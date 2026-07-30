@@ -1,42 +1,54 @@
 <#
 .SYNOPSIS
-    Mirrors whatsite -> whatwhatboy-site, then commits and pushes both repos.
+    Keeps whatsite and whatwhatboy-site identical, in whichever direction you edited.
 
 .DESCRIPTION
     Both repos serve whatwhatboy.com and must stay byte-identical.
-    Edit whatsite only; this script pushes those edits to the mirror.
+    Run this from EITHER repo. It works out which side you changed and copies
+    that side over the other, then commits and pushes both.
+
+    Direction is decided like this:
+      1. If only one repo has uncommitted changes, that one is the source.
+      2. If neither does, the one with the newer last commit is the source.
+      3. If BOTH have uncommitted changes it stops, because guessing could
+         throw away your work. Pick a side with -From.
+
     See SYNC.md for details.
 
 .EXAMPLE
-    .\sync.ps1 -Message "fix console filter"
+    .\sync.ps1 -Message "add ps5 emulators"
+    Auto-detects which repo you edited and syncs it to the other.
 .EXAMPLE
     .\sync.ps1 -DryRun
+    Shows the direction and the files that would change. Touches nothing.
 .EXAMPLE
-    .\sync.ps1 -Message "tweak copy" -NoPush
+    .\sync.ps1 -From whatwhatboy-site -Message "fix typo"
+    Forces the direction instead of auto-detecting.
 #>
 [CmdletBinding()]
 param(
     # Commit message used for both repos. Required unless -DryRun.
     [string]$Message,
 
-    # Show what would be copied, then exit. Touches nothing.
+    # Force the direction. Accepts a repo name or a full path.
+    [string]$From,
+
+    # Show the direction and the file list, then exit. Changes nothing.
     [switch]$DryRun,
 
     # Copy and commit, but don't push.
-    [switch]$NoPush,
-
-    # Override the mirror location.
-    [string]$MirrorPath
+    [switch]$NoPush
 )
 
 $ErrorActionPreference = 'Stop'
 
-$Source = $PSScriptRoot
-if (-not $MirrorPath) {
-    $MirrorPath = Join-Path (Split-Path $Source -Parent) 'whatwhatboy-site'
-}
+# The two repos, as siblings of whichever one this script sits in.
+$Here    = $PSScriptRoot
+$Parent  = Split-Path $Here -Parent
+$RepoA   = Join-Path $Parent 'whatsite'
+$RepoB   = Join-Path $Parent 'whatwhatboy-site'
 
-# Not mirrored - see the "What is not synced" table in SYNC.md
+# Never mirrored - see "What is not synced" in SYNC.md
 $ExcludeDirs  = @('.git', '.claude')
 $ExcludeFiles = @('sync.ps1', 'SYNC.md')
 
@@ -44,110 +56,132 @@ function Write-Step($text) { Write-Host "`n==> $text" -ForegroundColor Cyan }
 function Write-Ok($text)   { Write-Host "    $text" -ForegroundColor Green }
 function Write-Warn($text) { Write-Host "    $text" -ForegroundColor Yellow }
 
+function Assert-Repo($path, $label) {
+    if (-not (Test-Path $path)) { throw "$label not found: $path" }
+    if (-not (Test-Path (Join-Path $path '.git'))) { throw "$label is not a git repo: $path" }
+}
+
+function Test-Dirty($path) {
+    $status = & git -C $path status --porcelain
+    if ($LASTEXITCODE -ne 0) { throw "git status failed in $path" }
+    return -not [string]::IsNullOrWhiteSpace(($status | Out-String))
+}
+
+function Get-LastCommitTime($path) {
+    $ts = & git -C $path log -1 --format=%ct 2>$null
+    if ($LASTEXITCODE -ne 0 -or -not $ts) { return 0 }
+    return [int64]$ts
+}
+
 # --- Preflight ---------------------------------------------------------------
 
-if (-not (Test-Path (Join-Path $Source '.git'))) {
-    throw "Source is not a git repo: $Source"
-}
-if (-not (Test-Path $MirrorPath)) {
-    throw "Mirror not found: $MirrorPath`nClone it first, or pass -MirrorPath."
-}
-if (-not (Test-Path (Join-Path $MirrorPath '.git'))) {
-    throw "Mirror is not a git repo: $MirrorPath"
-}
+Assert-Repo $RepoA 'whatsite'
+Assert-Repo $RepoB 'whatwhatboy-site'
+
 if (-not $DryRun -and -not $Message) {
     throw "-Message is required (or use -DryRun to preview)."
 }
 
-# robocopy args shared by the dry run and the real run
-$RoboArgs = @($Source, $MirrorPath, '/MIR', '/NJH', '/NJS', '/NP', '/NDL',
+# --- Work out which way to copy ---------------------------------------------
+
+$dirtyA = Test-Dirty $RepoA
+$dirtyB = Test-Dirty $RepoB
+
+if ($From) {
+    # Explicit override: accept a name or a path.
+    $resolved = switch -Wildcard ($From) {
+        '*whatwhatboy-site' { $RepoB; break }
+        '*whatsite'         { $RepoA; break }
+        default             { throw "-From must be 'whatsite' or 'whatwhatboy-site' (got '$From')." }
+    }
+    $Source = $resolved
+    $reason = "forced with -From"
+}
+elseif ($dirtyA -and $dirtyB) {
+    throw @"
+Both repos have uncommitted changes, so the direction is ambiguous.
+Syncing now could overwrite work in one of them.
+
+  whatsite         : uncommitted changes
+  whatwhatboy-site : uncommitted changes
+
+Commit or discard one side, or choose explicitly:
+  .\sync.ps1 -From whatsite -Message "..."
+  .\sync.ps1 -From whatwhatboy-site -Message "..."
+"@
+}
+elseif ($dirtyA) { $Source = $RepoA; $reason = "it has uncommitted changes" }
+elseif ($dirtyB) { $Source = $RepoB; $reason = "it has uncommitted changes" }
+else {
+    # Both clean - go with whichever was committed to most recently.
+    $timeA = Get-LastCommitTime $RepoA
+    $timeB = Get-LastCommitTime $RepoB
+    if ($timeA -ge $timeB) { $Source = $RepoA; $reason = "both clean, it has the newer commit" }
+    else                   { $Source = $RepoB; $reason = "both clean, it has the newer commit" }
+}
+
+$Target = if ($Source -eq $RepoA) { $RepoB } else { $RepoA }
+
+Write-Step "Direction"
+Write-Host "    $(Split-Path $Source -Leaf)  ->  $(Split-Path $Target -Leaf)" -ForegroundColor White
+Write-Ok   "source chosen because $reason"
+
+$RoboArgs = @($Source, $Target, '/MIR', '/NJH', '/NJS', '/NP', '/NDL',
               '/XD') + $ExcludeDirs + @('/XF') + $ExcludeFiles
 
 # --- Dry run -----------------------------------------------------------------
 
 if ($DryRun) {
-    Write-Step "Dry run - files that would change in the mirror"
+    Write-Step "Dry run - files that would change in $(Split-Path $Target -Leaf)"
     # /L lists without copying; /NDL drops directory headers so only files show.
     & robocopy @RoboArgs /L
     $code = $LASTEXITCODE
-    if ($code -eq 0) {
-        Write-Ok "Already in sync. Nothing to copy."
-    } elseif ($code -ge 8) {
-        throw "robocopy failed with exit code $code"
-    } else {
-        Write-Warn "Files listed above would be copied or deleted. Re-run with -Message to apply."
-    }
+    if ($code -ge 8)      { throw "robocopy failed with exit code $code" }
+    elseif ($code -eq 0)  { Write-Ok "Already in sync. Nothing to copy." }
+    else                  { Write-Warn "Files above would be copied or deleted. Re-run with -Message to apply." }
     exit 0
 }
 
-# --- 1. Commit + push the primary -------------------------------------------
+# --- 1. Commit + push the source --------------------------------------------
 
-Write-Step "Committing primary ($Source)"
-Push-Location $Source
-try {
-    & git add -A
-    if ($LASTEXITCODE -ne 0) { throw "git add failed in primary" }
+function Invoke-CommitPush($path, $label) {
+    Write-Step "Committing $label ($path)"
+    & git -C $path add -A
+    if ($LASTEXITCODE -ne 0) { throw "git add failed in $label" }
 
-    & git diff --cached --quiet
+    & git -C $path diff --cached --quiet
     if ($LASTEXITCODE -eq 0) {
-        Write-Warn "No changes to commit."
+        Write-Warn "Nothing to commit."
     } else {
-        & git commit -m $Message
-        if ($LASTEXITCODE -ne 0) { throw "git commit failed in primary" }
+        & git -C $path commit -m $Message
+        if ($LASTEXITCODE -ne 0) { throw "git commit failed in $label" }
         Write-Ok "Committed."
     }
 
-    if (-not $NoPush) {
-        & git push
-        if ($LASTEXITCODE -ne 0) { throw "git push failed in primary" }
-        Write-Ok "Pushed."
-    }
-} finally {
-    Pop-Location
+    if ($NoPush) { return }
+
+    & git -C $path push
+    if ($LASTEXITCODE -ne 0) { throw "git push failed in $label" }
+    Write-Ok "Pushed."
 }
+
+Invoke-CommitPush $Source (Split-Path $Source -Leaf)
 
 # --- 2. Mirror the files -----------------------------------------------------
 
-Write-Step "Mirroring to $MirrorPath"
+Write-Step "Mirroring to $Target"
 & robocopy @RoboArgs /NFL
 
 # robocopy exit codes: 0-7 are success (8+ are real failures).
-# Bit 0 = files copied, bit 1 = extra files deleted from the mirror.
+# Bit 0 = files copied, bit 1 = extra files deleted from the target.
 $robo = $LASTEXITCODE
-if ($robo -ge 8) {
-    throw "robocopy failed with exit code $robo"
-}
-if ($robo -eq 0) {
-    Write-Ok "Mirror was already identical."
-} else {
-    Write-Ok "Mirror updated (robocopy code $robo)."
-}
+if ($robo -ge 8) { throw "robocopy failed with exit code $robo" }
+if ($robo -eq 0) { Write-Ok "Target was already identical." }
+else             { Write-Ok "Target updated (robocopy code $robo)." }
 
-# --- 3. Commit + push the mirror --------------------------------------------
+# --- 3. Commit + push the target --------------------------------------------
 
-Write-Step "Committing mirror ($MirrorPath)"
-Push-Location $MirrorPath
-try {
-    & git add -A
-    if ($LASTEXITCODE -ne 0) { throw "git add failed in mirror" }
-
-    & git diff --cached --quiet
-    if ($LASTEXITCODE -eq 0) {
-        Write-Warn "Mirror already up to date, nothing to commit."
-    } else {
-        & git commit -m $Message
-        if ($LASTEXITCODE -ne 0) { throw "git commit failed in mirror" }
-        Write-Ok "Committed."
-
-        if (-not $NoPush) {
-            & git push
-            if ($LASTEXITCODE -ne 0) { throw "git push failed in mirror" }
-            Write-Ok "Pushed."
-        }
-    }
-} finally {
-    Pop-Location
-}
+Invoke-CommitPush $Target (Split-Path $Target -Leaf)
 
 Write-Step "Done"
 if ($NoPush) {

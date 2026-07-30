@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=3.1.0">
+    <link rel="stylesheet" href="../style.css?v=3.1.1">
 </head>
 <body>
     <!-- Sidebar Navigation -->
@@ -232,7 +232,7 @@
                 <div class="games-grid">
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/ps3.png" alt="PlayStation Emulators">
+                            <img src="../assets/images/consoles/playstation.jpg" alt="PlayStation Emulators">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Complete</span>
@@ -253,7 +253,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/xbox360.png" alt="Xbox Emulators">
+                            <img src="../assets/images/consoles/xbox.jpg" alt="Xbox Emulators">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Complete</span>
@@ -274,7 +274,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="Nintendo Emulators">
+                            <img src="../assets/images/consoles/nintendo.png" alt="Nintendo Emulators">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Complete</span>
@@ -301,13 +301,76 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Modern Console Emulators</h2>
-                    <p class="section-subtitle">PlayStation 2/3, Xbox, GameCube/Wii, and current generation</p>
+                    <p class="section-subtitle">PlayStation 2/3/4/5, Xbox, GameCube/Wii, and current generation</p>
                 </div>
 
                 <div class="games-grid">
+                    <div class="game-card" id="ps5-sharpemu">
+                        <div class="game-image">
+                            <img src="../assets/images/emulators/SharpEmu.png" alt="SharpEmu" loading="lazy">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status experimental">Experimental</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">SharpEmu (PlayStation 5)</h3>
+                            <p class="game-description">Early-stage PS5 emulator written in C#. Research project — expect homebrew and test workloads rather than retail games.</p>
+                            <div class="game-features">
+                                <span class="feature">PlayStation 5</span>
+                                <span class="feature">C# / .NET</span>
+                                <span class="feature">Open Source</span>
+                            </div>
+                            <a href="https://github.com/sharpemu/sharpemu" target="_blank" rel="noopener noreferrer" class="game-link">
+                                GitHub <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" id="ps5-kyty">
+                        <div class="game-image">
+                            <img src="../assets/images/emulators/KytyPS5.jpg" alt="KytyPS5" loading="lazy">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status experimental">Experimental</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">KytyPS5 (PlayStation 5)</h3>
+                            <p class="game-description">Experimental PS4/PS5 emulator for Windows. Runs a small set of homebrew and simple test titles.</p>
+                            <div class="game-features">
+                                <span class="feature">PlayStation 5</span>
+                                <span class="feature">Homebrew</span>
+                                <span class="feature">Open Source</span>
+                            </div>
+                            <a href="https://github.com/KytyPS5/KytyPS5" target="_blank" rel="noopener noreferrer" class="game-link">
+                                GitHub <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" id="ps4-shadps4">
+                        <div class="game-image">
+                            <img src="../assets/images/emulators/shadps4.jpg" alt="shadPS4" loading="lazy">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status limited">Limited</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">shadPS4 (PlayStation 4)</h3>
+                            <p class="game-description">The most advanced PS4 emulator, running a growing list of retail titles on Windows, Linux, and macOS.</p>
+                            <div class="game-features">
+                                <span class="feature">PlayStation 4</span>
+                                <span class="feature">Cross-Platform</span>
+                                <span class="feature">Active Development</span>
+                            </div>
+                            <a href="https://shadps4.net/" target="_blank" rel="noopener noreferrer" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="game-card" id="ps2">
                         <div class="game-image">
-                            <img src="../assets/images/ps3.png" alt="PCSX2">
+                            <img src="../assets/images/emulators/PCSX2.png" alt="PCSX2" loading="lazy">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -328,7 +391,7 @@
 
                     <div class="game-card" id="ps3">
                         <div class="game-image">
-                            <img src="../assets/images/ps3.png" alt="RPCS3">
+                            <img src="../assets/images/emulators/RPCS3.jpg" alt="RPCS3">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -349,7 +412,7 @@
 
                     <div class="game-card" id="dolphin">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="Dolphin">
+                            <img src="../assets/images/emulators/Dolphin.png" alt="Dolphin">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -370,7 +433,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="Cemu">
+                            <img src="../assets/images/emulators/Cemu.png" alt="Cemu">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -391,7 +454,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="yuzu">
+                            <img src="../assets/images/emulators/yuzu.png" alt="yuzu">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status limited">Limited</span>
@@ -412,7 +475,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/xbox360.png" alt="Xenia">
+                            <img src="../assets/images/emulators/Xenia.png" alt="Xenia">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status limited">Limited</span>
@@ -445,7 +508,7 @@
                 <div class="games-grid">
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/ps3.png" alt="ePSXe">
+                            <img src="../assets/images/emulators/ePSXe.jpg" alt="ePSXe">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -466,7 +529,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="Project64">
+                            <img src="../assets/images/emulators/Project64.png" alt="Project64">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -487,7 +550,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="Snes9x">
+                            <img src="../assets/images/emulators/Snes9x.jpg" alt="Snes9x">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -508,7 +571,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="Gens">
+                            <img src="../assets/images/emulators/GensGenesisPlusGX.jpg" alt="Gens">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -541,7 +604,7 @@
                 <div class="games-grid">
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/ps3.png" alt="PPSSPP">
+                            <img src="../assets/images/emulators/PPSSPP.jpg" alt="PPSSPP">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -562,7 +625,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="DeSmuME">
+                            <img src="../assets/images/emulators/DeSmuME.jpg" alt="DeSmuME">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -583,7 +646,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="Citra">
+                            <img src="../assets/images/emulators/Citra.jpg" alt="Citra">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -604,7 +667,7 @@
 
                     <div class="game-card">
                         <div class="game-image">
-                            <img src="../assets/images/logo.png" alt="mGBA">
+                            <img src="../assets/images/emulators/mGBA.png" alt="mGBA">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -743,7 +806,7 @@
         </div>
     </footer>
 
-    <script src="../script.js?v=3.1.0"></script>
+    <script src="../script.js?v=3.1.1"></script>
 
     <!-- Ad Banner -->
 </body>
