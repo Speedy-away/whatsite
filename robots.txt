@@ -1,0 +1,12 @@
+# robots.txt for whatwhatboy.com
+
+User-agent: *
+Allow: /
+
+# Disallow vendor assets
+Disallow: /assets/vendor/
+
+# Sitemap
+Sitemap: https://whatwhatboy.com/sitemap.xml
+
+Crawl-delay: 1

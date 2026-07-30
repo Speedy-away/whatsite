@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Yim Mod Menu for GTA 5 and RDR2. Get the latest Yim Menu versions, Lua scripts, Battle Eye bypasses, and other premium mod menus like Nenyooo, Scooby, and Kiddions.">
+    <meta name="keywords" content="yim mod menu, yim menu, gta 5 mod menu, gta 5 mods, gta 5 hacks, gta 5 scripts, battle eye bypass, rdr2 mods, red dead redemption 2 mods, horse menu, yim lua scripts, nenyooo, scooby mod menu, kiddions mod menu, fsl gta 5">
+    <meta name="author" content="Brain Damage 101">
+    <meta property="og:url" content="https://whatwhatboy.com/braindamge101.html">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:title" content="Brain Damage 101 - GTA V & RDR2 Mods">
+    <meta property="og:description" content="Your trusted source for GTA V and RDR2 mods, Yim Menu, Lua scripts, and utilities.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brain Damage 101 | whatwhatboy's">
+    <meta name="twitter:description" content="Download Yim Mod Menu for GTA 5 and RDR2. Get the latest Yim Menu versions, Lua scripts, Battle Eye bypasses, and other premium mod menus like Nenyooo, Scooby, and Kiddions.">
+    <title>Brain Damage 101 | whatwhatboy's</title>
+    <link rel="canonical" href="https://whatwhatboy.com/braindamge101.html">
+
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3.1.0">
+    <style>
+        .bd-download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .bd-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 0.75rem;
+            padding: 1.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bd-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .bd-card.premium {
+            border: 2px solid #f59e0b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bd-card.premium::before {
+            content: 'PREMIUM';
+            position: absolute;
+            top: 12px;
+            right: -28px;
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            color: #000;
+            padding: 4px 35px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            transform: rotate(45deg);
+            letter-spacing: 1px;
+        }
+
+        .bd-card.free {
+            border: 2px solid #06b6d4;
+        }
+
+        .bd-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .bd-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .bd-card > p {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .bd-features {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .bd-features li {
+            padding: 0.35rem 0;
+            font-size: 0.88rem;
+            color: #ccc;
+        }
+
+        .bd-features li::before {
+            content: '\2713 ';
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        .bd-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .bd-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .bd-btn-primary { background: linear-gradient(135deg, #6366f1, #a78bfa); }
+        .bd-btn-free { background: linear-gradient(135deg, #06b6d4, #a78bfa); }
+        .bd-btn-premium { background: linear-gradient(135deg, #f59e0b, #f97316); color: #000; }
+        .bd-btn-rdr2 { background: linear-gradient(135deg, #10b981, #a78bfa); }
+        .bd-btn-utility { background: linear-gradient(135deg, #f59e0b, #a78bfa); }
+
+        .bd-section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .bd-label-yim { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; }
+        .bd-label-free { background: rgba(6, 182, 212, 0.15); color: #67e8f9; }
+        .bd-label-premium { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
+        .bd-label-rdr2 { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
+        .bd-label-utility { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
+
+        .bd-token-box {
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .bd-token-box p {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .bd-token-value {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .bd-token-value:hover {
+            background: rgba(0, 0, 0, 0.5);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .bd-token-value code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: #a5b4fc;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .bd-token-value i { color: #6366f1; }
+
+        .bd-info-box {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-left: 4px solid #f59e0b;
+            border-radius: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .bd-info-box h4 {
+            color: #fcd34d;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bd-info-box p {
+            color: #999;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .bd-info-box.danger {
+            background: rgba(239, 68, 68, 0.08);
+            border-color: rgba(239, 68, 68, 0.2);
+            border-left-color: #ef4444;
+        }
+
+        .bd-info-box.danger h4 { color: #f87171; }
+
+        /* Discord popup */
+        .bd-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(30, 30, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.25rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            z-index: 10000;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            max-width: 280px;
+        }
+
+        .bd-popup:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .bd-popup img {
+            width: 40px;
+            height: 40px;
+            border-radius: 0.5rem;
+        }
+
+        .bd-popup span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #a5b4fc;
+        }
+
+        @media (max-width: 768px) {
+            .bd-download-grid {
+                grid-template-columns: 1fr;
+            }
+            .bd-popup {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li><a href="index.html#discord" class="nav-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="index.html#games" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="youtube.html" class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="tools/index.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="index.html#console" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="help.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+                <li><a href="safety.html" class="nav-link">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Safety</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="profile.html" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="profile.html" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Brain Damage 101</h1>
+                <p class="hero-subtitle">Your trusted source for GTA V and RDR2 mods and utilities</p>
+            </div>
+        </section>
+
+        <!-- Yim Menu Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="bd-section-label bd-label-yim"><i class="fas fa-star"></i> Yim Menu</span>
+                    <h2 class="section-title">Yim Mod Menu</h2>
+                    <p class="section-subtitle">Enhanced & Legacy mod menus for GTA V with regular updates</p>
+                </div>
+
+                <div class="bd-download-grid">
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #6366f1;">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3>Yim V2 (Enhanced)</h3>
+                        <p>Standard enhanced version with all essential features</p>
+                        <ul class="bd-features">
+                            <li>All standard GTA Online modding features</li>
+                            <li>Player and account protections</li>
+                            <li>Money recovery options</li>
+                            <li>Regular updates</li>
+                        </ul>
+                        <a href="https://bstlar.com/F/YimV2" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-primary">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #a78bfa;">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Yim V2 (Enhanced) Fork</h3>
+                        <p>Enhanced version with additional features and improvements</p>
+                        <ul class="bd-features">
+                            <li>Improved player protections</li>
+                            <li>Additional vehicle spawn options</li>
+                            <li>Enhanced money drop features</li>
+                            <li>Better UI customization</li>
+                        </ul>
+                        <a href="https://bstlar.com/F/YimV2fork" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-primary">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #06b6d4;">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Yim V1 (Legacy)</h3>
+                        <p>The original version for those who prefer the classic experience</p>
+                        <ul class="bd-features">
+                            <li>Classic Yim Menu interface</li>
+                            <li>Proven stability</li>
+                            <li>Basic modding features</li>
+                            <li>Compatible with older systems</li>
+                        </ul>
+                        <a href="https://bstlar.com/F/YimMenuDLL" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-primary">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Token Section -->
+                <div class="bd-token-box">
+                    <p>Your Yim Token (click to copy):</p>
+                    <div class="bd-token-value" onclick="copyToClipboard()">
+                        <code>e86fc9f7badd7868b299cf18d10d7fd8</code>
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #777;">Use this token to activate your Yim Menu</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yim Lua Scripts Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="bd-section-label bd-label-yim"><i class="fas fa-code"></i> Scripts</span>
+                    <h2 class="section-title">Yim Lua Scripts</h2>
+                    <p class="section-subtitle">Expand your modding capabilities with these scripts</p>
+                </div>
+
+                <div class="bd-download-grid">
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #6366f1;">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Yim Lua PACK 30+</h3>
+                        <p>Collection of 30+ scripts to enhance your gameplay experience</p>
+                        <ul class="bd-features">
+                            <li>30+ custom Lua scripts</li>
+                            <li>Auto-installation package</li>
+                            <li>Regularly updated collection</li>
+                            <li>Compatible with all Yim versions</li>
+                        </ul>
+                        <a href="yimlua.html" class="bd-btn bd-btn-primary">
+                            <i class="fas fa-download"></i> Download Pack
+                        </a>
+                    </div>
+
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #a78bfa;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Individual Yim Scripts</h3>
+                        <p>Browse and download individual scripts based on your needs</p>
+                        <ul class="bd-features">
+                            <li>Custom vehicle scripts</li>
+                            <li>Weapon and combat enhancements</li>
+                            <li>Player and entity modifiers</li>
+                            <li>UI customization scripts</li>
+                        </ul>
+                        <a href="yimlua.html" class="bd-btn bd-btn-primary">
+                            <i class="fas fa-download"></i> Browse Scripts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FREE Mods Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="bd-section-label bd-label-free"><i class="fas fa-gift"></i> Free</span>
+                    <h2 class="section-title">FREE Mods</h2>
+                    <p class="section-subtitle">Quality free mod menus for GTA V</p>
+                </div>
+
+                <div class="bd-info-box">
+                    <h4><i class="fas fa-info-circle"></i> Free Mods Notice</h4>
+                    <p>Free mods may have limited features compared to premium options and may be detected more quickly by anti-cheat systems. Use with caution.</p>
+                </div>
+
+                <div class="bd-download-grid">
+                    <div class="bd-card free">
+                        <div class="bd-card-icon" style="color: #06b6d4;">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Nenyooo Free</h3>
+                        <p>Free version of the popular Nenyooo mod menu</p>
+                        <ul class="bd-features">
+                            <li>Basic modding features</li>
+                            <li>Limited protections</li>
+                            <li>Regular updates</li>
+                            <li>Community support</li>
+                        </ul>
+                        <a href="https://www.nenyoocheats.com/" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-free">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <div class="bd-card free">
+                        <div class="bd-card-icon" style="color: #67e8f9;">
+                            <i class="fas fa-dog"></i>
+                        </div>
+                        <h3>Scooby Free</h3>
+                        <p>Free version of the Scooby mod menu</p>
+                        <ul class="bd-features">
+                            <li>Basic vehicle spawning</li>
+                            <li>Weapon modifications</li>
+                            <li>Player options</li>
+                            <li>Simple UI</li>
+                        </ul>
+                        <a href="https://scoobycheats.net/" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-free">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <div class="bd-card free">
+                        <div class="bd-card-icon" style="color: #22d3ee;">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Riptide Free</h3>
+                        <p>Free version of Riptide mod menu</p>
+                        <ul class="bd-features">
+                            <li>Basic recovery options</li>
+                            <li>Limited vehicle features</li>
+                            <li>Player protections</li>
+                            <li>Regular updates</li>
+                        </ul>
+                        <a href="https://riptidecheats.cc/" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-free">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Utilities Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="bd-section-label bd-label-utility"><i class="fas fa-wrench"></i> Utilities</span>
+                    <h2 class="section-title">Other Utilities</h2>
+                    <p class="section-subtitle">Tools to enhance your GTA V experience</p>
+                </div>
+
+                <div class="bd-download-grid">
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #f59e0b;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>FSL</h3>
+                        <p>A tool that allows you to store your online save data locally, gain infinite money, and much more!</p>
+                        <ul class="bd-features">
+                            <li>Local save data storage</li>
+                            <li>Infinite money</li>
+                            <li>Play with friends</li>
+                        </ul>
+                        <a href="https://www.nenyoocheats.com/fsl.html" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-utility">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #fcd34d;">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <h3>Kiddions</h3>
+                        <p>Free and reliable mod menu option</p>
+                        <ul class="bd-features">
+                            <li>Free to use</li>
+                            <li>Basic modding features</li>
+                            <li>Regularly updated</li>
+                            <li>Large user community</li>
+                        </ul>
+                        <a href="kiddionsD.html" class="bd-btn bd-btn-utility">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RDR2 Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="bd-section-label bd-label-rdr2"><i class="fas fa-horse"></i> RDR2</span>
+                    <h2 class="section-title">Red Dead Redemption 2 Mods</h2>
+                    <p class="section-subtitle">Mods and utilities for Red Dead Redemption 2 Online</p>
+                </div>
+
+                <div class="bd-info-box danger">
+                    <h4><i class="fas fa-exclamation-triangle"></i> RDR2 Modding Warning</h4>
+                    <p>Modding in Red Dead Online carries significant risks. Rockstar's anti-cheat systems are actively monitoring for modifications. Use these tools with extreme caution.</p>
+                </div>
+
+                <div class="bd-download-grid">
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #10b981;">
+                            <i class="fas fa-horse"></i>
+                        </div>
+                        <h3>Horse Menu</h3>
+                        <p>Comprehensive mod menu for Red Dead Redemption 2</p>
+                        <ul class="bd-features">
+                            <li>Player and horse modifications</li>
+                            <li>Weapon and ability customizations</li>
+                            <li>Money and gold options</li>
+                            <li>Player protections</li>
+                            <li>Regular updates</li>
+                        </ul>
+                        <a href="https://bstlar.com/F/yimRDR2" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-rdr2">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <div class="bd-card">
+                        <div class="bd-card-icon" style="color: #6ee7b7;">
+                            <i class="fas fa-hat-cowboy"></i>
+                        </div>
+                        <h3>Yim for RDR2</h3>
+                        <p>Yim Menu adapted for Red Dead Redemption 2</p>
+                        <ul class="bd-features">
+                            <li>Familiar Yim interface</li>
+                            <li>RDR2-specific features</li>
+                            <li>Camp and trader options</li>
+                            <li>Bounty and mission modifiers</li>
+                        </ul>
+                        <a href="https://bstlar.com/F/yimRDR2" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-rdr2">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Mods Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="bd-section-label bd-label-premium"><i class="fas fa-crown"></i> Premium</span>
+                    <h2 class="section-title">Paid Mods with Battle Eye Bypasses</h2>
+                    <p class="section-subtitle">Premium mod menus with guaranteed Battle Eye protection bypass</p>
+                </div>
+
+                <div class="bd-info-box danger">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Important Notice</h4>
+                    <p>Using mods in GTA Online always carries a risk of being banned. These paid mods offer working Battle Eye bypasses, but no solution is 100% undetectable. Use at your own risk.</p>
+                </div>
+
+                <div class="bd-download-grid">
+                    <div class="bd-card premium">
+                        <div class="bd-card-icon" style="color: #f59e0b;">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Riptide Premium</h3>
+                        <p>Premium mod menu with working Battle Eye bypass</p>
+                        <ul class="bd-features">
+                            <li>Fully working Battle Eye bypass</li>
+                            <li>Safe public session gameplay</li>
+                            <li>Advanced recovery options</li>
+                            <li>Undetected money methods</li>
+                            <li>Regular updates</li>
+                        </ul>
+                        <a href="https://riptidecheats.cc/" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-premium">
+                            <i class="fas fa-shopping-cart"></i> Purchase Now
+                        </a>
+                    </div>
+
+                    <div class="bd-card premium">
+                        <div class="bd-card-icon" style="color: #f97316;">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Infamous Premium</h3>
+                        <p>Feature-rich mod menu with Battle Eye protection</p>
+                        <ul class="bd-features">
+                            <li>Updated Battle Eye bypass</li>
+                            <li>Advanced vehicle spawning</li>
+                            <li>Weapon customization</li>
+                            <li>Player tracking features</li>
+                            <li>Regular updates</li>
+                        </ul>
+                        <a href="https://infamouscheats.com/" target="_blank" rel="noopener noreferrer" class="bd-btn bd-btn-premium">
+                            <i class="fas fa-shopping-cart"></i> Purchase Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Discord Popup -->
+    <a href="https://discord.gg/yUp78V8tgM" target="_blank" class="bd-popup" id="popup">
+        <img src="braindamge/inf.png" alt="Discord">
+        <span>Join our Discord community!</span>
+    </a>
+
+    <audio id="autoPlayer" src="babyonfire.mp3" autoplay loop></audio>
+
+    <script src="script.js?v=3.1.0"></script>
+    <script>
+        function copyToClipboard() {
+            const token = "e86fc9f7badd7868b299cf18d10d7fd8";
+            navigator.clipboard.writeText(token).then(() => {
+                alert("Token copied to clipboard!");
+            }).catch(err => {
+                const tempInput = document.createElement("input");
+                tempInput.value = token;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999);
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                alert("Token copied to clipboard!");
+            });
+        }
+    </script>
+
+    <!-- Ad Banner -->
+</body>
+</html>

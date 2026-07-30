@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>Scooby Key API</title>
+    <link rel="canonical" href="https://whatwhatboy.com/api/scooby-key.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/api/scooby-key.html">
+    <meta property="og:title" content="Scooby Key API">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scooby Key API">
+</head>
+<body>
+<pre id="output"></pre>
+<script>
+// Key rotation system - must match scoobyontop2.html exactly
+const KEY_ROTATION_HOURS = 4;
+
+function generateKey(seed) {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const segments = [
+        'SCOOBY',
+        generateSegment(seed, 5, chars),
+        generateSegment(seed * 2, 5, chars),
+        generateSegment(seed * 3, 5, chars)
+    ];
+    return segments.join('-');
+}
+
+function generateSegment(seed, length, chars) {
+    let result = '';
+    let s = seed;
+    for (let i = 0; i < length; i++) {
+        s = (s * 9301 + 49297) % 233280;
+        const index = Math.floor((s / 233280) * chars.length);
+        result += chars[index];
+    }
+    return result;
+}
+
+function getTimeSeed() {
+    const now = new Date();
+    return Math.floor(now.getTime() / (1000 * 60 * 60 * KEY_ROTATION_HOURS));
+}
+
+function getTimeUntilRotation() {
+    const now = new Date();
+    const msPerRotation = KEY_ROTATION_HOURS * 60 * 60 * 1000;
+    const currentPeriodStart = Math.floor(now.getTime() / msPerRotation) * msPerRotation;
+    const nextRotation = currentPeriodStart + msPerRotation;
+    return nextRotation - now.getTime();
+}
+
+const seed = getTimeSeed();
+const key = generateKey(seed);
+const nextRotation = new Date(Date.now() + getTimeUntilRotation());
+
+const response = {
+    key: key,
+    seed: seed,
+    generated_at: new Date().toISOString(),
+    next_rotation: nextRotation.toISOString(),
+    rotation_hours: KEY_ROTATION_HOURS,
+    version: "2.0"
+};
+
+document.getElementById('output').textContent = JSON.stringify(response, null, 2);
+</script>
+</body>
+</html>

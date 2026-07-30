@@ -1,0 +1,750 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Console emulators for PC - RetroArch, PCSX2, Dolphin, RPCS3, Cemu, and more. Play console games on PC with enhanced graphics and features.">
+    <meta property="og:url" content="https://whatwhatboy.com/console/emulators.html">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:title" content="Console Emulators for PC">
+    <meta property="og:description" content="Console emulators for PC - RetroArch, PCSX2, Dolphin, RPCS3, Cemu, and more. Play console games on PC with enhanced graphics and features.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Console Emulators for PC - whatwhatboy">
+    <meta name="twitter:description" content="Console emulators for PC - RetroArch, PCSX2, Dolphin, RPCS3, Cemu, and more. Play console games on PC with enhanced graphics and features.">
+    <meta name="keywords" content="console emulators, retroarch, pcsx2, dolphin, rpcs3, cemu, emulation, console games pc">
+    <meta name="author" content="whatwhatboy">
+    <title>Console Emulators for PC - whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/console/emulators.html">
+
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=3.1.0">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li><a href="../index.html#discord" class="nav-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../index.html#games" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../youtube.html" class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="../tools/index.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="index.html" class="nav-link active">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="../help.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="../profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="../profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="../profile.html" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="../profile.html" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-image" style="margin-bottom: 2rem;">
+                    <img src="../assets/images/logo.png" alt="Console Emulators" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                </div>
+                <h1 class="hero-title">Console Emulators for PC</h1>
+                <p class="hero-subtitle">Play console games on PC with enhanced graphics, save states, and modern features. Complete collection of emulators for all major gaming consoles.</p>
+
+                <div class="hero-buttons">
+                    <a href="#retroarch" class="btn btn-primary">
+                        <i class="fas fa-star"></i>
+                        RetroArch
+                    </a>
+                    <a href="#modern" class="btn btn-outline">
+                        <i class="fas fa-desktop"></i>
+                        Modern Systems
+                    </a>
+                    <a href="#retro" class="btn btn-outline">
+                        <i class="fas fa-history"></i>
+                        Retro Systems
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>20+</h3>
+                        <p>Emulators</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Consoles</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Enhanced</h3>
+                        <p>Graphics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RetroArch Section -->
+        <section class="section" id="retroarch">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">RetroArch - All-in-One Emulation</h2>
+                    <p class="section-subtitle">The ultimate multi-system emulator frontend</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="RetroArch">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">RetroArch 1.16.0</h3>
+                            <p class="game-description">Universal emulation frontend supporting 100+ systems with shaders, netplay, and rewind features.</p>
+                            <div class="game-features">
+                                <span class="feature">100+ Systems</span>
+                                <span class="feature">Shaders</span>
+                                <span class="feature">Netplay</span>
+                            </div>
+                            <a href="https://www.retroarch.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Lakka">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Lakka</h3>
+                            <p class="game-description">Linux distribution that turns your PC into a full retro gaming console based on RetroArch.</p>
+                            <div class="game-features">
+                                <span class="feature">Linux Distro</span>
+                                <span class="feature">Console Experience</span>
+                                <span class="feature">Plug & Play</span>
+                            </div>
+                            <a href="https://www.lakka.tv/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Recalbox">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Recalbox</h3>
+                            <p class="game-description">Ready-to-use retro gaming OS with EmulationStation frontend and pre-configured emulators.</p>
+                            <div class="game-features">
+                                <span class="feature">Ready-to-use</span>
+                                <span class="feature">EmulationStation</span>
+                                <span class="feature">Pre-configured</span>
+                            </div>
+                            <a href="https://www.recalbox.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Console-Specific Emulator Collections -->
+        <section class="section" id="collections">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Emulators by Console Brand</h2>
+                    <p class="section-subtitle">Browse comprehensive emulator collections for each platform</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PlayStation Emulators">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Complete</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation Emulators</h3>
+                            <p class="game-description">Complete collection of PS1, PS2, PS3, and PSP emulators with setup guides and compatibility info.</p>
+                            <div class="game-features">
+                                <span class="feature">PS1-PS3</span>
+                                <span class="feature">PSP</span>
+                                <span class="feature">All Guides</span>
+                            </div>
+                            <a href="playstation-emulators.html" class="game-link">
+                                View PlayStation <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="Xbox Emulators">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Complete</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Xbox Emulators</h3>
+                            <p class="game-description">Original Xbox and Xbox 360 emulators with compatibility lists and performance guides.</p>
+                            <div class="game-features">
+                                <span class="feature">Original Xbox</span>
+                                <span class="feature">Xbox 360</span>
+                                <span class="feature">Full Setup</span>
+                            </div>
+                            <a href="xbox-emulators.html" class="game-link">
+                                View Xbox <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Nintendo Emulators">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Complete</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Nintendo Emulators</h3>
+                            <p class="game-description">Complete Nintendo emulation from NES to Switch, including N64, GameCube, Wii, DS, 3DS, and more.</p>
+                            <div class="game-features">
+                                <span class="feature">All Systems</span>
+                                <span class="feature">Switch Support</span>
+                                <span class="feature">HD Gaming</span>
+                            </div>
+                            <a href="nintendo-emulators.html" class="game-link">
+                                View Nintendo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Console Emulators Section -->
+        <section class="section" id="modern">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Modern Console Emulators</h2>
+                    <p class="section-subtitle">PlayStation 2/3, Xbox, GameCube/Wii, and current generation</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card" id="ps2">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PCSX2">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PCSX2 (PlayStation 2)</h3>
+                            <p class="game-description">Most accurate PS2 emulator with high-resolution rendering and wide game compatibility.</p>
+                            <div class="game-features">
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">HD Rendering</span>
+                                <span class="feature">Wide Compatibility</span>
+                            </div>
+                            <a href="https://pcsx2.net/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" id="ps3">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="RPCS3">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">RPCS3 (PlayStation 3)</h3>
+                            <p class="game-description">Open-source PS3 emulator with impressive compatibility and performance improvements.</p>
+                            <div class="game-features">
+                                <span class="feature">PS3 Exclusives</span>
+                                <span class="feature">Enhanced Graphics</span>
+                                <span class="feature">Active Development</span>
+                            </div>
+                            <a href="https://rpcs3.net/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" id="dolphin">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Dolphin">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Dolphin (GameCube/Wii)</h3>
+                            <p class="game-description">Mature emulator for GameCube and Wii with HD graphics and netplay support.</p>
+                            <div class="game-features">
+                                <span class="feature">HD Graphics</span>
+                                <span class="feature">Netplay</span>
+                                <span class="feature">Motion Controls</span>
+                            </div>
+                            <a href="https://dolphin-emu.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Cemu">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Cemu (Wii U)</h3>
+                            <p class="game-description">Wii U emulator with excellent performance and graphics enhancement capabilities.</p>
+                            <div class="game-features">
+                                <span class="feature">4K Gaming</span>
+                                <span class="feature">Graphics Packs</span>
+                                <span class="feature">High Performance</span>
+                            </div>
+                            <a href="https://cemu.info/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="yuzu">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status limited">Limited</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">yuzu (Nintendo Switch)</h3>
+                            <p class="game-description">Nintendo Switch emulator with growing compatibility and performance optimizations.</p>
+                            <div class="game-features">
+                                <span class="feature">Switch Games</span>
+                                <span class="feature">Growing Library</span>
+                                <span class="feature">Performance Focus</span>
+                            </div>
+                            <a href="https://yuzu-emu.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="Xenia">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status limited">Limited</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Xenia (Xbox 360)</h3>
+                            <p class="game-description">Xbox 360 emulator in active development with improving game compatibility.</p>
+                            <div class="game-features">
+                                <span class="feature">Xbox 360</span>
+                                <span class="feature">Active Development</span>
+                                <span class="feature">Improving Compatibility</span>
+                            </div>
+                            <a href="https://xenia.jp/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retro Console Emulators Section -->
+        <section class="section" id="retro">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Retro Console Emulators</h2>
+                    <p class="section-subtitle">Classic systems from 8-bit to early 3D era</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="ePSXe">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">ePSXe (PlayStation 1)</h3>
+                            <p class="game-description">Classic PS1 emulator with plugin system and enhanced graphics capabilities.</p>
+                            <div class="game-features">
+                                <span class="feature">Plugin System</span>
+                                <span class="feature">Enhanced Graphics</span>
+                                <span class="feature">High Compatibility</span>
+                            </div>
+                            <a href="https://www.epsxe.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Project64">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Project64 (Nintendo 64)</h3>
+                            <p class="game-description">Popular N64 emulator with high compatibility and graphics enhancement plugins.</p>
+                            <div class="game-features">
+                                <span class="feature">High Compatibility</span>
+                                <span class="feature">Graphics Plugins</span>
+                                <span class="feature">Save States</span>
+                            </div>
+                            <a href="https://www.pj64-emu.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Snes9x">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Snes9x (Super Nintendo)</h3>
+                            <p class="game-description">Accurate SNES emulator with excellent compatibility and performance.</p>
+                            <div class="game-features">
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">Excellent Performance</span>
+                                <span class="feature">Cross-platform</span>
+                            </div>
+                            <a href="http://www.snes9x.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Gens">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Gens/Genesis Plus GX</h3>
+                            <p class="game-description">Sega Genesis/Mega Drive emulators with high accuracy and compatibility.</p>
+                            <div class="game-features">
+                                <span class="feature">Sega Genesis</span>
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">Multiple Variants</span>
+                            </div>
+                            <a href="https://segaretro.org/Gens" target="_blank" class="game-link">
+                                Info Page <i class="fas fa-info-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Handheld Emulators Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Handheld Console Emulators</h2>
+                    <p class="section-subtitle">Portable gaming systems emulation</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PPSSPP">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PPSSPP (PlayStation Portable)</h3>
+                            <p class="game-description">Excellent PSP emulator with high-resolution rendering and wide device support.</p>
+                            <div class="game-features">
+                                <span class="feature">HD Rendering</span>
+                                <span class="feature">Cross-platform</span>
+                                <span class="feature">High Performance</span>
+                            </div>
+                            <a href="https://www.ppsspp.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="DeSmuME">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">DeSmuME (Nintendo DS)</h3>
+                            <p class="game-description">Nintendo DS emulator with dual-screen support and touchscreen functionality.</p>
+                            <div class="game-features">
+                                <span class="feature">Dual Screens</span>
+                                <span class="feature">Touchscreen</span>
+                                <span class="feature">Save States</span>
+                            </div>
+                            <a href="https://desmume.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Citra">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Citra (Nintendo 3DS)</h3>
+                            <p class="game-description">Nintendo 3DS emulator with stereoscopic 3D support and high-resolution rendering.</p>
+                            <div class="game-features">
+                                <span class="feature">3D Support</span>
+                                <span class="feature">HD Rendering</span>
+                                <span class="feature">Good Compatibility</span>
+                            </div>
+                            <a href="https://citra-emu.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="mGBA">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">mGBA (Game Boy Advance)</h3>
+                            <p class="game-description">Fast and accurate GBA emulator with debugging features and high compatibility.</p>
+                            <div class="game-features">
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">Fast Performance</span>
+                                <span class="feature">Debugging Tools</span>
+                            </div>
+                            <a href="https://mgba.io/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emulation Tips Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Emulation Setup & Tips</h2>
+                    <p class="section-subtitle">Getting the best emulation experience</p>
+                </div>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h4>BIOS & Firmware</h4>
+                        <p>Many emulators require console BIOS files. Dump from your own consoles or find legally obtained copies.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h4>Configuration</h4>
+                        <p>Optimize settings for your hardware. Enable frame limiting, configure controls, and adjust graphics settings.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>Controllers</h4>
+                        <p>Use original controllers with adapters or modern controllers. Configure input mapping for authentic experience.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-save"></i>
+                        </div>
+                        <h4>Save States</h4>
+                        <p>Use save states for convenience, but don't forget to use in-game saves for authentic progression.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Legal Emulation Guidelines</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-balance-scale"></i> Legal ROMs Only</h4>
+                                <p>Only use ROM files dumped from games you legally own. Downloading copyrighted ROMs is illegal.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-microchip"></i> BIOS Requirements</h4>
+                                <p>Console BIOS files must be dumped from your own hardware. Never download copyrighted BIOS files.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-desktop"></i> Performance Requirements</h4>
+                                <p>Modern console emulators require powerful hardware. Check system requirements before downloading.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-users"></i> Community Resources</h4>
+                                <p>Join emulation communities for help, compatibility lists, and the latest developments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="../assets/images/logo.png" alt="Logo" class="footer-logo">
+                        <h3>whatwhatboy's</h3>
+                    </div>
+                    <p>Game Developer and Content Creator. Building gaming communities and creating educational content for YouTube.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#games">Games</a></li>
+                        <li><a href="../index.html#tools">Tools</a></li>
+                        <li><a href="index.html">Console</a></li>
+                        <li><a href="../help.html">Help & FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../help.html">Help Center</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 whatwhatboy's. All rights reserved.</p>
+                    <p class="disclaimer">Educational purposes only. Use at your own risk.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=3.1.0"></script>
+
+    <!-- Ad Banner -->
+</body>
+</html>

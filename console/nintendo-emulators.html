@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nintendo emulators for PC - Dolphin, Cemu, Ryujinx, yuzu, Project64, and more. Play Nintendo games from NES to Switch on your computer.">
+    <meta name="keywords" content="nintendo emulators, dolphin, cemu, ryujinx, yuzu, project64, snes9x, n64, gamecube, wii, switch">
+    <meta name="author" content="whatwhatboy">
+    <title>Nintendo Emulators - N64, GameCube, Wii, Switch - whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/console/nintendo-emulators.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/console/nintendo-emulators.html">
+    <meta property="og:title" content="Nintendo Emulators - N64, GameCube, Wii, Switch - whatwhatboy">
+    <meta property="og:description" content="Nintendo emulators for PC - Dolphin, Cemu, Ryujinx, yuzu, Project64, and more. Play Nintendo games from NES to Switch on your computer.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nintendo Emulators - N64, GameCube, Wii, Switch - whatwhatboy">
+    <meta name="twitter:description" content="Nintendo emulators for PC - Dolphin, Cemu, Ryujinx, yuzu, Project64, and more. Play Nintendo games from NES to Switch on your computer.">
+
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=3.1.0">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../profile.html" class="nav-link">
+                    <i class="fas fa-address-card"></i>
+                    <span>Contact Info</span>
+                </a></li>
+                <li><a href="../index.html#discord" class="nav-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../index.html#games" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../youtube.html" class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="../index.html#tools" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="../index.html#console" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="emulators.html" class="nav-link active">
+                    <i class="fas fa-desktop"></i>
+                    <span>Emulators</span>
+                </a></li>
+                <li><a href="../help.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="../profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="../profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="../profile.html" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="../profile.html" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-image" style="margin-bottom: 2rem;">
+                    <img src="../assets/images/logo.png" alt="Nintendo Emulators" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                </div>
+                <h1 class="hero-title">Nintendo Emulators</h1>
+                <p class="hero-subtitle">Play Nintendo games from NES to Switch on your PC with enhanced graphics and modern features. Complete collection of Nintendo emulators for all generations.</p>
+
+                <div class="hero-buttons">
+                    <a href="#dolphin" class="btn btn-primary">
+                        <i class="fas fa-star"></i>
+                        Dolphin (GameCube/Wii)
+                    </a>
+                    <a href="#switch" class="btn btn-outline">
+                        <i class="fas fa-cube"></i>
+                        Switch Emulators
+                    </a>
+                    <a href="#retro" class="btn btn-outline">
+                        <i class="fas fa-history"></i>
+                        Retro Nintendo
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>8+</h3>
+                        <p>Consoles</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5000+</h3>
+                        <p>Games Library</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4K</h3>
+                        <p>HD Rendering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GameCube/Wii Section -->
+        <section class="section" id="dolphin">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">GameCube & Wii Emulators</h2>
+                    <p class="section-subtitle">The most mature Nintendo emulation platform</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Dolphin">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Mature</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Dolphin</h3>
+                            <p class="game-description">The definitive GameCube and Wii emulator with HD graphics, netplay support, and virtually perfect compatibility. Enhance Nintendo classics with modern features.</p>
+                            <div class="game-features">
+                                <span class="feature">Perfect Compatibility</span>
+                                <span class="feature">4K+ Graphics</span>
+                                <span class="feature">Netplay Multiplayer</span>
+                                <span class="feature">Motion Controls</span>
+                                <span class="feature">Save States</span>
+                                <span class="feature">Texture Packs</span>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">System Requirements:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    • CPU: Modern dual-core @ 3.0 GHz (quad-core recommended)<br>
+                                    • GPU: DirectX 11.1 / OpenGL 4.4 compatible<br>
+                                    • RAM: 4 GB minimum, 8 GB recommended<br>
+                                    • OS: Windows 10/11, Linux, macOS, Android
+                                </p>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Popular Games:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    Super Smash Bros Melee/Brawl, Mario Kart Wii, Zelda: Wind Waker/Twilight Princess, Metroid Prime trilogy, Mario Galaxy 1/2, Resident Evil 4
+                                </p>
+                            </div>
+                            <a href="https://dolphin-emu.org/" target="_blank" class="game-link">
+                                Download Dolphin <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wii U Section -->
+        <section class="section" id="wiiu">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Wii U Emulators</h2>
+                    <p class="section-subtitle">Play Wii U exclusives in 4K</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Cemu">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Cemu</h3>
+                            <p class="game-description">Wii U emulator with excellent performance, 4K gaming capabilities, and graphics enhancement packs. Play Zelda: Breath of the Wild and other Wii U exclusives.</p>
+                            <div class="game-features">
+                                <span class="feature">4K Gaming</span>
+                                <span class="feature">Graphics Packs</span>
+                                <span class="feature">High Performance</span>
+                                <span class="feature">60 FPS Patches</span>
+                                <span class="feature">Good Compatibility</span>
+                                <span class="feature">Active Development</span>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">System Requirements:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    • CPU: Modern quad-core @ 3.0 GHz+ (6+ cores recommended)<br>
+                                    • GPU: Vulkan or OpenGL 4.5 compatible (AMD/NVIDIA)<br>
+                                    • RAM: 8 GB minimum, 16 GB recommended<br>
+                                    • OS: Windows 10/11, Linux (experimental)
+                                </p>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Popular Games:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    Zelda: Breath of the Wild (4K 60fps), Super Mario 3D World, Mario Kart 8, Bayonetta 2, Xenoblade Chronicles X, Pikmin 3
+                                </p>
+                            </div>
+                            <a href="https://cemu.info/" target="_blank" class="game-link">
+                                Download Cemu <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nintendo Switch Section -->
+        <section class="section" id="switch">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nintendo Switch Emulators</h2>
+                    <p class="section-subtitle">Current generation Nintendo emulation</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Ryujinx">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Ryujinx</h3>
+                            <p class="game-description">Nintendo Switch emulator with excellent accuracy, great compatibility, and active development. Play Switch games with enhanced graphics and performance.</p>
+                            <div class="game-features">
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">Great Compatibility</span>
+                                <span class="feature">Active Development</span>
+                                <span class="feature">User-Friendly</span>
+                                <span class="feature">Save States</span>
+                                <span class="feature">Mods Support</span>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">System Requirements:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    • CPU: Modern 6+ core processor<br>
+                                    • GPU: OpenGL 4.6 or Vulkan compatible<br>
+                                    • RAM: 8 GB minimum, 16 GB recommended<br>
+                                    • OS: Windows 10/11, Linux, macOS
+                                </p>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Popular Games:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    Zelda: Tears of the Kingdom, Super Mario Odyssey, Pokemon Scarlet/Violet, Metroid Dread, Animal Crossing: New Horizons, Mario Kart 8 Deluxe
+                                </p>
+                            </div>
+                            <a href="https://ryujinx.org/" target="_blank" class="game-link">
+                                Download Ryujinx <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="yuzu">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status limited">Performance Focus</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">yuzu</h3>
+                            <p class="game-description">Nintendo Switch emulator focused on performance and speed. Alternative to Ryujinx with different compatibility profile.</p>
+                            <div class="game-features">
+                                <span class="feature">Performance Optimized</span>
+                                <span class="feature">Growing Compatibility</span>
+                                <span class="feature">Multicore Support</span>
+                                <span class="feature">Graphics Enhancements</span>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Recommendation:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    Try both Ryujinx and yuzu - some games work better in one vs the other. Ryujinx is generally more accurate, yuzu may offer better performance for some titles.
+                                </p>
+                            </div>
+                            <a href="https://yuzu-emu.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nintendo 64 Section -->
+        <section class="section" id="retro">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nintendo 64 Emulators</h2>
+                    <p class="section-subtitle">Classic N64 gaming with enhancements</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Project64">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Mature</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Project64</h3>
+                            <p class="game-description">Popular N64 emulator with high compatibility, graphics enhancement plugins, and easy-to-use interface. Play N64 classics in HD.</p>
+                            <div class="game-features">
+                                <span class="feature">High Compatibility</span>
+                                <span class="feature">Graphics Plugins</span>
+                                <span class="feature">Save States</span>
+                                <span class="feature">Cheat Support</span>
+                                <span class="feature">Easy Setup</span>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <h4 style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Popular Games:</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                    Super Mario 64, Zelda: Ocarina of Time/Majora's Mask, GoldenEye 007, Mario Kart 64, Banjo-Kazooie, Perfect Dark, Donkey Kong 64
+                                </p>
+                            </div>
+                            <a href="https://www.pj64-emu.com/" target="_blank" class="game-link">
+                                Download Project64 <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Mupen64Plus">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Mupen64Plus</h3>
+                            <p class="game-description">Open-source N64 emulator with plugin system and cross-platform support. Command-line based but very accurate.</p>
+                            <div class="game-features">
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">Cross-platform</span>
+                                <span class="feature">Plugin System</span>
+                                <span class="feature">Active Development</span>
+                            </div>
+                            <a href="https://mupen64plus.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Handheld Nintendo Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nintendo Handheld Emulators</h2>
+                    <p class="section-subtitle">Game Boy, DS, and 3DS emulation</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Citra">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Citra (Nintendo 3DS)</h3>
+                            <p class="game-description">Nintendo 3DS emulator with stereoscopic 3D support, high-resolution rendering, and excellent compatibility.</p>
+                            <div class="game-features">
+                                <span class="feature">3D Support</span>
+                                <span class="feature">HD Rendering</span>
+                                <span class="feature">Good Compatibility</span>
+                                <span class="feature">Save States</span>
+                            </div>
+                            <a href="https://citra-emu.org/" target="_blank" class="game-link">
+                                Download Citra <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="DeSmuME">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Mature</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">DeSmuME (Nintendo DS)</h3>
+                            <p class="game-description">Nintendo DS emulator with dual-screen support, touchscreen functionality, and high compatibility.</p>
+                            <div class="game-features">
+                                <span class="feature">Dual Screens</span>
+                                <span class="feature">Touchscreen</span>
+                                <span class="feature">Save States</span>
+                                <span class="feature">High Compatibility</span>
+                            </div>
+                            <a href="https://desmume.org/" target="_blank" class="game-link">
+                                Download DeSmuME <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="mGBA">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Mature</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">mGBA (Game Boy Advance)</h3>
+                            <p class="game-description">Fast and accurate GBA emulator with debugging features, high compatibility, and cross-platform support.</p>
+                            <div class="game-features">
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">Fast Performance</span>
+                                <span class="feature">Debugging Tools</span>
+                                <span class="feature">Cross-platform</span>
+                            </div>
+                            <a href="https://mgba.io/" target="_blank" class="game-link">
+                                Download mGBA <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Snes9x">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Mature</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Snes9x (Super Nintendo)</h3>
+                            <p class="game-description">Accurate SNES emulator with excellent compatibility, performance, and wide platform support.</p>
+                            <div class="game-features">
+                                <span class="feature">High Accuracy</span>
+                                <span class="feature">Excellent Performance</span>
+                                <span class="feature">Cross-platform</span>
+                            </div>
+                            <a href="http://www.snes9x.com/" target="_blank" class="game-link">
+                                Download Snes9x <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Guide Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nintendo Emulation Setup Guide</h2>
+                    <p class="section-subtitle">Getting started with Nintendo emulators</p>
+                </div>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4>System Files</h4>
+                        <p><strong>Switch/3DS:</strong> Require firmware/keys dumped from your console. <strong>Dolphin/Cemu:</strong> No BIOS needed! <strong>Retro systems:</strong> Generally no BIOS required.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-compact-disc"></i>
+                        </div>
+                        <h4>Game Formats</h4>
+                        <p>Switch: NSP, XCI | Wii U: WUX, WUD | GameCube/Wii: ISO, WBFS | 3DS: CIA, 3DS | DS: NDS | GBA: GBA | N64: Z64, N64 | SNES: SFC, SMC</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h4>Configuration Tips</h4>
+                        <p>Dolphin: Use Vulkan backend. Cemu: Enable async shader compilation. Switch: Use Vulkan for NVIDIA, OpenGL for AMD. Always check compatibility lists first.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>Controller Setup</h4>
+                        <p>Nintendo controllers work great via USB/Bluetooth. For Wii games in Dolphin, map Wiimote controls. Switch Pro controller recommended for Switch emulation.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Graphics Enhancements</h4>
+                        <p>Increase internal resolution (2x-8x). Enable anti-aliasing and texture filtering. Dolphin supports HD texture packs. Cemu has graphics packs for 60fps patches and resolution mods.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Multiplayer</h4>
+                        <p>Dolphin has excellent netplay for GameCube/Wii online multiplayer. Switch emulators support local multiplayer. Configure multiple controllers in emulator settings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Legal Nintendo Emulation Guidelines</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-microchip"></i> Firmware & Keys</h4>
+                                <p>Switch and 3DS require system files dumped from consoles you own. Sharing or downloading these files is illegal. Follow official dumping guides.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-compact-disc"></i> Game Ownership</h4>
+                                <p>Only dump games from cartridges/discs you legally own. Downloading ROM files is piracy. Use legal game dumping tools and methods.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-desktop"></i> System Requirements</h4>
+                                <p>Switch emulation requires powerful modern hardware. Dolphin and N64 run on modest systems. Check compatibility lists before attempting games.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-users"></i> Community Resources</h4>
+                                <p>Visit emulator wikis for setup guides, compatibility databases, and game-specific settings. Join Discord communities for help and support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back Navigation -->
+        <section class="section">
+            <div class="container" style="text-align: center;">
+                <a href="emulators.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to All Emulators
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="../script.js?v=3.1.0"></script>
+
+    <!-- Ad Banner -->
+</body>
+</html>

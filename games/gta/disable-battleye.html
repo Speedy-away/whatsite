@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to disable BattlEye for GTA 5 on Rockstar Games Launcher, Steam, Epic Games, and the Xbox App. Step-by-step guide with the -nobattleye launch argument.">
+    <meta name="keywords" content="disable battleye gta 5, how to disable battleye gta 5, gta v nobattleye, -nobattleye, nobattleye gta 5, battleye gta 5, remove battleye gta 5, turn off battleye gta 5, disable battleye rockstar launcher, disable battleye steam, disable battleye epic games, disable battleye xbox app, disable battleye game pass, gta 5 enhanced battleye, gta 5 legacy battleye, gta 5 battleye bypass, gta v anticheat, disable anticheat gta 5, gta 5 mod menu battleye, mod menu not injecting gta 5, gta 5 mods not loading, commandline.txt gta 5, gta 5 commandline txt nobattleye, gta 5 launch arguments, gta 5 launch options steam, delete battleye folder gta 5, battleye_x64.dll gta 5, gta 5 disable battleye 2026, gta v disable battleye 1.73, battleye auto disable tool, disable battleye bat, whatwhatboy, scooby menu, 2024, 2025, 2026">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="whatwhatboy">
+    <title>How to Disable BattlEye for GTA 5 - Rockstar, Steam, Epic & Xbox</title>
+    <link rel="canonical" href="https://whatwhatboy.com/games/gta/disable-battleye.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/games/gta/disable-battleye.html">
+    <meta property="og:title" content="How to Disable BattlEye for GTA 5 - Rockstar, Steam, Epic & Xbox">
+    <meta property="og:description" content="Step-by-step guide to disable BattlEye for GTA 5 on every launcher.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/gta1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Disable BattlEye for GTA 5">
+    <meta name="twitter:description" content="Step-by-step guide to disable BattlEye for GTA 5 on every launcher.">
+
+    <link rel="icon" href="../../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css?v=3.1.0">
+
+    <!-- Structured Data: HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Disable BattlEye for GTA 5",
+        "description": "Step-by-step guide to disable BattlEye anti-cheat for GTA 5 using the -nobattleye launch argument on Rockstar Games Launcher, Steam, Epic Games, and the Xbox App.",
+        "image": "https://whatwhatboy.com/assets/images/gta1.png",
+        "totalTime": "PT2M",
+        "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+        "tool": [
+            { "@type": "HowToTool", "name": "Rockstar Games Launcher, Steam, Epic Games, or Xbox App" }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Rockstar Games Launcher",
+                "text": "Open the Rockstar Games Launcher, go to Settings, select Grand Theft Auto V, scroll to Launch Arguments and enter -nobattleye, then launch the game.",
+                "url": "https://whatwhatboy.com/games/gta/disable-battleye.html#steps"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Steam",
+                "text": "In Steam, right-click Grand Theft Auto V, choose Properties, and enter -nobattleye in the Launch Options box, then launch the game.",
+                "url": "https://whatwhatboy.com/games/gta/disable-battleye.html#steps"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Epic Games Launcher",
+                "text": "Open Epic Games Launcher Settings, expand Grand Theft Auto V under Manage Games, enable Additional Command Line Arguments and enter -nobattleye, then launch the game.",
+                "url": "https://whatwhatboy.com/games/gta/disable-battleye.html#steps"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Xbox App / Game Pass",
+                "text": "The Game Pass copy still launches through the Rockstar Games Launcher, so set -nobattleye there. Alternatively create a commandline.txt file containing -nobattleye inside the GTA V install folder.",
+                "url": "https://whatwhatboy.com/games/gta/disable-battleye.html#steps"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I disable BattlEye for GTA 5?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Add the -nobattleye launch argument to GTA V. In the Rockstar Games Launcher, Steam, or Epic Games this goes in the launch/command-line arguments box. On the Xbox App it launches through Rockstar, or you can place a commandline.txt file with -nobattleye in the game folder. You can also run our one-click .bat tool that does it automatically." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does disabling BattlEye get you banned in GTA 5?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Disabling BattlEye by itself only lets mods load. Using mods online can still get you banned server-side, so always use an alternate account." }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is the commandline.txt file for GTA 5?",
+                "acceptedAnswer": { "@type": "Answer", "text": "It goes in the GTA V install folder, the same folder that contains GTA5.exe. Create a plain text file named commandline.txt containing -nobattleye." }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is my GTA 5 mod menu not loading?",
+                "acceptedAnswer": { "@type": "Answer", "text": "BattlEye blocks most mod menus. Disable it with the -nobattleye argument. A GTA V update can restore BattlEye, so if mods stop loading, apply the argument again or delete the BattlEye folder and BattlEye_x64.dll." }
+            }
+        ]
+    }
+    </script>
+
+    <script src="https://aloudalimonyexplosion.com/36/6a/2e/366a2e3edafab888009b3076fcd47b82.js"></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../../index.html" class="nav-link" data-tooltip="Home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../../profile.html" class="nav-link" data-tooltip="Contact Info">
+                    <i class="fas fa-address-card"></i>
+                    <span>Contact Info</span>
+                </a></li>
+                <li><a href="../../index.html#discord" class="nav-link" data-tooltip="Discord Servers">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../../index.html#games" class="nav-link active" data-tooltip="Free Cheats">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../../youtube.html" class="nav-link" data-tooltip="YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="../../index.html#tools" class="nav-link" data-tooltip="Tools">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="../../mods.html" class="nav-link" data-tooltip="Game Mods">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Game Mods</span>
+                </a></li>
+                <li><a href="../../help.html" class="nav-link" data-tooltip="Help & FAQ">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="../../profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="../../profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Disable BattlEye for GTA 5</h1>
+                <p class="hero-subtitle">Step-by-step guide for every launcher — Rockstar Games Launcher, Steam, Epic Games, and the Xbox App.</p>
+
+                <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.5rem; margin: 2rem auto; max-width: 700px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-info-circle"></i> What is BattlEye?</h3>
+                    <p style="line-height: 1.6; color: var(--text-secondary); margin: 0;">BattlEye is the anti-cheat that ships with GTA V. It blocks most mod menus and injectors from loading. Disabling it lets mods run — every method below does the same thing: it tells the game to start with the <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code> launch argument.</p>
+                </div>
+
+                <!-- Copy box: the launch argument -->
+                <div style="background: var(--bg-primary); border: 2px solid var(--primary-color); border-radius: 12px; padding: 1.5rem; margin: 2rem auto; max-width: 700px;">
+                    <p style="color: var(--text-secondary); margin: 0 0 1rem 0; font-size: 0.95rem; text-align: center;">
+                        <i class="fas fa-terminal" style="color: var(--primary-color);"></i>
+                        The launch argument you need — copy it:
+                    </p>
+                    <div style="display: flex; gap: 0.75rem; align-items: stretch; flex-wrap: wrap;">
+                        <input type="text" id="argInput" value="-nobattleye" readonly onclick="this.select()"
+                               style="flex: 1; min-width: 200px; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.9rem 1rem; color: var(--primary-color); font-family: 'Courier New', monospace; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.5px;">
+                        <button onclick="copyArg()" id="copyBtn" class="btn btn-primary" style="padding: 0.9rem 1.5rem; white-space: nowrap;">
+                            <i class="fas fa-copy"></i>
+                            <span id="copyBtnText">Copy</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#steps" class="btn btn-primary">
+                        <i class="fas fa-list-ol"></i>
+                        View Steps
+                    </a>
+                    <a href="https://youtu.be/rp08KxmkHy0" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                        Video Guide
+                    </a>
+                    <button onclick="history.back()" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i>
+                        Go Back
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>4</h3>
+                        <p>Launchers Covered</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2 min</h3>
+                        <p>Setup Time</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Free</h3>
+                        <p>No Tools Needed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Banner -->
+        <div style="display: flex; justify-content: center; margin: 2rem auto;">
+            <script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>
+            <div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>
+        </div>
+
+        <!-- Warning -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card" style="max-width: 900px; margin: 0 auto;">
+                    <div class="warning-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Read This First</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-user-shield"></i> Use an Alt Account</h4>
+                                <p>Never run mods on your main account. Disabling BattlEye is how mods load — Rockstar can still ban you server-side.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-user-lock"></i> Run as Administrator</h4>
+                                <p>Some launchers won't save launch arguments unless they're running with admin rights.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-rotate"></i> Game Updates Reset This</h4>
+                                <p>A GTA V update can restore the BattlEye files. If mods stop loading, redo these steps.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-shield-virus"></i> Antivirus</h4>
+                                <p>Temporarily disable antivirus — mod menu files are commonly flagged as false positives.</p>
+                            </div>
+                        </div>
+                        <div class="warning-footer">
+                            <p><strong>Disclaimer:</strong> This guide is for educational purposes only. Use at your own risk. We are not responsible for any bans or consequences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section class="section" id="steps">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How to Disable BattlEye</h2>
+                    <p class="section-subtitle">Use the one-click tool, or follow the manual steps for your launcher</p>
+                </div>
+
+                <!-- Automatic one-click tool -->
+                <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(99, 102, 241, 0.12) 100%); border: 2px solid #10b981; border-radius: 12px; padding: 2rem; max-width: 900px; margin: 0 auto 2rem auto; text-align: center;">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #10b981; color: #fff; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.5px; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 999px; margin-bottom: 1rem;">
+                        <i class="fas fa-bolt"></i> Easiest Method
+                    </div>
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.5rem;"><i class="fas fa-wand-magic-sparkles" style="color: #10b981;"></i> One-Click Auto Tool</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0 auto 1.5rem auto; max-width: 640px;">
+                        Don't want to do it by hand? This tool finds your GTA V folder automatically (Rockstar, Steam, Epic, or Xbox), drops in the <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">commandline.txt</code> with <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code>, and deletes BattlEye for you.
+                    </p>
+                    <a href="DisableBattlEye.bat" download="DisableBattlEye.bat" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+                        <i class="fas fa-download"></i>
+                        Download Auto Tool (.bat)
+                    </a>
+                    <p style="color: var(--text-secondary); margin: 1.25rem 0 0 0; font-size: 0.9rem; line-height: 1.6;">
+                        <i class="fas fa-user-lock" style="color: #10b981;"></i> <strong style="color: var(--text-primary);">Right-click &rarr; Run as administrator.</strong> Windows SmartScreen may warn about an unknown app — click <em>More info &rarr; Run anyway</em>. Prefer to do it manually? Follow the steps below.
+                    </p>
+                </div>
+
+                <!-- Rockstar Games Launcher -->
+                <div style="background: var(--bg-primary); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem;">
+                        <i class="fas fa-star"></i>
+                        Rockstar Games Launcher
+                    </h3>
+                    <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                        <li>Open the <strong style="color: var(--text-primary);">Rockstar Games Launcher</strong>.</li>
+                        <li>Click <strong style="color: var(--text-primary);">Settings</strong> (top right), then select <strong style="color: var(--text-primary);">Grand Theft Auto V</strong> in the left sidebar.</li>
+                        <li>Scroll down to <strong style="color: var(--text-primary);">Launch Arguments</strong> (also called "Command Line Arguments").</li>
+                        <li>Type <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code> into the box.</li>
+                        <li>Close Settings and launch the game from the launcher.</li>
+                    </ol>
+                </div>
+
+                <!-- Steam -->
+                <div style="background: var(--bg-primary); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem;">
+                        <i class="fab fa-steam"></i>
+                        Steam
+                    </h3>
+                    <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                        <li>Open <strong style="color: var(--text-primary);">Steam</strong> and go to your <strong style="color: var(--text-primary);">Library</strong>.</li>
+                        <li>Right-click <strong style="color: var(--text-primary);">Grand Theft Auto V</strong> and choose <strong style="color: var(--text-primary);">Properties</strong>.</li>
+                        <li>On the <strong style="color: var(--text-primary);">General</strong> tab, find <strong style="color: var(--text-primary);">Launch Options</strong>.</li>
+                        <li>Type <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code> into the box.</li>
+                        <li>Close the window and launch GTA V from Steam.</li>
+                    </ol>
+                </div>
+
+                <!-- Epic Games -->
+                <div style="background: var(--bg-primary); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem;">
+                        <i class="fas fa-gamepad"></i>
+                        Epic Games Launcher
+                    </h3>
+                    <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                        <li>Open the <strong style="color: var(--text-primary);">Epic Games Launcher</strong>.</li>
+                        <li>Click your <strong style="color: var(--text-primary);">profile icon</strong> (top right) → <strong style="color: var(--text-primary);">Settings</strong>.</li>
+                        <li>Scroll to <strong style="color: var(--text-primary);">Manage Games</strong> and click <strong style="color: var(--text-primary);">Grand Theft Auto V</strong> to expand it.</li>
+                        <li>Tick <strong style="color: var(--text-primary);">Additional Command Line Arguments</strong>.</li>
+                        <li>Type <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code> into the box that appears.</li>
+                        <li>Launch GTA V from the Epic Games Launcher.</li>
+                    </ol>
+                </div>
+
+                <!-- Xbox App -->
+                <div style="background: var(--bg-primary); border: 2px solid #10b981; border-radius: 12px; padding: 2rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                    <h3 style="color: #10b981; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem;">
+                        <i class="fab fa-xbox"></i>
+                        Xbox App (Game Pass / Microsoft Store)
+                    </h3>
+                    <div style="background: rgba(99, 102, 241, 0.12); border: 1px solid var(--primary-color); border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; font-size: 0.95rem;">
+                            <i class="fas fa-circle-exclamation" style="color: var(--primary-color);"></i>
+                            <strong style="color: var(--text-primary);">You need the Rockstar Games Launcher.</strong> The Game Pass / Microsoft Store copy of GTA V still boots through the Rockstar Games Launcher — make sure it's installed and you're signed in to your Rockstar account before you start.
+                        </p>
+                    </div>
+
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">The Xbox App has no launch-arguments box, so you add the argument with a <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">commandline.txt</code> file inside the game folder instead.</p>
+                    <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                        <li>Open the <strong style="color: var(--text-primary);">Xbox App</strong> → <strong style="color: var(--text-primary);">Library</strong> → click <strong style="color: var(--text-primary);">Grand Theft Auto V</strong>.</li>
+                        <li>Click the <strong style="color: var(--text-primary);">⋯</strong> menu → <strong style="color: var(--text-primary);">Manage</strong> → <strong style="color: var(--text-primary);">Files</strong> → <strong style="color: var(--text-primary);">Browse...</strong> to open the install folder.</li>
+                        <li>In that folder, create a new text file named <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">commandline.txt</code> — or just download the ready-made one below.</li>
+                        <li>Open it, type <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code> and save.</li>
+                        <li style="color: #10b981;"><strong>Launch the game.</strong> BattlEye will be skipped.</li>
+                    </ol>
+
+                    <div style="background: var(--bg-secondary); border: 1px dashed var(--primary-color); border-radius: 8px; padding: 1.25rem; margin-top: 1.25rem; text-align: center;">
+                        <p style="color: var(--text-secondary); margin: 0 0 1rem 0; line-height: 1.6; font-size: 0.95rem;">
+                            <i class="fas fa-file-arrow-down" style="color: var(--primary-color);"></i>
+                            Don't want to make the file yourself? Download a ready-made <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">commandline.txt</code> and drop it straight into your GTA V folder.
+                        </p>
+                        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="commandline.txt" download="commandline.txt" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Download commandline.txt
+                            </a>
+                            <a href="DisableBattlEye.bat" download="DisableBattlEye.bat" class="btn btn-outline">
+                                <i class="fas fa-bolt"></i>
+                                Or use the Auto Tool (.bat)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 8px; padding: 1rem; margin-top: 1.25rem;">
+                        <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; font-size: 0.95rem;">
+                            <i class="fas fa-lightbulb" style="color: #10b981;"></i> <strong style="color: var(--text-primary);">Tip:</strong> Make sure Windows isn't hiding file extensions, or you'll accidentally create <code>commandline.txt.txt</code>. In File Explorer: <strong style="color: var(--text-primary);">View → Show → File name extensions</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Universal fallback -->
+                <div style="background: var(--bg-secondary); border-left: 5px solid var(--primary-color); border-radius: 8px; padding: 2rem; max-width: 900px; margin: 0 auto;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-wrench"></i> Still Not Working? (Works on Any Launcher)</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">If BattlEye still loads, delete its files directly:</p>
+                    <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                        <li>Open your <strong style="color: var(--text-primary);">GTA V install folder</strong> (where <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">GTA5.exe</code> lives).</li>
+                        <li>Delete the <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">BattlEye</code> folder.</li>
+                        <li>Delete <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">BattlEye_x64.dll</code> if it is present.</li>
+                        <li>Launch the game as normal.</li>
+                    </ol>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin: 1rem 0 0 0; font-size: 0.95rem;"><strong style="color: var(--text-primary);">Note:</strong> Verifying/repairing game files will restore BattlEye, and so will most game updates. Just repeat the steps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complete Written Guide -->
+        <section class="section" id="full-guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Complete Written Guide</h2>
+                    <p class="section-subtitle">Every step in order, start to finish &mdash; no tools required</p>
+                </div>
+
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.25rem;"><i class="fas fa-1" style="color: var(--primary-color);"></i> Turn BattlEye off in the launcher</h3>
+                        <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                            <li>Make sure BattlEye is disabled in the <strong style="color: var(--text-primary);">Rockstar Games Launcher</strong> settings.</li>
+                            <li>Add the launch argument <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code> for your launcher using the steps above, or place a <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">commandline.txt</code> containing <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">-nobattleye</code> in your game directory (Steam / Epic / Rockstar / Xbox).</li>
+                        </ol>
+                    </div>
+
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.25rem;"><i class="fas fa-2" style="color: var(--primary-color);"></i> Remove the BattlEye service</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">Open <strong style="color: var(--text-primary);">Command Prompt as Administrator</strong> and run:</p>
+                        <div style="background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; margin-bottom: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: #10b981; overflow-x: auto;">sc delete BEService</div>
+                        <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">This removes the BattlEye service completely. You can also delete the <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">BattlEye</code> folder and <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">BattlEye_x64.dll</code> from your GTA V install folder.</p>
+                    </div>
+
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.25rem;"><i class="fas fa-3" style="color: var(--primary-color);"></i> Load the game to the main menu</h3>
+                        <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                            <li>Let the game load to the <strong style="color: var(--text-primary);">main menu</strong>. Do not load story mode or online yet.</li>
+                            <li>If auto-loading into story or online mode is enabled, disable it in the game settings, then restart the game.</li>
+                        </ol>
+                    </div>
+
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.25rem;"><i class="fas fa-4" style="color: var(--primary-color);"></i> Inject your mod menu</h3>
+                        <ol style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin: 0;">
+                            <li>Once the game is at the main menu, inject your menu (N3NY000, Scooby, YimMenu, etc.).</li>
+                            <li style="color: #f59e0b;"><strong>IMPORTANT: after the DLL is injected, go to STORY MODE first.</strong></li>
+                            <li>Once you are in story mode, open the menu and use <strong style="color: var(--text-primary);">Network &rarr; Session Starter</strong> to join a public or invite-only session.</li>
+                        </ol>
+                    </div>
+
+                    <div style="background: rgba(99, 102, 241, 0.08); border: 1px solid var(--primary-color); border-radius: 12px; padding: 1.5rem;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.1rem;"><i class="fas fa-circle-check"></i> How to check it worked</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7; margin: 0 0 0.75rem 0;">If BattlEye is disabled correctly, the game launches without the BattlEye splash/service starting, and your menu injects without being kicked.</p>
+                        <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Only players who also have BattlEye disabled can join you &mdash; players with BattlEye enabled will not be able to connect, and you will not be able to join them. Pair this with <a href="fsl.html" style="color: var(--primary-color);">FSL</a> if you want a local save.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Banner -->
+        <div style="display: flex; justify-content: center; margin: 2rem auto;">
+            <script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>
+            <div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>
+        </div>
+
+        <!-- Video Guide Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Video Guide</h2>
+                    <p class="section-subtitle">Prefer to watch? Follow along with the video</p>
+                </div>
+
+                <div class="video-card" style="max-width: 800px; margin: 0 auto;">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube-nocookie.com/embed/rp08KxmkHy0"
+                                title="How to Disable BattlEye for GTA 5 - Full Tutorial"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info" style="padding: 20px;">
+                        <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fab fa-youtube" style="color: #ff0000;"></i>
+                            Watch the Full Tutorial
+                        </h3>
+                        <p>A step-by-step walkthrough of disabling BattlEye on every launcher.</p>
+                        <a href="https://youtu.be/rp08KxmkHy0" class="btn btn-youtube btn-sm" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                            Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What's Next?</h2>
+                    <p class="section-subtitle">BattlEye is off — now grab a mod menu</p>
+                </div>
+
+                <!-- Scooby Menu - featured recommendation -->
+                <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                    <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; justify-content: center; text-align: center;">
+                        <img src="https://scoobymenu.cc/assets/images/previews/gta5/GTA5_Enhanced_TTjtWhhQKQ.jpg" alt="Scooby Mod Menu" loading="lazy" onclick="openImageModal(this.src)" style="width: 320px; max-width: 100%; border-radius: 10px; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <div style="flex: 1; min-width: 260px; text-align: left;">
+                            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-color); color: #fff; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 999px; margin-bottom: 0.85rem;">
+                                <i class="fas fa-crown"></i> Recommended
+                            </div>
+                            <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.6rem;">Download Scooby Menu</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">The <strong style="color: var(--primary-color);">best free mod menu for GTA 5</strong> — full <strong style="color: var(--text-primary);">Legacy &amp; Enhanced</strong> support with money &amp; RP recovery, fun features, and protections.</p>
+                            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                                <a href="https://bstlar.com/F/ScoobyKEY" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+                                    <i class="fas fa-download"></i>
+                                    Download Scooby Menu
+                                </a>
+                                <a href="https://youtu.be/z1G9I_spDho" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-youtube"></i>
+                                    Video Guide
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cheats-grid">
+                    <div class="cheat-card featured">
+                        <div class="cheat-header">
+                            <div class="cheat-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="cheat-info">
+                                <h3>More Free Mod Menus</h3>
+                                <p>Nenyoo, Yim, Riptide and 40+ more free GTA V mod menus</p>
+                            </div>
+                        </div>
+                        <div class="cheat-actions">
+                            <a href="index.html#free-menus" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Browse Mod Menus
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cheat-card">
+                        <div class="cheat-header">
+                            <div class="cheat-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="cheat-info">
+                                <h3>Lua Scripts</h3>
+                                <p>Extend your mod menu with recovery, unlock, and utility Lua scripts</p>
+                            </div>
+                        </div>
+                        <div class="cheat-actions">
+                            <a href="index.html#lua-scripts" class="btn btn-primary">
+                                <i class="fas fa-code"></i>
+                                Browse Scripts
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cheat-card">
+                        <div class="cheat-header">
+                            <div class="cheat-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="cheat-info">
+                                <h3>Need Help?</h3>
+                                <p>Join the Discord for support, updates, and troubleshooting</p>
+                            </div>
+                        </div>
+                        <div class="cheat-actions">
+                            <a href="../../index.html#discord" class="btn btn-primary">
+                                <i class="fab fa-discord"></i>
+                                Join Discord
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 whatwhatboy's. All rights reserved.</p>
+                    <p class="disclaimer">Educational purposes only. Use at your own risk.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js?v=3.1.0"></script>
+    <script>
+        function copyArg() {
+            const input = document.getElementById('argInput');
+            const btn = document.getElementById('copyBtn');
+            const label = document.getElementById('copyBtnText');
+
+            const done = () => {
+                label.textContent = 'Copied!';
+                btn.querySelector('i').className = 'fas fa-check';
+                setTimeout(() => {
+                    label.textContent = 'Copy';
+                    btn.querySelector('i').className = 'fas fa-copy';
+                }, 2000);
+            };
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(input.value).then(done);
+            } else {
+                input.select();
+                document.execCommand('copy');
+                done();
+            }
+        }
+
+        function openImageModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = src;
+
+            modal.onclick = function (event) {
+                if (event.target === modal) {
+                    closeImageModal();
+                }
+            };
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeImageModal();
+        });
+    </script>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeImageModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Full Size Image">
+        </div>
+    </div>
+
+    <!-- Native Banner Ad -->
+    <script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>
+    <div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>
+
+    <script src="https://aloudalimonyexplosion.com/57/23/ae/5723aef0781af6b27fc0113e359a1d7c.js"></script>
+</body>
+</html>

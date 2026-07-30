@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xbox 360 hacking tools - JTAG, RGH, Aurora Dashboard, homebrew applications, game modifications, and custom firmware for Xbox 360.">
+    <meta name="keywords" content="xbox 360 jtag, xbox 360 rgh, aurora dashboard, xbox 360 homebrew, xbox 360 mods, xbox 360 hacking">
+    <meta name="author" content="whatwhatboy">
+    <title>Xbox 360 Hacking & Homebrew - whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/console/xbox360.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/console/xbox360.html">
+    <meta property="og:title" content="Xbox 360 Hacking & Homebrew - whatwhatboy">
+    <meta property="og:description" content="Xbox 360 hacking tools - JTAG, RGH, Aurora Dashboard, homebrew applications, game modifications, and custom firmware for Xbox 360.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Xbox 360 Hacking & Homebrew - whatwhatboy">
+    <meta name="twitter:description" content="Xbox 360 hacking tools - JTAG, RGH, Aurora Dashboard, homebrew applications, game modifications, and custom firmware for Xbox 360.">
+
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=3.1.0">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li><a href="../index.html#discord" class="nav-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../index.html#games" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../youtube.html" class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="../tools/index.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="index.html" class="nav-link active">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="../help.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="../profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="../profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="../profile.html" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="../profile.html" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-image" style="margin-bottom: 2rem;">
+                    <img src="../assets/images/xbox360.png" alt="Xbox 360 Hacking" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                </div>
+                <h1 class="hero-title">Xbox 360 Hacking & Homebrew</h1>
+                <p class="hero-subtitle">Complete guide to Xbox 360 modification including JTAG, RGH installation, Aurora Dashboard, homebrew applications, and game modifications.</p>
+
+                <div class="hero-buttons">
+                    <a href="#jtag-rgh" class="btn btn-primary">
+                        <i class="fas fa-microchip"></i>
+                        JTAG/RGH
+                    </a>
+                    <a href="#aurora" class="btn btn-outline">
+                        <i class="fas fa-desktop"></i>
+                        Aurora Dashboard
+                    </a>
+                    <a href="#homebrew" class="btn btn-outline">
+                        <i class="fas fa-code"></i>
+                        Homebrew Apps
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>JTAG</h3>
+                        <p>& RGH</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Homebrew</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Active</h3>
+                        <p>Community</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JTAG/RGH Section -->
+        <section class="section" id="jtag-rgh">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">JTAG & RGH Modification</h2>
+                    <p class="section-subtitle">Hardware modifications to enable homebrew and custom firmware</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="JTAG Hack">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">JTAG Installation</h3>
+                            <p class="game-description">Complete JTAG installation guide for Xbox 360 consoles with old bootloader versions.</p>
+                            <div class="game-features">
+                                <span class="feature">Hardware Mod</span>
+                                <span class="feature">Old Bootloader</span>
+                                <span class="feature">Permanent</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('JTAG tutorial would be here')">
+                                View Guide <i class="fas fa-book"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="RGH Modification">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">RGH 1.2/2.0/3.0</h3>
+                            <p class="game-description">Reset Glitch Hack installation for newer Xbox 360 consoles that can't be JTAG'd.</p>
+                            <div class="game-features">
+                                <span class="feature">Reset Glitch</span>
+                                <span class="feature">Newer Consoles</span>
+                                <span class="feature">Multiple Versions</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('RGH tutorial would be here')">
+                                View Guide <i class="fas fa-book"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="CoolRunner">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">CoolRunner & Matrix</h3>
+                            <p class="game-description">Glitch chips and modchips needed for RGH installation and timing control.</p>
+                            <div class="game-features">
+                                <span class="feature">Glitch Chips</span>
+                                <span class="feature">Timing Control</span>
+                                <span class="feature">Hardware</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Hardware info would be here')">
+                                View Hardware <i class="fas fa-microchip"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aurora Dashboard Section -->
+        <section class="section" id="aurora">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Aurora Dashboard</h2>
+                    <p class="section-subtitle">Custom dashboard replacement with advanced features</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="Aurora Dashboard">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Aurora Dashboard 0.7b</h3>
+                            <p class="game-description">Modern dashboard replacement with game library management, covers, and advanced features.</p>
+                            <div class="game-features">
+                                <span class="feature">Game Library</span>
+                                <span class="feature">Cover Art</span>
+                                <span class="feature">Modern UI</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Aurora download would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="FreeStyle Dash">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">FreeStyle Dash</h3>
+                            <p class="game-description">Alternative dashboard with game organization, media playback, and customization options.</p>
+                            <div class="game-features">
+                                <span class="feature">Game Organization</span>
+                                <span class="feature">Media Player</span>
+                                <span class="feature">Customizable</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('FreeStyle download would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="XeXMenu">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">XeXMenu</h3>
+                            <p class="game-description">Simple file manager and homebrew launcher for Xbox 360 with basic functionality.</p>
+                            <div class="game-features">
+                                <span class="feature">File Manager</span>
+                                <span class="feature">Simple</span>
+                                <span class="feature">Lightweight</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('XeXMenu download would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homebrew Applications Section -->
+        <section class="section" id="homebrew">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Homebrew Applications</h2>
+                    <p class="section-subtitle">Essential homebrew applications and utilities for modded Xbox 360</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="XM360">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">XM360 (XBLA)</h3>
+                            <p class="game-description">Media player and file manager with support for various video and audio formats.</p>
+                            <div class="game-features">
+                                <span class="feature">Media Player</span>
+                                <span class="feature">Multi-format</span>
+                                <span class="feature">File Manager</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('XM360 download would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="RetroArch 360">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">RetroArch 360</h3>
+                            <p class="game-description">Multi-system emulator supporting NES, SNES, Genesis, and many other retro consoles.</p>
+                            <div class="game-features">
+                                <span class="feature">Multi-emulator</span>
+                                <span class="feature">Retro Gaming</span>
+                                <span class="feature">Save States</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('RetroArch download would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="Neighbourhood">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Neighbourhood (FTP)</h3>
+                            <p class="game-description">FTP client for transferring files between Xbox 360 and PC over network connection.</p>
+                            <div class="game-features">
+                                <span class="feature">FTP Client</span>
+                                <span class="feature">Network Transfer</span>
+                                <span class="feature">File Management</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Neighbourhood download would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="Simple 360 NAND Flasher">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Simple 360 NAND Flasher</h3>
+                            <p class="game-description">NAND backup and flashing utility for creating and restoring console firmware backups.</p>
+                            <div class="game-features">
+                                <span class="feature">NAND Backup</span>
+                                <span class="feature">Firmware Flash</span>
+                                <span class="feature">Recovery</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('NAND Flasher download would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Modifications Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Game Modifications & Trainers</h2>
+                    <p class="section-subtitle">Game mods, trainers, and modifications for Xbox 360 games</p>
+                </div>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>Game Trainers</h4>
+                        <p>Cheat trainers and modifications for popular Xbox 360 games with unlimited health, ammo, and other features.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Visual Mods</h4>
+                        <p>Graphics modifications, texture packs, and visual enhancements for supported Xbox 360 games.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-save"></i>
+                        </div>
+                        <h4>Save Game Mods</h4>
+                        <p>Modified save games with unlocked content, completed progress, and enhanced character stats.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Modding Tools</h4>
+                        <p>Tools for creating and installing game modifications, including Horizon and Modio for save editing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Xbox 360 Modding Safety</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-exclamation-triangle"></i> Risk of Brick</h4>
+                                <p>JTAG/RGH installation requires precise soldering and can permanently damage your console if done incorrectly.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-ban"></i> Xbox Live Ban</h4>
+                                <p>Modded consoles will be permanently banned from Xbox Live. Never connect a modded console to Xbox Live.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-tools"></i> Technical Skills Required</h4>
+                                <p>Installation requires advanced soldering skills and proper equipment. Consider professional installation.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-backup"></i> NAND Backup Important</h4>
+                                <p>Always create and verify NAND backups before modification. This is essential for recovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../script.js?v=3.1.0"></script>
+
+    <!-- Ad Banner -->
+</body>
+</html>

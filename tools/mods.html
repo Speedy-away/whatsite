@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free game modification tools, mod managers, graphics enhancers, and utilities for enhancing gaming experience across all platforms.">
+    <meta name="keywords" content="game mods, mod managers, reshade, mod organizer, game utilities, graphics mods, nexus mods">
+    <meta name="author" content="whatwhatboy">
+    <title>Game Mods & Utilities - whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/tools/mods.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/tools/mods.html">
+    <meta property="og:title" content="Game Mods & Utilities - whatwhatboy">
+    <meta property="og:description" content="Free game modification tools, mod managers, graphics enhancers, and utilities for enhancing gaming experience across all platforms.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Game Mods & Utilities - whatwhatboy">
+    <meta name="twitter:description" content="Free game modification tools, mod managers, graphics enhancers, and utilities for enhancing gaming experience across all platforms.">
+
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=3.1.0">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li><a href="../index.html#discord" class="nav-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../index.html#games" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../youtube.html" class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="index.html" class="nav-link active">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="../index.html#console" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="../help.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="../profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="../profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="../profile.html" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="../profile.html" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-image" style="margin-bottom: 2rem;">
+                    <img src="https://i.imgur.com/gamemod.png" alt="Game Mods" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                </div>
+                <h1 class="hero-title">Game Mods & Utilities</h1>
+                <p class="hero-subtitle">Essential tools and utilities for game modification, graphics enhancement, and improved gaming experience. From mod managers to visual enhancers.</p>
+
+                <div class="hero-buttons">
+                    <a href="#reshade" class="btn btn-primary">
+                        <i class="fas fa-paint-brush"></i>
+                        Graphics Mods
+                    </a>
+                    <a href="#mo2" class="btn btn-outline">
+                        <i class="fas fa-folder-open"></i>
+                        Mod Managers
+                    </a>
+                    <a href="#universal" class="btn btn-outline">
+                        <i class="fas fa-cogs"></i>
+                        Utilities
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>20+</h3>
+                        <p>Tools</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Easy</h3>
+                        <p>Setup</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Safe</h3>
+                        <p>& Legal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Graphics Enhancement Section -->
+        <section class="section" id="reshade">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Graphics Enhancement Tools</h2>
+                    <p class="section-subtitle">Post-processing and visual enhancement tools for better graphics</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/reshade.png" alt="ReShade">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">ReShade 5.9</h3>
+                            <p class="game-description">Advanced post-processing injection tool with hundreds of shaders for enhancing game graphics.</p>
+                            <div class="game-features">
+                                <span class="feature">Shaders</span>
+                                <span class="feature">Post-processing</span>
+                                <span class="feature">Universal</span>
+                            </div>
+                            <a href="https://reshade.me/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/enb.png" alt="ENB Series">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">ENB Series</h3>
+                            <p class="game-description">Graphics modification for specific games like GTA, Fallout, and Skyrim with advanced lighting.</p>
+                            <div class="game-features">
+                                <span class="feature">Game-specific</span>
+                                <span class="feature">Lighting</span>
+                                <span class="feature">Advanced</span>
+                            </div>
+                            <a href="http://enbdev.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/sweetfx.png" alt="SweetFX">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">SweetFX / SMAA</h3>
+                            <p class="game-description">Color correction and anti-aliasing shader package for improving visual quality.</p>
+                            <div class="game-features">
+                                <span class="feature">Color Correction</span>
+                                <span class="feature">Anti-aliasing</span>
+                                <span class="feature">Lightweight</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/dgvoodoo.png" alt="dgVoodoo2">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">dgVoodoo2</h3>
+                            <p class="game-description">Wrapper for old graphics APIs to run legacy games on modern systems with enhanced graphics.</p>
+                            <div class="game-features">
+                                <span class="feature">Legacy Games</span>
+                                <span class="feature">API Wrapper</span>
+                                <span class="feature">Compatibility</span>
+                            </div>
+                            <a href="http://dege.freeweb.hu/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mod Managers Section -->
+        <section class="section" id="mo2">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mod Management Tools</h2>
+                    <p class="section-subtitle">Organize, install, and manage game modifications easily</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/modorganizer.png" alt="Mod Organizer 2">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Mod Organizer 2</h3>
+                            <p class="game-description">Advanced mod manager for Bethesda games with virtual file system and conflict resolution.</p>
+                            <div class="game-features">
+                                <span class="feature">Bethesda Games</span>
+                                <span class="feature">Virtual FS</span>
+                                <span class="feature">Conflict Resolution</span>
+                            </div>
+                            <a href="https://www.modorganizer.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/vortex.png" alt="Vortex">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Vortex Mod Manager</h3>
+                            <p class="game-description">Official Nexus Mods manager supporting multiple games with automated deployment.</p>
+                            <div class="game-features">
+                                <span class="feature">Multi-game</span>
+                                <span class="feature">Nexus Integration</span>
+                                <span class="feature">Automated</span>
+                            </div>
+                            <a href="https://www.nexusmods.com/about/vortex/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/nmm.png" alt="Nexus Mod Manager">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status deprecated">Legacy</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Nexus Mod Manager</h3>
+                            <p class="game-description">Legacy mod manager for older Bethesda games, now replaced by Vortex.</p>
+                            <div class="game-features">
+                                <span class="feature">Legacy</span>
+                                <span class="feature">Simple</span>
+                                <span class="feature">Basic</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Legacy tool - use Vortex instead')">
+                                Legacy Tool <i class="fas fa-archive"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/wrye.png" alt="Wrye Bash">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Wrye Bash</h3>
+                            <p class="game-description">Advanced tool for managing Bethesda game data files with bashed patch creation.</p>
+                            <div class="game-features">
+                                <span class="feature">Advanced</span>
+                                <span class="feature">Bashed Patches</span>
+                                <span class="feature">Data Management</span>
+                            </div>
+                            <a href="https://www.nexusmods.com/oblivion/mods/22368" target="_blank" class="game-link">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Universal Utilities Section -->
+        <section class="section" id="universal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Universal Gaming Utilities</h2>
+                    <p class="section-subtitle">General purpose tools for enhanced gaming experience</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/msi-afterburner.png" alt="MSI Afterburner">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">MSI Afterburner</h3>
+                            <p class="game-description">GPU overclocking and monitoring tool with in-game overlay for FPS and hardware stats.</p>
+                            <div class="game-features">
+                                <span class="feature">GPU OC</span>
+                                <span class="feature">Monitoring</span>
+                                <span class="feature">Overlay</span>
+                            </div>
+                            <a href="https://www.msi.com/Landing/afterburner/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/rivatuner.png" alt="RivaTuner">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">RivaTuner Statistics Server</h3>
+                            <p class="game-description">Advanced on-screen display server for hardware monitoring and frame rate limiting.</p>
+                            <div class="game-features">
+                                <span class="feature">OSD</span>
+                                <span class="feature">Frame Limiting</span>
+                                <span class="feature">Advanced</span>
+                            </div>
+                            <a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html" target="_blank" class="game-link">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/specialk.png" alt="Special K">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Special K</h3>
+                            <p class="game-description">Universal game modification framework for fixing issues and enhancing performance.</p>
+                            <div class="game-features">
+                                <span class="feature">Universal</span>
+                                <span class="feature">Performance</span>
+                                <span class="feature">Bug Fixes</span>
+                            </div>
+                            <a href="https://special-k.info/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/dxvk.png" alt="DXVK">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">DXVK</h3>
+                            <p class="game-description">DirectX to Vulkan translation layer for better performance on Linux and Windows.</p>
+                            <div class="game-features">
+                                <span class="feature">DX to Vulkan</span>
+                                <span class="feature">Performance</span>
+                                <span class="feature">Cross-platform</span>
+                            </div>
+                            <a href="https://github.com/doitsujin/dxvk" target="_blank" class="game-link">
+                                GitHub <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game-Specific Tools Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Game-Specific Utilities</h2>
+                    <p class="section-subtitle">Specialized tools for specific games and franchises</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/openiv.png" alt="OpenIV">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">OpenIV (GTA Series)</h3>
+                            <p class="game-description">Multi-purpose editor and archive manager for Grand Theft Auto games.</p>
+                            <div class="game-features">
+                                <span class="feature">GTA Series</span>
+                                <span class="feature">Archive Editor</span>
+                                <span class="feature">Modding</span>
+                            </div>
+                            <a href="http://openiv.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/mccc.png" alt="MC Command Center">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">MC Command Center (Sims 4)</h3>
+                            <p class="game-description">Comprehensive mod for The Sims 4 adding story progression and gameplay features.</p>
+                            <div class="game-features">
+                                <span class="feature">Sims 4</span>
+                                <span class="feature">Story Progression</span>
+                                <span class="feature">Gameplay</span>
+                            </div>
+                            <a href="https://deaderpoolmc.tumblr.com/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/skse.png" alt="SKSE">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">SKSE (Skyrim)</h3>
+                            <p class="game-description">Script extender for Skyrim enabling advanced modding capabilities and features.</p>
+                            <div class="game-features">
+                                <span class="feature">Skyrim</span>
+                                <span class="feature">Script Extender</span>
+                                <span class="feature">Advanced Mods</span>
+                            </div>
+                            <a href="https://skse.silverlock.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/loot.png" alt="LOOT">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">LOOT (Bethesda Games)</h3>
+                            <p class="game-description">Load order optimization tool for Bethesda games to prevent mod conflicts.</p>
+                            <div class="game-features">
+                                <span class="feature">Load Order</span>
+                                <span class="feature">Optimization</span>
+                                <span class="feature">Conflict Prevention</span>
+                            </div>
+                            <a href="https://loot.github.io/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safe Modding Practices</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-save"></i> Backup Your Saves</h4>
+                                <p>Always backup your game saves before installing mods or using modification tools.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-download"></i> Trusted Sources</h4>
+                                <p>Download mods and tools only from trusted sources like Nexus Mods, Steam Workshop, or official sites.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-list"></i> Read Instructions</h4>
+                                <p>Always read installation instructions and compatibility notes before installing any modifications.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-users"></i> Community Support</h4>
+                                <p>Join modding communities for help, updates, and to share your experiences with others.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../script.js?v=3.1.0"></script>
+
+    <!-- Ad Banner -->
+</body>
+</html>

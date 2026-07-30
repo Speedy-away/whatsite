@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scooby Menu - Free Access Key">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Scooby Menu - Free Key</title>
+    <link rel="canonical" href="https://whatwhatboy.com/scoobyontop2.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/scoobyontop2.html">
+    <meta property="og:title" content="Scooby Menu - Free Key">
+    <meta property="og:description" content="Scooby Menu - Free Access Key">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scooby Menu - Free Key">
+    <meta name="twitter:description" content="Scooby Menu - Free Access Key">
+    <link rel="icon" href="icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --secondary: #6366f1;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-card-hover: #1a1a25;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --border: rgba(255, 255, 255, 0.08);
+            --glow: rgba(16, 185, 129, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 70%);
+            z-index: -1;
+            animation: bgPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Grid pattern overlay */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        /* Main container */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo section */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-name {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .brand-tagline {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* Card */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        /* Key section */
+        .key-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .key-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .key-label i {
+            color: var(--primary);
+        }
+
+        .key-timer {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        .key-timer i {
+            color: var(--secondary);
+            font-size: 11px;
+        }
+
+        .key-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(99, 102, 241, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .key-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .key-box:hover::before {
+            left: 100%;
+        }
+
+        .key-box:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px var(--glow);
+            transform: translateY(-2px);
+        }
+
+        .key-text {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 1.5px;
+            text-align: center;
+            filter: blur(8px);
+            transition: filter 0.3s ease;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            word-break: break-all;
+        }
+
+        .key-box:hover .key-text,
+        .key-box:focus .key-text,
+        .key-box.revealed .key-text {
+            filter: blur(0);
+        }
+
+        .key-hint {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .key-hint i {
+            font-size: 10px;
+        }
+
+        .copy-notice {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .copy-notice.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Buttons */
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            grid-column: span 2;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-discord {
+            background: linear-gradient(135deg, #5865F2, #4752c4);
+            color: white;
+        }
+
+        .btn-discord:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(88, 101, 242, 0.4);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        /* Status indicator */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .key-text {
+                font-size: 13px;
+            }
+
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-primary {
+                grid-column: span 1;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Blocked state */
+        .blocked-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .blocked-icon {
+            font-size: 80px;
+            color: #ef4444;
+            margin-bottom: 24px;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-10px); }
+            40% { transform: translateX(10px); }
+            60% { transform: translateX(-10px); }
+            80% { transform: translateX(10px); }
+        }
+
+        .blocked-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ef4444;
+            margin-bottom: 16px;
+        }
+
+        .blocked-message {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .blocked-message strong {
+            color: var(--text-primary);
+        }
+
+        .btn-link {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(239, 68, 68, 0.4);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .blocked-steps {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .blocked-steps h4 {
+            color: #ef4444;
+            margin-bottom: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blocked-steps ol {
+            color: var(--text-secondary);
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .blocked-steps li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+    </style>
+
+
+    <script src="https://aloudalimonyexplosion.com/36/6a/2e/366a2e3edafab888009b3076fcd47b82.js"></script>
+</head>
+
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- BLOCKED CONTENT - Shows when not from correct referrer -->
+    <div class="container" id="blockedContent">
+        <div class="card blocked-container">
+            <div class="blocked-icon">
+                <i class="fas fa-skull-crossbones"></i>
+            </div>
+            <h2 class="blocked-title" id="mockTitle">Nice Try Buddy!</h2>
+            <p class="blocked-message" id="mockMsg">
+                You really thought you could just skip the steps? <strong>That's embarrassing.</strong><br><br>
+                The key is right there... you just gotta earn it like everyone else.<br>
+                <strong>No shortcuts, no hacks, no begging in Discord.</strong>
+            </p>
+
+            <div class="blocked-steps">
+                <h4><i class="fas fa-list-ol"></i> Since you clearly need help:</h4>
+                <ol>
+                    <li>Click the button below (yes, the big obvious one)</li>
+                    <li>Complete the steps like a normal person</li>
+                    <li>Get redirected here automatically (magic, right?)</li>
+                    <li>Copy the key and stop trying to be slick</li>
+                </ol>
+            </div>
+
+            <p style="font-size: 11px; color: rgba(239,68,68,0.6); margin-bottom: 20px; font-style: italic;" id="mockCounter">
+                You and <span id="failCount">4,832</span> other people tried this today. None of you got in.
+            </p>
+
+            <a href="https://bstlar.com/F/ScoobyKEY" class="btn-link" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i>
+                Fine, I'll Do It The Right Way
+            </a>
+        </div>
+    </div>
+
+    <script>
+    // Mock system for bypass attempts
+    (function(){
+        var bl = document.getElementById('blockedContent');
+        if(!bl || bl.classList.contains('hidden')) return;
+
+        // Track repeat offenders
+        var attempts = parseInt(localStorage.getItem('_sba')||'0') + 1;
+        localStorage.setItem('_sba', attempts.toString());
+
+        var title = document.getElementById('mockTitle');
+        var msg = document.getElementById('mockMsg');
+        var fc = document.getElementById('failCount');
+
+        // Fake fail counter (random but consistent per day)
+        var today = new Date().toDateString();
+        var dayHash = 0;
+        for(var i=0;i<today.length;i++) dayHash = ((dayHash<<5)-dayHash)+today.charCodeAt(i);
+        fc.textContent = (Math.abs(dayHash % 8000) + 3000).toLocaleString();
+
+        // Escalating roasts based on how many times they've tried
+        if(attempts === 1) {
+            // First time - default message is fine
+        } else if(attempts === 2) {
+            title.textContent = 'Back Again?';
+            msg.innerHTML = 'You came back thinking it would work this time? <strong>It won\'t.</strong><br><br>The key system has been updated. Your old tricks are dead.<br><strong>Just do the steps. It takes 30 seconds.</strong>';
+        } else if(attempts === 3) {
+            title.textContent = 'Bro... Seriously?';
+            msg.innerHTML = 'This is attempt #' + attempts + '. At this point you could have gotten the key <strong>5 times over</strong> if you just did the steps.<br><br>We admire the persistence though. <strong>Too bad it\'s completely pointless.</strong>';
+        } else if(attempts <= 5) {
+            title.textContent = 'You Again? \u{1F480}';
+            msg.innerHTML = 'Attempt #' + attempts + '. You\'ve spent more time trying to bypass this than it takes to actually get the key.<br><br><strong>This is genuinely sad at this point.</strong> The button is RIGHT THERE.';
+        } else if(attempts <= 10) {
+            title.textContent = 'Certified Clown \u{1F921}';
+            msg.innerHTML = '<strong>Attempt #' + attempts + '</strong>. Bro you\'re a whole circus at this point.<br><br>The key page is literally free. The steps take 30 seconds. You\'ve wasted more time refreshing this page than every other user combined.<br><br><strong>We\'re genuinely concerned about you.</strong>';
+        } else {
+            title.textContent = 'Legend of Failure';
+            msg.innerHTML = '<strong>' + attempts + ' attempts.</strong> You should get an award for this level of dedication to doing things the wrong way.<br><br>At this point we think you just enjoy reading these messages.<br><br><strong>We respect the grind. Now click the button.</strong>';
+        }
+    })();
+    </script>
+
+    <!-- ACTUAL KEY CONTENT - Hidden by default, shown only if from correct referrer -->
+    <div class="container hidden" id="keyContent">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="Scooby Menu" class="logo">
+            <h1 class="brand-name">Scooby Menu</h1>
+            <p class="brand-tagline">Premium GTA V Experience</p>
+        </div>
+
+        <!-- Status Badge -->
+        <div style="text-align: center;">
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                Key Active
+            </div>
+        </div>
+
+        <!-- Key Card -->
+        <div class="card">
+            <div class="key-header">
+                <span class="key-label">
+                    <i class="fas fa-key"></i>
+                    Free Access Key
+                </span>
+                <span class="key-timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timerDisplay">Refreshes in --:--</span>
+                </span>
+            </div>
+
+            <div class="key-box" id="keyBox" tabindex="0" title="Hover to reveal, click to copy">
+                <div class="key-text" id="keyText">LOADING...</div>
+            </div>
+
+            <div class="key-hint">
+                <i class="fas fa-eye"></i>
+                Hover to reveal &#8226; Click to copy &#8226; Press <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">C</kbd> to copy
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-grid">
+                <a href="https://scoobymenu.cc/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fas fa-globe"></i>
+                    Official Website
+                </a>
+                <a href="https://discord.gg/ZzPUqQ3k8n" target="_blank" rel="noopener noreferrer" class="btn btn-discord">
+                    <i class="fab fa-discord"></i>
+                    Discord
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="usersCount">10K+</div>
+                <div class="stat-label">Users</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Support</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">Free</div>
+                <div class="stat-label">Forever</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://scoobymenu.cc/" target="_blank" rel="noopener noreferrer">Website</a>
+                <a href="https://discord.gg/CQwSYeDGG8" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="details.html">FAQ</a>
+            </div>
+            <p class="footer-copyright">&copy; 2026 Scooby Menu. All rights reserved.</p>
+        </div>
+    </div><!-- End of keyContent -->
+
+    <!-- Copy Notice -->
+    <div class="copy-notice" id="copyNotice">
+        <i class="fas fa-check-circle"></i>
+        Key copied to clipboard!
+    </div>
+
+    <script>
+        // Referrer check - only allow access from bstlar.com or with valid ref param
+        (function() {
+            const referrer = document.referrer;
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Multiple ways to verify access
+            const _dc = function(s){return atob(s)};
+            const allowedReferrers = ['YnN0bGFyLmNvbQ==','YnN0bGFyLm5ldA==','YnN0Lmdn','Ym9vc3QuaW5r','Ym9vc3Rpbms='].map(_dc);
+            const validRefParams = [_dc('YnN0bGFyc3I0ZWR4Z3locnQ2ZnJoZ3J0NmZmZ2RyZGRmcjRldXlqaGZnZw=='),_dc('djJfazN5XzRjYzNzc18yMDI2')];
+            const validTokens = [_dc('c2Nvb2J5MjAyNQ=='),_dc('c2Nvb2J5X3YyXzIwMjY=')];
+
+            // Check all verification methods
+            const isValidReferrer = allowedReferrers.some(domain => referrer.toLowerCase().includes(domain));
+            const hasValidRef = validRefParams.includes(urlParams.get('ref'));
+            const hasValidToken = validTokens.includes(urlParams.get('token'));
+
+            const isAuthorized = isValidReferrer || hasValidRef || hasValidToken;
+
+            // Immediately clean URL if ref param exists (before anything else)
+            if (urlParams.has('ref') || urlParams.has('token')) {
+                window.history.replaceState({}, '', window.location.pathname);
+            }
+
+            if (isAuthorized) {
+                // Show key content, hide blocked content
+                document.getElementById('blockedContent').classList.add('hidden');
+                document.getElementById('keyContent').classList.remove('hidden');
+
+                // Set a session marker (expires when browser closes)
+                sessionStorage.setItem('scooby_verified', Date.now().toString());
+            } else {
+                // Check if they were recently verified in this session
+                const verified = sessionStorage.getItem('scooby_verified');
+                if (verified) {
+                    document.getElementById('blockedContent').classList.add('hidden');
+                    document.getElementById('keyContent').classList.remove('hidden');
+                }
+                // Otherwise blocked content is shown by default
+            }
+        })();
+
+        // Key rotation system - changes every 4 hours
+        const KEY_ROTATION_HOURS = 4;
+
+        // Key engine v2
+        function generateKey(seed) {
+            var _e=[9,57,106,106,56,35,23,105,52,47,17,105,35,104,106,104,108,123],_s='';
+            for(var i=0;i<_e.length;i++)_s+=String.fromCharCode(_e[i]^90);
+            var sd=seed.toString();
+            function _fh(d){var h=2166136261;for(var j=0;j<d.length;j++){h^=d.charCodeAt(j);h=Math.imul(h,16777619);}return h>>>0;}
+            function _sg(v,n){var c='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',r='';for(var j=0;j<n;j++){r+=c[v%36];v=Math.floor(v/36);}return r;}
+            return 'SCOOBY-FREE-'+_sg(_fh(sd+'|1|'+_s),4)+'-'+_sg(_fh(sd+'|2|'+_s),4)+'-'+_sg(_fh(sd+'|3|'+_s),4);
+        }
+
+        function generateSegment() { return ''; }
+
+        // Get current time seed (changes every KEY_ROTATION_HOURS hours)
+        function getTimeSeed() {
+            const now = new Date();
+            const hours = Math.floor(now.getTime() / (1000 * 60 * 60 * KEY_ROTATION_HOURS));
+            return hours;
+        }
+
+        // Calculate time until next key rotation
+        function getTimeUntilRotation() {
+            const now = new Date();
+            const msPerRotation = KEY_ROTATION_HOURS * 60 * 60 * 1000;
+            const currentPeriodStart = Math.floor(now.getTime() / msPerRotation) * msPerRotation;
+            const nextRotation = currentPeriodStart + msPerRotation;
+            return nextRotation - now.getTime();
+        }
+
+        // Format milliseconds to HH:MM:SS
+        function formatTime(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            if (hours > 0) {
+                return `${hours}h ${minutes}m`;
+            }
+            return `${minutes}m ${seconds}s`;
+        }
+
+        // Current key
+        let currentKey = '';
+
+        // Initialize and update key
+        function updateKey() {
+            const seed = getTimeSeed();
+            currentKey = generateKey(seed);
+            document.getElementById('keyText').textContent = currentKey;
+        }
+
+        // Update timer display
+        function updateTimer() {
+            const remaining = getTimeUntilRotation();
+            document.getElementById('timerDisplay').textContent = `Refreshes in ${formatTime(remaining)}`;
+
+            // Check if key needs to be regenerated
+            const newSeed = getTimeSeed();
+            const newKey = generateKey(newSeed);
+            if (newKey !== currentKey) {
+                updateKey();
+            }
+        }
+
+        // Copy functionality
+        const keyBox = document.getElementById('keyBox');
+        const copyNotice = document.getElementById('copyNotice');
+
+        function copyKey() {
+            navigator.clipboard.writeText(currentKey).then(() => {
+                copyNotice.classList.add('show');
+                setTimeout(() => {
+                    copyNotice.classList.remove('show');
+                }, 2500);
+            }).catch(err => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = currentKey;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+
+                copyNotice.classList.add('show');
+                setTimeout(() => {
+                    copyNotice.classList.remove('show');
+                }, 2500);
+            });
+        }
+
+        keyBox.addEventListener('click', copyKey);
+
+        // Keyboard shortcut
+        document.addEventListener('keydown', function(e) {
+            if (e.key.toLowerCase() === 'c' && !e.ctrlKey && !e.metaKey) {
+                copyKey();
+            }
+        });
+
+        // Initialize
+        updateKey();
+        updateTimer();
+
+        // Update timer every second
+        setInterval(updateTimer, 1000);
+
+        // Anti-extraction measures
+        (function(){
+            try{Object.defineProperty(window,'ScoobyKeyAPI',{get:function(){return void 0},set:function(){},configurable:false});}catch(x){}
+            var kt=document.getElementById('keyText'),kb=document.getElementById('keyBox');
+            kt.addEventListener('dragstart',function(e){e.preventDefault()});
+            kt.addEventListener('selectstart',function(e){e.preventDefault()});
+            if(navigator.webdriver){kt.textContent='ACCESS DENIED';kb.style.pointerEvents='none';}
+            var ci=new Image();Object.defineProperty(ci,'id',{get:function(){kt.textContent='[PROTECTED]';kt.style.filter='blur(20px)';}});
+            setInterval(function(){console.log('%c',ci);},5000);
+        })();
+
+        // Block DevTools keyboard shortcuts
+        document.addEventListener('keydown',function(e){
+            if(e.key==='F12'){e.preventDefault();return false;}
+            if(e.ctrlKey&&e.shiftKey&&['I','i','J','j','C','c'].indexOf(e.key)!==-1){e.preventDefault();return false;}
+            if(e.ctrlKey&&(e.key==='U'||e.key==='u')){e.preventDefault();return false;}
+        });
+
+        // Disable right-click
+        document.addEventListener('contextmenu',function(e){e.preventDefault();return false;});
+
+        // Iframe protection
+        if(window.self!==window.top){document.body.innerHTML='';window.top.location=window.self.location;}
+
+        // Hide key when tab is not visible
+        document.addEventListener('visibilitychange',function(){
+            var k=document.getElementById('keyText');
+            if(!k)return;
+            if(document.hidden){k.setAttribute('data-r',k.textContent);k.textContent='\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022';k.style.filter='blur(8px)';}
+            else{var r=k.getAttribute('data-r');if(r)k.textContent=r;k.removeAttribute('data-r');}
+        });
+
+        // Console poisoning
+        (function(){var n=function(){};try{Object.defineProperty(window,'console',{get:function(){return{log:n,warn:n,error:n,info:n,debug:n,dir:n,table:n,trace:n,assert:n,clear:n,group:n,groupEnd:n};},set:function(){}});}catch(e){}})();
+    </script>
+
+    <!-- Native Banner Ad -->
+    <script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>
+    <div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>
+
+    <script src="https://aloudalimonyexplosion.com/57/23/ae/5723aef0781af6b27fc0113e359a1d7c.js"></script>
+</body>
+</html>

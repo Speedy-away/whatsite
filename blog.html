@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news, updates, tutorials, and announcements from whatwhatboy. Stay up to date with new cheats, tools, and community events.">
+    <meta property="og:url" content="https://whatwhatboy.com/blog.html">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:title" content="Blog - whatwhatboy">
+    <meta property="og:description" content="Latest news, updates, tutorials, and announcements from whatwhatboy.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - News, Updates & Tutorials | whatwhatboy">
+    <meta name="twitter:description" content="Latest news, updates, tutorials, and announcements from whatwhatboy. Stay up to date with new cheats, tools, and community events.">
+    <meta name="author" content="whatwhatboy">
+    <title>Blog - News, Updates & Tutorials | whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/blog.html">
+
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3.1.0">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link" data-tooltip="Home"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="profile.html" class="nav-link" data-tooltip="Contact Info"><i class="fas fa-address-card"></i><span>Contact Info</span></a></li>
+                <li><a href="index.html#discord" class="nav-link" data-tooltip="Discord Servers"><i class="fab fa-discord"></i><span>Discord Servers</span></a></li>
+                <li><a href="index.html#games" class="nav-link" data-tooltip="Free Cheats"><i class="fas fa-gamepad"></i><span>Free Cheats</span></a></li>
+                <li><a href="youtube.html" class="nav-link" data-tooltip="YouTube"><i class="fab fa-youtube"></i><span>YouTube</span></a></li>
+                <li><a href="index.html#tools" class="nav-link" data-tooltip="Tools"><i class="fas fa-wrench"></i><span>Tools</span></a></li>
+                <li><a href="mods.html" class="nav-link" data-tooltip="Game Mods"><i class="fas fa-puzzle-piece"></i><span>Game Mods</span></a></li>
+                <li><a href="apk.html" class="nav-link" data-tooltip="APK Downloads"><i class="fab fa-android"></i><span>APK Downloads</span></a></li>
+                <li><a href="index.html#console" class="nav-link" data-tooltip="Console"><i class="fas fa-tv"></i><span>Console</span></a></li>
+                <li><a href="console/emulators.html" class="nav-link" data-tooltip="Emulators"><i class="fas fa-desktop"></i><span>Emulators</span></a></li>
+                <li><a href="blog.html" class="nav-link active" data-tooltip="Blog"><i class="fas fa-newspaper"></i><span>Blog</span></a></li>
+                <li><a href="help.html" class="nav-link" data-tooltip="Help & FAQ"><i class="fas fa-question-circle"></i><span>Help & FAQ</span></a></li>
+            </ul>
+            <div class="sidebar-social">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@whatwhatboy98" target="_blank" rel="noopener noreferrer" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://discord.gg/dCdEnpJM" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://t.me/whatwhatboy" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu"><i class="fas fa-bars"></i></button>
+
+    <div class="main-content" id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Blog</h1>
+                <p class="page-subtitle">News, updates, tutorials, and announcements</p>
+            </div>
+        </section>
+
+        <!-- Blog Filters -->
+        <section class="section" style="padding-top: 2rem; padding-bottom: 0;">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active blog-filter-btn" data-category="all">All</button>
+                    <button class="filter-btn blog-filter-btn" data-category="update">Updates</button>
+                    <button class="filter-btn blog-filter-btn" data-category="tutorial">Tutorials</button>
+                    <button class="filter-btn blog-filter-btn" data-category="news">News</button>
+                    <button class="filter-btn blog-filter-btn" data-category="release">Releases</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts -->
+        <section class="section">
+            <div class="container">
+                <div class="blog-grid">
+                    <div class="blog-card" data-category="update">
+                        <span class="blog-tag tag-update">Update</span>
+                        <h3 class="blog-title">Complete Site Redesign</h3>
+                        <p class="blog-date"><i class="far fa-calendar"></i> March 6, 2026</p>
+                        <p class="blog-excerpt">We've completely redesigned the site with a clean minimalist look. New features include better navigation, faster loading, category filters, animated hero section, and this blog. Everything has been streamlined for a better user experience.</p>
+                        <div class="blog-tags-list">
+                            <span>Website</span>
+                            <span>Design</span>
+                            <span>Update</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="tutorial">
+                        <span class="blog-tag tag-tutorial">Tutorial</span>
+                        <h3 class="blog-title">How to Install Mod Menus Safely</h3>
+                        <p class="blog-date"><i class="far fa-calendar"></i> March 5, 2026</p>
+                        <p class="blog-excerpt">A step-by-step guide on safely installing mod menus for GTA V and other games. Learn about antivirus whitelisting, safe injection methods, and avoiding bans. Always use an alt account for safety.</p>
+                        <div class="blog-tags-list">
+                            <span>GTA V</span>
+                            <span>Safety</span>
+                            <span>Guide</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="news">
+                        <span class="blog-tag tag-news">News</span>
+                        <h3 class="blog-title">New Discord Communities</h3>
+                        <p class="blog-date"><i class="far fa-calendar"></i> March 4, 2026</p>
+                        <p class="blog-excerpt">We've expanded our Discord presence with dedicated servers for different games and communities. Join our official server, Infamous GTA Modding, N3NY000 Community, or RIPTIDE GTA for specialized support.</p>
+                        <div class="blog-tags-list">
+                            <span>Discord</span>
+                            <span>Community</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="release">
+                        <span class="blog-tag tag-release">Release</span>
+                        <h3 class="blog-title">CS2 Cheats Now Available</h3>
+                        <p class="blog-date"><i class="far fa-calendar"></i> March 3, 2026</p>
+                        <p class="blog-excerpt">Counter-Strike 2 cheats have been updated with the latest features including aimbot, wallhack, and ESP tools. All tools have been tested and verified working with the latest CS2 update.</p>
+                        <div class="blog-tags-list">
+                            <span>CS2</span>
+                            <span>Release</span>
+                            <span>Cheats</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="tutorial">
+                        <span class="blog-tag tag-tutorial">Tutorial</span>
+                        <h3 class="blog-title">Setting Up Console Emulators</h3>
+                        <p class="blog-date"><i class="far fa-calendar"></i> March 2, 2026</p>
+                        <p class="blog-excerpt">Learn how to set up emulators for PlayStation, Xbox, Nintendo, and more on your PC. This guide covers RPCS3, Xenia, Dolphin, Yuzu alternatives, and all the essentials to get started.</p>
+                        <div class="blog-tags-list">
+                            <span>Emulators</span>
+                            <span>Console</span>
+                            <span>Guide</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="update">
+                        <span class="blog-tag tag-update">Update</span>
+                        <h3 class="blog-title">APK Downloads Section Expanded</h3>
+                        <p class="blog-date"><i class="far fa-calendar"></i> March 1, 2026</p>
+                        <p class="blog-excerpt">The APK downloads section has been expanded with new apps for Android, Firestick, and TV Box devices. APK Time v2.2 remains our recommended app manager with installation guides included.</p>
+                        <div class="blog-tags-list">
+                            <span>APK</span>
+                            <span>Android</span>
+                            <span>Firestick</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/images/logo.png" alt="Logo" class="footer-logo">
+                        <h3>whatwhatboy</h3>
+                    </div>
+                    <p>Game developer and content creator. Building gaming communities and creating educational content.</p>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a href="https://discord.gg/dCdEnpJM" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                        <a href="https://t.me/whatwhatboy" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#games">Games</a></li>
+                        <li><a href="index.html#tools">Tools</a></li>
+                        <li><a href="index.html#console">Console</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Popular Games</h4>
+                    <ul>
+                        <li><a href="games/gta/index.html">GTA V Cheats</a></li>
+                        <li><a href="games/cs2/index.html">CS2 Cheats</a></li>
+                        <li><a href="games/cod/index.html">COD Cheats</a></li>
+                        <li><a href="games/gmod/index.html">GMOD Cheats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help & FAQ</a></li>
+                        <li><a href="profile.html">Contact</a></li>
+                        <li><a href="safety.html">Safety Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 whatwhatboy. All rights reserved.</p>
+                    <p class="disclaimer">Educational purposes only. Use at your own risk.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="script.js?v=3.1.0"></script>
+</body>
+</html>

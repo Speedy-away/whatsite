@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scooby Menu - Access Key Verification">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Scooby Menu - Please Wait</title>
+    <link rel="canonical" href="https://whatwhatboy.com/scoobyontop.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/scoobyontop.html">
+    <meta property="og:title" content="Scooby Menu - Please Wait">
+    <meta property="og:description" content="Scooby Menu - Access Key Verification">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scooby Menu - Please Wait">
+    <meta name="twitter:description" content="Scooby Menu - Access Key Verification">
+    <link rel="icon" href="icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --secondary: #6366f1;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-card-hover: #1a1a25;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --border: rgba(255, 255, 255, 0.08);
+            --glow: rgba(16, 185, 129, 0.3);
+            --warning: #f59e0b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 70%);
+            z-index: -1;
+            animation: bgPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Grid pattern overlay */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        /* Main container */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo section */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-name {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .brand-tagline {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* Card */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        /* Countdown section */
+        .countdown-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
+
+        .countdown-header i {
+            color: var(--primary);
+        }
+
+        .countdown-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(99, 102, 241, 0.1));
+            border: 3px solid rgba(16, 185, 129, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .countdown-circle::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: var(--primary);
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .countdown-number {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--primary);
+            text-shadow: 0 0 30px var(--glow);
+            transition: all 0.3s ease;
+        }
+
+        .countdown-number i {
+            font-size: 48px;
+        }
+
+        .countdown-text {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* Progress bar */
+        .progress-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            height: 8px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            width: 0%;
+            transition: width 1s linear;
+            box-shadow: 0 0 20px var(--glow);
+        }
+
+        /* Button */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-primary:disabled {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Instructions box */
+        .instructions-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 20px;
+        }
+
+        .instructions-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--warning);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .instruction-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .instruction-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .instruction-item i {
+            color: var(--warning);
+            font-size: 12px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .instruction-item strong {
+            color: var(--text-primary);
+        }
+
+        /* Info items */
+        .info-section {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .info-item i {
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        /* Status badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--secondary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.9); }
+        }
+
+        /* Ready state */
+        .ready-state .countdown-circle {
+            border-color: var(--primary);
+            box-shadow: 0 0 40px var(--glow);
+        }
+
+        .ready-state .countdown-circle::before {
+            animation: none;
+            border-color: var(--primary);
+        }
+
+        .ready-state .status-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+        }
+
+        .ready-state .status-dot {
+            background: var(--primary);
+        }
+
+        /* Copy notice */
+        .copy-notice {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .copy-notice.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .countdown-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .countdown-number {
+                font-size: 44px;
+            }
+
+            .info-section {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
+        }
+    </style>
+    <script src="https://aloudalimonyexplosion.com/36/6a/2e/366a2e3edafab888009b3076fcd47b82.js"></script>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="container" id="mainContent">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="Scooby Menu" class="logo">
+            <h1 class="brand-name">Scooby Menu</h1>
+            <p class="brand-tagline">Premium GTA V Experience</p>
+        </div>
+
+        <!-- Status Badge -->
+        <div style="text-align: center;">
+            <div class="status-badge" id="statusBadge">
+                <span class="status-dot"></span>
+                <span id="statusText">Verifying Access</span>
+            </div>
+        </div>
+
+        <!-- Countdown Card -->
+        <div class="card">
+            <div class="countdown-header">
+                <i class="fas fa-clock"></i>
+                Please Wait
+            </div>
+
+            <div class="countdown-circle" id="countdownCircle">
+                <span class="countdown-number" id="countdown">5</span>
+            </div>
+
+            <p class="countdown-text" id="countdownText">Verifying request and generating key...</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <button class="btn btn-primary" id="downloadBtn" disabled>
+                <i class="fas fa-lock" id="btnIcon"></i>
+                <span id="btnText">Locked - Please Wait</span>
+            </button>
+
+            <!-- Instructions -->
+            <div class="instructions-box">
+                <div class="instructions-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Important Instructions
+                </div>
+                <div class="instruction-item">
+                    <i class="fas fa-arrow-right"></i>
+                    <span><strong>Step 1:</strong> Follow the steps on the next page carefully</span>
+                </div>
+                <div class="instruction-item">
+                    <i class="fas fa-arrow-right"></i>
+                    <span><strong>Step 2:</strong> Use <strong>Microsoft EDGE Browser</strong> for best results</span>
+                </div>
+                <div class="instruction-item">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span><strong>Warning:</strong> Issues may occur if not using EDGE browser</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <div class="info-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure Access</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-ad"></i>
+                <span>Ad-Supported</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Free Forever</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="footer-copyright">&copy; 2026 Scooby Menu • whatwhatboy's</p>
+        </div>
+    </div>
+
+    <!-- Success Notice -->
+    <div class="copy-notice" id="successNotice">
+        <i class="fas fa-check-circle"></i>
+        Access Granted!
+    </div>
+
+    <script>
+        const COUNTDOWN_SECONDS = 5;
+        const DOWNLOAD_URL = 'https://bstlar.com/F/ScoobyKEY';
+
+        let timeLeft = COUNTDOWN_SECONDS;
+        const countdownElement = document.getElementById('countdown');
+        const progressBar = document.getElementById('progressBar');
+        const countdownText = document.getElementById('countdownText');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
+        const countdownCircle = document.getElementById('countdownCircle');
+        const mainContent = document.getElementById('mainContent');
+        const statusBadge = document.getElementById('statusBadge');
+        const statusText = document.getElementById('statusText');
+        const successNotice = document.getElementById('successNotice');
+
+        // Initialize progress
+        updateProgress();
+
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            updateProgress();
+
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                enableDownload();
+            }
+        }, 1000);
+
+        function updateProgress() {
+            const progress = ((COUNTDOWN_SECONDS - timeLeft) / COUNTDOWN_SECONDS) * 100;
+            progressBar.style.width = progress + '%';
+
+            if (timeLeft > 3) {
+                countdownText.textContent = 'Verifying request and generating key...';
+            } else if (timeLeft > 1) {
+                countdownText.textContent = 'Generating secure access key...';
+            } else if (timeLeft > 0) {
+                countdownText.textContent = 'Almost ready...';
+            }
+        }
+
+        function enableDownload() {
+            // Update container state
+            mainContent.classList.add('ready-state');
+
+            // Update countdown display
+            countdownElement.innerHTML = '<i class="fas fa-check"></i>';
+            countdownText.textContent = 'Access granted! Click below to continue.';
+            countdownText.style.color = 'var(--primary)';
+
+            // Update status badge
+            statusText.textContent = 'Ready';
+
+            // Enable button
+            downloadBtn.disabled = false;
+            btnText.textContent = 'Get Access Key';
+            btnIcon.className = 'fas fa-arrow-right';
+
+            // Show success notice briefly
+            successNotice.classList.add('show');
+            setTimeout(() => {
+                successNotice.classList.remove('show');
+            }, 2500);
+
+            // Create confetti
+            createConfetti();
+        }
+
+        function createConfetti() {
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.style.cssText = `
+                        position: fixed;
+                        width: 8px;
+                        height: 8px;
+                        background: hsl(${Math.random() * 360}, 70%, 60%);
+                        left: ${Math.random() * 100}%;
+                        top: -10px;
+                        border-radius: 50%;
+                        pointer-events: none;
+                        z-index: 1000;
+                    `;
+                    document.body.appendChild(confetti);
+
+                    const fall = confetti.animate([
+                        { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                        { transform: `translateY(100vh) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+                    ], {
+                        duration: 2000 + Math.random() * 1000,
+                        easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                    });
+
+                    fall.onfinish = () => confetti.remove();
+                }, i * 40);
+            }
+        }
+
+        downloadBtn.addEventListener('click', () => {
+            if (!downloadBtn.disabled) {
+                btnText.textContent = 'Redirecting...';
+                btnIcon.className = 'fas fa-spinner fa-spin';
+
+                setTimeout(() => {
+                    window.location.href = DOWNLOAD_URL;
+                }, 500);
+            }
+        });
+    </script>
+
+    <!-- Native Banner Ad -->
+    <script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>
+    <div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>
+
+    <script src="https://aloudalimonyexplosion.com/57/23/ae/5723aef0781af6b27fc0113e359a1d7c.js"></script>
+</body>
+</html>

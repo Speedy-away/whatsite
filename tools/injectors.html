@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free DLL injectors and memory tools for game hacking - Extreme Injector, Process Hacker, Cheat Engine, and more professional injection tools.">
+    <meta name="keywords" content="dll injector, extreme injector, process hacker, cheat engine, memory injection, game hacking tools">
+    <meta name="author" content="whatwhatboy">
+    <title>DLL Injectors & Memory Tools - whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/tools/injectors.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/tools/injectors.html">
+    <meta property="og:title" content="DLL Injectors & Memory Tools - whatwhatboy">
+    <meta property="og:description" content="Free DLL injectors and memory tools for game hacking - Extreme Injector, Process Hacker, Cheat Engine, and more professional injection tools.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DLL Injectors & Memory Tools - whatwhatboy">
+    <meta name="twitter:description" content="Free DLL injectors and memory tools for game hacking - Extreme Injector, Process Hacker, Cheat Engine, and more professional injection tools.">
+
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=3.1.0">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li><a href="../index.html#discord" class="nav-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../index.html#games" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../youtube.html" class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="index.html" class="nav-link active">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="../index.html#console" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="../help.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="../profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="../profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="../profile.html" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="../profile.html" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-image" style="margin-bottom: 2rem;">
+                    <img src="https://i.imgur.com/injectors.png" alt="DLL Injectors" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                </div>
+                <h1 class="hero-title">DLL Injectors & Memory Tools</h1>
+                <p class="hero-subtitle">Professional injection tools for loading DLLs, cheats, and modifications into game processes. Essential tools for game hacking and memory manipulation.</p>
+
+                <div class="hero-buttons">
+                    <a href="#popular" class="btn btn-primary">
+                        <i class="fas fa-star"></i>
+                        Popular Tools
+                    </a>
+                    <a href="#advanced" class="btn btn-outline">
+                        <i class="fas fa-cogs"></i>
+                        Advanced Tools
+                    </a>
+                    <a href="#portable" class="btn btn-outline">
+                        <i class="fas fa-mobile-alt"></i>
+                        Portable Tools
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Injectors</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Safe</h3>
+                        <p>Downloads</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Free</h3>
+                        <p>Always</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Injectors Section -->
+        <section class="section" id="popular">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Popular DLL Injectors</h2>
+                    <p class="section-subtitle">Most widely used and trusted injection tools</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card" id="extreme">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/extremeinjector.png" alt="Extreme Injector">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Extreme Injector v3.7.3</h3>
+                            <p class="game-description">Most popular DLL injector with multiple injection methods, stealth mode, and advanced anti-detection features.</p>
+                            <div class="game-features">
+                                <span class="feature">Manual Map</span>
+                                <span class="feature">Stealth Injection</span>
+                                <span class="feature">Multiple Methods</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" id="cheatengine">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/cheatengine.png" alt="Cheat Engine">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Cheat Engine 7.5</h3>
+                            <p class="game-description">Comprehensive memory scanner and debugger with injection capabilities, table creation, and scripting support.</p>
+                            <div class="game-features">
+                                <span class="feature">Memory Scanner</span>
+                                <span class="feature">Debugger</span>
+                                <span class="feature">Scripting</span>
+                            </div>
+                            <a href="https://cheatengine.org/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" id="processhacker">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/processhacker.png" alt="Process Hacker">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Process Hacker 3.0</h3>
+                            <p class="game-description">Advanced system monitoring tool with injection capabilities and comprehensive process management.</p>
+                            <div class="game-features">
+                                <span class="feature">Process Monitor</span>
+                                <span class="feature">Memory Editor</span>
+                                <span class="feature">DLL Injection</span>
+                            </div>
+                            <a href="https://processhacker.sourceforge.io/" target="_blank" class="game-link">
+                                Official Site <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/#" alt="Xenos Injector">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Xenos Injector</h3>
+                            <p class="game-description">Lightweight injector with manual mapping support and various injection techniques for bypassing detection.</p>
+                            <div class="game-features">
+                                <span class="feature">Manual Mapping</span>
+                                <span class="feature">Lightweight</span>
+                                <span class="feature">Bypass Methods</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Tools Section -->
+        <section class="section" id="advanced">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Advanced Memory Tools</h2>
+                    <p class="section-subtitle">Professional-grade tools for advanced users</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/srdi.png" alt="sRDI">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Shellcode Reflective DLL Injection</h3>
+                            <p class="game-description">Advanced reflective DLL injection technique for stealthy payload delivery and anti-detection.</p>
+                            <div class="game-features">
+                                <span class="feature">Reflective Loading</span>
+                                <span class="feature">Stealth</span>
+                                <span class="feature">Advanced</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/winapi.png" alt="WinAPIOverride">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">WinAPIOverride</h3>
+                            <p class="game-description">API monitoring and overriding tool for analyzing and modifying Windows API calls in real-time.</p>
+                            <div class="game-features">
+                                <span class="feature">API Hooking</span>
+                                <span class="feature">Real-time</span>
+                                <span class="feature">Analysis</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/manualmapper.png" alt="Manual Mapper">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Blackbone Manual Mapper</h3>
+                            <p class="game-description">Professional manual mapping injector with advanced features for bypassing modern anti-cheat systems.</p>
+                            <div class="game-features">
+                                <span class="feature">Manual Mapping</span>
+                                <span class="feature">Anti-Cheat Bypass</span>
+                                <span class="feature">Professional</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portable Tools Section -->
+        <section class="section" id="portable">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Portable & Lightweight Tools</h2>
+                    <p class="section-subtitle">Compact tools that don't require installation</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/simpleinjector.png" alt="Simple Injector">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Simple DLL Injector</h3>
+                            <p class="game-description">Minimalist injector with basic functionality - perfect for quick and simple DLL injection tasks.</p>
+                            <div class="game-features">
+                                <span class="feature">Lightweight</span>
+                                <span class="feature">Simple</span>
+                                <span class="feature">Portable</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/ghinject.png" alt="GH Injector">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">GH Injector</h3>
+                            <p class="game-description">Feature-rich injector with various injection methods and techniques in a portable package.</p>
+                            <div class="game-features">
+                                <span class="feature">Multiple Methods</span>
+                                <span class="feature">Portable</span>
+                                <span class="feature">Feature-Rich</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="https://i.imgur.com/cmdinjector.png" alt="CMD Injector">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Command Line Injector</h3>
+                            <p class="game-description">CLI-based injector for automated injection tasks and scripting integration.</p>
+                            <div class="game-features">
+                                <span class="feature">Command Line</span>
+                                <span class="feature">Scriptable</span>
+                                <span class="feature">Automated</span>
+                            </div>
+                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                                Download <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Guide Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Injection Guide & Best Practices</h2>
+                    <p class="section-subtitle">Learn how to use DLL injectors safely and effectively</p>
+                </div>
+
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <h4>Getting Started</h4>
+                        <ul>
+                            <li>Choose the right injector for your needs</li>
+                            <li>Ensure target process is running</li>
+                            <li>Run injector as administrator</li>
+                            <li>Select injection method carefully</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Safety Tips</h4>
+                        <ul>
+                            <li>Always test in offline modes first</li>
+                            <li>Use manual mapping for better stealth</li>
+                            <li>Avoid injecting into protected processes</li>
+                            <li>Disable real-time protection temporarily</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h4>Troubleshooting</h4>
+                        <ul>
+                            <li>Check if DLL architecture matches process</li>
+                            <li>Verify injector has sufficient privileges</li>
+                            <li>Try different injection methods</li>
+                            <li>Restart target process if injection fails</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Important Safety Information</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-exclamation-triangle"></i> Use at Own Risk</h4>
+                                <p>DLL injection can be detected by anti-cheat systems and may result in permanent game bans.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-virus"></i> Antivirus Detection</h4>
+                                <p>Injectors often trigger false positives. Add to antivirus exclusions or disable temporarily.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-user-shield"></i> Administrator Rights</h4>
+                                <p>Most injectors require administrator privileges to access game processes effectively.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-book"></i> Educational Purpose</h4>
+                                <p>These tools are for educational and research purposes. Respect ToS and other players.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../script.js?v=3.1.0"></script>
+
+    <!-- Ad Banner -->
+</body>
+</html>

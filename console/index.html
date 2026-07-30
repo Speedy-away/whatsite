@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Console gaming tools, homebrew, CFW, modchips, and emulators for Xbox 360, PlayStation 3, Nintendo Switch, and retro consoles.">
+    <meta name="keywords" content="console hacking, homebrew, xbox 360 jtag, ps3 cfw, nintendo switch homebrew, console modding, emulators">
+    <meta name="author" content="whatwhatboy">
+    <title>Console Gaming & Homebrew - whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/console/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/console/">
+    <meta property="og:title" content="Console Gaming & Homebrew - whatwhatboy">
+    <meta property="og:description" content="Console gaming tools, homebrew, CFW, modchips, and emulators for Xbox 360, PlayStation 3, Nintendo Switch, and retro consoles.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Console Gaming & Homebrew - whatwhatboy">
+    <meta name="twitter:description" content="Console gaming tools, homebrew, CFW, modchips, and emulators for Xbox 360, PlayStation 3, Nintendo Switch, and retro consoles.">
+
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=3.1.0">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../profile.html" class="nav-link">
+                    <i class="fas fa-address-card"></i>
+                    <span>Contact Info</span>
+                </a></li>
+                <li><a href="../index.html#discord" class="nav-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../index.html#games" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../youtube.html" class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="../index.html#tools" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="../mods.html" class="nav-link">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Game Mods</span>
+                </a></li>
+                <li><a href="../apk.html" class="nav-link">
+                    <i class="fab fa-android"></i>
+                    <span>APK Downloads</span>
+                </a></li>
+                <li><a href="index.html" class="nav-link active">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="emulators.html" class="nav-link">
+                    <i class="fas fa-desktop"></i>
+                    <span>Emulators</span>
+                </a></li>
+                <li><a href="../help.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="../profile.html" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="../profile.html" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="../profile.html" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="../profile.html" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-image" style="margin-bottom: 2rem;">
+                    <img src="../assets/images/logo.png" alt="Console Gaming" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                </div>
+                <h1 class="hero-title">Console Gaming & Homebrew</h1>
+                <p class="hero-subtitle">Comprehensive collection of console hacking tools, homebrew applications, custom firmware, emulators, and modding resources for all major gaming consoles.</p>
+
+                <div class="hero-buttons">
+                    <a href="#modern" class="btn btn-primary">
+                        <i class="fas fa-star"></i>
+                        Modern Consoles
+                    </a>
+                    <a href="#retro" class="btn btn-outline">
+                        <i class="fas fa-history"></i>
+                        Retro Consoles
+                    </a>
+                    <a href="#emulators" class="btn btn-outline">
+                        <i class="fas fa-desktop"></i>
+                        Emulators
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Consoles</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Tools</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Free</h3>
+                        <p>Homebrew</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Consoles Section -->
+        <section class="section" id="modern">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Modern Console Hacking (2006-Present)</h2>
+                    <p class="section-subtitle">Xbox 360, PlayStation 3, Nintendo Switch, and current generation consoles</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="Xbox 360">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Xbox 360</h3>
+                            <p class="game-description">JTAG, RGH, Aurora Dashboard, homebrew applications, and game modifications for Xbox 360.</p>
+                            <div class="game-features">
+                                <span class="feature">JTAG/RGH</span>
+                                <span class="feature">Aurora</span>
+                                <span class="feature">Homebrew</span>
+                            </div>
+                            <a href="xbox360.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PlayStation 3">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation 3</h3>
+                            <p class="game-description">Custom firmware, HEN, homebrew applications, and game backups for PlayStation 3.</p>
+                            <div class="game-features">
+                                <span class="feature">CFW</span>
+                                <span class="feature">HEN</span>
+                                <span class="feature">Homebrew</span>
+                            </div>
+                            <a href="ps3.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Nintendo Switch">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Nintendo Switch</h3>
+                            <p class="game-description">Atmosphère CFW, homebrew launcher, emulators, and game mods for Nintendo Switch.</p>
+                            <div class="game-features">
+                                <span class="feature">Atmosphère</span>
+                                <span class="feature">Homebrew</span>
+                                <span class="feature">Emulation</span>
+                            </div>
+                            <a href="nintendo-switch.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PlayStation 4">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status limited">Limited</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation 4</h3>
+                            <p class="game-description">Linux installation, homebrew development, and limited homebrew for specific firmware versions.</p>
+                            <div class="game-features">
+                                <span class="feature">Linux</span>
+                                <span class="feature">Homebrew</span>
+                                <span class="feature">Limited</span>
+                            </div>
+                            <a href="ps4.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retro Consoles Section -->
+        <section class="section" id="retro">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Retro Console Hacking (1985-2005)</h2>
+                    <p class="section-subtitle">Classic consoles with established homebrew scenes</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/xbox360.png" alt="Original Xbox">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Original Xbox</h3>
+                            <p class="game-description">Softmod, TSOP flashing, XBMC, emulators, and homebrew applications for original Xbox.</p>
+                            <div class="game-features">
+                                <span class="feature">Softmod</span>
+                                <span class="feature">XBMC</span>
+                                <span class="feature">Emulators</span>
+                            </div>
+                            <a href="original-xbox.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PlayStation 2">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation 2</h3>
+                            <p class="game-description">Free McBoot, homebrew applications, emulators, and game backups for PlayStation 2.</p>
+                            <div class="game-features">
+                                <span class="feature">Free McBoot</span>
+                                <span class="feature">Homebrew</span>
+                                <span class="feature">Emulators</span>
+                            </div>
+                            <a href="ps2.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="GameCube">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Nintendo GameCube</h3>
+                            <p class="game-description">Swiss homebrew launcher, Game Boy Interface, and emulators for GameCube.</p>
+                            <div class="game-features">
+                                <span class="feature">Swiss</span>
+                                <span class="feature">GBI</span>
+                                <span class="feature">Homebrew</span>
+                            </div>
+                            <a href="gamecube.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Nintendo Wii">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Nintendo Wii</h3>
+                            <p class="game-description">Homebrew Channel, USB loaders, emulators, and extensive homebrew library for Wii.</p>
+                            <div class="game-features">
+                                <span class="feature">Homebrew Channel</span>
+                                <span class="feature">USB Loaders</span>
+                                <span class="feature">Emulators</span>
+                            </div>
+                            <a href="wii.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emulators Section -->
+        <section class="section" id="emulators">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Console Emulators</h2>
+                    <p class="section-subtitle">Play console games on PC with these emulators</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="RetroArch">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">RetroArch</h3>
+                            <p class="game-description">All-in-one emulation frontend supporting multiple console cores with advanced features.</p>
+                            <div class="game-features">
+                                <span class="feature">Multi-system</span>
+                                <span class="feature">Shaders</span>
+                                <span class="feature">Netplay</span>
+                            </div>
+                            <a href="emulators.html#retroarch" class="game-link">
+                                View Emulators <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PCSX2">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation 2 Emulators</h3>
+                            <p class="game-description">PCSX2, AetherSX2, and other PS2 emulators for playing PlayStation 2 games.</p>
+                            <div class="game-features">
+                                <span class="feature">PS2</span>
+                                <span class="feature">High-res</span>
+                                <span class="feature">Enhanced</span>
+                            </div>
+                            <a href="emulators.html#ps2" class="game-link">
+                                View Emulators <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Dolphin">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">GameCube/Wii Emulators</h3>
+                            <p class="game-description">Dolphin emulator for GameCube and Wii games with enhanced graphics and features.</p>
+                            <div class="game-features">
+                                <span class="feature">GC/Wii</span>
+                                <span class="feature">HD Graphics</span>
+                                <span class="feature">Netplay</span>
+                            </div>
+                            <a href="emulators.html#dolphin" class="game-link">
+                                View Emulators <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="RPCS3">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation 3 Emulators</h3>
+                            <p class="game-description">RPCS3 and other PS3 emulators for playing PlayStation 3 exclusives on PC.</p>
+                            <div class="game-features">
+                                <span class="feature">PS3</span>
+                                <span class="feature">Exclusives</span>
+                                <span class="feature">Enhanced</span>
+                            </div>
+                            <a href="emulators.html#ps3" class="game-link">
+                                View Emulators <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 2rem;">
+                    <a href="emulators.html" class="btn btn-primary">
+                        <i class="fas fa-desktop"></i>
+                        Browse All Emulators
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Handheld Consoles Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Handheld Consoles</h2>
+                    <p class="section-subtitle">Homebrew and modifications for portable gaming systems</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Nintendo 3DS">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Nintendo 3DS</h3>
+                            <p class="game-description">Custom firmware, homebrew applications, and emulators for Nintendo 3DS family.</p>
+                            <div class="game-features">
+                                <span class="feature">Custom Firmware</span>
+                                <span class="feature">Homebrew</span>
+                                <span class="feature">Emulators</span>
+                            </div>
+                            <a href="3ds.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PlayStation Portable">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation Portable</h3>
+                            <p class="game-description">Custom firmware, homebrew, emulators, and plugins for PSP and PS Vita.</p>
+                            <div class="game-features">
+                                <span class="feature">CFW</span>
+                                <span class="feature">Homebrew</span>
+                                <span class="feature">Plugins</span>
+                            </div>
+                            <a href="psp.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/ps3.png" alt="PS Vita">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">PlayStation Vita</h3>
+                            <p class="game-description">HENkaku, homebrew applications, emulators, and game modifications for PS Vita.</p>
+                            <div class="game-features">
+                                <span class="feature">HENkaku</span>
+                                <span class="feature">Homebrew</span>
+                                <span class="feature">Emulation</span>
+                            </div>
+                            <a href="vita.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="../assets/images/logo.png" alt="Steam Deck">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Steam Deck</h3>
+                            <p class="game-description">EmuDeck, desktop mode, emulation station, and homebrew applications for Steam Deck.</p>
+                            <div class="game-features">
+                                <span class="feature">EmuDeck</span>
+                                <span class="feature">Desktop Mode</span>
+                                <span class="feature">Emulation</span>
+                            </div>
+                            <a href="steamdeck.html" class="game-link">
+                                View Tools <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Console Modification Safety</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-exclamation-triangle"></i> Risk of Brick</h4>
+                                <p>Console modifications can permanently damage your device. Always follow guides carefully and understand the risks.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-ban"></i> Warranty Void</h4>
+                                <p>Modifying consoles will void your warranty and may prevent access to online services.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-balance-scale"></i> Legal Considerations</h4>
+                                <p>Respect copyright laws and only use homebrew with games you legally own.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-users"></i> Community Support</h4>
+                                <p>Join console hacking communities for help, guides, and the latest developments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../script.js?v=3.1.0"></script>
+
+    <!-- Ad Banner -->
+</body>
+</html>
