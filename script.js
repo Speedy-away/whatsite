@@ -176,10 +176,11 @@ function initSearch() {
 
         gameCards.forEach((card) => {
             const searchText = (card.dataset.search || card.textContent).toLowerCase();
-            const category = card.dataset.category || '';
+            // Cards can belong to several categories, e.g. data-category="pc console"
+            const categories = (card.dataset.category || '').toLowerCase().split(/\s+/);
 
             const matchesSearch = !query || searchText.includes(query);
-            const matchesCategory = activeCategory === 'all' || category === activeCategory;
+            const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
 
             const show = matchesSearch && matchesCategory;
             card.style.display = show ? '' : 'none';
@@ -201,7 +202,7 @@ function initSearch() {
         btn.addEventListener('click', () => {
             filterBtns.forEach((b) => b.classList.remove('active'));
             btn.classList.add('active');
-            activeCategory = btn.dataset.filter || 'all';
+            activeCategory = (btn.dataset.filter || 'all').toLowerCase();
             filterCards();
         });
     });
@@ -553,11 +554,12 @@ function initBlogFilter() {
             filterBtns.forEach((b) => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const category = btn.dataset.category || 'all';
+            const category = (btn.dataset.category || 'all').toLowerCase();
 
             blogCards.forEach((card) => {
+                const categories = (card.dataset.category || '').toLowerCase().split(/\s+/);
                 card.style.display =
-                    (category === 'all' || card.dataset.category === category) ? '' : 'none';
+                    (category === 'all' || categories.includes(category)) ? '' : 'none';
             });
         });
     });
