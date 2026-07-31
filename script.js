@@ -187,6 +187,21 @@ function initSearch() {
             if (show) visibleCount++;
         });
 
+        // Pages group cards into several grids under their own headings. Hide any
+        // group that has nothing left in it so we don't leave a stranded heading.
+        document.querySelectorAll('.games-grid').forEach((grid) => {
+            const cards = grid.querySelectorAll('.game-card');
+            if (cards.length === 0) return;
+
+            const hasVisible = Array.from(cards).some((c) => c.style.display !== 'none');
+            grid.style.display = hasVisible ? '' : 'none';
+
+            const heading = grid.previousElementSibling;
+            if (heading && heading.classList.contains('section-header')) {
+                heading.style.display = hasVisible ? '' : 'none';
+            }
+        });
+
         // Toggle "no results" message
         const noResults = document.querySelector('.no-results');
         if (noResults) {
