@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nintendo Switch homebrew and custom firmware. Atmosphere CFW, Hekate bootloader, homebrew apps, and emulators for Nintendo Switch.">
+    <meta name="keywords" content="nintendo switch homebrew, atmosphere cfw, switch custom firmware, hekate, switch modding, atmosphere nx, switch homebrew launcher, rcm jig">
+    <meta name="author" content="whatwhatboy">
+    <title>Nintendo Switch Homebrew &amp; CFW - whatwhatboy</title>
+    <link rel="canonical" href="https://whatwhatboy.com/console/nintendo-switch.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:url" content="https://whatwhatboy.com/console/nintendo-switch.html">
+    <meta property="og:title" content="Nintendo Switch Homebrew &amp; CFW - whatwhatboy">
+    <meta property="og:description" content="Nintendo Switch homebrew and custom firmware. Atmosphere CFW, Hekate bootloader, homebrew apps, and emulators for Nintendo Switch.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/consoles/nintendo-switch.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nintendo Switch Homebrew &amp; CFW - whatwhatboy">
+    <meta name="twitter:description" content="Nintendo Switch homebrew and custom firmware. Atmosphere CFW, Hekate bootloader, homebrew apps, and emulators for Nintendo Switch.">
+
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=3.1.3">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="../assets/images/logo.png" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">whatwhatboy</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html#home" class="nav-link" data-tooltip="Home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="../profile.html" class="nav-link" data-tooltip="Profile">
+                    <i class="fas fa-address-card"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li><a href="../index.html#discord" class="nav-link" data-tooltip="Discord Servers">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Servers</span>
+                </a></li>
+                <li><a href="../index.html#games" class="nav-link" data-tooltip="Free Cheats">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Free Cheats</span>
+                </a></li>
+                <li><a href="../games-downloads/index.html" class="nav-link" data-tooltip="Games">
+                    <i class="fas fa-download"></i>
+                    <span>Games</span>
+                </a></li>
+                <li><a href="../youtube.html" class="nav-link" data-tooltip="YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a></li>
+                <li><a href="../tools/index.html" class="nav-link" data-tooltip="Tools">
+                    <i class="fas fa-wrench"></i>
+                    <span>Tools</span>
+                </a></li>
+                <li><a href="../mods.html" class="nav-link" data-tooltip="Game Mods">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Game Mods</span>
+                </a></li>
+                <li><a href="../apk.html" class="nav-link" data-tooltip="APK Downloads">
+                    <i class="fab fa-android"></i>
+                    <span>APK Downloads</span>
+                </a></li>
+                <li><a href="../console/index.html" class="nav-link active" data-tooltip="Console">
+                    <i class="fas fa-tv"></i>
+                    <span>Console</span>
+                </a></li>
+                <li><a href="../console/emulators.html" class="nav-link" data-tooltip="Emulators">
+                    <i class="fas fa-desktop"></i>
+                    <span>Emulators</span>
+                </a></li>
+                <li><a href="../blog.html" class="nav-link" data-tooltip="Blog">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Blog</span>
+                </a></li>
+                <li><a href="../help.html" class="nav-link" data-tooltip="Help &amp; FAQ">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help &amp; FAQ</span>
+                </a></li>
+            </ul>
+
+            <div class="sidebar-social">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" rel="noopener noreferrer" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@whatwhatboy98" target="_blank" rel="noopener noreferrer" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://discord.gg/6hsV2fva8Z" target="_blank" rel="noopener noreferrer" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://t.me/whatwhatboy" target="_blank" rel="noopener noreferrer" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-sidebar-btn" id="mobile-sidebar-btn" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-image" style="margin-bottom: 2rem;">
+                    <img src="../assets/images/consoles/nintendo-switch.jpg" alt="Nintendo Switch" style="max-width: 400px; width: 100%; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                </div>
+                <h1 class="hero-title">Nintendo Switch Homebrew &amp; CFW</h1>
+                <p class="hero-subtitle">Custom firmware, bootloaders, and homebrew for the Nintendo Switch. Start with Atmosphère, the most widely used CFW.</p>
+
+                <div class="hero-buttons">
+                    <a href="#cfw" class="btn btn-primary">
+                        <i class="fas fa-microchip"></i>
+                        Custom Firmware
+                    </a>
+                    <a href="#homebrew" class="btn btn-outline">
+                        <i class="fas fa-gamepad"></i>
+                        Homebrew
+                    </a>
+                    <a href="index.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i>
+                        All Consoles
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Firmware Section -->
+        <section class="section" id="cfw">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Custom Firmware</h2>
+                    <p class="section-subtitle">The software that unlocks homebrew on the Switch</p>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search Switch tools..." id="gameSearch">
+                    </div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No results found matching your search.</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card" data-search="atmosphere atmosphere-nx cfw custom firmware switch homebrew open source nintendo sysmodule">
+                        <div class="game-image">
+                            <img src="../assets/images/consoles/atmosphere.png" alt="Atmosphere CFW" loading="lazy">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Active</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Atmosphère CFW</h3>
+                            <p class="game-description">The most widely used custom firmware for the Nintendo Switch. Open source, actively maintained, and the base most homebrew expects.</p>
+                            <div class="game-features">
+                                <span class="feature">Custom Firmware</span>
+                                <span class="feature">Open Source</span>
+                                <span class="feature">Homebrew Support</span>
+                                <span class="feature">Actively Updated</span>
+                            </div>
+                            <a href="https://github.com/atmosphere-nx/atmosphere/releases" target="_blank" rel="noopener noreferrer" class="game-link">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homebrew Section -->
+        <section class="section" id="homebrew">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Emulation on Switch</h2>
+                    <p class="section-subtitle">Related pages on the site</p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card" data-search="nintendo emulators switch yuzu ryujinx wii u cemu dolphin emulation pc">
+                        <div class="game-image">
+                            <img src="../assets/images/consoles/nintendo.png" alt="Nintendo Emulators" loading="lazy">
+                        </div>
+                        <div class="game-overlay">
+                            <span class="game-status available">Available</span>
+                        </div>
+                        <div class="game-info">
+                            <h3 class="game-title">Nintendo Emulators</h3>
+                            <p class="game-description">Emulators for Switch, Wii U, GameCube, and the older Nintendo consoles, running on PC.</p>
+                            <div class="game-features">
+                                <span class="feature">Switch</span>
+                                <span class="feature">Wii U</span>
+                                <span class="feature">Retro</span>
+                            </div>
+                            <a href="nintendo-emulators.html" class="game-link">
+                                <i class="fas fa-arrow-right"></i>
+                                View Emulators
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information -->
+        <section class="section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Before You Mod Your Switch</h3>
+                    </div>
+                    <div class="warning-content">
+                        <div class="warning-grid">
+                            <div class="warning-item">
+                                <h4><i class="fas fa-microchip"></i> Not Every Switch Can</h4>
+                                <p>Only unpatched consoles can run CFW without a hardware modchip. Check your serial number before buying anything or opening the console.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-ban"></i> Online Bans</h4>
+                                <p>Nintendo bans consoles it detects running CFW, and a ban is tied to the hardware. Keep a modded Switch off Nintendo's online services.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-floppy-disk"></i> Back Up Your NAND</h4>
+                                <p>Dump your NAND and keys before installing anything. Without that backup a bad flash can leave the console unrecoverable.</p>
+                            </div>
+                            <div class="warning-item">
+                                <h4><i class="fas fa-balance-scale"></i> Own Your Games</h4>
+                                <p>Homebrew is legal; piracy is not. Only use dumps of games you actually own.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="../assets/images/logo.png" alt="Logo" class="footer-logo">
+                        <h3>whatwhatboy's</h3>
+                    </div>
+                    <p>Content Creator. Building gaming communities and creating educational content for YouTube.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#games">Games</a></li>
+                        <li><a href="../tools/index.html">Tools</a></li>
+                        <li><a href="index.html">Console</a></li>
+                        <li><a href="../help.html">Help &amp; FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../help.html">Help Center</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 whatwhatboy's. All rights reserved.</p>
+                    <p class="disclaimer">Educational purposes only. Use at your own risk.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=3.1.3"></script>
+</body>
+</html>
