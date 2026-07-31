@@ -129,7 +129,7 @@
             <div class="hero-bg"></div>
             <div class="hero-content">
                 <div class="hero-image" style="margin-bottom: 2rem;">
-                    <img src="https://i.imgur.com/injectors.png" alt="DLL Injectors" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                    <img src="../assets/images/tools.png" alt="DLL Injectors" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                 </div>
                 <h1 class="hero-title">DLL Injectors & Memory Tools</h1>
                 <p class="hero-subtitle">Professional injection tools for loading DLLs, cheats, and modifications into game processes. Essential tools for game hacking and memory manipulation.</p>
@@ -174,8 +174,20 @@
                     <p class="section-subtitle">Most widely used and trusted injection tools</p>
                 </div>
 
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search tools..." id="gameSearch">
+                    </div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No results found matching your search.</p>
+                </div>
+
                 <div class="games-grid">
-                    <div class="game-card" id="extreme">
+                    <div class="game-card" data-search="extreme injector v3.7.3 manual map stealth injection multiple methods popular dll mode advanced anti-detection features" id="extreme">
                         <div class="game-image">
                             <img src="../assets/images/tools/extreme-injector.png" alt="Extreme Injector">
                         </div>
@@ -190,13 +202,13 @@
                                 <span class="feature">Stealth Injection</span>
                                 <span class="feature">Multiple Methods</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
-                                Download <i class="fas fa-download"></i>
-                            </a>
+                            <p class="game-description" style="margin-bottom:0; opacity:0.75;">
+                                <i class="fas fa-clock"></i> Download link coming soon
+                            </p>
                         </div>
                     </div>
 
-                    <div class="game-card" id="cheatengine">
+                    <div class="game-card" data-search="cheat engine 7.5 memory scanner debugger scripting comprehensive injection capabilities table creation support" id="cheatengine">
                         <div class="game-image">
                             <img src="../assets/images/tools/cheat-engine.jpg" alt="Cheat Engine">
                         </div>
@@ -217,7 +229,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card" id="processhacker">
+                    <div class="game-card" data-search="process hacker 3.0 monitor memory editor dll injection advanced system monitoring tool capabilities comprehensive management" id="processhacker">
                         <div class="game-image">
                             <img src="../assets/images/tools/process-hacker.png" alt="Process Hacker">
                         </div>
@@ -238,7 +250,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="xenos injector manual mapping lightweight bypass methods support various injection techniques bypassing detection">
                         <div class="game-image">
                             <img src="../assets/images/tools/xenos-injector.png" alt="Xenos Injector">
                         </div>
@@ -271,9 +283,9 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="shellcode reflective dll injection srdi loading stealth advanced technique stealthy payload delivery anti-detection">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/srdi.png" alt="sRDI">
+                            <img src="../assets/images/tools.png" alt="sRDI">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -286,15 +298,15 @@
                                 <span class="feature">Stealth</span>
                                 <span class="feature">Advanced</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                            <a href="https://github.com/monoxgas/sRDI" target="_blank" rel="noopener noreferrer" class="game-link">
                                 Download <i class="fas fa-download"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="winapioverride api hooking real-time analysis monitoring overriding tool analyzing modifying windows calls real-time">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/winapi.png" alt="WinAPIOverride">
+                            <img src="../assets/images/tools.png" alt="WinAPIOverride">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -307,15 +319,15 @@
                                 <span class="feature">Real-time</span>
                                 <span class="feature">Analysis</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                            <a href="http://jacquelin.potier.free.fr/winapioverride32/" target="_blank" rel="noopener noreferrer" class="game-link">
                                 Download <i class="fas fa-download"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="blackbone manual mapper mapping anti-cheat bypass professional injector advanced features bypassing modern systems">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/manualmapper.png" alt="Manual Mapper">
+                            <img src="../assets/images/tools.png" alt="Manual Mapper">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -328,7 +340,7 @@
                                 <span class="feature">Anti-Cheat Bypass</span>
                                 <span class="feature">Professional</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                            <a href="https://github.com/DarthTon/Blackbone" target="_blank" rel="noopener noreferrer" class="game-link">
                                 Download <i class="fas fa-download"></i>
                             </a>
                         </div>
@@ -346,9 +358,9 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="simple dll injector lightweight portable minimalist basic functionality perfect quick injection tasks">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/simpleinjector.png" alt="Simple Injector">
+                            <img src="../assets/images/tools.png" alt="Simple Injector">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -361,15 +373,15 @@
                                 <span class="feature">Simple</span>
                                 <span class="feature">Portable</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
-                                Download <i class="fas fa-download"></i>
-                            </a>
+                            <p class="game-description" style="margin-bottom:0; opacity:0.75;">
+                                <i class="fas fa-clock"></i> Download link coming soon
+                            </p>
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="gh injector multiple methods portable feature-rich various injection techniques package">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/ghinject.png" alt="GH Injector">
+                            <img src="../assets/images/tools.png" alt="GH Injector">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -382,15 +394,15 @@
                                 <span class="feature">Portable</span>
                                 <span class="feature">Feature-Rich</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                            <a href="https://github.com/guidedhacking/GuidedHacking-Injector" target="_blank" rel="noopener noreferrer" class="game-link">
                                 Download <i class="fas fa-download"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="command line injector cmd scriptable automated cli-based injection tasks scripting integration">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/cmdinjector.png" alt="CMD Injector">
+                            <img src="../assets/images/tools.png" alt="CMD Injector">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -403,9 +415,9 @@
                                 <span class="feature">Scriptable</span>
                                 <span class="feature">Automated</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
-                                Download <i class="fas fa-download"></i>
-                            </a>
+                            <p class="game-description" style="margin-bottom:0; opacity:0.75;">
+                                <i class="fas fa-clock"></i> Download link coming soon
+                            </p>
                         </div>
                     </div>
                 </div>

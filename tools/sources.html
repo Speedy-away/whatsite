@@ -129,7 +129,7 @@
             <div class="hero-bg"></div>
             <div class="hero-content">
                 <div class="hero-image" style="margin-bottom: 2rem;">
-                    <img src="https://i.imgur.com/sourcecode.png" alt="Source Code" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                    <img src="../assets/images/srcs.png" alt="Source Code" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                 </div>
                 <h1 class="hero-title">Source Code & Development</h1>
                 <p class="hero-subtitle">Open source cheat bases, frameworks, and development resources for learning game hacking, reverse engineering, and creating your own modifications.</p>
@@ -174,10 +174,22 @@
                     <p class="section-subtitle">Complete source code for various game cheats and modifications</p>
                 </div>
 
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search tools..." id="gameSearch">
+                    </div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No results found matching your search.</p>
+                </div>
+
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="cs go cs2 base c++ directx imgui modern counter-strike cheat aimbot esp skin changer anti-aim features">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/csgo-base.png" alt="CS:GO Base">
+                            <img src="../assets/images/srcs.png" alt="CS:GO Base">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -196,9 +208,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="valorant external base memory overlay cheat reading esp triggerbot functionality">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/valorant-base.png" alt="Valorant Base">
+                            <img src="../assets/images/srcs.png" alt="Valorant Base">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -217,9 +229,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="universal base modular framework generic cheat adapted multiple design">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/universal-base.png" alt="Universal Base">
+                            <img src="../assets/images/srcs.png" alt="Universal Base">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -238,9 +250,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="apex legends base prediction advanced movement cheat source aimbot esp features">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/apex-base.png" alt="Apex Base">
+                            <img src="../assets/images/srcs.png" alt="Apex Base">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -271,9 +283,9 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="blackbone c++ memory injection windows hacking library dll manipulation process interaction">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/blackbone.png" alt="Blackbone">
+                            <img src="../assets/images/srcs.png" alt="Blackbone">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -292,9 +304,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="minhook api hooking x86 x64 minimal minimalistic library windows simple clean interface">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/minhook.png" alt="MinHook">
+                            <img src="../assets/images/srcs.png" alt="MinHook">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -313,7 +325,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="imgui gui directx opengl immediate mode library perfect creating cheat menus debug interfaces">
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
                         </div>
@@ -331,9 +343,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="microsoft detours official intercept cross-platform library intercepting win32 functions x86 x64 arm machines">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/detours.png" alt="Microsoft Detours">
+                            <img src="../assets/images/srcs.png" alt="Microsoft Detours">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -364,9 +376,9 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="guided hacking tutorials videos comprehensive beginner video written guides covering aspects hacking">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/guided-hacking.png" alt="Guided Hacking">
+                            <img src="../assets/images/srcs.png" alt="Guided Hacking">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -385,9 +397,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="reverse engineering tutorials hacking academy step-by-step practical hands-on memory scanning cheat development">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/game-hacking.png" alt="Game Hacking Academy">
+                            <img src="../assets/images/srcs.png" alt="Game Hacking Academy">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -406,7 +418,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="cheat engine tutorials interactive built-in progressive community learning memory scanning modification techniques">
                         <div class="game-image">
                             <img src="../assets/images/tools/cheat-engine.jpg" alt="Cheat Engine Tutorials">
                         </div>
@@ -427,9 +439,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="assembly disassembly language x86 x64 fundamentals resources learning techniques">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/assembly.png" alt="Assembly Language">
+                            <img src="../assets/images/srcs.png" alt="Assembly Language">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>

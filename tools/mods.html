@@ -129,7 +129,7 @@
             <div class="hero-bg"></div>
             <div class="hero-content">
                 <div class="hero-image" style="margin-bottom: 2rem;">
-                    <img src="https://i.imgur.com/gamemod.png" alt="Game Mods" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                    <img src="../assets/images/gamemods.png" alt="Game Mods" style="max-width: 400px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                 </div>
                 <h1 class="hero-title">Game Mods & Utilities</h1>
                 <p class="hero-subtitle">Essential tools and utilities for game modification, graphics enhancement, and improved gaming experience. From mod managers to visual enhancers.</p>
@@ -174,10 +174,22 @@
                     <p class="section-subtitle">Post-processing and visual enhancement tools for better graphics</p>
                 </div>
 
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search tools..." id="gameSearch">
+                    </div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No results found matching your search.</p>
+                </div>
+
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="reshade 5.9 shaders post-processing universal advanced injection tool hundreds enhancing graphics">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/reshade.png" alt="ReShade">
+                            <img src="../assets/images/gamemods.png" alt="ReShade">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -196,9 +208,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="enb series game-specific lighting advanced graphics modification specific like gta fallout skyrim lighting">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/enb.png" alt="ENB Series">
+                            <img src="../assets/images/gamemods.png" alt="ENB Series">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -217,9 +229,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="sweetfx smaa color correction anti-aliasing lightweight shader package improving visual quality">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/sweetfx.png" alt="SweetFX">
+                            <img src="../assets/images/gamemods.png" alt="SweetFX">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -232,15 +244,15 @@
                                 <span class="feature">Anti-aliasing</span>
                                 <span class="feature">Lightweight</span>
                             </div>
-                            <a href="#" class="game-link" onclick="alert('Download link would be here')">
+                            <a href="https://github.com/CeeJayDK/SweetFX" target="_blank" rel="noopener noreferrer" class="game-link">
                                 Download <i class="fas fa-download"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="dgvoodoo2 legacy api wrapper compatibility old graphics apis run modern systems enhanced graphics">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/dgvoodoo.png" alt="dgVoodoo2">
+                            <img src="../assets/images/gamemods.png" alt="dgVoodoo2">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -271,9 +283,9 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="mod organizer bethesda virtual fs conflict resolution advanced manager file system resolution">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/modorganizer.png" alt="Mod Organizer 2">
+                            <img src="../assets/images/gamemods.png" alt="Mod Organizer 2">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -292,9 +304,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="vortex mod manager multi-game nexus integration automated official mods supporting multiple deployment">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/vortex.png" alt="Vortex">
+                            <img src="../assets/images/gamemods.png" alt="Vortex">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -313,9 +325,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="nexus mod manager legacy simple basic older bethesda now replaced vortex">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/nmm.png" alt="Nexus Mod Manager">
+                            <img src="../assets/images/gamemods.png" alt="Nexus Mod Manager">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status deprecated">Legacy</span>
@@ -334,9 +346,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="wrye bash advanced bashed patches data management tool managing bethesda files patch creation">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/wrye.png" alt="Wrye Bash">
+                            <img src="../assets/images/gamemods.png" alt="Wrye Bash">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -367,9 +379,9 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="msi afterburner gpu oc monitoring overlay overclocking tool in-game fps hardware stats">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/msi-afterburner.png" alt="MSI Afterburner">
+                            <img src="../assets/images/tools.png" alt="MSI Afterburner">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -388,9 +400,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="rivatuner statistics server osd frame limiting advanced on-screen display hardware monitoring rate limiting">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/rivatuner.png" alt="RivaTuner">
+                            <img src="../assets/images/tools.png" alt="RivaTuner">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -409,9 +421,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="special universal performance bug fixes modification framework fixing issues enhancing performance">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/specialk.png" alt="Special K">
+                            <img src="../assets/images/tools.png" alt="Special K">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -430,9 +442,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="dxvk dx vulkan performance cross-platform directx translation layer better linux windows">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/dxvk.png" alt="DXVK">
+                            <img src="../assets/images/gamemods.png" alt="DXVK">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -463,9 +475,9 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="openiv gta series archive editor modding multi-purpose manager grand theft auto games">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/openiv.png" alt="OpenIV">
+                            <img src="../assets/images/gamemods.png" alt="OpenIV">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -484,9 +496,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="mc command center sims story progression gameplay comprehensive mod adding features">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/mccc.png" alt="MC Command Center">
+                            <img src="../assets/images/gamemods.png" alt="MC Command Center">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -505,9 +517,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="skse skyrim script extender advanced mods enabling modding capabilities features">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/skse.png" alt="SKSE">
+                            <img src="../assets/images/gamemods.png" alt="SKSE">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>
@@ -526,9 +538,9 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="loot bethesda load order optimization conflict prevention tool prevent mod conflicts">
                         <div class="game-image">
-                            <img src="https://i.imgur.com/loot.png" alt="LOOT">
+                            <img src="../assets/images/gamemods.png" alt="LOOT">
                         </div>
                         <div class="game-overlay">
                             <span class="game-status available">Active</span>

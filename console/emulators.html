@@ -174,8 +174,20 @@
                     <p class="section-subtitle">The ultimate multi-system emulator frontend</p>
                 </div>
 
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search emulators..." id="gameSearch">
+                    </div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No results found matching your search.</p>
+                </div>
+
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="retroarch 1.16.0 100+ systems shaders netplay universal emulation frontend supporting rewind features">
                         <div class="game-image">
                             <img src="../assets/images/logo.png" alt="RetroArch">
                         </div>
@@ -196,7 +208,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="lakka linux distro console experience plug distribution turns pc full retro gaming based retroarch">
                         <div class="game-image">
                             <img src="../assets/images/logo.png" alt="Lakka">
                         </div>
@@ -217,7 +229,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="recalbox ready-to-use emulationstation pre-configured retro gaming os frontend emulators">
                         <div class="game-image">
                             <img src="../assets/images/logo.png" alt="Recalbox">
                         </div>
@@ -250,7 +262,7 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="playstation emulators ps1-ps3 psp guides complete collection ps1 ps2 ps3 setup compatibility info">
                         <div class="game-image">
                             <img src="../assets/images/consoles/playstation.jpg" alt="PlayStation Emulators">
                         </div>
@@ -271,7 +283,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="xbox emulators original 360 full setup compatibility lists performance guides">
                         <div class="game-image">
                             <img src="../assets/images/consoles/xbox.jpg" alt="Xbox Emulators">
                         </div>
@@ -292,7 +304,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="nintendo emulators systems switch support hd gaming complete emulation nes including n64 gamecube wii ds 3ds more">
                         <div class="game-image">
                             <img src="../assets/images/consoles/nintendo.png" alt="Nintendo Emulators">
                         </div>
@@ -325,7 +337,7 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card" id="ps5-sharpemu">
+                    <div class="game-card" data-search="sharpemu playstation .net open source early-stage ps5 emulator written research project expect homebrew test workloads rather retail games" id="ps5-sharpemu">
                         <div class="game-image">
                             <img src="../assets/images/emulators/SharpEmu.png" alt="SharpEmu" loading="lazy">
                         </div>
@@ -346,7 +358,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card" id="ps5-kyty">
+                    <div class="game-card" data-search="kytyps5 playstation homebrew open source experimental ps4 ps5 emulator windows runs small set simple test titles" id="ps5-kyty">
                         <div class="game-image">
                             <img src="../assets/images/emulators/KytyPS5.jpg" alt="KytyPS5" loading="lazy">
                         </div>
@@ -367,7 +379,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card" id="ps4-shadps4">
+                    <div class="game-card" data-search="shadps4 playstation cross-platform active development advanced ps4 emulator running growing list retail titles windows linux macos" id="ps4-shadps4">
                         <div class="game-image">
                             <img src="../assets/images/emulators/shadps4.jpg" alt="shadPS4" loading="lazy">
                         </div>
@@ -388,7 +400,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card" id="ps2">
+                    <div class="game-card" data-search="pcsx2 playstation high accuracy hd rendering wide compatibility accurate ps2 emulator high-resolution compatibility" id="ps2">
                         <div class="game-image">
                             <img src="../assets/images/emulators/PCSX2.png" alt="PCSX2" loading="lazy">
                         </div>
@@ -409,7 +421,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card" id="ps3">
+                    <div class="game-card" data-search="rpcs3 playstation ps3 exclusives enhanced graphics active development open-source emulator impressive compatibility performance improvements" id="ps3">
                         <div class="game-image">
                             <img src="../assets/images/emulators/RPCS3.jpg" alt="RPCS3">
                         </div>
@@ -430,7 +442,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card" id="dolphin">
+                    <div class="game-card" data-search="dolphin gamecube wii hd graphics netplay motion controls mature emulator support" id="dolphin">
                         <div class="game-image">
                             <img src="../assets/images/emulators/Dolphin.png" alt="Dolphin">
                         </div>
@@ -451,7 +463,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="cemu wii 4k gaming graphics packs high performance emulator excellent enhancement capabilities">
                         <div class="game-image">
                             <img src="../assets/images/emulators/Cemu.png" alt="Cemu">
                         </div>
@@ -472,7 +484,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="yuzu nintendo switch growing library performance focus emulator compatibility optimizations">
                         <div class="game-image">
                             <img src="../assets/images/emulators/yuzu.png" alt="yuzu">
                         </div>
@@ -493,7 +505,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="xenia xbox 360 active development improving compatibility emulator compatibility">
                         <div class="game-image">
                             <img src="../assets/images/emulators/Xenia.png" alt="Xenia">
                         </div>
@@ -526,7 +538,7 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="epsxe playstation plugin system enhanced graphics high compatibility classic ps1 emulator capabilities">
                         <div class="game-image">
                             <img src="../assets/images/emulators/ePSXe.jpg" alt="ePSXe">
                         </div>
@@ -547,7 +559,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="project64 nintendo 64 high compatibility graphics plugins save states popular n64 emulator enhancement plugins">
                         <div class="game-image">
                             <img src="../assets/images/emulators/Project64.png" alt="Project64">
                         </div>
@@ -568,7 +580,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="snes9x super nintendo high accuracy excellent performance cross-platform accurate snes emulator compatibility performance">
                         <div class="game-image">
                             <img src="../assets/images/emulators/Snes9x.jpg" alt="Snes9x">
                         </div>
@@ -589,7 +601,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="gens genesis plus gx sega high accuracy multiple variants mega drive emulators compatibility">
                         <div class="game-image">
                             <img src="../assets/images/emulators/GensGenesisPlusGX.jpg" alt="Gens">
                         </div>
@@ -622,7 +634,7 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card">
+                    <div class="game-card" data-search="ppsspp playstation portable hd rendering cross-platform high performance excellent psp emulator high-resolution wide device support">
                         <div class="game-image">
                             <img src="../assets/images/emulators/PPSSPP.jpg" alt="PPSSPP">
                         </div>
@@ -643,7 +655,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="desmume nintendo ds dual screens touchscreen save states emulator dual-screen support functionality">
                         <div class="game-image">
                             <img src="../assets/images/emulators/DeSmuME.jpg" alt="DeSmuME">
                         </div>
@@ -664,7 +676,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="citra nintendo 3ds 3d support hd rendering good compatibility emulator stereoscopic high-resolution rendering">
                         <div class="game-image">
                             <img src="../assets/images/emulators/Citra.jpg" alt="Citra">
                         </div>
@@ -685,7 +697,7 @@
                         </div>
                     </div>
 
-                    <div class="game-card">
+                    <div class="game-card" data-search="mgba boy advance high accuracy fast performance debugging tools accurate gba emulator features compatibility">
                         <div class="game-image">
                             <img src="../assets/images/emulators/mGBA.png" alt="mGBA">
                         </div>
