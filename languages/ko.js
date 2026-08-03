@@ -16,6 +16,7 @@
     "APK Downloads": "APK 다운로드",
     "Discord Servers": "디스코드 서버",
     "Help & FAQ": "도움말 및 FAQ",
+    "Language": "언어",
     "Help Center": "고객센터",
     "Logo": "로고",
     "Open navigation menu": "내비게이션 메뉴 열기",

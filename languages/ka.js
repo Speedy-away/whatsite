@@ -16,6 +16,7 @@
     "APK Downloads": "APK ჩამოტვირთვები",
     "Discord Servers": "Discord სერვერები",
     "Help & FAQ": "დახმარება და FAQ",
+    "Language": "ენა",
     "Help Center": "დახმარების ცენტრი",
     "Logo": "ლოგო",
     "Open navigation menu": "ნავიგაციის მენიუს გახსნა",

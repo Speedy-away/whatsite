@@ -16,6 +16,7 @@
     "APK Downloads": "APK indirmeleri",
     "Discord Servers": "Discord sunucuları",
     "Help & FAQ": "Yardım ve SSS",
+    "Language": "Dil",
     "Help Center": "Yardım merkezi",
     "Logo": "Logo",
     "Open navigation menu": "Gezinme menüsünü aç",

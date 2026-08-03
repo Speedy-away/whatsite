@@ -16,6 +16,7 @@
     "APK Downloads": "تنزيلات APK",
     "Discord Servers": "سيرفرات Discord",
     "Help & FAQ": "المساعدة والأسئلة الشائعة",
+    "Language": "اللغة",
     "Help Center": "مركز المساعدة",
     "Logo": "الشعار",
     "Open navigation menu": "فتح قائمة التنقل",

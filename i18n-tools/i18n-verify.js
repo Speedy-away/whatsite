@@ -20,6 +20,10 @@ const { collect } = require('./i18n-extract.js');
 const site = collect(ROOT);
 const siteKeys = new Set(site.map(e => e.text));
 
+// Strings i18n.js injects into the DOM at runtime. They are genuinely on the
+// page but appear in no .html file, so a static scan would call them dead.
+['Language'].forEach(k => siteKeys.add(k));
+
 // ---- load each dictionary in a sandbox -------------------------------------
 function loadDict(code) {
   const sandbox = { window: {} };

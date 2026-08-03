@@ -16,6 +16,7 @@
     "APK Downloads": "Tải APK",
     "Discord Servers": "Máy chủ Discord",
     "Help & FAQ": "Trợ giúp & FAQ",
+    "Language": "Ngôn ngữ",
     "Help Center": "Trung tâm trợ giúp",
     "Logo": "Logo",
     "Open navigation menu": "Mở menu điều hướng",

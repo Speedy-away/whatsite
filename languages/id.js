@@ -16,6 +16,7 @@
     "APK Downloads": "Unduhan APK",
     "Discord Servers": "Server Discord",
     "Help & FAQ": "Bantuan & FAQ",
+    "Language": "Bahasa",
     "Help Center": "Pusat bantuan",
     "Logo": "Logo",
     "Open navigation menu": "Buka menu navigasi",

@@ -16,6 +16,7 @@
     "APK Downloads": "APK преузимања",
     "Discord Servers": "Discord сервери",
     "Help & FAQ": "Помоћ и честа питања",
+    "Language": "Језик",
     "Help Center": "Центар за помоћ",
     "Logo": "Лого",
     "Open navigation menu": "Отвори навигациони мени",

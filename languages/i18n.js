@@ -581,7 +581,36 @@
     });
 
     mount(root);
+    mountSidebarLink();
     syncUI();
+  }
+
+  // The floating pill is easy to miss, so also add a Language entry to the
+  // sidebar. Cloned from a real nav item, which is the only reliable way to
+  // inherit the site's own styling and its collapsed-sidebar tooltip.
+  function mountSidebarLink() {
+    var list = document.querySelector('.sidebar-nav .nav-list');
+    if (!list || list.querySelector('.i18n-nav-link')) return;
+    var sample = list.querySelector('li > .nav-link');
+    if (!sample) return;
+
+    var li = sample.parentNode.cloneNode(true);
+    var a = li.querySelector('.nav-link');
+    a.classList.remove('active');
+    a.classList.add('i18n-nav-link');
+    a.setAttribute('href', '#');
+    a.setAttribute('data-tooltip', 'Language');
+
+    var icon = a.querySelector('i');
+    if (icon) icon.className = 'fas fa-globe';
+    var span = a.querySelector('span');
+    if (span) span.textContent = 'Language';
+
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      showPicker(true);
+    });
+    list.appendChild(li);
   }
 
   function mount(el) {
@@ -645,7 +674,7 @@
 
     var head = '<div class="i18n-modal-head">' + GLOBE + '<h2>Choose your language</h2></div>' +
                '<p class="i18n-modal-sub">Select the language you would like to browse the site in. ' +
-               'You can change it any time from the top-left of the page.</p>';
+               'You can change it any time from Language in the sidebar, or the pill in the top-right corner.</p>';
 
     var grid = '<div class="i18n-grid">';
     LANGS.forEach(function (l) {

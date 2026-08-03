@@ -16,6 +16,7 @@
     "APK Downloads": "APK डाउनलोड",
     "Discord Servers": "डिस्कॉर्ड सर्वर",
     "Help & FAQ": "सहायता और FAQ",
+    "Language": "भाषा",
     "Help Center": "सहायता केंद्र",
     "Logo": "लोगो",
     "Open navigation menu": "नेविगेशन मेन्यू खोलें",

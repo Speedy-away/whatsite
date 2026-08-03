@@ -16,6 +16,7 @@
     "APK Downloads": "APK 下载",
     "Discord Servers": "Discord 服务器",
     "Help & FAQ": "帮助与常见问题",
+    "Language": "语言",
     "Help Center": "帮助中心",
     "Logo": "标志",
     "Open navigation menu": "打开导航菜单",

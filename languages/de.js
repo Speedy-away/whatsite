@@ -16,6 +16,7 @@
     "APK Downloads": "APK-Downloads",
     "Discord Servers": "Discord-Server",
     "Help & FAQ": "Hilfe & FAQ",
+    "Language": "Sprache",
     "Help Center": "Hilfecenter",
     "Logo": "Logo",
     "Open navigation menu": "Navigationsmenü öffnen",
