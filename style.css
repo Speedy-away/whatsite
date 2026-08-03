@@ -349,6 +349,10 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .video-card.featured { grid-column: 1 / -1; }
 .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: var(--bg-tertiary); }
 .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+/* Shown where a video has been removed, instead of an embed error box. */
+.video-embed .video-placeholder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 12px; text-align: center; color: var(--text-muted); }
+.video-embed .video-placeholder i { font-size: 28px; opacity: 0.55; }
+.video-embed .video-placeholder span { font-size: 12px; letter-spacing: 0.02em; }
 .video-thumbnail { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--bg-tertiary); }
 .video-thumbnail img { width: 100%; height: 100%; object-fit: cover; }
 .video-thumbnail .play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); opacity: 0; transition: opacity var(--tf); }
