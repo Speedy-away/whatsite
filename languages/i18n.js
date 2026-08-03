@@ -16,6 +16,8 @@
 
   var DEFAULT_LANG = 'en';
   var STORAGE_KEY = 'scooby.lang';
+  // Which corner the floating selector pins to when there is no navbar to sit in.
+  var FLOAT_SIDE = 'right';
 
   var LANGS = [
     { code: 'en', label: 'EN', native: 'English'    },
@@ -319,6 +321,10 @@
     '.i18n-floating{position:fixed;top:16px;left:16px;z-index:99999}',
     '.i18n-floating .i18n-toggle{background:rgba(12,12,14,.9);border-color:rgba(255,255,255,.18);',
     'backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}',
+    '.i18n-floating.i18n-float-right{left:auto;right:16px}',
+    '.i18n-float-right .i18n-menu{left:auto;right:0}',
+    '[dir="rtl"] .i18n-floating.i18n-float-right{right:auto;left:16px}',
+    '[dir="rtl"] .i18n-float-right .i18n-menu{right:auto;left:0}',
     '@media (max-width:600px){.i18n-menu{min-width:170px}.i18n-toggle{padding:6px 9px;font-size:.78rem}}',
 
     /* ---- right-to-left ---- */
@@ -471,7 +477,7 @@
   var CHECK = '<svg class="i18n-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
 
   // Ordered by preference; the selector lands in the first container that exists.
-  var MOUNTS = ['.sidebar-header', '.nav-inner', '.navbar-inner', '.nav-container', 'nav.navbar',
+  var MOUNTS = ['.nav-inner', '.navbar-inner', '.nav-container', 'nav.navbar',
                 '.portal-header .header-inner', 'header.header', '.header-inner'];
   var BRANDS = '.sidebar-brand, .brand, .logo, .navbar-brand-text, .portal-logo, .navbar-brand, .brand-name';
 
@@ -586,6 +592,7 @@
     }
     if (!host) {                                   // no nav on this page
       el.classList.add('i18n-floating');
+      el.classList.add(FLOAT_SIDE === 'right' ? 'i18n-float-right' : 'i18n-float-left');
       document.body.appendChild(el);
       return;
     }
