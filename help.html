@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=3.1.6">
+    <link rel="stylesheet" href="style.css?v=3.1.7">
   <script src="/languages/i18n.js"></script>
 </head>
 <body>
@@ -147,144 +147,292 @@
                     </div>
                 </div>
 
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>Why do I have to disable my antivirus?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                <div class="faq-categories">
+                <div class="faq-category">
+                    <h3 class="faq-category-title"><i class="fas fa-play"></i> Getting Started</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-download"></i>
+                                <span>How do I download a cheat or mod?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Open the game you want from <a href="index.html#games">Free Cheats</a>, or a game from <a href="mods.html">Game Mods</a>, then press the <strong>Download</strong> button on the cheat you want.</p>
+                                <p>Most downloads are hosted on our own file host and open in a new tab. Some link straight to the mod author instead, which is deliberate &mdash; you always get the original file rather than a re-upload.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Game cheats use code injection and memory manipulation techniques that antivirus software flags as potentially malicious behavior. This is known as a <strong>false positive</strong> -- the files are not actually harmful, but their behavior patterns resemble those of malware.</p>
-                            <p>To use cheats safely:</p>
-                            <ul>
-                                <li>Temporarily disable your antivirus or Windows Defender before downloading</li>
-                                <li>Add the cheat folder to your antivirus exclusion list</li>
-                                <li>Re-enable your antivirus after extraction is complete</li>
-                            </ul>
-                            <p>All files hosted on this site are manually scanned and verified safe before being published.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>Are all the cheats safe and undetected?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-shield-virus"></i>
+                                <span>Why do I have to disable my antivirus?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Cheats inject code into a running game and read or write its memory. That is exactly what malware does, so antivirus software flags it. This is a <strong>false positive</strong>: the behaviour looks the same even though the intent is not.</p>
+                                <ul><li>Turn off real-time protection before you extract the file</li><li>Add the folder to your exclusion list so it is not deleted later</li><li>Turn protection back on once you are done</li></ul>
+                                <p>Only do this for files you actually trust. If a download came from somewhere other than this site, scan it first.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>We test all cheats before featuring them and only list ones that are currently working and undetected. However, <strong>no cheat is 100% safe forever</strong>. Game developers constantly update their anti-cheat systems, which means:</p>
-                            <ul>
-                                <li>A cheat that is undetected today may get detected in a future update</li>
-                                <li>Using cheats in online games always carries some risk of a ban</li>
-                                <li>We strongly recommend using alt accounts rather than your main account</li>
-                                <li>Single-player cheats are generally much safer than online ones</li>
-                            </ul>
-                            <p>Always check the cheat's status on our site before using it, as we update detection statuses regularly.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>How do you earn if all the cheats are free?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-list-check"></i>
+                                <span>What do I need installed first?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Most Windows cheats need the <strong>Visual C++ Redistributables</strong>. Missing them is the single most common cause of a menu that opens and immediately closes.</p>
+                                <p>Script mods usually need a script hook too &mdash; Script Hook V for GTA V, Script Hook RDR2 for Red Dead. Install that before any mod that depends on it.</p>
+                                <p>See <a href="requirements.html">Requirements</a> for the full list.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>This website and all the cheats we provide are completely free. We sustain ourselves through:</p>
-                            <ul>
-                                <li><strong>Community support</strong> -- donations and contributions from our community members</li>
-                                <li><strong>Ad revenue</strong> -- advertisements displayed on our website and YouTube channel</li>
-                                <li><strong>YouTube monetization</strong> -- revenue from tutorial and showcase videos</li>
-                                <li><strong>Partnerships</strong> -- collaborations with other gaming communities</li>
-                            </ul>
-                            <p>We believe gaming tools should be accessible to everyone, which is why we keep everything free.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>How do I install a mod menu?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Follow these general steps to install most mod menus:</p>
-                            <ol>
-                                <li><strong>Disable your antivirus</strong> temporarily to prevent false positive detections</li>
-                                <li><strong>Download the cheat</strong> from the link provided on our game page</li>
-                                <li><strong>Extract the files</strong> using WinRAR or 7-Zip to a dedicated folder</li>
-                                <li><strong>Run the executable as Administrator</strong> (right-click > Run as administrator)</li>
-                                <li><strong>Launch your game</strong> and wait until you are fully loaded in</li>
-                                <li><strong>Inject the cheat</strong> by clicking the inject button in the cheat loader</li>
-                                <li><strong>Use the menu key</strong> (usually Insert, F5, or Numpad 0) to open the mod menu in-game</li>
-                            </ol>
-                            <p>Each cheat page includes specific installation instructions. Check the YouTube tutorial linked on the download page for a visual walkthrough.</p>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-wrench"></i>
+                                <span>How do I install a mod menu?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The usual sequence:</p>
+                                <ol><li>Extract the archive somewhere outside your game folder</li><li>Start the game and load into single player</li><li>Run the injector or loader as administrator</li><li>Pick the game process and inject</li><li>Open the menu with its hotkey, usually <strong>F4</strong>, <strong>Insert</strong> or <strong>Numpad /</strong></li></ol>
+                                <p>Every menu ships a readme. If the hotkey here does not work, that is the file to check.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>What should I do if a cheat isn't working?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                <div class="faq-category">
+                    <h3 class="faq-category-title"><i class="fas fa-link"></i> Downloads & Links</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-triangle-exclamation"></i>
+                                <span>A download link is dead or will not open</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Tell us and it gets fixed. The fastest route is <a href="https://discord.gg/6hsV2fva8Z" target="_blank" rel="noopener noreferrer">Discord</a> or <a href="contact.html">Contact</a>.</p>
+                                <p>Before reporting, try disabling your ad blocker for the page. Blockers sometimes stop the redirect that carries you to the file host.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>If a cheat is not working, try these troubleshooting steps in order:</p>
-                            <ul>
-                                <li><strong>Run as Administrator</strong> -- right-click the executable and select "Run as administrator"</li>
-                                <li><strong>Disable antivirus completely</strong> -- Windows Defender, third-party AV, and real-time protection</li>
-                                <li><strong>Check game version</strong> -- make sure your game is updated to the version supported by the cheat</li>
-                                <li><strong>Close overlays</strong> -- disable Steam overlay, Discord overlay, NVIDIA GeForce Experience, and MSI Afterburner</li>
-                                <li><strong>Re-download the cheat</strong> -- your antivirus may have quarantined or corrupted files</li>
-                                <li><strong>Try windowed mode</strong> -- some cheats work better when the game is not in fullscreen</li>
-                                <li><strong>Check our Discord or Telegram</strong> -- the cheat may have been detected or updated</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>Can I get banned for using cheats?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-server"></i>
+                                <span>What is bstlar.com?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>It is the file host used for most downloads on this site. When you press Download you land on a bstlar page with the file on it.</p>
+                                <p>Links that point somewhere else &mdash; GitHub, a mod author&rsquo;s own site, Mega &mdash; are intentional. Those are the official sources and we would rather send you there than mirror the file.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p><strong>Yes, there is always a risk of being banned when using cheats in online games.</strong> Anti-cheat systems are constantly being improved, and no cheat can guarantee permanent undetected status.</p>
-                            <p>To minimize your risk:</p>
-                            <ul>
-                                <li><strong>Always use alt accounts</strong> -- never cheat on your main account</li>
-                                <li><strong>Be subtle</strong> -- avoid obvious cheating like rage aimbotting or teleporting</li>
-                                <li><strong>Use private sessions</strong> when possible to avoid player reports</li>
-                                <li><strong>Do not grief other players</strong> -- this attracts reports and manual reviews</li>
-                                <li><strong>Add money or items gradually</strong> rather than all at once</li>
-                                <li><strong>Keep cheats updated</strong> -- outdated versions are more likely to be detected</li>
-                            </ul>
-                            <p>Single-player and offline modes are always the safest option.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>Do you provide support for paid cheats?</h4>
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-key"></i>
+                                <span>Where do I get the key for a mod menu?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A few menus use a rotating key. Open the key page linked from that menu and the current key is shown on it.</p>
+                                <p>Keys rotate on a fixed schedule, so one you saved earlier will stop working. Load the page again for the current one rather than reusing an old key.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Our focus is on <strong>free cheats and tools</strong>. We do not develop, sell, or officially support paid cheats. If you have purchased a cheat from a third-party provider, you should contact their support team directly for help.</p>
-                            <p>However, our community members on Discord and Telegram may be able to help with general questions about paid cheats or point you toward legitimate providers.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>How often is the website updated?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We update the website regularly to ensure all content is current and accurate:</p>
-                            <ul>
-                                <li><strong>Cheat status updates</strong> -- checked and updated multiple times per week</li>
-                                <li><strong>New cheats and mods</strong> -- added as they become available and pass our testing</li>
-                                <li><strong>Game updates</strong> -- pages are updated when games receive major patches</li>
-                                <li><strong>Blog posts</strong> -- new articles and guides published regularly</li>
-                            </ul>
-                            <p>Follow our <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" rel="noopener noreferrer">YouTube channel</a> and <a href="https://t.me/whatwhatboy" target="_blank" rel="noopener noreferrer">Telegram</a> for the fastest update notifications.</p>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-rectangle-ad"></i>
+                                <span>Why are there ads on the download pages?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ads are what keep everything here free. Nothing on this site is paywalled and there is no membership.</p>
+                                <p>If an ad ever tries to install something, close it &mdash; that is not a download from us. Our files only ever come from the Download button itself.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3 class="faq-category-title"><i class="fas fa-shield-halved"></i> Safety & Bans</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-ban"></i>
+                                <span>Can I get banned for using cheats?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Yes.</strong> Anti-cheat systems detect and ban, and there is no cheat anywhere that removes that risk.</p>
+                                <ul><li>Bans on GTA Online and similar are often tied to hardware, not just the account</li><li>Use single player wherever you can</li><li>If you go online, use an account you can afford to lose</li><li>Never use a cheat on an account with purchases on it</li></ul>
+                                <p>Read <a href="safety.html">Safety</a> before you use anything online.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-magnifying-glass"></i>
+                                <span>Are all the cheats safe and undetected?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Files here are checked before publishing, but <strong>undetected is never permanent</strong>. A cheat that was safe last month can be detected after a single game or anti-cheat update.</p>
+                                <p>Status badges on each card reflect what was true when it was last checked. Treat them as a guide, not a guarantee.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-user-shield"></i>
+                                <span>Should I use my main account?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No. Use a throwaway account for anything online.</p>
+                                <p>An alternate account costs far less than losing a main with years of progress and purchases on it.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-circle-question"></i>
+                                <span>A cheat is not working. What now?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <ol><li>Check the game updated &mdash; a patch breaks most cheats until they are rebuilt</li><li>Run the injector as administrator</li><li>Confirm the Visual C++ Redistributables are installed</li><li>Make sure your antivirus has not quietly deleted a file</li><li>Re-download in case the archive was incomplete</li></ol>
+                                <p>Still stuck? Ask in <a href="https://discord.gg/6hsV2fva8Z" target="_blank" rel="noopener noreferrer">Discord</a> with the game, the cheat name, and what actually happens.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3 class="faq-category-title"><i class="fas fa-puzzle-piece"></i> Game Mods</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-code-compare"></i>
+                                <span>What is the difference between a cheat and a mod?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A <strong>cheat</strong> injects into the running game to give you an advantage &mdash; aimbot, ESP, a trainer menu.</p>
+                                <p>A <strong>mod</strong> changes the game itself: graphics overhauls, new vehicles, new scripts. Mods live under <a href="mods.html">Game Mods</a> and are generally the safer, more accepted side of things.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-wifi"></i>
+                                <span>Do mods work in online modes?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Assume not, and do not try. Graphics mods are sometimes tolerated, but script mods and anything that alters game files will get you banned online.</p>
+                                <p>Keep a clean copy of the game if you want to play both modded single player and online.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-rotate"></i>
+                                <span>A game update broke my mods</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Normal. Script hooks tie themselves to a specific game build, so a patch stops them working until the author rebuilds.</p>
+                                <p>Wait for the update rather than forcing an old version. Forcing it usually crashes on launch.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3 class="faq-category-title"><i class="fas fa-tv"></i> Console & Emulators</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-microchip"></i>
+                                <span>Can I mod my Nintendo Switch?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Only if your console is an unpatched model. Later hardware revisions cannot run custom firmware without a physical modchip.</p>
+                                <p>Check your serial number before buying anything. Our <a href="console/nintendo-switch.html">Nintendo Switch</a> page covers Atmosph&egrave;re and what to back up first.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-desktop"></i>
+                                <span>Do I need a modded console to use emulators?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No. Emulators run on your PC and need nothing done to your console.</p>
+                                <p>You do need game files, and those should come from discs or cartridges you own. See <a href="console/emulators.html">Emulators</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Which emulator should I use?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Depends on the system &mdash; PCSX2 for PS2, RPCS3 for PS3, Dolphin for GameCube and Wii, Xenia for Xbox 360, shadPS4 for PS4.</p>
+                                <p>RetroArch covers most retro systems in one place. Every one is listed with its official download on the <a href="console/emulators.html">Emulators</a> page.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3 class="faq-category-title"><i class="fas fa-circle-info"></i> Site & Support</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-hand-holding-dollar"></i>
+                                <span>How is everything free?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ads on the site cover the hosting. There is no paid tier, no membership, and nothing is held back behind a payment.</p>
+                                <p>If someone is selling you something claiming to be from this site, it is not.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-store"></i>
+                                <span>Do you support paid cheats?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No. We only cover free tools, so we cannot help with anything you bought elsewhere &mdash; go to whoever sold it.</p>
+                                <p>Be careful buying private cheats generally. Chargebacks and disappearing sellers are common.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-clock-rotate-left"></i>
+                                <span>How often is the site updated?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Whenever something changes &mdash; a cheat is updated, a link dies, or a new tool is worth adding.</p>
+                                <p>The fastest way to hear about it is <a href="https://www.youtube.com/channel/UCusYWir4F6r5AY6A9Ddv7jg" target="_blank" rel="noopener noreferrer">YouTube</a> or <a href="https://t.me/whatwhatboy" target="_blank" rel="noopener noreferrer">Telegram</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
 
                 <div class="discord-cta">
@@ -321,6 +469,6 @@
         </div>
     </footer>
     <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
-    <script src="script.js?v=3.1.6"></script>
+    <script src="script.js?v=3.1.7"></script>
 </body>
 </html>

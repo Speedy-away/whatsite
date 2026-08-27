@@ -206,7 +206,16 @@ function initSearch() {
         // Toggle "no results" message
         const noResults = document.querySelector('.no-results');
         if (noResults) {
-            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    
+        // Hide a category heading once every question under it is filtered out.
+        document.querySelectorAll('.faq-category').forEach((cat) => {
+            const items = cat.querySelectorAll('.faq-item');
+            if (items.length === 0) return;
+            const anyVisible = Array.from(items).some((i) => i.style.display !== 'none');
+            cat.style.display = anyVisible ? '' : 'none';
+        });
+
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         }
     };
 

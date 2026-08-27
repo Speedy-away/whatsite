@@ -319,6 +319,8 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .faq-search { max-width: 500px; margin: 0 auto 32px; }
 .faq-categories { max-width: 800px; margin: 0 auto; }
 .faq-category { margin-bottom: 32px; }
+.faq-category-title { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.faq-category-title i { color: var(--accent-light); font-size: 14px; }
 .faq-items { display: flex; flex-direction: column; gap: 8px; }
 .faq-item { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-btn); overflow: hidden; transition: border-color var(--tf); }
 .faq-item:hover { border-color: var(--border-hover); }
