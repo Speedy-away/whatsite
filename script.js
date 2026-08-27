@@ -18,6 +18,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initSidebar();
     initSearch();
+    initSidebarGroups();
     initHeroAnimations();
     initStatsCounters();
     initScrollEffects();
@@ -576,6 +577,47 @@ function initBlogFilter() {
                 card.style.display =
                     (category === 'all' || categories.includes(category)) ? '' : 'none';
             });
+        });
+    });
+}
+
+/* ==========================================================================
+   Sidebar Groups
+   ========================================================================== */
+
+function initSidebarGroups() {
+    const sidebar = document.getElementById('sidebar');
+    const groups = document.querySelectorAll('.nav-group');
+    if (groups.length === 0) return;
+
+    // Open whichever group holds the current page, so you can see where you are.
+    groups.forEach((group) => {
+        if (group.querySelector('.nav-link.active')) {
+            group.classList.add('open');
+            const t = group.querySelector('.nav-group-toggle');
+            if (t) t.setAttribute('aria-expanded', 'true');
+        }
+    });
+
+    document.querySelectorAll('.nav-group-toggle').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const group = toggle.closest('.nav-group');
+            if (!group) return;
+
+            // On the collapsed rail there is no room for a sublist, so open the
+            // sidebar first rather than expanding into nothing.
+            if (sidebar && sidebar.classList.contains('collapsed')) {
+                sidebar.classList.remove('collapsed');
+                const main = document.getElementById('main-content');
+                if (main) main.classList.remove('sidebar-collapsed');
+                try { localStorage.setItem('sidebarCollapsed', 'false'); } catch (e) { /* private mode */ }
+                group.classList.add('open');
+                toggle.setAttribute('aria-expanded', 'true');
+                return;
+            }
+
+            const open = group.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
     });
 }

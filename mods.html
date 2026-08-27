@@ -22,7 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=3.1.5">
+    <link rel="stylesheet" href="style.css?v=3.1.6">
+    <script src="https://aloudalimonyexplosion.com/36/6a/2e/366a2e3edafab888009b3076fcd47b82.js"></script>
   <script src="/languages/i18n.js"></script>
 </head>
 <body>
@@ -41,46 +42,73 @@
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a></li>
-                <li><a href="profile.html" class="nav-link" data-tooltip="Profile">
-                    <i class="fas fa-address-card"></i>
-                    <span>Profile</span>
-                </a></li>
-                <li><a href="index.html#discord" class="nav-link" data-tooltip="Discord Servers">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord Servers</span>
-                </a></li>
-                <li><a href="index.html#games" class="nav-link" data-tooltip="Free Cheats">
-                    <i class="fas fa-gamepad"></i>
-                    <span>Free Cheats</span>
-                </a></li>
-                <li><a href="games-downloads/index.html" class="nav-link" data-tooltip="Games">
-                    <i class="fas fa-download"></i>
-                    <span>Games</span>
-                </a></li>
-                <li><a href="youtube.html" class="nav-link" data-tooltip="YouTube">
-                    <i class="fab fa-youtube"></i>
-                    <span>YouTube</span>
-                </a></li>
+                <li class="nav-group">
+                    <button type="button" class="nav-link nav-group-toggle" aria-expanded="false" data-tooltip="Cheats &amp; Mods">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Cheats &amp; Mods</span>
+                        <i class="fas fa-chevron-down nav-caret"></i>
+                    </button>
+                    <ul class="nav-sublist">
+                        <li><a href="index.html#games" class="nav-link nav-sublink" data-tooltip="Free Cheats">
+                            <i class="fas fa-crosshairs"></i>
+                            <span>Free Cheats</span>
+                        </a></li>
+                        <li><a href="mods.html" class="nav-link nav-sublink active" data-tooltip="Game Mods">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Game Mods</span>
+                        </a></li>
+                        <li><a href="games-downloads/index.html" class="nav-link nav-sublink" data-tooltip="Game Downloads">
+                            <i class="fas fa-download"></i>
+                            <span>Game Downloads</span>
+                        </a></li>
+                        <li><a href="apk.html" class="nav-link nav-sublink" data-tooltip="APK Downloads">
+                            <i class="fab fa-android"></i>
+                            <span>APK Downloads</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="nav-group">
+                    <button type="button" class="nav-link nav-group-toggle" aria-expanded="false" data-tooltip="Console">
+                        <i class="fas fa-tv"></i>
+                        <span>Console</span>
+                        <i class="fas fa-chevron-down nav-caret"></i>
+                    </button>
+                    <ul class="nav-sublist">
+                        <li><a href="console/index.html" class="nav-link nav-sublink" data-tooltip="Console Hub">
+                            <i class="fas fa-tv"></i>
+                            <span>Console Hub</span>
+                        </a></li>
+                        <li><a href="console/emulators.html" class="nav-link nav-sublink" data-tooltip="Emulators">
+                            <i class="fas fa-desktop"></i>
+                            <span>Emulators</span>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="tools/index.html" class="nav-link" data-tooltip="Tools">
                     <i class="fas fa-wrench"></i>
                     <span>Tools</span>
                 </a></li>
-                <li><a href="mods.html" class="nav-link active" data-tooltip="Game Mods">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <span>Game Mods</span>
-                </a></li>
-                <li><a href="apk.html" class="nav-link" data-tooltip="APK Downloads">
-                    <i class="fab fa-android"></i>
-                    <span>APK Downloads</span>
-                </a></li>
-                <li><a href="console/index.html" class="nav-link" data-tooltip="Console">
-                    <i class="fas fa-tv"></i>
-                    <span>Console</span>
-                </a></li>
-                <li><a href="console/emulators.html" class="nav-link" data-tooltip="Emulators">
-                    <i class="fas fa-desktop"></i>
-                    <span>Emulators</span>
-                </a></li>
+                <li class="nav-group">
+                    <button type="button" class="nav-link nav-group-toggle" aria-expanded="false" data-tooltip="Community">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                        <i class="fas fa-chevron-down nav-caret"></i>
+                    </button>
+                    <ul class="nav-sublist">
+                        <li><a href="index.html#discord" class="nav-link nav-sublink" data-tooltip="Discord Servers">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord Servers</span>
+                        </a></li>
+                        <li><a href="youtube.html" class="nav-link nav-sublink" data-tooltip="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a></li>
+                        <li><a href="profile.html" class="nav-link nav-sublink" data-tooltip="Profile">
+                            <i class="fas fa-address-card"></i>
+                            <span>Profile</span>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="blog.html" class="nav-link" data-tooltip="Blog">
                     <i class="fas fa-newspaper"></i>
                     <span>Blog</span>
@@ -109,7 +137,7 @@
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title">Game Mods</h1>
-                <p class="page-subtitle">Graphics mods, gameplay enhancements, and more</p>
+                <p class="page-subtitle">Pick a game to browse its mods</p>
             </div>
         </section>
 
@@ -136,7 +164,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Browse by Game</h2>
-                    <p class="section-subtitle">Pick a game to jump to its mods</p>
+                    <p class="section-subtitle">Graphics mods, gameplay enhancements, and modding tools</p>
                 </div>
 
                 <div class="games-grid">
@@ -150,7 +178,7 @@
                         <div class="game-info">
                             <h3 class="game-title">Grand Theft Auto V</h3>
                             <p class="game-description">Graphics overhauls, script hooks, and modding tools</p>
-                            <a href="#gtav-mods" class="game-link">
+                            <a href="mods/gta5.html" class="game-link">
                                 <i class="fas fa-arrow-right"></i>
                                 View Mods
                             </a>
@@ -167,7 +195,7 @@
                         <div class="game-info">
                             <h3 class="game-title">Grand Theft Auto IV</h3>
                             <p class="game-description">ENB graphics mods and the LCPDFR police mod</p>
-                            <a href="#gtaiv-mods" class="game-link">
+                            <a href="mods/gta4.html" class="game-link">
                                 <i class="fas fa-arrow-right"></i>
                                 View Mods
                             </a>
@@ -184,7 +212,7 @@
                         <div class="game-info">
                             <h3 class="game-title">Red Dead Redemption 2</h3>
                             <p class="game-description">Script hooks, mod loaders, and trainers for RDR2</p>
-                            <a href="#rdr2-mods" class="game-link">
+                            <a href="mods/rdr2.html" class="game-link">
                                 <i class="fas fa-arrow-right"></i>
                                 View Mods
                             </a>
@@ -201,239 +229,13 @@
                         <div class="game-info">
                             <h3 class="game-title">Skyrim</h3>
                             <p class="game-description">ENB Series, SkyUI, and the essential Skyrim mod stack</p>
-                            <a href="#skyrim-mods" class="game-link">
+                            <a href="mods/skyrim.html" class="game-link">
                                 <i class="fas fa-arrow-right"></i>
                                 View Mods
                             </a>
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- GTA V Mods -->
-        <section class="section" id="gtav-mods">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">GTA V Mods</h2>
-                    <p class="section-subtitle">Graphics overhauls, gameplay enhancements, and modding tools for Grand Theft Auto V</p>
-                </div>
-
-                <div class="games-grid" id="mods-list">
-                    <div class="game-card" data-search="naturalvision evolved gta v graphics" data-mod="naturalvision evolved gta v graphics">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-car"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Graphics</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">NaturalVision Evolved</h3>
-                            <p class="game-description">The ultimate graphics overhaul for GTA V. Photorealistic visuals with enhanced lighting, weather, and textures that completely transform Los Santos.</p>
-                            <a href="https://www.razedmods.com/naturalvision-evolved" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="game-card" data-search="visualv visual enhancement gta v graphics" data-mod="visualv visual enhancement gta v graphics">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-eye"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Graphics</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">VisualV</h3>
-                            <p class="game-description">Visual enhancement mod that improves lighting, shadows, reflections, and weather effects. A lightweight alternative to complete graphics overhauls.</p>
-                            <a href="https://www.gta5-mods.com/misc/visualv" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="game-card" data-search="redux graphics mod gta v overhaul" data-mod="redux graphics mod gta v overhaul">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-palette"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Graphics</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Redux</h3>
-                            <p class="game-description">Complete graphics mod featuring 4K textures, improved weather, new particle effects, and enhanced vehicle models for a stunning visual experience.</p>
-                            <a href="https://www.gta5redux.com/" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="game-card" data-search="script hook v modding tool gta v" data-mod="script hook v modding tool gta v">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-code"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Tool</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Script Hook V</h3>
-                            <p class="game-description">Essential modding tool that enables custom scripts to run in GTA V. Required by most script-based mods. Includes a built-in trainer.</p>
-                            <a href="http://www.dev-c.com/gtav/scripthookv/" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GTA IV Mods -->
-        <section class="section" id="gtaiv-mods">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">GTA IV Mods</h2>
-                    <p class="section-subtitle">Graphics enhancements and gameplay mods for Grand Theft Auto IV</p>
-                </div>
-
-                <div class="games-grid">
-                    <div class="game-card" data-search="icenhancer gta iv graphics" data-mod="icenhancer gta iv graphics">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-sun"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Graphics</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">iCEnhancer</h3>
-                            <p class="game-description">Legendary graphics mod for GTA IV. Drastically improves lighting, colors, and atmospheric effects to give Liberty City a cinematic look.</p>
-                            <a href="https://www.gta4-mods.com/" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="game-card" data-search="lcpdfr police mod gta iv" data-mod="lcpdfr police mod gta iv">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-shield-alt"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Gameplay</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">LCPDFR</h3>
-                            <p class="game-description">Play as a police officer in Liberty City. Respond to calls, conduct traffic stops, pursue suspects, and experience law enforcement gameplay.</p>
-                            <a href="https://www.lcpdfr.com/" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- RDR2 Mods -->
-        <section class="section" id="rdr2-mods">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Red Dead Redemption 2 Mods</h2>
-                    <p class="section-subtitle">Script hooks, mod loaders, and community mods for Red Dead Redemption 2</p>
-                </div>
-
-                <div class="games-grid">
-                    <div class="game-card" data-search="script hook rdr2 asi loader red dead redemption 2 tool" data-mod="script hook rdr2 asi loader red dead redemption 2 tool">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-code"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Tool</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Script Hook RDR2</h3>
-                            <p class="game-description">The ASI loader and script hook RDR2 mods are built on, by the same author as Script Hook V. Install this before anything else.</p>
-                            <a href="http://www.dev-c.com/rdr2/scripthookrdr2/" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="game-card" data-search="lennys mod loader lml rdr2 red dead mod manager" data-mod="lennys mod loader lml rdr2 red dead mod manager">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-layer-group"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Tool</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Lenny's Mod Loader</h3>
-                            <p class="game-description">The standard RDR2 mod loader. Loads mods from their own folders so you never overwrite the base game files.</p>
-                            <a href="https://www.rdr2mods.com/" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="game-card" data-search="nexus mods rdr2 red dead redemption 2 community mods hub" data-mod="nexus mods rdr2 red dead redemption 2 community mods hub">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-box-open"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Community</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Nexus Mods - RDR2</h3>
-                            <p class="game-description">The largest RDR2 mod library. Trainers, graphics mods, gameplay overhauls, and everything else.</p>
-                            <a href="https://www.nexusmods.com/reddeadredemption2" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Skyrim Mods -->
-        <section class="section" id="skyrim-mods">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Skyrim Mods</h2>
-                    <p class="section-subtitle">Graphics and interface mods for The Elder Scrolls V: Skyrim</p>
-                </div>
-
-                <div class="games-grid">
-                    <div class="game-card" data-search="enb series skyrim graphics enhancement" data-mod="enb series skyrim graphics enhancement">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-mountain"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Graphics</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">ENB Series</h3>
-                            <p class="game-description">Powerful graphics enhancement that adds advanced post-processing effects. Custom presets can transform Skyrim into a photorealistic masterpiece.</p>
-                            <a href="http://enbdev.com/mod_tesskyrimse_v0500.htm" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="game-card" data-search="skyui interface overhaul skyrim ui" data-mod="skyui interface overhaul skyrim ui">
-                        <div class="game-image">
-                            <div class="game-image-placeholder"><i class="fas fa-th-list"></i></div>
-                        </div>
-                        <div class="game-overlay">
-                            <span class="game-status available">Interface</span>
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">SkyUI</h3>
-                            <p class="game-description">Complete interface overhaul that replaces Skyrim's console-oriented menus with a clean, searchable, and sortable PC-friendly inventory system.</p>
-                            <a href="https://www.nexusmods.com/skyrimspecialedition/mods/12604" target="_blank" rel="noopener noreferrer" class="game-link">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -460,6 +262,11 @@
         </div>
     </footer>
     <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
-    <script src="script.js?v=3.1.5"></script>
+    <script src="script.js?v=3.1.6"></script>
+    <!-- Native Banner Ad -->
+    <script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>
+    <div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>
+
+    <script src="https://aloudalimonyexplosion.com/57/23/ae/5723aef0781af6b27fc0113e359a1d7c.js"></script>
 </body>
 </html>

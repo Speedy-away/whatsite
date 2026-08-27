@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../style.css?v=3.1.5">
+    <link rel="stylesheet" href="../../style.css?v=3.1.6">
 
     <script src="https://aloudalimonyexplosion.com/36/6a/2e/366a2e3edafab888009b3076fcd47b82.js"></script>
   <script src="/languages/i18n.js"></script>
@@ -47,46 +47,73 @@
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a></li>
-                <li><a href="../../profile.html" class="nav-link" data-tooltip="Profile">
-                    <i class="fas fa-address-card"></i>
-                    <span>Profile</span>
-                </a></li>
-                <li><a href="../../index.html#discord" class="nav-link" data-tooltip="Discord Servers">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord Servers</span>
-                </a></li>
-                <li><a href="../../index.html#games" class="nav-link active" data-tooltip="Free Cheats">
-                    <i class="fas fa-gamepad"></i>
-                    <span>Free Cheats</span>
-                </a></li>
-                <li><a href="../../games-downloads/index.html" class="nav-link" data-tooltip="Games">
-                    <i class="fas fa-download"></i>
-                    <span>Games</span>
-                </a></li>
-                <li><a href="../../youtube.html" class="nav-link" data-tooltip="YouTube">
-                    <i class="fab fa-youtube"></i>
-                    <span>YouTube</span>
-                </a></li>
+                <li class="nav-group">
+                    <button type="button" class="nav-link nav-group-toggle" aria-expanded="false" data-tooltip="Cheats &amp; Mods">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Cheats &amp; Mods</span>
+                        <i class="fas fa-chevron-down nav-caret"></i>
+                    </button>
+                    <ul class="nav-sublist">
+                        <li><a href="../../index.html#games" class="nav-link nav-sublink active" data-tooltip="Free Cheats">
+                            <i class="fas fa-crosshairs"></i>
+                            <span>Free Cheats</span>
+                        </a></li>
+                        <li><a href="../../mods.html" class="nav-link nav-sublink" data-tooltip="Game Mods">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Game Mods</span>
+                        </a></li>
+                        <li><a href="../../games-downloads/index.html" class="nav-link nav-sublink" data-tooltip="Game Downloads">
+                            <i class="fas fa-download"></i>
+                            <span>Game Downloads</span>
+                        </a></li>
+                        <li><a href="../../apk.html" class="nav-link nav-sublink" data-tooltip="APK Downloads">
+                            <i class="fab fa-android"></i>
+                            <span>APK Downloads</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="nav-group">
+                    <button type="button" class="nav-link nav-group-toggle" aria-expanded="false" data-tooltip="Console">
+                        <i class="fas fa-tv"></i>
+                        <span>Console</span>
+                        <i class="fas fa-chevron-down nav-caret"></i>
+                    </button>
+                    <ul class="nav-sublist">
+                        <li><a href="../../console/index.html" class="nav-link nav-sublink" data-tooltip="Console Hub">
+                            <i class="fas fa-tv"></i>
+                            <span>Console Hub</span>
+                        </a></li>
+                        <li><a href="../../console/emulators.html" class="nav-link nav-sublink" data-tooltip="Emulators">
+                            <i class="fas fa-desktop"></i>
+                            <span>Emulators</span>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="../../tools/index.html" class="nav-link" data-tooltip="Tools">
                     <i class="fas fa-wrench"></i>
                     <span>Tools</span>
                 </a></li>
-                <li><a href="../../mods.html" class="nav-link" data-tooltip="Game Mods">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <span>Game Mods</span>
-                </a></li>
-                <li><a href="../../apk.html" class="nav-link" data-tooltip="APK Downloads">
-                    <i class="fab fa-android"></i>
-                    <span>APK Downloads</span>
-                </a></li>
-                <li><a href="../../console/index.html" class="nav-link" data-tooltip="Console">
-                    <i class="fas fa-tv"></i>
-                    <span>Console</span>
-                </a></li>
-                <li><a href="../../console/emulators.html" class="nav-link" data-tooltip="Emulators">
-                    <i class="fas fa-desktop"></i>
-                    <span>Emulators</span>
-                </a></li>
+                <li class="nav-group">
+                    <button type="button" class="nav-link nav-group-toggle" aria-expanded="false" data-tooltip="Community">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                        <i class="fas fa-chevron-down nav-caret"></i>
+                    </button>
+                    <ul class="nav-sublist">
+                        <li><a href="../../index.html#discord" class="nav-link nav-sublink" data-tooltip="Discord Servers">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord Servers</span>
+                        </a></li>
+                        <li><a href="../../youtube.html" class="nav-link nav-sublink" data-tooltip="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a></li>
+                        <li><a href="../../profile.html" class="nav-link nav-sublink" data-tooltip="Profile">
+                            <i class="fas fa-address-card"></i>
+                            <span>Profile</span>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="../../blog.html" class="nav-link" data-tooltip="Blog">
                     <i class="fas fa-newspaper"></i>
                     <span>Blog</span>
@@ -301,7 +328,7 @@
         </div>
     </div>
 
-    <script src="../../script.js?v=3.1.5"></script>
+    <script src="../../script.js?v=3.1.6"></script>
     <script>
         function openImageModal(src) {
             const modal = document.getElementById('imageModal');

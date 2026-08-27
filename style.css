@@ -54,6 +54,20 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .nav-link span { transition: opacity var(--tf); }
 .nav-link:hover { background: var(--bg-tertiary); color: var(--text-primary); }
 .nav-link.active { color: var(--accent-light); background: var(--accent-glow); border-left: 3px solid var(--accent); padding-left: 13px; }
+/* Sidebar groups - collapsible sections so the nav stays short */
+.nav-group-toggle { width: 100%; background: none; border: none; cursor: pointer; font-family: inherit; text-align: left; }
+.nav-caret { margin-left: auto; font-size: 11px; transition: transform var(--tf); flex-shrink: 0; }
+.nav-group.open > .nav-group-toggle .nav-caret { transform: rotate(180deg); }
+.nav-group.open > .nav-group-toggle { color: var(--text-primary); }
+.nav-sublist { max-height: 0; overflow: hidden; transition: max-height var(--tn); }
+.nav-group.open .nav-sublist { max-height: 320px; }
+.nav-sublist li { margin: 2px 8px 2px 0; }
+.nav-sublink { padding-left: 44px; font-size: 13px; }
+.nav-sublink.active { padding-left: 41px; }
+/* Collapsed rail: sublists would have nowhere to go, so hide them and let a
+   click on the group expand the sidebar first (handled in script.js). */
+.sidebar.collapsed .nav-caret { display: none; }
+.sidebar.collapsed .nav-sublist { display: none; }
 .sidebar-social { padding: 16px 20px; border-top: 1px solid var(--border); margin-top: auto; flex-shrink: 0; }
 .sidebar-social h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; }
 .sidebar-social .social-links { display: flex; gap: 8px; flex-wrap: wrap; }
