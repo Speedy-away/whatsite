@@ -1,5 +1,5 @@
 // Service Worker for whatwhatboy.com
-const CACHE_VERSION = 'v3.1.7';
+const CACHE_VERSION = 'v3.1.8';
 const CACHE_NAME = `whatwhatboy-${CACHE_VERSION}`;
 
 const PRECACHE_ASSETS = [
