@@ -62,7 +62,8 @@ button { font: inherit; }
 .back-link:hover, .back-link:focus-visible { color: var(--text); background: rgba(255,255,255,.06); }
 
 .key-layout {
-    min-height: calc(100vh - 170px);
+    /* No forced viewport height. It padded this out and pushed the ad section
+       below the fold; the art card min-height already gives it presence. */
     display: grid;
     grid-template-columns: minmax(0, 1.06fr) minmax(360px, .94fr);
     gap: 30px;
@@ -220,7 +221,8 @@ button { font: inherit; }
     background: #0c0b10;
 }
 
-.selector-wrap { min-height: calc(100vh - 160px); display: grid; place-items: center; }
+/* Sized to content so the ad below stays reachable, like .blocked-wrap. */
+.selector-wrap { min-height: min(70vh, 560px); display: grid; place-items: center; padding: 24px 0 8px; }
 /* Shorter than the selector: a full-height blocked panel pushed the ad below
    the fold, so nobody bouncing off this page ever saw it. */
 .blocked-wrap { min-height: min(56vh, 420px); display: grid; place-items: center; padding: 28px 0 8px; }
