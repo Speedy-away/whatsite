@@ -557,6 +557,16 @@
     <script>
         const COUNTDOWN_SECONDS = 5;
         const DOWNLOAD_URL = 'https://bstlar.com/F/ScoobyKEY';
+        const ACCESS_ATTEMPT_KEY = 'scooby_access_attempt';
+        const FREE_KEY_PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'redm', 'spoofer']);
+        const requestedProduct = new URLSearchParams(window.location.search).get('product');
+        if (requestedProduct && FREE_KEY_PRODUCTS.has(requestedProduct)) {
+            try {
+                localStorage.setItem('scooby_pending_product', requestedProduct);
+            } catch (_) {
+                // The callback still opens the selector when browser storage is unavailable.
+            }
+        }
 
         let timeLeft = COUNTDOWN_SECONDS;
         const countdownElement = document.getElementById('countdown');
@@ -657,6 +667,36 @@
 
         downloadBtn.addEventListener('click', () => {
             if (!downloadBtn.disabled) {
+                if (!window.crypto || typeof window.crypto.getRandomValues !== 'function') {
+                    countdownText.textContent = 'Secure browser storage is required. Please use a current browser.';
+                    return;
+                }
+
+                const bytes = new Uint8Array(24);
+                window.crypto.getRandomValues(bytes);
+                const attemptId = Array.from(bytes,
+                    value => value.toString(16).padStart(2, '0')).join('');
+                let product = requestedProduct;
+                if (!product || !FREE_KEY_PRODUCTS.has(product)) {
+                    try {
+                        const pending = localStorage.getItem('scooby_pending_product');
+                        product = FREE_KEY_PRODUCTS.has(pending) ? pending : '';
+                    } catch (_) {
+                        product = '';
+                    }
+                }
+
+                try {
+                    sessionStorage.setItem(ACCESS_ATTEMPT_KEY, JSON.stringify({
+                        id: attemptId,
+                        product,
+                        startedAt: Date.now()
+                    }));
+                } catch (_) {
+                    countdownText.textContent = 'Session storage is required to continue securely.';
+                    return;
+                }
+
                 btnText.textContent = 'Redirecting...';
                 btnIcon.className = 'fas fa-spinner fa-spin';
 
