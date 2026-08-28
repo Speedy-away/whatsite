@@ -556,7 +556,14 @@
 
     <script>
         const COUNTDOWN_SECONDS = 3;
-        const DOWNLOAD_URL = 'https://bstlar.com/F/ScoobyKEY';
+        // Traffic is spread across several provider links so one being rate
+        // limited or down does not take the whole key flow with it.
+        const PROVIDER_URLS = [
+            'https://bstlar.com/F/ScoobyKEY',
+            'https://bstlar.com/F/ScoobyKEY2',
+            'https://bstlar.com/F/ScoobyKEY4'
+        ];
+        const DOWNLOAD_URL = PROVIDER_URLS[Math.floor(Math.random() * PROVIDER_URLS.length)];
         const ACCESS_ATTEMPT_KEY = 'scooby_access_attempt';
         const FREE_KEY_PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'redm', 'spoofer']);
         const requestedProduct = new URLSearchParams(window.location.search).get('product');

@@ -10,6 +10,18 @@
     const selector = document.getElementById('selectorContent');
     const parameters = new URLSearchParams(window.location.search);
 
+    // Spread bypass-page traffic over the same provider pool scoobyontop.html
+    // uses, so no single link takes all of it.
+    const PROVIDER_URLS = [
+        'https://bstlar.com/F/ScoobyKEY',
+        'https://bstlar.com/F/ScoobyKEY2',
+        'https://bstlar.com/F/ScoobyKEY4'
+    ];
+    const providerLink = document.querySelector('.blocked-panel .primary-button');
+    if (providerLink) {
+        providerLink.href = PROVIDER_URLS[Math.floor(Math.random() * PROVIDER_URLS.length)];
+    }
+
     // Local-only preview for testing the blocked copy even after this browser
     // has already completed the access flow. It has no effect on production.
     const localBlockedPreview = (window.location.hostname === '127.0.0.1' ||
