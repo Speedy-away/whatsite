@@ -472,7 +472,7 @@
         <div class="logo-section">
             <img src="assets/images/logo.png" alt="Scooby Menu" class="logo">
             <h1 class="brand-name">Scooby Menu</h1>
-            <p class="brand-tagline">Premium GTA V Experience</p>
+            <p class="brand-tagline">Premium Experience</p>
         </div>
 
         <!-- Status Badge -->
@@ -491,7 +491,7 @@
             </div>
 
             <div class="countdown-circle" id="countdownCircle">
-                <span class="countdown-number" id="countdown">5</span>
+                <span class="countdown-number" id="countdown">3</span>
             </div>
 
             <p class="countdown-text" id="countdownText">Verifying request and generating key...</p>
@@ -555,7 +555,7 @@
     </div>
 
     <script>
-        const COUNTDOWN_SECONDS = 5;
+        const COUNTDOWN_SECONDS = 3;
         const DOWNLOAD_URL = 'https://bstlar.com/F/ScoobyKEY';
         const ACCESS_ATTEMPT_KEY = 'scooby_access_attempt';
         const FREE_KEY_PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'redm', 'spoofer']);
@@ -697,12 +697,24 @@
                     return;
                 }
 
-                btnText.textContent = 'Redirecting...';
+                btnText.textContent = 'Opening...';
                 btnIcon.className = 'fas fa-spinner fa-spin';
 
-                setTimeout(() => {
-                    window.location.href = DOWNLOAD_URL;
-                }, 500);
+                // Open synchronously: a window.open() deferred in a setTimeout
+                // loses the user-gesture context and gets popup-blocked.
+                const tab = window.open(DOWNLOAD_URL, '_blank', 'noopener');
+
+                if (tab) {
+                    btnText.textContent = 'Opened in new tab';
+                    btnIcon.className = 'fas fa-check';
+                } else {
+                    // Blocked by the browser - fall back to this tab.
+                    countdownText.textContent = 'Popup blocked, continuing in this tab...';
+                    btnText.textContent = 'Redirecting...';
+                    setTimeout(() => {
+                        window.location.href = DOWNLOAD_URL;
+                    }, 600);
+                }
             }
         });
     </script>
