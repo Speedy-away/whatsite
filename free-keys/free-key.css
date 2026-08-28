@@ -220,7 +220,10 @@ button { font: inherit; }
     background: #0c0b10;
 }
 
-.selector-wrap, .blocked-wrap { min-height: calc(100vh - 160px); display: grid; place-items: center; }
+.selector-wrap { min-height: calc(100vh - 160px); display: grid; place-items: center; }
+/* Shorter than the selector: a full-height blocked panel pushed the ad below
+   the fold, so nobody bouncing off this page ever saw it. */
+.blocked-wrap { min-height: min(56vh, 420px); display: grid; place-items: center; padding: 28px 0 8px; }
 .selector-panel, .blocked-panel { width: min(900px, 100%); padding: clamp(25px, 5vw, 46px); border-radius: 25px; }
 .selector-panel h1, .blocked-panel h1 { margin-top: 0; }
 .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 28px; }
