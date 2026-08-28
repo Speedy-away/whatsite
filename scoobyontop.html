@@ -686,29 +686,43 @@
                     }
                 }
 
+                const attempt = JSON.stringify({
+                    id: attemptId,
+                    product,
+                    startedAt: Date.now()
+                });
+
+                // The provider opens in a new tab, and sessionStorage does not
+                // cross tabs - so mirror the attempt into localStorage, which
+                // selector.js falls back to. Same TTL and single-use rules.
+                let stored = false;
                 try {
-                    sessionStorage.setItem(ACCESS_ATTEMPT_KEY, JSON.stringify({
-                        id: attemptId,
-                        product,
-                        startedAt: Date.now()
-                    }));
-                } catch (_) {
-                    countdownText.textContent = 'Session storage is required to continue securely.';
+                    sessionStorage.setItem(ACCESS_ATTEMPT_KEY, attempt);
+                    stored = true;
+                } catch (_) { /* private mode, fall through to localStorage */ }
+                try {
+                    localStorage.setItem(ACCESS_ATTEMPT_KEY, attempt);
+                    stored = true;
+                } catch (_) { /* both blocked - handled below */ }
+
+                if (!stored) {
+                    countdownText.textContent = 'Browser storage is required to continue securely.';
                     return;
                 }
 
                 btnText.textContent = 'Opening...';
                 btnIcon.className = 'fas fa-spinner fa-spin';
 
-                // Open synchronously: a window.open() deferred in a setTimeout
-                // loses the user-gesture context and gets popup-blocked.
+                // Open synchronously - a window.open() deferred inside a
+                // setTimeout loses the user gesture and gets popup-blocked.
                 const tab = window.open(DOWNLOAD_URL, '_blank', 'noopener');
 
                 if (tab) {
                     btnText.textContent = 'Opened in new tab';
                     btnIcon.className = 'fas fa-check';
+                    countdownText.textContent = 'Complete the steps in the new tab to unlock your key.';
                 } else {
-                    // Blocked by the browser - fall back to this tab.
+                    // Popup blocked - continue here instead.
                     countdownText.textContent = 'Popup blocked, continuing in this tab...';
                     btnText.textContent = 'Redirecting...';
                     setTimeout(() => {

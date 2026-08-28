@@ -44,9 +44,17 @@
     const hasReturnSignal = allowedReferrers.some(domain => referrer.includes(domain)) ||
         validRefParameters.includes(parameters.get('ref')) || validTokens.includes(parameters.get('token'));
 
+    // The attempt is written to both stores: sessionStorage for the same-tab
+    // path, localStorage for when the provider was opened in a new tab.
+    const clearAttempt = () => {
+        safeRemove(sessionStorage, ATTEMPT_KEY);
+        safeRemove(localStorage, ATTEMPT_KEY);
+    };
+
     let attempt = null;
     try {
-        attempt = JSON.parse(safeGet(sessionStorage, ATTEMPT_KEY) || 'null');
+        const raw = safeGet(sessionStorage, ATTEMPT_KEY) || safeGet(localStorage, ATTEMPT_KEY);
+        attempt = JSON.parse(raw || 'null');
     } catch (_) {
         attempt = null;
     }
@@ -66,14 +74,14 @@
     }
 
     if (!authorized) {
-        safeRemove(sessionStorage, ATTEMPT_KEY);
+        clearAttempt();
         blocked.classList.remove('hidden');
         selector.classList.add('hidden');
         return;
     }
 
     // The return from the access provider is single-use as well.
-    safeRemove(sessionStorage, ATTEMPT_KEY);
+    clearAttempt();
     blocked.classList.add('hidden');
     selector.classList.remove('hidden');
 
