@@ -67,7 +67,9 @@
         now - attempt.startedAt >= MINIMUM_PROVIDER_TIME_MS &&
         now - attempt.startedAt <= ATTEMPT_TTL_MS &&
         (!attempt.product || PRODUCTS.has(attempt.product));
-    const authorized = hasReturnSignal && validAttempt;
+    // A valid ref, token, or referrer is enough on its own. The stored attempt
+    // is now only used to remember which product the visitor came for.
+    const authorized = hasReturnSignal;
 
     if (parameters.has('ref') || parameters.has('token')) {
         window.history.replaceState({}, '', window.location.pathname);
@@ -117,8 +119,9 @@
     };
 
     const pending = safeGet(localStorage, 'scooby_pending_product');
-    const requestedProduct = attempt.product && PRODUCTS.has(attempt.product)
-        ? attempt.product
+    const attemptProduct = attempt && attempt.product;
+    const requestedProduct = attemptProduct && PRODUCTS.has(attemptProduct)
+        ? attemptProduct
         : (pending && PRODUCTS.has(pending) ? pending : '');
     if (requestedProduct) {
         safeRemove(localStorage, 'scooby_pending_product');
