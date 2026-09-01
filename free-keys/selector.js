@@ -47,7 +47,7 @@
         'YnN0bGFyLmNvbQ==', 'YnN0bGFyLm5ldA==', 'YnN0Lmdn', 'Ym9vc3QuaW5r', 'Ym9vc3Rpbms='
     ].map(decode);
     const validRefParameters = [
-        decode('UnU1SjltTTR0blota210ZzR2ZmN4eWt1RV83UjAxRVZiUHJLazh5VXYwVQ=='),
+        decode('cTNhdlIteEFRMXdxR1B5ckJEem1pdExkVEFoenN5OWgzRDYwRHBnMVVaMA=='),
         decode('djJfazN5XzRjYzNzc18yMDI2')
     ];
     const validTokens = [decode('c2Nvb2J5MjAyNQ=='), decode('c2Nvb2J5X3YyXzIwMjY=')];
