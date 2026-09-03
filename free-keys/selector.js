@@ -5,7 +5,7 @@
     const MINIMUM_PROVIDER_TIME_MS = 3 * 1000;
     const GRANT_TTL_MS = 2 * 60 * 1000;
     const ATTEMPT_KEY = 'scooby_access_attempt';
-    const PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'redm', 'spoofer']);
+    const PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer']);
     const blocked = document.getElementById('blockedContent');
     const selector = document.getElementById('selectorContent');
     const parameters = new URLSearchParams(window.location.search);

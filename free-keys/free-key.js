@@ -1,56 +1,27 @@
 (() => {
     'use strict';
 
-    const ROTATION_SECONDS = 4 * 60 * 60;
     const GRANT_TTL_MS = 2 * 60 * 1000;
-    const PRODUCTS = {
-        gta5: { name: 'GTA V', prefix: 'GTA5' },
-        rdr2: { name: 'Red Dead Redemption 2', prefix: 'RDR2' },
-        cs2: { name: 'Counter-Strike 2', prefix: 'CS2' },
-        gmod: { name: "Garry's Mod", prefix: 'GMOD' },
-        fivem: { name: 'FiveM', prefix: 'FIVEM' },
-        redm: { name: 'RedM', prefix: 'REDM' },
-        spoofer: { name: 'Spoofer', prefix: 'SPOOFER' }
-    };
-
+    const PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer']);
     const product = document.body.dataset.product;
-    const definition = PRODUCTS[product];
-    if (!definition) return;
+    if (!PRODUCTS.has(product)) return;
 
-    const safeGet = (storage, key) => {
-        try { return storage.getItem(key); } catch (_) { return null; }
-    };
-    const safeSet = (storage, key, value) => {
-        try { storage.setItem(key, value); } catch (_) { /* Storage may be disabled. */ }
-    };
-    const safeRemove = (storage, key) => {
-        try { storage.removeItem(key); } catch (_) { /* Storage may be disabled. */ }
-    };
+    const safeGet = (storage, key) => { try { return storage.getItem(key); } catch (_) { return null; } };
+    const safeSet = (storage, key, value) => { try { storage.setItem(key, value); } catch (_) {} };
+    const safeRemove = (storage, key) => { try { storage.removeItem(key); } catch (_) {} };
 
+    // Preserve the sponsor hand-off as a UX step. The security boundary is the
+    // server-issued IP-bound challenge and verified Turnstile result below.
     const parameters = new URLSearchParams(window.location.search);
     const presentedToken = parameters.get('grant') || '';
     const grantKey = `scooby_one_time_grant_${product}`;
     let storedGrant = null;
-    try {
-        storedGrant = JSON.parse(safeGet(sessionStorage, grantKey) || 'null');
-    } catch (_) {
-        storedGrant = null;
-    }
-
+    try { storedGrant = JSON.parse(safeGet(sessionStorage, grantKey) || 'null'); } catch (_) {}
     const now = Date.now();
-    const validGrant = storedGrant &&
-        storedGrant.product === product &&
-        typeof storedGrant.token === 'string' &&
-        storedGrant.token.length >= 32 &&
-        storedGrant.token === presentedToken &&
-        Number.isFinite(storedGrant.issuedAt) &&
-        Number.isFinite(storedGrant.expiresAt) &&
-        storedGrant.issuedAt <= now &&
-        storedGrant.expiresAt >= now &&
-        storedGrant.expiresAt - storedGrant.issuedAt <= GRANT_TTL_MS;
-
-    // Consume before displaying anything. A refresh, copied URL, browser history
-    // restore, or second tab cannot reuse the same grant.
+    const validGrant = storedGrant && storedGrant.product === product &&
+        storedGrant.token === presentedToken && Number.isFinite(storedGrant.issuedAt) &&
+        Number.isFinite(storedGrant.expiresAt) && storedGrant.issuedAt <= now &&
+        storedGrant.expiresAt >= now && storedGrant.expiresAt - storedGrant.issuedAt <= GRANT_TTL_MS;
     safeRemove(sessionStorage, grantKey);
 
     if (!validGrant) {
@@ -63,79 +34,118 @@
     cleanUrl.searchParams.delete('grant');
     window.history.replaceState({}, '', cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
 
-    // Browsers can restore a fully rendered page from the back-forward cache
-    // without re-running this script. Treat that restore as a new visit so the
-    // already-consumed grant cannot reveal the key again.
+    // A page restored from the back-forward cache must not reveal a key after
+    // its one-time navigation grant has already been consumed.
     window.addEventListener('pageshow', event => {
         if (!event.persisted) return;
         safeSet(localStorage, 'scooby_pending_product', product);
         window.location.replace(`/scoobyontop.html?product=${encodeURIComponent(product)}`);
     });
 
+    const config = window.SCOOBY_ACCESS_KEY_CONFIG || {};
+    const apiBase = String(config.apiBase || '').replace(/\/$/, '');
+    const portalKey = String(config.portalKey || '');
+    const policySlug = String((config.policies || {})[product] || '');
     const keyOutput = document.getElementById('keyOutput');
     const copyButton = document.getElementById('copyButton');
     const timerText = document.getElementById('timerText');
     const timerFill = document.getElementById('timerFill');
     const blockMessage = document.getElementById('blockMessage');
     const bait = document.getElementById('adBait');
-    let keyEnabled = false;
+    let currentKey = '';
+    let issuedAt = 0;
+    let expiresAt = 0;
 
-    function secret() {
-        const encoded = [9, 57, 106, 106, 56, 35, 23, 105, 52, 47, 17, 105, 35, 104, 106, 104, 108, 123];
-        return encoded.map(value => String.fromCharCode(value ^ 90)).join('');
-    }
+    const showError = message => {
+        keyOutput.textContent = 'KEY UNAVAILABLE';
+        blockMessage.textContent = message || 'Access-key generation is temporarily unavailable.';
+        blockMessage.classList.add('show');
+        copyButton.disabled = true;
+    };
 
-    function fnv1a(value) {
-        let hash = 2166136261;
-        for (let index = 0; index < value.length; index += 1) {
-            hash ^= value.charCodeAt(index);
-            hash = Math.imul(hash, 16777619);
+    const api = async (path, options = {}) => {
+        const response = await fetch(`${apiBase}${path}`, {
+            ...options,
+            headers: { 'Content-Type': 'application/json', ...(options.headers || {}) }
+        });
+        let payload = {};
+        try { payload = await response.json(); } catch (_) {}
+        if (!response.ok || !payload.success) {
+            throw new Error(payload.message || `Request failed (${response.status})`);
         }
-        return hash >>> 0;
-    }
+        return payload;
+    };
 
-    function segment(value, length) {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-        let output = '';
-        let hash = value >>> 0;
-        for (let index = 0; index < length; index += 1) {
-            output += characters[hash % 36];
-            hash = Math.floor(hash / 36);
+    const loadTurnstile = () => new Promise((resolve, reject) => {
+        if (window.turnstile) { resolve(window.turnstile); return; }
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        script.async = true;
+        script.defer = true;
+        script.onload = () => resolve(window.turnstile);
+        script.onerror = () => reject(new Error('Could not load the site verification challenge.'));
+        document.head.appendChild(script);
+    });
+
+    const issueKey = async (challengeId, token) => {
+        const issued = await api(`/api/portal/v1/${encodeURIComponent(portalKey)}/access-keys/issue`, {
+            method: 'POST',
+            body: JSON.stringify({ challenge_id: challengeId, turnstile_token: token })
+        });
+        currentKey = issued.key;
+        issuedAt = Date.now();
+        expiresAt = Date.parse(issued.expires_at);
+        keyOutput.textContent = currentKey;
+        copyButton.textContent = 'Copy access key';
+        copyButton.disabled = false;
+        blockMessage.classList.remove('show');
+    };
+
+    const beginChallenge = async () => {
+        keyOutput.textContent = 'PREPARING CHALLENGE…';
+        const root = `/api/portal/v1/${encodeURIComponent(portalKey)}`;
+        const metadata = await api(`${root}/access-key-policies/${encodeURIComponent(policySlug)}`);
+        const challenge = await api(`${root}/access-keys/challenge`, {
+            method: 'POST',
+            body: JSON.stringify({ policy_slug: policySlug, integration_id: metadata.policy.integration_id })
+        });
+        if (challenge.challenge.turnstile_required === false) {
+            keyOutput.textContent = 'GENERATING KEY…';
+            await issueKey(challenge.challenge.id, '');
+            return;
         }
-        return output;
-    }
+        if (!challenge.challenge.site_key) {
+            throw new Error('Turnstile is enabled but the site key is missing.');
+        }
+        const turnstile = await loadTurnstile();
+        let host = document.getElementById('turnstileHost');
+        if (!host) {
+            host = document.createElement('div');
+            host.id = 'turnstileHost';
+            host.style.margin = '16px auto';
+            host.style.display = 'flex';
+            host.style.justifyContent = 'center';
+            keyOutput.insertAdjacentElement('afterend', host);
+        }
+        host.replaceChildren();
+        keyOutput.textContent = 'COMPLETE VERIFICATION';
+        turnstile.render(host, {
+            sitekey: challenge.challenge.site_key,
+            action: challenge.challenge.action,
+            cData: challenge.challenge.cdata,
+            theme: 'dark',
+            callback: token => issueKey(challenge.challenge.id, token).catch(error => showError(error.message)),
+            'error-callback': () => showError('Site verification failed. Reload and try again.'),
+            'expired-callback': () => showError('Site verification expired. Reload and try again.')
+        });
+    };
 
-    function keyFor(seed) {
-        const material = `${seed}|${product}|`;
-        const keySecret = secret();
-        const first = segment(fnv1a(`${material}1|${keySecret}`), 4);
-        const second = segment(fnv1a(`${material}2|${keySecret}`), 4);
-        const third = segment(fnv1a(`${material}3|${keySecret}`), 4);
-        return `SCOOBY-${definition.prefix}-${first}-${second}-${third}`;
-    }
-
-    function updateKeyAndTimer() {
-        const nowSeconds = Math.floor(Date.now() / 1000);
-        const seed = Math.floor(nowSeconds / ROTATION_SECONDS);
-        const remaining = ROTATION_SECONDS - (nowSeconds % ROTATION_SECONDS);
-        const hours = Math.floor(remaining / 3600);
-        const minutes = Math.floor((remaining % 3600) / 60);
-        const seconds = remaining % 60;
-
-        if (keyEnabled) keyOutput.textContent = keyFor(seed);
-        timerText.textContent = [hours, minutes, seconds]
-            .map(value => String(value).padStart(2, '0')).join(':');
-        timerFill.style.width = `${((ROTATION_SECONDS - remaining) / ROTATION_SECONDS) * 100}%`;
-    }
-
-    async function copyKey() {
-        if (!keyEnabled) return;
-        const value = keyOutput.textContent;
-        try {
-            await navigator.clipboard.writeText(value);
-        } catch (_) {
+    const copyKey = async () => {
+        if (!currentKey) return;
+        try { await navigator.clipboard.writeText(currentKey); }
+        catch (_) {
             const field = document.createElement('textarea');
-            field.value = value;
+            field.value = currentKey;
             field.setAttribute('readonly', '');
             field.style.position = 'fixed';
             field.style.opacity = '0';
@@ -147,24 +157,44 @@
         const original = copyButton.textContent;
         copyButton.textContent = 'Copied';
         window.setTimeout(() => { copyButton.textContent = original; }, 1600);
-    }
+    };
 
-    copyButton.addEventListener('click', copyKey);
-    updateKeyAndTimer();
-    window.setInterval(updateKeyAndTimer, 1000);
-
-    window.setTimeout(() => {
-        const baitStyle = bait ? window.getComputedStyle(bait) : null;
-        const blocked = !bait || bait.offsetHeight === 0 || bait.offsetWidth === 0 ||
-            !baitStyle || baitStyle.display === 'none' || baitStyle.visibility === 'hidden';
-        if (blocked) {
-            keyOutput.textContent = 'KEY LOCKED';
-            copyButton.disabled = true;
-            blockMessage.classList.add('show');
+    const updateTimer = () => {
+        if (!expiresAt || !Number.isFinite(expiresAt)) {
+            timerText.textContent = 'Awaiting issuance';
+            timerFill.style.width = '0%';
             return;
         }
-        keyEnabled = true;
-        copyButton.disabled = false;
-        updateKeyAndTimer();
+        const remaining = Math.max(0, expiresAt - Date.now());
+        const seconds = Math.ceil(remaining / 1000);
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        timerText.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        timerFill.style.width = `${Math.max(0, Math.min(100, remaining / Math.max(1, expiresAt - issuedAt) * 100))}%`;
+        if (remaining === 0 && currentKey) {
+            currentKey = '';
+            keyOutput.textContent = 'KEY EXPIRED';
+            copyButton.disabled = true;
+        }
+    };
+
+    copyButton.addEventListener('click', copyKey);
+    window.setInterval(updateTimer, 1000);
+    updateTimer();
+
+    if (!apiBase || portalKey.startsWith('REPLACE_') || !policySlug || policySlug.startsWith('REPLACE_')) {
+        showError('This product has not been connected to its ProudlyServer access-key policy yet.');
+        return;
+    }
+
+    window.setTimeout(() => {
+        const style = bait ? window.getComputedStyle(bait) : null;
+        if (!bait || bait.offsetHeight === 0 || bait.offsetWidth === 0 || !style ||
+            style.display === 'none' || style.visibility === 'hidden') {
+            showError('A content blocker hid a required page element. Allow this site, then reload.');
+            return;
+        }
+        beginChallenge().catch(error => showError(error.message));
     }, 850);
 })();

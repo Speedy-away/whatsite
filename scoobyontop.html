@@ -565,7 +565,7 @@
         ];
         const DOWNLOAD_URL = PROVIDER_URLS[Math.floor(Math.random() * PROVIDER_URLS.length)];
         const ACCESS_ATTEMPT_KEY = 'scooby_access_attempt';
-        const FREE_KEY_PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'redm', 'spoofer']);
+        const FREE_KEY_PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer']);
         const requestedProduct = new URLSearchParams(window.location.search).get('product');
         if (requestedProduct && FREE_KEY_PRODUCTS.has(requestedProduct)) {
             try {
