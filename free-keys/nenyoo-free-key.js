@@ -50,7 +50,7 @@
     const policy = metadata.policy;
     const expectedId = slug === 'gtav' ? '3546744805' : '2759446834';
     const actualIds = (policy.subscriptions || []).map(item => String(item.id));
-    if (policy.slug !== slug || policy.expires_in !== 14400 || policy.binding_mode !== 'ip' ||
+    if (policy.slug !== slug || policy.expires_in !== 14400 || policy.binding_mode !== 'hwid' ||
         policy.usage_mode !== 'reusable' ||
         actualIds.length !== 1 || actualIds[0] !== expectedId) {
       throw new Error('This key policy needs review before keys can be issued.');
