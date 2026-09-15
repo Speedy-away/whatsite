@@ -173,6 +173,23 @@ button { font: inherit; }
 .secondary-button { background: var(--surface-2); border: 1px solid var(--border); }
 .primary-button:disabled { opacity: .42; cursor: not-allowed; transform: none; filter: none; }
 
+.loader-download {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    padding: 0 20px;
+    border: 1px solid rgba(168,85,247,.42);
+    border-radius: 12px;
+    color: #fff;
+    background: rgba(168,85,247,.13);
+    font-weight: 750;
+    text-decoration: none;
+}
+.loader-download:hover { background: rgba(168,85,247,.22); transform: translateY(-1px); }
+.loader-download[hidden] { display: none; }
+
 .timer { margin-top: 18px; }
 .timer-row { display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: .84rem; }
 .timer-row strong { color: var(--text); font-variant-numeric: tabular-nums; }
