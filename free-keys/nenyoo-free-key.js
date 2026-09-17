@@ -2,6 +2,48 @@
   'use strict';
   const slug = document.body.dataset.policy;
   if (slug !== 'gtav' && slug !== 'fivem') return;
+  const accessProduct = `nenyoo-${slug}`;
+  const grantTtlMs = 2 * 60 * 1000;
+  const safeGet = (storage, name) => { try { return storage.getItem(name); } catch (_) { return null; } };
+  const safeSet = (storage, name, value) => { try { storage.setItem(name, value); } catch (_) {} };
+  const safeRemove = (storage, name) => { try { storage.removeItem(name); } catch (_) {} };
+  const parameters = new URLSearchParams(window.location.search);
+  const presentedToken = parameters.get('grant') || '';
+  const grantKey = `scooby_one_time_grant_${accessProduct}`;
+  let storedGrant = null;
+  try { storedGrant = JSON.parse(safeGet(sessionStorage, grantKey) || 'null'); } catch (_) {}
+  const grantNow = Date.now();
+  const validGrant = storedGrant && storedGrant.product === accessProduct &&
+    storedGrant.token === presentedToken && Number.isFinite(storedGrant.issuedAt) &&
+    Number.isFinite(storedGrant.expiresAt) && storedGrant.issuedAt <= grantNow &&
+    storedGrant.expiresAt >= grantNow &&
+    storedGrant.expiresAt - storedGrant.issuedAt <= grantTtlMs;
+  safeRemove(sessionStorage, grantKey);
+
+  if (!validGrant) {
+    safeSet(localStorage, 'scooby_pending_product', accessProduct);
+    window.location.replace(`/scoobyontop.html?product=${encodeURIComponent(accessProduct)}`);
+    return;
+  }
+
+  const cleanUrl = new URL(window.location.href);
+  cleanUrl.searchParams.delete('grant');
+  window.history.replaceState({}, '', cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+
+  const productArt = document.createElement('img');
+  productArt.src = slug === 'gtav'
+    ? '../assets/images/nenyoo-gtav.jpg'
+    : '../assets/images/nenyoo-fivem.png';
+  productArt.alt = slug === 'gtav' ? 'Nenyoo menu in GTA V' : 'Nenyoo menu in FiveM';
+  productArt.decoding = 'async';
+  document.querySelector('.art-card')?.prepend(productArt);
+
+  window.addEventListener('pageshow', event => {
+    if (!event.persisted) return;
+    safeSet(localStorage, 'scooby_pending_product', accessProduct);
+    window.location.replace(`/scoobyontop.html?product=${encodeURIComponent(accessProduct)}`);
+  });
+
   const base = 'https://proudlyauthentication.com/api/portal/v1/pk_wq5QrTCJgdWbnTAI7eYzD4OAcXBkeCsE';
   const output = document.getElementById('keyOutput');
   const copy = document.getElementById('copyButton');

@@ -5,7 +5,14 @@
     const MINIMUM_PROVIDER_TIME_MS = 3 * 1000;
     const GRANT_TTL_MS = 2 * 60 * 1000;
     const ATTEMPT_KEY = 'scooby_access_attempt';
-    const PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer']);
+    const PRODUCTS = new Set([
+        'gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer',
+        'nenyoo-gtav', 'nenyoo-fivem'
+    ]);
+    const PRODUCT_PATHS = {
+        'nenyoo-gtav': '/free-keys/nenyoo-gta5.html',
+        'nenyoo-fivem': '/free-keys/nenyoo-fivem.html'
+    };
     const blocked = document.getElementById('blockedContent');
     const selector = document.getElementById('selectorContent');
     const parameters = new URLSearchParams(window.location.search);
@@ -137,7 +144,8 @@
         : (pending && PRODUCTS.has(pending) ? pending : '');
     if (requestedProduct) {
         safeRemove(localStorage, 'scooby_pending_product');
-        navigateWithGrant(requestedProduct, `/free-keys/${requestedProduct}.html`);
+        navigateWithGrant(requestedProduct,
+            PRODUCT_PATHS[requestedProduct] || `/free-keys/${requestedProduct}.html`);
         return;
     }
 
