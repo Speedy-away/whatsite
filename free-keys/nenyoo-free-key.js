@@ -52,46 +52,42 @@
   const fill = document.getElementById('timerFill');
   const loaderDownload = document.createElement('a');
   loaderDownload.className = 'loader-download';
-  loaderDownload.href = 'https://nenyoomenu.com/download';
+  loaderDownload.href = 'https://nenyoomenu.com/downloads';
   loaderDownload.target = '_blank';
   loaderDownload.rel = 'noopener noreferrer';
   loaderDownload.textContent = 'Download Nenyoo loader';
   loaderDownload.hidden = true;
   document.querySelector('.key-actions')?.insertAdjacentElement('afterend', loaderDownload);
   let key = '', issuedAt = 0, expiresAt = 0;
-  const dashboardUrl = 'https://nenyoomenu.com/dashboard';
-  const downloadPageFallback = 'https://nenyoomenu.com/download';
+  const downloadPageFallback = 'https://nenyoomenu.com/downloads';
+  const downloadManifests = [
+    'https://nenyoomenu.com/loader-download.json',
+    'https://raw.githubusercontent.com/walteryo1337/NENYOO-WEB/main/loader-download.json'
+  ];
 
-  const fetchText = async url => {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 6000);
-    try {
-      const response = await fetch(url, { cache: 'no-store', signal: controller.signal });
-      if (!response.ok) throw new Error(`Could not read ${url} (${response.status})`);
-      return response.text();
-    } finally {
-      clearTimeout(timeout);
-    }
-  };
-
-  // Follow the dashboard's download link and extract the current loader URL
-  // from Nenyoo's own download-gate script, so loader updates need no edit here.
+  // Read the public release manifest, not the React HTML shell or hashed bundle.
   const findLoaderUrl = async () => {
-    const dashboard = new DOMParser().parseFromString(await fetchText(dashboardUrl), 'text/html');
-    const downloadLink = [...dashboard.querySelectorAll('a[href]')]
-      .find(link => /\/download(?:[/?#]|$)/i.test(link.getAttribute('href')));
-    if (!downloadLink) throw new Error('Nenyoo dashboard has no download link.');
-
-    const downloadPageUrl = new URL(downloadLink.getAttribute('href'), dashboardUrl).href;
-    const downloadPage = new DOMParser().parseFromString(await fetchText(downloadPageUrl), 'text/html');
-    const gateScript = [...downloadPage.querySelectorAll('script[src]')]
-      .find(script => /download-gate(?:\.min)?\.js(?:[?#]|$)/i.test(script.getAttribute('src')));
-    if (!gateScript) throw new Error('Nenyoo download configuration was not found.');
-
-    const source = await fetchText(new URL(gateScript.getAttribute('src'), downloadPageUrl).href);
-    const match = source.match(/PRIMARY_DOWNLOAD_URL\s*=\s*(['"])(https?:\/\/[^'"\s]+)\1/);
-    if (!match) throw new Error('Nenyoo loader URL was not found.');
-    return new URL(match[2]).href;
+    for (const endpoint of downloadManifests) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 6000);
+      try {
+        const response = await fetch(endpoint, { cache: 'no-store', signal: controller.signal, credentials: 'omit' });
+        if (!response.ok) throw new Error('Download manifest unavailable.');
+        const manifest = await response.json();
+        if (typeof manifest.url !== 'string') throw new Error('Missing loader URL.');
+        const url = new URL(manifest.url);
+        if (url.protocol !== 'https:' || url.hostname !== 'filego.at' || url.username || url.password || url.port ||
+            !/^\/bucket\/[A-Za-z0-9_-]+\/?$/.test(url.pathname) || url.search || url.hash) {
+          throw new Error('Invalid loader download URL.');
+        }
+        return url.href;
+      } catch (_) {
+        // The raw hosting-repository copy also works when the custom domain blocks CORS.
+      } finally {
+        clearTimeout(timeout);
+      }
+    }
+    throw new Error('Nenyoo download configuration was not available.');
   };
 
   const loaderUrl = findLoaderUrl().catch(() => downloadPageFallback);
