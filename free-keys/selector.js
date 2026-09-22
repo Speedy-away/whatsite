@@ -7,6 +7,7 @@
     const ATTEMPT_KEY = 'scooby_access_attempt';
     const PRODUCTS = new Set([
         'gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer',
+        'l4d', 'sbox',
         'nenyoo-gtav', 'nenyoo-fivem'
     ]);
     const PRODUCT_PATHS = {
