@@ -11,6 +11,7 @@ window.SCOOBY_ACCESS_KEY_CONFIG = Object.freeze({
         fivem: 'fivem',
         spoofer: 'spoofer',
         l4d: 'l4d',
-        sbox: 'sbox'
+        sbox: 'sbox',
+        tlou: 'tlou'
     })
 });
