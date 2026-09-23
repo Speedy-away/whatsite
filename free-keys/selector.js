@@ -59,9 +59,13 @@
         decode('djJfazN5XzRjYzNzc18yMDI2')
     ];
     const validTokens = [decode('c2Nvb2J5MjAyNQ=='), decode('c2Nvb2J5X3YyXzIwMjY=')];
+    // Returned by the Nenyoo provider link; it only unlocks Nenyoo products.
+    const nenyooRefParameter = decode('bmVueW9vX3BRbnNOTFltYVo4MDNkUGVOT21pM3FXdg==');
+    const isNenyooProduct = product => typeof product === 'string' && product.startsWith('nenyoo-');
 
     const referrer = document.referrer.toLowerCase();
-    const hasReturnSignal = allowedReferrers.some(domain => referrer.includes(domain)) ||
+    const nenyooOnly = parameters.get('ref') === nenyooRefParameter;
+    const hasReturnSignal = nenyooOnly || allowedReferrers.some(domain => referrer.includes(domain)) ||
         validRefParameters.includes(parameters.get('ref')) || validTokens.includes(parameters.get('token'));
 
     // The attempt is written to both stores: sessionStorage for the same-tab
@@ -117,6 +121,7 @@
     let grantIssued = false;
     const issueGrant = product => {
         if (grantIssued || !PRODUCTS.has(product)) return '';
+        if (nenyooOnly && !isNenyooProduct(product)) return '';
         const token = createToken();
         if (!token) return '';
         const issuedAt = Date.now();
@@ -147,6 +152,12 @@
         safeRemove(localStorage, 'scooby_pending_product');
         navigateWithGrant(requestedProduct,
             PRODUCT_PATHS[requestedProduct] || `/free-keys/${requestedProduct}.html`);
+        return;
+    }
+
+    if (nenyooOnly) {
+        blocked.classList.remove('hidden');
+        selector.classList.add('hidden');
         return;
     }
 
