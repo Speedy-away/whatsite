@@ -677,3 +677,99 @@ body::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
     .page-title { font-size: 1.5rem; }
     .features-grid { gap: 6px; }
 }
+
+/* Compact game catalog pages */
+.compact-game-page .section { padding: 36px 0; }
+.compact-game-page .section-header { margin-bottom: 24px; }
+.compact-game-page .section-title { font-size: 1.65rem; margin-bottom: 8px; }
+.compact-game-page .section-header .section-title::after { width: 36px; margin-top: 10px; }
+.compact-game-page .section-subtitle { font-size: 0.9rem; }
+.compact-game-page .hero { min-height: auto; padding: 64px 24px 36px; }
+.compact-game-page .hero-title { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 12px; }
+.compact-game-page .hero-subtitle { font-size: 1rem; margin-bottom: 24px; }
+.compact-game-page .hero-image { margin-bottom: 16px; }
+.compact-game-page .hero-image img { max-height: 160px; width: auto; }
+.compact-game-page .hero-buttons { gap: 8px; margin-bottom: 24px; }
+.compact-game-page .hero-stats { gap: 28px; }
+.compact-game-page .hero-stats .stat h3 { font-size: 1.5rem; }
+.compact-game-page .search-container { max-width: 420px; margin-bottom: 0; }
+.compact-game-page .filter-buttons { margin-bottom: 20px; }
+
+.compact-game-page .cheats-grid,
+.compact-game-page .games-grid,
+.compact-game-page .tools-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+    gap: 14px;
+}
+.compact-game-page .cheat-card,
+.compact-game-page .game-card,
+.compact-game-page .tool-card { min-width: 0; border-radius: 10px; }
+.compact-game-page .cheat-image,
+.compact-game-page .game-image { aspect-ratio: 16/9; max-height: 156px; flex-shrink: 0; }
+.compact-game-page .img-placeholder { min-height: 0; }
+.compact-game-page .img-placeholder i { font-size: 22px; }
+.compact-game-page .game-image-placeholder { font-size: 32px; }
+
+/* Keep the icon beside the title instead of consuming a separate row. */
+.compact-game-page .cheat-header {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 8px 10px;
+    padding: 12px;
+}
+.compact-game-page .cheat-icon { width: 28px; height: 28px; font-size: 14px; }
+.compact-game-page .cheat-info { min-width: 0; overflow-wrap: anywhere; }
+.compact-game-page .cheat-info h3 { font-size: 14px; line-height: 1.4; }
+.compact-game-page .cheat-info p { font-size: 13px; line-height: 1.45; }
+.compact-game-page .cheat-status { grid-column: 2; }
+.compact-game-page .cheat-features,
+.compact-game-page .cheat-details { padding: 0 12px 10px; }
+.compact-game-page .features-grid { gap: 6px; }
+.compact-game-page .features-grid .feature { padding: 3px 8px; font-size: 11px; white-space: normal; }
+.compact-game-page .feature-tag { padding: 3px 8px; font-size: 11px; letter-spacing: 0; }
+.compact-game-page .status-badge { padding: 3px 8px; font-size: 10px; white-space: normal; }
+.compact-game-page .cheat-actions { padding: 10px 12px; gap: 6px; }
+.compact-game-page .cheat-actions .btn { padding: 9px 12px; font-size: 13px; gap: 6px; white-space: normal; line-height: 1.2; }
+.compact-game-page .cheat-actions .btn i { font-size: 12px; }
+
+.compact-game-page .game-card { display: flex; flex-direction: column; }
+.compact-game-page .game-info { padding: 12px; display: flex; flex-direction: column; flex: 1; }
+.compact-game-page .game-title { font-size: 14px; line-height: 1.4; }
+.compact-game-page .game-description { margin-bottom: 10px; }
+.compact-game-page .game-features { margin-bottom: 10px; }
+.compact-game-page .game-link { margin-top: auto; align-self: flex-start; }
+.compact-game-page .game-overlay { top: 8px; right: 8px; }
+.compact-game-page .game-status { padding: 3px 8px; font-size: 10px; }
+.compact-game-page .tool-card { padding: 14px; gap: 10px; }
+.compact-game-page .tool-icon img { width: 32px; height: 32px; }
+.compact-game-page .tool-info { min-width: 0; }
+.compact-game-page .tool-info h4 { font-size: 14px; }
+
+@media (max-width: 768px) {
+    .compact-game-page .hero { padding: 80px 20px 32px; }
+    .compact-game-page .section { padding: 28px 0; }
+    .compact-game-page .section-title { font-size: 1.4rem; }
+    .compact-game-page .cheat-actions { flex-direction: row; }
+    /* Keep touch targets comfortable even though the surrounding cards are smaller. */
+    .compact-game-page .cheat-actions .btn { width: auto; flex: 1 1 auto; min-height: 44px; justify-content: center; }
+    .compact-game-page .game-link,
+    .compact-game-page .tool-link { min-height: 44px; }
+}
+
+@media (max-width: 480px) {
+    .compact-game-page .hero { padding: 76px 16px 28px; }
+    .compact-game-page .section-title { font-size: 1.25rem; }
+    .compact-game-page .hero-stats { flex-direction: row; gap: 16px; }
+}
+
+
+/* CS2 cards use a clean text header without decorative icon boxes. */
+.compact-game-page.no-cheat-icons .cheat-header {
+    grid-template-columns: minmax(0, 1fr);
+}
+.compact-game-page.no-cheat-icons .cheat-icon {
+    display: none;
+}
+.compact-game-page.no-cheat-icons .cheat-status {
+    grid-column: 1;
+}
