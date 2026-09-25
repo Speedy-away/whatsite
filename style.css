@@ -801,3 +801,35 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
     body::before { animation: none; }
 }
+
+
+/* Standalone call-to-action block. Two markup variants exist in the wild:
+   the icon is either a .cta-icon wrapper (help, game pages) or a bare
+   .discord-cta-icon glyph nested in .discord-cta-content (details). */
+.discord-cta {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    padding: 32px 24px;
+    text-align: center;
+    transition: border-color var(--tf);
+}
+.discord-cta:hover { border-color: var(--border-hover); }
+
+.discord-cta .cta-icon,
+.discord-cta .discord-cta-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-glow);
+    border-radius: var(--radius-btn);
+    color: var(--accent-light);
+    font-size: 22px;
+}
+
+.discord-cta h3 { font-size: 18px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.discord-cta p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin: 0 auto 20px; max-width: 60ch; }
+.discord-cta .btn { display: inline-flex; }
