@@ -64,13 +64,22 @@
         decode('Z1NxYnNnT25pYkhyRHlhd2hkakozX2p1bkNvWWUydktEOXhpdk43aXRnWQ==')
     ];
     const validTokens = [];
-    // Returned by the Nenyoo provider link; it only unlocks Nenyoo products.
+    // Returned by the Nenyoo provider link.
     const nenyooRefParameter = decode('bmVueW9vX0J6QUE1b1VrVEI0N2h1ZldSbjNpMlY=');
 
     const referrer = document.referrer.toLowerCase();
-    const nenyooOnly = parameters.get('ref') === nenyooRefParameter;
-    const hasReturnSignal = nenyooOnly || allowedReferrers.some(domain => referrer.includes(domain)) ||
-        validRefParameters.includes(parameters.get('ref')) || validTokens.includes(parameters.get('token'));
+    const refParameter = parameters.get('ref');
+
+    // Each brand's ref belongs to that brand's return page. A Nenyoo return
+    // therefore cannot land on the Scooby selector, or the other way round.
+    // With no ref at all we still accept a trusted provider referrer.
+    const refBrand = refParameter === nenyooRefParameter ? 'nenyoo'
+        : validRefParameters.includes(refParameter) ? 'scooby'
+        : '';
+    const hasReturnSignal = refBrand
+        ? refBrand === pageBrand
+        : allowedReferrers.some(domain => referrer.includes(domain)) ||
+          validTokens.includes(parameters.get('token'));
 
     // The attempt is written to both stores: sessionStorage for the same-tab
     // path, localStorage for when the provider was opened in a new tab.
@@ -125,7 +134,8 @@
     let grantIssued = false;
     const issueGrant = product => {
         if (grantIssued || !PRODUCTS.has(product)) return '';
-        if (nenyooOnly && !isNenyooProduct(product)) return '';
+        // A page only ever grants its own brand's products.
+        if ((isNenyooProduct(product) ? 'nenyoo' : 'scooby') !== pageBrand) return '';
         const token = createToken();
         if (!token) return '';
         const issuedAt = Date.now();
@@ -158,21 +168,11 @@
         return;
     }
 
-    if (nenyooOnly) {
-        blocked.classList.remove('hidden');
-        selector.classList.add('hidden');
-        return;
-    }
-
-    document.querySelectorAll('[data-key-product]').forEach(link => {
-        link.addEventListener('click', event => {
-            event.preventDefault();
-            const product = link.dataset.keyProduct;
-            if (!PRODUCTS.has(product)) {
-                return;
-            }
-            safeRemove(localStorage, 'scooby_pending_product');
-            navigateWithGrant(product, link.href);
-        });
-    });
+    // Authorised, but we never learned which product they came for — they hit
+    // the provider link directly rather than starting from a product page.
+    // There is no chooser any more, so explain that instead.
+    blocked.classList.remove('hidden');
+    selector.classList.add('hidden');
+    const note = document.getElementById('noProductNote');
+    if (note) note.classList.remove('hidden');
 })();
