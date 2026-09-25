@@ -303,7 +303,10 @@ body {
     justify-content: center;
     gap: 8px;
     margin-top: 10px;
-    padding: 12px 18px;
+    padding: 12px 14px;
+    /* keeps the label on one line inside the 300px side column */
+    font-size: 12.5px;
+    white-space: nowrap;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: var(--surface-2);
@@ -607,4 +610,80 @@ body.brand-scooby .brand-name {
 @media (max-width: 900px) {
     .key-layout { grid-template-columns: minmax(0, 1fr); }
     .container:has(.key-layout) { max-width: 560px; }
+}
+
+/* ==================================================================
+   Entry pages. The two brands get deliberately different shapes:
+   Scooby runs a numbered step rail, Nenyoo a single countdown ring.
+   ================================================================== */
+
+/* -- Scooby: step rail ------------------------------------------- */
+.entry-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    text-align: left;
+}
+.entry-head img { width: 52px; height: 52px; border-radius: 14px; flex: 0 0 auto; }
+.entry-head h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
+.entry-head p { color: var(--muted); font-size: 14px; margin: 0; }
+.entry-head .status-badge { margin: 0 0 0 auto; flex: 0 0 auto; }
+
+.step-rail { list-style: none; display: flex; flex-direction: column; gap: 0; margin: 0 0 22px; padding: 0; }
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+}
+.step:last-child { border-bottom: 0; }
+.step.done, .step.active { opacity: 1; }
+.step-no {
+    flex: 0 0 auto;
+    width: 26px; height: 26px;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--border-strong);
+    font-size: 12px; font-weight: 600;
+    color: var(--muted);
+}
+.step.done .step-no { background: var(--accent); border-color: var(--accent); color: #05130d; }
+.step.active .step-no { border-color: var(--accent); color: var(--accent); }
+.step strong { display: block; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+.step small { color: var(--muted); font-size: 13px; }
+
+/* -- Nenyoo: countdown ring -------------------------------------- */
+.ring-wrap { position: relative; width: 168px; height: 168px; margin: 0 auto 26px; }
+.ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring circle { fill: none; stroke-width: 6; stroke-linecap: round; }
+.ring .ring-bg { stroke: rgba(255, 255, 255, 0.08); }
+.ring .ring-fg {
+    stroke: var(--accent);
+    stroke-dasharray: 452;
+    stroke-dashoffset: 452;
+    transition: stroke-dashoffset 1s linear;
+}
+.ring-num {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+.ring-num small { display: block; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.entry-lede { text-align: center; margin-bottom: 26px; }
+.entry-lede h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+.entry-lede p { color: var(--muted); font-size: 14px; margin: 0; }
+
+@media (max-width: 520px) {
+    .entry-head { flex-wrap: wrap; }
+    .entry-head .status-badge { margin-left: 0; }
+    .ring-wrap { width: 140px; height: 140px; }
+    .ring-num { font-size: 38px; }
 }

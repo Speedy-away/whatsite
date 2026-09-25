@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="free-keys/key-page.css?v=3.1.22">
+    <link rel="stylesheet" href="free-keys/key-page.css?v=3.1.23">
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://whatwhatboy.com/nenyooontop.html">
     <script data-cfasync="false" src="https://abscloud.org/1/366a2e3edafab888009b3076fcd47b82"></script>
@@ -20,44 +20,39 @@
 <body class="brand-nenyoo">
 
     <main class="container">
-        <div class="logo-section">
-            <img src="assets/images/nenyoo-logo.gif" onerror="this.onerror=null;this.src='assets/images/logo.png'" alt="" class="logo">
-            <h1 class="brand-name">Nenyoo free key</h1>
-            <p class="brand-tagline" id="productBlurb">Getting your access link ready…</p>
+        <div class="ring-wrap">
+            <svg class="ring" viewBox="0 0 160 160" aria-hidden="true">
+                <circle class="ring-bg" cx="80" cy="80" r="72"></circle>
+                <circle class="ring-fg" id="ringFg" cx="80" cy="80" r="72"></circle>
+            </svg>
+            <div class="ring-num"><span><span id="countdown">3</span><small id="statusText">Verifying</small></span></div>
         </div>
 
-        <div style="text-align:center">
-            <span class="status-badge"><span id="statusText">Verifying access</span></span>
+        <div class="entry-lede">
+            <h1>Nenyoo free key</h1>
+            <p id="productBlurb">Getting your access link ready&hellip;</p>
         </div>
 
         <div class="card">
-            <div class="key-header">
-                <span class="key-label"><i class="fas fa-shield-halved"></i> Access steps</span>
-                <span class="key-timer"><i class="fas fa-clock"></i> <strong id="countdown">3</strong>s</span>
-            </div>
-
             <div class="scope-note">
-                <span>🔑</span>
-                <span id="countdownText">Complete the short access steps on the next page. You come straight back here and your <strong id="scopeProduct">key</strong> will be waiting.</span>
+                <span>&#128273;</span>
+                <span id="countdownText">Complete the short access steps on the next page. You come straight back here and your <strong id="scopeProduct">Nenyoo key</strong> will be waiting.</span>
             </div>
-
-            <div class="timer-track"><div class="timer-fill" id="progressBar"></div></div>
 
             <div class="key-actions">
                 <button class="primary-button" id="downloadBtn" type="button" disabled>
-                    <i class="fas fa-lock" id="btnIcon"></i> <span id="btnText">Locked — please wait</span>
+                    <i class="fas fa-lock" id="btnIcon"></i> <span id="btnText">Locked &mdash; please wait</span>
                 </button>
             </div>
-
-
         </div>
+
         <nav class="taskbar">
-                    <a href="https://nenyoomenu.com/login" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-right-to-bracket"></i> Sign in / Register</a>
-                    <a href="https://nenyoomenu.com/store" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-store"></i> Store</a>
-                    <a href="https://nenyoomenu.com/guides" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-book"></i> Guides</a>
-                    <a href="https://discord.gg/zmPtTD5JHR" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-discord"></i> Discord</a>
-                <a href="https://nenyoomenu.com/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-home"></i> Home</a>
-            </nav>
+            <a href="https://nenyoomenu.com/login" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-right-to-bracket"></i> Sign in / Register</a>
+            <a href="https://nenyoomenu.com/store" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-store"></i> Store</a>
+            <a href="https://nenyoomenu.com/guides" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-book"></i> Guides</a>
+            <a href="https://discord.gg/zmPtTD5JHR" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://nenyoomenu.com/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-home"></i> Home</a>
+        </nav>
 
         <section class="ad-placement" aria-label="Advertisement">
             <span class="ad-label">Advertisement</span>
@@ -86,8 +81,8 @@
         (() => {
             'use strict';
             const COUNTDOWN_SECONDS = 3;
-            // Spread traffic across the pool so one link being rate
-            // limited or down does not take the whole key flow with it.
+            // Spread traffic across the pool so one link being rate limited or
+            // down does not take the whole key flow with it.
             const PROVIDER_URLS = [
                 'https://bstlar.com/F/N3NYOOfreeKEY',
                 'https://bstlar.com/F/nenyooKey2',
@@ -98,35 +93,42 @@
             // Nenyoo is one global key now, so any ?product= on the way in is
             // ignored and the pending value is always the same.
             try { localStorage.setItem('scooby_pending_product', 'nenyoo'); } catch (_) {}
-            document.getElementById('scopeProduct').textContent = 'Nenyoo key';
             document.getElementById('productBlurb').textContent =
                 'One key for GTA V and FiveM, issued after the access steps.';
 
             const button = document.getElementById('downloadBtn');
             const countdown = document.getElementById('countdown');
-            const bar = document.getElementById('progressBar');
+            const ring = document.getElementById('ringFg');
             const statusText = document.getElementById('statusText');
             const countdownText = document.getElementById('countdownText');
             const btnText = document.getElementById('btnText');
             const btnIcon = document.getElementById('btnIcon');
 
+            const CIRC = 2 * Math.PI * 72;
+            ring.style.strokeDasharray = String(CIRC);
+            ring.style.strokeDashoffset = String(CIRC);
+
             let left = COUNTDOWN_SECONDS;
-            bar.style.width = '0%';
+
+            const draw = () => {
+                const done = (COUNTDOWN_SECONDS - left) / COUNTDOWN_SECONDS;
+                ring.style.strokeDashoffset = String(CIRC * (1 - done));
+            };
 
             const unlock = () => {
                 button.disabled = false;
                 btnText.textContent = 'Get access key';
                 btnIcon.className = 'fas fa-arrow-right';
                 statusText.textContent = 'Ready';
+                countdown.innerHTML = '<i class="fas fa-check"></i>';
                 countdownText.textContent = 'Access granted. Continue to the steps below.';
-                countdown.textContent = '0';
-                bar.style.width = '100%';
+                ring.style.strokeDashoffset = '0';
             };
 
             const timer = window.setInterval(() => {
                 left -= 1;
                 countdown.textContent = String(Math.max(0, left));
-                bar.style.width = `${((COUNTDOWN_SECONDS - left) / COUNTDOWN_SECONDS) * 100}%`;
+                draw();
                 if (left <= 0) {
                     window.clearInterval(timer);
                     unlock();
