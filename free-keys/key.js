@@ -208,6 +208,7 @@
 
     const showError = message => {
         keyOutput.textContent = 'KEY UNAVAILABLE';
+        keyOutput.classList.remove('has-key');
         blockMessage.textContent = message || 'Access-key generation is temporarily unavailable.';
         blockMessage.classList.add('show');
         copyButton.disabled = true;
@@ -246,6 +247,7 @@
         issuedAt = Date.now();
         expiresAt = Date.parse(issued.expires_at);
         keyOutput.textContent = currentKey;
+        keyOutput.classList.add('has-key');
         copyButton.textContent = `Copy ${entry.name} key`;
         copyButton.disabled = false;
         blockMessage.classList.remove('show');
@@ -253,6 +255,7 @@
 
     const beginChallenge = async () => {
         keyOutput.textContent = 'PREPARING CHALLENGE…';
+        keyOutput.classList.remove('has-key');
         const root = `/api/portal/v1/${encodeURIComponent(portalKey)}`;
         const metadata = await api(`${root}/access-key-policies/${encodeURIComponent(policySlug)}`);
         const challenge = await api(`${root}/access-keys/challenge`, {
@@ -261,6 +264,7 @@
         });
         if (challenge.challenge.turnstile_required === false) {
             keyOutput.textContent = 'GENERATING KEY…';
+            keyOutput.classList.remove('has-key');
             await issueKey(challenge.challenge.id, '');
             return;
         }
@@ -279,6 +283,7 @@
         }
         host.replaceChildren();
         keyOutput.textContent = 'COMPLETE VERIFICATION';
+        keyOutput.classList.remove('has-key');
         turnstile.render(host, {
             sitekey: challenge.challenge.site_key,
             action: challenge.challenge.action,
@@ -325,6 +330,7 @@
         if (remaining === 0 && currentKey) {
             currentKey = '';
             keyOutput.textContent = 'KEY EXPIRED';
+            keyOutput.classList.remove('has-key');
             copyButton.disabled = true;
         }
     };

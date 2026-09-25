@@ -130,16 +130,19 @@ body {
     letter-spacing: 0.06em;
     text-align: center;
     word-break: break-all;
-    cursor: pointer;
-    /* Blurred by default so a shoulder-surfer or a screenshot does not leak
-       the key. Hover, focus, or the toggle reveals it. */
-    filter: blur(7px);
-    user-select: none;
     transition: filter 0.2s ease, border-color 0.15s ease;
 }
-.key-output:hover,
-.key-output:focus-visible,
-.key-output.revealed {
+/* Only an actual key is hidden. Status text ("COMPLETE VERIFICATION",
+   "GENERATING KEY") has to stay readable, so the blur is gated on .has-key,
+   which key.js adds the moment a key is issued. */
+.key-output.has-key {
+    cursor: pointer;
+    filter: blur(7px);
+    user-select: none;
+}
+.key-output.has-key:hover,
+.key-output.has-key:focus-visible,
+.key-output.has-key.revealed {
     filter: blur(0);
     user-select: text;
     border-color: var(--border-strong);
@@ -243,18 +246,11 @@ body {
 .btn:hover { color: var(--text); border-color: var(--border-strong); }
 .btn i { font-size: 13px; }
 
-/* Ads */
-.ad-placement {
-    margin-top: 88px;
-    margin-bottom: 20px;
-    padding: 14px;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    background: var(--surface);
+/* Ads: no frame, no label - just the slot sitting above the footer. */
+.ad-slot {
+    margin: 88px 0 24px;
     text-align: center;
-    min-height: 120px;
 }
-.ad-label { display: block; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 
 .footer { text-align: center; padding-bottom: 8px; }
 .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; }
@@ -686,4 +682,73 @@ body.brand-scooby .brand-name {
     .entry-head .status-badge { margin-left: 0; }
     .ring-wrap { width: 140px; height: 140px; }
     .ring-num { font-size: 38px; }
+}
+
+/* ==================================================================
+   Refined backdrops. Replaces the earlier single-blob drift with a
+   layered aurora plus a two-density starfield. Still transform and
+   opacity only, so nothing here touches layout or paint cost.
+   ================================================================== */
+
+body.brand-nenyoo::before {
+    inset: -35%;
+    background:
+        radial-gradient(38% 26% at 68% 22%, rgba(168, 85, 247, 0.34), transparent 64%),
+        radial-gradient(30% 34% at 22% 56%, rgba(124, 58, 237, 0.26), transparent 66%),
+        radial-gradient(26% 22% at 84% 74%, rgba(217, 70, 239, 0.22), transparent 62%),
+        radial-gradient(44% 30% at 46% 92%, rgba(79, 70, 229, 0.20), transparent 70%),
+        radial-gradient(20% 18% at 12% 14%, rgba(236, 72, 153, 0.14), transparent 60%);
+    filter: blur(56px) saturate(1.15);
+    animation: auroraDrift 34s ease-in-out infinite alternate;
+}
+
+body.brand-scooby::before {
+    inset: -35%;
+    background:
+        radial-gradient(36% 26% at 28% 20%, rgba(16, 185, 129, 0.30), transparent 64%),
+        radial-gradient(30% 34% at 78% 54%, rgba(45, 212, 191, 0.22), transparent 66%),
+        radial-gradient(26% 22% at 16% 78%, rgba(34, 197, 94, 0.18), transparent 62%),
+        radial-gradient(44% 30% at 54% 94%, rgba(79, 70, 229, 0.18), transparent 70%),
+        radial-gradient(20% 18% at 88% 12%, rgba(56, 189, 248, 0.14), transparent 60%);
+    filter: blur(56px) saturate(1.12);
+    animation: auroraDriftAlt 38s ease-in-out infinite alternate;
+}
+
+/* Organic motion: the rotation keeps the blobs from sliding as one sheet. */
+@keyframes auroraDrift {
+    0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+    50%  { transform: translate3d(3%, -2.5%, 0) scale(1.12) rotate(4deg); }
+    100% { transform: translate3d(-2.5%, 2%, 0) scale(1.05) rotate(-3deg); }
+}
+@keyframes auroraDriftAlt {
+    0%   { transform: translate3d(0, 0, 0) scale(1.04) rotate(-2deg); }
+    50%  { transform: translate3d(-3%, 2%, 0) scale(1.13) rotate(3deg); }
+    100% { transform: translate3d(2%, -2.5%, 0) scale(1) rotate(0deg); }
+}
+
+/* Two star densities so the field reads as having depth. */
+body.brand-nenyoo::after,
+body.brand-scooby::after {
+    opacity: 0.5;
+    background-image:
+        radial-gradient(1.4px 1.4px at 18% 24%, rgba(255, 255, 255, 0.55), transparent),
+        radial-gradient(1.4px 1.4px at 68% 16%, rgba(255, 255, 255, 0.40), transparent),
+        radial-gradient(1.4px 1.4px at 42% 72%, rgba(255, 255, 255, 0.45), transparent),
+        radial-gradient(1px 1px at 86% 58%, rgba(255, 255, 255, 0.30), transparent),
+        radial-gradient(1px 1px at 8% 84%, rgba(255, 255, 255, 0.28), transparent),
+        radial-gradient(1px 1px at 55% 38%, rgba(255, 255, 255, 0.24), transparent),
+        radial-gradient(1px 1px at 32% 8%, rgba(255, 255, 255, 0.22), transparent);
+    background-size: 420px 420px, 420px 420px, 420px 420px, 260px 260px, 260px 260px, 260px 260px, 260px 260px;
+    animation: starPan 160s linear infinite, starPulse 9s ease-in-out infinite;
+}
+
+@keyframes starPan {
+    from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+    to   { background-position: 420px 420px, 420px 420px, 420px 420px, 260px 260px, 260px 260px, 260px 260px, 260px 260px; }
+}
+@keyframes starPulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.32; } }
+
+@media (prefers-reduced-motion: reduce) {
+    body.brand-nenyoo::before, body.brand-scooby::before,
+    body.brand-nenyoo::after,  body.brand-scooby::after { animation: none; }
 }
