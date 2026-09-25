@@ -265,3 +265,17 @@ body {
 }
 .loader-download:hover { border-color: var(--border-strong); }
 .loader-download[hidden] { display: none; }
+
+.redeem-note {
+    margin-top: 18px;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface-2);
+    font-size: 13px;
+    color: var(--muted);
+}
+.redeem-note strong { color: var(--text); font-weight: 600; }
+.redeem-note ol { margin: 10px 0 10px 18px; padding: 0; }
+.redeem-note li { margin-bottom: 5px; }
+.redeem-note p { margin: 0; }

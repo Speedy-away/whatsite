@@ -10,6 +10,11 @@
         scooby: {
             entry: '/scoobyontop.html',
             home: 'https://scoobymenu.cc/',
+            providers: [
+                'https://bstlar.com/F/ScoobyKEY',
+                'https://bstlar.com/F/ScoobyKEY2',
+                'https://bstlar.com/F/ScoobyKEY4'
+            ],
             products: {
                 gta5:    { name: 'GTA V',          art: 'gta52.png', blurb: 'One key for GTA V Legacy and Enhanced.' },
                 rdr2:    { name: 'RDR2',           art: 'rdr2.png',  blurb: 'Red Dead Redemption 2 access key.' },
@@ -29,6 +34,7 @@
             // both products. It must not borrow Scooby's portal key.
             portalKey: 'pk_wq5QrTCJgdWbnTAI7eYzD4OAcXBkeCsE',
             policy: 'nenyfree',
+            providers: ['https://bstlar.com/F/NenyooKEY'],
             downloadPageFallback: 'https://nenyoomenu.com/downloads',
             downloadManifests: [
                 'https://nenyoomenu.com/loader-download.json',
@@ -52,10 +58,28 @@
     const product = parameters.get('product') || '';
     const entry = brand.products[product];
 
-    // No product, or one that does not belong to this brand: send the visitor
-    // back through the access flow rather than showing a half-built page.
+    // The key card ships hidden. Nothing reveals it except a grant that checks
+    // out below, so saving or sharing the bare URL shows only the locked panel
+    // even if the redirect is blocked or scripts are cut off partway.
+    const blockedPanel = document.getElementById('blockedContent');
+    const keyContent = document.getElementById('keyContent');
+    const providerLink = document.getElementById('providerLink');
+    if (providerLink && brand.providers) {
+        providerLink.href = brand.providers[Math.floor(Math.random() * brand.providers.length)];
+    }
+
+    // No product, or no valid grant: stay put and show the locked panel, the
+    // way scoobyontop2.html does. Redirecting away would cost the ad
+    // impression and hide the reason the key is not there. The pending product
+    // is remembered so the provider return lands on the right page.
     const bounce = () => {
         if (product) safeSet(localStorage, 'scooby_pending_product', product);
+        if (keyContent) keyContent.classList.add('hidden');
+        if (blockedPanel) {
+            blockedPanel.classList.remove('hidden');
+            return;
+        }
+        // No locked panel in the markup: fall back to the access flow.
         window.location.replace(product
             ? `${brand.entry}?product=${encodeURIComponent(product)}`
             : brand.entry);
@@ -76,6 +100,10 @@
     safeRemove(sessionStorage, grantKey);
 
     if (!validGrant) { bounce(); return; }
+
+    // Grant checked out. This is the only path that reveals the card.
+    if (blockedPanel) blockedPanel.classList.add('hidden');
+    if (keyContent) keyContent.classList.remove('hidden');
 
     const cleanUrl = new URL(window.location.href);
     cleanUrl.searchParams.delete('grant');

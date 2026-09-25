@@ -34,52 +34,88 @@
     </header>
 
     <main class="container">
-        <div class="logo-section">
-            <img src="../../assets/images/logo.png" alt="" class="logo">
-            <h1 class="brand-name">Your free key</h1>
-            <p class="brand-tagline" id="productBlurb">Preparing your key…</p>
-        </div>
+        <!-- Shown by default. Only a valid one-time grant swaps these two. -->
+        <section id="blockedContent">
+            <div class="logo-section">
+                <img src="../../assets/images/logo.png" alt="" class="logo">
+                <h1 class="brand-name">You found the page. Not the bypass.</h1>
+                <p class="brand-tagline">Saving the link doesn&rsquo;t save you the steps.</p>
+            </div>
+            <div class="card">
+                <div class="scope-note">
+                    <span>🔒</span>
+                    <span>Keys are issued once per run through the access steps. Complete them and we&rsquo;ll bring you straight back to your product with the key ready.</span>
+                </div>
+                <div class="key-actions">
+                    <a class="primary-button" id="providerLink" href="https://bstlar.com/F/ScoobyKEY" style="text-align:center;text-decoration:none;display:block;">Alright, I&rsquo;ll do the steps</a>
+                </div>
+                <div class="button-grid">
+                    <a href="https://scoobymenu.cc/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-home"></i> Home</a>
+                </div>
+            </div>
+        </section>
 
-        <div style="text-align:center">
-            <span class="status-badge"><span class="status-dot"></span>Current key available</span>
-        </div>
-
-        <div class="card">
-            <div class="key-header">
-                <span class="key-label"><i class="fas fa-key"></i> <span id="productName">Free access key</span></span>
-                <span class="key-timer"><i class="fas fa-clock"></i> Policy expiry</span>
+        <section id="keyContent" class="hidden">
+            <div class="logo-section">
+                <img src="../../assets/images/logo.png" alt="" class="logo">
+                <h1 class="brand-name">Your free key</h1>
+                <p class="brand-tagline" id="productBlurb">Preparing your key…</p>
             </div>
 
-            <div class="product-art">
-                <img id="productArt" src="../../assets/images/logo.png" alt="">
+            <div style="text-align:center">
+                <span class="status-badge"><span class="status-dot"></span>Current key available</span>
             </div>
 
-            <div class="scope-note">
-                <span>🔒</span>
-                <span><strong id="scopeProduct">This product</strong> only. This key cannot unlock another game or Spoofer.</span>
+            <div class="card">
+                <div class="key-header">
+                    <span class="key-label"><i class="fas fa-key"></i> <span id="productName">Free access key</span></span>
+                    <span class="key-timer"><i class="fas fa-clock"></i> Policy expiry</span>
+                </div>
+
+                <div class="product-art">
+                    <img id="productArt" src="../../assets/images/logo.png" alt="">
+                </div>
+
+                <div class="scope-note">
+                    <span>🔒</span>
+                    <span><strong id="scopeProduct">This product</strong> only. This key cannot unlock another game or Spoofer.</span>
+                </div>
+
+                <span class="key-field-label">Current key</span>
+                <output class="key-output" id="keyOutput" aria-live="polite">Verifying access…</output>
+
+                <div class="key-actions">
+                    <button class="primary-button" id="copyButton" type="button" disabled>Copy key</button>
+                </div>
+
+                <div class="timer">
+                    <span>Key expires in</span>
+                    <strong id="timerText">--:--:--</strong>
+                </div>
+                <div class="timer-track"><div class="timer-fill" id="timerFill"></div></div>
+
+                <div class="message" id="blockMessage" role="alert">The key could not be displayed because a content blocker hid a required page element. Allow this site, then reload.</div>
+
+                <div class="redeem-note">
+                    <strong>Next: redeem this key</strong>
+                    <ol>
+                        <li>Sign in or register on the Scooby portal.</li>
+                        <li>Redeem the key above on your dashboard.</li>
+                        <li>Download the loader and run it.</li>
+                    </ol>
+                    <p>Access lasts <strong>4 hours</strong>. After it runs out, come back for a new free key.</p>
+                </div>
+
+                <a class="loader-download" href="https://scoobymenu.cc/portal/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-right-to-bracket"></i> Login / Register to download the loader
+                </a>
+
+                <div class="button-grid">
+                    <a href="https://discord.gg/ZzPUqQ3k8n" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="https://scoobymenu.cc/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-home"></i> Home</a>
+                </div>
             </div>
-
-            <span class="key-field-label">Current key</span>
-            <output class="key-output" id="keyOutput" aria-live="polite">Verifying access…</output>
-
-            <div class="key-actions">
-                <button class="primary-button" id="copyButton" type="button" disabled>Copy key</button>
-            </div>
-
-            <div class="timer">
-                <span>Key expires in</span>
-                <strong id="timerText">--:--:--</strong>
-            </div>
-            <div class="timer-track"><div class="timer-fill" id="timerFill"></div></div>
-
-            <div class="message" id="blockMessage" role="alert">The key could not be displayed because a content blocker hid a required page element. Allow this site, then reload.</div>
-
-            <div class="button-grid">
-                <a href="https://scoobymenu.cc/products/free/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-download"></i> Free version</a>
-                <a href="https://discord.gg/ZzPUqQ3k8n" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-discord"></i> Discord</a>
-                <a href="../../index.html" class="btn"><i class="fas fa-home"></i> Home</a>
-            </div>
-        </div>
+        </section>
 
         <section class="ad-placement" aria-label="Advertisement">
             <span class="ad-label">Advertisement</span>
