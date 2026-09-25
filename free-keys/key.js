@@ -8,7 +8,7 @@
     // per-product HTML files no longer exist.
     const CATALOGUE = {
         scooby: {
-            entry: '/scoobyontop.html',
+            entry: '../../scoobyontop.html',
             home: 'https://scoobymenu.cc/',
             providers: [
                 'https://bstlar.com/F/ScoobyKEY',
@@ -28,7 +28,7 @@
             }
         },
         nenyoo: {
-            entry: '/nenyooontop.html',
+            entry: '../../nenyooontop.html',
             home: 'https://nenyoomenu.com/',
             // Nenyoo bills to its own portal, with one merged policy covering
             // both products. It must not borrow Scooby's portal key.

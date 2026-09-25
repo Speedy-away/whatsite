@@ -13,7 +13,7 @@
     // Each brand now has one key page that reads ?product=, so the per-product
     // HTML files are gone.
     const isNenyooProduct = product => typeof product === 'string' && product.startsWith('nenyoo-');
-    const productPath = product => `/free-keys/${isNenyooProduct(product) ? 'nenyoo' : 'scooby'}/?product=${encodeURIComponent(product)}`;
+    const productPath = product => `free-keys/${isNenyooProduct(product) ? 'nenyoo' : 'scooby'}/?product=${encodeURIComponent(product)}`;
 
     const blocked = document.getElementById('blockedContent');
     const selector = document.getElementById('selectorContent');
@@ -58,13 +58,14 @@
     const allowedReferrers = [
         'YnN0bGFyLmNvbQ==', 'YnN0bGFyLm5ldA==', 'YnN0Lmdn', 'Ym9vc3QuaW5r', 'Ym9vc3Rpbms='
     ].map(decode);
+    // Rotated. The previous values are retired, so a link carrying an old ref
+    // no longer passes on its own.
     const validRefParameters = [
-        decode('cTNhdlIteEFRMXdxR1B5ckJEem1pdExkVEFoenN5OWgzRDYwRHBnMVVaMA=='),
-        decode('djJfazN5XzRjYzNzc18yMDI2')
+        decode('Z1NxYnNnT25pYkhyRHlhd2hkakozX2p1bkNvWWUydktEOXhpdk43aXRnWQ==')
     ];
-    const validTokens = [decode('c2Nvb2J5MjAyNQ=='), decode('c2Nvb2J5X3YyXzIwMjY=')];
+    const validTokens = [];
     // Returned by the Nenyoo provider link; it only unlocks Nenyoo products.
-    const nenyooRefParameter = decode('bmVueW9vX3BRbnNOTFltYVo4MDNkUGVOT21pM3FXdg==');
+    const nenyooRefParameter = decode('bmVueW9vX0J6QUE1b1VrVEI0N2h1ZldSbjNpMlY=');
 
     const referrer = document.referrer.toLowerCase();
     const nenyooOnly = parameters.get('ref') === nenyooRefParameter;
