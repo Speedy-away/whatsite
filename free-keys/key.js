@@ -2,17 +2,68 @@
     'use strict';
 
     const GRANT_TTL_MS = 2 * 60 * 1000;
-    const PRODUCTS = new Set(['gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer']);
-    const product = document.body.dataset.product;
-    if (!PRODUCTS.has(product)) return;
+
+    // One catalogue for both brands. Each brand has a single key page that
+    // reads ?product= and dresses itself from this table, which is why the
+    // per-product HTML files no longer exist.
+    const CATALOGUE = {
+        scooby: {
+            entry: '/scoobyontop.html',
+            home: 'https://scoobymenu.cc/',
+            products: {
+                gta5:    { name: 'GTA V',          art: 'gta52.png', blurb: 'One key for GTA V Legacy and Enhanced.' },
+                rdr2:    { name: 'RDR2',           art: 'rdr2.png',  blurb: 'Red Dead Redemption 2 access key.' },
+                cs2:     { name: 'CS2',            art: 'cs2.png',   blurb: 'Counter-Strike 2 access key.' },
+                gmod:    { name: "Garry's Mod",    art: 'gmod.png',  blurb: 'Garry’s Mod loader access key.' },
+                fivem:   { name: 'FiveM',          art: 'five.png',  blurb: 'FiveM loader access key.' },
+                l4d:     { name: 'Left 4 Dead',    art: 'l4d.png',   blurb: 'One key for Left 4 Dead 1 and 2.' },
+                sbox:    { name: 'S&box',          art: 'logo.png',  blurb: 'S&box loader access key.' },
+                tlou:    { name: 'The Last of Us', art: 'logo.png',  blurb: 'The Last of Us Part I access key.' },
+                spoofer: { name: 'Spoofer',        art: 'hwid.png',  blurb: 'HWID spoofer utility access key.' }
+            }
+        },
+        nenyoo: {
+            entry: '/nenyooontop.html',
+            home: 'https://nenyoomenu.com/',
+            // Nenyoo bills to its own portal, with one merged policy covering
+            // both products. It must not borrow Scooby's portal key.
+            portalKey: 'pk_wq5QrTCJgdWbnTAI7eYzD4OAcXBkeCsE',
+            policy: 'nenyfree',
+            downloadPageFallback: 'https://nenyoomenu.com/downloads',
+            downloadManifests: [
+                'https://nenyoomenu.com/loader-download.json',
+                'https://raw.githubusercontent.com/walteryo1337/NENYOO-WEB/main/loader-download.json'
+            ],
+            products: {
+                'nenyoo-gtav':  { name: 'GTA V', art: 'nenyoo-gtav.jpg',  blurb: 'Legacy and Enhanced, one key.' },
+                'nenyoo-fivem': { name: 'FiveM', art: 'nenyoo-fivem.png', blurb: 'A separate key for the FiveM menu.' }
+            }
+        }
+    };
+
+    const brand = CATALOGUE[document.body.dataset.brand];
+    if (!brand) return;
 
     const safeGet = (storage, key) => { try { return storage.getItem(key); } catch (_) { return null; } };
     const safeSet = (storage, key, value) => { try { storage.setItem(key, value); } catch (_) {} };
     const safeRemove = (storage, key) => { try { storage.removeItem(key); } catch (_) {} };
 
+    const parameters = new URLSearchParams(window.location.search);
+    const product = parameters.get('product') || '';
+    const entry = brand.products[product];
+
+    // No product, or one that does not belong to this brand: send the visitor
+    // back through the access flow rather than showing a half-built page.
+    const bounce = () => {
+        if (product) safeSet(localStorage, 'scooby_pending_product', product);
+        window.location.replace(product
+            ? `${brand.entry}?product=${encodeURIComponent(product)}`
+            : brand.entry);
+    };
+    if (!entry) { bounce(); return; }
+
     // Preserve the sponsor hand-off as a UX step. The security boundary is the
     // server-issued IP-bound challenge and verified Turnstile result below.
-    const parameters = new URLSearchParams(window.location.search);
     const presentedToken = parameters.get('grant') || '';
     const grantKey = `scooby_one_time_grant_${product}`;
     let storedGrant = null;
@@ -24,11 +75,7 @@
         storedGrant.expiresAt >= now && storedGrant.expiresAt - storedGrant.issuedAt <= GRANT_TTL_MS;
     safeRemove(sessionStorage, grantKey);
 
-    if (!validGrant) {
-        safeSet(localStorage, 'scooby_pending_product', product);
-        window.location.replace(`/scoobyontop.html?product=${encodeURIComponent(product)}`);
-        return;
-    }
+    if (!validGrant) { bounce(); return; }
 
     const cleanUrl = new URL(window.location.href);
     cleanUrl.searchParams.delete('grant');
@@ -38,14 +85,72 @@
     // its one-time navigation grant has already been consumed.
     window.addEventListener('pageshow', event => {
         if (!event.persisted) return;
-        safeSet(localStorage, 'scooby_pending_product', product);
-        window.location.replace(`/scoobyontop.html?product=${encodeURIComponent(product)}`);
+        bounce();
     });
+
+    // Dress the shell for the requested product.
+    const setText = (id, value) => {
+        const node = document.getElementById(id);
+        if (node) node.textContent = value;
+    };
+    setText('productName', entry.name);
+    setText('productBlurb', entry.blurb);
+    setText('scopeProduct', entry.name);
+    document.title = `${entry.name} Free Key | whatwhatboy`;
+    const art = document.getElementById('productArt');
+    if (art) {
+        art.src = `../../assets/images/${entry.art}`;
+        art.alt = entry.name;
+    }
+    const homeLink = document.getElementById('brandHome');
+    if (homeLink) homeLink.href = brand.home;
+
+    // Read the public release manifest, not the React HTML shell or hashed
+    // bundle. Anything that is not an exact filego.at bucket link is rejected
+    // and the plain downloads page is used instead.
+    const resolveLoaderUrl = async (manifests, fallback) => {
+        for (const endpoint of manifests) {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 6000);
+            try {
+                const response = await fetch(endpoint, { cache: 'no-store', signal: controller.signal, credentials: 'omit' });
+                if (!response.ok) throw new Error('Download manifest unavailable.');
+                const manifest = await response.json();
+                if (typeof manifest.url !== 'string') throw new Error('Missing loader URL.');
+                const url = new URL(manifest.url);
+                if (url.protocol !== 'https:' || url.hostname !== 'filego.at' || url.username || url.password || url.port ||
+                    !/^\/bucket\/[A-Za-z0-9_-]+\/?$/.test(url.pathname) || url.search || url.hash) {
+                    throw new Error('Invalid loader download URL.');
+                }
+                return url.href;
+            } catch (_) {
+                // The raw hosting-repository copy also works when the custom domain blocks CORS.
+            } finally {
+                clearTimeout(timeout);
+            }
+        }
+        return fallback;
+    };
+
+    if (brand.downloadManifests) {
+        const loaderDownload = document.getElementById('loaderDownload');
+        if (loaderDownload) {
+            resolveLoaderUrl(brand.downloadManifests, brand.downloadPageFallback)
+                .then(href => {
+                    loaderDownload.href = href;
+                    loaderDownload.hidden = false;
+                })
+                .catch(() => {
+                    loaderDownload.href = brand.downloadPageFallback;
+                    loaderDownload.hidden = false;
+                });
+        }
+    }
 
     const config = window.SCOOBY_ACCESS_KEY_CONFIG || {};
     const apiBase = String(config.apiBase || '').replace(/\/$/, '');
-    const portalKey = String(config.portalKey || '');
-    const policySlug = String((config.policies || {})[product] || '');
+    const portalKey = String(brand.portalKey || config.portalKey || '');
+    const policySlug = String(brand.policy || (config.policies || {})[product] || '');
     const keyOutput = document.getElementById('keyOutput');
     const copyButton = document.getElementById('copyButton');
     const timerText = document.getElementById('timerText');
@@ -55,6 +160,8 @@
     let currentKey = '';
     let issuedAt = 0;
     let expiresAt = 0;
+
+    if (copyButton) copyButton.textContent = `Copy ${entry.name} key`;
 
     const showError = message => {
         keyOutput.textContent = 'KEY UNAVAILABLE';
@@ -96,7 +203,7 @@
         issuedAt = Date.now();
         expiresAt = Date.parse(issued.expires_at);
         keyOutput.textContent = currentKey;
-        copyButton.textContent = 'Copy access key';
+        copyButton.textContent = `Copy ${entry.name} key`;
         copyButton.disabled = false;
         blockMessage.classList.remove('show');
     };

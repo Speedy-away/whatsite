@@ -564,9 +564,6 @@
             'https://bstlar.com/F/ScoobyKEY2',
             'https://bstlar.com/F/ScoobyKEY4'
         ];
-        // Nenyoo keys go through their own link, which returns with the
-        // Nenyoo-only ref checked in free-keys/selector.js.
-        const NENYOO_PROVIDER_URL = 'https://bstlar.com/F/NenyooKEY';
         const ACCESS_ATTEMPT_KEY = 'scooby_access_attempt';
         const FREE_KEY_PRODUCTS = new Set([
             'gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer',
@@ -574,10 +571,13 @@
             'nenyoo-gtav', 'nenyoo-fivem'
         ]);
         const requestedProduct = new URLSearchParams(window.location.search).get('product');
-        const DOWNLOAD_URL = requestedProduct && requestedProduct.startsWith('nenyoo-') &&
-            FREE_KEY_PRODUCTS.has(requestedProduct)
-            ? NENYOO_PROVIDER_URL
-            : PROVIDER_URLS[Math.floor(Math.random() * PROVIDER_URLS.length)];
+        // Nenyoo now has its own entry page and its own ref URL. Hand any
+        // Nenyoo request over rather than running it through the Scooby flow.
+        if (requestedProduct && requestedProduct.startsWith('nenyoo-') &&
+            FREE_KEY_PRODUCTS.has(requestedProduct)) {
+            window.location.replace(`/nenyooontop.html?product=${encodeURIComponent(requestedProduct)}`);
+        }
+        const DOWNLOAD_URL = PROVIDER_URLS[Math.floor(Math.random() * PROVIDER_URLS.length)];
         if (requestedProduct && FREE_KEY_PRODUCTS.has(requestedProduct)) {
             try {
                 localStorage.setItem('scooby_pending_product', requestedProduct);

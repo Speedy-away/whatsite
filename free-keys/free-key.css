@@ -133,14 +133,6 @@ body .choices a::before {
     background-size: cover;
     border-bottom: 1px solid var(--border);
 }
-.choices a[href="nenyoo-gta5.html"]::before {
-    background-image: linear-gradient(180deg, transparent 55%, rgba(9,9,13,.48)),
-        url('../assets/images/nenyoo-gtav.jpg');
-}
-.choices a[href="nenyoo-fivem.html"]::before {
-    background-image: linear-gradient(180deg, transparent 55%, rgba(9,9,13,.48)),
-        url('../assets/images/nenyoo-fivem.png');
-}
 body .choices h2 { margin: 24px 26px 6px; font-size: 1.55rem; }
 body .choices p { margin: 0 26px 22px; color: var(--muted); }
 body .choices strong {

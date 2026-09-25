@@ -10,22 +10,26 @@
         'l4d', 'sbox', 'tlou',
         'nenyoo-gtav', 'nenyoo-fivem'
     ]);
-    const PRODUCT_PATHS = {
-        'nenyoo-gtav': '/free-keys/nenyoo-gta5.html',
-        'nenyoo-fivem': '/free-keys/nenyoo-fivem.html'
-    };
+    // Each brand now has one key page that reads ?product=, so the per-product
+    // HTML files are gone.
+    const isNenyooProduct = product => typeof product === 'string' && product.startsWith('nenyoo-');
+    const productPath = product => `/free-keys/${isNenyooProduct(product) ? 'nenyoo' : 'scooby'}/?product=${encodeURIComponent(product)}`;
+
     const blocked = document.getElementById('blockedContent');
     const selector = document.getElementById('selectorContent');
     const parameters = new URLSearchParams(window.location.search);
 
-    // Spread bypass-page traffic over the same provider pool scoobyontop.html
-    // uses, so no single link takes all of it.
-    const PROVIDER_URLS = [
-        'https://bstlar.com/F/ScoobyKEY',
-        'https://bstlar.com/F/ScoobyKEY2',
-        'https://bstlar.com/F/ScoobyKEY4'
-    ];
-    const providerLink = document.querySelector('.blocked-panel .primary-button');
+    // Nenyoo has its own return page and its own provider link; Scooby spreads
+    // bypass-page traffic over the same pool scoobyontop.html uses.
+    const pageBrand = document.body.dataset.keyBrand === 'nenyoo' ? 'nenyoo' : 'scooby';
+    const PROVIDER_URLS = pageBrand === 'nenyoo'
+        ? ['https://bstlar.com/F/NenyooKEY']
+        : [
+            'https://bstlar.com/F/ScoobyKEY',
+            'https://bstlar.com/F/ScoobyKEY2',
+            'https://bstlar.com/F/ScoobyKEY4'
+        ];
+    const providerLink = document.querySelector('#blockedContent .primary-button, .blocked-panel .primary-button');
     if (providerLink) {
         providerLink.href = PROVIDER_URLS[Math.floor(Math.random() * PROVIDER_URLS.length)];
     }
@@ -61,7 +65,6 @@
     const validTokens = [decode('c2Nvb2J5MjAyNQ=='), decode('c2Nvb2J5X3YyXzIwMjY=')];
     // Returned by the Nenyoo provider link; it only unlocks Nenyoo products.
     const nenyooRefParameter = decode('bmVueW9vX3BRbnNOTFltYVo4MDNkUGVOT21pM3FXdg==');
-    const isNenyooProduct = product => typeof product === 'string' && product.startsWith('nenyoo-');
 
     const referrer = document.referrer.toLowerCase();
     const nenyooOnly = parameters.get('ref') === nenyooRefParameter;
@@ -150,8 +153,7 @@
         : (pending && PRODUCTS.has(pending) ? pending : '');
     if (requestedProduct) {
         safeRemove(localStorage, 'scooby_pending_product');
-        navigateWithGrant(requestedProduct,
-            PRODUCT_PATHS[requestedProduct] || `/free-keys/${requestedProduct}.html`);
+        navigateWithGrant(requestedProduct, productPath(requestedProduct));
         return;
     }
 
