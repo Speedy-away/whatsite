@@ -4,14 +4,14 @@ window.SCOOBY_ACCESS_KEY_CONFIG = Object.freeze({
     apiBase: 'https://proudlyauthentication.com',
     portalKey: 'pk_gri2butNfQ28AWQqNTD5xLtQKwer2MNv',
     policies: Object.freeze({
-        gta5: 'gtav',
-        rdr2: 'rdr',
-        cs2: 'cs2',
-        gmod: 'gmod',
-        fivem: 'fivem',
-        spoofer: 'spoofer',
-        l4d: 'l4d',
-        sbox: 'sbox',
-        tlou: 'tlou'
+        gta5: 'allfree',
+        rdr2: 'allfree',
+        cs2: 'allfree',
+        gmod: 'allfree',
+        fivem: 'allfree',
+        spoofer: 'allfree',
+        l4d: 'allfree',
+        sbox: 'allfree',
+        tlou: 'allfree'
     })
 });

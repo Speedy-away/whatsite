@@ -2,6 +2,8 @@
   'use strict';
   const slug = document.body.dataset.policy;
   if (slug !== 'gtav' && slug !== 'fivem') return;
+  // Both product pages share one merged access-key policy.
+  const policySlug = 'nenyfree';
   const accessProduct = `nenyoo-${slug}`;
   const grantTtlMs = 2 * 60 * 1000;
   const safeGet = (storage, name) => { try { return storage.getItem(name); } catch (_) { return null; } };
@@ -130,18 +132,18 @@
     document.head.appendChild(script);
   });
   const start = async () => {
-    const metadata = await api(`/access-key-policies/${slug}`);
+    const metadata = await api(`/access-key-policies/${policySlug}`);
     const policy = metadata.policy;
     const expectedId = slug === 'gtav' ? '3546744805' : '2759446834';
     const actualIds = (policy.subscriptions || []).map(item => String(item.id));
-    if (policy.slug !== slug || policy.expires_in !== 14400 || policy.binding_mode !== 'hwid' ||
+    if (policy.slug !== policySlug || policy.expires_in !== 14400 || policy.binding_mode !== 'hwid' ||
         policy.usage_mode !== 'reusable' ||
-        actualIds.length !== 1 || actualIds[0] !== expectedId) {
+        !actualIds.includes(expectedId)) {
       throw new Error('This key policy needs review before keys can be issued.');
     }
     const challenge = await api('/access-keys/challenge', {
       method: 'POST',
-      body: JSON.stringify({ policy_slug: slug, integration_id: policy.integration_id })
+      body: JSON.stringify({ policy_slug: policySlug, integration_id: policy.integration_id })
     });
     if (!challenge.challenge.turnstile_required) return issue(challenge.challenge.id, '');
     if (!challenge.challenge.site_key) throw new Error('Verification is not configured.');
