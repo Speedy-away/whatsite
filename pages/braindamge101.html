@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
-    <style data-critical-bg>html{background:#0b0f19;color-scheme:dark}body{background:#0b0f19}</style>
+    <style data-critical-bg>html{background:#0a0a0c;color-scheme:dark}body{background:#0a0a0c}</style>
     <meta name="description" content="Browse GTA 5 and RDR2 mod menus, including YimMenu, Scooby, Nenyoo, and Kiddions, plus Lua scripts and related utilities.">
     <meta name="keywords" content="Brain Damage 101, YimMenu, GTA 5 mod menus, RDR2 mod menus, GTA 5 Lua scripts, FSL">
     <meta name="author" content="Brain Damage 101">
@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=3.1.12">
+    <link rel="stylesheet" href="../style.css?v=3.1.13">
     <style>
         .bd-download-grid {
             display: grid;
@@ -48,7 +48,7 @@
         .bd-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(99, 102, 241, 0.3);
+            border-color: rgba(16, 185, 129, 0.3);
         }
 
         .bd-card.premium {
@@ -133,14 +133,14 @@
 
         .bd-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.4);
         }
 
-        .bd-btn-primary { background: linear-gradient(135deg, #6366f1, #a78bfa); }
-        .bd-btn-free { background: linear-gradient(135deg, #06b6d4, #a78bfa); }
+        .bd-btn-primary { background: linear-gradient(135deg, #10b981, #34d399); }
+        .bd-btn-free { background: linear-gradient(135deg, #06b6d4, #34d399); }
         .bd-btn-premium { background: linear-gradient(135deg, #f59e0b, #f97316); color: #000; }
-        .bd-btn-rdr2 { background: linear-gradient(135deg, #10b981, #a78bfa); }
-        .bd-btn-utility { background: linear-gradient(135deg, #f59e0b, #a78bfa); }
+        .bd-btn-rdr2 { background: linear-gradient(135deg, #10b981, #34d399); }
+        .bd-btn-utility { background: linear-gradient(135deg, #f59e0b, #34d399); }
 
         .bd-section-label {
             display: inline-flex;
@@ -155,15 +155,15 @@
             margin-bottom: 1rem;
         }
 
-        .bd-label-yim { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; }
+        .bd-label-yim { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
         .bd-label-free { background: rgba(6, 182, 212, 0.15); color: #67e8f9; }
         .bd-label-premium { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
         .bd-label-rdr2 { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
         .bd-label-utility { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
 
         .bd-token-box {
-            background: rgba(99, 102, 241, 0.08);
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
             border-radius: 0.75rem;
             padding: 1.5rem;
             text-align: center;
@@ -190,19 +190,19 @@
 
         .bd-token-value:hover {
             background: rgba(0, 0, 0, 0.5);
-            border-color: rgba(99, 102, 241, 0.3);
+            border-color: rgba(16, 185, 129, 0.3);
         }
 
         .bd-token-value code {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1rem;
-            color: #a5b4fc;
+            color: #6ee7b7;
             background: none;
             border: none;
             padding: 0;
         }
 
-        .bd-token-value i { color: #6366f1; }
+        .bd-token-value i { color: #10b981; }
 
         .bd-info-box {
             background: rgba(245, 158, 11, 0.08);
@@ -252,7 +252,7 @@
             color: white;
             z-index: 10000;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            border: 1px solid rgba(16, 185, 129, 0.3);
             text-decoration: none;
             transition: all 0.3s ease;
             max-width: 280px;
@@ -260,7 +260,7 @@
 
         .bd-popup:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.3);
         }
 
         .bd-popup img {
@@ -272,7 +272,7 @@
         .bd-popup span {
             font-size: 0.9rem;
             font-weight: 600;
-            color: #a5b4fc;
+            color: #6ee7b7;
         }
 
         @media (max-width: 768px) {
@@ -434,7 +434,7 @@
 
                 <div class="bd-download-grid">
                     <div class="bd-card">
-                        <div class="bd-card-icon" style="color: #6366f1;">
+                        <div class="bd-card-icon" style="color: #10b981;">
                             <i class="fas fa-cog"></i>
                         </div>
                         <h3>Yim V2 (Enhanced)</h3>
@@ -451,7 +451,7 @@
                     </div>
 
                     <div class="bd-card">
-                        <div class="bd-card-icon" style="color: #a78bfa;">
+                        <div class="bd-card-icon" style="color: #34d399;">
                             <i class="fas fa-star"></i>
                         </div>
                         <h3>Yim V2 (Enhanced) Fork</h3>
@@ -508,7 +508,7 @@
 
                 <div class="bd-download-grid">
                     <div class="bd-card">
-                        <div class="bd-card-icon" style="color: #6366f1;">
+                        <div class="bd-card-icon" style="color: #10b981;">
                             <i class="fas fa-box-open"></i>
                         </div>
                         <h3>Yim Lua PACK 30+</h3>
@@ -525,7 +525,7 @@
                     </div>
 
                     <div class="bd-card">
-                        <div class="bd-card-icon" style="color: #a78bfa;">
+                        <div class="bd-card-icon" style="color: #34d399;">
                             <i class="fas fa-code"></i>
                         </div>
                         <h3>Individual Yim Scripts</h3>
