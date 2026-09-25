@@ -16,8 +16,8 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg-primary); color-scheme: dark; }
+body { font-family: var(--font); background: transparent; color: var(--text-primary); line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
 ::selection, ::-moz-selection { background: var(--accent); color: #fff; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent-light); text-decoration: none; transition: color var(--tf); }
@@ -772,4 +772,32 @@ body::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 }
 .compact-game-page.no-cheat-icons .cheat-status {
     grid-column: 1;
+}
+
+
+/* Ambient animated backdrop. Sits behind all content, paints nothing opaque,
+   and only animates transform so it stays off the layout/paint path. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -30%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(38% 42% at 22% 26%, rgba(99, 102, 241, 0.18), transparent 62%),
+        radial-gradient(34% 38% at 79% 20%, rgba(56, 189, 248, 0.10), transparent 64%),
+        radial-gradient(42% 46% at 64% 80%, rgba(139, 92, 246, 0.14), transparent 66%);
+    filter: blur(30px);
+    will-change: transform;
+    animation: bg-drift 30s ease-in-out infinite alternate;
+}
+
+@keyframes bg-drift {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    50%  { transform: translate3d(2.5%, -2%, 0) scale(1.08); }
+    100% { transform: translate3d(-2%, 2.5%, 0) scale(1.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before { animation: none; }
 }
