@@ -8,14 +8,14 @@
     <meta name="description" content="Get your Scooby access key. Verify access, copy the product-specific key, and check the expiry before using it.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; connect-src 'self' https:; frame-src 'self' blob: https:; media-src 'self' blob: https:; font-src 'self' data: https:; worker-src 'self' blob: https:; object-src 'none'; base-uri 'none'">
     <title>Scooby Free Key</title>
-    <link rel="icon" href="../../assets/images/logo.png" type="image/png">
+    <link rel="icon" href="../assets/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../key-page.css?v=3.1.16">
+    <link rel="stylesheet" href="../key-page.css?v=3.1.17">
     <script defer src="../access-key-config.js"></script>
-    <script defer src="../key.js"></script>
+    <script defer src="../key.js?v=3.1.17"></script>
     <script defer src="https://aloudalimonyexplosion.com/36/6a/2e/366a2e3edafab888009b3076fcd47b82.js"></script>
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://whatwhatboy.com/free-keys/scooby/">
@@ -27,7 +27,7 @@
         <!-- Shown by default. Only a valid one-time grant swaps these two. -->
         <section id="blockedContent">
             <div class="logo-section">
-                <img src="../../assets/images/logo.png" alt="" class="logo">
+                <img src="../assets/logo.png" alt="" class="logo">
                 <h1 class="brand-name">You found the page. Not the bypass.</h1>
                 <p class="brand-tagline">Saving the link doesn&rsquo;t save you the steps.</p>
             </div>
@@ -52,7 +52,7 @@
 
         <section id="keyContent" class="hidden">
             <div class="logo-section">
-                <img src="../../assets/images/logo.png" alt="" class="logo">
+                <img src="../assets/logo.png" alt="" class="logo">
                 <h1 class="brand-name">Your free key</h1>
                 <p class="brand-tagline" id="productBlurb">Preparing your key…</p>
             </div>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="product-art">
-                    <img id="productArt" src="../../assets/images/logo.png" alt="">
+                    <img id="productArt" src="../assets/logo.png" alt="">
                 </div>
 
                 <div class="scope-note">
@@ -77,10 +77,12 @@
                 </div>
 
                 <span class="key-field-label">Current key</span>
-                <output class="key-output" id="keyOutput" aria-live="polite">Verifying access…</output>
+                <output class="key-output" id="keyOutput" tabindex="0" aria-live="polite">Verifying access…</output>
+                <p class="key-hint">Hover to reveal &middot; press <kbd>C</kbd> to copy</p>
 
                 <div class="key-actions">
                     <button class="primary-button" id="copyButton" type="button" disabled>Copy key</button>
+                    <button class="ghost-button" id="revealButton" type="button" aria-pressed="false">Show</button>
                 </div>
 
                 <div class="timer">
@@ -124,7 +126,7 @@
 
         <footer class="site-footer">
             <a class="foot-brand" href="https://scoobymenu.cc/" target="_blank" rel="noopener noreferrer">
-                <img src="../../assets/images/logo.png" alt="">
+                <img src="../assets/logo.png" alt="">
                 <span>Scooby</span>
             </a>
             <span class="foot-copy">&copy; 2026 Scooby Menu</span>

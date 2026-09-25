@@ -127,7 +127,7 @@
     document.title = `${entry.name} Free Key`;
     const art = document.getElementById('productArt');
     if (art) {
-        art.src = `../../assets/images/${entry.art}`;
+        art.src = `../assets/${entry.art}`;
         art.alt = entry.name;
     }
     const homeLink = document.getElementById('brandHome');
@@ -315,6 +315,29 @@
     };
 
     copyButton.addEventListener('click', copyKey);
+
+    // The key ships blurred. Hover reveals it transiently; this toggle pins it.
+    const revealButton = document.getElementById('revealButton');
+    if (revealButton) {
+        revealButton.addEventListener('click', () => {
+            const shown = keyOutput.classList.toggle('revealed');
+            revealButton.textContent = shown ? 'Hide' : 'Show';
+            revealButton.setAttribute('aria-pressed', String(shown));
+        });
+    }
+    keyOutput.addEventListener('click', copyKey);
+
+    // Press C to copy, unless the visitor is typing into a field.
+    document.addEventListener('keydown', event => {
+        if (event.key !== 'c' && event.key !== 'C') return;
+        if (event.ctrlKey || event.metaKey || event.altKey) return;
+        const node = document.activeElement;
+        if (node && (node.isContentEditable ||
+            ['INPUT', 'TEXTAREA', 'SELECT'].includes(node.tagName))) return;
+        if (!currentKey) return;
+        event.preventDefault();
+        copyKey();
+    });
     window.setInterval(updateTimer, 1000);
     updateTimer();
 

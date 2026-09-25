@@ -130,9 +130,55 @@ body {
     letter-spacing: 0.06em;
     text-align: center;
     word-break: break-all;
-    transition: border-color 0.15s ease;
+    cursor: pointer;
+    /* Blurred by default so a shoulder-surfer or a screenshot does not leak
+       the key. Hover, focus, or the toggle reveals it. */
+    filter: blur(7px);
+    user-select: none;
+    transition: filter 0.2s ease, border-color 0.15s ease;
 }
-.key-output:hover { border-color: var(--border-strong); }
+.key-output:hover,
+.key-output:focus-visible,
+.key-output.revealed {
+    filter: blur(0);
+    user-select: text;
+    border-color: var(--border-strong);
+}
+
+.key-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+}
+.key-hint kbd {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-family: inherit;
+    font-size: 11px;
+    color: var(--text);
+}
+
+.ghost-button {
+    flex: 0 0 auto;
+    padding: 13px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+.ghost-button:hover { color: var(--text); border-color: var(--border-strong); }
 
 .timer {
     display: flex;
