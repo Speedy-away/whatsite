@@ -369,3 +369,68 @@ body.brand-nenyoo .timer-fill { background: linear-gradient(90deg, #a855f7, #d94
     body.brand-nenyoo::before,
     body.brand-nenyoo::after { animation: none; }
 }
+
+/* ------------------------------------------------------------------
+   Scooby theme. Same technique as the Nenyoo backdrop but in the brand's
+   emerald, kept dimmer so the minimal layout still reads as the focus.
+   ------------------------------------------------------------------ */
+body.brand-scooby::before {
+    content: "";
+    position: fixed;
+    inset: -25%;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(40% 30% at 26% 26%, rgba(16, 185, 129, 0.22), transparent 62%),
+        radial-gradient(34% 44% at 76% 62%, rgba(45, 212, 191, 0.16), transparent 64%),
+        radial-gradient(28% 26% at 58% 88%, rgba(99, 102, 241, 0.16), transparent 60%);
+    filter: blur(42px);
+    will-change: transform;
+    animation: scoobyDrift 28s ease-in-out infinite alternate;
+}
+
+@keyframes scoobyDrift {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    50%  { transform: translate3d(-2.5%, 2%, 0) scale(1.09); }
+    100% { transform: translate3d(2%, -2.5%, 0) scale(1.04); }
+}
+
+body.brand-scooby::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.45;
+    background-image:
+        radial-gradient(1px 1px at 22% 28%, rgba(255, 255, 255, 0.5), transparent),
+        radial-gradient(1px 1px at 64% 18%, rgba(255, 255, 255, 0.32), transparent),
+        radial-gradient(1px 1px at 38% 76%, rgba(255, 255, 255, 0.38), transparent),
+        radial-gradient(1px 1px at 88% 54%, rgba(255, 255, 255, 0.28), transparent),
+        radial-gradient(1px 1px at 12% 88%, rgba(255, 255, 255, 0.3), transparent);
+    background-size: 380px 380px;
+    animation: scoobyStars 140s linear infinite;
+}
+
+@keyframes scoobyStars {
+    from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
+    to   { background-position: 380px 380px, 380px 380px, 380px 380px, 380px 380px, 380px 380px; }
+}
+
+body.brand-scooby .card,
+body.brand-scooby .ad-placement {
+    background: rgba(19, 19, 22, 0.74);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+body.brand-scooby .brand-name {
+    background: linear-gradient(120deg, #fff 30%, #6ee7b7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.brand-scooby::before,
+    body.brand-scooby::after { animation: none; }
+}
