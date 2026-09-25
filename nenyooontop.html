@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="free-keys/key-page.css?v=3.1.19">
+    <link rel="stylesheet" href="free-keys/key-page.css?v=3.1.20">
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://whatwhatboy.com/nenyooontop.html">
     <script data-cfasync="false" src="https://abscloud.org/1/366a2e3edafab888009b3076fcd47b82"></script>
@@ -87,23 +87,13 @@
             'use strict';
             const COUNTDOWN_SECONDS = 3;
             const PROVIDER_URL = 'https://bstlar.com/F/N3NYOOfreeKEY';
-            const PRODUCTS = {
-                'nenyoo-gtav': 'GTA V',
-                'nenyoo-fivem': 'FiveM'
-            };
-            const parameters = new URLSearchParams(window.location.search);
-            const product = parameters.get('product') || '';
-            const name = PRODUCTS[product];
 
-            if (name) {
-                // Remember which product the visitor came for so the return
-                // page can send them straight to it.
-                try { localStorage.setItem('scooby_pending_product', product); } catch (_) {}
-                document.getElementById('scopeProduct').textContent = `${name} key`;
-                document.getElementById('productBlurb').textContent = `Nenyoo ${name} — 4 hour key, bound to your device.`;
-            } else {
-                document.getElementById('productBlurb').textContent = 'Pick up your Nenyoo access key.';
-            }
+            // Nenyoo is one global key now, so any ?product= on the way in is
+            // ignored and the pending value is always the same.
+            try { localStorage.setItem('scooby_pending_product', 'nenyoo'); } catch (_) {}
+            document.getElementById('scopeProduct').textContent = 'Nenyoo key';
+            document.getElementById('productBlurb').textContent =
+                'One key for GTA V and FiveM, issued after the access steps.';
 
             const button = document.getElementById('downloadBtn');
             const countdown = document.getElementById('countdown');

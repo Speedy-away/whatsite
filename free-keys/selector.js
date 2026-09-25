@@ -8,17 +8,24 @@
     // Scooby is one global key: every product mapped to the same server-side
     // policy, so they all collapse to 'scooby'. The old per-game ids are still
     // accepted so existing links and stored pending values keep working.
+    // Both brands are one global key now: every product mapped to the same
+    // server-side policy ('allfree' / 'nenyfree'), so the per-product split
+    // bought nothing. The old ids stay accepted so existing links and stored
+    // pending values keep working.
     const LEGACY_SCOOBY = new Set([
         'gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer', 'l4d', 'sbox', 'tlou'
     ]);
-    const PRODUCTS = new Set(['scooby', 'nenyoo-gtav', 'nenyoo-fivem', ...LEGACY_SCOOBY]);
+    const LEGACY_NENYOO = new Set(['nenyoo-gtav', 'nenyoo-fivem']);
+    const PRODUCTS = new Set(['scooby', 'nenyoo', ...LEGACY_SCOOBY, ...LEGACY_NENYOO]);
 
-    const isNenyooProduct = product => typeof product === 'string' && product.startsWith('nenyoo-');
-    // Fold any legacy Scooby id down to the single global key.
-    const normalise = product => (LEGACY_SCOOBY.has(product) ? 'scooby' : product);
-    const productPath = product => isNenyooProduct(product)
-        ? `free-keys/nenyoo/?product=${encodeURIComponent(product)}`
-        : 'free-keys/scooby/';
+    const isNenyooProduct = product =>
+        product === 'nenyoo' || LEGACY_NENYOO.has(product);
+    // Fold any legacy id down to its brand's single global key.
+    const normalise = product => LEGACY_SCOOBY.has(product) ? 'scooby'
+        : LEGACY_NENYOO.has(product) ? 'nenyoo'
+        : product;
+    const productPath = product =>
+        isNenyooProduct(product) ? 'free-keys/nenyoo/' : 'free-keys/scooby/';
 
     const blocked = document.getElementById('blockedContent');
     const selector = document.getElementById('selectorContent');
@@ -168,17 +175,10 @@
         attemptProduct && PRODUCTS.has(attemptProduct)
             ? attemptProduct
             : (pending && PRODUCTS.has(pending) ? pending : ''));
-    if (requestedProduct) {
-        safeRemove(localStorage, 'scooby_pending_product');
-        navigateWithGrant(requestedProduct, productPath(requestedProduct));
-        return;
-    }
-
-    // Authorised, but we never learned which product they came for — they hit
-    // the provider link directly rather than starting from a product page.
-    // There is no chooser any more, so explain that instead.
-    blocked.classList.remove('hidden');
-    selector.classList.add('hidden');
-    const note = document.getElementById('noProductNote');
-    if (note) note.classList.remove('hidden');
+    // Nothing remembered just means they opened the provider link directly.
+    // Each brand has a single global key, so the page itself tells us which
+    // one to issue — there is nothing left to ask.
+    const target = requestedProduct || (pageBrand === 'nenyoo' ? 'nenyoo' : 'scooby');
+    safeRemove(localStorage, 'scooby_pending_product');
+    navigateWithGrant(target, productPath(target));
 })();

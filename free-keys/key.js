@@ -39,6 +39,14 @@
                 'https://nenyoomenu.com/loader-download.json',
                 'https://raw.githubusercontent.com/walteryo1337/NENYOO-WEB/main/loader-download.json'
             ],
+            // Both Nenyoo products resolve to the same 'nenyfree' policy, so
+            // one global key covers them, same as Scooby.
+            global: {
+                id: 'nenyoo',
+                name: 'Nenyoo',
+                art: 'nenyoo-gtav.jpg',
+                blurb: 'One key for GTA V and FiveM.'
+            },
             products: {
                 'nenyoo-gtav':  { name: 'GTA V', art: 'nenyoo-gtav.jpg',  blurb: 'Legacy and Enhanced, one key.' },
                 'nenyoo-fivem': { name: 'FiveM', art: 'nenyoo-fivem.png', blurb: 'A separate key for the FiveM menu.' }

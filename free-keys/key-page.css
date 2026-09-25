@@ -589,9 +589,3 @@ body.brand-scooby .brand-name {
     .site-footer .foot-links { margin-left: 0; gap: 14px; }
 }
 
-/* The network injects into the container div. If it stays empty — unfilled
-   inventory, or a blocker stripped it — collapse the whole slot rather than
-   leaving an empty bordered box on the page. */
-.ad-placement:has(> div:empty) {
-    display: none;
-}
