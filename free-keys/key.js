@@ -33,7 +33,11 @@
             // both products. It must not borrow Scooby's portal key.
             portalKey: 'pk_wq5QrTCJgdWbnTAI7eYzD4OAcXBkeCsE',
             policy: 'nenyfree',
-            providers: ['https://bstlar.com/F/N3NYOOfreeKEY'],
+            providers: [
+                'https://bstlar.com/F/N3NYOOfreeKEY',
+                'https://bstlar.com/F/nenyooKey2',
+                'https://bstlar.com/F/nenyooKey3'
+            ],
             downloadPageFallback: 'https://nenyoomenu.com/downloads',
             downloadManifests: [
                 'https://nenyoomenu.com/loader-download.json',

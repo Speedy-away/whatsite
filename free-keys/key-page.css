@@ -589,3 +589,22 @@ body.brand-scooby .brand-name {
     .site-footer .foot-links { margin-left: 0; gap: 14px; }
 }
 
+
+/* Key card with the redeem steps alongside it. The column only exists on the
+   key pages, so the container widens just for them. */
+.key-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 20px;
+    align-items: start;
+}
+.container:has(.key-layout) { max-width: 920px; }
+
+.side-panel { display: flex; flex-direction: column; gap: 12px; }
+.side-panel .redeem-note { margin-top: 0; }
+.side-panel .loader-download { margin-top: 0; }
+
+@media (max-width: 900px) {
+    .key-layout { grid-template-columns: minmax(0, 1fr); }
+    .container:has(.key-layout) { max-width: 560px; }
+}
