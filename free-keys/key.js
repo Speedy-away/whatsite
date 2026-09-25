@@ -34,7 +34,7 @@
             // both products. It must not borrow Scooby's portal key.
             portalKey: 'pk_wq5QrTCJgdWbnTAI7eYzD4OAcXBkeCsE',
             policy: 'nenyfree',
-            providers: ['https://bstlar.com/F/NenyooKEY'],
+            providers: ['https://bstlar.com/F/N3NYOOfreeKEY'],
             downloadPageFallback: 'https://nenyoomenu.com/downloads',
             downloadManifests: [
                 'https://nenyoomenu.com/loader-download.json',
@@ -124,7 +124,7 @@
     setText('productName', entry.name);
     setText('productBlurb', entry.blurb);
     setText('scopeProduct', entry.name);
-    document.title = `${entry.name} Free Key | whatwhatboy`;
+    document.title = `${entry.name} Free Key`;
     const art = document.getElementById('productArt');
     if (art) {
         art.src = `../../assets/images/${entry.art}`;

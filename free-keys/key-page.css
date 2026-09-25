@@ -279,3 +279,93 @@ body {
 .redeem-note ol { margin: 10px 0 10px 18px; padding: 0; }
 .redeem-note li { margin-bottom: 5px; }
 .redeem-note p { margin: 0; }
+
+/* ------------------------------------------------------------------
+   Nenyoo theme. Matches nenyoomenu.com: near-black ground, violet
+   light-ribbons drifting behind the content, faint starfield. Scoped to
+   .brand-nenyoo so the Scooby pages keep their plain look.
+   ------------------------------------------------------------------ */
+body.brand-nenyoo {
+    --bg: #050506;
+    --surface: #0f0f14;
+    --surface-2: #16161d;
+    --border: rgba(168, 85, 247, 0.16);
+    --border-strong: rgba(168, 85, 247, 0.38);
+    --accent: #a855f7;
+}
+
+/* Drifting violet ribbons. Transform-only, so it stays off the paint path. */
+body.brand-nenyoo::before {
+    content: "";
+    position: fixed;
+    inset: -25%;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(42% 30% at 72% 28%, rgba(168, 85, 247, 0.30), transparent 62%),
+        radial-gradient(36% 46% at 24% 62%, rgba(139, 92, 246, 0.24), transparent 64%),
+        radial-gradient(30% 26% at 86% 78%, rgba(217, 70, 239, 0.20), transparent 60%);
+    filter: blur(42px);
+    will-change: transform;
+    animation: nenyooDrift 26s ease-in-out infinite alternate;
+}
+
+@keyframes nenyooDrift {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    50%  { transform: translate3d(2.5%, -2.5%, 0) scale(1.1); }
+    100% { transform: translate3d(-2%, 2%, 0) scale(1.04); }
+}
+
+/* Faint starfield, slowly panning. */
+body.brand-nenyoo::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image:
+        radial-gradient(1px 1px at 18% 24%, rgba(255, 255, 255, 0.55), transparent),
+        radial-gradient(1px 1px at 68% 16%, rgba(255, 255, 255, 0.35), transparent),
+        radial-gradient(1px 1px at 42% 72%, rgba(255, 255, 255, 0.40), transparent),
+        radial-gradient(1px 1px at 86% 58%, rgba(255, 255, 255, 0.30), transparent),
+        radial-gradient(1px 1px at 8% 84%, rgba(255, 255, 255, 0.32), transparent);
+    background-size: 360px 360px;
+    animation: nenyooStars 120s linear infinite;
+}
+
+@keyframes nenyooStars {
+    from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
+    to   { background-position: 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px; }
+}
+
+/* Glassy panels so the ribbons read through the card. */
+body.brand-nenyoo .card,
+body.brand-nenyoo .ad-placement {
+    background: rgba(16, 16, 22, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+body.brand-nenyoo .topbar {
+    background: rgba(5, 5, 6, 0.6);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+body.brand-nenyoo .brand-name {
+    background: linear-gradient(120deg, #fff 30%, #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.brand-nenyoo .status-badge {
+    background: rgba(168, 85, 247, 0.12);
+    border-color: rgba(168, 85, 247, 0.28);
+    color: #c084fc;
+}
+body.brand-nenyoo .status-dot { background: #a855f7; }
+body.brand-nenyoo .timer-fill { background: linear-gradient(90deg, #a855f7, #d946ef); }
+
+@media (prefers-reduced-motion: reduce) {
+    body.brand-nenyoo::before,
+    body.brand-nenyoo::after { animation: none; }
+}

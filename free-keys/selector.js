@@ -23,7 +23,7 @@
     // bypass-page traffic over the same pool scoobyontop.html uses.
     const pageBrand = document.body.dataset.keyBrand === 'nenyoo' ? 'nenyoo' : 'scooby';
     const PROVIDER_URLS = pageBrand === 'nenyoo'
-        ? ['https://bstlar.com/F/NenyooKEY']
+        ? ['https://bstlar.com/F/N3NYOOfreeKEY']
         : [
             'https://bstlar.com/F/ScoobyKEY',
             'https://bstlar.com/F/ScoobyKEY2',
