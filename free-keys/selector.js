@@ -5,15 +5,20 @@
     const MINIMUM_PROVIDER_TIME_MS = 3 * 1000;
     const GRANT_TTL_MS = 2 * 60 * 1000;
     const ATTEMPT_KEY = 'scooby_access_attempt';
-    const PRODUCTS = new Set([
-        'gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer',
-        'l4d', 'sbox', 'tlou',
-        'nenyoo-gtav', 'nenyoo-fivem'
+    // Scooby is one global key: every product mapped to the same server-side
+    // policy, so they all collapse to 'scooby'. The old per-game ids are still
+    // accepted so existing links and stored pending values keep working.
+    const LEGACY_SCOOBY = new Set([
+        'gta5', 'rdr2', 'cs2', 'gmod', 'fivem', 'spoofer', 'l4d', 'sbox', 'tlou'
     ]);
-    // Each brand now has one key page that reads ?product=, so the per-product
-    // HTML files are gone.
+    const PRODUCTS = new Set(['scooby', 'nenyoo-gtav', 'nenyoo-fivem', ...LEGACY_SCOOBY]);
+
     const isNenyooProduct = product => typeof product === 'string' && product.startsWith('nenyoo-');
-    const productPath = product => `free-keys/${isNenyooProduct(product) ? 'nenyoo' : 'scooby'}/?product=${encodeURIComponent(product)}`;
+    // Fold any legacy Scooby id down to the single global key.
+    const normalise = product => (LEGACY_SCOOBY.has(product) ? 'scooby' : product);
+    const productPath = product => isNenyooProduct(product)
+        ? `free-keys/nenyoo/?product=${encodeURIComponent(product)}`
+        : 'free-keys/scooby/';
 
     const blocked = document.getElementById('blockedContent');
     const selector = document.getElementById('selectorContent');
@@ -159,9 +164,10 @@
 
     const pending = safeGet(localStorage, 'scooby_pending_product');
     const attemptProduct = attempt && attempt.product;
-    const requestedProduct = attemptProduct && PRODUCTS.has(attemptProduct)
-        ? attemptProduct
-        : (pending && PRODUCTS.has(pending) ? pending : '');
+    const requestedProduct = normalise(
+        attemptProduct && PRODUCTS.has(attemptProduct)
+            ? attemptProduct
+            : (pending && PRODUCTS.has(pending) ? pending : ''));
     if (requestedProduct) {
         safeRemove(localStorage, 'scooby_pending_product');
         navigateWithGrant(requestedProduct, productPath(requestedProduct));

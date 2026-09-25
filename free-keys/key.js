@@ -15,16 +15,15 @@
                 'https://bstlar.com/F/ScoobyKEY2',
                 'https://bstlar.com/F/ScoobyKEY4'
             ],
-            products: {
-                gta5:    { name: 'GTA V',          art: 'gta52.png', blurb: 'One key for GTA V Legacy and Enhanced.' },
-                rdr2:    { name: 'RDR2',           art: 'rdr2.png',  blurb: 'Red Dead Redemption 2 access key.' },
-                cs2:     { name: 'CS2',            art: 'cs2.png',   blurb: 'Counter-Strike 2 access key.' },
-                gmod:    { name: "Garry's Mod",    art: 'gmod.png',  blurb: 'Garry’s Mod loader access key.' },
-                fivem:   { name: 'FiveM',          art: 'five.png',  blurb: 'FiveM loader access key.' },
-                l4d:     { name: 'Left 4 Dead',    art: 'l4d.png',   blurb: 'One key for Left 4 Dead 1 and 2.' },
-                sbox:    { name: 'S&box',          art: 'logo.png',  blurb: 'S&box loader access key.' },
-                tlou:    { name: 'The Last of Us', art: 'logo.png',  blurb: 'The Last of Us Part I access key.' },
-                spoofer: { name: 'Spoofer',        art: 'hwid.png',  blurb: 'HWID spoofer utility access key.' }
+            // One global key. Every Scooby product maps to the same 'allfree'
+            // policy server-side, so splitting by product bought nothing and
+            // left ?product= stuck in browser autocomplete.
+            policy: 'allfree',
+            global: {
+                id: 'scooby',
+                name: 'Scooby',
+                art: 'logo.png',
+                blurb: 'One key for every Scooby product.'
             }
         },
         nenyoo: {
@@ -55,8 +54,10 @@
     const safeRemove = (storage, key) => { try { storage.removeItem(key); } catch (_) {} };
 
     const parameters = new URLSearchParams(window.location.search);
-    const product = parameters.get('product') || '';
-    const entry = brand.products[product];
+    // A global brand ignores ?product= entirely, so a stale autocompleted
+    // product in the URL cannot pin the visitor to one game.
+    const product = brand.global ? brand.global.id : (parameters.get('product') || '');
+    const entry = brand.global || (brand.products || {})[product];
 
     // The key card ships hidden. Nothing reveals it except a grant that checks
     // out below, so saving or sharing the bare URL shows only the locked panel
@@ -123,7 +124,9 @@
     };
     setText('productName', entry.name);
     setText('productBlurb', entry.blurb);
-    setText('scopeProduct', entry.name);
+    // A global brand keeps the static scope wording; only per-product brands
+    // name the product there.
+    if (!brand.global) setText('scopeProduct', entry.name);
     document.title = `${entry.name} Free Key`;
     const art = document.getElementById('productArt');
     if (art) {
