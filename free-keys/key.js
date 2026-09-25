@@ -279,7 +279,8 @@
             host.style.margin = '16px auto';
             host.style.display = 'flex';
             host.style.justifyContent = 'center';
-            keyOutput.insertAdjacentElement('afterend', host);
+            const anchor = (timerFill && timerFill.closest('.timer-track')) || keyOutput;
+            anchor.insertAdjacentElement('afterend', host);
         }
         host.replaceChildren();
         keyOutput.textContent = 'COMPLETE VERIFICATION';
