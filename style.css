@@ -877,3 +877,341 @@ body::after {
 .discord-cta h3 { font-size: 18px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
 .discord-cta p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin: 0 auto 20px; max-width: 60ch; }
 .discord-cta .btn { display: inline-flex; }
+
+
+/* Homepage animated atmosphere */
+#home .hero-bg {
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse 80% 65% at 50% -10%, rgba(16,185,129,0.14) 0%, transparent 64%),
+        radial-gradient(circle at 12% 28%, rgba(45,212,191,0.10) 0%, transparent 32%),
+        radial-gradient(circle at 88% 72%, rgba(16,185,129,0.08) 0%, transparent 34%);
+    background-size: 120% 120%, 115% 115%, 120% 120%;
+    animation: home-bg-breathe 18s ease-in-out infinite alternate;
+}
+
+#home .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: -18%;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 22% 32%, rgba(16,185,129,0.18) 0%, transparent 22%),
+        radial-gradient(circle at 78% 64%, rgba(45,212,191,0.12) 0%, transparent 24%),
+        radial-gradient(circle at 52% 92%, rgba(16,185,129,0.10) 0%, transparent 20%);
+    filter: blur(30px);
+    opacity: 0.72;
+    transform: translate3d(0, 0, 0);
+    animation: home-bg-orbs 24s ease-in-out infinite alternate;
+}
+
+#home .hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        radial-gradient(circle, rgba(110,231,183,0.42) 0 1px, transparent 1.7px),
+        radial-gradient(circle, rgba(255,255,255,0.20) 0 1px, transparent 1.6px);
+    background-size: 170px 170px, 250px 250px;
+    background-position: 0 0, 80px 110px;
+    opacity: 0.20;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    animation: home-bg-particles 32s linear infinite;
+}
+
+@keyframes home-bg-breathe {
+    0% { background-position: 50% 0%, 8% 24%, 92% 70%; }
+    100% { background-position: 50% 7%, 18% 34%, 82% 60%; }
+}
+
+@keyframes home-bg-orbs {
+    0% { transform: translate3d(-2%, 1%, 0) scale(0.98); opacity: 0.52; }
+    50% { transform: translate3d(2%, -2%, 0) scale(1.03); opacity: 0.78; }
+    100% { transform: translate3d(-1%, 3%, 0) scale(1); opacity: 0.62; }
+}
+
+@keyframes home-bg-particles {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-34px, 22px, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #home .hero-bg,
+    #home .hero-bg::before,
+    #home .hero-bg::after {
+        animation: none !important;
+    }
+}
+
+
+/* Refined action buttons: emerald primary actions and quiet glass secondary actions. */
+.btn,
+.game-btn,
+.discord-join,
+.tool-link {
+    position: relative;
+    isolation: isolate;
+    min-height: 42px;
+    border-radius: 12px;
+    font-weight: 650;
+    letter-spacing: 0.005em;
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease,
+        border-color 180ms ease, color 180ms ease;
+}
+
+.btn > *,
+.game-btn > *,
+.discord-join > *,
+.tool-link > * {
+    position: relative;
+    z-index: 1;
+}
+
+.btn i,
+.game-btn i,
+.discord-join i,
+.tool-link i {
+    width: 1.05em;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.btn-primary,
+.game-btn,
+.tool-link {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 56%, #059669 100%);
+    color: #04130e;
+    border: 1px solid rgba(110, 231, 183, 0.62);
+    box-shadow: 0 8px 18px rgba(16, 185, 129, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.btn-primary:hover,
+.game-btn:hover,
+.tool-link:hover {
+    background: linear-gradient(135deg, #6ee7b7 0%, #34d399 56%, #10b981 100%);
+    color: #02100b;
+    opacity: 1;
+    transform: translateY(-2px);
+    border-color: rgba(167, 243, 208, 0.78);
+    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.34);
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--text-primary);
+    border: 1px solid rgba(110, 231, 183, 0.28);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.btn-outline:hover {
+    background: rgba(16, 185, 129, 0.12);
+    color: #d1fae5;
+    border-color: rgba(110, 231, 183, 0.62);
+    transform: translateY(-2px);
+    box-shadow: 0 11px 22px rgba(16, 185, 129, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.btn:active,
+.game-btn:active,
+.discord-join:active,
+.tool-link:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+.btn:focus-visible,
+.game-btn:focus-visible,
+.discord-join:focus-visible,
+.tool-link:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.24),
+        0 8px 18px rgba(16, 185, 129, 0.2);
+}
+
+.btn:disabled,
+.btn.disabled,
+.game-btn.disabled {
+    opacity: 0.55;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.filter-buttons .filter-btn.active,
+.blog-filters .filter-pill.active,
+.blog-filter-btn.active {
+    background: linear-gradient(135deg, #34d399, #10b981);
+    border-color: rgba(110, 231, 183, 0.62);
+    color: #04130e;
+    box-shadow: 0 6px 14px rgba(16, 185, 129, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn,
+    .game-btn,
+    .discord-join,
+    .tool-link {
+        transition: none;
+    }
+
+    .btn:hover,
+    .game-btn:hover,
+    .discord-join:hover,
+    .tool-link:hover {
+        transform: none;
+    }
+}
+
+
+/* Keep card actions balanced on narrow screens instead of letting long labels
+   stretch one button while shorter actions collapse beside it. */
+@media (max-width: 768px) {
+    .compact-game-page .cheat-actions {
+        align-items: stretch;
+    }
+
+    .compact-game-page .cheat-actions .btn {
+        flex: 1 1 calc(50% - 6px);
+        width: auto;
+        min-width: 0;
+    }
+
+    .compact-game-page .cheat-actions .btn:only-child {
+        flex-basis: 100%;
+    }
+}
+
+
+/* Reference-style card actions: dark glass surfaces with crisp emerald outlines. */
+.btn,
+.game-btn,
+.discord-join,
+.tool-link {
+    min-height: 48px;
+    padding: 11px 16px;
+    border-radius: 14px;
+    font-size: 14px;
+    letter-spacing: 0;
+    box-shadow: none;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease,
+        color 180ms ease, box-shadow 180ms ease;
+}
+
+.btn-primary,
+.game-btn,
+.tool-link {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(16, 185, 129, 0.06));
+    color: #c7ffe8;
+    border: 1px solid rgba(52, 211, 153, 0.82);
+    box-shadow: inset 0 1px 0 rgba(167, 243, 208, 0.08);
+}
+
+.btn-primary:hover,
+.game-btn:hover,
+.tool-link:hover {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.28), rgba(16, 185, 129, 0.11));
+    color: #ecfff7;
+    border-color: #6ee7b7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(16, 185, 129, 0.14),
+        inset 0 1px 0 rgba(167, 243, 208, 0.12);
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.025);
+    color: #f4f4f5;
+    border: 1px solid rgba(110, 160, 139, 0.42);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    border-color: rgba(110, 231, 183, 0.72);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(16, 185, 129, 0.1);
+}
+
+.btn i,
+.game-btn i,
+.discord-join i,
+.tool-link i {
+    font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn,
+    .game-btn,
+    .discord-join,
+    .tool-link {
+        transition: none;
+    }
+
+    .btn:hover,
+    .game-btn:hover,
+    .discord-join:hover,
+    .tool-link:hover {
+        transform: none;
+    }
+}
+
+
+/* Warm accent variant for the main download action. */
+.btn-primary,
+.game-btn,
+.tool-link {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.14), rgba(245, 158, 11, 0.045));
+    color: #ffe8a6;
+    border-color: rgba(250, 204, 21, 0.82);
+    box-shadow: inset 0 1px 0 rgba(254, 240, 138, 0.08);
+}
+
+.btn-primary:hover,
+.game-btn:hover,
+.tool-link:hover {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(245, 158, 11, 0.09));
+    color: #fff7d6;
+    border-color: #fde68a;
+    box-shadow: 0 8px 18px rgba(245, 158, 11, 0.15),
+        inset 0 1px 0 rgba(254, 240, 138, 0.12);
+}
+
+.btn-primary i,
+.game-btn i,
+.tool-link i {
+    color: #facc15;
+}
+
+
+/* Final reference match: yellow is an outline accent only; the button stays dark. */
+.btn-primary,
+.game-btn,
+.tool-link {
+    background: rgba(19, 19, 22, 0.92);
+    color: #facc15;
+    border-color: #facc15;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.btn-primary:hover,
+.game-btn:hover,
+.tool-link:hover {
+    background: rgba(250, 204, 21, 0.08);
+    color: #fde68a;
+    border-color: #fde047;
+    box-shadow: 0 8px 18px rgba(250, 204, 21, 0.12),
+        inset 0 1px 0 rgba(254, 240, 138, 0.08);
+}
+
+.btn-primary i,
+.game-btn i,
+.tool-link i {
+    color: #facc15;
+}

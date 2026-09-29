@@ -285,13 +285,26 @@
                 left: 10px;
                 max-width: none;
             }
+            .bd-token-value {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .bd-token-value code {
+                overflow-wrap: anywhere;
+            }
         }
     </style>
   <script defer src="/languages/i18n.js"></script>
     <meta name="twitter:image" content="https://whatwhatboy.com/assets/images/logo.png">
     <meta name="twitter:image:alt" content="whatwhatboy logo">
     <meta property="og:image:alt" content="whatwhatboy logo">
-</head>
+
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="en_US">
+    <meta name="theme-color" content="#0a0a0c"></head>
 <body>
     <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
@@ -364,14 +377,6 @@
                         <i class="fas fa-chevron-down nav-caret"></i>
                     </button>
                     <ul class="nav-sublist">
-                        <li><a href="../index.html#discord" class="nav-link nav-sublink" data-tooltip="Discord Servers">
-                            <i class="fab fa-discord"></i>
-                            <span>Discord Servers</span>
-                        </a></li>
-                        <li><a href="youtube.html" class="nav-link nav-sublink" data-tooltip="YouTube">
-                            <i class="fab fa-youtube"></i>
-                            <span>YouTube</span>
-                        </a></li>
                         <li><a href="profile.html" class="nav-link nav-sublink" data-tooltip="Profile">
                             <i class="fas fa-address-card"></i>
                             <span>Profile</span>
@@ -519,7 +524,7 @@
                             <li>Regularly updated collection</li>
                             <li>Compatible with all Yim versions</li>
                         </ul>
-                        <a href="yimlua.html" class="bd-btn bd-btn-primary">
+                        <a href="../games/gta/lua/yim-scripts.html" class="bd-btn bd-btn-primary">
                             <i class="fas fa-download"></i> Download Pack
                         </a>
                     </div>
@@ -536,7 +541,7 @@
                             <li>Player and entity modifiers</li>
                             <li>UI customization scripts</li>
                         </ul>
-                        <a href="yimlua.html" class="bd-btn bd-btn-primary">
+                        <a href="../games/gta/lua/yim-scripts.html" class="bd-btn bd-btn-primary">
                             <i class="fas fa-download"></i> Browse Scripts
                         </a>
                     </div>
@@ -651,7 +656,7 @@
                             <li>Regularly updated</li>
                             <li>Large user community</li>
                         </ul>
-                        <a href="kiddionsD.html" class="bd-btn bd-btn-utility">
+                        <a href="../games/gta/lua/kiddions-scripts.html" class="bd-btn bd-btn-utility">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
@@ -773,7 +778,7 @@
         <span>Join our Discord community!</span>
     </a>
 
-    <audio id="autoPlayer" src="babyonfire.mp3" autoplay loop></audio>
+    <audio id="autoPlayer" src="../assets/babyonfire.mp3" autoplay loop></audio>
 
     <script src="../script.js?v=3.1.12"></script>
     <script>
