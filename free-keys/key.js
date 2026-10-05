@@ -23,7 +23,7 @@
                 id: 'scooby',
                 name: 'Scooby',
                 art: 'logo.png',
-                blurb: 'One key for every Scooby product.'
+                blurb: 'One Free-Key for every Scooby free edition.'
             }
         },
         nenyoo: {
