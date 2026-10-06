@@ -199,7 +199,6 @@
     const timerText = document.getElementById('timerText');
     const timerFill = document.getElementById('timerFill');
     const blockMessage = document.getElementById('blockMessage');
-    const bait = document.getElementById('adBait');
     let currentKey = '';
     let issuedAt = 0;
     let expiresAt = 0;
@@ -368,13 +367,8 @@
         return;
     }
 
-    window.setTimeout(() => {
-        const style = bait ? window.getComputedStyle(bait) : null;
-        if (!bait || bait.offsetHeight === 0 || bait.offsetWidth === 0 || !style ||
-            style.display === 'none' || style.visibility === 'hidden') {
-            showError('A content blocker hid a required page element. Allow this site, then reload.');
-            return;
-        }
-        beginChallenge().catch(error => showError(error.message));
-    }, 850);
+    // Resume in place after allowlisting: reloading would consume the one-time grant.
+    window.freeKeyAccess.requireClear()
+        .then(() => beginChallenge())
+        .catch(error => showError(error.message));
 })();

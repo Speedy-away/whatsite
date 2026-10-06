@@ -161,7 +161,8 @@
         return token;
     };
 
-    const navigateWithGrant = (product, href) => {
+    const navigateWithGrant = async (product, href) => {
+        await window.freeKeyAccess.requireClear();
         const token = issueGrant(product);
         if (!token) {
             blocked.classList.remove('hidden');

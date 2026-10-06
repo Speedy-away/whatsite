@@ -6,7 +6,7 @@ const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../key.js'), 'utf8');
 const config = fs.readFileSync(path.join(__dirname, '../access-key-config.js'), 'utf8');
 
-async function run({brand = 'scooby', product = '', grant = true, verify = false, rejected = false} = {}) {
+async function run({brand = 'scooby', product = '', grant = true, verify = false, rejected = false, blocked = false} = {}) {
   const elements = new Map(), calls = [], storage = new Map();
   const node = id => {
     if (!elements.has(id)) elements.set(id, {textContent:'', disabled:true, style:{}, offsetHeight:10, offsetWidth:10,
@@ -20,6 +20,7 @@ async function run({brand = 'scooby', product = '', grant = true, verify = false
   const context = {URL,URLSearchParams,Date,AbortController,clearTimeout,console,sessionStorage,localStorage:sessionStorage,
     navigator:{clipboard:{writeText:async()=>{}}},document:{body:{dataset:{brand}},getElementById:node,addEventListener(){},activeElement:null},
     location:{href:url.href,search:url.search,replace(){}},history:{replaceState(){}},addEventListener(){},
+    freeKeyAccess:{requireClear:()=> blocked ? new Promise(()=>{}) : Promise.resolve()},
     setInterval(){},setTimeout(fn,ms){if(ms===850)fn();return 1;},getComputedStyle:()=>({display:'block',visibility:'visible'}),
     turnstile:{render(host,options){options.callback('fixture-verification');}},
     fetch:async(url,options={})=>{
@@ -73,4 +74,9 @@ test('Nenyoo keeps its separate policy and portal',async()=>{
   const metadata=nenyoo.calls.find(c=>c.url.includes('/access-key-policies/'));
   assert.ok(metadata.url.endsWith('/nenyfree'));
   assert.notEqual(metadata.url.split('/')[6],scooby.calls.find(c=>c.url.includes('/access-key-policies/')).url.split('/')[6]);
+});
+
+test('blocked ads pause key issuance without discarding the running flow',async()=>{
+  const {calls}=await run({blocked:true});
+  assert.equal(calls.length,0);
 });

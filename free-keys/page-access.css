@@ -1,0 +1,26 @@
+.page-access-paused { overflow: hidden; }
+.page-access-dialog {
+    box-sizing: border-box;
+    width: min(480px, calc(100% - 32px));
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 28px;
+    overflow-y: auto;
+    border: 1px solid var(--border-strong, #393942);
+    border-radius: 18px;
+    background: var(--surface, #131316);
+    color: var(--text, #f5f5f7);
+    font: 14px/1.6 Inter, system-ui, sans-serif;
+    box-shadow: 0 24px 80px #0008;
+}
+.page-access-dialog::backdrop { background: #050508d9; backdrop-filter: blur(6px); }
+.page-access-dialog h2 { margin: 4px 0 12px; font-size: 26px; line-height: 1.2; letter-spacing: -.025em; }
+.page-access-dialog p { margin: 0 0 16px; }
+.page-access-dialog .page-access-eyebrow { color: var(--accent, #6ee7b7); font-size: 12px; font-weight: 600; }
+.page-access-dialog ul { padding-left: 20px; margin: 18px 0; }
+.page-access-dialog li { margin-bottom: 10px; }
+.page-access-dialog .page-access-status { color: var(--muted, #aaa); font-size: 13px; }
+.page-access-dialog button { width: 100%; min-height: 46px; white-space: normal; cursor: pointer; }
+.page-access-dialog button:disabled { opacity: .6; cursor: wait; }
+.page-access-exit { display: block; margin-top: 14px; text-align: center; color: var(--muted, #aaa); }
+.page-access-dialog :focus-visible { outline: 2px solid var(--accent, #6ee7b7); outline-offset: 4px; }
