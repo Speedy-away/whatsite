@@ -22,7 +22,7 @@
   "actions": [
     {
       "id": "gamerhack-g2all",
-      "label": "GamerHack · 7.00–13.52",
+      "label": "GamerHack · 5.05 / 5.07 / 7.00–13.52",
       "category": "loaders",
       "firmwares": [
         "5.05",
@@ -70,11 +70,14 @@
         "Open on a PS4 firmware recognized by this host; separate 5.05/5.07 branch is included.",
         "This route starts its exploit/GoldHEN sequence. Confirm firmware before opening."
       ],
-      "source": "https://github.com/GamerHack/GamerHack.github.io",
+      "source": "https://github.com/GamerHack/GamerHack.github.io/tree/23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
       "license": "External link only; no third-party runtime redistributed",
       "automatic": true,
       "version": "GoldHEN 2.4b18.12 advertised by live host",
-      "notes": "Router compatibility reviewed in docs/ps4-1352-guide.json; no support for 14.00 claimed."
+      "notes": "Exact router whitelist preserved. This external host selects separate firmware-specific chains; it is not a built-in whatwhatboy runtime.",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceReview": "/docs/qa/gamerhack-source-review.json",
+      "instructionsURL": "/docs/host-repository-review.md"
     },
     {
       "id": "karo-g2allpro",
@@ -747,6 +750,112 @@
       "source": "https://github.com/n0llptr/remote_lua_loader",
       "protocolSource": "https://github.com/n0llptr/remote_lua_loader/blob/main/payloads/send_lua.py",
       "license": "Upstream file terms vary; no runtime is bundled and no new license claim is made."
+    },
+    {
+      "id": "raw13g-1302-1352",
+      "label": "RAW GAME · 13.02 / 13.04 / 13.50 / 13.52",
+      "category": "loaders",
+      "firmwares": [
+        "13.02",
+        "13.04",
+        "13.50",
+        "13.52"
+      ],
+      "launchURL": "https://raw13g.github.io/",
+      "launchLabel": "Launch host",
+      "format": "HTML host",
+      "requirements": [
+        "Open in the PS4 browser only on 13.02, 13.04, 13.50 or 13.52. This external host starts its exploit sequence after cache handling.",
+        "The reviewed source has separate exact kernel patch files. Other offset entries and an upstream run-anyway option do not establish compatibility.",
+        "No physical-console execution has been verified by whatwhatboy. The 13.50 and 13.52 patch notes include hardware-testing limitations."
+      ],
+      "source": "https://github.com/raw13g/raw13g.github.io/tree/9ba2f0719591d6900d91aba6cc5291f8fff97e6d",
+      "sourceCommit": "9ba2f0719591d6900d91aba6cc5291f8fff97e6d",
+      "sourceEvidence": {
+        "review": "docs/qa/raw13g-source-review.json",
+        "landing": {
+          "path": "index.html",
+          "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/index.html",
+          "lines": "40-82",
+          "status": 200,
+          "bytes": 24773,
+          "sha256": "4898a1249458a4e1baaff5480a92810db010bdf538cdb8f7a58715805166f65c",
+          "gitBlobSHA": "f0cfb39d2b4ad48534993003ad501b1d7d297440"
+        },
+        "offsets": {
+          "path": "ps4_offsets.js",
+          "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/ps4_offsets.js",
+          "lines": "444-645",
+          "status": 200,
+          "bytes": 17675,
+          "sha256": "12e3886508e13e176018691def0a192c352b72959e2d1f1ea2b8fbd90a62b2dc",
+          "gitBlobSHA": "297ddf140c4074abb471188b084a3c3b1d5dc960"
+        },
+        "license": {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/LICENSE",
+          "lines": "1-23",
+          "status": 200,
+          "bytes": 1362,
+          "sha256": "2ec58a4da676a8401fdf946c0238a458adb9dc7119e772646322caa4fefa2f68",
+          "gitBlobSHA": "5d006df406dfd4c9a5d92d424a92339882a3345e"
+        }
+      },
+      "license": "External link only. MIT covers raw13g-authored code; mandatory primitive files, kernel patches and bundled payload binaries are explicitly excluded. No third-party runtime redistributed.",
+      "automatic": true,
+      "version": "Pinned source review 9ba2f0719591; bundled numeric payload version unconfirmed",
+      "notes": "External original host, not a built-in runtime. goldhen.bin and payload2.bin are byte-identical in this revision; no generic Load transport or PS5 support is asserted.",
+      "instructionsURL": "/docs/host-repository-review.md"
+    },
+    {
+      "id": "ps4-goldhen-2-3-900-binloader",
+      "platform": "ps4",
+      "label": "GoldHEN 2.3 · 9.00",
+      "category": "payloads",
+      "format": "BIN",
+      "firmwares": [
+        "9.00"
+      ],
+      "version": "2.3",
+      "bytes": 282648,
+      "sha256": "c9b8f33d28258af9e80465da591868dada25a1454f30f63882668d5e0dcff9c2",
+      "downloadURL": "/downloads/hosts/ps4/goldhen/2.3-firmware-9.00/goldhen_2.3_900.bin",
+      "consoleFileId": "goldhen-2-3-9-00",
+      "source": "https://github.com/GoldHEN/GoldHEN/releases/tag/2.3",
+      "sourceURL": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/b5a78e1e1f6ecbc2dfdcd63b4bb5446f49e309c9/goldhen_2.3_900.bin",
+      "sourceCommit": "b5a78e1e1f6ecbc2dfdcd63b4bb5446f49e309c9",
+      "instructionsURL": "/docs/host-repository-review.md",
+      "image": "/assets/images/console-software/goldhen.png",
+      "run": {
+        "type": "bin-tcp",
+        "port": 9020,
+        "protocolSource": "/hosts/runtime/ps4-900/web/lapse.js"
+      },
+      "requirements": [
+        "PS4 firmware 9.00 only. Start the built-in PSFree / Lapse loader on the console and wait for its BIN listener on TCP 9020.",
+        "Connect the paired desktop sender to load this BIN.",
+        "This is the existing official GoldHEN 2.3 build, also byte-identical to GamerHack’s 9.00 copy. It does not provide features introduced in newer GoldHEN releases.",
+        "TCP delivery confirms a transfer only. Check the console for successful GoldHEN execution before sending another payload."
+      ],
+      "license": "Official compiled GoldHEN release; no open-source license is asserted. Original publisher attribution and exact bytes retained.",
+      "tags": [
+        "PS4",
+        "9.00",
+        "GoldHEN",
+        "2.3",
+        "BIN",
+        "TCP 9020",
+        "PSFree",
+        "Lapse",
+        "GamerHack",
+        "ready-to-use"
+      ],
+      "provenance": {
+        "review": "/docs/qa/gamerhack-source-review.json",
+        "sameBytesAs": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/goldhen_2.3.bin",
+        "archivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.3-FW9.00\\goldhen_2.3_900.bin"
+      }
     }
-  ]
+  ],
+  "updated": "2026-11-02"
 }

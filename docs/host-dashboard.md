@@ -23,7 +23,7 @@ Expulsion V7 uses an original, labelled **Menu cover** because the previous scre
 - PS4 native BIN sends use GoldHEN's HTTP BinLoader on port 9090. Thirteen exact reviewed Nazky game-menu mappings have this transport. Fourteen other BIN variants remain download-only in the first-party action flow; byte identity between differently pinned source builds does not widen compatibility.
 - **Open host** remains an accurately labelled external navigation for upstream hosts; built-in browser runtimes are identified separately.
 - PS5 direct ELF requests use the official ELF loader's HTTP `?uri=` interface on port 9021. The payload URL uses the actual website origin. A desktop loopback preview cannot be fetched by the console, so it requires a LAN-reachable file host or the paired sender. HTTPS pages provide an explicit console-loader navigation link when mixed-content fetches are blocked.
-- The desktop sender transfers verified local ELF bytes over TCP 9021 or verified PS4 BIN bytes through GoldHEN HTTP. See [sender setup](host-payload-sender.md).
+- The desktop sender transfers verified local ELF bytes over TCP 9021, verified PS4 BIN bytes through GoldHEN HTTP, or an explicitly curated PS4 BIN through the separate waiting TCP 9020 listener. The latter now exposes the already archived official GoldHEN 2.3 build on exact firmware 9.00. See [sender setup](host-payload-sender.md) and [repository review](host-repository-review.md).
 
 Firmware whitelists remain exact. A launcher supporting 13.52 does not establish 13.52 support for a 9.00 game menu. Each menu retains its game update, source, checksum and requirements. The PS5 RDR2 action is a 60FPS runtime patch for the specified PS4 game build running on PS5, not a full mod menu.
 

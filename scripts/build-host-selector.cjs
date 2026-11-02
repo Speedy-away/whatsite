@@ -8,7 +8,7 @@ const image = platform => `/assets/images/host-selector/whatwhatboy-${platform}.
 function hostActions(platform) {
   const rows = [];
   const downloads = fs.existsSync(path.join(root,'docs/console-download-catalog.json')) ? JSON.parse(fs.readFileSync(path.join(root,'docs/console-download-catalog.json'),'utf8')).items : [];
-  for (const name of [`host-actions-${platform}.json`, 'host-modern-plugin-actions.json', 'host-current-cheat-actions.json', 'host-game-actions.json', 'host-legacy-menu-actions.json', 'host-extra-game-actions.json', 'host-native-payload-actions.json', 'host-web-utility-actions.json']) {
+  for (const name of [`host-actions-${platform}.json`, 'host-modern-plugin-actions.json', 'host-current-cheat-actions.json', 'host-game-actions.json', 'host-legacy-menu-actions.json', 'host-extra-game-actions.json', 'host-native-payload-actions.json', 'host-web-utility-actions.json', 'host-repository-menu-actions.json']) {
     const filename = path.join(root, 'docs', name);
     if (!fs.existsSync(filename)) continue;
     const data = JSON.parse(fs.readFileSync(filename, 'utf8'));
@@ -101,7 +101,7 @@ function buildHostSelector() {
     '#consoles', 'Choose console', true);
 
   const chooserFile = path.join(root, 'hosts/index.html');
-  fs.writeFileSync(chooserFile, require('./search-page-output.cjs').finish(chooserFile, fs.readFileSync(chooserFile, 'utf8').replace('</body>', '<script defer src="/assets/host-dashboard.js?v=12"></script></body>')));
+  fs.writeFileSync(chooserFile, require('./search-page-output.cjs').finish(chooserFile, fs.readFileSync(chooserFile, 'utf8').replace('</body>', '<script defer src="/assets/host-dashboard.js?v=13"></script></body>')));
 
   for (const platform of ['ps4', 'ps5']) {
     const name = platform.toUpperCase();
@@ -134,7 +134,7 @@ function buildHostSelector() {
     for (const relative of [`hosts/${platform}/index.html`,managerFile,filesPage,...gamePages]) {
       const hostFile = path.join(root,relative);
       let hostHtml = fs.readFileSync(hostFile, 'utf8').replace('console-guide host-selector', 'console-guide host-selector host-dashboard-page');
-      hostHtml = hostHtml.replace('</head>', '<link rel="stylesheet" href="/assets/host-dashboard.css?v=12">\n</head>').replace('</body>', '<script defer src="/assets/host-console-client.js?v=12"></script><script defer src="/assets/host-dashboard.js?v=12"></script></body>');
+      hostHtml = hostHtml.replace('</head>', '<link rel="stylesheet" href="/assets/host-dashboard.css?v=12">\n</head>').replace('</body>', '<script defer src="/assets/host-console-client.js?v=12"></script><script defer src="/assets/host-dashboard.js?v=13"></script></body>');
       fs.writeFileSync(hostFile, require('./search-page-output.cjs').finish(relative, hostHtml));
     }
   }

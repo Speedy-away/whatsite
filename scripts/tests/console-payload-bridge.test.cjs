@@ -194,6 +194,70 @@ test('raw ELF sender uses raw bytes on fixed TCP9021 and reports only transport 
   const out = await bridge.sendRawELF('192.168.1.50',data,{connect:options=>{captured=options;queueMicrotask(()=>socket.emit('connect'));return socket;}});
   assert.deepEqual(captured,{host:'192.168.1.50',port:9021}); assert.equal(out.status,'sent'); assert.match(out.message,/Check the console/); assert.equal(destroyed,true);
 });
+
+test('raw PS4 BIN transport requires the fixed port, platform, flat format and bounded verified file',async t=>{
+  const {root,actions,bin,elf} = fixture(t);
+  const action = {...actions[1],run:{type:'bin-tcp',port:9020}};
+  assert.deepEqual((await bridge.readVerifiedFile(action,root)).data,bin);
+  for (const change of [
+    {platform:'ps5'}, {run:{type:'bin-tcp',port:9090}}, {run:{type:'bin-tcp',port:9021}}, {run:{type:'bin-tcp'}},
+    {format:'ELF',downloadURL:'/downloads/fixture/payload.elf',sha256:actions[0].sha256},
+    {run:{type:'elf-tcp',port:9020}}, {run:{type:'elf-tcp',port:9021}}
+  ]) assert.throws(()=>bridge.localFileFor({...action,...change},root),{code:'unsupported-transport'});
+  await assert.rejects(()=>bridge.readVerifiedFile({...action,sha256:'0'.repeat(64)},root),{code:'checksum-mismatch'});
+  fs.writeFileSync(path.join(root,'downloads/fixture/menu.bin'),elf);
+  await assert.rejects(()=>bridge.readVerifiedFile({...action,sha256:crypto.createHash('sha256').update(elf).digest('hex')},root),{code:'invalid-bin'});
+  fs.writeFileSync(path.join(root,'downloads/fixture/menu.bin'),Buffer.alloc(0x300000));
+  assert.equal(bridge.localFileFor(action,root).bytes,0x300000);
+  fs.writeFileSync(path.join(root,'downloads/fixture/menu.bin'),Buffer.alloc(0x300001));
+  assert.throws(()=>bridge.localFileFor(action,root),{code:'invalid-file-size'});
+  assert.equal(bridge.localFileFor(action,root,{forRun:false}).bytes,0x300001,'Download limits do not invent raw loader compatibility');
+});
+
+test('raw PS4 BIN sender makes one fixed TCP9020 connection with exact bytes and EOF, without a readiness probe',async()=>{
+  const data = Buffer.from([1,2,3,4]), socket = new EventEmitter();
+  const connections = [], writes = []; let destroyed = false;
+  socket.end = bytes => {writes.push(bytes);queueMicrotask(()=>socket.emit('finish'));};
+  socket.destroy = ()=>{destroyed=true;};
+  const out = await bridge.sendRawBIN('192.168.1.50',data,{connect:options=>{connections.push(options);queueMicrotask(()=>socket.emit('connect'));return socket;}});
+  assert.deepEqual(connections,[{host:'192.168.1.50',port:9020}]);assert.deepEqual(writes,[data]);assert.equal(destroyed,true);
+  assert.equal(out.status,'sent');assert.equal(out.code,'bin-bytes-sent');assert.equal(out.port,9020);assert.equal(out.bytes,data.length);
+  assert.match(out.message,/Check the console/);assert.doesNotMatch(out.message,/accepted|running|executed successfully/i);
+});
+
+test('raw PS4 BIN failures preserve uncertainty after bytes are offered and never reconnect',async()=>{
+  for (const mode of ['refused','reset','disconnect','throw','timeout']) {
+    const socket = new EventEmitter();let connects=0,writes=0;
+    socket.destroy=()=>{};
+    socket.end=()=>{writes++;if(mode==='throw')throw Error('write threw');if(mode==='reset')queueMicrotask(()=>socket.emit('error',Error('reset')));if(mode==='disconnect')queueMicrotask(()=>socket.emit('close'));};
+    await assert.rejects(()=>bridge.sendRawBIN('192.168.1.50',Buffer.from([1,2,3]),{timeoutMs:5,connect:()=>{connects++;queueMicrotask(()=>socket.emit(mode==='refused'?'error':'connect',Error('refused')));return socket;}}),error=>{
+      assert.equal(error.mayHaveExecuted,mode==='refused'?undefined:true,mode);
+      if(mode!=='refused'){assert.equal(error.outcome,'unknown');assert.match(error.message,/Check the console before trying again/);}
+      return true;
+    });
+    assert.equal(connects,1);assert.equal(writes,mode==='refused'?0:1);
+  }
+  let connects=0;
+  for(const bytes of [Buffer.alloc(0),Buffer.alloc(0x300001),Buffer.from([0x7f,0x45,0x4c,0x46])])
+    await assert.rejects(()=>bridge.sendRawBIN('192.168.1.50',bytes,{connect:()=>{connects++;throw Error('Must not connect');}}));
+  assert.equal(connects,0);
+});
+
+test('paired raw BIN action reuses firmware, pairing, address and hash checks without HTTP or ELF fallback',async t=>{
+  const setup=fixture(t), sent=[];let otherTransports=0,probes=0,resolves=0;
+  setup.actions[1]={...setup.actions[1],run:{type:'bin-tcp',port:9020}};
+  const {request}=await startFixture(t,{...setup,resolveAddress:async address=>{resolves++;assert.equal(address,'ps4.local');return '192.168.1.50';},sendRawBIN:async(address,data)=>{sent.push({address,data});return {status:'sent',code:'bin-bytes-sent',message:'Bytes sent; check the console.',port:9020};},sendBIN:async()=>{otherTransports++;},sendELF:async()=>{otherTransports++;},inspectServices:async()=>{probes++;throw Error('Must not probe');}});
+  const body={actionId:'fixture-mod',platform:'ps4',address:'ps4.local',firmware:'9.00',gameVersion:'1.38'};
+  const status=await (await request('/api/status')).json();assert.equal(status.actions.find(a=>a.id==='fixture-mod').available,true);
+  assert.equal(resolves,0);assert.equal(sent.length,0);
+  assert.equal((await request('/api/run',body,{'X-Whatsite-Token':''})).status,401);
+  for(const change of [{platform:'ps5'},{firmware:'13.52'},{gameVersion:'1.57'},{port:9020}])assert.equal((await request('/api/run',{...body,...change})).status,400);
+  assert.equal(resolves,0);assert.equal(sent.length,0);
+  const out=await (await request('/api/run',body)).json();assert.equal(out.status,'sent');assert.equal(out.port,9020);
+  assert.deepEqual(sent,[{address:'192.168.1.50',data:setup.bin}]);assert.equal(resolves,1);assert.equal(probes,0);assert.equal(otherTransports,0);
+  setup.actions[1].sha256='0'.repeat(64);
+  assert.equal((await (await request('/api/run',body)).json()).code,'checksum-mismatch');assert.equal(sent.length,1);
+});
 test('GoldHEN bridge honors readiness and HTTP200 rather than faking a TCP result',async()=>{
   const seen = [], data = Buffer.from([1,2,3]);
   const out = await bridge.sendGoldHENHTTP('192.168.1.50',data,{fetcher:async(url,init)=>{seen.push([url,init]);return {ok:true,status:200,json:async()=>({status:'ready'})};}});

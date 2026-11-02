@@ -21,6 +21,7 @@
     "docs/host-legacy-menu-actions.json",
     "docs/host-extra-game-actions.json",
     "docs/host-web-utility-actions.json",
+    "docs/host-repository-menu-actions.json",
     "docs/console-archive-safety.json",
     "docs/ps4-ps5-launcher-build.json",
     "downloads/ps4/GTA5/manifest.json",
@@ -12393,6 +12394,78 @@
       ],
       "description": "BIN. Follow the exact file type and console loader requirements.",
       "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-repository-gamerhack-wildemodz138",
+      "name": "WildeModz · 1.38",
+      "filename": "WildeModz-1.38.bin",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.38.bin",
+      "bytes": 593216,
+      "sha256": "e82fe24709f9155bc1c77ffa1b2318bee03b5ec7bb4d120b7aadf21b48f6adf8",
+      "version": "1.38",
+      "category": "mods",
+      "compatibility": "PS4 firmware 9.00 and GTA V game update 1.38; the game update is separate from console firmware. No regional CUSA list was supplied for this exact build. Confirm the title ID and executable before using it. The reviewed GamerHack 900v3 host loads this exact BIN through its in-page native loader. Compatible standalone GoldHEN HTTP or ELF-loader support has not been verified; built-in Load is unavailable. Use the matching original host or a native loader confirmed compatible with this exact build. Keep one game menu active at a time. Menu release is not independently established. The source button and file numbers identify the game build; they are not asserted as menu releases. Download is the original pinned upstream file. No public mirror or redistribution licence is asserted. No payload was executed during review.",
+      "image": "/assets/images/gta52.png",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "GTA V · 1.38 · BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/index.html"
+    },
+    {
+      "id": "ps4-repository-gamerhack-arabicguy100",
+      "name": "ArabicGuy · 1.00",
+      "filename": "arabic-guy100.bin",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy100.bin",
+      "bytes": 1055408,
+      "sha256": "80849dc10d770b5e4596b0c32774b03b156245c18f1527157d6a967854b990a8",
+      "version": "1.00",
+      "category": "mods",
+      "compatibility": "PS4 firmware 9.00 and GTA V game update 1.00; the game update is separate from console firmware. No regional CUSA list was supplied for this exact build. Confirm the title ID and executable before using it. The reviewed GamerHack 900v3 host loads this exact BIN through its in-page native loader. Compatible standalone GoldHEN HTTP or ELF-loader support has not been verified; built-in Load is unavailable. Use the matching original host or a native loader confirmed compatible with this exact build. Keep one game menu active at a time. Menu release is not independently established. The source button and file numbers identify the game build; they are not asserted as menu releases. Download is the original pinned upstream file. No public mirror or redistribution licence is asserted. No payload was executed during review.",
+      "image": "/assets/images/gta52.png",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "GTA V · 1.00 · BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/index.html"
+    },
+    {
+      "id": "ps4-repository-gamerhack-arabicguy127",
+      "name": "ArabicGuy · 1.27",
+      "filename": "arabic-guy127.bin",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy127.bin",
+      "bytes": 1055408,
+      "sha256": "a603fa84029a0c9bd29e3e5d6ea2f97aa668f0600403c4102f4c35b186b982f4",
+      "version": "1.27",
+      "category": "mods",
+      "compatibility": "PS4 firmware 9.00 and GTA V game update 1.27; the game update is separate from console firmware. No regional CUSA list was supplied for this exact build. Confirm the title ID and executable before using it. The reviewed GamerHack 900v3 host loads this exact BIN through its in-page native loader. Compatible standalone GoldHEN HTTP or ELF-loader support has not been verified; built-in Load is unavailable. Use the matching original host or a native loader confirmed compatible with this exact build. Keep one game menu active at a time. Menu release is not independently established. The source button and file numbers identify the game build; they are not asserted as menu releases. Download is the original pinned upstream file. No public mirror or redistribution licence is asserted. No payload was executed during review.",
+      "image": "/assets/images/gta52.png",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "GTA V · 1.27 · BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/index.html"
+    },
+    {
+      "id": "ps4-repository-gamerhack-arabicguy132",
+      "name": "ArabicGuy · 1.32",
+      "filename": "arabic-guy132.bin",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy132.bin",
+      "bytes": 1055408,
+      "sha256": "3dddf0161fb409e7e9711c6b53e4eaef4c34f9768e263a9821b217b1bde00daa",
+      "version": "1.32",
+      "category": "mods",
+      "compatibility": "PS4 firmware 9.00 and GTA V game update 1.32; the game update is separate from console firmware. No regional CUSA list was supplied for this exact build. Confirm the title ID and executable before using it. The reviewed GamerHack 900v3 host loads this exact BIN through its in-page native loader. Compatible standalone GoldHEN HTTP or ELF-loader support has not been verified; built-in Load is unavailable. Use the matching original host or a native loader confirmed compatible with this exact build. Keep one game menu active at a time. Menu release is not independently established. The source button and file numbers identify the game build; they are not asserted as menu releases. Download is the original pinned upstream file. No public mirror or redistribution licence is asserted. No payload was executed during review.",
+      "image": "/assets/images/gta52.png",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "GTA V · 1.32 · BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/index.html"
     }
   ]
 }

@@ -102,7 +102,7 @@
   }
   function loadCapability(action) {
     var type = action.run && action.run.type, format = String(action.format || '').toUpperCase();
-    if (['goldhen-http','elf-http','elf-tcp','ps5-manager'].indexOf(type) !== -1) return {available:true,kind:'payload',reason:''};
+    if (['goldhen-http','elf-http','elf-tcp','ps5-manager'].indexOf(type) !== -1 || type === 'bin-tcp' && action.platform === 'ps4' && format === 'BIN' && action.run.port === 9020) return {available:true,kind:'payload',reason:''};
     if (action.runtimeId && /^\/hosts\/runtime\//.test(action.launchURL || '')) return {available:true,kind:'browser',reason:'Open this host on the matching console to use its built-in browser loader.'};
     if (/^(PRX|SPRX)$/.test(format)) return {available:false,kind:'plugin',reason:'This plugin loads through the console’s native plugin manager. Web loading is not available for this build.'};
     if (/^(JSON|MC4|SHN|XML)$/.test(format)) return {available:false,kind:'data',reason:'Install this file in the native cheat or patch manager, then enable it in the game.'};
@@ -225,7 +225,7 @@
         var needsFirmware = requiresFirmware(action) && !firmware.value;
         var isMenu = action.category === 'mods';
         var label = isMenu || action.run || capability.kind === 'browser' ? 'Load' : launch ? 'Open host' : '';
-        var requiresSender = action.run && action.run.type === 'elf-tcp' && !canBridge;
+        var requiresSender = action.run && (action.run.type === 'elf-tcp' || action.run.type === 'bin-tcp') && !canBridge;
         var uncertain = action.run && connection.warning(configuredAddress());
         var disabled = isMenu && !capability.available || needsFirmware || requiresSender || capability.kind === 'browser' && detection.platform !== platform || loading || uncertain;
         var meta = [action.format ? String(action.format).toUpperCase() : '', action.game ? '' : action.version, firmwareLabel(action)].filter(Boolean).join(' · ');
@@ -241,7 +241,7 @@
           (download ? '<p class="host-download-destination">Download destination: ' + escape(String(address.value || '').trim() || detection.platform === platform ? platform.toUpperCase() : 'This device') + '</p>' : '') +
           (isMenu && !capability.available ? '<p class="host-load-note">' + escape(capability.reason) + '</p>' : '') +
           (capability.kind === 'browser' && detection.platform !== platform ? '<p class="host-load-note">' + escape(capability.reason) + '</p>' : '') +
-          (requiresSender ? '<p class="host-load-note">Connect the paired desktop sender to load this ELF.</p>' : '') +
+          (requiresSender ? '<p class="host-load-note">' + (action.run.type === 'bin-tcp' ? 'Connect the paired desktop sender to load this BIN.' : 'Connect the paired desktop sender to load this ELF.') + '</p>' : '') +
           (uncertain ? '<p class="host-load-note">A previous transfer has an unknown result. Check the console and clear its transfer warning before loading again.</p>' : '') +
           '<details><summary>Requirements</summary><ul>' + details + '</ul>' + (action.firmwares && action.firmwares.length ? '<p>Firmware: ' + escape(action.firmwares.join(', ')) + '</p>' : '') + (action.license ? '<p>' + escape(action.license) + '</p>' : '') + links + (action.supportArchiveURL ? ' · <a href="' + escape(navigationURL(action.supportArchiveURL)) + '">Full setup files</a>' : '') + (!action.run && originalHost ? ' · <a href="' + escape(originalHost) + '" target="_blank" rel="noopener noreferrer">Original host</a>' : '') + '</details></div></article>';
     }
@@ -377,7 +377,7 @@
       if (requiresFirmware(action) && !firmware.value) { tell('Choose your installed firmware first.', true); return; }
       if (!firmwareMatches(action, firmware.value)) { tell('Choose a payload matching the installed firmware.', true); return; }
       if (action.run && (action.run.type === 'goldhen-http' || action.run.type === 'elf-http' || action.run.type === 'ps5-manager' || bridge)) { runAction(action); return; }
-      if (action.run && action.run.type === 'elf-tcp' && !action.launchURL) { doc.querySelector('.host-sender').open = true; tell('Start the local sender, open its host page, and connect with the pairing token to run ELF files.'); return; }
+      if (action.run && (action.run.type === 'elf-tcp' || action.run.type === 'bin-tcp') && !action.launchURL) { doc.querySelector('.host-sender').open = true; tell(action.run.type === 'bin-tcp' ? 'Connect the paired desktop sender to load this BIN.' : 'Start the local sender, open its host page, and connect with the pairing token to run ELF files.'); return; }
       if (action.category === 'mods' && !loadCapability(action).available) { tell(loadCapability(action).reason,true); return; }
       if (loadCapability(action).kind === 'browser' && detection.platform !== platform) { tell(loadCapability(action).reason,true); return; }
       var url; try { url = launchURL(action); } catch (error) { tell(error.message, true); return; }

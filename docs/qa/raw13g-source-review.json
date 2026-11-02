@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-02T16:34:03.438Z",
+  "repository": "https://github.com/raw13g/raw13g.github.io",
+  "defaultBranch": "main",
+  "commit": "9ba2f0719591d6900d91aba6cc5291f8fff97e6d",
+  "commitDate": "2026-09-25T21:40:15Z",
+  "branches": [
+    {
+      "name": "main",
+      "commit": "9ba2f0719591d6900d91aba6cc5291f8fff97e6d"
+    }
+  ],
+  "releases": [],
+  "tags": [],
+  "method": "GitHub API tree and exact commit-pinned raw files, textual inspection and hashes only; no clone, archive fetch, exploit browser navigation, source execution, payload execution or console contact.",
+  "result": {
+    "completeRuntimeVendoring": "not-qualified",
+    "reason": "The MIT license explicitly excludes mandatory primitive JS, all kernel patches and both payload binaries. Their original redistribution terms are not supplied in this repository. Linked possible original source repositories were inaccessible. Do not treat MIT as a blanket license.",
+    "authoredOnlyRuntime": "incomplete",
+    "authoredOnlyReason": "jb.js imports all three excluded primitive modules and requires the matching patch blob; copying only authored files does not yield a runnable integration. No algorithm or byte substitution was made.",
+    "recommendedIntegration": "Accurately labelled external PS4 browser host with the exact four-firmware whitelist, source and terms notes. Keep first-party Load/Download absent for these files until rights and exact standalone ABI are established.",
+    "readyStandaloneDownloadQualified": false,
+    "newPS5Resources": 0,
+    "newGameMenusOrTrainers": 0
+  },
+  "license": {
+    "file": {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/LICENSE",
+      "lines": "1-23",
+      "status": 200,
+      "bytes": 1362,
+      "sha256": "2ec58a4da676a8401fdf946c0238a458adb9dc7119e772646322caa4fefa2f68",
+      "gitBlobSHA": "5d006df406dfd4c9a5d92d424a92339882a3345e"
+    },
+    "raw13gAuthored": "MIT, Copyright (c) 2026 raw13g",
+    "explicitlyExcluded": [
+      "core.js",
+      "mem.js",
+      "int64.js",
+      "goldhen.bin",
+      "payload2.bin",
+      "patches/1302.bin",
+      "patches/1350.bin",
+      "patches/1352.bin"
+    ],
+    "missingTerms": "No per-file license headers or original source links found in excluded JS or patch/payload binaries. Numeric GoldHEN version is not established by the file name or commit title.",
+    "originalSourceChecks": [
+      {
+        "url": "https://api.github.com/repos/thebelx/OOMfie",
+        "status": 404
+      },
+      {
+        "url": "https://api.github.com/repos/thebelx/OnePS",
+        "status": 404
+      },
+      {
+        "url": "https://api.github.com/repos/thebelx/RAW-GAME-STOLE-OOMFIE",
+        "status": 404
+      }
+    ],
+    "context": "Upstream issue #1 links an attribution claim. It is recorded only as an unresolved provenance pointer, not treated as proof of authorship or permission.",
+    "contextURL": "https://github.com/raw13g/raw13g.github.io/issues/1"
+  },
+  "firmwareSupport": [
+    {
+      "firmware": "13.02",
+      "kernelPatch": "patches/1302.bin",
+      "payload": "payload2.bin",
+      "offsetAlias": "13.00 WebKit/libkernel only; separate measured kernel offsets in the 13.02 table",
+      "upstreamStatus": "Source claims kernel patch hardware proof on 13.02; this review did not verify hardware.",
+      "kernelPatchArtifact": {
+        "path": "patches/1302.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/patches/1302.bin",
+        "status": 200,
+        "bytes": 632,
+        "sha256": "235a051f5a066daa546253de6eb61c1223a2682cb34edd916fc4565bb2c02fc6",
+        "gitBlobSHA": "6a3870d35b37684c39ad7049e17c3eee08f7d821"
+      },
+      "payloadArtifact": {
+        "path": "payload2.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/payload2.bin",
+        "status": 200,
+        "bytes": 293120,
+        "sha256": "df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12",
+        "gitBlobSHA": "b9c254cb5171f82d8824794c184b968e5c604b24"
+      }
+    },
+    {
+      "firmware": "13.04",
+      "kernelPatch": "patches/1302.bin",
+      "payload": "payload2.bin",
+      "offsetAlias": "13.00 WebKit/libkernel only; kernel offsets and patch shared with 13.02",
+      "upstreamStatus": "Source infers shared 13.02 kernel; no independent hardware proof added by this review.",
+      "kernelPatchArtifact": {
+        "path": "patches/1302.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/patches/1302.bin",
+        "status": 200,
+        "bytes": 632,
+        "sha256": "235a051f5a066daa546253de6eb61c1223a2682cb34edd916fc4565bb2c02fc6",
+        "gitBlobSHA": "6a3870d35b37684c39ad7049e17c3eee08f7d821"
+      },
+      "payloadArtifact": {
+        "path": "payload2.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/payload2.bin",
+        "status": 200,
+        "bytes": 293120,
+        "sha256": "df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12",
+        "gitBlobSHA": "b9c254cb5171f82d8824794c184b968e5c604b24"
+      }
+    },
+    {
+      "firmware": "13.50",
+      "kernelPatch": "patches/1350.bin",
+      "payload": "payload2.bin",
+      "offsetAlias": null,
+      "upstreamStatus": "Source says exploit hardware proof but kernel patch UNTESTED on hardware.",
+      "kernelPatchArtifact": {
+        "path": "patches/1350.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/patches/1350.bin",
+        "status": 200,
+        "bytes": 632,
+        "sha256": "f771c196d012496c01f575674e95a74d7b00b7c1bc22325c7321f3ab6eb77b56",
+        "gitBlobSHA": "4ff57da79d2b85483b6d27ca513aa95e53d9d299"
+      },
+      "payloadArtifact": {
+        "path": "payload2.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/payload2.bin",
+        "status": 200,
+        "bytes": 293120,
+        "sha256": "df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12",
+        "gitBlobSHA": "b9c254cb5171f82d8824794c184b968e5c604b24"
+      }
+    },
+    {
+      "firmware": "13.52",
+      "kernelPatch": "patches/1352.bin",
+      "payload": "goldhen.bin",
+      "offsetAlias": "13.50 WebKit/libkernel; table overrides kernel offsets and patch",
+      "upstreamStatus": "Source says kernel patch verified OFFLINE ONLY; no successful execution asserted by this review.",
+      "kernelPatchArtifact": {
+        "path": "patches/1352.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/patches/1352.bin",
+        "status": 200,
+        "bytes": 632,
+        "sha256": "adfb9771904f71cd1f5a82cbded8ac46c7ffeb3df974579535cf711904ac347e",
+        "gitBlobSHA": "cb07a2b2340e054f1b823245ccf74cfe47d36839"
+      },
+      "payloadArtifact": {
+        "path": "goldhen.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/goldhen.bin",
+        "status": 200,
+        "bytes": 293120,
+        "sha256": "df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12",
+        "gitBlobSHA": "b9c254cb5171f82d8824794c184b968e5c604b24"
+      }
+    }
+  ],
+  "scopeBoundary": {
+    "sourceLandingWhitelist": [
+      "13.02",
+      "13.04",
+      "13.50",
+      "13.52"
+    ],
+    "sourceEvidence": {
+      "path": "index.html",
+      "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/index.html",
+      "lines": "40-82",
+      "status": 200,
+      "bytes": 24773,
+      "sha256": "4898a1249458a4e1baaff5480a92810db010bdf538cdb8f7a58715805166f65c",
+      "gitBlobSHA": "f0cfb39d2b4ad48534993003ad501b1d7d297440"
+    },
+    "offsetEvidence": {
+      "path": "ps4_offsets.js",
+      "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/ps4_offsets.js",
+      "lines": "444-645",
+      "status": 200,
+      "bytes": 17675,
+      "sha256": "12e3886508e13e176018691def0a192c352b72959e2d1f1ea2b8fbd90a62b2dc",
+      "gitBlobSHA": "297ddf140c4074abb471188b084a3c3b1d5dc960"
+    },
+    "notSupportedByThisReview": [
+      "PS5",
+      "14.00",
+      "13.00",
+      "12.52",
+      "12.50",
+      "12.02",
+      "12.00",
+      "11.00"
+    ],
+    "whyOlderTableIsNotSupport": "Older offset objects exist, but the tree ships only 1302/1350/1352 kernel patches and payload2/goldhen. Do not expand the whitelist from unused offset entries. The upstream landing allows a tap to run unsupported firmware anyway; site selector must not copy that allowance."
+  },
+  "abiAndTransport": {
+    "source": {
+      "path": "jb.js",
+      "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/jb.js",
+      "lines": "160-225; 2990-3040; 3470-3545",
+      "status": 200,
+      "bytes": 119726,
+      "sha256": "6f64a7add3e664e02a6e73a0e4c8189dd2cbde1261774cbef543b7bc2cdfb4dd",
+      "gitBlobSHA": "7a55e7c414d4c58ac37da1c02c3f26831fab0d9d"
+    },
+    "runtime": "In-page native memory primitive and worker-based exploit; after kernel patch, copies raw x86-64 BIN into executable memory and passes its entry to pthread_create with a zero fourth argument.",
+    "standaloneABI": "No general external raw TCP/HTTP BIN-loader contract established for these exact bundled files. A shared .bin extension does not qualify them for existing GoldHEN9090 or ELF9021 Load controls.",
+    "listenerPort": null,
+    "existingServicesAssumed": false,
+    "successLimit": "The runtime marks payloadRunning when pthread_create returns zero with a nonzero handle; that does not prove payload initialization, functional services or successful execution on a console.",
+    "network": [
+      "Relative same-origin imports and rpc_worker.js",
+      "Relative fetch patches/<file>.bin and matching payload",
+      "Diagnostic POST /t; no required response acknowledgement",
+      "Application cache manifest with NETWORK:* and query-versioned JS aliases"
+    ]
+  },
+  "dependencies": {
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/LICENSE",
+        "status": 200,
+        "bytes": 1362,
+        "sha256": "2ec58a4da676a8401fdf946c0238a458adb9dc7119e772646322caa4fefa2f68",
+        "gitBlobSHA": "5d006df406dfd4c9a5d92d424a92339882a3345e"
+      },
+      {
+        "path": "cache.appcache",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/cache.appcache",
+        "status": 200,
+        "bytes": 1347,
+        "sha256": "2ea5474577543a8859f5dde3ce26b373052b24e72f8ce46c1898e1b6cd61b388",
+        "gitBlobSHA": "02d4fdf1e32018331cc47efcdac6760ba9047987"
+      },
+      {
+        "path": "core.js",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/core.js",
+        "status": 200,
+        "bytes": 40946,
+        "sha256": "a76c52afbc19b05d176be2059048a3c6a4fb61db084d56434cef2b17da00b2b3",
+        "gitBlobSHA": "e606e5462e2d64cca48dbbc68b1055c18429c339"
+      },
+      {
+        "path": "goldhen.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/goldhen.bin",
+        "status": 200,
+        "bytes": 293120,
+        "sha256": "df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12",
+        "gitBlobSHA": "b9c254cb5171f82d8824794c184b968e5c604b24"
+      },
+      {
+        "path": "index.html",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/index.html",
+        "status": 200,
+        "bytes": 24773,
+        "sha256": "4898a1249458a4e1baaff5480a92810db010bdf538cdb8f7a58715805166f65c",
+        "gitBlobSHA": "f0cfb39d2b4ad48534993003ad501b1d7d297440"
+      },
+      {
+        "path": "int64.js",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/int64.js",
+        "status": 200,
+        "bytes": 2548,
+        "sha256": "611da6a52da5ecf970a3718ab2a4561d3992c655c55342d066d12a9a50554f34",
+        "gitBlobSHA": "ee8d9e6c7e8d4538449fb5eec02062c4fc64e0ef"
+      },
+      {
+        "path": "jb.html",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/jb.html",
+        "status": 200,
+        "bytes": 22535,
+        "sha256": "810088d929458ce1f3b98d6c3b7f4eb7984aa9b998237f74473087b9a19e0d0a",
+        "gitBlobSHA": "717f37a0e66500a7d1e301343410c2a597547060"
+      },
+      {
+        "path": "jb.js",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/jb.js",
+        "status": 200,
+        "bytes": 119726,
+        "sha256": "6f64a7add3e664e02a6e73a0e4c8189dd2cbde1261774cbef543b7bc2cdfb4dd",
+        "gitBlobSHA": "7a55e7c414d4c58ac37da1c02c3f26831fab0d9d"
+      },
+      {
+        "path": "logo_raw.png",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/logo_raw.png",
+        "status": 200,
+        "bytes": 14318,
+        "sha256": "23cdc5f24ffd3508d2ca7c71fcdae5bd7fbe2718dad9393964957a930f3f02a5",
+        "gitBlobSHA": "f1e5a90ba23c18780742d9d4c4b8292aca5fe92b"
+      },
+      {
+        "path": "mem.js",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/mem.js",
+        "status": 200,
+        "bytes": 26858,
+        "sha256": "ee5e52ea8c7ac349f3df4249e6245c6bb41aa9482081b452e629e589dead3b11",
+        "gitBlobSHA": "727a043de4effb46d4cfe2a4984d44161b7ff84a"
+      },
+      {
+        "path": "patches/1302.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/patches/1302.bin",
+        "status": 200,
+        "bytes": 632,
+        "sha256": "235a051f5a066daa546253de6eb61c1223a2682cb34edd916fc4565bb2c02fc6",
+        "gitBlobSHA": "6a3870d35b37684c39ad7049e17c3eee08f7d821"
+      },
+      {
+        "path": "patches/1350.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/patches/1350.bin",
+        "status": 200,
+        "bytes": 632,
+        "sha256": "f771c196d012496c01f575674e95a74d7b00b7c1bc22325c7321f3ab6eb77b56",
+        "gitBlobSHA": "4ff57da79d2b85483b6d27ca513aa95e53d9d299"
+      },
+      {
+        "path": "patches/1352.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/patches/1352.bin",
+        "status": 200,
+        "bytes": 632,
+        "sha256": "adfb9771904f71cd1f5a82cbded8ac46c7ffeb3df974579535cf711904ac347e",
+        "gitBlobSHA": "cb07a2b2340e054f1b823245ccf74cfe47d36839"
+      },
+      {
+        "path": "payload2.bin",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/payload2.bin",
+        "status": 200,
+        "bytes": 293120,
+        "sha256": "df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12",
+        "gitBlobSHA": "b9c254cb5171f82d8824794c184b968e5c604b24"
+      },
+      {
+        "path": "ps4_offsets.js",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/ps4_offsets.js",
+        "status": 200,
+        "bytes": 17675,
+        "sha256": "12e3886508e13e176018691def0a192c352b72959e2d1f1ea2b8fbd90a62b2dc",
+        "gitBlobSHA": "297ddf140c4074abb471188b084a3c3b1d5dc960"
+      },
+      {
+        "path": "rpc_worker.js",
+        "url": "https://raw.githubusercontent.com/raw13g/raw13g.github.io/9ba2f0719591d6900d91aba6cc5291f8fff97e6d/rpc_worker.js",
+        "status": 200,
+        "bytes": 6490,
+        "sha256": "2d030c4cc92f46f96e1e4aea0463e1cde84e7f9a2ec17411473880a0c3f4e682",
+        "gitBlobSHA": "16bf91741e43931586f6050bee6727cbb41319f7"
+      }
+    ],
+    "missingRequiredForFourWhitelistedFirmwares": [],
+    "queryAliases": [
+      {
+        "request": "core.js?v=10",
+        "file": "core.js"
+      },
+      {
+        "request": "jb.js?v=19",
+        "file": "jb.js"
+      }
+    ],
+    "optionalLogo": "logo_raw.png is also embedded in landing/JB HTML; attribution/asset licensing is not separately asserted."
+  },
+  "deduplication": {
+    "goldhenAndPayload2SameBytes": true,
+    "payloadSHA256": "df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12",
+    "payloadBytes": 293120,
+    "numericPayloadVersion": null,
+    "currentCatalogues": "No raw13g action exists in docs/host-actions-ps4.json; current integrated runtimes are ps4-900 and ps5-umtx.",
+    "hashComparison": "No matching raw13g SHA-256 found across root docs JSON inventory/catalogue/file/runtime metadata. This absence does not identify the numeric payload release."
+  },
+  "liveRouteFetches": [
+    {
+      "url": "https://raw13g.github.io/index.html",
+      "status": 200,
+      "bytes": 24773,
+      "sha256": "4898a1249458a4e1baaff5480a92810db010bdf538cdb8f7a58715805166f65c"
+    },
+    {
+      "url": "https://raw13g.github.io/LICENSE",
+      "status": 200,
+      "bytes": 1362,
+      "sha256": "2ec58a4da676a8401fdf946c0238a458adb9dc7119e772646322caa4fefa2f68"
+    },
+    {
+      "url": "https://raw13g.github.io/cache.appcache",
+      "status": 200,
+      "bytes": 1347,
+      "sha256": "2ea5474577543a8859f5dde3ce26b373052b24e72f8ce46c1898e1b6cd61b388"
+    }
+  ],
+  "limitations": [
+    "Exact files were saved only into private tmp/host-repository-review/raw13g-review for static review; no public mirror, F archive or site catalogue mutation was made by this research subtask.",
+    "The original GoldHEN public releases API currently lists 2.4b18 as latest public release; it does not certify the bundled raw13g file or 13.xx support.",
+    "No website compatibility, installed firmware, game ID or loader port was inferred from an upstream issue, unsupported tap override, filename or hidden offset table."
+  ]
+}

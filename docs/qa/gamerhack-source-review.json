@@ -1,0 +1,2017 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-02T16:36:03.552Z",
+  "repository": {
+    "url": "https://github.com/GamerHack/GamerHack.github.io",
+    "defaultBranch": "main",
+    "commit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+    "pushedAt": "2026-10-13T10:33:09Z",
+    "branches": [
+      {
+        "name": "main",
+        "commit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68"
+      }
+    ],
+    "releases": [],
+    "treeEntries": 334,
+    "treeTruncated": false,
+    "githubDetectedLicense": null,
+    "licensePaths": []
+  },
+  "scope": {
+    "platformsFound": [
+      "PS4"
+    ],
+    "PS5IntegrationEvidence": false,
+    "downloadedFilesExecuted": false,
+    "exploitPagesOpenedOrExecuted": false,
+    "physicalConsoleTests": false,
+    "repositoryCloned": false,
+    "publicCodeOrCatalogueMutations": false,
+    "temporaryDownloadsOnly": true
+  },
+  "findings": [
+    "The exact repository has one main branch and no GitHub releases. No repository LICENSE/COPYING/NOTICE file was present; its own wrapper is not recommended for rehosting.",
+    "G2All is already an external PS4 host action on the site. It must remain labelled external unless independently reviewed, permitted runtime files are hosted locally.",
+    "The G2All title is broader than a single exploit chain. Source routing splits the firmware range into seven different chain branches; selector choices do not establish successful execution.",
+    "GamerHack900v3 GoldHEN2.3 is byte-identical to the existing official archived9.00 GoldHEN2.3 build, providing an opportunity to add a missing first-party Load action using the existing built-in PSFree9.00 port9020 listener without another copy.",
+    "Of20 ready900v3 menu files,16 match host action or retained inventory files. Four new hashes are host-specific variants of existing menu families; do not duplicate existing identical builds.",
+    "No source evidence establishes PS5 support for any GamerHack entry. No PS5 firmware, ABI or port is inferred.",
+    "The four primitive-layer files and binary patch/payload dependencies are explicitly excluded from original RawGame4/raw13g MIT grants. Their full redistribution contract was not established by a permissive wrapper license."
+  ],
+  "g2allSourceRouting": [
+    {
+      "firmwares": [
+        "5.05",
+        "5.07"
+      ],
+      "entry": "g2all/505/exploit.js"
+    },
+    {
+      "sourceRange": "7.00–8.52",
+      "entry": "g2all/700/alert.js",
+      "chain": "PSFree/Lapse"
+    },
+    {
+      "sourceRange": "9.00–9.60",
+      "entry": "g2all/900/alert.js",
+      "chain": "PSFree/Lapse"
+    },
+    {
+      "sourceRange": "10.00–11.02",
+      "entry": "g2all/css/main.js",
+      "chain": "CSSFontFace/Lapse"
+    },
+    {
+      "sourceRange": "11.50–12.02",
+      "entry": "g2all/slopkit/chain_lapse.js",
+      "chain": "Slopkit/Lapse"
+    },
+    {
+      "sourceRange": "12.50–13.00",
+      "entry": "g2all/slopkit/chain_poops.js",
+      "chain": "Slopkit/Poops"
+    },
+    {
+      "sourceRange": "13.02–13.52",
+      "entry": "g2all/slopkit/jb.js",
+      "chain": "Slopkit/Relapse"
+    }
+  ],
+  "exactDuplicateOpportunity": {
+    "resource": "GoldHEN2.3 for PS4 firmware9.00",
+    "gamerhackPath": "900v3/goldhen_2.3.bin",
+    "gamerhackDispatchSource": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/index.html#L356",
+    "originalSource": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/b5a78e1e1f6ecbc2dfdcd63b4bb5446f49e309c9/goldhen_2.3_900.bin",
+    "bytes": 282648,
+    "sha256": "c9b8f33d28258af9e80465da591868dada25a1454f30f63882668d5e0dcff9c2",
+    "existingInventory": "docs/download-audit.json",
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.3-FW9.00\\goldhen_2.3_900.bin",
+    "loadingPrerequisite": "Built-in compatible PS4 firmware9.00 PSFree runtime must reach its TCP BIN listener on9020. Download/transfer acknowledgement does not prove console execution.",
+    "license": "No open-source license asserted for the closed-source GoldHEN binary; it is publicly distributed by the original GoldHEN repository."
+  },
+  "menuComparison": {
+    "comparedAgainst": [
+      "docs/host-game-actions.json",
+      "docs/host-legacy-menu-actions.json",
+      "docs/host-game-download-inventory.json",
+      "docs/host-legacy-menu-download-inventory.json",
+      "other docs/host*actions*.json and docs/host*inventory*.json",
+      "docs/download-audit.json"
+    ],
+    "new900Variants": [
+      {
+        "path": "900v3/WildeModz-1.38.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.38.bin",
+        "bytes": 593216,
+        "sha256": "e82fe24709f9155bc1c77ffa1b2318bee03b5ec7bb4d120b7aadf21b48f6adf8",
+        "sourceFirmware": "9.00",
+        "game": "GTA V",
+        "gameUpdate": "1.38",
+        "menuVersion": null,
+        "titleIds": [],
+        "license": "No menu-specific redistribution license declared; original author/host attribution must be retained.",
+        "loadSupport": "Source invokes its in-process browser payload loader. Generic GoldHEN HTTP9090 compatibility is not established by file extension or size; keep unsupported Load disabled."
+      },
+      {
+        "path": "900v3/arabic-guy127.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy127.bin",
+        "bytes": 1055408,
+        "sha256": "a603fa84029a0c9bd29e3e5d6ea2f97aa668f0600403c4102f4c35b186b982f4",
+        "sourceFirmware": "9.00",
+        "game": "GTA V",
+        "gameUpdate": "1.27",
+        "menuVersion": null,
+        "titleIds": [],
+        "license": "No menu-specific redistribution license declared; original author/host attribution must be retained.",
+        "loadSupport": "Source invokes its in-process browser payload loader. Generic GoldHEN HTTP9090 compatibility is not established by file extension or size; keep unsupported Load disabled."
+      },
+      {
+        "path": "900v3/arabic-guy100.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy100.bin",
+        "bytes": 1055408,
+        "sha256": "80849dc10d770b5e4596b0c32774b03b156245c18f1527157d6a967854b990a8",
+        "sourceFirmware": "9.00",
+        "game": "GTA V",
+        "gameUpdate": "1.00",
+        "menuVersion": null,
+        "titleIds": [],
+        "license": "No menu-specific redistribution license declared; original author/host attribution must be retained.",
+        "loadSupport": "Source invokes its in-process browser payload loader. Generic GoldHEN HTTP9090 compatibility is not established by file extension or size; keep unsupported Load disabled."
+      },
+      {
+        "path": "900v3/arabic-guy132.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy132.bin",
+        "bytes": 1055408,
+        "sha256": "3dddf0161fb409e7e9711c6b53e4eaef4c34f9768e263a9821b217b1bde00daa",
+        "sourceFirmware": "9.00",
+        "game": "GTA V",
+        "gameUpdate": "1.32",
+        "menuVersion": null,
+        "titleIds": [],
+        "license": "No menu-specific redistribution license declared; original author/host attribution must be retained.",
+        "loadSupport": "Source invokes its in-process browser payload loader. Generic GoldHEN HTTP9090 compatibility is not established by file extension or size; keep unsupported Load disabled."
+      }
+    ],
+    "matches900": 16,
+    "uniqueNew900": 4,
+    "files": [
+      {
+        "path": "505/OystersMenu-v1.00.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a658ceafd4b580c1bfd71173f9c7e6ec4ec91d4c",
+        "size": 1260864,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/a658ceafd4b580c1bfd71173f9c7e6ec4ec91d4c",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.00.bin",
+        "bytes": 1260864,
+        "sha256": "09925fe9288bd9e68f49ffaffba3e92fb6ddb1c8cf416e16251cdef53f19a67a",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/Lamance-v0.9-1.38.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "size": 1128208,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/6147bb34f57c593aeafc20c128fc870352a739b0",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/Lamance-v0.9-1.38.bin",
+        "bytes": 1128208,
+        "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+        "existingMatches": [
+          {
+            "file": "host-game-actions.json",
+            "id": "ps4-lamance-gta5-138",
+            "label": "Lamance",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          },
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "lamance-gta5-138-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\psfree900a\\Builds\\v0.9 - game 1.38 - firmware 9.00 - da9c138e47c5\\lamance-gta5-138-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.19.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "563eab1efea2447849115fb12a86d98ff6ae43a9",
+        "size": 1260864,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/563eab1efea2447849115fb12a86d98ff6ae43a9",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.19.bin",
+        "bytes": 1260864,
+        "sha256": "93fd71c737f4433f72dd594685303e23183859fa448dfafefc15bd8906676f7e",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.13.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5d14a719a814a38a9e2d3083b07e815f7760686a",
+        "size": 1260864,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/5d14a719a814a38a9e2d3083b07e815f7760686a",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.13.bin",
+        "bytes": 1260864,
+        "sha256": "38f847706303c2c2b5b71102073ac86fa534f1bc09b6c40129275a53b0c81718",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.24.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ec99c1ae2c4133edc4f39ac90f65890598ced8f",
+        "size": 1260864,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/9ec99c1ae2c4133edc4f39ac90f65890598ced8f",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.24.bin",
+        "bytes": 1260864,
+        "sha256": "b5566c5629c86f8860ba190537e0c2a2e220c879f469a155b924467b975ec08d",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.46.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65d7142a7d084d7a4fffc71d63e0633dd5a0701e",
+        "size": 29416,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/65d7142a7d084d7a4fffc71d63e0633dd5a0701e",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.46.bin",
+        "bytes": 29416,
+        "sha256": "f262d4878e01d057e4ee4d35a49ddf1363fa4ee9667dd50acf181a99aa8af07d",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.32.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec0aac6d8c9ba7d38b5c83d628ab3c5d0c7b5885",
+        "size": 1074320,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/ec0aac6d8c9ba7d38b5c83d628ab3c5d0c7b5885",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.32.bin",
+        "bytes": 1074320,
+        "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-nazky-wilde132",
+            "label": "WildeModz",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde132-game-1.32-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde132-game-1.32-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "nazky-wilde132-game-1.32-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.32\\WildeModz\\Builds\\game 1.32 - PS4 9.00 - Nazky af1fcfe9dc07\\nazky-wilde132-game-1.32-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde132-game-1.32-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.29.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3daa7accd404f8e0aba7e9498b1daf7ce16d8d02",
+        "size": 1260864,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/3daa7accd404f8e0aba7e9498b1daf7ce16d8d02",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.29.bin",
+        "bytes": 1260864,
+        "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+        "existingMatches": [
+          {
+            "file": "host-game-actions.json",
+            "id": "ps4-oysters-rdr2-129",
+            "label": "Oysters",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-129-ps4-900.bin"
+          },
+          {
+            "file": "host-game-http-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-129-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-129-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.29\\PSFree\\Builds\\Nazky PSFree af1fcfe9dc07 - game 1.29\\oysters-rdr2-129-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-129-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.38.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5e12e751558f0b32349d70f6f57492757beae7ba",
+        "size": 592864,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/5e12e751558f0b32349d70f6f57492757beae7ba",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.38.bin",
+        "bytes": 592864,
+        "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-nazky-wilde138",
+            "label": "WildeModz",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde138-game-1.38-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde138-game-1.38-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "nazky-wilde138-game-1.38-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\WildeModz\\Builds\\game 1.38 - PS4 9.00 - Nazky af1fcfe9dc07\\nazky-wilde138-game-1.38-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde138-game-1.38-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/arabic-guy127.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8af1983411af4e6def9198142acb0f505ca4006e",
+        "size": 2432450,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/8af1983411af4e6def9198142acb0f505ca4006e",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy127.bin",
+        "bytes": 2432450,
+        "sha256": "0a13d2a758869a23259b3527a956b493c8c4708c2c6a441fb133a455ebf237cc",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.33.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "962e8567ae349e649da0e481feec45089eb67d05",
+        "size": 1074320,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/962e8567ae349e649da0e481feec45089eb67d05",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.33.bin",
+        "bytes": 1074320,
+        "sha256": "1c742c48aeb6009f3e99468ab2702499ed66f0d642d624e9844a0f4aa595fb60",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/arabic-guy100.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bbae1123b41834a2dc3b289ebd63c38503c4049e",
+        "size": 1055340,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/bbae1123b41834a2dc3b289ebd63c38503c4049e",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy100.bin",
+        "bytes": 1055340,
+        "sha256": "49d151bfb960fb42d465134ab91f5173407a8ac202d75d23a3b2e441bc7cffd0",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/arabic-guy132.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "354974904ddc685109ffeeb8264c9dd00f4f07db",
+        "size": 1059520,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/354974904ddc685109ffeeb8264c9dd00f4f07db",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy132.bin",
+        "bytes": 1059520,
+        "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+        "existingMatches": [
+          {
+            "file": "host-game-actions.json",
+            "id": "ps4-arabicguy-gta5-132",
+            "label": "ArabicGuy",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-132-ps4-900.bin"
+          },
+          {
+            "file": "host-game-http-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-132-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "arabicguy-gta5-132-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.32\\PSFree\\Builds\\Nazky PSFree af1fcfe9dc07 - game 1.32\\arabicguy-gta5-132-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-132-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/arabic-guy133.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "size": 1059520,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy133.bin",
+        "bytes": 1059520,
+        "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+        "existingMatches": [
+          {
+            "file": "host-game-actions.json",
+            "id": "ps4-arabicguy-gta5-133",
+            "label": "ArabicGuy",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin"
+          },
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/arabicguy-gta5-133-ps4-900.bin"
+          },
+          {
+            "file": "host-game-http-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "arabicguy-gta5-133-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\psfree900a\\Builds\\game 1.33 - firmware 9.00 - da9c138e47c5\\arabicguy-gta5-133-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/arabicguy-gta5-133-ps4-900.bin"
+          },
+          {
+            "name": "arabicguy-gta5-133-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\PSFree\\Builds\\Nazky PSFree af1fcfe9dc07 - game 1.33\\arabicguy-gta5-133-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.00.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "076f88586f83333862310ec4976063c3afc3e2fe",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/076f88586f83333862310ec4976063c3afc3e2fe",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.00.bin",
+        "bytes": 1567488,
+        "sha256": "4c7ce16309f7d6164bab07238f6ca864e3b5744bceea3c9d63ed894b1cd31451",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-100-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-100-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.00\\psfree900a\\Builds\\game 1.00 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-100-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-100-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.13.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "45ac163a206001ae246351843c0197eb71802350",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/45ac163a206001ae246351843c0197eb71802350",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.13.bin",
+        "bytes": 1567488,
+        "sha256": "44174737c965b5063e8257939d0a7320aab697bfdaaa1240a0c3dba90a0b144e",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-113-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-113-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.13\\psfree900a\\Builds\\game 1.13 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-113-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-113-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.19.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.19.bin",
+        "bytes": 1567488,
+        "sha256": "100e0a0e1205c764001e3a9a37557bb4ab6e02841ae8493321313f4008e40981",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-119-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-119-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.19\\psfree900a\\Builds\\game 1.19 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-119-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-119-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_ArabicGuy100.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "decebf6d379d4e283927ff51094f51ea610f5ec0",
+        "size": 1055064,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/decebf6d379d4e283927ff51094f51ea610f5ec0",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+        "bytes": 1055064,
+        "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.24.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.24.bin",
+        "bytes": 1567488,
+        "sha256": "20648156363665c6fcfd0daf77b64c1827168b5b0c775919541d277f7f6d7a93",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-124-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-124-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.24\\psfree900a\\Builds\\game 1.24 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-124-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-124-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.29.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.29.bin",
+        "bytes": 1567488,
+        "sha256": "d972ff1b73601069e1e18365d08a26637a33ce00ff0c5063aa03c1e221961aa1",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-129-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-129-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.29\\psfree900a\\Builds\\game 1.29 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-129-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-129-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_ArabicGuy127.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f37b97e4d6a65ea37e8cd6c59bea4fcda479f23d",
+        "size": 1055384,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/f37b97e4d6a65ea37e8cd6c59bea4fcda479f23d",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+        "bytes": 1055384,
+        "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_Lamance-v0.9-1.38.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "size": 1128208,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/6147bb34f57c593aeafc20c128fc870352a739b0",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_Lamance-v0.9-1.38.bin",
+        "bytes": 1128208,
+        "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+        "existingMatches": [
+          {
+            "file": "host-game-actions.json",
+            "id": "ps4-lamance-gta5-138",
+            "label": "Lamance",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          },
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "lamance-gta5-138-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\psfree900a\\Builds\\v0.9 - game 1.38 - firmware 9.00 - da9c138e47c5\\lamance-gta5-138-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_ArabicGuy132.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "691650d2ea8e65cdc3bd43a246fd942f0f9fb178",
+        "size": 1054936,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/691650d2ea8e65cdc3bd43a246fd942f0f9fb178",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+        "bytes": 1054936,
+        "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-133.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3efb02b384411a231c0f0965867f4ab8158abbd5",
+        "size": 1063824,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/3efb02b384411a231c0f0965867f4ab8158abbd5",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-133.bin",
+        "bytes": 1063824,
+        "sha256": "d9df758cdd076aa360f997cfb598551cf0d69d9e5e2b4635b55bd7d23e33a211",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/beefqueef-gta5-133-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "beefqueef-gta5-133-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\psfree900a\\Builds\\game 1.33 - firmware 9.00 - da9c138e47c5\\beefqueef-gta5-133-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/beefqueef-gta5-133-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-134.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dfed540b8ed5cb99c5f20f6ffe7681b5b9d7acd6",
+        "size": 1063880,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/dfed540b8ed5cb99c5f20f6ffe7681b5b9d7acd6",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-134.bin",
+        "bytes": 1063880,
+        "sha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-nazky-bq134",
+            "label": "BeefQueefMod",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq134-game-1.34-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq134-game-1.34-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "nazky-bq134-game-1.34-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.34\\BeefQueefMod\\Builds\\game 1.34 - PS4 9.00 - Nazky af1fcfe9dc07\\nazky-bq134-game-1.34-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq134-game-1.34-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-Unified-147e.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d8f1561e480fc05aa3af25f43cf4d70cc4febda",
+        "size": 480740,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/7d8f1561e480fc05aa3af25f43cf4d70cc4febda",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-Unified-147e.bin",
+        "bytes": 480740,
+        "sha256": "a8a6789cd8873224dde81f4924cfd12f9d87f430e552d50064e9aabd23171ead",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-kameleon-bq147",
+            "label": "BeefQueefMod",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq147-game-1.47-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq147-game-1.47-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "kameleon-bq147-game-1.47-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.47\\BeefQueefMod\\Builds\\game 1.47 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-bq147-game-1.47-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq147-game-1.47-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-138d.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fca2039ba1488785a549a1dba553b4730accb9f8",
+        "size": 1073836,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/fca2039ba1488785a549a1dba553b4730accb9f8",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-138d.bin",
+        "bytes": 1073836,
+        "sha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-nazky-bq138",
+            "label": "BeefQueefMod",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq138-game-1.38-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq138-game-1.38-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "nazky-bq138-game-1.38-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\BeefQueefMod\\Builds\\game 1.38 - PS4 9.00 - Nazky af1fcfe9dc07\\nazky-bq138-game-1.38-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq138-game-1.38-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/Expulsion-V4.0-1.38.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "11726b8be804882cbc8e6dc5a599c79d52b151c9",
+        "size": 1055312,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/11726b8be804882cbc8e6dc5a599c79d52b151c9",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/Expulsion-V4.0-1.38.bin",
+        "bytes": 1055312,
+        "sha256": "c3df5201df8b17add26ea58794d3ec95d39a021586f1e4e2517b48fa540754e1",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-kameleon-expulsion138",
+            "label": "Expulsion",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-expulsion138-game-1.38-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-expulsion138-game-1.38-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "kameleon-expulsion138-game-1.38-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\Expulsion\\Builds\\menu 4.0 - game 1.38 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-expulsion138-game-1.38-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-expulsion138-game-1.38-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/Lamance-v0.9-1.38.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "size": 1128208,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/6147bb34f57c593aeafc20c128fc870352a739b0",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/Lamance-v0.9-1.38.bin",
+        "bytes": 1128208,
+        "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+        "existingMatches": [
+          {
+            "file": "host-game-actions.json",
+            "id": "ps4-lamance-gta5-138",
+            "label": "Lamance",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          },
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "lamance-gta5-138-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\psfree900a\\Builds\\v0.9 - game 1.38 - firmware 9.00 - da9c138e47c5\\lamance-gta5-138-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/WildeModz-1.46.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "size": 2610904,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/WildeModz-1.46.bin",
+        "bytes": 2610904,
+        "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-kameleon-wilde146",
+            "label": "WildeModz",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "kameleon-wilde146-game-1.46-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.46\\WildeModz\\Builds\\game 1.46 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-wilde146-game-1.46-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.00.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "076f88586f83333862310ec4976063c3afc3e2fe",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/076f88586f83333862310ec4976063c3afc3e2fe",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.00.bin",
+        "bytes": 1567488,
+        "sha256": "4c7ce16309f7d6164bab07238f6ca864e3b5744bceea3c9d63ed894b1cd31451",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-100-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-100-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.00\\psfree900a\\Builds\\game 1.00 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-100-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-100-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.13.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "45ac163a206001ae246351843c0197eb71802350",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/45ac163a206001ae246351843c0197eb71802350",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.13.bin",
+        "bytes": 1567488,
+        "sha256": "44174737c965b5063e8257939d0a7320aab697bfdaaa1240a0c3dba90a0b144e",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-113-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-113-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.13\\psfree900a\\Builds\\game 1.13 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-113-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-113-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.24.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.24.bin",
+        "bytes": 1567488,
+        "sha256": "20648156363665c6fcfd0daf77b64c1827168b5b0c775919541d277f7f6d7a93",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-124-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-124-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.24\\psfree900a\\Builds\\game 1.24 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-124-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-124-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.19.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.19.bin",
+        "bytes": 1567488,
+        "sha256": "100e0a0e1205c764001e3a9a37557bb4ab6e02841ae8493321313f4008e40981",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-119-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-119-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.19\\psfree900a\\Builds\\game 1.19 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-119-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-119-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.29.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "size": 1567488,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.29.bin",
+        "bytes": 1567488,
+        "sha256": "d972ff1b73601069e1e18365d08a26637a33ce00ff0c5063aa03c1e221961aa1",
+        "existingMatches": [
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-129-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "oysters-rdr2-129-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.29\\psfree900a\\Builds\\game 1.29 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-129-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/oysters-rdr2-129-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.32.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e8d43befdd9bd8f4a0017703fed40568eda4a7d3",
+        "size": 1080016,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/e8d43befdd9bd8f4a0017703fed40568eda4a7d3",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.32.bin",
+        "bytes": 1080016,
+        "sha256": "007f3418bee3f2fe27034262a84a148a9f8c0577e517133286a19c4bf18d55eb",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-kameleon-wilde132",
+            "label": "WildeModz",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde132-game-1.32-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde132-game-1.32-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "kameleon-wilde132-game-1.32-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.32\\WildeModz\\Builds\\game 1.32 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-wilde132-game-1.32-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde132-game-1.32-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.38.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ee4341f7250f2d488e596ba0de0d5f341608e3e",
+        "size": 593216,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/8ee4341f7250f2d488e596ba0de0d5f341608e3e",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.38.bin",
+        "bytes": 593216,
+        "sha256": "e82fe24709f9155bc1c77ffa1b2318bee03b5ec7bb4d120b7aadf21b48f6adf8",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.33.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f29d5efdca5c6ac8c708306549f92714cc79e515",
+        "size": 1080016,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/f29d5efdca5c6ac8c708306549f92714cc79e515",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.33.bin",
+        "bytes": 1080016,
+        "sha256": "d9ebf4cdf4150ac59865d7744713dfc99037ad75b08ea7551c5bcb3e992972a9",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-kameleon-wilde133",
+            "label": "WildeModz",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde133-game-1.33-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde133-game-1.33-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "kameleon-wilde133-game-1.33-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\WildeModz\\Builds\\game 1.33 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-wilde133-game-1.33-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde133-game-1.33-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy127.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dc3d212ad24087957c9fea7584dea4dac7c0e39a",
+        "size": 1055408,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/dc3d212ad24087957c9fea7584dea4dac7c0e39a",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy127.bin",
+        "bytes": 1055408,
+        "sha256": "a603fa84029a0c9bd29e3e5d6ea2f97aa668f0600403c4102f4c35b186b982f4",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy100.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d1404d679dcb5710b0ca71d55e8abfc07c5fabb",
+        "size": 1055408,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/4d1404d679dcb5710b0ca71d55e8abfc07c5fabb",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy100.bin",
+        "bytes": 1055408,
+        "sha256": "80849dc10d770b5e4596b0c32774b03b156245c18f1527157d6a967854b990a8",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy132.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3877ca8e373c51703eebaf774d58d1651877b96",
+        "size": 1055408,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/e3877ca8e373c51703eebaf774d58d1651877b96",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy132.bin",
+        "bytes": 1055408,
+        "sha256": "3dddf0161fb409e7e9711c6b53e4eaef4c34f9768e263a9821b217b1bde00daa",
+        "existingMatches": [],
+        "sharedInventoryMatches": [],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.46.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "size": 2610904,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.46.bin",
+        "bytes": 2610904,
+        "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-kameleon-wilde146",
+            "label": "WildeModz",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "kameleon-wilde146-game-1.46-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.46\\WildeModz\\Builds\\game 1.46 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-wilde146-game-1.46-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.47.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "faf0df034857db8f60f34994ed2d361170b8ae8d",
+        "size": 2819184,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/faf0df034857db8f60f34994ed2d361170b8ae8d",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.47.bin",
+        "bytes": 2819184,
+        "sha256": "beac207b97220a57f22c9a7ec9064e6fdb2ef98ec33852b2ee1c5f7a1717010f",
+        "existingMatches": [
+          {
+            "file": "host-legacy-menu-actions.json",
+            "id": "ps4-legacy-kameleon-wilde147",
+            "label": "WildeModz",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde147-game-1.47-ps4-900.bin"
+          },
+          {
+            "file": "host-legacy-menu-download-inventory.json",
+            "path": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde147-game-1.47-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "kameleon-wilde147-game-1.47-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.47\\WildeModz\\Builds\\game 1.47 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-wilde147-game-1.47-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde147-game-1.47-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy133.bin",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "size": 1059520,
+        "url": "https://api.github.com/repos/GamerHack/GamerHack.github.io/git/blobs/4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy133.bin",
+        "bytes": 1059520,
+        "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+        "existingMatches": [
+          {
+            "file": "host-game-actions.json",
+            "id": "ps4-arabicguy-gta5-133",
+            "label": "ArabicGuy",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin"
+          },
+          {
+            "file": "host-game-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/firmware-9.00/arabicguy-gta5-133-ps4-900.bin"
+          },
+          {
+            "file": "host-game-http-download-inventory.json",
+            "path": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin"
+          }
+        ],
+        "sharedInventoryMatches": [
+          {
+            "name": "arabicguy-gta5-133-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\psfree900a\\Builds\\game 1.33 - firmware 9.00 - da9c138e47c5\\arabicguy-gta5-133-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/firmware-9.00/arabicguy-gta5-133-ps4-900.bin"
+          },
+          {
+            "name": "arabicguy-gta5-133-ps4-900.bin",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\PSFree\\Builds\\Nazky PSFree af1fcfe9dc07 - game 1.33\\arabicguy-gta5-133-ps4-900.bin",
+            "local": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin"
+          }
+        ],
+        "gitBlobSHA1Verified": true
+      }
+    ]
+  },
+  "utilityReview": [
+    {
+      "name": "Orbis Toolbox1.0.1190",
+      "gamerhackPath": "900v3/Orbis-Toolbox-900.bin",
+      "bytes": 626392,
+      "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+      "originalRepository": "https://github.com/OSM-Made/Orbis-Toolbox",
+      "originalAsset": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin",
+      "prerequisites": "Exact9.00 file; retail executables; load HEN first. Hybrid Flasher/Updater POC unsupported.",
+      "githubDetectedLicense": null,
+      "recommendation": "Original ready asset is preferable to host mirror. No permissive source license established; integration_audit owns original release hash verification."
+    },
+    {
+      "name": "Other9.00 dumper/FTP/App2USB/backup utilities",
+      "recommendation": "GamerHack provides ready BINs, but no exact binary-to-licensed-source correspondence was established within this review. Do not infer firmware/ABI equivalence to the already integrated13.00 Kameleon files or present source-only unfinished dumper-testing as a ready build."
+    }
+  ],
+  "originalRuntimeSources": [
+    {
+      "repository": "https://github.com/rawgame4/rawgame4.github.io",
+      "commit": "df017967b1630eb48408d52e38970b31adc4e95b",
+      "licenseURL": "https://github.com/rawgame4/rawgame4.github.io/blob/df017967b1630eb48408d52e38970b31adc4e95b/LICENSE",
+      "ownCodeLicense": "MIT",
+      "excluded": [
+        "core.js",
+        "mem.js",
+        "int64.js",
+        "rpc_worker.js",
+        "payload.bin",
+        "patches/*.bin"
+      ],
+      "support": {
+        "sourceTested": [
+          "11.00",
+          "11.50",
+          "12.00",
+          "12.02",
+          "12.50",
+          "12.52",
+          "13.00"
+        ],
+        "sourceUntested": [
+          "10.01"
+        ]
+      },
+      "recommendation": "Do not rehost a full chain on the own-code MIT grant alone."
+    },
+    {
+      "repository": "https://github.com/jordyidk/slopkit",
+      "commit": "6153152be0b6a69e7e7931ff1b68523b7fde1429",
+      "githubDetectedLicense": null,
+      "licenseEndpointStatus": 404,
+      "recommendation": "Original credited primitive source; no explicit license grant found."
+    },
+    {
+      "repository": "https://github.com/raw13g/raw13g.github.io",
+      "ownCodeLicense": "MIT with explicit bundled-component exclusions",
+      "recommendation": "See separate raw13g review for exact commit and full source contract; same excluded primitive/binary dependency concern applies."
+    }
+  ],
+  "structuralVerification": {
+    "downloadedMenuFiles": 44,
+    "menuBytes": 56664534,
+    "allMenuGitBlobSHA1Verified": true,
+    "selectedSourceFiles": 80,
+    "allSelectedFilesGitBlobSHA1Verified": true,
+    "sourceFiles": [
+      {
+        "path": "505/arabic-guy100.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy100.bin",
+        "bytes": 1055340,
+        "sha256": "49d151bfb960fb42d465134ab91f5173407a8ac202d75d23a3b2e441bc7cffd0",
+        "gitBlobSHA1": "bbae1123b41834a2dc3b289ebd63c38503c4049e",
+        "expectedGitBlobSHA1": "bbae1123b41834a2dc3b289ebd63c38503c4049e",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/arabic-guy127.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy127.bin",
+        "bytes": 2432450,
+        "sha256": "0a13d2a758869a23259b3527a956b493c8c4708c2c6a441fb133a455ebf237cc",
+        "gitBlobSHA1": "8af1983411af4e6def9198142acb0f505ca4006e",
+        "expectedGitBlobSHA1": "8af1983411af4e6def9198142acb0f505ca4006e",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/arabic-guy132.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy132.bin",
+        "bytes": 1059520,
+        "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+        "gitBlobSHA1": "354974904ddc685109ffeeb8264c9dd00f4f07db",
+        "expectedGitBlobSHA1": "354974904ddc685109ffeeb8264c9dd00f4f07db",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/arabic-guy133.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy133.bin",
+        "bytes": 1059520,
+        "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+        "gitBlobSHA1": "4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "expectedGitBlobSHA1": "4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/cache.manifest",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/cache.manifest",
+        "bytes": 723,
+        "sha256": "41a6e4109df5a56872e0b970dc2e90ed26b2a08d2481cbf76408cb4d8816780d",
+        "gitBlobSHA1": "9d3435f03528b03b25f9087e5518445f0524a4f0",
+        "expectedGitBlobSHA1": "9d3435f03528b03b25f9087e5518445f0524a4f0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/exploit.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/exploit.js",
+        "bytes": 38450,
+        "sha256": "3479dcdd3734bd1ea0c819ab1b89ae107a5405b0c386b346b6c4cc6d64f352bc",
+        "gitBlobSHA1": "4a5885d44de11080b0b4241eb4784c1859daef1e",
+        "expectedGitBlobSHA1": "4a5885d44de11080b0b4241eb4784c1859daef1e",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "bytes": 862350,
+        "sha256": "1b8fdb8d8cc186534ac1b5b58a6c60073aaecc28a7dedafaab98cf64d8fbc3f3",
+        "gitBlobSHA1": "ec9b7d4fddf3b39013bdd37055ac7225dbce3f44",
+        "expectedGitBlobSHA1": "ec9b7d4fddf3b39013bdd37055ac7225dbce3f44",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/Lamance-v0.9-1.38.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/Lamance-v0.9-1.38.bin",
+        "bytes": 1128208,
+        "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+        "gitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "expectedGitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.00.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.00.bin",
+        "bytes": 1260864,
+        "sha256": "09925fe9288bd9e68f49ffaffba3e92fb6ddb1c8cf416e16251cdef53f19a67a",
+        "gitBlobSHA1": "a658ceafd4b580c1bfd71173f9c7e6ec4ec91d4c",
+        "expectedGitBlobSHA1": "a658ceafd4b580c1bfd71173f9c7e6ec4ec91d4c",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.13.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.13.bin",
+        "bytes": 1260864,
+        "sha256": "38f847706303c2c2b5b71102073ac86fa534f1bc09b6c40129275a53b0c81718",
+        "gitBlobSHA1": "5d14a719a814a38a9e2d3083b07e815f7760686a",
+        "expectedGitBlobSHA1": "5d14a719a814a38a9e2d3083b07e815f7760686a",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.19.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.19.bin",
+        "bytes": 1260864,
+        "sha256": "93fd71c737f4433f72dd594685303e23183859fa448dfafefc15bd8906676f7e",
+        "gitBlobSHA1": "563eab1efea2447849115fb12a86d98ff6ae43a9",
+        "expectedGitBlobSHA1": "563eab1efea2447849115fb12a86d98ff6ae43a9",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.24.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.24.bin",
+        "bytes": 1260864,
+        "sha256": "b5566c5629c86f8860ba190537e0c2a2e220c879f469a155b924467b975ec08d",
+        "gitBlobSHA1": "9ec99c1ae2c4133edc4f39ac90f65890598ced8f",
+        "expectedGitBlobSHA1": "9ec99c1ae2c4133edc4f39ac90f65890598ced8f",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/OystersMenu-v1.29.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.29.bin",
+        "bytes": 1260864,
+        "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+        "gitBlobSHA1": "3daa7accd404f8e0aba7e9498b1daf7ce16d8d02",
+        "expectedGitBlobSHA1": "3daa7accd404f8e0aba7e9498b1daf7ce16d8d02",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.32.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.32.bin",
+        "bytes": 1074320,
+        "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+        "gitBlobSHA1": "ec0aac6d8c9ba7d38b5c83d628ab3c5d0c7b5885",
+        "expectedGitBlobSHA1": "ec0aac6d8c9ba7d38b5c83d628ab3c5d0c7b5885",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.33.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.33.bin",
+        "bytes": 1074320,
+        "sha256": "1c742c48aeb6009f3e99468ab2702499ed66f0d642d624e9844a0f4aa595fb60",
+        "gitBlobSHA1": "962e8567ae349e649da0e481feec45089eb67d05",
+        "expectedGitBlobSHA1": "962e8567ae349e649da0e481feec45089eb67d05",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.38.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.38.bin",
+        "bytes": 592864,
+        "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+        "gitBlobSHA1": "5e12e751558f0b32349d70f6f57492757beae7ba",
+        "expectedGitBlobSHA1": "5e12e751558f0b32349d70f6f57492757beae7ba",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "505/WildeModz-1.46.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.46.bin",
+        "bytes": 29416,
+        "sha256": "f262d4878e01d057e4ee4d35a49ddf1363fa4ee9667dd50acf181a99aa8af07d",
+        "gitBlobSHA1": "65d7142a7d084d7a4fffc71d63e0633dd5a0701e",
+        "expectedGitBlobSHA1": "65d7142a7d084d7a4fffc71d63e0633dd5a0701e",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/cache.manifest",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/cache.manifest",
+        "bytes": 1052,
+        "sha256": "4a01a331c5de2379a458dbc03ac2be620bf571d0ff256a01606df9fce8cf886e",
+        "gitBlobSHA1": "0888082cbc29338e15cb21deda73c5fc8c93c30b",
+        "expectedGitBlobSHA1": "0888082cbc29338e15cb21deda73c5fc8c93c30b",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "bytes": 1334148,
+        "sha256": "5a7876c7322a0bf65604dcc2143d4363fbb1f0d4a7d6a36de9a02d9b4b3abfd3",
+        "gitBlobSHA1": "a9fb5a8983da9bcf439211dcb0f592f170d36a5c",
+        "expectedGitBlobSHA1": "a9fb5a8983da9bcf439211dcb0f592f170d36a5c",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.00.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.00.bin",
+        "bytes": 1567488,
+        "sha256": "4c7ce16309f7d6164bab07238f6ca864e3b5744bceea3c9d63ed894b1cd31451",
+        "gitBlobSHA1": "076f88586f83333862310ec4976063c3afc3e2fe",
+        "expectedGitBlobSHA1": "076f88586f83333862310ec4976063c3afc3e2fe",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.13.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.13.bin",
+        "bytes": 1567488,
+        "sha256": "44174737c965b5063e8257939d0a7320aab697bfdaaa1240a0c3dba90a0b144e",
+        "gitBlobSHA1": "45ac163a206001ae246351843c0197eb71802350",
+        "expectedGitBlobSHA1": "45ac163a206001ae246351843c0197eb71802350",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.19.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.19.bin",
+        "bytes": 1567488,
+        "sha256": "100e0a0e1205c764001e3a9a37557bb4ab6e02841ae8493321313f4008e40981",
+        "gitBlobSHA1": "285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "expectedGitBlobSHA1": "285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.24.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.24.bin",
+        "bytes": 1567488,
+        "sha256": "20648156363665c6fcfd0daf77b64c1827168b5b0c775919541d277f7f6d7a93",
+        "gitBlobSHA1": "1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "expectedGitBlobSHA1": "1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/OystersMenu-v1.3.8-v1.29.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.29.bin",
+        "bytes": 1567488,
+        "sha256": "d972ff1b73601069e1e18365d08a26637a33ce00ff0c5063aa03c1e221961aa1",
+        "gitBlobSHA1": "8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "expectedGitBlobSHA1": "8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_ArabicGuy100.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+        "bytes": 1055064,
+        "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+        "gitBlobSHA1": "decebf6d379d4e283927ff51094f51ea610f5ec0",
+        "expectedGitBlobSHA1": "decebf6d379d4e283927ff51094f51ea610f5ec0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_ArabicGuy127.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+        "bytes": 1055384,
+        "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+        "gitBlobSHA1": "f37b97e4d6a65ea37e8cd6c59bea4fcda479f23d",
+        "expectedGitBlobSHA1": "f37b97e4d6a65ea37e8cd6c59bea4fcda479f23d",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_ArabicGuy132.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+        "bytes": 1054936,
+        "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+        "gitBlobSHA1": "691650d2ea8e65cdc3bd43a246fd942f0f9fb178",
+        "expectedGitBlobSHA1": "691650d2ea8e65cdc3bd43a246fd942f0f9fb178",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/pl_GTA_Lamance-v0.9-1.38.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_Lamance-v0.9-1.38.bin",
+        "bytes": 1128208,
+        "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+        "gitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "expectedGitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672/WildeModz-1.46.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/WildeModz-1.46.bin",
+        "bytes": 2610904,
+        "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+        "gitBlobSHA1": "f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "expectedGitBlobSHA1": "f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672goldhen/cache.manifest",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672goldhen/cache.manifest",
+        "bytes": 94,
+        "sha256": "851e6de73b6f856f5e25f8267409ee3e252a55c41d40e379dba370a1ffb346e1",
+        "gitBlobSHA1": "fea527b404379a69ee5d9c208f531e64a20de9f2",
+        "expectedGitBlobSHA1": "fea527b404379a69ee5d9c208f531e64a20de9f2",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "672goldhen/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672goldhen/index.html",
+        "bytes": 18717,
+        "sha256": "cb7839da704885d4673bf4a8d363196c942fac63c5af48e65e3fe77c266947da",
+        "gitBlobSHA1": "92b67a1866a2757e0f018a35b9d3c01b0a278381",
+        "expectedGitBlobSHA1": "92b67a1866a2757e0f018a35b9d3c01b0a278381",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900goldhen/cache.manifest",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900goldhen/cache.manifest",
+        "bytes": 120,
+        "sha256": "8b4d3a5bde71fdeafd07a21adb5630e546a691f3607e01cd86d4e224a8965c54",
+        "gitBlobSHA1": "4163ec1cf8816d136c4795088ec3525efe09e796",
+        "expectedGitBlobSHA1": "4163ec1cf8816d136c4795088ec3525efe09e796",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900goldhen/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900goldhen/index.html",
+        "bytes": 1934,
+        "sha256": "2bca61fb2e6c35867ae29028059eca6b495fd44edf69b91184c64b718aa2fd37",
+        "gitBlobSHA1": "6a44c6fff2f37c80a45a300b273dac6e501dc0b8",
+        "expectedGitBlobSHA1": "6a44c6fff2f37c80a45a300b273dac6e501dc0b8",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy100.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy100.bin",
+        "bytes": 1055408,
+        "sha256": "80849dc10d770b5e4596b0c32774b03b156245c18f1527157d6a967854b990a8",
+        "gitBlobSHA1": "4d1404d679dcb5710b0ca71d55e8abfc07c5fabb",
+        "expectedGitBlobSHA1": "4d1404d679dcb5710b0ca71d55e8abfc07c5fabb",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy127.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy127.bin",
+        "bytes": 1055408,
+        "sha256": "a603fa84029a0c9bd29e3e5d6ea2f97aa668f0600403c4102f4c35b186b982f4",
+        "gitBlobSHA1": "dc3d212ad24087957c9fea7584dea4dac7c0e39a",
+        "expectedGitBlobSHA1": "dc3d212ad24087957c9fea7584dea4dac7c0e39a",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy132.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy132.bin",
+        "bytes": 1055408,
+        "sha256": "3dddf0161fb409e7e9711c6b53e4eaef4c34f9768e263a9821b217b1bde00daa",
+        "gitBlobSHA1": "e3877ca8e373c51703eebaf774d58d1651877b96",
+        "expectedGitBlobSHA1": "e3877ca8e373c51703eebaf774d58d1651877b96",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/arabic-guy133.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy133.bin",
+        "bytes": 1059520,
+        "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+        "gitBlobSHA1": "4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "expectedGitBlobSHA1": "4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-133.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-133.bin",
+        "bytes": 1063824,
+        "sha256": "d9df758cdd076aa360f997cfb598551cf0d69d9e5e2b4635b55bd7d23e33a211",
+        "gitBlobSHA1": "3efb02b384411a231c0f0965867f4ab8158abbd5",
+        "expectedGitBlobSHA1": "3efb02b384411a231c0f0965867f4ab8158abbd5",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-134.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-134.bin",
+        "bytes": 1063880,
+        "sha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5",
+        "gitBlobSHA1": "dfed540b8ed5cb99c5f20f6ffe7681b5b9d7acd6",
+        "expectedGitBlobSHA1": "dfed540b8ed5cb99c5f20f6ffe7681b5b9d7acd6",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-138d.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-138d.bin",
+        "bytes": 1073836,
+        "sha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e",
+        "gitBlobSHA1": "fca2039ba1488785a549a1dba553b4730accb9f8",
+        "expectedGitBlobSHA1": "fca2039ba1488785a549a1dba553b4730accb9f8",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/BeefQueefMod-Unified-147e.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/BeefQueefMod-Unified-147e.bin",
+        "bytes": 480740,
+        "sha256": "a8a6789cd8873224dde81f4924cfd12f9d87f430e552d50064e9aabd23171ead",
+        "gitBlobSHA1": "7d8f1561e480fc05aa3af25f43cf4d70cc4febda",
+        "expectedGitBlobSHA1": "7d8f1561e480fc05aa3af25f43cf4d70cc4febda",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/cache.manifest",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/cache.manifest",
+        "bytes": 896,
+        "sha256": "67f1bbeca40f39db35d2c4c0d5ea38400732a897d1014314788cf71babad7284",
+        "gitBlobSHA1": "fc69eaf203264b253805fdd670a9274360af540d",
+        "expectedGitBlobSHA1": "fc69eaf203264b253805fdd670a9274360af540d",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/Expulsion-V4.0-1.38.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/Expulsion-V4.0-1.38.bin",
+        "bytes": 1055312,
+        "sha256": "c3df5201df8b17add26ea58794d3ec95d39a021586f1e4e2517b48fa540754e1",
+        "gitBlobSHA1": "11726b8be804882cbc8e6dc5a599c79d52b151c9",
+        "expectedGitBlobSHA1": "11726b8be804882cbc8e6dc5a599c79d52b151c9",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/frontend.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/frontend.js",
+        "bytes": 6194,
+        "sha256": "6deb14e7610796ae173aa51e9fa82237162339cedac6082f596167028df65196",
+        "gitBlobSHA1": "3a45b7326e1a6790db27ebbd5ed91a709c668c60",
+        "expectedGitBlobSHA1": "3a45b7326e1a6790db27ebbd5ed91a709c668c60",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/goldhen_2.3.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/goldhen_2.3.bin",
+        "bytes": 282648,
+        "sha256": "c9b8f33d28258af9e80465da591868dada25a1454f30f63882668d5e0dcff9c2",
+        "gitBlobSHA1": "c0103e0599fecd2523059f8d3af597d9d445aff4",
+        "expectedGitBlobSHA1": "c0103e0599fecd2523059f8d3af597d9d445aff4",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/index.html",
+        "bytes": 26446,
+        "sha256": "35e4e8a549c57fc2c4a5f2a5398b5cd19aa5767d8fa3ec3bb35a3152d32f04e6",
+        "gitBlobSHA1": "a18f6c873c92c8335b3e142f58e6ae42a43d4dd1",
+        "expectedGitBlobSHA1": "a18f6c873c92c8335b3e142f58e6ae42a43d4dd1",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/Lamance-v0.9-1.38.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/Lamance-v0.9-1.38.bin",
+        "bytes": 1128208,
+        "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+        "gitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "expectedGitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/Orbis-Toolbox-900.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/Orbis-Toolbox-900.bin",
+        "bytes": 626392,
+        "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+        "gitBlobSHA1": "ff2be01cc13d59b2bc8bf693253bd3f29474951d",
+        "expectedGitBlobSHA1": "ff2be01cc13d59b2bc8bf693253bd3f29474951d",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.00.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.00.bin",
+        "bytes": 1567488,
+        "sha256": "4c7ce16309f7d6164bab07238f6ca864e3b5744bceea3c9d63ed894b1cd31451",
+        "gitBlobSHA1": "076f88586f83333862310ec4976063c3afc3e2fe",
+        "expectedGitBlobSHA1": "076f88586f83333862310ec4976063c3afc3e2fe",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.13.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.13.bin",
+        "bytes": 1567488,
+        "sha256": "44174737c965b5063e8257939d0a7320aab697bfdaaa1240a0c3dba90a0b144e",
+        "gitBlobSHA1": "45ac163a206001ae246351843c0197eb71802350",
+        "expectedGitBlobSHA1": "45ac163a206001ae246351843c0197eb71802350",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.19.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.19.bin",
+        "bytes": 1567488,
+        "sha256": "100e0a0e1205c764001e3a9a37557bb4ab6e02841ae8493321313f4008e40981",
+        "gitBlobSHA1": "285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "expectedGitBlobSHA1": "285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.24.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.24.bin",
+        "bytes": 1567488,
+        "sha256": "20648156363665c6fcfd0daf77b64c1827168b5b0c775919541d277f7f6d7a93",
+        "gitBlobSHA1": "1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "expectedGitBlobSHA1": "1876ccbe363d999d3c871da60caf60cccd682ba1",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/OystersMenu-v1.29.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/OystersMenu-v1.29.bin",
+        "bytes": 1567488,
+        "sha256": "d972ff1b73601069e1e18365d08a26637a33ce00ff0c5063aa03c1e221961aa1",
+        "gitBlobSHA1": "8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "expectedGitBlobSHA1": "8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.32.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.32.bin",
+        "bytes": 1080016,
+        "sha256": "007f3418bee3f2fe27034262a84a148a9f8c0577e517133286a19c4bf18d55eb",
+        "gitBlobSHA1": "e8d43befdd9bd8f4a0017703fed40568eda4a7d3",
+        "expectedGitBlobSHA1": "e8d43befdd9bd8f4a0017703fed40568eda4a7d3",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.33.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.33.bin",
+        "bytes": 1080016,
+        "sha256": "d9ebf4cdf4150ac59865d7744713dfc99037ad75b08ea7551c5bcb3e992972a9",
+        "gitBlobSHA1": "f29d5efdca5c6ac8c708306549f92714cc79e515",
+        "expectedGitBlobSHA1": "f29d5efdca5c6ac8c708306549f92714cc79e515",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.38.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.38.bin",
+        "bytes": 593216,
+        "sha256": "e82fe24709f9155bc1c77ffa1b2318bee03b5ec7bb4d120b7aadf21b48f6adf8",
+        "gitBlobSHA1": "8ee4341f7250f2d488e596ba0de0d5f341608e3e",
+        "expectedGitBlobSHA1": "8ee4341f7250f2d488e596ba0de0d5f341608e3e",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.46.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.46.bin",
+        "bytes": 2610904,
+        "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+        "gitBlobSHA1": "f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "expectedGitBlobSHA1": "f4ba1d660774091a90ddc20332d09516a0a3f730",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "900v3/WildeModz-1.47.bin",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.47.bin",
+        "bytes": 2819184,
+        "sha256": "beac207b97220a57f22c9a7ec9064e6fdb2ef98ec33852b2ee1c5f7a1717010f",
+        "gitBlobSHA1": "faf0df034857db8f60f34994ed2d361170b8ae8d",
+        "expectedGitBlobSHA1": "faf0df034857db8f60f34994ed2d361170b8ae8d",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/700/alert.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/700/alert.js",
+        "bytes": 1697,
+        "sha256": "b3352504520ecf2a187d21cc3de4b1db93dedbfacd9d238e84428d5b0714759b",
+        "gitBlobSHA1": "6029793a6f04f4e58533de255284914185440a96",
+        "expectedGitBlobSHA1": "6029793a6f04f4e58533de255284914185440a96",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/700/config.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/700/config.js",
+        "bytes": 2609,
+        "sha256": "f31906b947300e11642f571e779a00468a2bd9993083dcd232bd4e6b6a8c0f83",
+        "gitBlobSHA1": "dd17f1e0c66aea866e90994fdbe1c218502f3019",
+        "expectedGitBlobSHA1": "dd17f1e0c66aea866e90994fdbe1c218502f3019",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/900/alert.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/900/alert.js",
+        "bytes": 1809,
+        "sha256": "2ab0603afd508f1df66df097ef422b439223cf8069c05264458e026e8e963ff1",
+        "gitBlobSHA1": "d8f3b4bd76438fcfb89e623fe21735a4c739d07e",
+        "expectedGitBlobSHA1": "d8f3b4bd76438fcfb89e623fe21735a4c739d07e",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/900/config.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/900/config.js",
+        "bytes": 2609,
+        "sha256": "f31906b947300e11642f571e779a00468a2bd9993083dcd232bd4e6b6a8c0f83",
+        "gitBlobSHA1": "dd17f1e0c66aea866e90994fdbe1c218502f3019",
+        "expectedGitBlobSHA1": "dd17f1e0c66aea866e90994fdbe1c218502f3019",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/css/main.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/css/main.js",
+        "bytes": 3178,
+        "sha256": "e72782026cc40951f14ab11a28ce69c41b686b18beb05d7cca3f381e6b105c78",
+        "gitBlobSHA1": "ee0f96fff4d9a133c2682604bdcaaee65eac6717",
+        "expectedGitBlobSHA1": "ee0f96fff4d9a133c2682604bdcaaee65eac6717",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/index.html",
+        "bytes": 4119,
+        "sha256": "497511a39c071068b028383c814a2b9d0b340bd1ed5a66233cd9091b9d32e0bb",
+        "gitBlobSHA1": "1b8cb1143339b4500dcd0a63bcbdb8c490ad8f95",
+        "expectedGitBlobSHA1": "1b8cb1143339b4500dcd0a63bcbdb8c490ad8f95",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/chain_lapse.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/chain_lapse.js",
+        "bytes": 209270,
+        "sha256": "96f376429f5214bc97b53f42a3b1c500ef3d5b193e99644e5e10765e533adbd1",
+        "gitBlobSHA1": "c219c64171363580e81f0072dd7004d1131a123a",
+        "expectedGitBlobSHA1": "c219c64171363580e81f0072dd7004d1131a123a",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/chain_poops.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/chain_poops.js",
+        "bytes": 135998,
+        "sha256": "63320b4c953655f7a8f343af31466e3c6481f361f6e07bb54c90527fc9c1263e",
+        "gitBlobSHA1": "78a0ec2cdca28e5235922f7b3d1850a221401211",
+        "expectedGitBlobSHA1": "78a0ec2cdca28e5235922f7b3d1850a221401211",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/core.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/core.js",
+        "bytes": 43266,
+        "sha256": "3acf7e09988f10f800ca22bac1d4965b89ebb5ce2da4850089918fd1a457df4e",
+        "gitBlobSHA1": "56b0349f0ce59884271070e6bb9635a78edd75a1",
+        "expectedGitBlobSHA1": "56b0349f0ce59884271070e6bb9635a78edd75a1",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/int64.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/int64.js",
+        "bytes": 2787,
+        "sha256": "a79a3334a3f2c75b9a238ab1093796e326251c97ac5d02663eae5b14bf80f652",
+        "gitBlobSHA1": "824fa3941fbdd0f9fb0da8cf3d90ed5ef6f398bc",
+        "expectedGitBlobSHA1": "824fa3941fbdd0f9fb0da8cf3d90ed5ef6f398bc",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/jb.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/jb.js",
+        "bytes": 115292,
+        "sha256": "0be4d65905387d5513aa4cd26225991dc42d4c9ac936962f2c109d859c72a0c3",
+        "gitBlobSHA1": "35e008f6795147db3f671b847afa23769fec3b08",
+        "expectedGitBlobSHA1": "35e008f6795147db3f671b847afa23769fec3b08",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/mem.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/mem.js",
+        "bytes": 28202,
+        "sha256": "4a1b688e8061372bc8400e911c8e191b7e19e4b6286dcdeb3eef4971c5168a22",
+        "gitBlobSHA1": "63b86c43f87515044612a1c2163f613123b4feb0",
+        "expectedGitBlobSHA1": "63b86c43f87515044612a1c2163f613123b4feb0",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/ps4_offsets.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/ps4_offsets.js",
+        "bytes": 16104,
+        "sha256": "5f00b9482b1b41038e8e882ca3cec010f1eec8777a1b05a88ba8849033931e37",
+        "gitBlobSHA1": "ef53aef6ab4e7bea08ed65390c6ca06195c11f9e",
+        "expectedGitBlobSHA1": "ef53aef6ab4e7bea08ed65390c6ca06195c11f9e",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "g2all/slopkit/rpc_worker.js",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/g2all/slopkit/rpc_worker.js",
+        "bytes": 5395,
+        "sha256": "483925eafec03037596a71b95f046ba0ed1ab9018300ffd5ff718e2ce8c181dd",
+        "gitBlobSHA1": "6c2f6fb91fa36cb3c05d7fe2f712cc552a6e7305",
+        "expectedGitBlobSHA1": "6c2f6fb91fa36cb3c05d7fe2f712cc552a6e7305",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/index.html",
+        "bytes": 3232,
+        "sha256": "8cdb88d933f518362869f000656522c76f81a12e606c3bd8758aec8c5fe8e4dc",
+        "gitBlobSHA1": "b27e2281ea52f74d2f5137cabfed53c3624ccf13",
+        "expectedGitBlobSHA1": "b27e2281ea52f74d2f5137cabfed53c3624ccf13",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "README.md",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/README.md",
+        "bytes": 376,
+        "sha256": "0108329ad825843906ef60edd1dc28d898dbd15c129f180ff1bb661d4d7f1880",
+        "gitBlobSHA1": "5c5cff5c26e2f6c64cc8d89dbfd77ff805e860bb",
+        "expectedGitBlobSHA1": "5c5cff5c26e2f6c64cc8d89dbfd77ff805e860bb",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "restore/505/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/restore/505/index.html",
+        "bytes": 848257,
+        "sha256": "9923cc291ee95c2d3eed6cbb40d70bdb40e66a4831c33221ac37e9cb316bebd0",
+        "gitBlobSHA1": "be612e3e98e510b1a9032ba8ed57a8eb387cd1dd",
+        "expectedGitBlobSHA1": "be612e3e98e510b1a9032ba8ed57a8eb387cd1dd",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "restore/672/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/restore/672/index.html",
+        "bytes": 17526,
+        "sha256": "ff64bee8b00cce4fd2d3a1f5352becd7d217c2985c0fb9ea4659c2ba33bf5384",
+        "gitBlobSHA1": "a37b96561d842f49583898bfeee1302d79238d97",
+        "expectedGitBlobSHA1": "a37b96561d842f49583898bfeee1302d79238d97",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "restore/672goldhen/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/restore/672goldhen/index.html",
+        "bytes": 17526,
+        "sha256": "ff64bee8b00cce4fd2d3a1f5352becd7d217c2985c0fb9ea4659c2ba33bf5384",
+        "gitBlobSHA1": "a37b96561d842f49583898bfeee1302d79238d97",
+        "expectedGitBlobSHA1": "a37b96561d842f49583898bfeee1302d79238d97",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "restore/900goldhen/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/restore/900goldhen/index.html",
+        "bytes": 1697,
+        "sha256": "a45a3208edddab541b9d717d81719e1d26176e43266b09747b5dcec9d7b2d593",
+        "gitBlobSHA1": "59339c861543bc228019249044d1a67f4ab94d0f",
+        "expectedGitBlobSHA1": "59339c861543bc228019249044d1a67f4ab94d0f",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "restore/900v3/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/restore/900v3/index.html",
+        "bytes": 1697,
+        "sha256": "a45a3208edddab541b9d717d81719e1d26176e43266b09747b5dcec9d7b2d593",
+        "gitBlobSHA1": "59339c861543bc228019249044d1a67f4ab94d0f",
+        "expectedGitBlobSHA1": "59339c861543bc228019249044d1a67f4ab94d0f",
+        "gitBlobSHA1Verified": true
+      },
+      {
+        "path": "restore/index.html",
+        "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/restore/index.html",
+        "bytes": 1694,
+        "sha256": "60bf5a529fd49b4ce16a73421310f46145e1038a7f0621af97252bf0b4b1d0d8",
+        "gitBlobSHA1": "5f4c4226b7f283170a3e52548085a5fd6b46c5f4",
+        "expectedGitBlobSHA1": "5f4c4226b7f283170a3e52548085a5fd6b46c5f4",
+        "gitBlobSHA1Verified": true
+      }
+    ]
+  },
+  "limits": [
+    "Static inspection and cryptographic comparison only.",
+    "No public-runtime or console loading test was performed.",
+    "Original release history and license notices are evidence, not permission to change pinned website compatibility.",
+    "Temporary research copies are not claimed as completed F: archive records; root archives only resources selected for website addition."
+  ]
+}

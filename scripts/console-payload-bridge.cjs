@@ -12,7 +12,7 @@ const crypto = require('node:crypto');
 const {normalizeAddress} = require('../assets/host-console-client.js');
 const ROOT = path.resolve(__dirname, '..');
 const MAX_FILE = 64 * 1024 * 1024;
-const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json'];
+const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json', 'docs/host-repository-menu-actions.json'];
 const MIME = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.ico':'image/x-icon','.woff2':'font/woff2','.elf':'application/octet-stream','.bin':'application/octet-stream'};
 function fail(code, message) { const e = new Error(message); e.code = code; return e; }
 function uncertainFailure(error) {
@@ -65,6 +65,7 @@ function localFileFor(action, root = ROOT, {forRun = true} = {}) {
   if (!/^[a-f0-9]{64}$/i.test(action.sha256 || '')) throw fail('checksum-required', 'The curated action must include its SHA-256 checksum.');
   const run = action.run || {};
   const supported = (run.type === 'elf-tcp' || run.type === 'elf-http' && action.platform === 'ps5') && format === 'ELF' && run.port === 9021 ||
+    run.type === 'bin-tcp' && action.platform === 'ps4' && format === 'BIN' && run.port === 9020 ||
     run.type === 'goldhen-http' && action.platform === 'ps4' && format === 'BIN' && (!run.port || run.port === 9090);
   if (forRun && !supported)
     throw fail('unsupported-transport', 'No verified sender protocol is available for this action.');
@@ -73,7 +74,10 @@ function localFileFor(action, root = ROOT, {forRun = true} = {}) {
   const file = fs.realpathSync(candidate);
   if (!file.startsWith(downloadRoot + path.sep)) throw fail('invalid-file', 'The payload file must stay inside the download library.');
   const stat = fs.statSync(file);
-  if (!stat.isFile() || stat.size <= 0 || stat.size > (forRun ? MAX_FILE : 512 * 1024 * 1024)) throw fail('invalid-file-size', 'The payload file size is invalid.');
+  // The pinned PS4 9.00 runBinLoader maps exactly 0x300000 bytes. Its raw
+  // receiver has no negotiated size or framing, so reject larger files locally.
+  const limit = forRun && run.type === 'bin-tcp' ? 0x300000 : forRun ? MAX_FILE : 512 * 1024 * 1024;
+  if (!stat.isFile() || stat.size <= 0 || stat.size > limit) throw fail('invalid-file-size', 'The payload file size is invalid.');
   return {file, bytes:stat.size, format};
 }
 function availability(action, root) {
@@ -86,21 +90,32 @@ async function readVerifiedFile(action, root) {
   const digest = crypto.createHash('sha256').update(data).digest('hex');
   if (digest !== action.sha256.toLowerCase()) throw fail('checksum-mismatch', 'The payload checksum does not match the catalogue. Nothing was sent.');
   if (item.format === 'ELF' && (data.length < 64 || !data.subarray(0,4).equals(Buffer.from([0x7f,0x45,0x4c,0x46])))) throw fail('invalid-elf', 'The file does not contain an ELF executable. Nothing was sent.');
+  if (action.run.type === 'bin-tcp' && data.subarray(0,4).equals(Buffer.from([0x7f,0x45,0x4c,0x46]))) throw fail('invalid-bin', 'The raw BIN loader does not accept an ELF executable. Nothing was sent.');
   return {data,sha256:digest};
 }
 // Documented netcat transport: raw ELF bytes followed by EOF on TCP 9021.
 // A successful local write is a transfer result, not proof the payload executed.
 function sendRawELF(address, data, {connect = net.createConnection, timeoutMs = 15000} = {}) {
+  return sendRawPayload(address, data, 'ELF', 9021, {connect,timeoutMs});
+}
+// PSFree/Lapse runBinLoader (pinned PS4 9.00): one raw BIN stream followed by
+// EOF on TCP 9020. Never probe first: a connection consumes the single listener.
+function sendRawBIN(address, data, options = {}) {
+  if (!data.length || data.length > 0x300000) return Promise.reject(fail('invalid-file-size', 'The payload file size is invalid.'));
+  if (data.subarray(0,4).equals(Buffer.from([0x7f,0x45,0x4c,0x46]))) return Promise.reject(fail('invalid-bin', 'The raw BIN loader does not accept an ELF executable. Nothing was sent.'));
+  return sendRawPayload(address, data, 'BIN', 9020, options);
+}
+function sendRawPayload(address, data, format, port, {connect = net.createConnection, timeoutMs = 15000} = {}) {
   return new Promise((resolve,reject) => {
-    const socket = connect({host:address,port:9021});
+    const socket = connect({host:address,port});
     let settled = false, bytesAttempted = false;
-    const timer = setTimeout(() => done(fail('loader-timeout', 'The ELF transfer timed out. The console result is unknown.')), timeoutMs);
+    const timer = setTimeout(() => done(fail('loader-timeout', 'The ' + format + ' transfer timed out. The console result is unknown.')), timeoutMs);
     function done(error) {
       if (settled) return; settled = true; clearTimeout(timer); socket.destroy();
       if (error) reject(bytesAttempted ? uncertainFailure(error) : error);
-      else resolve({status:'sent',code:'elf-bytes-sent',message:'ELF bytes sent to the console loader on port 9021. Check the console for the payload result.',bytes:data.length,port:9021});
+      else resolve({status:'sent',code:format.toLowerCase()+'-bytes-sent',message:format+' bytes sent to the console loader on port '+port+'. Check the console for the payload result.',bytes:data.length,port});
     }
-    socket.once('error', () => done(fail('loader-connection-failed', 'Could not transfer the ELF. Start the compatible network ELF loader on port 9021.')));
+    socket.once('error', () => done(fail('loader-connection-failed', 'Could not transfer the '+format+'. Start the compatible network '+format+' loader on port '+port+'.')));
     socket.once('connect', () => { bytesAttempted = true; try { socket.end(data); } catch (error) { done(error); } });
     socket.once('finish', () => done());
     socket.once('close', () => { if (!settled) done(fail('loader-disconnected', 'The loader disconnected before the transfer finished.')); });
@@ -269,7 +284,7 @@ function staticPath(requestURL) {
     /^\/docs\/host-(?:actions-ps[45]|game-actions)\.json$/.test(value);
   return allowed ? value : null;
 }
-function createBridge({root = ROOT, actions = loadActions(root), token = crypto.randomBytes(32).toString('hex'), resolveAddress = resolveConsoleAddress, sendELF = sendRawELF, sendBIN = sendGoldHENHTTP, inspectServices = inspectConsoleServices} = {}) {
+function createBridge({root = ROOT, actions = loadActions(root), token = crypto.randomBytes(32).toString('hex'), resolveAddress = resolveConsoleAddress, sendELF = sendRawELF, sendBIN = sendGoldHENHTTP, sendRawBIN: sendTCPBIN = sendRawBIN, inspectServices = inspectConsoleServices} = {}) {
   if (!/^[a-f0-9]{64}$/i.test(token)) throw fail('invalid-token', 'The sender token must be 32 random bytes encoded as hexadecimal.');
   root = fs.realpathSync(root);
   const busy = new Set();
@@ -305,7 +320,8 @@ function createBridge({root = ROOT, actions = loadActions(root), token = crypto.
         if (busy.has(key)) throw fail('console-busy','Another payload transfer is still in progress for this console.');
         busy.add(key); acquired = true;
         const file = await readVerifiedFile(action,root);
-        const outcome = action.run.type === 'elf-tcp' || action.run.type === 'elf-http' ? await sendELF(address,file.data) : await sendBIN(address,file.data);
+        const outcome = action.run.type === 'bin-tcp' ? await sendTCPBIN(address,file.data) :
+          action.run.type === 'elf-tcp' || action.run.type === 'elf-http' ? await sendELF(address,file.data) : await sendBIN(address,file.data);
         return json(res,200,{...outcome,actionId:action.id,platform:action.platform,address,sha256:file.sha256});
       } catch (e) { return json(res,e.mayHaveExecuted ? 200 : 400,{status:e.mayHaveExecuted ? 'uncertain' : 'error',code:e.code || 'sender-failed',message:e.code ? e.message : 'The sender could not complete the action. Nothing has been confirmed on the console.',...(e.mayHaveExecuted ? {mayHaveExecuted:true,outcome:'unknown'} : {})}); }
       finally { if (acquired) busy.delete(key); }
@@ -361,4 +377,4 @@ function main(args = process.argv.slice(2)) {
   return server;
 }
 if (require.main === module) { try { main(); } catch (e) { process.stderr.write(e.message + '\n'); process.exitCode = 1; } }
-module.exports = {ROOT,loadActions,localFileFor,availability,readVerifiedFile,isPrivateIPv4,resolveConsoleAddress,sendRawELF,sendGoldHENHTTP,inspectConsoleServices,equalToken,staticPath,createBridge,main};
+module.exports = {ROOT,loadActions,localFileFor,availability,readVerifiedFile,isPrivateIPv4,resolveConsoleAddress,sendRawELF,sendRawBIN,sendGoldHENHTTP,inspectConsoleServices,equalToken,staticPath,createBridge,main};

@@ -37,8 +37,9 @@ test('console catalogues contain only reviewed PS4/PS5 builds and keep platform 
   assert.throws(() => getCatalog('ps3'), /Expected ps4 or ps5/);
   for (const item of catalogue.filter(item => /GTA V game update/.test(item.compatibility))) {
     assert.deepEqual(item.platforms, ['ps4']);
-    if (item.id.startsWith('ps4-legacy-')) {
-      const action = readJson('docs/host-legacy-menu-actions.json').actions.find(action => action.id === item.id);
+    if (item.id.startsWith('ps4-legacy-') || item.id.startsWith('ps4-repository-gamerhack-')) {
+      const sourceCatalogue = item.id.startsWith('ps4-repository-gamerhack-') ? 'docs/host-repository-menu-actions.json' : 'docs/host-legacy-menu-actions.json';
+      const action = readJson(sourceCatalogue).actions.find(action => action.id === item.id);
       assert.ok(action, item.id + ' has original source evidence');
       assert.deepEqual(action.firmwares, ['9.00']);
       assert.equal(item.compatibility, action.requirements.join(' '));

@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-02T16:07:04.507Z",
+  "status": "passed",
+  "method": "CUA in-app browser through rendered controls; no console IP was contacted or payload executed.",
+  "checks": {
+    "ps4GTA5": {
+      "scopedMenuCards": 12,
+      "versionButtons": true,
+      "visibleImageBadges": false,
+      "actions": [
+        "Download",
+        "Load"
+      ]
+    },
+    "ps5Manager": {
+      "ownPage": true,
+      "noHubCards": true,
+      "noMenuLibrary": true,
+      "nativeSettingsLink": true,
+      "helperInstallLink": true
+    },
+    "nativePS5Preview": {
+      "correctPublicOriginReadOnly": true,
+      "readDisabled": true,
+      "saveDisabled": true,
+      "languageSwitch": "English → Deutsch → English",
+      "preservedPath": "/data/pldmgr/autoload.txt",
+      "mobileViewport": {
+        "width": 430,
+        "height": 900,
+        "clientWidth": 415,
+        "scrollWidth": 415
+      }
+    },
+    "finalPS4Manager": {
+      "workspacePanels": 1,
+      "hubCards": 0,
+      "menuLibrary": 0
+    }
+  },
+  "screenshot": "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/ps4-payload-workspace-final.jpg",
+  "viewportRestored": true,
+  "temporaryPreviewTabClosed": true,
+  "deliverable": "/hosts/ps4/payload-manager/",
+  "limitations": [
+    "Real console hardware not connected; native operations verified with mocked endpoints/filesystems.",
+    "One-time matching ezRemote helper installation remains required."
+  ]
+}

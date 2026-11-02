@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T16:53:01.455Z",
+  "method": "CUA browser interaction with authored local dashboard only. No exploit page opened, console address configured, network Load requested or console contacted.",
+  "goldhen": {
+    "firmware": "9.00",
+    "cardVisible": true,
+    "unpairedLoadDisabled": true,
+    "firmware1400CardCount": 0,
+    "pairedBehavior": "Authored DOM fixture and bridge socket mocks only."
+  },
+  "menu": {
+    "family": "ArabicGuy",
+    "oneCard": true,
+    "variants": 7,
+    "selectedAction": "ps4-repository-gamerhack-arabicguy132",
+    "gameUpdate": "1.32",
+    "menuVersion": "Not provided",
+    "download": "Pinned original upstream URL verified in actual anchor.",
+    "actions": [
+      "Download",
+      "Load"
+    ],
+    "loadDisabled": true,
+    "visibleImageRoleBadges": false,
+    "screenshot": "docs/screenshots/host-repository-arabicguy.png"
+  },
+  "external": {
+    "rawGameAt1352": true,
+    "underCollapsedOtherHosts": true,
+    "button": "Open host",
+    "rawGameAt1300CardCount": 0,
+    "originalHostNotOpened": true
+  },
+  "language": {
+    "visual": "English to Deutsch to English; new requirements and variant labels translated; exact URL, game1.32, firmware9.00 and disabledLoad preserved.",
+    "generatedDictionaries": {
+      "count": 20,
+      "newKeys": 28,
+      "exactGeneratedEntriesVerified": 560
+    }
+  },
+  "phone": {
+    "viewport": {
+      "width": 430,
+      "height": 900
+    },
+    "documentClientWidth": 430,
+    "documentScrollWidth": 431,
+    "loadDisabled": true,
+    "viewportReset": true,
+    "note": "One-pixel document overflow observed in existing connection-form layout. Popup content stays within its viewport; no CSS changes were made in this batch."
+  },
+  "limits": [
+    "Physical console execution, native installation and receiver saving not tested.",
+    "Browser downloads were not executed; original file bytes were checked during source acquisition and archive intake."
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T16:33:59.853Z",
+  "scope": "Original GoldHEN and Orbis-Toolbox release contracts, linked from GamerHack; read-only metadata and static hashes. No downloaded file executed.",
+  "repositories": [
+    {
+      "repo": "GoldHEN/GoldHEN",
+      "tag": "2.4b18",
+      "commit": "f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4",
+      "defaultBranch": "master",
+      "archived": false,
+      "apiLicense": null,
+      "licenseFiles": [],
+      "readme": {
+        "url": "https://github.com/GoldHEN/GoldHEN/blob/f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4/README.md",
+        "bytes": 4763,
+        "sha256": "29c71a5526e43d7395145b10ac8a414063b58321a65784c0be2b4975c719ffd3",
+        "text": "# GoldHEN - PS4 Homebrew Enabler\n```\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  _________________  .____  ________    ___ ______________ _______\n /  _____________  \\ |    | \\______ \\  /   |   \\_   _____/ \\      \\\n/   \\  ___  /   |   \\|    |  |    |  \\/    ~    \\    __)_  /   |   \\\n\\    \\_\\  \\/    |    \\    |__|    `   \\    Y    /        \\/    |    \\\n \\______  /\\_______  /_______ \\_____  /\\___|_  /_______  /\\____|__  /\n        \\/         \\/        \\/     \\/       \\/        \\/         \\/\n                              Coded By\n        _________.__  ____________________________ ________\n       /   _____/|__|/   _________    _________   \\\\_____  \\\n       \\_____  \\ |  |\\_____  \\   |    |  |       _/ /   |   \\\n       /        \\|  |/        \\  |    |  |    |   \\/    |    \\\n      /_______  /|__/_______  /  |____|  |____|_  /\\_________/\n              \\/            \\/                  \\/\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n```\n\n## Features\n\n- Homebrew Enabler\n- Debug Settings\n- VR Support\n- Remote Package Install\n- Rest Mode Support\n- External HDD Support\n- Official External HDD Format Support\n- Debug Trophies Support\n- sys_dynlib_dlsym Patch\n- UART Enabler\n- Never Disable Screenshot\n- Remote Play Enabler\n- FW Update Block\n- FTP Server on 2121 port (Thanks to [hippie68](https://github.com/hippie68))\n- BinLoader Server on 9090 port\n- Klog Server on 3232 port\n- CE-30391-6 Error CMOS Fix\n- Integrated Cheat Menu\n- Integrated FPS Counter\n- Plugins support\n- TitleId label feature\n- Scanlines overlay\n- Internal pkg installation support (/data/pkg) (Thanks to [OSM](https://github.com/OSM-Made))\n\n### :warning: Warnings\n\nThe BinLoader server is in an experimental phase but in any case there are several payloads around, some even not very well done, which can also be harmful and in the best case only crash the console. So use it with caution.\nI have tried to work out to support all payloads possible but no guarantees can be given on this. Obviously I do not take any responsibility in case of use of payloads not made by me.\n\n### :warning: Known Issues\n\nApplications such as Apollo, Itemzflow, and Orbis Toolbox may cause the PS4 console to crash/malfunction during entering/exiting rest mode.\n\n### :warning: Cheat Menu\n\nThe Cheat Menu is experimental, use with caution.\nPlease report cheat related issues to the cheat author(s).\n\nRead CHEATMENU.md\n\n### Credits\n\nCoded by [SiSTRo](https://github.com/SiSTR0)\n\nCheat Menu coded by:\n- [ctn123](https://github.com/ctn123)\n- [Shinigami](https://github.com/ScriptSK)\n- [SiSTRo](https://github.com/SiSTR0)\n\n[Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager) coded by:\n- [bucanero](https://github.com/bucanero)\n\n[Plugin SDK](https://github.com/GoldHEN/GoldHEN_Plugins_SDK) coded by:\n- [bucanero](https://github.com/bucanero)\n- [ctn123](https://github.com/ctn123)\n- [jocover](https://github.com/jocover)\n- [nik](https://github.com/nkrapivin)\n- [OSM](https://github.com/OSM-Made)\n- [SiSTRo](https://github.com/SiSTR0)\n\nPlugin SDK uses [OpenOrbis-PS4-Toolchain](https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain) so thanks to all [OpenOrbis](https://github.com/OpenOrbis) devs\n\nSpecial thanks:\n- [golden](https://github.com/jogolden)\n- [Joonie](https://github.com/Joonie86)\n- [Kameleon](https://github.com/kmeps4)\n- [OSM](https://github.com/OSM-Made)\n\nGreeting to other devs:\n- [Al-Azif](https://github.com/Al-Azif)\n- [ChendoChap](https://github.com/ChendoChap)\n- [flat_z](https://github.com/flatz)\n- [idc](https://github.com/idc)\n- [kiwidoggie](https://github.com/kiwidoggie)\n- [qwertyoruiop](https://twitter.com/qwertyoruiopz)\n- [sleirsgoevy](https://github.com/sleirsgoevy)\n- [Specter](https://github.com/Cryptogenic)\n- [SocraticBliss](https://github.com/SocraticBliss)\n- [Vortex](https://github.com/xvortex)\n- [zecoxao](https://twitter.com/notzecoxao)\n- [Znullptr](https://github.com/dmiller423)\n\nGreeting to QA/Testers:\n- [Arczi](https://www.psxhax.com/members/archi55.566599)\n- [Big_Wadger](https://twitter.com/big_wadger)\n- [Brandon Alberhasky](https://twitter.com/alberhasky)\n- [Echo Stretch](https://twitter.com/StretchEcho)\n- [Marcus Andre](https://github.com/marcussacana)\n- [MGS_PS4_PS5_HB_Tester](https://twitter.com/MSZ_MGS)\n- [Pharaoh2k](https://github.com/Pharaoh2k)\n\n### Note\nProject source code is currently private because over time I have seen a sad abuse of the source code that I, like the previous devs who worked on it, have been pleased to make it available to everyone to study and maybe improve it.\n\n### Donations\nConsider [donating](https://goldhen.github.io/support) if you like GoldHEN and want to support my work\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/SiSTRo)\n"
+      },
+      "release": {
+        "url": "https://github.com/GoldHEN/GoldHEN/releases/tag/2.4b18",
+        "publishedAt": "2024-10-28T05:27:29Z",
+        "body": "```\r\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n  _________________  .____  ________    ___ ______________ _______\r\n /  _____________  \\ |    | \\______ \\  /   |   \\_   _____/ \\      \\\r\n/   \\  ___  /   |   \\|    |  |    |  \\/    ~    \\    __)_  /   |   \\\r\n\\    \\_\\  \\/    |    \\    |__|    `   \\    Y    /        \\/    |    \\\r\n \\______  /\\_______  /_______ \\_____  /\\___|_  /_______  /\\____|__  /\r\n        \\/         \\/        \\/     \\/       \\/        \\/         \\/\r\n                              Coded By\r\n        _________.__  ____________________________ ________\r\n       /   _____/|__|/   _________    _________   \\\\_____  \\\r\n       \\_____  \\ |  |\\_____  \\   |    |  |       _/ /   |   \\\r\n       /        \\|  |/        \\  |    |  |    |   \\/    |    \\\r\n      /_______  /|__/_______  /  |____|  |____|_  /\\_________/\r\n              \\/            \\/                  \\/\r\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n```\r\n\r\n## Features\r\n\r\n- Homebrew Enabler\r\n- Debug Settings\r\n- VR Support\r\n- Remote Package Install\r\n- Rest Mode Support\r\n- External HDD Support\r\n- Official External HDD Format Support\r\n- Debug Trophies Support\r\n- sys_dynlib_dlsym Patch\r\n- UART Enabler\r\n- Never Disable Screenshot\r\n- Remote Play Enabler\r\n- FW Update Block\r\n- FTP Server on 2121 port\r\n- BinLoader Server on 9090 port\r\n- Klog Server on 3232 port\r\n- CE-30391-6 Error CMOS Fix\r\n- Integrated Cheat Menu\r\n- Integrated FPS Counter\r\n- Plugins support\r\n- TitleId label feature\r\n- Scanlines overlay\r\n- Internal pkg installation support (/data/pkg) (Thanks to OSM)\r\n\r\n### Notes\r\n\r\nHi all! The new beta is finally out!\r\n\r\nSorry for the wait but as always in my free time I continue to work on GoldHEN to improve it and add new features useful to everyone.\r\n\r\n\r\nThis new release supports both the previous WebKit exploits and the new pppwn, but for this it requires a custom stage2 that I wrote and released the [code](https://github.com/SiSTR0/PPPwn)\r\nI'd like to take this opportunity to thank the people without whom we wouldn't have this (and other) release today:\r\n- TheFlow for releasing his exploit (and not just this one) to everyone.\r\n- flat_z for conceiving and publishing the hen for ps4 with a writeup.\r\n- vortex for implementing the first versions of the hen.\r\n- golden for creating projects that helped me understand many things.\r\n- OSM for his cool Orbis Toolbox.\r\n- Hippie68 for his work on the new FTP server.\r\n- Al_Azif for providing various necessary resources.\r\n- SocraticBliss for his RE scripts.\r\n- Illusion for his game patches and more.\r\n- bucanero for his work on the cheat manager.\r\n- All the cheat developers who shared their trainers with everyone.\r\n\r\nThanks to the testers who had so much patience:\r\n- Big_Wadger\r\n- EchoStretch\r\n- Opoisso893\r\n- mbcrumb\r\n- MODDED WARFARE\r\n- vapour\r\n\r\nLast but not least, my friends ctn and Kameleon for their continuous support, not only technical!\r\n\r\nThanks also to everyone who supported my project on kofi.\r\n\r\n### :warning: Warnings\r\n\r\nThe BinLoader server is in an experimental phase but in any case there are several payloads around, some even not very well done, which can also be harmful and in the best case only crash the console. So use it with caution.\r\nI have tried to work out to support all payloads possible but no guarantees can be given on this. Obviously I do not take any responsibility in case of use of payloads not made by me.\r\n\r\n### :warning: Known Issues\r\n\r\nApplications such as Apollo, Itemzflow, and Orbis Toolbox may cause the PS4 console to crash/malfunction during entering/exiting rest mode.\r\n\r\n\r\n### :warning: Cheat Menu\r\n\r\nThe Cheat Menu is experimental, use with caution.\r\nPlease report cheat related issues to the cheat author(s).\r\n\r\nRead [CHEATMENU.md](https://github.com/GoldHEN/GoldHEN/blob/master/CHEATMENU.md) for more information.\r\n\r\nCheat menu coded by:\r\n- [ctn123](https://github.com/ctn123)\r\n- [Shinigami](https://github.com/ScriptSK)\r\n- [SiSTRo](https://github.com/SiSTR0)\r\n\r\n[Plugin SDK](https://github.com/GoldHEN/GoldHEN_Plugins_SDK) coded by:\r\n- [bucanero](https://github.com/bucanero)\r\n- [ctn123](https://github.com/ctn123)\r\n- [jocover](https://github.com/jocover)\r\n- [nik](https://github.com/nkrapivin)\r\n- [OSM](https://github.com/OSM-Made)\r\n- [SiSTRo](https://github.com/SiSTR0)\r\n\r\nPlugin SDK uses [OpenOrbis-PS4-Toolchain](https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain) so thanks to all [OpenOrbis](https://github.com/OpenOrbis) devs\r\n\r\n## Supported Firmware\r\n- 5.05\r\n- 6.71 / 6.72\r\n- 9.00\r\n- 9.60\r\n- 10.00 / 10.01\r\n- 10.50\r\n- 10.70 / 10.71\r\n- 11.00\r\n\r\n## Changelog\r\n\r\n### v2.4b18\r\n- Added Cheat Downloader (Thanks to [ctn](https://github.com/ctn123))\r\n- Added support for 10.50, 10.70 and 10.71\r\n- Improved rest mode support\r\n- Fixed network servers configuration save\r\n- Moved Klog server to userland (better network disconnection supports)\r\n\r\n\r\n\r\n## Donations\r\nConsider [donating](https://goldhen.github.io/support) or [sponsoring](https://github.com/sponsors/SiSTR0) if you like GoldHEN and want to support my work\r\n\r\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/SiSTRo)",
+        "assets": [
+          {
+            "name": "GoldHEN_v2.4b18.7z",
+            "bytes": 258065,
+            "url": "https://github.com/GoldHEN/GoldHEN/releases/download/2.4b18/GoldHEN_v2.4b18.7z",
+            "publisherDigest": null
+          }
+        ]
+      }
+    },
+    {
+      "repo": "OSM-Made/Orbis-Toolbox",
+      "tag": "1.0.1190",
+      "commit": "83c935231d664ee9d523edf32a1c1aecaac1a92a",
+      "defaultBranch": "main",
+      "archived": true,
+      "apiLicense": null,
+      "licenseFiles": [],
+      "readme": {
+        "url": "https://github.com/OSM-Made/Orbis-Toolbox/blob/83c935231d664ee9d523edf32a1c1aecaac1a92a/README.md",
+        "bytes": 1086,
+        "sha256": "b09a2bafa5be8cc28d610d331f08a647310808683f2611a8ef50f698e8d45e5f",
+        "text": "# Orbis-Toolbox\nA modification of the playstation UI to help with launching and developing homebrew.\n\n![UI](https://i.imgur.com/xomr471.png)\n\n## FAQ\n\n- Does this work with Hybrid Flasher / Updater POC?\n  - No at the current time it will only function as expected on retail executables.\n  - Please make sure you flash back to \"Retail\" or reinstall your Firmware before using.\n- It does not Load!!??\n  - Make sure you follow the instructions for loading the payload.\n  - Right now it requires HEN or homebrew enabler to load it.\n  - So far from my testing Mira & GoldHEN work but others do not.\n- What firmware does this work with?\n  - Currently it supports 5.05, 6.72, 7.02 & 7.55\n- How can I help with bugs?\n  - Please submit a bug Issue on this repo. Please Insure to use the Bug Template.\n  - For any bugs I will need a crash log in order to figure out the issue. The playstation error codes do not generally help.\n\n## Pictures\n![UI](https://i.imgur.com/3VbyJDD.png)\n![UI](https://i.imgur.com/B1cfhdz.png)\n![UI](https://i.imgur.com/6MT0lzn.png)\n![UI](https://i.imgur.com/ovQionn.png)\n"
+      },
+      "release": {
+        "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/tag/1.0.1190",
+        "publishedAt": "2021-12-22T00:38:26Z",
+        "body": "Please Note this is a pre-release build and is not inclusive of all features as some are still being worked on. As well please expect there to be some bugs that need to be worked out. If you have any ideas or issues please submit an issue on this repo :)\r\n\r\n**Please note  this will not work with the Hybrid Flasher nor Updater POC**\r\n\r\n- 9.00 Support Confirmed working 🥇 \r\n- Some minor fixes for Daemons as well.\r\n\r\nHow to load:\r\n1. Load up your choice of HEN\r\n2. Load the Orbis-Toolbox-{Your Firmware}.bin payload.\r\n3. Navigate to the settings to start using the toolbox.",
+        "assets": [
+          {
+            "name": "Orbis-Toolbox-505.bin",
+            "bytes": 626472,
+            "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-505.bin",
+            "publisherDigest": null
+          },
+          {
+            "name": "Orbis-Toolbox-672.bin",
+            "bytes": 626504,
+            "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-672.bin",
+            "publisherDigest": null
+          },
+          {
+            "name": "Orbis-Toolbox-702.bin",
+            "bytes": 626664,
+            "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-702.bin",
+            "publisherDigest": null
+          },
+          {
+            "name": "Orbis-Toolbox-755.bin",
+            "bytes": 626664,
+            "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-755.bin",
+            "publisherDigest": null
+          },
+          {
+            "name": "Orbis-Toolbox-900.bin",
+            "bytes": 626392,
+            "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin",
+            "publisherDigest": null
+          }
+        ]
+      }
+    }
+  ],
+  "files": [
+    {
+      "repo": "GoldHEN/GoldHEN",
+      "tag": "2.4b18",
+      "commit": "f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4",
+      "name": "GoldHEN_v2.4b18.7z",
+      "url": "https://github.com/GoldHEN/GoldHEN/releases/download/2.4b18/GoldHEN_v2.4b18.7z",
+      "bytes": 258065,
+      "sha256": "d0c84c79f65df5afc79a00c578f33ab1aa70aeb9c205f1e789895dc7d4fca38d",
+      "localReviewPath": "tmp/host-repository-review/ready-original-source-review/GoldHEN_v2.4b18.7z",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "repo": "OSM-Made/Orbis-Toolbox",
+      "tag": "1.0.1190",
+      "commit": "83c935231d664ee9d523edf32a1c1aecaac1a92a",
+      "name": "Orbis-Toolbox-505.bin",
+      "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-505.bin",
+      "bytes": 626472,
+      "sha256": "657aad360767ce7f9cef3c374f8ea448870df8d3cf6534a582930bbec0b400ce",
+      "localReviewPath": "tmp/host-repository-review/ready-original-source-review/Orbis-Toolbox-505.bin",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "repo": "OSM-Made/Orbis-Toolbox",
+      "tag": "1.0.1190",
+      "commit": "83c935231d664ee9d523edf32a1c1aecaac1a92a",
+      "name": "Orbis-Toolbox-672.bin",
+      "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-672.bin",
+      "bytes": 626504,
+      "sha256": "c19e3f0d549b241aa31febd5a5223d0bf0156bdc4e419e1083f795ea90d5ce30",
+      "localReviewPath": "tmp/host-repository-review/ready-original-source-review/Orbis-Toolbox-672.bin",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "repo": "OSM-Made/Orbis-Toolbox",
+      "tag": "1.0.1190",
+      "commit": "83c935231d664ee9d523edf32a1c1aecaac1a92a",
+      "name": "Orbis-Toolbox-900.bin",
+      "url": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin",
+      "bytes": 626392,
+      "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+      "localReviewPath": "tmp/host-repository-review/ready-original-source-review/Orbis-Toolbox-900.bin",
+      "existingArchive": [],
+      "existingCatalogue": []
+    }
+  ],
+  "existingMatches": [
+    {
+      "id": "ps4-ps5-goldhen-2-3-5-05",
+      "title": "GoldHEN 2.3 · PS4 5.05 BIN",
+      "release": "2.3-FW5.05",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/b5a78e1e1f6ecbc2dfdcd63b4bb5446f49e309c9/goldhen_2.3_505.bin",
+      "files": [
+        {
+          "name": "goldhen_2.3_505.bin",
+          "bytes": 280792,
+          "sha256": "a58e3633c6992b0b392a572679ba56d2a5344d03ad715e0cf30df3341f17e6be",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.3-FW5.05\\goldhen_2.3_505.bin"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-goldhen-2-3-6-72",
+      "title": "GoldHEN 2.3 · PS4 6.72 BIN",
+      "release": "2.3-FW6.72",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/b5a78e1e1f6ecbc2dfdcd63b4bb5446f49e309c9/goldhen_2.3_672.bin",
+      "files": [
+        {
+          "name": "goldhen_2.3_672.bin",
+          "bytes": 285304,
+          "sha256": "75218e080d6a46c3778ef1e4338d453e8c2ce8ff1bc368818943bd21a1d5e681",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.3-FW6.72\\goldhen_2.3_672.bin"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-goldhen-2-3-9-00",
+      "title": "GoldHEN 2.3 · PS4 9.00 BIN",
+      "release": "2.3-FW9.00",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/b5a78e1e1f6ecbc2dfdcd63b4bb5446f49e309c9/goldhen_2.3_900.bin",
+      "files": [
+        {
+          "name": "goldhen_2.3_900.bin",
+          "bytes": 282648,
+          "sha256": "c9b8f33d28258af9e80465da591868dada25a1454f30f63882668d5e0dcff9c2",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.3-FW9.00\\goldhen_2.3_900.bin"
+        }
+      ]
+    }
+  ],
+  "goldHENBranches": [
+    {
+      "branch": "beta",
+      "commit": "f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 4763,
+          "blob": "d222fbb8c2dda0d4e97caaccc92db8a1bfb268b0"
+        },
+        {
+          "path": "goldhen.bin",
+          "bytes": 260160,
+          "blob": "1b2c2ad6330a86eea387739fc283f9711e1b5e16"
+        }
+      ]
+    },
+    {
+      "branch": "master",
+      "commit": "3bb36e7a9fdc3f38147f7c59c6cbc464c9ca395c",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 4738,
+          "blob": "80ab94cd3a34775d0b0ec5c03b297d10c3c455cd"
+        },
+        {
+          "path": "goldhen_2.3_505.bin",
+          "bytes": 280792,
+          "blob": "3e80d192199eeefb783953fbc79922c76e971c90"
+        },
+        {
+          "path": "goldhen_2.3_672.bin",
+          "bytes": 285304,
+          "blob": "c766609cd45a1d012df767f8f1eb90763b38cd61"
+        },
+        {
+          "path": "goldhen_2.3_900.bin",
+          "bytes": 282648,
+          "blob": "c0103e0599fecd2523059f8d3af597d9d445aff4"
+        }
+      ]
+    }
+  ],
+  "goldHENExperimentalRepository": {
+    "url": "https://api.github.com/repos/GoldHEN/GoldHEN_Experimental",
+    "status": 404
+  },
+  "conclusions": {
+    "licensing": "Neither original repository declares a redistribution license or has a LICENSE/COPYING file in the reviewed tag tree. Preserve public author URLs; source code/runtime vendoring is not licensed by a public GitHub listing alone.",
+    "goldHENVersion": "Latest original public release is 2.4b18, not 2.4b18.12. The 2.4b18 release supports 5.05, 6.71/6.72, 9.00, 9.60, 10.00/10.01, 10.50, 10.70/10.71 and 11.00. It does not establish 13.52 support.",
+    "gamerhackVersion": "GamerHack 23c946a7f85f1338ea2b78163e72e0ce9bc82b68 advertises 2.4b18.12 and distributes identical 293120-byte GoldHEN files in 505, 672, 672goldhen, 900goldhen, 900v3 and g2all. A host claim cannot supply an absent original release license or broaden the original public release contract.",
+    "orbis": "Original 1.0.1190 pre-release supplies firmwares 505/672/702/755/900 separately; requires running HEN before the matching BIN. GamerHack 900v3 maps 900 only. Its original repository is archived. No 13.xx or PS5 support inferred.",
+    "newReleaseFiles": "Selected original release assets are not present by SHA-256 in the current inventory/catalogue. They are review-only bytes under tmp/host-repository-review, not new public mirrors or archive entries.",
+    "usefulExistingIntegration": "Official GoldHEN 2.3 PS4 BINs 505/672/900 already exist in the local archive. Exposing the exact 9.00 BIN through the existing pinned PSFree/Lapse 9020 bootstrap adds functionality without fetching an unconfirmed host-modified HEN."
+  }
+}

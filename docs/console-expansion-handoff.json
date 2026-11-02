@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T16:05:15.311Z",
+  "updatedAt": "2026-11-02T16:53:01.458Z",
   "status": "PS4/PS5 game batch5 complete locally: sixteen new verified game downloads, compact cards, exact Save routes and shared receiver11 integration. Source-site failures and the unrelated Wii U test are recorded separately.",
   "workspace": "C:/Users/whatw/Documents/GitHub/whatsite",
   "latestUserRequests": [
@@ -4361,17 +4361,39 @@
     "latestExpansion": "gta5dumpAllRepositories"
   },
   "hostOrganisationAndWorkspaces": {
-    "status": "in progress",
+    "status": "Completed locally and archived; native installation required and physical console execution untested.",
     "latestRequests": [
       "Remove all visible image-role tags (Game artwork, Menu preview, Menu cover, Project preview).",
       "Separate GTA5, RDR2 and Other games into their own host pages and move existing exact mod variants there.",
       "Integrate Kameleon webpayload utilities in first-party host Load/Download actions, rather than Open host redirects.",
       "File manager and payload manager/autoload need dedicated pages and native-console functionality."
     ],
-    "completed": [
-      "Removed figcaption nodes from both action/group image templates and obsolete badge CSS; accessible alt descriptions/image-role provenance retained.",
-      "Rebuilt hosts assetsv11 and archived interim sender1.5.2+c70e79027536 (older11snapshots retained); docs/qa/host-image-label-removal.json verifies this."
-    ],
+    "completed": {
+      "routes": [
+        "/hosts/ps4/files/",
+        "/hosts/ps4/payload-manager/",
+        "/hosts/ps4/gta5/",
+        "/hosts/ps4/rdr2/",
+        "/hosts/ps4/other-games/",
+        "/hosts/ps5/files/",
+        "/hosts/ps5/payload-manager/",
+        "/hosts/ps5/gta5/",
+        "/hosts/ps5/rdr2/",
+        "/hosts/ps5/other-games/"
+      ],
+      "home": "Game mods now presents GTA5/RDR2/Other games cards; child pages retain four compact menu cards per desktop row and one version-button popup per family. No visible image-role badges.",
+      "nativeWorkspace": "Self-contained native-origin ezRemote workspace: explicit read/list, ready BIN/ELF upload, managed folder create/rename, raw actual autoload-file editor. Hash-verified unique backup/staging, repeated stale-original checks, final reread; no delete/execute/automatic retry. Public preview stays read-only.",
+      "nativeSources": {
+        "ps4": "ezRemote Client2.08 /266d9b8fa7af1cd106688999f95960841c3e894d",
+        "ps5": "ezRemote Client2.18 /f3ac2abab304a807f20a8b97480dbd169e5b6be6"
+      },
+      "autoload": {
+        "ps4": "/data/GoldHEN/payloads.ini [AutoRun]; native GoldHEN LaunchPad/Square control retained",
+        "ps5": "/data/pldmgr/autoload.txt; native Payload Manager8084 autoload/storage/settings controls retained"
+      },
+      "webUtilities": "18 verified first-party PS4 BIN files;17 exactly13.00, ps4debug33 exact versions through12.02. GoldHENHTTP9090 after compatible jailbreak.12 explicit translated effect confirmations. No13.52/14.00/PS5 compatibility inferred.",
+      "languages": "20 generated language dictionaries;835 keys each. New public workspace/game templates, native98-key inline subset, runtime messages and12effect confirmations tested. No full-site linguistic completeness claim."
+    },
     "activeOwners": {
       "root": "Game scope pages and dedicated service-page structure; final integration/QA/archive/handoff.",
       "integrated_load_audit": "Exact18KameleonBIN source/protocol/firmware audit and preparation metadata; no execution.",
@@ -4399,6 +4421,147 @@
       "docs/host-kameleon-existing-files.json",
       "docs/qa/host-kameleon-webpayloads-source.json",
       "docs/host-native-workspace-review.json"
+    ],
+    "updatedAt": "2026-11-02T16:08:02.472Z",
+    "latestUserClarifications": [
+      "Remove visible Game artwork/Menu preview/Menu cover/Project preview image labels; retain useful image alternatives and provenance.",
+      "Separate GTA5, RDR2 and Other games into full pages with every older menu variant preserved.",
+      "Bring reviewed Kameleon web utility BINs into first-party Load/Download controls rather than host redirects.",
+      "File manager and Payload manager/Autoload must be their own pages with actual supported native operations."
+    ],
+    "nativeArtifacts": [
+      {
+        "platform": "ps4",
+        "path": "/downloads/helpers/host-native-workspace/ps4/7cefa37d8cdd39ad/whatsite-workspace-ps4.html",
+        "bytes": 348534,
+        "sha256": "7cefa37d8cdd39adc132298bea24429c33ef7a8248b9b2c177fdb5aaf441c92a",
+        "installPath": "/data/whatsite-workspace-ps4.html",
+        "nativeURL": "http://{consoleIP}:8080/data/whatsite-workspace-ps4.html",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-7cefa37d8cdd39ad\\whatsite-workspace-ps4.html",
+        "archiveStatus": "verified"
+      },
+      {
+        "platform": "ps5",
+        "path": "/downloads/helpers/host-native-workspace/ps5/032c28a8bd60c7c9/whatsite-workspace-ps5.html",
+        "bytes": 348534,
+        "sha256": "032c28a8bd60c7c9ff9580244375af95d78924d9b4d7e12272058fc2afd53333",
+        "installPath": "/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+        "nativeURL": "http://{consoleIP}:9090/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-032c28a8bd60c7c9\\whatsite-workspace-ps5.html",
+        "archiveStatus": "verified"
+      }
+    ],
+    "retainedNativeArtifacts": 8,
+    "sender": {
+      "id": "console-payload-sender-630bb639c32f",
+      "name": "console-payload-sender-1.6.0-630bb639c32f.zip",
+      "version": "1.6.0+630bb639c32f",
+      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-630bb639c32f.zip",
+      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-630bb639c32f.zip",
+      "bytes": 99881875,
+      "sha256": "ca05b68effa75d15206d10c481b60ad04ab25e53f2f28527c374f4b8932ab56b",
+      "snapshot": "630bb639c32f6e4e12035a55ee4b79076e9f334ad9a63b97a38bd83e9024929a",
+      "files": 272,
+      "payloads": 124,
+      "actions": 162,
+      "zipEntries": 272,
+      "manifestFiles": 271
+    },
+    "retainedSenderSnapshots": 14,
+    "receivers": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.12",
+        "bytes": 676243,
+        "sha256": "e2cbb3de30d7843a9d60e3bd1e56c5f938a27bf29682701a37d7ce7091381799",
+        "items": 491,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.12\\whatsite-ps4.html"
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.12",
+        "bytes": 548833,
+        "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20",
+        "items": 350,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.12\\whatsite-ps5.html"
+      }
+    ],
+    "verification": {
+      "unitTests": {
+        "tests": 544,
+        "passed": 544,
+        "failed": 0,
+        "report": "docs/qa/host-organisation-full-tests.txt"
+      },
+      "siteAudit": {
+        "pages": 492,
+        "localLinks": 56276,
+        "issues": 0,
+        "report": "docs/qa/host-organisation-site-audit.txt"
+      },
+      "reports": [
+        "docs/qa/host-organisation-integrity.json",
+        "docs/qa/host-organisation-browser.json",
+        "docs/qa/host-organisation-language.json",
+        "docs/qa/host-web-utility-integrity.json",
+        "docs/qa/host-payload-integrity.json"
+      ],
+      "browser": {
+        "ps4GTA5": {
+          "scopedMenuCards": 12,
+          "versionButtons": true,
+          "visibleImageBadges": false,
+          "actions": [
+            "Download",
+            "Load"
+          ]
+        },
+        "ps5Manager": {
+          "ownPage": true,
+          "noHubCards": true,
+          "noMenuLibrary": true,
+          "nativeSettingsLink": true,
+          "helperInstallLink": true
+        },
+        "nativePS5Preview": {
+          "correctPublicOriginReadOnly": true,
+          "readDisabled": true,
+          "saveDisabled": true,
+          "languageSwitch": "English → Deutsch → English",
+          "preservedPath": "/data/pldmgr/autoload.txt",
+          "mobileViewport": {
+            "width": 430,
+            "height": 900,
+            "clientWidth": 415,
+            "scrollWidth": 415
+          }
+        },
+        "finalPS4Manager": {
+          "workspacePanels": 1,
+          "hubCards": 0,
+          "menuLibrary": 0
+        }
+      },
+      "artifactIntegrity": "All14 sender snapshots and10 native workspace artifacts rehashed against public and F: bytes; final ZIP272entries and each manifest SHA/CRC verified as data only.",
+      "archiveIndex": {
+        "checkedAt": "2026-11-02T16:08:02.473Z",
+        "items": 2154,
+        "fileRecords": 3098,
+        "presentFileRecords": 3098,
+        "missingFileRecords": 0
+      }
+    },
+    "limitations": [
+      "Physical PS4/PS5 execution not tested; downloaded payloads were never executed.",
+      "One-time helper installation via ezRemote/FTP at displayed console path required; public/desktop pages cannot directly write console storage.",
+      "Autoload editor changes actual disk file only; native settings must enable autoload and an active manager may need to reload. Native API has no atomic compare-and-swap; keep other configuration writers idle.",
+      "Authored workspace reads /data, manages explicit payload roots only and does not guess USB mounts or physical slots. No delete, extraction or automatic execution.",
+      "Web utility payload support stays source-pinned, not broadened by the firmware selector."
+    ],
+    "resume": [
+      "Use docs/host-native-workspace-build.json artifacts[] for active helpers; preserve retainedArtifacts and all older versions. Do not rebuild/download new artifacts casually just for verification.",
+      "Final sender1.6.0+630bb639c32f includes latest shared category/theme imagery and current9catalogues; both concurrently created earlier1.6.0 snapshots retained and F-verified.",
+      "Continue unrelated PS3/Switch/console/source changes from their own handoff sections. Never overwrite shared changes or delete old downloads."
     ]
   },
   "keywordAndPhoneFollowup": {
@@ -5048,5 +5211,179 @@
     "previousTitle": "2Take1 Source Archive",
     "title": "Subversion",
     "status": "Applied to catalogue, regeneration review data and rendered page; all href values unchanged."
+  },
+  "repositoryHostReview20261102": {
+    "status": "Completed locally: reviewed both exact repositories, added4 distinct original-only GTA V builds, enabled the existing official PS4 9.00 GoldHEN2.3 through paired TCP9020, activated receiver13 and archived final sender1.7.0. No commit, worktree, deployment or console execution.",
+    "updatedAt": "2026-11-02T16:53:01.458Z",
+    "repositories": [
+      {
+        "repository": "https://github.com/GamerHack/GamerHack.github.io",
+        "commit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+        "branch": "main",
+        "releases": 0,
+        "review": "docs/qa/gamerhack-source-review.json"
+      },
+      {
+        "repository": "https://github.com/raw13g/raw13g.github.io",
+        "commit": "9ba2f0719591d6900d91aba6cc5291f8fff97e6d",
+        "branch": "main",
+        "releases": 0,
+        "review": "docs/qa/raw13g-source-review.json"
+      }
+    ],
+    "completed": {
+      "menus": [
+        {
+          "id": "ps4-repository-gamerhack-wildemodz138",
+          "version": "game 1.38 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - e82fe24709f9",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/WildeModz-1.38.bin",
+          "bytes": 593216,
+          "sha256": "e82fe24709f9155bc1c77ffa1b2318bee03b5ec7bb4d120b7aadf21b48f6adf8",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\WildeModz\\Builds\\game 1.38 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - e82fe24709f9\\WildeModz-1.38.bin"
+        },
+        {
+          "id": "ps4-repository-gamerhack-arabicguy100",
+          "version": "game 1.00 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - 80849dc10d77",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy100.bin",
+          "bytes": 1055408,
+          "sha256": "80849dc10d770b5e4596b0c32774b03b156245c18f1527157d6a967854b990a8",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.00\\ArabicGuy\\Builds\\game 1.00 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - 80849dc10d77\\arabic-guy100.bin"
+        },
+        {
+          "id": "ps4-repository-gamerhack-arabicguy127",
+          "version": "game 1.27 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - a603fa84029a",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy127.bin",
+          "bytes": 1055408,
+          "sha256": "a603fa84029a0c9bd29e3e5d6ea2f97aa668f0600403c4102f4c35b186b982f4",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.27\\ArabicGuy\\Builds\\game 1.27 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - a603fa84029a\\arabic-guy127.bin"
+        },
+        {
+          "id": "ps4-repository-gamerhack-arabicguy132",
+          "version": "game 1.32 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - 3dddf0161fb4",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/arabic-guy132.bin",
+          "bytes": 1055408,
+          "sha256": "3dddf0161fb409e7e9711c6b53e4eaef4c34f9768e263a9821b217b1bde00daa",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.32\\ArabicGuy\\Builds\\game 1.32 - PS4 9.00 - GamerHack 900v3 23c946a7f85f - 3dddf0161fb4\\arabic-guy132.bin"
+        }
+      ],
+      "menuUI": "Existing ArabicGuy/WildeModz families reused; no new family cards or duplicate known hashes. Legacy build toggle and four compact desktop columns retained. Game update and menu version remain separate. Original upstream Download only, exact console receiver IDs, unsupported Load disabled.",
+      "goldhen": {
+        "actionId": "ps4-goldhen-2-3-900-binloader",
+        "catalogueId": "goldhen-2-3-9-00",
+        "version": "2.3",
+        "firmwares": [
+          "9.00"
+        ],
+        "bytes": 282648,
+        "sha256": "c9b8f33d28258af9e80465da591868dada25a1454f30f63882668d5e0dcff9c2",
+        "transport": "bin-tcp",
+        "port": 9020,
+        "source": "Existing official archived GoldHEN release; byte-identical to GamerHack900v3 copy.",
+        "workflow": "Start existing guarded PSFree/Lapse on PS4; wait for native9020 message; Load via paired sender. One socket+bytes+EOF, max3MiB, no probe/retry, no execution acknowledgement."
+      },
+      "rawGame": {
+        "actionId": "raw13g-1302-1352",
+        "firmwares": [
+          "13.02",
+          "13.04",
+          "13.50",
+          "13.52"
+        ],
+        "external": true,
+        "notes": "13.04 maps to1302patch exactly as source. Numeric bundled payload version/standaloneABI unconfirmed. No PS5 or14.00 support inferred."
+      },
+      "licensing": "GamerHack has no declared repo licence. raw13gMIT excludes required primitives, kernelpatches and payloads; original licensing unresolved. Complete runtimes not vendored; no new external runtime represented as built in. Four closed compiled menu variants are privately archived and publicly link only the pinned original files.",
+      "preservation": {
+        "previousCatalogueFiles": 567,
+        "unchangedActiveNativeHelpers": 2,
+        "retainedSenderSnapshots": 16,
+        "nativeWorkspace": "Existing self-contained helper files, native APIs, original autoload backups and old versions untouched."
+      },
+      "languages": {
+        "count": 20,
+        "newKeys": 28,
+        "exactGeneratedEntriesVerified": 560
+      },
+      "search": "Durable editorial keywords updated only for PS4host andGTA5child; existing imagery/socialpreviews retained."
+    },
+    "receivers": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.13",
+        "items": 495,
+        "previousItems": 491,
+        "bytes": 682288,
+        "sha256": "e5ca12699547522a14f724b96b1025c37f0af78d825d4fcb2250ba1a0d2d913e"
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.13",
+        "items": 350,
+        "previousItems": 350,
+        "bytes": 548833,
+        "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20"
+      }
+    ],
+    "sender": {
+      "id": "console-payload-sender-39f407c84929",
+      "name": "console-payload-sender-1.7.0-39f407c84929.zip",
+      "version": "1.7.0+39f407c84929",
+      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-39f407c84929.zip",
+      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-39f407c84929.zip",
+      "bytes": 100212958,
+      "sha256": "76a022f26d95d23c6c03703e105a240045ed914a995e10ef94d98ee75c01970c",
+      "snapshot": "39f407c849299abfec8ebe3e18052e0d2277a8eb9b6da74d5cf9bacf6142b7b9",
+      "files": 275,
+      "payloads": 125,
+      "actions": 168,
+      "zipEntries": 275,
+      "manifestFiles": 274
+    },
+    "verification": {
+      "tests": {
+        "tests": 575,
+        "passed": 575,
+        "failed": 0,
+        "report": "docs/qa/host-repository-full-tests.txt"
+      },
+      "siteAudit": {
+        "pages": 492,
+        "localLinksAndAssets": 56276,
+        "issues": 0,
+        "report": "docs/qa/host-repository-site-audit.txt"
+      },
+      "integrity": "docs/qa/host-repository-integrity.json",
+      "browser": "docs/qa/host-repository-browser.json",
+      "archiveIndex": {
+        "items": 2162,
+        "fileRecords": 3106,
+        "presentFileRecords": 3106,
+        "missingFileRecords": 0,
+        "report": "docs/qa/host-repository-archive-index.txt"
+      },
+      "existingRuntimeVerification": "213files/179localdependencies/96upstreamfiles/eight authored guardcases verified; no new runtime build or execution."
+    },
+    "keyFiles": [
+      "scripts/prepare-host-repository-review.cjs",
+      "scripts/prepare-host-repository-menus.cjs",
+      "scripts/verify-host-repository-review.cjs",
+      "docs/host-repository-menu-actions.json",
+      "docs/host-repository-menu-jobs.json",
+      "docs/host-repository-review.md",
+      "i18n-tools/host-repository-translations.cjs",
+      "scripts/tests/host-repository-review.test.cjs"
+    ],
+    "resume": [
+      "Use current docs/host-menu-companion-build.json and sender manifest for latest active versions; do not restore the earlier1.6.0 snapshot from historical handoff sections. Every old snapshot remains available.",
+      "Private static source/release review files are retained in tmp/host-repository-review, separate from published pages and ready F: builds. No full repositories cloned or source archives downloaded.",
+      "Do not infer PS5,14.00, game-update or generic payloadABI support. New menuLoad remains disabled until independently established. No Bstlar downloads.",
+      "Do not rerun broad archived/self-contained page generators. Source helper preparers merge only their own action IDs and retain earlier data."
+    ],
+    "limitations": [
+      "Physical PS4/PS5 execution, receiver saving and native installation remain untested.",
+      "Four original-only menu variants do not have a verified standalone Load ABI.",
+      "Complete GamerHack/RAW GAME runtimes were not vendored because redistribution permissions for required components were not established.",
+      "Phone browser check observed1px existing connection-form document overflow at430px; no new CSS or broad layout changes."
+    ]
   }
 }

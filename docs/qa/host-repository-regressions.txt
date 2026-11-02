@@ -1,0 +1,36 @@
+✔ console catalogues contain only reviewed PS4/PS5 builds and keep platform scopes separate (12.1228ms)
+✔ expanded catalogue retains bounded capacity and refuses missing platforms or duplicate identities (0.5226ms)
+✔ native feeds exclude archives, cheat JSON, plugins and unsupported platform builds (2.9857ms)
+✔ console address, receiver selection and filters preserve exact platform behavior (0.3315ms)
+✔ ready-file filtering keeps original archives available without treating them as executable builds (0.1406ms)
+✔ public console catalogue defaults to ready files and combines format with the search (1.7539ms)
+✔ an intentional original-archive link selects the archive without hiding it behind the ready default (0.9528ms)
+✔ routine page builds preserve archived companions; regeneration requires the explicit option (8.4536ms)
+✔ every card exposes its direct Download beside Save before the collapsed technical details (2.457ms)
+✔ reviewed preparation instructions are text and retain their title/update markers (1.9392ms)
+✔ applying a console address updates actual receiver and client-preparation routes while download URLs stay pinned (0.7862ms)
+✔ XML catalogue deduplication retains regional filenames and resolves each console guide separately (4.4076ms)
+✔ download desk renders platform-specific actions, compatibility and truthful storage guidance (2.4343ms)
+✔ the four GamerHack variants keep exact original downloads, independent game pins and disabled loading (2.2519ms)
+✔ new builds join the existing menu families without replacing an older build or file hash (7.8325ms)
+✔ the integrated catalogues preserve historical actions from their separate source catalogues (3.9397ms)
+✔ RAW GAME remains an exact four-firmware external host rather than a vendored runtime (1.7609ms)
+✔ the BIN bootstrap keeps the existing official GoldHEN 2.3 bytes and only the 9.00 TCP9020 contract (1.4548ms)
+✔ active receiver IDs map to the exact downloadable host bytes while retaining every earlier receiver item (15.2714ms)
+✔ the rendered BIN Load stays disabled until the matching paired sender advertises the exact action (6.0538ms)
+✔ BIN capability rejects a wrong platform, format or loader port (0.2519ms)
+✔ integration preserves page content and is idempotent for root and nested pages (2.2159ms)
+✔ homepage migration removes old runtime, canvas and motion button while retaining the homepage stylesheet (0.2796ms)
+✔ later page-generator assets retain their ordering without repeated background rewrites (0.6118ms)
+✔ palette mapping stays stable for platform and resource sections (0.1461ms)
+✔ redirects and helper or self-contained payload pages remain unchanged (0.1387ms)
+✔ site pages include current background assets or the generator-safe shared loader (923.247ms)
+✔ PS3 file-list regeneration retains background integration and plain download links (552.3004ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1579.4868
