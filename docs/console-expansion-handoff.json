@@ -1,6 +1,8 @@
 {
   "publication20261102": {
     "firstPublishedCommit": "61ef2a139ccba62c81aea4afe8f4a7423026dfd5",
+    "followUpPublishedCommit": "6850fb24930ff5097e139ea15265639d6479bb1e",
+    "publicationStatus": "Both main snapshots successfully pushed and verified on origin/main, preserving all original history. Temporary upload branches deleted. Closing snapshot includes the finished metadata/language pass and final artwork closeout. All original requested branch work is already contained in main; helper, docs and tests are now committed rather than local-only.",
     "firstPublication": "1,879 files committed and pushed successfully. Temporary batch-upload branch removed.",
     "followUpValidation": "Latest shared artwork, Themes navigation and Reborn/Ozark configuration changes validated together: 619 tests pass; site audit checks 492 pages and 57624 local links/assets with zero issues. Category-art metadata refreshed to match updated sources, retaining every link and script.",
     "request": "Sort out local pushes and new work, push everything, and merge the branch.",
@@ -28,7 +30,7 @@
     "verification": "Local bare-remote integration test covers dry run, interrupted upload/resume, unchanged history/index/dirty files, verified final main and staging cleanup.",
     "status": "Complete: all 18 batches accepted, original four commits pushed, remote main verified at 0e3330855b61c93a8b8a74535ee3fef930c8614f, temporary codex/upload-objects-0e3330855b61 branch deleted. Repository credential username pinned locally to Speedy-away. Initial final push redundantly resent blobs and was stopped; corrected helper anchors all batch commits as direct boundary parents and verifies zero remaining file blobs before handoff. Final metadata handoff: 3574 objects; final main push: Total 0. Original commits/index/workspace preserved; substantial concurrent uncommitted changes remain local. Helper/docs/tests remain uncommitted. Resume state and completion timestamp retained in .git/batch-upload."
   },
-  "updatedAt": "2026-11-02T19:14:41.396Z",
+  "updatedAt": "2026-11-02T19:21:45.337Z",
   "status": "PS4/PS5 game batch5 complete locally: sixteen new verified game downloads, compact cards, exact Save routes and shared receiver11 integration. Source-site failures and the unrelated Wii U test are recorded separately.",
   "workspace": "C:/Users/whatw/Documents/GitHub/whatsite",
   "latestUserRequests": [
@@ -6406,5 +6408,123 @@
     "newBinaryDownloads": 0,
     "archiveChanges": 0,
     "published": false
+  },
+  "remainingConsoleImageRepair": {
+    "date": "2026-11-02",
+    "status": "Complete locally",
+    "request": "Check remaining console pages for missing images and fix them.",
+    "scope": "401 public console pages; immutable packaged console receiver HTML excluded.",
+    "newCardImages": 105,
+    "invalidImageReferencesRepaired": 2,
+    "changedPages": [
+      "console/ps3/cfw.html",
+      "console/ps3/jailbreaks.html",
+      "console/ps3/downloads.html",
+      "console/ps4/emulators.html",
+      "console/ps5/emulators.html",
+      "console/ps5/relapse.html",
+      "console/ps5/y2jb.html",
+      "console/ps5/themes.html",
+      "console/nintendo-switch/mods.html",
+      "console/nintendo-switch/themes.html",
+      "console/nintendo-switch-2.html",
+      "console/nintendo-switch-2/civswitch.html",
+      "console/nintendo-switch-2/ns2jb.html",
+      "console/nintendo-switch-2/save-tools.html",
+      "console/nintendo-switch-2/game-tools.html",
+      "console/wiiu/mods.html",
+      "console/wiiu/online.html",
+      "console/wiiu/vwii.html",
+      "console/wiiu/game-downloads.html",
+      "console/xbox-one-series/dependencies.html",
+      "console/xbox-one-series.html",
+      "console/nintendo-switch/apps.html",
+      "console/nintendo-switch/jump-n-bump.html",
+      "console/index.html",
+      "console/vault.html",
+      "console/retro/xbox.html",
+      "console/retro/xbox-online.html"
+    ],
+    "verification": {
+      "pages": 401,
+      "imageReferences": 9117,
+      "uniqueImagesDecoded": 1448,
+      "missingCards": 0,
+      "intentionalTextOnlyCards": 15,
+      "brokenImages": 0,
+      "decodeFailures": 0,
+      "byPlatform": {},
+      "focusedTests": 14,
+      "fullSitePages": 492,
+      "fullSiteLocalLinksAndAssets": 57624,
+      "fullSiteIssues": 0,
+      "browserChecked": [
+        "Console directory Nintendo panels",
+        "Original Xbox online ten game artworks",
+        "Switch game-mod resource previews"
+      ],
+      "idempotentRepair": true
+    },
+    "intentionalTextOnly": "15 exact reference, emergency-action, playlist and troubleshooting cards are documented in docs/console-image-text-only-cards.json. No missing project identity was invented.",
+    "preservation": "No binary downloads, archive inventories, console compatibility pins or old source files replaced. New artwork is local and provenance/hash recorded. Invalid/nonstandard old Switch icon bytes retained; active links use publisher gameplay screenshot.",
+    "builders": "Responsible console-directory, original Xbox, Vault, Switch, Switch2, WiiU, Xbox dependencies and PlayStation builders retain their image choices.",
+    "reports": [
+      "docs/qa/console-wide-image-audit.json",
+      "docs/qa/playstation-nonmod-card-image-repair.json",
+      "docs/qa/switch-console-image-repair.json",
+      "docs/qa/wiiu-xbox-framework-image-repair.json",
+      "docs/qa/jumpnbump-image-repair.json"
+    ],
+    "published": false,
+    "finalClosure": {
+      "checkedAt": "2026-11-02T19:21:45.337Z",
+      "status": "Finished; final 401-page image audit passes with zero missing cards, broken paths or decode failures.",
+      "workspacePreserved": true,
+      "published": false,
+      "userRequestedChatRemoval": true
+    }
+  },
+  "publicPageSearchLanguageRefresh": {
+    "completedAt": "2026-11-02T19:22:31.489Z",
+    "scope": "All 535 eligible site pages; 492 indexable public pages. Excludes archived downloads, host runtimes and standalone console helpers.",
+    "metadata": {
+      "audited": 535,
+      "updated": 9,
+      "searchAttributes": 5863,
+      "drift": 0,
+      "genericKeywordEntries": 0
+    },
+    "sitemap": {
+      "canonicalURLs": 492,
+      "removedNonIndexableOrNoncanonicalURL": "https://whatwhatboy.com/source-codes/games/gta5/ps4.html",
+      "idempotent": true,
+      "script": "scripts/refresh-public-sitemap.cjs"
+    },
+    "languages": {
+      "publicPagesWithLoader": 492,
+      "missingLoaders": 0,
+      "languages": 20,
+      "keysPerLanguage": 941,
+      "addedSharedKeys": 15,
+      "source": "i18n-tools/site-refresh-translations.cjs",
+      "limitation": "Long guide prose and additional unmatched text still use English fallback; this is not a claim that every paragraph has been translated.",
+      "auditFix": "Language audit and injection now use site-public-pages.cjs so archived host runtimes are excluded."
+    },
+    "verification": {
+      "tests": 31,
+      "failed": 0,
+      "report": "docs/qa/all-pages-refresh-tests.txt",
+      "audit": {
+        "pages": 492,
+        "linksAndAssets": 57624,
+        "issues": 0
+      },
+      "durability": "docs/qa/all-pages-durability.txt",
+      "languageCoverage": "docs/language-coverage.json",
+      "browser": "Spanish successfully applied to skip link, Overview and region labels; English preference restored.",
+      "screenshot": "docs/qa/all-pages-language-preview.png"
+    },
+    "published": false,
+    "archiveChanges": 0
   }
 }

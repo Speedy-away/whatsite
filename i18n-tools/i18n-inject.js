@@ -28,8 +28,7 @@ function walk(dir, out = []) {
 
 let added = 0, already = 0, failed = 0;
 
-const publicFiles = walk(ROOT);
-if (fs.existsSync(path.join(ROOT, 'downloads/index.html'))) publicFiles.push(path.join(ROOT, 'downloads/index.html'));
+const publicFiles = require('../scripts/site-public-pages.cjs').pages();
 for (const file of publicFiles) {
   const rel = path.relative(ROOT, file).replace(/\\/g, '/');
   let html = fs.readFileSync(file, 'utf8');

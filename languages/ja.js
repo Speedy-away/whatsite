@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "ゲームの更新: {gameVersion} · メニューのバージョン: {menuVersion} · BIN · GamerHack 5.05ホストのビルド · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "ゲームの更新: {gameVersion} · メニューのバージョン: 未記載 · BIN · GamerHack 5.05ホストのビルド · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "ゲームの更新: 未記載 · メニューのバージョン: {menuVersion} · BIN · GamerHack 5.05ホストのビルド · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "ゲームの更新: 未記載 · メニューのバージョン: 未記載 · BIN · GamerHack 5.05ホストのビルド · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "ゲームの更新: 未記載 · メニューのバージョン: 未記載 · BIN · GamerHack 5.05ホストのビルド · {titleIds}",
+    "Skip to content": "本文へ移動",
+    "Overview": "概要",
+    "Other Projects": "その他のプロジェクト",
+    "whatwhatboy home": "whatwhatboy ホーム",
+    "About": "このサイトについて",
+    "All downloads": "すべてのダウンロード",
+    "Browse all downloads": "すべてのダウンロードを見る",
+    "Browse this page": "このページを見る",
+    "Setup & source": "設定と出典",
+    "Game region": "ゲームの地域",
+    "Game update / package": "ゲーム更新／パッケージ",
+    "Menu + plugins.ini": "メニュー + plugins.ini",
+    "Download menu + plugins.ini": "メニューと plugins.ini をダウンロード",
+    "Original menu file": "元のメニューファイル",
+    "plugins.ini only": "plugins.ini のみ"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ja", t);

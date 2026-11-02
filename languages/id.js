@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Pembaruan game: {gameVersion} · Versi menu: {menuVersion} · BIN · Build host GamerHack 5.05 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Pembaruan game: {gameVersion} · Versi menu: Tidak disediakan · BIN · Build host GamerHack 5.05 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Pembaruan game: Tidak disediakan · Versi menu: {menuVersion} · BIN · Build host GamerHack 5.05 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Pembaruan game: Tidak disediakan · Versi menu: Tidak disediakan · BIN · Build host GamerHack 5.05 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Pembaruan game: Tidak disediakan · Versi menu: Tidak disediakan · BIN · Build host GamerHack 5.05 · {titleIds}",
+    "Skip to content": "Lewati ke konten",
+    "Overview": "Ringkasan",
+    "Other Projects": "Proyek lainnya",
+    "whatwhatboy home": "Beranda whatwhatboy",
+    "About": "Tentang",
+    "All downloads": "Semua unduhan",
+    "Browse all downloads": "Jelajahi semua unduhan",
+    "Browse this page": "Jelajahi halaman ini",
+    "Setup & source": "Pengaturan dan sumber",
+    "Game region": "Wilayah game",
+    "Game update / package": "Pembaruan game / paket",
+    "Menu + plugins.ini": "Menu + plugins.ini",
+    "Download menu + plugins.ini": "Unduh menu + plugins.ini",
+    "Original menu file": "File menu asli",
+    "plugins.ini only": "Hanya plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("id", t);

@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Bản cập nhật trò chơi: {gameVersion} · Phiên bản menu: {menuVersion} · BIN · Bản dựng host GamerHack 5.05 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Bản cập nhật trò chơi: {gameVersion} · Phiên bản menu: Không được cung cấp · BIN · Bản dựng host GamerHack 5.05 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Bản cập nhật trò chơi: Không được cung cấp · Phiên bản menu: {menuVersion} · BIN · Bản dựng host GamerHack 5.05 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Bản cập nhật trò chơi: Không được cung cấp · Phiên bản menu: Không được cung cấp · BIN · Bản dựng host GamerHack 5.05 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Bản cập nhật trò chơi: Không được cung cấp · Phiên bản menu: Không được cung cấp · BIN · Bản dựng host GamerHack 5.05 · {titleIds}",
+    "Skip to content": "Chuyển đến nội dung",
+    "Overview": "Tổng quan",
+    "Other Projects": "Dự án khác",
+    "whatwhatboy home": "Trang chủ whatwhatboy",
+    "About": "Giới thiệu",
+    "All downloads": "Tất cả bản tải xuống",
+    "Browse all downloads": "Xem tất cả bản tải xuống",
+    "Browse this page": "Duyệt trang này",
+    "Setup & source": "Thiết lập và nguồn",
+    "Game region": "Khu vực trò chơi",
+    "Game update / package": "Bản cập nhật / gói",
+    "Menu + plugins.ini": "Menu + plugins.ini",
+    "Download menu + plugins.ini": "Tải menu + plugins.ini",
+    "Original menu file": "Tệp menu gốc",
+    "plugins.ini only": "Chỉ plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("vi", t);

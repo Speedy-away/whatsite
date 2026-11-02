@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Aktualizacja gry: {gameVersion} · Wersja menu: {menuVersion} · BIN · Kompilacja hosta GamerHack 5.05 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Aktualizacja gry: {gameVersion} · Wersja menu: Nie podano · BIN · Kompilacja hosta GamerHack 5.05 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Aktualizacja gry: Nie podano · Wersja menu: {menuVersion} · BIN · Kompilacja hosta GamerHack 5.05 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Aktualizacja gry: Nie podano · Wersja menu: Nie podano · BIN · Kompilacja hosta GamerHack 5.05 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Aktualizacja gry: Nie podano · Wersja menu: Nie podano · BIN · Kompilacja hosta GamerHack 5.05 · {titleIds}",
+    "Skip to content": "Przejdź do treści",
+    "Overview": "Przegląd",
+    "Other Projects": "Inne projekty",
+    "whatwhatboy home": "Strona główna whatwhatboy",
+    "About": "Informacje",
+    "All downloads": "Wszystkie pliki",
+    "Browse all downloads": "Przeglądaj wszystkie pliki",
+    "Browse this page": "Przeglądaj tę stronę",
+    "Setup & source": "Konfiguracja i źródło",
+    "Game region": "Region gry",
+    "Game update / package": "Aktualizacja gry / pakiet",
+    "Menu + plugins.ini": "Menu + plugins.ini",
+    "Download menu + plugins.ini": "Pobierz menu + plugins.ini",
+    "Original menu file": "Oryginalny plik menu",
+    "plugins.ini only": "Tylko plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("pl", t);

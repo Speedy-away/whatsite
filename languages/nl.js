@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Game-update: {gameVersion} · Menuversie: {menuVersion} · BIN · Hostbuild van GamerHack 5.05 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Game-update: {gameVersion} · Menuversie: Niet opgegeven · BIN · Hostbuild van GamerHack 5.05 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Game-update: Niet opgegeven · Menuversie: {menuVersion} · BIN · Hostbuild van GamerHack 5.05 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Game-update: Niet opgegeven · Menuversie: Niet opgegeven · BIN · Hostbuild van GamerHack 5.05 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Game-update: Niet opgegeven · Menuversie: Niet opgegeven · BIN · Hostbuild van GamerHack 5.05 · {titleIds}",
+    "Skip to content": "Naar inhoud",
+    "Overview": "Overzicht",
+    "Other Projects": "Andere projecten",
+    "whatwhatboy home": "whatwhatboy startpagina",
+    "About": "Over",
+    "All downloads": "Alle downloads",
+    "Browse all downloads": "Alle downloads bekijken",
+    "Browse this page": "Deze pagina bekijken",
+    "Setup & source": "Instellen en bron",
+    "Game region": "Spelregio",
+    "Game update / package": "Spelupdate / pakket",
+    "Menu + plugins.ini": "Menu + plugins.ini",
+    "Download menu + plugins.ini": "Menu + plugins.ini downloaden",
+    "Original menu file": "Origineel menubestand",
+    "plugins.ini only": "Alleen plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("nl", t);

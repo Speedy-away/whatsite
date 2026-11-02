@@ -1,0 +1,39 @@
+✔ language picker dismiss closes once and releases its Escape handler (1.5532ms)
+✔ language picker choice closes once and releases its Escape handler (0.4748ms)
+✔ language picker outside closes once and releases its Escape handler (0.4054ms)
+✔ language picker escape closes once and releases its Escape handler (0.4079ms)
+✔ live status text and accessible attributes retain the latest English source on language changes (3.4037ms)
+✔ complete dictionary templates preserve console names and literal filenames without broad prefix translation (0.8659ms)
+✔ inserted guides translate while code, marked content and user-entered values stay unchanged (1.1045ms)
+✔ dynamic titles and description metadata revert to their newest source instead of stale text (0.6115ms)
+✔ failed dictionary loads keep the current language and can be retried successfully (0.8773ms)
+✔ a slow earlier dictionary cannot overwrite a newer choice, including RTL direction (0.7005ms)
+✔ validated date captures in translated templates localize while English reset preserves the source (11.3325ms)
+✔ date template captures retain their literal source when Intl is unavailable (1.1173ms)
+✔ metadata engine imports without writing or traversing the public site (37.155ms)
+✔ pure metadata updates preserve body, pin, canonical and are idempotent (9.4014ms)
+✔ generator finalizer restores metadata after legacy keyword/social overrides (7.9141ms)
+✔ noindex aliases retain exact directives and canonical without an indexable page schema (1.4696ms)
+✔ metadata checks stay stable when a wrapper appends only styles or scripts (0.9913ms)
+✔ metadata transform supplies a real title when a new page omits the tag (1.0308ms)
+✔ generator finalizer leaves downloaded and receiver HTML byte-identical (0.1374ms)
+✔ real shared and PS3 page generators retain complete metadata without a repair sweep (44.7369ms)
+✔ game-name aliases distinguish numbered games and console generations (3.5087ms)
+✔ resource aliases come from headings and tags rather than negative compatibility notes (1.6285ms)
+✔ native library fields and visible tags retain their filter scopes (0.3407ms)
+✔ Unicode search alternatives preserve escaped quotes and visible markup (2.107ms)
+✔ only searchable cards are changed and embedded scripts/comments are inert (0.2688ms)
+✔ immutable ready builds and downloaded HTML keep their exact bytes (0.5563ms)
+✔ new game aliases keep numbered titles distinct without inventing an update or year (0.2988ms)
+✔ file and gameplay tags add useful searches without assigning console support from a format (0.4569ms)
+✔ navigation and CTA keyword labels from the whole-site audit are rejected (2.1259ms)
+✔ specific projects, game names and firmware requirements remain searchable (0.0911ms)
+✔ label matching handles case and whitespace without broad word removal (0.0619ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 168.4664

@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "עדכון המשחק: {gameVersion} · גרסת התפריט: {menuVersion} · BIN · גרסת המארח GamerHack 5.05 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "עדכון המשחק: {gameVersion} · גרסת התפריט: לא צוין · BIN · גרסת המארח GamerHack 5.05 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "עדכון המשחק: לא צוין · גרסת התפריט: {menuVersion} · BIN · גרסת המארח GamerHack 5.05 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "עדכון המשחק: לא צוין · גרסת התפריט: לא צוין · BIN · גרסת המארח GamerHack 5.05 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "עדכון המשחק: לא צוין · גרסת התפריט: לא צוין · BIN · גרסת המארח GamerHack 5.05 · {titleIds}",
+    "Skip to content": "דלג לתוכן",
+    "Overview": "סקירה כללית",
+    "Other Projects": "פרויקטים נוספים",
+    "whatwhatboy home": "דף הבית של whatwhatboy",
+    "About": "אודות",
+    "All downloads": "כל ההורדות",
+    "Browse all downloads": "עיון בכל ההורדות",
+    "Browse this page": "עיון בעמוד זה",
+    "Setup & source": "הגדרה ומקור",
+    "Game region": "אזור המשחק",
+    "Game update / package": "עדכון משחק / חבילה",
+    "Menu + plugins.ini": "תפריט + plugins.ini",
+    "Download menu + plugins.ini": "הורדת תפריט + plugins.ini",
+    "Original menu file": "קובץ התפריט המקורי",
+    "plugins.ini only": "plugins.ini בלבד"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("he", t);

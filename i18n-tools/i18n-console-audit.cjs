@@ -55,7 +55,7 @@ if (start<0 || end<0) throw Error('Runtime lookup functions moved; update this a
 const runtimeSandbox={current:'en',DEFAULT_LANG:'en'};
 vm.runInNewContext('var templateCache = new WeakMap();\n'+runtime.slice(start,end)+'\nthis.lookup=lookup;',runtimeSandbox);
 const lookup=runtimeSandbox.lookup;
-const publicFiles=[...files(root),path.join(root,'downloads/index.html')].filter(file=>fs.existsSync(file));
+const publicFiles=require('../scripts/site-public-pages.cjs').pages();
 const pages=[];
 const all=new Map();
 for(const file of publicFiles) {

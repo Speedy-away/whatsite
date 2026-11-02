@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "गेम अपडेट: {gameVersion} · मेन्यू संस्करण: {menuVersion} · BIN · GamerHack 5.05 होस्ट बिल्ड · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "गेम अपडेट: {gameVersion} · मेन्यू संस्करण: नहीं दिया गया · BIN · GamerHack 5.05 होस्ट बिल्ड · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "गेम अपडेट: नहीं दिया गया · मेन्यू संस्करण: {menuVersion} · BIN · GamerHack 5.05 होस्ट बिल्ड · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "गेम अपडेट: नहीं दिया गया · मेन्यू संस्करण: नहीं दिया गया · BIN · GamerHack 5.05 होस्ट बिल्ड · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "गेम अपडेट: नहीं दिया गया · मेन्यू संस्करण: नहीं दिया गया · BIN · GamerHack 5.05 होस्ट बिल्ड · {titleIds}",
+    "Skip to content": "सामग्री पर जाएँ",
+    "Overview": "अवलोकन",
+    "Other Projects": "अन्य परियोजनाएँ",
+    "whatwhatboy home": "whatwhatboy मुखपृष्ठ",
+    "About": "परिचय",
+    "All downloads": "सभी डाउनलोड",
+    "Browse all downloads": "सभी डाउनलोड देखें",
+    "Browse this page": "यह पृष्ठ देखें",
+    "Setup & source": "सेटअप और स्रोत",
+    "Game region": "गेम का क्षेत्र",
+    "Game update / package": "गेम अपडेट / पैकेज",
+    "Menu + plugins.ini": "मेन्यू + plugins.ini",
+    "Download menu + plugins.ini": "मेन्यू + plugins.ini डाउनलोड करें",
+    "Original menu file": "मूल मेन्यू फ़ाइल",
+    "plugins.ini only": "केवल plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("hi", t);

@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "تحديث اللعبة: {gameVersion} · إصدار القائمة: {menuVersion} · BIN · نسخة المضيف GamerHack 5.05 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "تحديث اللعبة: {gameVersion} · إصدار القائمة: غير محدد · BIN · نسخة المضيف GamerHack 5.05 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "تحديث اللعبة: غير محدد · إصدار القائمة: {menuVersion} · BIN · نسخة المضيف GamerHack 5.05 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "تحديث اللعبة: غير محدد · إصدار القائمة: غير محدد · BIN · نسخة المضيف GamerHack 5.05 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "تحديث اللعبة: غير محدد · إصدار القائمة: غير محدد · BIN · نسخة المضيف GamerHack 5.05 · {titleIds}",
+    "Skip to content": "انتقل إلى المحتوى",
+    "Overview": "نظرة عامة",
+    "Other Projects": "مشاريع أخرى",
+    "whatwhatboy home": "الرئيسية whatwhatboy",
+    "About": "حول",
+    "All downloads": "كل التنزيلات",
+    "Browse all downloads": "تصفح كل التنزيلات",
+    "Browse this page": "تصفح هذه الصفحة",
+    "Setup & source": "الإعداد والمصدر",
+    "Game region": "منطقة اللعبة",
+    "Game update / package": "تحديث اللعبة / الحزمة",
+    "Menu + plugins.ini": "القائمة + plugins.ini",
+    "Download menu + plugins.ini": "تنزيل القائمة + plugins.ini",
+    "Original menu file": "ملف القائمة الأصلي",
+    "plugins.ini only": "plugins.ini فقط"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ar", t);

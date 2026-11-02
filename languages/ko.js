@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "게임 업데이트: {gameVersion} · 메뉴 버전: {menuVersion} · BIN · GamerHack 5.05 호스트 빌드 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "게임 업데이트: {gameVersion} · 메뉴 버전: 제공되지 않음 · BIN · GamerHack 5.05 호스트 빌드 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "게임 업데이트: 제공되지 않음 · 메뉴 버전: {menuVersion} · BIN · GamerHack 5.05 호스트 빌드 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "게임 업데이트: 제공되지 않음 · 메뉴 버전: 제공되지 않음 · BIN · GamerHack 5.05 호스트 빌드 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "게임 업데이트: 제공되지 않음 · 메뉴 버전: 제공되지 않음 · BIN · GamerHack 5.05 호스트 빌드 · {titleIds}",
+    "Skip to content": "본문으로 이동",
+    "Overview": "개요",
+    "Other Projects": "다른 프로젝트",
+    "whatwhatboy home": "whatwhatboy 홈",
+    "About": "소개",
+    "All downloads": "모든 다운로드",
+    "Browse all downloads": "모든 다운로드 보기",
+    "Browse this page": "이 페이지 둘러보기",
+    "Setup & source": "설정 및 출처",
+    "Game region": "게임 지역",
+    "Game update / package": "게임 업데이트 / 패키지",
+    "Menu + plugins.ini": "메뉴 + plugins.ini",
+    "Download menu + plugins.ini": "메뉴와 plugins.ini 다운로드",
+    "Original menu file": "원본 메뉴 파일",
+    "plugins.ini only": "plugins.ini만"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ko", t);

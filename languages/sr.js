@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Ажурирање игре: {gameVersion} · Верзија менија: {menuVersion} · BIN · Издање хоста GamerHack 5.05 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Ажурирање игре: {gameVersion} · Верзија менија: Није наведено · BIN · Издање хоста GamerHack 5.05 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Ажурирање игре: Није наведено · Верзија менија: {menuVersion} · BIN · Издање хоста GamerHack 5.05 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Ажурирање игре: Није наведено · Верзија менија: Није наведено · BIN · Издање хоста GamerHack 5.05 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Ажурирање игре: Није наведено · Верзија менија: Није наведено · BIN · Издање хоста GamerHack 5.05 · {titleIds}",
+    "Skip to content": "Пређи на садржај",
+    "Overview": "Преглед",
+    "Other Projects": "Други пројекти",
+    "whatwhatboy home": "Почетна whatwhatboy",
+    "About": "О пројекту",
+    "All downloads": "Сва преузимања",
+    "Browse all downloads": "Прегледај сва преузимања",
+    "Browse this page": "Прегледај ову страницу",
+    "Setup & source": "Подешавање и извор",
+    "Game region": "Регион игре",
+    "Game update / package": "Ажурирање игре / пакет",
+    "Menu + plugins.ini": "Мени + plugins.ini",
+    "Download menu + plugins.ini": "Преузми мени + plugins.ini",
+    "Original menu file": "Оригинална датотека менија",
+    "plugins.ini only": "Само plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("sr", t);

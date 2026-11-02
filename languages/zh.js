@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "游戏更新: {gameVersion} · 菜单版本: {menuVersion} · BIN · GamerHack 5.05 站点构建 · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "游戏更新: {gameVersion} · 菜单版本: 未提供 · BIN · GamerHack 5.05 站点构建 · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "游戏更新: 未提供 · 菜单版本: {menuVersion} · BIN · GamerHack 5.05 站点构建 · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "游戏更新: 未提供 · 菜单版本: 未提供 · BIN · GamerHack 5.05 站点构建 · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "游戏更新: 未提供 · 菜单版本: 未提供 · BIN · GamerHack 5.05 站点构建 · {titleIds}",
+    "Skip to content": "跳转到内容",
+    "Overview": "概览",
+    "Other Projects": "其他项目",
+    "whatwhatboy home": "whatwhatboy 首页",
+    "About": "关于",
+    "All downloads": "全部下载",
+    "Browse all downloads": "浏览全部下载",
+    "Browse this page": "浏览本页",
+    "Setup & source": "设置与来源",
+    "Game region": "游戏地区",
+    "Game update / package": "游戏更新／软件包",
+    "Menu + plugins.ini": "菜单 + plugins.ini",
+    "Download menu + plugins.ini": "下载菜单和 plugins.ini",
+    "Original menu file": "原始菜单文件",
+    "plugins.ini only": "仅 plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("zh", t);

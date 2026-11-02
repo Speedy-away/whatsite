@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "თამაშის განახლება: {gameVersion} · მენიუს ვერსია: {menuVersion} · BIN · GamerHack 5.05-ის ჰოსტის ბილდი · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "თამაშის განახლება: {gameVersion} · მენიუს ვერსია: მითითებული არ არის · BIN · GamerHack 5.05-ის ჰოსტის ბილდი · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "თამაშის განახლება: მითითებული არ არის · მენიუს ვერსია: {menuVersion} · BIN · GamerHack 5.05-ის ჰოსტის ბილდი · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "თამაშის განახლება: მითითებული არ არის · მენიუს ვერსია: მითითებული არ არის · BIN · GamerHack 5.05-ის ჰოსტის ბილდი · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "თამაშის განახლება: მითითებული არ არის · მენიუს ვერსია: მითითებული არ არის · BIN · GamerHack 5.05-ის ჰოსტის ბილდი · {titleIds}",
+    "Skip to content": "შინაარსზე გადასვლა",
+    "Overview": "მიმოხილვა",
+    "Other Projects": "სხვა პროექტები",
+    "whatwhatboy home": "whatwhatboy მთავარი",
+    "About": "შესახებ",
+    "All downloads": "ყველა ჩამოტვირთვა",
+    "Browse all downloads": "ყველა ჩამოტვირთვის ნახვა",
+    "Browse this page": "ამ გვერდის დათვალიერება",
+    "Setup & source": "გამართვა და წყარო",
+    "Game region": "თამაშის რეგიონი",
+    "Game update / package": "თამაშის განახლება / პაკეტი",
+    "Menu + plugins.ini": "მენიუ + plugins.ini",
+    "Download menu + plugins.ini": "მენიუს და plugins.ini-ის ჩამოტვირთვა",
+    "Original menu file": "მენიუს ორიგინალი ფაილი",
+    "plugins.ini only": "მხოლოდ plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ka", t);

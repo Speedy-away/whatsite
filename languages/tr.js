@@ -929,7 +929,22 @@
     "Game update: {gameVersion} · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Oyun güncellemesi: {gameVersion} · Menü sürümü: {menuVersion} · BIN · GamerHack 5.05 host derlemesi · {titleIds}",
     "Game update: {gameVersion} · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Oyun güncellemesi: {gameVersion} · Menü sürümü: Belirtilmedi · BIN · GamerHack 5.05 host derlemesi · {titleIds}",
     "Game update: Not provided · Menu version: {menuVersion} · BIN · GamerHack 5.05 build · {titleIds}": "Oyun güncellemesi: Belirtilmedi · Menü sürümü: {menuVersion} · BIN · GamerHack 5.05 host derlemesi · {titleIds}",
-    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Oyun güncellemesi: Belirtilmedi · Menü sürümü: Belirtilmedi · BIN · GamerHack 5.05 host derlemesi · {titleIds}"
+    "Game update: Not provided · Menu version: Not provided · BIN · GamerHack 5.05 build · {titleIds}": "Oyun güncellemesi: Belirtilmedi · Menü sürümü: Belirtilmedi · BIN · GamerHack 5.05 host derlemesi · {titleIds}",
+    "Skip to content": "İçeriğe geç",
+    "Overview": "Genel bakış",
+    "Other Projects": "Diğer projeler",
+    "whatwhatboy home": "whatwhatboy ana sayfa",
+    "About": "Hakkında",
+    "All downloads": "Tüm indirmeler",
+    "Browse all downloads": "Tüm indirmelere göz at",
+    "Browse this page": "Bu sayfaya göz at",
+    "Setup & source": "Kurulum ve kaynak",
+    "Game region": "Oyun bölgesi",
+    "Game update / package": "Oyun güncellemesi / paket",
+    "Menu + plugins.ini": "Menü + plugins.ini",
+    "Download menu + plugins.ini": "Menü + plugins.ini indir",
+    "Original menu file": "Orijinal menü dosyası",
+    "plugins.ini only": "Yalnızca plugins.ini"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("tr", t);
