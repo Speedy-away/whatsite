@@ -14,7 +14,7 @@ function read() {
 function get(key, kind = 'tools') {
   const data = read();
   if (!data) return null;
-  const fallback = kind === 'emulators' ? 'emulators-emulators' : ['games','mods','themes'].includes(kind) ? 'category-'+kind : kind === 'downloads' ? 'library-game-downloads' : 'category-apps';
+  const fallback = kind === 'themes' ? 'category-themes-universal' : kind === 'emulators' ? 'emulators-emulators' : ['games','mods'].includes(kind) ? 'category-'+kind : kind === 'downloads' ? 'library-game-downloads' : 'category-apps';
   return data.covers[data.routes[key] || key] || data.covers[fallback];
 }
 function image(cover, alt, className = '') {

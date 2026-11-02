@@ -297,7 +297,7 @@ function createBridge({root = ROOT, actions = loadActions(root), token = crypto.
         if (Object.keys(body).some(k => !['actionId','platform','address','firmware','gameVersion'].includes(k))) throw fail('unexpected-field','The request contains an unsupported field.');
         const action = actions.find(a => a.id === body.actionId && a.platform === body.platform);
         if (!action) throw fail('unknown-action','Choose an action from this platform host catalogue.');
-        if (action.firmwares && action.firmwares.length && !action.firmwares.includes(body.firmware)) throw fail('firmware-mismatch','Select a firmware supported by this action.');
+        if (!body.firmware || !require('../assets/host-dashboard.js').firmwareMatches(action,body.firmware)) throw fail('firmware-mismatch','Select a firmware supported by this action.');
         const gameVersions = action.gameVersions && action.gameVersions.length ? action.gameVersions : action.gameVersion ? [action.gameVersion] : [];
         if (gameVersions.length && !gameVersions.includes(body.gameVersion)) throw fail('game-version-mismatch','Select the exact game update supported by this menu.');
         const address = await resolveAddress(body.address);

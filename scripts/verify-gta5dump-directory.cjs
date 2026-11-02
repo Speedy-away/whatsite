@@ -15,6 +15,8 @@ async function hashStream(stream) {
 }
 async function main() {
   assert.equal(archiveQA.passed, true, 'Archive verification must pass first');
+  assert.equal(archiveQA.summary.requestedProjects, 51, 'Archive report must cover the complete catalogue');
+  assert.equal(archiveQA.summary.passed, 49, 'Every available exact snapshot must pass verification');
   const gta5dump = catalog.projects.filter(project => project.group === 'gta5dump');
   assert.equal(gta5dump.length, 48);
   assert.deepEqual(gta5dump.map(project => project.repo).sort(), expected.map(item => 'GTA5dump/' + item.name).sort());
@@ -25,8 +27,9 @@ async function main() {
   for (const card of cards) {
     assert.doesNotMatch(card, /<p\b/i, 'Compact cards must not contain description paragraphs');
     assert.doesNotMatch(card, />\s*View (?:source|repository)/i, 'Compact cards must not contain View source actions');
+    assert.doesNotMatch(card, /<details\b|Archive details/i, 'Compact cards must not contain archive details');
   }
-  const downloads = [], unavailable = [];
+  const downloads = [], unavailable = [], websiteDownloads = [];
   for (const project of catalog.projects) {
     const card = cards.find(card => card.match(/\bdata-search="([^"]*)"/)?.[1].split(/\s+/).includes(project.repo.toLowerCase()));
     assert.ok(card, 'Missing project card: ' + project.repo);
@@ -38,7 +41,11 @@ async function main() {
     }
     const file = manifest.files.find(file => file.id === project.id && file.commit === project.commit && file.status === 'downloaded');
     assert.ok(file?.backupPath, 'Missing exact archived snapshot: ' + project.repo);
-    assert.ok(card.includes(file.local), 'Card does not point to its own snapshot');
+    const href = card.match(/<a\b[^>]*\bhref="([^"]+)"[^>]*>\s*Download\b/)?.[1];
+    assert.ok(href, 'Missing download action: ' + project.repo);
+    if (href.startsWith('/downloads/')) assert.equal(decodeURI(href), file.local);
+    else assert.equal(href, `https://codeload.github.com/${project.repo}/zip/${project.commit}`, 'External download must be a real ZIP pinned to the exact source commit');
+    websiteDownloads.push({repo: project.repo, href, mode: href.startsWith('/downloads/') ? 'local-mirror' : 'upstream-exact-commit-zip', backupSHA256: file.sha256, backupIsLocalExport: Boolean(file.archiveMethod)});
     const item = audit.items.find(item => item.id === file.inventoryId);
     assert.ok(item?.files.some(saved => saved.sha256 === file.sha256 && saved.bytes === file.bytes && saved.backupPath === file.backupPath));
     downloads.push({...file, repo: project.repo});
@@ -66,8 +73,8 @@ async function main() {
     totalProjectCards: cards.length, availableGta5dumpSnapshots: gta5dump.filter(project => project.commit).length,
     unavailable, downloadableSnapshots: downloads.length, bytes: downloads.reduce((sum, file) => sum + file.bytes, 0),
     initial18Preserved: true, cardDescriptions: 0, cardViewSourceActions: 0, metadataSynchronized: true,
-    archiveReport: 'docs/qa/gta5-pc-source-archives.json', httpHashChecks: http.length, http};
+    archiveReport: 'docs/qa/gta5-pc-source-archives.json', httpHashChecks: http.length, websiteDownloads, http};
   fs.writeFileSync(path.join(root, 'docs/qa/gta5dump-all-site.json'), JSON.stringify(report, null, 2) + '\n');
-  console.log(JSON.stringify({...report, http: undefined}));
+  console.log(JSON.stringify({...report, http: undefined, websiteDownloads: undefined}));
 }
 if (require.main === module) main().catch(error => {console.error(error); process.exitCode = 1;});

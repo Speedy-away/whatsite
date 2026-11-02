@@ -336,7 +336,9 @@
       if (connection.warning(destination)) { tell('A previous transfer has an unknown result. Check the console and clear its transfer warning before loading again.',true); return; }
       var bridgeAction = bridge && bridge.actions && bridge.actions.some(function (a) { return a.id === action.id && a.platform === platform && a.available; });
       if (bridgeAction && (!bridge.capabilities || !bridge.capabilities.uncertainOutcomes)) { tell('Update the desktop sender before loading. This version cannot report uncertain transfer results.',true); return; }
-      if (action.confirmBeforeLoad && (!win.confirm || !win.confirm(action.confirmBeforeLoad))) { tell('Load cancelled. Nothing was sent.'); return; }
+      var confirmation = action.confirmBeforeLoad;
+      if (confirmation && win.__scoobyI18n && win.__scoobyI18n.t) confirmation = win.__scoobyI18n.t(confirmation);
+      if (confirmation && (!win.confirm || !win.confirm(confirmation))) { tell('Load cancelled. Nothing was sent.'); return; }
       var copyControl = doc.querySelector('#host-download-on-run'), copy = copyControl && copyControl.checked;
       if (copy) {
         try { requestDownload(action,null,downloadPlan(action,platform,destination,detection,client.normalizeAddress)); }

@@ -18,6 +18,12 @@ function applyThemes(html, file) {
     const [url,label] = entry;
     html = html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/g, nav => nav.includes(`href="${url}"`) ? nav : nav.replace('</nav>',`<a href="${url}">${label}</a></nav>`));
     const art = require('./category-card-art.cjs');
+    html = html.replace(/<article\b(?=[^>]*\bdata-console-theme-card)[^>]*>[\s\S]*?<\/article>/g, card => {
+      const old=/<div\b(?=[^>]*\bdata-category-art=)[^>]*>/.exec(card);
+      if(!old)return card;
+      const area=art.range(card,old.index,old[0]);
+      return card.slice(0,area.start)+require('./merged-category-covers.cjs').render(url,{title:label,kind:'themes'})+card.slice(area.end);
+    });
     const start = /<section\b(?=[^>]*id="start")[^>]*>/.exec(html);
     if (start && themes[relative]) {
       const section = art.range(html,start.index,start[0]);

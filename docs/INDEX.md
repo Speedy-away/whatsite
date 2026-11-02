@@ -7,6 +7,7 @@
 - [PS5 downloads and payload handling](guides/ps5-console-downloads.md)
 - [File formats and archive extraction](guides/console-files-and-archives.md)
 - [PS4 LaunchPad and PS5 Payload Manager / autoload](host-payload-management.md)
+- [Native console file and payload workspace](host-native-workspace.md)
 
 The website also has separate [PS3 downloads](../console/ps3/downloads.html) and
 [Nintendo Switch homebrew](../console/nintendo-switch.html) pages. Their builds

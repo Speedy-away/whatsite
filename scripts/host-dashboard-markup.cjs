@@ -20,7 +20,8 @@ function nativeWorkspacePanel(platform,view) {
 function workspaceDashboard(platform,actions,view) {
   const full=dashboard(platform,actions),start=full.indexOf('  <div class="host-tools-grid">'),end=full.indexOf('  <details class="host-sender">');
   if(start<0||end<=start)throw Error('Shared connection markup changed; refusing an incomplete workspace page.');
-  return full.slice(0,start)+nativeWorkspacePanel(platform,view)+(view==='payloads'?managerPanel(platform):'')+'<p class="host-dashboard-status" id="host-status" role="status">Configure the console address, then open its installed native workspace.</p>'+full.slice(end);
+  const tail=full.slice(end).replace(/<p class="host-note">Download uses the configured console downloader,[\s\S]*?<\/p>/,'');
+  return full.slice(0,start)+nativeWorkspacePanel(platform,view)+(view==='payloads'?managerPanel(platform):'')+'<p class="host-dashboard-status" id="host-status" role="status">Configure the console address, then open its installed native workspace.</p>'+tail;
 }
 
 function dashboard(platform, actions, {manager = false, gameScope = '', gamesLanding = false} = {}) {

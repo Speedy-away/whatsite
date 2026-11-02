@@ -48,7 +48,8 @@ function archiveCard(project) {
   if (!entry) throw Error('Missing source inventory item: ' + project.inventoryId);
   const file = entry.files?.find(file => /source.*\.zip$/i.test(file.name));
   const mirror = publicMirror(file?.local, root);
-  const source = file?.bytes >= MAX_MIRROR_BYTES && /^https:\/\//.test(file.sourceUrl || '') ? file.sourceUrl : null;
+  const originalZip = file?.archiveMethod && project.repo && project.commit ? `https://codeload.github.com/${project.repo}/zip/${project.commit}` : file?.sourceUrl;
+  const source = file?.bytes >= MAX_MIRROR_BYTES && /^https:\/\//.test(originalZip || '') ? originalZip : null;
   if (!file || (!mirror && !source)) throw Error('Missing public source archive: ' + project.inventoryId);
   const bytes = mirror ? mirror.bytes : file.bytes;
   if (bytes !== file.bytes) throw Error('Source archive size mismatch: ' + file.local);
@@ -56,25 +57,25 @@ function archiveCard(project) {
   const projectDetails = project.commit ? `<dt>Branch</dt><dd>${esc(project.branch)}</dd><dt>Commit</dt><dd>${ext(project.commitUrl, '<code>' + esc(project.commit) + '</code>')}</dd><dt>License</dt><dd>${esc(project.license || 'No license identified in the reviewed repository metadata')}</dd>${project.compatibility ? `<dt>Game compatibility</dt><dd>${esc(project.compatibility)}</dd>` : ''}` : '';
   const provenance = project.compact ? `<dt>Repository</dt><dd><code>${esc(project.repo || entry.url)}</code></dd>${project.availabilityNote ? `<dt>Contents</dt><dd>${esc(project.availabilityNote)}</dd>` : ''}` : '';
   const exportNote = file.archiveMethod ? '<dt>Archive provenance</dt><dd>Source export from the verified Git commit.</dd>' : '';
-  const details = `<details class="source-file-details"><summary>Archive details</summary><dl><dt>Version</dt><dd>${esc(version)}</dd>${projectDetails}${provenance}${exportNote}<dt>File</dt><dd>${esc(file.name)}</dd><dt>Size</dt><dd>${bytes.toLocaleString('en-GB')} bytes</dd><dt>SHA-256</dt><dd><code>${esc(file.sha256)}</code></dd></dl></details>`;
+  const archiveScope = !mirror && file.archiveMethod ? 'Local archive ' : '';
+  const details = `<details class="source-file-details"><summary>Archive details</summary><dl><dt>Version</dt><dd>${esc(version)}</dd>${projectDetails}${provenance}${exportNote}<dt>${archiveScope}File</dt><dd>${esc(file.name)}</dd><dt>${archiveScope}Size</dt><dd>${bytes.toLocaleString('en-GB')} bytes</dd><dt>${archiveScope}SHA-256</dt><dd><code>${esc(file.sha256)}</code></dd></dl></details>`;
   const size = bytes >= 1048576 ? (bytes / 1048576).toFixed(1) + ' MiB' : (bytes / 1024).toFixed(1) + ' KiB';
   const description = esc(project.description || '');
-  const downloadLabel = project.compact && project.contentKind === 'data' ? 'Download reference ZIP' : project.compact && project.contentKind === 'decompiled-scripts' ? 'Download scripts ZIP' : project.compact && (project.status === 'metadata-only' || ['metadata', 'archive'].includes(project.contentKind)) ? 'Download repository ZIP' : project.compact ? 'Download ZIP' : 'Download source ZIP';
+  const downloadLabel = project.compact ? 'Download' : 'Download source ZIP';
   const repositoryAction = project.compact ? '' : ext(project.branchUrl || entry.url, project.branchUrl ? 'View source' : 'View repository');
-  const downloadTail = project.compact ? `<span class="source-download-tail">(${size}) <i class="fas fa-download" aria-hidden="true"></i></span>` : `(${size}) <i class="fas fa-download" aria-hidden="true"></i>`;
+  const downloadTail = !mirror && file.archiveMethod ? '<i class="fas fa-download" aria-hidden="true"></i>' : project.compact ? `<span class="source-download-tail">(${size}) <i class="fas fa-download" aria-hidden="true"></i></span>` : `(${size}) <i class="fas fa-download" aria-hidden="true"></i>`;
   let card = resource(esc(project.title), description, `<a href="${esc(mirror?.local || source)}" ${mirror ? 'download' : 'target="_blank" rel="noopener noreferrer"'}>${downloadLabel} ${downloadTail}</a>${repositoryAction}`, project.image || '');
   if (project.edition) card = card.replace('</h3>', `</h3><span class="source-edition source-edition--${project.edition.toLowerCase()}">GTA 5 ${esc(project.edition)}</span>`);
   if (project.compact) card = card.replace('class="guide-resource"', 'class="guide-resource source-project-card" data-source-project')
     .replace('<p>' + description + '</p>', '')
     .replace(/data-search="[^"]*"/, `data-search="${esc([project.title, project.repo, project.edition].filter(Boolean).join(' ').toLowerCase())}"`);
-  return card.replace('</article>', `${details}</article>`);
+  return project.compact ? card : card.replace('</article>', `${details}</article>`);
 }
 
 function unavailableSourceCard(project) {
   const empty = project.status === 'empty';
   const status = empty ? 'No files available' : 'Archive unavailable';
-  const note = project.availabilityNote || (empty ? 'The repository has no committed files.' : 'No verified local archive is available.');
-  return `<article class="guide-resource source-project-card" data-source-project data-search="${esc([project.title, project.repo, project.edition].filter(Boolean).join(' ').toLowerCase())}"><h3>${esc(project.title)}</h3>${project.edition ? `<span class="source-edition source-edition--${project.edition.toLowerCase()}">GTA 5 ${esc(project.edition)}</span>` : ''}<span class="source-availability">${status}</span><details class="source-file-details"><summary>Archive details</summary><dl><dt>Status</dt><dd>${esc(note)}</dd><dt>Repository</dt><dd><code>${esc(project.repo || project.branchUrl || '')}</code></dd>${project.commit ? `<dt>Commit</dt><dd><code>${esc(project.commit)}</code></dd>` : ''}</dl></details></article>`;
+  return `<article class="guide-resource source-project-card" data-source-project data-search="${esc([project.title, project.repo, project.edition].filter(Boolean).join(' ').toLowerCase())}"><h3>${esc(project.title)}</h3>${project.edition ? `<span class="source-edition source-edition--${project.edition.toLowerCase()}">GTA 5 ${esc(project.edition)}</span>` : ''}<span class="source-availability">${status}</span></article>`;
 }
 
 function gtaPCContent() {

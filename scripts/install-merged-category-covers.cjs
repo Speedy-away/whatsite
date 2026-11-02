@@ -8,7 +8,8 @@ function install() {
   const plan = read('docs/image-prompts/merged-category-plan.json');
   const generated = read('docs/image-prompts/merged-category-generation-results.json').results;
   const retries = fs.existsSync(path.join(root,'docs/image-prompts/merged-category-retries.json')) ? read('docs/image-prompts/merged-category-retries.json').results : [];
-  const byId = new Map(generated.concat(retries).filter(item=>item.status==='fulfilled').map(item=>[item.id,item]));
+  const finish = fs.existsSync(path.join(root,'docs/image-prompts/merged-category-theme-finish.json')) ? read('docs/image-prompts/merged-category-theme-finish.json').results : [];
+  const byId = new Map(generated.concat(retries,finish).filter(item=>item.status==='fulfilled').map(item=>[item.id,item]));
   const missing = plan.covers.filter(item=>!byId.has(item.id));
   assert.equal(missing.length,0,'Missing finished merged covers: '+missing.map(item=>item.id).join(', '));
   const covers = {};

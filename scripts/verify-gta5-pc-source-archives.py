@@ -27,7 +27,7 @@ INITIAL_REPORT = ROOT / "docs/qa/gta5-pc-source-archives-initial18.json"
 BACKUP_ROOT = Path("F:/whatsite-backup-downloads-etc")
 MAX_ENTRIES = 100_000
 MAX_UNCOMPRESSED = 2 * 1024**3
-MAX_UNCOMPRESSED_OVERRIDE = 8 * 1024**3
+MAX_UNCOMPRESSED_OVERRIDE = 16 * 1024**3
 MAX_MEMBER_BYTES = 512 * 1024**2
 SOURCE_SUFFIXES = {".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx", ".inl"}
 BINARY_SUFFIXES = {".exe", ".dll", ".asi", ".lib", ".obj", ".pdb", ".so", ".a", ".o", ".bin", ".sys"}
@@ -157,7 +157,7 @@ def verify_project(project: dict, manifest_files: list) -> dict:
             raise ValueError("unknown catalog content kind: " + str(content_kind))
         max_uncompressed = project.get("maxUncompressedBytes", MAX_UNCOMPRESSED)
         if isinstance(max_uncompressed, bool) or not isinstance(max_uncompressed, int) or not 0 < max_uncompressed <= MAX_UNCOMPRESSED_OVERRIDE:
-            raise ValueError("configured uncompressed limit must be a positive integer no greater than 8 GiB")
+            raise ValueError("configured uncompressed limit must be a positive integer no greater than 16 GiB")
         matches = [file for file in manifest_files if file.get("id") == project["id"] and file.get("commit") == commit and file.get("status") == "downloaded"]
         if not matches:
             row["status"] = "incomplete"

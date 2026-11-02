@@ -77,7 +77,7 @@ function build(collection,{onlyPages}={}){
   const content=ui.section('discord-resources',game.title+' · reviewed sources',help+filters(entries,[game])+menuGrid(entries))+assets;
   const file=path.join(root,game.page.slice(1));
   if(collection==='xbox360'&&game.id==='cod4'&&fs.existsSync(file))insert(file,content,'DISCORD PLATFORM RESOURCES');
-  else ui.page(game.page.slice(1),game.title+' · '+platform+' Resources',game.title+' source-listed menus, original files, compatibility notes and guides.',game.image,nav,content,'#discord-resources','Browse resources');
+  else ui.page(game.page.slice(1),game.title+' · '+platform+' Resources',game.title+' '+platform+' mod menus, original files, compatibility notes and guides.',game.image,nav,content,'#discord-resources','Browse resources');
  }
  if(requested(hub))insert(path.join(root,hub),ui.section('discord-game-catalogue',grouped?'Choose your Xbox 360 game or tool':'Source-reviewed games & tools',gameGrid(grouped?grouped.overview:data.games)+`<div class="guide-links">${ui.link(directory,'Search all reviewed resources')}</div>`),'DISCORD PLATFORM GAME INDEX');
  if(!selected)fs.writeFileSync(path.join(root,'docs/seo/'+collection+'-discord-resources.json'),JSON.stringify({reviewed:data.reviewed,resources:data.resources.map(item=>({id:item.id,name:item.name,gameIds:item.gameIds,search:search(item,data.games),pages:data.games.filter(g=>g.id===item.gameId||item.gameIds.includes(g.id)).map(g=>g.page+'#'+item.id)}))},null,2)+'\n');

@@ -139,6 +139,14 @@ test('sender uses only a curated action with matching platform, firmware and gam
   r = await request('/api/run',{...valid,actionId:'fixture-mod',platform:'ps4'}); assert.equal((await r.json()).code,'game-version-mismatch');
   r = await request('/api/run',{...valid,actionId:'fixture-mod',platform:'ps4',gameVersion:'1.38'}); assert.equal((await r.json()).status,'accepted'); assert.deepEqual(sent[1].data,setup.bin);
 });
+test('sender enforces firmware ranges and upper limits before a mocked transfer',async t=>{
+ const setup=fixture(t);let sends=0;
+ setup.actions[0].firmwares=['3.00–12.70'];setup.actions[0].firmwareMax='12.70';
+ const {request}=await startFixture(t,{...setup,resolveAddress:async()=> '192.168.1.50',sendELF:async()=>{sends++;return {status:'sent',message:'Fixture transfer only'};}});
+ for(const firmware of ['', '2.70','13.00']){const r=await request('/api/run',{actionId:'fixture-ps5',platform:'ps5',address:'192.168.1.50',firmware});assert.equal((await r.json()).code,'firmware-mismatch');}
+ assert.equal(sends,0);
+ const r=await request('/api/run',{actionId:'fixture-ps5',platform:'ps5',address:'192.168.1.50',firmware:'12.70'});assert.equal((await r.json()).status,'sent');assert.equal(sends,1);
+});
 test('file checksum failure prevents any network payload transfer',async t=>{
   const setup = fixture(t); let sends = 0;
   setup.actions[0].sha256 = '0'.repeat(64);

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T15:35:05.540Z",
+  "updatedAt": "2026-11-02T16:05:15.311Z",
   "status": "PS4/PS5 game batch5 complete locally: sixteen new verified game downloads, compact cards, exact Save routes and shared receiver11 integration. Source-site failures and the unrelated Wii U test are recorded separately.",
   "workspace": "C:/Users/whatw/Documents/GitHub/whatsite",
   "latestUserRequests": [
@@ -30,7 +30,19 @@
     "Update visible category images across all pages with platform-specific mixes of emulator and tool logos, games and download artwork.",
     "Keep improving PS4/PS5 loading and download workflows; use real service checks and preserve separate platform files.",
     "Organize Source Codes as Console > platform > game (for example PS4 > GTA 5), PC, and other projects.",
-    "Add GTA 5 PC sources: YimMenu V1 for Legacy, YimMenu V2 for Enhanced, Impulse and a substantial Legacy source collection from GTA5dump; save source archives locally."
+    "Add GTA 5 PC sources: YimMenu V1 for Legacy, YimMenu V2 for Enhanced, Impulse and a substantial Legacy source collection from GTA5dump; save source archives locally.",
+    "Include all 48 GTA5dump repositories in the GTA 5 PC source directory, preserving each accessible source snapshot locally.",
+    "Remove repeated GTA 5 source-card descriptions and per-card View source actions; keep downloads and collapsed details.",
+    "Use single merged category images, rather than adjacent thumbnails.",
+    "Fix game artwork and fill image frames; remove visible Game artwork captions.",
+    "Order GTA V, Call of Duty and GTA IV first on PS3 and Xbox 360 mod hubs.",
+    "Give Xbox 360 Call of Duty its own hub; separate stealth servers, mod tools and multi-game tools.",
+    "Give Myten a family page while preserving source-confirmed per-game cross-listing.",
+    "Collapse verbose source/version/build notes and remove generic source tag chips.",
+    "Move Themes from the top-level sidebar onto matching console pages.",
+    "Expose existing verified PS5 native payloads with explicit Payload Manager naming.",
+    "Check all pages for descriptions, keywords, search tags and embedded URL images.",
+    "Remove Archive details from GTA 5 PC source cards; keep downloads."
   ],
   "constraints": [
     "Do not commit, publish or deploy unless separately requested.",
@@ -2431,8 +2443,8 @@
         "rendered": {
           "ps3": {
             "resources": 390,
-            "menuPreviews": 100,
-            "remainingArtwork": 290
+            "menuPreviews": 81,
+            "remainingArtwork": 309
           },
           "xbox360": {
             "resources": 155,
@@ -2466,7 +2478,7 @@
         },
         "siteAudit": {
           "publicPages": 492,
-          "localLinksAndAssets": 56202,
+          "localLinksAndAssets": 56240,
           "issues": 0,
           "report": "docs/qa/menu-layout-site-audit.txt"
         },
@@ -2488,7 +2500,39 @@
       "screenshot": "docs/qa/xbox360-menu-grid-2026-11-02.png",
       "noNewBinaryDownloads": true,
       "noArchiveWrites": true,
-      "publication": "Local only; no commit, push or deployment."
+      "publication": "Local only; no commit, push or deployment.",
+      "screenshots": [
+        "docs/qa/ps3-menu-grid-2026-11-02.png",
+        "docs/qa/xbox360-menu-grid-2026-11-02.png"
+      ]
+    },
+    "ps3FileContext": {
+      "updatedAt": "2026-11-02T15:54:22.895Z",
+      "status": "Complete locally",
+      "request": "Add file-level PS3 HEN/DEX/CEX and edition tags; remove repeated variant download rows from main menu cards and prefer newest recorded compatible releases.",
+      "scope": "All PS3 catalogue cards. HEN/DEX/CEX are not assigned to PS4, Xbox or PC files.",
+      "evidence": "Labels use nearest archive member directory or exact reviewed hash mapping. Resource-wide claims are not applied to unidentified extracted files. Unknown types and regions are explicit.",
+      "ui": "One download popup for multi-variant resources; six separate WeAreGhosts2.0 type/region pairs, three Cloud1.5 groups, tagged SPRX and EBOOT links, matching supporting files kept with the group. Full packages remain on cards; both Jimbo DEX/HEN originals stay visible.",
+      "versions": "Newest numeric version is preferred only within the same file, type, region, game-update, firmware and recorded compatibility group. Exact duplicate copies and older files remain accessible in preserved copies; no upstream version change or binary deletion.",
+      "verification": {
+        "focusedTests": {
+          "passed": 20,
+          "failed": 0,
+          "report": "docs/qa/ps3-file-context-tests.txt"
+        },
+        "allExistingDownloadLinks": {
+          "resources": 345,
+          "links": 956,
+          "errors": 0,
+          "report": "docs/qa/ps3-file-context-preservation.json"
+        },
+        "ps3Catalogue": "docs/qa/ps3-file-context-catalog.txt",
+        "siteAudit": "docs/qa/ps3-file-context-site-audit.txt",
+        "metadataDrift": 0,
+        "browser": "WeAreGhosts HEN/BLES popup opened and both matching tagged file links verified."
+      },
+      "screenshot": "docs/qa/ps3-weareghosts-file-tags-2026-11-02.png",
+      "noInventoryOrArchiveMutation": true
     }
   },
   "originalXboxExpansion": {
@@ -4314,7 +4358,7 @@
       "node scripts/sync-existing-public-sitemap.cjs --write"
     ],
     "metadata": "Social preview manifest includes the ten new pages and a refreshed Source Codes overview image; previous image assets remain preserved. Source-page metadata is synchronized.",
-    "latestExpansion": "gta5PCSourceExpansion"
+    "latestExpansion": "gta5dumpAllRepositories"
   },
   "hostOrganisationAndWorkspaces": {
     "status": "in progress",
@@ -4584,7 +4628,8 @@
       "node scripts/prepare-gta5-pc-sources.cjs --download --archive (explicit requested sources; normal F: permissions)",
       "python scripts/verify-gta5-pc-source-archives.py",
       "node scripts/refresh-local-download-index.cjs --write (metadata-only; preserves previous snapshots)"
-    ]
+    ],
+    "latestContinuation": "gta5dumpAllRepositories"
   },
   "githubLargeFileCleanup": {
     "completedAt": "2026-11-02T15:10:28.1286580Z",
@@ -4661,12 +4706,35 @@
           "linkIssues": 0
         },
         "published": false
+      },
+      {
+        "completedAt": "2026-11-02T16:05:15.311Z",
+        "file": "downloads/source-codes/gta5-pc/gta5dump-nha-cleaned-decompiled-scripts/NHA-Cleaned-Decompiled-Scripts-76fad386e3d0-source.zip",
+        "bytes": 1290165930,
+        "sha256": "2c059ede3723e18ce19b937c4cdbb75acf2c8a40035b068b77e2a1f3bbefa10b",
+        "archiveVerified": true,
+        "action": "Removed NHA oversized project copy after hashing the original and F: backup; no archived original deleted.",
+        "sourceUrl": "https://codeload.github.com/GTA5dump/NHA-Cleaned-Decompiled-Scripts/zip/76fad386e3d047e50e7b4eeec3271ccf0df137aa",
+        "prevention": "Exact source ZIP path ignored; temporary export helper now checks existing manifest snapshot before exporting or copying. Normal source preparer already keeps oversized snapshots outside public downloads.",
+        "verification": {
+          "githubOversizedFiles": 0,
+          "stagedFiles": 0,
+          "focusedTestsPassed": 6,
+          "gta5dumpDirectoryVerificationPassed": true,
+          "pinnedSourceDownloadVerified": true,
+          "near95MiBHelpers": 3
+        },
+        "notes": [
+          "Three existing sender helpers are between 95 and 96 MiB, below 100 MB; the conservative 95 MiB audit still flags them. Their current and historical bytes are preserved.",
+          "Custom local git-export ZIP hash is preserved in the private inventory; the upstream source ZIP is pinned to the same commit but is not claimed to be byte-identical."
+        ],
+        "published": false
       }
     ]
   },
   "gta5dumpAllRepositoriesPending": {
     "updatedAt": "2026-11-02T15:27:42.158Z",
-    "status": "All48 entries and clean UI ready; final NHA exact-commit source object database is being fetched for a local source export after ZIP timeout. Other48 catalogue ZIPs and existingMenyoo are saved. No final full-archive claim yet.",
+    "status": "Completed. See gta5dumpAllRepositories for final verification and archive provenance.",
     "catalog": "docs/gta5-pc-source-catalog.json",
     "review": "docs/gta5dump-all-repository-review.json",
     "manifest": "downloads/source-codes/gta5-pc/manifest.json",
@@ -4683,6 +4751,302 @@
       "node scripts/refresh-local-download-index.cjs --write",
       "Save desktop/phone screenshots then node scripts/finalize-gta5dump-all-handoff.cjs"
     ],
-    "sourceObjectDatabase": "tmp/gta5-source-downloads/NHA-exact-commit.git"
+    "sourceObjectDatabase": "tmp/gta5-source-downloads/NHA-exact-commit.git",
+    "completedAt": "2026-11-02T15:55:43.303Z"
+  },
+  "gta5dumpAllRepositories": {
+    "updatedAt": "2026-11-02T15:55:43.303Z",
+    "status": "Complete locally: all 48 GTA5dump entries listed; 46 exact repository snapshots saved and verified, WildMOdz recorded empty, GTA5dump/YimMenu recorded inaccessible. Compact cards and search implemented.",
+    "page": "/source-codes/pc/gta5/",
+    "scope": {
+      "gta5dumpRepositories": 48,
+      "gta5dumpDownloads": 46,
+      "originalFeaturedProjects": 3,
+      "existingMenyooPreserved": true,
+      "totalCards": 52,
+      "totalDownloadLinks": 50,
+      "newGta5dumpArchivesThisContinuation": 31
+    },
+    "exceptions": [
+      {
+        "repo": "GTA5dump/WildMOdz",
+        "status": "empty",
+        "reason": "No branch references or committed files are available."
+      },
+      {
+        "repo": "GTA5dump/YimMenu",
+        "status": "unavailable",
+        "reason": "GitHub returns HTTP 403: repository unavailable due to a DMCA takedown."
+      }
+    ],
+    "content": {
+      "sourceRepositories": 43,
+      "incompleteSolutionOnly": "bronze",
+      "referenceData": "GtaV_2.1",
+      "decompiledScripts": "NHA-Cleaned-Decompiled-Scripts",
+      "note": "Data, incomplete projects and decompiled scripts retain accurate content details; no original GTA engine-source or current-game compatibility claims."
+    },
+    "preservation": [
+      "All original eighteen source snapshots remain listed and byte-preserved in the manifest and F: archive.",
+      "All source archives are pinned to exact commits. No source builds, archive extraction or bundled binary execution.",
+      "Source archives use download-archive-layout.cjs under PC/Games/GTA5/Legacy or Enhanced/.../Source Code/<branch-commit>. No older download or duplicate version was replaced or deleted.",
+      "MenyooSP existing source ZIP was mirrored from its already-verified F: backup; the original remains preserved.",
+      "No commit, push, deployment, publication or scheduled monitor."
+    ],
+    "sourceExportMethods": [
+      {
+        "repo": "GTA5dump/NHA-Cleaned-Decompiled-Scripts",
+        "commit": "76fad386e3d047e50e7b4eeec3271ccf0df137aa",
+        "sourceUrl": "https://github.com/GTA5dump/NHA-Cleaned-Decompiled-Scripts/commit/76fad386e3d047e50e7b4eeec3271ccf0df137aa",
+        "archiveMethod": "Trusted git archive --format=zip of a shallow exact-commit source object database; no source checkout, build or execution. Original GitHub ZIP attempts timed out and partials are retained."
+      }
+    ],
+    "ui": {
+      "cardDescriptions": 0,
+      "perCardViewSourceActions": 0,
+      "kept": [
+        "Project title",
+        "Edition badge",
+        "Download ZIP"
+      ],
+      "search": {
+        "accountQuery": "gta5dump",
+        "expectedMatches": 48,
+        "clearRestores": 52,
+        "noResultsState": true,
+        "escapeResets": true
+      },
+      "browser": {
+        "desktopViewport": 1280,
+        "phoneViewport": 390,
+        "phoneDocumentWidth": 375
+      },
+      "archiveDetails": 0
+    },
+    "reports": [
+      "docs/qa/gta5dump-all-site.json",
+      "docs/qa/gta5-pc-source-archives.json",
+      "docs/qa/gta5dump-all-tests.txt",
+      "docs/qa/gta5dump-external-downloads.json"
+    ],
+    "baselineReportsRetained": [
+      "docs/qa/gta5-pc-source-archives-initial18.json",
+      "docs/qa/gta5-pc-source-catalog-initial18.json",
+      "docs/qa/gta5-pc-source-site.json"
+    ],
+    "verification": {
+      "archiveSummary": {
+        "requestedProjects": 51,
+        "passed": 49,
+        "empty": 1,
+        "recordedUnavailable": 1,
+        "failed": 0,
+        "incomplete": 0,
+        "manifestFiles": 51,
+        "totalSourceFiles": 12000,
+        "totalBinaryFiles": 225
+      },
+      "httpHashChecks": 50,
+      "bytes": 1801600256,
+      "initial18Preserved": true,
+      "tests": {
+        "passed": 27,
+        "failed": 0
+      },
+      "archiveIndex": {
+        "updated": "2026-11-02T15:46:04.720Z",
+        "mode": "metadata-only",
+        "history": "F:\\whatsite-backup-downloads-etc\\archive-history\\index-refresh-2026-11-02T15-46-04-720Z-i4PyVi",
+        "items": 2143,
+        "fileRecords": 3087,
+        "presentFileRecords": 3087,
+        "missingFileRecords": 0,
+        "missingPaths": 0,
+        "otherUnavailableRecords": 0,
+        "availability": {
+          "present": 3087
+        }
+      }
+    },
+    "downloadRouting": {
+      "localWebsiteMirrors": 48,
+      "externalPinnedZIPs": 2,
+      "policy": "Existing95MiB mirror policy and pinned download URLs retained. Archive metadata remains in internal inventory and verification reports."
+    },
+    "screenshots": [
+      "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19ca9-49db-7830-b905-d4370ab14794/gta5dump-all-clean-desktop.jpg",
+      "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19ca9-49db-7830-b905-d4370ab14794/gta5dump-all-clean-phone.jpg"
+    ],
+    "files": [
+      "docs/gta5dump-all-repository-review.json",
+      "docs/gta5dump-large-data-review.json",
+      "docs/gta5-pc-source-catalog.json",
+      "scripts/expand-gta5dump-source-catalog.cjs",
+      "scripts/prepare-gta5-pc-sources.cjs",
+      "scripts/verify-gta5-pc-source-archives.py",
+      "scripts/verify-gta5dump-directory.cjs",
+      "scripts/build-source-code-pages.cjs",
+      "assets/source-codes.css",
+      "assets/source-code-search.js"
+    ],
+    "regeneration": [
+      "node scripts/expand-gta5dump-source-catalog.cjs",
+      "node scripts/prepare-gta5-pc-sources.cjs --download --archive",
+      "node scripts/build-source-code-pages.cjs",
+      "python scripts/verify-gta5-pc-source-archives.py",
+      "node scripts/verify-gta5dump-directory.cjs --base=<local-preview-origin>",
+      "node scripts/refresh-local-download-index.cjs --write"
+    ]
+  },
+  "mergedConsoleNavigation20261102": {
+    "updatedAt": "2026-11-02T15:55:44.366Z",
+    "status": "Requested visual, console-navigation, payload-library and search-preview changes complete locally.",
+    "requests": [
+      "Use single merged category images, rather than adjacent thumbnails.",
+      "Fix game artwork and fill image frames; remove visible Game artwork captions.",
+      "Order GTA V, Call of Duty and GTA IV first on PS3 and Xbox 360 mod hubs.",
+      "Give Xbox 360 Call of Duty its own hub; separate stealth servers, mod tools and multi-game tools.",
+      "Give Myten a family page while preserving source-confirmed per-game cross-listing.",
+      "Collapse verbose source/version/build notes and remove generic source tag chips.",
+      "Move Themes from the top-level sidebar onto matching console pages.",
+      "Expose existing verified PS5 native payloads with explicit Payload Manager naming.",
+      "Check all pages for descriptions, keywords, search tags and embedded URL images."
+    ],
+    "completed": {
+      "mergedCoverAssets": 54,
+      "mergedCategoryCards": 182,
+      "oldImageTiles": 0,
+      "topLevelThemesItems": 0,
+      "consoleThemeHubs": [
+        "ps3",
+        "ps4",
+        "ps5",
+        "psvita",
+        "ps2",
+        "psp",
+        "ds",
+        "3ds",
+        "wiiu",
+        "nintendo-switch"
+      ],
+      "xbox360Pages": [
+        "/console/xbox360/mods/call-of-duty/",
+        "/console/xbox360/mods/stealth-servers/",
+        "/console/xbox360/mods/tools/",
+        "/console/xbox360/mods/multi-game-tools/",
+        "/console/xbox360/mods/multi-game-tools/myten/"
+      ],
+      "ps5PayloadCards": 19,
+      "addedNativeActionRecords": 11,
+      "existingArchiveMirrorsAddedToSite": 3,
+      "newUpstreamPayloadDownloads": 0,
+      "ps3GenericTags": "Removed general source/game/file-format chips; retained HEN/DEX/CEX and meaningful compatibility labels.",
+      "sourceRequirements": "Original source links, update/region requirements, older downloads, source screenshots, exact hashes and per-game claims retained. No MultiCOD-only game compatibility inferred."
+    },
+    "artwork": {
+      "manifest": "docs/merged-category-covers.json",
+      "plan": "docs/image-prompts/merged-category-plan.json",
+      "mode": "built-in image_gen.imagegen; copied PNGs unchanged; originals retained",
+      "additionalPrompt": "docs/image-prompts/merged-category-theme-finish.json",
+      "officialGameSources": "docs/game-card-art-sources.json",
+      "utilityVectorSource": "scripts/build-ps3-tool-covers.cjs"
+    },
+    "verification": {
+      "fullSuite": {
+        "tests": 563,
+        "passed": 563,
+        "failed": 0,
+        "output": "docs/qa/console-merged-final-tests.txt"
+      },
+      "lastRoutingCheck": {
+        "tests": 13,
+        "passed": 13,
+        "failed": 0,
+        "output": "docs/qa/console-merged-routing-last-check.txt"
+      },
+      "site": {
+        "publicPages": 492,
+        "localLinksAndAssets": 56276,
+        "issues": 0,
+        "output": "docs/qa/console-merged-final-site-audit.txt"
+      },
+      "searchAndPreviews": {
+        "pages": 535,
+        "completeRequiredTags": 535,
+        "emptyDescriptions": 0,
+        "emptyKeywords": 0,
+        "genericKeywords": 0,
+        "metadataPassed": true,
+        "assetsPassed": true,
+        "httpPassed": true,
+        "httpRequests": 1076,
+        "decodedPNGs": 541,
+        "report": "docs/qa/merged-console-social-http-verification.json"
+      },
+      "historicalBaseline": {
+        "preservationPassed": false,
+        "bodyDifferences": 429,
+        "canonicalOrDirectiveDifferences": 3,
+        "note": "Read-only comparison against the earlier shared baseline. Bodies have since changed; baseline was retained and no exact preservation claim is made."
+      },
+      "protectedHelpers": "Search durability checks passed; self-contained receivers and downloaded/vendored HTML excluded from presentation rewriting.",
+      "browser": "docs/qa/merged-console-browser-verification.json",
+      "payloadStatic": "docs/qa/host-payload-integrity.json",
+      "closeout": "docs/qa/merged-console-closeout-verification.json"
+    },
+    "sender": {
+      "version": "1.6.0+05eb2ae569e3",
+      "bytes": 99758446,
+      "sha256": "9ede68843e23243d8969d4c2f6699983a88eecc18a18c7eabbab58997e55779d",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.6.0+05eb2ae569e3\\console-payload-sender-1.6.0-05eb2ae569e3.zip",
+      "zipEntries": 272,
+      "manifestRecords": 271,
+      "readyFiles": 124,
+      "actions": 162,
+      "crcAndEveryMemberSHA256Passed": true
+    },
+    "retainedInterimSender": {
+      "version": "1.6.0+bf57d9770657",
+      "bytes": 99628320,
+      "sha256": "997e95f29841fd0c257d03aaaececdbffd0239338214ae96bbe24a40918b93a7",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.6.0+bf57d9770657\\console-payload-sender-1.6.0-bf57d9770657.zip",
+      "zipEntries": 272,
+      "manifestRecords": 271,
+      "readyFiles": 124,
+      "actions": 162,
+      "crcAndEveryMemberSHA256Passed": true
+    },
+    "archiveIndex": {
+      "items": 2142,
+      "fileRecords": 3086,
+      "presentFileRecords": 3086,
+      "missing": 0,
+      "report": "docs/qa/console-merged-archive-index-refresh.json",
+      "note": "Metadata-only snapshot at archive refresh; every prior snapshot retained."
+    },
+    "remainingRequestedWork": [],
+    "limits": [
+      "Physical console execution/installation not tested.",
+      "No downloaded payload executed.",
+      "No commit, publication or deployment performed."
+    ]
+  },
+  "gta5SourceCardDetailsRemoval": {
+    "checkedAt": "2026-11-02T15:57:48.443Z",
+    "passed": true,
+    "cards": 52,
+    "downloads": 50,
+    "downloadURLsUnchanged": true,
+    "archiveDetailsRemoved": 52,
+    "archiveDetailsRemaining": 0,
+    "page": "/source-codes/pc/gta5/",
+    "report": "docs/qa/gta5-source-card-details-removal.json"
+  },
+  "gta5SourceCardRename": {
+    "updatedAt": "2026-11-02T16:00:01.504Z",
+    "id": "gta5dump-2take1",
+    "previousTitle": "2Take1 Source Archive",
+    "title": "Subversion",
+    "status": "Applied to catalogue, regeneration review data and rendered page; all href values unchanged."
   }
 }

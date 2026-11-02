@@ -101,7 +101,8 @@ test('new eighteen web utilities are direct verified PS4 BIN actions and retain 
 test('declining an effect confirmation prevents both the optional copy and console transmission',async()=>{
   const action={id:'ps4-confirmation-fixture',label:'Fixture effect',platform:'ps4',category:'mods',game:'Fixture game',gameVersion:'1.57',firmwares:['9.00'],format:'BIN',run:{type:'goldhen-http',port:9090},downloadURL:'/downloads/fixture.bin',consoleFileId:'ps4-fixture',confirmBeforeLoad:'Apply fixture effect?',requirements:[]};
   const f=fixture({actions:[action]});let confirms=0;
-  f.window.confirm=()=>{confirms++;return false;};f.ids['host-download-on-run'].checked=true;
+  f.window.__scoobyI18n={t:source=>source==='Apply fixture effect?'?'Translated fixture effect?':source};
+  f.window.confirm=message=>{assert.equal(message,'Translated fixture effect?');confirms++;return false;};f.ids['host-download-on-run'].checked=true;
   f.pair();await flush();f.openMenu();const button=f.load();assert.equal(button.disabled,false);await flush();
   assert.equal(confirms,1);assert.equal(f.sends.length,0);assert.equal(f.opened.length,0);assert.equal(f.anchorClicks.length,0);
   assert.match(f.ids['host-status'].textContent,/Load cancelled/);

@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-02T15:54:00Z",
+  "method": "CUA in-app browser, real localhost preview; no payload Load/Download action invoked.",
+  "cases": [
+    {"page":"/console/xbox360/mods.html","result":"GTA V, Call of Duty, GTA IV first; correct game artwork; separate stealth and multi-game tool destinations","screenshot":"docs/qa/xbox360-organized-mods.jpg"},
+    {"page":"/console/psvita/home.html","result":"Single merged emulator/app/game cover images; no old image tiles, failed images or horizontal overflow","screenshot":"docs/qa/vita-merged-category-covers.jpg"},
+    {"page":"/console/ps3/index.html","result":"PS3 theme card opens /console/ps3/themes.html; no top-level Themes sidebar; universal theme artwork; no overflow or failed images","screenshot":"docs/qa/ps3-console-themes-card.jpg"},
+    {"page":"/console/xbox360/mods/multi-game-tools/myten/","viewportWidth":390,"documentWidth":375,"resourceCards":7,"visibleTagChips":0,"result":"No horizontal overflow; source details collapsed","screenshot":"docs/qa/myten-phone-cards.jpg"},
+    {"page":"/hosts/ps5/","result":"Payloads filter displays 19 cards / 19 variants; explicit PS5 Payload Manager and original versions","screenshot":"docs/qa/ps5-expanded-payloads.jpg"},
+    {"page":"/hosts/ps5/gta5/","viewportWidth":390,"result":"Choose version dialog opens; image uses cover at 349 x 180 pixels; no visible artwork captions or horizontal overflow","screenshot":"docs/qa/ps5-game-dialog-phone.jpg"}
+  ],
+  "browserViewportReset": true,
+  "originalSavedFirmwareRestored": "13.60",
+  "physicalConsoleTested": false,
+  "executedPayloads": 0
+}

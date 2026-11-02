@@ -1,0 +1,38 @@
+✔ helper construction and script opening never make a console request (1.9648ms)
+✔ public previews and wrong ports cannot call even read APIs (0.698ms)
+✔ path scope rejects traversal, encoded tricks, guessed mounts and writes outside managed roots (0.2553ms)
+✔ HTTP-compatible SHA-256 and untouched text preservation match exact bytes (2.6836ms)
+✔ older console WebKit fallback works without native Promise, encoders or modern Number helpers (2018.8776ms)
+✔ actual list and bounded file reads expose native files without an execution route (0.9344ms)
+✔ uploads use the exact ordered multipart contract and verify saved bytes without overwriting (1.4714ms)
+✔ create and rename verify postconditions instead of trusting unconditional native success (1.527ms)
+✔ each native autoload save retains a verified original-byte backup and preserves unknown entries (2.1464ms)
+✔ an unchanged raw editor causes no write, including browser-normalized newlines (0.289ms)
+✔ empty autoload files receive real zero-byte backups and clearing uses a closed multipart stage (1.9574ms)
+✔ a concurrent native edit blocks replacement before and after the verified backup (1.148ms)
+✔ bad backup or staging bytes prevent replacement; retained originals are never removed (0.7686ms)
+✖ standalone artifacts contain authored assets, native boundaries and only prepared archive jobs (17.1475ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2124.532
+
+✖ failing tests:
+
+test at scripts\tests\host-native-workspace.test.cjs:81:1
+✖ standalone artifacts contain authored assets, native boundaries and only prepared archive jobs (17.1475ms)
+  Error: Missing native translation es: Settings
+      at nativeDictionaries (C:\Users\whatw\Documents\GitHub\whatsite\scripts\host-native-workspace.cjs:26:76)
+      at render (C:\Users\whatw\Documents\GitHub\whatsite\scripts\host-native-workspace.cjs:32:47)
+      at Object.prepare (C:\Users\whatw\Documents\GitHub\whatsite\scripts\host-native-workspace.cjs:39:31)
+      at TestContext.<anonymous> (C:\Users\whatw\Documents\GitHub\whatsite\scripts\tests\host-native-workspace.test.cjs:82:24)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

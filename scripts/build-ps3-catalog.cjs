@@ -9,6 +9,7 @@ const h = value => esc(String(value ?? '')).replaceAll('>','&gt;');
 const guideRenderer=require('./console-resource-renderer.cjs').createResourceRenderer({root});
 const menuMedia=require('./console-menu-media.cjs').createMenuMedia({root});
 const multiGame=require('./ps3-multicod-metadata.cjs');
+const downloadContext=require('./ps3-download-context.cjs');
 const matchesGame=(item,id)=>item.gameId===id || (item.gameIds || []).includes(id) || (item.indexIds || []).includes(id);
 const games = require('./console-mod-navigation.cjs').applyGameImages(multiGame.mergeGameDefinitions([
   {id:'gta-v', title:'Grand Theft Auto V', short:'GTA V', url:'/console/ps3/mods/gta-v/', image:'/assets/images/gta52.png', summary:'Title update 1.27 loaders and SPRX menus, with HEN, DEX and region notes.', aliases:['GTA 5','GTA V','Grand Theft Auto 5','1.27']},
@@ -79,14 +80,39 @@ function card(item) {
   const fallback=item.gameId==='world-at-war'?'/assets/images/ps3-mods/waw-official-cover.jpg':game?.image||'/assets/images/consoles/ps3.png';
   const image=ownImage||(fs.existsSync(path.join(root,fallback.slice(1)))?fallback:'/assets/images/consoles/ps3.png');
   const media=menuMedia.figure(item,image,game?.title||'PS3');
-  const fileMarkup = file => `<div class="menu-download">${variantMarkup(file)}<a href="${h(file.local)}" download data-sha256="${h(file.sha256)}" data-i18n-skip translate="no">${h(filename(file))}</a> <small>${bytes(file.bytes)}</small></div>`;
+  const fileTags = file => {
+    const context=downloadContext.context(item,file);
+    const archive=/\.(?:zip|rar|7z)$/i.test(filename(file));
+    const includedTypes=archive&&!context.types.length&&file.owner?[...new Set(stored.filter(member=>member.memberPath&&member.owner?.id===file.owner.id).flatMap(member=>downloadContext.context(item,member).types))]:[];
+    const labels=[...(archive?['Full package']:[]),...context.types,...includedTypes,...context.regions];
+    if(!archive&&!context.types.length)labels.unshift('Type not specified');
+    if(!archive&&!context.regions.length)labels.push('Region not specified');
+    if(!labels.length)labels.push('Full package');
+    return `<span class="menu-file-tags" aria-label="File variant">${labels.map(label=>`<span class="menu-file-tag">${h(label)}</span>`).join('')}</span>`;
+  };
+  const fileMarkup = file => `<div class="menu-download">${variantMarkup(file)}<a href="${h(file.local)}" download data-sha256="${h(file.sha256)}" data-i18n-skip translate="no">${h(filename(file))}</a> ${fileTags(file)} <small>${bytes(file.bytes)}</small></div>`;
   const originalFiles = stored.filter(file=>!file.memberPath),extracted = stored.filter(file=>file.memberPath);
   const rank=file=>/\.pkg$/i.test(filename(file))?0:/\.(?:sprx|prx)$/i.test(filename(file))?1:/\.(?:rpf|edat)$/i.test(filename(file))?2:3;
-  const ready=incomplete?[]:extracted.filter(file=>file.owner.readiness!=='incomplete'&&file.readiness!=='invalid-console-header'&&(file.archiveRole||file.owner.archiveRole)?.[0]==='Builds'&&/\.(?:pkg|sprx|prx|rpf|edat|bin|sco|gsc|gscc|csc|ff)$/i.test(filename(file))).sort((a,b)=>rank(a)-rank(b)).slice(0,6);
-  const shown=new Set(ready.map(file=>file.local));
-  const remaining=extracted.filter(file=>!shown.has(file.local));
-  const readyFiles=ready.map(fileMarkup).join('');
-  const files = `<div class="menu-downloads">${readyFiles}${originalFiles.map(fileMarkup).join('')}${remaining.length?`<details><summary>More downloads (${remaining.length})</summary>${remaining.map(fileMarkup).join('')}</details>`:''}</div>`;
+  const eligible=incomplete?[]:extracted.filter(file=>file.owner.readiness!=='incomplete'&&file.readiness!=='invalid-console-header'&&(file.archiveRole||file.owner.archiveRole)?.[0]==='Builds'&&/\.(?:pkg|sprx|prx|rpf|edat|bin|sco|gsc|gscc|csc|ff)$/i.test(filename(file))).sort((a,b)=>rank(a)-rank(b));
+  const ready=downloadContext.select(item,eligible).current;
+  const archives=downloadContext.select(item,originalFiles);
+  const shown=new Set([...ready,...archives.current].map(file=>file.local));
+  let remaining=extracted.filter(file=>!shown.has(file.local));
+  const variants=new Map();
+  for(const file of ready){const c=downloadContext.context(item,file);if(!variants.has(c.key))variants.set(c.key,{...c,files:[]});variants.get(c.key).files.push(file);}
+  const chooser=variants.size>1||ready.length>3;
+  const downloadsId='downloads-'+item.id;
+  const groupedSupport=new Set();
+  const choices=[...variants.values()].sort((a,b)=>a.label.localeCompare(b.label)).map(group=>{
+    const owners=new Set(group.files.map(file=>file.owner.id));
+    const support=remaining.filter(file=>owners.has(file.owner.id)&&downloadContext.context(item,file).key===group.key&&!eligible.includes(file));
+    if(chooser)for(const file of support)groupedSupport.add(file.local);
+    return `<details class="menu-variant-group"><summary>${h(group.label)} <small>${group.files.length} file${group.files.length===1?'':'s'}</small></summary>${group.files.map(fileMarkup).join('')}${support.length?`<details><summary>Supporting files (${support.length})</summary>${support.map(fileMarkup).join('')}</details>`:''}</details>`;
+  }).join('');
+  if(chooser)remaining=remaining.filter(file=>!groupedSupport.has(file.local));
+  const readyFiles=chooser?`<div class="guide-links"><a href="#${h(downloadsId)}" data-guide-open>Choose console type &amp; download</a></div><section id="${h(downloadsId)}" data-guide-panel data-guide-title="${h(item.name+' · Downloads'+(item.version?' · '+item.version:''))}"><p>Choose your PS3 type and game region. Files in the same group belong together. Labels come from the preserved archive; they do not establish support for other firmware or title IDs.</p>${choices}</section>`:ready.map(fileMarkup).join('');
+  const extra=[...archives.preserved,...remaining];
+  const files = `<div class="menu-downloads">${readyFiles}${archives.current.map(fileMarkup).join('')}${extra.length?`<details><summary>Supporting files &amp; preserved copies (${extra.length})</summary>${extra.map(fileMarkup).join('')}</details>`:''}</div>`;
   // Preserve attachment URLs in the inventory. Discord renews signatures from
   // the source post; the bare CDN URL expires. Hosted files remain above.
   const originals = (item.downloads || []).filter(download => /^https?:\/\//.test(download.url) && !expiresOnDiscord(download,item) && attempts.some(entry=>entry.url===download.url)).map(download => ext(download.url, h(multiGame.downloadLabel(item,download)))).join('');
@@ -98,8 +124,8 @@ function card(item) {
   const skippedForSize = attempts.some(entry=>/size.bound|size limit|size-bound|import bound/i.test(entry.status+' '+entry.error));
   const availability = incomplete?'Incomplete source distribution · archived for reference':siteBuilds.length ? siteBuilds.length + ' file download' + (siteBuilds.length === 1 ? '' : 's') + (backupOnly.length ? ' · larger build saved in local archive' : '') : backupOnly.length ? 'Build saved in local archive · external source download' : skippedForSize ? 'Source reachable · not archived (exceeds selected size limit)' : attempts.length ? 'Unavailable locally · source retrieval failed' : item.status==='source-marks-down' ? 'Unavailable · source marks this link down' : item.category.includes('reference') ? 'Compatibility reference · no package download' : 'Source reference · no local build archived';
   const lanAccess=!incomplete&&backupOnly.some(file=>(file.archiveRole||[])?.[0]==='Builds')?`<div class="guide-links">${fullLink('/console/ps3/archive-server.html?resource='+encodeURIComponent(item.id),'Download files from local archive')}</div>`:'';
-  const backupRecords = backupOnly.length ? `<details class="menu-card-links"><summary>Local backup downloads (${backupOnly.length})</summary>${backupOnly.map(file=>`<div class="menu-download" data-sha256="${h(file.sha256)}">${variantMarkup(file)}<p data-i18n-skip translate="no">${h(filename(file))} · ${bytes(file.bytes)}</p></div>`).join('')}</details>` : '';
-  const visibleTags=[...new Set([...tags(item).slice(0,5),...tags(item).filter(tag=>/HEN|DEX|CEX|GOTY|incomplete|mismatch/i.test(tag))])];
+  const backupRecords = backupOnly.length ? `<details class="menu-card-links"><summary>Local backup downloads (${backupOnly.length})</summary>${backupOnly.map(file=>`<div class="menu-download" data-sha256="${h(file.sha256)}">${variantMarkup(file)}<p data-i18n-skip translate="no">${h(filename(file))} ${fileTags(file)} · ${bytes(file.bytes)}</p></div>`).join('')}</details>` : '';
+  const visibleTags=[...new Set(tags(item).filter(tag=>/HEN|DEX|CEX|GOTY|incomplete|mismatch/i.test(tag)))];
   const update=String(item.gameUpdate||'Not specified');
   return `<article class="guide-resource menu-card" id="${h(item.id)}" data-ps3-entry data-game="${h(item.gameId)}" data-games="${h([...new Set([item.gameId,...(item.gameIds || []),...(item.indexIds || [])])].join(' '))}" data-type="${h(item.category)}" data-search="${h(terms(item))}">${media}<h3>${h(item.name)}</h3><p class="menu-description">${h(item.description)}</p><ul class="guide-resource-tags" aria-label="Resource tags">${visibleTags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul><dl class="menu-card-meta">${item.version?`<dt>Menu</dt><dd>${h(item.version)}</dd>`:''}<dt>Game update</dt><dd>${h(update.length>85?'See per-game guide':update)}</dd></dl>${incomplete?'<p class="menu-card-note">Source limitations · read guide</p>':''}${guide}${lanAccess}${largeSource}${files}${backupRecords}<details class="menu-card-links"><summary>Sources</summary><div class="guide-links">${originals}${references}${item.source ? ext(item.source, discordPost(item.source) ? 'Original Discord post (sign-in may be needed)' : 'Source & requirements') : ''}</div></details></article>`;
 }

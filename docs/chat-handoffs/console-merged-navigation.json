@@ -1,0 +1,133 @@
+{
+  "updatedAt": "2026-11-02T15:55:44.366Z",
+  "status": "Requested visual, console-navigation, payload-library and search-preview changes complete locally.",
+  "requests": [
+    "Use single merged category images, rather than adjacent thumbnails.",
+    "Fix game artwork and fill image frames; remove visible Game artwork captions.",
+    "Order GTA V, Call of Duty and GTA IV first on PS3 and Xbox 360 mod hubs.",
+    "Give Xbox 360 Call of Duty its own hub; separate stealth servers, mod tools and multi-game tools.",
+    "Give Myten a family page while preserving source-confirmed per-game cross-listing.",
+    "Collapse verbose source/version/build notes and remove generic source tag chips.",
+    "Move Themes from the top-level sidebar onto matching console pages.",
+    "Expose existing verified PS5 native payloads with explicit Payload Manager naming.",
+    "Check all pages for descriptions, keywords, search tags and embedded URL images."
+  ],
+  "completed": {
+    "mergedCoverAssets": 54,
+    "mergedCategoryCards": 182,
+    "oldImageTiles": 0,
+    "topLevelThemesItems": 0,
+    "consoleThemeHubs": [
+      "ps3",
+      "ps4",
+      "ps5",
+      "psvita",
+      "ps2",
+      "psp",
+      "ds",
+      "3ds",
+      "wiiu",
+      "nintendo-switch"
+    ],
+    "xbox360Pages": [
+      "/console/xbox360/mods/call-of-duty/",
+      "/console/xbox360/mods/stealth-servers/",
+      "/console/xbox360/mods/tools/",
+      "/console/xbox360/mods/multi-game-tools/",
+      "/console/xbox360/mods/multi-game-tools/myten/"
+    ],
+    "ps5PayloadCards": 19,
+    "addedNativeActionRecords": 11,
+    "existingArchiveMirrorsAddedToSite": 3,
+    "newUpstreamPayloadDownloads": 0,
+    "ps3GenericTags": "Removed general source/game/file-format chips; retained HEN/DEX/CEX and meaningful compatibility labels.",
+    "sourceRequirements": "Original source links, update/region requirements, older downloads, source screenshots, exact hashes and per-game claims retained. No MultiCOD-only game compatibility inferred."
+  },
+  "artwork": {
+    "manifest": "docs/merged-category-covers.json",
+    "plan": "docs/image-prompts/merged-category-plan.json",
+    "mode": "built-in image_gen.imagegen; copied PNGs unchanged; originals retained",
+    "additionalPrompt": "docs/image-prompts/merged-category-theme-finish.json",
+    "officialGameSources": "docs/game-card-art-sources.json",
+    "utilityVectorSource": "scripts/build-ps3-tool-covers.cjs"
+  },
+  "verification": {
+    "fullSuite": {
+      "tests": 563,
+      "passed": 563,
+      "failed": 0,
+      "output": "docs/qa/console-merged-final-tests.txt"
+    },
+    "lastRoutingCheck": {
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "output": "docs/qa/console-merged-routing-last-check.txt"
+    },
+    "site": {
+      "publicPages": 492,
+      "localLinksAndAssets": 56276,
+      "issues": 0,
+      "output": "docs/qa/console-merged-final-site-audit.txt"
+    },
+    "searchAndPreviews": {
+      "pages": 535,
+      "completeRequiredTags": 535,
+      "emptyDescriptions": 0,
+      "emptyKeywords": 0,
+      "genericKeywords": 0,
+      "metadataPassed": true,
+      "assetsPassed": true,
+      "httpPassed": true,
+      "httpRequests": 1076,
+      "decodedPNGs": 541,
+      "report": "docs/qa/merged-console-social-http-verification.json"
+    },
+    "historicalBaseline": {
+      "preservationPassed": false,
+      "bodyDifferences": 429,
+      "canonicalOrDirectiveDifferences": 3,
+      "note": "Read-only comparison against the earlier shared baseline. Bodies have since changed; baseline was retained and no exact preservation claim is made."
+    },
+    "protectedHelpers": "Search durability checks passed; self-contained receivers and downloaded/vendored HTML excluded from presentation rewriting.",
+    "browser": "docs/qa/merged-console-browser-verification.json",
+    "payloadStatic": "docs/qa/host-payload-integrity.json",
+    "closeout": "docs/qa/merged-console-closeout-verification.json"
+  },
+  "sender": {
+    "version": "1.6.0+05eb2ae569e3",
+    "bytes": 99758446,
+    "sha256": "9ede68843e23243d8969d4c2f6699983a88eecc18a18c7eabbab58997e55779d",
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.6.0+05eb2ae569e3\\console-payload-sender-1.6.0-05eb2ae569e3.zip",
+    "zipEntries": 272,
+    "manifestRecords": 271,
+    "readyFiles": 124,
+    "actions": 162,
+    "crcAndEveryMemberSHA256Passed": true
+  },
+  "retainedInterimSender": {
+    "version": "1.6.0+bf57d9770657",
+    "bytes": 99628320,
+    "sha256": "997e95f29841fd0c257d03aaaececdbffd0239338214ae96bbe24a40918b93a7",
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.6.0+bf57d9770657\\console-payload-sender-1.6.0-bf57d9770657.zip",
+    "zipEntries": 272,
+    "manifestRecords": 271,
+    "readyFiles": 124,
+    "actions": 162,
+    "crcAndEveryMemberSHA256Passed": true
+  },
+  "archiveIndex": {
+    "items": 2142,
+    "fileRecords": 3086,
+    "presentFileRecords": 3086,
+    "missing": 0,
+    "report": "docs/qa/console-merged-archive-index-refresh.json",
+    "note": "Metadata-only snapshot at archive refresh; every prior snapshot retained."
+  },
+  "remainingRequestedWork": [],
+  "limits": [
+    "Physical console execution/installation not tested.",
+    "No downloaded payload executed.",
+    "No commit, publication or deployment performed."
+  ]
+}

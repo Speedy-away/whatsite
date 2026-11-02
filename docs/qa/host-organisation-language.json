@@ -1,0 +1,2624 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T15:56:07.862Z",
+  "scope": "New PS4/PS5 game collection pages and file/payload workspaces, complete native UI/errors/prompts/status templates,18utilitylabels/descriptions and12confirmations. Shared chrome, proper names, file data and original upstream/provenance/legal text are excluded; no whole-site linguistic coverage claim.",
+  "method": "Actual public languages/i18n.js pure lookup and actual native createLookup against all20generated dictionaries; real ten public page snapshots; complete98-key embedded subset and composed write warning; exact current generator render and immutable bytes verified. Native APIs use only mock test fixtures; no console connection or downloaded code execution.",
+  "sourceFiles": [
+    {
+      "path": "scripts/host-dashboard-markup.cjs",
+      "sha256": "e6f184ea43e6abc1c84f74b75dc948fd6dfcf0a2f4771bcf6d51b3ef8c2a9a91"
+    },
+    {
+      "path": "assets/host-dashboard.js",
+      "sha256": "c2030369c04d059b2e145881cf3bef90a5fc56a2aff2206c1ffe761e7601ccf6"
+    },
+    {
+      "path": "assets/host-native-workspace.js",
+      "sha256": "5e4dea51c7e4717b580b6806d82af5cc0cd55c236639e4278f9716294476588c"
+    },
+    {
+      "path": "assets/host-native-workspace-i18n.js",
+      "sha256": "525722fa210cf8ef91d978f1d2e9fb525c523c7453082f2997ee617e1a66e26c"
+    },
+    {
+      "path": "scripts/host-native-workspace.cjs",
+      "sha256": "16b77f27684b73069541a184e52e6db5c688d2a7a9b8dba53d8fc114201c7a41"
+    },
+    {
+      "path": "docs/host-web-utility-actions.json",
+      "sha256": "fba05e81344007f1ef05b64e0a3d1c9e4516b5c7d1cab94be7a4c95531b950e3"
+    },
+    {
+      "path": "i18n-tools/console-translations.cjs",
+      "sha256": "faac178d5bef4c2c3daad8695fd4640c37b2ebb9ad78ac39158ab35390c3919a"
+    },
+    {
+      "path": "languages/i18n.js",
+      "sha256": "bc9af98e5f7c8cf5a430edb7a5c40bb228040b4aab9a6b424e5f3730b5a78ae7"
+    }
+  ],
+  "pages": [
+    "hosts/ps4/gta5/index.html",
+    "hosts/ps4/rdr2/index.html",
+    "hosts/ps4/other-games/index.html",
+    "hosts/ps4/files/index.html",
+    "hosts/ps4/payload-manager/index.html",
+    "hosts/ps5/gta5/index.html",
+    "hosts/ps5/rdr2/index.html",
+    "hosts/ps5/other-games/index.html",
+    "hosts/ps5/files/index.html",
+    "hosts/ps5/payload-manager/index.html"
+  ],
+  "publicCases": [
+    {
+      "text": "GTA 5 · PS4 mods | whatwhatboy",
+      "sources": [
+        "hosts/ps4/gta5/index.html title"
+      ]
+    },
+    {
+      "text": "Home",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Console",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "GTA 5 · PS4 mods",
+      "sources": [
+        "hosts/ps4/gta5/index.html text"
+      ]
+    },
+    {
+      "text": "Choose exact game updates and menu builds for GTA 5 on PS4.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text"
+      ]
+    },
+    {
+      "text": "Browse mods",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Console pages",
+      "sources": [
+        "hosts/ps4/gta5/index.html attribute",
+        "hosts/ps4/rdr2/index.html attribute",
+        "hosts/ps4/other-games/index.html attribute",
+        "hosts/ps4/files/index.html attribute",
+        "hosts/ps4/payload-manager/index.html attribute",
+        "hosts/ps5/gta5/index.html attribute",
+        "hosts/ps5/rdr2/index.html attribute",
+        "hosts/ps5/other-games/index.html attribute",
+        "hosts/ps5/files/index.html attribute",
+        "hosts/ps5/payload-manager/index.html attribute"
+      ]
+    },
+    {
+      "text": "PS4 host",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Other games",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "GTA 5 mods",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps5/gta5/index.html text"
+      ]
+    },
+    {
+      "text": "Your console connection",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Connect to your PS4",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Target PS4",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Not configured",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 IP address",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Use PS4 address",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "This PS4",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Installed firmware",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Browser firmware: not detected",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Firmware selection: not selected",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Viewing from:",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Not detected",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Service: not verified",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "14.00 setup guide",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Supplied ISO & GoldHEN downloads",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": ". The supplied 14.00 route is experimental. A tool without a firmware list still needs its own compatible loader; 14.00 support is not established for every payload.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Detect console",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Check PS4 services",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Find PS4 IP",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Find the console LAN address in Settings → Network → View Connection Status. When using a PC or phone, enter the PS4 address here. Browser detection does not discover another device on your network.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Downloader setup & connection help",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "For console downloads, install the matching receiver helper and keep ezRemote Server running. Opening its page does not save a file. Choose and verify storage in the native downloader.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Install console downloader",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "File manager setup",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Service checks require the paired desktop sender. They read service responses without loading a payload or changing files.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Transfer result unknown",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Check the console before trying another payload. The previous request may have reached it. Clearing this warning does not send or retry anything.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Clear transfer warning",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 ezRemote file manager",
+      "sources": [
+        "hosts/ps4/gta5/index.html attribute",
+        "hosts/ps4/rdr2/index.html attribute",
+        "hosts/ps4/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Files & storage · PS4",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 file manager",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text"
+      ]
+    },
+    {
+      "text": "Start ezRemote Client on your PS4 before opening its file manager.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Open file manager page",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 payload management",
+      "sources": [
+        "hosts/ps4/gta5/index.html attribute",
+        "hosts/ps4/rdr2/index.html attribute",
+        "hosts/ps4/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Payloads · PS4",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 payloads & autoload",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Prepare your payload files, then use GoldHEN LaunchPad and AutoRun on the console.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Manage PS4 payloads",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 downloads & storage",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 library",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Browse hosts, payloads & game mods",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Host categories",
+      "sources": [
+        "hosts/ps4/gta5/index.html attribute",
+        "hosts/ps4/rdr2/index.html attribute",
+        "hosts/ps4/other-games/index.html attribute",
+        "hosts/ps5/gta5/index.html attribute",
+        "hosts/ps5/rdr2/index.html attribute",
+        "hosts/ps5/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Game mods",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Payloads",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Loaders",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Tools",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Game",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Search payloads and mod menus",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "GTA V, RDR2, trainer, ELF…",
+      "sources": [
+        "hosts/ps4/gta5/index.html attribute",
+        "hosts/ps4/rdr2/index.html attribute",
+        "hosts/ps4/other-games/index.html attribute",
+        "hosts/ps5/gta5/index.html attribute",
+        "hosts/ps5/rdr2/index.html attribute",
+        "hosts/ps5/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Show older game builds",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Download a copy when pressing Load",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "128 actions",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Select the installed firmware and PS4 address. Load sends a compatible payload through its running console loader.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Enable JavaScript to use the host controls.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "No actions match these filters.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Choose version",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Close version chooser",
+      "sources": [
+        "hosts/ps4/gta5/index.html attribute",
+        "hosts/ps4/rdr2/index.html attribute",
+        "hosts/ps4/other-games/index.html attribute",
+        "hosts/ps5/gta5/index.html attribute",
+        "hosts/ps5/rdr2/index.html attribute",
+        "hosts/ps5/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Game update & menu version",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Version choices",
+      "sources": [
+        "hosts/ps4/gta5/index.html attribute",
+        "hosts/ps4/rdr2/index.html attribute",
+        "hosts/ps4/other-games/index.html attribute",
+        "hosts/ps5/gta5/index.html attribute",
+        "hosts/ps5/rdr2/index.html attribute",
+        "hosts/ps5/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Match the installed game update, menu version and title ID. Each option keeps its original download and loading requirements.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Desktop sender · connect from a PC",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Use the paired sender when the browser cannot contact your PS4 loader. Open its local host page and enter the token printed on your computer. Nothing loads until you choose a payload.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Download desktop sender",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Sender instructions",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Local sender URL",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Pairing token",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Open local sender",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Connect sender",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Download uses the configured console downloader, which checks its queue and destination before saving. Without a console address, it downloads to this device. A transfer acknowledgement does not confirm execution; check the console for the result.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Reviewed 2 November 2026. Check each project's release notes for firmware and installation requirements.",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Report a broken link",
+      "sources": [
+        "hosts/ps4/gta5/index.html text",
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "RDR2 · PS4 mods | whatwhatboy",
+      "sources": [
+        "hosts/ps4/rdr2/index.html title"
+      ]
+    },
+    {
+      "text": "RDR2 · PS4 mods",
+      "sources": [
+        "hosts/ps4/rdr2/index.html text"
+      ]
+    },
+    {
+      "text": "Choose exact game updates and menu builds for RDR2 on PS4.",
+      "sources": [
+        "hosts/ps4/rdr2/index.html text"
+      ]
+    },
+    {
+      "text": "RDR2 mods",
+      "sources": [
+        "hosts/ps4/rdr2/index.html text",
+        "hosts/ps5/rdr2/index.html text"
+      ]
+    },
+    {
+      "text": "Other games · PS4 mods | whatwhatboy",
+      "sources": [
+        "hosts/ps4/other-games/index.html title"
+      ]
+    },
+    {
+      "text": "Other games · PS4 mods",
+      "sources": [
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Choose exact game updates and menu builds for Other games on PS4.",
+      "sources": [
+        "hosts/ps4/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Other games mods",
+      "sources": [
+        "hosts/ps4/other-games/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 file manager | whatwhatboy",
+      "sources": [
+        "hosts/ps4/files/index.html title"
+      ]
+    },
+    {
+      "text": "Manage files on your PS4 through its installed native workspace.",
+      "sources": [
+        "hosts/ps4/files/index.html text"
+      ]
+    },
+    {
+      "text": "Open files",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps5/files/index.html text"
+      ]
+    },
+    {
+      "text": "File manager",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps5/files/index.html text"
+      ]
+    },
+    {
+      "text": "Payload manager",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Downloads",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Console files",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps5/files/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 · native workspace",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Console file manager",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps5/files/index.html text"
+      ]
+    },
+    {
+      "text": "Browse console files, upload ready payloads and edit the existing autoload file through ezRemote Client. The installed helper verifies backups and re-reads saved files.",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Open file workspace",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps5/files/index.html text"
+      ]
+    },
+    {
+      "text": "Open native file manager",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Install the console workspace",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Download PS4 workspace helper",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Use ezRemote Client or FTP to copy this HTML file to",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Keep ezRemote Client running, then open the workspace above. Its filesystem controls work only through the matching console origin.",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "The public page cannot directly access console storage. Opening the native workspace does not upload, overwrite or run a payload.",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Autoload edits preserve a verified backup and refuse a stale original. Editing a queue does not start it; review its native settings before the next launch.",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Configure the console address, then open its installed native workspace.",
+      "sources": [
+        "hosts/ps4/files/index.html text",
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "whatwhatboy's · PS4 payload manager | whatwhatboy",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html title"
+      ]
+    },
+    {
+      "text": "whatwhatboy's · PS4 payload manager",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Load, download and organise PS4 payloads with the matching native console tools.",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Manage payloads",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Setup guide",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Payload management",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Payload files & autoload",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Manage payload files",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Edit autoload file",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 · native GoldHEN controls",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Use a compatible GoldHEN release that includes PayLoader LaunchPad. Its native list manages payload launches and AutoRun on the PS4.",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Save compatible payloads in the location required by your GoldHEN release, using the PS4 file manager.",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "On the PS4, open",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Highlight the payload and use",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "to add it to AutoRun. Review the list before restarting GoldHEN.",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Open PS4 file manager",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 AutoRun setup & paths",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 loader requirements",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "LaunchPad/AutoRun requires a GoldHEN build providing those features, introduced in 2.4b18.10. Match that build to your firmware. PS5 Payload Manager is a separate PS5 application.",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS4 console and controller",
+      "sources": [
+        "hosts/ps4/payload-manager/index.html attribute"
+      ]
+    },
+    {
+      "text": "GTA 5 · PS5 mods | whatwhatboy",
+      "sources": [
+        "hosts/ps5/gta5/index.html title"
+      ]
+    },
+    {
+      "text": "GTA 5 · PS5 mods",
+      "sources": [
+        "hosts/ps5/gta5/index.html text"
+      ]
+    },
+    {
+      "text": "Choose exact game updates and menu builds for GTA 5 on PS5.",
+      "sources": [
+        "hosts/ps5/gta5/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 host",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Connect to your PS5",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Target PS5",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 IP address",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Use PS5 address",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "This PS5",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Check PS5 services",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Find PS5 IP",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Find the console LAN address in Settings → Network → View Connection Status. When using a PC or phone, enter the PS5 address here. Browser detection does not discover another device on your network.",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 ezRemote file manager",
+      "sources": [
+        "hosts/ps5/gta5/index.html attribute",
+        "hosts/ps5/rdr2/index.html attribute",
+        "hosts/ps5/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Files & storage · PS5",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 file manager",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text"
+      ]
+    },
+    {
+      "text": "Load websrv on your PS5, or start ezRemote Client.",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 payload management",
+      "sources": [
+        "hosts/ps5/gta5/index.html attribute",
+        "hosts/ps5/rdr2/index.html attribute",
+        "hosts/ps5/other-games/index.html attribute"
+      ]
+    },
+    {
+      "text": "Payloads · PS5",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Open Payload Manager, import files and set the startup list in its native interface.",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Manage PS5 payloads",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 downloads & storage",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 library",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "36 actions",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Select the installed firmware and PS5 address. Load sends a compatible payload through its running console loader.",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Use the paired sender when the browser cannot contact your PS5 loader. Open its local host page and enter the token printed on your computer. Nothing loads until you choose a payload.",
+      "sources": [
+        "hosts/ps5/gta5/index.html text",
+        "hosts/ps5/rdr2/index.html text",
+        "hosts/ps5/other-games/index.html text",
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "RDR2 · PS5 mods | whatwhatboy",
+      "sources": [
+        "hosts/ps5/rdr2/index.html title"
+      ]
+    },
+    {
+      "text": "RDR2 · PS5 mods",
+      "sources": [
+        "hosts/ps5/rdr2/index.html text"
+      ]
+    },
+    {
+      "text": "Choose exact game updates and menu builds for RDR2 on PS5.",
+      "sources": [
+        "hosts/ps5/rdr2/index.html text"
+      ]
+    },
+    {
+      "text": "Other games · PS5 mods | whatwhatboy",
+      "sources": [
+        "hosts/ps5/other-games/index.html title"
+      ]
+    },
+    {
+      "text": "Other games · PS5 mods",
+      "sources": [
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "Choose exact game updates and menu builds for Other games on PS5.",
+      "sources": [
+        "hosts/ps5/other-games/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 file manager | whatwhatboy",
+      "sources": [
+        "hosts/ps5/files/index.html title"
+      ]
+    },
+    {
+      "text": "Manage files on your PS5 through its installed native workspace.",
+      "sources": [
+        "hosts/ps5/files/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 · native workspace",
+      "sources": [
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Download PS5 workspace helper",
+      "sources": [
+        "hosts/ps5/files/index.html text",
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "whatwhatboy's · PS5 payload manager | whatwhatboy",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html title"
+      ]
+    },
+    {
+      "text": "whatwhatboy's · PS5 payload manager",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Load, download and organise PS5 payloads with the matching native console tools.",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 native service · port 8084",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Load the manager ELF once through your compatible console loader, then manage downloaded payloads, startup order and USB imports in its native web interface.",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Load PS5 Payload Manager",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Open PS5 manager",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 autoload & order",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Import & download payloads",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Repository sources",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Running processes",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Settings",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Autoload runs when Payload Manager starts. Enable it and choose the list in the native manager. Opening this page does not enable or run an autoload list.",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "Installation & native manager guide",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 payload repository source",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html text"
+      ]
+    },
+    {
+      "text": "PS5 Payload Manager interface",
+      "sources": [
+        "hosts/ps5/payload-manager/index.html attribute"
+      ]
+    },
+    {
+      "text": "Copy already installed base, update and DLC package files to the configured external drive.",
+      "sources": [
+        "ps4-kme-web-pkg-backup-1300 description"
+      ]
+    },
+    {
+      "text": "App Dumper",
+      "sources": [
+        "ps4-kme-web-app-dumper-1300 label"
+      ]
+    },
+    {
+      "text": "Dump an installed app/game to the USB output used by this build.",
+      "sources": [
+        "ps4-kme-web-app-dumper-1300 description"
+      ]
+    },
+    {
+      "text": "Disable Updates",
+      "sources": [
+        "ps4-kme-web-disable-updates-1300 label"
+      ]
+    },
+    {
+      "text": "Block firmware-update downloads using the PS4 update-file paths.",
+      "sources": [
+        "ps4-kme-web-disable-updates-1300 description"
+      ]
+    },
+    {
+      "text": "Disable update downloads by changing the update-file blockers on this PS4?",
+      "sources": [
+        "ps4-kme-web-disable-updates-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Enable Updates",
+      "sources": [
+        "ps4-kme-web-enable-updates-1300 label"
+      ]
+    },
+    {
+      "text": "Remove the update-file blockers so firmware-update downloads can work again.",
+      "sources": [
+        "ps4-kme-web-enable-updates-1300 description"
+      ]
+    },
+    {
+      "text": "Remove the update blockers on this PS4? System-update downloads will be allowed again.",
+      "sources": [
+        "ps4-kme-web-enable-updates-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Enable Browser",
+      "sources": [
+        "ps4-kme-web-enable-browser-1300 label"
+      ]
+    },
+    {
+      "text": "Apply the console browser-enabled setting used by this payload.",
+      "sources": [
+        "ps4-kme-web-enable-browser-1300 description"
+      ]
+    },
+    {
+      "text": "Change this PS4’s browser-enabled setting?",
+      "sources": [
+        "ps4-kme-web-enable-browser-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Exit IDU",
+      "sources": [
+        "ps4-kme-web-exit-idu-1300 label"
+      ]
+    },
+    {
+      "text": "Exit IDU mode and restart the console.",
+      "sources": [
+        "ps4-kme-web-exit-idu-1300 description"
+      ]
+    },
+    {
+      "text": "Exit IDU mode and restart this PS4 now?",
+      "sources": [
+        "ps4-kme-web-exit-idu-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "RIF Renamer",
+      "sources": [
+        "ps4-kme-web-rif-renamer-1300 label"
+      ]
+    },
+    {
+      "text": "Rename licence RIF files in the console licence directories.",
+      "sources": [
+        "ps4-kme-web-rif-renamer-1300 description"
+      ]
+    },
+    {
+      "text": "Rename RIF licence files in this PS4’s system and user licence directories?",
+      "sources": [
+        "ps4-kme-web-rif-renamer-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "FTP Server",
+      "sources": [
+        "ps4-kme-web-ftp-1300 label"
+      ]
+    },
+    {
+      "text": "Start the supplied FTP server so a client can connect to the console.",
+      "sources": [
+        "ps4-kme-web-ftp-1300 description"
+      ]
+    },
+    {
+      "text": "History Blocker",
+      "sources": [
+        "ps4-kme-web-history-blocker-1300 label"
+      ]
+    },
+    {
+      "text": "Toggle browser history blocking for console users.",
+      "sources": [
+        "ps4-kme-web-history-blocker-1300 description"
+      ]
+    },
+    {
+      "text": "Toggle browser history blocking for the users on this PS4?",
+      "sources": [
+        "ps4-kme-web-history-blocker-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Kernel Dumper",
+      "sources": [
+        "ps4-kme-web-kernel-dumper-1300 label"
+      ]
+    },
+    {
+      "text": "Write a kernel dump through the selected payload’s native output workflow.",
+      "sources": [
+        "ps4-kme-web-kernel-dumper-1300 description"
+      ]
+    },
+    {
+      "text": "Kernel Module Dumper",
+      "sources": [
+        "ps4-kme-web-module-dumper-1300 label"
+      ]
+    },
+    {
+      "text": "Dump console kernel modules through the native utility.",
+      "sources": [
+        "ps4-kme-web-module-dumper-1300 description"
+      ]
+    },
+    {
+      "text": "Start the exact official ps4debug v1.1.19 service for a matching debugger client.",
+      "sources": [
+        "ps4-kme-web-ps4debug-v1-1-19 description"
+      ]
+    },
+    {
+      "text": "Database Backup",
+      "sources": [
+        "ps4-kme-web-db-backup-1300 label"
+      ]
+    },
+    {
+      "text": "Back up the app/add-on/content databases internally and to the utility’s USB backup layout.",
+      "sources": [
+        "ps4-kme-web-db-backup-1300 description"
+      ]
+    },
+    {
+      "text": "Create database backups using this utility’s internal or connected USB paths?",
+      "sources": [
+        "ps4-kme-web-db-backup-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Database Restore",
+      "sources": [
+        "ps4-kme-web-db-restore-1300 label"
+      ]
+    },
+    {
+      "text": "Replace console databases from a matching backup, then restart the console.",
+      "sources": [
+        "ps4-kme-web-db-restore-1300 description"
+      ]
+    },
+    {
+      "text": "Restore can replace this PS4’s databases and restart the console. Verify a backup made for this console before continuing.",
+      "sources": [
+        "ps4-kme-web-db-restore-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Move configured installed package files to USB and replace their internal paths with links.",
+      "sources": [
+        "ps4-kme-web-app2usb-1300 description"
+      ]
+    },
+    {
+      "text": "App2USB moves installed package files to USB and replaces their internal paths with links. Verify the intended drive, mount and configuration before continuing.",
+      "sources": [
+        "ps4-kme-web-app2usb-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Spoof the running PS4 target ID for testkit/debug behavior.",
+      "sources": [
+        "ps4-kme-web-to-dex-1300 description"
+      ]
+    },
+    {
+      "text": "Change the running PS4’s target ID to spoof testkit/debug behavior?",
+      "sources": [
+        "ps4-kme-web-to-dex-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Permanent UART",
+      "sources": [
+        "ps4-kme-web-permanent-uart-1300 label"
+      ]
+    },
+    {
+      "text": "Enable hardware UART through a persistent system-controller setting.",
+      "sources": [
+        "ps4-kme-web-permanent-uart-1300 description"
+      ]
+    },
+    {
+      "text": "Enable permanent hardware UART on this PS4? This setting can persist across firmware updates.",
+      "sources": [
+        "ps4-kme-web-permanent-uart-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "Disable ASLR",
+      "sources": [
+        "ps4-kme-web-disable-aslr-1300 label"
+      ]
+    },
+    {
+      "text": "Apply the source’s address-randomization disabling patch.",
+      "sources": [
+        "ps4-kme-web-disable-aslr-1300 description"
+      ]
+    },
+    {
+      "text": "Apply the Disable ASLR patch to this running PS4?",
+      "sources": [
+        "ps4-kme-web-disable-aslr-1300 confirmBeforeLoad"
+      ]
+    },
+    {
+      "text": "0 menus · 0 variants",
+      "sources": [
+        "dynamic public message"
+      ]
+    },
+    {
+      "text": "12 menus · 37 variants",
+      "sources": [
+        "dynamic public message"
+      ]
+    },
+    {
+      "text": "3 game pages",
+      "sources": [
+        "dynamic public message"
+      ]
+    },
+    {
+      "text": "Load cancelled. Nothing was sent.",
+      "sources": [
+        "dynamic public message"
+      ]
+    },
+    {
+      "text": "Opening the installed console workspace. Keep ezRemote Client running and install the helper at the displayed path first.",
+      "sources": [
+        "dynamic public message"
+      ]
+    }
+  ],
+  "nativeCases": [
+    {
+      "key": "Language",
+      "text": "Language"
+    },
+    {
+      "key": "Settings",
+      "text": "Settings"
+    },
+    {
+      "key": "whatsite / console workspace",
+      "text": "whatsite / console workspace"
+    },
+    {
+      "key": "{platform} files & payloads",
+      "text": "PS4 files & payloads"
+    },
+    {
+      "key": "{platform} files & payloads · whatsite",
+      "text": "PS4 files & payloads · whatsite"
+    },
+    {
+      "key": "Workspace",
+      "text": "Workspace"
+    },
+    {
+      "key": "File manager",
+      "text": "File manager"
+    },
+    {
+      "key": "Payload files",
+      "text": "Payload files"
+    },
+    {
+      "key": "Autoload file",
+      "text": "Autoload file"
+    },
+    {
+      "key": "Choose a view, then read the console when ready.",
+      "text": "Choose a view, then read the console when ready."
+    },
+    {
+      "key": "Console folder",
+      "text": "Console folder"
+    },
+    {
+      "key": "Read folder",
+      "text": "Read folder"
+    },
+    {
+      "key": "Name",
+      "text": "Name"
+    },
+    {
+      "key": "Type",
+      "text": "Type"
+    },
+    {
+      "key": "Bytes",
+      "text": "Bytes"
+    },
+    {
+      "key": "No file selected.",
+      "text": "No file selected."
+    },
+    {
+      "key": "Download selected file",
+      "text": "Download selected file"
+    },
+    {
+      "key": "Rename selected file",
+      "text": "Rename selected file"
+    },
+    {
+      "key": "Managed payload folders only",
+      "text": "Managed payload folders only"
+    },
+    {
+      "key": "Uploads accept ready BIN or ELF files up to 8 MiB. Existing filenames are preserved. This workspace never executes a payload.",
+      "text": "Uploads accept ready BIN or ELF files up to 8 MiB. Existing filenames are preserved. This workspace never executes a payload."
+    },
+    {
+      "key": "Choose a file",
+      "text": "Choose a file"
+    },
+    {
+      "key": "Upload & verify",
+      "text": "Upload & verify"
+    },
+    {
+      "key": "Create folder",
+      "text": "Create folder"
+    },
+    {
+      "key": "Native autoload file",
+      "text": "Native autoload file"
+    },
+    {
+      "key": "Read actual file",
+      "text": "Read actual file"
+    },
+    {
+      "key": "Raw file editor · comments, unknown sections and entries are retained unless you edit them",
+      "text": "Raw file editor · comments, unknown sections and entries are retained unless you edit them"
+    },
+    {
+      "key": "I reviewed these edits and checked that no native autoload sequence is active. Save must keep a verified backup.",
+      "text": "I reviewed these edits and checked that no native autoload sequence is active. Save must keep a verified backup."
+    },
+    {
+      "key": "Back up, save & verify",
+      "text": "Back up, save & verify"
+    },
+    {
+      "key": "Only ezRemote Client on its own HTTP origin can operate this workspace. External storage remains in the native file manager until its actual mount is verified. No files are deleted here.",
+      "text": "Only ezRemote Client on its own HTTP origin can operate this workspace. External storage remains in the native file manager until its actual mount is verified. No files are deleted here."
+    },
+    {
+      "key": "Manage actual console files through ezRemote Client. No payload runs when this page opens.",
+      "text": "Manage actual console files through ezRemote Client. No payload runs when this page opens."
+    },
+    {
+      "key": "Reading the native directory…",
+      "text": "Reading the native directory…"
+    },
+    {
+      "key": "New folder name",
+      "text": "New folder name"
+    },
+    {
+      "key": "Creating and verifying the folder…",
+      "text": "Creating and verifying the folder…"
+    },
+    {
+      "key": "New filename",
+      "text": "New filename"
+    },
+    {
+      "key": "Checking the original, renaming and verifying the result…",
+      "text": "Checking the original, renaming and verifying the result…"
+    },
+    {
+      "key": "Reading selected file…",
+      "text": "Reading selected file…"
+    },
+    {
+      "key": "Choose a ready BIN or ELF file first.",
+      "text": "Choose a ready BIN or ELF file first."
+    },
+    {
+      "key": "Reading, uploading and verifying the file…",
+      "text": "Reading, uploading and verifying the file…"
+    },
+    {
+      "key": "Reading native autoload bytes and text…",
+      "text": "Reading native autoload bytes and text…"
+    },
+    {
+      "key": "Actual native file read. No file has been changed.",
+      "text": "Actual native file read. No file has been changed."
+    },
+    {
+      "key": "Verifying the original, preserving a verified backup, staging and checking the replacement…",
+      "text": "Verifying the original, preserving a verified backup, staging and checking the replacement…"
+    },
+    {
+      "key": "No edits to save. No write was requested.",
+      "text": "No edits to save. No write was requested."
+    },
+    {
+      "key": "GoldHEN uses payloads.ini with an [AutoRun] section. This raw editor does not invent ordering, delay syntax or firmware support. Keep actual generated paths and use a compatible GoldHEN version.",
+      "text": "GoldHEN uses payloads.ini with an [AutoRun] section. This raw editor does not invent ordering, delay syntax or firmware support. Keep actual generated paths and use a compatible GoldHEN version."
+    },
+    {
+      "key": "This edits the actual on-disk list, not the manager’s current execution state. Review the native manager before editing; use its own Autoload page to apply supported configuration changes. Saving here never runs a sequence.",
+      "text": "This edits the actual on-disk list, not the manager’s current execution state. Review the native manager before editing; use its own Autoload page to apply supported configuration changes. Saving here never runs a sequence."
+    },
+    {
+      "key": "ezRemote origin selected. Read a folder or the autoload file to check its API. Keep the native app running.",
+      "text": "ezRemote origin selected. Read a folder or the autoload file to check its API. Keep the native app running."
+    },
+    {
+      "key": "ezRemote returned HTTP {status}.",
+      "text": "ezRemote returned HTTP 503."
+    },
+    {
+      "key": "Native listing read: {count} entries. An empty result does not establish that a directory exists or is writable.",
+      "text": "Native listing read: 3 entries. An empty result does not establish that a directory exists or is writable."
+    },
+    {
+      "key": "Verified new folder: {path}. Read the folder to refresh the listing.",
+      "text": "Verified new folder: /data/whatwhatboy/two  spaces.bin. Read the folder to refresh the listing."
+    },
+    {
+      "key": "Renamed file verified by SHA-256: {hash}. Read the folder to refresh the listing.",
+      "text": "Renamed file verified by SHA-256: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. Read the folder to refresh the listing."
+    },
+    {
+      "key": "File read for download. SHA-256: {hash}",
+      "text": "File read for download. SHA-256: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "key": "Saved file verified: {path} · SHA-256 {hash}. No execution was requested. Read the folder to refresh the listing.",
+      "text": "Saved file verified: /data/whatwhatboy/two  spaces.bin · SHA-256 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. No execution was requested. Read the folder to refresh the listing."
+    },
+    {
+      "key": "Read SHA-256: {hash}",
+      "text": "Read SHA-256: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "key": "On-disk file verified. Backup retained: {path}. Read the actual file again. Native autoload execution and applied settings have not been verified.",
+      "text": "On-disk file verified. Backup retained: /data/whatwhatboy/two  spaces.bin. Read the actual file again. Native autoload execution and applied settings have not been verified."
+    },
+    {
+      "key": "Native manager: {screen}",
+      "text": "Native manager: storage"
+    },
+    {
+      "key": "autoload",
+      "text": "autoload"
+    },
+    {
+      "key": "storage",
+      "text": "storage"
+    },
+    {
+      "key": "settings",
+      "text": "settings"
+    },
+    {
+      "key": "Read-only preview. Copy this self-contained HTML file to {path}, start ezRemote Client with its Web Server enabled, then open {url}. No console requests are made from this preview.",
+      "text": "Read-only preview. Copy this self-contained HTML file to /data/whatwhatboy/two  spaces.bin, start ezRemote Client with its Web Server enabled, then open http://192.168.1.55:8080/data/whatsite-workspace-ps4.html. No console requests are made from this preview."
+    },
+    {
+      "key": "{message} Any backup or staging files are retained: {path}",
+      "text": "The destination already exists. Choose a new name; existing files are preserved. Any backup or staging files are retained: /data/whatwhatboy/two  spaces.bin"
+    },
+    {
+      "key": "{message} Read the console again before another change.",
+      "text": "The destination already exists. Choose a new name; existing files are preserved. Read the console again before another change."
+    },
+    {
+      "key": "Enable JavaScript, copy this HTML file to the documented console path and open it through the running native ezRemote Client.",
+      "text": "Enable JavaScript, copy this HTML file to the documented console path and open it through the running native ezRemote Client."
+    },
+    {
+      "key": "Choose PS4 or PS5.",
+      "text": "Choose PS4 or PS5."
+    },
+    {
+      "key": "Use a normal absolute console path without traversal or URL encoding.",
+      "text": "Use a normal absolute console path without traversal or URL encoding."
+    },
+    {
+      "key": "This workspace reads /data and explicitly verified mounted-device roots only. A numbered directory does not verify a mount.",
+      "text": "This workspace reads /data and explicitly verified mounted-device roots only. A numbered directory does not verify a mount."
+    },
+    {
+      "key": "Use a simple filename without slashes, traversal or trailing dots.",
+      "text": "Use a simple filename without slashes, traversal or trailing dots."
+    },
+    {
+      "key": "Writes are limited to the managed payload folders and the selected native autoload file.",
+      "text": "Writes are limited to the managed payload folders and the selected native autoload file."
+    },
+    {
+      "key": "The native service did not return file bytes.",
+      "text": "The native service did not return file bytes."
+    },
+    {
+      "key": "The native response exceeded the workspace limit.",
+      "text": "The native response exceeded the workspace limit."
+    },
+    {
+      "key": "The native connection was lost. Inspect the console before repeating any write.",
+      "text": "The native connection was lost. Inspect the console before repeating any write."
+    },
+    {
+      "key": "The native request timed out. Inspect the console before repeating any write.",
+      "text": "The native request timed out. Inspect the console before repeating any write."
+    },
+    {
+      "key": "Open the installed workspace through the running ezRemote Client on its default native port. Public previews are read-only.",
+      "text": "Open the installed workspace through the running ezRemote Client on its default native port. Public previews are read-only."
+    },
+    {
+      "key": "Read a folder successfully before enabling file changes.",
+      "text": "Read a folder successfully before enabling file changes."
+    },
+    {
+      "key": "ezRemote returned an unreadable response. Inspect the console before repeating any write.",
+      "text": "ezRemote returned an unreadable response. Inspect the console before repeating any write."
+    },
+    {
+      "key": "ezRemote did not return its native result.",
+      "text": "ezRemote did not return its native result."
+    },
+    {
+      "key": "ezRemote did not confirm the file change. Inspect the console before repeating it.",
+      "text": "ezRemote did not confirm the file change. Inspect the console before repeating it."
+    },
+    {
+      "key": "ezRemote did not return a bounded directory listing.",
+      "text": "ezRemote did not return a bounded directory listing."
+    },
+    {
+      "key": "The selected file is not present in the native listing.",
+      "text": "The selected file is not present in the native listing."
+    },
+    {
+      "key": "This file exceeds the workspace read limit. Use the native file manager.",
+      "text": "This file exceeds the workspace read limit. Use the native file manager."
+    },
+    {
+      "key": "The file size changed while it was being read. Read it again before proceeding.",
+      "text": "The file size changed while it was being read. Read it again before proceeding."
+    },
+    {
+      "key": "The native text file could not be read within the editor limit.",
+      "text": "The native text file could not be read within the editor limit."
+    },
+    {
+      "key": "Uploads must contain 1 byte through 8 MiB. Use the native file manager for larger files.",
+      "text": "Uploads must contain 1 byte through 8 MiB. Use the native file manager for larger files."
+    },
+    {
+      "key": "The upload acknowledgement could not be read. Inspect the console before retrying.",
+      "text": "The upload acknowledgement could not be read. Inspect the console before retrying."
+    },
+    {
+      "key": "ezRemote did not confirm the upload.",
+      "text": "ezRemote did not confirm the upload."
+    },
+    {
+      "key": "The saved file did not match its expected SHA-256. Inspect the console; no retry was sent.",
+      "text": "The saved file did not match its expected SHA-256. Inspect the console; no retry was sent."
+    },
+    {
+      "key": "The destination already exists. Choose a new name; existing files are preserved.",
+      "text": "The destination already exists. Choose a new name; existing files are preserved."
+    },
+    {
+      "key": "The file changed since it was read. Read it again; no replacement was requested.",
+      "text": "The file changed since it was read. Read it again; no replacement was requested."
+    },
+    {
+      "key": "The native listing did not confirm the new folder. Inspect the console before retrying.",
+      "text": "The native listing did not confirm the new folder. Inspect the console before retrying."
+    },
+    {
+      "key": "Choose a ready BIN or ELF file. This page saves files and never executes them.",
+      "text": "Choose a ready BIN or ELF file. This page saves files and never executes them."
+    },
+    {
+      "key": "The selected ELF does not have its executable header.",
+      "text": "The selected ELF does not have its executable header."
+    },
+    {
+      "key": "Managed root folders cannot be renamed.",
+      "text": "Managed root folders cannot be renamed."
+    },
+    {
+      "key": "The listing did not confirm the rename. Inspect the console before retrying.",
+      "text": "The listing did not confirm the rename. Inspect the console before retrying."
+    },
+    {
+      "key": "The autoload file is not valid UTF-8. Download it and use its native editor.",
+      "text": "The autoload file is not valid UTF-8. Download it and use its native editor."
+    },
+    {
+      "key": "The autoload file contains binary data. It will not be edited.",
+      "text": "The autoload file contains binary data. It will not be edited."
+    },
+    {
+      "key": "Native text and binary reads differ. Read the file again before editing.",
+      "text": "Native text and binary reads differ. Read the file again before editing."
+    },
+    {
+      "key": "Read the actual autoload file before saving.",
+      "text": "Read the actual autoload file before saving."
+    },
+    {
+      "key": "Keep the native autoload file within 64 KiB with no binary data.",
+      "text": "Keep the native autoload file within 64 KiB with no binary data."
+    },
+    {
+      "key": "Uploads are limited to 8 MiB. Use the native file manager for larger files.",
+      "text": "Uploads are limited to 8 MiB. Use the native file manager for larger files."
+    },
+    {
+      "key": "The selected local file could not be read.",
+      "text": "The selected local file could not be read."
+    },
+    {
+      "key": "composed write warning",
+      "text": "The destination already exists. Choose a new name; existing files are preserved. Any backup or staging files are retained: /data/whatwhatboy/two  spaces.bin Read the console again before another change."
+    }
+  ],
+  "nativeSubset": {
+    "languages": 20,
+    "keys": 98,
+    "inline": true,
+    "remoteScripts": false,
+    "networkPermissionsExpanded": false,
+    "storagePreference": "whatsite.workspace.lang",
+    "unchangedFields": [
+      "native file names",
+      "absolute paths including repeated spaces",
+      "SHA-256 values",
+      "raw autoload editor contents",
+      "native origins/ports"
+    ],
+    "tests": "node --test scripts/tests/host-native-workspace.test.cjs scripts/tests/host-native-workspace-i18n.test.cjs",
+    "testsPassed": 17
+  },
+  "languages": [
+    {
+      "code": "es",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "17e540ddcba667bf558394ef572b594ba88d999ede786af62362abbde21badf1"
+    },
+    {
+      "code": "pt",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "d69c29f581fd48646a0388121f757bf922d08f108eff17b6babe0808a31c80a2"
+    },
+    {
+      "code": "fr",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "9a0a636546f634d1d0ff28202bcacf1086b63d44d92b98f7b77b1bcf8c0f4da2"
+    },
+    {
+      "code": "de",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "9b7b8417cabcda88c79041cdcfcd424b5d8615f55e02e1b662d5cde599f277fd"
+    },
+    {
+      "code": "ru",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "6cf21a410a8e695d2ee56955f53420ce9a1207ea260c4fb04148af4fa189fac1"
+    },
+    {
+      "code": "tr",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "6187cb806cc9027e9feb827c76ed71cd047dc204f88875a36bb4dcf07bf2abab"
+    },
+    {
+      "code": "pl",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "c32a1dd55ceb16b7a6cc57693b8f722b06b3ab85e23b665a0a0da7a1200b2d6d"
+    },
+    {
+      "code": "it",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "2ad0e120ec59e765fa1950a6d2bc8bc0e4d3214b57161be99a23185e8337f5b0"
+    },
+    {
+      "code": "zh",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "9df59c7692d56154c638543a7f17ba21a6db7b696f7901520ef7fbc0d2ee3370"
+    },
+    {
+      "code": "ja",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "5298488b2cda74fa1104c9a8e75cd4c5b3a96033267ade298af136ce6571a95d"
+    },
+    {
+      "code": "ko",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "6deaecc746d4f8f0f6d59710307af295e87e950f9e577445cff48ba9bc6a85c4"
+    },
+    {
+      "code": "th",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "c0330cfb4b9f6b2e4b711e8008f604359b060d5f6993c88ff1b903bb39686295"
+    },
+    {
+      "code": "vi",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "b2414c7ea40bc19f287f73f303a0b80587fd07a79615673c4a0c63e05a462a58"
+    },
+    {
+      "code": "id",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "9f5330ec3ca56e24a8703f29aef0edaf2dc397eab6cce0e85696d31a2fad0d2b"
+    },
+    {
+      "code": "hi",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "da7d391485ea9764dc802bf46791ccb391bc4dfe319652c48227564d5f00e8a4"
+    },
+    {
+      "code": "sr",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "575204175b6f34999ace69caa69240457c609fc75f5bd5aa801115669c45f7d5"
+    },
+    {
+      "code": "nl",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "548044fe99c892fc710c70fe60ce774798b48bda19ce1f483a8872abfd46bce3"
+    },
+    {
+      "code": "ka",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "9498a39c2b0f5532aaf2c4cc0913e2653ae4520d36881e4b06c9be3bf0957a64"
+    },
+    {
+      "code": "ar",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "b89e4477323ee6ff46427ccf667c62d8b80b80679244729ae02e5a51b6c48575"
+    },
+    {
+      "code": "he",
+      "keys": 835,
+      "publicLookups": 228,
+      "missingPublic": [],
+      "nativeLookups": 99,
+      "nativeErrors": [],
+      "placeholderErrors": [],
+      "sha256": "7f630a0392798a3555cb15426f1adec45823c2fe066ee24d40978f739a9e2c67"
+    }
+  ],
+  "artifactChecks": [
+    {
+      "platform": "ps4",
+      "path": "/downloads/helpers/host-native-workspace/ps4/7cefa37d8cdd39ad/whatsite-workspace-ps4.html",
+      "bytes": 348534,
+      "sha256": "7cefa37d8cdd39adc132298bea24429c33ef7a8248b9b2c177fdb5aaf441c92a",
+      "matchesBuildReport": true,
+      "matchesCurrentRender": true,
+      "noRemoteScripts": true
+    },
+    {
+      "platform": "ps5",
+      "path": "/downloads/helpers/host-native-workspace/ps5/032c28a8bd60c7c9/whatsite-workspace-ps5.html",
+      "bytes": 348534,
+      "sha256": "032c28a8bd60c7c9ff9580244375af95d78924d9b4d7e12272058fc2afd53333",
+      "matchesBuildReport": true,
+      "matchesCurrentRender": true,
+      "noRemoteScripts": true
+    }
+  ],
+  "retainedHelperBuilds": 8,
+  "passed": true
+}

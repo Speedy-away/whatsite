@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-02T15:19:54.733Z",
+  "updated": "2026-11-02T16:04:43.711Z",
   "scope": "Mod menus, scripts, tools and source codes; excludes games and firmware.",
   "summary": {
-    "resources": 2088,
+    "resources": 2102,
     "mirroredResources": 1497,
     "mirroredFiles": 2316,
     "mirroredBytes": 12570702574,
     "statuses": {
-      "downloaded": 1921,
+      "downloaded": 1935,
       "excluded": 111,
       "unavailable": 52,
       "ready": 1,
@@ -41022,6 +41022,230 @@
           "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20",
           "availability": "mirrored",
           "local": "/downloads/ps4-ps5/whatsite-ps5-console-downloader-2026-11-02-12/whatsite-ps5.html"
+        }
+      ]
+    },
+    {
+      "id": "console-payload-sender-bf57d9770657",
+      "title": "Console Payload Sender desktop helper",
+      "url": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-bf57d9770657.zip",
+      "kind": "desktop-helper",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "console-payload-sender-1.6.0-bf57d9770657.zip",
+          "bytes": 99628320,
+          "sha256": "997e95f29841fd0c257d03aaaececdbffd0239338214ae96bbe24a40918b93a7",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "console-payload-sender-05eb2ae569e3",
+      "title": "Console Payload Sender desktop helper",
+      "url": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-05eb2ae569e3.zip",
+      "kind": "desktop-helper",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "console-payload-sender-1.6.0-05eb2ae569e3.zip",
+          "bytes": 99758446,
+          "sha256": "9ede68843e23243d8969d4c2f6699983a88eecc18a18c7eabbab58997e55779d",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-nha-cleaned-decompiled-scripts-76fad386e3d0",
+      "title": "NHA-Cleaned-Decompiled-Scripts source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/NHA-Cleaned-Decompiled-Scripts/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "NHA-Cleaned-Decompiled-Scripts-76fad386e3d0-source.zip",
+          "bytes": 1290165930,
+          "sha256": "2c059ede3723e18ce19b937c4cdbb75acf2c8a40035b068b77e2a1f3bbefa10b",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps4-native-workspace-7cefa37d8cdd39ad",
+      "title": "whatsite PS4 native file and payload workspace",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/7cefa37d8cdd39ad/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps4.html",
+          "bytes": 348534,
+          "sha256": "7cefa37d8cdd39adc132298bea24429c33ef7a8248b9b2c177fdb5aaf441c92a",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps5-native-workspace-032c28a8bd60c7c9",
+      "title": "whatsite PS5 native file and payload workspace",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/032c28a8bd60c7c9/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps5.html",
+          "bytes": 348534,
+          "sha256": "032c28a8bd60c7c9ff9580244375af95d78924d9b4d7e12272058fc2afd53333",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps4-native-workspace-47a3c9f5208a6280",
+      "title": "whatsite PS4 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/47a3c9f5208a6280/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps4.html",
+          "bytes": 37139,
+          "sha256": "47a3c9f5208a6280ec4263eb34133f58b2cb72d72cacddd767e5d92a0d00b366",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps4-native-workspace-61aaeb7f0fc9d6a7",
+      "title": "whatsite PS4 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/61aaeb7f0fc9d6a7/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps4.html",
+          "bytes": 35203,
+          "sha256": "61aaeb7f0fc9d6a76881d6545d9c64d1454e3dec82c344860c5f15368f873bed",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps4-native-workspace-b8ae103c45d0e937",
+      "title": "whatsite PS4 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/b8ae103c45d0e937/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps4.html",
+          "bytes": 348479,
+          "sha256": "b8ae103c45d0e9373f5b9f5bbf26e2f337fa59e86ea4f978b8e159c17d0ea99b",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps4-native-workspace-bcdcd5054a5d2ca2",
+      "title": "whatsite PS4 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/bcdcd5054a5d2ca2/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps4.html",
+          "bytes": 35240,
+          "sha256": "bcdcd5054a5d2ca247cce0fab18bcb88fa26563461f2d6e63620cb4a0ba46ea1",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps5-native-workspace-3b33bd9e66e1f267",
+      "title": "whatsite PS5 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/3b33bd9e66e1f267/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps5.html",
+          "bytes": 37139,
+          "sha256": "3b33bd9e66e1f267cb0f5c536e4b2daa78b7faec7cd34c3aabcc7daaf76a5417",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps5-native-workspace-5ff1ff9e058843c3",
+      "title": "whatsite PS5 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/5ff1ff9e058843c3/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps5.html",
+          "bytes": 348479,
+          "sha256": "5ff1ff9e058843c328d2b19da709c27750664863a88b13b10879f51a61bf5fb4",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps5-native-workspace-78292c38110b60a6",
+      "title": "whatsite PS5 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/78292c38110b60a6/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps5.html",
+          "bytes": 35240,
+          "sha256": "78292c38110b60a65017eebf36e5ecc34d6f3b6c8ed538e0b710a2de00c32fe5",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps5-native-workspace-bc49e5d1f366c5b8",
+      "title": "whatsite PS5 native workspace · retained build",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/bc49e5d1f366c5b8/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "whatsite-workspace-ps5.html",
+          "bytes": 35203,
+          "sha256": "bc49e5d1f366c5b81277bfa3424ca3550ac5fd26511a19afbcc1dd1bdcf8b015",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "console-payload-sender-630bb639c32f",
+      "title": "Console Payload Sender desktop helper",
+      "url": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-630bb639c32f.zip",
+      "kind": "desktop-helper",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "console-payload-sender-1.6.0-630bb639c32f.zip",
+          "bytes": 99881875,
+          "sha256": "ca05b68effa75d15206d10c481b60ad04ab25e53f2f28527c374f4b8932ab56b",
+          "availability": "backup-only"
         }
       ]
     },

@@ -152,6 +152,29 @@
         "linkIssues": 0
       },
       "published": false
+    },
+    {
+      "completedAt": "2026-11-02T16:05:15.311Z",
+      "file": "downloads/source-codes/gta5-pc/gta5dump-nha-cleaned-decompiled-scripts/NHA-Cleaned-Decompiled-Scripts-76fad386e3d0-source.zip",
+      "bytes": 1290165930,
+      "sha256": "2c059ede3723e18ce19b937c4cdbb75acf2c8a40035b068b77e2a1f3bbefa10b",
+      "archiveVerified": true,
+      "action": "Removed NHA oversized project copy after hashing the original and F: backup; no archived original deleted.",
+      "sourceUrl": "https://codeload.github.com/GTA5dump/NHA-Cleaned-Decompiled-Scripts/zip/76fad386e3d047e50e7b4eeec3271ccf0df137aa",
+      "prevention": "Exact source ZIP path ignored; temporary export helper now checks existing manifest snapshot before exporting or copying. Normal source preparer already keeps oversized snapshots outside public downloads.",
+      "verification": {
+        "githubOversizedFiles": 0,
+        "stagedFiles": 0,
+        "focusedTestsPassed": 6,
+        "gta5dumpDirectoryVerificationPassed": true,
+        "pinnedSourceDownloadVerified": true,
+        "near95MiBHelpers": 3
+      },
+      "notes": [
+        "Three existing sender helpers are between 95 and 96 MiB, below 100 MB; the conservative 95 MiB audit still flags them. Their current and historical bytes are preserved.",
+        "Custom local git-export ZIP hash is preserved in the private inventory; the upstream source ZIP is pinned to the same commit but is not claimed to be byte-identical."
+      ],
+      "published": false
     }
   ]
 }
