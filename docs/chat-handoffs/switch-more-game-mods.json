@@ -1,0 +1,34 @@
+{
+  "updatedAt": "2026-11-02T09:39:54.975Z",
+  "status": "Eight new ready Switch game mods added; existing13 preserved",
+  "page": "/console/nintendo-switch/mods.html",
+  "totalResources": 21,
+  "totalGames": 10,
+  "selection": "docs/switch-more-mods-selection.json",
+  "catalogue": "docs/switch-game-mods-catalog.json",
+  "jobs": "docs/switch-game-mods-jobs.json",
+  "downloadManifest": "docs/switch-game-mods-downloads.json",
+  "privateInventory": "docs/switch-more-mods-private-inventory.json",
+  "build": "node scripts/build-switch-game-mods.cjs",
+  "verify": "node scripts/verify-switch-more-mods.cjs",
+  "archive": "node scripts/archive-switch-more-mods.cjs",
+  "newItems": [
+    "dark-souls-60fps",
+    "darksiders2-60fps",
+    "lucky-60fps",
+    "dqb2-highres",
+    "juarez-60fps",
+    "pokemon-rescue-60fps",
+    "smoo-online-140",
+    "sonic-crossworlds-143"
+  ],
+  "verified": "All8newpublic/FfilesSHA256checked; sixIPS/IPS32filesmatchauthorGitblobs; twoZIPsCRC/pathinspected;21cardIDsallunique; noexecution; desktopfiltercounts1/0/2 and390pxphoneoverflowcheckpassed.",
+  "constraints": "Legacy graphics patches remain pinned to source game/build IDs; no emulatorZIPs; noSwitch2supportinferred; allolderdownloadsretained; no videos.",
+  "archiveIndex": "Refreshed:1576items2443presentfile records,0missingpaths. All8new itemIDs confirmed in sharedinventory after cooperatingwriter mergedthem.",
+  "siteAudit": {
+    "pages": 396,
+    "localLinks": 39556,
+    "issues": 0
+  },
+  "http": "All8localdownloads fetched throughpreview andSHA256matched"
+}

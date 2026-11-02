@@ -1,0 +1,387 @@
+{
+  "updatedAt": "2026-11-02T12:26:49.784Z",
+  "scope": "wiiu-games-batch2",
+  "status": "Completed local batch; verified ready packages only promoted. Larger failed/incomplete transfers retained and labelled unavailable.",
+  "pages": [
+    "/console/wiiu/game-downloads.html",
+    "/console/wiiu/games.html",
+    "/console/wiiu/mods.html",
+    "/console/wiiu/vwii.html"
+  ],
+  "builders": [
+    "scripts/build-wiiu-more.cjs",
+    "scripts/build-wiiu-games-batch2.cjs"
+  ],
+  "preparation": "scripts/prepare-wiiu-games-batch2.cjs --games | --wii-mod | --mods",
+  "catalogue": "docs/wiiu-games-batch2.json",
+  "inventory": "docs/wiiu-games-batch2-private-inventory.json",
+  "counts": {
+    "ready": 13,
+    "nativeWiiUGames": 5,
+    "vWiiGames": 6,
+    "patchLoader": 1,
+    "experimentalWiiModWithUnconfirmedVWii": 1,
+    "unavailable": 5,
+    "readyBytes": 55241567
+  },
+  "files": [
+    {
+      "id": "wiiu-DonkeyKongish",
+      "title": "DonkeyKong-ish",
+      "version": "2.0.0",
+      "name": "DonkeyKongish-2.0.0.zip",
+      "bytes": 814088,
+      "sha256": "6ea546b0cde189dc9496b6729e2e50c3ddfadfe7bd41c02b684e2423d37f5bae",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/DonkeyKongish.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/DonkeyKongish-2.0.0.zip",
+      "itemId": "wiiu-games-batch2-wiiu-DonkeyKongish",
+      "platform": "Wii U",
+      "category": [
+        "Wii U",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\DonkeyKong-ish\\Builds\\2.0.0\\DonkeyKongish-2.0.0.zip"
+    },
+    {
+      "id": "wiiu-PacManish",
+      "title": "PacMan-ish",
+      "version": "1.0.4",
+      "name": "PacManish-1.0.4.zip",
+      "bytes": 1545113,
+      "sha256": "354c8cdc2a756b1d1eeb25720aaf7995fdbe4b6e9c5597d182d34855dd803208",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/PacManish.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/PacManish-1.0.4.zip",
+      "itemId": "wiiu-games-batch2-wiiu-PacManish",
+      "platform": "Wii U",
+      "category": [
+        "Wii U",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\PacMan-ish\\Builds\\1.0.4\\PacManish-1.0.4.zip"
+    },
+    {
+      "id": "wiiu-Trogdor-Reburninated",
+      "title": "Trogdor-Reburninated",
+      "version": "2.4",
+      "name": "Trogdor-Reburninated-2.4.zip",
+      "bytes": 14270774,
+      "sha256": "dfb887e10801f16c8268ca03da5b7ae0d16cc48c519ce8ecbeb9237090f66bd1",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/Trogdor-Reburninated.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/Trogdor-Reburninated-2.4.zip",
+      "itemId": "wiiu-games-batch2-wiiu-Trogdor-Reburninated",
+      "platform": "Wii U",
+      "category": [
+        "Wii U",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\Trogdor-Reburninated\\Builds\\2.4\\Trogdor-Reburninated-2.4.zip"
+    },
+    {
+      "id": "wiiu-ConwaysGameofLife",
+      "title": "Conway's Game of Life",
+      "version": "0.1",
+      "name": "ConwaysGameofLife-0.1.zip",
+      "bytes": 1132813,
+      "sha256": "0543563bb8d8bae9656d9dfcc1bbefb51642f44b454daef46a5cd9a691090e7d",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/ConwaysGameofLife.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/ConwaysGameofLife-0.1.zip",
+      "itemId": "wiiu-games-batch2-wiiu-ConwaysGameofLife",
+      "platform": "Wii U",
+      "category": [
+        "Wii U",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\Conway's Game of Life\\Builds\\0.1\\ConwaysGameofLife-0.1.zip"
+    },
+    {
+      "id": "wiiu-PongU",
+      "title": "Pong U",
+      "version": "1.4",
+      "name": "PongU-1.4.zip",
+      "bytes": 1056565,
+      "sha256": "d9f1df8e05394d62b6b9b0319408af7762c1ba317727e92a41b2a8fa7a25ac73",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/PongU.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/PongU-1.4.zip",
+      "itemId": "wiiu-games-batch2-wiiu-PongU",
+      "platform": "Wii U",
+      "category": [
+        "Wii U",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\Pong U\\Builds\\1.4\\PongU-1.4.zip"
+    },
+    {
+      "id": "vwii-NewoShooter",
+      "title": "Newo Shooter",
+      "version": "2.2",
+      "name": "NewoShooter-2.2.zip",
+      "bytes": 12074148,
+      "sha256": "16a0f279d1822d89149f2e086abf8c1f0da4246cfd17d875840902e55cb5d2a3",
+      "sourceUrl": "https://hbb1.oscwii.org/api/contents/NewoShooter/NewoShooter.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/NewoShooter-2.2.zip",
+      "itemId": "wiiu-games-batch2-vwii-NewoShooter",
+      "platform": "Wii U",
+      "category": [
+        "vWii",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Newo Shooter\\Builds\\2.2\\NewoShooter-2.2.zip"
+    },
+    {
+      "id": "vwii-Wii-Tac-Toe",
+      "title": "Wii-Tac-Toe",
+      "version": "1.1.0",
+      "name": "Wii-Tac-Toe-1.1.0.zip",
+      "bytes": 1563260,
+      "sha256": "1ff1bddefac6905fea4c01ff2c0586a65a794b24c969a84a74e2f3cbfea87c7b",
+      "sourceUrl": "https://hbb1.oscwii.org/api/contents/Wii-Tac-Toe/Wii-Tac-Toe.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/Wii-Tac-Toe-1.1.0.zip",
+      "itemId": "wiiu-games-batch2-vwii-Wii-Tac-Toe",
+      "platform": "Wii U",
+      "category": [
+        "vWii",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Wii-Tac-Toe\\Builds\\1.1.0\\Wii-Tac-Toe-1.1.0.zip"
+    },
+    {
+      "id": "vwii-NewoFox",
+      "title": "Newo Fox",
+      "version": "1.2",
+      "name": "NewoFox-1.2.zip",
+      "bytes": 4270009,
+      "sha256": "9ca7af80e8b71e5de71919d3b20113ad02504d9a9df54f36d65b019d4165240d",
+      "sourceUrl": "https://hbb1.oscwii.org/api/contents/NewoFox/NewoFox.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/NewoFox-1.2.zip",
+      "itemId": "wiiu-games-batch2-vwii-NewoFox",
+      "platform": "Wii U",
+      "category": [
+        "vWii",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Newo Fox\\Builds\\1.2\\NewoFox-1.2.zip"
+    },
+    {
+      "id": "vwii-chromono2",
+      "title": "chro.mono 2",
+      "version": "2.3.0",
+      "name": "chromono2-2.3.0.zip",
+      "bytes": 2842565,
+      "sha256": "e5f216bfdf7a9e91565e994d724801144e996643ea807238187a1bb506da057d",
+      "sourceUrl": "https://hbb1.oscwii.org/api/contents/chromono2/chromono2.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/chromono2-2.3.0.zip",
+      "itemId": "wiiu-games-batch2-vwii-chromono2",
+      "platform": "Wii U",
+      "category": [
+        "vWii",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\chro.mono 2\\Builds\\2.3.0\\chromono2-2.3.0.zip"
+    },
+    {
+      "id": "vwii-retro_tennis_2",
+      "title": "Retro Tennis 2",
+      "version": "1.0",
+      "name": "retro_tennis_2-1.0.zip",
+      "bytes": 4786501,
+      "sha256": "c9550fb68ec1f438a3b992e6381c31522f6aa6a680a9a1ffdbb496ceb8c2df4a",
+      "sourceUrl": "https://hbb1.oscwii.org/api/contents/retro_tennis_2/retro_tennis_2.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/retro_tennis_2-1.0.zip",
+      "itemId": "wiiu-games-batch2-vwii-retro_tennis_2",
+      "platform": "Wii U",
+      "category": [
+        "vWii",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Retro Tennis 2\\Builds\\1.0\\retro_tennis_2-1.0.zip"
+    },
+    {
+      "id": "vwii-wiirdle",
+      "title": "Wiirdle",
+      "version": "1.0.0",
+      "name": "wiirdle-1.0.0.zip",
+      "bytes": 1308331,
+      "sha256": "dddb61b42e86c9d58dc8127e656f87d7c9cb79da7b43a41bc69b7ce9afd85300",
+      "sourceUrl": "https://hbb1.oscwii.org/api/contents/wiirdle/wiirdle.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/wiirdle-1.0.0.zip",
+      "itemId": "wiiu-games-batch2-vwii-wiirdle",
+      "platform": "Wii U",
+      "category": [
+        "vWii",
+        "Homebrew Games"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Wiirdle\\Builds\\1.0.0\\wiirdle-1.0.0.zip"
+    },
+    {
+      "id": "vwii-riivolution",
+      "title": "Riivolution",
+      "version": "v1.06",
+      "name": "riivolution-v1.06.zip",
+      "bytes": 1990601,
+      "sha256": "74f4014cdd490cbb18c77f5b1d75fd01ec6a7d7a2bd9e9127ce977ef0416243f",
+      "sourceUrl": "https://hbb1.oscwii.org/api/contents/riivolution/riivolution.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/riivolution-v1.06.zip",
+      "itemId": "wiiu-games-batch2-vwii-riivolution",
+      "platform": "Wii U",
+      "category": [
+        "vWii",
+        "Game Mods"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Game Mods\\Riivolution\\Builds\\v1.06\\riivolution-v1.06.zip"
+    },
+    {
+      "id": "wii-nsmbw-project",
+      "title": "mkwcat's NSMBW project",
+      "version": "v0.6.5",
+      "name": "mkwcat-nsmbw.zip",
+      "bytes": 7586799,
+      "sha256": "9f731f1012878b32ada6b47d0e99ad32f25e93672be315875d4405263cceeea3",
+      "sourceUrl": "https://github.com/mkwcat/nsmbw-project/releases/download/v0.6.5/mkwcat-nsmbw.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/wiiu-games-batch2/mkwcat-nsmbw.zip",
+      "itemId": "wiiu-games-batch2-wii-nsmbw-project",
+      "platform": "Wii",
+      "category": [
+        "Wii U",
+        "Game Mods"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii\\Wii U\\Game Mods\\nsmbw project\\Builds\\v0.6.5\\mkwcat-nsmbw.zip"
+    }
+  ],
+  "unavailable": [
+    {
+      "id": "second-wind",
+      "title": "Second Wind",
+      "version": "v1.9.14-alpha-7",
+      "source": "https://github.com/CEObrainz/Second-Wind/releases/tag/v1.9.14-alpha-7",
+      "error": "Transfer failed or remained incomplete after bounded retries. No completed F archive or ready download is claimed."
+    },
+    {
+      "id": "falling-leaf",
+      "title": "Newer Falling Leaf",
+      "version": "1.12",
+      "source": "https://newerteam.com/wii/specials.html",
+      "error": "Transfer failed or remained incomplete after bounded retries. No completed F archive or ready download is claimed."
+    },
+    {
+      "id": "summer-sun",
+      "title": "Newer Summer Sun",
+      "version": "1.12",
+      "source": "https://newerteam.com/wii/specials.html",
+      "error": "Transfer failed or remained incomplete after bounded retries. No completed F archive or ready download is claimed."
+    },
+    {
+      "id": "holiday-special",
+      "title": "Newer Holiday Special",
+      "version": "1.12",
+      "source": "https://newerteam.com/wii/specials.html",
+      "error": "Transfer failed or remained incomplete after bounded retries. No completed F archive or ready download is claimed."
+    },
+    {
+      "id": "ctgp-r",
+      "title": "CTGP Revolution",
+      "version": "1.03.1190",
+      "source": "https://chadsoft.co.uk/install-guide/",
+      "error": "Transfer failed or remained incomplete after bounded retries. No completed F archive or ready download is claimed."
+    }
+  ],
+  "verification": {
+    "tests": {
+      "passed": 10,
+      "failed": 0,
+      "log": "docs/qa/wiiu-games-batch2-tests.txt"
+    },
+    "sourceChecks": [
+      "Native complete Wii U store packages match captured MD5/SHA where supplied.",
+      "OSC vWii support and package sizes captured before download.",
+      "ZIP CRC and safe paths checked; DOL section ranges/entry points and WUHB/PowerPC headers inspected as data.",
+      "All13 public/backup byte counts and SHA256 independently verified;13 records confirmed in both inventories."
+    ],
+    "linkReport": "docs/qa/wiiu-all-download-links.json",
+    "downloadLinks": {
+      "pages": 12,
+      "uniqueDownloads": 93,
+      "issues": 0
+    },
+    "archiveIndex": {
+      "checkedAt": "2026-11-02T12:27:52.534Z",
+      "items": 1962,
+      "fileRecords": 2912,
+      "present": 2906,
+      "missingPaths": 6,
+      "newBatchMissingPaths": 0,
+      "unrelatedHistoricalPS3Paths": [
+        {
+          "id": "ps3-discord-ps3-mw2-darkks-package",
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS3\\Games\\Call of Duty\\Modern Warfare 2\\SPRX Menus\\Darkks Package\\Builds\\Unversioned\\DarkksPackMW2.rar"
+        },
+        {
+          "id": "ps3-discord-ps3-mw3-sprx-detox-v3",
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS3\\Games\\Call of Duty\\Modern Warfare 3\\SPRX Menus\\Detox V3\\Builds\\V3\\Detox+V3.rar"
+        },
+        {
+          "id": "ps3-discord-ps3-bo1-mp-project-cynical",
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS3\\Games\\Call of Duty\\Black Ops 1\\SPRX Menus\\Project Cynical [CFW]\\Builds\\Unversioned\\Project_Cynical.rar"
+        },
+        {
+          "id": "ps3-discord-ps3-bo1-mp-project-kush",
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS3\\Games\\Call of Duty\\Black Ops 1\\SPRX Menus\\Project Kush [CFW]\\Builds\\Unversioned\\BO1_Project_Kush_RTM.rar"
+        },
+        {
+          "id": "ps3-discord-ps3-bo1-mp-redemption",
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS3\\Games\\Call of Duty\\Black Ops 1\\SPRX Menus\\Redemption [CFW_HEN]\\Builds\\Unversioned\\BO1+Redemption+Azza.rar"
+        },
+        {
+          "id": "ps3-discord-ps3-bo2-jericho-engine",
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS3\\Games\\Call of Duty\\Black Ops 2\\SPRX Menus\\Jericho Engine\\Builds\\Unversioned\\Xbox_Jericho_Engines.zip"
+        }
+      ]
+    },
+    "globalInventoryNote": "Both global inventories contain all13ready new records. Index refresh exposes6historical PS3 path records outside this scope; no Wii U batch files missing. Preserve PS3 owner work and reconcile those historical aliases separately."
+  },
+  "limits": [
+    "No console execution, mod application, physical-controller testing or installation.",
+    "No commit, publication or deployment.",
+    "The nsmbw-project release documents Wii/Dolphin; vWii-specific support and8-player peripherals are unconfirmed and visibly labelled.",
+    "Incomplete Second Wind/Newer/CTGP-R transfers are not ready downloads; original sources and partial workspace files retained."
+  ],
+  "chatCleanup": "User requested deletion after finishing. Available native tool supports archiving, not permanent deletion; user informed."
+}

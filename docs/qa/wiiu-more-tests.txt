@@ -1,0 +1,16 @@
+✔ accepts Wii U PowerPC executables and modules, rejects other-platform ELF and NRO data (0.7646ms)
+✔ recognizes WUHB containers separately from raw executables (0.1125ms)
+✔ limits source jobs to captured Wii U store packages or pinned official release assets (0.3265ms)
+✔ Wii U expansion preserves every baseline version, original URL and thirty local file hashes (128.3086ms)
+✔ additional Wii U apps retain complete original containers and real console headers, with local archive provenance (3241.6491ms)
+✔ Wii U pages preserve language/mobile/background integration and all local resources resolve (23.7125ms)
+✔ curated Wii U themes retain original patch archives, embedded author/version metadata and separate ready tools (593.1416ms)
+✔ Wii U filters combine search/category, translate counts, clear empty results and reveal bookmarked apps (1.923ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4065.2448

@@ -1,0 +1,43 @@
+{
+  "status": "Complete locally; full test suite and site audit pass.",
+  "checkedAt": "2026-11-02T09:12:20.919Z",
+  "changes": [
+    "Switch 2 filtering assertions identify exact current microSD and multiword system-version matches.",
+    "Xbox Harissa64 filename limit is checked in prerequisites and rendered page.",
+    "Xbox no-video assertion rejects player elements and private archive paths while permitting shared footer links.",
+    "Two generated Switch resource routes added to sitemap; their builder now preserves these entries.",
+    "Refreshed three stale background integrations."
+  ],
+  "tests": {
+    "tests": 353,
+    "passed": 353,
+    "failed": 0,
+    "scope": "All scripts/tests/*.test.cjs",
+    "output": "docs/qa/console-final-test-fixes.txt",
+    "checkedAt": "2026-11-02T09:12:20.919Z"
+  },
+  "siteAudit": {
+    "publicPages": 280,
+    "localLinksAndAssets": 29729,
+    "issues": 0,
+    "checkedAt": "2026-11-02T09:12:20.919Z"
+  },
+  "archive": {
+    "items": 1403,
+    "fileRecords": 2236,
+    "presentFileRecords": 2173,
+    "missingPaths": 0,
+    "truthfullyUnlocatedRecords": 63,
+    "mode": "check"
+  },
+  "artifactVerification": {
+    "originalContinuationFiles": 87,
+    "patchLinkedCheatFiles": 24,
+    "passed": true,
+    "helpers": "Both current .7.1 helpers and original helper archives verified by verify-patch-linked-cheats.cjs"
+  },
+  "limits": [
+    "No physical console testing or downloaded payload execution.",
+    "No commit, push, publication or deployment."
+  ]
+}

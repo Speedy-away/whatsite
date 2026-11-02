@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-02T13:03:44.984Z",
+  "scope": "xbox360-more",
+  "merged": true,
+  "indexRefreshed": true,
+  "scopeAllSha256Verified": true,
+  "scopeItems": 41,
+  "scopeFiles": 96,
+  "scopeBytes": 1196384410,
+  "newItems": 3,
+  "newFiles": 3,
+  "newBytes": 380494896,
+  "previousItems": 38,
+  "previousFiles": 93,
+  "previousFilesUnchanged": true,
+  "scopeMissingFiles": 0,
+  "mergeCommand": "node scripts/console-expansion-archive.cjs --inventory=docs/xbox360-more-private-inventory.json",
+  "mergeSnapshot": {
+    "sidecars": 916,
+    "items": 2035,
+    "files": 3049
+  },
+  "indexCommand": "node scripts/refresh-local-download-index.cjs --write",
+  "indexSnapshot": {
+    "updated": "2026-11-02T13:02:08.840Z",
+    "mode": "metadata-only",
+    "history": "F:\\whatsite-backup-downloads-etc\\archive-history\\index-refresh-2026-11-02T13-02-08-840Z-VFa6zy",
+    "items": 2036,
+    "fileRecords": 2982,
+    "presentFileRecords": 2982,
+    "missingFileRecords": 0,
+    "missingPaths": 0,
+    "otherUnavailableRecords": 0,
+    "availability": {
+      "present": 2982
+    }
+  },
+  "resolvedIncomplete": [
+    "xbox360-more-sonic-exe",
+    "xbox360-more-sally-exe",
+    "xbox360-more-silent-hill-skins"
+  ],
+  "notes": [
+    "All96 scope files independently byte-count/SHA-256 and format verified. All38 earlier entries and93 earlier files retain exact names, versions, sources, sizes and hashes.",
+    "The three previously incomplete originals are now complete; earlier failure attempts and all staged partials remain preserved.",
+    "Both materialized inventories and the refreshed index contain every scope file; no downloaded build was executed."
+  ],
+  "downloadedBuildsExecuted": false,
+  "physicalHardwareTested": false
+}

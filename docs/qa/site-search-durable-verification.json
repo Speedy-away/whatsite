@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-11-02T14:46:22.056Z",
+  "passed": true,
+  "pages": 523,
+  "metadataDrift": [],
+  "genericKeywordEntries": [],
+  "generatorFiles": [
+    "scripts/build-3ds-expansion.cjs",
+    "scripts/build-3ds-mods-online.cjs",
+    "scripts/build-apollo-vita.cjs",
+    "scripts/build-console-directory.cjs",
+    "scripts/build-console-downloads.cjs",
+    "scripts/build-console-guides.cjs",
+    "scripts/build-console-themes.cjs",
+    "scripts/build-discord-platform-resources.cjs",
+    "scripts/build-ds-expansion.cjs",
+    "scripts/build-host-selector.cjs",
+    "scripts/build-nintendo-retro.cjs",
+    "scripts/build-ps2-expansion.cjs",
+    "scripts/build-ps3-browser-downloads.cjs",
+    "scripts/build-psp-more.cjs",
+    "scripts/build-retro-page.cjs",
+    "scripts/build-source-code-pages.cjs",
+    "scripts/build-steamdeck.cjs",
+    "scripts/build-switch-app-pages.cjs",
+    "scripts/build-switch-core-pages.cjs",
+    "scripts/build-switch-game-mods.cjs",
+    "scripts/build-switch-homebrew.cjs",
+    "scripts/build-switch-themes.cjs",
+    "scripts/build-vita-guides.cjs",
+    "scripts/build-wii-expansion.cjs",
+    "scripts/build-wii-games-online.cjs",
+    "scripts/build-wiiu-homebrew.cjs",
+    "scripts/build-wiiu-themes.cjs",
+    "scripts/console-game-directories.cjs",
+    "scripts/ps3-multicod-metadata.cjs",
+    "scripts/ps3-page.cjs",
+    "scripts/build-console-topic-hubs.cjs"
+  ],
+  "protectedHelpers": [
+    {
+      "platform": "ps4",
+      "activatedVersion": "2026.11.02.11",
+      "path": "console/ps4/whatsite-ps4.html",
+      "live": {
+        "bytes": 649654,
+        "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a"
+      },
+      "immutable": {
+        "bytes": 649654,
+        "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a"
+      },
+      "retainedPrevious": {
+        "bytes": 641053,
+        "sha256": "f0417719a4ed4128ce28d0d85cd833f818ce1b4853e60f72207112876b50d4d9"
+      },
+      "livePassed": true,
+      "immutablePassed": true,
+      "previousPassed": true
+    },
+    {
+      "platform": "ps5",
+      "activatedVersion": "2026.11.02.11",
+      "path": "console/ps5/whatsite-ps5.html",
+      "live": {
+        "bytes": 548833,
+        "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e"
+      },
+      "immutable": {
+        "bytes": 548833,
+        "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e"
+      },
+      "retainedPrevious": {
+        "bytes": 537184,
+        "sha256": "5fe16837baee7f350e39689b868e318c3b735f86b836add986a44723cb6226d3"
+      },
+      "livePassed": true,
+      "immutablePassed": true,
+      "previousPassed": true
+    }
+  ]
+}

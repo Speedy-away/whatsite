@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-11-02T12:46:04.634Z",
+  "mode": "Installed Edge headless local preview, external DNS blocked; no Wii execution",
+  "results": [
+    {
+      "name": "wii-more-desktop",
+      "screenshot": "docs/screenshots/wii-more-desktop.png",
+      "width": 1440,
+      "height": 1080,
+      "documentWidth": 1440,
+      "checks": [
+        "Twelve visible native packages",
+        "Games filter visibly shows three cards",
+        "Apps filter visibly shows two cards",
+        "Emulator filter visibly shows seven cards",
+        "Mini filter excludes SD-dependent games",
+        "Search finds the native ELF package",
+        "Empty search shows visible empty state",
+        "Clear resets search, category and model",
+        "Existing Wii system and GameCube cards preserved",
+        "Twelve visible download actions",
+        "No added video embeds",
+        "Mobile, background and language integration retained",
+        "All twelve real artwork images loaded",
+        "No horizontal document overflow",
+        "Visible cards fit the viewport"
+      ],
+      "failures": [],
+      "visibleCards": 12
+    },
+    {
+      "name": "wii-more-tablet",
+      "screenshot": "docs/screenshots/wii-more-tablet.png",
+      "width": 1024,
+      "height": 900,
+      "documentWidth": 1024,
+      "checks": [
+        "Twelve visible native packages",
+        "Games filter visibly shows three cards",
+        "Apps filter visibly shows two cards",
+        "Emulator filter visibly shows seven cards",
+        "Mini filter excludes SD-dependent games",
+        "Search finds the native ELF package",
+        "Empty search shows visible empty state",
+        "Clear resets search, category and model",
+        "Existing Wii system and GameCube cards preserved",
+        "Twelve visible download actions",
+        "No added video embeds",
+        "Mobile, background and language integration retained",
+        "All twelve real artwork images loaded",
+        "No horizontal document overflow",
+        "Visible cards fit the viewport"
+      ],
+      "failures": [],
+      "visibleCards": 12
+    },
+    {
+      "name": "wii-more-mobile",
+      "screenshot": "docs/screenshots/wii-more-mobile.png",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "checks": [
+        "Twelve visible native packages",
+        "Games filter visibly shows three cards",
+        "Apps filter visibly shows two cards",
+        "Emulator filter visibly shows seven cards",
+        "Mini filter excludes SD-dependent games",
+        "Search finds the native ELF package",
+        "Empty search shows visible empty state",
+        "Clear resets search, category and model",
+        "Existing Wii system and GameCube cards preserved",
+        "Twelve visible download actions",
+        "No added video embeds",
+        "Mobile, background and language integration retained",
+        "All twelve real artwork images loaded",
+        "No horizontal document overflow",
+        "Visible cards fit the viewport"
+      ],
+      "failures": [],
+      "visibleCards": 12
+    },
+    {
+      "name": "wii-more-mobile-details",
+      "screenshot": "docs/screenshots/wii-more-mobile-details.png",
+      "width": 390,
+      "height": 1000,
+      "documentWidth": 390,
+      "checks": [
+        "Twelve visible native packages",
+        "Games filter visibly shows three cards",
+        "Apps filter visibly shows two cards",
+        "Emulator filter visibly shows seven cards",
+        "Mini filter excludes SD-dependent games",
+        "Search finds the native ELF package",
+        "Empty search shows visible empty state",
+        "Clear resets search, category and model",
+        "Existing Wii system and GameCube cards preserved",
+        "Twelve visible download actions",
+        "No added video embeds",
+        "Mobile, background and language integration retained",
+        "All twelve real artwork images loaded",
+        "No horizontal document overflow",
+        "Visible cards fit the viewport"
+      ],
+      "failures": [],
+      "visibleCards": 1
+    }
+  ]
+}

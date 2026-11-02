@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-02T09:39:18.809Z",
+  "status": "complete-local",
+  "platforms": 17,
+  "platformSpecificLinks": 23,
+  "globalSites": 5,
+  "additionalVaultSystems": 3,
+  "newDirectoryPages": 18,
+  "preservedExactSuppliedUrls": true,
+  "sourceEvidence": "docs/console-game-directory-source-evidence.json",
+  "focusedTests": {
+    "tests": 38,
+    "passed": 38,
+    "failed": 0,
+    "output": "docs/qa/console-game-directories-tests.txt"
+  },
+  "fullSuite": {
+    "tests": 387,
+    "passed": 384,
+    "failed": 3,
+    "output": "docs/qa/console-game-directories-all-tests.txt",
+    "reason": "Shared Xbox 360 catalogue grew from fifteen to twenty-four items; three existing exact-count fixtures still expect the old counts. No Xbox library data was edited by this task."
+  },
+  "siteAudit": "Audited 396 public pages and 39526 local links/assets; 0 issue(s).",
+  "integration": {
+    "checked": 325,
+    "changed": 0,
+    "mode": "check"
+  },
+  "metadataProblems": [],
+  "browser": {
+    "vitaHub": "Game downloads is the first category card; navigation and click to dedicated Vita page verified.",
+    "vitaDirectory": "Exact supplied Vita external URL visible; all-console navigation and original hub return link verified.",
+    "mobile": {
+      "width": 390,
+      "documentWidth": 375,
+      "overflow": false,
+      "globalPlatformCards": 14
+    },
+    "externalLinks": "Provider URLs inspected; no individual game downloads were requested or tested."
+  },
+  "preservation": {
+    "newBinaryDownloads": 0,
+    "downloadedPayloadsExecuted": false,
+    "archiveWrites": 0,
+    "existingLocalFileLinksRetained": true,
+    "readyReceiverBuildsSkipped": true
+  },
+  "publication": "Local edits only; no commit, push or deployment."
+}

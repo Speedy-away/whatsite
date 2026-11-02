@@ -1,0 +1,454 @@
+{
+  "checkedAt": "2026-11-02T12:28:40.560Z",
+  "passed": true,
+  "pages": [
+    {
+      "app": "JKSV",
+      "page": "/console/nintendo-switch/jksv.html",
+      "version": "12/02/2025",
+      "files": [
+        {
+          "name": "JKSV.nro",
+          "sha256": "a2b7f6372a4b81f3c3194aa6f96f2824bdea853b9a8ebf8c4a008d0d865a0cbf",
+          "bytes": 10130471,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 5
+    },
+    {
+      "app": "Checkpoint",
+      "page": "/console/nintendo-switch/checkpoint.html",
+      "version": "5.3.0",
+      "files": [
+        {
+          "name": "Checkpoint.nro",
+          "sha256": "e2c76687df29f845f11a61a62a25327703b22250d4a78dbdbed6dd1401253e48",
+          "bytes": 5047633,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "ftpd",
+      "page": "/console/nintendo-switch/ftpd.html",
+      "version": "3.2.1",
+      "files": [
+        {
+          "name": "ftpd.nro",
+          "sha256": "cc8b2b335ccbe1bf1215a29c4ef3698effc879d3ddde2c6c0de505d14bc39c90",
+          "bytes": 1533963,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        },
+        {
+          "name": "ftpd-sd-package.zip",
+          "sha256": "9ea5f2397b57ac294cefc4b7e8abc3f881c23adf62060b35300ab0f1f47e92df",
+          "bytes": 1011008,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "NX-Shell",
+      "page": "/console/nintendo-switch/nx-shell.html",
+      "version": "4.01",
+      "files": [
+        {
+          "name": "NX-Shell.nro",
+          "sha256": "5aafd64efde89c0881cdbd865a1b2b054e20329d43e0bce0e1b77378977f5878",
+          "bytes": 8575621,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "NXMP",
+      "page": "/console/nintendo-switch/nxmp.html",
+      "version": "0.9.3",
+      "files": [
+        {
+          "name": "NXMP-sd-package.zip",
+          "sha256": "9d9dbc1bc58ed08eeafa88fa67d61632c58195ddd17d0f37526a9d90ce1e1853",
+          "bytes": 45564568,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "Moonlight-Switch",
+      "page": "/console/nintendo-switch/moonlight.html",
+      "version": "1.5.0",
+      "files": [
+        {
+          "name": "Moonlight-Switch.nro",
+          "sha256": "594167a17b587d3bf828ea3477afbe71c114b4ef5d25940ea4ca831788d0af69",
+          "bytes": 17677907,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 5
+    },
+    {
+      "app": "mGBA",
+      "page": "/console/nintendo-switch/mgba.html",
+      "version": "0.10.5",
+      "files": [
+        {
+          "name": "mgba.nro",
+          "sha256": "00607daffe2d6df20dafff5936eeec1c19e77328471abce76992edc33626ca28",
+          "bytes": 7956467,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "melonDS",
+      "page": "/console/nintendo-switch/melonds.html",
+      "version": "7.2.1",
+      "files": [
+        {
+          "name": "melonDS.nro",
+          "sha256": "aa358df9261f8a7f160060fbaaf8b39c4b1d0a43cb72b608334f32c4cf8aef42",
+          "bytes": 3252598,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "pNES",
+      "page": "/console/nintendo-switch/pnes.html",
+      "version": "7.2",
+      "files": [
+        {
+          "name": "pnes.nro",
+          "sha256": "6f640a7d3c740229247fadf81b2700b951ad76c24ca940b77eceb5f3f9cdbe9f",
+          "bytes": 32694687,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "pSNES",
+      "page": "/console/nintendo-switch/psnes.html",
+      "version": "7.2",
+      "files": [
+        {
+          "name": "psnes.nro",
+          "sha256": "3343eb76f45498961cb53968451c35b20fb0ec7962060723dcad485cff6633e4",
+          "bytes": 32052730,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "PPSSPP Standalone",
+      "page": "/console/nintendo-switch/ppsspp.html",
+      "version": "1.17.x (Sept 9, 2024)",
+      "files": [
+        {
+          "name": "ppsspp-sd-package.zip",
+          "sha256": "9296552c26d96c61f04d2aaf12f06f867cf59172b3748c1a4a97367c6361903f",
+          "bytes": 20226510,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "Homebrew Menu",
+      "page": "/console/nintendo-switch/homebrew-menu.html",
+      "version": "3.6.1",
+      "files": [
+        {
+          "name": "hbmenu.nro",
+          "sha256": "6cf6d130515723ebe0041c2479420caf9726895087439ff7b2e528c2ed39c100",
+          "bytes": 2455539,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "ftpsrv",
+      "page": "/console/nintendo-switch/ftpsrv.html",
+      "version": "1.2.2",
+      "files": [
+        {
+          "name": "ftpsrv-sd-package.zip",
+          "sha256": "23caf41817fd0c76395623fa0611610793010a9485633e004d4b7dd29a98d2e1",
+          "bytes": 446946,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "SwitchIdent",
+      "page": "/console/nintendo-switch/switchident.html",
+      "version": "0.5",
+      "files": [
+        {
+          "name": "SwitchIdent.nro",
+          "sha256": "1f092b58256586d009219f88a22a943846d56e7eac49a9e8774e4366b87e833b",
+          "bytes": 8963995,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 3
+    },
+    {
+      "app": "Switch 90DNS tester",
+      "page": "/console/nintendo-switch/90dns-tester.html",
+      "version": "1.0.4",
+      "files": [
+        {
+          "name": "Switch_90DNS_tester.nro",
+          "sha256": "27db5352c32bd2a149274ef278130cff0c30dd4d9c7003836f0a874a134886d2",
+          "bytes": 321486,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "OpenSupaplex",
+      "page": "/console/nintendo-switch/opensupaplex.html",
+      "version": "7.2.2",
+      "files": [
+        {
+          "name": "OpenSupaplex-sd-package.zip",
+          "sha256": "3cd849233c6ddc0c2f2f6f2f12d83eaabe98c7cb617ec48fb1b43168419989a1",
+          "bytes": 7227648,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "2048",
+      "page": "/console/nintendo-switch/2048.html",
+      "version": "1.2.0",
+      "files": [
+        {
+          "name": "2048.nro",
+          "sha256": "51f6588000d899c58faadc4443f9550f4e4bcc93719fabb3dc0537ec11037ff5",
+          "bytes": 7817135,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 3
+    },
+    {
+      "app": "SuDokuL",
+      "page": "/console/nintendo-switch/sudokul.html",
+      "version": "1.5",
+      "files": [
+        {
+          "name": "SuDokuL-sd-package.zip",
+          "sha256": "e6ab197e23bcb3db79947f400acc729a49d4b6ccca886be2160c1ad57bbeb245",
+          "bytes": 5433623,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "BrogueCE",
+      "page": "/console/nintendo-switch/brogue-ce.html",
+      "version": "1.9.2-r2",
+      "files": [
+        {
+          "name": "brogue.nro",
+          "sha256": "b7d6366431be73b18b7bad0ed01fe724cd6f00cdf773a81a95d06728889cd1e6",
+          "bytes": 10767662,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "Minesweeper",
+      "page": "/console/nintendo-switch/minesweeper.html",
+      "version": "2.0",
+      "files": [
+        {
+          "name": "Minesweeper-Switch.nro",
+          "sha256": "7172be2da02fefdebde3745f15d9e7beb7f08472fad3a2cc86eb70811b22cc9d",
+          "bytes": 1669972,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "Space Game NX",
+      "page": "/console/nintendo-switch/space-game-nx.html",
+      "version": "1.1",
+      "files": [
+        {
+          "name": "spacenx.nro",
+          "sha256": "9ca9fcc76dffd132f4ceb1a3091cf811bc4a23c5876aea35d9be6e13de254d64",
+          "bytes": 759712,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 3
+    },
+    {
+      "app": "pinballnx",
+      "page": "/console/nintendo-switch/pinballnx.html",
+      "version": "1.0",
+      "files": [
+        {
+          "name": "pinballnx-sd-package.zip",
+          "sha256": "d7cf0fe4bee6b9859ea0141036b69946208a966b0e5a4cbbb6a3ea797d991073",
+          "bytes": 4507287,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "Cpp-Snake-NX",
+      "page": "/console/nintendo-switch/cpp-snake-nx.html",
+      "version": "1.1.0",
+      "files": [
+        {
+          "name": "Cpp-Snake-NX.nro",
+          "sha256": "982ff14c538bb94eb6d18411efe71e885006cf3e944da270d18cd2fa88442f16",
+          "bytes": 751813,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 3
+    },
+    {
+      "app": "Jump n Bump",
+      "page": "/console/nintendo-switch/jump-n-bump.html",
+      "version": "1.02",
+      "files": [
+        {
+          "name": "jumpnbump.nro",
+          "sha256": "8e855038b7ab00c1a3174327d0ed0016f0da1c8d9a92035a9cc0c22dcacc252b",
+          "bytes": 8234598,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "SpaceVue",
+      "page": "/console/nintendo-switch/spacevue.html",
+      "version": "3.0.1",
+      "files": [
+        {
+          "name": "SpaceVue.nro",
+          "sha256": "cab1cc6d9f7fd08f3f1e43a161ae1077a04d8e29036699cfcb7dd2820912c0ad",
+          "bytes": 8421717,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 3
+    },
+    {
+      "app": "NXThemes Installer",
+      "page": "/console/nintendo-switch/nxthemes-installer.html",
+      "version": "nxt-3.0.2",
+      "files": [
+        {
+          "name": "NXThemesInstaller.nro",
+          "sha256": "36ac0fac5477e08a176b2f155b8b3c170c1291004d943541348599bae8cf97a1",
+          "bytes": 10467778,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    },
+    {
+      "app": "SimpleModManager",
+      "page": "/console/nintendo-switch/simplemodmanager.html",
+      "version": "2.1.4",
+      "files": [
+        {
+          "name": "SimpleModManager.nro",
+          "sha256": "50031babc9fa28da497f2f18751fc0ae6abe1a17db5ae722bff47fda53c13349",
+          "bytes": 8771712,
+          "localPassed": true,
+          "backupPassed": true,
+          "httpPassed": true
+        }
+      ],
+      "setupSteps": 4
+    }
+  ],
+  "files": 28,
+  "images": 27,
+  "localLinks": 2089,
+  "limits": [
+    "No application was executed.",
+    "No physical-console installation or performance test.",
+    "Pins are preserved releases, not a claim of current firmware compatibility."
+  ]
+}

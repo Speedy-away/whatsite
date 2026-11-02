@@ -1,0 +1,133 @@
+{
+  "updatedAt": "2026-11-02T12:55:08.877Z",
+  "status": "Complete locally: every eligible site page has complete metadata and an original URL preview; no publication or deployment.",
+  "request": "Continue the all-page tags/keywords/search-description audit and add original embedded URL/share-preview images.",
+  "scope": {
+    "pages": 506,
+    "indexablePages": 464,
+    "otherNoindexOrRedirect": 42,
+    "excluded": "Ready receivers, downloaded HTML tools and vendored hosts/runtime executables retain their exact bytes."
+  },
+  "artwork": {
+    "nativeCards": 506,
+    "nativeDimensions": "1200 x 630",
+    "nativeActiveBytes": 33504846,
+    "illustratedCovers": [
+      {
+        "page": "console/nintendo-switch/index.html",
+        "path": "/assets/images/social/illustrated/whatwhatboy-nintendo-v1.png",
+        "width": 1734,
+        "height": 907
+      },
+      {
+        "page": "console/ps5/index.html",
+        "path": "/assets/images/social/illustrated/whatwhatboy-playstation-v1.png",
+        "width": 1734,
+        "height": 907
+      },
+      {
+        "page": "console/xbox-one-series/index.html",
+        "path": "/assets/images/social/illustrated/whatwhatboy-xbox-v1.png",
+        "width": 1734,
+        "height": 907
+      },
+      {
+        "page": "index.html",
+        "path": "/assets/images/social/illustrated/whatwhatboy-site-v1.png",
+        "width": 1734,
+        "height": 907
+      },
+      {
+        "page": "pc/index.html",
+        "path": "/assets/images/social/illustrated/whatwhatboy-pc-v1.png",
+        "width": 1734,
+        "height": 907
+      },
+      {
+        "page": "tools/index.html",
+        "path": "/assets/images/social/illustrated/whatwhatboy-tools-v1.png",
+        "width": 1734,
+        "height": 907
+      }
+    ],
+    "generationMode": "Built-in image_gen.imagegen for six original illustrated covers; original SVG authored from scratch and rendered for per-page cards. AI raster originals copied unchanged.",
+    "manifest": "docs/seo/social-images.json",
+    "overrides": "docs/seo/social-image-overrides.json",
+    "prompts": "docs/image-prompts/social-share-covers.json"
+  },
+  "metadata": {
+    "tags": "One title, description, keyword set, canonical, robots; matching Open Graph and Twitter titles/descriptions/images; secure image URL, format, exact width/height and descriptive alt; public WebPage primaryImageOfPage ImageObject.",
+    "engine": "scripts/page-search-metadata.cjs",
+    "finalizer": "scripts/search-page-output.cjs",
+    "generatorHooks": 30
+  },
+  "checks": {
+    "metadataPassed": true,
+    "mediaPassed": true,
+    "httpPassed": true,
+    "missingDescriptions": 0,
+    "missingKeywords": 0,
+    "genericKeywordPages": 0,
+    "manifestMissing": [],
+    "manifestExtra": [],
+    "decodedPNGs": 512,
+    "httpRequests": 1018,
+    "httpPassedCount": 1018,
+    "metadataPendingUpdates": 0,
+    "tests": {
+      "tests": 468,
+      "passed": 468,
+      "failed": 0,
+      "skipped": 0,
+      "output": "docs/qa/site-social-preview-final-tests.txt"
+    },
+    "siteAudit": "Audited 464 public pages and 49709 local links/assets; 0 issue(s).",
+    "protectedHelpers": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.11",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.11",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      }
+    ]
+  },
+  "reports": {
+    "completeness": "docs/qa/site-metadata-completeness-final-audit.json",
+    "social": "docs/qa/site-social-preview-verification.json",
+    "durability": "docs/qa/site-search-durable-verification.json"
+  },
+  "preservation": {
+    "baseline": "docs/qa/social-preview-preservation-baseline.json",
+    "baselinePages": 471,
+    "newPages": 35,
+    "canonicalOrDirectiveChanges": 0,
+    "observedBodyDifferences": 428,
+    "overallHistoricalPreservationPassed": false,
+    "note": "Original 471-page baseline is unchanged. Concurrent sidebar/content work left 428 existing raw and normalized body hash differences; hashes cannot identify the exact diff. These observations are retained and not silently rebased. Metadata transforms independently assert unchanged bodies. Current .11 live/immutable and retained .10 helpers match recorded hashes; old downloads remain untouched."
+  },
+  "additionalFixes": [
+    "External Wii U provider links coexist with all 13 existing ready-download cards; curated-library builder guard and idempotency checks preserve those cards.",
+    "Stale Xbox 360 resource pages were refreshed by concurrent work; all original source-anchor tests now pass.",
+    "Vendor exploit runtime pages are excluded from metadata/search rewriting."
+  ],
+  "regeneration": [
+    "node scripts/update-site-search-tags.cjs",
+    "node scripts/build-social-previews.cjs",
+    "node scripts/update-page-metadata.cjs",
+    "node scripts/build-social-previews.cjs --check",
+    "node scripts/update-page-metadata.cjs --check",
+    "node scripts/update-site-search-tags.cjs --check",
+    "node scripts/verify-search-durability.cjs",
+    "node scripts/verify-social-previews.cjs"
+  ],
+  "documentation": "docs/seo/social-previews.md",
+  "publication": "Local only; no commit, push, publication or deployment. External sharing previews require public hosting and may retain cached older images."
+}

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-02",
+  "status": "passed",
+  "url": "http://127.0.0.1:8765/console/xbox360/library.html",
+  "browser": "Codex in-app browser through cua_repl",
+  "desktop": {"viewport":1280,"clientWidth":1265,"documentWidth":1265,"brokenImages":0,"initialResources":15},
+  "mobile": {"viewport":390,"clientWidth":375,"documentWidth":375,"gridColumns":1,"controlWidth":343,"minimumControlHeight":48,"expandedSetupOverflow":false,"sharedFileOptionsVisible":true},
+  "cases": [
+    "All categories: 15 of 15 resources",
+    "Emulators category: 3 of 15 resources",
+    "Emulators plus BIOS PS1: 1 of 15 resources",
+    "Conflicting ABadAvatar plus emulators: 0 results and visible empty-state text",
+    "Clear filters resets search, category and runtime",
+    "Unaccented frappe search finds Catppuccin Frappé",
+    "Phone search balatro: 1 resource, full-width stacked controls",
+    "Phone setup disclosure opens; primary manual and alternate store URLs are distinct and correct",
+    "Phone shared mobile-download integration exposes File options beside Download",
+    "Viewport override reset; complete 15-entry library left in deliverable tab"
+  ],
+  "screenshots": ["docs/qa/xbox360-more-desktop.jpg","docs/qa/xbox360-more-mobile-filters.jpg","docs/qa/xbox360-more-mobile-download.jpg"],
+  "physicalHardwareTested": false,
+  "downloadedPayloadsExecuted": false
+}

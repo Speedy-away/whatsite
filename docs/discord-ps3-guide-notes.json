@@ -1,0 +1,271 @@
+{
+  "discord-ps3-cod4-yardsale-v6-5": {
+    "readiness": "incomplete",
+    "category": "reference",
+    "description": "Misfiled source archive: contains Xbox V6.5 patch_mp.ff and default_mp.xex, with no PS3-labelled build. Preserved for reference; excluded from PS3 console-ready downloads."
+  },
+  "discord-ps3-cod4-tree-patch-v1": {
+    "readiness": "incomplete",
+    "category": "reference",
+    "description": "Misfiled source archive: contains Xbox-labelled patch_mp.ff and default_mp.xex, with no PS3-labelled build. Preserved for reference; excluded from PS3 console-ready downloads."
+  },
+  "discord-ps3-cod4-plant-patch": {
+    "readiness": "incomplete",
+    "category": "reference",
+    "description": "Misfiled source archive: contains Xbox-labelled patch_mp.ff and default_mp.xex, with no PS3-labelled build. Preserved for reference; excluded from PS3 console-ready downloads."
+  },
+  "discord-ps3-cod4-cabepex-v1-5": {
+    "readiness": "incomplete",
+    "category": "reference",
+    "description": "Misfiled source archive: contains Xbox-labelled patch_mp.ff and default_mp.xex, with no PS3-labelled build. Preserved for reference; excluded from PS3 console-ready downloads."
+  },
+  "discord-ps3-cod4-nato-v1": {
+    "readiness": "incomplete",
+    "category": "script",
+    "description": "Raw GSC source distribution with a maps/mp/gametypes tree. No PS3 fastfile build was found. Preserved for source reference; excluded from PS3 console-ready downloads."
+  },
+  "discord-ps3-waw-mp-purple-kush-v2": {
+    "readiness": "incomplete",
+    "category": "script",
+    "description": "Raw GSC script distribution with a PC-style maps tree. No PS3 fastfile build was found. Preserved for source reference; excluded from PS3 console-ready downloads."
+  },
+  "discord-ps3-mw2-xclickymodz": {
+    "category": "script",
+    "tags": [
+      "Discord source",
+      "CFW source label",
+      "Fastfile",
+      "FF",
+      "Patch"
+    ],
+    "description": "xClickyModz private patch. Although posted in the SPRX forum, static archive inspection found patch_mp.ff and a credits readme, with no SPRX file.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Archive contents",
+        "text": "The archive contains patch_mp.ff and READ ME FIRST.txt. The readme identifies xClickyModz and the patch credits but does not give a file destination, game update or region. Confirm those requirements before replacing game files and preserve originals."
+      }
+    ]
+  },
+  "discord-ps3-mw2-snow-engine": {
+    "region": "CEX folders: BLES00683 and BLUS30377; DEX EBOOT has no region folder label.",
+    "compatibility": "Archive contains CEX and DEX EBOOT variants plus SnowMW2.sprx. Exact game update and firmware are not specified.",
+    "tags": [
+      "Discord source",
+      "SPRX",
+      "CEX",
+      "DEX",
+      "BLES00683",
+      "BLUS30377"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Choose the labelled archive variant",
+        "text": "Static inspection found CEX/BLES00683/EBOOT.BIN, CEX/BLUS30377/EBOOT.BIN, DEX/EBOOT.BIN and SnowMW2.sprx. These are archive labels, not hardware test results. Match your console environment and title ID, preserve the original EBOOT and confirm the loader and destination before copying files."
+      }
+    ]
+  },
+  "discord-ps3-waw-nightfire": {
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Archive readme",
+        "text": "The readme places NightFire.sprx in /dev_hdd0/tmp/ and EBOOT.BIN in the matching World at War USRDIR. Preserve the original EBOOT first. Host: L1 + R3 opens, X selects, L1/R1 scroll and Square returns. Non-host: D-pad Left opens, Square selects, L2/R2 scroll and Circle returns."
+      }
+    ]
+  },
+  "discord-ps3-waw-external-3": {
+    "gameUpdate": "1.07 (archive folder label)",
+    "compatibility": "Separate CFW and HEN folders, labelled World at War 1.07. Exact firmware and region are not specified.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Archive readme",
+        "text": "Choose the matching CFW or HEN folder. Preserve the original EBOOT.BIN. Place ParadiseWAW.sprx in /dev_hdd0/tmp/ and the selected EBOOT.BIN in the correct regional game USRDIR. The distributor deliberately renamed External.sprx to ParadiseWAW.sprx to match the supplied EBOOT; keep the supplied filename."
+      }
+    ]
+  },
+  "discord-ps3-waw-paradise": {
+    "version": "CFW 1.3 / HEN archive",
+    "compatibility": "Contains CFW 1.3 and HEN folders. Exact firmware, region and game update are not specified.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Archive controls file",
+        "text": "The CFW controls file gives D-pad Up + L1 to open or close, X to select, Up/Down to scroll in game and R1/L1 to scroll in the pregame menu. The archive supplies separate CFW and HEN EBOOT/SPRX files; choose the matching pair and preserve original game files."
+      }
+    ]
+  },
+  "discord-ps3-mw2-patch-wxmpatcher-v3": {
+    "note": "Source title says V3, but the linked original is named WxMPatcherV2.zip. Both labels are preserved; the file has not been inspected in this pass."
+  },
+  "discord-ps3-mw2-patch-xfusion-v1-2": {
+    "note": "Source title says V1.2, while the linked original filename is xFusionV1.rar. The archive version remains unverified."
+  },
+  "discord-ps3-mw3-sprx-phantom": {
+    "category": "reference",
+    "status": "source-reference",
+    "description": "MW3 Phantom publisher reference from the PS3 forum. The captured post links the French Modding Team shop entry, with no ready-to-use file attached.",
+    "note": "The original Discord post contains the publisher’s MW3 Phantom CCAPI DEX/CEX listing. Current availability and exact requirements have not been verified; no local build is archived."
+  },
+  "discord-ps3-gta5-loader-boxuga-v2": {
+    "category": "loader",
+    "downloads": [
+      {
+        "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Scripts.zip",
+        "label": "Original Scripts.zip · Scripts.zip"
+      },
+      {
+        "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/update.rpf",
+        "label": "Original update.rpf · update.rpf"
+      }
+    ],
+    "note": "Original source folder/release layout: update.rpf. Preserve its matching game and console requirements.",
+    "compatibility": "Pinned V2 release explicitly labels update.rpf for PS3 CFW/HEN. Exact firmware, title ID and game update are not supplied. OFW support is not established.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Choose the PS3 release asset",
+        "text": "The pinned V2 release labels update.rpf for PS3 CFW/HEN. Its Boxuga.V2.Xbox.zip is a separate Xbox 360 RGH build. Keep these platforms separate and preserve your original game files."
+      },
+      {
+        "type": "text",
+        "title": "Optional loader scripts",
+        "text": "Scripts.zip contains BoxugaLoader.csc and PS3 CTD textures alongside separate Xbox XSC/XTD files. The author describes this archive as scripts for loading through another loader. Read.txt gives a stack size of 2024 and L1/LB + Left as the controls. Keep the platform-specific texture assets with the matching script."
+      },
+      {
+        "type": "text",
+        "title": "Requirements still unspecified",
+        "text": "The captured post and V2 release do not supply a PS3 title ID, game update or exact installation destination. Confirm those requirements against your game before replacing update.rpf. The README describes GTA V Story Mode controls; it does not establish compatibility with every online service."
+      }
+    ],
+    "version": "V2 (pinned GitHub release)",
+    "gameUpdate": "Not specified by source",
+    "tags": [
+      "GTA V",
+      "Boxuga",
+      "Mod loader",
+      "CFW",
+      "HEN",
+      "V2"
+    ]
+  },
+  "discord-ps3-gta4-unknown-modding-v11": {
+    "category": "loader",
+    "downloads": [
+      {
+        "url": "https://mega.nz/folder/355QwKQC#ULSbVNfMKxczvXaQOdwl5Q/file/X8ohGbyQ",
+        "label": "Original update.img · Unknown Modding V1.1 GTA 4/update.img"
+      }
+    ],
+    "note": "Original source folder/release layout: Unknown Modding V1.1 GTA 4/update.img. Preserve its matching game and console requirements.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Source contents",
+        "text": "The reviewed source folder contains one update.img under Unknown Modding V1.1 GTA 4. No installation readme, controls, title ID or exact game update was supplied in this folder. Preserve your original game files and verify the matching loader and destination before replacement."
+      }
+    ],
+    "version": "1.1 (source post and folder)",
+    "gameUpdate": "Not specified by source",
+    "compatibility": "PS3 GTA IV forum source; folder contains update.img. Exact title ID, game update and CEX/DEX/HEN/OFW requirements are not specified.",
+    "tags": [
+      "GTA IV",
+      "Unknown Modding",
+      "Mod loader",
+      "IMG"
+    ]
+  },
+  "discord-ps3-gta5-loader-tmm-v12": {
+    "category": "loader",
+    "downloads": [
+      {
+        "url": "https://mega.nz/folder/aPpDWaoT#GepfrSbjU0kb-kiqc-sFjg/file/aKYBAKqY",
+        "label": "Original update.rpf · TMM v12 Modloader/TMMv12 (no texture)/update.rpf"
+      }
+    ],
+    "note": "Original source folder/release layout: TMM v12 Modloader/TMMv12 (no texture)/update.rpf. Preserve its matching game and console requirements.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Preserved source variant",
+        "text": "This source supplies update.rpf under TMM v12 Modloader / TMMv12 (no texture). Preserve the no-texture label. The folder does not include an EBOOT or installation documentation, so no EBOOT, firmware, title-ID or update compatibility is inferred."
+      }
+    ],
+    "version": "v12",
+    "gameUpdate": "Not specified by source",
+    "compatibility": "PS3 GTA V forum source. The supplied folder labels this TMMv12 (no texture). Exact title ID, game update and CEX/DEX/HEN requirements are unspecified.",
+    "tags": [
+      "GTA V",
+      "TMM",
+      "Mod loader",
+      "No texture variant",
+      "RPF"
+    ]
+  },
+  "discord-ps3-gta5-loader-semjases-v153": {
+    "category": "loader",
+    "downloads": [
+      {
+        "url": "https://mega.nz/folder/F8hEQI5a#sGCKPnSZ3i5Um3yVVeim4w/file/Mw5iRaDA",
+        "label": "Original EBOOT.BIN · Semjases ModLoader 15.3/EBOOT/EBOOT DEX BLES/EBOOT.BIN"
+      },
+      {
+        "url": "https://mega.nz/folder/F8hEQI5a#sGCKPnSZ3i5Um3yVVeim4w/file/hs5gSC6D",
+        "label": "Original update.rpf · Semjases ModLoader 15.3/update.rpf"
+      }
+    ],
+    "note": "Original source folder/release layout: Semjases ModLoader 15.3/update.rpf. Preserve its matching game and console requirements.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Keep the supplied requirements",
+        "text": "The reviewed Semjases ModLoader 15.3 folder contains update.rpf and EBOOT / EBOOT DEX BLES / EBOOT.BIN. The executable is explicitly a DEX/BLES variant, with no full BLES title ID provided. Do not treat it as a HEN or CEX EBOOT."
+      },
+      {
+        "type": "text",
+        "title": "Before replacement",
+        "text": "Preserve the original update.rpf and EBOOT.BIN. Match the game edition, title ID, update and console environment before choosing the source files. No installation destination or controls were included in the reviewed folder."
+      }
+    ],
+    "version": "15.3",
+    "gameUpdate": "Not specified by source",
+    "compatibility": "The source folder supplies update.rpf and a separate EBOOT explicitly labelled DEX BLES. The BLES number, game update and exact DEX firmware are unspecified; HEN support is not established by this folder.",
+    "tags": [
+      "GTA V",
+      "Semjases",
+      "Mod loader",
+      "DEX",
+      "BLES",
+      "RPF",
+      "EBOOT"
+    ]
+  },
+  "discord-ps3-gta5-loader-james-reborn-v401": {
+    "category": "loader",
+    "downloads": [
+      {
+        "url": "https://mega.nz/folder/oHJlGKSS#4WLMQNGK4-shzRUIXeeGFA/file/5OhEVQDZ",
+        "label": "Original update.rpf · jamews reborn 40.1/update.rpf"
+      }
+    ],
+    "note": "Original source folder/release layout: jamews reborn 40.1/update.rpf. Preserve its matching game and console requirements.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Source contents and unknown requirements",
+        "text": "The reviewed folder, spelled jamews reborn 40.1 by its source, contains update.rpf only. No EBOOT, readme, controls, title ID or game-update requirement was supplied. Preserve the original game files and verify the destination and compatible console environment before replacement."
+      }
+    ],
+    "version": "40.1",
+    "gameUpdate": "Not specified by source",
+    "compatibility": "PS3 GTA V forum source and folder version40.1. Exact title ID, game update and CEX/DEX/HEN requirements are unspecified.",
+    "tags": [
+      "GTA V",
+      "James Reborn",
+      "Mod loader",
+      "RPF"
+    ]
+  }
+}

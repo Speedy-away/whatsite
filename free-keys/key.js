@@ -289,29 +289,88 @@
             action: challenge.challenge.action,
             cData: challenge.challenge.cdata,
             theme: 'dark',
+            // Compact stays usable inside the key card on narrow phones.
+            size: 'compact',
             callback: token => issueKey(challenge.challenge.id, token).catch(error => showError(error.message)),
             'error-callback': () => showError('Site verification failed. Reload and try again.'),
             'expired-callback': () => showError('Site verification expired. Reload and try again.')
         });
     };
 
-    const copyKey = async () => {
-        if (!currentKey) return;
-        try { await navigator.clipboard.writeText(currentKey); }
-        catch (_) {
-            const field = document.createElement('textarea');
-            field.value = currentKey;
-            field.setAttribute('readonly', '');
-            field.style.position = 'fixed';
-            field.style.opacity = '0';
-            document.body.appendChild(field);
-            field.select();
-            document.execCommand('copy');
-            field.remove();
+    let copyFeedbackTimer = null;
+    let copyAttempt = 0;
+    let copyStatus = null;
+    const showCopyStatus = message => {
+        if (!copyStatus) {
+            copyStatus = document.getElementById('keyCopyStatus');
+            if (!copyStatus) {
+                copyStatus = document.createElement('p');
+                copyStatus.id = 'keyCopyStatus';
+                copyStatus.className = 'key-hint';
+                copyStatus.setAttribute('role', 'status');
+                copyStatus.setAttribute('aria-live', 'polite');
+                keyOutput.insertAdjacentElement('afterend', copyStatus);
+            }
         }
-        const original = copyButton.textContent;
+        copyStatus.textContent = message;
+    };
+    const copyKey = async () => {
+        // Copy only an issued key, never the blurred/status text in the output.
+        if (!currentKey) return false;
+        const key = currentKey;
+        const attempt = ++copyAttempt;
+        let copied = false;
+        try {
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+                await navigator.clipboard.writeText(key);
+                copied = true;
+            }
+        } catch (_) { /* Try the selection-based fallback when permission is denied. */ }
+        if (!copied) {
+            let field;
+            try {
+                field = document.createElement('textarea');
+                field.value = key;
+                field.setAttribute('readonly', '');
+                field.style.position = 'fixed';
+                field.style.opacity = '0';
+                document.body.appendChild(field);
+                field.focus({ preventScroll: true });
+                field.select();
+                if (field.setSelectionRange) field.setSelectionRange(0, key.length);
+                copied = document.execCommand('copy') === true;
+            } catch (_) { /* The visible key remains available for manual copying. */ }
+            finally { if (field) field.remove(); }
+            if (copied) copyButton.focus({ preventScroll: true });
+        }
+        // An expired/replaced key or a newer request owns the UI now.
+        if (currentKey !== key || attempt !== copyAttempt) return copied;
+        if (copyFeedbackTimer != null) window.clearTimeout(copyFeedbackTimer);
+        const label = `Copy ${entry.name} key`;
+        if (!copied) {
+            copyButton.textContent = label;
+            keyOutput.textContent = key;
+            keyOutput.classList.add('revealed');
+            const reveal = document.getElementById('revealButton');
+            if (reveal) {
+                reveal.textContent = 'Hide';
+                reveal.setAttribute('aria-pressed', 'true');
+            }
+            try {
+                keyOutput.focus({ preventScroll: true });
+                const selection = window.getSelection();
+                const range = document.createRange();
+                range.selectNodeContents(keyOutput);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            } catch (_) { /* Long-press selection is still available on the revealed key. */ }
+            showCopyStatus('Copying was blocked. The key is revealed. Touch and hold it, then choose Copy.');
+            return false;
+        }
         copyButton.textContent = 'Copied';
-        window.setTimeout(() => { copyButton.textContent = original; }, 1600);
+        showCopyStatus('Key copied.');
+        copyFeedbackTimer = window.setTimeout(() => { copyButton.textContent = label; }, 1600);
+        return true;
     };
 
     const updateTimer = () => {
@@ -332,6 +391,7 @@
             keyOutput.textContent = 'KEY EXPIRED';
             keyOutput.classList.remove('has-key');
             copyButton.disabled = true;
+            if (copyStatus) copyStatus.textContent = '';
         }
     };
 

@@ -119,8 +119,25 @@ not the generated files**, then re-run:
 node i18n-tools/build-chrome.js
 ```
 
-They currently cover the **site chrome** — the sidebar navigation, footer and
-shared labels, 56 entries appearing on nearly all 85 pages.
+They cover the **site chrome and console UI**: sidebar navigation, shared footer,
+console/download/storage/search controls, host-selector copy and safe dynamic
+templates. The console pack lives in
+[../i18n-tools/console-translations.cjs](../i18n-tools/console-translations.cjs)
+and is merged by `build-chrome.js` before the dictionaries are generated.
+
+This does **not** mean that every page description, source quotation or game
+guide is translated. Missing source strings remain readable in English; product
+names, filenames, URLs and compatibility values are preserved intentionally.
+Check the current public-page lookup report with:
+
+```bash
+node i18n-tools/i18n-console-audit.cjs --write
+```
+
+The report at `docs/language-coverage.json` validates identical key sets and
+template placeholders across all languages, lists missing loaders, and records
+unmatched public-page strings. Its lookup counts are not a linguistic translation
+percentage: source candidates also contain names and technical metadata.
 
 Adding a language here therefore means adding one `code:"translation"` pair per
 row of that table, plus the `LANGS` and `FLAGS` entries described above. There is

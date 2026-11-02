@@ -1,0 +1,413 @@
+{
+  "reviewedAt": "2026-11-02T14:41:00.940Z",
+  "method": "Read source and exact live BIN bytes into bounded memory only, record hashes/metadata, then discard bytes. No payload saved, installed or executed.",
+  "source": {
+    "url": "https://www.kmeps4.site/webpayloads/index.html",
+    "bytes": 27685,
+    "sha256": "548313b73ba4309619a4417762035f87f34b5f8724c921629edf490a83951ddd",
+    "lastModified": "Thu, 12 Mar 2026 10:29:43 GMT",
+    "text": "<html>\n<head>\n<title>GoldHEN Bin Server Web Payloads</title>\n<link rel=\"shortcut icon\" href=\"favicon.ico\"></link>\n<link rel=\"stylesheet\" href=\"btn.css\">\n<style>\nbody{background-image: url(\"bg.jpg\");background-repeat: no-repeat;background-size:70%;background-position: center;background-color: black;\ncolor:white;font-size:20px;text-align:center;margin:0;overflow:hidden;}\n.info{overflow: hidden;position: fixed;position: absolute;top: 45%;left: 50%;font-size: 25px;font-family: sans-serif;color: white;transform: translate(-50%, -50%);}\n</style>\n\n<script>\n\n//Check Cache Status\nif (window.applicationCache.status=='0')\n{\n  window.location.replace(\"cache.html\");\n}\n//Initialization of variables\nvar payloadData = \"\";\nvar array = \"\";\nvar PLfile = \"\";\nlocalStorage.setItem(\"ipaddress\",\"127.0.0.1\");\n\n//Functions\nfunction pldone() \n{\n  msgs.innerHTML= LoadedMSG;\n}\n\n//Function to 'Load' the payload file to be send to GoldHEN Bin Server.\t\n\tvar getPayload=function(payload,onLoadEndCallback)\n    {\n\t\tvar req=new XMLHttpRequest();\n\t\treq.open('GET',payload);\n\t\treq.send();\n\t\treq.responseType=\"arraybuffer\";\n\t\treq.onload=function(event){\n\t\t\tif(onLoadEndCallback)onLoadEndCallback(req,event);\n\t\t};\n\t};\n\t\n//Function to 'Send' the payload file to GoldHEN Bin Server using Html POST method. \n\tvar sendPayload=function(url,data,onLoadEndCallback)\n    {\n\t\tvar req=new XMLHttpRequest();\n\t\treq.open(\"POST\",url,true);\n\t\treq.send(data);\n\t\treq.onload=function(event){\n\t\t\tif(onLoadEndCallback)onLoadEndCallback(req,event);\n\t\t};\n\t};\n\n//function to check current status of the GoldHEN Bin Server\nfunction checkbinserverstatus()\n{\n    var req = new XMLHttpRequest(); \n\treq.open(\"POST\", \"http://\"+localStorage.ipaddress+\":9090/status\");\n\treq.send();\n\treq.onerror = function(){\n\t\tmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>GoldHEN Bin Server Not Detected!!!</h1>\";\n\t\tsessionStorage.isbinserver = \"no\";\n\t};\n\treq.onload = function(){\n\tvar responseJson = JSON.parse(req.responseText);\n\tif (responseJson.status==\"ready\"){\n\t\tmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>GoldHEN Bin Server Detected, Payloads Will run over HTTP-POST!!!</h1>\";\n\t\tsessionStorage.isbinserver = \"yes\";\n\t\t}\n\t};\n}\n\n//Payloads to be loaded over GoldHEN Bin Server method in BZ2 format\nfunction LoadpayloadGoldHENBz2(PLfile)\n{ //Loading Payload via Payload Param.\n\t   // First do an initial check to see if the BinLoader server is running, ready or busy.\n\t   var req = new XMLHttpRequest(); \n\t   req.open(\"POST\", \"http://\"+localStorage.ipaddress+\":9090/status\");\n\t   req.send();\n\t   req.onerror = function(){\n\t\t   alert(\"Cannot Load Payload Because The BinLoader Server Is Not Running\");//<<If server is not running, alert message.\n\t\t   return;\n\t   };\n\t\treq.onload = function(){\n\t\t\tvar responseJson = JSON.parse(req.responseText);\n\t\t\tif (responseJson.status==\"ready\"){\n\t\t    getPayload(PLfile, function (req) {\n            if ((req.status === 200 || req.status === 304) && req.response) {\n\t\t\t\t   //Sending bins via IP POST Method\n                    let payloadData = new Uint8Array(req.response); //Method By Hippie68\n                   // Decompress\n                   if (PLfile.endsWith(\".bz2\"))\n                   {\n                   try {\n                    payloadData = bzip2.simple(bzip2.array(payloadData));\n                   } catch (error) {\n                   throw error;\n                   }\n                   }\n                   //Send Decompress Payload to GoldHEN Bin Server\n\t\t\t\t\tsendPayload(\"http://\" + localStorage.ipaddress + \":9090\", payloadData.buffer, function (req) {\n\t\t\t\t\t   if (req.status === 200) {\n\t\t\t\t\t\tpldone();\n\t\t\t\t\t   }else{msgs.innerHTML = 'Cannot send payload';return;}\n\t\t\t\t\t})\n\t\t\t\t}\n\t\t\t});\n\t\t\t}\n\t\t\telse {\n\t\t\t\talert(\"Cannot Load Payload Because The BinLoader Server Is Busy\");//<<If server is busy, alert message.\n\t\t\t\treturn;\n\t\t\t}\n\t\t};\n\t}\n\n//Payloads to be loaded over GoldHEN Bin Server method\nfunction LoadpayloadGoldHEN(PLfile)\n{ //Loading Payload via Payload Param.\n\t   // First do an initial check to see if the BinLoader server is running, ready or busy.\n\t   var req = new XMLHttpRequest(); \n\t   req.open(\"POST\", \"http://\"+localStorage.ipaddress+\":9090/status\");\n\t   req.send();\n\t   req.onerror = function(){\n\t\t   alert(\"Cannot Load Payload Because The BinLoader Server Is Not Running\");//<<If server is not running, alert message.\n\t\t   return;\n\t   };\n\t\treq.onload = function(){\n\t\t\tvar responseJson = JSON.parse(req.responseText);\n\t\t\tif (responseJson.status==\"ready\"){\n\t\t    getPayload(PLfile, function (req) {\n\t\t\t\tif ((req.status === 200 || req.status === 304) && req.response) {\n\t\t\t\t   //Sending bins via IP POST Method\n\t\t\t\t\tsendPayload(\"http://\" + localStorage.ipaddress + \":9090\", req.response, function (req) {\n\t\t\t\t\t   if (req.status === 200) {\n\t\t\t\t\t\tpldone();\n\t\t\t\t\t   }else{msgs.innerHTML = 'Cannot send payload';return;}\n\t\t\t\t\t})\n\t\t\t\t}\n\t\t\t});\n\t\t\t}\n\t\t\telse {\n\t\t\t\talert(\"Cannot Load Payload Because The BinLoader Server Is Busy\");//<<If server is busy, alert message.\n\t\t\t\treturn;\n\t\t\t}\n\t\t};\n}\n\nfunction load_disableupdates()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Disable-Updates. Please wait!</h1>\";\nLoadedMSG=\"Disable-Updates Loaded\";\nPLfile = \"pl_disableupdates.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_enableupdates(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Enable-Updates. Please wait!</h1>\";\nLoadedMSG=\"Enable-Updates Loaded\";\nPLfile = \"pl_enableupdates.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n\nfunction load_appdumper()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading App Dumper. Please wait!</h1>\";\nLoadedMSG=\"App Dumper Loaded\";\nPLfile = \"pl_appdumper.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_pkgbackup()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading PKG-Backup v1.3. Please wait!</h1>\";\nLoadedMSG=\"PKG-Backup v1.3 Loaded\";\nPLfile = \"pl_pkgbackup.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_moduledumper()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Kernel Module-Dumper. Please wait!</h1>\";\nLoadedMSG=\"Kernel Module-Dumper Loaded\";\nPLfile = \"pl_moduledumper.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_kerneldumper(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Kernel-Dumper. Please wait!</h1>\";\nLoadedMSG=\"Kernel-Dumper Loaded\";\nPLfile = \"pl_kerneldumper.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_ftp()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Ftp. Please wait!</h1>\";\nLoadedMSG=\"Ftp Loaded\";\nPLfile = \"pl_ftp.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_uart()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Permanent UART. Please wait!</h1>\";\nLoadedMSG=\"Permanent UART Loaded\";\nPLfile = \"pl_permanentuart.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_todex()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Enable-Dex. Please wait!</h1>\";\nLoadedMSG=\"ToDex Loaded\";\nPLfile = \"pl_todex.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n\nfunction load_backupdb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading DB-Backup. Please wait!</h1>\";\nLoadedMSG=\"DB-Backup Loaded\";\nPLfile = \"pl_backup.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_restoredb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading DB-Restore. Please wait!</h1>\";\nLoadedMSG=\"DB-Restore Loaded\";\nPLfile = \"pl_restore.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_app2usb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading App-To-Usb. Please wait!</h1>\";\nLoadedMSG=\"App-To-Usb Loaded\";\nPLfile = \"pl_app2usb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n\nfunction load_exitidu(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Exitidu. Please wait!</h1>\";\nLoadedMSG=\"Exitidu Loaded\";\nPLfile = \"pl_exitidu.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_rifrenamer(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Rifrenamer. Please wait!</h1>\";\nLoadedMSG=\"Rifrenamer Loaded\";\nPLfile = \"pl_rifrenamer.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_enablebrowser(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Enable-Browser. Please wait!</h1>\";\nLoadedMSG=\"Enable-Browser Loaded\";\nPLfile = \"pl_enablebrowser.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n\nfunction load_historyblocker()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading History-Blocker. Please wait!</h1>\";\nLoadedMSG=\"History-Blocker Loaded\";\nPLfile = \"pl_historyblocker.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n\nfunction load_ps4debug()\n{\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading PS4-Debug 1.1.19 Please wait!</h1>\";\nLoadedMSG=\"PS4-Debug 1.1.19 Loaded\";\nPLfile = \"pl_ps4debug.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_disableaslr(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading Disable-ASLR. Please wait!</h1>\";\nLoadedMSG=\"Disable-ASLR Loaded\";\nPLfile = \"pl_disableaslr.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n/////////////LINUX 9.60\nfunction load_960Linux1gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 9.60 Linux 1gb. Please wait!</h1>\";\nLoadedMSG=\"9.60 Linux 1gb Loaded\";\nPLfile = \"pl_960LinuxLoader1gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_960Linux2gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 9.60 Linux 2gb. Please wait!</h1>\";\nLoadedMSG=\"9.60 Linux 2gb Loaded\";\nPLfile = \"pl_960LinuxLoader2gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_960Linux3gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 9.60 Linux 3gb. Please wait!</h1>\";\nLoadedMSG=\"9.60 Linux 3gb Loaded\";\nPLfile = \"pl_960LinuxLoader3gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_960Linux4gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 9.60 Linux 4gb. Please wait!</h1>\";\nLoadedMSG=\"9.60 Linux 4gb Loaded\";\nPLfile = \"pl_960LinuxLoader4gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n/////////////LINUX 10.00/10.01\nfunction load_1000Linux1gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 10.0x Linux 1gb. Please wait!</h1>\";\nLoadedMSG=\"10.0x Linux 1gb Loaded\";\nPLfile = \"pl_1000LinuxLoader1gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_1000Linux2gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 10.0x Linux 2gb. Please wait!</h1>\";\nLoadedMSG=\"10.0x Linux 2gb Loaded\";\nPLfile = \"pl_1000LinuxLoader2gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_1000Linux3gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 10.0x Linux 3gb. Please wait!</h1>\";\nLoadedMSG=\"10.0x Linux 3gb Loaded\";\nPLfile = \"pl_1000LinuxLoader3gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_1000Linux4gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 10.0x Linux 4gb. Please wait!</h1>\";\nLoadedMSG=\"10.0x Linux 4gb Loaded\";\nPLfile = \"pl_1000LinuxLoader4gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n/////////////LINUX 13.00\nfunction load_1100Linux1gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 13.00 Linux 1gb. Please wait!</h1>\";\nLoadedMSG=\"13.00 Linux 1gb Loaded\";\nPLfile = \"pl_1100LinuxLoader1gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_1100Linux2gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 13.00 Linux 2gb. Please wait!</h1>\";\nLoadedMSG=\"13.00 Linux 2gb Loaded\";\nPLfile = \"pl_1100LinuxLoader2gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_1100Linux3gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 13.00 Linux 3gb. Please wait!</h1>\";\nLoadedMSG=\"13.00 Linux 3gb Loaded\";\nPLfile = \"pl_1100LinuxLoader3gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\nfunction load_1100Linux4gb(){\nmsgs.innerHTML=\"<h1 style='font-size:25px;text-align:center;'>Loading 13.00 Linux 4gb. Please wait!</h1>\";\nLoadedMSG=\"13.00 Linux 4gb Loaded\";\nPLfile = \"pl_1100LinuxLoader4gb.bin\";\nLoadpayloadGoldHEN(PLfile);\n}\n\n</script>\n\n</head>\n\n<body onload=\"checkbinserverstatus()\">\n  <h1 id=msgs style='font-size:25px;text-align:center;color:white'>GoldHEN Bin Server Web Payloads</h1>\n  <div id=mymenu style=\"text-align:center;\">\n  <div style=\"width:100%;font-size:20px;color:white\">\n  PS4 Firmware <span id=\"PS4fw\"></span></div>\n  <div id=\"pldmenu\" style=font-size:16px>\n   <br><br>\n  <div style=font-size:16px>PAYLOADS</div>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='PKG-Backup v1.3 - Modded Version Of App Dumper / 13.00 Port By Kamaleon'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_pkgbackup(); return false\">PKG-BackUp v1.3</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='App Dumper Only v1.8 - Original Version By xVortex / 13.00 Port Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_appdumper(); return false\">App-Dumper</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Disable-Updates v1.0 - 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_disableupdates(); return false\">Disable-Updates</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Enable-Updates v1.0 - 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_enableupdates(); return false\">Enable-Updates</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Enable Browser / 13.00 Port Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_enablebrowser(); return false\">Enable-Browser</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Exit IDU / 13.00 Port Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_exitidu(); return false\">Exit-IDU</button>\n  <br><br>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Rifrenamer / 13.00 Port Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_rifrenamer(); return false\">Rif-Renamer</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Ftp Server - Original Version By xVortex / 13.00 Port Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_ftp(); return false\">Ftp-Server</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='History-Blocker - v2.0 Original Version By Stooged / 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_historyblocker(); return false\">History-Blocker</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Kernel-Dumper - v1.0 Original Version By Eversion / 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_kerneldumper(); return false\">Kernel-Dumper</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Kernel-Module Dumper -  13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_moduledumper(); return false\">Kernel-Module-Dumper</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Ps4Debug v1.1.19 - By CTN123'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_ps4debug(); return false\">Ps4Debug v1.1.19</button>\n  <br><br>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='DB-Backup v1.0 - By Leeful / 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_backupdb(); return false\">DB-Backup</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='DB-Restore v1.0 - By Leeful / 13.00 Port Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_restoredb(); return false\">DB-Restore</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='App-2-Usb - Original Version By Stooged / 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_app2usb(); return false\">App-2-Usb</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='To-Dex v1.0 - By notzecoxao / 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_todex(); return false\">To-Dex</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Permanent UART - 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_uart(); return false\">Permanent-UART</button>\n  <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Disable ASLR - 13.00 Port By Al Azif'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_disableaslr(); return false\">Disable-ASLR</button>\n  </div>\n  <br><br>\n  <a id=\"linuxl\" ><button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loaders Payloads'\" ; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" type=\"button\">Linux Vram Payloads</button></a>\n  <div id=\"linuxlJ\" style=\"display: none;\">\n    <br>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 1GB - 9.60 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_960Linux1gb(); return false\">9.60 Linux 1GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 2GB - 9.60 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_960Linux2gb(); return false\">9.60 Linux 2GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 3GB - 9.60 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_960Linux3gb(); return false\">9.60 Linux 3GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 4GB - 9.60 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_960Linux4gb(); return false\">9.60 Linux 4GB Vram</button>\n    <br><br>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 1GB - 10.0x Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1000Linux1gb(); return false\">10.0x Linux 1GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 2GB - 10.0x Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1000Linux2gb(); return false\">10.0x Linux 2GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 3GB - 10.0x Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1000Linux3gb(); return false\">10.0x Linux 3GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 4GB - 10.0x Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1000Linux4gb(); return false\">10.0x Linux 4GB Vram</button>\n    <br><br>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 1GB - 11.00 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1100Linux1gb(); return false\">11.00 Linux 1GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 2GB - 11.00 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1100Linux2gb(); return false\">11.00 Linux 2GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 3GB - 11.00 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1100Linux3gb(); return false\">11.00 Linux 3GB Vram</button>\n    <button class=\"btn\" onMouseOver=\"msgs.innerHTML='Linux Vram Loader 4GB - 11.00 Port By EinTim23'\"; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" onclick=\"load_1100Linux4gb(); return false\">11.00 Linux 4GB Vram</button>\n  </div>\n  <div id=\"Backl\" style=\"display: none;\">\n    <br>\n    <br>\n    <a ><button class=\"btn\" onMouseOver=\"msgs.innerHTML='Go Back'\" ; onmouseout=\"msgs.innerHTML='GoldHEN Bin Server Web Payloads'\" type=\"button\">Back</button></a>\n  </div>\n  <br>\n  <h1 style=\"text-align:center;font-size:25px;color:white\">Massive Thanks - Theflow0, SiSTRo, CTN, Al-Azif, PRB, Leeful And Many More...</h1>\n  <p style=\"text-align:center;font-size:20px;color:white\"><a href=\"https://twitter.com/Kameleonre_\">Kameleonre_</a></p>\n  </div>\n\n  <script>\n  var UA = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple')).replace(\"layStation 4/\",\"\");\n\n  PS4fw.innerHTML=\"v\"+UA+\" Detected\"\n  \n  </script>\n\n\n  <script> //Organize more the payloads menu Method By NazkyYT Modded By Kameleon_\n    var GBl = document.getElementById(\"Backl\");\n    var plmenu = document.getElementById(\"pldmenu\");\n    var linuxl = document.getElementById(\"linuxl\");\n    var linuxlJ = document.getElementById(\"linuxlJ\");\n  \n    linuxl.onclick = function() \n    {\n      plmenu.style.display = \"none\";\n      linuxl.style.display = \"none\";\n      linuxlJ.style.display = \"unset\";\n      GBl.style.display = \"unset\";\n      \n    }\n\n    GBl.onclick = function() \n    {\n      plmenu.style.display = \"unset\";\n      linuxl.style.display = \"unset\"\n      linuxlJ.style.display = \"none\";\n      GBl.style.display = \"none\";\n    }\n  </script>\n\n<script>\n\n//MODDED BY HIPPIE BZIP2.JS\nvar bzip2 = {};\n\nbzip2.array = function(bytes) {\nvar bit = 0, byte = 0;\nvar BITMASK = [0, 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF];\nreturn function(n) {\n  var result = 0;\n  while (n > 0) {\n    var left = 8 - bit;\n    if (n >= left) {\n      result <<= left;\n      result |= (BITMASK[left] & bytes[byte++]);\n      bit = 0;\n      n -= left;\n    } else {\n      result <<= n;\n      result |= ((bytes[byte] & (BITMASK[n] << (8 - n - bit))) >> (8 - n - bit));\n      bit += n;\n      n = 0;\n    }\n  }\n  return result;\n}\n};\n\nbzip2.simple = function(bits) {\nvar size = bzip2.header(bits);\nvar all = [], chunk = [];\ndo {\n  all = all.concat(chunk);\n  chunk = bzip2.decompress(bits, size);\n} while (chunk != -1);\nreturn Uint8Array.from(all);\n};\n\nbzip2.header = function(bits) {\nif (bits(8 * 3) != 4348520) throw \"No magic number found.\";\nvar i = bits(8) - 48;\nif (i < 1 || i > 9) throw \"Not a bzip2 archive.\";\nreturn i;\n};\n\n// Param1: a function for reading the block data (starting with 0x314159265359)\n// Param2: block size (0-9) (optional, defaults to 9)\n// Param3: length at which to stop decompressing and return the output\nbzip2.decompress = function(bits, size, len) {\nvar MAX_HUFCODE_BITS = 20;\nvar MAX_SYMBOLS = 258;\nvar SYMBOL_RUNA = 0;\nvar SYMBOL_RUNB = 1;\nvar GROUP_SIZE = 50;\n\nvar bufsize = 100000 * size;\nfor (var h = \"\", i = 0; i < 6; i++) h += bits(8).toString(16);\nif (h == \"177245385090\") return -1; // Last block\nif (h != \"314159265359\") throw \"Not valid bzip2 data.\";\nbits(32); // Ignore CRC codes\nif (bits(1)) throw \"Unsupported obsolete version.\";\nvar origPtr = bits(24);\nif(origPtr > bufsize) throw \"Initial position larger than buffer size.\";\nvar t = bits(16);\nvar symToByte = new Uint8Array(256),\n    symTotal = 0;\nfor (i = 0; i < 16; i++) {\n  if (t & (1 << (15 - i))) {\n    var k = bits(16);\n    for (j = 0; j < 16; j++) {\n      if (k & (1 << (15 - j))) {\n        symToByte[symTotal++] = (16 * i) + j;\n      }\n    }\n  }\n}\n\nvar groupCount = bits(3);\nif (groupCount < 2 || groupCount > 6) throw \"Error 1 while decompressing.\";\nvar nSelectors = bits(15);\nif (nSelectors == 0) throw \"Error 2 while decompressing.\";\nvar mtfSymbol = []; // TODO: possibly replace JS array with typed arrays\nfor (var i = 0; i < groupCount; i++) mtfSymbol[i] = i;\nvar selectors = new Uint8Array(32768);\n\nfor (var i = 0; i < nSelectors; i++) {\n  for (var j = 0; bits(1); j++) if (j >= groupCount) throw \"Error 3 while decompressing.\";\n  var uc = mtfSymbol[j];\n  mtfSymbol.splice(j, 1); // This is a probably inefficient MTF transform\n  mtfSymbol.splice(0, 0, uc);\n  selectors[i] = uc;\n}\n\nvar symCount = symTotal + 2;\nvar groups = [];\nfor (var j = 0; j < groupCount; j++) {\n  var length = new Uint8Array(MAX_SYMBOLS),\n      temp = new Uint8Array(MAX_HUFCODE_BITS + 1);\n  t = bits(5); // Lengths\n  for (var i = 0; i < symCount; i++) {\n    while (true) {\n      if (t < 1 || t > MAX_HUFCODE_BITS) throw \"Error 4 while decompressing.\";\n      if (!bits(1)) break;\n      if (!bits(1)) t++;\n      else t--;\n    }\n    length[i] = t;\n  }\n  var  minLen,  maxLen;\n  minLen = maxLen = length[0];\n  for (var i = 1; i < symCount; i++) {\n    if (length[i] > maxLen) maxLen = length[i];\n    else if (length[i] < minLen) minLen = length[i];\n  }\n  var hufGroup;\n  hufGroup = groups[j] = {};\n  hufGroup.permute = new Uint32Array(MAX_SYMBOLS);\n  hufGroup.limit = new Uint32Array(MAX_HUFCODE_BITS + 1);\n  hufGroup.base = new Uint32Array(MAX_HUFCODE_BITS + 1);\n  hufGroup.minLen = minLen;\n  hufGroup.maxLen = maxLen;\n  var base = hufGroup.base.subarray(1);\n  var limit = hufGroup.limit.subarray(1);\n  var pp = 0;\n  for (var i = minLen; i <= maxLen; i++)\n    for (var t = 0; t < symCount; t++)\n    if (length[t] == i) hufGroup.permute[pp++] = t;\n    for (i = minLen; i <= maxLen; i++) temp[i] = limit[i] = 0;\n    for (i = 0; i < symCount; i++) temp[length[i]]++;\n    pp = t = 0;\n    for (i = minLen; i < maxLen; i++) {\n      pp += temp[i];\n      limit[i] = pp - 1;\n      pp <<= 1;\n      base[i + 1] = pp - (t += temp[i]);\n    }\n    limit[maxLen] = pp + temp[maxLen] - 1;\n    base[minLen] = 0;\n}\nvar byteCount = new Uint32Array(256);\nfor (var i = 0; i < 256; i++) mtfSymbol[i] = i;\nvar runPos, count, symCount, selector;\nrunPos = count = symCount = selector = 0;\nvar buf = new Uint32Array(bufsize);\nwhile (true) {\n  if (!(symCount--)) {\n    symCount = GROUP_SIZE - 1;\n    if (selector >= nSelectors) throw \"Error 5 while decompressing.\";\n    hufGroup = groups[selectors[selector++]];\n    base = hufGroup.base.subarray(1);\n    limit = hufGroup.limit.subarray(1);\n  }\n  i = hufGroup.minLen;\n  j = bits(i);\n  while (true) {\n    if (i > hufGroup.maxLen) throw \"Error 6 while decompressing.\";\n    if (j <= limit[i]) break;\n    i++;\n    j = (j << 1) | bits(1);\n  }\n  j -= base[i];\n  if (j < 0 || j >= MAX_SYMBOLS) throw \"Error 7 while decompressing.\";\n  var nextSym = hufGroup.permute[j];\n  if (nextSym == SYMBOL_RUNA || nextSym == SYMBOL_RUNB) {\n    if (!runPos) {\n      runPos = 1;\n      t = 0;\n    }\n    if (nextSym == SYMBOL_RUNA) t += runPos;\n    else t += 2 * runPos;\n    runPos <<= 1;\n    continue;\n  }\n  if (runPos) {\n    runPos = 0;\n    if (count + t >= bufsize) throw \"Error 8 while decompressing.\";\n    uc = symToByte[mtfSymbol[0]];\n    byteCount[uc] += t;\n    while (t--) buf[count++] = uc;\n  }\n  if (nextSym > symTotal) break;\n  if (count >= bufsize) throw \"Error 9 while decompressing.\";\n  i = nextSym -1;\n  uc = mtfSymbol[i];\n  mtfSymbol.splice(i, 1);\n  mtfSymbol.splice(0, 0, uc);\n  uc = symToByte[uc];\n  byteCount[uc]++;\n  buf[count++] = uc;\n}\nif (origPtr < 0 || origPtr >= count) throw \"Error 10 while decompressing.\";\nvar j = 0;\nfor (var i = 0; i < 256; i++) {\n  k = j + byteCount[i];\n  byteCount[i] = j;\n  j = k;\n}\nfor (var i = 0; i < count; i++) {\n  uc = buf[i] & 0xff;\n  buf[byteCount[uc]] |= (i << 8);\n  byteCount[uc]++;\n}\nvar pos = 0, current = 0, run = 0;\nif (count) {\n  pos = buf[origPtr];\n  current = (pos & 0xff);\n  pos >>= 8;\n  run = -1;\n}\ncount = count;\nvar output = [];\nvar copies, previous, outbyte;\nif (!len) len = Infinity;\nwhile (count) {\n  count--;\n  previous = current;\n  pos = buf[pos];\n  current = pos & 0xff;\n  pos >>= 8;\n  if (run++ == 3) {\n    copies = current;\n    outbyte = previous;\n    current = -1;\n  } else {\n    copies = 1;\n    outbyte = current;\n  }\n  while (copies--) {\n    output.push(outbyte);\n    if (!--len) return output;\n  }\n  if (current != previous) run = 0;\n}\nreturn output;\n};\n\n</script>\n  \n</body>\n</html>\n"
+  },
+  "entries": [
+    {
+      "function": "load_pkgbackup",
+      "label": "PKG-BackUp v1.3",
+      "sourceDescription": "PKG-Backup v1.3 - Modded Version Of App Dumper / 13.00 Port By Kamaleon",
+      "filename": "pl_pkgbackup.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_pkgbackup.bin",
+      "bytes": 33352,
+      "sha256": "1a3d3dd41843d94cc4a3517caaefe8f8996f1bda7709a5856a711bfbaca6021b",
+      "headerHex": "e9463a0000f30f1efa415741564155415455534881ec480e000031ed4c8d3d1d",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:15 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_appdumper",
+      "label": "App-Dumper",
+      "sourceDescription": "App Dumper Only v1.8 - Original Version By xVortex / 13.00 Port Al Azif",
+      "filename": "pl_appdumper.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_appdumper.bin",
+      "bytes": 26216,
+      "sha256": "290f83e02fb0cc86e659e7ec380021942430a7608d975f03676c8afc52ba7ab0",
+      "headerHex": "e93a110000f30f1efa415741564155415455534881ec480e000031ed4c8d3d5d",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:01 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_disableupdates",
+      "label": "Disable-Updates",
+      "sourceDescription": "Disable-Updates v1.0 - 13.00 Port By Al Azif",
+      "filename": "pl_disableupdates.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_disableupdates.bin",
+      "bytes": 8420,
+      "sha256": "d6d38701f5284f4764f47197052cb189a17120a7de5b961136c5f6045c30a1fc",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec380e0000488d2d1f1800",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:04 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_enableupdates",
+      "label": "Enable-Updates",
+      "sourceDescription": "Enable-Updates v1.0 - 13.00 Port By Al Azif",
+      "filename": "pl_enableupdates.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_enableupdates.bin",
+      "bytes": 8388,
+      "sha256": "e261f6e0d18fbe95f3998b0d4b39f0683e125a04633d5333b44ade31ca074de8",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec380e0000488d2dff1700",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:07 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_enablebrowser",
+      "label": "Enable-Browser",
+      "sourceDescription": "Enable Browser / 13.00 Port Al Azif",
+      "filename": "pl_enablebrowser.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_enablebrowser.bin",
+      "bytes": 10420,
+      "sha256": "0e7c5fadc6fa4abbe5df7954f956d4c75aa71a4c03bcaf514c83578583a1a8ad",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec380e0000e8bd010000e8",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:05 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_exitidu",
+      "label": "Exit-IDU",
+      "sourceDescription": "Exit IDU / 13.00 Port Al Azif",
+      "filename": "pl_exitidu.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_exitidu.bin",
+      "bytes": 10332,
+      "sha256": "f3aa40ba35081f2384d4ec5382950f04769153f4da9b4240989283ad14a94c48",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec380e0000e8c4010000e8",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:08 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_rifrenamer",
+      "label": "Rif-Renamer",
+      "sourceDescription": "Rifrenamer / 13.00 Port Al Azif",
+      "filename": "pl_rifrenamer.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_rifrenamer.bin",
+      "bytes": 9188,
+      "sha256": "8dcb00ee027503d4388f2af88a6d386049458199669209511234f7dc9d36b79e",
+      "headerHex": "e9aa010000f30f1efa415741564155415455534881ec98030000488d05a72500",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:19 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_ftp",
+      "label": "Ftp-Server",
+      "sourceDescription": "Ftp Server - Original Version By xVortex / 13.00 Port Al Azif",
+      "filename": "pl_ftp.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_ftp.bin",
+      "bytes": 27492,
+      "sha256": "68577a874540b877ba7e95906a77060ff05480b37777d81bb0a4dfe139bda1d1",
+      "headerHex": "e97d250000f30f1efa488d05e072000041545553488d2d855600004889fb4889",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:09 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_historyblocker",
+      "label": "History-Blocker",
+      "sourceDescription": "History-Blocker - v2.0 Original Version By Stooged / 13.00 Port By Al Azif",
+      "filename": "pl_historyblocker.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_historyblocker.bin",
+      "bytes": 10972,
+      "sha256": "a10b34e1cd810b11069c00eca5ca7672a9ab9a5f1c801a81faad36f264137d38",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec580f0000e8f908000048",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:10 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_kerneldumper",
+      "label": "Kernel-Dumper",
+      "sourceDescription": "Kernel-Dumper - v1.0 Original Version By Eversion / 13.00 Port By Al Azif",
+      "filename": "pl_kerneldumper.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_kerneldumper.bin",
+      "bytes": 18588,
+      "sha256": "e4ea6a8b13a28991ece96b70fe88baeaea1cd99aee316db218fa1ce7464956d0",
+      "headerHex": "e98c050000f30f1efa415741564155415455534881ec480e000031ed4c8d3d1d",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:11 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_moduledumper",
+      "label": "Kernel-Module-Dumper",
+      "sourceDescription": "Kernel-Module Dumper -  13.00 Port By Al Azif",
+      "filename": "pl_moduledumper.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_moduledumper.bin",
+      "bytes": 17772,
+      "sha256": "62640e215becf50e60690ea5867525e32443b23c1ac74f94a8c1ca78ba964457",
+      "headerHex": "e9e0050000f30f1efa415741564155415455534881ec480e000031ed4c8d3d5d",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:12 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_ps4debug",
+      "label": "Ps4Debug v1.1.19",
+      "sourceDescription": "Ps4Debug v1.1.19 - By CTN123",
+      "filename": "pl_ps4debug.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_ps4debug.bin",
+      "bytes": 84936,
+      "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+      "headerHex": "e94b1e0000662e0f1f84000000000090f30f1efa55534883ec084889fb4889f5",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:17 GMT",
+      "selectedStrings": [],
+      "existingArchiveMatches": [
+        {
+          "inventoryId": "ps4-ps5-expand-ps4-ps4debug",
+          "title": "ps4debug",
+          "version": "v1.1.19",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\ps4debug\\Builds\\v1.1.19\\ps4debug_v1.1.19.bin",
+          "sourceURL": "https://github.com/GoldHEN/ps4debug/releases/download/v1.1.19/ps4debug_v1.1.19.bin"
+        }
+      ]
+    },
+    {
+      "function": "load_backupdb",
+      "label": "DB-Backup",
+      "sourceDescription": "DB-Backup v1.0 - By Leeful / 13.00 Port By Al Azif",
+      "filename": "pl_backup.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_backup.bin",
+      "bytes": 15092,
+      "sha256": "91eaee1292f8741bd9514fe4c4e3af99189359ae79ee3f75a7292df014d1f4b4",
+      "headerHex": "e9af000000f30f1efa41574c8d3d2e27000041564c89ff41554c8d353e270000",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:02 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_restoredb",
+      "label": "DB-Restore",
+      "sourceDescription": "DB-Restore v1.0 - By Leeful / 13.00 Port Al Azif",
+      "filename": "pl_restore.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_restore.bin",
+      "bytes": 10796,
+      "sha256": "20c5fd911366bf688d3c569008d1e4e9a020948a0a18ffaa3a34077d898f2a49",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec480e00004c8d3d7f1e00",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:18 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_app2usb",
+      "label": "App-2-Usb",
+      "sourceDescription": "App-2-Usb - Original Version By Stooged / 13.00 Port By Al Azif",
+      "filename": "pl_app2usb.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_app2usb.bin",
+      "bytes": 25908,
+      "sha256": "a2e4ae50d28f7e870df21723d976ad9a714db7cd2bb3db21cbf1aac17dc68438",
+      "headerHex": "e9d41e0000f30f1efa488d051c650000833800750331c0c350488d0518650000",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:00 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_todex",
+      "label": "To-Dex",
+      "sourceDescription": "To-Dex v1.0 - By notzecoxao / 13.00 Port By Al Azif",
+      "filename": "pl_todex.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_todex.bin",
+      "bytes": 10164,
+      "sha256": "2fc2357636a04c073d7f904fb5e7ce65f75f3aa9e561287c1123a325b53bd30c",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec380e0000e8c5010000e8",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:20 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_uart",
+      "label": "Permanent-UART",
+      "sourceDescription": "Permanent UART - 13.00 Port By Al Azif",
+      "filename": "pl_permanentuart.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_permanentuart.bin",
+      "bytes": 10228,
+      "sha256": "1fe2747142285df475abbaaf2a02c28d30628d068c983d3178fab4c4609987f9",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec380e0000e8bd010000e8",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:13 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    },
+    {
+      "function": "load_disableaslr",
+      "label": "Disable-ASLR",
+      "sourceDescription": "Disable ASLR - 13.00 Port By Al Azif",
+      "filename": "pl_disableaslr.bin",
+      "url": "https://www.kmeps4.site/webpayloads/pl_disableaslr.bin",
+      "bytes": 10276,
+      "sha256": "9548e6163969a77864eb4b9ef946faa9dd2322c08bf31a7af749eb123a08b59f",
+      "headerHex": "e900000000f30f1efa415741564155415455534881ec380e0000e8bd010000e8",
+      "topLevelELF": false,
+      "loader": "LoadpayloadGoldHEN",
+      "contentType": "application/octet-stream",
+      "lastModified": "Thu, 12 Mar 2026 10:30:03 GMT",
+      "selectedStrings": [
+        "Unsupported firmware"
+      ],
+      "existingArchiveMatches": []
+    }
+  ],
+  "additionalButtons": [
+    {
+      "label": "Linux Vram Payloads",
+      "sourceDescription": "Linux Vram Loaders Payloads"
+    },
+    {
+      "function": "load_960Linux1gb",
+      "label": "9.60 Linux 1GB Vram",
+      "sourceDescription": "Linux Vram Loader 1GB - 9.60 Port By EinTim23"
+    },
+    {
+      "function": "load_960Linux2gb",
+      "label": "9.60 Linux 2GB Vram",
+      "sourceDescription": "Linux Vram Loader 2GB - 9.60 Port By EinTim23"
+    },
+    {
+      "function": "load_960Linux3gb",
+      "label": "9.60 Linux 3GB Vram",
+      "sourceDescription": "Linux Vram Loader 3GB - 9.60 Port By EinTim23"
+    },
+    {
+      "function": "load_960Linux4gb",
+      "label": "9.60 Linux 4GB Vram",
+      "sourceDescription": "Linux Vram Loader 4GB - 9.60 Port By EinTim23"
+    },
+    {
+      "function": "load_1000Linux1gb",
+      "label": "10.0x Linux 1GB Vram",
+      "sourceDescription": "Linux Vram Loader 1GB - 10.0x Port By EinTim23"
+    },
+    {
+      "function": "load_1000Linux2gb",
+      "label": "10.0x Linux 2GB Vram",
+      "sourceDescription": "Linux Vram Loader 2GB - 10.0x Port By EinTim23"
+    },
+    {
+      "function": "load_1000Linux3gb",
+      "label": "10.0x Linux 3GB Vram",
+      "sourceDescription": "Linux Vram Loader 3GB - 10.0x Port By EinTim23"
+    },
+    {
+      "function": "load_1000Linux4gb",
+      "label": "10.0x Linux 4GB Vram",
+      "sourceDescription": "Linux Vram Loader 4GB - 10.0x Port By EinTim23"
+    },
+    {
+      "function": "load_1100Linux1gb",
+      "label": "11.00 Linux 1GB Vram",
+      "sourceDescription": "Linux Vram Loader 1GB - 11.00 Port By EinTim23"
+    },
+    {
+      "function": "load_1100Linux2gb",
+      "label": "11.00 Linux 2GB Vram",
+      "sourceDescription": "Linux Vram Loader 2GB - 11.00 Port By EinTim23"
+    },
+    {
+      "function": "load_1100Linux3gb",
+      "label": "11.00 Linux 3GB Vram",
+      "sourceDescription": "Linux Vram Loader 3GB - 11.00 Port By EinTim23"
+    },
+    {
+      "function": "load_1100Linux4gb",
+      "label": "11.00 Linux 4GB Vram",
+      "sourceDescription": "Linux Vram Loader 4GB - 11.00 Port By EinTim23"
+    },
+    {
+      "label": "Back",
+      "sourceDescription": "Go Back"
+    }
+  ]
+}

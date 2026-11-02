@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-11-02T08:35:22.206Z",
+  "page": "/console/nintendo-switch/themes.html",
+  "passed": true,
+  "desktop": {
+    "viewportWidth": 1280,
+    "documentWidth": 1265,
+    "initialResults": 8,
+    "authorSearch": {
+      "query": "Yumpzy",
+      "result": "1 result",
+      "titles": [
+        "Cozy Snorlax Adventures"
+      ]
+    },
+    "menuFilter": {
+      "target": "News",
+      "result": "2 results",
+      "titles": [
+        "Pixel Forest",
+        "PS5 Theme"
+      ]
+    },
+    "noResults": {
+      "result": "0 results",
+      "groupsHidden": true,
+      "emptyMessageVisible": true
+    },
+    "clearFilters": {
+      "result": "8 results",
+      "visible": 8
+    },
+    "layoutLabelCheck": "Six Cozy Snorlax layout names and authors match original container metadata.",
+    "consoleErrors": []
+  },
+  "phone": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentWidth": 375,
+    "singleColumn": true,
+    "searchHeight": 49.59375,
+    "menuHeight": 48,
+    "downloadHeight": 44,
+    "menuFilter": {
+      "result": "2 results",
+      "individualSectionHidden": true
+    },
+    "deepLink": {
+      "hash": "#switch-themes-1984e",
+      "resetsFilters": true,
+      "result": "8 results",
+      "targetVisible": true
+    }
+  },
+  "laptop": {
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "documentWidth": 1009,
+    "cardColumns": "468px 468px"
+  },
+  "temporaryViewportReset": true,
+  "screenshots": [
+    "docs/qa/switch-themes-desktop.jpg",
+    "docs/qa/switch-themes-mobile-hero.jpg",
+    "docs/qa/switch-themes-mobile-card.jpg"
+  ],
+  "limits": [
+    "Browser and container checks only; no physical Switch execution or installation."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "updatedAt": "2026-11-02T12:55:08.877Z",
+  "status": "Complete locally:506 pages validate;30 generator hooks;468 tests pass; .11 current and retained .10 helpers hash-match.",
+  "result": "docs/qa/site-search-durable-verification.json",
+  "engine": "scripts/page-search-metadata.cjs",
+  "finalizer": "scripts/search-page-output.cjs",
+  "verifier": "scripts/verify-search-durability.cjs",
+  "generatorFiles": [
+    "scripts/build-3ds-expansion.cjs",
+    "scripts/build-3ds-mods-online.cjs",
+    "scripts/build-apollo-vita.cjs",
+    "scripts/build-console-directory.cjs",
+    "scripts/build-console-downloads.cjs",
+    "scripts/build-console-guides.cjs",
+    "scripts/build-ds-expansion.cjs",
+    "scripts/build-host-selector.cjs",
+    "scripts/build-nintendo-retro.cjs",
+    "scripts/build-ps2-expansion.cjs",
+    "scripts/build-ps3-browser-downloads.cjs",
+    "scripts/build-retro-page.cjs",
+    "scripts/build-steamdeck.cjs",
+    "scripts/build-switch-app-pages.cjs",
+    "scripts/build-switch-core-pages.cjs",
+    "scripts/build-switch-game-mods.cjs",
+    "scripts/build-switch-homebrew.cjs",
+    "scripts/build-switch-themes.cjs",
+    "scripts/build-vita-guides.cjs",
+    "scripts/build-wii-expansion.cjs",
+    "scripts/build-wii-games-online.cjs",
+    "scripts/build-wiiu-homebrew.cjs",
+    "scripts/build-wiiu-themes.cjs",
+    "scripts/console-game-directories.cjs",
+    "scripts/ps3-multicod-metadata.cjs",
+    "scripts/ps3-page.cjs",
+    "scripts/build-console-topic-hubs.cjs"
+  ],
+  "checks": {
+    "metadataPages": 445,
+    "pendingMetadataUpdates": 0,
+    "genericKeywordEntries": 0,
+    "tests": {
+      "tests": 416,
+      "passed": 416,
+      "failed": 0,
+      "output": "docs/qa/site-search-durable-all-tests.txt"
+    },
+    "siteAudit": "Audited 403 public pages and 40820 local links/assets; 0 issue(s).",
+    "protectedHelpers": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.9",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.9",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      }
+    ]
+  },
+  "changes": [
+    "Extracted a reusable metadata engine; importing the engine/CLI performs no site traversal or writes.",
+    "Added final search/metadata hooks to27 generator files, retaining the Game downloads navigation and resource aliases.",
+    "Upserts keep metadata/schema in place so CSS/script postprocessing does not cause spurious metadata drift.",
+    "Removed navigation/CTA keyword noise and fixed Safety Tips content extraction; added specific Safety keywords.",
+    "Missing title tags and duplicate metadata are repaired without changing page bodies or existing robots/canonical targets.",
+    "Regression tests render the actual shared and PS3 builders against an in-memory filesystem.",
+    "Updated stale tests to verify exact legacy menu source pins and activated9/current plus retained8 helper copies; no helper bytes or inventory jobs changed."
+  ],
+  "regeneration": [
+    "node scripts/update-page-metadata.cjs",
+    "node scripts/update-site-search-tags.cjs",
+    "node scripts/update-page-metadata.cjs --check",
+    "node scripts/update-site-search-tags.cjs --check",
+    "node scripts/verify-search-durability.cjs"
+  ],
+  "preservation": "Another console update activated and archived helper version2026.11.02.9. Both live/immutable9 files and retained8 files match their recorded hashes. This continuation did not download/execute payloads or write archives, and did not revert concurrent source content.",
+  "publication": "Local only; no commit, push, publication or deployment.",
+  "latestChecks": {
+    "metadataPassed": true,
+    "mediaPassed": true,
+    "httpPassed": true,
+    "missingDescriptions": 0,
+    "missingKeywords": 0,
+    "genericKeywordPages": 0,
+    "manifestMissing": [],
+    "manifestExtra": [],
+    "decodedPNGs": 512,
+    "httpRequests": 1018,
+    "httpPassedCount": 1018,
+    "metadataPendingUpdates": 0,
+    "tests": {
+      "tests": 468,
+      "passed": 468,
+      "failed": 0,
+      "skipped": 0,
+      "output": "docs/qa/site-social-preview-final-tests.txt"
+    },
+    "siteAudit": "Audited 464 public pages and 49709 local links/assets; 0 issue(s).",
+    "protectedHelpers": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.11",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.11",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      }
+    ]
+  },
+  "socialPreviewHandoff": "docs/chat-handoffs/site-social-previews.json",
+  "latestRegeneration": [
+    "node scripts/update-site-search-tags.cjs",
+    "node scripts/build-social-previews.cjs",
+    "node scripts/update-page-metadata.cjs",
+    "node scripts/build-social-previews.cjs --check",
+    "node scripts/update-page-metadata.cjs --check",
+    "node scripts/update-site-search-tags.cjs --check",
+    "node scripts/verify-search-durability.cjs",
+    "node scripts/verify-social-previews.cjs"
+  ]
+}

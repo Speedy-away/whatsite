@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-02T13:00:52.396Z",
+  "status": "passed",
+  "resources": 41,
+  "desktop": {
+    "brokenVisibleImages": 0,
+    "documentWidth": 1265,
+    "viewport": 1280
+  },
+  "mobile": {
+    "clientWidth": 375,
+    "documentWidth": 375,
+    "expandedSetupOverflow": false,
+    "minimumControlHeight": 48,
+    "viewport": 390
+  },
+  "cases": [
+    "Initial library:41 ready resources",
+    "ANDKFOX search:2 games with both author artworks loaded",
+    "Emulators filter:8",
+    "ABadAvatar filter:2, including temporary DashLaunch",
+    "Phone clear filters restores41",
+    "Phone Silent Hill + skins filter:1",
+    "Silent Hill creator artwork loaded",
+    "Publisher Drive link has no false download attribute",
+    "Phone setup expands:375px document,48px controls,no overflow",
+    "Phone Sally search:1; stable author link,819MB extracted-data note and setup verified",
+    "No-match empty state and reset restore41",
+    "Temporary viewport reset"
+  ],
+  "screenshots": [
+    "docs/qa/xbox360-more-batch4-desktop.jpg",
+    "docs/qa/xbox360-more-batch4-mobile.jpg"
+  ],
+  "previewNote": "Final library verified on an owned loopback-only QA server; temporary tab closed and viewport reset. Owned server stopped after screenshots; shared preview and unrelated browser tabs preserved.",
+  "physicalHardwareTested": false,
+  "downloadedBuildsExecuted": false
+}

@@ -1,0 +1,66 @@
+{
+  "id": "vwii-NewoShooter",
+  "title": "Newo Shooter",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "2.2",
+  "url": "https://hbb1.oscwii.org/api/contents/NewoShooter/NewoShooter.zip",
+  "source": "https://oscwii.org/library/app/NewoShooter",
+  "name": "NewoShooter-2.2.zip",
+  "description": "On rails 3d Shoot-'em-up",
+  "author": "Owen",
+  "details": "Controllers: Wiimote, Pointer, Classic, or Gamecube\nDevTeam: Julian Mathonet, Des Walker. Music By: @benanderson89 Title by: www.Kenney.nl\nVisit: http://wiibrew.org\n\t",
+  "expectedBytes": 12074148,
+  "icon": "https://hbb1.oscwii.org/api/contents/NewoShooter/icon.png",
+  "requirements": "vWii Homebrew Channel and the game’s supported Wii controls. OSC explicitly lists vWii support; Wii U GamePad support is not implied.",
+  "setup": "Extract the full ZIP to SD root. Keep /apps/<game>/boot.dol and all supplied folders together, then launch from the vWii Homebrew Channel.",
+  "supportedPlatforms": [
+    "wii",
+    "vwii",
+    "wii_mini"
+  ],
+  "peripherals": [
+    "Wii Remote",
+    "Nunchuk",
+    "Classic Controller",
+    "GameCube Controller",
+    "SDHC"
+  ],
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 81,
+    "uncompressedBytes": 13753908,
+    "builds": [
+      {
+        "path": "apps/NewoShooter/boot.dol",
+        "bytes": 2185472,
+        "sha256": "001e51a8cdaceb12e2f28e61135046f8ff9b1930fe4796865f05ed546f19bed1"
+      }
+    ],
+    "xmlFiles": [
+      "apps/NewoShooter/meta.xml"
+    ],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/vwii-NewoShooter.png",
+  "file": {
+    "name": "NewoShooter-2.2.zip",
+    "version": "2.2",
+    "bytes": 12074148,
+    "sha256": "16a0f279d1822d89149f2e086abf8c1f0da4246cfd17d875840902e55cb5d2a3",
+    "sourceUrl": "https://hbb1.oscwii.org/api/contents/NewoShooter/NewoShooter.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/NewoShooter-2.2.zip",
+    "itemId": "wiiu-games-batch2-vwii-NewoShooter",
+    "platform": "Wii U",
+    "category": [
+      "vWii",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Newo Shooter\\Builds\\2.2\\NewoShooter-2.2.zip"
+  },
+  "mirrorReason": null
+}

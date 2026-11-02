@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-02T09:49:35.249Z",
+  "passed": true,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "documentWidth": 375,
+  "checks": [
+    {
+      "case": "Wordle name search",
+      "shown": 1
+    },
+    {
+      "case": "Wordle + emulators category",
+      "shown": 0,
+      "emptyVisible": true
+    },
+    {
+      "case": "Emulators category",
+      "shown": 6
+    },
+    {
+      "case": "Reset",
+      "shown": 19,
+      "query": "",
+      "category": "all"
+    }
+  ],
+  "screenshot": "docs/qa/ds-dsi-mobile-final.png",
+  "method": "Actual in-app browser DOM and screenshot at phone viewport; values observed after filter changes. Viewport override reset after verification."
+}

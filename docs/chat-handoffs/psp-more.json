@@ -1,0 +1,124 @@
+{
+  "scope": "psp-more",
+  "updatedAt": "2026-11-02T12:10:49.736Z",
+  "status": "Complete locally: PSP/themes builders finalize search and metadata after custom page changes. Repeated real rebuilds are byte-identical; 21 tests, 20 HTTP/hash checks and post-regeneration browser checks passed.",
+  "canonicalPageUrls": [
+    "https://whatwhatboy.com/console/retro/psp.html"
+  ],
+  "preview": "http://127.0.0.1:8776/console/retro/psp.html",
+  "sourceBuilderEntryPoints": [
+    "scripts/build-psp-more.cjs"
+  ],
+  "prepare": "node scripts/prepare-psp-more.cjs; bundled Python scripts/inspect-psp-more.py; node scripts/prepare-psp-more.cjs --archive (F escalation)",
+  "dataSources": [
+    "docs/psp-more-catalogue.json",
+    "docs/psp-more-source-candidates.json",
+    "docs/psp-more-source-review.json"
+  ],
+  "archiveInventoryPath": "docs/psp-more-private-inventory.json",
+  "archiveScope": "psp-more",
+  "counts": {
+    "nativeTitles": 12,
+    "entries": 18,
+    "archivedFiles": 20,
+    "bytes": 365638748
+  },
+  "verification": [
+    "docs/qa/psp-more-verification.json",
+    "docs/qa/psp-more-format-verification.json",
+    "docs/qa/psp-integration-verification.json",
+    "docs/qa/psp-archive-merge-verification.json",
+    "docs/qa/psp-final-verification.json",
+    "docs/qa/psp-final-browser.json",
+    "docs/qa/psp-final-theme-source-links.json",
+    "docs/qa/psp-regeneration-verification.json",
+    "docs/qa/psp-regeneration-browser.json"
+  ],
+  "screenshots": [
+    "docs/qa/psp-more-desktop.png",
+    "docs/qa/psp-more-mobile.png",
+    "docs/qa/psp-final-desktop.png",
+    "docs/qa/psp-final-mobile.png",
+    "docs/qa/psp-regenerated-themes.png",
+    "docs/qa/psp-regenerated-mobile.png"
+  ],
+  "notes": [
+    "ARK-4 final v42069r206 is archived; maintained successor ARK-5/FasterARK linked without replacing pinned ARK-4.",
+    "4 themes: two PTF, two original 6.60 CTF; CXMB VSH/XMB and ms0/ef0 setup explicit.",
+    "Wagic PSP bundle contains WTH/Res; extra core kept optional.",
+    "NZP internal version confirms 2.0.0-indev+20261031133122.",
+    "CMFileManager standard and GO-M2 variants retained separately.",
+    "PicoDrive page button links original upstream due bundled noncommercial redistribution terms; private backup preserved.",
+    "Original ARK ZIP includes PC/PSVita subfolders: page uses PSP paths only; no standalone PC helper fetched.",
+    "Preview 8765 currently serves different home content at PSP path, so scoped preview8776 used.",
+    "No physical hardware testing, downloaded executable execution, commits, deploys or publication."
+  ],
+  "coordinatorActions": [],
+  "integration": {
+    "report": "docs/qa/psp-integration-verification.json",
+    "themeBuilder": "scripts/build-console-themes.cjs",
+    "languageTests": "scripts/tests/i18n-picker.test.cjs",
+    "note": "Retro link and sitemap were already present and were verified without rewriting them. Latest PS3 catalogue changes preserved."
+  },
+  "archiveMerge": {
+    "checkedAt": "2026-11-02T09:13:26.736Z",
+    "report": "docs/qa/psp-archive-merge-verification.json",
+    "pspItems": 18,
+    "pspFiles": 20,
+    "pspBytes": 365638748,
+    "inventoryItems": 1403,
+    "inventoryFileRecords": 2236,
+    "priorRecordsPreserved": true,
+    "missingPaths": 0,
+    "index": "F:/whatsite-backup-downloads-etc/index.html",
+    "metadataHistory": "F:\\whatsite-backup-downloads-etc\\archive-history\\index-refresh-2026-11-02T09-12-59-497Z-t3m4Fq"
+  },
+  "finalCheck": {
+    "checkedAt": "2026-11-02T09:34:37.525Z",
+    "report": "docs/qa/psp-final-verification.json",
+    "browser": "docs/qa/psp-final-browser.json",
+    "themeSourceLinks": "docs/qa/psp-final-theme-source-links.json",
+    "files": 20,
+    "archiveMissingPaths": 0,
+    "notes": [
+      "Kept the other chat’s /console/psp/ alias route.",
+      "Historical recovery records retained: original names, hashes, versions and source URLs compared including recoveryOriginalFileRecord.",
+      "No F: writes, global inventory merge, downloads replacement, commit, publication or deployment in this final check."
+    ],
+    "fixes": [
+      "Refreshed scoped PSP/Retro metadata.",
+      "ARK bundle details select ARK_Loader/EBOOT.PBP rather than VBOOT.PBP.",
+      "Restored Retro hub background integration and preserved it in its builder.",
+      "Reworded three PSP prerequisites for readers; all download versions, hashes and paths unchanged."
+    ]
+  },
+  "regeneration": {
+    "report": "docs/qa/psp-regeneration-verification.json",
+    "commands": [
+      "node scripts/build-psp-more.cjs",
+      "node scripts/build-console-themes.cjs",
+      "node --test scripts/tests/psp-regeneration.test.cjs scripts/tests/page-search-metadata.test.cjs scripts/tests/i18n-picker.test.cjs scripts/tests/i18n-runtime.test.cjs",
+      "node scripts/update-page-metadata.cjs --check --page console/retro/psp.html --page console/themes.html",
+      "node scripts/verify-psp-final.cjs --http"
+    ],
+    "manualMetadataRepairNeeded": false,
+    "test": "scripts/tests/psp-regeneration.test.cjs",
+    "notes": [
+      "The final shared search-page-output.cjs pass follows custom HTML/mobile/background changes.",
+      "Retro retains the other chat’s topic navigation/background/search finalization; redundant second pass removed.",
+      "The regeneration test runs the real three builders twice with captured page writes and rejects unrelated filesystem mutations.",
+      "Actual PSP/themes rebuilds are also byte-identical. All 20 pinned versions, hashes, source URLs and local paths match the pre-build snapshot.",
+      "All 69 current themes retained, including 14 3DS and four PSP entries.",
+      "Local preview restarted on port8776 for HTTP/browser QA. No archive files changed; no publication or commit."
+    ]
+  },
+  "completion": {
+    "checkedAt": "2026-11-02T12:10:49.736Z",
+    "workComplete": true,
+    "pendingActions": [],
+    "metadataCheck": "PSP and themes passed with zero metadata updates",
+    "regenerationTest": "Passed: real PSP/themes/Retro repeat-build regression",
+    "chatArchiveRequested": true,
+    "localOnly": true
+  }
+}

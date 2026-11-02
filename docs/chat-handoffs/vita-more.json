@@ -1,0 +1,184 @@
+{
+  "scope": "vita-more",
+  "status": "Complete locally: Vita library linked from hub, archive integrated, sitemap entry verified and final site-wide local link audit passed.",
+  "updatedAt": "2026-11-02T09:18:59.605Z",
+  "canonicalPages": [
+    "console/psvita/library.html"
+  ],
+  "buildEntrypoints": [
+    "node scripts/build-vita-more.cjs"
+  ],
+  "maintenanceEntrypoints": [
+    "node scripts/prepare-vita-more.cjs",
+    "node scripts/prepare-vita-more-artwork.cjs",
+    "node scripts/finalize-vita-more-data.cjs"
+  ],
+  "catalogues": [
+    "docs/vita-more-catalogue.json",
+    "docs/vita-more-jobs.json",
+    "docs/vita-more-files.json"
+  ],
+  "privateInventory": "docs/vita-more-private-inventory.json",
+  "immutableIntakeEvents": "docs/.console-expansion-private-inventory/vita-more/",
+  "assets": [
+    "assets/vita-more.css",
+    "assets/vita-more.js",
+    "assets/images/vita-more/",
+    "downloads/vita-more/"
+  ],
+  "content": {
+    "projects": 14,
+    "nativeApplicationsOrPlugins": 13,
+    "readyFiles": 20,
+    "bytes": 198660302,
+    "projectsIncluded": [
+      "SuperTux Classic 1.04",
+      "Jump ’n’ Bump Vita 1.00 (upstream tag 1.02)",
+      "Enigma Vita 1.11 (upstream tag 1.16)",
+      "Chocolate Doom Vita r3.1 pre-release",
+      "mGBA 0.10.5",
+      "DaedalusX64 Nightly 2026-10-12 fb7238e retrieved 2026-11-02",
+      "Moonlight 0.13.2",
+      "Imago 1.3.0",
+      "Custom Themes Manager 4.02",
+      "PSVshell 1.1 stable",
+      "shellbat r10",
+      "ds34vita 1.1",
+      "reVita 1.0.8 + required ioplus 1.0 + optional motion module",
+      "MINIMAL theme 01.00 by Alberto Munguia"
+    ],
+    "notes": [
+      "Native Vita VPK/SUPRX/SKPRX clearly distinguished from Adrenaline PSP files.",
+      "mGBA original 7z and its unchanged extracted VPK both preserved and archived.",
+      "Required Enigma, Chocolate Doom and Daedalus data ZIPs preserved separately.",
+      "Ports and emulators label supplied free/shareware data versus user-supplied commercial game data.",
+      "MINIMAL ZIP root theme.xml, version and author inspected; packaged original preview extracted.",
+      "All project artwork uses author screenshots or original VPK icons with visible credits.",
+      "VitaDB original domain was parked; author releases are used instead."
+    ]
+  },
+  "verification": {
+    "commands": [
+      "node scripts/verify-vita-more.cjs",
+      "node scripts/verify-vita-more-http.cjs",
+      "node scripts/console-expansion-archive.cjs --inventory=docs/vita-more-private-inventory.json --check",
+      "node scripts/verify-vita-more-integration.cjs"
+    ],
+    "reports": [
+      "docs/qa/vita-more-verification.json",
+      "docs/qa/vita-more-http.json",
+      "docs/qa/vita-more-browser.json",
+      "docs/qa/vita-more-integration.json",
+      "docs/qa/vita-more-final-site-audit.json",
+      "docs/qa/vita-more-final-site-audit.txt"
+    ],
+    "mirrorAndArchiveHashesVerified": 20,
+    "archiveIntegrity": "7-Zip CRC tests for every VPK/data/archive. SCE SELF and SFO signatures checked for VPKs; SCE SELF signatures for SUPRX/SKPRX modules. No downloaded executable was run.",
+    "localLinks": 109,
+    "httpDownloads": 20,
+    "sourcePages": 31,
+    "allSourcesHTTP200": true,
+    "sampleHTTPBytes": "shellbat.suprx: 3014 bytes and expected SHA-256 matched",
+    "browser": "Desktop 1280px, phone 390px and tablet 1024px; stable document width equals client width at all three sizes. Live Plugins+SKPRX=3, +3.65=2, Themes=3, missing query=0, Clear=14. Scoped VM also checks deep-link reveal and reset focus.",
+    "mobileBackgroundAndLanguageV3": true,
+    "screenshots": [
+      "docs/qa/vita-more-desktop.jpg",
+      "docs/qa/vita-more-mobile.jpg"
+    ],
+    "hardwareTested": false,
+    "finalSiteAudit": {
+      "checkedAt": "2026-11-02T09:18:59.605Z",
+      "passed": true,
+      "command": "node scripts/audit-site.cjs",
+      "publicPages": 355,
+      "localLinksAndAssets": 35844,
+      "issues": 0,
+      "sitemap": {
+        "file": "sitemap.xml",
+        "canonical": "https://whatwhatboy.com/console/psvita/library.html",
+        "occurrences": 1,
+        "alreadyPresent": true
+      },
+      "output": "docs/qa/vita-more-final-site-audit.txt",
+      "scope": "Local href/src destinations and HTML anchors, duplicate IDs, placeholder actions and canonical sitemap coverage on public pages. External HTTP links are outside this audit.",
+      "publication": "Local only; no commit, push, publication or deployment.",
+      "report": "docs/qa/vita-more-final-site-audit.json"
+    }
+  },
+  "preview": {
+    "requested": "http://127.0.0.1:8765/console/psvita/library.html",
+    "qaURL": "http://127.0.0.1:8767/console/psvita/library.html",
+    "note": "The shared 8765 endpoint served a fallback homepage at this exact path during QA. A scoped static server on 8767 successfully served the current checkout. Do not mistake fallback homepage rendering for the Vita page.",
+    "serverEntrypoint": "node scripts/serve-vita-more-preview.cjs 8767",
+    "temporaryServerStoppedAfterQA": true
+  },
+  "preserved": [
+    "Existing Vita apps, jailbreak, CFW and library pages remain unchanged by hub integration.",
+    "Only the Vita hub gained a navigation link and resource card; its builder retains both.",
+    "Shared sidebar, console index, Retro builder, sitemap and other chats’ catalogues were not modified.",
+    "Every baseline inventory item/file/version/source remains recorded. Archive metadata snapshots and immutable intake events retained.",
+    "No commit, publication, deployment, worktree, monitor or video added."
+  ],
+  "coordinatorIntegration": [
+    "Vita hub links, required archive merge/index refresh and canonical sitemap coverage are complete.",
+    "Final local site audit passed: 355 public pages, 35844 local links/assets, zero issues.",
+    "Use scripts/build-vita-more.cjs for the library. scripts/build-vita-guides.cjs preserves its hub links."
+  ],
+  "integration": {
+    "updatedAt": "2026-11-02T09:13:33.164Z",
+    "status": "Complete locally: Vita hub linked and archived Vita library inventory integrated.",
+    "canonicalPage": "console/psvita/library.html",
+    "hub": "console/psvita/index.html",
+    "hubBuilder": "scripts/build-vita-guides.cjs",
+    "hubLinks": [
+      "Homebrew Library navigation link",
+      "Native games, emulators & themes resource card"
+    ],
+    "privateInventory": "docs/vita-more-private-inventory.json",
+    "inventoryItems": 14,
+    "archivedFiles": 20,
+    "bytes": 198660302,
+    "inventoryMerge": "console-expansion-archive.cjs --inventory=docs/vita-more-private-inventory.json --verify",
+    "indexRefresh": {
+      "updated": "2026-11-02T09:12:31.704Z",
+      "mode": "metadata-only",
+      "history": "F:\\whatsite-backup-downloads-etc\\archive-history\\index-refresh-2026-11-02T09-12-31-704Z-SojBUy",
+      "items": 1403,
+      "fileRecords": 2236,
+      "presentFileRecords": 2173,
+      "missingFileRecords": 0,
+      "missingPaths": 0,
+      "otherUnavailableRecords": 63,
+      "availability": {
+        "present": 2173,
+        "unlocated": 63
+      },
+      "vitaItemsPresent": true,
+      "vitaChecksumsPresent": true
+    },
+    "verification": "docs/qa/vita-more-integration.json",
+    "priorRecordsPreserved": [
+      {
+        "path": "docs/download-audit.json",
+        "itemsPreserved": 1401,
+        "fileRecordsPreserved": 2234
+      },
+      {
+        "path": "F:/whatsite-backup-downloads-etc/download-inventory.json",
+        "itemsPreserved": 1401,
+        "fileRecordsPreserved": 2234
+      }
+    ],
+    "preservedPages": [
+      "console/psvita/apps.html",
+      "console/psvita/jailbreak.html",
+      "console/psvita/cfw.html",
+      "console/psvita/library.html"
+    ],
+    "limits": [
+      "Local changes only; no commit, publication or deployment.",
+      "No new downloads or downloaded executable execution.",
+      "Existing unlocated records retained truthfully; zero missing archive paths."
+    ]
+  }
+}

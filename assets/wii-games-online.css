@@ -1,0 +1,32 @@
+.wii-mod-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,280px) auto;gap:16px;align-items:end;margin-bottom:18px}
+.wii-mod-controls label{display:block;font-weight:600;margin-bottom:8px}
+.wii-mod-controls input,.wii-mod-controls select,.wii-mod-controls button{width:100%;min-width:0;min-height:48px;padding:12px;border:1px solid #48564e;border-radius:8px;color:#f3f7f4;background:#141a17;font:inherit}
+.wii-mod-controls button{cursor:pointer}
+.wii-mod-controls :focus-visible,.wii-mod-details summary:focus-visible{outline:2px solid #80d5ad;outline-offset:4px}
+.wii-mod-card{min-width:0;overflow:hidden;align-self:start}
+.wii-mod-card[hidden],#wiiModEmpty[hidden]{display:none!important}
+.wii-game-art{margin:0 0 20px;background:#121714;padding:18px;border:1px solid #2e3c34;border-radius:8px;width:100%;box-sizing:border-box}
+.wii-mod-card .wii-game-art img{width:100%;height:112px;object-fit:contain;border-radius:0;margin:0}
+.wii-game-art figcaption{font-size:.7rem;line-height:1.4;color:#97ac9f;margin-top:10px}
+.wii-game-online{color:#a5d9bd;font-size:.84rem;margin:16px 0}
+.wii-mod-details{border-top:1px solid #35443c;padding-top:12px;margin-top:16px;font-size:.9rem;line-height:1.65}
+.wii-mod-details summary{cursor:pointer;min-height:44px;padding:8px 0;color:#c3e8d3;font-weight:600}
+.wii-mod-details p{margin:12px 0}
+.wii-mod-details code,.wii-xml-selectors p{overflow-wrap:anywhere;word-break:break-word}
+.wii-xml-selectors{padding-left:20px;font-size:.8rem;max-height:280px;overflow:auto}
+.wii-game-sha code{display:block;font-size:.75rem;word-break:break-all;margin-top:8px}
+.wii-game-unavailable{color:#d9bd88;border-left:2px solid #ad8645;padding-left:12px}
+.wii-service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin:24px 0}
+.wii-service-grid article{border-top:2px solid #588869;padding:22px 0}
+.wii-service-grid h3{margin-bottom:14px}
+.wii-service-grid p{color:#c0c9c3;line-height:1.7;margin-bottom:16px}
+.wii-service-grid article>a{display:inline-block;margin:8px 16px 0 0;color:#89d5af}
+.wii-dns-values{display:flex;gap:20px;flex-wrap:wrap;margin:26px 0}
+.wii-dns-values>div{flex:1;min-width:220px;border:1px solid #354e3e;padding:20px;background:#152219;border-radius:8px}
+.wii-dns-values span,.wii-dns-values code{display:block}
+.wii-dns-values code{font-size:1.4rem;color:#a9e9c4;margin-top:10px}
+#wiiModStatus{margin-bottom:24px;color:#b9cabe}
+#wii-games .guide-resource>img{height:150px;object-fit:contain;background:#101612;padding:18px}
+@media(max-width:900px){.wii-mod-controls{grid-template-columns:1fr 1fr}.wii-mod-controls button{grid-column:1/-1}.wii-service-grid{gap:20px}}
+@media(max-width:600px){.wii-mod-controls,.wii-service-grid{grid-template-columns:minmax(0,1fr)}.wii-dns-values>div{min-width:0;flex-basis:100%}.wii-mod-card .guide-links a{overflow-wrap:anywhere;max-width:100%}.wii-service-grid article{padding:18px 0}}
+.wii-games-page .guide-hero-grid>img{object-fit:contain;background:#111914;padding:24px;max-height:260px}

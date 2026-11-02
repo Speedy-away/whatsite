@@ -1,0 +1,830 @@
+{
+  "generatedAt": "2026-11-02T13:41:21.462Z",
+  "passed": true,
+  "scope": {
+    "mode": "Static local file verification",
+    "payloadExecution": false,
+    "consoleContact": false,
+    "networkRequests": false,
+    "limitations": [
+      "Checksums and ELF structure do not establish firmware compatibility or successful console execution.",
+      "BIN files are checked against their pinned checksum and size where listed; no BIN executable-format claim is made.",
+      "A download-only bootstrap ELF is checked as a file and does not gain a Run transport."
+    ]
+  },
+  "summary": {
+    "catalogueActions": 133,
+    "files": 24,
+    "passed": 24,
+    "failed": 0,
+    "bytes": 89409040,
+    "runnableActions": 23,
+    "runnableValidatorPassed": 23,
+    "elfDownloads": 11,
+    "elfPassed": 11
+  },
+  "files": [
+    {
+      "id": "ps4-ftpsrv-elf",
+      "platform": "ps4",
+      "format": "ELF",
+      "file": "/downloads/host-payloads/ps4-ps5-expand-ps4-ftpsrv/5f00e2df7fa8/ftpsrv-ps4.elf",
+      "runnable": true,
+      "transport": "elf-tcp",
+      "expectedBytes": 146720,
+      "expectedSha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
+      "bytes": 146720,
+      "sha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 146720,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x6400",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "55424",
+            "memoryBytes": "55424"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "81920",
+            "virtualAddress": "0x10000",
+            "fileBytes": "33184",
+            "memoryBytes": "33184"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "131072",
+            "virtualAddress": "0x1c000",
+            "fileBytes": "576",
+            "memoryBytes": "17476"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-klogsrv-elf",
+      "platform": "ps4",
+      "format": "ELF",
+      "file": "/downloads/host-payloads/ps4-ps5-expand-ps4-klogsrv/7e89c33eb90d/klogsrv-ps4.elf",
+      "runnable": true,
+      "transport": "elf-tcp",
+      "expectedBytes": 91208,
+      "expectedSha256": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
+      "bytes": 91208,
+      "sha256": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 91208,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x1300",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "34639",
+            "memoryBytes": "34639"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "65536",
+            "virtualAddress": "0xc000",
+            "fileBytes": "16736",
+            "memoryBytes": "16736"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "82272",
+            "virtualAddress": "0x10160",
+            "fileBytes": "0",
+            "memoryBytes": "16548"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-payload-manager",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/host-payloads/ps4-ps5-expand-ps5-payload-manager/2a42054fd972/pldmgr_v0.6.3.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": 2795992,
+      "expectedSha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4",
+      "bytes": 2795992,
+      "sha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 2795992,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0xc40e0",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "830448",
+            "memoryBytes": "830448"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "851968",
+            "virtualAddress": "0xcc000",
+            "fileBytes": "1917360",
+            "memoryBytes": "1917360"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "2785280",
+            "virtualAddress": "0x2a4000",
+            "fileBytes": "9476",
+            "memoryBytes": "62256"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-websrv",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/host-payloads/ps4-ps5-expand-ps5-websrv/54730c867c6e/websrv-ps5.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": 1597864,
+      "expectedSha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
+      "bytes": 1597864,
+      "sha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 1597864,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x4937c",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "334800",
+            "memoryBytes": "334800"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "360448",
+            "virtualAddress": "0x54000",
+            "fileBytes": "393696",
+            "memoryBytes": "393696"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "770048",
+            "virtualAddress": "0xb8000",
+            "fileBytes": "422616",
+            "memoryBytes": "429560"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-ftpsrv",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/host-payloads/ps4-ps5-expand-ps5-ftpsrv/7d4b31c83eae/ftpsrv-ps5.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": 191864,
+      "expectedSha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938",
+      "bytes": 191864,
+      "sha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 191864,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x7c18",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "66656",
+            "memoryBytes": "66656"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "98304",
+            "virtualAddress": "0x14000",
+            "fileBytes": "49552",
+            "memoryBytes": "49552"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "163840",
+            "virtualAddress": "0x24000",
+            "fileBytes": "604",
+            "memoryBytes": "3304"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-klogsrv",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/host-payloads/ps4-ps5-expand-ps5-klogsrv/e828ec144231/klogsrv-ps5.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": 136016,
+      "expectedSha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
+      "bytes": 136016,
+      "sha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 136016,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x2370",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "43952",
+            "memoryBytes": "43952"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "65536",
+            "virtualAddress": "0xc000",
+            "fileBytes": "33168",
+            "memoryBytes": "33168"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "114688",
+            "virtualAddress": "0x18000",
+            "fileBytes": "28",
+            "memoryBytes": "2360"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-elfldr",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/host-payloads/ps4-ps5-expand-ps5-elfldr/82f622761017/elfldr-ps5.elf",
+      "runnable": false,
+      "transport": null,
+      "expectedBytes": 394568,
+      "expectedSha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
+      "bytes": 394568,
+      "sha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
+      "runnableValidatorPassed": null,
+      "elf": {
+        "bytes": 394568,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x0",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "54392",
+            "memoryBytes": "54392"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "81920",
+            "virtualAddress": "0x10000",
+            "fileBytes": "300136",
+            "memoryBytes": "300136"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "393216",
+            "virtualAddress": "0x5c000",
+            "fileBytes": "28",
+            "memoryBytes": "2400"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-shadowmountplus",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/archive/f22d8b3749d7/shadowmountplus.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": null,
+      "expectedSha256": "08c843018750bef013fe3a4de5f80c5c9738c6c2dafa2406e6b6e68d7585f3da",
+      "bytes": 3614944,
+      "sha256": "08c843018750bef013fe3a4de5f80c5c9738c6c2dafa2406e6b6e68d7585f3da",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 3614944,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x0",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "2113755",
+            "memoryBytes": "2113755"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "2146304",
+            "virtualAddress": "0x208000",
+            "fileBytes": "709136",
+            "memoryBytes": "709136"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "2867200",
+            "virtualAddress": "0x2b8000",
+            "fileBytes": "746426",
+            "memoryBytes": "14996048"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-upload",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/archive/cd469f63fa67/ps5upload-10.6.0.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": null,
+      "expectedSha256": "2f67651bf1320a83202b632782a1f404543b1ea4911dfb3be5a510971f015392",
+      "bytes": 6514240,
+      "sha256": "2f67651bf1320a83202b632782a1f404543b1ea4911dfb3be5a510971f015392",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 6514240,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x1bd8a4",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "1861456",
+            "memoryBytes": "1861456"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "1884160",
+            "virtualAddress": "0x1c8000",
+            "fileBytes": "828648",
+            "memoryBytes": "828648"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "2719744",
+            "virtualAddress": "0x294000",
+            "fileBytes": "1871244",
+            "memoryBytes": "2176512"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-orbit-store",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/archive/5a12cb950970/orbit_store.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": null,
+      "expectedSha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914",
+      "bytes": 59691728,
+      "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 59691728,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x6b22d0",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "7059253",
+            "memoryBytes": "7059253"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "7077888",
+            "virtualAddress": "0x6bc000",
+            "fileBytes": "47858032",
+            "memoryBytes": "47858032"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "54951936",
+            "virtualAddress": "0x3464000",
+            "fileBytes": "1413996",
+            "memoryBytes": "44540472"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-arabicguy-gta5-127",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-127-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1059520,
+      "expectedSha256": "be9ee0dacc71e94d607584770c08cdc39c1319427e9fd83424fc19dd15782aa6",
+      "bytes": 1059520,
+      "sha256": "be9ee0dacc71e94d607584770c08cdc39c1319427e9fd83424fc19dd15782aa6",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-arabicguy-gta5-132",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-132-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1059520,
+      "expectedSha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+      "bytes": 1059520,
+      "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-arabicguy-gta5-133",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1059520,
+      "expectedSha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+      "bytes": 1059520,
+      "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-beefqueef-gta5-133",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/beefqueef-gta5-133-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1073700,
+      "expectedSha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6",
+      "bytes": 1073700,
+      "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-oysters-rdr2-100",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-100-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1190392,
+      "expectedSha256": "199b68feb24e1d202589b7ccb7b9ee28fdf3cab5546b41bd1263939ecedb7add",
+      "bytes": 1190392,
+      "sha256": "199b68feb24e1d202589b7ccb7b9ee28fdf3cab5546b41bd1263939ecedb7add",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-oysters-rdr2-113",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-113-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1190392,
+      "expectedSha256": "089f1c3144dffb35589a7fb36a05dd54f642c1eeef3873daa3b7f4ce965af06d",
+      "bytes": 1190392,
+      "sha256": "089f1c3144dffb35589a7fb36a05dd54f642c1eeef3873daa3b7f4ce965af06d",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-oysters-rdr2-119",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-119-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1190392,
+      "expectedSha256": "370b5bd2b4bace7a2dd51bd28f9b080b1e5221f3bd9e6dec64c5e72baa183254",
+      "bytes": 1190392,
+      "sha256": "370b5bd2b4bace7a2dd51bd28f9b080b1e5221f3bd9e6dec64c5e72baa183254",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-oysters-rdr2-124",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-124-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1190392,
+      "expectedSha256": "58e2317dd8fe1cc44ce834a174ac06e566b34eb3709ce39e088f63aa51a5944a",
+      "bytes": 1190392,
+      "sha256": "58e2317dd8fe1cc44ce834a174ac06e566b34eb3709ce39e088f63aa51a5944a",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-oysters-rdr2-129",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-129-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1260864,
+      "expectedSha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+      "bytes": 1260864,
+      "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps5-rdr2-60fps-v2-0",
+      "platform": "ps5",
+      "format": "ELF",
+      "file": "/downloads/hosts/ps5/game-mods/rdr2-60fps/v2.0/RedDead2.60FPS_v2.0.elf",
+      "runnable": true,
+      "transport": "elf-http",
+      "expectedBytes": 154304,
+      "expectedSha256": "646ecb71e80415ab9d9c651539451d38ee0052a5997f7ef7504a42932c7f8261",
+      "bytes": 154304,
+      "sha256": "646ecb71e80415ab9d9c651539451d38ee0052a5997f7ef7504a42932c7f8261",
+      "runnableValidatorPassed": true,
+      "elf": {
+        "bytes": 154304,
+        "bits": 64,
+        "endianness": "little",
+        "type": 3,
+        "machineId": 62,
+        "machine": "x86-64",
+        "entry": "0x352c",
+        "programHeaderOffset": "64",
+        "headerBytes": 64,
+        "programHeaderBytes": 56,
+        "programHeaderCount": 4,
+        "loadSegments": [
+          {
+            "index": 0,
+            "flags": 7,
+            "fileOffset": "16384",
+            "virtualAddress": "0x0",
+            "fileBytes": "51254",
+            "memoryBytes": "51254"
+          },
+          {
+            "index": 1,
+            "flags": 6,
+            "fileOffset": "81920",
+            "virtualAddress": "0x10000",
+            "fileBytes": "33104",
+            "memoryBytes": "33104"
+          },
+          {
+            "index": 2,
+            "flags": 6,
+            "fileOffset": "131072",
+            "virtualAddress": "0x1c000",
+            "fileBytes": "44",
+            "memoryBytes": "35232"
+          }
+        ]
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-legacy-nazky-bq134",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq134-game-1.34-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1063880,
+      "expectedSha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5",
+      "bytes": 1063880,
+      "sha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-legacy-nazky-bq138",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq138-game-1.38-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1073836,
+      "expectedSha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e",
+      "bytes": 1073836,
+      "sha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-legacy-nazky-wilde132",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde132-game-1.32-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 1074320,
+      "expectedSha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+      "bytes": 1074320,
+      "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "id": "ps4-legacy-nazky-wilde138",
+      "platform": "ps4",
+      "format": "BIN",
+      "file": "/downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde138-game-1.38-ps4-900.bin",
+      "runnable": true,
+      "transport": "goldhen-http",
+      "expectedBytes": 592864,
+      "expectedSha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+      "bytes": 592864,
+      "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+      "runnableValidatorPassed": true,
+      "elf": null,
+      "passed": true,
+      "issues": []
+    }
+  ]
+}

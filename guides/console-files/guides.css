@@ -1,0 +1,24 @@
+.guide-markdown { max-width: 86ch; }
+.guide-markdown > * + * { margin-top: 20px; }
+.guide-markdown h2 { margin-top: 46px; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; scroll-margin-top: 28px; }
+.guide-markdown h3 { margin-top: 32px; font-size: 1.2rem; }
+.guide-markdown p, .guide-markdown li, .guide-markdown td { color: var(--text-secondary); }
+.guide-markdown strong, .guide-markdown th { color: var(--text-primary); }
+.guide-markdown ol, .guide-markdown ul { padding-inline-start: 26px; }
+.guide-markdown li { padding-inline-start: 7px; margin-top: 13px; }
+.guide-markdown li > p { margin: 0; }
+.guide-markdown li > p + p { margin-top: 12px; }
+.guide-illustration { max-width: 760px; margin-inline: 0; }
+.guide-illustration img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain; object-position: left center; border-radius: var(--radius-card); }
+.guide-markdown pre { overflow-x: auto; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-secondary); }
+.guide-table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.guide-table-scroll table { width: 100%; border-collapse: collapse; text-align: start; }
+.guide-table-scroll th, .guide-table-scroll td { padding: 14px 18px; vertical-align: top; }
+.guide-table-scroll thead, .guide-table-scroll tr:nth-child(even) { background: var(--bg-secondary); }
+.guide-markdown-source { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--border); }
+.guide-markdown a { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .guide-markdown h2 { margin-top: 34px; }
+  .guide-table-scroll th, .guide-table-scroll td { padding: 12px; }
+  .guide-illustration img { max-height: 300px; }
+}

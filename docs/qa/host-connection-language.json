@@ -1,0 +1,2584 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T13:57:39.564Z",
+  "scope": "New host connection checks, complete uncertain-result messages, native download handoff, compatibility-gate recovery, rendered PS4/PS5 connection/native-manager controls and setup. No whole-site coverage claim.",
+  "method": "Evaluated the actual pure lookup implementation from languages/i18n.js against each generated dictionary. Rendered dashboard() for both consoles and host/manager modes. Exercised real inspectConsoleServices with injected Response fixtures only; no console connections, payload execution or file operations.",
+  "dictionaryFreeze": {
+    "languages": 20,
+    "keysPerLanguage": 645
+  },
+  "sourceFiles": [
+    {
+      "path": "assets/host-console-client.js",
+      "sha256": "04248ca3f1a918302e9b0c4f276ef89fdc04b54ff46fdf51684c8e8c9db03c0b"
+    },
+    {
+      "path": "assets/host-dashboard.js",
+      "sha256": "b779bb228a05bde35ddb09e688c212fa50f8083624bae778dbb687b45eec182b"
+    },
+    {
+      "path": "scripts/console-payload-bridge.cjs",
+      "sha256": "9f804020cf69de367f0f9285026dcc22de3310fe2240567cbad2b5c507aca79e"
+    },
+    {
+      "path": "scripts/host-dashboard-markup.cjs",
+      "sha256": "ae3b1014def73f32ad4ba5e87a2c04402cbca9cf97480ea6ec7f0f4033b313bc"
+    },
+    {
+      "path": "languages/i18n.js",
+      "sha256": "bc9af98e5f7c8cf5a430edb7a5c40bb228040b4aab9a6b424e5f3730b5a78ae7"
+    },
+    {
+      "path": "i18n-tools/console-translations.cjs",
+      "sha256": "3b124a8ce1fe8302b1dcaa5242693da4dd5356f9e8d34c1fa9627ceeff7cdf39"
+    }
+  ],
+  "protectedUntranslated": [
+    "PS4 14.00",
+    "Payload LaunchPad & AutoRun",
+    "GoldHEN → Utilities → PayLoader LaunchPad",
+    "Square",
+    "Payload Manager"
+  ],
+  "testedMessages": [
+    {
+      "text": "Your console connection",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Connect to your PS4",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Target PS4",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Not configured",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS4 IP address",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Use PS4 address",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "This PS4",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Installed firmware",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Choose firmware",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Browser firmware: not detected",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Firmware selection: not selected",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Viewing from:",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Not detected",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Service: not verified",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "14.00 setup guide",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Supplied ISO & GoldHEN downloads",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": ". The supplied 14.00 route is experimental. A tool without a firmware list still needs its own compatible loader; 14.00 support is not established for every payload.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Detect console",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Check PS4 services",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Find PS4 IP",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Find the console LAN address in Settings → Network → View Connection Status. When using a PC or phone, enter the PS4 address here. Browser detection does not discover another device on your network.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Downloader setup & connection help",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "For console downloads, install the matching receiver helper and keep ezRemote Server running. Opening its page does not save a file. Choose and verify storage in the native downloader.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Install console downloader",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "File manager setup",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Service checks require the paired desktop sender. They read service responses without loading a payload or changing files.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Transfer result unknown",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Check the console before trying another payload. The previous request may have reached it. Clearing this warning does not send or retry anything.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Clear transfer warning",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Files & storage · PS4",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS4 file manager",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Start ezRemote Client on your PS4 before opening its file manager.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Console service",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "ezRemote · port 8080",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Open PS4 file manager",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Payloads · PS4",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Manage payloads & autoload",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Prepare your payload files, then use GoldHEN LaunchPad and AutoRun on the console.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Manage PS4 payloads",
+      "sources": [
+        "ps4-host rendered text"
+      ]
+    },
+    {
+      "text": "PS4 downloads & storage",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS4 library",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Browse hosts, payloads & game mods",
+      "sources": [
+        "ps4-host rendered text",
+        "ps5-host rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Payload management",
+      "sources": [
+        "ps4-host rendered text",
+        "ps5-host rendered text"
+      ]
+    },
+    {
+      "text": "Game mods",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Payloads",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Loaders",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Tools",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Game",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Choose a game",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Search payloads and mod menus",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Show older game builds",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Download a copy when pressing Load",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "0 actions",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Select the installed firmware and PS4 address. Load sends a compatible payload through its running console loader.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Enable JavaScript to use the host controls.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "No actions match these filters.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Choose version",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Game update & menu version",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Match the installed game update, menu version and title ID. Each option keeps its original download and loading requirements.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Desktop sender · connect from a PC",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Use the paired sender when the browser cannot contact your PS4 loader. Open its local host page and enter the token printed on your computer. Nothing loads until you choose a payload.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "Download desktop sender",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Sender instructions",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Local sender URL",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Pairing token",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Open local sender",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Connect sender",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Download uses the configured console downloader, which checks its queue and destination before saving. Without a console address, it downloads to this device. A transfer acknowledgement does not confirm execution; check the console for the result.",
+      "sources": [
+        "ps4-host rendered text",
+        "ps4-manager rendered text",
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS4 ezRemote file manager",
+      "sources": [
+        "ps4-host rendered attribute",
+        "ps4-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "PS4 payload management",
+      "sources": [
+        "ps4-host rendered attribute",
+        "ps4-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "Host categories",
+      "sources": [
+        "ps4-host rendered attribute",
+        "ps4-manager rendered attribute",
+        "ps5-host rendered attribute",
+        "ps5-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "GTA V, RDR2, trainer, ELF…",
+      "sources": [
+        "ps4-host rendered attribute",
+        "ps4-manager rendered attribute",
+        "ps5-host rendered attribute",
+        "ps5-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "Close version chooser",
+      "sources": [
+        "ps4-host rendered attribute",
+        "ps4-manager rendered attribute",
+        "ps5-host rendered attribute",
+        "ps5-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "Version choices",
+      "sources": [
+        "ps4-host rendered attribute",
+        "ps4-manager rendered attribute",
+        "ps5-host rendered attribute",
+        "ps5-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "Payload manager page",
+      "sources": [
+        "ps4-manager rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS4 · native GoldHEN controls",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Use a compatible GoldHEN release that includes PayLoader LaunchPad. Its native list manages payload launches and AutoRun on the PS4.",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Save compatible payloads in the location required by your GoldHEN release, using the PS4 file manager.",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "On the PS4, open",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Highlight the payload and use",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "to add it to AutoRun. Review the list before restarting GoldHEN.",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "PS4 AutoRun setup & paths",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "PS4 loader requirements",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "LaunchPad/AutoRun requires a GoldHEN build providing those features, introduced in 2.4b18.10. Match that build to your firmware. PS5 Payload Manager is a separate PS5 application.",
+      "sources": [
+        "ps4-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Choose a payload",
+      "sources": [
+        "ps4-manager rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "All PS4 host actions",
+      "sources": [
+        "ps4-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS4 console and controller",
+      "sources": [
+        "ps4-manager rendered attribute",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Connect to your PS5",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Target PS5",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS5 IP address",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Use PS5 address",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "This PS5",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Check PS5 services",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Find PS5 IP",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Find the console LAN address in Settings → Network → View Connection Status. When using a PC or phone, enter the PS5 address here. Browser detection does not discover another device on your network.",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Files & storage · PS5",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS5 file manager",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Load websrv on your PS5, or start ezRemote Client.",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "websrv · port 8080",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "ezRemote · port 9090",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Open PS5 file manager",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Payloads · PS5",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Open Payload Manager, import files and set the startup list in its native interface.",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Manage PS5 payloads",
+      "sources": [
+        "ps5-host rendered text"
+      ]
+    },
+    {
+      "text": "PS5 downloads & storage",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS5 library",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Select the installed firmware and PS5 address. Load sends a compatible payload through its running console loader.",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Use the paired sender when the browser cannot contact your PS5 loader. Open its local host page and enter the token printed on your computer. Nothing loads until you choose a payload.",
+      "sources": [
+        "ps5-host rendered text",
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS5 ezRemote file manager",
+      "sources": [
+        "ps5-host rendered attribute",
+        "ps5-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "PS5 payload management",
+      "sources": [
+        "ps5-host rendered attribute",
+        "ps5-manager rendered attribute"
+      ]
+    },
+    {
+      "text": "PS5 native service · port 8084",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Load the manager ELF once through your compatible console loader, then manage downloaded payloads, startup order and USB imports in its native web interface.",
+      "sources": [
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Load PS5 Payload Manager",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Open PS5 manager",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS5 autoload & order",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Import & download payloads",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Repository sources",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Running processes",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "Autoload runs when Payload Manager starts. Enable it and choose the list in the native manager. Opening this page does not enable or run an autoload list.",
+      "sources": [
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Installation & native manager guide",
+      "sources": [
+        "ps5-manager rendered text",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "All PS5 host actions",
+      "sources": [
+        "ps5-manager rendered text"
+      ]
+    },
+    {
+      "text": "PS5 Payload Manager interface",
+      "sources": [
+        "ps5-manager rendered attribute",
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Responding",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Not verified",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "GoldHEN loader",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Console downloader",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "A payload transfer is already in progress. Check its result before sending another.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "A previous transfer has an unknown result. Check the console and clear its transfer warning before loading again.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Transfer warning cleared for this address. Nothing was sent or retried.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Update the desktop sender to check the downloader and file-manager services.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The console service rejected its read-only request.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service result ps4/http-rejected",
+        "mocked actual service check goldhen/http-rejected",
+        "mocked actual service check downloader/http-rejected",
+        "mocked actual service check ps4-files/http-rejected",
+        "mocked actual service result ps5/http-rejected",
+        "mocked actual service check payload-manager/http-rejected",
+        "mocked actual service check files/http-rejected",
+        "mocked actual service check ezremote/http-rejected"
+      ]
+    },
+    {
+      "text": "The console service response exceeded its metadata limit.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service result ps4/oversize",
+        "mocked actual service check goldhen/oversize",
+        "mocked actual service result ps5/oversize",
+        "mocked actual service check payload-manager/oversize"
+      ]
+    },
+    {
+      "text": "The console service response length could not be bounded.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The console service read timed out. Its availability is unknown.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The console service could not be read. It may be stopped, unreachable or blocked.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service result ps4/unreachable",
+        "mocked actual service check goldhen/unreachable",
+        "mocked actual service check downloader/unreachable",
+        "mocked actual service check ps4-files/unreachable",
+        "mocked actual service result ps5/unreachable",
+        "mocked actual service check payload-manager/unreachable",
+        "mocked actual service check files/unreachable",
+        "mocked actual service check ezremote/unreachable"
+      ]
+    },
+    {
+      "text": "The service did not return GoldHEN readiness metadata.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service result ps4/bad-metadata",
+        "mocked actual service check goldhen/bad-metadata"
+      ]
+    },
+    {
+      "text": "GoldHEN HTTP loader responded and is ready. Firmware and game have not been detected.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service result ps4/ready",
+        "mocked actual service check goldhen/ready"
+      ]
+    },
+    {
+      "text": "GoldHEN HTTP loader responded but is busy. Firmware and game have not been detected.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service result ps4/busy",
+        "mocked actual service check goldhen/busy"
+      ]
+    },
+    {
+      "text": "The service did not return valid Payload Manager metadata.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service result ps5/bad-metadata",
+        "mocked actual service check payload-manager/bad-metadata"
+      ]
+    },
+    {
+      "text": "The console service metadata could not be read. No firmware or game was detected.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The receiver did not return a valid queue array.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service check downloader/bad-metadata",
+        "mocked actual service check downloader/oversize"
+      ]
+    },
+    {
+      "text": "Receiver queue responded. The installed downloader page and saving destination have not been verified.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service check downloader/ready",
+        "mocked actual service check downloader/busy"
+      ]
+    },
+    {
+      "text": "The configured file-manager endpoint did not return a recognizable HTML page.",
+      "sources": [
+        "connection/error translation row",
+        "mocked actual service check ps4-files/ready",
+        "mocked actual service check ps4-files/busy",
+        "mocked actual service check ps4-files/bad-metadata",
+        "mocked actual service check ps4-files/oversize",
+        "mocked actual service check files/ready",
+        "mocked actual service check ezremote/ready",
+        "mocked actual service check files/busy",
+        "mocked actual service check ezremote/busy",
+        "mocked actual service check files/bad-metadata",
+        "mocked actual service check ezremote/bad-metadata",
+        "mocked actual service check files/oversize",
+        "mocked actual service check ezremote/oversize"
+      ]
+    },
+    {
+      "text": "The configured file-manager page responded. Its identity and file operations have not been verified.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The configured service could not be read; its availability is unknown.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Enter a console address, not a network or broadcast address.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Enter a private IPv4 address or local hostname, without a URL, port or path.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Payload Manager requests are permitted from its own origin.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Open Payload Manager on the console. Its API accepts requests only from its own origin.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Connection failed.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "This browser cannot make the required request. Open the native manager or local sender.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The request timed out. Check the console service and network.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The browser could not read the service response.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The service did not return a Payload Manager version.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Select an installed ELF inside the Payload Manager repository, local, or USB payload directory.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Payload Manager cannot launch itself through its payload API.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The manager did not confirm the loader transfer.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Payload Manager transferred the ELF to its loader. Check the console for the payload result.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Use the localhost sender URL, for example http://127.0.0.1:8766.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The sender port is invalid.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Open the local sender dashboard, then enter its pairing token there.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Enter the pairing token printed by the local sender.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The sender returned an unexpected response.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "This HTTPS page cannot contact the console HTTP loader. Use the local sender dashboard.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "GoldHEN HTTP loader is not ready. Enable its BinLoader server and wait until it is idle.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "GoldHEN HTTP loader is ready.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The payload file size is invalid.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The payload checksum does not match the catalogue. Nothing was sent.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The loader did not acknowledge the payload.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "GoldHEN accepted the payload bytes. Check the game or console for the result.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The ELF loader did not acknowledge the URL request.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "ELF loader accepted the URL request. The console download and payload result have not been verified.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The ELF transfer timed out. The console result is unknown.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Could not transfer the ELF. Start the compatible network ELF loader on port 9021.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The loader disconnected before the transfer finished.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The GoldHEN request timed out.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Could not read the GoldHEN HTTP loader response on port 9090.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The GoldHEN loader rejected the request or returned an unreadable response.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The GoldHEN HTTP loader is busy or not ready.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Opening the console downloader. It must be installed and running; its native page checks the queue and destination before saving.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Update the desktop sender before loading. This version cannot report uncertain transfer results.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "PS5 Payload Manager requires a PS5.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Console browser",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "No console browser detected",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Enter the console LAN IPv4 address. Loopback points to this computer.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The console hostname must resolve only to private LAN IPv4 addresses.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "A locally hosted ready-to-use file is required for the sender.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Invalid download path.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "This action does not contain a supported ready-to-use file.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The curated action must include its SHA-256 checksum.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "No verified sender protocol is available for this action.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The payload file must stay inside the download library.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The payload file changed while it was being read. Nothing was sent.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The file does not contain an ELF executable. Nothing was sent.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "ELF bytes sent to the console loader on port 9021. Check the console for the payload result.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Use the checked console LAN IPv4 address.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The request is too large.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Send a JSON action request.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Choose a listed action.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Choose a verified BIN payload from the host catalogue.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Run requires a ready-to-use BIN hosted in this site download library.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Open this site using its public or computer LAN URL, or connect the paired sender. The console cannot fetch files from the computer localhost preview.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Open the site over HTTP or HTTPS using a console-reachable public or computer LAN address, or use the paired sender.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Choose the HTTP or HTTPS origin that actually hosts these payload files, without credentials or a path.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The console cannot fetch payloads from the computer localhost preview. Open the site using the computer LAN address, publish it, or connect the paired sender.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Choose an ELF from the verified host catalogue.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The ELF download path is invalid.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Native ELF launch requires a ready-to-use ELF in the site download library.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "This HTTPS page cannot request the console HTTP loader. Open the loader link on the console, or use the local sender dashboard.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The file URL is invalid.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Choose a supported Payload Manager screen.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Use the localhost sender address.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Open the sender dashboard on its own localhost address.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Enter the current sender pairing token.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Local sender connected. This check did not send a payload.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Use an explicit POST action.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The action request must use JSON.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The service check accepts only an address and platform.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The request contains an unsupported field.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Choose an action from this platform host catalogue.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Select a firmware supported by this action.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Select the exact game update supported by this menu.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Another payload transfer is still in progress for this console.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The sender could not complete the action. Nothing has been confirmed on the console.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "This path is read-only.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "This file is not served by the local sender.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "Could not reach the service. Check that it is running; browser CORS or network restrictions may also block the request.",
+      "sources": [
+        "connection/error translation row"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The request timed out. Check the console service and network.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The browser could not read the service response.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. Could not reach the service. Check that it is running; browser CORS or network restrictions may also block the request.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The service returned HTTP 503.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The loader did not acknowledge the payload.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The manager did not confirm the loader transfer.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The sender returned an unexpected response.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The ELF loader did not acknowledge the URL request.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The ELF transfer timed out. The console result is unknown.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. Could not transfer the ELF. Start the compatible network ELF loader on port 9021.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The loader disconnected before the transfer finished.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The GoldHEN request timed out.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. Could not read the GoldHEN HTTP loader response on port 9090.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The transfer result is unknown. Check the console before trying again. The GoldHEN loader rejected the request or returned an unreadable response.",
+      "sources": [
+        "actual uncertain-result composition"
+      ]
+    },
+    {
+      "text": "The service returned HTTP 404.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "The service returned HTTP 503.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Payload Manager 0.6.3 responded. The console payload loader has not been tested.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Payload Manager 0.7.0-beta.1 responded. The console payload loader has not been tested.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Opening PS4 file manager at 192.168.1.50. Start the named console service first.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Opening PS5 file manager at ps5.local. Start the named console service first.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Opening PS5 Payload Manager at 192.168.1.50. The manager ELF must already be running.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Enter the PS4 LAN address when using a PC, phone or another console.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Enter the PS5 LAN address when using a PC, phone or another console.",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "ezRemote Client · port 8080",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "ezRemote Client · port 9090",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Service: payload-manager 0.6.3",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "192.168.1.50 (service-reported)",
+      "sources": [
+        "concrete dynamic template"
+      ]
+    },
+    {
+      "text": "Payload Manager 0.6.3 responded. This is the app version; firmware and game have not been detected.",
+      "sources": [
+        "mocked actual service result ps5/ready",
+        "mocked actual service check payload-manager/ready",
+        "mocked actual service result ps5/busy",
+        "mocked actual service check payload-manager/busy"
+      ]
+    }
+  ],
+  "serviceResults": [
+    {
+      "platform": "ps4",
+      "scenario": "ready",
+      "status": "connected",
+      "code": "goldhen-ready",
+      "message": "GoldHEN HTTP loader responded and is ready. Firmware and game have not been detected.",
+      "checks": [
+        {
+          "service": "goldhen",
+          "status": "connected",
+          "connection": "ready",
+          "code": "goldhen-ready",
+          "port": 9090,
+          "path": "/status",
+          "message": "GoldHEN HTTP loader responded and is ready. Firmware and game have not been detected."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "connected",
+          "code": "receiver-queue-readable",
+          "queueCount": 0,
+          "companionVerified": false,
+          "message": "Receiver queue responded. The installed downloader page and saving destination have not been verified."
+        },
+        {
+          "service": "ps4-files",
+          "port": 8080,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:9090/status",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/"
+      ]
+    },
+    {
+      "platform": "ps4",
+      "scenario": "busy",
+      "status": "connected",
+      "code": "goldhen-busy",
+      "message": "GoldHEN HTTP loader responded but is busy. Firmware and game have not been detected.",
+      "checks": [
+        {
+          "service": "goldhen",
+          "status": "connected",
+          "connection": "busy",
+          "code": "goldhen-busy",
+          "port": 9090,
+          "path": "/status",
+          "message": "GoldHEN HTTP loader responded but is busy. Firmware and game have not been detected."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "connected",
+          "code": "receiver-queue-readable",
+          "queueCount": 0,
+          "companionVerified": false,
+          "message": "Receiver queue responded. The installed downloader page and saving destination have not been verified."
+        },
+        {
+          "service": "ps4-files",
+          "port": 8080,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:9090/status",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/"
+      ]
+    },
+    {
+      "platform": "ps4",
+      "scenario": "bad-metadata",
+      "status": "unavailable",
+      "code": "unexpected-response",
+      "message": "The service did not return GoldHEN readiness metadata.",
+      "checks": [
+        {
+          "service": "goldhen",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "port": 9090,
+          "path": "/status",
+          "message": "The service did not return GoldHEN readiness metadata."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The receiver did not return a valid queue array."
+        },
+        {
+          "service": "ps4-files",
+          "port": 8080,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:9090/status",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/"
+      ]
+    },
+    {
+      "platform": "ps4",
+      "scenario": "http-rejected",
+      "status": "unavailable",
+      "code": "service-http-error",
+      "message": "The console service rejected its read-only request.",
+      "checks": [
+        {
+          "service": "goldhen",
+          "status": "blocked",
+          "code": "service-http-error",
+          "port": 9090,
+          "path": "/status",
+          "message": "The console service rejected its read-only request."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "blocked",
+          "code": "service-http-error",
+          "message": "The console service rejected its read-only request."
+        },
+        {
+          "service": "ps4-files",
+          "port": 8080,
+          "path": "/",
+          "status": "blocked",
+          "code": "service-http-error",
+          "message": "The console service rejected its read-only request."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:9090/status",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/"
+      ]
+    },
+    {
+      "platform": "ps4",
+      "scenario": "oversize",
+      "status": "unavailable",
+      "code": "unexpected-response",
+      "message": "The console service response exceeded its metadata limit.",
+      "checks": [
+        {
+          "service": "goldhen",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "port": 9090,
+          "path": "/status",
+          "message": "The console service response exceeded its metadata limit."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The receiver did not return a valid queue array."
+        },
+        {
+          "service": "ps4-files",
+          "port": 8080,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:9090/status",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/"
+      ]
+    },
+    {
+      "platform": "ps4",
+      "scenario": "unreachable",
+      "status": "unavailable",
+      "code": "service-unavailable",
+      "message": "The console service could not be read. It may be stopped, unreachable or blocked.",
+      "checks": [
+        {
+          "service": "goldhen",
+          "status": "unknown",
+          "code": "service-unavailable",
+          "port": 9090,
+          "path": "/status",
+          "message": "The console service could not be read. It may be stopped, unreachable or blocked."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "unknown",
+          "code": "service-unavailable",
+          "message": "The console service could not be read. It may be stopped, unreachable or blocked."
+        },
+        {
+          "service": "ps4-files",
+          "port": 8080,
+          "path": "/",
+          "status": "unknown",
+          "code": "service-unavailable",
+          "message": "The console service could not be read. It may be stopped, unreachable or blocked."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:9090/status",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/"
+      ]
+    },
+    {
+      "platform": "ps5",
+      "scenario": "ready",
+      "status": "connected",
+      "code": "manager-connected",
+      "message": "Payload Manager 0.6.3 responded. This is the app version; firmware and game have not been detected.",
+      "checks": [
+        {
+          "service": "payload-manager",
+          "status": "connected",
+          "connection": "responding",
+          "code": "manager-connected",
+          "port": 8084,
+          "path": "/version",
+          "message": "Payload Manager 0.6.3 responded. This is the app version; firmware and game have not been detected."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "connected",
+          "code": "receiver-queue-readable",
+          "queueCount": 0,
+          "companionVerified": false,
+          "message": "Receiver queue responded. The installed downloader page and saving destination have not been verified."
+        },
+        {
+          "service": "files",
+          "port": 8080,
+          "path": "/fs/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        },
+        {
+          "service": "ezremote",
+          "port": 9090,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:8084/version",
+        "http://192.168.1.50:8084/getip",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/fs/",
+        "http://192.168.1.50:9090/"
+      ]
+    },
+    {
+      "platform": "ps5",
+      "scenario": "busy",
+      "status": "connected",
+      "code": "manager-connected",
+      "message": "Payload Manager 0.6.3 responded. This is the app version; firmware and game have not been detected.",
+      "checks": [
+        {
+          "service": "payload-manager",
+          "status": "connected",
+          "connection": "responding",
+          "code": "manager-connected",
+          "port": 8084,
+          "path": "/version",
+          "message": "Payload Manager 0.6.3 responded. This is the app version; firmware and game have not been detected."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "connected",
+          "code": "receiver-queue-readable",
+          "queueCount": 0,
+          "companionVerified": false,
+          "message": "Receiver queue responded. The installed downloader page and saving destination have not been verified."
+        },
+        {
+          "service": "files",
+          "port": 8080,
+          "path": "/fs/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        },
+        {
+          "service": "ezremote",
+          "port": 9090,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:8084/version",
+        "http://192.168.1.50:8084/getip",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/fs/",
+        "http://192.168.1.50:9090/"
+      ]
+    },
+    {
+      "platform": "ps5",
+      "scenario": "bad-metadata",
+      "status": "unavailable",
+      "code": "unexpected-response",
+      "message": "The service did not return valid Payload Manager metadata.",
+      "checks": [
+        {
+          "service": "payload-manager",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "port": 8084,
+          "path": "/version",
+          "message": "The service did not return valid Payload Manager metadata."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The receiver did not return a valid queue array."
+        },
+        {
+          "service": "files",
+          "port": 8080,
+          "path": "/fs/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        },
+        {
+          "service": "ezremote",
+          "port": 9090,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:8084/version",
+        "http://192.168.1.50:8084/getip",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/fs/",
+        "http://192.168.1.50:9090/"
+      ]
+    },
+    {
+      "platform": "ps5",
+      "scenario": "http-rejected",
+      "status": "unavailable",
+      "code": "service-http-error",
+      "message": "The console service rejected its read-only request.",
+      "checks": [
+        {
+          "service": "payload-manager",
+          "status": "blocked",
+          "code": "service-http-error",
+          "port": 8084,
+          "path": "/version",
+          "message": "The console service rejected its read-only request."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "blocked",
+          "code": "service-http-error",
+          "message": "The console service rejected its read-only request."
+        },
+        {
+          "service": "files",
+          "port": 8080,
+          "path": "/fs/",
+          "status": "blocked",
+          "code": "service-http-error",
+          "message": "The console service rejected its read-only request."
+        },
+        {
+          "service": "ezremote",
+          "port": 9090,
+          "path": "/",
+          "status": "blocked",
+          "code": "service-http-error",
+          "message": "The console service rejected its read-only request."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:8084/version",
+        "http://192.168.1.50:8084/getip",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/fs/",
+        "http://192.168.1.50:9090/"
+      ]
+    },
+    {
+      "platform": "ps5",
+      "scenario": "oversize",
+      "status": "unavailable",
+      "code": "unexpected-response",
+      "message": "The console service response exceeded its metadata limit.",
+      "checks": [
+        {
+          "service": "payload-manager",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "port": 8084,
+          "path": "/version",
+          "message": "The console service response exceeded its metadata limit."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The receiver did not return a valid queue array."
+        },
+        {
+          "service": "files",
+          "port": 8080,
+          "path": "/fs/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        },
+        {
+          "service": "ezremote",
+          "port": 9090,
+          "path": "/",
+          "status": "unknown",
+          "code": "unexpected-response",
+          "message": "The configured file-manager endpoint did not return a recognizable HTML page."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:8084/version",
+        "http://192.168.1.50:8084/getip",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/fs/",
+        "http://192.168.1.50:9090/"
+      ]
+    },
+    {
+      "platform": "ps5",
+      "scenario": "unreachable",
+      "status": "unavailable",
+      "code": "service-unavailable",
+      "message": "The console service could not be read. It may be stopped, unreachable or blocked.",
+      "checks": [
+        {
+          "service": "payload-manager",
+          "status": "unknown",
+          "code": "service-unavailable",
+          "port": 8084,
+          "path": "/version",
+          "message": "The console service could not be read. It may be stopped, unreachable or blocked."
+        },
+        {
+          "service": "downloader",
+          "port": 6701,
+          "path": "/get_download_state",
+          "status": "unknown",
+          "code": "service-unavailable",
+          "message": "The console service could not be read. It may be stopped, unreachable or blocked."
+        },
+        {
+          "service": "files",
+          "port": 8080,
+          "path": "/fs/",
+          "status": "unknown",
+          "code": "service-unavailable",
+          "message": "The console service could not be read. It may be stopped, unreachable or blocked."
+        },
+        {
+          "service": "ezremote",
+          "port": 9090,
+          "path": "/",
+          "status": "unknown",
+          "code": "service-unavailable",
+          "message": "The console service could not be read. It may be stopped, unreachable or blocked."
+        }
+      ],
+      "requests": [
+        "http://192.168.1.50:8084/version",
+        "http://192.168.1.50:8084/getip",
+        "http://192.168.1.50:6701/get_download_state",
+        "http://192.168.1.50:8080/fs/",
+        "http://192.168.1.50:9090/"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "code": "es",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "1eea6b53d15a08cf697c22b1fe8e2501b5e165e414571ed74fce898c89486167"
+    },
+    {
+      "code": "pt",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "2fb0ee5dd04c185428769e57769c419481cd300ee97e0bcb43234e2a165aafa4"
+    },
+    {
+      "code": "fr",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "c0905f09a04058098dd462de0da7462b42a7505693050cb275129d19785e8f53"
+    },
+    {
+      "code": "de",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "45b8424e7d580c54d7aa75273757600dbb2038f2d1aa1e66aad34902c8e27acb"
+    },
+    {
+      "code": "ru",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "bf9de74d175f92a8ef9d8721824ea1589f5dd9f060fde0e6e92adf25f01be66a"
+    },
+    {
+      "code": "tr",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "ab759f419beacdb992de4591d10c3c73f6ed8538a8fe61d67f97471fb1dfb5c8"
+    },
+    {
+      "code": "pl",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "2a377761788a2fd9c86c1f9c1d097f40d98ddeb717e2f7d35bf34e31f71bc5c3"
+    },
+    {
+      "code": "it",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "57e7041e371af1b60096255820e1eb5c07f62007ef509af869050121247594eb"
+    },
+    {
+      "code": "zh",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "d80dfaa356edc700cd037fe20f2b2f249264f69c4de82c056ab465db1cd228a2"
+    },
+    {
+      "code": "ja",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "4cadf4a09fd1c56484716e7858596704de60e577e3043252e4813d08c58ff394"
+    },
+    {
+      "code": "ko",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "d97d37831d857229d57b9beea685ba2aa3e974e039e79b4fd245c4433b8beafc"
+    },
+    {
+      "code": "th",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "dd964a2f83197a3fa3280670c1c5951c14977e26208332b96b357ae87934d92e"
+    },
+    {
+      "code": "vi",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "b4b89103dcd27f6fd81fa69100d03118bdbb8f1d0e6150f40d77efc48d08bf74"
+    },
+    {
+      "code": "id",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "9497ea8b2fcc00e29b16fef82097404e422864df002afbfa0d091570a861808e"
+    },
+    {
+      "code": "hi",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "3762b19fd2643b2309ece056497a8b1a000c8c0f8b89dd678464f879d29e0f82"
+    },
+    {
+      "code": "sr",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "143710add8700a3b3d56cb8e6c30fc1b310e4ccd2911ca1cbfbc5fb1ec1c12a2"
+    },
+    {
+      "code": "nl",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "cf5c3f07aeed4e6988cfc67a18c898054ab6ded4b6bba2b6f7372ee0799917bc"
+    },
+    {
+      "code": "ka",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "698d2d44323aa33e559fb925a8c80fd96ef5388dd3503669934ceef6b846dc10"
+    },
+    {
+      "code": "ar",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "64965999421160e33bf86b5921a4a883477f7eb8c6d3fa2d4f993e685ad9c55e"
+    },
+    {
+      "code": "he",
+      "keys": 645,
+      "testedMessages": 256,
+      "matchedMessages": 256,
+      "missing": [],
+      "placeholderErrors": [],
+      "protectedTokenErrors": [],
+      "sha256": "af2a7698e59c449dd35ec0903d1e80fb8674238f32d38ae15942d9deff8930e7"
+    }
+  ],
+  "passed": true
+}

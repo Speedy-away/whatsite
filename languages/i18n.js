@@ -47,6 +47,7 @@
 
   // Resolve sibling dictionaries from this script's own URL so the code works
   // at any directory depth, and over file:// as well as http://.
+  var DICTIONARY_QUERY = '';
   var BASE = (function () {
     var s = document.currentScript;
     if (!s) {
@@ -55,6 +56,8 @@
         if (/i18n\.js(\?|$)/.test(all[i].src)) { s = all[i]; break; }
       }
     }
+    var version = s && s.src && s.src.match(/[?&]v=([^&#]+)/);
+    if (version) DICTIONARY_QUERY = '?v=' + version[1];
     return s && s.src ? s.src.replace(/[^/]*$/, '') : '/languages/';
   })();
 
@@ -63,8 +66,13 @@
   var dicts = { en: {} };        // lang -> { english: translated }
   var current = DEFAULT_LANG;
   var textOriginals = new WeakMap();   // text node -> original English
+  var textRendered = new WeakMap();    // distinguish app updates from our own translations
   var attrOriginals = new WeakMap();   // element   -> { attr: original }
+  var attrRendered = new WeakMap();
+  var templateCache = new WeakMap();
   var titleOriginal = null;
+  var titleRendered = null;
+  var loadErrorNode = null;
   var observer = null;
   var applying = false;
 
@@ -118,13 +126,19 @@
     pending[code] = [cb];
 
     var s = document.createElement('script');
-    s.src = BASE + code + '.js';
+    s.src = BASE + code + '.js' + DICTIONARY_QUERY;
     s.async = true;
-    s.onload = function () { flush(code, null); };
-    s.onerror = function () {
-      dicts[code] = {};                      // fail soft: page stays English
-      flush(code, new Error('dictionary ' + code + ' failed to load'));
-    };
+    var finished = false;
+    var timer = setTimeout(function () { finish(new Error('dictionary ' + code + ' timed out')); }, 12000);
+    function finish(err) {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timer);
+      if (err && s.parentNode) s.parentNode.removeChild(s);
+      flush(code, err);
+    }
+    s.onload = function () { finish(dicts[code] ? null : new Error('dictionary ' + code + ' did not register')); };
+    s.onerror = function () { finish(new Error('dictionary ' + code + ' failed to load')); };
     (document.head || document.documentElement).appendChild(s);
   }
 
@@ -143,29 +157,101 @@
   // ------------------------------------------------------------ traversal ---
 
   var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, TEXTAREA: 1, NOSCRIPT: 1, SVG: 1, CANVAS: 1 };
-  var ATTRS = ['placeholder', 'title', 'alt', 'aria-label'];
+  var ATTRS = ['placeholder', 'title', 'alt', 'aria-label', 'aria-description', 'aria-valuetext', 'data-tooltip', 'value'];
 
   function skipped(el) {
     for (var n = el; n && n.nodeType === 1; n = n.parentNode) {
       if (SKIP_TAGS[n.tagName]) return true;
       if (n.hasAttribute && n.hasAttribute('data-i18n-skip')) return true;
+      if (n.getAttribute && n.getAttribute('translate') === 'no') return true;
+      if (n.classList && n.classList.contains('notranslate')) return true;
     }
     return false;
   }
 
   var norm = function (s) { return s.replace(/\s+/g, ' ').trim(); };
 
+  function templates(table) {
+    var cached = templateCache.get(table);
+    if (cached) return cached;
+    cached = [];
+    Object.keys(table).forEach(function (key) {
+      var names = [], pattern = '', cursor = 0, match;
+      var marker = /\{([A-Za-z_][A-Za-z0-9_]*)\}/g;
+      while ((match = marker.exec(key))) {
+        pattern += key.slice(cursor, match.index).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        var name = match[1];
+        names.push(name);
+        if (/^(?:count|total|shown|bytes|size|number)$/.test(name)) pattern += '([0-9][0-9.,]*)';
+        else if (name === 'platform') pattern += '(PS4(?:\\s*\\/\\s*PS5)?|PS5|PS3|PS Vita|Xbox 360|Nintendo Switch|Steam Deck|PC)';
+        else if (name === 'filename') pattern += '([^\\r\\n<>]+\\.(?:pkg|fpkg|elf|bin|prx|sprx|self|zip|rar|7z|iso|json|vpk|pup|jar|csc|gsc|lua|txt|ini))';
+        else pattern += '([^\\r\\n]+?)';
+        cursor = marker.lastIndex;
+      }
+      if (!names.length || typeof table[key] !== 'string') return;
+      pattern += key.slice(cursor).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      cached.push({pattern: new RegExp('^' + pattern + '$'), names: names, value: table[key], specificity: key.replace(marker, '').length});
+    });
+    cached.sort(function (a, b) { return b.specificity - a.specificity; });
+    templateCache.set(table, cached);
+    return cached;
+  }
+
+  function localizedDate(value) {
+    if (current === DEFAULT_LANG || typeof Intl === 'undefined' || typeof Intl.DateTimeFormat !== 'function') return value;
+    var match = /^(0?[1-9]|[12][0-9]|3[01]) (January|February|March|April|May|June|July|August|September|October|November|December) ([12][0-9]{3})$/.exec(String(value));
+    if (!match) return value;
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var day = Number(match[1]), month = months.indexOf(match[2]), year = Number(match[3]);
+    var date = new Date(Date.UTC(year, month, day));
+    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) return value;
+    try {
+      return new Intl.DateTimeFormat(current, {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'}).format(date);
+    } catch (e) { return value; }
+  }
+
+  function interpolate(value, values, localizeDates) {
+    return value.replace(/\{([A-Za-z_][A-Za-z0-9_]*)\}/g, function (marker, name) {
+      if (!Object.prototype.hasOwnProperty.call(values, name)) return marker;
+      var result = String(values[name]);
+      return localizeDates && name === 'date' ? localizedDate(result) : result;
+    });
+  }
+
+  function lookup(source, table, values) {
+    var key = norm(source);
+    if (Object.prototype.hasOwnProperty.call(table, key) && typeof table[key] === 'string') {
+      return values ? interpolate(table[key], values, key.indexOf('{date}') !== -1) : table[key];
+    }
+    if (values) return interpolate(source, values);
+    var patterns = templates(table);
+    for (var i = 0; i < patterns.length; i++) {
+      var rule = patterns[i], match = rule.pattern.exec(key);
+      if (!match) continue;
+      var captures = {}, valid = true;
+      for (var j = 0; j < rule.names.length; j++) {
+        var name = rule.names[j], value = match[j + 1];
+        if (Object.prototype.hasOwnProperty.call(captures, name) && captures[name] !== value) { valid = false; break; }
+        captures[name] = value;
+      }
+      if (valid) return interpolate(rule.value, captures, rule.names.indexOf('date') !== -1);
+    }
+    return undefined;
+  }
+
   function translateText(node, table) {
+    if (skipped(node.parentNode)) return;
     var original = textOriginals.get(node);
-    if (original === undefined) {
+    var value = node.nodeValue;
+    if (original === undefined || value !== textRendered.get(node) && value !== original) {
       original = node.nodeValue;
-      if (!norm(original) || !/[A-Za-z]/.test(original)) return;
-      if (skipped(node.parentNode)) return;
       textOriginals.set(node, original);
+      if (!norm(original) || !/[A-Za-z]/.test(original)) { textRendered.set(node, original); return; }
     }
     var key = norm(original);
-    var hit = table[key];
+    var hit = lookup(key, table);
     if (hit === undefined) {
+      textRendered.set(node, original);
       if (node.nodeValue !== original) node.nodeValue = original;   // reverting
       return;
     }
@@ -173,21 +259,29 @@
     var lead = (original.match(/^\s*/) || [''])[0];
     var trail = (original.match(/\s*$/) || [''])[0];
     var next = lead + hit + trail;
+    textRendered.set(node, next);
     if (node.nodeValue !== next) node.nodeValue = next;
   }
 
-  function translateAttrs(el, table) {
+  function translateAttrs(el, table, attrs) {
     if (skipped(el)) return;
     var saved = attrOriginals.get(el);
-    for (var i = 0; i < ATTRS.length; i++) {
-      var a = ATTRS[i];
+    var rendered = attrRendered.get(el);
+    attrs = attrs || ATTRS;
+    for (var i = 0; i < attrs.length; i++) {
+      var a = attrs[i];
+      if (a === 'value' && (el.tagName !== 'INPUT' || !/^(?:button|submit|reset)$/i.test(el.getAttribute('type') || ''))) continue;
       if (!el.hasAttribute(a)) continue;
       if (!saved) { saved = {}; attrOriginals.set(el, saved); }
-      if (saved[a] === undefined) saved[a] = el.getAttribute(a);
+      if (!rendered) { rendered = {}; attrRendered.set(el, rendered); }
+      var value = el.getAttribute(a);
+      if (saved[a] === undefined || value !== rendered[a] && value !== saved[a]) saved[a] = value;
       var key = norm(saved[a]);
       if (!key) continue;
-      var hit = table[key];
-      el.setAttribute(a, hit === undefined ? saved[a] : hit);
+      var hit = lookup(key, table);
+      var next = hit === undefined ? saved[a] : hit;
+      rendered[a] = next;
+      if (value !== next) el.setAttribute(a, next);
     }
   }
 
@@ -206,17 +300,28 @@
   }
 
   function applyMeta(table) {
-    if (titleOriginal === null) titleOriginal = document.title;
-    var t = table[norm(titleOriginal)];
-    document.title = t === undefined ? titleOriginal : t;
+    if (titleOriginal === null || document.title !== titleRendered && document.title !== titleOriginal) titleOriginal = document.title;
+    var t = lookup(titleOriginal, table);
+    titleRendered = t === undefined ? titleOriginal : t;
+    if (document.title !== titleRendered) document.title = titleRendered;
 
-    var meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      var saved = attrOriginals.get(meta);
-      if (!saved) { saved = { content: meta.getAttribute('content') }; attrOriginals.set(meta, saved); }
-      var d = table[norm(saved.content || '')];
-      meta.setAttribute('content', d === undefined ? saved.content : d);
-    }
+    var metas = document.querySelectorAll('meta[name="description"],meta[property="og:title"],meta[property="og:description"],meta[name="twitter:title"],meta[name="twitter:description"]');
+    for (var i = 0; i < metas.length; i++) translateAttrs(metas[i], table, ['content']);
+  }
+
+  function finishApplying() {
+    applying = false;
+    if (observer) observer.takeRecords();
+  }
+
+  function refresh(root) {
+    var table = dicts[current] || {};
+    applying = true;
+    try {
+      if (root && root.nodeType === 3) translateText(root, table);
+      else apply(root || document.body || document.documentElement, table);
+      applyMeta(table);
+    } finally { finishApplying(); }
   }
 
   // ------------------------------------------------------- dynamic content ---
@@ -227,17 +332,32 @@
       if (applying || current === DEFAULT_LANG) return;
       var table = dicts[current] || {};
       applying = true;
-      for (var i = 0; i < records.length; i++) {
-        var added = records[i].addedNodes;
-        for (var j = 0; j < added.length; j++) {
-          var node = added[j];
-          if (node.nodeType === 3) translateText(node, table);
-          else if (node.nodeType === 1) apply(node, table);
+      try {
+        for (var i = 0; i < records.length; i++) {
+          var record = records[i];
+          if (record.type === 'characterData') {
+            if (record.target.parentNode && record.target.parentNode.tagName === 'TITLE') applyMeta(table);
+            else translateText(record.target, table);
+          } else if (record.type === 'attributes') {
+            if (record.target.tagName === 'META' && record.attributeName === 'content') applyMeta(table);
+            else if (record.attributeName === 'translate' || record.attributeName === 'data-i18n-skip') apply(record.target, table);
+            else translateAttrs(record.target, table);
+          } else {
+            if (record.target && record.target.tagName === 'TITLE') { applyMeta(table); continue; }
+            var added = record.addedNodes || [];
+            for (var j = 0; j < added.length; j++) {
+              var node = added[j];
+              if (node.nodeType === 3) translateText(node, table);
+              else if (node.nodeType === 1) {
+                apply(node, table);
+                if (node.tagName === 'META' || node.tagName === 'TITLE') applyMeta(table);
+              }
+            }
+          }
         }
-      }
-      applying = false;
+      } finally { finishApplying(); }
     });
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.documentElement, { childList: true, characterData: true, attributes: true, attributeFilter: ATTRS.concat(['content', 'translate', 'data-i18n-skip']), subtree: true });
   }
 
   // ------------------------------------------------------------- switching ---
@@ -252,14 +372,31 @@
     // newer choice made while it was still in flight.
     var mySeq = ++requestSeq;
 
-    loadDict(code, function () {
+    loadDict(code, function (err) {
       if (mySeq !== requestSeq) return;         // superseded by a later switch
+      if (err) {
+        if (!loadErrorNode) {
+          loadErrorNode = document.createElement('div');
+          loadErrorNode.className = 'i18n-load-error';
+          loadErrorNode.setAttribute('role', 'alert');
+          loadErrorNode.setAttribute('data-i18n-skip', '');
+          (document.body || document.documentElement).appendChild(loadErrorNode);
+        }
+        var message = 'Unable to load this language. Please try again.';
+        loadErrorNode.textContent = lookup(message, dicts[current] || {}) || message;
+        syncUI();
+        reveal();
+        return;
+      }
+      if (loadErrorNode && loadErrorNode.parentNode) loadErrorNode.parentNode.removeChild(loadErrorNode);
+      loadErrorNode = null;
       current = code;
       var table = dicts[code] || {};
       applying = true;
-      apply(document.body || document.documentElement, table);
-      applyMeta(table);
-      applying = false;
+      try {
+        apply(document.body || document.documentElement, table);
+        applyMeta(table);
+      } finally { finishApplying(); }
 
       document.documentElement.setAttribute('lang', code);
       // Right-to-left scripts need the whole document mirrored, not just translated.
@@ -279,6 +416,7 @@
   // -------------------------------------------------------------- selector ---
 
   var CSS = [
+    '.i18n-load-error{position:fixed;inset-inline-end:16px;bottom:20px;z-index:1300;max-width:calc(100vw - 32px);padding:12px 16px;border:1px solid rgba(255,255,255,.25);border-radius:10px;background:#17191e;color:#fff;font-size:.9rem}',
     '.i18n-switcher{position:relative;display:inline-flex;flex-shrink:0;font-family:inherit;z-index:1200}',
     '.i18n-switcher *{box-sizing:border-box}',
     '.i18n-toggle{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:50px;',
@@ -635,9 +773,13 @@
     a.classList.add('i18n-nav-link');
     a.setAttribute('href', '#');
     a.setAttribute('data-tooltip', 'Language');
+    a.setAttribute('aria-label', 'Language');
+    a.removeAttribute('aria-current');
 
-    var icon = a.querySelector('i');
-    if (icon) icon.className = 'fas fa-globe';
+    var icon = a.querySelector('.nav-icon') || a.querySelector('i');
+    var globe = '<svg class="nav-icon" data-nav-icon="language" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>';
+    if (icon) icon.outerHTML = globe;
+    else a.insertAdjacentHTML('afterbegin', globe);
     var span = a.querySelector('span');
     if (span) span.textContent = 'Language';
 
@@ -703,6 +845,7 @@
     picker.setAttribute('role', 'dialog');
     picker.setAttribute('aria-modal', 'true');
     picker.setAttribute('aria-label', 'Choose your language');
+    var overlay = picker;
 
     var box = document.createElement('div');
     box.className = 'i18n-modal';
@@ -733,11 +876,14 @@
     document.body.style.overflow = 'hidden';
 
     function close(code) {
-      document.body.style.overflow = prevOverflow;
-      picker.classList.remove('show');
-      var node = picker;
+      // A dismissed overlay can still receive bubbling clicks or queued events.
+      // Only this picker may close itself; never touch a newly opened picker.
+      if (picker !== overlay) return;
       picker = null;
-      setTimeout(function () { if (node.parentNode) node.parentNode.removeChild(node); }, 260);
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+      overlay.classList.remove('show');
+      setTimeout(function () { if (overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 260);
       // Storing the choice is what stops this reappearing on the next visit.
       setLang(code, {});
     }
@@ -747,15 +893,16 @@
       if (pick) { close(pick.getAttribute('data-lang')); return; }
       if (e.target.closest && e.target.closest('.i18n-dismiss')) close(DEFAULT_LANG);
     });
-    picker.addEventListener('click', function (e) {
-      if (e.target === picker) close(current);          // click outside = keep as-is
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close(current);          // click outside = keep as-is
     });
-    document.addEventListener('keydown', function onKey(e) {
-      if (e.key === 'Escape' && picker) { document.removeEventListener('keydown', onKey); close(current); }
-    });
+    function onKey(e) {
+      if (e.key === 'Escape') close(current);
+    }
+    document.addEventListener('keydown', onKey);
 
     // Next frame so the CSS transition runs.
-    setTimeout(function () { if (picker) picker.classList.add('show'); }, 20);
+    setTimeout(function () { if (picker === overlay) overlay.classList.add('show'); }, 20);
     var first = box.querySelector('.i18n-pick.suggested') || box.querySelector('.i18n-pick');
     if (first) first.focus();
   }
@@ -777,6 +924,15 @@
     set: setLang,
     get: function () { return current; },
     langs: LANGS,
+    /** Translate a complete source string, optionally filling named placeholders. */
+    t: function (source, values) {
+      source = String(source);
+      var hit = lookup(source, dicts[current] || {}, values);
+      return hit === undefined ? source : hit;
+    },
+    translate: function (source, values) { return window.__scoobyI18n.t(source, values); },
+    /** Refresh application-rendered content after a deliberate DOM update. */
+    refresh: refresh,
     /** Re-open the language picker (pass true to force it after a choice). */
     showPicker: function () { showPicker(true); },
     /** Forget the saved choice, so the first-visit picker shows again. */
@@ -787,7 +943,19 @@
         document.body, NodeFilter.SHOW_TEXT, null, false), n;
       while ((n = w.nextNode())) {
         var v = norm(textOriginals.get(n) !== undefined ? textOriginals.get(n) : n.nodeValue);
-        if (v && /[A-Za-z]/.test(v) && !skipped(n.parentNode) && table[v] === undefined) out[v] = 1;
+        if (v && /[A-Za-z]/.test(v) && !skipped(n.parentNode) && lookup(v, table) === undefined) out[v] = 1;
+      }
+      var elements = document.body.querySelectorAll(ATTRS.map(function (attr) { return '[' + attr + ']'; }).join(','));
+      for (var i = 0; i < elements.length; i++) {
+        if (skipped(elements[i])) continue;
+        var saved = attrOriginals.get(elements[i]) || {};
+        for (var j = 0; j < ATTRS.length; j++) {
+          var attr = ATTRS[j];
+          if (!elements[i].hasAttribute(attr)) continue;
+          if (attr === 'value' && (elements[i].tagName !== 'INPUT' || !/^(?:button|submit|reset)$/i.test(elements[i].getAttribute('type') || ''))) continue;
+          var value = norm(saved[attr] === undefined ? elements[i].getAttribute(attr) || '' : saved[attr]);
+          if (value && /[A-Za-z]/.test(value) && lookup(value, table) === undefined) out[value] = 1;
+        }
       }
       return Object.keys(out);
     }

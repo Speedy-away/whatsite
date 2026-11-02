@@ -1,0 +1,107 @@
+{
+  "verified": [
+    {
+      "id": "ps3-discord-ps3-mw2-darkks-package",
+      "verifiedCopies": 2,
+      "roles": [
+        [
+          "Builds"
+        ],
+        [
+          "Builds"
+        ]
+      ],
+      "platform": "Xbox 360"
+    },
+    {
+      "id": "ps3-discord-ps3-mw3-sprx-detox-v3",
+      "verifiedCopies": 2,
+      "roles": [
+        [
+          "Helpers",
+          "Windows"
+        ],
+        [
+          "Helpers",
+          "Windows"
+        ]
+      ],
+      "platform": "PS3"
+    },
+    {
+      "id": "ps3-discord-ps3-bo1-mp-project-cynical",
+      "verifiedCopies": 1,
+      "roles": [
+        [
+          "Helpers",
+          "Windows"
+        ]
+      ],
+      "platform": "PS3"
+    },
+    {
+      "id": "ps3-discord-ps3-bo1-mp-project-kush",
+      "verifiedCopies": 1,
+      "roles": [
+        [
+          "Helpers",
+          "Windows"
+        ]
+      ],
+      "platform": "PS3"
+    },
+    {
+      "id": "ps3-discord-ps3-bo1-mp-redemption",
+      "verifiedCopies": 1,
+      "roles": [
+        [
+          "Source Code"
+        ]
+      ],
+      "platform": "PS3"
+    },
+    {
+      "id": "ps3-discord-ps3-bo2-jericho-engine",
+      "verifiedCopies": 1,
+      "roles": [
+        [
+          "Builds"
+        ]
+      ],
+      "platform": "Xbox 360"
+    }
+  ],
+  "filesMoved": false,
+  "filesDeleted": false,
+  "downloadedPayloadsExecuted": false,
+  "result": {
+    "updatedAt": "2026-11-02T12:54:05.686Z",
+    "status": "Complete: six stale historical PS3 Builds paths reconciled to explicit hash-verified current layout.",
+    "items": [
+      "ps3-discord-ps3-mw2-darkks-package",
+      "ps3-discord-ps3-mw3-sprx-detox-v3",
+      "ps3-discord-ps3-bo1-mp-project-cynical",
+      "ps3-discord-ps3-bo1-mp-project-kush",
+      "ps3-discord-ps3-bo1-mp-redemption",
+      "ps3-discord-ps3-bo2-jericho-engine"
+    ],
+    "classification": "Darkks and Jericho stay Xbox 360 builds; Detox, Cynical and Kush remain Windows helpers; Redemption remains source code. No wrong-platform copies restored to PS3 Builds.",
+    "index": {
+      "items": 2028,
+      "fileRecords": 2967,
+      "present": 2967,
+      "missingPaths": 0
+    },
+    "tests": {
+      "passed": 3,
+      "failed": 0,
+      "file": "scripts/tests/archive-relocations.test.cjs"
+    },
+    "implementation": [
+      "scripts/archive-relocations.cjs",
+      "scripts/refresh-local-download-index.cjs"
+    ],
+    "report": "docs/qa/ps3-archive-relocation-reconciliation.json",
+    "preservation": "Metadata only. Historical records retained in relocationOriginalFileRecords and previousBackupPaths; duplicate payload copies retained. No files moved/deleted/replaced, payload execution or companion/receiver regeneration."
+  }
+}

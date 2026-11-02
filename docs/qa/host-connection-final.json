@@ -1,0 +1,91 @@
+{
+  "completedAt": "2026-11-02T14:03:30.214Z",
+  "status": "complete locally",
+  "scope": "PS4/PS5 host connection checks, exact download-copy routing and uncertain-transfer recovery",
+  "features": [
+    "Fixed bounded read-only checks for loader/manager, downloader queue and standard native file-manager pages, with separate evidence summaries.",
+    "Address and pairing generations discard stale replies, including A-to-B-to-A edits and older same-address responses.",
+    "Download-a-copy-on-Load uses the same exact console file ID and destination synchronously during the original click; completion never retargets or duplicates it.",
+    "Post-dispatch lost acknowledgements, timeouts, server5xx and socket failures report uncertain; preflight failures remain non-executing.",
+    "Per-address uncertain warnings survive reload, lock Load until explicit review/clear and never trigger retries; stale paired helpers are blocked before copying or sending.",
+    "Clarified ezRemote Server downloader vs ezRemote Client file-manager setup and native installation links."
+  ],
+  "verification": {
+    "tests": {
+      "passed": 501,
+      "failed": 0,
+      "log": "docs/qa/host-connection-all-tests.txt"
+    },
+    "language": {
+      "languages": 20,
+      "keys": 645,
+      "runtimeLookups": 5120,
+      "report": "docs/qa/host-connection-language.json",
+      "runtimeTestsPassed": 12
+    },
+    "siteAudit": {
+      "pages": 471,
+      "localReferences": 50906,
+      "issues": 0
+    },
+    "senderIntegrity": "docs/qa/host-connection-sender-integrity.json",
+    "payloadIntegrity": "docs/qa/host-payload-integrity.json",
+    "browser": {
+      "desktopWidth": 1280,
+      "firstFourCardsShareRow": true,
+      "setupDisclosureKeyboardAccessible": true,
+      "publicIPv4RejectedBeforeRequests": true,
+      "unpairedCheckStopsBeforeConsoleRequests": true,
+      "mobileWidth": 430,
+      "mobileDocumentWidthAfterLayout": 415,
+      "viewportReset": true
+    },
+    "archive": {
+      "checkedAt": "2026-11-02T14:00:25.412Z",
+      "items": 2069,
+      "records": 3015,
+      "present": 3015,
+      "missing": 0
+    }
+  },
+  "sender": {
+    "id": "console-payload-sender-3dfef0b6ba96",
+    "name": "console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+    "version": "1.5.1+3dfef0b6ba96",
+    "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+    "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+    "bytes": 58776318,
+    "sha256": "c5f93806643259fddf04e8132e7a4869a8f68ea59d09f335b62bdda4353b23a4",
+    "snapshot": "3dfef0b6ba961aef28da472cb57aeb27cd6506791f4330f3154ccd111116e6fd",
+    "files": 213,
+    "payloads": 95,
+    "actions": 133,
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.5.1+3dfef0b6ba96\\console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+    "preservedSnapshots": 10
+  },
+  "nativeCompanions": {
+    "version": "2026.11.02.11",
+    "unchanged": true
+  },
+  "bootstrapReview": "docs/host-bootstrap-handoff-review.json",
+  "limits": [
+    "Console hardware transfers, installation and execution remain untested. No downloaded payload or exploit was executed.",
+    "A readable queue does not verify companion HTML installation or writable storage; a file-manager page response does not verify its identity or file operations.",
+    "No raw TCP9020/9021 readiness probes. The PS4 bootstrap remains a separate manual stage; no unverified GoldHEN binary/ABI mapping was enabled.",
+    "No commit, publication or deployment performed."
+  ],
+  "screenshots": [
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/ps4-downloader-connection-help.jpg",
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/ps4-downloader-connection-mobile.jpg"
+  ],
+  "keyFiles": [
+    "assets/host-dashboard.js",
+    "assets/host-console-client.js",
+    "scripts/console-payload-bridge.cjs",
+    "scripts/host-dashboard-markup.cjs",
+    "scripts/tests/host-continuation-state.test.cjs",
+    "scripts/tests/host-service-overview.test.cjs",
+    "scripts/tests/host-transfer-outcomes.test.cjs"
+  ],
+  "preservation": "All pinned payload/game/firmware data,95 ready downloads,23 executable transport mappings,native receiver11 and prior sender/source/build snapshots preserved."
+}

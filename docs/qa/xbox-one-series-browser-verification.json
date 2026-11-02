@@ -1,0 +1,196 @@
+{
+  "reviewed": "2026-11-02",
+  "checkedAt": "2026-11-02T12:52:48.915Z",
+  "page": "/console/xbox-one-series/apps.html",
+  "mode": "In-app browser against exact-size local iframe with native DOM interactions",
+  "results": [
+    {
+      "width": 1366,
+      "height": 850,
+      "documentWidth": 1351,
+      "apps": 23,
+      "checks": [
+        {
+          "passed": true,
+          "label": "Exact requested viewport"
+        },
+        {
+          "passed": true,
+          "label": "No horizontal overflow"
+        },
+        {
+          "passed": true,
+          "label": "All 23 apps rendered"
+        },
+        {
+          "passed": true,
+          "label": "All local publisher artwork loaded"
+        },
+        {
+          "passed": true,
+          "label": "Search matches one app"
+        },
+        {
+          "passed": true,
+          "label": "Empty search feedback"
+        },
+        {
+          "passed": true,
+          "label": "Clear filters restores all apps"
+        },
+        {
+          "passed": true,
+          "label": "Tools category count"
+        },
+        {
+          "passed": true,
+          "label": "Game engines category contains only native engine ports"
+        },
+        {
+          "passed": true,
+          "label": "Unconfirmed-model filter preserves compatibility limits"
+        },
+        {
+          "passed": true,
+          "label": "Xbox One has only source-confirmed apps"
+        },
+        {
+          "passed": true,
+          "label": "Xbox One hides XBSX2 AVX2"
+        },
+        {
+          "passed": true,
+          "label": "Model filter excludes unconfirmed Dolphin successor"
+        },
+        {
+          "passed": true,
+          "label": "Xbox One gets RetroArch ANGLE"
+        },
+        {
+          "passed": true,
+          "label": "Series has only source-confirmed apps"
+        },
+        {
+          "passed": true,
+          "label": "Series hides XBSX2 SSE4"
+        },
+        {
+          "passed": true,
+          "label": "Series gets RetroArch Mesa"
+        },
+        {
+          "passed": true,
+          "label": "Filter touch targets at least 44px"
+        },
+        {
+          "passed": true,
+          "label": "Expanded filenames and SHA-256 do not overflow"
+        },
+        {
+          "passed": true,
+          "label": "Language loader and controls"
+        },
+        {
+          "passed": true,
+          "label": "Background controls"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 375,
+      "apps": 23,
+      "checks": [
+        {
+          "passed": true,
+          "label": "Exact requested viewport"
+        },
+        {
+          "passed": true,
+          "label": "No horizontal overflow"
+        },
+        {
+          "passed": true,
+          "label": "All 23 apps rendered"
+        },
+        {
+          "passed": true,
+          "label": "All local publisher artwork loaded"
+        },
+        {
+          "passed": true,
+          "label": "Search matches one app"
+        },
+        {
+          "passed": true,
+          "label": "Empty search feedback"
+        },
+        {
+          "passed": true,
+          "label": "Clear filters restores all apps"
+        },
+        {
+          "passed": true,
+          "label": "Tools category count"
+        },
+        {
+          "passed": true,
+          "label": "Game engines category contains only native engine ports"
+        },
+        {
+          "passed": true,
+          "label": "Unconfirmed-model filter preserves compatibility limits"
+        },
+        {
+          "passed": true,
+          "label": "Xbox One has only source-confirmed apps"
+        },
+        {
+          "passed": true,
+          "label": "Xbox One hides XBSX2 AVX2"
+        },
+        {
+          "passed": true,
+          "label": "Model filter excludes unconfirmed Dolphin successor"
+        },
+        {
+          "passed": true,
+          "label": "Xbox One gets RetroArch ANGLE"
+        },
+        {
+          "passed": true,
+          "label": "Series has only source-confirmed apps"
+        },
+        {
+          "passed": true,
+          "label": "Series hides XBSX2 SSE4"
+        },
+        {
+          "passed": true,
+          "label": "Series gets RetroArch Mesa"
+        },
+        {
+          "passed": true,
+          "label": "Filter touch targets at least 44px"
+        },
+        {
+          "passed": true,
+          "label": "Expanded filenames and SHA-256 do not overflow"
+        },
+        {
+          "passed": true,
+          "label": "Language loader and controls"
+        },
+        {
+          "passed": true,
+          "label": "Background controls"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "hardwareTested": false,
+  "downloadedBuildsExecuted": false
+}

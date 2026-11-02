@@ -1,0 +1,127 @@
+{
+  "scope": "wii-more",
+  "status": "complete locally; final inventory merged and organized archive index refreshed",
+  "updatedAt": "2026-11-02T08:59:58.496Z",
+  "canonicalPages": [
+    "console/retro/wii.html"
+  ],
+  "buildEntrypoints": [
+    "node scripts/build-wii-expansion.cjs"
+  ],
+  "catalogue": "docs/wii-more-catalog.json",
+  "privateInventory": "docs/wii-more-private-inventory.json",
+  "files": "docs/wii-more-files.json",
+  "preservedBase": "docs/wii-more-base-content.html",
+  "apps": [
+    {
+      "id": "wiimc",
+      "version": "1.3.4",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "cavestory",
+      "version": "1.0.1",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "supertux",
+      "version": "0.1.4-wii-d.07",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "snes9xgx",
+      "version": "5.0.4",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "not64",
+      "version": "2026-04-10",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "WiiSXRX",
+      "version": "3.3 Beta",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "helium",
+      "version": "0.1.1",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "wiixplorer",
+      "version": "r259",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "vbagx",
+      "version": "3.0.4",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "mgba",
+      "version": "0.10.5",
+      "format": "ZIP · native Wii DOL"
+    },
+    {
+      "id": "scummvm",
+      "version": "2026.1.0",
+      "format": "ZIP · native Wii ELF"
+    },
+    {
+      "id": "fceugx",
+      "version": "4.0.3",
+      "format": "ZIP · native Wii DOL"
+    }
+  ],
+  "downloadBytes": 117552459,
+  "verification": {
+    "report": "docs/wii-more-verification.json",
+    "packages": "docs/wii-more-package-verification.json",
+    "browser": "docs/wii-more-browser-qa.json",
+    "archivesMatched": 12,
+    "httpFilesMatched": 12,
+    "externalLinks": 52,
+    "inaccessibleLinks": [],
+    "preservedURLs": 28,
+    "localLinks": 82,
+    "browserChecks": 60,
+    "browserFailures": [],
+    "physicalHardwareTested": false,
+    "downloadedBuildsExecuted": false
+  },
+  "screenshots": [
+    "docs/screenshots/wii-more-desktop.png",
+    "docs/screenshots/wii-more-tablet.png",
+    "docs/screenshots/wii-more-mobile.png",
+    "docs/screenshots/wii-more-mobile-details.png"
+  ],
+  "constraints": [
+    "No commit, publish, deployment, worktree or videos.",
+    "Only Wii page/new scoped files changed; broad console and Retro builders were not run.",
+    "Mobile/background/languages i18n?v=3 integration retained."
+  ],
+  "compatibilityNotes": [
+    "Cave Story 1.0.1 contains sd:/cavestory paths. Copy apps/cavestory AND root cavestory to SD. Mini excluded despite OSC label.",
+    "Helium Boy0.1.1 USB support unconfirmed; SD path retained and Mini excluded.",
+    "ScummVM OSC2026.1.0 is pinned and older than upstream; native executable is boot.elf with matched plugins.",
+    "WiiSXRX3.3Beta is FS build without CDDA."
+  ],
+  "preview": {
+    "shared": "http://127.0.0.1:8765/console/retro/wii.html",
+    "qaUsed": "http://127.0.0.1:8766/console/retro/wii.html",
+    "note": "Shared8765 returned ERR_EMPTY_RESPONSE during final QA. Temporary8766 used for passing final checks.",
+    "temporaryServerStopped": true
+  },
+  "coordinatorNextSteps": [
+    "Use scoped builder after any older broad Nintendo builder that writes Wii. Preserve existing immutable console receivers.",
+    "Keep all twelve old archived packages when adding newer versions."
+  ],
+  "regeneration": {
+    "page": "node scripts/build-wii-expansion.cjs",
+    "catalogue": "node scripts/prepare-wii-more.cjs --catalog (requires scoped staging and matching verified/archived package metadata)",
+    "intake": "node scripts/prepare-wii-more.cjs --metadata --download, then --archive with normal F: escalation; never executes builds",
+    "verification": "node scripts/verify-wii-more.cjs --http --links and node scripts/qa-wii-more.cjs; WII_PREVIEW_BASE overrides localhost8765"
+  },
+  "inventoryFinalization": "docs/wii-more-inventory-finalization.json"
+}

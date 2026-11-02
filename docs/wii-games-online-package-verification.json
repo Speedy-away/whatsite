@@ -1,0 +1,1567 @@
+{
+  "records": [
+    {
+      "id": "riivolution-mini",
+      "filename": "riivolution-mini-v1.07.zip",
+      "bytes": 2139803,
+      "sha256": "d3d6fe4609857db21c82fb2de80e51b926f141b5ded4f0df6dc614ccd3c28f25",
+      "crcPassed": true,
+      "entryCount": 4,
+      "uncompressedBytes": 2142672,
+      "roots": [
+        "apps"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/riivolution-mini/boot.elf",
+          "format": "ELF32 big-endian PowerPC",
+          "headerPassed": true,
+          "entryPoint": "0x80d4cd00",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 768,
+              "address": "0x80003400",
+              "bytes": 320,
+              "memoryBytes": 320
+            },
+            {
+              "kind": "text",
+              "offset": 1280,
+              "address": "0x80d4cd00",
+              "bytes": 2016,
+              "memoryBytes": 2016
+            },
+            {
+              "kind": "text",
+              "offset": 3328,
+              "address": "0x80d4d4e0",
+              "bytes": 2129184,
+              "memoryBytes": 2129184
+            }
+          ],
+          "bytes": 2132532,
+          "sha256": "510f96f4268145d6113734838518a9788fe0b36602bec5f7d15ae3dd1744c0eb"
+        }
+      ],
+      "patchXml": [],
+      "readmes": {
+        "apps/riivolution-mini/readme.txt": "Riivolution v1.07\r\nby Aaron, tueidj, Tempus, and megazig\r\nriivolution@japaneatahand.com\r\n\r\nHomepage: https://aerialx.github.io/rvlution.net/wiki/Riivolution\r\nDownload: https://aerialx.github.io/rvlution.net/riivolution.zip\r\n\r\nRiivolution is an on-the-fly game patcher for use with retail discs. It allows users to place content on their SD or USB devices, which will be read by the game during regular play.\r\nRiivolution can be used for custom textures, music, levels, memory patches, game translations, and more.\r\n\r\nMini-FAQ - Updated online version: https://aerialx.github.io/rvlution.net/wiki/FAQ\r\n\r\nQ: Does Riivolution work with my \"backups\" or USB loaders?\r\nA: No. And that's not a bug.\r\n\r\nQ: Does Riivolution work with my PAL/NTSC/JAP Wii/game?\r\nA: Yes.\r\n\r\nQ: Does Riivolution work on my Wii U?\r\nA: It does now! In vWii mode (it does not work with Wii U games) Riivolution can be run or installed through Smash Stack, other game exploits, or the Homebrew Channel if it's already installed.\r\n\r\nQ: What IOS does it need installed?\r\nA: Riivolution requires an updated IOS37; if you're on System Menu 4.2 or 4.3 you don't need to do anything.\r\n   If it's not installed or the proper version it will be installed the first time Riivolution is run.\r\n   Alternatively, you can also use NUSD or DOP-IOS to install it - with all patches disabled.\r\n\r\nQ: Does Riivolution work with Game X?\r\nA: I probably haven't played it, but yes, it should; try it. If it doesn't work, report it - some games known to reload IOS will require specific patches to work.\r\n   Games that have specifically been tested include Fatal Frame 4, Super Smash Bros. Brawl, New Super Mario Bros. Wii, Rock Band, among others.\r\n\r\nQ: What does the \"Install\" button do?\r\nA: It will install a Riivolution channel onto your System Menu for easy access. This can always be uninstalled.\r\n\r\nQ: Can I use Ocarina / Gecko codes with it?\r\nA: Normally, Riivolution just supports direct memory patches. However, Riivolution supports a patching method that can be used with the Gecko OS code handler.\r\n   Read more about that here: https://aerialx.github.io/rvlution.net/wiki/Ocarina_Codes\r\n\r\nQ: Uhh, how do I use this?\r\nA: As a user, you need to either download patch packages made by someone else or make your own.\r\n   A basic template and packages for common games can be found here: https://aerialx.github.io/rvlution.net/wiki/Patch_Templates\r\n   For a more detailed explanation about Riivolution's patch XML files, check out the instructions: https://aerialx.github.io/rvlution.net/wiki/Patch_Format\r\n\r\nQ: Network support? Awesome, how do I use it?\r\nA: Read more about all of Riivolution's network features here: https://aerialx.github.io/rvlution.net/wiki/Network\r\n   You can also check out our list of all the known public Riivolution servers: https://aerialx.github.io/rvlution.net/wiki/List_of_RiiFS_servers\r\n\r\nQ: Can I see it in action?\r\nA: Sure. https://aerialx.github.io/rvlution.net/wiki/Media\r\n\r\nSpecial thanks to everyone that contributed: Treeki, Omega, Pop006, TobiasAmaranth, Mooseknuckle2000, Skawo, and everyone else who helped out!\r\n\r\n\r\nChangelog\r\n\r\nv1.07\r\nDecember XXth, 20XX\r\n - ???\r\n\r\nv1.06\r\nDecember 18th, 2013\r\n - Wiimote disconnection issues resolved (Smash Bros. Brawl strap screen crash)\r\n\r\nv1.05\r\nJune 10th, 2013\r\n - Wii U (Virtual Wii Menu) is now supported\r\n - New Wii Remote Plus remotes are now properly supported\r\n\r\nv1.04\r\nSeptember 16th, 2010\r\n - System Menu 4.3v2 compatibility (September 8th, 2010 update)\r\n - New savefile redirection feature\r\n - This update provides behind-the-scenes fixes that will not affect features but will improve the overall system performance.\r\n\r\nv1.03\r\nJune 22nd, 2010\r\n - System Menu 4.3 compatibility\r\n - Wii slot light filesystem indicator\r\n - Stability fixes for all filesystems\r\n - Files close after a few seconds to allow them to be replaced over RiiFS\r\n - Improved channel install\r\n - RiiFS improvements\r\n    - Native C++ Server\r\n    - Connects automatically on a LAN without needing SD/USB\r\n\r\nv1.02\r\nMarch 28th, 2010\r\n - Disc file addition\r\n - More memory patch improvements\r\n - Network hostname lookups\r\n - Network stability improvements\r\n - Games will now connect to the network alongside Riivolution/RiiFS\r\n - Foreign character support in XMLs (Latin-1)\r\n\r\nv1.01\r\nMarch 22nd, 2010\r\n - Memory patch improvements\r\n - Mounted disk improvements\r\n - Added network support\r\n\r\nv1.0\r\nMarch 20th, 2010\r\n - Inital release\r\n"
+      },
+      "image": {
+        "path": "/assets/images/wii-games-online/riivolution-mini.png",
+        "credit": "Riivolution for Wii Mini project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://hbb1.oscwii.org/api/contents/riivolution-mini/riivolution-mini.zip",
+        "sha256": "bb96b657e47a48f22f97eb81bee735950a2d988867451797dc35682501620339"
+      },
+      "format": "ZIP \u00b7 Wii homebrew"
+    },
+    {
+      "id": "wiilink-account-linker",
+      "filename": "wiilink-account-linker-v2.1.0.zip",
+      "bytes": 1328780,
+      "sha256": "5b3552d2b6a236fff130aa039a10e036af840b2242a4b6ed80f8f24534697f1e",
+      "crcPassed": true,
+      "entryCount": 3,
+      "uncompressedBytes": 2759882,
+      "roots": [
+        "apps"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/wiilink-account-linker/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80004000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80004000",
+              "bytes": 1995392
+            },
+            {
+              "kind": "data",
+              "offset": 1995648,
+              "address": "0x801eb280",
+              "bytes": 752992
+            }
+          ],
+          "bytes": 2748640,
+          "sha256": "1b9ac3cf5e0444c13c3e4be4ffa1b6871391070d132f320cf6272654f9e28c4e"
+        }
+      ],
+      "patchXml": [],
+      "readmes": {},
+      "image": {
+        "path": "/assets/images/wii-games-online/wiilink-account-linker.png",
+        "credit": "WiiLink Account Linker project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://hbb1.oscwii.org/api/contents/wiilink-account-linker/wiilink-account-linker.zip",
+        "sha256": "8d22ce375012efcbf39b173d13519fdabc606ab7f5b6c67b5339123cb0dc7dcd"
+      },
+      "format": "ZIP \u00b7 Wii homebrew"
+    },
+    {
+      "id": "wiimmfipatcher",
+      "filename": "wiimmfipatcher-v0.7.5.zip",
+      "bytes": 294461,
+      "sha256": "ba4569ac6de619d4501684d49345d305a465a22caacbea58d2f0c795c266d582",
+      "crcPassed": true,
+      "entryCount": 5,
+      "uncompressedBytes": 571582,
+      "roots": [
+        "apps",
+        "readme.txt"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/wiimmfipatcher/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80a00000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80a00000",
+              "bytes": 378816
+            },
+            {
+              "kind": "data",
+              "offset": 379072,
+              "address": "0x80a5c7c0",
+              "bytes": 142304
+            }
+          ],
+          "bytes": 521376,
+          "sha256": "9bc07bb1b6e17b382a55dca0ef0bd109518a32a81d21cce41d9877c5d40cc076"
+        }
+      ],
+      "patchXml": [],
+      "readmes": {
+        "readme.txt": "Instructions:\r\n\r\nThe \"apps\" folder you see in this archive needs to go onto your SD root. You need a Homebrew Channel installed on your Wii for this to all work.\r\n\r\nWhen you copy the folders correctly to the SD card, a new application will appear in the Homebrew Channel called \"Wiimmfi Patcher\".\r\n\r\nWhen you run it, all you must do is insert a disc and wait, and it will attempt to automatically patch your game, and then run it.\r\n\r\nOnce your game is running, simply try to connect to Nintendo WFC. If you get error codes, check https://wiimmfi.de/error to find out why. Error Code 60000 means you need a new friend code. \r\n\r\nNaturally, all patches are temporary, as the Wii can't write data to a disc. But it's suprising how many people think it can... So you must run this every time you wish to play on Wiimmfi.\r\n\r\nReport problems with the app to MrBean35000vr or Leseratte.\r\n\r\n\r\nCHANGELOG\r\n\r\nv0.7.5\r\n\r\n- Fixes another bug breaking 3+ player matchmaking in lots of games.\r\n- (Version 0.7.4 was skipped to make sure that version numbers of this Disc patcher\r\n  and the corresponding ISO patcher are identical (0.7.5 / v7.5)).\r\n\r\nv0.7.3\r\n\r\n- Fixes another bug that broke matchmaking in a bunch of other games, including Conduit 2, \r\n  GTI Club Supermini Festa, NBA 2k10, NHL 2K10, PES 2010, PES 2011, Sonic & SEGA All-Stars Racing, \r\n  Sports Island 3, Tetris Party Deluxe, Tom Clancy's Ghost Recon, Trackmania and Worms Battle Islands.\r\n\r\nv0.7.2\r\n\r\n- Fixes another bug that broke matchmaking in some other games, including Tatsunoko vs Capcom\r\n\r\nv0.7.1\r\n\r\n- Fixes a bug that broke matchmaking in a bunch of games, including friend matching in Mario Sports Mix. \r\n\r\nv0.7\r\n\r\n- Adds support for the new security updates for games other than Mario Kart Wii.\r\n- Makes all games run under the proper IOS (if available), which should fix USB problems in certain games.\r\n- Adds UPnP support for Mario Kart Wii (all regions), SSBB (PAL and USA) and Animal Crossing (PAL and USA).\r\n- Fix stupid 51420 error for Mario Kart Wii.\r\n- Fix error where some out-of-region games wouldn't start properly.\r\n- Games that still have their official server but which currently return error code 23400\r\n  (CoD: Black Ops, CoD: Modern Warfare Reflex, CoD: Modern Warfare 3, Rock Band 3, The Beatles: Rock Band)\r\n  will have that error 23400 fixed (but are obviously still running over their original servers instead of Wiimmfi).\r\n  Thanks to InvoxiPlayGames for creating these patches.\r\n- CoD: World At War works again, using a proxy server operated by InvoxiPlayGames. \r\n  Note: This causes user data to be sent both to InvoxiPlayGames' server, and to the original Demonware game servers. \r\n  The Wiimmfi team is not responsible for anything that happens on any Call of Duty or Rock Band game servers.\r\n- Fixes a bug where Mario Kart Wii started through this patcher wouldn't be able to set / enable\r\n  competition downloads through WiiConnect24.\r\n- Fixes a bug where the patcher would freeze if you inserted the game disc incorrectly (label side down). Yeah ...\r\n- Improves the disc reading logic / code so it should hang less often with unreliable disc drives.\r\n\r\nv0.6\r\n\r\n- Adds support for the new Wiimmfi patching service for Mario Kart Wii.\r\n\r\nv0.5\r\n\r\n- Removes Gamestats skip code, it's no longer required.\r\n- Fixes a bug where not all strings in Mario Kart Wii would correctly patch!\r\n- Inserts a call that resets the wireless before booting. This makes it work from FlashHax.\r\n- Removed all dependencies on files on the SD card! Other than itself, of course.\r\n\r\nv0.4\r\n\r\n- Animal Crossing no longer runs horrendously slow.\r\n- Mario Strikers Charged (USA/PAL) now have an inbuilt Gamestats skip code to bypass the missing server (fix Error 98020).\r\n\r\n\r\nv0.3\r\n\r\n- Now a standalone app.\r\n- Even better compatability with games.\r\n- Super Smash Bros. Brawl no longer runs horrendously slow.\r\n\r\n\r\nv0.2\r\n\r\n- Changed patching method to fix the problems of v0.1.\r\n- Improved compatability with games that aren't Mario Kart.\r\n\r\n\r\nv0.1\r\n\r\n- Initial version.\r\n- Uses BrainSlug.\r\n- Patching method not very robust yet.\r\n"
+      },
+      "image": {
+        "path": "/assets/images/wii-games-online/wiimmfipatcher.png",
+        "credit": "Wiimmfi Patcher project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://hbb1.oscwii.org/api/contents/wiimmfipatcher/wiimmfipatcher.zip",
+        "sha256": "8c1470a887742b889677b044708efaaf469f380095705474d262435887c54b2f"
+      },
+      "format": "ZIP \u00b7 Wii homebrew"
+    },
+    {
+      "id": "riivolution",
+      "filename": "riivolution-v1.06.zip",
+      "bytes": 1990601,
+      "sha256": "74f4014cdd490cbb18c77f5b1d75fd01ec6a7d7a2bd9e9127ce977ef0416243f",
+      "crcPassed": true,
+      "entryCount": 4,
+      "uncompressedBytes": 1993268,
+      "roots": [
+        "apps"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/riivolution/boot.elf",
+          "format": "ELF32 big-endian PowerPC",
+          "headerPassed": true,
+          "entryPoint": "0x80d13040",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 768,
+              "address": "0x80003400",
+              "bytes": 320,
+              "memoryBytes": 320
+            },
+            {
+              "kind": "text",
+              "offset": 1280,
+              "address": "0x80d13040",
+              "bytes": 2016,
+              "memoryBytes": 2016
+            },
+            {
+              "kind": "text",
+              "offset": 3328,
+              "address": "0x80d13820",
+              "bytes": 1980000,
+              "memoryBytes": 1980000
+            }
+          ],
+          "bytes": 1983348,
+          "sha256": "fb35c678f7f72643fe6089263aa5085565ca4c612037b6ddda283db75dd3a951"
+        }
+      ],
+      "patchXml": [
+        {
+          "path": "apps/riivolution/meta.xml",
+          "root": "app",
+          "discs": [],
+          "regions": [],
+          "folders": [],
+          "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<app version=\"1.0\">\n\t<name>Riivolution</name>\n\t<coder>Aaron tueidj Tempus megazig</coder>\n\t<version>v1.06</version>\n\t<release_date>20131218120000</release_date>\n\t<short_description>Riivolution Patcher</short_description>\n\t<long_description>Riivolution is an on-the-fly game patcher for use with retail discs. It allows users to place content on their SD or USB devices, which will be read by the game during regular play. Riivolution can be used for custom textures, music, levels, memory patches, game translations, and more.\n\nRiivolution requires valid game content and an XML file to apply changes to games.\n\nhttp://rvlution.net/riivolution</long_description>\n<no_ios_reload/>\n</app>\n"
+        }
+      ],
+      "readmes": {
+        "apps/riivolution/readme.txt": "Riivolution v1.06\r\nDecember 18th, 2013\r\nby Aaron, tueidj, Tempus, and megazig\r\nriivolution@japaneatahand.com\r\n\r\nHomepage: http://rvlution.net/riivolution\r\nDownload: http://rvlution.net/riivolution.zip\r\n\r\nRiivolution is an on-the-fly game patcher for use with retail discs. It allows users to place content on their SD or USB devices, which will be read by the game during regular play.\r\nRiivolution can be used for custom textures, music, levels, memory patches, game translations, and more.\r\n\r\nMini-FAQ - Updated online version: http://rvlution.net/riiv/FAQ\r\n\r\nQ: Does Riivolution work with my \"backups\" or USB loaders?\r\nA: No. And that's not a bug.\r\n\r\nQ: Does Riivolution work with my PAL/NTSC/JAP Wii/game?\r\nA: Yes.\r\n\r\nQ: Does Riivolution work on my Wii U?\r\nA: It does now! In vWii mode (it does not work with Wii U games) Riivolution can be run or installed through Smash Stack, other game exploits, or the Homebrew Channel if it's already installed.\r\n\r\nQ: What IOS does it need installed?\r\nA: Riivolution requires an updated IOS37; if you're on System Menu 4.2 or 4.3 you don't need to do anything.\r\n   If it's not installed or the proper version it will be installed the first time Riivolution is run.\r\n   Alternatively, you can also use NUSD or DOP-IOS to install it - with all patches disabled.\r\n\r\nQ: Does Riivolution work with Game X?\r\nA: I probably haven't played it, but yes, it should; try it. If it doesn't work, report it - some games known to reload IOS will require specific patches to work.\r\n   Games that have specifically been tested include Fatal Frame 4, Super Smash Bros. Brawl, New Super Mario Bros. Wii, Rock Band, among others.\r\n\r\nQ: What does the \"Install\" button do?\r\nA: It will install a Riivolution channel onto your System Menu for easy access. This can always be uninstalled.\r\n\r\nQ: Can I use Ocarina / Gecko codes with it?\r\nA: Normally, Riivolution just supports direct memory patches. However, Riivolution supports a patching method that can be used with the Gecko OS code handler.\r\n   Read more about that here: http://rvlution.net/riiv/Ocarina_Codes\r\n\r\nQ: Uhh, how do I use this?\r\nA: As a user, you need to either download patch packages made by someone else or make your own.\r\n   A basic template and packages for common games can be found here: http://rvlution.net/riiv/Patch_Templates\r\n   For a more detailed explanation about Riivolution's patch XML files, check out the instructions: http://rvlution.net/riiv/Patch_Format\r\n\r\nQ: Network support? Awesome, how do I use it?\r\nA: Read more about all of Riivolution's network features here: http://rvlution.net/riiv/Network\r\n   You can also check out our list of all the known public Riivolution servers: http://rvlution.net/riiv/List_of_RiiFS_servers\r\n\r\nQ: Can I see it in action?\r\nA: Sure. http://rvlution.net/riiv/Media\r\n\r\nSpecial thanks to everyone that contributed: Treeki, Omega, Pop006, TobiasAmaranth, Mooseknuckle2000, Skawo, and everyone else who helped out!\r\n\r\n\r\nChangelog\r\n\r\nv1.06\r\nDecember 18th, 2013\r\n - Wiimote disconnection issues resolved (Smash Bros. Brawl strap screen crash)\r\n\r\nv1.05\r\nJune 10th, 2013\r\n - Wii U (Virtual Wii Menu) is now supported\r\n - New Wii Remote Plus remotes are now properly supported\r\n\r\nv1.04\r\nSeptember 16th, 2010\r\n - System Menu 4.3v2 compatibility (September 8th, 2010 update)\r\n - New savefile redirection feature\r\n - This update provides behind-the-scenes fixes that will not affect features but will improve the overall system performance.\r\n\r\nv1.03\r\nJune 22nd, 2010\r\n - System Menu 4.3 compatibility\r\n - Wii slot light filesystem indicator\r\n - Stability fixes for all filesystems\r\n - Files close after a few seconds to allow them to be replaced over RiiFS\r\n - Improved channel install\r\n - RiiFS improvements\r\n    - Native C++ Server\r\n    - Connects automatically on a LAN without needing SD/USB\r\n\r\nv1.02\r\nMarch 28th, 2010\r\n - Disc file addition\r\n - More memory patch improvements\r\n - Network hostname lookups\r\n - Network stability improvements\r\n - Games will now connect to the network alongside Riivolution/RiiFS\r\n - Foreign character support in XMLs (Latin-1)\r\n\r\nv1.01\r\nMarch 22nd, 2010\r\n - Memory patch improvements\r\n - Mounted disk improvements\r\n - Added network support\r\n\r\nv1.0\r\nMarch 20th, 2010\r\n - Inital release\r\n"
+      },
+      "image": {
+        "path": "/assets/images/wii-games-online/riivolution.png",
+        "credit": "Riivolution project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://hbb1.oscwii.org/api/contents/riivolution/riivolution.zip",
+        "sha256": "bb96b657e47a48f22f97eb81bee735950a2d988867451797dc35682501620339"
+      },
+      "format": "ZIP \u00b7 Wii homebrew"
+    },
+    {
+      "id": "mail-patcher",
+      "filename": "Mail-Patcher-2.2.2.zip",
+      "bytes": 587887,
+      "sha256": "595bc899eb02d76851e9ab1c19b4c975fda4aba32486144a980f156f626e6aca",
+      "crcPassed": true,
+      "entryCount": 3,
+      "uncompressedBytes": 1258793,
+      "roots": [
+        "apps"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/Mail-Patcher/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80004000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80004000",
+              "bytes": 906688
+            },
+            {
+              "kind": "data",
+              "offset": 906944,
+              "address": "0x800e15c0",
+              "bytes": 344608
+            }
+          ],
+          "bytes": 1251552,
+          "sha256": "81d3fcacb34f4a1ea321c7eed160fd05ba48cffa40a06f8cdca2e8f8ff8d27fa"
+        }
+      ],
+      "patchXml": [],
+      "readmes": {},
+      "image": {
+        "path": "/assets/images/wii-games-online/mail-patcher.png",
+        "credit": "WiiLink Mail Patcher project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://hbb1.oscwii.org/api/contents/Mail-Patcher/Mail-Patcher.zip",
+        "sha256": "600f9a22608e156662a463b19d8fa621e12a22e9885d362f096aa439822dbe20"
+      },
+      "format": "ZIP \u00b7 Wii homebrew"
+    },
+    {
+      "id": "wiilink-wfc-patcher",
+      "filename": "WiiLink-WFC-Patcher-0.7.zip",
+      "bytes": 226239,
+      "sha256": "348007ae80cd98ccc8e7b45a92c48103378dc094ed8049ae1044ddf22eefccc8",
+      "crcPassed": true,
+      "entryCount": 3,
+      "uncompressedBytes": 451311,
+      "roots": [
+        "apps"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/WiiLink-WFC-Patcher/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80004000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80004000",
+              "bytes": 325088
+            },
+            {
+              "kind": "data",
+              "offset": 325376,
+              "address": "0x800535e0",
+              "bytes": 122592
+            }
+          ],
+          "bytes": 447968,
+          "sha256": "c9dcb1fb21efe7f3d2a6827e1c40d62d1cd0ecd1579144e8aa90a252142502aa"
+        }
+      ],
+      "patchXml": [],
+      "readmes": {},
+      "image": {
+        "path": "/assets/images/wii-games-online/wiilink-wfc-patcher.png",
+        "credit": "WiiLink WFC Patcher project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://hbb1.oscwii.org/api/contents/WiiLink-WFC-Patcher/WiiLink-WFC-Patcher.zip",
+        "sha256": "625428aebeb0f56bfab652f057b5e6e472b16acf021d16ec244f49b468f8b559"
+      },
+      "format": "ZIP \u00b7 Wii homebrew"
+    },
+    {
+      "id": "wiilink-desktop",
+      "filename": "WiiLinkPatcher_Windows-x64_v300.exe",
+      "bytes": 12725427,
+      "sha256": "fd2ef171f83db0375ea28c040c11a0168756f08f64bc4c5fd28e5b821f10d4e8",
+      "format": "PE x64 \u00b7 Windows helper"
+    },
+    {
+      "id": "ctgp-revolution",
+      "filename": "ctgp-revolution.zip",
+      "bytes": 1003926952,
+      "sha256": "98426d1bfdb20620b0b7c027fb392a281810dd6d27ae964b62cbf02a7de2be89",
+      "crcPassed": true,
+      "entryCount": 22,
+      "uncompressedBytes": 1009879363,
+      "roots": [
+        "apps",
+        "boot.elf",
+        "ctgpr",
+        "licenses.txt",
+        "readme.txt",
+        "riivolution"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/ctgpr/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80007a30",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80004000",
+              "bytes": 108096
+            },
+            {
+              "kind": "data",
+              "offset": 108352,
+              "address": "0x8001e640",
+              "bytes": 175200
+            }
+          ],
+          "bytes": 283552,
+          "sha256": "b4c6ba27bc22813ecad686e918e5dafe9cd2ce8afa84427aa60dd865d2fe4556"
+        }
+      ],
+      "patchXml": [
+        {
+          "path": "riivolution/mkwiiriivoslottest.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "RMC",
+              "disc": "0",
+              "version": "0"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            }
+          ],
+          "folders": [],
+          "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wiidisc version=\"1\">\r\n  <id game=\"RMC\" disc=\"0\" version=\"0\">\r\n    <region type=\"P\"/>\r\n\r\n  </id>\r\n  <options>\r\n    \r\n\r\n    <section name=\"CTGP Settings\">\r\n\r\n      <option id=\"CTs\" name=\"CTGP Revolution Channel\" default=\"1\">\r\n        <choice name=\"Enabled!\">\r\n          <patch id=\"CTsFTW\" />\r\n        </choice>\r\n      </option>\r\n\r\n      <option name=\"Copy MKW save to SD card?\" default=\"1\">\r\n\t<choice name=\"Enabled\">\r\n  \t   <patch id=\"redirectsave\" /> \r\n  \t</choice>\r\n      </option>\r\n\r\n      </section>\r\n</options>\r\n\r\n\r\n\r\n  <patch id=\"CTsFTW\">\r\n   \r\n   <file disc=\"main.dol\" external=\"/apps/ctgpr/boot.dol\" />\r\n  \r\n\r\n  </patch>\r\n\r\n\r\n  <patch id=\"redirectsave\"> \r\n     <savegame clone=\"true\" external=\"/riivolution/save/{$__gameid}{$__region}\"/> \r\n  </patch>\r\n\r\n\r\n\r\n\r\n  \r\n\r\n\r\n</wiidisc>"
+        },
+        {
+          "path": "riivolution/mkwiiriivoslottestnstcj.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "RMC",
+              "disc": "0",
+              "version": "0"
+            }
+          ],
+          "regions": [
+            {
+              "type": "J"
+            }
+          ],
+          "folders": [],
+          "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wiidisc version=\"1\">\r\n  <id game=\"RMC\" disc=\"0\" version=\"0\">\r\n\t<region type=\"J\"/>\r\n\r\n  </id>\r\n  <options>\r\n    \r\n\r\n     <section name=\"CTGP Settings\">\r\n\r\n      <option id=\"CTs\" name=\"CTGP Revolution Channel\" default=\"1\">\r\n        <choice name=\"Enabled!\">\r\n          <patch id=\"CTsFTW\" />\r\n        </choice>\r\n      </option>\r\n\r\n      <option name=\"Copy MKW save to SD card?\" default=\"1\">\r\n\t<choice name=\"Enabled\">\r\n  \t   <patch id=\"redirectsave\" /> \r\n  \t</choice>\r\n      </option>\r\n\r\n\r\n    </section>\r\n  \r\n</options>\r\n\r\n\r\n  <patch id=\"CTsFTW\">\r\n   \r\n   <file disc=\"main.dol\" external=\"/apps/ctgpr/boot.dol\" />\r\n  \r\n\r\n  </patch>\r\n\r\n\r\n  <patch id=\"redirectsave\"> \r\n     <savegame clone=\"true\" external=\"/riivolution/save/{$__gameid}{$__region}\"/> \r\n  </patch>\r\n\r\n\r\n\r\n\r\n  \r\n\r\n\r\n</wiidisc>"
+        },
+        {
+          "path": "riivolution/mkwiiriivoslottestnstcu.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "RMC",
+              "disc": "0",
+              "version": "0"
+            }
+          ],
+          "regions": [
+            {
+              "type": "E"
+            }
+          ],
+          "folders": [],
+          "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wiidisc version=\"1\">\r\n  <id game=\"RMC\" disc=\"0\" version=\"0\">\r\n    <region type=\"E\"/>\r\n\r\n  </id>\r\n  <options>\r\n    \r\n\r\n    <section name=\"CTGP Settings\">\r\n\r\n      <option id=\"CTs\" name=\"CTGP Revolution Channel\" default=\"1\">\r\n        <choice name=\"Enabled!\">\r\n          <patch id=\"CTsFTW\" />\r\n        </choice>\r\n      </option>\r\n\r\n      <option name=\"Copy MKW save to SD card?\" default=\"1\">\r\n\t<choice name=\"Enabled\">\r\n  \t   <patch id=\"redirectsave\" /> \r\n  \t</choice>\r\n      </option>\r\n\r\n\r\n      </section>\r\n</options>\r\n\r\n\r\n\r\n  <patch id=\"CTsFTW\">\r\n   \r\n   <file disc=\"main.dol\" external=\"/apps/ctgpr/boot.dol\" />\r\n  \r\n\r\n  </patch>\r\n\r\n\r\n  <patch id=\"redirectsave\"> \r\n     <savegame clone=\"true\" external=\"/riivolution/save/{$__gameid}{$__region}\"/> \r\n  </patch>\r\n\r\n\r\n\r\n\r\n  \r\n\r\n\r\n</wiidisc>"
+        }
+      ],
+      "readmes": {
+        "readme.txt": "Welcome to CTGP Revolution!\r\n\r\nTo make everything lovely and wonderful, extract the contents of this ZIP archive to the root of your SD card. Let everything merge and replace if it asks to. You also need to have a real Mario Kart Wii disc. Currently PAL (Europe/Australia), NTSC-U (America) and NTSC-J (Japan) discs are supported.\r\n\r\nTo launch CTGP Revolution, you must go via the CTGP Revolution Channel. To load the CTGP Revolution Channel, you have a few options.\r\n\r\nIf you already have a CTGP Revolution Channel, just launch that after extracting the files to the SD card.\r\n\r\nIf you have a Homebrew Channel, go in there and there will be a new Homebrew app waiting for you. Launch that and you are good to go.\r\n\r\nIf you had v1.02, or have Riivolution, you can use Riivolution to make the channel load. Assuming you have merged correctly, simply load Riivolution, set \"CTGP Revolution Channel\" to Enabled and then click Launch Game.\r\n\r\nIf you're a newcomer or without Homebrew, you will need to use Letterbomb/Bannerbomb/Smash Stack to make the channel manifest.\r\n\r\nOnce the Channel is running, it will explain the rest of the steps to you. When all is installed, simply click Launch Game on the CTGP Revolution Channel to make everything begin!\r\n\r\nThose with My Stuff folders, they now reside at /ctgpr/My Stuff. If you have v1.02 on the SD card, the channel will move your My Stuff for you to the new location, or you can put it there yourself. \r\n\r\nSimilarly, if you don't have a My Stuff folder, feel free to create one at /ctgpr/My Stuff. Right now, the Channel does not do that automatically.\r\n\r\nAnd you can add music to the CTGP-R Channel by dropping MP3 files in /ctgpr/ChannelMusic.\r\n\r\nWiimmfi is automatically built in to the CTGP-R Channel. Using Wiimmfi, you can play online after Nintendo WFC shutdown, on both custom tracks, and on regular tracks.\r\n\r\nIf you run into trouble, more detailed instructions are available at http://chadsoft.co.uk/\r\n\r\nHave fun!\r\n\r\n\r\n\r\nCommon problems and solutions:\r\n\r\nIf you can't install the CTGP Revolution Channel to the Wii menu, try removing the batteries from your Wii Remote as the installer begins, or if that fails, updating your Wii console.\r\n\r\nIf you find that your save data goes missing after running the CTGP, simply go into the Settings and turn \"Save game on SD card\" off.\r\n\r\nIf the CTGP Revolution Channel constantly declares \"Please insert an SD card\" even if there is one inserted, try running it via the Homebrew Channel instead of Riivolution.\r\n\r\nIf the CTGP Revolution Channel says the SD card has been ejected when you try to launch the game, please go to the Settings Menu, go to More Settings, and set SD Compatability Mode to ON.\r\n\r\nIf an update fails to download, feel free to get it from the Chadsoft website: http://www.chadsoft.co.uk/\r\n\r\nIf you don't have a \"My Stuff\" folder in /ctgpr/ when everything is done installing, make it yourself, the channel will know how to use it.\r\n\r\nIf the Channel always says \"Note: CTWW is disabled\" when you try to launch game, and you wish to play CTWW, please go to the Settings and set \"Automatic Updates\" to either \"On\" or \"Verify Only\".\r\n\r\nIf you get stuck in a loop where updates don't appear to be completing (getting to a certain percentage, throwing an error, then trying again over and over), delete the CTGP files from the SD card and download it again.\r\n\r\nIf the channel says \"Could not load CTGP-R. Your pack may be corrupted.\", put your SD in your computer, go into the ctgpr folder, and delete the file \"jelly.bin\". This normally solves the problem. If that doesn't work, redownload the pack.\r\n\r\nIf you get an \"Exception (DSI) occurred!\", try reloading to see if it goes away.\r\n\r\nIf you wish to use ghost data from your save file with CTGP, start the game with Custom Tracks off. Go to the Mario Kart Channel, go to Rankings, select a track, then select your Mii on the screen. When it shows your ghost data, it has been successfully copied to the SD card, and can then be used with CTGP. Please note that times dumped in this manner cannot be sent to the CTGP leaderboards, to prevent hacked times.\r\n\r\nIf there's any other problem not listed here, please contact MrBean35000vr!"
+      },
+      "image": {
+        "path": "/assets/images/wii-games-online/ctgp-revolution.png",
+        "credit": "CTGP Revolution project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://mega.nz/file/Ae4xWKaY#guxkfuaYnaAof5awsJxje0N_qsRO-fjKwRJ9BkA3vYc",
+        "sha256": "07b900603c8bae6062dffcc55c49b239876e120f8e7768ed8eee378aefbf85ee"
+      },
+      "format": "ZIP \u00b7 mod data + Wii launcher"
+    },
+    {
+      "id": "newer-smbw",
+      "filename": "newer-smbw.zip",
+      "bytes": 496257877,
+      "sha256": "948336a3a111de3094452abbe0c11f702544b1db325c010561c0c3242d088220",
+      "publisherMd5": "bc1edbf1782d5004e13d69826e28af58",
+      "publisherMd5Matched": true,
+      "crcPassed": true,
+      "entryCount": 1052,
+      "uncompressedBytes": 586268934,
+      "roots": [
+        "Install instructions.url",
+        "NewerSMBW",
+        "riivolution"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/NewerSMBW.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SMN"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            },
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "K"
+            },
+            {
+              "type": "W"
+            }
+          ],
+          "folders": [
+            {
+              "external": "Tilesets",
+              "disc": "/Stage/Texture",
+              "create": "true"
+            },
+            {
+              "external": "TitleReplay",
+              "disc": "/Replay/title",
+              "create": "true"
+            },
+            {
+              "external": "BGs",
+              "disc": "/Object",
+              "create": "true"
+            },
+            {
+              "external": "SpriteTex",
+              "disc": "/Object",
+              "create": "true"
+            },
+            {
+              "external": "Layouts",
+              "disc": "/Layout",
+              "create": "true"
+            },
+            {
+              "external": "Music",
+              "disc": "/Sound/new",
+              "create": "true"
+            },
+            {
+              "external": "Music/sfx",
+              "disc": "/Sound/new/sfx",
+              "create": "true"
+            },
+            {
+              "external": "Music/stream",
+              "disc": "/Sound/stream",
+              "create": "true"
+            },
+            {
+              "external": "Music/rsar",
+              "disc": "/Sound"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/EngEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/GerEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/FraEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/SpaEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/ItaEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/US/EngUS/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/US/FraUS/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/US/SpaUS/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/JP/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/KR/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/TW/Font"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/EngEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/GerEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/FraEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/SpaEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/ItaEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/US/EngUS/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/US/FraUS/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/US/SpaUS/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/JP/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/KR/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/TW/Message"
+            },
+            {
+              "external": "NewerRes",
+              "disc": "/NewerRes",
+              "create": "true"
+            },
+            {
+              "external": "LevelSamples",
+              "disc": "/LevelSamples",
+              "create": "true"
+            },
+            {
+              "external": "Others"
+            },
+            {
+              "external": "Others{$__region}"
+            },
+            {
+              "external": "Maps",
+              "disc": "/Maps",
+              "create": "true"
+            },
+            {
+              "external": "Maps/Texture",
+              "disc": "/Maps",
+              "create": "true"
+            },
+            {
+              "external": "Stages",
+              "disc": "/Stage",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\" shiftfiles=\"true\" root=\"/NewerSMBW\" log=\"true\">\r\n\t<id game=\"SMN\">\r\n\t\t<region type=\"P\"/>\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"K\"/>\r\n\t\t<region type=\"W\"/>\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"Newer SMBW\">\r\n\t\t\t<option name=\"Game\" id=\"newercore\" default=\"1\">\r\n\t\t\t\t<choice name=\"Enabled\"><patch id=\"newercore\"/></choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"newercore\">\r\n\t\t<!-- <savegame external=\"/save/{$__gameid}{$__region}\" clone=\"false\" /> -->\r\n\t\t<folder external=\"Tilesets\" disc=\"/Stage/Texture\" create=\"true\" />\r\n\t\t<folder external=\"TitleReplay\" disc=\"/Replay/title\" create=\"true\" />\r\n\t\t<folder external=\"BGs\" disc=\"/Object\" create=\"true\" />\r\n\t\t<folder external=\"SpriteTex\" disc=\"/Object\" create=\"true\" />\r\n\t\t<folder external=\"Layouts\" disc=\"/Layout\" create=\"true\" />\r\n\t\t<folder external=\"Music\" disc=\"/Sound/new\" create=\"true\" />\r\n\t\t<folder external=\"Music/sfx\" disc=\"/Sound/new/sfx\" create=\"true\" />\r\n\t\t<folder external=\"Music/stream\" disc=\"/Sound/stream\" create=\"true\" />\r\n\t\t<folder external=\"Music/rsar\" disc=\"/Sound\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/EngEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/GerEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/FraEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/SpaEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/ItaEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/US/EngUS/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/US/FraUS/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/US/SpaUS/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/JP/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/KR/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/TW/Font\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/EngEU/Message\" />\t\r\n\t\t<folder external=\"Message\" disc=\"/EU/GerEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/FraEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/SpaEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/ItaEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/US/EngUS/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/US/FraUS/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/US/SpaUS/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/JP/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/KR/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/TW/Message\" />\r\n\t\t<folder external=\"NewerRes\" disc=\"/NewerRes\" create=\"true\" />\r\n\t\t<!-- <folder external=\"CS\" disc=\"/CS\" create=\"true\" /> -->\r\n\t\t<folder external=\"LevelSamples\" disc=\"/LevelSamples\" create=\"true\" />\r\n\t\t<folder external=\"Others\" />\r\n\t\t<folder external=\"Others{$__region}\" />\r\n\t\t<folder external=\"Maps\" disc=\"/Maps\" create=\"true\" />\r\n\t\t<folder external=\"Maps/Texture\" disc=\"/Maps\" create=\"true\" />\r\n\t\t<folder external=\"Stages\" disc=\"/Stage\" create=\"true\" />\r\n\t\t\r\n\t\t<!-- Save name change -->\r\n\t\t<!-- EU -->    <memory offset=\"0x802F148C\" value=\"4E6572534D4257\" original=\"7769696D6A3264\" />\r\n\t\t<!-- US -->    <memory offset=\"0x802F118C\" value=\"4E6572534D4257\" original=\"7769696D6A3264\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x802F0FAC\" value=\"4E6572534D4257\" original=\"7769696D6A3264\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x802F17CC\" value=\"4E6572534D4257\" original=\"7769696D6A3264\" />\r\n\t\t\r\n\t\t<!-- Inject Newer loader -->\r\n\t\t<!-- EU --> <memory offset=\"0x80328478\" value=\"80001800\" original=\"8015BC60\" />\r\n\t\t<!-- US --> <memory offset=\"0x80328130\" value=\"80001800\" original=\"8015BB20\" />\r\n\t\t<!-- JP --> <memory offset=\"0x80327E98\" value=\"80001800\" original=\"8015B930\" />\r\n\t\t<!-- KR --> <memory offset=\"0x80334E60\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t<!-- TW --> <memory offset=\"0x80333218\" value=\"80001800\" original=\"8015C060\" />\r\n\r\n\t\t<!-- Expand ArchiveHeap -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4A84\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4994\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4914\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4AA4\" value=\"3C600140\" original=\"3C600120\" />\r\n\r\n\t\t<!-- Expand 2DHeap -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800B64EC\" value=\"3C800032\" original=\"3C800030\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800B649C\" value=\"3C800032\" original=\"3C800030\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800B641C\" value=\"3C800032\" original=\"3C800030\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800B65AC\" value=\"3C800032\" original=\"3C800030\" />\r\n\r\n\t\t<!-- Force non-Japanese font -->\r\n\t\t<!-- EU -->    <memory offset=\"0x801B0204\" value=\"38000000\" original=\"5400FFFE\" />\r\n\t\t<!-- US -->    <memory offset=\"0x801B00C4\" value=\"38000000\" original=\"5400FFFE\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x801AFED4\" value=\"38000000\" original=\"5400FFFE\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x801B0604\" value=\"38000000\" original=\"5400FFFE\" />\r\n\r\n\t\t<!-- Title screen fixes -->\r\n\t\t<!-- EU -->    <memory offset=\"0x8015D850\" value=\"4E800020\" original=\"38600000\" />\r\n\t\t<!-- US -->    <memory offset=\"0x8015D710\" value=\"4E800020\" original=\"38600000\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x8015D520\" value=\"4E800020\" original=\"38600000\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x8015DC50\" value=\"4E800020\" original=\"38600000\" />\r\n\r\n\t\t<!-- Disable debug key sequence -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4E84\" value=\"38600000\" original=\"3863330C\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4D70\" value=\"38600000\" original=\"3863300C\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4CF0\" value=\"38600000\" original=\"38632E2C\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4E80\" value=\"38600000\" original=\"3863364C\" />\r\n\t\t\r\n\t\t<!-- Disable unnecessary exception info -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4E8C\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4D78\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4CF8\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4E88\" value=\"38600021\" original=\"3860003F\" />\r\n\r\n\t\t<!-- Common -->\r\n\t\t<memory offset=\"0x80001800\" valuefile=\"Loader.bin\" />\r\n\t</patch>\r\n</wiidisc>\r\n"
+        }
+      ],
+      "readmes": {
+        "NewerSMBW/VERSION.txt": "Newer Super Mario Brothers Wii \nVERSION: 1.30\r\nBUILD DD/MM/YY HH:MM - 16/11/2021 23:20"
+      },
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "falling-leaf",
+      "filename": "falling-leaf.zip",
+      "bytes": 149915067,
+      "sha256": "3c77287b95e1ad5c95ccce39e711ddf56b5e2e8de94ffe34d5f18b654d9037ee",
+      "crcPassed": true,
+      "entryCount": 346,
+      "uncompressedBytes": 171326068,
+      "roots": [
+        "NewerFL",
+        "riivolution"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/config/SMNP.xml",
+          "root": "riivolution",
+          "discs": [],
+          "regions": [],
+          "folders": [],
+          "xml": "<riivolution version=\"2\">\n  <option id=\"newerfl\" default=\"1\" />\n</riivolution>\n"
+        },
+        {
+          "path": "riivolution/NewerFALLING.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SMN"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            },
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "K"
+            },
+            {
+              "type": "W"
+            }
+          ],
+          "folders": [
+            {
+              "external": "Tilesets",
+              "disc": "/Stage/Texture",
+              "create": "true"
+            },
+            {
+              "external": "TitleReplay",
+              "disc": "/Replay/title",
+              "create": "true"
+            },
+            {
+              "external": "BGs",
+              "disc": "/Object",
+              "create": "true"
+            },
+            {
+              "external": "SpriteTex",
+              "disc": "/Object",
+              "create": "true"
+            },
+            {
+              "external": "Layouts",
+              "disc": "/Layout",
+              "create": "true"
+            },
+            {
+              "external": "Music",
+              "disc": "/Sound/new",
+              "create": "true"
+            },
+            {
+              "external": "Music/sfx",
+              "disc": "/Sound/new/sfx",
+              "create": "true"
+            },
+            {
+              "external": "Music/stream",
+              "disc": "/Sound/stream",
+              "create": "true"
+            },
+            {
+              "external": "Music/rsar",
+              "disc": "/Sound"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/EngEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/GerEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/FraEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/SpaEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/EU/ItaEU/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/US/EngUS/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/US/FraUS/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/US/SpaUS/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/JP/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/KR/Font"
+            },
+            {
+              "external": "Font",
+              "disc": "/TW/Font"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/EngEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/GerEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/FraEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/SpaEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/EU/ItaEU/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/US/EngUS/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/US/FraUS/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/US/SpaUS/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/JP/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/KR/Message"
+            },
+            {
+              "external": "Message",
+              "disc": "/TW/Message"
+            },
+            {
+              "external": "NewerRes",
+              "disc": "/NewerRes",
+              "create": "true"
+            },
+            {
+              "external": "LevelSamples",
+              "disc": "/LevelSamples",
+              "create": "true"
+            },
+            {
+              "external": "Others"
+            },
+            {
+              "external": "Others{$__region}"
+            },
+            {
+              "external": "Maps",
+              "disc": "/Maps",
+              "create": "true"
+            },
+            {
+              "external": "Maps/Texture",
+              "disc": "/Maps",
+              "create": "true"
+            },
+            {
+              "external": "Stages",
+              "disc": "/Stage",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\" shiftfiles=\"true\" root=\"/NewerFL\" log=\"true\">\r\n\t<id game=\"SMN\">\r\n\t\t<region type=\"P\"/>\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"K\"/>\r\n\t\t<region type=\"W\"/>\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"Newer FALLING LEAF\">\r\n\t\t\t<option name=\"Game\" id=\"newerfl\" default=\"1\">\r\n\t\t\t\t<choice name=\"Enabled\"><patch id=\"newerfl\"/></choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"newerfl\">\r\n\t\t <!--<savegame external=\"/save/{$__gameid}{$__region}\" clone=\"false\" />-->\r\n\t\t<folder external=\"Tilesets\" disc=\"/Stage/Texture\" create=\"true\" />\r\n\t\t<folder external=\"TitleReplay\" disc=\"/Replay/title\" create=\"true\" />\r\n\t\t<folder external=\"BGs\" disc=\"/Object\" create=\"true\" />\r\n\t\t<folder external=\"SpriteTex\" disc=\"/Object\" create=\"true\" />\r\n\t\t<folder external=\"Layouts\" disc=\"/Layout\" create=\"true\" />\r\n\t\t<folder external=\"Music\" disc=\"/Sound/new\" create=\"true\" />\r\n\t\t<folder external=\"Music/sfx\" disc=\"/Sound/new/sfx\" create=\"true\" />\r\n\t\t<folder external=\"Music/stream\" disc=\"/Sound/stream\" create=\"true\" />\r\n\t\t<folder external=\"Music/rsar\" disc=\"/Sound\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/EngEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/GerEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/FraEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/SpaEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/EU/ItaEU/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/US/EngUS/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/US/FraUS/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/US/SpaUS/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/JP/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/KR/Font\" />\r\n\t\t<folder external=\"Font\" disc=\"/TW/Font\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/EngEU/Message\" />\t\r\n\t\t<folder external=\"Message\" disc=\"/EU/GerEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/FraEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/SpaEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/EU/ItaEU/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/US/EngUS/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/US/FraUS/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/US/SpaUS/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/JP/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/KR/Message\" />\r\n\t\t<folder external=\"Message\" disc=\"/TW/Message\" />\r\n\t\t<folder external=\"NewerRes\" disc=\"/NewerRes\" create=\"true\" />\r\n\t\t<!-- <folder external=\"CS\" disc=\"/CS\" create=\"true\" /> -->\r\n\t\t<folder external=\"LevelSamples\" disc=\"/LevelSamples\" create=\"true\" />\r\n\t\t<folder external=\"Others\" />\r\n\t\t<folder external=\"Others{$__region}\" />\r\n\t\t<folder external=\"Maps\" disc=\"/Maps\" create=\"true\" />\r\n\t\t<folder external=\"Maps/Texture\" disc=\"/Maps\" create=\"true\" />\r\n\t\t<folder external=\"Stages\" disc=\"/Stage\" create=\"true\" />\r\n\r\n\t\t<!-- Save name change -->\r\n\t\t<!-- EU -->    <memory offset=\"0x802F148C\" value=\"4F6572534d4257\" original=\"7769696D6A3264\" />\r\n\t\t<!-- US -->    <memory offset=\"0x802F118C\" value=\"4F6572534d4257\" original=\"7769696D6A3264\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x802F0FAC\" value=\"4F6572534d4257\" original=\"7769696D6A3264\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x802F17CC\" value=\"4F6572534d4257\" original=\"7769696D6A3264\" />\r\n\t\t\r\n\t\t<!-- Inject Newer loader -->\r\n\t\t<!-- EU --> <memory offset=\"0x80328478\" value=\"80001800\" original=\"8015BC60\" />\r\n\t\t<!-- US --> <memory offset=\"0x80328130\" value=\"80001800\" original=\"8015BB20\" />\r\n\t\t<!-- JP --> <memory offset=\"0x80327E98\" value=\"80001800\" original=\"8015B930\" />\r\n\t\t<!-- KR --> <memory offset=\"0x80334E60\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t<!-- TW --> <memory offset=\"0x80333218\" value=\"80001800\" original=\"8015C060\" />\r\n\r\n\t\t<!-- Expand ArchiveHeap -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4A84\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4994\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4914\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4AA4\" value=\"3C600140\" original=\"3C600120\" />\r\n\r\n\t\t<!-- Expand 2DHeap -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800B64EC\" value=\"3C800032\" original=\"3C800030\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800B649C\" value=\"3C800032\" original=\"3C800030\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800B641C\" value=\"3C800032\" original=\"3C800030\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800B65AC\" value=\"3C800032\" original=\"3C800030\" />\r\n\r\n\t\t<!-- Force non-Japanese font -->\r\n\t\t<!-- EU -->    <memory offset=\"0x801B0204\" value=\"38000000\" original=\"5400FFFE\" />\r\n\t\t<!-- US -->    <memory offset=\"0x801B00C4\" value=\"38000000\" original=\"5400FFFE\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x801AFED4\" value=\"38000000\" original=\"5400FFFE\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x801B0604\" value=\"38000000\" original=\"5400FFFE\" />\r\n\r\n\t\t<!-- Title screen fixes -->\r\n\t\t<!-- EU -->    <memory offset=\"0x8015D850\" value=\"4E800020\" original=\"38600000\" />\r\n\t\t<!-- US -->    <memory offset=\"0x8015D710\" value=\"4E800020\" original=\"38600000\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x8015D520\" value=\"4E800020\" original=\"38600000\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x8015DC50\" value=\"4E800020\" original=\"38600000\" />\r\n\r\n\t\t<!-- Disable debug key sequence -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4E84\" value=\"38600000\" original=\"3863330C\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4D70\" value=\"38600000\" original=\"3863300C\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4CF0\" value=\"38600000\" original=\"38632E2C\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4E80\" value=\"38600000\" original=\"3863364C\" />\r\n\t\t\r\n\t\t<!-- Disable unnecessary exception info -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4E8C\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4D78\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4CF8\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4E88\" value=\"38600021\" original=\"3860003F\" />\r\n\r\n\t\t<!-- Common -->\r\n\t\t<memory offset=\"0x80001800\" valuefile=\"Loader.bin\" />\r\n\t</patch>\r\n</wiidisc>\r\n"
+        }
+      ],
+      "readmes": {
+        "NewerFL/VERSION.txt": "Newer FALLING LEAF version 1.12 based on Newer SUPER MARIO BROS. Wii version 1.30\r\n\r\nBuilt\r\n05/12/2022 02:28 UTC\r\nDD/MM/YYYY HH:MM\r\n\r\nCHANGELOG\r\n- 1.12 05/12/2022\r\nShop has the correct items again\r\nDefault world name is correct again\r\nStar Coin menu restored to no longer show the world name\r\n\r\n- 1.11 04/12/2022\r\nFixed a bug with the 100% completion message\r\n\r\n- 1.10 19/11/2021\r\nSupport for all NSMBW disc versions\r\nMessage boxes align to centre automatically\r\nVarious small level fixes\r\n\r\n- 1.0.04 15/12/2014\r\nFixed a bug in 1-6. Again.\r\n\r\n- 1.0.03 10/12/2014\r\nFixed a bug in 1-6\r\n\r\n- 1.0.02 06/12/2014\r\nAdded 2-1 for titlescreen demos \r\n\r\n- 1.0.01 04/12/2014\r\nTwo tiny bugs fixed (tile in 1-1 and a bug with events in 1-2)\r\n\r\nCREDITS\r\nNewer Team - Newer SMBW Base\r\nNintendo - New SMBW, NSMBU tilesets\r\nSkawo - Making everything else\r\nOrangeDude - Testing"
+      },
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "summer-sun",
+      "filename": "summer-sun.zip",
+      "bytes": 131888515,
+      "sha256": "6027aa8e211b126beffb7c8130e45d16ec336557fdcea3ebe4691eb3faefa2de",
+      "crcPassed": true,
+      "entryCount": 174,
+      "uncompressedBytes": 147461692,
+      "roots": [
+        "Readme.txt",
+        "SumSun",
+        "riivolution"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/SumSun.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SMN"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            },
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "K"
+            },
+            {
+              "type": "W"
+            }
+          ],
+          "folders": [
+            {
+              "external": "Stage/Texture",
+              "disc": "/Stage/Texture/",
+              "create": "true"
+            },
+            {
+              "external": "NewerRes",
+              "disc": "/NewerRes/",
+              "create": "true"
+            },
+            {
+              "external": "Stage",
+              "disc": "/Stage/",
+              "create": "true"
+            },
+            {
+              "external": "Env"
+            },
+            {
+              "external": "Effect"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/EU/EngEU/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/EU/GerEU/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/EU/FraEU/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/EU/SpaEU/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/EU/ItaEU/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/US/EngUS/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/US/FraUS/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/US/SpaUS/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/JP/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/KR/Message"
+            },
+            {
+              "external": "EU/EngEu/Message/",
+              "disc": "/TW/Message"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/EU/EngEU/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/EU/GerEU/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/EU/FraEU/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/EU/SpaEU/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/EU/ItaEU/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/US/EngUS/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/US/FraUS/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/US/SpaUS/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/JP/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/KR/staffroll"
+            },
+            {
+              "external": "EU/EngEu/staffroll/",
+              "disc": "/TW/staffroll"
+            },
+            {
+              "external": "Sound/stream/"
+            },
+            {
+              "external": "Sound"
+            },
+            {
+              "external": "Layout"
+            },
+            {
+              "external": "WorldMap"
+            },
+            {
+              "external": "Object",
+              "disc": "/Object/",
+              "create": "true"
+            },
+            {
+              "external": "Opening{$__region}"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\" shiftfiles=\"true\" log=\"true\">\r\n    <id game=\"SMN\">\r\n\t\t<region type=\"P\"/>\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"K\"/>\r\n\t\t<region type=\"W\"/>\r\n    </id>\r\n    <options>\r\n        <section name=\"Newer SUMMER SUN\">\r\n            <option name=\"Newer SUMMER SUN\" id=\"NewerS\" default=\"1\">\r\n                <choice name=\"Enabled\"><patch id=\"NewerS\"/></choice>\r\n            </option>\r\n\t\t</section>\r\n    </options>\r\n    <patch id=\"NewerS\" root=\"/SumSun\">\r\n\t\t<!--<savegame external=\"/SumSun/save/{$__gameid}{$__region}\" clone=\"false\" />  -->\r\n\t\t<folder external=\"Stage/Texture\" disc=\"/Stage/Texture/\" create=\"true\"/>\r\n\t\t<folder external=\"NewerRes\" disc=\"/NewerRes/\" create=\"true\"/>\r\n\t\t<folder external=\"Stage\" disc=\"/Stage/\" create=\"true\" />\r\n\t\t<folder external=\"Env\" />\r\n\t\t<folder external=\"Effect\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/EU/EngEU/Message\" />\t\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/EU/GerEU/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/EU/FraEU/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/EU/SpaEU/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/EU/ItaEU/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/US/EngUS/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/US/FraUS/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/US/SpaUS/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/JP/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/KR/Message\" />\r\n\t\t<folder external=\"EU/EngEu/Message/\" disc=\"/TW/Message\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/EU/EngEU/staffroll\" />\t\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/EU/GerEU/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/EU/FraEU/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/EU/SpaEU/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/EU/ItaEU/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/US/EngUS/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/US/FraUS/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/US/SpaUS/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/JP/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/KR/staffroll\" />\r\n\t\t<folder external=\"EU/EngEu/staffroll/\" disc=\"/TW/staffroll\" />\r\n\t\t<folder external=\"Sound/stream/\" />\r\n\t\t<folder external=\"Sound\" />\r\n\t\t<folder external=\"Layout\" />\r\n\t\t<folder external=\"WorldMap\" />\r\n\t\t<folder external=\"Object\" disc=\"/Object/\" create=\"true\" />\r\n\t\t<folder external=\"Opening{$__region}\" />\r\n\t\t\r\n\t\t<!-- Save name change -->\r\n\t\t<!-- EU -->    <memory offset=\"0x802F148C\" value=\"4E6572536D536E\" original=\"7769696D6A3264\" />\r\n\t\t<!-- US -->    <memory offset=\"0x802F118C\" value=\"4E6572536D536E\" original=\"7769696D6A3264\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x802F0FAC\" value=\"4E6572536D536E\" original=\"7769696D6A3264\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x802F17CC\" value=\"4E6572536D536E\" original=\"7769696D6A3264\" />\r\n\t\t\r\n\t\t<!-- Expand ArchiveHeap -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4A84\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4994\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4914\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4AA4\" value=\"3C600140\" original=\"3C600120\" />\r\n\t\t\r\n\t\t<!-- Disable debug key sequence -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4E84\" value=\"38600000\" original=\"3863330C\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4D70\" value=\"38600000\" original=\"3863300C\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4CF0\" value=\"38600000\" original=\"38632E2C\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4E80\" value=\"38600000\" original=\"3863364C\" />\r\n\t\t\r\n\t\t<!-- Disable unnecessary exception info -->\r\n\t\t<!-- EU -->    <memory offset=\"0x800E4E8C\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- US -->    <memory offset=\"0x800E4D78\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x800E4CF8\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x800E4E88\" value=\"38600021\" original=\"3860003F\" />\r\n\t\t\r\n\t\t<!-- Inject Newer loader -->\r\n\t\t<!-- EU --> <memory offset=\"0x80328478\" value=\"80001800\" original=\"8015BC60\" />\r\n\t\t<!-- US --> <memory offset=\"0x80328130\" value=\"80001800\" original=\"8015BB20\" />\r\n\t\t<!-- JP --> <memory offset=\"0x80327E98\" value=\"80001800\" original=\"8015B930\" />\r\n\t\t<!-- KR --> <memory offset=\"0x80334E60\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t<!-- TW --> <memory offset=\"0x80333218\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t\r\n\t\t<!-- Common -->\r\n\t\t<memory offset=\"0x80001800\" valuefile=\"Loader.bin\" />\r\n\t\t\r\n\t</patch>\r\n</wiidisc>\r\n"
+        }
+      ],
+      "readmes": {
+        "Readme.txt": "\r\nNewer Super Mario Bros. Wii SuMMeR SUN Special v1.12\r\nby Newer Team\r\n\r\nChangelog\r\nv1.12:\r\nMatch exception identifier with game version (it said 1.10 in 1.11)\r\n\r\nv1.11:\r\nFixed a bug where custom messages and the staffroll didn't get patched in\r\nUpdated staffroll because I forgot to in v1.10\r\n\r\nv1.10:\r\nAdded support for the rest of the regions\r\nNumerous tiling/level fixes\r\n\r\nv1.01:\r\nAdded PALv2 and fixed JPN support\r\nFixed a Multiplayer issue in 2-1\r\nMaybe fixed an issue in 2-7\r\nTiling stuff\r\n\r\n\r\n\r\n\r\nDevelopment time:\r\n2.06.2012-05.07.2012 09:42 GMT+1.\r\n\r\nPS. A message to all ISO-doers: I would appreciate if you did not make an ISO version of this game, due to horrible glitches that may and will happen if you do.\r\n\r\n\r\n\r\n"
+      },
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "holiday-special",
+      "filename": "holiday-special.zip",
+      "bytes": 68818998,
+      "sha256": "66594cefe80859fc6326ba8174eaca22496ec30f24560a89dd12f5a6c2ed483b",
+      "crcPassed": true,
+      "entryCount": 105,
+      "uncompressedBytes": 72974241,
+      "roots": [
+        "Info.txt",
+        "XmasNewer",
+        "riivolution"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/XmasNewer.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SMN"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            },
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "K"
+            },
+            {
+              "type": "W"
+            }
+          ],
+          "folders": [
+            {
+              "external": "Stage/Texture",
+              "disc": "/Stage/Texture/",
+              "create": "true"
+            },
+            {
+              "external": "Stage"
+            },
+            {
+              "external": "Env"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/EU/EngEU/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/EU/GerEU/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/EU/FraEU/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/EU/SpaEU/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/EU/ItaEU/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/US/EngUS/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/US/FraUS/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/US/SpaUS/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/JP/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/KR/Message"
+            },
+            {
+              "external": "MessageEN",
+              "disc": "/TW/Message"
+            },
+            {
+              "external": "Sound/stream/"
+            },
+            {
+              "external": "Layout/preGame/"
+            },
+            {
+              "external": "Layout/sequenceBG/"
+            },
+            {
+              "external": "Layout/textures/"
+            },
+            {
+              "external": "Sound"
+            },
+            {
+              "external": "WorldMap"
+            },
+            {
+              "external": "Object",
+              "disc": "/Object/",
+              "create": "true"
+            },
+            {
+              "external": "Opening{$__region}"
+            },
+            {
+              "external": "NewerRes",
+              "disc": "/NewerRes",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\" shiftfiles=\"true\" log=\"true\">\r\n    <id game=\"SMN\">\r\n\t\t<region type=\"P\"/>\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"K\"/>\r\n\t\t<region type=\"W\"/>\r\n    </id>\r\n    <options>\r\n        <section name=\"Newer Holiday Special\">\r\n            <option name=\"Newer Holiday Special\" id=\"Newer\" default=\"1\">\r\n                <choice name=\"Enabled\"><patch id=\"Newer\"/></choice>\r\n            </option>\r\n\t\t</section>\r\n    </options>\r\n    <patch id=\"Newer\" root=\"/XmasNewer\">\r\n\t\t<!--  <savegame external=\"/XmasNewer/save/{$__gameid}{$__region}\" clone=\"false\" />  -->\r\n\t\t<folder external=\"Stage/Texture\" disc=\"/Stage/Texture/\" create=\"true\"/>\r\n\t\t<folder external=\"Stage\" />\r\n\t\t<folder external=\"Env\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/EU/EngEU/Message\" />\t\r\n\t\t<folder external=\"MessageEN\" disc=\"/EU/GerEU/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/EU/FraEU/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/EU/SpaEU/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/EU/ItaEU/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/US/EngUS/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/US/FraUS/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/US/SpaUS/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/JP/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/KR/Message\" />\r\n\t\t<folder external=\"MessageEN\" disc=\"/TW/Message\" />\r\n\t\t<folder external=\"Sound/stream/\" />\r\n\t\t<folder external=\"Layout/preGame/\" />\r\n\t\t<folder external=\"Layout/sequenceBG/\" />\r\n\t\t<folder external=\"Layout/textures/\" />\r\n\t\t<folder external=\"Sound\" />\r\n\t\t<folder external=\"WorldMap\" />\r\n\t\t<folder external=\"Object\" disc=\"/Object/\" create=\"true\" />\r\n\t\t<folder external=\"Opening{$__region}\" />\r\n\t\t<folder external=\"NewerRes\" disc=\"/NewerRes\" create=\"true\" />\r\n\t\t\r\n\t\t<!-- Save name change -->\r\n\t\t<!-- EU -->    <memory offset=\"0x802F148C\" value=\"586D61734E6572\" original=\"7769696D6A3264\" />\r\n\t\t<!-- US -->    <memory offset=\"0x802F118C\" value=\"586D61734E6572\" original=\"7769696D6A3264\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x802F0FAC\" value=\"586D61734E6572\" original=\"7769696D6A3264\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x802F17CC\" value=\"586D61734E6572\" original=\"7769696D6A3264\" />\r\n\t\t\r\n\t\t<!-- Inject Newer loader -->\r\n\t\t<!-- EU --> <memory offset=\"0x80328478\" value=\"80001800\" original=\"8015BC60\" />\r\n\t\t<!-- US --> <memory offset=\"0x80328130\" value=\"80001800\" original=\"8015BB20\" />\r\n\t\t<!-- JP --> <memory offset=\"0x80327E98\" value=\"80001800\" original=\"8015B930\" />\r\n\t\t<!-- KR --> <memory offset=\"0x80334E60\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t<!-- TW --> <memory offset=\"0x80333218\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t\r\n\t\t<!-- Common -->\r\n\t\t<memory offset=\"0x80001800\" valuefile=\"Loader.bin\" />\r\n\t\t\r\n\t</patch>\r\n</wiidisc>\r\n"
+        }
+      ],
+      "readmes": {},
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "another-smbw",
+      "filename": "another-smbw.zip",
+      "bytes": 45608228,
+      "sha256": "e4e24be445880eb2ba315f3de03af637e472cae3bdea7995997ed41048eec308",
+      "crcPassed": true,
+      "entryCount": 261,
+      "uncompressedBytes": 48219506,
+      "roots": [
+        "Another",
+        "riivolution"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/Another.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SMN"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            },
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "K"
+            },
+            {
+              "type": "W"
+            }
+          ],
+          "folders": [
+            {
+              "external": "/Another/Lang"
+            },
+            {
+              "external": "/Another/Stage"
+            },
+            {
+              "external": "/Another/Sound"
+            },
+            {
+              "external": "/Another/Sound/seq",
+              "disc": "/Sound/stream",
+              "create": "true"
+            },
+            {
+              "external": "/Another/Layout"
+            },
+            {
+              "external": "/Another/Object"
+            },
+            {
+              "external": "/Another/WorldMap"
+            },
+            {
+              "external": "/Another/Layout/Opening{$__region}"
+            },
+            {
+              "external": "/Another/NewerRes",
+              "disc": "/NewerRes",
+              "create": "true"
+            },
+            {
+              "external": "/Another/Object/Background",
+              "disc": "/Object",
+              "create": "true"
+            },
+            {
+              "external": "/Another/Stage/Texture",
+              "disc": "/Stage/Texture",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\" shiftfiles=\"true\">\r\n\t<id game=\"SMN\">\r\n\t\t<region type=\"P\"/>\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"K\"/>\r\n\t\t<region type=\"W\"/>\r\n\t</id>\r\n    <options>\r\n        <section name=\"Another Mario Wii\">\r\n            <option name=\"Another Mario Wii\" id=\"Another\" default=\"1\">\r\n                <choice name=\"Enabled\"><patch id=\"Another\"/></choice>\r\n            </option>\r\n</section>\r\n    </options>\r\n    <patch id=\"Another\">  \r\n\t\t<folder external=\"/Another/Lang\" />\r\n\t\t<folder external=\"/Another/Stage\" />\r\n\t\t<folder external=\"/Another/Sound\" />\r\n\t\t<folder external=\"/Another/Sound/seq\" disc=\"/Sound/stream\" create=\"true\" />\r\n\t\t<folder external=\"/Another/Layout\" />\r\n\t\t<folder external=\"/Another/Object\" />\r\n\t\t<folder external=\"/Another/WorldMap\" />\r\n\t\t<folder external=\"/Another/Layout/Opening{$__region}\" />\r\n\t\t<folder external=\"/Another/NewerRes\" disc=\"/NewerRes\" create=\"true\" />\r\n\t\t<folder external=\"/Another/Object/Background\" disc=\"/Object\" create=\"true\" />\r\n\t\t<folder external=\"/Another/Stage/Texture\" disc=\"/Stage/Texture\" create=\"true\" />\r\n\t\t<file disc=\"/JP/Message/Message.arc\" external=\"/Another/Lang/URA-JAPANESE.arc\" />\r\n\t\t<file disc=\"/KR/Message/Message.arc\" external=\"/Another/Lang/KOREAN.arc\" />\r\n\t\t<file disc=\"/TW/Message/Message.arc\" external=\"/Another/Lang/TAIWANESE.arc\" />\r\n\t\t<file disc=\"/US/SpaUS/Message/Message.arc\" external=\"/Another/Lang/USSPANISH.arc\" />\r\n\t\t<file disc=\"/EU/EngEU/Message/Message.arc\" external=\"/Another/Lang/EUENGLISH.arc\" />\r\n\t\t<file disc=\"/Eu/FraEU/Message/Message.arc\" external=\"/Another/Lang/EUFRENCH.arc\" />\r\n\t\t<file disc=\"/EU/SpaEU/Message/Message.arc\" external=\"/Another/Lang/EUSPANISH.arc\" />\r\n\t\t<file disc=\"/EU/ItaEU/Message/Message.arc\" external=\"/Another/Lang/EUITALIAN.arc\" />\r\n\t\t<file disc=\"/EU/GerEU/Message/Message.arc\" external=\"/Another/Lang/EUGERMAN.arc\" />\r\n\t\t<file disc=\"/US/EngUS/Message/Message.arc\" external=\"/Another/Lang/USENGLISH.arc\" />\r\n\t\t<file disc=\"/US/FraUS/Message/Message.arc\" external=\"/Another/Lang/USFRENCH.arc\" />\r\n\t\t<file disc=\"/EU/EngEU/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\t\r\n\t\t<file disc=\"/EU/GerEU/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/EU/FraEU/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/EU/SpaEU/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/EU/ItaEU/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/US/EngUS/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/US/FraUS/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/US/SpaUS/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/JP/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/KR/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\t\t<file disc=\"/TW/staffroll/staffroll.bin\" external=\"/Another/Lang/staffroll.bin\" />\r\n\r\n\t\t<file disc=\"/Sample/tobira.bti\" external=\"/Another/Sample/tobira.bti\" create=\"True\" />\r\n\r\n\t\t<!-- Save name change -->\r\n\t\t<!-- EU -->    <memory offset=\"0x802F148C\" value=\"616E6F746865722E\" original=\"7769696D6A3264\" />\r\n\t\t<!-- US -->    <memory offset=\"0x802F118C\" value=\"616E6F746865722E\" original=\"7769696D6A3264\" />\r\n\t\t<!-- JP -->    <memory offset=\"0x802F0FAC\" value=\"616E6F746865722E\" original=\"7769696D6A3264\" />\r\n\t\t<!-- KR/TW --> <memory offset=\"0x802F17CC\" value=\"616E6F746865722E\" original=\"7769696D6A3264\" />\r\n\t\t\r\n\t\t<!-- Inject Newer loader -->\r\n\t\t<!-- EU --> <memory offset=\"0x80328478\" value=\"80001800\" original=\"8015BC60\" />\r\n\t\t<!-- US --> <memory offset=\"0x80328130\" value=\"80001800\" original=\"8015BB20\" />\r\n\t\t<!-- JP --> <memory offset=\"0x80327E98\" value=\"80001800\" original=\"8015B930\" />\r\n\t\t<!-- KR --> <memory offset=\"0x80334E60\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t<!-- TW --> <memory offset=\"0x80333218\" value=\"80001800\" original=\"8015C060\" />\r\n\t\t\r\n\t\t<!-- Common -->\r\n        <memory offset=\"0x80001800\" valuefile=\"/Another/Loader.bin\" />\r\n</patch>\r\n</wiidisc>\r\n"
+        },
+        {
+          "path": "riivolution/config/SMNP.xml",
+          "root": "riivolution",
+          "discs": [],
+          "regions": [],
+          "folders": [],
+          "xml": "<riivolution version=\"2\">\n  <option id=\"Another\" default=\"1\" />\n</riivolution>\n"
+        }
+      ],
+      "readmes": {},
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "mkw-sp",
+      "filename": "mkw-sp-v0.1.12.zip",
+      "bytes": 4366987,
+      "sha256": "8cc60bcc9e7d781ef727a4013e3b54e414fd2325ec7797c8d8cdee438e65fe96",
+      "crcPassed": true,
+      "entryCount": 4,
+      "uncompressedBytes": 4434907,
+      "roots": [
+        "apps"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/mkw-sp/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80106410",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80100000",
+              "bytes": 25664
+            },
+            {
+              "kind": "data",
+              "offset": 25920,
+              "address": "0x80106440",
+              "bytes": 4408544
+            },
+            {
+              "kind": "data",
+              "offset": 4434464,
+              "address": "0x8053a920",
+              "bytes": 224
+            }
+          ],
+          "bytes": 4434688,
+          "sha256": "507308959c1f5eb5e896bc72b0b7a7ceabb6bbd4b96ce5b92f6ca7a214182967"
+        }
+      ],
+      "patchXml": [
+        {
+          "path": "apps/mkw-sp/meta.xml",
+          "root": "app",
+          "discs": [],
+          "regions": [],
+          "folders": [],
+          "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<app version=\"1\">\n    <name>MKW-SP</name>\n    <coder>The MKW-SP Developers</coder>\n    <short_description>Mario Kart Wii - Service Pack</short_description>\n</app>\n"
+        }
+      ],
+      "readmes": {},
+      "format": "ZIP \u00b7 standalone Wii DOL"
+    },
+    {
+      "id": "wiilink-gui",
+      "filename": "WiiLinkPatcherGUI-Windows-onefile-x64.exe",
+      "bytes": 27562328,
+      "sha256": "37d685b02f5bb06904043a21d25687401f751d665864ff4537baebe7b1a669bc",
+      "format": "PE x64 \u00b7 Windows helper"
+    },
+    {
+      "id": "retro-rewind",
+      "filename": "RetroRewind-6.13.4-full.zip",
+      "bytes": 1939356115,
+      "sha256": "586b929de36018e5fc3f7ee73b0aba407730d38470d7a54b8a455dca14be7002",
+      "crcPassed": true,
+      "entryCount": 4072,
+      "uncompressedBytes": 2203007239,
+      "roots": [
+        "RetroRewind.wad",
+        "RetroRewind6",
+        "RetroRewindChannel",
+        "RetroRewindVWii.wad",
+        "apps",
+        "riivolution"
+      ],
+      "nativeFiles": [
+        {
+          "path": "apps/RetroRewind/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80004000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80004000",
+              "bytes": 1645312
+            },
+            {
+              "kind": "data",
+              "offset": 1645568,
+              "address": "0x80195b00",
+              "bytes": 804608
+            }
+          ],
+          "bytes": 2450176,
+          "sha256": "4e8e8ef62ab0dd6ec7f12703a327d4250ef704736021dd12704755ae6f5f409e"
+        },
+        {
+          "path": "apps/riivolution/boot.elf",
+          "format": "ELF32 big-endian PowerPC",
+          "headerPassed": true,
+          "entryPoint": "0x80d13040",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 768,
+              "address": "0x80003400",
+              "bytes": 320,
+              "memoryBytes": 320
+            },
+            {
+              "kind": "text",
+              "offset": 1280,
+              "address": "0x80d13040",
+              "bytes": 2016,
+              "memoryBytes": 2016
+            },
+            {
+              "kind": "text",
+              "offset": 3328,
+              "address": "0x80d13820",
+              "bytes": 1980000,
+              "memoryBytes": 1980000
+            }
+          ],
+          "bytes": 1983348,
+          "sha256": "fb35c678f7f72643fe6089263aa5085565ca4c612037b6ddda283db75dd3a951"
+        },
+        {
+          "path": "apps/yawmME/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80004000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80004000",
+              "bytes": 497408
+            },
+            {
+              "kind": "data",
+              "offset": 497664,
+              "address": "0x8007d700",
+              "bytes": 456480
+            }
+          ],
+          "bytes": 954144,
+          "sha256": "4e2af7555561d3dce7fdf8a82d456489eda201a04bc7d1068987b984f60bc8f6"
+        }
+      ],
+      "patchXml": [
+        {
+          "path": "apps/riivolution/meta.xml",
+          "root": "app",
+          "discs": [],
+          "regions": [],
+          "folders": [],
+          "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<app version=\"1.0\">\n\t<name>Riivolution</name>\n\t<coder>Aaron tueidj Tempus megazig</coder>\n\t<version>v1.06</version>\n\t<release_date>20131218120000</release_date>\n\t<short_description>Riivolution Patcher</short_description>\n\t<long_description>Riivolution is an on-the-fly game patcher for use with retail discs. It allows users to place content on their SD or USB devices, which will be read by the game during regular play. Riivolution can be used for custom textures, music, levels, memory patches, game translations, and more.\n\nRiivolution requires valid game content and an XML file to apply changes to games.\n\nhttp://rvlution.net/riivolution</long_description>\n<no_ios_reload/>\n</app>\n"
+        },
+        {
+          "path": "riivolution/RetroRewind6.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "RMC"
+            }
+          ],
+          "regions": [],
+          "folders": [
+            {
+              "external": "/RetroRewind6/Binaries",
+              "disc": "/Binaries",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/BT/Tracks",
+              "disc": "/Race/Course",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/CT/Tracks",
+              "disc": "/Race/Course",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Tracks",
+              "disc": "/Race/Course",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Assets",
+              "disc": "/",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Patches",
+              "disc": "/patches",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Ghosts/ExpertsRT",
+              "disc": "/Ghosts/ExpertsRT",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Ghosts/ExpertsCT",
+              "disc": "/Ghosts/ExpertsCT",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/strm",
+              "disc": "/sound/strm",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Character",
+              "disc": "/Race/Kart",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Character/AllKart",
+              "disc": "/Scene/Model/Kart",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Character/Driver",
+              "disc": "/Scene/Model/Driver",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Character/Map",
+              "disc": "/Race/Map",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Character/Portrait",
+              "disc": "/Race/Portrait",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Character/Sound",
+              "disc": "/sound",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Character/MiiOutfitC",
+              "disc": "/Race/Kart",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/Mission",
+              "disc": "/Race/MissionRun",
+              "create": "true"
+            },
+            {
+              "external": "/ctgpr/My Stuff",
+              "recursive": "true"
+            },
+            {
+              "external": "/ctgpr/My Stuff",
+              "disc": "/"
+            },
+            {
+              "external": "/RetroRewind6/MyStuff",
+              "recursive": "true"
+            },
+            {
+              "external": "/RetroRewind6/MyStuff",
+              "disc": "/"
+            },
+            {
+              "external": "/ctgpr/My Stuff",
+              "disc": "/sound/strm",
+              "create": "true"
+            },
+            {
+              "external": "/RetroRewind6/MyStuff",
+              "disc": "/sound/strm",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"RMC\"/>\r\n\t<options>\r\n\t\t<section name=\"Retro Rewind\">\r\n\t\t\t<option name=\"Pack\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"RRLoadPack\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t\t<option name=\"My Stuff\">\r\n\t\t\t\t<choice name=\"CTGP\">\r\n\t\t\t\t\t<patch id=\"RRCTGPLoad\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"RR\">\r\n\t\t\t\t\t<patch id=\"RRLoad\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"CTGP Music\">\r\n\t\t\t\t\t<patch id=\"RRCTGPLoadMusic\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"RR Music\">\r\n\t\t\t\t\t<patch id=\"RRLoadMusic\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t\t<option name=\"Seperate Savegame\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"RRSave\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\t\r\n\t<patch id=\"RRLoadPack\">\r\n    \t<memory offset=\"0x80005EFC\" value=\"0000000A\"/>\r\n    \t<memory offset=\"0x800023D0\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x80002470\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x80002370\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x80002400\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x800024A0\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x800024E0\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x80002510\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x800018a8\" value=\"00000000\"/>\r\n    \t<memory offset=\"0x80001804\" value=\"00000000\"/>\r\n\t    <memory valuefile=\"/RetroRewind6/Binaries/Loader.pul\" offset=\"0x80004000\"/>\r\n\t\t<memory offset=\"0x80242698\" value=\"4BDC1968\" original=\"4e800020\"/> <!--RMCP DOL-->\r\n\t\t<memory offset=\"0x8000A3F4\" value=\"4bff9c0c\" original=\"4e800020\"/> <!--RMCP REL-->\r\n\t\t<memory offset=\"0x802417dc\" value=\"4BDC2824\" original=\"4e800020\"/> <!--RMCE DOL-->\r\n\t\t<memory offset=\"0x8000A3B4\" value=\"4BFF9C4c\" original=\"4e800020\"/> <!--RMCE REL-->\t\t\r\n\t\t<memory offset=\"0x802425b8\" value=\"4BDC1A48\" original=\"4e800020\"/> <!--RMCJ DOL-->\r\n\t\t<memory offset=\"0x8000A350\" value=\"4BFF9CB0\" original=\"4e800020\"/> <!--RMCJ REL-->\r\n\t    <savegame clone=\"true\" external=\"/riivolution/save/RetroWFC/{$__gameid}{$__region}\"/>\r\n\t\t<folder external=\"/RetroRewind6/Binaries\" disc=\"/Binaries\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/BT/Tracks\" disc=\"/Race/Course\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/CT/Tracks\" disc=\"/Race/Course\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Tracks\" disc=\"/Race/Course\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Assets\" disc=\"/\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Patches\" disc=\"/patches\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Ghosts/ExpertsRT\" disc=\"/Ghosts/ExpertsRT\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Ghosts/ExpertsCT\" disc=\"/Ghosts/ExpertsCT\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/strm\" disc=\"/sound/strm\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Character\" disc=\"/Race/Kart\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Character/AllKart\" disc=\"/Scene/Model/Kart\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Character/Driver\" disc=\"/Scene/Model/Driver\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Character/Map\" disc=\"/Race/Map\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Character/Portrait\" disc=\"/Race/Portrait\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Character/Sound\" disc=\"/sound\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Character/MiiOutfitC\" disc=\"/Race/Kart\" create=\"true\"/>\r\n\t\t<folder external=\"/RetroRewind6/Mission\" disc=\"/Race/MissionRun\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_J.szs\" external=\"/RetroRewind6/Language/JPN/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_F.szs\" external=\"/RetroRewind6/Language/FRA/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_G.szs\" external=\"/RetroRewind6/Language/GER/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_D.szs\" external=\"/RetroRewind6/Language/DUT/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_AS.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_ES.szs\" external=\"/RetroRewind6/Language/SPA(EU)/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_FI.szs\" external=\"/RetroRewind6/Language/FIN/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_I.szs\" external=\"/RetroRewind6/Language/ITA/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_K.szs\" external=\"/RetroRewind6/Language/KOR/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_R.szs\" external=\"/RetroRewind6/Language/RUS/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_T.szs\" external=\"/RetroRewind6/Language/TUR/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/UIAssets_C.szs\" external=\"/RetroRewind6/Language/CZE/Assets/UIAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_J.szs\" external=\"/RetroRewind6/Language/JPN/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_F.szs\" external=\"/RetroRewind6/Language/FRA/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_G.szs\" external=\"/RetroRewind6/Language/GER/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_D.szs\" external=\"/RetroRewind6/Language/DUT/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_AS.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_ES.szs\" external=\"/RetroRewind6/Language/SPA(EU)/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_FI.szs\" external=\"/RetroRewind6/Language/FIN/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_I.szs\" external=\"/RetroRewind6/Language/ITA/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_K.szs\" external=\"/RetroRewind6/Language/KOR/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_R.szs\" external=\"/RetroRewind6/Language/RUS/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_T.szs\" external=\"/RetroRewind6/Language/TUR/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/RaceAssets_C.szs\" external=\"/RetroRewind6/Language/CZE/Assets/RaceAssets.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Title.szs\" external=\"/RetroRewind6/UI/Title.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Award.szs\" external=\"/RetroRewind6/UI/Award.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Globe.szs\" external=\"/RetroRewind6/UI/Globe.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/MenuSingle.szs\" external=\"/RetroRewind6/UI/MenuSingle.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/MenuMulti.szs\" external=\"/RetroRewind6/UI/MenuMulti.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Channel.szs\" external=\"/RetroRewind6/UI/Channel.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Title_E.szs\" external=\"/RetroRewind6/UI/Title_U.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Title_J.szs\" external=\"/RetroRewind6/UI/Title_U.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Title_U.szs\" external=\"/RetroRewind6/UI/Title_U.szs\" create=\"true\"/>\r\n        <file disc=\"/Race/Common_J.szs\" external=\"/RetroRewind6/UI/Common_U.szs\" create=\"true\"/>      \r\n        <file disc=\"/Race/Common_U.szs\" external=\"/RetroRewind6/UI/Common_U.szs\" create=\"true\"/>         \r\n        <file disc=\"/Race/Common_E.szs\" external=\"/RetroRewind6/UI/Common_U.szs\" create=\"true\"/>  \r\n        <file disc=\"/Boot/Strap/jp/jp.szs\" external=\"/RetroRewind6/UI/English.szs\" create=\"true\"/>\r\n        <file disc=\"/Boot/Strap/eu/English.szs\" external=\"/RetroRewind6/UI/English.szs\" create=\"true\"/>\r\n        <file disc=\"/Boot/Strap/us/English.szs\" external=\"/RetroRewind6/UI/English.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Font.szs\" external=\"/RetroRewind6/UI/Font.szs\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Font_K.szs\" external=\"/RetroRewind6/UI/Font.szs\" create=\"true\"/>\r\n        <file disc=\"/thp/button/transmissionType.thp\" external=\"/RetroRewind6/UI/transmissionType.thp\" create=\"true\"/>\r\n        <file disc=\"/thp/button/class.thp\" external=\"/RetroRewind6/UI/class.thp\" create=\"true\"/>\r\n        <file disc=\"/Scene/UI/Kont.szs\" external=\"/RetroRewind6/Language/KOR/Font/Font.szs\" create=\"true\"/>\r\n        <file disc=\"/Jcene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/JPN/UI/Race_J.szs\" create=\"true\"/>      \r\n        <file disc=\"/Jcene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/JPN/UI/Race_J.szs\" create=\"true\"/>          \r\n        <file disc=\"/Jcene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/JPN/UI/Race_J.szs\" create=\"true\"/>   \r\n        <file disc=\"/Jcene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>  \r\n        <file disc=\"/Fcene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/FRA/UI/Race_F.szs\" create=\"true\"/>      \r\n        <file disc=\"/Fcene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/FRA/UI/Race_F.szs\" create=\"true\"/>     \r\n        <file disc=\"/Fcene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/FRA/UI/Race_F.szs\" create=\"true\"/>  \r\n        <file disc=\"/Fcene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>  \r\n        <file disc=\"/Gcene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/GER/UI/Race_G.szs\" create=\"true\"/>      \r\n        <file disc=\"/Gcene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/GER/UI/Race_G.szs\" create=\"true\"/>        \r\n        <file disc=\"/Gcene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/GER/UI/Race_G.szs\" create=\"true\"/>   \r\n        <file disc=\"/Gcene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>  \r\n        <file disc=\"/Dcene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/DUT/UI/Race_D.szs\" create=\"true\"/>      \r\n        <file disc=\"/Dcene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/DUT/UI/Race_D.szs\" create=\"true\"/>         \r\n        <file disc=\"/Dcene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/DUT/UI/Race_D.szs\" create=\"true\"/>   \r\n        <file disc=\"/Dcene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>  \r\n        <file disc=\"/Ucene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/UI/Race_AS.szs\" create=\"true\"/>      \r\n        <file disc=\"/Ucene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/UI/Race_AS.szs\" create=\"true\"/>        \r\n        <file disc=\"/Ucene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/UI/Race_AS.szs\" create=\"true\"/>    \r\n        <file disc=\"/Ucene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>  \r\n        <file disc=\"/Ecene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/SPA(EU)/UI/Race_ES.szs\" create=\"true\"/>      \r\n        <file disc=\"/Ecene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/SPA(EU)/UI/Race_ES.szs\" create=\"true\"/>       \r\n        <file disc=\"/Ecene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/SPA(EU)/UI/Race_ES.szs\" create=\"true\"/>    \r\n        <file disc=\"/Ecene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>  \r\n        <file disc=\"/Ncene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/FIN/UI/Race_FI.szs\" create=\"true\"/>      \r\n        <file disc=\"/Ncene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/FIN/UI/Race_FI.szs\" create=\"true\"/>       \r\n        <file disc=\"/Ncene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/FIN/UI/Race_FI.szs\" create=\"true\"/>     \r\n        <file disc=\"/Ncene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>     \r\n        <file disc=\"/Icene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/ITA/UI/Race_I.szs\" create=\"true\"/>      \r\n        <file disc=\"/Icene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/ITA/UI/Race_I.szs\" create=\"true\"/>       \r\n        <file disc=\"/Icene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/ITA/UI/Race_I.szs\" create=\"true\"/> \r\n        <file disc=\"/Icene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>    \r\n        <file disc=\"/Kcene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/KOR/UI/Race_K.szs\" create=\"true\"/>      \r\n        <file disc=\"/Kcene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/KOR/UI/Race_K.szs\" create=\"true\"/>        \r\n        <file disc=\"/Kcene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/KOR/UI/Race_K.szs\" create=\"true\"/> \r\n        <file disc=\"/Kcene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/>     \r\n        <file disc=\"/Acene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/RUS/UI/Race_R.szs\" create=\"true\"/>      \r\n        <file disc=\"/Acene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/RUS/UI/Race_R.szs\" create=\"true\"/>        \r\n        <file disc=\"/Acene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/RUS/UI/Race_R.szs\" create=\"true\"/> \r\n        <file disc=\"/Acene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/> \r\n        <file disc=\"/Tcene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/TUR/UI/Race_T.szs\" create=\"true\"/>      \r\n        <file disc=\"/Tcene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/TUR/UI/Race_T.szs\" create=\"true\"/>        \r\n        <file disc=\"/Tcene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/TUR/UI/Race_T.szs\" create=\"true\"/> \r\n        <file disc=\"/Tcene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/> \r\n        <file disc=\"/Ccene/UI/Race_J.szs\" external=\"/RetroRewind6/Language/CZE/UI/Race_C.szs\" create=\"true\"/>      \r\n        <file disc=\"/Ccene/UI/Race_U.szs\" external=\"/RetroRewind6/Language/CZE/UI/Race_C.szs\" create=\"true\"/>         \r\n        <file disc=\"/Ccene/UI/Race_E.szs\" external=\"/RetroRewind6/Language/CZE/UI/Race_C.szs\" create=\"true\"/>  \r\n        <file disc=\"/Ccene/UI/Race.szs\" external=\"/RetroRewind6/UI/Race.szs\" create=\"true\"/> \r\n        <file disc=\"/Jace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n\t\t<file disc=\"/Jace/Common_J.szs\" external=\"/RetroRewind6/Language/JPN/UI/Common_J.szs\" create=\"true\"/>      \r\n        <file disc=\"/Jace/Common_U.szs\" external=\"/RetroRewind6/Language/JPN/UI/Common_J.szs\" create=\"true\"/>        \r\n        <file disc=\"/Jace/Common_E.szs\" external=\"/RetroRewind6/Language/JPN/UI/Common_J.szs\" create=\"true\"/>  \r\n        <file disc=\"/Face/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Face/Common_J.szs\" external=\"/RetroRewind6/Language/FRA/UI/Common_F.szs\" create=\"true\"/>      \r\n        <file disc=\"/Face/Common_U.szs\" external=\"/RetroRewind6/Language/FRA/UI/Common_F.szs\" create=\"true\"/>       \r\n        <file disc=\"/Face/Common_E.szs\" external=\"/RetroRewind6/Language/FRA/UI/Common_F.szs\" create=\"true\"/>  \r\n        <file disc=\"/Gace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Gace/Common_J.szs\" external=\"/RetroRewind6/Language/GER/UI/Common_G.szs\" create=\"true\"/>      \r\n        <file disc=\"/Gace/Common_U.szs\" external=\"/RetroRewind6/Language/GER/UI/Common_G.szs\" create=\"true\"/>       \r\n        <file disc=\"/Gace/Common_E.szs\" external=\"/RetroRewind6/Language/GER/UI/Common_G.szs\" create=\"true\"/>  \r\n        <file disc=\"/Dace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Dace/Common_J.szs\" external=\"/RetroRewind6/Language/DUT/UI/Common_D.szs\" create=\"true\"/>      \r\n        <file disc=\"/Dace/Common_U.szs\" external=\"/RetroRewind6/Language/DUT/UI/Common_D.szs\" create=\"true\"/>        \r\n        <file disc=\"/Dace/Common_E.szs\" external=\"/RetroRewind6/Language/DUT/UI/Common_D.szs\" create=\"true\"/>     \r\n        <file disc=\"/Uace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Uace/Common_J.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/UI/Common_AS.szs\" create=\"true\"/>      \r\n        <file disc=\"/Uace/Common_U.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/UI/Common_AS.szs\" create=\"true\"/>       \r\n        <file disc=\"/Uace/Common_E.szs\" external=\"/RetroRewind6/Language/SPA(NTSC)/UI/Common_AS.szs\" create=\"true\"/>   \r\n        <file disc=\"/Eace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Eace/Common_J.szs\" external=\"/RetroRewind6/Language/SPA(EU)/UI/Common_ES.szs\" create=\"true\"/>      \r\n        <file disc=\"/Eace/Common_U.szs\" external=\"/RetroRewind6/Language/SPA(EU)/UI/Common_ES.szs\" create=\"true\"/>       \r\n        <file disc=\"/Eace/Common_E.szs\" external=\"/RetroRewind6/Language/SPA(EU)/UI/Common_ES.szs\" create=\"true\"/>  \r\n        <file disc=\"/Nace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Nace/Common_J.szs\" external=\"/RetroRewind6/Language/FIN/UI/Common_FI.szs\" create=\"true\"/>      \r\n        <file disc=\"/Nace/Common_U.szs\" external=\"/RetroRewind6/Language/FIN/UI/Common_FI.szs\" create=\"true\"/>        \r\n        <file disc=\"/Nace/Common_E.szs\" external=\"/RetroRewind6/Language/FIN/UI/Common_FI.szs\" create=\"true\"/>  \r\n        <file disc=\"/Iace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Iace/Common_J.szs\" external=\"/RetroRewind6/Language/ITA/UI/Common_I.szs\" create=\"true\"/>      \r\n        <file disc=\"/Iace/Common_U.szs\" external=\"/RetroRewind6/Language/ITA/UI/Common_I.szs\" create=\"true\"/>        \r\n        <file disc=\"/Iace/Common_E.szs\" external=\"/RetroRewind6/Language/ITA/UI/Common_I.szs\" create=\"true\"/>  \r\n        <file disc=\"/Kace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Kace/Common_J.szs\" external=\"/RetroRewind6/Language/KOR/UI/Common_K.szs\" create=\"true\"/>      \r\n        <file disc=\"/Kace/Common_U.szs\" external=\"/RetroRewind6/Language/KOR/UI/Common_K.szs\" create=\"true\"/>         \r\n        <file disc=\"/Kace/Common_E.szs\" external=\"/RetroRewind6/Language/KOR/UI/Common_K.szs\" create=\"true\"/>    \r\n        <file disc=\"/Aace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/>   \r\n        <file disc=\"/Aace/Common_J.szs\" external=\"/RetroRewind6/Language/RUS/UI/Common_R.szs\" create=\"true\"/>      \r\n        <file disc=\"/Aace/Common_U.szs\" external=\"/RetroRewind6/Language/RUS/UI/Common_R.szs\" create=\"true\"/>       \r\n        <file disc=\"/Aace/Common_E.szs\" external=\"/RetroRewind6/Language/RUS/UI/Common_R.szs\" create=\"true\"/> \r\n        <file disc=\"/Tace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Tace/Common_J.szs\" external=\"/RetroRewind6/Language/TUR/UI/Common_T.szs\" create=\"true\"/>      \r\n        <file disc=\"/Tace/Common_U.szs\" external=\"/RetroRewind6/Language/TUR/UI/Common_T.szs\" create=\"true\"/>      \r\n        <file disc=\"/Tace/Common_E.szs\" external=\"/RetroRewind6/Language/TUR/UI/Common_T.szs\" create=\"true\"/>   \r\n        <file disc=\"/Cace/Common.szs\" external=\"/RetroRewind6/UI/Common.szs\" create=\"true\"/> \r\n        <file disc=\"/Cace/Common_J.szs\" external=\"/RetroRewind6/Language/CZE/UI/Common_C.szs\" create=\"true\"/>      \r\n        <file disc=\"/Cace/Common_U.szs\" external=\"/RetroRewind6/Language/CZE/UI/Common_C.szs\" create=\"true\"/>       \r\n        <file disc=\"/Cace/Common_E.szs\" external=\"/RetroRewind6/Language/CZE/UI/Common_C.szs\" create=\"true\"/>\r\n\t</patch>\r\n\t<patch id=\"RRCTGPLoad\">\r\n\t\t<folder external=\"/ctgpr/My Stuff\" recursive=\"true\"/>\r\n\t\t<folder external=\"/ctgpr/My Stuff\" disc=\"/\"/>\r\n\t\t<file external=\"/ctgpr/My Stuff/title_bg.brstm\" disc=\"/sound/strm/title_bg.brstm\" create=\"true\" />\r\n\t\t<file external=\"/ctgpr/My Stuff/offline_bg.brstm\" disc=\"/sound/strm/offline_bg.brstm\" create=\"true\" />\r\n\t\t<file external=\"/ctgpr/My Stuff/wifi_bg.brstm\" disc=\"/sound/strm/wifi_bg.brstm\" create=\"true\" />\r\n    \t<memory offset=\"0x80001200\" value=\"01\"/>\r\n\t</patch>\t\r\n\t<patch id=\"RRLoad\">\r\n        <folder external=\"/RetroRewind6/MyStuff\" recursive=\"true\"/>\r\n        <folder external=\"/RetroRewind6/MyStuff\" disc=\"/\" />\r\n\t\t<file external=\"/RetroRewind6/MyStuff/title_bg.brstm\" disc=\"/sound/strm/title_bg.brstm\" create=\"true\" />\r\n\t\t<file external=\"/RetroRewind6/MyStuff/offline_bg.brstm\" disc=\"/sound/strm/offline_bg.brstm\" create=\"true\" />\r\n\t\t<file external=\"/RetroRewind6/MyStuff/wifi_bg.brstm\" disc=\"/sound/strm/wifi_bg.brstm\" create=\"true\" />\r\n    \t<memory offset=\"0x80001200\" value=\"01\"/>\r\n\t</patch>\r\n\t<patch id=\"RRCTGPLoadMusic\">\r\n\t\t"
+        }
+      ],
+      "readmes": {
+        "apps/riivolution/readme.txt": "Riivolution v1.06\r\nDecember 18th, 2013\r\nby Aaron, tueidj, Tempus, and megazig\r\nriivolution@japaneatahand.com\r\n\r\nHomepage: http://rvlution.net/riivolution\r\nDownload: http://rvlution.net/riivolution.zip\r\n\r\nRiivolution is an on-the-fly game patcher for use with retail discs. It allows users to place content on their SD or USB devices, which will be read by the game during regular play.\r\nRiivolution can be used for custom textures, music, levels, memory patches, game translations, and more.\r\n\r\nMini-FAQ - Updated online version: http://rvlution.net/riiv/FAQ\r\n\r\nQ: Does Riivolution work with my \"backups\" or USB loaders?\r\nA: No. And that's not a bug.\r\n\r\nQ: Does Riivolution work with my PAL/NTSC/JAP Wii/game?\r\nA: Yes.\r\n\r\nQ: Does Riivolution work on my Wii U?\r\nA: It does now! In vWii mode (it does not work with Wii U games) Riivolution can be run or installed through Smash Stack, other game exploits, or the Homebrew Channel if it's already installed.\r\n\r\nQ: What IOS does it need installed?\r\nA: Riivolution requires an updated IOS37; if you're on System Menu 4.2 or 4.3 you don't need to do anything.\r\n   If it's not installed or the proper version it will be installed the first time Riivolution is run.\r\n   Alternatively, you can also use NUSD or DOP-IOS to install it - with all patches disabled.\r\n\r\nQ: Does Riivolution work with Game X?\r\nA: I probably haven't played it, but yes, it should; try it. If it doesn't work, report it - some games known to reload IOS will require specific patches to work.\r\n   Games that have specifically been tested include Fatal Frame 4, Super Smash Bros. Brawl, New Super Mario Bros. Wii, Rock Band, among others.\r\n\r\nQ: What does the \"Install\" button do?\r\nA: It will install a Riivolution channel onto your System Menu for easy access. This can always be uninstalled.\r\n\r\nQ: Can I use Ocarina / Gecko codes with it?\r\nA: Normally, Riivolution just supports direct memory patches. However, Riivolution supports a patching method that can be used with the Gecko OS code handler.\r\n   Read more about that here: http://rvlution.net/riiv/Ocarina_Codes\r\n\r\nQ: Uhh, how do I use this?\r\nA: As a user, you need to either download patch packages made by someone else or make your own.\r\n   A basic template and packages for common games can be found here: http://rvlution.net/riiv/Patch_Templates\r\n   For a more detailed explanation about Riivolution's patch XML files, check out the instructions: http://rvlution.net/riiv/Patch_Format\r\n\r\nQ: Network support? Awesome, how do I use it?\r\nA: Read more about all of Riivolution's network features here: http://rvlution.net/riiv/Network\r\n   You can also check out our list of all the known public Riivolution servers: http://rvlution.net/riiv/List_of_RiiFS_servers\r\n\r\nQ: Can I see it in action?\r\nA: Sure. http://rvlution.net/riiv/Media\r\n\r\nSpecial thanks to everyone that contributed: Treeki, Omega, Pop006, TobiasAmaranth, Mooseknuckle2000, Skawo, and everyone else who helped out!\r\n\r\n\r\nChangelog\r\n\r\nv1.06\r\nDecember 18th, 2013\r\n - Wiimote disconnection issues resolved (Smash Bros. Brawl strap screen crash)\r\n\r\nv1.05\r\nJune 10th, 2013\r\n - Wii U (Virtual Wii Menu) is now supported\r\n - New Wii Remote Plus remotes are now properly supported\r\n\r\nv1.04\r\nSeptember 16th, 2010\r\n - System Menu 4.3v2 compatibility (September 8th, 2010 update)\r\n - New savefile redirection feature\r\n - This update provides behind-the-scenes fixes that will not affect features but will improve the overall system performance.\r\n\r\nv1.03\r\nJune 22nd, 2010\r\n - System Menu 4.3 compatibility\r\n - Wii slot light filesystem indicator\r\n - Stability fixes for all filesystems\r\n - Files close after a few seconds to allow them to be replaced over RiiFS\r\n - Improved channel install\r\n - RiiFS improvements\r\n    - Native C++ Server\r\n    - Connects automatically on a LAN without needing SD/USB\r\n\r\nv1.02\r\nMarch 28th, 2010\r\n - Disc file addition\r\n - More memory patch improvements\r\n - Network hostname lookups\r\n - Network stability improvements\r\n - Games will now connect to the network alongside Riivolution/RiiFS\r\n - Foreign character support in XMLs (Latin-1)\r\n\r\nv1.01\r\nMarch 22nd, 2010\r\n - Memory patch improvements\r\n - Mounted disk improvements\r\n - Added network support\r\n\r\nv1.0\r\nMarch 20th, 2010\r\n - Inital release\r\n",
+        "RetroRewind6/version.txt": "6.13.4"
+      },
+      "image": {
+        "path": "/assets/images/wii-games-online/retro-rewind.png",
+        "credit": "Retro Rewind project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://cdn.update.rwfc.net/RetroRewind/zip/6.13.4-full.zip",
+        "sha256": "22e18a0e053b5e77130ffe033da990147a9f2fc396e78d8687653b09058b7430"
+      },
+      "format": "ZIP \u00b7 mod data + Wii launcher"
+    }
+  ],
+  "downloadsExecuted": false
+}

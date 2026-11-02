@@ -23,6 +23,7 @@ body {
     background: transparent;
     color: var(--text);
     min-height: 100vh;
+    min-height: 100svh;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     display: flex;
@@ -60,7 +61,15 @@ body {
        revealed state grows past the viewport. */
     margin: auto;
     padding: 48px 20px 40px;
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-bottom: max(40px, env(safe-area-inset-bottom));
 }
+
+.container, .key-layout > *, .side-panel, .card { min-width: 0; }
+.container { overflow-wrap: anywhere; }
+button, a { touch-action: manipulation; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
 
 .logo-section { text-align: center; margin-bottom: 24px; }
 .logo { width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px; }
@@ -197,6 +206,7 @@ body {
 .timer-fill { height: 100%; width: 0; background: var(--accent); transition: width 1s linear; }
 
 .key-actions { display: flex; gap: 10px; margin-top: 18px; }
+.key-actions > * { min-width: 0; min-height: 48px; }
 .primary-button {
     flex: 1;
     padding: 13px 20px;
@@ -242,6 +252,7 @@ body {
     color: var(--muted);
     background: transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
+    min-height: 44px;
 }
 .btn:hover { color: var(--text); border-color: var(--border-strong); }
 .btn i { font-size: 13px; }
@@ -250,6 +261,9 @@ body {
 .ad-slot {
     margin: 88px 0 24px;
     text-align: center;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
 }
 
 .footer { text-align: center; padding-bottom: 8px; }
@@ -264,7 +278,9 @@ body {
 
 @media (max-width: 560px) {
     .topbar { padding: 16px 18px; }
-    .container { padding: 32px 16px; }
+    .container {
+        padding: 28px max(16px, env(safe-area-inset-right)) max(32px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    }
     .card { padding: 22px; }
     .key-output { font-size: 13px; padding: 15px; }
     .btn { flex: 1 1 100%; }
@@ -300,9 +316,10 @@ body {
     gap: 8px;
     margin-top: 10px;
     padding: 12px 14px;
-    /* keeps the label on one line inside the 300px side column */
-    font-size: 12.5px;
-    white-space: nowrap;
+    min-width: 0;
+    min-height: 48px;
+    white-space: normal;
+    text-align: center;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: var(--surface-2);
@@ -543,9 +560,7 @@ body.brand-scooby .brand-name {
 .site-footer {
     display: flex;
     align-items: center;
-    /* one line: six links plus brand and copyright only fit if nothing wraps
-       and the gaps stay tight. Wrapping comes back on narrow screens. */
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 14px;
     margin-top: 88px;
     padding: 32px 4px 24px;
@@ -566,12 +581,15 @@ body.brand-scooby .brand-name {
 .site-footer .foot-copy { color: var(--muted); font-size: 12px; white-space: nowrap; flex: 0 0 auto; }
 .site-footer .foot-links {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 14px;
     margin-left: auto;
     min-width: 0;
 }
 .site-footer .foot-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     color: var(--muted);
     font-size: 12px;
     white-space: nowrap;
@@ -586,6 +604,9 @@ body.brand-scooby .brand-name {
     .site-footer { flex-direction: column; align-items: flex-start; flex-wrap: wrap; gap: 14px; }
     .site-footer .foot-links { flex-wrap: wrap; }
     .site-footer .foot-links { margin-left: 0; gap: 14px; }
+    .site-footer { margin-top: 44px; }
+    .ad-slot { margin-top: 44px; }
+    .taskbar .btn { white-space: normal; text-align: center; }
 }
 
 
@@ -753,4 +774,13 @@ body.brand-scooby::after {
 @media (prefers-reduced-motion: reduce) {
     body.brand-nenyoo::before, body.brand-scooby::before,
     body.brand-nenyoo::after,  body.brand-scooby::after { animation: none; }
+    *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}
+
+@media (max-width: 380px) {
+    .card { padding: 18px; }
+    .key-actions { flex-wrap: wrap; }
+    .key-actions .primary-button { flex-basis: 100%; }
+    .key-actions .ghost-button { flex: 1; }
+    .timer { flex-wrap: wrap; }
 }

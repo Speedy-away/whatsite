@@ -1,0 +1,61 @@
+{
+  "scope": "pc-emulators",
+  "updatedAt": "2026-11-02T08:35:00Z",
+  "status": "complete locally; ready for coordinating archive merge and sitemap audit",
+  "canonicalPages": [
+    "/pc/emulators.html",
+    "/pc/nintendo-emulators.html",
+    "/pc/playstation-emulators.html",
+    "/pc/xbox-emulators.html",
+    "/pc/"
+  ],
+  "entries": 29,
+  "renderedCardsAcrossCatalogues": 54,
+  "sources": [
+    "docs/pc-emulator-catalog.json",
+    "docs/pc-emulator-source-evidence.json",
+    "docs/pc-emulator-downloads.json"
+  ],
+  "buildEntrypoint": "node scripts/build-pc-emulators.cjs",
+  "archiveEntrypoint": "node scripts/archive-pc-emulators.cjs --download",
+  "verifyEntrypoint": "node scripts/verify-pc-emulators.cjs",
+  "privateInventory": "docs/pc-emulators-private-inventory.json",
+  "archive": {
+    "selectedReadyWindowsPackages": 22,
+    "verifiedReadyFiles": 22,
+    "verifiedBytes": 689661708,
+    "publicMirrors": 21,
+    "publicMirrorBytes": 487152630,
+    "largeFile": "RetroArch Windows x64 1.22.2 is 202509078 bytes, saved to F: with the original publisher download on the site instead of a public repository mirror.",
+    "unresolvedSelectedDownloads": 0,
+    "failedTransferHistory": "The first DuckStation transfer timed out; the complete retry was archive-tested, hashed and saved. The failed attempt remains recorded truthfully alongside the ready file.",
+    "preservation": "All older/source/other-OS archives retained. Existing bytes reused only on exact source-URL and fresh SHA-256 matches. Scoped helper used for durable intake; global inventory merge left to coordinator.",
+    "validation": "ZIP/7z signatures, 7-Zip integrity and path checks, ready EXE presence, or MZ/PE signatures for the Play installer. Every F: record and public mirror independently size/SHA-256 checked. No downloaded executable was run."
+  },
+  "importantClassifications": [
+    "Exact Eden NS2 repository is source-only at review. Windows MSYS2 build instructions only; Linux explicitly untested and no verified macOS route. No binary, cloned repository or source ZIP was fabricated/downloaded.",
+    "Native, experimental, source, legacy, Wine and RetroArch-core host routes have separate icon labels; packaged-only filtering excludes source, Wine and cores.",
+    "shadPS4 0.21.0 requires macOS26.0+ on Apple Silicon; Intel Macs unsupported. Core release is CLI/SDL; separate QtLauncher release linked.",
+    "Cemu macOS experimental, DeSmuME Linux source, Cxbx Linux Wine. Lakka/Recalbox hardware images have no desktop OS badges.",
+    "Historical yuzu, Ryujinx and Citra retained as references with no current downloads. Genesis Plus GX is a frontend core, not a standalone desktop package."
+  ],
+  "checks": {
+    "syntax": "pass: builder, importer, verifier and browser script",
+    "structureAndHashes": "pass: docs/qa/pc-emulators-verification.json; 29 unique entries, four catalogue pages, 54 rendered cards, 22 archived files, all local hashes correct",
+    "anchors": "Retained modern/retroarch/collections/retro/handheld; Nintendo dolphin/wiiu/switch/retro; PlayStation ps2/ps3/psp/ps1; Xbox xbox360/xbox. New switch2 on both requested emulator pages. Every structured-data entry URL resolves to an existing anchor.",
+    "metadata": "Source builder supplies exact current descriptions, keywords and CollectionPage/ItemList. Shared metadata updater has no overriding PC descriptions/titles; its legacy redirects derive target page metadata.",
+    "desktopUI": "Coordinator CUA1280px: all images loaded, no horizontal overflow; macOS + packaged-only17/29, Eden search0 under those filters, Reset29/29.",
+    "phoneUI": "Coordinator CUA390x844 and320x740: no horizontal overflow, Eden source-only card readable. Viewport reset.",
+    "video": "No embedded/linked videos in catalogue main content. Existing shared sidebar social channel retained.",
+    "privateMetadata": "Public downloads report has no F:/C: paths or GitHub signed redirect query strings."
+  },
+  "screenshots": [
+    "docs/screenshots/pc-emulators-mobile.jpg"
+  ],
+  "remainingCoordinatorActions": [
+    "Merge scoped private inventory using console-expansion-archive.cjs with other completed console chats, then refresh organized local archive index.",
+    "Run the coordinated site/sitemap audit after concurrent console pages settle.",
+    "Add this handoff as a scoped field to the latest global console-expansion-handoff.json without replacing other chat history."
+  ],
+  "constraints": "No commit, publication, deployment, worktree, game/BIOS/keys downloads or downloaded executable execution."
+}

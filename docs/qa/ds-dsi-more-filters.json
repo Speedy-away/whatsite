@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "checkedAt": "2026-11-02T12:18:54.177Z",
+  "method": "Actual filter script in Node VM with catalogue-shaped DOM fixtures; no browser-rendering claim",
+  "checks": [
+    {
+      "label": "All original and new cards",
+      "count": 49
+    },
+    {
+      "label": "Name search",
+      "count": 1
+    },
+    {
+      "label": "Combined empty search",
+      "count": 0
+    },
+    {
+      "label": "Clear restores cards",
+      "count": 49
+    },
+    {
+      "label": "Emulators category",
+      "count": 6
+    },
+    {
+      "label": "Skins category",
+      "count": 15
+    },
+    {
+      "label": "Unmatched query",
+      "count": 0
+    },
+    {
+      "label": "Escape restores all",
+      "count": 49
+    }
+  ]
+}

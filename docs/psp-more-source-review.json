@@ -1,0 +1,176 @@
+{
+  "scope": "psp-more",
+  "reviewedAt": "2026-11-02T08:34:10.640Z",
+  "method": "Read official project READMEs, selected release pages, ARK wiki and selected tagged source files. No console binaries executed, no hardware test. Only this review JSON is owned by reviewer.",
+  "overall": "Official ready build asset selection is sound. Do not turn generic PSP builds into source-confirmed all-model/all-firmware guarantees. Explicit storage exceptions and ARK maintenance status below should be visible.",
+  "findings": [
+    {
+      "priority": "required",
+      "topic": "ARK-4 maintenance",
+      "status": "confirmed",
+      "detail": "PSP-Archive/ARK-4 is archived (owner archive date August 2, 2026); its README directs users to PSP-Arkfive/ARK-5. Label bundled ARK-4 as a pinned legacy/final release and link current official successor/setup. Do not describe ARK-4 as actively maintained.",
+      "sources": [
+        "https://github.com/PSP-Archive/ARK-4",
+        "https://github.com/PSP-Arkfive/ARK-5",
+        "https://github.com/PSP-Arkfive/FasterARK"
+      ]
+    },
+    {
+      "priority": "required",
+      "topic": "ARK-4 compatibility and migration",
+      "status": "confirmed",
+      "detail": "Official ARK-4 wiki confirms all retail PSP models on 6.60/6.61. Live loader uses ARK_01234 in PSP/SAVEDATA and ARK_Loader in PSP/GAME; Go may use internal or external provided both folders use the same device. Root README has a distinct existing-CFW route: 6.61 PRO/ME → DC-ARK + New cIPL → power-on holding L → fresh/full 6.61 ARK install; earlier CFW needs its specified official-firmware preparation. cIPL is separate from live loading; follow official Infinity prerequisite and avoid treating one procedure as universal.",
+      "sources": [
+        "https://github.com/PSP-Archive/ARK-4/wiki",
+        "https://github.com/PSP-Archive/ARK-4/wiki/Installation-on-PSP",
+        "https://github.com/PSP-Archive/ARK-4/wiki/cIPL",
+        "https://github.com/PSP-Archive/ARK-4/blob/main/README.md"
+      ]
+    },
+    {
+      "priority": "required",
+      "topic": "Current ARK successor migration",
+      "status": "confirmed",
+      "detail": "FasterARK's current official README says existing ARK-4 users should use OTA if working; if OTA fails download ARK_UPDATE.zip, extract and copy PSP to Memory Stick then run updater. Existing Adrenaline-ARK users require Adrenaline-8. New stock PSP route explicitly starts on official 6.60/6.61. Link this source without silently replacing pinned ARK-4 files.",
+      "sources": [
+        "https://github.com/PSP-Arkfive/FasterARK"
+      ]
+    },
+    {
+      "priority": "required",
+      "topic": "Go storage paths",
+      "status": "confirmed",
+      "detail": "ms0:/ is Memory Stick (external M2 on Go); ef0:/ is PSP Go internal memory. Base homebrew install path is <storage>:/PSP/GAME/<app>/EBOOT.PBP. ARK-4 changelog r42065 says XMB homebrew launched from ef0 has ms0→ef0 redirection; Custom Launcher can disable redirection. Do not mechanically rewrite every app's runtime save/config paths from ms0 to ef0 or claim simultaneous access to both without source evidence.",
+      "sources": [
+        "https://github.com/PSP-Archive/ARK-4/blob/main/CHANGELOG.md",
+        "https://github.com/PSP-Archive/ARK-4/wiki/Installation-on-PSP"
+      ]
+    },
+    {
+      "priority": "required",
+      "topic": "Source build model labels",
+      "status": "confirmed",
+      "detail": "Only NZ:P explicitly lists PSP-1000 and PSP-2000+ in the checked app README. Some projects simply publish a PSP build. Show unenumerated model coverage as project not enumerated, rather than asserting a tested firmware/model matrix. ARK's broad homebrew support is not physical testing of these 12 builds.",
+      "sources": [
+        "https://github.com/nzp-team/nzportable",
+        "https://github.com/PSP-Archive/ARK-4/wiki/Homebrew-Support"
+      ]
+    },
+    {
+      "priority": "required",
+      "topic": "CXMB and CTF",
+      "status": "confirmed",
+      "detail": "cello0314/CXMB README gives 3.71–6.61 Classic/6.61 Infinity lineage; plugin paths ms0:/seplugins/cxmb/cxmb.prx or ef0:/seplugins/cxmb/cxmb.prx, enabled in VSH then restart. ARK plugin installation should use official ARK runlevel syntax/installer rather than copying classic vsh.txt syntax as if it were ARK syntax. Theme exact firmware remains pinned; plugin firmware compatibility does not prove each CTF build supports 6.61.",
+      "sources": [
+        "https://github.com/cello0314/CXMB/blob/main/readme.txt",
+        "https://github.com/PSP-Archive/ARK-4/wiki/Plugins"
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "slug": "apollo",
+      "version": "v2.3.2",
+      "source": "https://github.com/bucanero/apollo-psp/blob/v2.3.2/README.md",
+      "prerequisites": "Homebrew-enabled PSP. Game-specific keys needed for save decryption/patching; author documents SGKeyDumper and SGDeemer. Back up saves.",
+      "storage": "Author supports Memory Stick and internal saves. Selected storage is explicit in tagged source main.c; do not imply every operation reads both devices at once.",
+      "confirmedInstall": "ms0:/PSP/GAME/APOLLO",
+      "notes": "CFW version and per-model coverage not enumerated in checked README."
+    },
+    {
+      "slug": "cmfilemanager",
+      "version": "v4.12",
+      "source": "https://github.com/joel16/CMFileManager-PSP/blob/next/README.MD",
+      "prerequisites": "Custom firmware. FTP requires WLAN; PSP Street cannot use WLAN features.",
+      "storage": "README explicitly supports ef0:/ internal and ms0:/ external on Go. Release distinguishes regular PSP/Go without external M2 build from PSP Go with external M2 build.",
+      "variants": "https://github.com/joel16/CMFileManager-PSP/releases/tag/v4.12",
+      "notes": "Choose GO-M2 variant when Go external card support is needed. FTP anonymous port 1337, as author documents."
+    },
+    {
+      "slug": "opensupaplex",
+      "version": "v7.2.2",
+      "source": "https://github.com/sergiou87/open-supaplex",
+      "prerequisites": "Homebrew-enabled PSP and included package resources.",
+      "storage": "Whole PSP app folder under PSP/GAME; no explicit ms0/ef0 dual-device matrix in checked README.",
+      "notes": "Project screenshot URL points to switch/resources/screenshots; credit as project screenshot, not proof of PSP rendering. Prefer selected PBP icon."
+    },
+    {
+      "slug": "ccleste",
+      "version": "v1.0.4",
+      "source": "https://github.com/fjtrujy/ccleste/blob/v1.0.4/README.md",
+      "prerequisites": "Homebrew-enabled PSP; packaged PSP .tar.gz is a binary release asset, not a source archive.",
+      "storage": "Keep selected package's EBOOT.PBP and data together in an app folder under PSP/GAME; exact archive layout is root verifier's evidence.",
+      "notes": "Source says optional audio build runs at slightly over half speed; do not promise enabled audio or full-speed result for selected build. No checked all-model matrix."
+    },
+    {
+      "slug": "nzportable",
+      "version": "nightly pinned snapshot",
+      "source": "https://github.com/nzp-team/nzportable",
+      "prerequisites": "Homebrew-enabled PSP. Official README confirms PHAT PSP-1000 and SLIM PSP-2000 and higher.",
+      "storage": "Official release: extract ZIP folder into PSP/GAME. Keep bundled maps/data.",
+      "notes": "Mutable nightly source requires snapshot timestamp, build-version marker and archive hash. Do not describe as a commercial COD mod/PSP retail game; it is standalone demake."
+    },
+    {
+      "slug": "daedalus",
+      "version": "1.1.8",
+      "source": "https://github.com/DaedalusX64/daedalus",
+      "prerequisites": "Homebrew-enabled PSP plus user-supplied N64 ROMs.",
+      "storage": "Author says entire DaedalusX64 folder in PSP/GAME; no checked explicit Go dual-storage guarantees.",
+      "notes": "Compatibility/speed depend on game. README build prerequisites for macOS/Linux (libpng etc.) are compiler/desktop prerequisites, not PSP install dependencies."
+    },
+    {
+      "slug": "picodrive",
+      "version": "v2.05",
+      "source": "https://github.com/irixxxx/picodrive/releases/tag/v2.05",
+      "prerequisites": "Homebrew-enabled PSP plus user-supplied ROMs; Sega CD needs a suitable user-supplied BIOS.",
+      "storage": "PSP platform code uses working-directory handling. Keep complete extracted app package under PSP/GAME; exact included README controls BIOS naming.",
+      "notes": "Project README includes platform-wide mouse/lightgun features that do not imply PSP input support or measured 32X speed."
+    },
+    {
+      "slug": "wagic",
+      "version": "wagic-v0.25.5",
+      "source": "https://github.com/WagicProject/wagic/releases/tag/wagic-v0.25.5",
+      "prerequisites": "Homebrew-enabled PSP plus matching game resources.",
+      "storage": "Confirm WTH/resource locations from downloaded PSP package/included docs. Do not finalize placeholder install paths.",
+      "notes": "WagicPSP-0255.zip is ~27.6 MB and Wagic-core-0255.zip ~52.3 MB. Dependency on separate core should be determined from package contents; researcher has not proven PSP ZIP omits required resources. PC CardImageDownloader is a separate helper and not needed for native-app count."
+    },
+    {
+      "slug": "crosscraft",
+      "version": "v1.3",
+      "source": "https://github.com/CrossCraft/CrossCraft-Classic",
+      "prerequisites": "Homebrew-enabled PSP. WLAN required for network multiplayer; offline creative mode separate.",
+      "storage": "Whole PSP app package in PSP/GAME; no checked explicit Go dual-storage guarantees.",
+      "notes": "Repository archived May 29, 2024. Project targets Minecraft Classic v0.30 creative mode with saves/multiplayer. It explicitly disclaims using original copyrighted assets; credit handmade/CC0 adapted textures."
+    },
+    {
+      "slug": "homebrew-sorter",
+      "version": "v1.29",
+      "source": "https://github.com/wad11656/Homebrew-Sorter-Ultimate",
+      "prerequisites": "CFW. Author supports PSP/Go and Adrenaline; optional Game Categories integration uses appropriate CFW setting.",
+      "storage": "Explicit author limitation: on PSP Go run app from Memory Stick to access Memory Stick storage. Storage Device selector chooses Memory Stick/System Storage.",
+      "confirmedInstall": "PSP/GAME/Homebrew Sorter Ultimate",
+      "notes": "No Animations release removes animations and EBOOT XMB song. Do not claim internal-launched app freely accesses Go external storage."
+    },
+    {
+      "slug": "pkgi",
+      "version": "v1.1.0",
+      "source": "https://github.com/bucanero/pkgi-psp/releases/tag/v1.1.0",
+      "prerequisites": "Selected homebrew-db CFW build. WLAN for downloads. Legitimately licensed downloaded commercial content requires valid license; app provides no blanket license.",
+      "storage": "Tagged source detects Go and defaults storage to ef0; release documents config.txt `storage ms0` to use Memory Stick. README pkgi.txt/config paths use ms0:/PSP/GAME/PKGI and downloads ms0:/PKG; explain selected device instead of claiming universal literal paths.",
+      "sourceCode": "https://github.com/bucanero/pkgi-psp/blob/v1.1.0/source/pkgi_psp.c",
+      "notes": "Use homebrew database asset for homebrew catalogue. No need to download separate OFW build unless offered as an explicitly labelled variant."
+    },
+    {
+      "slug": "scummvm",
+      "version": "2026.4.0",
+      "source": "https://docs.scummvm.org/en/latest/other_platforms/playstation_portable.html",
+      "prerequisites": "Homebrew-enabled PSP and supported game data. Keep exact-version engine plugins with executable.",
+      "storage": "Official install PSP/GAME/scummvm. Official runtime paths ms0:/scummvm_savegames/ and ms0:/scummvm.ini. Any ef0 mapping relies on CFW redirection; official docs do not independently promise ef0 paths.",
+      "notes": "Game data may be stored anywhere accessible. Keep kbd.zip in scummvm folder or virtual keyboard may not appear. On update use complete matching plugin folder; mixed plugin versions can crash startup."
+    }
+  ],
+  "unresolved": [
+    "Exact app folder names and Wagic resource requirements must be finalized from root's static archive inspection.",
+    "No selected app was physically installed or run. No model-specific measured speed claims are validated."
+  ]
+}

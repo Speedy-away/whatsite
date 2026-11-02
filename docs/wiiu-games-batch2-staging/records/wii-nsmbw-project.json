@@ -1,0 +1,48 @@
+{
+  "id": "wii-nsmbw-project",
+  "title": "mkwcat's NSMBW project",
+  "platform": "Wii",
+  "targetLabel": "Wii patch · vWii unconfirmed",
+  "category": "Game Mods",
+  "version": "v0.6.5",
+  "url": "https://github.com/mkwcat/nsmbw-project/releases/download/v0.6.5/mkwcat-nsmbw.zip",
+  "source": "https://github.com/mkwcat/nsmbw-project/releases/tag/v0.6.5",
+  "name": "mkwcat-nsmbw.zip",
+  "expectedBytes": 7586799,
+  "expectedSha256": "9f731f1012878b32ada6b47d0e99ad32f25e93672be315875d4405263cceeea3",
+  "description": "Experimental New Super Mario Bros. Wii Riivolution feature pack.",
+  "requirements": "Publisher documents real Wii and Dolphin; vWii-specific testing is not confirmed. Retail New Super Mario Bros. Wii disc and Riivolution required. The expanded8-player mode depends on4GameCube controllers, which is not a standard vWii peripheral setup; do not assume it works on Wii U.",
+  "setup": "Extract the complete release ZIP to SD root and merge its riivolution folder. Enable Core (Required) in Riivolution. Disable other mod sections to avoid conflicts. Retain the original XML disc/region checks. Back up saves; disable this patch to undo. Review the publisher requirements before trying vWii.",
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 3,
+    "uncompressedBytes": 10505331,
+    "builds": [],
+    "xmlFiles": [
+      "riivolution/mkwcat-nsmbw.xml"
+    ],
+    "patchGameIds": [
+      "SMN"
+    ]
+  },
+  "file": {
+    "name": "mkwcat-nsmbw.zip",
+    "version": "v0.6.5",
+    "bytes": 7586799,
+    "sha256": "9f731f1012878b32ada6b47d0e99ad32f25e93672be315875d4405263cceeea3",
+    "sourceUrl": "https://github.com/mkwcat/nsmbw-project/releases/download/v0.6.5/mkwcat-nsmbw.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/mkwcat-nsmbw.zip",
+    "itemId": "wiiu-games-batch2-wii-nsmbw-project",
+    "platform": "Wii",
+    "category": [
+      "Wii U",
+      "Game Mods"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii\\Wii U\\Game Mods\\nsmbw project\\Builds\\v0.6.5\\mkwcat-nsmbw.zip"
+  },
+  "mirrorReason": null
+}

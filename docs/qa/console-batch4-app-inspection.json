@@ -1,0 +1,1747 @@
+{
+  "inspection": [
+    {
+      "id": "ps5-store-prosperolight-01-000-110",
+      "metadata": {
+        "ageLevel": {
+          "default": 0
+        },
+        "applicationCategoryType": 0,
+        "applicationDrmType": "free",
+        "attribute": 1644167168,
+        "attribute2": 0,
+        "attribute3": 262208,
+        "conceptId": "99002",
+        "contentBadgeType": 1,
+        "contentId": "UP9000-PPSA99002_00-PROSPEROLIGHT000",
+        "contentVersion": "01.000.110",
+        "downloadDataSize": 256,
+        "gameIntent": {
+          "permittedIntents": [
+            {
+              "intentType": "launchActivity"
+            }
+          ]
+        },
+        "localizedParameters": {
+          "defaultLanguage": "en-US",
+          "en-US": {
+            "titleName": "ProsperoLight"
+          }
+        },
+        "masterVersion": "01.00",
+        "pubtools": {
+          "creationDate": "2026-08-22 00:00:00",
+          "loudnessSnd0": "-28.00",
+          "toolVersion": "2.00"
+        },
+        "requiredSystemSoftwareVersion": "0x0000000000000000",
+        "sdkVersion": "0x0000000000000000",
+        "titleId": "PPSA99002",
+        "versionFileUri": ""
+      },
+      "ebootMagic": "4f153d1d",
+      "layout": {
+        "fileCount": 132,
+        "directoryCount": 12,
+        "formats": {
+          "wav": 20,
+          "txt": 26,
+          "huifont": 4,
+          "json": 64,
+          "(none)": 1,
+          "bin": 7,
+          "elf": 2,
+          "rst": 1,
+          "md": 2,
+          "prx": 1,
+          "png": 1,
+          "dds": 2,
+          "at9": 1
+        },
+        "consoleFiles": [
+          {
+            "path": "PPSA99002/assets/private/geometry.header.bin",
+            "directory": false,
+            "bytes": 376,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/geometry.text.bin",
+            "directory": false,
+            "bytes": 736,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/netflix-video-resources.bin",
+            "directory": false,
+            "bytes": 2816,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/pixel.header.bin",
+            "directory": false,
+            "bytes": 384,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/pixel.text.linear-buffer.bin",
+            "directory": false,
+            "bytes": 2304,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/pixel.text.p010-passthrough.bin",
+            "directory": false,
+            "bytes": 2304,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/eboot.bin",
+            "directory": false,
+            "bytes": 59176476,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/lapy.elf",
+            "directory": false,
+            "bytes": 154992,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_module/libc.prx",
+            "directory": false,
+            "bytes": 1284674,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/self-updater.elf",
+            "directory": false,
+            "bytes": 821968,
+            "encrypted": false
+          }
+        ],
+        "documentation": [],
+        "entries": [
+          {
+            "path": "PPSA99002",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/back_01.wav",
+            "directory": false,
+            "bytes": 19244,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/error_01.wav",
+            "directory": false,
+            "bytes": 26924,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/focus_01.wav",
+            "directory": false,
+            "bytes": 4844,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/focus_02.wav",
+            "directory": false,
+            "bytes": 4844,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/index.txt",
+            "directory": false,
+            "bytes": 279,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/launch_01.wav",
+            "directory": false,
+            "bytes": 245804,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/modal_close_01.wav",
+            "directory": false,
+            "bytes": 29680,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/modal_open_01.wav",
+            "directory": false,
+            "bytes": 33644,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/notify_01.wav",
+            "directory": false,
+            "bytes": 145028,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/open_01.wav",
+            "directory": false,
+            "bytes": 86444,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/resume_01.wav",
+            "directory": false,
+            "bytes": 192044,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/saved_01.wav",
+            "directory": false,
+            "bytes": 153644,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/select_01.wav",
+            "directory": false,
+            "bytes": 19244,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/slider_01.wav",
+            "directory": false,
+            "bytes": 5804,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/slider_02.wav",
+            "directory": false,
+            "bytes": 5804,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/slider_03.wav",
+            "directory": false,
+            "bytes": 5804,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/tab_01.wav",
+            "directory": false,
+            "bytes": 21164,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/toggle_01.wav",
+            "directory": false,
+            "bytes": 5324,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/toggle_02.wav",
+            "directory": false,
+            "bytes": 5324,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/toggle_03.wav",
+            "directory": false,
+            "bytes": 5324,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/audio/sfx/glass/welcome_01.wav",
+            "directory": false,
+            "bytes": 258192,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/banner.txt",
+            "directory": false,
+            "bytes": 18,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/DejaVu-LICENSE.txt",
+            "directory": false,
+            "bytes": 3857,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/Inter-LICENSE.txt",
+            "directory": false,
+            "bytes": 4380,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/Montserrat-LICENSE.txt",
+            "directory": false,
+            "bytes": 4391,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSans-LICENSE.txt",
+            "directory": false,
+            "bytes": 4395,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansArabic-LICENSE.txt",
+            "directory": false,
+            "bytes": 4381,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansDevanagari-LICENSE.txt",
+            "directory": false,
+            "bytes": 4385,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansHebrew-LICENSE.txt",
+            "directory": false,
+            "bytes": 4381,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansJP-LICENSE.txt",
+            "directory": false,
+            "bytes": 4387,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansKR-LICENSE.txt",
+            "directory": false,
+            "bytes": 4387,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansSC-LICENSE.txt",
+            "directory": false,
+            "bytes": 4387,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansTC-LICENSE.txt",
+            "directory": false,
+            "bytes": 4387,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansTamil-LICENSE.txt",
+            "directory": false,
+            "bytes": 4380,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/NotoSansThai-LICENSE.txt",
+            "directory": false,
+            "bytes": 4379,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/dejavu-sans-mono.huifont",
+            "directory": false,
+            "bytes": 6382000,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/inter-regular.huifont",
+            "directory": false,
+            "bytes": 7102084,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/inter-semibold.huifont",
+            "directory": false,
+            "bytes": 7151692,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/fonts/montserrat-medium.huifont",
+            "directory": false,
+            "bytes": 7678896,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/bg.json",
+            "directory": false,
+            "bytes": 23209,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/ckb.json",
+            "directory": false,
+            "bytes": 22944,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/cs.json",
+            "directory": false,
+            "bytes": 18399,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/de.json",
+            "directory": false,
+            "bytes": 18050,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/el.json",
+            "directory": false,
+            "bytes": 23508,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/en.json",
+            "directory": false,
+            "bytes": 19421,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/eo.json",
+            "directory": false,
+            "bytes": 17845,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/es.json",
+            "directory": false,
+            "bytes": 18755,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/et.json",
+            "directory": false,
+            "bytes": 17631,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/fr.json",
+            "directory": false,
+            "bytes": 18826,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/he.json",
+            "directory": false,
+            "bytes": 19655,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/hi.json",
+            "directory": false,
+            "bytes": 23923,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/hu.json",
+            "directory": false,
+            "bytes": 19250,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/it.json",
+            "directory": false,
+            "bytes": 18149,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/ja.json",
+            "directory": false,
+            "bytes": 19449,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/ko.json",
+            "directory": false,
+            "bytes": 18249,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/lt.json",
+            "directory": false,
+            "bytes": 18630,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/nb_NO.json",
+            "directory": false,
+            "bytes": 17677,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/nl.json",
+            "directory": false,
+            "bytes": 17908,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/pl.json",
+            "directory": false,
+            "bytes": 18422,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/pt.json",
+            "directory": false,
+            "bytes": 18669,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/pt_BR.json",
+            "directory": false,
+            "bytes": 18408,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/bg.json",
+            "directory": false,
+            "bytes": 24217,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/ckb.json",
+            "directory": false,
+            "bytes": 39157,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/cs.json",
+            "directory": false,
+            "bytes": 19407,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/de.json",
+            "directory": false,
+            "bytes": 19058,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/el.json",
+            "directory": false,
+            "bytes": 24516,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/en.json",
+            "directory": false,
+            "bytes": 20429,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/eo.json",
+            "directory": false,
+            "bytes": 18853,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/es.json",
+            "directory": false,
+            "bytes": 19763,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/et.json",
+            "directory": false,
+            "bytes": 18639,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/fr.json",
+            "directory": false,
+            "bytes": 19834,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/he.json",
+            "directory": false,
+            "bytes": 30138,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/hi.json",
+            "directory": false,
+            "bytes": 30787,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/hu.json",
+            "directory": false,
+            "bytes": 20258,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/it.json",
+            "directory": false,
+            "bytes": 19157,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/ja.json",
+            "directory": false,
+            "bytes": 20457,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/ko.json",
+            "directory": false,
+            "bytes": 19257,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/lt.json",
+            "directory": false,
+            "bytes": 19638,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/nb_NO.json",
+            "directory": false,
+            "bytes": 18685,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/nl.json",
+            "directory": false,
+            "bytes": 18916,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/pl.json",
+            "directory": false,
+            "bytes": 19430,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/pt.json",
+            "directory": false,
+            "bytes": 19677,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/pt_BR.json",
+            "directory": false,
+            "bytes": 19416,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/ru.json",
+            "directory": false,
+            "bytes": 27607,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/sv.json",
+            "directory": false,
+            "bytes": 18784,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/ta.json",
+            "directory": false,
+            "bytes": 33431,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/th.json",
+            "directory": false,
+            "bytes": 33976,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/tr.json",
+            "directory": false,
+            "bytes": 19648,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/uk.json",
+            "directory": false,
+            "bytes": 24084,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/vi.json",
+            "directory": false,
+            "bytes": 20265,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/zh_CN.json",
+            "directory": false,
+            "bytes": 18223,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/rendered/zh_TW.json",
+            "directory": false,
+            "bytes": 18348,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/ru.json",
+            "directory": false,
+            "bytes": 26599,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/sv.json",
+            "directory": false,
+            "bytes": 17776,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/ta.json",
+            "directory": false,
+            "bytes": 27716,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/th.json",
+            "directory": false,
+            "bytes": 25324,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/tr.json",
+            "directory": false,
+            "bytes": 18640,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/uk.json",
+            "directory": false,
+            "bytes": 23076,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/vi.json",
+            "directory": false,
+            "bytes": 19257,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/zh_CN.json",
+            "directory": false,
+            "bytes": 17215,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/locales/zh_TW.json",
+            "directory": false,
+            "bytes": 17340,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/SHA256SUMS",
+            "directory": false,
+            "bytes": 540,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/geometry.header.bin",
+            "directory": false,
+            "bytes": 376,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/geometry.text.bin",
+            "directory": false,
+            "bytes": 736,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/netflix-video-resources.bin",
+            "directory": false,
+            "bytes": 2816,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/pixel.header.bin",
+            "directory": false,
+            "bytes": 384,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/pixel.text.linear-buffer.bin",
+            "directory": false,
+            "bytes": 2304,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/assets/private/pixel.text.p010-passthrough.bin",
+            "directory": false,
+            "bytes": 2304,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/eboot.bin",
+            "directory": false,
+            "bytes": 59176476,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/lapy-manifest.json",
+            "directory": false,
+            "bytes": 608,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/lapy.elf",
+            "directory": false,
+            "bytes": 154992,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/Granite-MIT.txt",
+            "directory": false,
+            "bytes": 1070,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/Lapy-MIT.txt",
+            "directory": false,
+            "bytes": 1741,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/Mesa-license.rst",
+            "directory": false,
+            "bytes": 1816,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/PS5-PyroWave-PoC-MIT.txt",
+            "directory": false,
+            "bytes": 1266,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/ProsperoLight-GPL.txt",
+            "directory": false,
+            "bytes": 35149,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/PyroWave-MIT.txt",
+            "directory": false,
+            "bytes": 1065,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/THIRD_PARTY_NOTICES.md",
+            "directory": false,
+            "bytes": 10638,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/Volk-MIT.txt",
+            "directory": false,
+            "bytes": 1066,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/Vulkan-Headers-LICENSE.md",
+            "directory": false,
+            "bytes": 495,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/libjpeg-turbo.txt",
+            "directory": false,
+            "bytes": 5213,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/libpng.txt",
+            "directory": false,
+            "bytes": 5345,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/libwebp.txt",
+            "directory": false,
+            "bytes": 1496,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/miniz.txt",
+            "directory": false,
+            "bytes": 1162,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/licenses/moonlight-common-c-LICENSE.txt",
+            "directory": false,
+            "bytes": 35530,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_module",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_module/libc.prx",
+            "directory": false,
+            "bytes": 1284674,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_sys",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_sys/icon0.png",
+            "directory": false,
+            "bytes": 473073,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_sys/param.json",
+            "directory": false,
+            "bytes": 863,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_sys/pic0.dds",
+            "directory": false,
+            "bytes": 8294548,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_sys/pic1.dds",
+            "directory": false,
+            "bytes": 8294548,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/sce_sys/snd0.at9",
+            "directory": false,
+            "bytes": 841896,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA99002/self-updater.elf",
+            "directory": false,
+            "bytes": 821968,
+            "encrypted": false
+          }
+        ]
+      },
+      "icon": {
+        "source": "https://github.com/LedyBacer/ProsperoLight/releases/download/01.000.110/PPSA99002.zip",
+        "archiveEntry": "PPSA99002/sce_sys/icon0.png",
+        "bytes": 473073,
+        "sha256": "099efdf0915cd8aa3a004866e9201be6731d92b1c335f5d61ac355a9cff5b82b"
+      },
+      "bytes": 36520955,
+      "sha256": "f29935f3bd9d61926c1ea63f8d34019fff19ee993e8d030ee373c004efd974ba",
+      "executed": false
+    },
+    {
+      "id": "ps5-store-recompstore-2-7-4",
+      "metadata": {
+        "ageLevel": {
+          "default": 0
+        },
+        "applicationCategoryType": 0,
+        "applicationDrmType": "free",
+        "attribute": 0,
+        "attribute2": 0,
+        "attribute3": 524352,
+        "conceptId": "92000",
+        "contentBadgeType": 1,
+        "contentId": "UP9000-PPSA92000_00-RECOMPSTORE00000",
+        "contentVersion": "02.740.000",
+        "downloadDataSize": 256,
+        "gameIntent": {
+          "permittedIntents": [
+            {
+              "intentType": "launchActivity"
+            }
+          ]
+        },
+        "localizedParameters": {
+          "defaultLanguage": "en-US",
+          "en-US": {
+            "titleName": "RecompStore"
+          }
+        },
+        "masterVersion": "01.00",
+        "pubtools": {
+          "creationDate": "2026-10-12 00:00:00",
+          "loudnessSnd0": "-28.00",
+          "toolVersion": "2.00"
+        },
+        "requiredSystemSoftwareVersion": "0x0000000000000000",
+        "sdkVersion": "0x0000000000000000",
+        "titleId": "PPSA92000",
+        "versionFileUri": ""
+      },
+      "ebootMagic": "4f153d1d",
+      "layout": {
+        "fileCount": 97,
+        "directoryCount": 9,
+        "formats": {
+          "bin": 1,
+          "prx": 1,
+          "png": 26,
+          "ogg": 1,
+          "wav": 9,
+          "ttf": 36,
+          "txt": 16,
+          "elf": 4,
+          "dds": 2,
+          "json": 1
+        },
+        "consoleFiles": [
+          {
+            "path": "PPSA92000/eboot.bin",
+            "directory": false,
+            "bytes": 29799166,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_module/libc.prx",
+            "directory": false,
+            "bytes": 1284674,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/recompstore-launcher.elf",
+            "directory": false,
+            "bytes": 115960,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/recompstore-receiver.elf",
+            "directory": false,
+            "bytes": 132376,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/RecompStore-Installer.elf",
+            "directory": false,
+            "bytes": 956688,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/recompstore-copier.elf",
+            "directory": false,
+            "bytes": 1016160,
+            "encrypted": false
+          }
+        ],
+        "documentation": [],
+        "entries": [
+          {
+            "path": "PPSA92000",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/eboot.bin",
+            "directory": false,
+            "bytes": 29799166,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_module",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_module/libc.prx",
+            "directory": false,
+            "bytes": 1284674,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/cat-apps.png",
+            "directory": false,
+            "bytes": 11489,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/cat-emulators.png",
+            "directory": false,
+            "bytes": 20473,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/shield.png",
+            "directory": false,
+            "bytes": 3131,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/cat-games.png",
+            "directory": false,
+            "bytes": 19200,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/folder.png",
+            "directory": false,
+            "bytes": 1362,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/chevron-left.png",
+            "directory": false,
+            "bytes": 623,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/report-qr.png",
+            "directory": false,
+            "bytes": 1906,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/buttons.png",
+            "directory": false,
+            "bytes": 19664,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/pointer-open.png",
+            "directory": false,
+            "bytes": 39752,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/hint-square.png",
+            "directory": false,
+            "bytes": 4770,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/controller-lines.png",
+            "directory": false,
+            "bytes": 35951,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/hint-triangle.png",
+            "directory": false,
+            "bytes": 5328,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/hint-circle.png",
+            "directory": false,
+            "bytes": 6200,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/disc.png",
+            "directory": false,
+            "bytes": 4869,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/pointer-hand.png",
+            "directory": false,
+            "bytes": 27768,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/cat-tools.png",
+            "directory": false,
+            "bytes": 12423,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/dualsense.png",
+            "directory": false,
+            "bytes": 43940,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/hint-cross.png",
+            "directory": false,
+            "bytes": 5066,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/ui/flags.png",
+            "directory": false,
+            "bytes": 37028,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/brand",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/brand/mark-leg.png",
+            "directory": false,
+            "bytes": 4132,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/brand/mark-arrow.png",
+            "directory": false,
+            "bytes": 4109,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/brand/mark-bowl.png",
+            "directory": false,
+            "bytes": 4293,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/brand/logo-512.png",
+            "directory": false,
+            "bytes": 103905,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/brand/mark-glow.png",
+            "directory": false,
+            "bytes": 261818,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/brand/mark.png",
+            "directory": false,
+            "bytes": 6040,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/menu-music.ogg",
+            "directory": false,
+            "bytes": 2364112,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/complete.wav",
+            "directory": false,
+            "bytes": 247720,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/select.wav",
+            "directory": false,
+            "bytes": 74920,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/error.wav",
+            "directory": false,
+            "bytes": 84520,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/move.wav",
+            "directory": false,
+            "bytes": 34600,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/tab.wav",
+            "directory": false,
+            "bytes": 90280,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/install.wav",
+            "directory": false,
+            "bytes": 128680,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/boot.wav",
+            "directory": false,
+            "bytes": 1113644,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/back.wav",
+            "directory": false,
+            "bytes": 74920,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/sounds/open.wav",
+            "directory": false,
+            "bytes": 157480,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/JetBrainsMono-Bold.ttf",
+            "directory": false,
+            "bytes": 29780,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Exo2-ExtraBold.ttf",
+            "directory": false,
+            "bytes": 68152,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansThai-Store.ttf",
+            "directory": false,
+            "bytes": 12828,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Onest-SemiBold.ttf",
+            "directory": false,
+            "bytes": 46728,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/VT323-OFL.txt",
+            "directory": false,
+            "bytes": 4367,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Onest-OFL.txt",
+            "directory": false,
+            "bytes": 4384,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Sora-Bold.ttf",
+            "directory": false,
+            "bytes": 93268,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansSC-Store.ttf",
+            "directory": false,
+            "bytes": 311400,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Figtree-SemiBold.ttf",
+            "directory": false,
+            "bytes": 57584,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Exo2-OFL.txt",
+            "directory": false,
+            "bytes": 4386,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/PorpoiseSerif-SemiBold.ttf",
+            "directory": false,
+            "bytes": 68716,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Lora-OFL.txt",
+            "directory": false,
+            "bytes": 4423,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/VT323-Regular.ttf",
+            "directory": false,
+            "bytes": 57620,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Onest-Regular.ttf",
+            "directory": false,
+            "bytes": 46616,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansTC-Store.ttf",
+            "directory": false,
+            "bytes": 261896,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansKR-Store.ttf",
+            "directory": false,
+            "bytes": 310544,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/JetBrainsMono-SemiBold.ttf",
+            "directory": false,
+            "bytes": 29752,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/PorpoiseSerif-Bold.ttf",
+            "directory": false,
+            "bytes": 68720,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansTC-OFL.txt",
+            "directory": false,
+            "bytes": 4388,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Doto-Black.ttf",
+            "directory": false,
+            "bytes": 159032,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/JetBrainsMono-OFL.txt",
+            "directory": false,
+            "bytes": 4399,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/PorpoiseSerif-ExtraBold.ttf",
+            "directory": false,
+            "bytes": 68432,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/JetBrainsMono-Regular.ttf",
+            "directory": false,
+            "bytes": 29816,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Nunito-SemiBold.ttf",
+            "directory": false,
+            "bytes": 132332,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/MPLUS1-ExtraBold.ttf",
+            "directory": false,
+            "bytes": 46984,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Doto-OFL.txt",
+            "directory": false,
+            "bytes": 4382,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Onest-ExtraBold.ttf",
+            "directory": false,
+            "bytes": 46700,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Figtree-Regular.ttf",
+            "directory": false,
+            "bytes": 57504,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansJP-Store.ttf",
+            "directory": false,
+            "bytes": 268044,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansJP-OFL.txt",
+            "directory": false,
+            "bytes": 4388,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Exo2-SemiBold.ttf",
+            "directory": false,
+            "bytes": 68172,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Exo2-Regular.ttf",
+            "directory": false,
+            "bytes": 68108,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Nunito-Bold.ttf",
+            "directory": false,
+            "bytes": 132360,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Exo2-Bold.ttf",
+            "directory": false,
+            "bytes": 68192,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Figtree-OFL.txt",
+            "directory": false,
+            "bytes": 4388,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/MPLUS1-Regular.ttf",
+            "directory": false,
+            "bytes": 46984,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansArabic-Store.ttf",
+            "directory": false,
+            "bytes": 19276,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/MPLUS1-OFL.txt",
+            "directory": false,
+            "bytes": 4387,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Figtree-Bold.ttf",
+            "directory": false,
+            "bytes": 57672,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Nunito-Regular.ttf",
+            "directory": false,
+            "bytes": 132392,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/OFL.txt",
+            "directory": false,
+            "bytes": 4385,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansArabic-OFL.txt",
+            "directory": false,
+            "bytes": 4382,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/MPLUS1-SemiBold.ttf",
+            "directory": false,
+            "bytes": 47008,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansSC-OFL.txt",
+            "directory": false,
+            "bytes": 4388,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Onest-Bold.ttf",
+            "directory": false,
+            "bytes": 46644,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Sora-OFL.txt",
+            "directory": false,
+            "bytes": 4385,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/PorpoiseSerif-Regular.ttf",
+            "directory": false,
+            "bytes": 68536,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/MPLUS1-Bold.ttf",
+            "directory": false,
+            "bytes": 46992,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/Nunito-ExtraBold.ttf",
+            "directory": false,
+            "bytes": 132252,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansKR-OFL.txt",
+            "directory": false,
+            "bytes": 4388,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/JetBrainsMono-ExtraBold.ttf",
+            "directory": false,
+            "bytes": 29764,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/fonts/NotoSansThai-OFL.txt",
+            "directory": false,
+            "bytes": 4380,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/recompstore-launcher.elf",
+            "directory": false,
+            "bytes": 115960,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/recompstore-receiver.elf",
+            "directory": false,
+            "bytes": 132376,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/RecompStore-Installer.elf",
+            "directory": false,
+            "bytes": 956688,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/assets/payloads/recompstore-copier.elf",
+            "directory": false,
+            "bytes": 1016160,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_sys",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_sys/pic1.dds",
+            "directory": false,
+            "bytes": 8294548,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_sys/pic0.dds",
+            "directory": false,
+            "bytes": 8294548,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_sys/icon0.png",
+            "directory": false,
+            "bytes": 103905,
+            "encrypted": false
+          },
+          {
+            "path": "PPSA92000/sce_sys/param.json",
+            "directory": false,
+            "bytes": 851,
+            "encrypted": false
+          }
+        ]
+      },
+      "icon": {
+        "source": "https://github.com/elripalda/RecompStore/releases/download/v2.7.4/PPSA92000.zip",
+        "archiveEntry": "PPSA92000/sce_sys/icon0.png",
+        "bytes": 103905,
+        "sha256": "d230fe4b2b69f83f2929f31f350b61528f7745a42756bee45925765e3d0ef506"
+      },
+      "bytes": 25830650,
+      "sha256": "2c7a58ef65d08974cb43a0045388be457b21a1fde3f98d6ecfd77eae6d309601",
+      "executed": false
+    }
+  ]
+}

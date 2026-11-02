@@ -1,0 +1,480 @@
+{
+  "reviewed": "2026-11-02",
+  "scope": [
+    "PS4",
+    "PS5"
+  ],
+  "localPreview": "http://127.0.0.1:8765",
+  "tests": {
+    "passed": 276,
+    "failed": 0,
+    "scope": "All scripts/tests/*.test.cjs",
+    "output": "docs/qa/console-final-node-tests.txt"
+  },
+  "siteAudit": {
+    "publicPages": 464,
+    "localLinksAndAssets": 49713,
+    "issues": 0,
+    "output": "docs/qa/console-batch5-site-audit.txt"
+  },
+  "archive": {
+    "root": "F:/whatsite-backup-downloads-etc",
+    "newJobsVerified": 172,
+    "finalCompanionsVerified": 2,
+    "priorFinalFilesVerified": 14,
+    "requiredPublicMirrorsVerified": 166,
+    "olderVersionsPreserved": true,
+    "indexRefreshed": true,
+    "evidence": [
+      "docs/qa/new-console-artifacts-verification.json",
+      "docs/qa/final-console-companions-verification.json"
+    ],
+    "indexRefreshedAt": "2026-11-02T12:51:19.434Z",
+    "index": {
+      "mode": "write",
+      "backupRoot": "F:\\whatsite-backup-downloads-etc",
+      "items": 2012,
+      "fileRecords": 2958,
+      "presentFileRecords": 2952,
+      "missingFileRecords": 6,
+      "missingPaths": 6,
+      "otherUnavailableRecords": 0,
+      "availability": {
+        "present": 2952,
+        "missing": 6
+      }
+    },
+    "continuation": {
+      "newArtifactsHashVerified": 87,
+      "newHelpersHashVerified": 2,
+      "baselineCatalogueItemsPreserved": 232,
+      "report": "docs/qa/console-continuation-verification.json",
+      "httpReport": "docs/qa/console-continuation-http-verification.json"
+    },
+    "siteExpansion": {
+      "newArtifacts": 90,
+      "readyFiles": 87,
+      "notices": 3,
+      "preservedCatalogue": 352,
+      "allOlderHelpersVerified": 16,
+      "report": "docs/qa/console-site-expansion-verification.json"
+    },
+    "batch5": {
+      "newFilesHashVerified": 16,
+      "oldCatalogueIDsPreserved": 532,
+      "priorHelpersPreserved": 2,
+      "receiverCataloguesComplete": true,
+      "report": "docs/qa/console-batch5-verification.json"
+    }
+  },
+  "browserChecks": {
+    "searchAndCategoryFiltering": true,
+    "emptyState": true,
+    "consoleAddressLinks": true,
+    "payloadManagerPort": 8084,
+    "fileBrowserPort": 8080,
+    "themeManagerPort": 8095,
+    "narrowViewport": {
+      "width": 390,
+      "documentWidth": 375,
+      "horizontalOverflow": false
+    },
+    "testFixture": {
+      "metadataOnly": true,
+      "ps5Type": 6,
+      "ps5Destination": "/mnt/usb1/ps5-theme.elf",
+      "ps4Type": 7,
+      "ps4Destination": "/data/CUSA03991_01.35.json",
+      "ps4FolderConfirmationRequired": true,
+      "filesDownloadedOrWritten": false
+    },
+    "visibleDownloadBesideSave": {
+      "ps4": true,
+      "ps5": true,
+      "mobile": true
+    },
+    "downloadLinkHTTP": {
+      "status": 200,
+      "url": "http://127.0.0.1:8765/downloads/ps4-ps5/goldhen-cusa03991-01-35/CUSA03991_01.35.json",
+      "bytes": 4863,
+      "sha256": "ddbaeb4f66deadedef7dada84cfedda1c90471ae99b5874d3e0b19fa43289475",
+      "checkedAt": "2026-11-02T07:03:38.407Z",
+      "method": "HTTP GET of the visible Download link; bytes verified in memory, not executed."
+    },
+    "browserDownloadEvent": "Timed out; not counted as successful. HTTP response bytes and hash separately verified.",
+    "exactTitleIDSelector": {
+      "game": "Bloodborne",
+      "titleID": "CUSA00900",
+      "xml": "/downloads/ps4-ps5/fps-cusa00900-1792785960/CUSA00900.xml",
+      "consoleLink": "/console/ps4/downloads.html?file=fps-cusa00900-1792785960#files"
+    },
+    "folderPreparationMock": {
+      "syntheticOnly": true,
+      "noPhysicalConsoleWrites": true,
+      "explicitCreation": true,
+      "creationVerified": true,
+      "secondAttemptVerifiedExisting": true,
+      "path": "/data/whatwhatboy",
+      "ps5OnlyRealMountKindsOffered": [
+        "/mnt/ext0",
+        "/mnt/usb1"
+      ],
+      "ordinaryDirectoryExcluded": "/mnt/usb0",
+      "usbPreparationURL": "http://127.0.0.1:9090/data/homebrew/ezremote-client/assets/whatsite-ps5.html?prepare=1&folder=%2Fmnt%2Fusb1%2Fwhatwhatboy",
+      "mockServerStopped": true
+    },
+    "continuation": {
+      "matrixDirectELFLinks": 8,
+      "matchingGameUpdateLabels": true,
+      "eldenRingSelector": {
+        "titleID": "CUSA28863",
+        "xml": "/downloads/ps4-ps5/fps-cusa28863-1792785960/CUSA28863.xml"
+      },
+      "contextualPatchLinks": {
+        "exactCUSAPages": 16,
+        "versionRequirementsSeparate": true
+      },
+      "mobile": {
+        "width": 390,
+        "documentWidth": 375,
+        "horizontalOverflow": false,
+        "selectedFile": "matrix-ps4-bo3-126",
+        "directDownloadVisible": true
+      },
+      "httpBytesVerified": 3,
+      "noPayloadExecuted": true
+    }
+  },
+  "companions": [
+    {
+      "id": "ps4-ps5-whatsite-ps4-console-downloader-2026-11-02-11",
+      "path": "console/ps4/whatsite-ps4.html",
+      "version": "2026.11.02.11",
+      "bytes": 649654,
+      "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps4.html",
+      "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.11-f359c97a07b6/whatsite-ps4.html"
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps5-console-downloader-2026-11-02-11",
+      "path": "console/ps5/whatsite-ps5.html",
+      "version": "2026.11.02.11",
+      "bytes": 548833,
+      "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps5.html",
+      "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.11-b054ff263869/whatsite-ps5.html"
+    }
+  ],
+  "screenshots": [
+    "docs/qa/ps4-visible-download-2026-11-02.jpg",
+    "docs/qa/ps5-visible-download-2026-11-02.jpg",
+    "docs/qa/ps4-downloads-mobile-2026-11-02.jpg",
+    "docs/qa/ps5-folder-preparation-mock-2026-11-02.jpg",
+    "docs/qa/ps3-jimbo-variants-2026-11-02.jpg",
+    "docs/qa/multicod-ready-downloads-2026-11-02.jpg",
+    "docs/qa/multicod-compact-cards-2026-11-02.jpg",
+    "docs/qa/multicod-compact-mobile-2026-11-02.jpg",
+    "docs/qa/ps5-native-cheats-mobile-2026-11-02.jpg"
+  ],
+  "limits": [
+    "No physical PS4/PS5 transfer, installation or launch tested.",
+    "No downloaded payload executed.",
+    "No publication, commit or deployment."
+  ],
+  "checkedAt": "2026-11-02T12:51:19.434Z",
+  "catalogue": {
+    "uniqueResources": 549,
+    "ps4Files": 473,
+    "ps5Files": 350
+  },
+  "sharedIntegration": {
+    "mobileHelpersExcluded": true,
+    "archivedHelperBytesUnchanged": true,
+    "sharedBackgroundRegenerationVerified": true
+  },
+  "multiCOD": {
+    "meaning": "Source-confirmed multiple Call of Duty games; per-game pages with a collection index.",
+    "ps4": {
+      "families": 5,
+      "games": 7,
+      "perGameMappings": 12,
+      "index": "/console/mods/ps4/call-of-duty/multicod/"
+    },
+    "ps3": {
+      "audit": "docs/qa/ps3-variant-routing-verification.json",
+      "targetedTests": 11,
+      "jimboHENandDEXVisible": true,
+      "combinedHENDEXArchivesPreserved": 8,
+      "cod4Canonical": "/console/ps3/mods/call-of-duty/cod4/",
+      "aliasPreservesAnchors": true
+    },
+    "xbox360": {
+      "cod4Archives": 4,
+      "sourceConfirmedMultiCODImports": 0,
+      "page": "/console/xbox360/mods/call-of-duty/cod4/"
+    },
+    "DEXandHENScope": "PS3 only"
+  },
+  "siteExpansion": {
+    "checkedAt": "2026-11-02T09:36:52.663Z",
+    "status": "complete locally",
+    "baseline": "docs/qa/console-site-expansion-baseline.json",
+    "verification": "docs/qa/console-site-expansion-verification.json",
+    "httpVerification": "docs/qa/console-site-expansion-http.json",
+    "newArtifacts": 90,
+    "readyCatalogueFiles": 87,
+    "notices": 3,
+    "preservedCatalogue": 352,
+    "currentCatalogue": 478,
+    "ps4": 414,
+    "ps5": 322,
+    "helperArchives": 16,
+    "compactCards": "Game, exact update, Download and Save stay visible. Source, requirements and archive filenames remain in closed Setup & source details.",
+    "nativePS5": {
+      "index": "/console/ps5/game-cheats.html",
+      "games": 9,
+      "files": 12,
+      "newGames": 6,
+      "newFiles": 6,
+      "source": "etaHEN/PS5_Cheats pinned ef295511ea4252474b16325618ffaafd3afb3cbb",
+      "note": "Native PPSA files are separate from PS4/CUSA backward-compatible patches. Original metadata quirks, licence and creator credits retained."
+    },
+    "sourcePack": {
+      "id": "virusmike-bo3-aio-v2",
+      "bytes": 973715,
+      "sha256": "411bd9591e4ace83cee3b54210c079d5e0675f0cb7edd57eb0caca1f8f028c65",
+      "compatibility": "PS4 BO3 01.33: CUSA03004, CUSA02290, CUSA02624; original full RAR retained beside older builds."
+    },
+    "unavailable": "CJ House map remains an incomplete preserved partial; Chronoss cheat PKG v2 MediaFire404 and MEGA limit. No download job, invented complete hash or working-download claim.",
+    "sharedFPSState": {
+      "games": 88,
+      "XMLs": 269
+    },
+    "focusedTests": {
+      "tests": 47,
+      "passed": 47,
+      "failed": 0,
+      "output": "docs/qa/console-site-expansion-focused-tests.txt",
+      "checkedAt": "2026-11-02T09:36:52.663Z"
+    },
+    "broadSnapshot": {
+      "tests": 387,
+      "passed": 385,
+      "failed": 2,
+      "output": "docs/qa/console-site-expansion-node-tests.txt",
+      "note": "Concurrent PS2 topic routing/category-count assertions fail in the broad snapshot; own expansion focused suite is independently green. Preserve the shared topic work."
+    },
+    "screenshots": [
+      "docs/qa/multicod-compact-cards-2026-11-02.jpg",
+      "docs/qa/multicod-compact-mobile-2026-11-02.jpg",
+      "docs/qa/ps5-native-cheats-mobile-2026-11-02.jpg"
+    ],
+    "hardwareExecutionTested": false,
+    "payloadsExecuted": false
+  },
+  "batch5": {
+    "updatedAt": "2026-11-02T12:51:19.434Z",
+    "status": "complete locally",
+    "newGames": 16,
+    "PS4": [
+      {
+        "game": "Prey",
+        "filename": "CUSA04482_01.12.json",
+        "page": "/console/mods/ps4/prey/"
+      },
+      {
+        "game": "Bully",
+        "filename": "CUSA03551_01.00.json",
+        "page": "/console/mods/ps4/bully/"
+      },
+      {
+        "game": "Borderlands 3",
+        "filename": "CUSA08025_01.16.json",
+        "page": "/console/mods/ps4/borderlands-3/"
+      },
+      {
+        "game": "Crysis Remastered",
+        "filename": "CUSA18659_01.03.json",
+        "page": "/console/mods/ps4/crysis-remastered/"
+      },
+      {
+        "game": "Dead Rising 4",
+        "filename": "CUSA08558_01.01.json",
+        "page": "/console/mods/ps4/dead-rising-4/"
+      },
+      {
+        "game": "Outlast 2",
+        "filename": "CUSA06633_01.03.json",
+        "page": "/console/mods/ps4/outlast-2/"
+      },
+      {
+        "game": "Darksiders III",
+        "filename": "CUSA08798_01.11.json",
+        "page": "/console/mods/ps4/darksiders-iii/"
+      },
+      {
+        "game": "Mad Max",
+        "filename": "CUSA00054_01.04.json",
+        "page": "/console/mods/ps4/mad-max/"
+      }
+    ],
+    "PS5": [
+      {
+        "game": "Demon's Souls",
+        "filename": "PPSA01342_01.004.000.shn",
+        "page": "/console/ps5/game-cheats/demons-souls/"
+      },
+      {
+        "game": "Mortal Kombat 11",
+        "filename": "PPSA01619_01.000.004.shn",
+        "page": "/console/ps5/game-cheats/mortal-kombat-11/"
+      },
+      {
+        "game": "Maneater",
+        "filename": "PPSA01861_01.000.010.shn",
+        "page": "/console/ps5/game-cheats/maneater/"
+      },
+      {
+        "game": "Alan Wake Remastered",
+        "filename": "PPSA01925_01.000.003.shn",
+        "page": "/console/ps5/game-cheats/alan-wake-remastered/"
+      },
+      {
+        "game": "No More Heroes III",
+        "filename": "PPSA07576_01.000.000.shn",
+        "page": "/console/ps5/game-cheats/no-more-heroes-iii/"
+      },
+      {
+        "game": "A Plague Tale: Requiem",
+        "filename": "PPSA05366_01.005.000.shn",
+        "page": "/console/ps5/game-cheats/a-plague-tale-requiem/"
+      },
+      {
+        "game": "Tales of Arise",
+        "filename": "PPSA02745_01.000.004.shn",
+        "page": "/console/ps5/game-cheats/tales-of-arise/"
+      },
+      {
+        "game": "Lies of P",
+        "filename": "PPSA10261_01.000.000.shn",
+        "page": "/console/ps5/game-cheats/lies-of-p/"
+      }
+    ],
+    "baseline": "docs/qa/console-batch5-baseline.json",
+    "verification": "docs/qa/console-batch5-verification.json",
+    "jobs": "docs/qa/console-batch5-download-jobs.json",
+    "durableIntake": "docs/ps4-ps5-private-inventory.json",
+    "inventoryMerge": "docs/qa/console-batch5-inventory-merge.json",
+    "sourceAvailability": "docs/qa/console-batch5-source-availability.json",
+    "sourceBoundary": "The source-site CJ House/Ghosts/MW2 candidates remain unavailable. All sixteen added game definitions are separately attributed pinned GoldHEN/etaHEN publisher files; none is falsely attributed to VirusMike.",
+    "compactCards": "New PS4 and PS5 cards show exact build, Download, Save and a closed Setup & source disclosure. Long labels, author conditions, credits and original metadata caveats remain accessible.",
+    "nativeCounts": {
+      "games": 17,
+      "files": 20
+    },
+    "cheatFiles": 97,
+    "newFiles": 16,
+    "ps4": 8,
+    "ps5": 8,
+    "baselineCatalogue": 532,
+    "preservedCatalogue": 532,
+    "currentCatalogue": 549,
+    "ps4Catalogue": 473,
+    "ps5Catalogue": 350,
+    "focusedTests": {
+      "tests": 33,
+      "passed": 33,
+      "failed": 0,
+      "checkedAt": "2026-11-02T12:49:47.799Z",
+      "output": "docs/qa/console-batch5-focused-tests.txt"
+    },
+    "broadSnapshot": {
+      "tests": 483,
+      "passed": 482,
+      "failed": 1,
+      "checkedAt": "2026-11-02T12:47:29.721Z",
+      "output": "docs/qa/console-batch5-node-tests.txt",
+      "scope": "All scripts/tests/*.test.cjs and free-keys/tests/*.test.cjs",
+      "note": "One unrelated Wii U directory/provider assertion failed during concurrent Wii U work. PS4/PS5 batch5 tests pass. Do not replace the other chat’s files to force a broad green result."
+    },
+    "siteAudit": {
+      "publicPages": 464,
+      "localLinksAndAssets": 49713,
+      "issues": 0,
+      "output": "docs/qa/console-batch5-site-audit.txt"
+    },
+    "archiveIndex": {
+      "mode": "write",
+      "backupRoot": "F:\\whatsite-backup-downloads-etc",
+      "items": 2012,
+      "fileRecords": 2958,
+      "presentFileRecords": 2952,
+      "missingFileRecords": 6,
+      "missingPaths": 6,
+      "otherUnavailableRecords": 0,
+      "availability": {
+        "present": 2952,
+        "missing": 6
+      }
+    },
+    "helpers": [
+      {
+        "platform": "ps4",
+        "path": "console/ps4/whatsite-ps4.html",
+        "version": "2026.11.02.11",
+        "bytes": 649654,
+        "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps4.html",
+        "archive": {
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps4.html",
+          "expectedBytes": 649654,
+          "expectedSha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a",
+          "passed": true,
+          "bytes": 649654,
+          "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a"
+        },
+        "embeddedItems": 473,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "platform": "ps5",
+        "path": "console/ps5/whatsite-ps5.html",
+        "version": "2026.11.02.11",
+        "bytes": 548833,
+        "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps5.html",
+        "archive": {
+          "path": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps5.html",
+          "expectedBytes": 548833,
+          "expectedSha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e",
+          "passed": true,
+          "bytes": 548833,
+          "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e"
+        },
+        "embeddedItems": 350,
+        "missing": [],
+        "passed": true
+      }
+    ],
+    "priorVersion10HelpersPreserved": true,
+    "browser": {
+      "phoneViewport": 390,
+      "documentWidth": 375,
+      "horizontalOverflow": false,
+      "setupClosedByDefault": true,
+      "exactPS4Save": "goldhen-cusa04482-01-12",
+      "exactPS5Save": "ps5-native-shn-ppsa02745-01-000-004",
+      "authorConditionVerified": "Tales of Arise: Only enable once the encounter starts",
+      "httpDownloadsHashVerified": 16
+    },
+    "screenshots": [
+      "docs/qa/console-batch5-ps4-card.jpg",
+      "docs/qa/console-batch5-ps4-mobile.jpg",
+      "docs/qa/console-batch5-ps5-mobile.jpg"
+    ],
+    "payloadsExecuted": false,
+    "hardwareExecutionTested": false,
+    "publication": "Local changes only; not committed, pushed or deployed."
+  }
+}

@@ -1,0 +1,1980 @@
+{
+  "checkedAt": "2026-11-02T13:01:45.035Z",
+  "scope": "xbox360-more",
+  "passed": true,
+  "resources": 41,
+  "archivedFiles": 96,
+  "totalBytes": 1196384410,
+  "localLinksAndAssets": 108,
+  "publicPrivatePaths": 0,
+  "files": [
+    {
+      "id": "swanstation",
+      "name": "swanstation-0.1.1.0.zip",
+      "bytes": 2199302,
+      "sha256": "4a6844861dd4318fe42d65754feef4d3f822d98fa1acee4b6627626c5a224957",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 3,
+        "uncompressedBytes": 5020093,
+        "executables": [
+          {
+            "name": "swanstation.xex",
+            "bytes": 4968448,
+            "sha256": "d9ed883fe530ed6b143ed2fbcbe70c9f0b9df0c813d676c216f3a43dfab053e1"
+          }
+        ],
+        "upstreamFileHashesVerified": 3
+      }
+    },
+    {
+      "id": "balatro360",
+      "name": "Balatro360-Xbox360-1.0.0.0.zip",
+      "bytes": 2331470,
+      "sha256": "c63dc4ccce4c848ac8c6b975a8326686c0f32e8334897660a783dc0196535c18",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 12,
+        "uncompressedBytes": 5655821,
+        "executables": [
+          {
+            "name": "apps/balatro360/default.xex",
+            "bytes": 5468160,
+            "sha256": "972b1bca239b51a79a510b2bfd911148089faa9866ada15b55c34389eb129c7d"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "balatro360",
+      "name": "balatro360-1.0.0.0.zip",
+      "bytes": 2329666,
+      "sha256": "b938c69e389e63c1ef02cdc44186717ff396f912630b769b232d53fa628941d4",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 11,
+        "uncompressedBytes": 5653126,
+        "executables": [
+          {
+            "name": "default.xex",
+            "bytes": 5468160,
+            "sha256": "972b1bca239b51a79a510b2bfd911148089faa9866ada15b55c34389eb129c7d"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "dusklight",
+      "name": "dusklight-0.1.0.0.zip",
+      "bytes": 21359103,
+      "sha256": "59b69f3e447c83165ff034d407316a1834aa6967408e935a8e51daa080993c19",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 38,
+        "uncompressedBytes": 44443693,
+        "executables": [
+          {
+            "name": "dusklight.xex",
+            "bytes": 36429824,
+            "sha256": "27b2a42df9f39ba00a2b8dbfe491c3ec35c203c40af91bf64a26a1bd69c46c9f"
+          }
+        ],
+        "upstreamFileHashesVerified": 38
+      }
+    },
+    {
+      "id": "starship",
+      "name": "Starship-Xbox360-0.2.0.0.zip",
+      "bytes": 6787372,
+      "sha256": "cfd6f0343d167869843f46d31165212249675e2ab9a28fa81e21b66947c56222",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 106,
+        "uncompressedBytes": 16609313,
+        "executables": [
+          {
+            "name": "apps/starship/starship.xex",
+            "bytes": 15663104,
+            "sha256": "49b7cb67588ff1bb0e6b61b9d7c4199eee9b53da6aa5a4348002d8011fe89d0d"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "ctr360",
+      "name": "CTR360-Xbox360-1.0.3.0.zip",
+      "bytes": 12571568,
+      "sha256": "96fc653f711a9c94950eeb397de824c61fceb7be1c82ece71910cb5509c2ac99",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 52,
+        "uncompressedBytes": 25100828,
+        "executables": [
+          {
+            "name": "apps/ctr360/default.xex",
+            "bytes": 2134016,
+            "sha256": "9611c0e63bdf370f25536ec85e0f4560ca266c8f89ab1712bd5dbc899a5a1e49"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "ctr360",
+      "name": "ctr360-1.0.3.0.zip",
+      "bytes": 1104285,
+      "sha256": "4b510db3cfc005af24a1a64c95cb5a524ae9075894a471f6d7a768814072d716",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 10,
+        "uncompressedBytes": 2296563,
+        "executables": [
+          {
+            "name": "default.xex",
+            "bytes": 2134016,
+            "sha256": "9611c0e63bdf370f25536ec85e0f4560ca266c8f89ab1712bd5dbc899a5a1e49"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "homebrew-app-store",
+      "name": "Homebrew-App-Store-Xbox360-0.1.0.0.zip",
+      "bytes": 1891078,
+      "sha256": "43eaec792e733b5cacb85e299af93ac9bac00891e5abd816da65e9db0f929d33",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 5,
+        "uncompressedBytes": 3937382,
+        "executables": [
+          {
+            "name": "apps/hbstore/homebrew_app_store.xex",
+            "bytes": 3735552,
+            "sha256": "0b0aa7c227be84426bb6ae5eda3382ca7474e00093d251767e3139b161a8193e"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora 0.7b.2 - Release Package.rar",
+      "bytes": 22647806,
+      "sha256": "0c7c765c3a5b938cfc64c71beda276a17d109b88df2a88e3f91eb1e74b7e46a0",
+      "formatVerification": {
+        "type": "RAR with native XEX2",
+        "entryCount": 203,
+        "launch": "Aurora.xex",
+        "executableSha256": "583bcd442d8017d6fcb2645b93cda987f4c0a43a688b652d7364ccaedaeefa9f"
+      }
+    },
+    {
+      "id": "aurora-az",
+      "name": "AuroraAZ-v1.1-Installer.zip",
+      "bytes": 1623449,
+      "sha256": "725b6918c693e8bcf3f6f217f638a8fe4d1ed6b86bf0c7bdefbd8a7689fb6b27",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 3,
+        "uncompressedBytes": 2170199,
+        "executables": [
+          {
+            "name": "AuroraAZInstaller\\AuroraAZ.xex",
+            "bytes": 593920,
+            "sha256": "fd928ebb0490966bb232c1e199d650d31b8483b11a7c8ee8c827e1ed1a26f1d7"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "catppuccin-latte",
+      "name": "Catppuccin-Latte-Blue.xzp",
+      "bytes": 8259338,
+      "sha256": "473ef6e2cf880aba2e41be89ccbabc2f12875ab017eafaf5bd2a653c23579196",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 8259338,
+        "bytes": 8259338
+      }
+    },
+    {
+      "id": "catppuccin-frappe",
+      "name": "Catppuccin-Frappe-Blue.xzp",
+      "bytes": 8253241,
+      "sha256": "6649ac7add90fcc26a790845585b0b3b747211368f56e921e2792c1e426ddbf1",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 8253241,
+        "bytes": 8253241
+      }
+    },
+    {
+      "id": "catppuccin-macchiato",
+      "name": "Catppuccin-Macchiato-Blue.xzp",
+      "bytes": 8253392,
+      "sha256": "49c2f5e541358c6ef45657ff6ce287fc87f5e0e7bda14aad2a408c0db6a47632",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 8253392,
+        "bytes": 8253392
+      }
+    },
+    {
+      "id": "catppuccin-mocha",
+      "name": "Catppuccin-Mocha-Blue.xzp",
+      "bytes": 8255172,
+      "sha256": "c96c549c3e5a70bd3c4c1e024b46f5d1f2adaec2f4067a3020a46ae752359400",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 8255172,
+        "bytes": 8255172
+      }
+    },
+    {
+      "id": "harissa64",
+      "name": "Harissa64-2.0.8.zip",
+      "bytes": 39116506,
+      "sha256": "d181ce07e2b30a78e200cb4a1bea5906f0db38f54508ff109cbbd312aca3f8fc",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 10,
+        "uncompressedBytes": 39145036,
+        "executables": [
+          {
+            "name": "Harissa64\\default.xex",
+            "bytes": 38653952,
+            "sha256": "3c6c41fd60d405748226de1a21ef00d4aa56db2275dc5177cb357abca399eed7"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "harissadc",
+      "name": "HarissaDC-0.1.0-dev.zip",
+      "bytes": 21495409,
+      "sha256": "b49d608656832e2dad835f5d56ce4ee22c06b20538f7250269d4c7fd3a00bfb7",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 5,
+        "uncompressedBytes": 21509781,
+        "executables": [
+          {
+            "name": "HarissaDC/default.xex",
+            "bytes": 21487616,
+            "sha256": "ee94e14d14ca8dffc8553b6f55b31acd9cd00991371183e6d28a4cc663cf3d80"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "anarch360",
+      "name": "anarch360.xex",
+      "bytes": 3252224,
+      "sha256": "0652e4aaac97cbecf57ae8bbb1b87d812a80fd0595396d655b73f5c8fc01e23e",
+      "formatVerification": {
+        "type": "Native XEX2",
+        "magic": "XEX2",
+        "bytes": 3252224
+      }
+    },
+    {
+      "id": "auroraflow-global",
+      "name": "AuroraFlow.Global.xzp",
+      "bytes": 31007960,
+      "sha256": "bdc72ccda62de7ebdaa05bccf08311ec7ce65e4ca3021f60e945af8510abeaf3",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 31007960,
+        "bytes": 31007960
+      }
+    },
+    {
+      "id": "auroraflow-global",
+      "name": "Modern.by.MaZ3.Global.cfljson",
+      "bytes": 40975,
+      "sha256": "643fc6e17f24330c8cc59a1d954528365eaacf40de539f7b37cb197caf4a37ec",
+      "formatVerification": {
+        "type": "Aurora CFLJSON layout",
+        "bytes": 40975,
+        "keys": [
+          "info",
+          "properties",
+          "modes"
+        ]
+      }
+    },
+    {
+      "id": "auroraflow-en",
+      "name": "AuroraFlow.EN.xzp",
+      "bytes": 31210299,
+      "sha256": "868fc3c8374c5217da4247077e51e8693cb81f146bf4d50339c9b17eac41bb83",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 31210299,
+        "bytes": 31210299
+      }
+    },
+    {
+      "id": "auroraflow-en",
+      "name": "Modern.by.MaZ3.cfljson",
+      "bytes": 40968,
+      "sha256": "831aed750a6fe9c8d5c6c179cc38c2f4193bb3cfe922f7152b918762b85bf412",
+      "formatVerification": {
+        "type": "Aurora CFLJSON layout",
+        "bytes": 40968,
+        "keys": [
+          "info",
+          "properties",
+          "modes"
+        ]
+      }
+    },
+    {
+      "id": "nxe-avatar-v5",
+      "name": "Def-NXESp-Av-Xblogov5.xzp",
+      "bytes": 5605497,
+      "sha256": "b7fcd1cfbb9f4ebd96b717e6afc03716c18291d5d23185f3a94b2f5a35be7b53",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 5605497,
+        "bytes": 5605497
+      }
+    },
+    {
+      "id": "xboxone-experience",
+      "name": "XboxOneExperience.xzp",
+      "bytes": 6420180,
+      "sha256": "bca1ecf133245b6e6a61d83633f3ef3a85c9878bf467308ec95c8fdf56fbc4c7",
+      "formatVerification": {
+        "type": "Xbox 360 XZP",
+        "magic": "XUIZ",
+        "version": 1,
+        "declaredBytes": 6420180,
+        "bytes": 6420180
+      }
+    },
+    {
+      "id": "fce360-enhanced",
+      "name": "fce360-enhanced.v0.8.10.zip",
+      "bytes": 11968834,
+      "sha256": "52870b7d2320814f2cb0e1f5f97b2b8c533b73b752ab7a314740de2fe8f91711",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 17,
+        "uncompressedBytes": 14290040,
+        "executables": [
+          {
+            "name": "fceux.xex",
+            "bytes": 6922240,
+            "sha256": "17fc8a142f208c992d30c0b810b0d685852482830ab2179450b0d5085d239b56"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "salvia360",
+      "name": "Salvia-360.zip",
+      "bytes": 140795200,
+      "sha256": "3e82efe38d35aa71567faf998c7e8db75adb471964b2df8915f067327303b47c",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 354,
+        "uncompressedBytes": 153285788,
+        "executables": [
+          {
+            "name": "beetle-lynx.xex",
+            "bytes": 2910208,
+            "sha256": "9b3e24bc0840b461865ad2504e3560ee29bdcc0e81a5f281807ae7932d32bd6f"
+          },
+          {
+            "name": "beetle-ngp.xex",
+            "bytes": 2916352,
+            "sha256": "7893d56c04fef8fc8d3789cf9e982d9d02cc58261e4551515c3b0f5ae47fe039"
+          },
+          {
+            "name": "beetle-pce.xex",
+            "bytes": 3131392,
+            "sha256": "0ecb4b4fc895d9f33dd84386daeb27ed5e19f853bd03b24917078e755d64a06b"
+          },
+          {
+            "name": "beetle-pce-fast.xex",
+            "bytes": 3246080,
+            "sha256": "eaea97d3d8dd4ea663ab938337232d1c3819fdcede95fdad617be09c7150a71b"
+          },
+          {
+            "name": "beetle-pce-fx.xex",
+            "bytes": 3106816,
+            "sha256": "a9602a53159bcfbf07715dc424f53ee27acebc318d51ae0e5f6c65e20f1fb8b0"
+          },
+          {
+            "name": "beetle-vb.xex",
+            "bytes": 2893824,
+            "sha256": "0c4077cc4ab2f8afbd43e9102d0e06aa56a54e62001230b83911473bd6cc8501"
+          },
+          {
+            "name": "beetle-wswan.xex",
+            "bytes": 2924544,
+            "sha256": "7fff7205783127ec22c1332dfc2b6f253cb8b050fbe2146ef88300cd5d80096e"
+          },
+          {
+            "name": "cannonball.xex",
+            "bytes": 2969600,
+            "sha256": "6e0478aba43150ba883cfbde14d035f31c2585673868ceed0d76a67c41274be1"
+          },
+          {
+            "name": "default.xex",
+            "bytes": 2820096,
+            "sha256": "9f6bad611525aab7cfa49ac7d3d88f4eebd6076b8559549ad739b298f622c8fd"
+          },
+          {
+            "name": "dosbox-pure.xex",
+            "bytes": 3952640,
+            "sha256": "0f9ac0d30d4d21e4552fb5096ca31bd03f707b37437d89bd7230aaf266f4b3b2"
+          },
+          {
+            "name": "fbanext.xex",
+            "bytes": 5373952,
+            "sha256": "68d0814282baf98c01550b8111c6be37e5286dd3965d301d2d29efb536a614ff"
+          },
+          {
+            "name": "fbneo.xex",
+            "bytes": 9584640,
+            "sha256": "823f081dea8c09091226f5edfa6ee4b58681cc156bdeb37b1d0bc2b01958e631"
+          },
+          {
+            "name": "frodo-c64.xex",
+            "bytes": 2967552,
+            "sha256": "2fea24b87a7eb24529167fd982a35b3714e87be8d721560cdf02bf30d349cc8f"
+          },
+          {
+            "name": "frodo-c64_sc.xex",
+            "bytes": 2961408,
+            "sha256": "ddc63c92f3219f96db7de463bf2b2854c0a73321a699aec187212bbf0702c489"
+          },
+          {
+            "name": "Gambatte.xex",
+            "bytes": 3043328,
+            "sha256": "24bd8cd1c0c209578fab496e7ebdfbc473fe9110d0c5cd955da0af62457eaab3"
+          },
+          {
+            "name": "Genesis-Plus-GX.xex",
+            "bytes": 3467264,
+            "sha256": "315d42bdb0ff9b71ac47a75157afb9f65a045495ee4cfc892e2c76824dc9592b"
+          },
+          {
+            "name": "mame-2003-plus.xex",
+            "bytes": 8779776,
+            "sha256": "7a03261947b5f447931d53b566ed5c870416a9d42dd1d8878ecc244f1cf8c7aa"
+          },
+          {
+            "name": "Nestopia.xex",
+            "bytes": 3289088,
+            "sha256": "ea143de5ba86f97916859b385d3b38879e3ad4f5353fbca19ebc2bd5002edd3f"
+          },
+          {
+            "name": "pcsxr-360.xex",
+            "bytes": 3225600,
+            "sha256": "352bbcd0d8b8808a2ee5b94e27fd65cb22c318a7ba4a87cb13dfb268fb0b1794"
+          },
+          {
+            "name": "picodrive.xex",
+            "bytes": 3325952,
+            "sha256": "74fad17146bf6209ef36c62ad95d937f3615053ee817c2b2442ca071bd936509"
+          },
+          {
+            "name": "prboom.xex",
+            "bytes": 3713024,
+            "sha256": "a5c48856c8cdd4196e95615f3b7ffa084eace609b6dd6514dbdf75ea7f94dd5b"
+          },
+          {
+            "name": "puae.xex",
+            "bytes": 6443008,
+            "sha256": "438bca8defbd8d5d1af3133100625e923c6d8ac6f1e71c0ffc35c59a4fe862c9"
+          },
+          {
+            "name": "puae2021.xex",
+            "bytes": 5953536,
+            "sha256": "e8be176dd24a806a88ac7ad3d8dda10b47b92af346c8e8ff586b2c6372f0448f"
+          },
+          {
+            "name": "px68k.xex",
+            "bytes": 3934208,
+            "sha256": "6788632ebbf8c6520cba254e8af3a04c11b100c1602045ea2212a3f0f8087b0d"
+          },
+          {
+            "name": "Snes9x.xex",
+            "bytes": 3465216,
+            "sha256": "48d76d7a35e6fc5be5c03d3ff57532f8173314f40d0c7f6187a5cdb62fd208e9"
+          },
+          {
+            "name": "Snes9x2010.xex",
+            "bytes": 3481600,
+            "sha256": "e9d5e1f83c7a290ce6ed7813b4e942b1c3b85b1b5adf87ffc9077ede304e35bf"
+          },
+          {
+            "name": "tyrquake.xex",
+            "bytes": 3274752,
+            "sha256": "b66c714aa2e0965832fdd98377360102fd19842321b5818ada45c10afc28f922"
+          },
+          {
+            "name": "vba-next.xex",
+            "bytes": 2949120,
+            "sha256": "b15f26de405e3ab1997ca56775d308cf12533b9fb31a63841fe6a341a2ed135c"
+          },
+          {
+            "name": "xbox64.xex",
+            "bytes": 3354624,
+            "sha256": "8a9c66aa7da3f85fac6de4c5f8d5e03b9c508ffae64da86c495286c7fbc813c1"
+          },
+          {
+            "name": "plugins/hidmouse.xex",
+            "bytes": 24576,
+            "sha256": "d34c82d7f8e77ee1428b74ebdfc49b261fbe70cce5c17eeefeba630d66ba6fe8"
+          },
+          {
+            "name": "3dox.xex",
+            "bytes": 2973696,
+            "sha256": "50071ce6d9d9c92cb3ab75862f2a34afb11aeacceec99a883f529892fed80981"
+          },
+          {
+            "name": "atari-800.xex",
+            "bytes": 3072000,
+            "sha256": "8f8f70d0be74fbd6a440bf466907203a426c2ddf2025f855dd642e202bb523b1"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "simple360player",
+      "name": "Simple360Player-0.2.zip",
+      "bytes": 6398773,
+      "sha256": "eadb457719b5b6c92420e1e0c8bfa0986d00dcb2727f107b8421fff72f01e226",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 4,
+        "uncompressedBytes": 8441016,
+        "executables": [
+          {
+            "name": "Simple360Player\\default.xex",
+            "bytes": 6303744,
+            "sha256": "0f8936175281600d897f1182467419d4ae45181370a0ebea24006267db96ae6d"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "multiplex360",
+      "name": "Multiplex360-0.4.zip",
+      "bytes": 6792896,
+      "sha256": "de565422ccf2789a3c9ec8305c57e6ca21981e6c7e1a8b57d413a9a56861bcc8",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 5,
+        "uncompressedBytes": 8835009,
+        "executables": [
+          {
+            "name": "Multiplex360\\default.xex",
+            "bytes": 6696960,
+            "sha256": "7acaafcea2f85865bcbaef4d5ec5918ec4493b69f7d5694d2d1bc11d5b61467f"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "silverdash360",
+      "name": "Silverdash360-0.1.2-console.zip",
+      "bytes": 64510979,
+      "sha256": "6478589dd4963294eca15961b5ecca8347d0442b4fbc5c136d20643194c5a1f1",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 110,
+        "uncompressedBytes": 111971722,
+        "executables": [
+          {
+            "name": "Silverdash360/default.xex",
+            "bytes": 7843840,
+            "sha256": "bb7c7f0e1495ba5d97e44653cfcb35b7077d06bf13704acd907cd3dd782821cf"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "silverdash360",
+      "name": "Silverdash360-0.1.3.zip",
+      "bytes": 211928,
+      "sha256": "a8b64351790f0750b51143d3347a588beb00a6b71552e76eac53a633875b2adc",
+      "formatVerification": {
+        "type": "ZIP application update",
+        "entryCount": 7,
+        "files": [
+          {
+            "name": "AppManifest.xaml",
+            "bytes": 891,
+            "sha256": "a4466525ae700832f4658f55970b4ad27a39d42d03512ae583666881dcdfc791"
+          },
+          {
+            "name": "INSTALL.txt",
+            "bytes": 741,
+            "sha256": "a4d6be21e8c5a42d56e7b81b89b8aad8772d6ea09974b1e2e0ea81c1196f7e08"
+          },
+          {
+            "name": "LICENSE.md",
+            "bytes": 5458,
+            "sha256": "6dea9272b85db7518785bc3334ed127855db87bdde8025db58d8eee2feb20ffd"
+          },
+          {
+            "name": "Silverdash360.dll",
+            "bytes": 397824,
+            "sha256": "d745d444e49aedd3dc7b525325f9b434b9861b087245890bffb5d7d2da3a06bf"
+          },
+          {
+            "name": "SplashScreenImage.jpg",
+            "bytes": 36308,
+            "sha256": "44c4509418fc1d6a3396e3f692d3ab382a5c1dfc6eed54a6a888eeca96da62b7"
+          },
+          {
+            "name": "SplashScreenImage480.jpg",
+            "bytes": 16696,
+            "sha256": "bc1bda73abb52a53b53992d878b1e7d905fa7c3d92c31f568e424f87c945ee55"
+          },
+          {
+            "name": "XboxAppManifest.xml",
+            "bytes": 662,
+            "sha256": "435e5fae94bb95c779e436f8799c243efa81a44a36654aa2f8d124931b8c1ecf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quad-carnage",
+      "name": "Quad Carnage for 360.zip",
+      "bytes": 87175153,
+      "sha256": "3df04b186612f6b10cf9ae6201c0e01f46c4753b45dcded3abff843842756b9c",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 84,
+        "uncompressedBytes": 264798248,
+        "executables": [
+          {
+            "name": "QuadCarnage/default.xex",
+            "bytes": 8949760,
+            "sha256": "b0cfc540a14798ae76e94b13293b3b6c9ea3c23a2e26a16fa668008c3421d1b4"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/Assembly-CSharp.dll.xex",
+            "bytes": 49152,
+            "sha256": "f2fc8662f60e677a11f8a8993e114439750572c8158947e7836066c962c3f345"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/Mono.Posix.dll.xex",
+            "bytes": 151552,
+            "sha256": "1bef9f59f8618b7b650b6c9bf2295726baa24e79d2e3549dc01aab65fa4c9e1c"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/Mono.Security.dll.xex",
+            "bytes": 200704,
+            "sha256": "6a3d616b7f79968ed15934aaf948090412b9ab6d70f2eb90cf3d7b7527529ba8"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/mscorlib.dll.xex",
+            "bytes": 1302528,
+            "sha256": "e4bac29fffa413d87a21d731556624fcbcb8e0f24082d26c3dd3afec186994db"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/System.Configuration.dll.xex",
+            "bytes": 94208,
+            "sha256": "2e203ff9732c57f855909e79d6e970e0796c0536098460d153784cb5611e8193"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/System.Core.dll.xex",
+            "bytes": 241664,
+            "sha256": "b818558fb035d200f1d3e6a6422902f7b395a38d6c8d73690a97b403e47e9f68"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/System.dll.xex",
+            "bytes": 843776,
+            "sha256": "9c0ef8eda6ec007f7c2dda09bffeb478f415749f48b741e9e8619b4fe5d4d2e0"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/System.Security.dll.xex",
+            "bytes": 102400,
+            "sha256": "6fe9787313dac3ab0cbff46dcf5fd59d280cd3de26fce0c5e4238f4c36d1a0bb"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/System.Xml.dll.xex",
+            "bytes": 679936,
+            "sha256": "8fae6b4b643661df3bd7d60880f8831b5119de9b264ee61f06ded72214cd2934"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/UnityEngine.dll.xex",
+            "bytes": 815104,
+            "sha256": "76eb28779ef3a07fc91aa1ee4ea7053d7764c189b43837a57477b489e94352b7"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/UnityEngine.Networking.dll.xex",
+            "bytes": 417792,
+            "sha256": "d38bb4f25f2a44351f8038db9488ca6caf93019bd5cde7d398f5cf1b02f9c17d"
+          },
+          {
+            "name": "QuadCarnage/Media/Managed/UnityEngine.UI.dll.xex",
+            "bytes": 311296,
+            "sha256": "f01296424a47714091b8fe3403c4efe046b2b112fbca6b0b762c311ed2f75894"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "wowjay",
+      "name": "WOWJAY360.7z",
+      "bytes": 37455015,
+      "sha256": "d8d9fbfe8394c43e2c23f89ed6e5663257d4f83f2a17f8163acda6979da9eafb",
+      "formatVerification": {
+        "type": "7Z with native XEX2",
+        "entryCount": 78,
+        "crcTestPassed": true,
+        "executables": [
+          {
+            "name": "default.xex",
+            "bytes": 8949760,
+            "sha256": "3c761b9ade0beac9e0b5c29ac814553bb5a78619f7dfd5b26613fedd262d946e"
+          },
+          {
+            "name": "Media\\Managed\\Assembly-CSharp.dll.xex",
+            "bytes": 61440,
+            "sha256": "54bcc52dfe33606a81aa2b8ee38c81fc6687ead9d2c9d463006de411ff56964e"
+          },
+          {
+            "name": "Media\\Managed\\Mono.Posix.dll.xex",
+            "bytes": 151552,
+            "sha256": "32aaa5a6d7c07666754dd5ecfb6c519ffff63ca02ca138a905f45295fbe5d260"
+          },
+          {
+            "name": "Media\\Managed\\Mono.Security.dll.xex",
+            "bytes": 200704,
+            "sha256": "cbebc1828e3db9e52b6258c55bf6e4cad230a52255d8cd7d8f76df8a3a9f59d0"
+          },
+          {
+            "name": "Media\\Managed\\mscorlib.dll.xex",
+            "bytes": 1302528,
+            "sha256": "44bf114c7e3bb041ce5b7a54a46a6dc13d5611c01cce65a0090170d91c565752"
+          },
+          {
+            "name": "Media\\Managed\\System.Configuration.dll.xex",
+            "bytes": 94208,
+            "sha256": "dba543e7c9ef13bb27b33ee41332277a4d2fcf8b95d294ad810081305fd98f54"
+          },
+          {
+            "name": "Media\\Managed\\System.Core.dll.xex",
+            "bytes": 241664,
+            "sha256": "3a8904a63b46f730860dc6fdfde591268322ce3762d53fb8fae99cdf072c3267"
+          },
+          {
+            "name": "Media\\Managed\\System.dll.xex",
+            "bytes": 843776,
+            "sha256": "192a59f45669f0133d2edc9c8cfda5ed3ccc3f295bd3b60463dacc4628675211"
+          },
+          {
+            "name": "Media\\Managed\\System.Security.dll.xex",
+            "bytes": 102400,
+            "sha256": "927507218726e8a5bb71bfe2cfeb0f18af82e726c8ebecb67af8893a706c9c2c"
+          },
+          {
+            "name": "Media\\Managed\\System.Xml.dll.xex",
+            "bytes": 679936,
+            "sha256": "b53f4833e1e7723232a593eec01925e77c94211310f8a5062a1e63aa2d781bed"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.dll.xex",
+            "bytes": 815104,
+            "sha256": "c087dc58c8ae90fb211643930559a88baea0855011455d6efe8b265e466db467"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.Networking.dll.xex",
+            "bytes": 417792,
+            "sha256": "73c45071340ea9a3093a037cad04722f7e42d290cb95e6366d53f3ed53bcca7f"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.UI.dll.xex",
+            "bytes": 311296,
+            "sha256": "06def412755ddc7262a904355a6845459a62b392bdfe24989ab9f830f13556f1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nest-bound",
+      "name": "NestBoud 360.zip",
+      "bytes": 52807754,
+      "sha256": "6580ec0cc55f3e44adbb1695d07cf2e83aaa9007f8d9b6e7763377459721bc62",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 111,
+        "uncompressedBytes": 111733653,
+        "executables": [
+          {
+            "name": "NestBoud 360/Media/Managed/Assembly-CSharp.dll.xex",
+            "bytes": 36864,
+            "sha256": "cc5786125baa0b6d44cfafb26dad7adc345fab6348b3b0cfd3425f9d61077a74"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/Mono.Posix.dll.xex",
+            "bytes": 163840,
+            "sha256": "234ba6432f1fef7a163a0edc003d89cc823d1c3bc3279b9e28b9cc8329c766ce"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/Mono.Security.dll.xex",
+            "bytes": 229376,
+            "sha256": "a08b60689506937ca4ccb2d8218b61451880d7edd9ba0f51ccb8cf7108e250a4"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/mscorlib.dll.xex",
+            "bytes": 1499136,
+            "sha256": "75deaffd4a8512a0e409bfa3ce93f5ea45622fbcc02ab0c255515384cbcfd072"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/System.Configuration.dll.xex",
+            "bytes": 106496,
+            "sha256": "65896d49239f187a26dbfa2d1458f4e9dc401d924ae580c4b74bd77184fc7d1d"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/System.Core.dll.xex",
+            "bytes": 274432,
+            "sha256": "df2fc27d6b8bf337353b32348f49ee5a9de804bc4fdd830d77e95587649a17ae"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/System.dll.xex",
+            "bytes": 991232,
+            "sha256": "c9b17bd268c401f46a9222e295055c14da450a0f87998e841e7b782c6a7aac49"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/System.Security.dll.xex",
+            "bytes": 114688,
+            "sha256": "80bc3b33f1b5721743040c5df6bc3080f2e53d817d4a06278ec6818a5b5cfc1a"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/System.Xml.dll.xex",
+            "bytes": 835584,
+            "sha256": "b43ff63d752f51f403f5e618a5d9d015431395540185467e00182510c48ff89a"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/UnityEngine.dll.xex",
+            "bytes": 897024,
+            "sha256": "7e57354ba8d1c6a74c1b60a65343ecf0b2e0dd3ff8f01c0d6551437b57d34869"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/UnityEngine.Networking.dll.xex",
+            "bytes": 479232,
+            "sha256": "55abd3a8dee13fb676c947652e74472a9c025a9f24ce42e56677060b05e96331"
+          },
+          {
+            "name": "NestBoud 360/Media/Managed/UnityEngine.UI.dll.xex",
+            "bytes": 356352,
+            "sha256": "1b707358822c4ad7edc1ba8653c26dc637364098dd154a34cc9627aa388e20f8"
+          },
+          {
+            "name": "NestBoud 360/NestBoud 360.xex",
+            "bytes": 10080256,
+            "sha256": "6ca2a95807e7d1e9dacc73b6cb7f571a2c6e9c5cf32ead9f79c3a177ff38d099"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "slither360",
+      "name": "Slither360-v0.10.2-dev.1-PUBLIC.rar",
+      "bytes": 1826917,
+      "sha256": "a28c7ce96e817a4cd270fb461348c6806edbcea8283ac039655ac2e315fe4dbc",
+      "formatVerification": {
+        "type": "RAR with native XEX2",
+        "entryCount": 11,
+        "crcTestPassed": true,
+        "executables": [
+          {
+            "name": "Slither360-v0.10.2-dev.1-PUBLIC\\default.xex",
+            "bytes": 692224,
+            "sha256": "a42deb70f1400467951860b84baf29cef7cef1a43275d2710d32f1af6b8cd424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "portal-clone",
+      "name": "PortalCloneXbox.rar",
+      "bytes": 55805775,
+      "sha256": "2dbc6172f0802f8adab9e2ce53bde3d5397785caf4fca0dfac5e5d45574630cd",
+      "formatVerification": {
+        "type": "RAR with native XEX2",
+        "entryCount": 82,
+        "crcTestPassed": true,
+        "executables": [
+          {
+            "name": "PortalClone\\default.xex",
+            "bytes": 8949760,
+            "sha256": "bcef1e3e215166973f2b011c1994beea02b9fad3d99d4ca6b9dacfe858f072a0"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\Assembly-CSharp.dll.xex",
+            "bytes": 32768,
+            "sha256": "7437d0e51f91ad71658f33577f75945422809b690590330323cb4961a5d8bd10"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\Mono.Posix.dll.xex",
+            "bytes": 151552,
+            "sha256": "9aaf9b5457aa72b417fe38508b010482b18f97a1b69635d09500a0338d07ee8c"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\Mono.Security.dll.xex",
+            "bytes": 200704,
+            "sha256": "cefff6a6d845061c36c5b13544e1d52032b65d99d2999476582d9b2f733ee26d"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\mscorlib.dll.xex",
+            "bytes": 1302528,
+            "sha256": "4798e62b133293ae755de94dfc863122e43a4ac55307e3a79cac9231d7e98af4"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\System.Configuration.dll.xex",
+            "bytes": 94208,
+            "sha256": "f4546bebf0deb28bcfd63acc0821d77c32f1d04047304a41a47a5f37396cfbce"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\System.Core.dll.xex",
+            "bytes": 241664,
+            "sha256": "58f06808c9448a79e5c4a7a8dc0a1e0bba8d815c202b3c0d1f1a044008cb0e2a"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\System.dll.xex",
+            "bytes": 843776,
+            "sha256": "79f5aa2f27719b4d6b93c4469923c77379e3ca99fb36668016c635192777160e"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\System.Security.dll.xex",
+            "bytes": 102400,
+            "sha256": "f8bc395fbe03c1acf7d8f5d58087c548cee39970f7f29273496f009559747132"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\System.Xml.dll.xex",
+            "bytes": 679936,
+            "sha256": "ce98e7e6c78484be9f625b0c4331236b5afe24951caa54437ea7f12631706eaa"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\UnityEngine.dll.xex",
+            "bytes": 815104,
+            "sha256": "5cf24f4a9a20976bb161c8b99605885878be0f27253ed3a506d99eb2506f1282"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\UnityEngine.Networking.dll.xex",
+            "bytes": 417792,
+            "sha256": "0c21c563bdfce9b6e1ed7be46b3e7bd3448f75eb021fd18f236300d6a3081f80"
+          },
+          {
+            "name": "PortalClone\\Media\\Managed\\UnityEngine.UI.dll.xex",
+            "bytes": 311296,
+            "sha256": "dae307c330cfb940aa6cd656f29ce842a2a0eaedd8d7044056725833ec339557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "snes360-enhanced",
+      "name": "snes360-enhanced.v0.38.zip",
+      "bytes": 11740360,
+      "sha256": "a305a177bc16d481333ed98fbfc217d0cbbc0f9775a0c54554d194ceba6176d6",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 18,
+        "uncompressedBytes": 13059870,
+        "executables": [
+          {
+            "name": "Snes360.xex",
+            "bytes": 2809856,
+            "sha256": "bf90a1855c0894979941c2593ae5cfd6af8c4aa1c009c0f353788109e9f25e13"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "amiga360-refresh",
+      "name": "A360RF26-Xbox.7z",
+      "bytes": 14235921,
+      "sha256": "146a2e42894f57944fbc9dfebb861a6a96992c993e3dbdf32b4ba91d436ed592",
+      "formatVerification": {
+        "type": "7Z with native XEX2",
+        "entryCount": 132,
+        "crcTestPassed": true,
+        "executables": [
+          {
+            "name": "A360RF26.xex",
+            "bytes": 10018816,
+            "sha256": "5299e3ff3a7ca10f65fc740a59ea0ef3c7a96bba0f9f618efa7b8e719d2246c8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ace-driver-collection",
+      "name": "AceDriverCollection.zip",
+      "bytes": 5158650,
+      "sha256": "5a2936b833b7544f804f7cf9a93c9ad31a3116841058023f18c1a6eb670e9d7f",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 5,
+        "uncompressedBytes": 22862909,
+        "executables": [
+          {
+            "name": "AceDriverCollection/default.xex",
+            "bytes": 5042176,
+            "sha256": "225d201fd892c4035fdabd618ffe460396a5b394cfa4850912be775e9ed961dc"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "dashlaunch-temporary-gui",
+      "name": "DashLaunch_for_BadUpdate.xex",
+      "bytes": 1699840,
+      "sha256": "1280828f7e33c21aa3d05ab2cbc0541e0cfa5eae0b91dcf33723ec744bcd1c9f",
+      "formatVerification": {
+        "type": "Native XEX2",
+        "magic": "XEX2",
+        "bytes": 1699840
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Triangle-runtime-03cb4bc8e0e1.zip",
+      "bytes": 17172614,
+      "sha256": "4544d5ed997ec5e3059857acd6df141a8a074895f4bd0c6875821a0f0160de2f",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 54,
+        "uncompressedBytes": 18212008,
+        "executables": [
+          {
+            "name": "Triangle-runtime-03cb4bc8e0e1/media/Triangle.xex",
+            "bytes": 1777664,
+            "sha256": "dd4829adbc166169ca59cbacc2bfb69393c618edb3cfdc2a729147dee4fddacd"
+          },
+          {
+            "name": "Triangle-runtime-03cb4bc8e0e1/Triangle.xex",
+            "bytes": 1777664,
+            "sha256": "32ccf9567f3208b04c04e0a9beaf89953c1edaefac4b45b89281b965c8913fcd"
+          }
+        ],
+        "upstreamFileHashesVerified": 50
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Triangle.xex",
+      "bytes": 1777664,
+      "sha256": "32ccf9567f3208b04c04e0a9beaf89953c1edaefac4b45b89281b965c8913fcd",
+      "formatVerification": {
+        "type": "Native XEX2",
+        "magic": "XEX2",
+        "bytes": 1777664
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "AAA_Certificate_Services.der",
+      "bytes": 1078,
+      "sha256": "d7a7a0fb5d7e2731d771e9484ebcdef71d5f0c3e0a2948782bc83ee0ea699ef4",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1078,
+        "header": "308204323082031a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Baltimore_CyberTrust_Root.der",
+      "bytes": 891,
+      "sha256": "16af57a9f676b0ab126095aa5ebadef22ab31119d644ac95cd4b93dbf3f26aeb",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 891,
+        "header": "308203773082025f"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "COMODO_RSA_Certification_Authority.der",
+      "bytes": 1500,
+      "sha256": "52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1500,
+        "header": "308205d8308203c0"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Certum_Trusted_Network_CA.der",
+      "bytes": 959,
+      "sha256": "5c58468d55f58e497e743982d2b50010b6d165374acf83a7d4a32db768c4408e",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 959,
+        "header": "308203bb308202a3"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "DST_Root_CA_X3.der",
+      "bytes": 846,
+      "sha256": "0687260331a72403d909f105e69bcf0d32e1bd2493ffc6d9206d11bcd6770739",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 846,
+        "header": "3082034a30820232"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "DigiCert_Global_Root_CA.der",
+      "bytes": 947,
+      "sha256": "4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 947,
+        "header": "308203af30820297"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "DigiCert_Global_Root_G2.der",
+      "bytes": 914,
+      "sha256": "cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 914,
+        "header": "3082038e30820276"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "DigiCert_Global_Root_G3.der",
+      "bytes": 831,
+      "sha256": "61799e3594f6fa6c9f619031e4a3c9f643fda38c083704a5075e5709a21b1ab7",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 831,
+        "header": "3082033b308202c0"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "DigiCert_Global_Root_G3_1.der",
+      "bytes": 579,
+      "sha256": "31ad6648f8104138c738f39ea4320133393e3a18cc02296ef97c2ac9ef6731d0",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 579,
+        "header": "3082023f308201c5"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "DigiCert_High_Assurance_EV_Root_CA.der",
+      "bytes": 969,
+      "sha256": "7431e5f4c3c1ce4690774f0b61e05440883ba9a01ed00ba6abd7806ed3b118cf",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 969,
+        "header": "308203c5308202ad"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Entrust_Root_Certification_Authority.der",
+      "bytes": 1173,
+      "sha256": "73c176434f1bc6d5adf45b0e76e727287c8de57616c1e6e6141a2b2cbc7d8e4c",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1173,
+        "header": "3082049130820379"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Entrust_Root_Certification_Authority_1.der",
+      "bytes": 1298,
+      "sha256": "13efb39a2f6654e8c67bd04f4c6d4c90cd6cab5091bcedc73787f6b77d3d3fe7",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1298,
+        "header": "3082050e308203f6"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Entrust_Root_Certification_Authority_2.der",
+      "bytes": 1090,
+      "sha256": "43df5774b03e7fef5fe40d931a7bedf1bb2e6b42738c4e6d3841103d3aa7f339",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1090,
+        "header": "3082043e30820326"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Entrust_Root_Certification_Authority_3.der",
+      "bytes": 765,
+      "sha256": "02ed0eb28c14da45165c566791700d6451d7fb56f0b2ab1d3b8eb070e56edff5",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 765,
+        "header": "308202f930820280"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "GlobalSign_Root_CA.der",
+      "bytes": 867,
+      "sha256": "cbb522d7b7f127ad6a0113865bdf1cd4102e7d0759af635a7cf4720dc963c53b",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 867,
+        "header": "3082035f30820247"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "GlobalSign_Root_CA_1.der",
+      "bytes": 1415,
+      "sha256": "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1415,
+        "header": "308205833082036b"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "GlobalSign_Root_CA_2.der",
+      "bytes": 889,
+      "sha256": "ebd41040e4bb3ec742c9e381d31ef2a41a48b6685c96e7cef3c1df6cd4331c99",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 889,
+        "header": "308203753082025d"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Go_Daddy_Root_Certificate_Authority_-_G2.der",
+      "bytes": 969,
+      "sha256": "45140b3247eb9cc8c5b4f0d7b53091f73292089e6e5a63e2749dd3aca9198eda",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 969,
+        "header": "308203c5308202ad"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Go_Daddy_Root_Certificate_Authority_-_G2_1.der",
+      "bytes": 1236,
+      "sha256": "973a41276ffd01e027a2aad49e34c37846d3e976ff6a620b6712e33832041aa6",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1236,
+        "header": "308204d0308203b8"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "ISRG_Root_X1.der",
+      "bytes": 1391,
+      "sha256": "96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1391,
+        "header": "3082056b30820353"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Microsoft_RSA_Root_Certificate_Authority_2017.der",
+      "bytes": 1452,
+      "sha256": "c741f70f4b2a8d88bf2e71c14122ef53ef10eba0cfa5e64cfa20f418853073e0",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1452,
+        "header": "308205a830820390"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Sectigo_Public_Server_Authentication_Root_R46.der",
+      "bytes": 1422,
+      "sha256": "7bb647a62aeeac88bf257aa522d01ffea395e0ab45c73f93f65654ec38f25a06",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1422,
+        "header": "3082058a30820372"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Starfield_Root_Certificate_Authority_-_G2.der",
+      "bytes": 993,
+      "sha256": "2ce1cb0bf9d2f9e102993fbe215152c3b2dd0cabde1c68e5319b839154dbb7f5",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 993,
+        "header": "308203dd308202c5"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Starfield_Services_Root_Certificate_Authority_-_G2.der",
+      "bytes": 1011,
+      "sha256": "568d6905a2c88708a4b3025190edcfedb1974a606a13c6e5290fcb2ae63edab5",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1011,
+        "header": "308203ef308202d7"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "T-TeleSec_GlobalRoot_Class_2.der",
+      "bytes": 967,
+      "sha256": "91e2f5788d5810eba7ba58737de1548a8ecacd014598bc0b143e041b17052552",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 967,
+        "header": "308203c3308202ab"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "USERTrust_ECC_Certification_Authority.der",
+      "bytes": 905,
+      "sha256": "5dd661d3cb33b5005cbed045a223ddc4445aaa41d1acb5df700884cad9ba4195",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 905,
+        "header": "308203853082030c"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "USERTrust_ECC_Certification_Authority_1.der",
+      "bytes": 659,
+      "sha256": "4ff460d54b9c86dabfbcfc5712e0400d2bed3fbc4d4fbdaa86e06adcd2a9ad7a",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 659,
+        "header": "3082028f30820215"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "USERTrust_ECC_Certification_Authority_2.der",
+      "bytes": 946,
+      "sha256": "3457106752400212903a3545ca3b2ef384a456972bd951d8d840c1b0a379efa1",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 946,
+        "header": "308203ae30820333"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "USERTrust_RSA_Certification_Authority.der",
+      "bytes": 1506,
+      "sha256": "e793c9b02fd8aa13e21c31228accb08119643b749c898964b1746d46c3d4cbd2",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1506,
+        "header": "308205de308203c6"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "USERTrust_RSA_Certification_Authority_1.der",
+      "bytes": 1559,
+      "sha256": "7fa4ff68ec04a99d7528d5085f94907f4d1dd1c5381bacdc832ed5c960214676",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1559,
+        "header": "30820613308203fb"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.der",
+      "bytes": 1239,
+      "sha256": "9acfab7e43c8d880d06b262a94deeee4b4659989c3d0caf19baf6405e41ab7df",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1239,
+        "header": "308204d3308203bb"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "thawte_Primary_Root_CA.der",
+      "bytes": 1060,
+      "sha256": "8d722f81a9c113c0791df136a2966db26c950a971db46b4199f4ea54b78bfb9f",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1060,
+        "header": "3082042030820308"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "A_button.png",
+      "bytes": 4548,
+      "sha256": "6d8769aacff836a1edd5dbbb7f4ee7c3652b21509bd286ae77989ad1cf39952d",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 4548,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "B_button.png",
+      "bytes": 4250,
+      "sha256": "8e100cd5aa094f96e70a024eec4433e85cc2b28fd6e91fa559fb12843602ba8b",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 4250,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Arial_12.xpr",
+      "bytes": 118796,
+      "sha256": "2f3f1942a2ceb5a1900655d86ed5abb7ba422f3f4d98e4550dd821592bbad5d7",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 118796,
+        "header": "5850523200005000"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "LB_button.png",
+      "bytes": 3007,
+      "sha256": "c9719656a1b8760a5a87f49ae7659c4a48693081a842c0cb98efb2a1a13a1d61",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 3007,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "RB_button.png",
+      "bytes": 2799,
+      "sha256": "80b80b7ad1ea47e9ebd1e949f677a3a55207d47a5ca8e04e39ec20c621f6e1be",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 2799,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "RS_button.png",
+      "bytes": 4144,
+      "sha256": "2d6bccb502e92f92864864d17063f7bb03d7b1662c975e99430cf3100f2f245f",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 4144,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Triangle.xex",
+      "bytes": 1777664,
+      "sha256": "dd4829adbc166169ca59cbacc2bfb69393c618edb3cfdc2a729147dee4fddacd",
+      "formatVerification": {
+        "type": "Native XEX2",
+        "magic": "XEX2",
+        "bytes": 1777664
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "X_button.png",
+      "bytes": 4575,
+      "sha256": "e7b5a8beb263f1e75b48c64ba57ffe002ab1b619a57cbd915f68af130c071559",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 4575,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "Y_button.png",
+      "bytes": 4346,
+      "sha256": "4da30c178e91381a3b6f7cc32be405b10a2824afc514fb12db633813e6f1639b",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 4346,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "delete_icon.png",
+      "bytes": 455826,
+      "sha256": "4f523fbd028a78efc3fbd7c7303db71e7f615b51893cb9a3e9dc98d0046fd148",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 455826,
+        "header": "ffd8ffe000104a46"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "refresh_icon.png",
+      "bytes": 497435,
+      "sha256": "02e2d0bc42ac38a07303100ea1a276733a86b3b578676c4245d628164c22a411",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 497435,
+        "header": "ffd8ffe000104a46"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "rename_icon.png",
+      "bytes": 485892,
+      "sha256": "57fabd51ea230c4dace28aee4d4093390357de9bc76245ea10ed54b76d807954",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 485892,
+        "header": "ffd8ffe000104a46"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "segoe.ttf",
+      "bytes": 34164,
+      "sha256": "3745c347d168dd938971aed573ab2140b6a766f658c4f353f06ddc05e976ff7a",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 34164,
+        "header": "0001000000120100"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "splash-dark.png",
+      "bytes": 5224292,
+      "sha256": "1da8e42b86233a2f669c66577ea720c7e331dedd5d0503f767ddf69e7916d65a",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 5224292,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "splash.png",
+      "bytes": 6189806,
+      "sha256": "967d93c7bd87c7be43b5031444c09d3037a23432495e1abe1bc6fb644d19a2bc",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 6189806,
+        "header": "89504e470d0a1a0a"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "xarialuni.ttf",
+      "bytes": 1588364,
+      "sha256": "699b818bddd1d7f47b3ccdbf089140303198aebe297fd2e73f7d0fde604553e5",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 1588364,
+        "header": "0001000000100100"
+      }
+    },
+    {
+      "id": "triangle-runtime",
+      "name": "sources.json",
+      "bytes": 110,
+      "sha256": "b9aeddb97c6e1fb95283077bedf304f2ba8cd7eb1572308303d5644f3cfa6d56",
+      "formatVerification": {
+        "type": "Manifest-pinned runtime asset",
+        "bytes": 110,
+        "header": "7b0a0922736f7572"
+      }
+    },
+    {
+      "id": "liquid-glass",
+      "name": "LiquidGlass-Aurora-Skin-v1.0.0.zip",
+      "bytes": 2368113,
+      "sha256": "04b3e9328342ef6f462969fd4c694a65ba3e00ecb0eedcf2c0c28a27bc9cbec8",
+      "formatVerification": {
+        "type": "ZIP with Xbox 360 XZP skins",
+        "entryCount": 7,
+        "crcTestPassed": true,
+        "skins": [
+          {
+            "name": "Aurora\\Skins\\LiquidGlass.xzp",
+            "bytes": 6426872,
+            "sha256": "283e2cafc6d2b8ae97982396053e0227f4e0198191ef5ac181681691a7669a45"
+          }
+        ]
+      }
+    },
+    {
+      "id": "polar-glass",
+      "name": "PolarGlass-Aurora-Skin-v1.0.0.zip",
+      "bytes": 1514092,
+      "sha256": "2081dbb5378a5000e9b5186fb79ecf8ba2021e0d720c92731776cd497529bbbc",
+      "formatVerification": {
+        "type": "ZIP with Xbox 360 XZP skins",
+        "entryCount": 7,
+        "crcTestPassed": true,
+        "skins": [
+          {
+            "name": "Aurora\\Skins\\PolarGlass.xzp",
+            "bytes": 5487872,
+            "sha256": "4dd9b540e3a8a80953ba5ce8d5ea699101338b60c249c599dd2242ad4bc63684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "silenthill360-alpha1",
+      "name": "SilentHill_Xbox360.zip",
+      "bytes": 4535839,
+      "sha256": "f9d0fccc547a0860c6541e8946f3213b2b5a7e906eb22928c4ea6936e27536e1",
+      "formatVerification": {
+        "type": "ZIP with native XEX2",
+        "entryCount": 5,
+        "uncompressedBytes": 4543106,
+        "executables": [
+          {
+            "name": "Silent Hill/default.xex",
+            "bytes": 4534272,
+            "sha256": "08644a047a2d43362cda7ecc0bd84767389d4881e4b87888c6f986acb3d72620"
+          }
+        ],
+        "upstreamFileHashesVerified": 0
+      }
+    },
+    {
+      "id": "matrix-v4",
+      "name": "Matrix Skins Aurora V4.zip",
+      "bytes": 27446593,
+      "sha256": "05b079ebd41aacddca8f5dfd9cdd96fa60352680285b027f3a29d2396806a880",
+      "formatVerification": {
+        "type": "ZIP with Xbox 360 XZP skins",
+        "entryCount": 6,
+        "crcTestPassed": true,
+        "skins": [
+          {
+            "name": "Matrix Skins Aurora V4\\MatrixCodeAuroraBootNoMusicV4.xzp",
+            "bytes": 6368993,
+            "sha256": "79882e6c348b3242f7e3d362e6120ab0c4e2741b04054a51620a59a27690c38d"
+          },
+          {
+            "name": "Matrix Skins Aurora V4\\MatrixCodeAuroraBootV4.xzp",
+            "bytes": 16108532,
+            "sha256": "c8d7054b066e915e8a60dc0d7a22b1261e69afa71948322404d0db6360fe5f6a"
+          },
+          {
+            "name": "Matrix Skins Aurora V4\\MatrixCodeTrinityBootNoMusicV4.xzp",
+            "bytes": 6512838,
+            "sha256": "7eb21b2ee716b8e18d3df062e1510d9d2a09baa8b65106130278b293a00f84c7"
+          },
+          {
+            "name": "Matrix Skins Aurora V4\\MatrixCodeTrinityBootV4.xzp",
+            "bytes": 15508287,
+            "sha256": "23367e7e2618e5cbf495fe81cae71770083e97446ff1246072afaf2c1d8e4738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sonic-exe",
+      "name": "FinalUpdate.rar",
+      "bytes": 99590619,
+      "sha256": "427ad55f5d64950135a969f0413d517c859d3b354e2d2032cb444d9bbf4c593d",
+      "formatVerification": {
+        "type": "RAR with native XEX2",
+        "entryCount": 156,
+        "crcTestPassed": true,
+        "executables": [
+          {
+            "name": "Media\\Managed\\Assembly-CSharp.dll.xex",
+            "bytes": 40960,
+            "sha256": "e3d5d0ee3ac0cc8e1bef202266c8389922ab2990c24d08a9adce85c85053e88a"
+          },
+          {
+            "name": "Media\\Managed\\Mono.Posix.dll.xex",
+            "bytes": 151552,
+            "sha256": "51f25e00931cc323df5177f2ec13e859d7c90352204bbcbdecefc4a1917f98bd"
+          },
+          {
+            "name": "Media\\Managed\\Mono.Security.dll.xex",
+            "bytes": 200704,
+            "sha256": "bcc742be577d6fd07c94beda8bc868501c1a26a8391e732fd18f3ba5ec677af8"
+          },
+          {
+            "name": "Media\\Managed\\mscorlib.dll.xex",
+            "bytes": 1298432,
+            "sha256": "2dffaf31153fc10540b099fa4e57527b844fd4cd7bfb4df4a7753cf6c03010a3"
+          },
+          {
+            "name": "Media\\Managed\\System.Configuration.dll.xex",
+            "bytes": 94208,
+            "sha256": "9745faf11d1f5abff06c004c277249637596fc73280fb4c711176da6672a2bf0"
+          },
+          {
+            "name": "Media\\Managed\\System.Core.dll.xex",
+            "bytes": 241664,
+            "sha256": "091418b1d9baa2688f187def09200c02702fc5e3239cc0da9c4aa980fa35f0bd"
+          },
+          {
+            "name": "Media\\Managed\\System.dll.xex",
+            "bytes": 843776,
+            "sha256": "5de3d680a99a6b959460229ac23dda0ebd869a82ab26b0a32978b2951fc5a237"
+          },
+          {
+            "name": "Media\\Managed\\System.Security.dll.xex",
+            "bytes": 102400,
+            "sha256": "8e86fd81e501de8d8b6f810c9cd5a39e7a30ce0c4ee00cb114562ed19ead207b"
+          },
+          {
+            "name": "Media\\Managed\\System.Xml.dll.xex",
+            "bytes": 679936,
+            "sha256": "60bcf2b739ad61ee8beee506628a04f3cb5f72f9eedeb4f577d57454e8098c4e"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.dll.xex",
+            "bytes": 811008,
+            "sha256": "4f01328d33e560475195593c5629ff163d8a73ec0c18cb4e8fd891edd41f5f0d"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.Networking.dll.xex",
+            "bytes": 417792,
+            "sha256": "6448a93f1c68d80925efb4a980d0b322605c540d54a27f5ade038fcd914ce94c"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.UI.dll.xex",
+            "bytes": 311296,
+            "sha256": "20d63c5ec8e4d120cba213183e2a17121b9dc0aed16a8f7d96eee3d8ff6267c4"
+          },
+          {
+            "name": "default.xex",
+            "bytes": 8896512,
+            "sha256": "66da1d1f27fb54bf6686010856ce03e7fda100f396784df03a300d7a0f0675b1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sally-exe",
+      "name": "Demo1.rar",
+      "bytes": 126278336,
+      "sha256": "97b95de2304ab6c720cde266d60fd0f2dca578b18a833da70fbee283e52a877f",
+      "formatVerification": {
+        "type": "RAR with native XEX2",
+        "entryCount": 112,
+        "crcTestPassed": true,
+        "executables": [
+          {
+            "name": "Media\\Managed\\Assembly-CSharp.dll.xex",
+            "bytes": 40960,
+            "sha256": "ae2c92abba7c3271fe872c6171c1545dca30d7d7e42a89cdd639ece37eaa957e"
+          },
+          {
+            "name": "Media\\Managed\\Mono.Posix.dll.xex",
+            "bytes": 151552,
+            "sha256": "a8d1d18857775139487074f29a85018f80db340bb941e54a266c931661c01dbe"
+          },
+          {
+            "name": "Media\\Managed\\Mono.Security.dll.xex",
+            "bytes": 200704,
+            "sha256": "c07244bac2161a0960b3fc5d3651ab2a1b10a8ca355a90a9e833d5bd094b5ccf"
+          },
+          {
+            "name": "Media\\Managed\\mscorlib.dll.xex",
+            "bytes": 1298432,
+            "sha256": "c72c59d8bbc7ec6620b7437a5e59bcf723653a48ed8fb1ae3e90cca3f9d3c844"
+          },
+          {
+            "name": "Media\\Managed\\System.Configuration.dll.xex",
+            "bytes": 94208,
+            "sha256": "2f6857f6892692a1d80e26f70ee34792a2a1b83c1a1f3479089d88cd36623191"
+          },
+          {
+            "name": "Media\\Managed\\System.Core.dll.xex",
+            "bytes": 241664,
+            "sha256": "7b316d0b62a79d3b173eb3abdc8d31b6b4fe187f33b1532b00219605a49ddd28"
+          },
+          {
+            "name": "Media\\Managed\\System.dll.xex",
+            "bytes": 843776,
+            "sha256": "f2f0dd213178daf213d2369963c1d2261c2ed461b736f8a2e68f6c57e52c4482"
+          },
+          {
+            "name": "Media\\Managed\\System.Security.dll.xex",
+            "bytes": 102400,
+            "sha256": "b68c00fe444edb00a2f543aa21b90048a4cfb9c5c517c128619b07cf31ecec5b"
+          },
+          {
+            "name": "Media\\Managed\\System.Xml.dll.xex",
+            "bytes": 679936,
+            "sha256": "d72d7633571091b85237599cc9cb0c6c8775cb06f15cc0da88eb7c0ba17004f5"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.dll.xex",
+            "bytes": 811008,
+            "sha256": "6cf5cd9c9a498ef9ffa3fb86582d0265f7d583e614f5f55c707c4ee59c021309"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.Networking.dll.xex",
+            "bytes": 417792,
+            "sha256": "5284b99737043066f0e8c756459c2dbbbdb74e60e5528179fd29a68c83553667"
+          },
+          {
+            "name": "Media\\Managed\\UnityEngine.UI.dll.xex",
+            "bytes": 311296,
+            "sha256": "8ca23fe55dc1d359e4f963ac096764c504e2d0c4ea3b90d67bff2ccdfa247e69"
+          },
+          {
+            "name": "default.xex",
+            "bytes": 8949760,
+            "sha256": "48157ec1e8b34f73954dc36f1896e714fffef6538388a439ffe67ae40e6a1283"
+          }
+        ]
+      }
+    },
+    {
+      "id": "silent-hill-skins",
+      "name": "Silent Hill Skins Aurora Xbox360.zip",
+      "bytes": 154625941,
+      "sha256": "d764fcd76d4f3b582de6ec8d7cbc34667fdcb6f94b38011fe5912ab9330c2cf8",
+      "formatVerification": {
+        "type": "ZIP with Xbox 360 XZP skins",
+        "entryCount": 8,
+        "crcTestPassed": true,
+        "skins": [
+          {
+            "name": "Silent Hill Skins Aurora Xbox360\\Silent Hill 2 Save Me James Skin.xzp",
+            "bytes": 29151926,
+            "sha256": "9d77a02bd50beb3ce9d15ddfaadad5cbd6c74f5dad356b423ff4b4be011247bb"
+          },
+          {
+            "name": "Silent Hill Skins Aurora Xbox360\\Silent Hill 2 Save Me Maria Skin.xzp",
+            "bytes": 29191010,
+            "sha256": "d46951709a4d55132100488fef56339db3409bf79bda0a29f9e491795ea0f585"
+          },
+          {
+            "name": "Silent Hill Skins Aurora Xbox360\\Silent Hill 2 Welcome SkinV2.xzp",
+            "bytes": 57144823,
+            "sha256": "6940cc7a97924412d075880cc2c13aed1c9e46c8c4e2fd980f3245177f1378ea"
+          },
+          {
+            "name": "Silent Hill Skins Aurora Xbox360\\Silent Hill 3 Save Me Heather Skin.xzp",
+            "bytes": 26152099,
+            "sha256": "7232ae1e65a292c80399123b187abffbcc0f8f85f728eecd2b4d7114e700ee3c"
+          },
+          {
+            "name": "Silent Hill Skins Aurora Xbox360\\Silent_Hill_2_Pyramidhead_Skin_V2.xzp",
+            "bytes": 21052739,
+            "sha256": "3527318134ad0d00d95db5031c17d0689ff9e4a73c5498c899665d0b44f2428f"
+          },
+          {
+            "name": "Silent Hill Skins Aurora Xbox360\\Silent_Hill_2_Welcome_Skin.xzp",
+            "bytes": 25387994,
+            "sha256": "6b86ddcc6cb6267b2ea0512bab8a544d443cd9d7109bf4fa1c1c48a9be46a114"
+          },
+          {
+            "name": "Silent Hill Skins Aurora Xbox360\\Silent_Hill_SkinV2.xzp",
+            "bytes": 11029977,
+            "sha256": "268ea27228d80a819cdd76c747e2e67518d8eebbb5347d0cbcd0b8d64e876753"
+          }
+        ]
+      }
+    }
+  ],
+  "physicalHardwareTested": false,
+  "downloadedPayloadsExecuted": false,
+  "browser": {
+    "checkedAt": "2026-11-02T13:00:52.396Z",
+    "status": "passed",
+    "resources": 41,
+    "desktop": {
+      "brokenVisibleImages": 0,
+      "documentWidth": 1265,
+      "viewport": 1280
+    },
+    "mobile": {
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "expandedSetupOverflow": false,
+      "minimumControlHeight": 48,
+      "viewport": 390
+    },
+    "cases": [
+      "Initial library:41 ready resources",
+      "ANDKFOX search:2 games with both author artworks loaded",
+      "Emulators filter:8",
+      "ABadAvatar filter:2, including temporary DashLaunch",
+      "Phone clear filters restores41",
+      "Phone Silent Hill + skins filter:1",
+      "Silent Hill creator artwork loaded",
+      "Publisher Drive link has no false download attribute",
+      "Phone setup expands:375px document,48px controls,no overflow",
+      "Phone Sally search:1; stable author link,819MB extracted-data note and setup verified",
+      "No-match empty state and reset restore41",
+      "Temporary viewport reset"
+    ],
+    "screenshots": [
+      "docs/qa/xbox360-more-batch4-desktop.jpg",
+      "docs/qa/xbox360-more-batch4-mobile.jpg"
+    ],
+    "previewNote": "Final library verified on an owned loopback-only QA server; temporary tab closed and viewport reset. Owned server stopped after screenshots; shared preview and unrelated browser tabs preserved.",
+    "physicalHardwareTested": false,
+    "downloadedBuildsExecuted": false
+  }
+}

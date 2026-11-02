@@ -1,0 +1,68 @@
+{
+  "id": "vwii-riivolution",
+  "title": "Riivolution",
+  "platform": "Wii U",
+  "category": "Game Mods",
+  "version": "v1.06",
+  "url": "https://hbb1.oscwii.org/api/contents/riivolution/riivolution.zip",
+  "source": "https://oscwii.org/library/app/riivolution",
+  "name": "riivolution-v1.06.zip",
+  "description": "Riivolution Patcher",
+  "author": "Aaron tueidj Tempus megazig",
+  "details": "Riivolution is an on-the-fly game patcher for use with retail discs. It allows users to place content on their SD or USB devices, which will be read by the game during regular play. Riivolution can be used for custom textures, music, levels, memory patches, game translations, and more.\n\nRiivolution requires valid game content and an XML file to apply changes to games.\n\nhttp://rvlution.net/riivolution",
+  "expectedBytes": 1990601,
+  "icon": "https://hbb1.oscwii.org/api/contents/riivolution/icon.png",
+  "requirements": "vWii Homebrew Channel and the original supported retail disc. Riivolution patch XML must match the disc game/region. Optional channel installation writes NAND; it is not required to launch the app from HBC.",
+  "setup": "Extract the complete apps/riivolution folder to SD root. Keep each mod’s XML in /riivolution/ and its data at the paths named inside that XML. Launch from HBC with your retail disc inserted. Disable patches to return to the original game.",
+  "supportedPlatforms": [
+    "wii",
+    "vwii"
+  ],
+  "peripherals": [
+    "Wii Remote",
+    "Wii Remote",
+    "Wii Remote",
+    "Wii Remote",
+    "Nunchuk",
+    "Classic Controller",
+    "GameCube Controller",
+    "SDHC"
+  ],
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 4,
+    "uncompressedBytes": 1993268,
+    "builds": [
+      {
+        "path": "apps/riivolution/boot.elf",
+        "bytes": 1983348,
+        "sha256": "fb35c678f7f72643fe6089263aa5085565ca4c612037b6ddda283db75dd3a951"
+      }
+    ],
+    "xmlFiles": [
+      "apps/riivolution/meta.xml"
+    ],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/vwii-riivolution.png",
+  "file": {
+    "name": "riivolution-v1.06.zip",
+    "version": "v1.06",
+    "bytes": 1990601,
+    "sha256": "74f4014cdd490cbb18c77f5b1d75fd01ec6a7d7a2bd9e9127ce977ef0416243f",
+    "sourceUrl": "https://hbb1.oscwii.org/api/contents/riivolution/riivolution.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/riivolution-v1.06.zip",
+    "itemId": "wiiu-games-batch2-vwii-riivolution",
+    "platform": "Wii U",
+    "category": [
+      "vWii",
+      "Game Mods"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Game Mods\\Riivolution\\Builds\\v1.06\\riivolution-v1.06.zip"
+  },
+  "mirrorReason": null
+}

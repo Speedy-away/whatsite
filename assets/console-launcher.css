@@ -1,0 +1,11 @@
+.console-service-opener{display:grid;grid-template-columns:minmax(180px,1fr) auto;gap:14px;max-width:760px;padding:24px;border:1px solid #285044;background:#0d211a;border-radius:12px}.console-service-opener label{display:block;color:#e3ece7;font-weight:700;margin-bottom:8px}.console-service-opener input{width:100%;min-height:48px;border:1px solid #46735e;border-radius:7px;background:#08150f;color:#f0faf4;padding:10px 14px;font:inherit}.console-service-opener button{align-self:end;min-height:48px;border:1px solid #46735e;border-radius:7px;background:#15392a;color:#d5f8e1;padding:10px 16px;font:inherit;cursor:pointer}.console-service-opener .guide-links,.console-service-opener [role=status]{grid-column:1/-1;margin:0}.console-service-opener [role=status]{font-size:.9rem;color:#bdcec3}.console-service-opener a[aria-disabled=true]{opacity:.45;cursor:not-allowed}.launcher-icon-preview{display:flex;align-items:center;gap:24px;max-width:750px}.launcher-icon-preview img{width:128px;height:128px;flex-shrink:0;border-radius:24px}.launcher-icon-preview p{margin:0}.console-service-opener a:focus-visible,.console-service-opener button:focus-visible,.console-service-opener input:focus-visible{outline:3px solid #80efb2;outline-offset:3px}@media(max-width:600px){.console-service-opener{grid-template-columns:1fr;padding:18px}.console-service-opener button{justify-self:start}.launcher-icon-preview{align-items:flex-start;gap:16px}.launcher-icon-preview img{width:88px;height:88px;border-radius:16px}}
+.console-service-opener > *, .launcher-icon-preview > * { min-width: 0; }
+.console-service-opener, .launcher-icon-preview { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .console-service-opener input { min-width: 0; font-size: 1rem; }
+  .console-service-opener button { width: 100%; justify-self: stretch; white-space: normal; }
+  .console-service-opener .guide-links > a { min-height: 44px; }
+}
+@media (max-width: 380px) {
+  .launcher-icon-preview { flex-direction: column; }
+}

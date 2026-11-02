@@ -1,0 +1,512 @@
+{
+  "scope": "ps3-themes",
+  "updatedAt": "2026-11-02T09:06:39.845Z",
+  "status": "Complete locally:28 PS3 themes,15 static/13 animated,with verified previews/downloads/F copies",
+  "canonicalUrls": [
+    "/console/ps3/themes.html"
+  ],
+  "preview": "http://127.0.0.1:8765/console/ps3/themes.html",
+  "builders": [
+    "scripts/build-ps3-themes.cjs"
+  ],
+  "assets": [
+    "assets/ps3-themes.css",
+    "assets/ps3-themes.js",
+    "assets/images/ps3-themes/"
+  ],
+  "sourceCatalogue": "docs/themezer-ps3-catalog.json",
+  "archiveInventory": "docs/ps3-themes-private-inventory.json",
+  "archiveRoot": "F:/whatsite-backup-downloads-etc",
+  "commands": {
+    "build": "node scripts/build-ps3-themes.cjs",
+    "downloadAndArchive": "node scripts/import-ps3-themes.cjs --download",
+    "refreshEditorial": "node scripts/import-ps3-themes.cjs --metadata",
+    "verify": "node scripts/verify-ps3-themes.cjs --write",
+    "http": "node scripts/check-ps3-theme-links.cjs",
+    "tests": "node --test scripts/tests/ps3-themes.test.cjs",
+    "merge": "node scripts/console-expansion-archive.cjs --inventory=docs/ps3-themes-private-inventory.json",
+    "index": "node scripts/refresh-local-download-index.cjs --write",
+    "addReviewed": "node scripts/import-ps3-themes.cjs --download --add-reviewed"
+  },
+  "themes": {
+    "total": 28,
+    "static": 15,
+    "dynamic": 13,
+    "bytes": 137269152,
+    "files": [
+      {
+        "id": "1E4B0",
+        "title": "PS4 XMB 2.0",
+        "author": "akaBATTOUSAI",
+        "version": "2.0",
+        "local": "/downloads/ps3/themes/1E4B0/cd7c38c8ab110b53/ps4-xmb-2-0-1E4B0.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/ps4-xmb-2-0-1E4B0",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E4B0/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E4B0",
+        "bytes": 449056,
+        "sha256": "cd7c38c8ab110b530c52e19425e9da983587a29713346970b84cf07d1f70ec11"
+      },
+      {
+        "id": "1E74D",
+        "title": "Red Theme",
+        "author": "scei",
+        "version": "version 1.0",
+        "local": "/downloads/ps3/themes/1E74D/750c43481da5c1be/red-theme-1E74D.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/red-theme-1E74D",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E74D/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E74D",
+        "bytes": 830480,
+        "sha256": "750c43481da5c1be03b7d2d025763ea64bb75b6c6792549ed5e45fb56ebd255e"
+      },
+      {
+        "id": "1E702",
+        "title": "PS2 Animated Theme",
+        "author": "lnnlrocklnnl",
+        "version": "1.0.1 Final",
+        "local": "/downloads/ps3/themes/1E702/eba70ceacc1f9974/ps2-animated-theme-1E702.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/ps2-animated-theme-1E702",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E702/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E702",
+        "bytes": 2908608,
+        "sha256": "eba70ceacc1f9974f1f576749b38e67aecbc43cb392ed1dfa726a1d15b26d98d"
+      },
+      {
+        "id": "1D87B",
+        "title": "Yakuza Animated Kamurocho",
+        "author": "YakFan",
+        "version": "Pro",
+        "local": "/downloads/ps3/themes/1D87B/96f06212e99f39c5/yakuza-animated-kamurocho-1D87B.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/yakuza-animated-kamurocho-1D87B",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D87B/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D87B",
+        "bytes": 14740736,
+        "sha256": "96f06212e99f39c59ae968c810e8c13d9ba2843dcb60445206b89074dda94bb9"
+      },
+      {
+        "id": "1D2DE",
+        "title": "Dark Souls Hope Dynamic Theme",
+        "author": "Sentiel",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1D2DE/abf96e346bb8f00b/dark-souls-hope-dynamic-theme-1D2DE.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/dark-souls-hope-dynamic-theme-1D2DE",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D2DE/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D2DE",
+        "bytes": 4859040,
+        "sha256": "abf96e346bb8f00b9e896b51f394835ef2b9340dca66561f0e04393252a06a60"
+      },
+      {
+        "id": "1D083",
+        "title": "LBP Dynamic V2+Sounds",
+        "author": "Kevinoss",
+        "version": "V2+Sounds",
+        "local": "/downloads/ps3/themes/1D083/9e58514c9a939ad3/lbp-dynamic-v2-sounds-1D083.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/lbp-dynamic-v2-sounds-1D083",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D083/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D083",
+        "bytes": 4176688,
+        "sha256": "9e58514c9a939ad34fe18c3c3781929acffa786f88621dbeb2b1a89fbc0fd2ef"
+      },
+      {
+        "id": "1D560",
+        "title": "In your hands Animated",
+        "author": "Faxtron",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1D560/5cd84ad104627840/in-your-hands-animated-1D560.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/in-your-hands-animated-1D560",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D560/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D560",
+        "bytes": 8948352,
+        "sha256": "5cd84ad104627840c0599f9eab9d2a2235cac99a9e61328ed9e44cdd57d48779"
+      },
+      {
+        "id": "1C8BC",
+        "title": "Windows 7 Ultimate Gaming",
+        "author": "FHT Designs",
+        "version": "1.0.01",
+        "local": "/downloads/ps3/themes/1C8BC/654ee94007f236b5/windows-7-ultimate-gaming-1C8BC.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/windows-7-ultimate-gaming-1C8BC",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1C8BC/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1C8BC",
+        "bytes": 3020864,
+        "sha256": "654ee94007f236b5b76943a1d9442c955ff0e79fd7d2986ec252db3cf1b66c13"
+      },
+      {
+        "id": "1E4EB",
+        "title": "Minecraft #6",
+        "author": "The-Marker",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1E4EB/fcc36caf756b3c14/minecraft-6-1E4EB.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/minecraft-6-1E4EB",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E4EB/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E4EB",
+        "bytes": 1643760,
+        "sha256": "fcc36caf756b3c14c5439640d27da3ee766f9cd4bb62dbe74204cecfe61139d4"
+      },
+      {
+        "id": "1D451",
+        "title": "Ultimate PlayStation Theme",
+        "author": "xdarkgeox",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1D451/d7587a56d30e5db4/ultimate-playstation-theme-1D451.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/ultimate-playstation-theme-1D451",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D451/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D451",
+        "bytes": 11955472,
+        "sha256": "d7587a56d30e5db452752ad787c04671599744000fbe51417cf90984e1530f51"
+      },
+      {
+        "id": "1E45F",
+        "title": "Matrix Code Animated",
+        "author": "Faxtron",
+        "version": "1.00",
+        "local": "/downloads/ps3/themes/1E45F/efeb5d8cd7f624d7/matrix-code-animated-1E45F.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/matrix-code-animated-1E45F",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E45F/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E45F",
+        "bytes": 8090496,
+        "sha256": "efeb5d8cd7f624d755bf063ee991be54301ca0a05b437a1586424da1a5bedac0"
+      },
+      {
+        "id": "1CB5E",
+        "title": "Red Dead Redemption John Marston Custom Theme",
+        "author": "Bastart",
+        "version": "version 2.0",
+        "local": "/downloads/ps3/themes/1CB5E/b51d38ccb2eef320/red-dead-redemption-john-marston-custom-theme-1CB5E.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/red-dead-redemption-john-marston-custom-theme-1CB5E",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1CB5E/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1CB5E",
+        "bytes": 3379760,
+        "sha256": "b51d38ccb2eef320c11a5dd6b9d240e30e14577be5f1737baba2e5b04335bd3b"
+      },
+      {
+        "id": "1E5C8",
+        "title": "Playstation 2 #2",
+        "author": "xemnas-1",
+        "version": "unversioned snapshot 2026-11-02",
+        "local": "/downloads/ps3/themes/1E5C8/6858b4cdbe810add/playstation-2-2-1E5C8.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/playstation-2-2-1E5C8",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E5C8/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E5C8",
+        "bytes": 1707776,
+        "sha256": "6858b4cdbe810addad879f5bae9284eda4b8c05b5b20593dec1055a19ecc4569"
+      },
+      {
+        "id": "1DEFC",
+        "title": "Playstation 2",
+        "author": "hairybones1997",
+        "version": "1.00",
+        "local": "/downloads/ps3/themes/1DEFC/119a422b810cf864/playstation-2-1DEFC.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/playstation-2-1DEFC",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1DEFC/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1DEFC",
+        "bytes": 442912,
+        "sha256": "119a422b810cf864d10b2241d4fb2b8e56cc131d3b968f4bb0665e3c4ae3c45d"
+      },
+      {
+        "id": "1DA36",
+        "title": "Scarface Dynamic",
+        "author": "Jaydee1003",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1DA36/b73bbcf7cda777ea/scarface-dynamic-1DA36.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/scarface-dynamic-1DA36",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1DA36/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1DA36",
+        "bytes": 6474480,
+        "sha256": "b73bbcf7cda777eab156a535f379bed4089f88db90868c359708c4e010861e01"
+      },
+      {
+        "id": "1D7B2",
+        "title": "iOS 5",
+        "author": "Jordan Daniel Murti",
+        "version": "1.8",
+        "local": "/downloads/ps3/themes/1D7B2/126cd129803ebe2d/ios-5-1D7B2.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/ios-5-1D7B2",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D7B2/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D7B2",
+        "bytes": 2703456,
+        "sha256": "126cd129803ebe2d05412356f464cdf3f8b4301053abdfcdad8592842b05f54f"
+      },
+      {
+        "id": "1D99C",
+        "title": "Evangelion Animated",
+        "author": "Faxtron",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1D99C/7595d53ed8a3a9f0/evangelion-animated-1D99C.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/evangelion-animated-1D99C",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D99C/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D99C",
+        "bytes": 8864080,
+        "sha256": "7595d53ed8a3a9f0965a93d40039e5bee39827974542254d169764e62d6bade2"
+      },
+      {
+        "id": "1E152",
+        "title": "Breaking Bad",
+        "author": "Carsette",
+        "version": "version 1.0",
+        "local": "/downloads/ps3/themes/1E152/8b39f722efa620f2/breaking-bad-1E152.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/breaking-bad-1E152",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E152/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E152",
+        "bytes": 6590400,
+        "sha256": "8b39f722efa620f242b261ae325fe5615e23c9099689fb80a5081f76e96ed0c8"
+      },
+      {
+        "id": "1B9E3",
+        "title": "Windows XP",
+        "author": "Andy Smith",
+        "version": "version 1.0",
+        "local": "/downloads/ps3/themes/1B9E3/a9bb2af2e7ace80d/windows-xp-1B9E3.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/windows-xp-1B9E3",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1B9E3/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1B9E3",
+        "bytes": 4459872,
+        "sha256": "a9bb2af2e7ace80de06632ec8824bddb9f154764be41be52df087ea32b73f235"
+      },
+      {
+        "id": "1E6FA",
+        "title": "Xbox 360 Theme #2",
+        "author": "Aguile1990",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1E6FA/52cd02d33b5c4db8/xbox-360-theme-2-1E6FA.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/xbox-360-theme-2-1E6FA",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1E6FA/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1E6FA",
+        "bytes": 827440,
+        "sha256": "52cd02d33b5c4db84d2b682fe8fc3acbffadd8cd72c583c6d8d5ce83b02c05d9"
+      },
+      {
+        "id": "1BBAC",
+        "title": "Crystal Clear Abstract",
+        "author": "Harbinger2020",
+        "version": "version 1.0",
+        "local": "/downloads/ps3/themes/1BBAC/87452bcff3a91799/crystal-clear-abstract-1BBAC.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/crystal-clear-abstract-1BBAC",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1BBAC/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1BBAC",
+        "bytes": 4958800,
+        "sha256": "87452bcff3a917997ca78b042ed196ba3fe0d5846f1c5297a46d62fdf6309147"
+      },
+      {
+        "id": "1BD7F",
+        "title": "Buuf 2.0",
+        "author": "ricemonkey",
+        "version": "version 1.0",
+        "local": "/downloads/ps3/themes/1BD7F/0ae8402d646dd6f8/buuf-2-0-1BD7F.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/buuf-2-0-1BD7F",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1BD7F/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1BD7F",
+        "bytes": 4516672,
+        "sha256": "0ae8402d646dd6f824742cb79301e692084bc78157251ba4d8ad960449db7b81"
+      },
+      {
+        "id": "1C8EB",
+        "title": "Somatic",
+        "author": "Stenoxp",
+        "version": "unversioned snapshot 2026-11-02",
+        "local": "/downloads/ps3/themes/1C8EB/d79b1111f5221149/somatic-1C8EB.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/somatic-1C8EB",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1C8EB/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1C8EB",
+        "bytes": 2262624,
+        "sha256": "d79b1111f5221149470c9abe6d4b39cbf72973714a1deed177bdd6aca08776f3"
+      },
+      {
+        "id": "1BA2D",
+        "title": "Outline",
+        "author": "Barrie",
+        "version": "version 1.0",
+        "local": "/downloads/ps3/themes/1BA2D/cf1fb8de5a464321/outline-1BA2D.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/outline-1BA2D",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1BA2D/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1BA2D",
+        "bytes": 1215712,
+        "sha256": "cf1fb8de5a464321abaa67737e6481eb982f3636d8f5b382cc8de53d5c028b51"
+      },
+      {
+        "id": "1D06E",
+        "title": "Fallout NV Custom Dynamic",
+        "author": "Devilush",
+        "version": "2.0",
+        "local": "/downloads/ps3/themes/1D06E/c546153365d79cf1/fallout-nv-custom-dynamic-1D06E.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/fallout-nv-custom-dynamic-1D06E",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D06E/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D06E",
+        "bytes": 4328064,
+        "sha256": "c546153365d79cf13ad41cd0dc0c5a77b55dbd01cd2fe8c4d0fe451e672a9b12"
+      },
+      {
+        "id": "1D090",
+        "title": "Uncharted Dynamic Theme",
+        "author": "MAXTHUNDER",
+        "version": "2.0",
+        "local": "/downloads/ps3/themes/1D090/cf06e2fcb57f7eff/uncharted-dynamic-theme-1D090.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/uncharted-dynamic-theme-1D090",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D090/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D090",
+        "bytes": 4779216,
+        "sha256": "cf06e2fcb57f7effe4e8e04ecc1ac8c9157db86dba0cba36638bc5ddade111f4"
+      },
+      {
+        "id": "1D765",
+        "title": "LBP Dynamic #2",
+        "author": "Kevinoss",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1D765/cd6e01332b687b9c/lbp-dynamic-2-1D765.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/lbp-dynamic-2-1D765",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1D765/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1D765",
+        "bytes": 4829056,
+        "sha256": "cd6e01332b687b9c6c09171d77be96522368800f6eab6f7e80d8607a9c20edc0"
+      },
+      {
+        "id": "1DB82",
+        "title": "Bayonetta Dynamic Theme 2",
+        "author": "uLtRaMa6nEt1c",
+        "version": "1.0",
+        "local": "/downloads/ps3/themes/1DB82/2a320b0fa06471dd/bayonetta-dynamic-theme-2-1DB82.p3t",
+        "sourceUrl": "https://themezer.net/ps3/themes/bayonetta-dynamic-theme-2-1DB82",
+        "downloadUrl": "https://api.themezer.net/ps3/themes/1DB82/download?src=webapp",
+        "consoleUrl": "http://ps3.themezer.net/T1DB82",
+        "bytes": 13305280,
+        "sha256": "2a320b0fa06471dd1b09de0edc4a5a50231d3edec89ce8cf9ce2731c9764826b"
+      }
+    ]
+  },
+  "archive": {
+    "verifiedExactCopies": 28,
+    "preservedOriginalContainers": "All28 are direct P3TF files; no source container discarded. Somatic literal undefined version preserved as historical metadata; corrected snapshot record also archived.",
+    "mergedSuccessfully": true,
+    "mergeResult": {
+      "items": 1401,
+      "files": 2234
+    },
+    "indexUpdated": "2026-11-02T09:06:14.345Z",
+    "indexMissingPaths": 0,
+    "concurrency": "First merge detected active legacy inventory writers and safely refused replacement. Second merge succeeded, followed by index refresh. Keep scoped sidecar/events; parent should perform final --all --verify after every console chat finishes."
+  },
+  "checks": {
+    "artifactErrors": [],
+    "httpErrors": [],
+    "parserTests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "browser": "docs/qa/ps3-themes/browser.json",
+    "artifacts": "docs/qa/ps3-themes/verification.json",
+    "links": "docs/qa/ps3-themes/http-links.json",
+    "checks": "All28 containers, previews, local links and F/site bytes verified. All28 local downloads HTTP200+expectedSHA; all28 console source URLs HTTP200+P3T MIME+expected size."
+  },
+  "screenshots": [
+    "docs/qa/ps3-themes/desktop.png",
+    "docs/qa/ps3-themes/mobile.png",
+    "docs/qa/ps3-themes/expanded-desktop.png",
+    "docs/qa/ps3-themes/expanded-mobile.png",
+    "docs/qa/ps3-themes/batch3-desktop.png",
+    "docs/qa/ps3-themes/batch3-mobile.png"
+  ],
+  "sources": {
+    "themezer": "https://themezer.net/",
+    "catalogue": "https://themezer.net/ps3/themes",
+    "sony": "https://manuals.playstation.net/document/en/ps3/current/settings/themesettings.html",
+    "usb": "https://themezer.net/ps3/faq/how-do-i-install-a-ps3-theme-from-a-usb-drive",
+    "browser": "https://themezer.net/ps3/faq/can-i-install-a-theme-using-the-ps3-browser-or-ftp",
+    "compatibility": "https://themezer.net/ps3/faq/do-i-need-a-modded-ps3-to-use-custom-themes"
+  },
+  "contentNotes": [
+    "Sony USB /PS3/THEME route, Apply/Delete and stock-compatible P3T installation documented; no HEN/DEX/CFW requirement attached to ordinary themes.",
+    "Sony PS3 external-storage support page cited for FAT32/FAT16; no formatting operation performed.",
+    "Source-specific caveats retained: RDR HD-only backgrounds, In your hands brightness, shared icon credits, source/embedded version and author spelling differences.",
+    "Original collection attribution is site-level; Themezer does not provide old item permalinks. Modern Themezer source links identify each exact item."
+  ],
+  "integration": {
+    "rootOwns": [
+      "Shared sidebar/navigation",
+      "console/themes.html",
+      "sitemap.xml"
+    ],
+    "untouched": [
+      "Other PS3 builders, data, apps and game pages",
+      "languages/*",
+      "i18n-tools/*",
+      "scripts/build-console-guides.cjs",
+      "pc/**",
+      "console/index.html",
+      "scripts/build-retro-page.cjs"
+    ],
+    "shell": "Required build-console-guides.cjs.page; no broad build. Preserved mobile/background integration, /languages/i18n.js?v=3 and dynamic count translation refresh."
+  },
+  "limitations": [
+    "No physical PS3 download, installation, theme rendering or animated scene execution tested",
+    "No downloaded payload, P3T or embedded RAF executed",
+    "No commit, publication, deployment, worktree or videos"
+  ],
+  "pageSha256": "86dacc0ca5566f7858d431d96f86d444b5b122dd4ec5023de131d4e42a648b24",
+  "latestBatch": {
+    "added": 8,
+    "static": 4,
+    "dynamic": 4,
+    "ids": [
+      "1BBAC",
+      "1BD7F",
+      "1C8EB",
+      "1BA2D",
+      "1D06E",
+      "1D090",
+      "1D765",
+      "1DB82"
+    ],
+    "bytes": 40195424,
+    "prior20Preserved": true,
+    "artifactErrors": [],
+    "httpErrors": [],
+    "testsPassed": 5,
+    "browser": {
+      "static": 15,
+      "dynamic": 13,
+      "buufSearch": 1,
+      "reset": 28,
+      "previewWidth": 640,
+      "desktopWidth": 1280,
+      "desktopDocumentWidth": 1265,
+      "phoneWidth": 390,
+      "phoneDocumentWidth": 375
+    },
+    "screenshots": [
+      "docs/qa/ps3-themes/batch3-desktop.png",
+      "docs/qa/ps3-themes/batch3-mobile.png"
+    ]
+  },
+  "batches": [
+    {
+      "added": 8,
+      "static": 5,
+      "dynamic": 3,
+      "ids": [
+        "1E5C8",
+        "1DEFC",
+        "1DA36",
+        "1D7B2",
+        "1D99C",
+        "1E152",
+        "1B9E3",
+        "1E6FA"
+      ],
+      "bytes": 32070416,
+      "artifactErrors": [],
+      "httpErrors": [],
+      "testsPassed": 5,
+      "browser": {
+        "staticCount": 11,
+        "dynamicCount": 9,
+        "scarface": 1,
+        "reset": 20,
+        "phoneWidth": 390,
+        "documentWidth": 375
+      },
+      "screenshots": [
+        "docs/qa/ps3-themes/expanded-desktop.png",
+        "docs/qa/ps3-themes/expanded-mobile.png"
+      ]
+    }
+  ]
+}

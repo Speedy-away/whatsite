@@ -1,0 +1,92 @@
+{
+  "checkedAt": "2026-11-02T09:24:08.576Z",
+  "inspection": [
+    {
+      "id": "ps4-store-orbisshelf-0-2-0",
+      "source": "https://github.com/apexlions16/OrbisShelf/releases/download/v0.2.0/OrbisShelf-v0.2.0.pkg",
+      "version": "v0.2.0",
+      "bytes": 6619136,
+      "sha256": "546101fd77b6e4203d986d90bdbeca497f0379e07629cfbfc4b292947aa5a778",
+      "publisherDigest": "sha256:546101fd77b6e4203d986d90bdbeca497f0379e07629cfbfc4b292947aa5a778",
+      "metadata": {
+        "APP_VER": "0.20",
+        "SYSTEM_VER": "0x00000000",
+        "TITLE": "OrbisShelf",
+        "TITLE_ID": "ORBS00001",
+        "VERSION": "0.20"
+      },
+      "executed": false
+    },
+    {
+      "id": "ps4-store-pplay-3-8",
+      "source": "https://github.com/Cpasjuste/pplay/releases/download/v3.8/pplay-3.8_ps4.zip",
+      "version": "v3.8",
+      "bytes": 36132906,
+      "sha256": "4df671ac087354b23e3fa43975abe8fee0cecb18bcbe12dc14612fce772ec90f",
+      "publisherDigest": null,
+      "metadata": {
+        "APP_VER": "3.8",
+        "SYSTEM_VER": "0x000003fc",
+        "TITLE": "pplay @ cpasjuste",
+        "TITLE_ID": "PPLA00001",
+        "VERSION": "3.8"
+      },
+      "layout": {
+        "fileCount": 2,
+        "directoryCount": 4,
+        "formats": {
+          "pkg": 1,
+          "ttf": 1
+        },
+        "consoleFiles": [
+          {
+            "path": "pplay/IV0001-PPLA00001_00-PPLA000013080000.pkg",
+            "directory": false,
+            "bytes": 33882112,
+            "encrypted": false
+          }
+        ],
+        "documentation": [],
+        "entries": [
+          {
+            "path": "pplay",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "pplay/IV0001-PPLA00001_00-PPLA000013080000.pkg",
+            "directory": false,
+            "bytes": 33882112,
+            "encrypted": false
+          },
+          {
+            "path": "pplay/data",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "pplay/data/pplay",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "pplay/data/pplay/mpv",
+            "directory": true,
+            "bytes": 0,
+            "encrypted": false
+          },
+          {
+            "path": "pplay/data/pplay/mpv/subfont.ttf",
+            "directory": false,
+            "bytes": 6244952,
+            "encrypted": false
+          }
+        ]
+      },
+      "executed": false
+    }
+  ]
+}

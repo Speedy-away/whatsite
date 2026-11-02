@@ -1,0 +1,44 @@
+.switch2-page .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.switch2-page .guide-hero img { object-fit: contain; background: #fff; aspect-ratio: 2/1; }
+.switch2-page .guide-hero h1 { font-size: clamp(2rem, 4vw, 3.6rem); }
+.switch2-page .switch2-overview { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-block: 1px solid var(--border); padding-block: 22px; gap: 20px; }
+.switch2-page .switch2-overview dt, .switch2-page .switch2-meta dt { color: var(--text-secondary); font-size: .78rem; }
+.switch2-page .switch2-overview dd { margin: 5px 0 0; font-size: 1.1rem; font-weight: 650; }
+.switch2-page .switch2-credit { margin: 10px 0 0; font-size: .8rem; color: var(--text-secondary); }
+.switch2-page .switch2-intro { max-width: 80ch; margin-bottom: 24px; color: var(--text-secondary); }
+.switch2-page .switch2-table-wrap { max-width: 100%; overflow-x: auto; margin-block: 24px; }
+.switch2-page .switch2-table { width: 100%; border-collapse: collapse; text-align: left; font-size: .94rem; }
+.switch2-page .switch2-table th, .switch2-page .switch2-table td { padding: 16px 18px 16px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+.switch2-page .switch2-table th { color: var(--text-primary); }
+.switch2-page .switch2-table td { color: var(--text-secondary); }
+.switch2-page .switch2-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; margin-bottom: 20px; }
+.switch2-page .switch2-field { display: flex; flex-direction: column; gap: 8px; flex: 1 1 220px; }
+.switch2-page .switch2-field:first-child { flex-grow: 2; }
+.switch2-page .switch2-field label { font-size: .875rem; color: var(--text-secondary); }
+.switch2-page .switch2-field input, .switch2-page .switch2-field select { box-sizing: border-box; width: 100%; min-height: 48px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); padding: 12px; font: inherit; }
+.switch2-page .switch2-controls button { min-height: 48px; cursor: pointer; }
+.switch2-page .switch2-controls button:disabled { opacity: .5; cursor: default; }
+.switch2-page .switch2-results { font-size: .875rem; color: var(--text-secondary); margin-bottom: 20px; }
+.switch2-page .switch2-resource { gap: 14px; }
+.switch2-page .switch2-resource h3 { margin: 0; }
+.switch2-page .switch2-resource img { aspect-ratio: 2/1; background: #fff; padding: 0; }
+.switch2-page .switch2-resource .guide-links a { min-height: 44px; display: inline-flex; align-items: center; }
+.switch2-page .switch2-meta { margin: 0; display: grid; gap: 12px; }
+.switch2-page .switch2-meta dd { margin: 3px 0 0; font-size: .86rem; overflow-wrap: anywhere; }
+.switch2-page .switch2-format { font-size: .73rem; border: 1px solid var(--border); padding: 4px 9px; border-radius: 4px; color: var(--accent-light); }
+.switch2-page .switch2-research-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; }
+.switch2-page .switch2-research-layout h3 { margin-bottom: 16px; }
+.switch2-page .switch2-research-layout ul { padding-left: 20px; color: var(--text-secondary); }
+.switch2-page .switch2-research-layout li { margin-bottom: 12px; }
+.switch2-page .switch2-small { font-size: .875rem; color: var(--text-secondary); }
+.switch2-page [hidden] { display: none !important; }
+.switch2-page :is(input,select,button,a):focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+@media (max-width: 700px) {
+  .switch2-page .switch2-overview { grid-template-columns: 1fr; gap: 16px; }
+  .switch2-page .switch2-overview > div { display: grid; grid-template-columns: 1fr 1fr; align-items: baseline; gap: 12px; }
+  .switch2-page .switch2-overview dd { font-size: 1rem; margin: 0; }
+  .switch2-page .switch2-research-layout { grid-template-columns: 1fr; gap: 24px; }
+  .switch2-page .switch2-controls { align-items: stretch; }
+  .switch2-page .switch2-controls button { flex: 1 1 100%; }
+  .switch2-page .switch2-table :is(th,td) { padding-right: 12px; font-size: .86rem; }
+}

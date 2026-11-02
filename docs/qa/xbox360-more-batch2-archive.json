@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-02",
+  "scope": "xbox360-more",
+  "scopeItems":29,
+  "scopeFiles":34,
+  "scopeBytes":711805484,
+  "newItems":14,
+  "newFiles":17,
+  "newBytes":540075103,
+  "allOriginalFilesPreserved":true,
+  "scopeMissingFiles":0,
+  "scopeAllSha256Verified":true,
+  "mergeCommand":"node scripts/console-expansion-archive.cjs --inventory=docs/xbox360-more-private-inventory.json --verify",
+  "mergeSnapshot":{"sidecars":668,"items":1614,"files":2546},
+  "indexCommand":"node scripts/refresh-local-download-index.cjs --write",
+  "indexSnapshot":{"items":1616,"fileRecords":2484,"presentFileRecords":2482,"missingFileRecords":2},
+  "note":"The two missing records in the whole-archive index snapshot are outside this verified34-file Xbox360 scope. Concurrent chats may continue adding archive metadata. Merge/index helpers preserved original downloads and saved prior metadata snapshots.",
+  "downloadedBuildsExecuted":false
+}

@@ -1,0 +1,226 @@
+{
+  "reviewedAt": "2026-11-02T07:31:05.732Z",
+  "repository": "https://github.com/GoldHEN/GoldHEN_Cheat_Repository",
+  "commit": "3a4ca53414ed6653d091d9dcd82c838333585d2f",
+  "oldFiles": 18,
+  "addedFiles": 20,
+  "totalCheatFiles": 38,
+  "totalOtherGameCollections": 41,
+  "allExistingMetadataPreserved": {
+    "oldSourceFiles": true,
+    "oldJobs": true,
+    "oldDescriptors": true,
+    "oldResources": true,
+    "oldGames": true
+  },
+  "preparerIdempotent": true,
+  "tests": {
+    "command": "node --test scripts/tests/extra-game-cheats.test.cjs scripts/tests/console-game-imports.test.cjs scripts/tests/console-mod-catalog.test.cjs",
+    "passed": 15,
+    "failed": 0
+  },
+  "sourceValidation": "Each original JSON parsed without execution. Exact ID, update, name, process, all labels and credits match metadata. SHA-256, byte count and Git blob SHA-1 match the cached pinned official tree. Artwork source titles and SHA-256 verified; existing official assets reused where available.",
+  "pending": "Parent must archive the 20 new jobs and generate the scoped game pages/download catalogue. No site build or F: mutation performed by this expansion.",
+  "jobs": [
+    {
+      "id": "goldhen-cusa00135-01-15",
+      "title": "Batman: Arkham Knight · GoldHEN JSON 01.15",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA00135_01.15.json",
+      "filename": "CUSA00135_01.15.json",
+      "bytes": 3846,
+      "sha256": "48de16803a94ea153f4b3d057576062ee4604ed326c045ece963a50bed110be5",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA00135_01.15.json",
+      "page": "console/mods/ps4/batman-arkham-knight/index.html"
+    },
+    {
+      "id": "goldhen-cusa02000-01-02",
+      "title": "Batman: Return to Arkham – Arkham City · GoldHEN JSON 01.02",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA02000_01.02.json",
+      "filename": "CUSA02000_01.02.json",
+      "bytes": 1954,
+      "sha256": "3cfeb184262239474b307c6700235c19ca894caeb82609ed54d807a7575779f2",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA02000_01.02.json",
+      "page": "console/mods/ps4/batman-arkham-city/index.html"
+    },
+    {
+      "id": "goldhen-cusa03979-01-03",
+      "title": "BioShock: The Collection · GoldHEN JSON 01.03",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA03979_01.03.json",
+      "filename": "CUSA03979_01.03.json",
+      "bytes": 3626,
+      "sha256": "aa486f3005a5d42967917d1ba7f80a43181cbe796e7aac583f9c069048e9d485",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA03979_01.03.json",
+      "page": "console/mods/ps4/bioshock-collection/index.html"
+    },
+    {
+      "id": "goldhen-cusa03980-01-02",
+      "title": "BioShock Infinite: The Complete Edition · GoldHEN JSON 01.02",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA03980_01.02.json",
+      "filename": "CUSA03980_01.02.json",
+      "bytes": 2573,
+      "sha256": "5b66b81b7dc6194b68fbf81d24ed43892869907e0db1beb035da3440e12261c5",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA03980_01.02.json",
+      "page": "console/mods/ps4/bioshock-infinite/index.html"
+    },
+    {
+      "id": "goldhen-cusa09175-01-81",
+      "title": "Days Gone · GoldHEN JSON 01.81",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA09175_01.81.json",
+      "filename": "CUSA09175_01.81.json",
+      "bytes": 3427,
+      "sha256": "22777eeb0ff6477c3553da0a0b64e6be9d929b7a671cfdbf9f3e75577bd75f11",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA09175_01.81.json",
+      "page": "console/mods/ps4/days-gone/index.html"
+    },
+    {
+      "id": "goldhen-cusa00717-01-08",
+      "title": "Detroit: Become Human · GoldHEN JSON 01.08",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA00717_01.08.json",
+      "filename": "CUSA00717_01.08.json",
+      "bytes": 548,
+      "sha256": "f4cad337fd51b34c48d450519426d4cc2dc519521fa510bf2d759c4b440401a6",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA00717_01.08.json",
+      "page": "console/mods/ps4/detroit-become-human/index.html"
+    },
+    {
+      "id": "goldhen-cusa11260-01-13",
+      "title": "Death Stranding · GoldHEN JSON 01.13",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA11260_01.13.json",
+      "filename": "CUSA11260_01.13.json",
+      "bytes": 8569,
+      "sha256": "3d03f9d84a322edbe79f30f1be8e41796e83a463879473af441a8ea14fb0e2cf",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA11260_01.13.json",
+      "page": "console/mods/ps4/death-stranding/index.html"
+    },
+    {
+      "id": "goldhen-cusa13233-02-18",
+      "title": "Ghost of Tsushima · GoldHEN JSON 02.18",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA13233_02.18.json",
+      "filename": "CUSA13233_02.18.json",
+      "bytes": 1754,
+      "sha256": "bf3aaf4caaabeadf74d3bda57c3d5cddda245bf13a806af5b77c1ba7a0b2d7a7",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA13233_02.18.json",
+      "page": "console/mods/ps4/ghost-of-tsushima/index.html"
+    },
+    {
+      "id": "goldhen-cusa11993-01-19",
+      "title": "Marvel’s Spider-Man · GoldHEN JSON 01.19",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA11993_01.19.json",
+      "filename": "CUSA11993_01.19.json",
+      "bytes": 5992,
+      "sha256": "b9243a2d4dfca28e5c486b46f09b3591a9c0146e32564e8122c2d6d06a2d061c",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA11993_01.19.json",
+      "page": "console/mods/ps4/marvels-spider-man/index.html"
+    },
+    {
+      "id": "goldhen-cusa17776-01-09",
+      "title": "Marvel’s Spider-Man: Miles Morales · GoldHEN JSON 01.09",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA17776_01.09.json",
+      "filename": "CUSA17776_01.09.json",
+      "bytes": 2644,
+      "sha256": "180902ffcc686d95e0f623e70feba02c70d4251ca01cab4c3ddc49660f7cb987",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA17776_01.09.json",
+      "page": "console/mods/ps4/spider-man-miles-morales/index.html"
+    },
+    {
+      "id": "goldhen-cusa11454-01-12",
+      "title": "Control · GoldHEN JSON 01.12",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA11454_01.12.json",
+      "filename": "CUSA11454_01.12.json",
+      "bytes": 2350,
+      "sha256": "4356e33e8d98e513a624e8bdb9b7664f80efd40062baa1e9243ef736066528c4",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA11454_01.12.json",
+      "page": "console/mods/ps4/control/index.html"
+    },
+    {
+      "id": "goldhen-cusa04480-01-06",
+      "title": "NieR: Automata · GoldHEN JSON 01.06",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA04480_01.06.json",
+      "filename": "CUSA04480_01.06.json",
+      "bytes": 1189,
+      "sha256": "8bc08ae21a293cea7a9bddc4d29e763abf7732a6ac09a2c70a3a63a79dbe3951",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA04480_01.06.json",
+      "page": "console/mods/ps4/nier-automata/index.html"
+    },
+    {
+      "id": "goldhen-cusa18742-01-03",
+      "title": "NieR Replicant ver.1.22474487139… · GoldHEN JSON 01.03",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA18742_01.03.json",
+      "filename": "CUSA18742_01.03.json",
+      "bytes": 1907,
+      "sha256": "1a720a85329c2e5d224684e09aec62ba5b661ef5d46dbb2a644b11d7c7503574",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA18742_01.03.json",
+      "page": "console/mods/ps4/nier-replicant/index.html"
+    },
+    {
+      "id": "goldhen-cusa00552-01-11",
+      "title": "The Last of Us Remastered · GoldHEN JSON 01.11",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA00552_01.11.json",
+      "filename": "CUSA00552_01.11.json",
+      "bytes": 1655,
+      "sha256": "36711940f5c91d370a31f3d610e934ec8077967dd14c958c687af4ec0bb709bc",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA00552_01.11.json",
+      "page": "console/mods/ps4/the-last-of-us-remastered/index.html"
+    },
+    {
+      "id": "goldhen-cusa10249-01-09",
+      "title": "The Last of Us Part II · GoldHEN JSON 01.09",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA10249_01.09.json",
+      "filename": "CUSA10249_01.09.json",
+      "bytes": 379,
+      "sha256": "c8fc693b9f2e93acea70ddb50ed8765b8999a65ec473a4586a0189691e53344e",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA10249_01.09.json",
+      "page": "console/mods/ps4/the-last-of-us-part-ii/index.html"
+    },
+    {
+      "id": "goldhen-cusa00341-01-33",
+      "title": "Uncharted 4: A Thief’s End · GoldHEN JSON 01.33",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA00341_01.33.json",
+      "filename": "CUSA00341_01.33.json",
+      "bytes": 504,
+      "sha256": "a11a60c6aec6699d4995b9f2c0dc76e9a939b84cd8ae853acbe09039ddd36869",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA00341_01.33.json",
+      "page": "console/mods/ps4/uncharted-4/index.html"
+    },
+    {
+      "id": "goldhen-cusa07875-01-08",
+      "title": "Uncharted: The Lost Legacy · GoldHEN JSON 01.08",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA07875_01.08.json",
+      "filename": "CUSA07875_01.08.json",
+      "bytes": 674,
+      "sha256": "b8e4db7485f9e63ac385693fc34d5c2c6469cbb2bc0dd470458f4d29c62b76ce",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA07875_01.08.json",
+      "page": "console/mods/ps4/uncharted-lost-legacy/index.html"
+    },
+    {
+      "id": "goldhen-cusa00362-01-04",
+      "title": "Alien: Isolation · GoldHEN JSON 01.04",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA00362_01.04.json",
+      "filename": "CUSA00362_01.04.json",
+      "bytes": 982,
+      "sha256": "b4ccd16830033ca80fb57cdfe7abb0e516c4dfee48de3c0c9708b3dede9fc42e",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA00362_01.04.json",
+      "page": "console/mods/ps4/alien-isolation/index.html"
+    },
+    {
+      "id": "goldhen-cusa01140-01-16",
+      "title": "Metal Gear Solid V: The Phantom Pain · GoldHEN JSON 01.16",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA01140_01.16.json",
+      "filename": "CUSA01140_01.16.json",
+      "bytes": 4707,
+      "sha256": "a18a29e6f7dc098fecb9e508a5742783acb06c039cb1520cf62b99614a7d727d",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA01140_01.16.json",
+      "page": "console/mods/ps4/metal-gear-solid-v/index.html"
+    },
+    {
+      "id": "goldhen-cusa11407-01-08",
+      "title": "Metro Exodus · GoldHEN JSON 01.08",
+      "importPath": "docs/tmp/extra-game-cheats-expansion/CUSA11407_01.08.json",
+      "filename": "CUSA11407_01.08.json",
+      "bytes": 7547,
+      "sha256": "2f7b1091a3af3e183ba2f85e820da9348063a8e689fd2a11fe91059a83fc9fe2",
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/3a4ca53414ed6653d091d9dcd82c838333585d2f/json/CUSA11407_01.08.json",
+      "page": "console/mods/ps4/metro-exodus/index.html"
+    }
+  ]
+}

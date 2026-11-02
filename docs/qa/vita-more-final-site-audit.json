@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-02T09:18:59.605Z",
+  "passed": true,
+  "command": "node scripts/audit-site.cjs",
+  "publicPages": 355,
+  "localLinksAndAssets": 35844,
+  "issues": 0,
+  "sitemap": {
+    "file": "sitemap.xml",
+    "canonical": "https://whatwhatboy.com/console/psvita/library.html",
+    "occurrences": 1,
+    "alreadyPresent": true
+  },
+  "output": "docs/qa/vita-more-final-site-audit.txt",
+  "scope": "Local href/src destinations and HTML anchors, duplicate IDs, placeholder actions and canonical sitemap coverage on public pages. External HTTP links are outside this audit.",
+  "publication": "Local only; no commit, push, publication or deployment."
+}

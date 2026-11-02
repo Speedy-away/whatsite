@@ -1,0 +1,42 @@
+{
+  "checkedDate": "2026-11-02",
+  "pages": ["/console/nintendo-switch/apps.html", "/console/nintendo-switch/mods.html", "/console/retro/wiiu.html", "/console/retro/"],
+  "catalogues": {
+    "switch": {"apps":28,"addedThisExpansion":14,"emulators":5,"homebrewGames":9,"archivedUniqueFiles":54},
+    "wiiu": {"resources":16,"homebrewGames":4,"emulators":3,"archivedUniqueFiles":30},
+    "switchMods": {"resources":13,"games":["Mario Kart 8 Deluxe","Super Smash Bros. Ultimate","Super Mario Odyssey"],"archivedFiles":13,"publicBuilds":11,"unavailableSources":0}
+  },
+  "archive": {
+    "root":"F:/whatsite-backup-downloads-etc",
+    "collectionItems":57,
+    "collectionUniqueFiles":97,
+    "collectionBytes":6073368496,
+    "fullHdrPackageBytes":1343035337,
+    "fullCtgpPackageBytes":4144410553,
+    "largePackagesPubliclyMirrored":false,
+    "indexRefresh":{"items":952,"fileRecords":1634,"presentFileRecords":1571,"missingPaths":0,"olderUnlocatedRecordsRetained":63},
+    "method":"Ready console builds and original containers retained; sizes, sources, versions and SHA-256 checked. Large ZIP directories inspected without extracting or executing builds."
+  },
+  "checks": {
+    "archiveBoundaryTests":"8 passed; zero failed",
+    "switchIntegrity":"28 apps, 54 archived files and both pages: zero issues",
+    "wiiuIntegrity":"16 resources, 30 archived files and both pages: zero issues",
+    "gameModsIntegrity":"13 archived files, 11 public builds: zero issues; zero unavailable sources",
+    "wholeSiteAudit":"211 public pages and 19939 local links/assets: zero issues",
+    "publicDownloadHttp":"All 71 unique public download URLs returned HTTP 200",
+    "switchBrowser":"Shareable Emulators URL selected five entries; PPSSPP search returned one with explicit current-OS limitation; games category returned nine; unmatched input displayed empty results",
+    "modsBrowser":"MK8 filter returned three; Smash shortcut selected nine and cleared stale search; empty groups hide correctly; CTGP shows its SHA-256, 3.86 GiB size and 3.0.3 compatibility pin",
+    "wiiuBrowser":"Sixteen entries, three emulators; search/empty state and NooDS file details work",
+    "responsive":"No horizontal overflow at desktop, 390px or 320px; expanded details and long file hashes checked",
+    "preservation":"Existing Switch CFW/Hekate/firmware anchors and Retro platforms retained; no language dictionaries, hosts or unrelated console downloads changed",
+    "videos":"No video or iframe embeds added to expanded pages"
+  },
+  "screenshots": [
+    "/docs/screenshots/nintendo-switch-emulators-desktop.jpg",
+    "/docs/screenshots/nintendo-switch-mods-desktop.jpg",
+    "/docs/screenshots/nintendo-wiiu-desktop.jpg",
+    "/docs/screenshots/nintendo-switch-mods-mobile.jpg",
+    "/docs/screenshots/nintendo-wiiu-mobile.jpg"
+  ],
+  "limitations":["Physical-console installation and execution were not tested.","No downloaded console build was executed.","No commit, deployment or publication was performed."]
+}

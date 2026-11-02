@@ -1,0 +1,25 @@
+{
+  "updatedAt": "2026-11-02T10:29:58.722Z",
+  "status": "Complete: regenerated stale reciprocal game catalogues from existing archive-reviewed metadata.",
+  "resource": "discord-ps3-bo1-mp-pepitax-cfw-hen",
+  "archiveSha256": "3e94cb9e79e50b76842e409201fd3ca69e3a6b604eee90e37b221aee3d2ed037",
+  "archiveBytes": 54312080,
+  "confirmedGameIds": [
+    "advanced-warfare",
+    "black-ops-1",
+    "black-ops-3",
+    "ghosts",
+    "modern-warfare-3"
+  ],
+  "archiveMembersVerified": 15,
+  "regeneration": "node scripts/build-ps3-multicod-pages.cjs",
+  "tests": {
+    "passed": 14,
+    "failed": 0,
+    "scope": [
+      "ps3-multicod.test.cjs",
+      "site-background-integration.test.cjs"
+    ]
+  },
+  "preservation": "No compatibility inference or assertion relaxation. Kept distinct CEX/HEN and DEX archive branches, current background/search integration, original files, latest companion versions and shared handoff fields. No downloads executed, archive writes, commit or deployment."
+}

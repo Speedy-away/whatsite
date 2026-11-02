@@ -1,0 +1,47 @@
+{
+  "reviewed": "2026-11-02",
+  "scope": "PS3 local expansion including the fourth source batch",
+  "checks": {
+    "nodeTests": {
+      "passed": 44,
+      "failed": 0
+    },
+    "pages": 34,
+    "catalogueResources": 213,
+    "siteSourceResources": 76,
+    "additionalApps": 1,
+    "consoleDownloadFiles": 685,
+    "archive": {
+      "attempted": 65,
+      "downloaded": 62,
+      "preservedFiles": 796,
+      "mainIndex": {
+        "items": 1053,
+        "fileRecords": 1835,
+        "presentFileRecords": 1772,
+        "missingPaths": 0,
+        "truthfullyUnlocatedRecords": 63
+      },
+      "fourthBatch": {
+        "sourceDownloads": 19,
+        "fileRecords": 119,
+        "mirrors": 97,
+        "crcArchives": 16,
+        "staticPS3Packages": 4,
+        "staticPPUFiles": 38
+      }
+    },
+    "checksumPathsVerified": 1672,
+    "checksumErrors": 0,
+    "linkMetadataSizeRecheckPassed": true,
+    "browserCases": 18,
+    "browserFailures": [],
+    "lanFiles": 605,
+    "hardwareExecutionTested": false,
+    "downloadedPayloadsExecuted": false
+  },
+  "browserReport": "/docs/ps3-browser-qa.json",
+  "archiveHttpReport": "/docs/ps3-archive-http-verification.json",
+  "batchReport": "/docs/ps3-fourth-verification.json",
+  "screenshot": "/docs/screenshots/ps3-aw-salvation.png"
+}

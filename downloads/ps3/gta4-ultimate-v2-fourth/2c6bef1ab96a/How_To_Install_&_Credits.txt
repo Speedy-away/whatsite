@@ -1,0 +1,42 @@
+DOWNLOAD: https://www.mediafire.com/folder/3v89d1xposxvf/Ultimate_Mod
+
+Installation Instructions:
+
+NOTE: THE 1.1 UPDATE IS NOT MANDATORY ANYMORE
+
+Natural timecycle and new icons:	copy "ps3.rpf" to /dev_hdd0/game/TITLE_ID/USRDIR/ps3.rpf 
+						copy "frontend_menus.xml" to /dev_hdd0/game/TITLE_ID/USRDIR/update/data/frontend_menus.xml (skip this part if you don't have this directory or if you haven't updated the game)
+						ONCE YOU ARE DONE REMEMBER TO ENABLE THE "Noise" OPTION IN THE DISPLAY SECTION OF THE PAUSE MENU
+
+New radar/map/HUD:	copy "radar.img" to /dev_hdd0/game/TITLE_ID/USRDIR/ps3/models/cdimages/radar.img 
+				copy "frontend_ps3.ctd" to /dev_hdd0/game/TITLE_ID/USRDIR/update/textures/frontend_ps3.ctd
+
+Better Textures (vehicles, weapons...):	copy "vehicles.img" and "weapons.img" to /dev_hdd0/game/TITLE_ID/USRDIR/ps3/models/cdimages/
+							ROADS: copy "gtxd.img" to /dev_hdd0/game/TITLE_ID/USRDIR/ps3/data/cdimages/gtxd.img
+							TREES: copy "ext_veg.img" to /dev_hdd0/game/TITLE_ID/USRDIR/ps3/data/maps/props/vegetation/ext_veg.img
+
+Additionals Visual Modifications:	FOR DISK/ISO USERS, copy "common.rpf" to /dev_hdd0/game/TITLE_ID/USRDIR/common.rpf 
+						FOR PSN USERS, you'll need to follow this tutorial on how to encrypt the common.rpf archive https://www.reddit.com/r/ps3homebrew/comments/pichgn/tutorial_porting_or_making_gta_iv_mods_from_pc_to/ 
+						or, alternativly, if you have NPEB00882/NPUB30702 Title ID you can download the one I've already made but you'll need to rename it to "common.edat"
+
+Find your Title ID: https://gamefaqs.gamespot.com/ps3/933036-grand-theft-auto-iv/data
+
+CREDITS:
+cp1dell:	https://www.gtagarage.com/mods/show.php?id=24247
+CG4:	https://www.gtagaming.com/cg4-radar-map-mod-v1-2-f12357.html
+DayL:	https://www.gtainside.com/en/gta4/mods/160838-dayl-s-natural-timecycle/
+_CP_ & robi29:	https://gtaforums.com/topic/415952-visualiv/
+_CP_ & robi29:	https://www.gta5-mods.com/misc/visualv
+PotonForry:	https://libertycity.net/files/gta-4/81836-better-clouds.html
+AIGE:	https://www.gtainside.com/en/gta4/mods/48897-hd-dirt-texture-1-0
+erpetter1:	https://www.gtainside.com/en/gta4/mods/67133-improved-light-occluders-with-new-headlights
+Stonem09: https://www.gtainside.com/en/gta4/mods/159293-hd-weapon-icons/
+IcE La Glace:	https://icelaglace.com/
+Dhatz:	https://www.gtagarage.com/mods/show.php?id=6431
+Michiel de Boer:	http://www.michieldb.nl/other/cursors/
+Noun Project:	https://thenounproject.com/icon/cursor-wait-1188206/
+FragdogIsLoveFragdogIsLife:	https://www.gtagaming.com/hd-effects-f28215.html
+BisonSales:	https://vault.bisonsalesrup.com/index.php/s/BP5ZS8s8NZwFqtq
+DKT70:	https://www.mediafire.com/file/px0eykcauk5xmgv/HD_Roads_by_DKT70.rar
+Me for making some textures myself
+Google & R* for a couple of GTA V's textures

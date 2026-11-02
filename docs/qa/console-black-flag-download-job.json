@@ -1,0 +1,36 @@
+{
+  "reviewed": "2026-11-02",
+  "notes": [
+    "One additional exact ready XML from the pinned official PS Game Patch release, retained separately because a concurrent batch already staged the other planned families. Nothing was executed. Preserve all old jobs and archives."
+  ],
+  "jobs": [
+    {
+      "id": "fps-cusa00009-1792785960",
+      "title": "Assassin's Creed IV Black Flag · CUSA00009 patch XML",
+      "platform": "PS4 and PS5",
+      "category": [
+        "Games",
+        "Assassin's Creed IV Black Flag",
+        "Game Patches"
+      ],
+      "project": "PS Game Patch",
+      "version": "1792785960",
+      "filename": "CUSA00009.xml",
+      "url": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "sourceUrls": [
+        "https://github.com/illusionyy/PS-Game-Patch/blob/65914503123d4e643aa5aa0e8c720de8e99ef7e8/patches/xml/AssassinsCreedIVBlackFlag.xml"
+      ],
+      "importPath": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA00009.xml",
+      "archiveEntry": "patches/xml/CUSA00009.xml",
+      "expectedBytes": 606,
+      "expectedSha256": "8fade2be1a71083f76fb72b7cbd1424c816067783912f28831f525c8e6f4c74f",
+      "archiveRole": [
+        "Builds"
+      ],
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ]
+    }
+  ]
+}

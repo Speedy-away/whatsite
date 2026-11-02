@@ -1,0 +1,100 @@
+{
+  "updatedAt": "2026-11-02T09:58:38.861Z",
+  "status": "complete-local",
+  "request": "Update tags and keywords on every site page for searches.",
+  "coverage": {
+    "sitePages": 445,
+    "indexablePages": 403,
+    "redirectPages": 21,
+    "otherNoindexPages": 21,
+    "editorialOverrides": 137,
+    "initialSearchPagesUpdated": 267,
+    "latestSearchPagesVisited": 445,
+    "searchAttributes": 4264
+  },
+  "changes": [
+    "Page-specific titles, descriptions, keyword tags, Open Graph/Twitter metadata and canonical-bound structured page schema refreshed across every eligible site page.",
+    "Search card aliases expanded for actual named games/consoles and accent-folded terms; visible content and filter compatibility fields are retained.",
+    "Switch generations and topic-specific aliases remain separate. Native PS5 descriptions preserve exact PPSA/update requirements.",
+    "Metadata traversal now excludes internal test captures, temporary pages, downloaded HTML and exact ready receiver builds.",
+    "The updater checks body equality before writing metadata and preserves robots directives and existing canonicals."
+  ],
+  "checks": {
+    "metadataPassed": true,
+    "metadataRepeatCheck": "0 pending updates across 445 pages",
+    "searchAttributeRepeatCheck": {
+      "visited": 445,
+      "changed": 0
+    },
+    "fullTests": {
+      "tests": 398,
+      "passed": 398,
+      "failed": 0,
+      "output": "docs/qa/site-search-metadata-all-tests.txt"
+    },
+    "focusedTests": {
+      "tests": 29,
+      "passed": 29,
+      "failed": 0,
+      "output": "docs/qa/site-search-metadata-focused-tests.txt"
+    },
+    "siteAudit": "Audited 403 public pages and 40392 local links/assets; 0 issue(s).",
+    "readyArtifactsPreserved": true
+  },
+  "browser": {
+    "consoleDirectoryAliases": [
+      "psvita → PlayStation Vita",
+      "ps 2 → PlayStation 2",
+      "wiiu → Nintendo Wii U",
+      "x360 → Xbox 360"
+    ],
+    "socialMetadata": "Browser parsed matching title, OG title, description, keywords, canonical and one structured-data block.",
+    "nativeExample": "Astro Bot PS5 JSON cheats retains PPSA21564 01.007.000 in its description."
+  },
+  "sharedContent": {
+    "originalBaselineComparisonPassed": false,
+    "concurrentBodyChanges": [
+      "console/ps3/desktop-tools.html",
+      "console/ps3/mods/call-of-duty/advanced-warfare/index.html",
+      "console/ps3/mods/call-of-duty/black-ops-1/index.html",
+      "console/ps3/mods/call-of-duty/black-ops-2/index.html",
+      "console/ps3/mods/call-of-duty/black-ops-3/index.html",
+      "console/ps3/mods/call-of-duty/cod4/index.html",
+      "console/ps3/mods/call-of-duty/cod4-modern-warfare/index.html",
+      "console/ps3/mods/call-of-duty/ghosts/index.html",
+      "console/ps3/mods/call-of-duty/index.html",
+      "console/ps3/mods/call-of-duty/modern-warfare-2/index.html",
+      "console/ps3/mods/call-of-duty/modern-warfare-3/index.html",
+      "console/ps3/mods/call-of-duty/world-at-war/index.html",
+      "console/ps3/mods/dead-island/index.html",
+      "console/ps3/mods/dead-island-riptide/index.html",
+      "console/ps3/mods/gta-iv/index.html",
+      "console/ps3/mods/gta-v/index.html",
+      "console/ps3/mods/menus.html",
+      "console/ps3/mods/multicod/index.html",
+      "console/ps3/mods/uncharted/among-thieves/index.html",
+      "console/ps3/mods/uncharted/drakes-deception/index.html",
+      "console/ps3/mods/uncharted/drakes-fortune/index.html",
+      "console/ps3/mods/uncharted/index.html",
+      "console/retro/3ds-mods.html",
+      "console/retro/3ds-online.html",
+      "console/retro/wii/game-mods.html",
+      "console/retro/wii/mario-kart-wii.html",
+      "console/retro/wii/new-super-mario-bros-wii.html",
+      "console/retro/xbox.html"
+    ],
+    "explanation": "Other console builders refreshed page bodies while this task ran. Those changes are retained and explicitly reported rather than overwritten or silently rebased. The original-baseline verifier reports them as preservation findings; metadata checks and all three protected artifact hashes pass."
+  },
+  "regeneration": [
+    "node scripts/update-page-metadata.cjs",
+    "node scripts/update-site-search-tags.cjs",
+    "node scripts/update-page-metadata.cjs --check",
+    "node scripts/update-site-search-tags.cjs --check"
+  ],
+  "reports": [
+    "docs/qa/site-search-metadata-verification.json",
+    "docs/qa/site-search-metadata-baseline.json",
+    "docs/qa/site-search-tags-report.json"
+  ],
+  "publication": "Local only; no commit, push or deployment."
+}

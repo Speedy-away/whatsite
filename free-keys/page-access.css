@@ -6,6 +6,9 @@
     margin: auto;
     padding: 28px;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    overflow-wrap: anywhere;
+    scrollbar-gutter: stable;
     border: 1px solid var(--border-strong, #393942);
     border-radius: 18px;
     background: var(--surface, #131316);
@@ -22,5 +25,11 @@
 .page-access-dialog .page-access-status { color: var(--muted, #aaa); font-size: 13px; }
 .page-access-dialog button { width: 100%; min-height: 46px; white-space: normal; cursor: pointer; }
 .page-access-dialog button:disabled { opacity: .6; cursor: wait; }
-.page-access-exit { display: block; margin-top: 14px; text-align: center; color: var(--muted, #aaa); }
+.page-access-exit { display: grid; place-items: center; min-height: 44px; margin-top: 14px; text-align: center; color: var(--muted, #aaa); }
 .page-access-dialog :focus-visible { outline: 2px solid var(--accent, #6ee7b7); outline-offset: 4px; }
+
+@media (max-width: 480px), (max-height: 480px) {
+    .page-access-dialog { padding: 20px; max-height: calc(100dvh - 24px); }
+    .page-access-dialog h2 { font-size: 23px; }
+    .page-access-dialog button { padding: 12px; touch-action: manipulation; }
+}

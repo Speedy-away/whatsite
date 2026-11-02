@@ -1,0 +1,60 @@
+{
+  "id": "wiiu-Trogdor-Reburninated",
+  "title": "Trogdor-Reburninated",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "2.4",
+  "url": "https://wiiu.cdn.fortheusers.org/zips/Trogdor-Reburninated.zip",
+  "source": "https://hb-app.store/wiiu/Trogdor-Reburninated",
+  "name": "Trogdor-Reburninated-2.4.zip",
+  "description": "Burninate the countryside!",
+  "author": "Mode8fx",
+  "details": "An enhanced recreation of the Homestar Runner Flash game, \"Trogdor\", expanded with new features.\\n- New Options menu to customize your game\\n- Level select\\n- New cheats\\n- Optional soundtrack from Stinkoman 20X6, another Homestar Runner game\\n- Multiple screen scaling options\\n- Bugs from the original game have been fixed",
+  "md5": "7308e2e629ef8df0fb5ed7ba2ce43081",
+  "expectedSha256": "dfb887e10801f16c8268ca03da5b7ae0d16cc48c519ce8ecbeb9237090f66bd1",
+  "icon": "https://wiiu.cdn.fortheusers.org/packages/Trogdor-Reburninated/icon.png",
+  "requirements": "Aroma for the bundled WUHB. Keep the complete package; any separate RPX variant needs the environment documented by the project.",
+  "setup": "Extract the complete SD bundle to the SD root; keep every app folder, music file and companion asset. Launch the matching executable from its documented environment.",
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 57,
+    "uncompressedBytes": 14519194,
+    "builds": [
+      {
+        "path": "wiiu/apps/Trogdor-RB/Trogdor-Reburninated.wuhb",
+        "bytes": 3405408,
+        "sha256": "d41cf97590ad82af580d3bb49658df56ef8a86130e5a66bf80f3e4a1d74dfdf5"
+      },
+      {
+        "path": "wiiu/apps/Trogdor-RB/Trogdor-Reburninated.rpx",
+        "bytes": 3375986,
+        "sha256": "ef9ac7448b7369d7a51b57fc0e72ebe96c39aa9c914b5e1f33aa94d16d5ab3f9"
+      }
+    ],
+    "xmlFiles": [
+      "wiiu/apps/Trogdor-RB/meta.xml"
+    ],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/wiiu-Trogdor-Reburninated.png",
+  "file": {
+    "name": "Trogdor-Reburninated-2.4.zip",
+    "version": "2.4",
+    "bytes": 14270774,
+    "sha256": "dfb887e10801f16c8268ca03da5b7ae0d16cc48c519ce8ecbeb9237090f66bd1",
+    "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/Trogdor-Reburninated.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/Trogdor-Reburninated-2.4.zip",
+    "itemId": "wiiu-games-batch2-wiiu-Trogdor-Reburninated",
+    "platform": "Wii U",
+    "category": [
+      "Wii U",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\Trogdor-Reburninated\\Builds\\2.4\\Trogdor-Reburninated-2.4.zip"
+  },
+  "mirrorReason": null
+}

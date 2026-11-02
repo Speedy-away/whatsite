@@ -1,0 +1,540 @@
+{
+  "checkedAt": "2026-11-02T08:59:22.758Z",
+  "apps": 12,
+  "files": [
+    {
+      "id": "wiimc",
+      "version": "1.3.4",
+      "bytes": 6267819,
+      "sha256": "58b858bf30e82b0be7dd02f1b832acc725cf32fe2a9f4546ba6e745926ff2cf1",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/wiimc/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "cavestory",
+      "version": "1.0.1",
+      "bytes": 9304946,
+      "sha256": "794840e77b4bd855286f95f3d4059a329653a2d357cfab074e93706f9ff506f0",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/cavestory/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "supertux",
+      "version": "0.1.4-wii-d.07",
+      "bytes": 10219416,
+      "sha256": "7cc4fbaeb1e33a3988266b6be19ac190970c7ec0d0ef4dd3cedb3352e95c73ad",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/supertux/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "snes9xgx",
+      "version": "5.0.4",
+      "bytes": 2988096,
+      "sha256": "b0df208477455d4d7bc8052f9c5698e780551bd14fb6cb0240974ee0e2704bc1",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/snes9xgx/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "not64",
+      "version": "2026-04-10",
+      "bytes": 1852870,
+      "sha256": "73e31681dd2dbda5769cfd79638f9275ec9b660730950007a75afcc4ff8e7489",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/not64/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "WiiSXRX",
+      "version": "3.3 Beta",
+      "bytes": 841768,
+      "sha256": "3ffc03c1e0035d942d8a1dcbe27e0a64b8bd124c138519d19db3c22d68e5b564",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/WiiSXRX/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "helium",
+      "version": "0.1.1",
+      "bytes": 3166200,
+      "sha256": "bab11081df9ceb062b352ee7f16cbb9a52f766beb8c879b440cf0d6b2c6ed0df",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/helium/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "wiixplorer",
+      "version": "r259",
+      "bytes": 2452156,
+      "sha256": "2fb33da9736f08398cb59cb4029504094273b4fbcb57b634f8cec8a047ad11cd",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/wiixplorer/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "vbagx",
+      "version": "3.0.4",
+      "bytes": 3565078,
+      "sha256": "998202066ca46602b642e6f7343985160e3cabcc8e108c4815ab5c82dc5ca79d",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/vbagx/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "mgba",
+      "version": "0.10.5",
+      "bytes": 990061,
+      "sha256": "44c65b34b01abfaa06dc084728886319a3561e54d0960a7b0cdba0bb4ecae91f",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/mgba/boot.dol",
+      "httpMatches": true
+    },
+    {
+      "id": "scummvm",
+      "version": "2026.1.0",
+      "bytes": 73135442,
+      "sha256": "cf7a756cb4e153f59f79fe0ec444c2a0fb007ebb4c192a7de0c11bbaabcab4ef",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii ELF",
+      "bootPath": "/apps/scummvm/boot.elf",
+      "httpMatches": true
+    },
+    {
+      "id": "fceugx",
+      "version": "4.0.3",
+      "bytes": 2768607,
+      "sha256": "fb1c3391996ef3d7e91cf246baf5bbe2dcec4768c69bca5cc0b8e2440c6dee18",
+      "archiveMatches": true,
+      "publicMatches": true,
+      "format": "ZIP · native Wii DOL",
+      "bootPath": "/apps/fceugx/boot.dol",
+      "httpMatches": true
+    }
+  ],
+  "localLinks": [
+    "/assets/images/logo.png",
+    "/style.css?v=3.3.2",
+    "/assets/console-guides.css?v=3.3.2",
+    "/languages/i18n.js?v=3",
+    "/assets/site-ads.css?v=2",
+    "/assets/mobile.css?v=3.3.4",
+    "/assets/mobile-downloads.css?v=3.3.4",
+    "/assets/mobile-downloads.js?v=3.3.4",
+    "/assets/wii-more.css?v=1",
+    "/assets/wii-more.js?v=1",
+    "/assets/site-background.css?v=2",
+    "/assets/site-background.js?v=2",
+    "/index.html#home",
+    "/index.html#games",
+    "/pages/mods.html",
+    "/games-downloads/index.html",
+    "/pages/apk.html",
+    "/console/ps5/index.html",
+    "/assets/images/platform-logos/ps5.svg",
+    "/console/ps4/index.html",
+    "/assets/images/platform-logos/ps4.svg",
+    "/console/ps3/",
+    "/assets/images/platform-logos/ps3.svg",
+    "/console/psvita/index.html",
+    "/assets/images/platform-logos/psvita.svg",
+    "/console/xbox360/",
+    "/assets/images/platform-logos/xbox360.svg",
+    "/console/xbox-one-series.html",
+    "/assets/images/platform-logos/xbox-one-series.svg",
+    "/console/nintendo-switch.html",
+    "/assets/images/platform-logos/nintendo-switch.svg",
+    "/console/nintendo-switch-2.html",
+    "/assets/images/platform-logos/nintendo-switch-2-symbol.svg",
+    "/console/steamdeck.html",
+    "/assets/images/platform-logos/steamdeck.svg",
+    "/console/retro/index.html",
+    "/console/mods/index.html",
+    "/pc/index.html",
+    "/pc/emulators.html",
+    "/source-codes/index.html",
+    "/tools/index.html",
+    "/pages/profile.html",
+    "/pages/help.html",
+    "/",
+    "/console/",
+    "/pc/",
+    "/assets/images/expansion-nintendo-retro/wii.png",
+    "/console/retro/",
+    "/assets/images/wii-more/wiimc.png",
+    "/downloads/wii-more/wiimc-1.3.4.zip",
+    "/assets/images/wii-more/cavestory.png",
+    "/downloads/wii-more/cavestory-1.0.1.zip",
+    "/assets/images/wii-more/supertux.png",
+    "/downloads/wii-more/supertux-0.1.4-wii-d.07.zip",
+    "/assets/images/wii-more/snes9xgx.png",
+    "/downloads/wii-more/snes9xgx-5.0.4.zip",
+    "/assets/images/wii-more/not64.png",
+    "/downloads/wii-more/not64-2026-04-10.zip",
+    "/assets/images/wii-more/wiisxrx.png",
+    "/downloads/wii-more/WiiSXRX-3.3_Beta.zip",
+    "/assets/images/wii-more/helium.png",
+    "/downloads/wii-more/helium-0.1.1.zip",
+    "/assets/images/wii-more/wiixplorer.png",
+    "/downloads/wii-more/wiixplorer-r259.zip",
+    "/assets/images/wii-more/vbagx.png",
+    "/downloads/wii-more/vbagx-3.0.4.zip",
+    "/assets/images/wii-more/mgba.png",
+    "/downloads/wii-more/mgba-0.10.5.zip",
+    "/assets/images/wii-more/scummvm.png",
+    "/downloads/wii-more/scummvm-2026.1.0.zip",
+    "/assets/images/wii-more/fceugx.png",
+    "/downloads/wii-more/fceugx-4.0.3.zip",
+    "/assets/images/expansion-nintendo-retro/priiloader.png",
+    "/assets/images/expansion-nintendo-retro/usbloadergx.png",
+    "/assets/images/expansion-nintendo-retro/nintendont.png",
+    "/assets/images/expansion-nintendo-retro/cleanrip.png",
+    "/assets/images/expansion-nintendo-retro/gcmm.png",
+    "/console/retro/gamecube.html",
+    "/pages/contact.html",
+    "/script.js?v=3.3.4",
+    "/assets/console-guide-dialog.js?v=4",
+    "/assets/site-ads.js?v=2"
+  ],
+  "externalLinks": [
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/wiimc/wiimc.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/wiimc/wiimc.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/wiimc",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/wiimc",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/cavestory",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/cavestory",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/wiimc.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/wiimc.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://autumn-mnya.github.io/games/cavestorywii/",
+      "status": 200,
+      "resolvedUrl": "https://autumn-mnya.github.io/games/cavestorywii/",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/dborth/wiimc",
+      "status": 200,
+      "resolvedUrl": "https://github.com/dborth/wiimc",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/cavestory/cavestory.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/cavestory/cavestory.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/supertux/supertux.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/supertux/supertux.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/cavestory.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/cavestory.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/supertux.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/supertux.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/supertux",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/supertux",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/DeltaResero/SuperTux-Wii",
+      "status": 200,
+      "resolvedUrl": "https://github.com/DeltaResero/SuperTux-Wii",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/snes9xgx",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/snes9xgx",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/snes9xgx/snes9xgx.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/snes9xgx/snes9xgx.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/not64",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/not64",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/snes9xgx.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/snes9xgx.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/dborth/snes9xgx",
+      "status": 200,
+      "resolvedUrl": "https://github.com/dborth/snes9xgx",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/extremscorner/not64",
+      "status": 200,
+      "resolvedUrl": "https://github.com/extremscorner/not64",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/not64/not64.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/not64/not64.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/WiiSXRX/WiiSXRX.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/WiiSXRX/WiiSXRX.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/WiiSXRX",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/WiiSXRX",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/not64.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/not64.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/WiiSXRX.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/WiiSXRX.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/niuus/WiiSXRX",
+      "status": 200,
+      "resolvedUrl": "https://github.com/niuus/WiiSXRX",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/helium/helium.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/helium/helium.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/helium",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/helium",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/wiixplorer",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/wiixplorer",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/helium.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/helium.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://sourceforge.net/projects/wiixplorer/",
+      "status": 200,
+      "resolvedUrl": "https://sourceforge.net/projects/wiixplorer/",
+      "accessible": true
+    },
+    {
+      "url": "https://wiibrew.org/wiki/Helium_boy",
+      "status": 200,
+      "resolvedUrl": "https://wiibrew.org/wiki/Helium_boy",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/wiixplorer/wiixplorer.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/wiixplorer/wiixplorer.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/vbagx/vbagx.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/vbagx/vbagx.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/vbagx",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/vbagx",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/wiixplorer.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/wiixplorer.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/vbagx.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/vbagx.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/dborth/vbagx",
+      "status": 200,
+      "resolvedUrl": "https://github.com/dborth/vbagx",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/mgba/mgba.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/mgba/mgba.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/mgba",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/mgba",
+      "accessible": true
+    },
+    {
+      "url": "https://www.scummvm.org/",
+      "status": 200,
+      "resolvedUrl": "https://www.scummvm.org/",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/mgba.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/mgba.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://mgba.io/",
+      "status": 200,
+      "resolvedUrl": "https://mgba.io/",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/scummvm/scummvm/blob/master/dists/wii/READMII",
+      "status": 200,
+      "resolvedUrl": "https://github.com/scummvm/scummvm/blob/master/dists/wii/READMII",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/scummvm/scummvm.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/scummvm/scummvm.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/scummvm",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/scummvm",
+      "accessible": true
+    },
+    {
+      "url": "https://oscwii.org/library/app/fceugx",
+      "status": 200,
+      "resolvedUrl": "https://oscwii.org/library/app/fceugx",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/scummvm.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/scummvm.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/fceugx.oscmeta",
+      "status": 200,
+      "resolvedUrl": "https://raw.githubusercontent.com/OpenShopChannel/Apps/master/contents/fceugx.oscmeta",
+      "accessible": true
+    },
+    {
+      "url": "https://github.com/dborth/fceugx",
+      "status": 200,
+      "resolvedUrl": "https://github.com/dborth/fceugx",
+      "accessible": true
+    },
+    {
+      "url": "https://hbb1.oscwii.org/api/contents/fceugx/fceugx.zip",
+      "status": 200,
+      "resolvedUrl": "https://hbb1.oscwii.org/api/contents/fceugx/fceugx.zip",
+      "accessible": true
+    },
+    {
+      "url": "https://wii.hacks.guide/vwii-homebrew-channel",
+      "status": 200,
+      "resolvedUrl": "https://wii.hacks.guide/vwii-homebrew-channel",
+      "accessible": true
+    },
+    {
+      "url": "https://wii.hacks.guide/hbc.html",
+      "status": 200,
+      "resolvedUrl": "https://wii.hacks.guide/hbc.html",
+      "accessible": true
+    },
+    {
+      "url": "https://wii.hacks.guide/get-started.html",
+      "status": 200,
+      "resolvedUrl": "https://wii.hacks.guide/get-started.html",
+      "accessible": true
+    }
+  ],
+  "preservedURLs": 28,
+  "payloadsExecuted": false,
+  "hardwareTested": false,
+  "failures": []
+}

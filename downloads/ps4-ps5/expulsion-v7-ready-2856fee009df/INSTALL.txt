@@ -1,0 +1,82 @@
+EXPULSION V7.0 - By Lush Modz
+GTA V PS4 update 1.57 - All-in-one USA / EUR PRX
+
+PS4 INSTALL
+1. Fully close GTA V. Enable GoldHEN FTP and game plugins on the PS4.
+2. Extract the ZIP and open Expulsion V7.0/PS4/.
+   Merge PS4/data/ into console /data/ and PS4/user/ into console /user/.
+   Preserve existing settings, outfits and custom files; skip conflicting samples.
+3. Install the single shared menu file at:
+   /data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx
+   This same PRX is used for both USA and EUR. No region-specific copy is needed.
+4. Edit /data/GoldHEN/plugins.ini (the filename is plugins.ini).
+   Add the entry matching your installed game's title ID:
+
+   USA - CUSA00419:
+   [CUSA00419]
+   /data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx
+
+   EUR - CUSA00411:
+   [CUSA00411]
+   /data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx
+
+   You can keep only your game's entry, or keep both entries above.
+   At least the MATCHING title section and PRX path must be present.
+   A USA-only entry will not load the EUR game, or vice versa.
+   Use the game's title ID, not your PSN account region.
+   Both sections point to the same file; you only update that one PRX.
+
+   If your title section already exists, update its Expulsion entry instead
+   of duplicating the section. Replace any old region-folder or alias path.
+   Enable only one Expulsion entry per title. Preserve unrelated settings.
+   plugins.ini.example is a reference, not a replacement configuration.
+   If using the supported Velora build, keep Velora before Expulsion.
+5. Launch GTA V again. Default menu combo: Square + D-pad Right.
+   D-pad navigates, X selects, Circle returns. Saved custom binds take precedence.
+
+INDOOR SKATEPARK
+Keep /data/Expulsion/Maps/indoor-skatepark.map157 installed from this package.
+
+IF THE MENU DOES NOT LOAD
+Check update 1.57, the matching CUSA section, the exact PRX path and GoldHEN
+plugin enablement. Remove duplicate Expulsion entries for the same title.
+A hook/signature rejection means the executable failed compatibility checks;
+do not disable those checks. EUR console testing remains required.
+
+INCLUDED CONTENT
+- Latest built LushModz-Expulsion-1.57.prx, with embedded Lua runtime.
+- 92 .LushModzOutfit files: 52 male / 40 female Amethyst presets.
+- 17 .LushModzOutfitNAME files: original sample plus 16 added names.
+- MountMod.lua, LushModzFunV1Menu.lua, Lua API guide and Lua license.
+- Existing map/UGC samples.
+- Full V7.0 changelog, conversion notes.
+
+PS4 CONTENT PATHS AND MENUS
+/data/Expulsion/outfits/
+  Refresh View Saved Outfit Files for portable files.
+  Built-in: Outfit Options > Amethyst Outfits > Male Outfits / Female Outfits.
+  Male stays first; Female is second. Use the matching freemode character.
+/data/Expulsion/outfit-names/
+  Outfit Options > Outfit Name Options > your actual saved wardrobe slot >
+  Outfit Name Editor > Choose Premade Name File. Refresh, highlight a file
+  to preview, open it, then select a name to rename only that slot.
+  Undo remains available. Outfit names are limited to 31 bytes, including formatting codes.
+/data/Expulsion/LUA-Scripts/
+  Misc Options > LUA Scripts > Refresh > MountMod.lua > Enable Script.
+  Close Expulsion, then R1 + D-pad Down shows/hides MountMod.
+  D-pad chooses, X activates, Circle hides. Riding: left stick moves,
+  hold X runs, Triangle dismounts. Scripts are enabled manually.
+  LushModzFunV1Menu.lua: enable, close Expulsion, then L1 + D-pad Down.
+  PC Lua scripts need adaptation to Expulsion Lua API v1.
+/user/data/Expulsion/icons/
+  Legacy assets; custom popup icons are disabled.
+
+VERIFICATION STATUS
+PRX build and focused local tests passed. Packaging is verified against
+source files and the current PRX hash. PS4 appearance, Lua runtime behavior,
+wardrobe rendering and saved-name persistence require console verification.
+No files were uploaded to your console while creating this package.
+
+PS4 POPUP ICONS
+This build uses built-in PS4 notification icons. Custom popup logo images
+are disabled; no separate logo installation is needed.

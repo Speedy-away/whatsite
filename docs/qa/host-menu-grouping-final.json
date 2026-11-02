@@ -1,0 +1,133 @@
+{
+  "completedAt": "2026-11-02T10:34:18.314Z",
+  "status": "Complete locally; no publication/deployment or console payload execution",
+  "menuGroups": {
+    "Expulsion": 4,
+    "Cyprus": 2,
+    "Oysters": 5
+  },
+  "behavior": [
+    "One card per family after exact platform/firmware filtering",
+    "Separate game update and menu/trainer version labels; undocumented releases stay Not provided",
+    "Version selection changes exact file, preview, requirements and actions only",
+    "Escape/backdrop/close controls, focus restoration and visible-control keyboard wrapping verified",
+    "Four desktop card columns; phone layout verified at430px without overflow"
+  ],
+  "artwork": "Expulsion7 andExplosive use clearly labelled originalcovers; Expulsion5 uses itsmatching sourcepreview; Oysters/North nowhave realfamily-menu previews.",
+  "newContent": {
+    "olderGtaVariants": 15,
+    "olderGtaGameUpdates": [
+      "1.27",
+      "1.32",
+      "1.33",
+      "1.34",
+      "1.35",
+      "1.38",
+      "1.46",
+      "1.47"
+    ],
+    "olderGtaFirmware": "PS4 9.00",
+    "sourceVerifiedNewHttpMappings": 4,
+    "originalHostOnlyMappings": 11,
+    "otherGameTrainerEntries": 40,
+    "ps4TrainerEntries": 34,
+    "nativePs5TrainerEntries": 6,
+    "standaloneRunForJson": false
+  },
+  "catalogue": {
+    "uniqueFiles": 505,
+    "ps4Files": 440,
+    "ps5Files": 323,
+    "hostActions": 133,
+    "senderReadyFiles": 95
+  },
+  "verification": {
+    "focusedTests": 63,
+    "focusedPass": 63,
+    "fullTests": 417,
+    "fullPass": 417,
+    "sitePages": 403,
+    "siteLocalReferences": 40886,
+    "siteIssues": 0,
+    "curatedRunnableOrElfFiles": 24,
+    "integrityPassed": 24,
+    "runnableValidators": 23,
+    "elfStructures": 11,
+    "legacyArchiveFilesVerified": 26,
+    "trainerWebsiteAndArchivePairs": 40,
+    "languages": 20,
+    "dictionaryKeys": 437,
+    "archiveRecords": 2569,
+    "archivePresent": 2569,
+    "archiveMissing": 0,
+    "hardwareExecutionTested": false,
+    "payloadsExecuted": false
+  },
+  "sender": {
+    "checkedAt": "2026-11-02T10:23:23.076Z",
+    "version": "1.3.0+e56126d1d0c5",
+    "zipEntries": 213,
+    "manifestFiles": 212,
+    "crc": "all pass",
+    "sha256": "c91aa5ee95493b5439f4f4d30e72b6a038b54b04f8167487159ae7a3156a080b",
+    "bytes": 58602949,
+    "archive": "matches",
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.3.0+e56126d1d0c5\\console-payload-sender-1.3.0-e56126d1d0c5.zip",
+    "publicPath": "/downloads/helpers/console-payload-sender/console-payload-sender-1.3.0-e56126d1d0c5.zip",
+    "readyFiles": 95,
+    "actions": 133,
+    "olderSnapshots": 5,
+    "versionChooserPresent": true
+  },
+  "companionsReport": "docs/host-menu-companion-build.json",
+  "companions": [
+    {
+      "platform": "ps4",
+      "version": "2026.11.02.9",
+      "path": "console/ps4/whatsite-ps4.html",
+      "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.9-0e2e76658bff/whatsite-ps4.html",
+      "bytes": 611857,
+      "sha256": "0e2e76658bff397398a0b08399b10717fd8fa95bdee0326d13fc33f759369ec6",
+      "previousSha256": "90d91e58f5565edef426d65f09a18a35b41f0157212989f8bd71205501c3e347",
+      "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-90d91e58f556/whatsite-ps4.html",
+      "previousItems": 414,
+      "items": 440,
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.9\\whatsite-ps4.html"
+    },
+    {
+      "platform": "ps5",
+      "version": "2026.11.02.9",
+      "path": "console/ps5/whatsite-ps5.html",
+      "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.9-bc762a372392/whatsite-ps5.html",
+      "bytes": 510441,
+      "sha256": "bc762a372392e503c834a1d59e2c46e7e627bc1e71f2ceff9674aa1e88b376de",
+      "previousSha256": "758589463a57df1df961fcb93834aa3fcbc4be920ae8b84b712ed77321544dcb",
+      "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-758589463a57/whatsite-ps5.html",
+      "previousItems": 322,
+      "items": 323,
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.9\\whatsite-ps5.html"
+    }
+  ],
+  "screenshots": [
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/expulsion-grouped-version-chooser.jpg",
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/oysters-grouped-corrected-preview.jpg",
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/cyprus-mobile-version-chooser.jpg"
+  ],
+  "sourceReports": [
+    "docs/host-menu-art-review.json",
+    "docs/host-legacy-menu-review.json",
+    "docs/host-legacy-menu-download-inventory.json",
+    "docs/host-extra-game-actions-verification.json",
+    "docs/host-extra-game-art.json"
+  ],
+  "testLogs": [
+    "docs/qa/host-menu-focused-tests.txt",
+    "docs/qa/host-menu-all-tests.txt"
+  ],
+  "regeneration": [
+    "node scripts/build-host-selector.cjs",
+    "node scripts/import-host-legacy-menus.cjs",
+    "node scripts/prepare-host-extra-game-actions.cjs --build"
+  ],
+  "preservation": "All previous catalogue IDs and hashes retained in v9 receivers; both prior v8 public snapshots retained immutably. Every older sender ZIP and F: archive version preserved. Do not execute downloaded payloads."
+}

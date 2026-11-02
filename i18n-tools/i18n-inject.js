@@ -4,16 +4,17 @@
  *   node tools/i18n-inject.js          apply
  *   node tools/i18n-inject.js --check  report only, change nothing
  *
- * Safe to re-run: pages that already reference i18n.js are skipped, so new
- * pages just need this run again.
+ * Updates public pages only. Archived downloads, standalone console helpers,
+ * source evidence and redirect stubs remain untouched.
  */
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const TAG = '<script src="/languages/i18n.js"></script>';
+const VERSION = '3';
+const TAG = '<script defer src="/languages/i18n.js?v=' + VERSION + '"></script>';
 const CHECK = process.argv.includes('--check');
-const SKIP_DIRS = ['.git', '.claude', 'backup', 'node_modules', 'i18n-tools', 'languages', 'api', 'css2', 'css2-1'];
+const SKIP_DIRS = ['.git', '.agents', '.codex', '.claude', '.playwright', '.playwright-cli', 'backup', 'node_modules', 'assets', 'docs', 'design-references', 'downloads', 'i18n-tools', 'languages', 'api', 'css2', 'css2-1'];
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -27,11 +28,23 @@ function walk(dir, out = []) {
 
 let added = 0, already = 0, failed = 0;
 
-for (const file of walk(ROOT)) {
+const publicFiles = walk(ROOT);
+if (fs.existsSync(path.join(ROOT, 'downloads/index.html'))) publicFiles.push(path.join(ROOT, 'downloads/index.html'));
+for (const file of publicFiles) {
   const rel = path.relative(ROOT, file).replace(/\\/g, '/');
   let html = fs.readFileSync(file, 'utf8');
 
-  if (html.includes('/languages/i18n.js')) { already++; continue; }
+  if (/whatsite-ps[45]\.html$/.test(rel) || /<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html) || /http-equiv="refresh"/i.test(html)) continue;
+
+  const loader = /<script\b[^>]*\bsrc="[^"]*(?:^|\/)languages\/i18n\.js(?:\?[^"]*)?"[^>]*>\s*<\/script>/g;
+  if (loader.test(html)) {
+    const normalized = html.replace(loader, TAG);
+    if (normalized === html) { already++; continue; }
+    if (!CHECK) fs.writeFileSync(file, normalized, 'utf8');
+    console.log((CHECK ? '  would refresh ' : '  refreshed     ') + rel);
+    added++;
+    continue;
+  }
 
   // Load in <head> (not deferred) so the anti-flash cloak applies before paint.
   let out;

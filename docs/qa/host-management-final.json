@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-11-02T09:39:20.009Z",
+  "scope": "PS4/PS5 host, file-manager controls, native payload management and main-hub organization",
+  "routes": [
+    "/hosts/ps4/",
+    "/hosts/ps5/",
+    "/hosts/ps4/payload-manager/",
+    "/hosts/ps5/payload-manager/",
+    "/console/ps4/",
+    "/console/ps5/"
+  ],
+  "layout": {
+    "desktopColumns": 4,
+    "phoneColumnsAt430px": 2,
+    "phoneOverflow": false,
+    "ps4Firmware14Selectable": true,
+    "experimental14GuideShown": true,
+    "existingCompatibilityPinsPreserved": true,
+    "modPreviewsVisible": true
+  },
+  "targetValidation": {
+    "desktopLoopbackRejected": true,
+    "matchingConsoleOnlyLoopback": true,
+    "ps4FileManager": "ezRemote :8080/",
+    "ps5FileManagers": [
+      "websrv :8080/fs/",
+      "ezRemote :9090/"
+    ]
+  },
+  "nativeManagement": {
+    "ps4": "GoldHEN PayLoader LaunchPad/AutoRun; requires a compatible release providing these controls",
+    "ps5": "itsPLK Payload Manager v0.6.3 native dashboard, autoload, storage, sources and processes",
+    "automaticExecutionOnPageLoad": false
+  },
+  "verification": {
+    "focusedTests": 59,
+    "focusedPassed": 59,
+    "fileIntegrity": "20/20;19 runnable validators;11/11 ELF structures",
+    "hardwareExecutionTested": false,
+    "downloadedPayloadsExecuted": false,
+    "translationLanguages": 20,
+    "sourceDictionaryKeys": 375,
+    "archiveFileRecords": 2363,
+    "archiveMissingPaths": 0,
+    "siteAudit": {
+      "pages": 385,
+      "localReferences": 38595,
+      "issues": 0
+    },
+    "broaderSuite": {
+      "tests": 387,
+      "passed": 384,
+      "failures": 3,
+      "note": "Snapshot:387 tests/384 passed/3 failed. Topic suite now9/9 passes; an active separate Xbox360 batch has20ready/24catalogue records and15publishedcards, with4pending imports. Its owner is editing builder/verifier/tests; root did not overwrite that unfinished work or claim the full suite is green.",
+      "activeXboxWork": "docs/xbox360-more-batch2.json; scripts/build-xbox360-more.cjs; scripts/verify-xbox360-more.cjs; scripts/tests/xbox360-more.test.cjs"
+    }
+  },
+  "sender": {
+    "checkedAt": "2026-11-02T09:36:40.738Z",
+    "version": "1.2.0+6c1da94cbfd5",
+    "zipEntries": 118,
+    "manifestFiles": 117,
+    "crc": "all pass",
+    "sha256": "75b86a1a37b901e1e09899375b34146009d98a34b496c38248529df94eea98a1",
+    "bytes": 53352798,
+    "archive": "matches",
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.2.0+6c1da94cbfd5\\console-payload-sender-1.2.0-6c1da94cbfd5.zip",
+    "publicPath": "/downloads/helpers/console-payload-sender/console-payload-sender-1.2.0-6c1da94cbfd5.zip",
+    "managerRoutes": true,
+    "olderSnapshots": 4
+  },
+  "screenshots": [
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/compact-four-column-host.jpg",
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/organized-ps5-hub.jpg",
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/ps4-firmware-14-selector.jpg"
+  ]
+}

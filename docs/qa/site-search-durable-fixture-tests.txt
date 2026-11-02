@@ -1,0 +1,38 @@
+✔ console catalogues contain only reviewed PS4/PS5 builds and keep platform scopes separate (9.5282ms)
+✔ expanded catalogue retains bounded capacity and refuses missing platforms or duplicate identities (0.9886ms)
+✔ native feeds exclude archives, cheat JSON, plugins and unsupported platform builds (2.7486ms)
+✔ console address, receiver selection and filters preserve exact platform behavior (0.3212ms)
+✔ ready-file filtering keeps original archives available without treating them as executable builds (0.136ms)
+✔ public console catalogue defaults to ready files and combines format with the search (1.1097ms)
+✔ an intentional original-archive link selects the archive without hiding it behind the ready default (0.6012ms)
+✔ routine page builds preserve archived companions; regeneration requires the explicit option (7.424ms)
+✔ every card exposes its direct Download beside Save before the collapsed technical details (2.6256ms)
+✔ reviewed preparation instructions are text and retain their title/update markers (1.8242ms)
+✔ applying a console address updates actual receiver and client-preparation routes while download URLs stay pinned (0.7355ms)
+✔ XML catalogue deduplication retains regional filenames and resolves each console guide separately (2.8968ms)
+✔ download desk renders platform-specific actions, compatibility and truthful storage guidance (1.8899ms)
+✔ shared mobile updates preserve archived standalone console helper bytes and embedded dependencies (18.739ms)
+✔ file classification preserves pinned URLs and excludes webpages, providers and screenshot previews (1.1226ms)
+✔ iPhone, touch iPad and Android instructions distinguish native saving without claiming installation (0.1981ms)
+✔ share preparation only fetches same-origin files with redirects disabled and keeps the exact filename (1.32ms)
+✔ sharing rejects large, unbounded fallback, empty, redirected and HTML error responses (0.7205ms)
+✔ sharing rejects partial files and byte-count mismatches while allowing decoded compressed responses (0.9121ms)
+✔ sharing detects disguised HTML and LFS pointers but preserves deliberate HTML companions (0.8016ms)
+✔ sharing keeps URL pins, rejects redirects and uses known file MIME for generic download headers (0.3941ms)
+✔ non-stream fallback only buffers a bounded unencoded body and verifies its actual bytes (0.4492ms)
+✔ aborting preparation cancels the reader and releases its lock (0.3407ms)
+✔ clipboard denial falls back to actual copy results or honest manual selection (0.3097ms)
+✔ a late clipboard denial cannot select or copy a different reopened file (0.1548ms)
+✔ enhancement is idempotent, keeps original navigation and leaves screenshots and receiver controls intact (1.7856ms)
+✔ file sharing requires prepare then a distinct second tap, preserves download fallback and handles cancellation honestly (1.6607ms)
+✔ external downloads and unsupported browsers never fetch a sharing copy (0.6148ms)
+✔ fallback dialog blocks background pointer hits and restores state after backdrop, Escape and destroy (1.223ms)
+✔ closing during preparation aborts the request and does not let a late result change a reopened dialog (0.5598ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.7914

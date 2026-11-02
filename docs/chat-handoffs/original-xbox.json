@@ -1,0 +1,93 @@
+{
+  "updatedAt": "2026-11-02T09:57:31.651Z",
+  "status": "Complete locally",
+  "canonicalPage": "console/retro/xbox.html",
+  "catalogue": "docs/original-xbox-catalogue.json",
+  "releaseSnapshots": "docs/original-xbox-release-snapshots.json",
+  "privateInventory": "docs/original-xbox-private-inventory.json",
+  "resources": [
+    {
+      "id": "lithiumx",
+      "version": "v0.9.7",
+      "bytes": 2918811,
+      "sha256": "2f6c514f08a8d79ac05653372291eeeb89d39df3d17c88f60c92fd6e2e80e2f2",
+      "source": "https://github.com/Ryzee119/LithiumX/releases/download/v0.9.7/LithiumX.zip"
+    },
+    {
+      "id": "nevolutionx",
+      "version": "v0.2.1",
+      "bytes": 3706500,
+      "sha256": "97a026b39adce1ddf74b89b21715610cd3cc406c1469d5341e953e642e67e06e",
+      "source": "https://github.com/dracc/NevolutionX/releases/download/v0.2.1/NevolutionX.zip"
+    },
+    {
+      "id": "sdlpopx",
+      "version": "v1.22",
+      "bytes": 2138412,
+      "sha256": "086839e2f5748a9461e3aab9d72bac3b09b242c3f2982e4f9ed250aca52f87e2",
+      "source": "https://github.com/Ryzee119/SDLPoP/releases/download/v1.22/SDLPoP_Xbox.zip"
+    }
+  ],
+  "build": "node scripts/build-original-xbox.cjs",
+  "archive": "node scripts/prepare-original-xbox.cjs --download",
+  "checks": "Three original release ZIPs passed CRC; native XBE headers and section bounds verified, including the embedded XBE in the NevolutionX ISO; all F/site/HTTP copies match.",
+  "sourceOnly": [
+    {
+      "title": "Peanut-GB Xbox port",
+      "source": "https://github.com/Ryzee119/Peanut-GB/tree/xbox/port/xbox",
+      "status": "Source project only; no tagged ready release returned by the publisher release endpoint in this review. No source archive downloaded."
+    }
+  ],
+  "browser": {
+    "viewportWidth": 390,
+    "documentWidth": 375,
+    "screenshot": "docs/qa/original-xbox-mobile-final.png"
+  },
+  "limits": [
+    "No downloaded build executed.",
+    "No physical console testing.",
+    "Recorded SHA-256 values measure the fetched release bytes; these older GitHub assets expose no publisher digest."
+  ],
+  "onlineExpansion": {
+    "updatedAt": "2026-11-02T09:57:31.651Z",
+    "status": "Complete locally",
+    "page": "console/retro/xbox-online.html",
+    "games": 10,
+    "halo2Playlists": 4,
+    "sources": "docs/original-xbox-online.json",
+    "tests": {
+      "total": 400,
+      "passed": 400,
+      "failed": 0,
+      "log": "docs/qa/original-xbox-online-full-tests.txt"
+    },
+    "audit": {
+      "pages": 403,
+      "localLinks": 40392,
+      "issues": 0
+    },
+    "browser": {
+      "filters": {
+        "haloAll": 2,
+        "haloCoop": 0,
+        "emptyVisible": true,
+        "reset": 10
+      },
+      "phone": {
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      "screenshots": [
+        "docs/qa/original-xbox-online-mobile.png",
+        "docs/qa/original-xbox-online-finder-mobile.png"
+      ]
+    },
+    "archive": "No new downloadable builds added; existing three original Xbox releases remain byte-verified against F: by original-xbox.test.cjs.",
+    "limitations": [
+      "No physical console connection tested.",
+      "Detailed Team XLink console setup wiki returned temporary maintenance; main site and game matrix were available.",
+      "Player limits describe System Link, not local campaign or Xbox Live matchmaking."
+    ]
+  },
+  "buildOnline": "node scripts/build-original-xbox-online.cjs"
+}

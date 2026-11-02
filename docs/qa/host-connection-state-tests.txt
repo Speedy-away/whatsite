@@ -1,0 +1,21 @@
+✔ real service-check handlers discard old target replies, including an A to B to A edit (5.7688ms)
+✔ a newer real service check wins over an older reply or rejection for the same address (0.9104ms)
+✔ Load with copy opens the exact same-console file during the click and never retargets on completion (2.5527ms)
+✔ uncertain results and mayHaveExecuted errors persist a target lock across reload until explicit clear (3.1277ms)
+✔ an uncertain A or a busy reply for A cannot lock a different B target (1.1434ms)
+✔ the real chooser retains two stable popup actions and changes the exact download with its version button (0.8023ms)
+✔ stale pairing replies cannot restore a bridge after its token changes away and back (0.6013ms)
+✔ raw ELF failures distinguish connection refusal from bytes already offered, without reconnecting (6.3648ms)
+✔ GoldHEN bridge never retries an ambiguous POST and keeps preflight failures non-executing (46.209ms)
+✔ browser GoldHEN distinguishes preflight rejection from a lost execution response (32.1729ms)
+✔ ELF URL requests and paired run requests report uncertain after dispatch but inspection never does (47.4153ms)
+✔ paired run server errors cannot acknowledge that an execution request was harmless (0.8564ms)
+✔ an acknowledgement body cannot leave a sent action pending forever (46.9697ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 250.9526

@@ -17,7 +17,7 @@ curl -L "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962
 echo "Warzone cover - please download manually"
 
 # COD Cold War
-curl -L "https://image.api.playstation.com/vulcan/ap/rnd/202009/2300/LFLBZLYuHsFWPOFQw7HI8ue5.png" -o "$COVERS_DIR/cod-cold-war.jpg" 2>/dev/null || \
+curl -L 'https://gmedia.playstation.com/is/image/SIEPDC/call-of-duty-black-ops-cold-war-pdp-hero-01-ps4-25aug20$en?fmt=jpeg&wid=1280&qlt=85' -o "$COVERS_DIR/cod-cold-war-official.jpg" 2>/dev/null || \
 echo "Cold War cover - please download manually"
 
 # COD MW 2019

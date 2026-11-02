@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-02T09:35:06.724Z",
+  "id": "raptords",
+  "archive": "RAPTOR-NDS-V1.1.0.zip",
+  "containedExecutable": "RAPTOR-NDS-V1.1.0.nds",
+  "ndsBytes": 5292544,
+  "nitrofs": {
+    "offset": 674816,
+    "bytes": 45,
+    "names": [
+      "/FILE0000.GLB",
+      "/FILE0001.GLB",
+      "/SETUP.INI"
+    ]
+  },
+  "method": "Read Nintendo DS FNT directory metadata from ready executable as data; no execution",
+  "notes": "The pinned source README describes a general external folder route, while this exact NDS release embeds its shareware resources."
+}

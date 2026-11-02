@@ -1,0 +1,59 @@
+{
+  "scope": "vita-more",
+  "checkedAt": "2026-11-02T09:02:39.349Z",
+  "preview": "http://127.0.0.1:8767/console/psvita/library.html",
+  "breakpoints": [
+    {
+      "width": 1280,
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    },
+    {
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "cardWidth": 343
+    },
+    {
+      "width": 1024,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    }
+  ],
+  "filters": [
+    {
+      "category": "Plugins",
+      "format": "SKPRX",
+      "shown": 3
+    },
+    {
+      "query": "3.65",
+      "category": "Plugins",
+      "format": "SKPRX",
+      "shown": 2
+    },
+    {
+      "category": "Themes",
+      "shown": 3
+    },
+    {
+      "query": "zz-no-result",
+      "category": "Themes",
+      "shown": 0
+    },
+    {
+      "clear": true,
+      "shown": 14
+    }
+  ],
+  "screenshots": [
+    "docs/qa/vita-more-desktop.jpg",
+    "docs/qa/vita-more-mobile.jpg"
+  ],
+  "passed": true,
+  "notes": [
+    "Initial mobile measurement was taken during loading; stable measurement has no overflow.",
+    "Shared 8765 preview served a fallback homepage; scoped QA used 8767.",
+    "No physical Vita execution tested."
+  ]
+}

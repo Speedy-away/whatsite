@@ -1,0 +1,52 @@
+{
+  "id": "wiiu-DonkeyKongish",
+  "title": "DonkeyKong-ish",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "2.0.0",
+  "url": "https://wiiu.cdn.fortheusers.org/zips/DonkeyKongish.zip",
+  "source": "https://hb-app.store/wiiu/DonkeyKongish",
+  "name": "DonkeyKongish-2.0.0.zip",
+  "description": "Game based on the legendary Donkey Kong.",
+  "author": "Martin Butler",
+  "details": "This was a game I originally wrote in Java; my then 9 year old son designed the levels. Sorry I can't remember where I got the sprites, other elements were drawn by my son. I've ported it over to the Wii U. I got the music from Donkey Kong Soundboard.",
+  "md5": "1806694201364b09caa3efbed2c7e02e",
+  "icon": "https://wiiu.cdn.fortheusers.org/packages/DonkeyKongish/icon.png",
+  "requirements": "Aroma for the bundled WUHB. Keep the complete package; any separate RPX variant needs the environment documented by the project.",
+  "setup": "Extract the complete SD bundle to the SD root; keep every app folder, music file and companion asset. Launch the matching executable from its documented environment.",
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 3,
+    "uncompressedBytes": 822077,
+    "builds": [
+      {
+        "path": "wiiu/apps/DonkeyKongish/DonkeyKong-ish.wuhb",
+        "bytes": 821324,
+        "sha256": "97431515754fc7c6ea38b15ac68048981328816cbdeb55d49b03cdffe5d72656"
+      }
+    ],
+    "xmlFiles": [],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/wiiu-DonkeyKongish.png",
+  "file": {
+    "name": "DonkeyKongish-2.0.0.zip",
+    "version": "2.0.0",
+    "bytes": 814088,
+    "sha256": "6ea546b0cde189dc9496b6729e2e50c3ddfadfe7bd41c02b684e2423d37f5bae",
+    "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/DonkeyKongish.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/DonkeyKongish-2.0.0.zip",
+    "itemId": "wiiu-games-batch2-wiiu-DonkeyKongish",
+    "platform": "Wii U",
+    "category": [
+      "Wii U",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\DonkeyKong-ish\\Builds\\2.0.0\\DonkeyKongish-2.0.0.zip"
+  },
+  "mirrorReason": null
+}

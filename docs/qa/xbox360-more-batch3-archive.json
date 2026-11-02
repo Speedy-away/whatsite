@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-02T12:45:25.170Z",
+  "scope": "xbox360-more",
+  "merged": true,
+  "indexRefreshed": true,
+  "scopeAllSha256Verified": true,
+  "scopeItems": 38,
+  "scopeFiles": 93,
+  "scopeBytes": 815889514,
+  "newItems": 9,
+  "newFiles": 59,
+  "newBytes": 104084030,
+  "previousItems": 29,
+  "previousFiles": 34,
+  "previousFilesUnchanged": true,
+  "triangleOriginalComponents": 50,
+  "triangleGitBlobsVerified": 50,
+  "scopeMissingFiles": 0,
+  "mergeCommand": "node scripts/console-expansion-archive.cjs --inventory=docs/xbox360-more-private-inventory.json",
+  "mergeSnapshot": {
+    "sidecars": 910,
+    "items": 2007,
+    "files": 3016
+  },
+  "indexCommand": "node scripts/refresh-local-download-index.cjs --write",
+  "indexSnapshot": {
+    "items": 2007,
+    "fileRecords": 2954,
+    "presentFileRecords": 2948,
+    "missingFileRecords": 6,
+    "missingPaths": 6,
+    "otherUnavailableRecords": 0,
+    "availability": {
+      "present": 2948,
+      "missing": 6
+    }
+  },
+  "notes": [
+    "All93 scope files were independently byte-count/SHA256 verified. All50 Triangle component Git blob SHA1 values matched their pinned source tree.",
+    "A first merge with --verify finished content validation but could not acquire the concurrent writer lock. The preserving metadata merge was then retried successfully; no download was replaced or deleted.",
+    "The whole-archive index reports6 missing records outside this fully verified93-file scope.",
+    "Three incomplete source downloads are recorded without ready-file hashes; original partials remain in docs/tmp/xbox360-more-batch3."
+  ],
+  "downloadedBuildsExecuted": false,
+  "physicalHardwareTested": false
+}

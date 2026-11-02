@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-02T12:21:56.329Z",
+  "pages": [
+    "console/retro/3ds.html",
+    "console/retro/3ds-themes.html",
+    "console/retro/3ds-mods.html",
+    "console/retro/3ds-online.html"
+  ],
+  "additionalApps": 23,
+  "themes": 14,
+  "modsAndOnline": 12,
+  "publicFiles": 92,
+  "backupFiles": 92,
+  "bytes": 293160686,
+  "localLinks": 455,
+  "checks": [
+    "Complete Nimbus dependencies, official Pretendo links, NNID/PNID distinction and exact game-mod region/revision pins checked",
+    "Dated game-support table includes per-row evidence and distinguishes public, tester, development and unconfirmed access",
+    "Every public file matches F: archive SHA-256 and byte count",
+    "Actual Themezer 3DS bundles and their declared BGM inspected",
+    "Original six core anchors and pinned download URLs preserved",
+    "Local links, anchors, JSON-LD, mobile/background/i18n integrations checked",
+    "No video or payload execution"
+  ],
+  "errors": [],
+  "limits": [
+    "Static and byte-level validation; physical3DShardware execution untested."
+  ]
+}

@@ -1,0 +1,701 @@
+{
+  "checkedAt": "2026-11-02T12:43:35.385Z",
+  "method": "HTTP HEAD, redirects followed; release builds already downloaded and hashed separately",
+  "retryOf": "2026-11-02T12:31:44.942Z",
+  "retried": 68,
+  "total": 115,
+  "passed": 110,
+  "failed": 5,
+  "results": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/apps/publish/partner-center/open-a-developer-account",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/devkit-activation",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/devhome-home",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/device-portal-xbox",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/remote-debugging-xbox",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/uwp/apps-for-xbox/development-options",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/advanced-settings/device-portal",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/development-environment-setup",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-gb/previous-versions/windows/uwp/debug-test-perf/device-portal-api-core",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/system-resource-allocation",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/devkit-deactivation",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/images/device-portal-xbox-1.png",
+      "status": 200,
+      "ok": true,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/uwp/xbox-apps/images/device-portal-xbox-15.png",
+      "status": 200,
+      "ok": true,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/XBSX2",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/XBSX2/releases/tag/v2.0.9.2",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/devmodewiki/blob/master/docs/emulation/xbsx2-guide.mdx",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/XBSX2/releases/download/v2.0.9.2/XBSX2_2.0.9.2_SSE4.msixbundle",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/XBSX2/releases/download/v2.0.9.2/XBSX2_2.0.9.2_AVX2.msixbundle",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/danprice142/dolphin-uwp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/dolphin-uwp/releases/tag/1.2.0.2",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/devmodewiki/blob/master/docs/emulation/dolphin-guide.mdx",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/dolphin-uwp/releases/download/1.2.0.2/Dolphin_1.2.0.2.msix",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/dolphin/releases/download/1.1.9.0/DolphinWinRT_1.1.9.0_x64.msix",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://www.ppsspp.org/",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ppsspp.org/download/",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ppsspp.org/docs/getting-started/how-to-run-on-xbox/",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ppsspp.org/files/1_20_4/ppsspp_uwp.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://github.com/flyinghead/flycast",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/flyinghead/flycast/releases/tag/v2.7",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/TheArcadeStriker/flycast-wiki/wiki/Getting-started-with-Flycast",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/flyinghead/flycast/releases/download/v2.7/flycast-2.7.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/Dantes-Dungeon/DURANGO-FTP",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/tag/v1.2",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox/releases/tag/1.18.2",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox#installation",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox/releases/download/1.18.2/moonlight-xbox-dx_1.18.2.0_x64.msixbundle",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/RetroArch",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/RetroArch/releases/tag/08-19-2026",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/devmodewiki/blob/master/docs/emulation/retroarch-guide.mdx",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/RetroArch/releases/download/08-19-2026/RetroArch-XboxOne.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/RetroArch/releases/download/08-19-2026/RetroArch-SeriesConsoles.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/marcelofrau/dosbox-pure-uwp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/dosbox-pure-uwp/releases/tag/v1.0.0.236",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/dosbox-pure-uwp/releases/download/v1.0.0.236/dosbox-uwp_1.0.0.236_x64.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/marcelofrau/scummvm-uwp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/scummvm-uwp/releases/tag/v2026.3.1.155",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/scummvm-uwp/releases/download/v2026.3.1.155/scummvm-uwp_2026.3.1.155_x64.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/skitzellez/xemu-uwp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/skitzellez/xemu-uwp/releases/tag/uwp-0.9.1010.0",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/skitzellez/xemu-uwp/blob/uwp-0.9.1010.0/README-UWP.md",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/skitzellez/xemu-uwp/releases/download/uwp-0.9.1010.0/Xemu_0.9.1010.0_x64.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/SirMangler/xenia",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/SirMangler/xenia/releases/tag/1.1.5a",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/SirMangler/xenia/releases/download/1.1.5a/xenia-canary-uwp_1.1.5a.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/retropassdev/RetroPass",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/retropassdev/RetroPass/releases/tag/RetroPass_v1.13.0",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/retropassdev/RetroPass/blob/main/Docs/SetupLaunchBox.md",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/retropassdev/RetroPass/blob/main/Docs/SetupEmulationStation.md",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://forums.launchbox-app.com/topic/58352-launchbox-on-xbox-series-s/",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/marcelofrau/x-files-uwp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/x-files-uwp/releases/tag/v1.8.0.1527",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/x-files-uwp/blob/main/docs/PORTAL-APPDATA.md",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/x-files-uwp/releases/download/v1.8.0.1527/xfiles_1.8.0.1527_x64.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://kodi.tv/",
+      "status": 403,
+      "ok": false,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://kodi.tv/download/windows/",
+      "status": 403,
+      "ok": false,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://kodi.wiki/view/First_time_user",
+      "status": 403,
+      "ok": false,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://kodi.tv/article/kodi-21-3-omega-release/",
+      "status": 403,
+      "ok": false,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://kodi.wiki/view/Backup",
+      "status": 403,
+      "ok": false,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://mirrors.kodi.tv/releases/windows/UWP/kodi-21.3-Omega_21.3.0.0-x64.msix",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/danprice142/Azahar-UWP",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/Azahar-UWP/releases/tag/0.2126.2.1",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/Azahar-UWP/blob/0.2126.2.1/src/citra_uwp/storage_paths.cpp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/Azahar-UWP/releases/download/0.2126.2.1/Azahar_0.2126.2.1.msix",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/danprice142/Cemu-UWP",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/Cemu-UWP/releases/tag/0.2.6.7",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/Cemu-UWP/blob/0.2.6.7/src/uwp/UwpMemoryBudgetService.cpp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/Cemu-UWP/blob/0.2.6.7/src/uwp/UwpStorageService.cpp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/danprice142/Cemu-UWP/releases/download/0.2.6.7/Cemu_0.2.6.7.msix",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/marcelofrau/Ymir",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/Ymir/releases/tag/uwp-v0.4.2.1",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/marcelofrau/Ymir/releases/download/uwp-v0.4.2.1/ymir-uwp_0.4.2.1_x64.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/diasurgical/DevilutionX",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/diasurgical/DevilutionX/releases/tag/1.5.5",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/diasurgical/DevilutionX/blob/master/docs/installing.md",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/diasurgical/DevilutionX/releases/download/1.5.5/devilutionx-xbox-one-series.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/deathkiller/jazz2",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/deathkiller/jazz2/releases/tag/3.9.0",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://de4th.dev/jazz2/",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://de4th.dev/jazz2/help",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://de4th.dev/jazz2/docs/paths.html",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://github.com/deathkiller/jazz2/releases/download/3.9.0/Jazz2_3.9.0_UWP.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/XProger/OpenLara",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XProger/OpenLara/releases/tag/latest",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XProger/OpenLara/blob/master/src/platform/xb1/main.cpp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XProger/OpenLara/issues/15",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XProger/OpenLara/releases/download/latest/OpenLara_xb1.zip",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/Xbox-Homebrew/SDLPoP",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/Xbox-Homebrew/SDLPoP/releases/tag/1.0.0.0",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/Xbox-Homebrew/SDLPoP/releases/download/1.0.0.0/sdlpop.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/Mayo1970/ioQuake3-One",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/Mayo1970/ioQuake3-One/releases/tag/1.4",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/Mayo1970/ioQuake3-One/blob/1.4/INSTALLATION.md",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/Mayo1970/ioQuake3-One/releases/download/1.4/ioq3.msixbundle",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/Mayo1970/ioQuake3-One/releases/download/1.4/openarena.msixbundle",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/Mayo1970/ioQuake3-One/releases/download/1.4/eliteforce.msixbundle",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/2ship2harkinian-uwp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/2ship2harkinian-uwp/releases/tag/0.1.0-uwp",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/2ship2harkinian-uwp/blob/0.1.0-uwp/README.md",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://2ship.equipment/",
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/2ship2harkinian-uwp/releases/download/0.1.0-uwp/2ship2harkinian.msixbundle",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox/releases/download/1.18.2/Microsoft.UI.Xaml.2.7.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox/releases/download/1.18.2/Microsoft.VCLibs.x64.14.00.appx",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/octet-stream"
+    }
+  ]
+}

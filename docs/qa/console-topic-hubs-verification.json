@@ -1,0 +1,244 @@
+{
+  "checkedAt": "2026-11-02T09:27:46.141Z",
+  "status": "complete-local",
+  "platforms": [
+    "PlayStation 2",
+    "Nintendo GameCube",
+    "Nintendo Wii",
+    "Nintendo Wii U",
+    "PlayStation Portable",
+    "Nintendo 2DS & 3DS",
+    "Nintendo DS & DSi",
+    "Nintendo Switch",
+    "Nintendo Switch 2",
+    "Xbox One / Series X|S",
+    "Steam Deck",
+    "PS Vita"
+  ],
+  "hubPages": 12,
+  "newTopicPages": 60,
+  "generatedPages": 72,
+  "existingTopicDestinations": 12,
+  "focusedTests": {
+    "tests": 29,
+    "passed": 29,
+    "failed": 0,
+    "output": "docs/qa/console-topic-hubs-focused-tests.txt"
+  },
+  "fullSuite": {
+    "tests": 374,
+    "passed": 371,
+    "failed": 3,
+    "output": "docs/qa/console-topic-hubs-all-tests.txt",
+    "failures": [
+      "Concurrent PS4 cheat artwork for goldhen-cusa03528-01-00",
+      "PS4 store fixture expects seven packages while shared data now contains nine",
+      "Switch 2 shared download inventory contains new ns2-savekit/OunceCake archives not yet linked by its source builder"
+    ],
+    "note": "Full suite is not reported as passing. The new console organization tests all pass."
+  },
+  "siteAudit": "Audited 363 public pages and 36288 local links/assets; 0 issue(s).",
+  "navigation": {
+    "checked": 408,
+    "changed": 1,
+    "hubs": 12,
+    "mode": "write"
+  },
+  "metadata": {
+    "checked": 72,
+    "problems": []
+  },
+  "browser": {
+    "mobileHubs": [
+      {
+        "platform": "PlayStation 2",
+        "route": "/console/ps2/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Nintendo GameCube",
+        "route": "/console/gamecube/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Nintendo Wii",
+        "route": "/console/wii/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Nintendo Wii U",
+        "route": "/console/wiiu/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "PlayStation Portable",
+        "route": "/console/psp/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Nintendo 2DS & 3DS",
+        "route": "/console/3ds/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Nintendo DS & DSi",
+        "route": "/console/ds/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Nintendo Switch",
+        "route": "/console/nintendo-switch/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Nintendo Switch 2",
+        "route": "/console/nintendo-switch-2/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Xbox One / Series X|S",
+        "route": "/console/xbox-one-series/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "Steam Deck",
+        "route": "/console/steamdeck/",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      },
+      {
+        "platform": "PS Vita",
+        "route": "/console/psvita/home.html",
+        "viewport": 390,
+        "documentWidth": 375,
+        "overflow": false
+      }
+    ],
+    "topicSearches": [
+      {
+        "route": "/console/ps2/emulators.html",
+        "initial": 3,
+        "noMatch": 0,
+        "reset": 3,
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      {
+        "route": "/console/wii/games.html",
+        "initial": 3,
+        "noMatch": 0,
+        "reset": 3,
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      {
+        "route": "/console/wiiu/plugins.html",
+        "initial": 6,
+        "noMatch": 0,
+        "reset": 6,
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      {
+        "route": "/console/psp/games.html",
+        "initial": 5,
+        "noMatch": 0,
+        "reset": 5,
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      {
+        "route": "/console/3ds/emulators.html",
+        "initial": 9,
+        "noMatch": 0,
+        "reset": 9,
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      {
+        "route": "/console/ds/games.html",
+        "initial": 4,
+        "noMatch": 0,
+        "reset": 4,
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      {
+        "route": "/console/psvita/games.html",
+        "initial": 4,
+        "noMatch": 0,
+        "reset": 4,
+        "viewport": 390,
+        "documentWidth": 375
+      },
+      {
+        "route": "/console/xbox-one-series/apps.html",
+        "initial": 14,
+        "noMatch": 0,
+        "reset": 14,
+        "viewport": 390,
+        "documentWidth": 375
+      }
+    ],
+    "laptop": {
+      "viewport": 1280,
+      "documentWidth": 1265,
+      "ps2GridColumns": 3
+    },
+    "entryRoutes": [
+      "Old PS2 URL opens new hub",
+      "All downloads opens old library with ?view=all",
+      "Original #picodrive bookmark remains on original resource"
+    ]
+  },
+  "immutableHelpers": [
+    {
+      "path": "console/ps4/whatsite-ps4.html",
+      "bytes": 580639,
+      "sha256": "90d91e58f5565edef426d65f09a18a35b41f0157212989f8bd71205501c3e347",
+      "matchesEarlierHandoffSnapshot": false
+    },
+    {
+      "path": "console/ps5/whatsite-ps5.html",
+      "bytes": 508787,
+      "sha256": "758589463a57df1df961fcb93834aa3fcbc4be920ae8b84b712ed77321544dcb",
+      "matchesEarlierHandoffSnapshot": false
+    }
+  ],
+  "archive": {
+    "newDownloads": 0,
+    "downloadedPayloadsExecuted": false,
+    "notes": "Layout-only reuse of existing download URLs and files; no archive import or F: write required."
+  },
+  "limits": [
+    "No physical console testing",
+    "No commit, push, publication or deployment"
+  ],
+  "helperPreservation": {
+    "organizerSkipsReadyBuilds": true,
+    "fixtureTestsPassed": true,
+    "initialCheck": "Both .7.1 live hashes matched the handoff before final checks.",
+    "finalObservation": "Live helper bytes advanced during parallel console expansion. This organizer did not generate or rewrite them; leave the new live bytes and all archive versions intact."
+  }
+}

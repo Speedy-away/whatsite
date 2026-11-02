@@ -1,0 +1,25 @@
+{
+  "checkedAt":"2026-11-02",
+  "status":"passed",
+  "resources":38,
+  "desktop":{"viewport":1280,"documentWidth":1265,"brokenVisibleSkinImages":0},
+  "mobile":{"viewport":390,"clientWidth":375,"documentWidth":375,"minimumControlHeight":48,"expandedSetupOverflow":false},
+  "cases":[
+    "Initial full library:38 resources",
+    "ABadAvatar filter:2 including the temporary DashLaunch fork",
+    "BadUpdate filter:3 including Silent Hill Alpha1 and the temporary DashLaunch fork",
+    "Emulators category:8",
+    "Glass search:2 with both real skin previews loaded",
+    "Phone Triangle search:1",
+    "Phone setup disclosure expands without horizontal overflow",
+    "Shared File options appears beside Triangle ready ZIP download",
+    "Triangle HTTP200,17172614bytes,SHA2564544d5ed997ec5e3059857acd6df141a8a074895f4bd0c6875821a0f0160de2f matches F archive",
+    "No-match search shows empty-state text",
+    "Clear restores38 resources",
+    "Viewport override reset"
+  ],
+  "screenshots":["docs/qa/xbox360-more-batch3-desktop.jpg","docs/qa/xbox360-more-batch3-mobile.jpg"],
+  "previewNote":"Current files verified on a temporary loopback-only QA server; owned QA server stopped after screenshots. Shared preview and unrelated browser tabs were preserved.",
+  "physicalHardwareTested":false,
+  "downloadedBuildsExecuted":false
+}

@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-11-02T11:57:58.980Z",
+  "builders": [
+    "scripts/build-psp-more.cjs",
+    "scripts/build-console-themes.cjs",
+    "scripts/build-retro-page.cjs"
+  ],
+  "changes": [
+    "Run shared search/metadata finalizer after every PSP and themes wrapper change.",
+    "Keep the existing topic-routing/background/search sequence in Retro; remove its duplicate final pass."
+  ],
+  "regressionTest": "scripts/tests/psp-regeneration.test.cjs",
+  "focusedTests": {
+    "passed": 21,
+    "failed": 0,
+    "scope": [
+      "psp-regeneration",
+      "page-search-metadata",
+      "i18n-picker",
+      "i18n-runtime"
+    ]
+  },
+  "actualRebuilds": 2,
+  "actualPageHashes": {
+    "console/retro/psp.html": "4527d1a35759a6e6e0ce508006b09b139c8967cc53d1739f6d222c5fd3f274ad",
+    "console/themes.html": "5f60c7a52b4d55a839ce93c2e910f52e3dfbe62371f76f122102a35b63225f2b"
+  },
+  "byteIdenticalAcrossRebuilds": true,
+  "manualMetadataRepairNeeded": false,
+  "pinnedDownloadDescriptorsUnchanged": 20,
+  "themeCounts": {
+    "switch": 15,
+    "3ds": 14,
+    "wiiu": 8,
+    "ps3": 28,
+    "psp": 4
+  },
+  "downloadQa": {
+    "report": "docs/qa/psp-final-verification.json",
+    "files": 20,
+    "httpHashChecks": 20,
+    "archiveLinks": 20,
+    "localPageLinks": 487,
+    "priorRecordsPreserved": true
+  },
+  "localOnly": true,
+  "archiveWrites": false,
+  "payloadsExecuted": false,
+  "browser": {
+    "apollo": "1 download shown",
+    "themes": "4 downloads shown",
+    "empty": "0 downloads shown",
+    "reset": "18 downloads shown",
+    "errors": [],
+    "desktop": {
+      "scrollWidth": 2319,
+      "width": 2334
+    },
+    "mobile": {
+      "scrollWidth": 375,
+      "width": 390
+    },
+    "themeIndex": "4 themes",
+    "themeCards": 69,
+    "ctf": "2 themes",
+    "themeErrors": []
+  },
+  "screenshots": [
+    "docs/qa/psp-regenerated-themes.png",
+    "docs/qa/psp-regenerated-mobile.png"
+  ]
+}

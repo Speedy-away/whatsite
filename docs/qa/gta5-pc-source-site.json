@@ -1,0 +1,184 @@
+{
+  "checkedAt": "2026-11-02T14:53:49.951Z",
+  "passed": true,
+  "page": "source-codes/pc/gta5/index.html",
+  "newSourceProjects": 18,
+  "gta5dumpProjects": 15,
+  "editions": {
+    "Legacy": 17,
+    "Enhanced": 1
+  },
+  "totalBytes": 87684107,
+  "sourceZipHttpHashChecks": [
+    {
+      "id": "yimmenu-v1",
+      "http": 200,
+      "bytes": 2461218,
+      "sha256": "8a3b6b88177c374be19b9086d0bbf8242ec4d29dda84261db2fbe9970ec68d32",
+      "edition": "Legacy"
+    },
+    {
+      "id": "yimmenu-v2",
+      "http": 200,
+      "bytes": 2788417,
+      "sha256": "89627c24ea8c7940b47bd1a6eee41e3bc2c0a1bd543027988b5ad5c08758dbdb",
+      "edition": "Enhanced"
+    },
+    {
+      "id": "impulse",
+      "http": 200,
+      "bytes": 36629057,
+      "sha256": "3baf3c96b2f4d5065f5fa563954194bd7c95732061c7facff946e50728b673f0",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-cydexv5",
+      "http": 200,
+      "bytes": 1046979,
+      "sha256": "def5af64a938e8f2f193110e4d50eba737898ecbb46c4f4e65d79d43cb460f04",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-burnmenu",
+      "http": 200,
+      "bytes": 561725,
+      "sha256": "7898b57d14efe47d24e64aa4bed570858b028011e5f75cd54c2ec73897e2f0c9",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-aera",
+      "http": 200,
+      "bytes": 1380829,
+      "sha256": "8a7b8e132315cddba2b717dc6de91540ff5b6ae9b2a7d82bfac9e9664541dd83",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-insight",
+      "http": 200,
+      "bytes": 1774035,
+      "sha256": "2a2d82eca000b7c075263696d38a59e8a855c42f89bf17245e5897d48a316ab1",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-lxdmenu",
+      "http": 200,
+      "bytes": 735378,
+      "sha256": "0c2a279b00a2b9de5d36a3ea3a4bb4de1dd8de469a4c8cbbc81ad787b223bbb0",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-moon",
+      "http": 200,
+      "bytes": 615841,
+      "sha256": "a1bc861fad4b077786b260c8219d29b665d1d0cfeb6b4b50819705c4d6d236ea",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-sentinel-pro",
+      "http": 200,
+      "bytes": 1677673,
+      "sha256": "2d5124047a867154ed0d18234f567902a19dca2f410184e8432286267bbf011b",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-sentinel",
+      "http": 200,
+      "bytes": 506611,
+      "sha256": "4d88cc389c0d56b4ad60499bde260fb0308071c27d5d99a486d38960d88f19d7",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-spooky-best-initial-source-leak",
+      "http": 200,
+      "bytes": 1462532,
+      "sha256": "79152ef9d07b9751adac5a443311d4361d4d57e3402596a70d2bab42ce897200",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-throne",
+      "http": 200,
+      "bytes": 1575569,
+      "sha256": "ea0133939498819ae3bb6d6a5e8945595095fb173937bedbf6f2368f4ee1d4bb",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-xbase",
+      "http": 200,
+      "bytes": 1536464,
+      "sha256": "2cbe0cdaf5adfb787a0dd526e8f44692c14dec3ca15f0ac10be42aa34ab5cf08",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-starmenu",
+      "http": 200,
+      "bytes": 806625,
+      "sha256": "14970b88ac28717b5ae885928f1716fd0ddd77eb0a194929ef42b34066b53df3",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-xforce",
+      "http": 200,
+      "bytes": 575682,
+      "sha256": "504d80e12aa51117705f8cd5833268d74e1d3bb98a758f35535eff2b09dd8843",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-2take1",
+      "http": 200,
+      "bytes": 5696464,
+      "sha256": "880e2871af23f15eb804a3ddeeaf637f803dfaca0d27629f2901640da889d7dd",
+      "edition": "Legacy"
+    },
+    {
+      "id": "gta5dump-perplex",
+      "http": 200,
+      "bytes": 25853008,
+      "sha256": "63a7c9e5e0a7d2a31c173430fbf8d198289fedb445c28422f2ad07e6a8c67153",
+      "edition": "Legacy"
+    }
+  ],
+  "archiveVerification": "docs/qa/gta5-pc-source-archives.json",
+  "existingMenyooLinkPreserved": true,
+  "metadataSynchronized": true,
+  "requestedBranchCorrection": {
+    "requested": "enhance",
+    "requestedCommitHTTP": 422,
+    "requestedREADMEHTTP": 404,
+    "verified": "enhanced"
+  },
+  "browser": {
+    "desktopViewport": 1280,
+    "desktopDocumentWidth": 1265,
+    "phoneViewport": 390,
+    "phoneDocumentWidth": 375,
+    "desktopEnhancedJump": true,
+    "phoneLegacyJump": true,
+    "downloadLinks": 18
+  },
+  "focusedTests": {
+    "passed": 27,
+    "failed": 0,
+    "output": "docs/qa/gta5-pc-source-tests.txt"
+  },
+  "siteAudit": {
+    "publicPages": 486,
+    "localLinksAndAssets": 53363,
+    "issues": 0
+  },
+  "archiveIndex": {
+    "items": 2088,
+    "fileRecords": 3034,
+    "presentFileRecords": 3034,
+    "missingFileRecords": 0,
+    "otherUnavailableRecords": 0
+  },
+  "screenshots": [
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19ca9-49db-7830-b905-d4370ab14794/gta5-pc-source-legacy.jpg",
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19ca9-49db-7830-b905-d4370ab14794/gta5-pc-source-phone.jpg"
+  ],
+  "limits": [
+    "Source snapshots only; no building or execution of downloaded source or bundled files.",
+    "Historical sources are not claimed compatible with current GTA Online updates.",
+    "No commit, push or deployment."
+  ]
+}

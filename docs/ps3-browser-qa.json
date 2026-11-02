@@ -1,0 +1,359 @@
+{
+  "reviewed": "2026-11-02",
+  "mode": "Isolated headless Edge against local preview; no PS3 hardware execution",
+  "results": [
+    {
+      "name": "ps3-mods-final",
+      "url": "/console/ps3/mods.html",
+      "screenshot": "/docs/screenshots/ps3-mods-final.png",
+      "title": "PS3 Mods / Mod Menus | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Top overview has the current game categories"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-mods-mobile",
+      "url": "/console/ps3/mods.html",
+      "screenshot": "/docs/screenshots/ps3-mods-mobile.png",
+      "title": "PS3 Mods / Mod Menus | whatwhatboy",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Top overview has the current game categories"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-menu-search",
+      "url": "/console/ps3/mods/menus.html",
+      "screenshot": "/docs/screenshots/ps3-menu-search.png",
+      "title": "PS3 Menu Directory | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Resource type filter selects RTM helpers",
+        "Incomplete source pack is labelled and has no ready-build section"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-browser-downloads",
+      "url": "/console/ps3/browser-downloads.html",
+      "screenshot": "/docs/screenshots/ps3-browser-downloads.png",
+      "title": "PS3 Console File List | whatwhatboy",
+      "width": 1024,
+      "height": 900,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Prepared webMAN URLs retain literal schemes and download-only endpoint",
+        "No automatic installation action",
+        "Language runtime and controls are available",
+        "Language switching translates page UI",
+        "Translation preserves filenames, paths, hashes and file URLs"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-texture-installer",
+      "url": "/console/ps3/mods/gta-iv/#gta-iv-texture-installer-v2",
+      "screenshot": "/docs/screenshots/ps3-texture-installer.png",
+      "title": "GTA IV · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-archive-downloads",
+      "url": "/console/ps3/archive-server.html?resource=gta-iv-texture-installer-v2#open-archive",
+      "screenshot": "/docs/screenshots/ps3-archive-downloads.png",
+      "title": "PS3 Archive Downloads | whatwhatboy",
+      "width": 1024,
+      "height": 900,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Archive link retains the selected PS3 resource and private computer address",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-cod-games",
+      "url": "/console/ps3/mods/call-of-duty/#games",
+      "screenshot": "/docs/screenshots/ps3-cod-games.png",
+      "title": "Call of Duty · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Call of Duty category contains each supported PS3 title",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-bo3-spectre",
+      "url": "/console/ps3/mods/call-of-duty/black-ops-3/#bo3-spectre-engine-v1",
+      "screenshot": "/docs/screenshots/ps3-bo3-spectre.png",
+      "title": "Black Ops 3 · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-ghosts-rebound",
+      "url": "/console/ps3/mods/call-of-duty/ghosts/#ghosts-rebound-digital",
+      "screenshot": "/docs/screenshots/ps3-ghosts-rebound.png",
+      "title": "Ghosts · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Incomplete source pack is labelled and has no ready-build section",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-mw3-resurgence",
+      "url": "/console/ps3/mods/call-of-duty/modern-warfare-3/#mw3-resurgence",
+      "screenshot": "/docs/screenshots/ps3-mw3-resurgence.png",
+      "title": "Modern Warfare 3 · PS3 Mods | whatwhatboy",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-legacy-pkg",
+      "url": "/console/ps3/apps.html#legacy-customization",
+      "screenshot": "/docs/screenshots/ps3-legacy-pkg.png",
+      "title": "PS3 Apps & Homebrew | whatwhatboy",
+      "width": 1024,
+      "height": 900,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-dead-island-installer",
+      "url": "/console/ps3/mods/dead-island/#dead-island-dev-installer-v2",
+      "screenshot": "/docs/screenshots/ps3-dead-island-installer.png",
+      "title": "Dead Island · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-dead-island-riptide",
+      "url": "/console/ps3/mods/dead-island-riptide/#dead-island-dev-installer-v2",
+      "screenshot": "/docs/screenshots/ps3-dead-island-riptide.png",
+      "title": "Dead Island Riptide · PS3 Mods | whatwhatboy",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-gta-ultimate-v2",
+      "url": "/console/ps3/mods/gta-iv/#gta-iv-ultimate-mod-v2",
+      "screenshot": "/docs/screenshots/ps3-gta-ultimate-v2.png",
+      "title": "GTA IV · PS3 Mods | whatwhatboy",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-aw-salvation",
+      "url": "/console/ps3/mods/call-of-duty/advanced-warfare/#aw-salvation-hen-digital",
+      "screenshot": "/docs/screenshots/ps3-aw-salvation.png",
+      "title": "Advanced Warfare · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-cod4-texture",
+      "url": "/console/ps3/mods/call-of-duty/cod4/#cod4-texture-installer-super-lite",
+      "screenshot": "/docs/screenshots/ps3-cod4-texture.png",
+      "title": "COD4 · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-mw2-black-ice",
+      "url": "/console/ps3/mods/call-of-duty/modern-warfare-2/#mw2-black-ice-v2",
+      "screenshot": "/docs/screenshots/ps3-mw2-black-ice.png",
+      "title": "MW2 (2009) · PS3 Mods | whatwhatboy",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-waw-paradise",
+      "url": "/console/ps3/mods/call-of-duty/world-at-war/#waw-paradise-hen",
+      "screenshot": "/docs/screenshots/ps3-waw-paradise.png",
+      "title": "World at War · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-waw-layout",
+      "url": "/console/ps3/mods/call-of-duty/world-at-war/#discord-ps3-waw-nightfire",
+      "screenshot": "/docs/screenshots/ps3-waw-layout.png",
+      "title": "World at War · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Advertisement sits outside download cards and grids",
+        "Advertisement has a full content-width placement",
+        "Every resource has source imagery or labelled game artwork",
+        "Resource cards keep natural heights",
+        "Generic title-ID placeholder rows are omitted",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-waw-layout-mobile",
+      "url": "/console/ps3/mods/call-of-duty/world-at-war/#discord-ps3-waw-nightfire",
+      "screenshot": "/docs/screenshots/ps3-waw-layout-mobile.png",
+      "title": "World at War · PS3 Mods | whatwhatboy",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Advertisement sits outside download cards and grids",
+        "Advertisement has a full content-width placement",
+        "Every resource has source imagery or labelled game artwork",
+        "Resource cards keep natural heights",
+        "Generic title-ID placeholder rows are omitted",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    },
+    {
+      "name": "ps3-waw-advertisement",
+      "url": "/console/ps3/mods/call-of-duty/world-at-war/#page-advertisement",
+      "screenshot": "/docs/screenshots/ps3-waw-advertisement.png",
+      "title": "World at War · PS3 Mods | whatwhatboy",
+      "width": 1366,
+      "height": 1000,
+      "checks": [
+        "No horizontal overflow",
+        "No embedded video",
+        "Advertisement sits outside download cards and grids",
+        "Advertisement has a full content-width placement",
+        "Every resource has source imagery or labelled game artwork",
+        "Resource cards keep natural heights",
+        "Generic title-ID placeholder rows are omitted",
+        "Game catalogue links open full tabs",
+        "Menu-name search returns the exact entry",
+        "Requested resource is visible in the saved screenshot"
+      ],
+      "failures": []
+    }
+  ]
+}

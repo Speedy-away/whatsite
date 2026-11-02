@@ -1,0 +1,3340 @@
+{
+  "generatedAt": "2026-11-02T12:56:36.605Z",
+  "sourceReport": "docs/qa/external-download-links.json",
+  "visibleActionEntries": 428,
+  "summary": {
+    "reachable-page": 176,
+    "network-error": 123,
+    "reachable-file": 112,
+    "access-blocked": 7,
+    "provider-page-unverified": 10
+  },
+  "issues": [
+    {
+      "url": "http://riptidecheats.cc/loader.html",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "pages/riptide344TRFVDV5key.html",
+          "label": "Download Loader",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RIPTIDE",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:21:37.958Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://consolemods.org/wiki/images/f/ff/Simple_360_NAND_Flasher.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/apps.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Simple 360 NAND Flasher",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:21:40.062Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://consolemods.org/wiki/images/f/ff/Simple_360_NAND_Flasher.7z",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5652",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 2048,
+      "headStatus": 403,
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Jeff Lonestar · packaged Silent Hill 3 Heather background artwork, not a console-test screenshot",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Author download page · 147.46 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:56:26.773Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "server": "ESF"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Silent Hill Skins Aurora Xbox360.zip - Google Drive"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Jeff Lonestar · packaged Matrix background artwork, not a console-test screenshot",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Author download page · 26.18 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:50:07.989Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "server": "ESF"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Matrix Skins Aurora V4.zip - Google Drive"
+    },
+    {
+      "url": "https://gamebanana.com/dl/1340103",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:20:18.916Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://gamebanana.com/dl/1479173",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:20:27.318Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/apexlions16/OrbisShelf/releases/download/v0.2.0/OrbisShelf-v0.2.0.pkg",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ps4/apps.html",
+          "label": "Download PKG",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download OrbisShelf-v0.2.0.pkg",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "OrbisShelf · PS4",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:20:51.814Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/ArthurCose/Minicraft-DS-Edition/releases/download/v1.0.0-beta.3/Minicraft-DS-Edition.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:09.295Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkachanDS/releases/download/0.2.1/IkachanDS.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:35.800Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkachanDS/releases/download/0.2.1/IkachanDS.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "Ikachan DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Ikachan DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:37.317Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/IkuReader.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:49.322Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/IkuReader.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "IkuReader · modern build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "IkuReader · modern build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:53.554Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/sdcard-root.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:01.324Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/tag/6.5_modern",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "IkuReader · modern build · 6.5_modern",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:05.567Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/AzizBgBoss/derailed/releases/download/1.1alpha/derailed.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "Derailed! authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Derailed! authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:22.043Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/AzizBgBoss/derailed/releases/tag/1.1alpha",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Derailed! · 1.1alpha",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:25.342Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/AzizBgBoss/MicroCityNDS/releases/download/v1.0/MicroCityNDS.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "MicroCityNDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "MicroCityNDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:35.223Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/AzizBgBoss/TerrariaDS/releases/download/0.2/TerrariaDS.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:43.981Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/claudechinsta/cg-nds-input-test/releases/download/1.0.0/cg-input-test.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "CG NDS Input Test authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "CG NDS Input Test authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:24:07.548Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/claudechinsta/cg-nds-input-test/releases/tag/1.0.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "CG NDS Input Test · 1.0.0",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:24:08.396Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/Cpasjuste/pplay/releases/download/v3.8/pplay-3.8_ps4.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ps4/apps.html",
+          "label": "Download ZIP",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download pplay-3.8_ps4.zip",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "pPlay · PS4 media player",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:24:31.552Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/danibiker/Salvia/releases/download/v1.1.0/Salvia-360.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "danibiker · official Salvia Aurora cover artwork from the Xbox 360 release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 134.27 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:25:47.380Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/tag/v1.2",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:20.794Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/dbeef/spelunky-ds/releases/download/1.13DSi%2B%2B/spelunkyds.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "SpelunkyDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "SpelunkyDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:31.028Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/dbeef/spelunky-ds/releases/tag/1.13DSi++",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "SpelunkyDS · 1.13DSi++",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:32.557Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/djforrest33-hash/amiga360-refresh-2026-xbox-binaries/releases/download/v1.5-feature-edition/A360RF26-Xbox.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 13.58 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:27:19.002Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/dougieprishpreed/balatro360/releases/download/v1.0.0/Balatro360-Xbox360-1.0.0.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 2.22 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:27:37.869Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/dougieprishpreed/ctr360/releases/download/v1.0.3/CTR360-Xbox360-1.0.3.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 11.99 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:27:55.761Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/DS-Homebrew/NesDS/releases/download/v2.1/nesDS.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:28:15.782Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/DS-Homebrew/NesDS/releases/download/v2.1/nesDS.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/emulators.html",
+          "label": "nesDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "nesDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:28:16.734Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/elripalda/RecompStore/releases/download/v2.7.4/PPSA92000.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ps5/apps.html",
+          "label": "Download ZIP",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps5/downloads.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps5/downloads.html",
+          "label": "Download PPSA92000.zip",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RecompStore",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:29:07.692Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/Epicpkmn11/dsidl/releases/download/v0.1.1/dsidl.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "dsidl · DSi QR downloader authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "dsidl · DSi QR downloader authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:29:38.485Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/Fewnity/Counter-Strike-Nintendo-DS/releases/download/1.0.0/Counter.Strike.DS.1.0.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:30:13.514Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/Fhoughton/Anarch360/releases/download/v1.0.0/anarch360.xex",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 3.10 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:30:39.470Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/haimbilia/Aurora-A-Z/releases/download/v1.1/AuroraAZ-v1.1-Installer.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 1.55 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.611Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/headshot2017/3dmaze/releases/download/v1.0.0/3dmaze-nds-fat.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "3D Maze · Windows 9x port authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "3D Maze · Windows 9x port authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.613Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/headshot2017/3dmaze/releases/tag/v1.0.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "3D Maze · Windows 9x port · v1.0.0",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.616Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/headshot2017/3dpinball-nds/releases/download/v0.5/3dpinball-nds.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "3D Pinball · Space Cadet DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "3D Pinball · Space Cadet DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.620Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/headshot2017/3dpinball-nds/releases/tag/v0.5",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "3D Pinball · Space Cadet DS · v0.5",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.621Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/HG-ERIK/multiplex360/releases/download/v0.4/Multiplex360-0.4.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 6.48 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.623Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/HG-ERIK/simple360player/releases/download/v0.2/Simple360Player-0.2.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 6.10 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.647Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/irixxxx/picodrive/releases/download/v2.05/PicoDrive_psp_2.05-19d4108.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/psp/emulators.html",
+          "label": "Download PicoDrive_psp_2.05-19d4108.zip",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psp/emulators.html",
+          "label": "Original download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psp/emulators.html",
+          "label": "Artwork credit",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/psp.html",
+          "label": "Download PicoDrive_psp_2.05-19d4108.zip",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/psp.html",
+          "label": "Original download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/psp.html",
+          "label": "Artwork credit",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.725Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/jam1garner/smash-minecraft-skins/releases/tag/v1.2.5b",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Release & source",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.750Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/KahnerC/SpiritedDS/releases/download/Version1.0/spirited_ds.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "Spirited DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Spirited DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.761Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/KahnerC/SpiritedDS/releases/tag/Version1.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Spirited DS · Version1.0",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.787Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/kernel64/Harissa64/releases/download/v2.0.8/Harissa64-2.0.8.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "kernel64 · Harissa64 background from the official release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 37.30 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.791Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/kernel64/HarissaDC",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Xbox 360 console illustration · no HarissaDC release artwork supplied",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.793Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/kernel64/HarissaDC/releases/download/v0.1.0-dev/HarissaDC-0.1.0-dev.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 20.50 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.794Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Lana-chan/GameYob/releases/download/v0.5.3b-mavica/gameyob_dsi.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.822Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Lana-chan/GameYob/releases/download/v0.5.3b-mavica/gameyob.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/emulators.html",
+          "label": "GameYob · mavica build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "GameYob · mavica build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.823Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Lana-chan/GameYob/releases/tag/v0.5.3b-mavica",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "GameYob · mavica build · v0.5.3b-mavica",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.824Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/LedyBacer/ProsperoLight/releases/download/01.000.110/PPSA99002.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ps5/apps.html",
+          "label": "Download ZIP",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps5/downloads.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps5/downloads.html",
+          "label": "Download PPSA99002.zip",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "ProsperoLight",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.825Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/M-Essa11/sonic-racing-crossworlds-switch-mods/releases/tag/v1.43-atmosphere.1",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Release & source",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.836Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/marcelofrau/dosbox-pure-uwp/releases/tag/v1.0.0.236",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.865Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/marcelofrau/scummvm-uwp/releases/tag/v2026.3.1.155",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Setup documentation",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Setup documentation",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.867Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/marcelofrau/x-files-uwp/releases/tag/v1.8.0.1527",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.871Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/MaZ3PlaYZ/AuroraFlow-/releases/download/Final-v1.5/AuroraFlow.EN.xzp",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 29.76 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.947Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/MaZ3PlaYZ/AuroraFlow-/releases/download/Final-v1.5/AuroraFlow.Global.xzp",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 29.57 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.948Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/mdmrk/2048-nds/releases/download/v1.0.2/2048-nds.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "2048 NDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "2048 NDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.984Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/mdmrk/2048-nds/releases/tag/v1.0.2",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "2048 NDS · v1.0.2",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.986Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/MERLev/ds34vita",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psvita/library.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psvita/plugins.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "ds34vita",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.986Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/MERLev/reVita",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psvita/library.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psvita/plugins.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "reVita",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:45.988Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/NitrousTracker/nitroustracker/releases/download/release%2F0.6.5/NitrousTracker-0.6.5.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "NitrousTracker · music studio authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "NitrousTracker · music studio authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.030Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/NitrousTracker/nitroustracker/releases/tag/release/0.6.5",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "NitrousTracker · music studio · release/0.6.5",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.030Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/nowrep/vita-shellbat",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psvita/library.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psvita/plugins.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "shellbat",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.031Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/PretendoNetwork/nimbus/releases",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/retro/3ds-online.html",
+          "label": "Nimbus · original release notes",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.064Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/PretendoNetwork/nimbus/releases/tag/v2.2.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/retro/3ds-online.html",
+          "label": "Nimbus 2.2.0 release notes",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.065Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/PSP-Archive/ARK-4/releases/tag/v42069r206",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psp/setup.html",
+          "label": "Source & release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/psp.html",
+          "label": "Source & release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "ARK-4 · final release",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.067Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/RetroGamer02/raptor-consoles/releases/download/MultiSys-V1.0.4/RAPTOR-NDS-V1.1.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "RaptorDS · Call of the Shadows authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "RaptorDS · Call of the Shadows authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.096Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/RetroGamer02/raptor-consoles/releases/tag/MultiSys-V1.0.4",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "RaptorDS · Call of the Shadows · MultiSys-V1.0.4",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.097Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/retropassdev/RetroPass/releases/tag/RetroPass_v1.13.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.099Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/rhaleblian/dslibris/releases/download/v1.5.2-2/dslibris-1.5.2-2.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.100Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/rhaleblian/dslibris/releases/tag/v1.5.2-2",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "dslibris · EPUB reader · v1.5.2-2",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.101Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Rinnegatamante/DaedalusX64-vitaGL/releases/tag/Nightly",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psvita/emulators.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psvita/library.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.104Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Rph-nsmb/MontyHallDS/releases/download/v2.0/Monty.Hall.DS.v2.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "Monty Hall DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Monty Hall DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.105Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Rph-nsmb/MontyHallDS/releases/tag/v2.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Monty Hall DS · v2.0",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.106Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Ryzee119/LithiumX/releases/tag/v0.9.7",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/retro/xbox.html",
+          "label": "Publisher release",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.131Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/Ryzee119/SDLPoP/releases/tag/v1.22",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/retro/xbox.html",
+          "label": "Publisher release",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.132Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/seaners42/Punch-A-Rooney/releases/download/1.0.1/Punch-A-Rooney.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.134Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/seaners42/Punch-A-Rooney/releases/tag/1.0.1",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "PUNCH-A-ROONEY! · 1.0.1",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.135Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/SevyW/imago/releases/tag/v1.3.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psvita/library.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psvita/themes.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.137Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/SirMangler/xenia/releases/tag/1.1.5a",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.139Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/skitzellez/xemu-uwp/releases/tag/uwp-0.9.1010.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.141Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/SlickAmogus/silent-hill-decomp/releases/download/xbox360-alpha-1/SilentHill_Xbox360.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 4.33 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.174Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/smealum/portalDS/releases/download/r1/ASDS_r1.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/games.html",
+          "label": "Aperture Science DS · portalDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Aperture Science DS · portalDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.176Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/smealum/portalDS/releases/tag/r1",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Aperture Science DS · portalDS · r1",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.176Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/tallHouse64/CerealBoxSnow/releases/download/v1.2.0/CerealBoxSnowNds1.2.0.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "Cereal Box Snow authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Cereal Box Snow authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.181Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/tallHouse64/CerealBoxSnow/releases/tag/v1.2.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Cereal Box Snow · v1.2.0",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.182Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/ThatNintendoNerd/stage_config/releases/tag/v1.1.1",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Release & source",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.206Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox/releases/tag/1.18.2",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Xbox UWP framework dependencies",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.210Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/theheroGAC/SuperTux-PSVITA/releases/tag/1.04",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psvita/games.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/psvita/library.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.211Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/theodor-ubp/xbox360-skins-aurora/releases/download/v5/Def-NXESp-Av-Xblogov5.xzp",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Phoenix / Mynam3isnathan / Theodor94 · packaged skin background artwork, not a UI screenshot",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 5.35 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.215Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/wanszai/Ace-Driver-Collection-X360-Releases/releases/download/v1.0.1/AceDriverCollection.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 4.92 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.247Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/wavemotion-dave/A7800DS/releases/download/5.2c/A7800DS.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/emulators.html",
+          "label": "A7800DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "A7800DS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.249Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/wavemotion-dave/A7800DS/releases/tag/5.2c",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "A7800DS · 5.2c",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.249Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/wavemotion-dave/StellaDS/releases/download/8.4a/StellaDS.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/emulators.html",
+          "label": "StellaDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "StellaDS authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.250Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/wavemotion-dave/StellaDS/releases/tag/8.4a",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/emulators.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "StellaDS · 8.4a",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.251Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/WuBoytH/The-WuBor-Patch/releases/download/0.18.1/The_WuBor_Patch.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.253Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/WuBoytH/The-WuBor-Patch/releases/tag/0.18.1",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Release & source",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.253Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/RetroArch/releases/tag/08-19-2026",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.298Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/XboxEmulationHub/XBSX2/releases/tag/v2.0.9.2",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.304Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/xenosworks/dusklight-xenon/releases/download/xenon-0.1.0.0/dusklight-0.1.0.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 20.37 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.306Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/xenosworks/homebrew-app-store/releases/download/v0.1.0.0/Homebrew-App-Store-Xbox360-0.1.0.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 1.80 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.307Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/xenosworks/starship-xenon/releases/download/xenon-0.2.0.0/Starship-Xbox360-0.2.0.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 6.47 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.308Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/xenosworks/swanstation-xenon/releases/download/xenon-0.1.1.0/swanstation-0.1.1.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 2.10 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.332Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/xyzz/vita-moonlight/releases/tag/0.13.2",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/psvita/library.html",
+          "label": "Author setup / release",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:31:46.336Z",
+      "outcome": "network-error",
+      "error": "ENOTFOUND",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://gofile.io/d/AuSpG026",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps4/emulators.html",
+          "label": "Supplied download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Crema · Wii U",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:21:43.458Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/AuSpG026",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://gofile.io/d/oTSXa5pw",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps4/emulators.html",
+          "label": "Supplied download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RPCS3 port · PlayStation 3",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:21:43.893Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/oTSXa5pw",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://gofile.io/d/xycQRzqX",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "VOLT PC TO PSN RTM AIO TOOL RELAY",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:21:44.740Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/xycQRzqX",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://kodi.tv/article/kodi-21-3-omega-release/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Stable release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Stable release notes",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:29.507Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://kodi.tv/article/kodi-21-3-omega-release/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5568",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5568,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://kodi.tv/download/windows/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:33.119Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://kodi.tv/download/windows/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5501",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5501,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://mega.nz/#!a2ZXTRgA!aWQ2JkrUpXiUfpx-gTpjw0WjI5EajitnqkQR8aW6x28",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 142.97 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 142.97 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:39.436Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/#!S2gxSQJK!EnzSuFO3d0LtjN9gEv6jzykwGB-yRvDha3w_iWk6mNk",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 125.78 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 125.78 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:40.980Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/#!T2IGCTDb!1fW9TSvsBqEuJq5Qjvh-4roAaWZ0Scx5HwPZe_mWqkU",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 65.63 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 65.63 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:21:51.443Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/Ae4xWKaY#guxkfuaYnaAof5awsJxje0N_qsRO-fjKwRJ9BkA3vYc",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 957.42 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/mario-kart-wii.html",
+          "label": "Download ZIP · 957.42 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:03.455Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/aQ4CkLQC#3VnJQR37ADYUDoSuklPeUIN0SFFQDlcvIJHDVau8sPY",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Unlocker Tool",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:22:09.546Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/eugETbRb#1ehlOokX_lLtIwjlzJQgsklGKMlVcWQhfHtCNjZkgOw",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 473.27 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 473.27 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:05.014Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/KFgDjSLZ#rNdRxZt4N2DwCA9cfEbtVOKbrMaoB3llkbSCOtluK5Q",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-1/index.html",
+          "label": "Download Injector",
+          "field": "anchor"
+        },
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+          "label": "Download Injector",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "PS4 Payload Injector Tool",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:22:24.775Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/folder/xhcDWTzQ#sf7Iya2oNGqQ15LWnWYjWQ",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 66.98 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/super-mario-galaxy-2.html",
+          "label": "Download ZIP · 66.98 MiB",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:50:10.299Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://pretendo.network/docs/install/wiiu",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/wiiu/online.html",
+          "label": "Official Wii U setup",
+          "field": "anchor"
+        },
+        {
+          "page": "console/wiiu/online.html",
+          "label": "PNID & installation instructions",
+          "field": "anchor"
+        },
+        {
+          "page": "console/wiiu/online.html",
+          "label": "Official account & save guidance",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:22:54.923Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://pretendo.network/docs/install/wiiu",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5554",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5554,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/3dsmenu/themes/3DarkS.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:23:58.132Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/3dsmenu/themes/DiiSU%20Dark.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:24:09.819Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/classic%20DS%20Menu.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:24:51.546Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/dark.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:24:53.486Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/Relaxing%20Space.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:25:58.328Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/Sharp%20-%20White%20on%20Black.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:06.199Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/Sky.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:10.330Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/Switch%20-%20Basic%20Dark.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:18.201Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/Switch%20-%20Basic%20Light.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:20.445Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/white.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T12:26:28.510Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://riptidecheats.cc/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "pages/braindamge101.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "pages/braindamge101.html",
+          "label": "Purchase Now",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Riptide Free",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:22:08.962Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://www.lcpdfr.com/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "mods/gta4.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "LCPDFR",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:22:57.106Z",
+      "outcome": "network-error",
+      "status": 0,
+      "error": "redirect limit exceeded",
+      "redirects": [
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mediafire.com/file/45z1tjfuf0i2zt0/MAG_INJECTOR_MAGUPDATE21102026.zip/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/modern-warfare-remastered/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "MAG Menu v1 and multi-COD injector",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:23:56.777Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/45z1tjfuf0i2zt0/MAG_INJECTOR_MAGUPDATE21102026.zip/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "pageTitle": "MAG_INJECTOR_MAGUPDATE21102026"
+    },
+    {
+      "url": "https://www.mediafire.com/file/7tvnntrnw9tof2c/GTA_IV_Texture_Installer_V2%255BHEN%2526CFW%255D.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/gta-iv/index.html",
+          "label": "MediaFire source",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "MediaFire source",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "GTA IV Texture Installer",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:24:35.679Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/7tvnntrnw9tof2c/GTA_IV_Texture_Installer_V2%255BHEN%2526CFW%255D.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "pageTitle": "GTA IV Texture Installer V2[HEN&amp;CFW]"
+    },
+    {
+      "url": "https://www.mediafire.com/file/eqvmqypdq6ddocd/PS3_Uncharted_Series_Dev_Menu_Installer_Tool_By_VirusMike.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "Installer RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/uncharted/index.html",
+          "label": "Installer RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Uncharted Series Dev Menu Installer by VirusMike",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:25:15.100Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/eqvmqypdq6ddocd/PS3_Uncharted_Series_Dev_Menu_Installer_Tool_By_VirusMike.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "pageTitle": "PS3 Uncharted Series Dev Menu Installer Tool By VirusMike"
+    },
+    {
+      "url": "https://www.mediafire.com/file/pdqbs6ebw2797jq/",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/ghosts/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "SilentShadaw v3",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:26:04.300Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/pdqbs6ebw2797jq/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "pageTitle": "SilentShadowV3"
+    },
+    {
+      "url": "https://www.mediafire.com/file/ukcihgnjgnolw0v/Dead_Island_Series_Dev_Menu_Installer_V2_%255BHEN%2526CFW%255D.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/dead-island/index.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/dead-island-riptide/index.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Dead Island Series Developer Menu Installer V2",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:26:21.058Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/ukcihgnjgnolw0v/Dead_Island_Series_Dev_Menu_Installer_V2_%255BHEN%2526CFW%255D.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "pageTitle": "Dead Island Series Dev Menu Installer V2 [HEN&amp;CFW]"
+    },
+    {
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/12604",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "mods/skyrim.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "SkyUI",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:23:05.907Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.nexusmods.com/skyrimspecialedition/mods/12604",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5618",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5618,
+      "headStatus": 403,
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.psx-place.com/threads/4-93-evilnat-w-cobra-v8-5-cex-pex-d-pex.39743/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Evilnat release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Evilnat developer release and supported builds",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Release & Downloads",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Evilnat CFW Cobra",
+          "field": "items.url"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:23:11.200Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.psx-place.com/threads/4-93-evilnat-w-cobra-v8-5-cex-pex-d-pex.39743/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5708",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5708,
+      "headStatus": 403,
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.psx-place.com/threads/custom-firmware-ferrox-4-87-cobra-8-20.32504/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Legacy Release",
+          "field": "anchor"
+        }
+      ],
+      "checkedAt": "2026-11-02T08:23:12.857Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.psx-place.com/threads/custom-firmware-ferrox-4-87-cobra-8-20.32504/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5705",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5705,
+      "headStatus": 403,
+      "pageTitle": "Just a moment..."
+    }
+  ],
+  "note": "Provider and access limitations are unverified, not asserted broken. Source/provenance-only references are excluded from this priority list."
+}

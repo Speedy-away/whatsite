@@ -1,0 +1,45 @@
+.wiiu-store { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:26px; border:1px solid #47604b; background:#15271c; border-radius:14px; }
+.wiiu-store p { max-width:65ch; color:var(--text-secondary); margin-top:8px; }
+.wiiu-store .btn { white-space:nowrap; flex-shrink:0; }
+.wiiu-overview { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:42px; align-items:center; }
+.wiiu-overview p { max-width:50ch; color:var(--text-secondary); }
+.wiiu-library-number { display:block; font-size:clamp(3.5rem,8vw,6rem); font-weight:700; line-height:1.1; letter-spacing:-.06em; color:var(--accent-light); font-variant-numeric:tabular-nums; }
+.wiiu-overview .guide-links { margin-top:18px; }
+.wiiu-tools { display:grid; grid-template-columns:minmax(180px,1fr) minmax(180px,250px) auto; gap:20px; padding:22px; border:1px solid var(--border); border-radius:12px; background:var(--bg-secondary); align-items:end; }
+.wiiu-tools button { min-height:48px; padding:12px 16px; font:inherit; font-size:.875rem; color:var(--text-primary); border:1px solid #485a4c; background:#1c3022; border-radius:8px; cursor:pointer; transition:background .2s; }
+.wiiu-tools button:hover { background:#2d4935; }
+.wiiu-tools button:focus-visible { outline:2px solid var(--accent-light); outline-offset:3px; }
+.wiiu-tools label { display:block; font-size:.875rem; margin-bottom:8px; font-weight:600; }
+.wiiu-tools input,.wiiu-tools select { width:100%; min-height:48px; background:#101b14; border:1px solid #485a4c; border-radius:8px; color:var(--text-primary); padding:12px; font:inherit; }
+.wiiu-tools input:focus-visible,.wiiu-tools select:focus-visible,.wiiu-app summary:focus-visible { outline:2px solid var(--accent-light); outline-offset:3px; }
+.wiiu-count { color:var(--text-secondary); font-size:.875rem; margin:18px 0 24px; }
+.wiiu-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.wiiu-app { padding:26px; border:1px solid var(--border); background:var(--bg-secondary); border-radius:16px; display:flex; flex-direction:column; min-width:0; scroll-margin-top:24px; }
+.wiiu-app[hidden] { display:none; }
+.wiiu-app header { display:grid; grid-template-columns:64px minmax(0,1fr); align-items:center; gap:18px; margin-bottom:20px; }
+.wiiu-app header img { width:64px; height:64px; border-radius:12px; object-fit:contain; }
+.wiiu-app h3 { font-size:1.3rem; line-height:1.25; margin:0 0 6px; }
+.wiiu-category { color:var(--accent-light); font-size:.8rem; }
+.wiiu-app p { color:var(--text-secondary); margin-bottom:16px; font-size:.94rem; }
+.wiiu-meta { display:grid; grid-template-columns:76px minmax(0,1fr); gap:8px 12px; margin-bottom:20px; font-size:.85rem; line-height:1.55; }
+.wiiu-meta dt { color:var(--text-secondary); }
+.wiiu-meta dd { margin:0; overflow-wrap:anywhere; }
+.wiiu-tags { list-style:none; display:flex; flex-wrap:wrap; gap:7px; padding:0; margin:0 0 20px; }
+.wiiu-tags li { padding:4px 8px; font-size:.72rem; color:#c2d8c6; background:#1c3022; border:1px solid #344e3b; border-radius:5px; }
+.wiiu-actions { margin-top:auto; display:flex; align-items:center; gap:12px 18px; flex-wrap:wrap; }
+.wiiu-actions .btn { font-size:.85rem; padding:11px 16px; }
+.wiiu-sources { display:flex; flex-wrap:wrap; gap:10px 20px; margin-top:18px; padding-top:16px; border-top:1px solid var(--border); font-size:.8rem; }
+.wiiu-app details { font-size:.85rem; margin-top:18px; }
+.wiiu-app summary { cursor:pointer; }
+.wiiu-file { margin:16px 0; padding-top:12px; border-top:1px solid var(--border); }
+.wiiu-file code,.wiiu-file strong { display:block; margin-bottom:6px; overflow-wrap:anywhere; }
+.wiiu-file code { font-size:.7rem; }
+.wiiu-layout { padding:24px; border:1px solid #3a5541; border-radius:12px; background:#111e16; color:#c1d7c5; white-space:pre-wrap; overflow-wrap:anywhere; font-size:.84rem; line-height:1.85; }
+.wiiu-format-table { width:100%; border-collapse:collapse; font-size:.9rem; }
+.wiiu-format-table th,.wiiu-format-table td { text-align:left; vertical-align:top; padding:16px; border-bottom:1px solid var(--border); }
+.wiiu-format-table td { color:var(--text-secondary); }
+.wiiu-setup-grid { display:grid; grid-template-columns:1fr .8fr; gap:36px; align-items:start; }
+@media(min-width:1500px){.wiiu-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:800px){.wiiu-store{align-items:flex-start;flex-direction:column;}.wiiu-setup-grid{grid-template-columns:1fr;}}
+@media(max-width:1000px){.wiiu-overview{grid-template-columns:1fr;gap:24px;}.wiiu-tools{grid-template-columns:minmax(140px,1fr) minmax(140px,1fr);}.wiiu-tools button{grid-column:1/-1;justify-self:start;}}
+@media(max-width:650px){.wiiu-tools,.wiiu-grid{grid-template-columns:1fr;}.wiiu-app{padding:22px;}.wiiu-format-table th,.wiiu-format-table td{padding:12px 8px;}}

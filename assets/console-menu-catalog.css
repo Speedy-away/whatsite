@@ -1,0 +1,38 @@
+/* Shared PS3, Xbox 360 and PC menu browsing. */
+.games-grid.menu-game-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; align-items:start; }
+.games-grid.menu-resource-grid,.ps3-catalog .games-grid.menu-resource-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; align-items:start; }
+.ps3-catalog .ps3-game-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.menu-resource-grid > .guide-resource { gap:12px; padding:18px; height:auto; min-width:0; }
+.menu-resource-grid .guide-resource > h3 { font-size:1.05rem; line-height:1.35; margin:0; text-wrap:pretty; }
+.menu-resource-grid .guide-resource > p { margin:0; }
+.menu-resource-grid .guide-links,.menu-resource-grid .guide-resource .guide-links { margin-top:0; padding-top:0; width:100%; gap:8px 14px; }
+.menu-resource-grid .menu-description { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+.menu-resource-grid .guide-resource-tags { gap:5px; }
+.menu-resource-grid .feature-tag { padding:3px 6px; font-size:.7rem; }
+.menu-preview { width:100%; margin:0; min-width:0; }
+.menu-preview > a { display:block; width:100%; border-radius:8px; overflow:hidden; background:#080b09; }
+.menu-resource-grid .menu-preview img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:0; }
+.menu-preview figcaption { margin-top:6px; color:var(--text-secondary); font-size:.7rem; line-height:1.4; }
+.menu-preview a:focus-visible { outline:2px solid var(--accent-light); outline-offset:3px; }
+.menu-card-meta { display:grid; grid-template-columns:auto minmax(0,1fr); width:100%; gap:6px 10px; margin:0; font-size:.8rem; line-height:1.5; }
+.menu-card-meta dt { color:var(--text-secondary); }
+.menu-card-meta dd { margin:0; overflow-wrap:anywhere; }
+.menu-downloads { width:100%; min-width:0; display:grid; gap:8px; }
+.menu-download { min-width:0; overflow-wrap:anywhere; font-size:.82rem; line-height:1.5; padding:8px 0; border-top:1px solid var(--border); }
+.menu-download p,.menu-download h5 { margin:0 0 4px; }
+.menu-download h5 { font-size:.82rem; }
+.menu-download small { color:var(--text-secondary); font-size:.72rem; }
+.menu-download > a { display:inline; }
+.menu-card-links { width:100%; }
+.menu-card-links summary,.menu-downloads summary { cursor:pointer; color:var(--text-secondary); font-size:.8rem; }
+.menu-card-links .guide-links { margin-top:8px; }
+.menu-card-note { color:var(--accent-light); font-size:.78rem; line-height:1.5; }
+@media(max-width:1100px) {
+ .games-grid.menu-resource-grid,.ps3-catalog .games-grid.menu-resource-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:900px) {
+ .games-grid.menu-resource-grid,.ps3-catalog .games-grid.menu-resource-grid,.games-grid.menu-game-grid,.ps3-catalog .ps3-game-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+ .games-grid.menu-resource-grid,.ps3-catalog .games-grid.menu-resource-grid,.games-grid.menu-game-grid,.ps3-catalog .ps3-game-grid { grid-template-columns:minmax(0,1fr); }
+}

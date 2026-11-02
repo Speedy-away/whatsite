@@ -1,0 +1,654 @@
+{
+  "scope": "wiiu-more",
+  "updatedAt": "2026-11-02T09:00:26.494Z",
+  "status": "Completed locally:37 apps (16 preserved +21 additions),8 themes and2 ready theme tools;31 new files archived and in both shared inventories.",
+  "pages": [
+    "/console/retro/wiiu.html",
+    "/console/retro/wiiu-themes.html"
+  ],
+  "builders": [
+    "scripts/build-wiiu-more.cjs",
+    "scripts/build-wiiu-homebrew.cjs",
+    "scripts/build-wiiu-themes.cjs"
+  ],
+  "baseline": "docs/qa/wiiu-more-baseline.json",
+  "baselineApps": 16,
+  "baselineLocalFiles": 30,
+  "privateInventories": [
+    "docs/wiiu-more-apps-private-inventory.json",
+    "docs/wiiu-themes-private-inventory.json"
+  ],
+  "parentIntegration": [
+    "Add canonical URLs to shared sitemap/themes index if not already integrated. Parent owns shared navigation and Retro landing.",
+    "Import this scoped handoff into docs/console-expansion-handoff.json without replacing concurrent changes."
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:8765",
+    "session": 35719,
+    "note": "Prior server stopped; restored Python static server serving the shared checkout. Leave running."
+  },
+  "limits": [
+    "No physical Wii U execution or installation.",
+    "No downloaded payload was executed.",
+    "No commit, publication, deployment or worktree."
+  ],
+  "catalogues": [
+    "docs/wiiu-homebrew-catalog.json",
+    "docs/wiiu-homebrew-downloads.json",
+    "docs/wiiu-homebrew-extra-catalog.json",
+    "docs/wiiu-homebrew-extra-downloads.json",
+    "docs/themezer-wiiu-catalog.json"
+  ],
+  "sourcePreparation": [
+    "scripts/prepare-wiiu-extra-apps.cjs --download",
+    "scripts/prepare-wiiu-themes.cjs",
+    "scripts/download-wiiu-theme-catalog.cjs"
+  ],
+  "verifiedDownloadableFiles": [
+    {
+      "id": "wiiu-more-apps-AirAttack",
+      "title": "Air Attack",
+      "name": "AirAttack-sd-package.zip",
+      "version": "1.0.1",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/AirAttack.zip",
+      "local": "/downloads/wiiu-more/AirAttack/1.0.1/AirAttack-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.0.1",
+      "archivedAt": "2026-11-02T08:22:27.235Z",
+      "bytes": 5143343,
+      "sha256": "3a3978352e236842fda10d92f2999cc6db324173d762ef9cabf619b8ef417f81",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Homebrew games\\AirAttack\\Builds\\1.0.1\\AirAttack-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-BlockamokRemix",
+      "title": "Blockamok Remix",
+      "name": "BlockamokRemix-sd-package.zip",
+      "version": "1.2",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/BlockamokRemix.zip",
+      "local": "/downloads/wiiu-more/BlockamokRemix/1.2/BlockamokRemix-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.2",
+      "archivedAt": "2026-11-02T08:22:44.046Z",
+      "bytes": 5975961,
+      "sha256": "e17df7bb5c991a1504b1987dd37c28320100633ca66430eafd20e9a83eaa9fda",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Homebrew games\\blockamok\\Builds\\1.2\\BlockamokRemix-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-Button-Break",
+      "title": "Button Break",
+      "name": "Button-Break-sd-package.zip",
+      "version": "1.0.1",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/Button-Break.zip",
+      "local": "/downloads/wiiu-more/Button-Break/1.0.1/Button-Break-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.0.1",
+      "archivedAt": "2026-11-02T08:22:52.122Z",
+      "bytes": 344131,
+      "sha256": "534c6742f090cb907dab08ca56f4ee51582c916960446b763e493b758b0a6d08",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Homebrew games\\Button Break\\Builds\\1.0.1\\Button-Break-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-Labyrinth",
+      "title": "Labyrinth",
+      "name": "Labyrinth-sd-package.zip",
+      "version": "1.0.2",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/Labyrinth.zip",
+      "local": "/downloads/wiiu-more/Labyrinth/1.0.2/Labyrinth-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.0.2",
+      "archivedAt": "2026-11-02T08:22:58.778Z",
+      "bytes": 2987648,
+      "sha256": "97f7146e061a29eb7189fb3ef2190c8c263a1b9cbe59a50044d2d082f64337b7",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Homebrew games\\Labyrinth\\Builds\\1.0.2\\Labyrinth-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-Othello",
+      "title": "Othello",
+      "name": "Othello-sd-package.zip",
+      "version": "1.6.0",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/Othello.zip",
+      "local": "/downloads/wiiu-more/Othello/1.6.0/Othello-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.6.0",
+      "archivedAt": "2026-11-02T08:23:12.919Z",
+      "bytes": 1625888,
+      "sha256": "1fa0e5608d8b073f10fcca69e6faa4637db2208934ae472f37651af324a33401",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Homebrew games\\Othello\\Builds\\1.6.0\\Othello-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-TankTrap",
+      "title": "Tank Trap",
+      "name": "TankTrap-sd-package.zip",
+      "version": "1.0",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/TankTrap.zip",
+      "local": "/downloads/wiiu-more/TankTrap/1.0/TankTrap-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.0",
+      "archivedAt": "2026-11-02T08:23:17.253Z",
+      "bytes": 4494223,
+      "sha256": "4b56d115157a00f5465bbb2eddf5fde6bf92ab064704bffe17670b579606f9f6",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Homebrew games\\UntitledSandGame\\Builds\\1.0\\TankTrap-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-coldstart-wiiu",
+      "title": "COLD START",
+      "name": "coldstart-wiiu-sd-package.zip",
+      "version": "3.6.0",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/coldstart-wiiu.zip",
+      "local": "/downloads/wiiu-more/coldstart-wiiu/3.6.0/coldstart-wiiu-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "3.6.0",
+      "archivedAt": "2026-11-02T08:25:05.780Z",
+      "bytes": 53648381,
+      "sha256": "de0541971d00fd32e6d8c081918ceb5346c3f8c5bda980b13c02c9ac5b8eaf75",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Homebrew games\\cold start nx\\Builds\\3.6.0\\coldstart-wiiu-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-CrispyDoomU",
+      "title": "Crispy Doom U",
+      "name": "CrispyDoomU-sd-package.zip",
+      "version": "1.1-graphics-fix",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/CrispyDoomU.zip",
+      "local": "/downloads/wiiu-more/CrispyDoomU/1.1-graphics-fix/CrispyDoomU-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.1-graphics-fix",
+      "archivedAt": "2026-11-02T08:25:13.935Z",
+      "bytes": 2588199,
+      "sha256": "689908a7d5b7878083187e7f33587e16bc84317204923938a2eac674b3949903",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Game ports & interpreters\\crispy doom u aroma\\Builds\\1.1-graphics-fix\\CrispyDoomU-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-EasyRPG",
+      "title": "EasyRPG",
+      "name": "EasyRPG-sd-package.zip",
+      "version": "0.8.1.1",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/EasyRPG.zip",
+      "local": "/downloads/wiiu-more/EasyRPG/0.8.1.1/EasyRPG-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "0.8.1.1",
+      "archivedAt": "2026-11-02T08:25:26.085Z",
+      "bytes": 6690779,
+      "sha256": "f49f7cab8446b3257729c7b898465b22b6c90c579ace93be64e2757fecae4ac3",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Game ports & interpreters\\Player\\Builds\\0.8.1.1\\EasyRPG-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-MegaZeux",
+      "title": "MegaZeux",
+      "name": "MegaZeux-sd-package.zip",
+      "version": "2.93d",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/MegaZeux.zip",
+      "local": "/downloads/wiiu-more/MegaZeux/2.93d/MegaZeux-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2.93d",
+      "archivedAt": "2026-11-02T08:25:35.858Z",
+      "bytes": 3210021,
+      "sha256": "333bcef82bb2a308ffc825b913dbd38a7075fb7cbec2ded4d3b8f1d6cbd91a21",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Game ports & interpreters\\megazeux\\Builds\\2.93d\\MegaZeux-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-CHIP8",
+      "title": "CHIP8 Emulator",
+      "name": "CHIP8-sd-package.zip",
+      "version": "2.2",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/CHIP8.zip",
+      "local": "/downloads/wiiu-more/CHIP8/2.2/CHIP8-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2.2",
+      "archivedAt": "2026-11-02T08:25:52.246Z",
+      "bytes": 969374,
+      "sha256": "0ee1948a909fcab02384e921a5e7346a4562fbada7a3be8ce4a4c1e497876c5f",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Emulators\\CHIP8 Emulator WiiU\\Builds\\2.2\\CHIP8-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-yapesdl",
+      "title": "YAPE 4 U",
+      "name": "yapesdl-sd-package.zip",
+      "version": "0.70.2-wiiu-version",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/yapesdl.zip",
+      "local": "/downloads/wiiu-more/yapesdl/0.70.2-wiiu-version/yapesdl-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "0.70.2-wiiu-version",
+      "archivedAt": "2026-11-02T08:25:56.670Z",
+      "bytes": 820252,
+      "sha256": "9b2def3f82c6ddd3d81222c669449758145008445d16add09a3e29d3cc5732d0",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Emulators\\yapesdl\\Builds\\0.70.2-wiiu-version\\yapesdl-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-wudd",
+      "title": "WUDD",
+      "name": "wudd-sd-package.zip",
+      "version": "1.2.2",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/wudd.zip",
+      "local": "/downloads/wiiu-more/wudd/1.2.2/wudd-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.2.2",
+      "archivedAt": "2026-11-02T08:26:20.773Z",
+      "bytes": 1622441,
+      "sha256": "439e6c647c2218957a86c6d1095c29166f780f4fe55f736ead69815638965904",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Saves & system\\wudd\\Builds\\1.2.2\\wudd-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-dumpling",
+      "title": "Dumpling",
+      "name": "dumpling-sd-package.zip",
+      "version": "2.7.2",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/dumpling.zip",
+      "local": "/downloads/wiiu-more/dumpling/2.7.2/dumpling-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2.7.2",
+      "archivedAt": "2026-11-02T08:26:26.190Z",
+      "bytes": 2660415,
+      "sha256": "e9a08c8b7f0150bb7f03e8b1cc280294a98d89749fef1b3b569ea659fa50675c",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Saves & system\\dumpling\\Builds\\2.7.2\\dumpling-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-schismtracker",
+      "title": "Schism Tracker",
+      "name": "schismtracker-sd-package.zip",
+      "version": "20251014",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/schismtracker.zip",
+      "local": "/downloads/wiiu-more/schismtracker/20251014/schismtracker-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "20251014",
+      "archivedAt": "2026-11-02T08:27:16.569Z",
+      "bytes": 1411645,
+      "sha256": "a10058610d2cc20080ba12fea1a25d9dc415c959e3981c6a58217b94cbcb540f",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Media & network\\schismtracker\\Builds\\20251014\\schismtracker-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-moonlight-wiiu",
+      "title": "Moonlight Wii U",
+      "name": "moonlight-wiiu-sd-package.zip",
+      "version": "wiiu-v1.6",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/moonlight-wiiu.zip",
+      "local": "/downloads/wiiu-more/moonlight-wiiu/wiiu-v1.6/moonlight-wiiu-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "wiiu-v1.6",
+      "archivedAt": "2026-11-02T08:27:44.378Z",
+      "bytes": 3914034,
+      "sha256": "206defef33f29bf36ca542655ebb252243a64c0ec58e9a3fe36f7e8b32900410",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Media & network\\moonlight wiiu\\Builds\\wiiu-v1.6\\moonlight-wiiu-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-vgedit",
+      "title": "vgedit",
+      "name": "vgedit-sd-package.zip",
+      "version": "2.2.1",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/vgedit.zip",
+      "local": "/downloads/wiiu-more/vgedit/2.2.1/vgedit-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2.2.1",
+      "archivedAt": "2026-11-02T08:27:59.509Z",
+      "bytes": 18079487,
+      "sha256": "04990f8db9d3e26fbdd79a1e7f91935bcc0184617bff318ce322f84e5b421ac7",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Saves & system\\vgedit\\Builds\\2.2.1\\vgedit-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-GamePadAutoStandby",
+      "title": "GamePad Auto Standby",
+      "name": "GamePadAutoStandby-sd-package.zip",
+      "version": "0.8",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/GamePadAutoStandby.zip",
+      "local": "/downloads/wiiu-more/GamePadAutoStandby/0.8/GamePadAutoStandby-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "0.8",
+      "archivedAt": "2026-11-02T08:28:07.957Z",
+      "bytes": 51527,
+      "sha256": "277088aa2ab1d68f700f8eb24c3394ad819129e8e5bfce2aa322d52c3a926ce9",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Plugins & mods\\GamepadAutoStandby\\Builds\\0.8\\GamePadAutoStandby-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-NetworkSwitcher",
+      "title": "Network Switcher",
+      "name": "NetworkSwitcher-sd-package.zip",
+      "version": "1.2",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/NetworkSwitcher.zip",
+      "local": "/downloads/wiiu-more/NetworkSwitcher/1.2/NetworkSwitcher-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.2",
+      "archivedAt": "2026-11-02T08:28:13.944Z",
+      "bytes": 165754,
+      "sha256": "4ded1d5a4227403ca327f9e0e297ee2484235ea334f7d4bda31cdd5943a5ef05",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Plugins & mods\\Network Switcher\\Builds\\1.2\\NetworkSwitcher-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-ScreenshotUnlocker",
+      "title": "Screenshot Unlocker",
+      "name": "ScreenshotUnlocker-sd-package.zip",
+      "version": "1.1",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/ScreenshotUnlocker.zip",
+      "local": "/downloads/wiiu-more/ScreenshotUnlocker/1.1/ScreenshotUnlocker-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.1",
+      "archivedAt": "2026-11-02T08:28:19.573Z",
+      "bytes": 7581,
+      "sha256": "6e6996433aafb91184c378bc37f15ff7581cf48847b718d50cb6e45bbd10ea1d",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Plugins & mods\\Screenshot Unlocker\\Builds\\1.1\\ScreenshotUnlocker-sd-package.zip"
+    },
+    {
+      "id": "wiiu-more-apps-WiiU-Shell",
+      "title": "WiiU-Shell",
+      "name": "WiiU-Shell-sd-package.zip",
+      "version": "1.08",
+      "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/WiiU-Shell.zip",
+      "local": "/downloads/wiiu-more/WiiU-Shell/1.08/WiiU-Shell-sd-package.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.08",
+      "archivedAt": "2026-11-02T08:31:06.598Z",
+      "bytes": 7367849,
+      "sha256": "f252288f9351a8c07a16fe3ebb937282b51e263bc8c84b4f6e4403d62494411d",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Saves & system\\WiiU Shell\\Builds\\1.08\\WiiU-Shell-sd-package.zip"
+    },
+    {
+      "id": "wiiu-themes-dark-theme-purple",
+      "title": "Dark Theme - Purple",
+      "name": "Dark Theme - Purple by gbatemp-archive (Themezer-T1F578).utheme",
+      "local": "/downloads/wiiu-themes/1F578/57d6ef2805338c20/dark-theme-purple.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F578/download?src=webapp",
+      "version": "2021-09-10T11:21:52.000Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2021-09-10T11:21:52.000Z",
+      "archivedAt": "2026-11-02T08:32:04.869Z",
+      "bytes": 3074520,
+      "sha256": "57d6ef2805338c2048a6fd95d1de46f637dfdcf5be8aa3697e796201acb429dd",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\Dark Theme - Purple\\Builds\\2021-09-10T11_21_52.000Z\\Dark Theme - Purple by gbatemp-archive (Themezer-T1F578).utheme"
+    },
+    {
+      "id": "wiiu-themes-dark-theme-light-blue",
+      "title": "Dark Theme - Light Blue",
+      "name": "Dark Theme - Light Blue by gbatemp-archive (Themezer-T1F579).utheme",
+      "local": "/downloads/wiiu-themes/1F579/8ddc1285ab51f11e/dark-theme-light-blue.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F579/download?src=webapp",
+      "version": "2021-09-10T11:09:24.000Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2021-09-10T11:09:24.000Z",
+      "archivedAt": "2026-11-02T08:32:08.224Z",
+      "bytes": 2848197,
+      "sha256": "8ddc1285ab51f11e3f75fa44f9aa7c9d54c858654c155f2426d34a9f393336bc",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\Dark Theme - Light Blue\\Builds\\2021-09-10T11_09_24.000Z\\Dark Theme - Light Blue by gbatemp-archive (Themezer-T1F579).utheme"
+    },
+    {
+      "id": "wiiu-themes-vaporwave-summer",
+      "title": "Vaporwave Summer",
+      "name": "Vaporwave Summer by gbatemp-archive (Themezer-T1F577).utheme",
+      "local": "/downloads/wiiu-themes/1F577/f8ff93009b3ff73e/vaporwave-summer.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F577/download?src=webapp",
+      "version": "2021-12-19T21:00:48.000Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2021-12-19T21:00:48.000Z",
+      "archivedAt": "2026-11-02T08:32:09.985Z",
+      "bytes": 3224013,
+      "sha256": "f8ff93009b3ff73ef7952e3f1237d7a3ade528753163b81f306bdc2ce63e31b0",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\Vaporwave Summer\\Builds\\2021-12-19T21_00_48.000Z\\Vaporwave Summer by gbatemp-archive (Themezer-T1F577).utheme"
+    },
+    {
+      "id": "wiiu-themes-cloudy-day",
+      "title": "Cloudy Day",
+      "name": "Cloudy Day by dewgong64 (Themezer-T1F5C3).utheme",
+      "local": "/downloads/wiiu-themes/1F5C3/baef8c421db1e14b/cloudy-day.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5C3/download?src=webapp",
+      "version": "2024-07-12T11:22:49.329Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2024-07-12T11:22:49.329Z",
+      "archivedAt": "2026-11-02T08:32:11.112Z",
+      "bytes": 2988507,
+      "sha256": "baef8c421db1e14b79a1a0b8d335cf75f3d0e90dd3e89da41bc79c70ae2d6fb3",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\Cloudy Day\\Builds\\2024-07-12T11_22_49.329Z\\Cloudy Day by dewgong64 (Themezer-T1F5C3).utheme"
+    },
+    {
+      "id": "wiiu-themes-wii-theme-dark",
+      "title": "Wii Theme - Dark",
+      "name": "Wii Theme - Dark by dewgong64 (Themezer-T1F5B6).utheme",
+      "local": "/downloads/wiiu-themes/1F5B6/5770dd6a9c3153c4/wii-theme-dark.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5B6/download?src=webapp",
+      "version": "2024-05-25T02:17:36.026Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2024-05-25T02:17:36.026Z",
+      "archivedAt": "2026-11-02T08:32:12.438Z",
+      "bytes": 7615845,
+      "sha256": "5770dd6a9c3153c4e623c1adbaab06c15a25685796de38809df5433e98d316b8",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\Wii Theme - Dark\\Builds\\2024-05-25T02_17_36.026Z\\Wii Theme - Dark by dewgong64 (Themezer-T1F5B6).utheme"
+    },
+    {
+      "id": "wiiu-themes-mario-galaxy-theme-v2",
+      "title": "Mario Galaxy Theme V2",
+      "name": "Mario Galaxy Theme V2 by gbatemp-archive (Themezer-T1F590).utheme",
+      "local": "/downloads/wiiu-themes/1F590/82b0d7000d63d6b7/mario-galaxy-theme-v2.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F590/download?src=webapp",
+      "version": "2024-06-22T12:46:52.000Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2024-06-22T12:46:52.000Z",
+      "archivedAt": "2026-11-02T08:32:13.938Z",
+      "bytes": 10623166,
+      "sha256": "82b0d7000d63d6b755758220b5618866357c7b5cfc8b09a5393cea2e0162f3e6",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\Mario Galaxy Theme V2\\Builds\\2024-06-22T12_46_52.000Z\\Mario Galaxy Theme V2 by gbatemp-archive (Themezer-T1F590).utheme"
+    },
+    {
+      "id": "wiiu-themes-botw-theme",
+      "title": "BOTW Theme",
+      "name": "BOTW Theme by perrohuevo (Themezer-T1F5A2).utheme",
+      "local": "/downloads/wiiu-themes/1F5A2/67b11a563c653575/botw-theme.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5A2/download?src=webapp",
+      "version": "2024-04-28T01:09:19.446Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2024-04-28T01:09:19.446Z",
+      "archivedAt": "2026-11-02T08:32:15.503Z",
+      "bytes": 15530504,
+      "sha256": "67b11a563c653575aa8de85385f30e84a5f5fdb88962df1db1f5e6065895c55a",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\BOTW Theme\\Builds\\2024-04-28T01_09_19.446Z\\BOTW Theme by perrohuevo (Themezer-T1F5A2).utheme"
+    },
+    {
+      "id": "wiiu-themes-windwaker-theme",
+      "title": "Windwaker theme!",
+      "name": "Windwaker theme! by wompwomp2.02119 (Themezer-T1F5A3).utheme",
+      "local": "/downloads/wiiu-themes/1F5A3/51b1d24a2e209d9b/windwaker-theme.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5A3/download?src=webapp",
+      "version": "2024-04-28T01:33:41.755Z",
+      "format": "utheme (ZIP / BPS patches)",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "2024-04-28T01:33:41.755Z",
+      "archivedAt": "2026-11-02T08:32:17.270Z",
+      "bytes": 12989734,
+      "sha256": "51b1d24a2e209d9b6db3869d5a2c005aafc22b5b2aaf1fe8ea07e44a5134d2e3",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Themes\\Windwaker theme!\\Builds\\2024-04-28T01_33_41.755Z\\Windwaker theme! by wompwomp2.02119 (Themezer-T1F5A3).utheme"
+    },
+    {
+      "id": "wiiu-themes-themiify",
+      "title": "Themiify",
+      "name": "themiify.wuhb",
+      "local": "/downloads/wiiu-themes/tools/1.2.1/themiify.wuhb",
+      "version": "1.2.1",
+      "sourceUrl": "https://github.com/ThemeCafe/Themiify/releases/download/v1.2.1/themiify.wuhb",
+      "format": "WUHB",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "1.2.1",
+      "archivedAt": "2026-11-02T08:32:24.610Z",
+      "bytes": 9445152,
+      "sha256": "970c7348b5468bc18bafc4c4e6e4c4ac4d22858731b10e26939a8b1cc426cdd4",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Tools\\Themiify\\Builds\\1.2.1\\themiify.wuhb"
+    },
+    {
+      "id": "wiiu-themes-stylemiiu",
+      "title": "StyleMiiU",
+      "name": "stylemiiu.wps",
+      "local": "/downloads/wiiu-themes/tools/0.5.3/stylemiiu.wps",
+      "version": "0.5.3",
+      "sourceUrl": "https://github.com/ThemeCafe/StyleMiiU-Plugin/releases/download/0.5.3/stylemiiu.wps",
+      "format": "WPS",
+      "archiveRole": [
+        "Builds"
+      ],
+      "releaseTag": "0.5.3",
+      "archivedAt": "2026-11-02T08:32:27.406Z",
+      "bytes": 163938,
+      "sha256": "8f532f638acf1fcdfc944ddd38f3fe96a34057eede3a2be2c90b8ceecdeecbe0",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Tools\\StyleMiiU Plugin\\Builds\\0.5.3\\stylemiiu.wps"
+    }
+  ],
+  "checks": {
+    "focusedTests": {
+      "passed": 8,
+      "failed": 0,
+      "log": "docs/qa/wiiu-more-tests.txt"
+    },
+    "baseline": {
+      "apps": 16,
+      "publicFiles": 30,
+      "Ffiles": 30,
+      "issues": 0
+    },
+    "newApps": 21,
+    "themes": 8,
+    "tools": 2,
+    "newBytes": 192282509,
+    "sharedInventoryRecords": 31,
+    "archiveIndex": {
+      "items": 1373,
+      "fileRecords": 2207,
+      "present": 2144,
+      "missingPaths": 0,
+      "unlocatedHistoricalRecords": 63
+    },
+    "browser": {
+      "desktopWidth": 1280,
+      "appFilters": "37 all /11 games /1 Air Attack /0 missing /37 reset",
+      "themeFilters": "8 all /4 music /0 music+MikaDubbz /3 MikaDubbz /8 reset",
+      "mobile": {
+        "viewportWidth": 390,
+        "documentWidth": 375,
+        "horizontalOverflow": false
+      },
+      "missingImages": 0
+    }
+  },
+  "screenshots": [
+    "docs/qa/wiiu-themes-desktop.jpg",
+    "docs/qa/wiiu-themes-mobile.jpg",
+    "docs/qa/wiiu-more-mobile.jpg"
+  ],
+  "notes": [
+    "Café-Xplorer is excluded from ready catalogue: its RPX-named member has a WUHB header. Original metadata and precise static inspection retained under unavailable; WiiU-Shell supplies replacement.",
+    "COLD START store label3.6.0 differs from preserved executable filename3.3.0; visible Store package label and version note avoid certifying executable version.",
+    "Themiify1.2.1 and StyleMiiU0.5.3 are archived.8original .utheme ZIPs retain all patches/music/messages/previews.",
+    "No numeric per-theme Menu revisions source-published; exact BPS source size/CRC fingerprints recorded rather than inventing a region test matrix.",
+    "Concurrent inventory merge initially refused/locked; later read confirmed all31records in both current inventories. Organized archive index refreshed successfully."
+  ],
+  "remainingChecks": [],
+  "wiiUOnlineMods": {
+    "updatedAt": "2026-11-02T09:34:41.725Z",
+    "status": "Complete locally: new Pretendo/online, game-mod and vWii pages; hub/theme/sitemap routes verified;79 unique download links HTTP200/size checked,73 console files matched catalogue SHA256 and6 metadata downloads checked.",
+    "pages": [
+      "/console/wiiu/online.html",
+      "/console/wiiu/mods.html",
+      "/console/wiiu/vwii.html"
+    ],
+    "builder": "scripts/build-wiiu-online-mods.cjs",
+    "aggregate": "scripts/build-wiiu-more.cjs",
+    "linksReport": "docs/qa/wiiu-all-download-links.json",
+    "checkedPages": 12,
+    "downloads": 79,
+    "issues": [],
+    "notes": [
+      "Official Pretendo site and guide provide Wii U network/PNID instructions. Inkay WPS/WMS and NNID retention explained.",
+      "vWii lists only existing source-confirmed vWii-compatible archived Wii packages; no new binary downloads introduced.",
+      "Second Wind guide preserves Wii U1.5.0+DLC3.0 and documented legacy environment requirement; CTGP-R explicitly Mario Kart Wii/vWii with disc, not Mario Kart8.",
+      "All original downloads and pins retained. No physical console, account creation, mod application or payload execution. No commit/publication/deployment."
+    ]
+  },
+  "wiiUGamesBatch2": {
+    "updatedAt": "2026-11-02T12:26:49.784Z",
+    "status": "Completed local batch; verified ready packages only promoted. Larger failed/incomplete transfers retained and labelled unavailable.",
+    "handoff": "docs/chat-handoffs/wiiu-games-batch2.json",
+    "counts": {
+      "ready": 13,
+      "nativeWiiUGames": 5,
+      "vWiiGames": 6,
+      "patchLoader": 1,
+      "experimentalWiiModWithUnconfirmedVWii": 1,
+      "unavailable": 5,
+      "readyBytes": 55241567
+    },
+    "pages": [
+      "/console/wiiu/game-downloads.html",
+      "/console/wiiu/games.html",
+      "/console/wiiu/mods.html",
+      "/console/wiiu/vwii.html"
+    ],
+    "verification": {
+      "testsPassed": 10,
+      "downloadLinks": 93,
+      "downloadLinkIssues": 0,
+      "newFArchiveMissing": 0,
+      "indexRefreshed": true,
+      "historicalPS3PathRecords": 6,
+      "report": "docs/qa/wiiu-games-batch2-archive-index.json"
+    }
+  }
+}

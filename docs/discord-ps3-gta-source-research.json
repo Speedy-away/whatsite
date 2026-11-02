@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T10:29:42.689Z",
+  "scope": "Exact reviewed public source assets, staged only; root must archive F: before site download delivery. No payload execution.",
+  "sources": [
+    {
+      "id": "ps3-gta5-loader-boxuga-v2",
+      "source": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/tag/V2",
+      "tag": "V2",
+      "title": "Version 2.0",
+      "publishedAt": "2021-12-27T12:19:02Z",
+      "body": "**update.rpf** - PS3 CFW/HEN\r\n**Boxuga.V2.Xbox.zip** - Xbox 360 RGH\r\n**Scripts.zip** - Allows version of just the scripts that can be loaded by other loaders\r\n\r\nnote i stuffed up on uploading the source so you can get it from [here](https://github.com/BoxxyDEV/Boxuga-ModLoader)",
+      "assets": [
+        {
+          "id": 52656779,
+          "name": "Boxuga.V2.Xbox.zip",
+          "bytes": 133962616,
+          "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Boxuga.V2.Xbox.zip",
+          "digest": null
+        },
+        {
+          "id": 54891436,
+          "name": "Scripts.zip",
+          "bytes": 1941254,
+          "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Scripts.zip",
+          "digest": null
+        },
+        {
+          "id": 52655720,
+          "name": "update.rpf",
+          "bytes": 68136448,
+          "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/update.rpf",
+          "digest": null
+        }
+      ],
+      "guide": {
+        "category": "loader",
+        "version": "V2 (pinned GitHub release)",
+        "gameUpdate": "Not specified by source",
+        "compatibility": "Pinned V2 release explicitly labels update.rpf for PS3 CFW/HEN. Exact firmware, title ID and game update are not supplied. OFW support is not established.",
+        "tags": [
+          "GTA V",
+          "Boxuga",
+          "Mod loader",
+          "CFW",
+          "HEN",
+          "V2"
+        ],
+        "guideBlocks": [
+          {
+            "type": "text",
+            "title": "Choose the PS3 release asset",
+            "text": "The pinned V2 release labels update.rpf for PS3 CFW/HEN. Its Boxuga.V2.Xbox.zip is a separate Xbox 360 RGH build. Keep these platforms separate and preserve your original game files."
+          },
+          {
+            "type": "text",
+            "title": "Optional loader scripts",
+            "text": "Scripts.zip contains BoxugaLoader.csc and PS3 CTD textures alongside separate Xbox XSC/XTD files. The author describes this archive as scripts for loading through another loader. Read.txt gives a stack size of 2024 and L1/LB + Left as the controls. Keep the platform-specific texture assets with the matching script."
+          },
+          {
+            "type": "text",
+            "title": "Requirements still unspecified",
+            "text": "The captured post and V2 release do not supply a PS3 title ID, game update or exact installation destination. Confirm those requirements against your game before replacing update.rpf. The README describes GTA V Story Mode controls; it does not establish compatibility with every online service."
+          }
+        ],
+        "evidence": {
+          "release": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/tag/V2",
+          "readme": "https://github.com/BoxxyDEV/Boxuga-ModLoader/blob/V2/README.md",
+          "readmeLocal": "docs/discord-ps4-ps5-raw/gta-source-research/boxuga-v2-readme.txt",
+          "scriptsMembers": [
+            "BoxugaLoader.csc",
+            "BoxugaLoader.xsc",
+            "Read.txt",
+            "Textures/PS3/BoxugaBackground.ctd",
+            "Textures/PS3/BoxugaOnOff.ctd",
+            "Textures/Xbox 360/BoxugaBackground.xtd",
+            "Textures/Xbox 360/BoxugaOnOff.xtd"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ps3-gta4-unknown-modding-v11",
+      "source": "https://mega.nz/folder/355QwKQC#ULSbVNfMKxczvXaQOdwl5Q",
+      "status": "listed",
+      "files": [
+        {
+          "name": "update.img",
+          "memberPath": "Unknown Modding V1.1 GTA 4/update.img",
+          "bytes": 5535744,
+          "nodeId": "X8ohGbyQ",
+          "sourceUrl": "https://mega.nz/folder/355QwKQC#ULSbVNfMKxczvXaQOdwl5Q/file/X8ohGbyQ"
+        }
+      ],
+      "guide": {
+        "category": "loader",
+        "version": "1.1 (source post and folder)",
+        "gameUpdate": "Not specified by source",
+        "compatibility": "PS3 GTA IV forum source; folder contains update.img. Exact title ID, game update and CEX/DEX/HEN/OFW requirements are not specified.",
+        "tags": [
+          "GTA IV",
+          "Unknown Modding",
+          "Mod loader",
+          "IMG"
+        ],
+        "guideBlocks": [
+          {
+            "type": "text",
+            "title": "Source contents",
+            "text": "The reviewed source folder contains one update.img under Unknown Modding V1.1 GTA 4. No installation readme, controls, title ID or exact game update was supplied in this folder. Preserve your original game files and verify the matching loader and destination before replacement."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ps3-gta5-loader-tmm-v12",
+      "source": "https://mega.nz/folder/aPpDWaoT#GepfrSbjU0kb-kiqc-sFjg",
+      "status": "listed",
+      "files": [
+        {
+          "name": "update.rpf",
+          "memberPath": "TMM v12 Modloader/TMMv12 (no texture)/update.rpf",
+          "bytes": 82639872,
+          "nodeId": "aKYBAKqY",
+          "sourceUrl": "https://mega.nz/folder/aPpDWaoT#GepfrSbjU0kb-kiqc-sFjg/file/aKYBAKqY"
+        }
+      ],
+      "guide": {
+        "category": "loader",
+        "version": "v12",
+        "gameUpdate": "Not specified by source",
+        "compatibility": "PS3 GTA V forum source. The supplied folder labels this TMMv12 (no texture). Exact title ID, game update and CEX/DEX/HEN requirements are unspecified.",
+        "tags": [
+          "GTA V",
+          "TMM",
+          "Mod loader",
+          "No texture variant",
+          "RPF"
+        ],
+        "guideBlocks": [
+          {
+            "type": "text",
+            "title": "Preserved source variant",
+            "text": "This source supplies update.rpf under TMM v12 Modloader / TMMv12 (no texture). Preserve the no-texture label. The folder does not include an EBOOT or installation documentation, so no EBOOT, firmware, title-ID or update compatibility is inferred."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ps3-gta5-loader-semjases-v153",
+      "source": "https://mega.nz/folder/F8hEQI5a#sGCKPnSZ3i5Um3yVVeim4w",
+      "status": "listed",
+      "files": [
+        {
+          "name": "EBOOT.BIN",
+          "memberPath": "Semjases ModLoader 15.3/EBOOT/EBOOT DEX BLES/EBOOT.BIN",
+          "bytes": 30395564,
+          "nodeId": "Mw5iRaDA",
+          "sourceUrl": "https://mega.nz/folder/F8hEQI5a#sGCKPnSZ3i5Um3yVVeim4w/file/Mw5iRaDA"
+        },
+        {
+          "name": "update.rpf",
+          "memberPath": "Semjases ModLoader 15.3/update.rpf",
+          "bytes": 80434176,
+          "nodeId": "hs5gSC6D",
+          "sourceUrl": "https://mega.nz/folder/F8hEQI5a#sGCKPnSZ3i5Um3yVVeim4w/file/hs5gSC6D"
+        }
+      ],
+      "guide": {
+        "category": "loader",
+        "version": "15.3",
+        "gameUpdate": "Not specified by source",
+        "compatibility": "The source folder supplies update.rpf and a separate EBOOT explicitly labelled DEX BLES. The BLES number, game update and exact DEX firmware are unspecified; HEN support is not established by this folder.",
+        "tags": [
+          "GTA V",
+          "Semjases",
+          "Mod loader",
+          "DEX",
+          "BLES",
+          "RPF",
+          "EBOOT"
+        ],
+        "guideBlocks": [
+          {
+            "type": "text",
+            "title": "Keep the supplied requirements",
+            "text": "The reviewed Semjases ModLoader 15.3 folder contains update.rpf and EBOOT / EBOOT DEX BLES / EBOOT.BIN. The executable is explicitly a DEX/BLES variant, with no full BLES title ID provided. Do not treat it as a HEN or CEX EBOOT."
+          },
+          {
+            "type": "text",
+            "title": "Before replacement",
+            "text": "Preserve the original update.rpf and EBOOT.BIN. Match the game edition, title ID, update and console environment before choosing the source files. No installation destination or controls were included in the reviewed folder."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ps3-gta5-loader-james-reborn-v401",
+      "source": "https://mega.nz/folder/oHJlGKSS#4WLMQNGK4-shzRUIXeeGFA",
+      "status": "listed",
+      "files": [
+        {
+          "name": "update.rpf",
+          "memberPath": "jamews reborn 40.1/update.rpf",
+          "bytes": 81360896,
+          "nodeId": "5OhEVQDZ",
+          "sourceUrl": "https://mega.nz/folder/oHJlGKSS#4WLMQNGK4-shzRUIXeeGFA/file/5OhEVQDZ"
+        }
+      ],
+      "guide": {
+        "category": "loader",
+        "version": "40.1",
+        "gameUpdate": "Not specified by source",
+        "compatibility": "PS3 GTA V forum source and folder version40.1. Exact title ID, game update and CEX/DEX/HEN requirements are unspecified.",
+        "tags": [
+          "GTA V",
+          "James Reborn",
+          "Mod loader",
+          "RPF"
+        ],
+        "guideBlocks": [
+          {
+            "type": "text",
+            "title": "Source contents and unknown requirements",
+            "text": "The reviewed folder, spelled jamews reborn 40.1 by its source, contains update.rpf only. No EBOOT, readme, controls, title ID or game-update requirement was supplied. Preserve the original game files and verify the destination and compatible console environment before replacement."
+          }
+        ]
+      }
+    }
+  ],
+  "downloads": [
+    {
+      "id": "ps3-gta5-loader-boxuga-v2",
+      "filename": "Scripts.zip",
+      "memberPath": "Scripts.zip",
+      "sourceUrl": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Scripts.zip",
+      "bytes": 1941254,
+      "sha256": "3746d53246f0398ec40779dcbb5484e2360d39109094805ef63a28d655238ab8",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/gta-source-research/ps3-gta5-loader-boxuga-v2/Scripts.zip",
+      "status": "staged",
+      "stagingVerifiedAt": "2026-11-02T10:50:54.763Z",
+      "prefixHex": "504b0304140000000800339d95532a31",
+      "format": "ZIP",
+      "version": "V2 (pinned GitHub release)",
+      "platform": "PS3",
+      "platforms": [
+        "PS3",
+        "Xbox 360"
+      ],
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied"
+    },
+    {
+      "id": "ps3-gta5-loader-boxuga-v2",
+      "filename": "update.rpf",
+      "memberPath": "update.rpf",
+      "sourceUrl": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/update.rpf",
+      "bytes": 68136448,
+      "sha256": "37510a1981a5c2660e30dd39be7b96fdc0edc9376f4ca8330cab72cd50c343d0",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/gta-source-research/ps3-gta5-loader-boxuga-v2/update.rpf",
+      "status": "staged",
+      "stagingVerifiedAt": "2026-11-02T10:50:54.810Z",
+      "prefixHex": "52504637000001b9000017a00ffffff8",
+      "format": "RPF7",
+      "version": "V2 (pinned GitHub release)",
+      "platform": "PS3",
+      "variant": "CFW / HEN (source-labelled shared file)",
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied"
+    },
+    {
+      "id": "ps3-gta4-unknown-modding-v11",
+      "filename": "update.img",
+      "memberPath": "Unknown Modding V1.1 GTA 4/update.img",
+      "sourceUrl": "https://mega.nz/folder/355QwKQC#ULSbVNfMKxczvXaQOdwl5Q/file/X8ohGbyQ",
+      "bytes": 5535744,
+      "sha256": "0efdda3b033a49671b50efdea29d7baafe366453518a248a8fd7fcdad5b6923c",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/gta-source-research/ps3-gta4-unknown-modding-v11/Unknown Modding V1.1 GTA 4/update.img",
+      "status": "staged",
+      "stagingVerifiedAt": "2026-11-02T10:50:54.816Z",
+      "prefixHex": "c15bd4219d62d6f549ca70cffcb81df4",
+      "format": "Source file; no additional format validation claimed",
+      "version": "1.1 (source post and folder)",
+      "platform": "PS3",
+      "megaMacVerified": true,
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied"
+    },
+    {
+      "id": "ps3-gta5-loader-tmm-v12",
+      "filename": "update.rpf",
+      "memberPath": "TMM v12 Modloader/TMMv12 (no texture)/update.rpf",
+      "sourceUrl": "https://mega.nz/folder/aPpDWaoT#GepfrSbjU0kb-kiqc-sFjg/file/aKYBAKqY",
+      "bytes": 82639872,
+      "sha256": "1b5752b720b684c00411850bdd832e5d9d676d78f2862b2d07290b33a4eb3342",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/gta-source-research/ps3-gta5-loader-tmm-v12/TMM v12 Modloader/TMMv12 (no texture)/update.rpf",
+      "status": "staged",
+      "stagingVerifiedAt": "2026-11-02T10:50:54.874Z",
+      "prefixHex": "52504637000001bd000017c00ffffff8",
+      "format": "RPF7",
+      "version": "v12",
+      "platform": "PS3",
+      "megaMacVerified": true,
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied"
+    },
+    {
+      "id": "ps3-gta5-loader-semjases-v153",
+      "filename": "EBOOT.BIN",
+      "memberPath": "Semjases ModLoader 15.3/EBOOT/EBOOT DEX BLES/EBOOT.BIN",
+      "sourceUrl": "https://mega.nz/folder/F8hEQI5a#sGCKPnSZ3i5Um3yVVeim4w/file/Mw5iRaDA",
+      "bytes": 30395564,
+      "sha256": "01aafcdb15b7d37eee7653a0afadf17bec76dd34b9f0bf4d46bf5f16c479ee7a",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/gta-source-research/ps3-gta5-loader-semjases-v153/Semjases ModLoader 15.3/EBOOT/EBOOT DEX BLES/EBOOT.BIN",
+      "status": "staged",
+      "stagingVerifiedAt": "2026-11-02T10:50:54.895Z",
+      "prefixHex": "534345000000000280000001000003f0",
+      "format": "SCE container",
+      "version": "15.3",
+      "platform": "PS3",
+      "variant": "DEX / BLES (full title ID unspecified)",
+      "megaMacVerified": true,
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied"
+    },
+    {
+      "id": "ps3-gta5-loader-semjases-v153",
+      "filename": "update.rpf",
+      "memberPath": "Semjases ModLoader 15.3/update.rpf",
+      "sourceUrl": "https://mega.nz/folder/F8hEQI5a#sGCKPnSZ3i5Um3yVVeim4w/file/hs5gSC6D",
+      "bytes": 80434176,
+      "sha256": "1d64c7e882cd7c68b03f3ca2e59e8db93b9b819a7dc914d47aa6f2cebbe86960",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/gta-source-research/ps3-gta5-loader-semjases-v153/Semjases ModLoader 15.3/update.rpf",
+      "status": "staged",
+      "resumedFromBytes": 48758784,
+      "megaMacVerified": true,
+      "stagingVerifiedAt": "2026-11-02T10:50:54.950Z",
+      "prefixHex": "52504637000001b9000017a00ffffff8",
+      "format": "RPF7",
+      "version": "15.3",
+      "platform": "PS3",
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied"
+    },
+    {
+      "id": "ps3-gta5-loader-james-reborn-v401",
+      "filename": "update.rpf",
+      "memberPath": "jamews reborn 40.1/update.rpf",
+      "sourceUrl": "https://mega.nz/folder/oHJlGKSS#4WLMQNGK4-shzRUIXeeGFA/file/5OhEVQDZ",
+      "bytes": 81360896,
+      "sha256": "0544142ba43d244941a995f976174994f643e16f455f255cd8b714db4a03c08d",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/gta-source-research/ps3-gta5-loader-james-reborn-v401/jamews reborn 40.1/update.rpf",
+      "status": "staged",
+      "resumedFromBytes": 0,
+      "megaMacVerified": true,
+      "stagingVerifiedAt": "2026-11-02T10:50:55.006Z",
+      "prefixHex": "5250463700000191000015800ffffff8",
+      "format": "RPF7",
+      "version": "40.1",
+      "platform": "PS3",
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied"
+    }
+  ],
+  "finishedAt": "2026-11-02T10:50:08.353Z",
+  "guideNotes": {
+    "ps3-gta5-loader-boxuga-v2": {
+      "category": "loader",
+      "version": "V2 (pinned GitHub release)",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "Pinned V2 release explicitly labels update.rpf for PS3 CFW/HEN. Exact firmware, title ID and game update are not supplied. OFW support is not established.",
+      "tags": [
+        "GTA V",
+        "Boxuga",
+        "Mod loader",
+        "CFW",
+        "HEN",
+        "V2"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Choose the PS3 release asset",
+          "text": "The pinned V2 release labels update.rpf for PS3 CFW/HEN. Its Boxuga.V2.Xbox.zip is a separate Xbox 360 RGH build. Keep these platforms separate and preserve your original game files."
+        },
+        {
+          "type": "text",
+          "title": "Optional loader scripts",
+          "text": "Scripts.zip contains BoxugaLoader.csc and PS3 CTD textures alongside separate Xbox XSC/XTD files. The author describes this archive as scripts for loading through another loader. Read.txt gives a stack size of 2024 and L1/LB + Left as the controls. Keep the platform-specific texture assets with the matching script."
+        },
+        {
+          "type": "text",
+          "title": "Requirements still unspecified",
+          "text": "The captured post and V2 release do not supply a PS3 title ID, game update or exact installation destination. Confirm those requirements against your game before replacing update.rpf. The README describes GTA V Story Mode controls; it does not establish compatibility with every online service."
+        }
+      ],
+      "evidence": {
+        "release": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/tag/V2",
+        "readme": "https://github.com/BoxxyDEV/Boxuga-ModLoader/blob/V2/README.md",
+        "readmeLocal": "docs/discord-ps4-ps5-raw/gta-source-research/boxuga-v2-readme.txt",
+        "scriptsMembers": [
+          "BoxugaLoader.csc",
+          "BoxugaLoader.xsc",
+          "Read.txt",
+          "Textures/PS3/BoxugaBackground.ctd",
+          "Textures/PS3/BoxugaOnOff.ctd",
+          "Textures/Xbox 360/BoxugaBackground.xtd",
+          "Textures/Xbox 360/BoxugaOnOff.xtd"
+        ]
+      }
+    },
+    "ps3-gta4-unknown-modding-v11": {
+      "category": "loader",
+      "version": "1.1 (source post and folder)",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "PS3 GTA IV forum source; folder contains update.img. Exact title ID, game update and CEX/DEX/HEN/OFW requirements are not specified.",
+      "tags": [
+        "GTA IV",
+        "Unknown Modding",
+        "Mod loader",
+        "IMG"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Source contents",
+          "text": "The reviewed source folder contains one update.img under Unknown Modding V1.1 GTA 4. No installation readme, controls, title ID or exact game update was supplied in this folder. Preserve your original game files and verify the matching loader and destination before replacement."
+        }
+      ]
+    },
+    "ps3-gta5-loader-tmm-v12": {
+      "category": "loader",
+      "version": "v12",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "PS3 GTA V forum source. The supplied folder labels this TMMv12 (no texture). Exact title ID, game update and CEX/DEX/HEN requirements are unspecified.",
+      "tags": [
+        "GTA V",
+        "TMM",
+        "Mod loader",
+        "No texture variant",
+        "RPF"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Preserved source variant",
+          "text": "This source supplies update.rpf under TMM v12 Modloader / TMMv12 (no texture). Preserve the no-texture label. The folder does not include an EBOOT or installation documentation, so no EBOOT, firmware, title-ID or update compatibility is inferred."
+        }
+      ]
+    },
+    "ps3-gta5-loader-semjases-v153": {
+      "category": "loader",
+      "version": "15.3",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "The source folder supplies update.rpf and a separate EBOOT explicitly labelled DEX BLES. The BLES number, game update and exact DEX firmware are unspecified; HEN support is not established by this folder.",
+      "tags": [
+        "GTA V",
+        "Semjases",
+        "Mod loader",
+        "DEX",
+        "BLES",
+        "RPF",
+        "EBOOT"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Keep the supplied requirements",
+          "text": "The reviewed Semjases ModLoader 15.3 folder contains update.rpf and EBOOT / EBOOT DEX BLES / EBOOT.BIN. The executable is explicitly a DEX/BLES variant, with no full BLES title ID provided. Do not treat it as a HEN or CEX EBOOT."
+        },
+        {
+          "type": "text",
+          "title": "Before replacement",
+          "text": "Preserve the original update.rpf and EBOOT.BIN. Match the game edition, title ID, update and console environment before choosing the source files. No installation destination or controls were included in the reviewed folder."
+        }
+      ]
+    },
+    "ps3-gta5-loader-james-reborn-v401": {
+      "category": "loader",
+      "version": "40.1",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "PS3 GTA V forum source and folder version40.1. Exact title ID, game update and CEX/DEX/HEN requirements are unspecified.",
+      "tags": [
+        "GTA V",
+        "James Reborn",
+        "Mod loader",
+        "RPF"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Source contents and unknown requirements",
+          "text": "The reviewed folder, spelled jamews reborn 40.1 by its source, contains update.rpf only. No EBOOT, readme, controls, title ID or game-update requirement was supplied. Preserve the original game files and verify the destination and compatible console environment before replacement."
+        }
+      ]
+    }
+  },
+  "staticInspection": {
+    "boxugaScriptMembers": [
+      "BoxugaLoader.csc",
+      "BoxugaLoader.xsc",
+      "Read.txt",
+      "Textures/PS3/BoxugaBackground.ctd",
+      "Textures/PS3/BoxugaOnOff.ctd",
+      "Textures/Xbox 360/BoxugaBackground.xtd",
+      "Textures/Xbox 360/BoxugaOnOff.xtd"
+    ],
+    "scriptReadme": "Stack size 2024; L1/LB + Left controls.",
+    "payloadsExecuted": false,
+    "hardwareCompatibilityTested": false
+  },
+  "status": "complete-staging",
+  "archiveStatus": "No F: writes by this task. Root must save the staged originals in the requested archive before offering website downloads.",
+  "totalBytes": 350443954,
+  "stagedFiles": 7,
+  "completedAt": "2026-11-02T10:50:55.006Z",
+  "transferHistory": [
+    {
+      "at": "2026-11-02T10:37:48.949Z",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "error": "Remaining transfer exceeded five-minute bound; partials preserved"
+    }
+  ]
+}

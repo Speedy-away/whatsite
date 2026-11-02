@@ -1,0 +1,62 @@
+{
+  "id": "vwii-wiirdle",
+  "title": "Wiirdle",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "1.0.0",
+  "url": "https://hbb1.oscwii.org/api/contents/wiirdle/wiirdle.zip",
+  "source": "https://oscwii.org/library/app/wiirdle",
+  "name": "wiirdle-1.0.0.zip",
+  "description": "Wordle clone for the Wii",
+  "author": "HTV04",
+  "details": "Wiirdle is a Wordle clone for the Wii, powered by the WiiLÖVE framework. Every day, you will have six attempts to guess a five-letter word, with feedback given for each guess indicating when letters match or occupy the correct position. \"Wordle\" by Josh Wardle and the New York Times.",
+  "expectedBytes": 1308331,
+  "icon": "https://hbb1.oscwii.org/api/contents/wiirdle/icon.png",
+  "requirements": "vWii Homebrew Channel and the game’s supported Wii controls. OSC explicitly lists vWii support; Wii U GamePad support is not implied.",
+  "setup": "Extract the full ZIP to SD root. Keep /apps/<game>/boot.dol and all supplied folders together, then launch from the vWii Homebrew Channel.",
+  "supportedPlatforms": [
+    "wii",
+    "vwii",
+    "wii_mini"
+  ],
+  "peripherals": [
+    "Wii Remote"
+  ],
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 13,
+    "uncompressedBytes": 2845251,
+    "builds": [
+      {
+        "path": "apps/wiirdle/boot.dol",
+        "bytes": 2618208,
+        "sha256": "17a5f5ac925301684aa24470cd01d2638ddc519785beab5b07a60380e3d1c46b"
+      }
+    ],
+    "xmlFiles": [
+      "apps/wiirdle/meta.xml"
+    ],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/vwii-wiirdle.png",
+  "file": {
+    "name": "wiirdle-1.0.0.zip",
+    "version": "1.0.0",
+    "bytes": 1308331,
+    "sha256": "dddb61b42e86c9d58dc8127e656f87d7c9cb79da7b43a41bc69b7ce9afd85300",
+    "sourceUrl": "https://hbb1.oscwii.org/api/contents/wiirdle/wiirdle.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/wiirdle-1.0.0.zip",
+    "itemId": "wiiu-games-batch2-vwii-wiirdle",
+    "platform": "Wii U",
+    "category": [
+      "vWii",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Wiirdle\\Builds\\1.0.0\\wiirdle-1.0.0.zip"
+  },
+  "mirrorReason": null
+}

@@ -1,0 +1,66 @@
+.ps3-themes-page .guide-hero { padding-bottom: 28px; }
+.ps3-themes-page .guide-hero p { max-width: 65ch; }
+.ps3-themes-page .ps3-theme-intro { max-width: 84ch; }
+.ps3-theme-intro p + p { margin-top: 12px; }
+.ps3-theme-intro > a { display: inline-flex; gap: 10px; align-items: center; margin-top: 16px; }
+.ps3-theme-toolbar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px; margin-bottom: 14px; }
+.ps3-theme-toolbar > div { min-width: 0; }
+.ps3-theme-search { flex: 1 1 260px; }
+.ps3-theme-toolbar label { display: block; margin-bottom: 8px; font-size: .875rem; font-weight: 600; }
+.ps3-theme-toolbar input, .ps3-theme-toolbar select { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm, 8px); color: var(--text-primary); background: var(--bg-secondary); font: inherit; }
+.ps3-theme-toolbar input::placeholder { color: var(--text-muted, #a4a4ae); opacity: 1; }
+.ps3-theme-toolbar select { min-width: 190px; }
+.ps3-theme-toolbar .btn { min-height: 46px; }
+.ps3-theme-count { margin: 0 0 24px; color: var(--text-secondary); font-size: .875rem; }
+.ps3-theme-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 24px; align-items: start; }
+.ps3-theme-card { min-width: 0; border: 1px solid var(--border); border-radius: var(--radius-card, 16px); background: var(--bg-secondary); overflow: hidden; }
+.ps3-theme-card[hidden], .ps3-theme-empty[hidden] { display: none !important; }
+.ps3-theme-preview { position: relative; display: block; aspect-ratio: 16/9; background: #060609; }
+.ps3-theme-preview img { display: block; width: 100%; height: 100%; aspect-ratio: 16/9; object-fit: contain; }
+.ps3-theme-preview-label { position: absolute; right: 10px; bottom: 10px; padding: 4px 8px; border-radius: 4px; color: #fff; background: rgb(0 0 0 / .78); font-size: .6875rem; letter-spacing: .03em; }
+.ps3-theme-body { padding: 22px; }
+.ps3-theme-kind { margin-bottom: 8px; color: var(--text-secondary); font-size: .75rem; display: flex; flex-wrap: wrap; gap: 7px; }
+.ps3-theme-body h3 { margin: 0; font-size: 1.25rem; line-height: 1.35; letter-spacing: -.02em; }
+.ps3-theme-author { margin-top: 5px; color: var(--accent-light); font-size: .875rem; }
+.ps3-theme-description { margin-top: 16px; color: var(--text-secondary); font-size: .94rem; line-height: 1.7; }
+.ps3-theme-features { display: flex; flex-wrap: wrap; list-style: none; gap: 6px 14px; margin: 16px 0 0; padding: 0; color: var(--text-secondary); font-size: .75rem; line-height: 1.5; }
+.ps3-theme-features li::before { content: '·'; display: inline-block; margin-right: 6px; color: var(--accent-light); }
+.ps3-theme-release { display: flex; justify-content: space-between; gap: 12px; margin: 20px 0 16px; color: var(--text-secondary); font-size: .8rem; overflow-wrap: anywhere; }
+.ps3-theme-release strong { color: var(--text-primary); font-weight: 500; }
+.ps3-theme-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
+.ps3-theme-actions > a:not(.btn) { font-size: .875rem; }
+.ps3-theme-actions .btn { min-height: 46px; padding-inline: 16px; }
+.ps3-theme-console, .ps3-theme-file { padding-top: 16px; margin-top: 18px; border-top: 1px solid var(--border); font-size: .875rem; }
+.ps3-theme-card summary { min-height: 30px; cursor: pointer; color: var(--text-primary); font-weight: 500; }
+.ps3-theme-card details p { margin-top: 12px; color: var(--text-secondary); }
+.ps3-theme-short-url { display: inline-block; margin-top: 12px; font-family: monospace; overflow-wrap: anywhere; }
+.ps3-theme-file dl { margin-top: 14px; }
+.ps3-theme-file dt { margin-top: 12px; font-size: .75rem; color: var(--text-secondary); }
+.ps3-theme-file dd { margin: 4px 0 0; overflow-wrap: anywhere; }
+.ps3-theme-file code { font-size: .8rem; }
+.ps3-theme-empty { padding: 36px 0; border-top: 1px solid var(--border); }
+.ps3-theme-empty p { margin-bottom: 18px; }
+.ps3-theme-lead { max-width: 72ch; margin-bottom: 24px; color: var(--text-secondary); }
+.ps3-theme-install { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(220px,1fr); align-items: start; gap: 36px; }
+.ps3-theme-folder { margin: 0; padding: 22px 24px; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.ps3-theme-folder figcaption { margin-bottom: 18px; color: var(--text-secondary); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; }
+.ps3-theme-folder pre { margin: 0 0 20px; font-size: .9rem; line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text-primary); }
+.ps3-theme-folder p { color: var(--text-secondary); font-size: .875rem; }
+.ps3-theme-help { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; }
+.ps3-theme-help h3 { margin-bottom: 14px; font-size: 1.1rem; line-height: 1.4; }
+.ps3-theme-help p { color: var(--text-secondary); font-size: .94rem; }
+.ps3-theme-help p + p { margin-top: 12px; }
+.ps3-themes-page :is(button,input,select,a,summary):focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+@media (min-width: 1640px) { .ps3-theme-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (max-width: 1150px) { .ps3-theme-help { grid-template-columns: 1fr; gap: 26px; max-width: 80ch; } }
+@media (max-width: 900px) { .ps3-theme-install { grid-template-columns: 1fr; gap: 14px; } .ps3-theme-folder { max-width: 480px; } }
+@media (max-width: 680px) {
+  .ps3-theme-grid { grid-template-columns: 1fr; gap: 24px; }
+  .ps3-theme-toolbar { gap: 12px; }
+  .ps3-theme-search { flex-basis: 100%; }
+  .ps3-theme-toolbar > div:not(.ps3-theme-search) { flex: 1 1 170px; }
+  .ps3-theme-toolbar select { min-width: 0; }
+  .ps3-theme-body { padding: 20px; }
+  .ps3-theme-release { flex-wrap: wrap; }
+  .ps3-themes-page .guide-hero { padding-top: 36px; }
+}

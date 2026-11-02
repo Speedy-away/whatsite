@@ -1,0 +1,58 @@
+{
+  "id": "wiiu-PongU",
+  "title": "Pong U",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "1.4",
+  "url": "https://wiiu.cdn.fortheusers.org/zips/PongU.zip",
+  "source": "https://hb-app.store/wiiu/PongU",
+  "name": "PongU-1.4.zip",
+  "description": "1979 pong but worse!",
+  "author": "SpookScoop93",
+  "details": "A simple, lightweigh (~500 kb size with metadata) pong clone written in C with SDL2. (Cross-platform. For more platforms check out my github.)\\n\\nFeatures:\\nVery small size. (As I said, 524 kb with metadata)\\n\\nControls:\\n| DPad |\\nUp - Go up\\nDown - Go down\\nLeft - Go down\\nRight - Go up\\n\\nWarning:\\nDoes not support WiiMotes. (Tho the controls are made with those in mind in case I add the support)",
+  "md5": "210f74c484578f13712b2246a3730bc4",
+  "expectedSha256": "d9f1df8e05394d62b6b9b0319408af7762c1ba317727e92a41b2a8fa7a25ac73",
+  "icon": "https://wiiu.cdn.fortheusers.org/packages/PongU/icon.png",
+  "requirements": "Aroma for the bundled WUHB. Keep the complete package; any separate RPX variant needs the environment documented by the project. The source explicitly excludes Wii Remote support.",
+  "setup": "Extract the complete SD bundle to the SD root; keep every app folder, music file and companion asset. Launch the matching executable from its documented environment.",
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 4,
+    "uncompressedBytes": 1064002,
+    "builds": [
+      {
+        "path": "wiiu/apps/PongU/pong_u.rpx",
+        "bytes": 527194,
+        "sha256": "252ad686a6f80f481f4a84639582ed2df7ef4a8bff33f098f9e04f9459d83eb7"
+      },
+      {
+        "path": "wiiu/apps/PongU/pong_u.wuhb",
+        "bytes": 536032,
+        "sha256": "1227c5ba5b8192df7bc692a653f22cb17cf0286201932cb13e18b04334c6f780"
+      }
+    ],
+    "xmlFiles": [],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/wiiu-PongU.png",
+  "file": {
+    "name": "PongU-1.4.zip",
+    "version": "1.4",
+    "bytes": 1056565,
+    "sha256": "d9f1df8e05394d62b6b9b0319408af7762c1ba317727e92a41b2a8fa7a25ac73",
+    "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/PongU.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/PongU-1.4.zip",
+    "itemId": "wiiu-games-batch2-wiiu-PongU",
+    "platform": "Wii U",
+    "category": [
+      "Wii U",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\Pong U\\Builds\\1.4\\PongU-1.4.zip"
+  },
+  "mirrorReason": null
+}

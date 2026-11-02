@@ -1,0 +1,73 @@
+{
+  "reviewed": "2026-11-02",
+  "mode": "Real archive files served read-only through an ephemeral loopback HTTP listener",
+  "filesAvailable": 605,
+  "resource": "gta-iv-texture-installer-v2",
+  "verifiedFiles": [
+    {
+      "filename": "GTA IV Texture Intsaller V2.pkg",
+      "bytes": 539571872,
+      "sha256": "5faed3be2af6d779a9ad1852fdbccfd64d2f0028a09e6c62b7c55098ce4d36e5"
+    },
+    {
+      "filename": "GTA_IV_Texture_Installer_V2_HEN_CFW.rar",
+      "bytes": 539573839,
+      "sha256": "f261464a7fab6c5c5b725210182ad72c4f064404a4a97b9f4027bc43f032588a"
+    },
+    {
+      "resourceId": "ps3-pro-lite-492",
+      "filename": "PS3_Pro_Lite.pkg",
+      "bytes": 749383088,
+      "sha256": "94049e5baf77b51fab20d3be58a6a289b694a443b66f41d70c738b473d1cf786"
+    },
+    {
+      "resourceId": "gta-v-fbi4z-v2",
+      "filename": "update.rpf",
+      "bytes": 93972480,
+      "sha256": "711b4bf4f21941a8b99baecbc20ea373fe03dac9dbcc3900c997783051d2755e"
+    },
+    {
+      "resourceId": "dead-island-dev-installer-v2",
+      "filename": "Dead Island Series Dev Menu Installer By VirusMike V2.pkg",
+      "bytes": 467615184,
+      "sha256": "437d8d2eea1dd69a2d9610dc7359e99c08ef4f0b87d0bf62f271a161797e910c"
+    },
+    {
+      "resourceId": "gta-iv-ultimate-common-npeb00882",
+      "filename": "common-NPEB00882.edat",
+      "bytes": 17251024,
+      "sha256": "aeae3826665acc3210fde9befe659242a664e175333731806fdd479afbeb8159"
+    },
+    {
+      "resourceId": "gta-iv-ultimate-common-npub30702",
+      "filename": "common-NPUB30702.edat",
+      "bytes": 17279728,
+      "sha256": "a4a83cd564dfcbd69d557c52a3e9a81999cada415f3a247e8a43de46658a542b"
+    },
+    {
+      "resourceId": "aw-salvation-hen-digital",
+      "filename": "Salvation.sprx",
+      "bytes": 60992,
+      "sha256": "5aa2aeb914d4ff6804ac64a94a1255f922928cb00fb7f5543590a80cdac10104"
+    },
+    {
+      "resourceId": "cod4-texture-installer-super-lite",
+      "filename": "COD4 Texture Installer Super Lite Version.pkg",
+      "bytes": 530822816,
+      "sha256": "ce76f6af9c34ef83da62935e03209cee4a3c524738b97aa8f0c4fb8f2c1680e1"
+    }
+  ],
+  "checks": [
+    "PS3-only sanitized catalogue",
+    "Full-file SHA-256 verified before HEAD response",
+    "Exact PKG and RAR Content-Length",
+    "192-byte PS3 PKG header range",
+    "32-byte suffix equals archived file",
+    "Apache directory and original-case filename URL",
+    "Legacy4.92 PKG type and declared size",
+    "New ready RPF7 byte-range delivery",
+    "Incomplete distribution excluded from ready catalogue",
+    "Fourth-batch PKG/SPRX and separate EDAT variants served as exact archived bytes through ezRemote URLs"
+  ],
+  "hardwareExecutionTested": false
+}

@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-11-02T09:57:31.651Z",
+  "status": "Complete locally",
+  "page": "console/retro/xbox-online.html",
+  "games": 10,
+  "halo2Playlists": 4,
+  "sources": "docs/original-xbox-online.json",
+  "tests": {
+    "total": 400,
+    "passed": 400,
+    "failed": 0,
+    "log": "docs/qa/original-xbox-online-full-tests.txt"
+  },
+  "audit": {
+    "pages": 403,
+    "localLinks": 40392,
+    "issues": 0
+  },
+  "browser": {
+    "filters": {
+      "haloAll": 2,
+      "haloCoop": 0,
+      "emptyVisible": true,
+      "reset": 10
+    },
+    "phone": {
+      "viewport": 390,
+      "documentWidth": 375
+    },
+    "screenshots": [
+      "docs/qa/original-xbox-online-mobile.png",
+      "docs/qa/original-xbox-online-finder-mobile.png"
+    ]
+  },
+  "archive": "No new downloadable builds added; existing three original Xbox releases remain byte-verified against F: by original-xbox.test.cjs.",
+  "limitations": [
+    "No physical console connection tested.",
+    "Detailed Team XLink console setup wiki returned temporary maintenance; main site and game matrix were available.",
+    "Player limits describe System Link, not local campaign or Xbox Live matchmaking."
+  ]
+}

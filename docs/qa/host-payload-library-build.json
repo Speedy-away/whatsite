@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-11-02T14:39:44.624Z",
+  "added": 11,
+  "verification": [
+    {
+      "id": "ps5-ezremote-ezremote-loader-1-01-elf",
+      "path": "/downloads/host-payloads/catalogue/eda226e008ef/ezRemote-Loader-1.01.elf",
+      "bytes": 7351176,
+      "sha256": "eda226e008efae5f14bd9e4fb0dd27ee198d1e3b525aa4ab1079e410e66f5e3c",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-payload-manager",
+      "status": "existing-host-build",
+      "sha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4"
+    },
+    {
+      "id": "ps5-garlic",
+      "path": "/downloads/host-payloads/catalogue/aaec2cb0a39e/garlic-savemgr.elf",
+      "bytes": 1721560,
+      "sha256": "aaec2cb0a39e94217665652fd84fa7706f09c9f8640c07785b6a68b1711f18fc",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-ftpsrv",
+      "status": "existing-host-build",
+      "sha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938"
+    },
+    {
+      "id": "ps5-websrv",
+      "status": "existing-host-build",
+      "sha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263"
+    },
+    {
+      "id": "ps5-klogsrv",
+      "status": "existing-host-build",
+      "sha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb"
+    },
+    {
+      "id": "ps5-elfldr",
+      "status": "existing-host-build",
+      "sha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d"
+    },
+    {
+      "id": "ps5-f22d8b3749d7-shadowmountplus-elf",
+      "status": "existing-host-build",
+      "sha256": "08c843018750bef013fe3a4de5f80c5c9738c6c2dafa2406e6b6e68d7585f3da"
+    },
+    {
+      "id": "ps5-78aec0f39465-etahen-2-5b-bin",
+      "path": "/downloads/archive/78aec0f39465/etaHEN-2.5B.bin",
+      "bytes": 4678728,
+      "sha256": "4845cac45095361b8983b14d6690622183b0dcfbf6d7fda16e161aa91ff0531e",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-cd469f63fa67-ps5upload-10-6-0-elf",
+      "status": "existing-host-build",
+      "sha256": "2f67651bf1320a83202b632782a1f404543b1ea4911dfb3be5a510971f015392"
+    },
+    {
+      "id": "ps5-5a12cb950970-orbit-store-elf",
+      "status": "existing-host-build",
+      "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914"
+    },
+    {
+      "id": "ps5-640d68a152b5-ps5sx2installer-elf",
+      "path": "/downloads/archive/640d68a152b5/PS5SX2Installer.elf",
+      "bytes": 1163520,
+      "sha256": "efdec4f8d968ef4a7c1880e75d26b96d212a042a6c208de46f0a859609f6224c",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-640d68a152b5-ps5sxhelper-elf",
+      "path": "/downloads/archive/640d68a152b5/PS5SXHelper.elf",
+      "bytes": 2439560,
+      "sha256": "fece3ee9c7e035c51319af018ae6865f0bf5db182074dafd0502c3bb2d5ee7d2",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-3a4d278d7ff5-ps5x360-helper-elf",
+      "path": "/downloads/archive/3a4d278d7ff5/PS5X360-Helper.elf",
+      "bytes": 1295832,
+      "sha256": "4a0250329e63b376f620511c4b6e2c6a2eb959e056824abde27947bf53f07b59",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-7d1b737c85a3-helper-elf",
+      "path": "/downloads/archive/7d1b737c85a3/helper.elf",
+      "bytes": 111032,
+      "sha256": "31c8a3479937e310f758d36d87c937c91ae942921fa4645473b3d228a7d88959",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-theme-stop-elf",
+      "path": "/downloads/ps4-ps5/ps5-theme-stop-elf/ps5-theme-stop.elf",
+      "bytes": 156288,
+      "sha256": "90a1ee926eba4277e1ed2827191151872e4d113de0c566614db51d1b4506230c",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-theme--elf",
+      "path": "/downloads/ps4-ps5/ps5-theme--elf/ps5-theme.elf",
+      "bytes": 1284704,
+      "sha256": "e27473f0f5d3a9c544ed075f3f0a0e831377e0ab5e6316dce81ad732a99c04eb",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "fps-ps5-patch-system-38108724867",
+      "path": "/downloads/ps4-ps5/fps-ps5-patch-system-38108724867/patch-bundle-loader-prospero.elf",
+      "bytes": 1794904,
+      "sha256": "10d8636e1b0f07f3f046aadb5c050a24ed9b0fae3585ec29a1ecabec07035589",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    },
+    {
+      "id": "ps5-recompstore-installer-2-7-4",
+      "path": "/downloads/host-payloads/catalogue/3a20194226cf/RecompStore-Installer.elf",
+      "bytes": 26794760,
+      "sha256": "3a20194226cf5e1ee66a5a67d81610c1ac9bf82deee7b791c752d0e7d6202d5c",
+      "elf": true,
+      "status": "verified-existing-local-build"
+    }
+  ],
+  "skipped": [],
+  "newDownloads": 0,
+  "executed": 0
+}

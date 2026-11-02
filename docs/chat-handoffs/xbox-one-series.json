@@ -1,0 +1,1262 @@
+{
+  "scope": "xbox-one-series",
+  "updatedAt": "2026-11-02T12:54:41.412Z",
+  "status": "Complete locally: nine new projects and 17 new files added; all 56 Xbox files verified on F:, all previous 39 preserved, inventories and indexes reconciled.",
+  "canonicalPages": [
+    "console/xbox-one-series/index.html",
+    "console/xbox-one-series/apps.html",
+    "console/xbox-one-series/dependencies.html",
+    "console/xbox-one-series/dev-mode.html",
+    "console/xbox-one-series/device-portal.html",
+    "console/xbox-one-series/install.html",
+    "console/xbox-one-series/storage.html",
+    "console/xbox-one-series/retail-mode.html"
+  ],
+  "preview": "http://127.0.0.1:8765/console/xbox-one-series/apps.html",
+  "buildEntrypoints": [
+    {
+      "command": "node scripts/build-xbox-one-series.cjs",
+      "scope": "Builds the Xbox full library and, when available, uses build-console-topic-hubs.buildPlatform for Xbox only. Preserves coordinator-owned topic layout without running broad builders or modifying shared navigation/manifests/sitemap."
+    },
+    {
+      "command": "node scripts/prepare-xbox-one-series.cjs --download --archive",
+      "scope": "Only when refreshing selected official assets; network and F: writes require normal escalation. Preserves originals and different bytes. No execution."
+    }
+  ],
+  "authoredCatalogue": "scripts/xbox-one-series-catalogue.cjs",
+  "publicCatalogue": "docs/xbox-one-series-catalogue.json",
+  "privateInventory": "docs/xbox-one-series-private-inventory.json",
+  "archive": {
+    "helper": "scripts/console-expansion-archive.cjs",
+    "layout": "scripts/download-archive-layout.cjs",
+    "root": "F:/whatsite-backup-downloads-etc",
+    "items": 24,
+    "fileRecords": 56,
+    "bytes": 1310344413,
+    "allLocalAndBackupHashesVerified": true,
+    "globalInventoryModifiedByThisChat": true,
+    "mergeInstruction": "Complete. All 56 scoped files and metadata verified after cooperative union and index refresh. Preserve immutable intake events, sidecars, prior metadata snapshots and explicit relocation history.",
+    "newFiles": 17,
+    "newBytes": 159706941,
+    "sharedMerge": {
+      "completed": true,
+      "completedAt": "2026-11-02T12:54:41.412Z",
+      "command": "createArchive({lockTimeoutMs:120000}).mergeInventory({verifyFiles:true})",
+      "entrypoint": "tmp/xbox-one-series/finish-third-merge.cjs",
+      "indexCommand": "node scripts/refresh-local-download-index.cjs --write",
+      "indexWrapper": "tmp/xbox-one-series/refresh-third-index.cjs",
+      "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+      "globalItems": 2032,
+      "globalFileRecords": 2974,
+      "missingPaths": 0,
+      "unlocatedRecords": 0
+    },
+    "reconciliationHistory": [
+      {
+        "completed": false,
+        "attempts": 2,
+        "reason": "Another legacy archive writer changed inventories during both helper reconciliation attempts; immutable scoped events and metadata snapshots were preserved.",
+        "observedAt": "2026-11-02T09:33:19.307Z",
+        "observedXboxItems": 15,
+        "observedXboxFileRecords": 39,
+        "requiredCoordinatorCommand": "node scripts/console-expansion-archive.cjs --all --verify",
+        "when": "After concurrent legacy inventory writers finish"
+      },
+      {
+        "completed": true,
+        "completedAt": "2026-11-02T10:02:38.581Z",
+        "command": "node scripts/console-expansion-archive.cjs --all --verify",
+        "indexCommand": "node scripts/refresh-local-download-index.cjs --write",
+        "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+        "globalItems": 1668,
+        "globalFileRecords": 2541,
+        "missingPaths": 0,
+        "unlocatedRecords": 0
+      }
+    ],
+    "finalVerification": {
+      "completed": true,
+      "checkedAt": "2026-11-02T12:54:41.412Z",
+      "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+      "files": 56,
+      "verifiedFiles": 56,
+      "bytes": 1310344413,
+      "items": 24,
+      "originalFilesPreserved": 16,
+      "previousCatalogueFilesPreserved": 39,
+      "allRecordedSizesAndSha256Match": true,
+      "pathContainmentAndLayoutVerified": true,
+      "exactScopedMetadataInBothGlobalInventories": true,
+      "bothGlobalInventoriesMatch": true,
+      "indexAndChecksumEntriesVerified": true,
+      "previousInventoryRecordsPreserved": 2918,
+      "globalItems": 2032,
+      "globalFileRecords": 2974,
+      "missingPaths": 0,
+      "unlocatedRecords": 0,
+      "downloadedBuildsExecuted": false
+    },
+    "indexRefresh": {
+      "updated": "2026-11-02T12:54:30.027Z",
+      "mode": "metadata-only",
+      "history": "F:\\whatsite-backup-downloads-etc\\archive-history\\index-refresh-2026-11-02T12-54-30-027Z-CYrjhA",
+      "items": 2032,
+      "fileRecords": 2974,
+      "presentFileRecords": 2974,
+      "missingFileRecords": 0,
+      "missingPaths": 0,
+      "otherUnavailableRecords": 0,
+      "availability": {
+        "present": 2974
+      },
+      "checkedAt": "2026-11-02T12:54:41.412Z",
+      "report": "docs/qa/xbox-one-series-third-index-refresh.json",
+      "truthfullyUnlocatedRecords": 0,
+      "note": "Metadata and availability refresh, including explicit verified relocation history; full payload hashing limited to the 56 Xbox One/Series files in the scoped report."
+    }
+  },
+  "apps": [
+    {
+      "id": "xbsx2",
+      "name": "XBSX2 · PlayStation 2",
+      "version": "2.0.9.2",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "dolphin",
+      "name": "Dolphin UWP · GameCube & Wii",
+      "version": "1.2.0.2 + legacy 1.1.9.0",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "ppsspp",
+      "name": "PPSSPP · PlayStation Portable",
+      "version": "1.20.4",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "flycast",
+      "name": "Flycast · Dreamcast & arcade",
+      "version": "v2.7 · package 2.7.1.0",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "durangoftp",
+      "name": "DurangoFTP · local file transfer",
+      "version": "1.4.5.0 · release v1.2",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "moonlight",
+      "name": "Moonlight Xbox · PC streaming",
+      "version": "1.18.2",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "retroarch",
+      "name": "RetroArch · multi-system emulation",
+      "version": "Xbox snapshot 2026-08-19",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "dosbox-pure",
+      "name": "DOSBox Pure UWP · DOS games",
+      "version": "1.0.0.236",
+      "models": [
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "scummvm",
+      "name": "ScummVM UWP · adventure games",
+      "version": "2026.3.1.155",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "xemu",
+      "name": "xemu UWP · original Xbox",
+      "version": "0.9.1010.0",
+      "models": [
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "xenia",
+      "name": "Xenia Canary UWP · Xbox 360",
+      "version": "legacy 1.1.5a",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "retropass",
+      "name": "RetroPass · library frontend",
+      "version": "1.13.0",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "xfiles",
+      "name": "X-Files · file manager",
+      "version": "1.8.0.1527",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "kodi",
+      "name": "Kodi · media centre",
+      "version": "21.3 Omega",
+      "models": [
+        "one"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "azahar",
+      "name": "Azahar UWP · Nintendo 3DS",
+      "version": "0.2126.2.1",
+      "models": [
+        "unspecified"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "cemu",
+      "name": "Cemu UWP · Wii U",
+      "version": "0.2.6.7",
+      "models": [
+        "unspecified"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "ymir",
+      "name": "Ymir UWP · Sega Saturn",
+      "version": "0.4.2.1",
+      "models": [
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "devilutionx",
+      "name": "DevilutionX · Diablo & Hellfire engine",
+      "version": "1.5.5",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "jazz2",
+      "name": "Jazz² Resurrection · Jazz Jackrabbit 2 engine",
+      "version": "3.9.0",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "openlara",
+      "name": "OpenLara · classic Tomb Raider engine",
+      "version": "xb1 snapshot 2021-01-08",
+      "models": [
+        "one"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "sdlpop",
+      "name": "SDLPoP UWP · Prince of Persia",
+      "version": "release 1.0.0.0 · package 1.0.1.0",
+      "models": [
+        "one",
+        "series"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "ioquake3",
+      "name": "ioQuake3-One · id Tech 3 engines",
+      "version": "1.4",
+      "models": [
+        "one"
+      ],
+      "modelNotes": null
+    },
+    {
+      "id": "2ship",
+      "name": "2 Ship 2 Harkinian UWP · Majora’s Mask engine",
+      "version": "0.1.0-uwp",
+      "models": [
+        "unspecified"
+      ],
+      "modelNotes": null
+    }
+  ],
+  "content": [
+    "Current Microsoft account requirements: new Store onboarding free per 2026-10-29 official article; fully registered developer account still required for console activation.",
+    "Developer Home, LAN HTTPS :11443, Portal login versus Visual Studio PIN, x64 native package/dependency installation, USB and LocalState paths, backup/removal, retail switching and permanent deactivation.",
+    "Search, categories, model-specific file filtering, version/size/SHA-256, package identity, OS minimum, framework identity/publisher/minimum version.",
+    "Shared mobile, language loader ?v=3 and animated background integration retained.",
+    "Eight additions: RetroArch Xbox One + Series, DOSBox Pure UWP, ScummVM UWP, xemu UWP, legacy Xenia UWP, RetroPass, X-Files and official Kodi21.3 UWP.",
+    "Manifest requirements override outdated README dependency counts: RetroPass needs5frameworks; X-Files publishes .NET Core Debug + Runtime dependencies.",
+    "Kodi profile uses LocalCache\\Roaming\\Kodi; Xenia games can use LocalCache. Global backup instructions now allow app-specific local-data paths.",
+    "DOSBox/xemu limited to source-confirmed Series support; Kodi lists confirmed One support and unconfirmed exact Series support.",
+    "Coverage file records SafeExit and unverified alternative assets truthfully; no skipped candidate is presented as a ready download.",
+    "Twenty-three real package icons and two credited Microsoft screenshots; no added videos.",
+    "Nine new families: Azahar UWP, Cemu UWP, Ymir UWP, DevilutionX, Jazz² Resurrection, OpenLara xb1, SDLPoP UWP, ioQuake3-One and 2 Ship 2 Harkinian UWP.",
+    "Game engines & ports category and Unconfirmed model scope filter added. Article scopes include non-framework file scopes so the unconfirmed Dolphin successor remains discoverable. Confirmed model filters do not expose unconfirmed builds.",
+    "Ymir is Series-only. Azahar, Cemu and 2ship have verified Xbox UWP evidence but no exact One/Series matrix. OpenLara and ioQuake3 confirm Xbox One-family support; exact Series support remains unconfirmed.",
+    "Source-pinned game-data setup covers own Diablo/Hellfire MPQs, Jazz2 Source directory contents, OpenLara Store/no-compression content.zip, distinct Quake III/OpenArena/Elite Force apps and supported own Majora’s Mask ROM.",
+    "All 39 earlier files retain their exact paths, source URLs, versions, sizes and SHA-256 values. All 17 new files are archived; no downloaded builds were executed."
+  ],
+  "verification": {
+    "static": {
+      "command": "node scripts/verify-xbox-one-series.cjs",
+      "report": "docs/qa/xbox-one-series-verification.json",
+      "checks": 579,
+      "errors": 0,
+      "files": 56,
+      "bytes": 1310344413,
+      "localLinksAndAssets": 141
+    },
+    "external": {
+      "report": "docs/qa/xbox-one-series-link-verification.json",
+      "checked": 115,
+      "httpPassed": 110,
+      "httpBlocked": 5,
+      "readyDownloadSources": 30,
+      "allReadyDownloadSourcesPassed": true,
+      "newReleaseDownloadSources": 11,
+      "documentationLimit": "Five existing Kodi docs/landing endpoints return 403 to automated HEAD; key content was checked through web browsing. All eleven new release asset URLs returned 200."
+    },
+    "browser": {
+      "report": "docs/qa/xbox-one-series-browser-verification.json",
+      "checkedAt": "2026-11-02T12:52:48.915Z",
+      "checks": 42,
+      "failed": 0,
+      "desktop": {
+        "width": 1366,
+        "height": 850,
+        "documentWidth": 1351,
+        "apps": 23,
+        "checks": [
+          {
+            "passed": true,
+            "label": "Exact requested viewport"
+          },
+          {
+            "passed": true,
+            "label": "No horizontal overflow"
+          },
+          {
+            "passed": true,
+            "label": "All 23 apps rendered"
+          },
+          {
+            "passed": true,
+            "label": "All local publisher artwork loaded"
+          },
+          {
+            "passed": true,
+            "label": "Search matches one app"
+          },
+          {
+            "passed": true,
+            "label": "Empty search feedback"
+          },
+          {
+            "passed": true,
+            "label": "Clear filters restores all apps"
+          },
+          {
+            "passed": true,
+            "label": "Tools category count"
+          },
+          {
+            "passed": true,
+            "label": "Game engines category contains only native engine ports"
+          },
+          {
+            "passed": true,
+            "label": "Unconfirmed-model filter preserves compatibility limits"
+          },
+          {
+            "passed": true,
+            "label": "Xbox One has only source-confirmed apps"
+          },
+          {
+            "passed": true,
+            "label": "Xbox One hides XBSX2 AVX2"
+          },
+          {
+            "passed": true,
+            "label": "Model filter excludes unconfirmed Dolphin successor"
+          },
+          {
+            "passed": true,
+            "label": "Xbox One gets RetroArch ANGLE"
+          },
+          {
+            "passed": true,
+            "label": "Series has only source-confirmed apps"
+          },
+          {
+            "passed": true,
+            "label": "Series hides XBSX2 SSE4"
+          },
+          {
+            "passed": true,
+            "label": "Series gets RetroArch Mesa"
+          },
+          {
+            "passed": true,
+            "label": "Filter touch targets at least 44px"
+          },
+          {
+            "passed": true,
+            "label": "Expanded filenames and SHA-256 do not overflow"
+          },
+          {
+            "passed": true,
+            "label": "Language loader and controls"
+          },
+          {
+            "passed": true,
+            "label": "Background controls"
+          }
+        ],
+        "errors": []
+      },
+      "phone": {
+        "width": 390,
+        "height": 844,
+        "documentWidth": 375,
+        "apps": 23,
+        "checks": [
+          {
+            "passed": true,
+            "label": "Exact requested viewport"
+          },
+          {
+            "passed": true,
+            "label": "No horizontal overflow"
+          },
+          {
+            "passed": true,
+            "label": "All 23 apps rendered"
+          },
+          {
+            "passed": true,
+            "label": "All local publisher artwork loaded"
+          },
+          {
+            "passed": true,
+            "label": "Search matches one app"
+          },
+          {
+            "passed": true,
+            "label": "Empty search feedback"
+          },
+          {
+            "passed": true,
+            "label": "Clear filters restores all apps"
+          },
+          {
+            "passed": true,
+            "label": "Tools category count"
+          },
+          {
+            "passed": true,
+            "label": "Game engines category contains only native engine ports"
+          },
+          {
+            "passed": true,
+            "label": "Unconfirmed-model filter preserves compatibility limits"
+          },
+          {
+            "passed": true,
+            "label": "Xbox One has only source-confirmed apps"
+          },
+          {
+            "passed": true,
+            "label": "Xbox One hides XBSX2 AVX2"
+          },
+          {
+            "passed": true,
+            "label": "Model filter excludes unconfirmed Dolphin successor"
+          },
+          {
+            "passed": true,
+            "label": "Xbox One gets RetroArch ANGLE"
+          },
+          {
+            "passed": true,
+            "label": "Series has only source-confirmed apps"
+          },
+          {
+            "passed": true,
+            "label": "Series hides XBSX2 SSE4"
+          },
+          {
+            "passed": true,
+            "label": "Series gets RetroArch Mesa"
+          },
+          {
+            "passed": true,
+            "label": "Filter touch targets at least 44px"
+          },
+          {
+            "passed": true,
+            "label": "Expanded filenames and SHA-256 do not overflow"
+          },
+          {
+            "passed": true,
+            "label": "Language loader and controls"
+          },
+          {
+            "passed": true,
+            "label": "Background controls"
+          }
+        ],
+        "errors": []
+      },
+      "note": "Final checks after model-filter expansion passed. Viewport override reset; canonical apps tab left as deliverable."
+    },
+    "downloadedBuildsExecuted": false,
+    "physicalHardwareTested": false,
+    "archiveReconciliation": {
+      "completed": true,
+      "checkedAt": "2026-11-02T12:54:41.412Z",
+      "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+      "files": 56,
+      "verifiedFiles": 56,
+      "bytes": 1310344413,
+      "items": 24,
+      "originalFilesPreserved": 16,
+      "previousCatalogueFilesPreserved": 39,
+      "allRecordedSizesAndSha256Match": true,
+      "pathContainmentAndLayoutVerified": true,
+      "exactScopedMetadataInBothGlobalInventories": true,
+      "bothGlobalInventoriesMatch": true,
+      "indexAndChecksumEntriesVerified": true,
+      "previousInventoryRecordsPreserved": 2918,
+      "globalItems": 2032,
+      "globalFileRecords": 2974,
+      "missingPaths": 0,
+      "unlocatedRecords": 0,
+      "downloadedBuildsExecuted": false
+    }
+  },
+  "screenshots": [
+    "docs/qa/xbox-one-series-third-desktop.jpg",
+    "docs/qa/xbox-one-series-third-mobile.jpg"
+  ],
+  "files": [
+    "console/xbox-one-series.html",
+    "assets/xbox-one-series.css",
+    "assets/xbox-one-series.js",
+    "scripts/build-xbox-one-series.cjs",
+    "scripts/xbox-one-series-catalogue.cjs",
+    "scripts/prepare-xbox-one-series.cjs",
+    "scripts/xbox-one-series-packages.cjs",
+    "scripts/verify-xbox-one-series.cjs",
+    "scripts/verify-xbox-one-series-links.cjs",
+    "docs/xbox-one-series-catalogue.json",
+    "docs/xbox-one-series-artwork.json",
+    "docs/xbox-one-series-sources.json",
+    "docs/xbox-one-series-package-verification.json",
+    "docs/qa/xbox-one-series-desktop.jpg",
+    "docs/qa/xbox-one-series-mobile.jpg",
+    "docs/qa/xbox-one-series-mobile-download.jpg",
+    "console/xbox-one-series/index.html",
+    "console/xbox-one-series/apps.html",
+    "console/xbox-one-series/dependencies.html",
+    "console/xbox-one-series/dev-mode.html",
+    "console/xbox-one-series/device-portal.html",
+    "console/xbox-one-series/install.html",
+    "console/xbox-one-series/storage.html",
+    "console/xbox-one-series/retail-mode.html",
+    "scripts/xbox-one-series-extra-apps.cjs",
+    "scripts/prepare-xbox-one-series-browser-qa.cjs",
+    "docs/xbox-one-series-expansion-coverage.json",
+    "docs/qa/xbox-one-series-expansion-baseline.json",
+    "docs/qa/xbox-one-series-expanded-desktop.jpg",
+    "docs/qa/xbox-one-series-expanded-mobile.jpg",
+    "scripts/verify-xbox-one-series-archive.cjs",
+    "docs/qa/xbox-one-series-archive-reconciliation.json",
+    "scripts/xbox-one-series-more-apps.cjs",
+    "docs/xbox-one-series-third-coverage.json",
+    "docs/qa/xbox-one-series-third-baseline.json",
+    "docs/qa/xbox-one-series-third-index-refresh.json",
+    "docs/qa/xbox-one-series-archive-39-files-2026-11-02.json",
+    "docs/qa/xbox-one-series-third-desktop.jpg",
+    "docs/qa/xbox-one-series-third-mobile.jpg"
+  ],
+  "remainingScopeWork": [],
+  "coordinatorNotes": [
+    "Preserve shared uncommitted work and the current topic-page layout. No broad console/Retro builder was run.",
+    "Coordinator should retain this scoped update when merging docs/console-expansion-handoff.json.",
+    "The old full-library route redirects bare visits to the topic hub; ?view=all and historic hash links keep the complete library accessible. Canonical apps page is /console/xbox-one-series/apps.html.",
+    "All 56 scoped file paths passed full streamed size/hash, layout, inventory, index, checksum and site-mirror verification. The prior 39 files and 2918 pre-merge metadata tuples are preserved, including original records for verified explicit moves.",
+    "Final organized index snapshot: 2032 items / 2974 present records, zero missing/unlocated file records. The six earlier unrelated stale aliases were resolved using explicit previousBackupPaths and verified hashes; original records remain in relocation history.",
+    "Shared inventory counts may grow through other chats. Scope completion and exact evidence are recorded separately; retain other chats’ root handoff fields and shared changes."
+  ],
+  "publication": "Nothing committed, published or deployed.",
+  "history": [
+    {
+      "completedAt": "2026-11-02T09:07:55.705Z",
+      "status": "complete locally; ready for coordinator integration",
+      "apps": 6,
+      "files": 16,
+      "verification": {
+        "static": {
+          "command": "node scripts/verify-xbox-one-series.cjs",
+          "report": "docs/qa/xbox-one-series-verification.json",
+          "checks": 201,
+          "errors": 0,
+          "files": 16,
+          "bytes": 252111977,
+          "localLinksAndAssets": 86
+        },
+        "external": {
+          "command": "node scripts/verify-xbox-one-series-links.cjs",
+          "report": "docs/qa/xbox-one-series-link-verification.json",
+          "checked": 40,
+          "passed": 40,
+          "failed": 0,
+          "method": "HTTP HEAD; all original ready assets separately downloaded, statically inspected and hashed."
+        },
+        "browser": {
+          "report": "docs/qa/xbox-one-series-browser-verification.json",
+          "checks": 29,
+          "failed": 0,
+          "desktop": {
+            "width": 1366,
+            "height": 850,
+            "documentWidth": 1351
+          },
+          "phone": {
+            "width": 390,
+            "height": 844,
+            "documentWidth": 375
+          },
+          "note": "Earlier native Computer Use URL-detection block was resolved after continuation when the in-app browser became available. Final browser checks completed. Viewport override reset; guide tab left open as deliverable."
+        },
+        "downloadedBuildsExecuted": false,
+        "physicalHardwareTested": false
+      },
+      "screenshots": [
+        "docs/qa/xbox-one-series-desktop.jpg",
+        "docs/qa/xbox-one-series-mobile.jpg",
+        "docs/qa/xbox-one-series-mobile-download.jpg"
+      ]
+    },
+    {
+      "completedAt": "2026-11-02T10:02:38.581Z",
+      "status": "Complete locally: all 39 Xbox files verified on F:; shared archive inventories and organized indexes reconciled.",
+      "apps": 14,
+      "files": 39,
+      "archive": {
+        "helper": "scripts/console-expansion-archive.cjs",
+        "layout": "scripts/download-archive-layout.cjs",
+        "root": "F:/whatsite-backup-downloads-etc",
+        "items": 15,
+        "fileRecords": 39,
+        "bytes": 1150637472,
+        "allLocalAndBackupHashesVerified": true,
+        "globalInventoryModifiedByThisChat": true,
+        "mergeInstruction": "Completed: verified additive union and organized index refresh. Retain immutable intake events and sidecars for future additions/recovery.",
+        "newFiles": 23,
+        "newBytes": 898525495,
+        "sharedMerge": {
+          "completed": true,
+          "completedAt": "2026-11-02T10:02:38.581Z",
+          "command": "node scripts/console-expansion-archive.cjs --all --verify",
+          "indexCommand": "node scripts/refresh-local-download-index.cjs --write",
+          "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+          "globalItems": 1668,
+          "globalFileRecords": 2541,
+          "missingPaths": 0,
+          "unlocatedRecords": 0
+        },
+        "reconciliationHistory": [
+          {
+            "completed": false,
+            "attempts": 2,
+            "reason": "Another legacy archive writer changed inventories during both helper reconciliation attempts; immutable scoped events and metadata snapshots were preserved.",
+            "observedAt": "2026-11-02T09:33:19.307Z",
+            "observedXboxItems": 15,
+            "observedXboxFileRecords": 39,
+            "requiredCoordinatorCommand": "node scripts/console-expansion-archive.cjs --all --verify",
+            "when": "After concurrent legacy inventory writers finish"
+          },
+          {
+            "completed": true,
+            "completedAt": "2026-11-02T10:02:38.581Z",
+            "command": "node scripts/console-expansion-archive.cjs --all --verify",
+            "indexCommand": "node scripts/refresh-local-download-index.cjs --write",
+            "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+            "globalItems": 1668,
+            "globalFileRecords": 2541,
+            "missingPaths": 0,
+            "unlocatedRecords": 0
+          }
+        ],
+        "finalVerification": {
+          "completed": true,
+          "checkedAt": "2026-11-02T10:02:38.581Z",
+          "report": "docs/qa/xbox-one-series-archive-39-files-2026-11-02.json",
+          "files": 39,
+          "verifiedFiles": 39,
+          "bytes": 1150637472,
+          "items": 15,
+          "originalFilesPreserved": 16,
+          "allRecordedSizesAndSha256Match": true,
+          "pathContainmentAndLayoutVerified": true,
+          "bothGlobalInventoriesMatch": true,
+          "indexAndChecksumEntriesVerified": true,
+          "previousInventoryRecordsPreserved": 2536,
+          "globalItems": 1668,
+          "globalFileRecords": 2541,
+          "missingPaths": 0,
+          "unlocatedRecords": 0,
+          "downloadedBuildsExecuted": false
+        }
+      },
+      "verification": {
+        "static": {
+          "command": "node scripts/verify-xbox-one-series.cjs",
+          "report": "docs/qa/xbox-one-series-verification.json",
+          "checks": 579,
+          "errors": 0,
+          "files": 56,
+          "bytes": 1310344413,
+          "localLinksAndAssets": 141
+        },
+        "external": {
+          "report": "docs/qa/xbox-one-series-link-verification.json",
+          "checked": 115,
+          "httpPassed": 110,
+          "httpBlocked": 5,
+          "readyDownloadSources": 30,
+          "allReadyDownloadSourcesPassed": true,
+          "newReleaseDownloadSources": 11,
+          "documentationLimit": "Five existing Kodi docs/landing endpoints return 403 to automated HEAD; key content was checked through web browsing. All eleven new release asset URLs returned 200."
+        },
+        "browser": {
+          "report": "docs/qa/xbox-one-series-browser-verification.json",
+          "checkedAt": "2026-11-02T12:52:48.915Z",
+          "checks": 42,
+          "failed": 0,
+          "desktop": {
+            "width": 1366,
+            "height": 850,
+            "documentWidth": 1351,
+            "apps": 23,
+            "checks": [
+              {
+                "passed": true,
+                "label": "Exact requested viewport"
+              },
+              {
+                "passed": true,
+                "label": "No horizontal overflow"
+              },
+              {
+                "passed": true,
+                "label": "All 23 apps rendered"
+              },
+              {
+                "passed": true,
+                "label": "All local publisher artwork loaded"
+              },
+              {
+                "passed": true,
+                "label": "Search matches one app"
+              },
+              {
+                "passed": true,
+                "label": "Empty search feedback"
+              },
+              {
+                "passed": true,
+                "label": "Clear filters restores all apps"
+              },
+              {
+                "passed": true,
+                "label": "Tools category count"
+              },
+              {
+                "passed": true,
+                "label": "Game engines category contains only native engine ports"
+              },
+              {
+                "passed": true,
+                "label": "Unconfirmed-model filter preserves compatibility limits"
+              },
+              {
+                "passed": true,
+                "label": "Xbox One has only source-confirmed apps"
+              },
+              {
+                "passed": true,
+                "label": "Xbox One hides XBSX2 AVX2"
+              },
+              {
+                "passed": true,
+                "label": "Model filter excludes unconfirmed Dolphin successor"
+              },
+              {
+                "passed": true,
+                "label": "Xbox One gets RetroArch ANGLE"
+              },
+              {
+                "passed": true,
+                "label": "Series has only source-confirmed apps"
+              },
+              {
+                "passed": true,
+                "label": "Series hides XBSX2 SSE4"
+              },
+              {
+                "passed": true,
+                "label": "Series gets RetroArch Mesa"
+              },
+              {
+                "passed": true,
+                "label": "Filter touch targets at least 44px"
+              },
+              {
+                "passed": true,
+                "label": "Expanded filenames and SHA-256 do not overflow"
+              },
+              {
+                "passed": true,
+                "label": "Language loader and controls"
+              },
+              {
+                "passed": true,
+                "label": "Background controls"
+              }
+            ],
+            "errors": []
+          },
+          "phone": {
+            "width": 390,
+            "height": 844,
+            "documentWidth": 375,
+            "apps": 23,
+            "checks": [
+              {
+                "passed": true,
+                "label": "Exact requested viewport"
+              },
+              {
+                "passed": true,
+                "label": "No horizontal overflow"
+              },
+              {
+                "passed": true,
+                "label": "All 23 apps rendered"
+              },
+              {
+                "passed": true,
+                "label": "All local publisher artwork loaded"
+              },
+              {
+                "passed": true,
+                "label": "Search matches one app"
+              },
+              {
+                "passed": true,
+                "label": "Empty search feedback"
+              },
+              {
+                "passed": true,
+                "label": "Clear filters restores all apps"
+              },
+              {
+                "passed": true,
+                "label": "Tools category count"
+              },
+              {
+                "passed": true,
+                "label": "Game engines category contains only native engine ports"
+              },
+              {
+                "passed": true,
+                "label": "Unconfirmed-model filter preserves compatibility limits"
+              },
+              {
+                "passed": true,
+                "label": "Xbox One has only source-confirmed apps"
+              },
+              {
+                "passed": true,
+                "label": "Xbox One hides XBSX2 AVX2"
+              },
+              {
+                "passed": true,
+                "label": "Model filter excludes unconfirmed Dolphin successor"
+              },
+              {
+                "passed": true,
+                "label": "Xbox One gets RetroArch ANGLE"
+              },
+              {
+                "passed": true,
+                "label": "Series has only source-confirmed apps"
+              },
+              {
+                "passed": true,
+                "label": "Series hides XBSX2 SSE4"
+              },
+              {
+                "passed": true,
+                "label": "Series gets RetroArch Mesa"
+              },
+              {
+                "passed": true,
+                "label": "Filter touch targets at least 44px"
+              },
+              {
+                "passed": true,
+                "label": "Expanded filenames and SHA-256 do not overflow"
+              },
+              {
+                "passed": true,
+                "label": "Language loader and controls"
+              },
+              {
+                "passed": true,
+                "label": "Background controls"
+              }
+            ],
+            "errors": []
+          },
+          "note": "Final checks after model-filter expansion passed. Viewport override reset; canonical apps tab left as deliverable."
+        },
+        "downloadedBuildsExecuted": false,
+        "physicalHardwareTested": false,
+        "archiveReconciliation": {
+          "completed": true,
+          "checkedAt": "2026-11-02T12:54:41.412Z",
+          "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+          "files": 56,
+          "verifiedFiles": 56,
+          "bytes": 1310344413,
+          "items": 24,
+          "originalFilesPreserved": 16,
+          "previousCatalogueFilesPreserved": 39,
+          "allRecordedSizesAndSha256Match": true,
+          "pathContainmentAndLayoutVerified": true,
+          "exactScopedMetadataInBothGlobalInventories": true,
+          "bothGlobalInventoriesMatch": true,
+          "indexAndChecksumEntriesVerified": true,
+          "previousInventoryRecordsPreserved": 2918,
+          "globalItems": 2032,
+          "globalFileRecords": 2974,
+          "missingPaths": 0,
+          "unlocatedRecords": 0,
+          "downloadedBuildsExecuted": false
+        }
+      },
+      "screenshots": [
+        "docs/qa/xbox-one-series-expanded-desktop.jpg",
+        "docs/qa/xbox-one-series-expanded-mobile.jpg"
+      ],
+      "additions": [
+        {
+          "id": "retroarch",
+          "version": "Xbox snapshot 2026-08-19",
+          "models": [
+            "one",
+            "series"
+          ]
+        },
+        {
+          "id": "dosbox-pure",
+          "version": "1.0.0.236",
+          "models": [
+            "series"
+          ]
+        },
+        {
+          "id": "scummvm",
+          "version": "2026.3.1.155",
+          "models": [
+            "one",
+            "series"
+          ]
+        },
+        {
+          "id": "xemu",
+          "version": "0.9.1010.0",
+          "models": [
+            "series"
+          ]
+        },
+        {
+          "id": "xenia",
+          "version": "legacy 1.1.5a",
+          "models": [
+            "one",
+            "series"
+          ]
+        },
+        {
+          "id": "retropass",
+          "version": "1.13.0",
+          "models": [
+            "one",
+            "series"
+          ]
+        },
+        {
+          "id": "xfiles",
+          "version": "1.8.0.1527",
+          "models": [
+            "one",
+            "series"
+          ]
+        },
+        {
+          "id": "kodi",
+          "version": "21.3 Omega",
+          "models": [
+            "one"
+          ]
+        }
+      ],
+      "coverage": "docs/xbox-one-series-expansion-coverage.json"
+    }
+  ],
+  "fullLibrary": "console/xbox-one-series.html?view=all",
+  "additions": [
+    {
+      "id": "azahar",
+      "version": "0.2126.2.1",
+      "models": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "cemu",
+      "version": "0.2.6.7",
+      "models": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "ymir",
+      "version": "0.4.2.1",
+      "models": [
+        "series"
+      ]
+    },
+    {
+      "id": "devilutionx",
+      "version": "1.5.5",
+      "models": [
+        "one",
+        "series"
+      ]
+    },
+    {
+      "id": "jazz2",
+      "version": "3.9.0",
+      "models": [
+        "one",
+        "series"
+      ]
+    },
+    {
+      "id": "openlara",
+      "version": "xb1 snapshot 2021-01-08",
+      "models": [
+        "one"
+      ]
+    },
+    {
+      "id": "sdlpop",
+      "version": "release 1.0.0.0 · package 1.0.1.0",
+      "models": [
+        "one",
+        "series"
+      ]
+    },
+    {
+      "id": "ioquake3",
+      "version": "1.4",
+      "models": [
+        "one"
+      ]
+    },
+    {
+      "id": "2ship",
+      "version": "0.1.0-uwp",
+      "models": [
+        "unspecified"
+      ]
+    }
+  ],
+  "preservation": {
+    "baseline": "docs/qa/xbox-one-series-expansion-baseline.json",
+    "originalApps": 6,
+    "originalFiles": 16,
+    "allOriginalBytesVersionsSourceUrlsAndPathsPreserved": true,
+    "previousCatalogueBaseline": "docs/qa/xbox-one-series-third-baseline.json",
+    "previousApps": 14,
+    "previousFiles": 39,
+    "allPreviousBytesVersionsSourceUrlsAndPathsPreserved": true
+  },
+  "coverage": "docs/xbox-one-series-third-coverage.json",
+  "browserQaPreparation": "node scripts/prepare-xbox-one-series-browser-qa.cjs",
+  "latestBatch": {
+    "completedAt": "2026-11-02T12:54:41.412Z",
+    "apps": 23,
+    "newProjects": 9,
+    "files": 56,
+    "newFiles": 17,
+    "newBytes": 159706941,
+    "preservedPreviousApps": 14,
+    "preservedPreviousFiles": 39,
+    "added": [
+      {
+        "id": "azahar",
+        "version": "0.2126.2.1",
+        "models": [
+          "unspecified"
+        ]
+      },
+      {
+        "id": "cemu",
+        "version": "0.2.6.7",
+        "models": [
+          "unspecified"
+        ]
+      },
+      {
+        "id": "ymir",
+        "version": "0.4.2.1",
+        "models": [
+          "series"
+        ]
+      },
+      {
+        "id": "devilutionx",
+        "version": "1.5.5",
+        "models": [
+          "one",
+          "series"
+        ]
+      },
+      {
+        "id": "jazz2",
+        "version": "3.9.0",
+        "models": [
+          "one",
+          "series"
+        ]
+      },
+      {
+        "id": "openlara",
+        "version": "xb1 snapshot 2021-01-08",
+        "models": [
+          "one"
+        ]
+      },
+      {
+        "id": "sdlpop",
+        "version": "release 1.0.0.0 · package 1.0.1.0",
+        "models": [
+          "one",
+          "series"
+        ]
+      },
+      {
+        "id": "ioquake3",
+        "version": "1.4",
+        "models": [
+          "one"
+        ]
+      },
+      {
+        "id": "2ship",
+        "version": "0.1.0-uwp",
+        "models": [
+          "unspecified"
+        ]
+      }
+    ],
+    "coverage": "docs/xbox-one-series-third-coverage.json",
+    "archive": {
+      "completed": true,
+      "checkedAt": "2026-11-02T12:54:41.412Z",
+      "report": "docs/qa/xbox-one-series-archive-reconciliation.json",
+      "files": 56,
+      "verifiedFiles": 56,
+      "bytes": 1310344413,
+      "items": 24,
+      "originalFilesPreserved": 16,
+      "previousCatalogueFilesPreserved": 39,
+      "allRecordedSizesAndSha256Match": true,
+      "pathContainmentAndLayoutVerified": true,
+      "exactScopedMetadataInBothGlobalInventories": true,
+      "bothGlobalInventoriesMatch": true,
+      "indexAndChecksumEntriesVerified": true,
+      "previousInventoryRecordsPreserved": 2918,
+      "globalItems": 2032,
+      "globalFileRecords": 2974,
+      "missingPaths": 0,
+      "unlocatedRecords": 0,
+      "downloadedBuildsExecuted": false
+    }
+  }
+}

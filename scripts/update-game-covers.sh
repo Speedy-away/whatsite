@@ -9,7 +9,7 @@ echo "Updating Call of Duty game pages with proper cover art..."
 sed -i 's|https://i.imgur.com/K8vR4nP.png|../../assets/images/cod.png|g' games/cod/index.html
 sed -i 's|https://i.imgur.com/9YwQJXH.jpeg|../../assets/images/covers/cod-black-ops-6.jpg|g' games/cod/index.html
 sed -i 's|https://i.imgur.com/xVZ8LQx.jpeg|../../assets/images/covers/cod-warzone.jpg|g' games/cod/index.html
-sed -i 's|https://i.imgur.com/yvXB5hl.jpeg|../../assets/images/covers/cod-cold-war.jpg|g' games/cod/index.html
+sed -i 's|https://i.imgur.com/yvXB5hl.jpeg|../../assets/images/covers/cod-cold-war-official.jpg|g' games/cod/index.html
 sed -i 's|https://i.imgur.com/K2gDJYa.jpeg|../../assets/images/covers/cod-mw-2019.jpg|g' games/cod/index.html
 sed -i 's|https://i.imgur.com/nZ8kXVj.jpeg|../../assets/images/covers/cod-black-ops-3.jpg|g' games/cod/index.html
 sed -i 's|https://i.imgur.com/BnXr6YM.jpeg|../../assets/images/covers/cod-black-ops-2.jpg|g' games/cod/index.html

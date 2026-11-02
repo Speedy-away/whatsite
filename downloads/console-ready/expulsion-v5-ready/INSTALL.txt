@@ -1,0 +1,29 @@
+EXPULSION V5.0 - GTA V CUSA00419 / 1.57
+
+FTP INSTALL: merge the package's data folder into PS4 /data, and its user folder into PS4 /user.
+Paths:
+/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx
+/data/Expulsion/maps/Expulsion_Map.txt (created when saving an editor map)
+/data/Expulsion/ugc/Expulsion_UGC.txt (included sample layout)
+/data/Expulsion/ugc/Expulsion_UGC_Actors.txt (included local actor preview)
+/user/data/Expulsion/icons/youtube.png
+/user/data/Expulsion/icons/x.png
+
+Enable the PRX under [CUSA00419] in your existing GoldHEN plugin configuration.
+Fully close and restart GTA after replacing the PRX.
+Keep the maps folder when uploading, even if it is empty: map saving needs it.
+Do not overwrite your saved map when installing updates; none is included in this package.
+The scripts folder is reserved for future script-loader support; copying .osc/.csc files there does not currently inject them.
+UGC samples are local layouts/actor previews, not saved Creator jobs or platform conversions.
+Legacy files directly under /data remain readable as fallbacks; new map saves use /data/Expulsion/maps.
+Popup logos need the /user/data location for ShellUI visibility and console testing.
+
+FOLLOW LUSH MODZ
+Join Discord for the latest mod menu updates, release news, and community discussion:
+https://discord.com/invite/jPNwZJ4
+
+X / Twitter: @LushModz
+https://x.com/LushModz
+
+YouTube: Lush Modz
+Subscribe for mod menu videos and updates.

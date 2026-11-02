@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "startedAt": "2026-11-02T06:09:36.141Z",
+  "finishedAt": "2026-11-02T06:09:36.977Z",
+  "durationMs": 836,
+  "expectedJobs": 172,
+  "method": "Read-only schema, source/version metadata, byte size and SHA-256 verification. Existing F: archives and required public mirrors were read; no archive, payload or console state was modified. Import-stage copies were also checked when specified. No binaries were executed.",
+  "inputs": [
+    {
+      "file": "docs/new-console-ready-file-jobs.json",
+      "jobs": 24,
+      "sha256": "b61246f9aa1b6c05a16ef139d98e1f995a62f2b1db35e94a08048ae612405d7a"
+    },
+    {
+      "file": "docs/ps4-extra-game-download-jobs.json",
+      "jobs": 18,
+      "sha256": "1a7712ac517ed36ea09bcc2523b56278f9a7fd71bf161d5c274212a60e28818c"
+    },
+    {
+      "file": "docs/ps4-ps5-game-patch-jobs.json",
+      "jobs": 113,
+      "sha256": "3feb793e96c7f6605b4df1056a793a1fc8b425c920dab121318d3343b2fabfed"
+    },
+    {
+      "file": "docs/console-ready-software-jobs.json",
+      "jobs": 10,
+      "sha256": "30b19d5cfab6516a36bf243de2e9384de313a10fbf096a4720706ce9bb8db4e0"
+    },
+    {
+      "file": "docs/ps4-store-apps-jobs.json",
+      "jobs": 7,
+      "sha256": "2960fc8f709eff0a45564a6d16e8c068c2972676d29ffab8b84b3de0867979bd"
+    }
+  ],
+  "inventory": {
+    "file": "docs/download-audit.json",
+    "updated": "2026-11-02T06:02:06.343Z",
+    "sha256": "650fdfe7adbbdaa1bb9d1a982e53c48e6ea2e4e18eaa8938173987cdbd6671bd"
+  },
+  "counts": {
+    "jobs": 172,
+    "validSchemas": 172,
+    "inventoryMatched": 172,
+    "archiveVerified": 172,
+    "publicMirrorsRequired": 166,
+    "publicMirrorsVerified": 166,
+    "publicMirrorsNotRequired": 6,
+    "stagingCopiesSpecified": 154,
+    "stagingCopiesVerified": 154,
+    "distinctFilesRead": 481,
+    "bytesRead": 1233002349
+  },
+  "groups": [
+    {
+      "file": "docs/new-console-ready-file-jobs.json",
+      "jobs": 24,
+      "archiveVerified": 24,
+      "publicMirrorsRequired": 21,
+      "publicMirrorsVerified": 21
+    },
+    {
+      "file": "docs/ps4-extra-game-download-jobs.json",
+      "jobs": 18,
+      "archiveVerified": 18,
+      "publicMirrorsRequired": 18,
+      "publicMirrorsVerified": 18
+    },
+    {
+      "file": "docs/ps4-ps5-game-patch-jobs.json",
+      "jobs": 113,
+      "archiveVerified": 113,
+      "publicMirrorsRequired": 113,
+      "publicMirrorsVerified": 113
+    },
+    {
+      "file": "docs/console-ready-software-jobs.json",
+      "jobs": 10,
+      "archiveVerified": 10,
+      "publicMirrorsRequired": 9,
+      "publicMirrorsVerified": 9
+    },
+    {
+      "file": "docs/ps4-store-apps-jobs.json",
+      "jobs": 7,
+      "archiveVerified": 7,
+      "publicMirrorsRequired": 5,
+      "publicMirrorsVerified": 5
+    }
+  ],
+  "missing": [],
+  "mismatches": [],
+  "notes": []
+}

@@ -1,0 +1,276 @@
+{
+  "checkedAt": "2026-11-02T10:01:46.049Z",
+  "scope": "Read-only audit of final browser-facing HTML writers. No builders ran and no public files changed.",
+  "recommendedCoreHooks": [
+    {
+      "file": "scripts/build-console-guides.cjs",
+      "line": 123,
+      "location": "page() final write",
+      "reason": "Shared constructor used by most console, source-code, host and new directory pages. Apply transform only after hub/game-directory/search/ads/sidebar/mobile processing."
+    },
+    {
+      "file": "scripts/ps3-page.cjs",
+      "line": 25,
+      "location": "PS3 page wrapper final write",
+      "reason": "Line12 replaces keywords after shared page(); media removal can also change keyword subjects. Reapply at wrapper end."
+    },
+    {
+      "file": "scripts/build-console-topic-hubs.cjs",
+      "line": 135,
+      "location": "finalizeMetadata(files)",
+      "reason": "Current local implementation resets title/keywords/social/schema metadata and report entries. Replace its per-file metadata computation with shared engine transform result, retain additive report merge."
+    },
+    {
+      "file": "scripts/console-game-directories.cjs",
+      "line": 79,
+      "location": "prepare(file) final write",
+      "reason": "Keeps dedicated game-directory pages using the common engine after hero/theme changes. build() also calls topic-hub finalizer so keep those consistent."
+    },
+    {
+      "file": "scripts/build-ps3-browser-downloads.cjs",
+      "line": 52,
+      "location": "standalone file-list HTML write",
+      "reason": "Bypasses page() entirely. Transform its console page only; leave downloads/ps3/catalog.json and downloaded packages untouched."
+    }
+  ],
+  "postSharedKeywordOrMetadataOverwriters": [
+    {
+      "file": "scripts/build-3ds-expansion.cjs",
+      "line": 13,
+      "reason": "finish() overrides keywords and adds OG/anonymous collection schema"
+    },
+    {
+      "file": "scripts/build-3ds-mods-online.cjs",
+      "line": 6,
+      "reason": "finish() overrides keywords and adds OG/anonymous collection schema"
+    },
+    {
+      "file": "scripts/build-ds-expansion.cjs",
+      "line": 45,
+      "reason": "overrides keywords after page(), final write52"
+    },
+    {
+      "file": "scripts/build-vita-guides.cjs",
+      "line": 144,
+      "reason": "keyword loop rewrites generated Vita pages at147"
+    },
+    {
+      "file": "scripts/build-host-selector.cjs",
+      "line": 47,
+      "reason": "savePage() replaces keywords with broad PS4/PS5 list; final write52"
+    },
+    {
+      "file": "scripts/build-host-selector.cjs",
+      "line": 115,
+      "reason": "appends host keywords to existing PS4/PS5 hubs; final write117"
+    },
+    {
+      "file": "scripts/build-ps2-expansion.cjs",
+      "line": 42,
+      "reason": "overrides keywords and modifies content before final write51"
+    },
+    {
+      "file": "scripts/build-wiiu-homebrew.cjs",
+      "line": 64,
+      "reason": "overrides keywords before final write67"
+    },
+    {
+      "file": "scripts/build-wiiu-themes.cjs",
+      "line": 41,
+      "reason": "overrides keywords before final write44"
+    },
+    {
+      "file": "scripts/build-switch-homebrew.cjs",
+      "line": 109,
+      "reason": "overrides keywords before final write112"
+    },
+    {
+      "file": "scripts/build-switch-app-pages.cjs",
+      "line": 23,
+      "reason": "overrides keywords before final write26"
+    },
+    {
+      "file": "scripts/build-switch-game-mods.cjs",
+      "line": 55,
+      "reason": "overrides keywords and adds anonymous collection schema before final write57"
+    },
+    {
+      "file": "scripts/build-switch-themes.cjs",
+      "line": 66,
+      "reason": "overrides keywords before final write70"
+    },
+    {
+      "file": "scripts/build-console-downloads.cjs",
+      "line": 96,
+      "reason": "overrides keywords then writes browser page101; adjacent companion write104 must remain protected"
+    },
+    {
+      "file": "scripts/build-nintendo-retro.cjs",
+      "line": 136,
+      "reason": "legacy broad builder keyword loop; do not run broadly over scoped expansions"
+    }
+  ],
+  "contentMutatorsWhichNeedFinalKeywords": [
+    {
+      "file": "scripts/build-steamdeck.cjs",
+      "line": 56,
+      "reason": "Directly replaces catalogue/guides in existing source rather than using page(); transform final after string."
+    },
+    {
+      "file": "scripts/build-console-directory.cjs",
+      "line": 72,
+      "reason": "Replaces directory body/card groups in retained page."
+    },
+    {
+      "file": "scripts/build-retro-page.cjs",
+      "line": 51,
+      "reason": "Builds routed Retro catalogue and subsequently themes/background; transform final body."
+    },
+    {
+      "file": "scripts/build-switch-core-pages.cjs",
+      "line": 63,
+      "reason": "Adds hub/setup resources after initial page construction."
+    },
+    {
+      "file": "scripts/build-apollo-vita.cjs",
+      "line": 34,
+      "reason": "Legacy updater can replace hub card data after page() generation."
+    }
+  ],
+  "preservingPostprocessors": [
+    "scripts/build-vita-more.cjs:44 (CSS/body class/background only)",
+    "scripts/build-xbox360-more.cjs:55 (CSS/body data/background only)",
+    "scripts/build-xbox-one-series.cjs:93 (CSS/body class plus scoped topic refresh; body passed to page())",
+    "scripts/build-wii-games-online.cjs:34 (CSS/body class/background only)",
+    "scripts/build-wii-expansion.cjs:40 (adds collection schema/background; body content supplied to page())",
+    "scripts/build-wiiu-online-mods.cjs:6 (CSS/background only)",
+    "scripts/build-original-xbox.cjs:18 (background only)",
+    "scripts/build-original-xbox-online.cjs:55 (background/media only)",
+    "scripts/build-psp-more.cjs:48 (CSS/hero/no-results/background only)"
+  ],
+  "aliasCaution": {
+    "file": "scripts/ps3-multicod-metadata.cjs",
+    "line": 53,
+    "reason": "Copies a canonical page into noindex alias and changes robots; ensure own page schema is removed/reapplied so alias noindex stays true and canonical target remains unchanged."
+  },
+  "constraints": [
+    "Do not hook fs.writeFileSync globally.",
+    "Do not add SEO as a side effect of background/mobile helpers; keep their contract and protected ready-build behavior narrow.",
+    "Use engine eligibility guards for console/ps4/whatsite-ps4.html, console/ps5/whatsite-ps5.html and downloads/ HTML.",
+    "Existing PS4/PS5 scoped upgrade already invokes updater at end; no need to run that broad build for SEO work.",
+    "A final explicit metadata/search refresh command remains useful for legacy body mutators."
+  ],
+  "implementedHooks": {
+    "checkedAt": "2026-11-02T10:05:10.290Z",
+    "files": [
+      {
+        "file": "scripts/build-3ds-expansion.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-3ds-mods-online.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-ds-expansion.cjs",
+        "syntaxPassed": true,
+        "hooks": 2
+      },
+      {
+        "file": "scripts/build-vita-guides.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-host-selector.cjs",
+        "syntaxPassed": true,
+        "hooks": 4
+      },
+      {
+        "file": "scripts/build-ps2-expansion.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-wiiu-homebrew.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-wiiu-themes.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-switch-homebrew.cjs",
+        "syntaxPassed": true,
+        "hooks": 2
+      },
+      {
+        "file": "scripts/build-switch-app-pages.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-switch-game-mods.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-switch-themes.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-console-downloads.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-nintendo-retro.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-steamdeck.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-console-directory.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      },
+      {
+        "file": "scripts/build-retro-page.cjs",
+        "syntaxPassed": true,
+        "hooks": 2
+      },
+      {
+        "file": "scripts/build-switch-core-pages.cjs",
+        "syntaxPassed": true,
+        "hooks": 3
+      },
+      {
+        "file": "scripts/build-apollo-vita.cjs",
+        "syntaxPassed": true,
+        "hooks": 3
+      },
+      {
+        "file": "scripts/ps3-multicod-metadata.cjs",
+        "syntaxPassed": true,
+        "hooks": 1
+      }
+    ],
+    "buildersExecuted": false,
+    "publicHtmlWrites": 0,
+    "notes": [
+      "Every browser HTML final write in the owned overwrite/mutator scope now passes through finish(file,html).",
+      "Console download companion generation remains unchanged.",
+      "Apollo legacy broad scanner replaced with site-public-pages inventory plus ready-helper guard before body mutation.",
+      "Steam Deck --check evaluates the same metadata/search output as write mode."
+    ]
+  }
+}

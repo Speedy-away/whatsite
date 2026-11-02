@@ -1,0 +1,651 @@
+{
+  "scope": "ps2-expansion",
+  "status": "Complete locally; original six resources preserved and fourteen additional resources implemented.",
+  "canonicalPageUrls": [
+    "https://whatwhatboy.com/console/retro/ps2.html"
+  ],
+  "themeIndexTarget": "/console/retro/ps2.html#ps2-themes",
+  "extraPages": [],
+  "preview": "http://127.0.0.1:8765/console/retro/ps2.html#library",
+  "sourceBuilderEntryPoints": [
+    "scripts/build-ps2-expansion.cjs",
+    "scripts/build-ps2-art.cjs"
+  ],
+  "dataSources": [
+    "docs/ps2-expansion-catalogue.json",
+    "docs/ps2-expansion-files.json"
+  ],
+  "archiveInventoryPath": "docs/ps2-expansion-private-inventory.json",
+  "archiveScope": "ps2-expansion",
+  "archiveRoot": "F:/whatsite-backup-downloads-etc",
+  "counts": {
+    "originalResources": 6,
+    "additionalResources": 14,
+    "archivedFiles": 17,
+    "siteMirrors": 16,
+    "archivedBytes": 30054583
+  },
+  "downloadPolicy": "Original release containers preserved, with three additional unchanged extracted ELFs for MCA retail, HDDChecker and PS2ME. No source archives, desktop emulator builds, commercial game data or external BIOS files downloaded. PicoDrive routes publicly to the original asset and is privately archived; it is not mirrored on the ad-supported site.",
+  "preservedCompatibility": [
+    "FreeMcBoot 1.966 custom installer 6aa96da",
+    "OpenTuna 9b61aee model/ROM guidance",
+    "OPL stable 1.1.0",
+    "wLaunchELF 4.43a development 57c2049",
+    "Apollo PS2 1.0.2",
+    "PS2Ident 0.850 ca2b5acc"
+  ],
+  "importantNotes": [
+    "OPL themes DeckyOS 1.0 default and PadOS 1.0 normal 4:3 target OPL 1.2+. The existing stable OPL 1.1.0 remains untouched. A separately labelled OPL 1.2.0 Beta 2271 b3a2199 ELF is offered as an optional test build.",
+    "Quake v1.1.0 console setup explicitly states memory-card slot1 saves, despite its README overview claiming broader save paths. The page follows the explicit console section. quake.elf is the actual filename.",
+    "SuperTux USB bundle includes APPS/SUPERTUX and supertux.elf. PS2ME ZIP contains the runtime and optional background audio, plus a README in games/; no JAR games are bundled.",
+    "PS2Link default build has two package files: PS2LINK.ELF and IPCONFIG.DAT. IRX modules are embedded; no separately downloaded PC client is included.",
+    "Keep these scoped files distinct from other chats. No shared sidebar, console landing, sitemap, languages, i18n-tools or shared builder was edited."
+  ],
+  "regeneration": [
+    "Run node scripts/build-ps2-expansion.cjs after any baseline PS2 regeneration; build-ps2-retro.cjs alone still produces only the original six resources.",
+    "The scoped builder imports build-console-guides.cjs for the shell without running its broad build, then applies mobile/background integration.",
+    "Run node scripts/prepare-ps2-expansion.cjs --download --archive with normal escalation when restaging is needed; never execute downloaded binaries. It requires Python on the unsandboxed host for read-only ZIP/TAR/ELF inspection. Existing staged files are verified and conflicting destinations are rejected.",
+    "Run node scripts/verify-ps2-expansion.cjs --http against the existing 8765 preview.",
+    "Use console-expansion-archive.cjs --inventory=docs/ps2-expansion-private-inventory.json --verify for cooperating union merges. Organized archive index was refreshed successfully with refresh-local-download-index.cjs --write."
+  ],
+  "checks": [
+    "All 17 archived files: bytes and SHA-256 rechecked against F:/whatsite-backup-downloads-etc.",
+    "All 16 local site downloads: bytes/SHA verified on disk and through HTTP 200 from the preview.",
+    "ZIP CRCs, safe member paths, bounded expanded sizes, no archive symlinks and ELF32 little-endian MIPS executable headers verified without execution.",
+    "Original six resource IDs, versions and download URLs preserved; local links/anchors/assets and canonical URL checked; no duplicate IDs or embedded videos.",
+    "Shared i18n v3, dynamic __scoobyI18n.t count translation, mobile CSS and site-background integration verified.",
+    "Browser: all14, Quake2 results, theme2, emulator3, empty0, clear14; section navigation reveals hidden groups; desktop1280 and mobile390 have no horizontal overflow; no failed images or browser console errors."
+  ],
+  "reports": [
+    "docs/qa/ps2-expansion-package-checks.json",
+    "docs/qa/ps2-expansion-verification.json",
+    "docs/qa/ps2-expansion-browser.json"
+  ],
+  "screenshots": [
+    "docs/qa/ps2-themes-desktop-2026-11-02.png",
+    "docs/qa/ps2-library-mobile-2026-11-02.png"
+  ],
+  "rootIntegration": [
+    "Use /console/retro/ps2.html as the existing canonical route.",
+    "Link the shared themes index to /console/retro/ps2.html#ps2-themes.",
+    "Root owns Retro card/navigation/sitemap changes. No additional PS2 page needs indexing."
+  ],
+  "remaining": [],
+  "limits": [
+    "No physical PS2 execution, installation or measured-performance test",
+    "No commit, publication, deployment or worktree",
+    "No downloaded payload or binary executed"
+  ],
+  "updatedAt": "2026-11-02T09:27:06.648Z",
+  "verifiedDownloadFiles": [
+    {
+      "id": "mca",
+      "archiveItemId": "ps2-expansion-mca",
+      "files": [
+        {
+          "name": "MemoryCardAnihilator_v2.2.0.zip",
+          "sourceUrl": "https://github.com/ffgriever-pl/Memory-Card-Annihilator/releases/download/v2.2.0/MemoryCardAnihilator_v2.2.0.zip",
+          "version": "v2.2.0",
+          "bytes": 6749557,
+          "sha256": "86c2302454fbedd6168f02fc6992e4b93a8cf9f375122b01f12a0bc611558fb0",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/mca/v2.2.0/MemoryCardAnihilator_v2.2.0.zip",
+          "elfs": [
+            {
+              "path": "mca_legacy/mca-packed.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 531268
+            },
+            {
+              "path": "mca_legacy/mca.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 2579248
+            },
+            {
+              "path": "mca_new/mca-packed.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 577892
+            },
+            {
+              "path": "mca_new/mca.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 2739888
+            },
+            {
+              "path": "mca_Arcade/mca-packed_ARCADE.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 586500
+            },
+            {
+              "path": "mca_Arcade/mca_ARCADE.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 2772272
+            },
+            {
+              "path": "mca_Prototype/mca-packed_PROTOTYPE.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 586756
+            },
+            {
+              "path": "mca_Prototype/mca_PROTOTYPE.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 2772272
+            },
+            {
+              "path": "mca_Developer/mca-packed_DEVELOPER.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 586356
+            },
+            {
+              "path": "mca_Developer/mca_DEVELOPER.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 2772272
+            }
+          ]
+        },
+        {
+          "name": "mca-new-retail-v2.2.0.elf",
+          "sourceUrl": "https://github.com/ffgriever-pl/Memory-Card-Annihilator/releases/download/v2.2.0/MemoryCardAnihilator_v2.2.0.zip",
+          "version": "v2.2.0",
+          "bytes": 577892,
+          "sha256": "def84b075f9352c2c66aa49de51d7257d878306d9bc838638d35eb8d9fd0fc72",
+          "format": "PS2 ELF",
+          "archiveRole": [
+            "Builds"
+          ],
+          "derivedFrom": "MemoryCardAnihilator_v2.2.0.zip",
+          "member": "mca_new/mca-packed.elf",
+          "local": "/downloads/ps2-expansion/mca/v2.2.0/mca-new-retail-v2.2.0.elf",
+          "elfs": [
+            {
+              "path": "mca-new-retail-v2.2.0.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 577892
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hddchecker",
+      "archiveItemId": "ps2-expansion-hddchecker",
+      "files": [
+        {
+          "name": "HDDChecker-c7679407.zip",
+          "sourceUrl": "https://github.com/ps2homebrew/HDDChecker/releases/download/latest/HDDChecker-c7679407.zip",
+          "version": "0.964-c7679407",
+          "bytes": 848212,
+          "sha256": "7773ecbb9a443e7ad00b33ec2963ebecda8d191cd37f31457c7f277ad61fc724",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/hddchecker/0.964-c7679407/HDDChecker-c7679407.zip",
+          "elfs": [
+            {
+              "path": "HDDChecker.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 1342900
+            }
+          ]
+        },
+        {
+          "name": "HDDChecker-c7679407.elf",
+          "sourceUrl": "https://github.com/ps2homebrew/HDDChecker/releases/download/latest/HDDChecker-c7679407.zip",
+          "version": "0.964-c7679407",
+          "bytes": 1342900,
+          "sha256": "001033b8729c4be38e19fadcc3ed154caadc4e8ef4a84a490c66f57ce56c4655",
+          "format": "PS2 ELF",
+          "archiveRole": [
+            "Builds"
+          ],
+          "derivedFrom": "HDDChecker-c7679407.zip",
+          "member": "HDDChecker.elf",
+          "local": "/downloads/ps2-expansion/hddchecker/0.964-c7679407/HDDChecker-c7679407.elf",
+          "elfs": [
+            {
+              "path": "HDDChecker-c7679407.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 1342900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hddtester",
+      "archiveItemId": "ps2-expansion-hddtester",
+      "files": [
+        {
+          "name": "hddtester_compressed_v1.1.elf",
+          "sourceUrl": "https://github.com/ps2homebrew/PS2HDDTester/releases/download/v1.1/hddtester_compressed_v1.1.elf",
+          "version": "v1.1",
+          "bytes": 73844,
+          "sha256": "fae9a01c7339a5410cfe9fe2402268d3b767a92ac400e2b0753572ff86f20367",
+          "format": "PS2 ELF",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/hddtester/v1.1/hddtester_compressed_v1.1.elf",
+          "elfs": [
+            {
+              "path": "hddtester_compressed_v1.1.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 73844
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padtest",
+      "archiveItemId": "ps2-expansion-padtest",
+      "files": [
+        {
+          "name": "padtest_ps2.elf",
+          "sourceUrl": "https://github.com/PCSX2/tools/releases/download/tests/pad/padtest_ps2.elf",
+          "version": "tests/pad",
+          "bytes": 199056,
+          "sha256": "0d0733034a3d0ad8b59f7daaea139c631caf466e3ade77405af495e1c441a41b",
+          "format": "PS2 ELF",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/padtest/tests_pad/padtest_ps2.elf",
+          "elfs": [
+            {
+              "path": "padtest_ps2.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 199056
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps2link",
+      "archiveItemId": "ps2-expansion-ps2link",
+      "files": [
+        {
+          "name": "ps2link-06a31aae-default.tar.gz",
+          "sourceUrl": "https://github.com/ps2dev/ps2link/releases/download/latest/ps2link-06a31aae-default.tar.gz",
+          "version": "06a31aae-default",
+          "bytes": 95114,
+          "sha256": "50ae3a67164cb0c82d429a470eaf82498b15b2887e26acee21f567238b24e522",
+          "format": "TAR.GZ",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/ps2link/06a31aae-default/ps2link-06a31aae-default.tar.gz",
+          "elfs": [
+            {
+              "path": "ps2link/PS2LINK.ELF",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 103860
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opl-beta",
+      "archiveItemId": "ps2-expansion-opl-beta",
+      "files": [
+        {
+          "name": "OPNPS2LD.ELF",
+          "sourceUrl": "https://github.com/ps2homebrew/Open-PS2-Loader/releases/download/latest/OPNPS2LD.ELF",
+          "version": "1.2.0-Beta-2271-b3a2199",
+          "bytes": 1361812,
+          "sha256": "4b6d36eff917bbeb3d860fea7ca0b3dd38502c4f5b008803a1edf3f0edf12290",
+          "format": "PS2 ELF",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/opl-beta/1.2.0-Beta-2271-b3a2199/OPNPS2LD.ELF",
+          "elfs": [
+            {
+              "path": "OPNPS2LD.ELF",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 1361812
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fceumm",
+      "archiveItemId": "ps2-expansion-fceumm",
+      "files": [
+        {
+          "name": "fceu-packed.v0.3.3.elf",
+          "sourceUrl": "https://github.com/ps2homebrew/Fceumm-PS2/releases/download/v0.3.3/fceu-packed.v0.3.3.elf",
+          "version": "v0.3.3",
+          "bytes": 617589,
+          "sha256": "a41a3c5dfc0b9283046b905a131a1044625acd67c48d9d1d18af65e12ec51f4a",
+          "format": "PS2 ELF",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/fceumm/v0.3.3/fceu-packed.v0.3.3.elf",
+          "elfs": [
+            {
+              "path": "fceu-packed.v0.3.3.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 617589
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "picodrive",
+      "archiveItemId": "ps2-expansion-picodrive",
+      "files": [
+        {
+          "name": "PicoDrive_ps2_2.05-19d4108.zip",
+          "sourceUrl": "https://github.com/irixxxx/picodrive/releases/download/v2.05/PicoDrive_ps2_2.05-19d4108.zip",
+          "version": "v2.05",
+          "bytes": 1048905,
+          "sha256": "22f2abdf5a2f8a5f02c130c4722b7b08ddddd705a161c757c1e3917b0daf70e8",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "elfs": [
+            {
+              "path": "PicoDrive/PicoDrive.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 808900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ps2me",
+      "archiveItemId": "ps2-expansion-ps2me",
+      "files": [
+        {
+          "name": "PS2ME-v1.4.0.zip",
+          "sourceUrl": "https://github.com/Wellinator/PS2ME/releases/download/v1.4.0/PS2ME-v1.4.0.zip",
+          "version": "v1.4.0",
+          "bytes": 2045136,
+          "sha256": "973d62fa632d92cf275c677bdbfd8c6ad0b9e6274a64e6d8a43c7dafc5bd0c54",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/ps2me/v1.4.0/PS2ME-v1.4.0.zip",
+          "elfs": [
+            {
+              "path": "PS2ME/PS2ME-v1.4.0.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 3336612
+            }
+          ]
+        },
+        {
+          "name": "PS2ME-v1.4.0.elf",
+          "sourceUrl": "https://github.com/Wellinator/PS2ME/releases/download/v1.4.0/PS2ME-v1.4.0.zip",
+          "version": "v1.4.0",
+          "bytes": 3336612,
+          "sha256": "53cacfc3360efeb8bcf9233289874ca402474076771c1528420aaa74d2f8e0c4",
+          "format": "PS2 ELF",
+          "archiveRole": [
+            "Builds"
+          ],
+          "derivedFrom": "PS2ME-v1.4.0.zip",
+          "member": "PS2ME/PS2ME-v1.4.0.elf",
+          "local": "/downloads/ps2-expansion/ps2me/v1.4.0/PS2ME-v1.4.0.elf",
+          "elfs": [
+            {
+              "path": "PS2ME-v1.4.0.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 3336612
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supertux",
+      "archiveItemId": "ps2-expansion-supertux",
+      "files": [
+        {
+          "name": "supertux-ps2-usb.zip",
+          "sourceUrl": "https://github.com/headshot2017/supertux-ps2/releases/download/v0.1.1a/supertux-ps2-usb.zip",
+          "version": "v0.1.1a",
+          "bytes": 9088429,
+          "sha256": "822b041bbd85bced2ed99e494cd4184bfc5badf9e6be9344f5615de49d6fe70c",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/supertux/v0.1.1a/supertux-ps2-usb.zip",
+          "elfs": [
+            {
+              "path": "supertux.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 4188680
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quake",
+      "archiveItemId": "ps2-expansion-quake",
+      "files": [
+        {
+          "name": "q1ps2_release_1.1.0.zip",
+          "sourceUrl": "https://github.com/glampert/quake-ps2/releases/download/v1.1.0/q1ps2_release_1.1.0.zip",
+          "version": "v1.1.0",
+          "bytes": 634699,
+          "sha256": "16e85c15b84a861a39b9b1ecf52f5401c91c654f325650b19849f3529f7fa29f",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/quake/v1.1.0/q1ps2_release_1.1.0.zip",
+          "elfs": [
+            {
+              "path": "q1ps2_release_1.1.0/quake.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 1412384
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quake2",
+      "archiveItemId": "ps2-expansion-quake2",
+      "files": [
+        {
+          "name": "q2ps2_release_3.22.zip",
+          "sourceUrl": "https://github.com/glampert/quake2-ps2/releases/download/v3.22/q2ps2_release_3.22.zip",
+          "version": "v3.22",
+          "bytes": 789016,
+          "sha256": "d9b3c6ded7c87edf212b6bd114f8f6dc36b8e9beda7147857bae543d44995b78",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/quake2/v3.22/q2ps2_release_3.22.zip",
+          "elfs": [
+            {
+              "path": "q2ps2_release_3.22/quake2.elf",
+              "class": "ELF32",
+              "endian": "little",
+              "machine": "MIPS",
+              "type": "executable",
+              "bytes": 1889408
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deckyos",
+      "archiveItemId": "ps2-expansion-deckyos",
+      "files": [
+        {
+          "name": "thm_DeckyOS.zip",
+          "sourceUrl": "https://github.com/PixeliGer/OPL-Theme-DeckyOS/releases/download/v1.0/thm_DeckyOS.zip",
+          "version": "v1.0",
+          "bytes": 416571,
+          "sha256": "23d3a957ae88b4af66e9c893bdcc05cca10278c5d69da72fad52bf36b88a723e",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/deckyos/v1.0/thm_DeckyOS.zip",
+          "elfs": []
+        }
+      ]
+    },
+    {
+      "id": "pados",
+      "archiveItemId": "ps2-expansion-pados",
+      "files": [
+        {
+          "name": "thm_PadOS.zip",
+          "sourceUrl": "https://github.com/PixeliGer/OPL-Theme-PadOS/releases/download/v1.0/thm_PadOS.zip",
+          "version": "v1.0",
+          "bytes": 829239,
+          "sha256": "255d205cdd2348e530a38c8d419fcb2fec61f1b01e6796147ab0722ab8b630c4",
+          "format": "ZIP",
+          "archiveRole": [
+            "Builds"
+          ],
+          "local": "/downloads/ps2-expansion/pados/v1.0/thm_PadOS.zip",
+          "elfs": []
+        }
+      ]
+    }
+  ],
+  "organizedArchiveIndexSnapshot": {
+    "items": 1198,
+    "fileRecords": 1989,
+    "presentFileRecords": 1926,
+    "missingPaths": 0,
+    "unlocated": 63
+  },
+  "setupPopup": {
+    "status": "complete",
+    "scope": "All fourteen additional resource cards",
+    "behavior": [
+      "Native modal with app title and sticky Close control",
+      "Escape and backdrop dismissal",
+      "Focus returns to original setup control",
+      "Scrollable phone layout; existing setup content and checksums retained",
+      "Native details fallback without JavaScript"
+    ],
+    "verification": "Desktop and 390px browser checks passed; scoped archive/link/hash checks passed",
+    "screenshot": "docs/qa/ps2-setup-popup-mobile.png"
+  },
+  "mainGuidePopups": {
+    "status": "complete",
+    "anchors": [
+      "start",
+      "ps2-storage-guide",
+      "storage"
+    ],
+    "behavior": "Compact sections open their retained instructions in the existing accessible modal; hero/navigation links and direct anchor loads open the matching popup; native content remains available without JavaScript.",
+    "checks": [
+      "Setup hero link opens five setup steps",
+      "Storage navigation opens six checklist steps",
+      "Storage options button opens both original cards",
+      "Escape/Close restore content and focus",
+      "390px popup fits with scrollable content; desktop viewport restored",
+      "Scoped file/link/hash verification passes"
+    ],
+    "screenshot": "docs/qa/ps2-main-storage-popup.png"
+  },
+  "oplThemeSetupPopup": {
+    "status": "complete",
+    "trigger": "Open OPL theme setup guide",
+    "anchor": "ps2-theme-setup",
+    "checks": [
+      "Opens shared modal with retained compatibility and THM instructions",
+      "Theme cards remain visible on page",
+      "Escape closes and restores content/focus",
+      "Scoped verification passed"
+    ],
+    "screenshot": "docs/qa/ps2-opl-theme-setup-popup.png"
+  },
+  "finalVerifiedAt": "2026-11-02T12:20:17.407Z",
+  "closeout": "Final checks passed; work remains local. User requested chat deletion; available control archives the chat."
+}

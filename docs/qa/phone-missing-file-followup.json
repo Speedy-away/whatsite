@@ -1,0 +1,2614 @@
+{
+  "checkedAt": "2026-11-02T08:22:04.621Z",
+  "mode": "Read-only diagnosis; no file/inventory repairs or network downloads performed",
+  "notes": [
+    "Initial whole-page audit had 138 missing references (69 unique URLs). A concurrent importer is preparing this exact batch; counts decrease during inspection.",
+    "All expected ready files are aliases of XMLs already extracted from the same pinned archive; each source XML hash is checked here.",
+    "Do not duplicate another importer or replace the inventory while it runs. Re-run audit-phone-downloads.cjs after that importer completes."
+  ],
+  "batch": {
+    "file": "docs/qa/console-site-expansion-patch-jobs.json",
+    "preparedAt": "2026-11-02T08:20:51.296Z",
+    "jobs": 69,
+    "versions": [
+      "1792785960"
+    ],
+    "sourceUrls": [
+      "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip"
+    ],
+    "archive": {
+      "url": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "local": "/downloads/ps4-ps5/fps-patch-archive-1792785960/patch1.zip",
+      "bytes": 871392,
+      "sha256": "bd35217d12986ed16a8cde6e6a0e6bd34e80a40292bfbdffa81055146f684ab7",
+      "exists": true
+    }
+  },
+  "snapshot": {
+    "publicPages": 303,
+    "missingReferences": 94,
+    "uniqueMissingUrls": 47,
+    "batchMissingAtSnapshot": 47,
+    "otherMissingUrls": [],
+    "exactOriginalsAvailable": 69,
+    "readyFilesPresentWhenInspected": 28,
+    "readyFilesExactWhenInspected": 28
+  },
+  "entries": [
+    {
+      "id": "fps-cusa10123-1792785960",
+      "title": "Assassin's Creed Rogue Remastered · CUSA10123 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa10123-1792785960/CUSA10123.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA10123.xml",
+      "expectedBytes": 619,
+      "expectedSha256": "a65a5b5cb66ecebab2c39d6bdf3a4e0cbd73f10df169106b6270559fc8382226",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA10123.xml",
+        "exists": true,
+        "bytes": 619,
+        "sha256": "a65a5b5cb66ecebab2c39d6bdf3a4e0cbd73f10df169106b6270559fc8382226",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 619,
+        "sha256": "a65a5b5cb66ecebab2c39d6bdf3a4e0cbd73f10df169106b6270559fc8382226",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa10123-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa10123-1792785960/CUSA10123.xml",
+          "bytes": 619,
+          "sha256": "a65a5b5cb66ecebab2c39d6bdf3a4e0cbd73f10df169106b6270559fc8382226"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa10123-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa10123-1792785960/CUSA10123.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Assassin's Creed Rogue Remastered\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA10123.xml",
+              "bytes": 619,
+              "sha256": "a65a5b5cb66ecebab2c39d6bdf3a4e0cbd73f10df169106b6270559fc8382226",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa05008-1792785960",
+      "title": "Assassin's Creed The Ezio Collection · CUSA05008 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa05008-1792785960/CUSA05008.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA05008.xml",
+      "expectedBytes": 1739,
+      "expectedSha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA05008.xml",
+        "exists": true,
+        "bytes": 1739,
+        "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1739,
+        "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa05008-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa05008-1792785960/CUSA05008.xml",
+          "bytes": 1739,
+          "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa05008-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa05008-1792785960/CUSA05008.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Assassin's Creed The Ezio Collection\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA05008.xml",
+              "bytes": 1739,
+              "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa04893-1792785960",
+      "title": "Assassin's Creed The Ezio Collection · CUSA04893 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa04893-1792785960/CUSA04893.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA04893.xml",
+      "expectedBytes": 1739,
+      "expectedSha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA04893.xml",
+        "exists": true,
+        "bytes": 1739,
+        "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1739,
+        "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa04893-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa04893-1792785960/CUSA04893.xml",
+          "bytes": 1739,
+          "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa04893-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa04893-1792785960/CUSA04893.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Assassin's Creed The Ezio Collection\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA04893.xml",
+              "bytes": 1739,
+              "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa05943-1792785960",
+      "title": "Assassin's Creed The Ezio Collection · CUSA05943 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa05943-1792785960/CUSA05943.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA05943.xml",
+      "expectedBytes": 1739,
+      "expectedSha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA05943.xml",
+        "exists": true,
+        "bytes": 1739,
+        "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1739,
+        "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa05943-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa05943-1792785960/CUSA05943.xml",
+          "bytes": 1739,
+          "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa05943-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa05943-1792785960/CUSA05943.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Assassin's Creed The Ezio Collection\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA05943.xml",
+              "bytes": 1739,
+              "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa11875-1792785960",
+      "title": "Concrete Genie · CUSA11875 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa11875-1792785960/CUSA11875.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA11875.xml",
+      "expectedBytes": 1305,
+      "expectedSha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA11875.xml",
+        "exists": true,
+        "bytes": 1305,
+        "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1305,
+        "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa11875-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa11875-1792785960/CUSA11875.xml",
+          "bytes": 1305,
+          "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa11875-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa11875-1792785960/CUSA11875.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Concrete Genie\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA11875.xml",
+              "bytes": 1305,
+              "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa11834-1792785960",
+      "title": "Concrete Genie · CUSA11834 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa11834-1792785960/CUSA11834.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA11834.xml",
+      "expectedBytes": 1305,
+      "expectedSha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA11834.xml",
+        "exists": true,
+        "bytes": 1305,
+        "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1305,
+        "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa11834-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa11834-1792785960/CUSA11834.xml",
+          "bytes": 1305,
+          "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa11834-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa11834-1792785960/CUSA11834.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Concrete Genie\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA11834.xml",
+              "bytes": 1305,
+              "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa11851-1792785960",
+      "title": "Concrete Genie · CUSA11851 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa11851-1792785960/CUSA11851.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA11851.xml",
+      "expectedBytes": 1305,
+      "expectedSha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA11851.xml",
+        "exists": true,
+        "bytes": 1305,
+        "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1305,
+        "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa11851-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa11851-1792785960/CUSA11851.xml",
+          "bytes": 1305,
+          "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc"
+        },
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31348-1792785960",
+      "title": "Crisis Core: Final Fantasy VII Reunion · CUSA31348 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31348-1792785960/CUSA31348.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31348.xml",
+      "expectedBytes": 2720,
+      "expectedSha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31348.xml",
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa31348-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa31348-1792785960/CUSA31348.xml",
+          "bytes": 2720,
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa31348-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa31348-1792785960/CUSA31348.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Crisis Core_ Final Fantasy VII Reunion\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA31348.xml",
+              "bytes": 2720,
+              "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31351-1792785960",
+      "title": "Crisis Core: Final Fantasy VII Reunion · CUSA31351 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31351-1792785960/CUSA31351.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31351.xml",
+      "expectedBytes": 2720,
+      "expectedSha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31351.xml",
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa31351-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa31351-1792785960/CUSA31351.xml",
+          "bytes": 2720,
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa31351-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa31351-1792785960/CUSA31351.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Crisis Core_ Final Fantasy VII Reunion\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA31351.xml",
+              "bytes": 2720,
+              "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31350-1792785960",
+      "title": "Crisis Core: Final Fantasy VII Reunion · CUSA31350 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31350-1792785960/CUSA31350.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31350.xml",
+      "expectedBytes": 2720,
+      "expectedSha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31350.xml",
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa31350-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa31350-1792785960/CUSA31350.xml",
+          "bytes": 2720,
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa31350-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa31350-1792785960/CUSA31350.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Crisis Core_ Final Fantasy VII Reunion\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA31350.xml",
+              "bytes": 2720,
+              "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31349-1792785960",
+      "title": "Crisis Core: Final Fantasy VII Reunion · CUSA31349 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31349-1792785960/CUSA31349.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31349.xml",
+      "expectedBytes": 2720,
+      "expectedSha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31349.xml",
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 2720,
+        "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa31349-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa31349-1792785960/CUSA31349.xml",
+          "bytes": 2720,
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa31349-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa31349-1792785960/CUSA31349.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Crisis Core_ Final Fantasy VII Reunion\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA31349.xml",
+              "bytes": 2720,
+              "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa01836-1792785960",
+      "title": "Deus Ex Mankind Divided · CUSA01836 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa01836-1792785960/CUSA01836.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA01836.xml",
+      "expectedBytes": 1074,
+      "expectedSha256": "abae8486f65189018daf791a031ee4c654c904afea62bac1321e2b1746823f18",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA01836.xml",
+        "exists": true,
+        "bytes": 1074,
+        "sha256": "abae8486f65189018daf791a031ee4c654c904afea62bac1321e2b1746823f18",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1074,
+        "sha256": "abae8486f65189018daf791a031ee4c654c904afea62bac1321e2b1746823f18",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa01836-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa01836-1792785960/CUSA01836.xml",
+          "bytes": 1074,
+          "sha256": "abae8486f65189018daf791a031ee4c654c904afea62bac1321e2b1746823f18"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa01836-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa01836-1792785960/CUSA01836.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Deus Ex Mankind Divided\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA01836.xml",
+              "bytes": 1074,
+              "sha256": "abae8486f65189018daf791a031ee4c654c904afea62bac1321e2b1746823f18",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa00503-1792785960",
+      "title": "Dragon Age: Inquisition · CUSA00503 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa00503-1792785960/CUSA00503.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA00503.xml",
+      "expectedBytes": 1940,
+      "expectedSha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA00503.xml",
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa00503-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa00503-1792785960/CUSA00503.xml",
+          "bytes": 1940,
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa00503-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa00503-1792785960/CUSA00503.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Dragon Age_ Inquisition\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA00503.xml",
+              "bytes": 1940,
+              "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa00220-1792785960",
+      "title": "Dragon Age: Inquisition · CUSA00220 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa00220-1792785960/CUSA00220.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA00220.xml",
+      "expectedBytes": 1940,
+      "expectedSha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA00220.xml",
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa00220-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa00220-1792785960/CUSA00220.xml",
+          "bytes": 1940,
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa00220-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa00220-1792785960/CUSA00220.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Dragon Age_ Inquisition\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA00220.xml",
+              "bytes": 1940,
+              "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa01425-1792785960",
+      "title": "Dragon Age: Inquisition · CUSA01425 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa01425-1792785960/CUSA01425.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA01425.xml",
+      "expectedBytes": 1940,
+      "expectedSha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA01425.xml",
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa01425-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa01425-1792785960/CUSA01425.xml",
+          "bytes": 1940,
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa01425-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa01425-1792785960/CUSA01425.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Dragon Age_ Inquisition\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA01425.xml",
+              "bytes": 1940,
+              "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa00728-1792785960",
+      "title": "Dragon Age: Inquisition · CUSA00728 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa00728-1792785960/CUSA00728.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA00728.xml",
+      "expectedBytes": 1940,
+      "expectedSha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA00728.xml",
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 1940,
+        "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa00728-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa00728-1792785960/CUSA00728.xml",
+          "bytes": 1940,
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa00728-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa00728-1792785960/CUSA00728.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Dragon Age_ Inquisition\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA00728.xml",
+              "bytes": 1940,
+              "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa09431-1792785960",
+      "title": "Dragon's Dogma: Dark Arisen · CUSA09431 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa09431-1792785960/CUSA09431.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA09431.xml",
+      "expectedBytes": 662,
+      "expectedSha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA09431.xml",
+        "exists": true,
+        "bytes": 662,
+        "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 662,
+        "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa09431-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa09431-1792785960/CUSA09431.xml",
+          "bytes": 662,
+          "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa09431-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa09431-1792785960/CUSA09431.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Dragon's Dogma_ Dark Arisen\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA09431.xml",
+              "bytes": 662,
+              "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa07340-1792785960",
+      "title": "Dragon's Dogma: Dark Arisen · CUSA07340 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa07340-1792785960/CUSA07340.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA07340.xml",
+      "expectedBytes": 662,
+      "expectedSha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA07340.xml",
+        "exists": true,
+        "bytes": 662,
+        "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 662,
+        "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa07340-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa07340-1792785960/CUSA07340.xml",
+          "bytes": 662,
+          "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa07340-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa07340-1792785960/CUSA07340.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Dragon's Dogma_ Dark Arisen\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA07340.xml",
+              "bytes": 662,
+              "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa07316-1792785960",
+      "title": "Dragon's Dogma: Dark Arisen · CUSA07316 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa07316-1792785960/CUSA07316.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA07316.xml",
+      "expectedBytes": 662,
+      "expectedSha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA07316.xml",
+        "exists": true,
+        "bytes": 662,
+        "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 662,
+        "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa07316-1792785960",
+        "manifest": {
+          "status": "downloaded",
+          "local": "/downloads/ps4-ps5/fps-cusa07316-1792785960/CUSA07316.xml",
+          "bytes": 662,
+          "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5"
+        },
+        "inventoryItem": {
+          "id": "ps4-ps5-fps-cusa07316-1792785960",
+          "status": "downloaded",
+          "files": [
+            {
+              "local": "/downloads/ps4-ps5/fps-cusa07316-1792785960/CUSA07316.xml",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4 and PS5\\Games\\Dragon's Dogma_ Dark Arisen\\Game Patches\\PS Game Patch\\Builds\\1792785960\\CUSA07316.xml",
+              "bytes": 662,
+              "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+              "backupExists": true
+            }
+          ]
+        },
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa25470-1792785960",
+      "title": "God of War Ragnarok · CUSA25470 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa25470-1792785960/CUSA25470.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA25470.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA25470.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa25470-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34384-1792785960",
+      "title": "God of War Ragnarok · CUSA34384 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34384-1792785960/CUSA34384.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34384.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34384.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa34384-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31680-1792785960",
+      "title": "God of War Ragnarok · CUSA31680 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31680-1792785960/CUSA31680.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31680.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": false,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31680.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa31680-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31681-1792785960",
+      "title": "God of War Ragnarok · CUSA31681 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31681-1792785960/CUSA31681.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31681.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31681.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa31681-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34394-1792785960",
+      "title": "God of War Ragnarok · CUSA34394 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34394-1792785960/CUSA34394.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34394.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34394.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa34394-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa25471-1792785960",
+      "title": "God of War Ragnarok · CUSA25471 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa25471-1792785960/CUSA25471.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA25471.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA25471.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa25471-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31678-1792785960",
+      "title": "God of War Ragnarok · CUSA31678 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31678-1792785960/CUSA31678.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31678.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31678.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa31678-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34387-1792785960",
+      "title": "God of War Ragnarok · CUSA34387 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34387-1792785960/CUSA34387.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34387.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34387.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa34387-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34259-1792785960",
+      "title": "God of War Ragnarok · CUSA34259 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34259-1792785960/CUSA34259.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34259.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34259.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "associations": {
+        "patchResource": "fps-cusa34259-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34395-1792785960",
+      "title": "God of War Ragnarok · CUSA34395 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34395-1792785960/CUSA34395.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34395.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34395.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34395-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34393-1792785960",
+      "title": "God of War Ragnarok · CUSA34393 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34393-1792785960/CUSA34393.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34393.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34393.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34393-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34385-1792785960",
+      "title": "God of War Ragnarok · CUSA34385 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34385-1792785960/CUSA34385.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34385.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34385.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34385-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34256-1792785960",
+      "title": "God of War Ragnarok · CUSA34256 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34256-1792785960/CUSA34256.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34256.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34256.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34256-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34389-1792785960",
+      "title": "God of War Ragnarok · CUSA34389 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34389-1792785960/CUSA34389.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34389.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34389.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34389-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34386-1792785960",
+      "title": "God of War Ragnarok · CUSA34386 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34386-1792785960/CUSA34386.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34386.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34386.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34386-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa25468-1792785960",
+      "title": "God of War Ragnarok · CUSA25468 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa25468-1792785960/CUSA25468.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA25468.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA25468.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa25468-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34258-1792785960",
+      "title": "God of War Ragnarok · CUSA34258 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34258-1792785960/CUSA34258.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34258.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34258.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34258-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34257-1792785960",
+      "title": "God of War Ragnarok · CUSA34257 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34257-1792785960/CUSA34257.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34257.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34257.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34257-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa31679-1792785960",
+      "title": "God of War Ragnarok · CUSA31679 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa31679-1792785960/CUSA31679.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA31679.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA31679.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa31679-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34391-1792785960",
+      "title": "God of War Ragnarok · CUSA34391 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34391-1792785960/CUSA34391.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34391.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34391.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34391-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34390-1792785960",
+      "title": "God of War Ragnarok · CUSA34390 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34390-1792785960/CUSA34390.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34390.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34390.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34390-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34392-1792785960",
+      "title": "God of War Ragnarok · CUSA34392 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34392-1792785960/CUSA34392.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34392.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34392.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34392-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34388-1792785960",
+      "title": "God of War Ragnarok · CUSA34388 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34388-1792785960/CUSA34388.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34388.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34388.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34388-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa34357-1792785960",
+      "title": "God of War Ragnarok · CUSA34357 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa34357-1792785960/CUSA34357.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA34357.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA34357.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa34357-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa25469-1792785960",
+      "title": "God of War Ragnarok · CUSA25469 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa25469-1792785960/CUSA25469.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA25469.xml",
+      "expectedBytes": 3249,
+      "expectedSha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA25469.xml",
+        "exists": true,
+        "bytes": 3249,
+        "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa25469-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa12824-1792785960",
+      "title": "Hogwarts Legacy · CUSA12824 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa12824-1792785960/CUSA12824.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA12824.xml",
+      "expectedBytes": 3969,
+      "expectedSha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA12824.xml",
+        "exists": true,
+        "bytes": 3969,
+        "sha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa12824-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa12771-1792785960",
+      "title": "Hogwarts Legacy · CUSA12771 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa12771-1792785960/CUSA12771.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA12771.xml",
+      "expectedBytes": 3969,
+      "expectedSha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA12771.xml",
+        "exists": true,
+        "bytes": 3969,
+        "sha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa12771-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa24853-1792785960",
+      "title": "Kena: Bridge of Spirits · CUSA24853 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa24853-1792785960/CUSA24853.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA24853.xml",
+      "expectedBytes": 2489,
+      "expectedSha256": "a08ac4bb2e0b79aa02ba81476cb961f882f6b41c771c7d4528472c1d5f7c19bf",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA24853.xml",
+        "exists": true,
+        "bytes": 2489,
+        "sha256": "a08ac4bb2e0b79aa02ba81476cb961f882f6b41c771c7d4528472c1d5f7c19bf",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa24853-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa36849-1792785960",
+      "title": "Lies of P · CUSA36849 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa36849-1792785960/CUSA36849.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA36849.xml",
+      "expectedBytes": 3328,
+      "expectedSha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA36849.xml",
+        "exists": true,
+        "bytes": 3328,
+        "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa36849-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa36848-1792785960",
+      "title": "Lies of P · CUSA36848 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa36848-1792785960/CUSA36848.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA36848.xml",
+      "expectedBytes": 3328,
+      "expectedSha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA36848.xml",
+        "exists": true,
+        "bytes": 3328,
+        "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa36848-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa36847-1792785960",
+      "title": "Lies of P · CUSA36847 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa36847-1792785960/CUSA36847.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA36847.xml",
+      "expectedBytes": 3328,
+      "expectedSha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA36847.xml",
+        "exists": true,
+        "bytes": 3328,
+        "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa36847-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa36850-1792785960",
+      "title": "Lies of P · CUSA36850 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa36850-1792785960/CUSA36850.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA36850.xml",
+      "expectedBytes": 3328,
+      "expectedSha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA36850.xml",
+        "exists": true,
+        "bytes": 3328,
+        "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa36850-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa17941-1792785960",
+      "title": "Life is Strange: True Colors · CUSA17941 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa17941-1792785960/CUSA17941.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA17941.xml",
+      "expectedBytes": 1075,
+      "expectedSha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA17941.xml",
+        "exists": true,
+        "bytes": 1075,
+        "sha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa17941-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa24801-1792785960",
+      "title": "Life is Strange: True Colors · CUSA24801 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa24801-1792785960/CUSA24801.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA24801.xml",
+      "expectedBytes": 1075,
+      "expectedSha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA24801.xml",
+        "exists": true,
+        "bytes": 1075,
+        "sha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa24801-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa15090-1792785960",
+      "title": "Need for Speed Heat · CUSA15090 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa15090-1792785960/CUSA15090.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA15090.xml",
+      "expectedBytes": 783,
+      "expectedSha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA15090.xml",
+        "exists": true,
+        "bytes": 783,
+        "sha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa15090-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa15081-1792785960",
+      "title": "Need for Speed Heat · CUSA15081 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa15081-1792785960/CUSA15081.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA15081.xml",
+      "expectedBytes": 783,
+      "expectedSha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA15081.xml",
+        "exists": true,
+        "bytes": 783,
+        "sha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa15081-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa01067-1792785960",
+      "title": "Resident Evil: HD · CUSA01067 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa01067-1792785960/CUSA01067.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA01067.xml",
+      "expectedBytes": 672,
+      "expectedSha256": "71a20a192d72b61142bc5e965138ece1711cfaf5efc7c7b6369902a11cca3ef4",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA01067.xml",
+        "exists": true,
+        "bytes": 672,
+        "sha256": "71a20a192d72b61142bc5e965138ece1711cfaf5efc7c7b6369902a11cca3ef4",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa01067-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa05794-1792785960",
+      "title": "Rise of the Tomb Raider · CUSA05794 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa05794-1792785960/CUSA05794.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA05794.xml",
+      "expectedBytes": 1063,
+      "expectedSha256": "768e183acbbb7acf475e43e28ca107eec7ece74d8a055e41cc1eba663a74eca0",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA05794.xml",
+        "exists": true,
+        "bytes": 1063,
+        "sha256": "768e183acbbb7acf475e43e28ca107eec7ece74d8a055e41cc1eba663a74eca0",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa05794-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa05333-1792785960",
+      "title": "Skyrim · CUSA05333 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa05333-1792785960/CUSA05333.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA05333.xml",
+      "expectedBytes": 992,
+      "expectedSha256": "b50644f6733b1c49a25b9aeebea5e8131ae7d6453fab045fe22ac1d8f890914f",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA05333.xml",
+        "exists": true,
+        "bytes": 992,
+        "sha256": "b50644f6733b1c49a25b9aeebea5e8131ae7d6453fab045fe22ac1d8f890914f",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa05333-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa28194-1792785960",
+      "title": "Sonic Frontiers · CUSA28194 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa28194-1792785960/CUSA28194.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA28194.xml",
+      "expectedBytes": 765,
+      "expectedSha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA28194.xml",
+        "exists": true,
+        "bytes": 765,
+        "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa28194-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa32054-1792785960",
+      "title": "Sonic Frontiers · CUSA32054 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa32054-1792785960/CUSA32054.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA32054.xml",
+      "expectedBytes": 765,
+      "expectedSha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA32054.xml",
+        "exists": true,
+        "bytes": 765,
+        "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa32054-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa28193-1792785960",
+      "title": "Sonic Frontiers · CUSA28193 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa28193-1792785960/CUSA28193.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA28193.xml",
+      "expectedBytes": 765,
+      "expectedSha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA28193.xml",
+        "exists": true,
+        "bytes": 765,
+        "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa28193-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa13689-1792785960",
+      "title": "The Outer Worlds · CUSA13689 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa13689-1792785960/CUSA13689.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA13689.xml",
+      "expectedBytes": 1383,
+      "expectedSha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA13689.xml",
+        "exists": true,
+        "bytes": 1383,
+        "sha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa13689-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa16285-1792785960",
+      "title": "The Outer Worlds · CUSA16285 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa16285-1792785960/CUSA16285.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA16285.xml",
+      "expectedBytes": 1383,
+      "expectedSha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA16285.xml",
+        "exists": true,
+        "bytes": 1383,
+        "sha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa16285-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa36846-1792785960",
+      "title": "Wo Long: Fallen Dynasty · CUSA36846 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa36846-1792785960/CUSA36846.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA36846.xml",
+      "expectedBytes": 1354,
+      "expectedSha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA36846.xml",
+        "exists": true,
+        "bytes": 1354,
+        "sha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa36846-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa36986-1792785960",
+      "title": "Wo Long: Fallen Dynasty · CUSA36986 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa36986-1792785960/CUSA36986.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA36986.xml",
+      "expectedBytes": 1354,
+      "expectedSha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA36986.xml",
+        "exists": true,
+        "bytes": 1354,
+        "sha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa36986-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa08548-1792785960",
+      "title": "Wreckfest · CUSA08548 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa08548-1792785960/CUSA08548.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA08548.xml",
+      "expectedBytes": 1382,
+      "expectedSha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA08548.xml",
+        "exists": true,
+        "bytes": 1382,
+        "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa08548-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa08652-1792785960",
+      "title": "Wreckfest · CUSA08652 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa08652-1792785960/CUSA08652.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA08652.xml",
+      "expectedBytes": 1382,
+      "expectedSha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA08652.xml",
+        "exists": true,
+        "bytes": 1382,
+        "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa08652-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa17033-1792785960",
+      "title": "Wreckfest · CUSA17033 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa17033-1792785960/CUSA17033.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA17033.xml",
+      "expectedBytes": 1382,
+      "expectedSha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA17033.xml",
+        "exists": true,
+        "bytes": 1382,
+        "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa17033-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    },
+    {
+      "id": "fps-cusa00009-1792785960",
+      "title": "Assassin's Creed IV Black Flag · CUSA00009 patch XML",
+      "url": "/downloads/ps4-ps5/fps-cusa00009-1792785960/CUSA00009.xml",
+      "sourceUrl": "https://github.com/illusionyy/PS-Game-Patch/releases/download/1792785960/patch1.zip",
+      "version": "1792785960",
+      "archiveEntry": "patches/xml/CUSA00009.xml",
+      "expectedBytes": 606,
+      "expectedSha256": "8fade2be1a71083f76fb72b7cbd1424c816067783912f28831f525c8e6f4c74f",
+      "pages": [
+        "console/ps4/game-patches.html",
+        "console/ps5/game-patches.html"
+      ],
+      "missingAtAuditSnapshot": true,
+      "original": {
+        "path": "downloads/ps4-ps5/fps-patches-1792785960/xml/CUSA00009.xml",
+        "exists": true,
+        "bytes": 606,
+        "sha256": "8fade2be1a71083f76fb72b7cbd1424c816067783912f28831f525c8e6f4c74f",
+        "matchesExpected": true
+      },
+      "ready": {
+        "exists": false,
+        "matchesExpected": false
+      },
+      "associations": {
+        "patchResource": "fps-cusa00009-1792785960",
+        "manifest": null,
+        "inventoryItem": null,
+        "catalogResource": null
+      }
+    }
+  ]
+}

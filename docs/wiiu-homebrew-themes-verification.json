@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-02T08:32:44.061Z",
+  "themes": 8,
+  "tools": 2,
+  "totalBytes": 68503576,
+  "checks": [
+    "All original .utheme ZIP entries decompressed with verified CRC32 and bounded paths",
+    "All BPS1 patch signatures and patch CRC32 values verified; source sizes and CRCs retained",
+    "Themezer theme ID/title/uploader/version match original package metadata",
+    "WUHB header and WPS ELF32 big-endian PowerPC header checked",
+    "Public files archived through scoped helper; no downloaded file executed"
+  ],
+  "limits": [
+    "No physical Wii U installation or execution",
+    "No original Nintendo Menu files are redistributed",
+    "Numeric per-theme Wii U Menu revisions not provided by publisher; exact BPS source checksums recorded"
+  ],
+  "inventory": "docs/wiiu-themes-private-inventory.json"
+}

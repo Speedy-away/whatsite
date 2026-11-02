@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-02",
+  "purpose": "Primary-source references for per-page URL previews. This records requirements separately from project design choices; it does not claim search or social platforms will display a particular preview.",
+  "projectChoice": {
+    "format": "image/png",
+    "width": 1200,
+    "height": 630,
+    "reason": "A consistent high-resolution landscape export for the site's original share artwork. These exact dimensions are a project choice, not a requirement of the Open Graph protocol.",
+    "metadata": ["og:image", "og:image:secure_url", "og:image:type", "og:image:width", "og:image:height", "og:image:alt", "twitter:card=summary_large_image", "twitter:image", "twitter:image:alt"],
+    "consistency": "Use the same absolute HTTPS image URL, descriptive alt text and actual pixel dimensions across Open Graph, X card metadata and the page's ImageObject. Keep canonical and existing indexing directives unchanged.",
+    "limitation": "Text-led share cards favor readable social previews. Google recommends avoiding text in a preferred search image, so title cards must not be described as fully satisfying that recommendation. A representative illustration without text is preferable when available."
+  },
+  "sources": [
+    {
+      "title": "The Open Graph protocol",
+      "url": "https://ogp.me/",
+      "status": "Current primary documentation fetched",
+      "notes": [
+        "Core properties are og:title, og:type, og:image and og:url.",
+        "Image structured properties include HTTPS secure_url, MIME type, pixel width and height, and alt describing the image.",
+        "Place structured properties after their og:image root; another image root starts a new image group.",
+        "The protocol does not prescribe one image size or image file format."
+      ]
+    },
+    {
+      "title": "Google image SEO best practices",
+      "url": "https://developers.google.com/search/docs/appearance/google-images",
+      "documentUpdated": "2026-03-02",
+      "status": "Current primary documentation fetched",
+      "notes": [
+        "Google can use og:image or WebPage.primaryImageOfPage as a preferred-image signal; primaryImageOfPage may be a URL or ImageObject.",
+        "Images should represent the page, use high resolution and avoid extreme aspect ratios, generic logos and text. Selection remains automated.",
+        "Google Images supports BMP, GIF, JPEG, PNG, WebP, SVG and AVIF. Broader Google support does not establish social-platform SVG support.",
+        "Use descriptive alt text without keyword stuffing. HTML img/src and an image sitemap can help image discovery."
+      ]
+    },
+    {
+      "title": "Schema.org primaryImageOfPage and ImageObject",
+      "urls": ["https://schema.org/primaryImageOfPage", "https://schema.org/ImageObject"],
+      "schemaVersionShown": "30.1 (2026-09-16)",
+      "status": "Current primary documentation fetched",
+      "notes": [
+        "primaryImageOfPage applies to WebPage and expects ImageObject in the Schema.org vocabulary.",
+        "ImageObject supports contentUrl, encodingFormat, width, height, description and representativeOfPage. Use the actual image bytes URL and truthful dimensions.",
+        "WebPage.image can reference the same ImageObject. Do not manufacture article type, licensing, creator or publication facts."
+      ]
+    },
+    {
+      "title": "X legacy Cards documentation availability",
+      "urls": ["https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image", "https://developer.x.com/en/docs/x-for-websites/cards/overview/markup", "https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image", "https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup", "https://docs.x.com/llms.txt"],
+      "status": "Legacy card URLs redirected to https://docs.x.com/overview; the current top-level documentation index did not expose a Cards section. The attempted new cards path was unavailable.",
+      "notes": [
+        "Current official card-specific format, pixel, aspect-ratio, byte-size and alt-length limits could not be verified from live X documentation in this check.",
+        "Keep the existing explicit Twitter card tags and provide PNG exports and descriptive alt text. Do not cite third-party reproductions as current official X requirements."
+      ]
+    }
+  ],
+  "verificationBoundary": "Local tests can verify generated PNG bytes, dimensions, metadata agreement and protected-file hashes. Actual platform fetches, caching and rendered preview selection require a reachable published URL and remain unverified by this local-only change."
+}

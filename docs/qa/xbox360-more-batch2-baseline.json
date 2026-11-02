@@ -1,0 +1,411 @@
+{
+  "checkedAt": "2026-11-02T09:32:11.086Z",
+  "resources": [
+    {
+      "id": "swanstation",
+      "title": "SwanStation",
+      "version": "0.1.1.0",
+      "files": [
+        {
+          "name": "swanstation-0.1.1.0.zip",
+          "version": "0.1.1.0",
+          "bytes": 2199302,
+          "sha256": "4a6844861dd4318fe42d65754feef4d3f822d98fa1acee4b6627626c5a224957",
+          "sourceUrl": "https://github.com/xenosworks/swanstation-xenon/releases/download/xenon-0.1.1.0/swanstation-0.1.1.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-swanstation",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "SwanStation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "balatro360",
+      "title": "Balatro360",
+      "version": "1.0.0.0",
+      "files": [
+        {
+          "name": "Balatro360-Xbox360-1.0.0.0.zip",
+          "version": "1.0.0.0",
+          "bytes": 2331470,
+          "sha256": "c63dc4ccce4c848ac8c6b975a8326686c0f32e8334897660a783dc0196535c18",
+          "sourceUrl": "https://github.com/dougieprishpreed/balatro360/releases/download/v1.0.0/Balatro360-Xbox360-1.0.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-balatro360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Balatro360"
+          ]
+        },
+        {
+          "label": "Store package · console files at ZIP root",
+          "name": "balatro360-1.0.0.0.zip",
+          "version": "1.0.0.0",
+          "bytes": 2329666,
+          "sha256": "b938c69e389e63c1ef02cdc44186717ff396f912630b769b232d53fa628941d4",
+          "sourceUrl": "https://github.com/dougieprishpreed/balatro360/releases/download/v1.0.0/balatro360-1.0.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-balatro360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Balatro360"
+          ],
+          "formatVerification": {
+            "type": "ZIP with native XEX2",
+            "entryCount": 11,
+            "uncompressedBytes": 5653126,
+            "executables": [
+              {
+                "name": "default.xex",
+                "bytes": 5468160,
+                "sha256": "972b1bca239b51a79a510b2bfd911148089faa9866ada15b55c34389eb129c7d"
+              }
+            ],
+            "upstreamFileHashesVerified": 11
+          }
+        }
+      ]
+    },
+    {
+      "id": "dusklight",
+      "title": "Dusklight",
+      "version": "0.1.0.0",
+      "files": [
+        {
+          "name": "dusklight-0.1.0.0.zip",
+          "version": "0.1.0.0",
+          "bytes": 21359103,
+          "sha256": "59b69f3e447c83165ff034d407316a1834aa6967408e935a8e51daa080993c19",
+          "sourceUrl": "https://github.com/xenosworks/dusklight-xenon/releases/download/xenon-0.1.0.0/dusklight-0.1.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-dusklight",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Dusklight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "starship",
+      "title": "Starship",
+      "version": "0.2.0.0",
+      "files": [
+        {
+          "name": "Starship-Xbox360-0.2.0.0.zip",
+          "version": "0.2.0.0",
+          "bytes": 6787372,
+          "sha256": "cfd6f0343d167869843f46d31165212249675e2ab9a28fa81e21b66947c56222",
+          "sourceUrl": "https://github.com/xenosworks/starship-xenon/releases/download/xenon-0.2.0.0/Starship-Xbox360-0.2.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-starship",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Starship"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ctr360",
+      "title": "CTR360",
+      "version": "1.0.3.0",
+      "files": [
+        {
+          "name": "CTR360-Xbox360-1.0.3.0.zip",
+          "version": "1.0.3.0",
+          "bytes": 12571568,
+          "sha256": "96fc653f711a9c94950eeb397de824c61fceb7be1c82ece71910cb5509c2ac99",
+          "sourceUrl": "https://github.com/dougieprishpreed/ctr360/releases/download/v1.0.3/CTR360-Xbox360-1.0.3.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-ctr360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "CTR360"
+          ]
+        },
+        {
+          "label": "Store package · console files at ZIP root",
+          "name": "ctr360-1.0.3.0.zip",
+          "version": "1.0.3.0",
+          "bytes": 1104285,
+          "sha256": "4b510db3cfc005af24a1a64c95cb5a524ae9075894a471f6d7a768814072d716",
+          "sourceUrl": "https://github.com/dougieprishpreed/ctr360/releases/download/v1.0.3/ctr360-1.0.3.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-ctr360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "CTR360"
+          ],
+          "formatVerification": {
+            "type": "ZIP with native XEX2",
+            "entryCount": 10,
+            "uncompressedBytes": 2296563,
+            "executables": [
+              {
+                "name": "default.xex",
+                "bytes": 2134016,
+                "sha256": "9611c0e63bdf370f25536ec85e0f4560ca266c8f89ab1712bd5dbc899a5a1e49"
+              }
+            ],
+            "upstreamFileHashesVerified": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "homebrew-app-store",
+      "title": "Homebrew App Store",
+      "version": "0.1.0.0",
+      "files": [
+        {
+          "name": "Homebrew-App-Store-Xbox360-0.1.0.0.zip",
+          "version": "0.1.0.0",
+          "bytes": 1891078,
+          "sha256": "43eaec792e733b5cacb85e299af93ac9bac00891e5abd816da65e9db0f929d33",
+          "sourceUrl": "https://github.com/xenosworks/homebrew-app-store/releases/download/v0.1.0.0/Homebrew-App-Store-Xbox360-0.1.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-homebrew-app-store",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Homebrew App Store"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aurora",
+      "title": "Aurora Dashboard",
+      "version": "0.7b.2 · Rev1655",
+      "files": [
+        {
+          "name": "Aurora 0.7b.2 - Release Package.rar",
+          "version": "0.7b.2 · Rev1655",
+          "bytes": 22647806,
+          "sha256": "0c7c765c3a5b938cfc64c71beda276a17d109b88df2a88e3f91eb1e74b7e46a0",
+          "sourceUrl": "https://phoenix.xboxunity.net/downloads/Aurora%200.7b.2%20-%20Release%20Package.rar",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-aurora",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Aurora Dashboard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aurora-az",
+      "title": "Aurora A–Z",
+      "version": "1.1",
+      "files": [
+        {
+          "name": "AuroraAZ-v1.1-Installer.zip",
+          "version": "1.1",
+          "bytes": 1623449,
+          "sha256": "725b6918c693e8bcf3f6f217f638a8fe4d1ed6b86bf0c7bdefbd8a7689fb6b27",
+          "sourceUrl": "https://github.com/haimbilia/Aurora-A-Z/releases/download/v1.1/AuroraAZ-v1.1-Installer.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-aurora-az",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Aurora A–Z"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-latte",
+      "title": "Catppuccin Latte",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Latte-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8259338,
+          "sha256": "473ef6e2cf880aba2e41be89ccbabc2f12875ab017eafaf5bd2a653c23579196",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Latte-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-latte",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Latte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-frappe",
+      "title": "Catppuccin Frappé",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Frappe-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8253241,
+          "sha256": "6649ac7add90fcc26a790845585b0b3b747211368f56e921e2792c1e426ddbf1",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Frappe-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-frappe",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Frappé"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-macchiato",
+      "title": "Catppuccin Macchiato",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Macchiato-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8253392,
+          "sha256": "49c2f5e541358c6ef45657ff6ce287fc87f5e0e7bda14aad2a408c0db6a47632",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Macchiato-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-macchiato",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Macchiato"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-mocha",
+      "title": "Catppuccin Mocha",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Mocha-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8255172,
+          "sha256": "c96c549c3e5a70bd3c4c1e024b46f5d1f2adaec2f4067a3020a46ae752359400",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Mocha-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-mocha",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Mocha"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harissa64",
+      "title": "Harissa64",
+      "version": "2.0.8",
+      "files": [
+        {
+          "name": "Harissa64-2.0.8.zip",
+          "version": "2.0.8",
+          "bytes": 39116506,
+          "sha256": "d181ce07e2b30a78e200cb4a1bea5906f0db38f54508ff109cbbd312aca3f8fc",
+          "sourceUrl": "https://github.com/kernel64/Harissa64/releases/download/v2.0.8/Harissa64-2.0.8.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-harissa64",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "Harissa64"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harissadc",
+      "title": "HarissaDC",
+      "version": "0.1.0-dev",
+      "files": [
+        {
+          "name": "HarissaDC-0.1.0-dev.zip",
+          "version": "0.1.0-dev",
+          "bytes": 21495409,
+          "sha256": "b49d608656832e2dad835f5d56ce4ee22c06b20538f7250269d4c7fd3a00bfb7",
+          "sourceUrl": "https://github.com/kernel64/HarissaDC/releases/download/v0.1.0-dev/HarissaDC-0.1.0-dev.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-harissadc",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "HarissaDC"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anarch360",
+      "title": "Anarch360",
+      "version": "1.0.0",
+      "files": [
+        {
+          "name": "anarch360.xex",
+          "version": "1.0.0",
+          "bytes": 3252224,
+          "sha256": "0652e4aaac97cbecf57ae8bbb1b87d812a80fd0595396d655b73f5c8fc01e23e",
+          "sourceUrl": "https://github.com/Fhoughton/Anarch360/releases/download/v1.0.0/anarch360.xex",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-anarch360",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Anarch360"
+          ]
+        }
+      ]
+    }
+  ],
+  "catalogueSha256": "86bd24122419802151b9ddb174f22c0dcb601add7bc0c81185e833579c548d50"
+}

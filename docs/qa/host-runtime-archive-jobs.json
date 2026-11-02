@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "created": "2026-11-02",
+  "jobs": [
+    {
+      "id": "host-runtime-ps4-900-web-b5f298341018",
+      "title": "PS4 9.00 · PSFree / Lapse · web",
+      "project": "ps4-900",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "whatwhatboy"
+      ],
+      "archiveRole": [
+        "Builds"
+      ],
+      "version": "368d82aa40d3-integration-2026.11.02.2",
+      "kind": "direct",
+      "url": "https://github.com/kmeps4/PSFree/tree/368d82aa40d3017c220757ce315761adb5f06678",
+      "filename": "ps4-900-web-b5f298341018.zip",
+      "importPath": "tmp/host-runtime-builds/ps4-900-web-b5f298341018.zip",
+      "expectedBytes": 280352,
+      "expectedSha256": "b5f2983410186c7869937e89c2cd9a5a52e0b623b4a3f09fd5e71a22a8d47277",
+      "mirror": true,
+      "pages": [
+        "hosts/ps4/index.html"
+      ]
+    },
+    {
+      "id": "host-runtime-ps4-900-source-a3b8a49c4c34",
+      "title": "PS4 9.00 · PSFree / Lapse · source",
+      "project": "ps4-900",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "whatwhatboy"
+      ],
+      "archiveRole": [
+        "Source Code"
+      ],
+      "version": "368d82aa40d3-integration-2026.11.02.2",
+      "kind": "direct",
+      "url": "https://github.com/kmeps4/PSFree/tree/368d82aa40d3017c220757ce315761adb5f06678",
+      "filename": "ps4-900-source-a3b8a49c4c34.zip",
+      "importPath": "tmp/host-runtime-builds/ps4-900-source-a3b8a49c4c34.zip",
+      "expectedBytes": 90651,
+      "expectedSha256": "a3b8a49c4c34db536af79e5e455d494cd2d7c8f75129f5cc18c6104984cdafed",
+      "mirror": true,
+      "pages": [
+        "hosts/ps4/index.html"
+      ]
+    },
+    {
+      "id": "host-runtime-ps4-900-native-aio-patches-bin-edf729eb5fe5",
+      "title": "PS4 9.00 · PSFree / Lapse · native-aio-patches-bin",
+      "project": "ps4-900",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "whatwhatboy"
+      ],
+      "archiveRole": [
+        "Builds"
+      ],
+      "version": "368d82aa40d3-integration-2026.11.02.2",
+      "kind": "direct",
+      "url": "https://raw.githubusercontent.com/kmeps4/PSFree/368d82aa40d3017c220757ce315761adb5f06678/aio_patches.bin",
+      "filename": "aio_patches.bin",
+      "importPath": "hosts/runtime/ps4-900/upstream/aio_patches.bin",
+      "expectedBytes": 5588,
+      "expectedSha256": "edf729eb5fe532b679cf2f7fb7c9af852d83199ad6d1364d40fb68b9983ac1e5",
+      "mirror": false,
+      "pages": [
+        "hosts/ps4/index.html"
+      ]
+    },
+    {
+      "id": "host-runtime-ps4-900-native-900-elf-56183734c0b4",
+      "title": "PS4 9.00 · PSFree / Lapse · native-900-elf",
+      "project": "ps4-900",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "whatwhatboy"
+      ],
+      "archiveRole": [
+        "Builds"
+      ],
+      "version": "368d82aa40d3-integration-2026.11.02.2",
+      "kind": "direct",
+      "url": "https://raw.githubusercontent.com/kmeps4/PSFree/368d82aa40d3017c220757ce315761adb5f06678/kpatch/900.elf",
+      "filename": "900.elf",
+      "importPath": "hosts/runtime/ps4-900/upstream/kpatch/900.elf",
+      "expectedBytes": 5288,
+      "expectedSha256": "56183734c0b4c694344971479c3e070a6a6f0d13f783804b1610218314a7ae33",
+      "mirror": false,
+      "pages": [
+        "hosts/ps4/index.html"
+      ]
+    },
+    {
+      "id": "host-runtime-ps5-umtx-web-56c9ea9c18e0",
+      "title": "PS5 · UMTX ELF loader · web",
+      "project": "ps5-umtx",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "whatwhatboy"
+      ],
+      "archiveRole": [
+        "Builds"
+      ],
+      "version": "2cf6778ebe89-integration-2026.11.02.2",
+      "kind": "direct",
+      "url": "https://github.com/PS5Dev/PS5-UMTX-Jailbreak/tree/2cf6778ebe89ff35255e1c228826d0d2155e9d2a",
+      "filename": "ps5-umtx-web-56c9ea9c18e0.zip",
+      "importPath": "tmp/host-runtime-builds/ps5-umtx-web-56c9ea9c18e0.zip",
+      "expectedBytes": 304158,
+      "expectedSha256": "56c9ea9c18e047a50a86c6b69226fbf32b98c707d78dab13a717b479f64afbd9",
+      "mirror": true,
+      "pages": [
+        "hosts/ps5/index.html"
+      ]
+    },
+    {
+      "id": "host-runtime-ps5-umtx-source-ee70ec8c7909",
+      "title": "PS5 · UMTX ELF loader · source",
+      "project": "ps5-umtx",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "whatwhatboy"
+      ],
+      "archiveRole": [
+        "Source Code"
+      ],
+      "version": "2cf6778ebe89-integration-2026.11.02.2",
+      "kind": "direct",
+      "url": "https://github.com/PS5Dev/PS5-UMTX-Jailbreak/tree/2cf6778ebe89ff35255e1c228826d0d2155e9d2a",
+      "filename": "ps5-umtx-source-ee70ec8c7909.zip",
+      "importPath": "tmp/host-runtime-builds/ps5-umtx-source-ee70ec8c7909.zip",
+      "expectedBytes": 252708,
+      "expectedSha256": "ee70ec8c7909253e64022be27b4790decc55477598884b1594227560c9248e3d",
+      "mirror": true,
+      "pages": [
+        "hosts/ps5/index.html"
+      ]
+    },
+    {
+      "id": "host-runtime-ps5-umtx-native-elfldr-elf-7e5ac39cf5fb",
+      "title": "PS5 · UMTX ELF loader · native-elfldr-elf",
+      "project": "ps5-umtx",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "whatwhatboy"
+      ],
+      "archiveRole": [
+        "Builds"
+      ],
+      "version": "2cf6778ebe89-integration-2026.11.02.2",
+      "kind": "direct",
+      "url": "https://raw.githubusercontent.com/PS5Dev/PS5-UMTX-Jailbreak/2cf6778ebe89ff35255e1c228826d0d2155e9d2a/document/en/ps5/payloads/elfldr.elf",
+      "filename": "elfldr.elf",
+      "importPath": "hosts/runtime/ps5-umtx/upstream/payloads/elfldr.elf",
+      "expectedBytes": 305328,
+      "expectedSha256": "7e5ac39cf5fbf7c14ff71aeff91bed0149be13a295c5047ecbf8be7b79f18121",
+      "mirror": false,
+      "pages": [
+        "hosts/ps5/index.html"
+      ]
+    }
+  ]
+}

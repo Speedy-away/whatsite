@@ -1,0 +1,19 @@
+{
+  "checkedDate": "2026-11-02",
+  "pages": ["/console/nintendo-switch.html", "/console/nintendo-switch/apps.html"],
+  "catalogue": {"apps":14,"directNroPrimaryDownloads":10,"completeBundlePrimaryDownloads":4,"publicFiles":16,"publicBytes":141098353,"archivedUniqueFiles":24,"unavailablePackages":0},
+  "checks": {
+    "switchVerification": "14 apps, 24 archived files, both pages and local links: zero issues; archived and mirrored sizes/SHA-256 verified",
+    "archiveSafetyTests": "5 passing tests for ZIP paths, CRC, bounds, NRO formats and inventory preservation",
+    "wholeSiteAudit": "191 public pages and 14797 local links/assets: zero issues",
+    "localHttp": "All 16 unique public download URLs returned HTTP 200 to HEAD requests",
+    "search": "Saves category returned JKSV and Checkpoint; unmatched text returned zero and displayed empty state; JKSV search returned one app",
+    "fileDetails": "JKSV installation and checksum details opened successfully",
+    "desktop": "No horizontal overflow or failed loaded images",
+    "mobile": "390 by 844 viewport, no horizontal overflow; navigation collapsed, single-column cards and file details usable",
+    "language": "Both pages retain languages/i18n.js?v=3; dynamic result counts use the runtime translation helper; language files unchanged",
+    "preservation": "Existing CFW, Hekate, Homebrew and firmware anchors and Darthsternie link retained; other console builders, hosts and language files untouched"
+  },
+  "screenshots": ["/docs/screenshots/switch-homebrew-desktop.jpg", "/docs/screenshots/switch-homebrew-mobile.jpg"],
+  "limitations": ["No physical-console installation or execution was tested.", "Downloaded console builds were inspected without execution.", "No commit, deployment or publication was performed."]
+}

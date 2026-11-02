@@ -1,0 +1,116 @@
+
+
+
+		       ษออออออออออออออออออออออออออออออออป
+		       บ       LastTeamStanding        บ
+		       ศออออออออออออออออออออออออออออออออผ
+
+
+
+	               LLLLLLLLLL.    .TTTTTT SSSSSSSSSSS.
+	                       `LL    TT'             `SS
+	                       .LL    TT              .SS
+	               LLLLLLLLLL'    TT           SSSSS'
+	               LL'            TT              `SS
+	               LL            .TT              .SS
+	               LL        TTTTTT'      SSSSSSSSSS'
+
+
+		             P      SSSSSSS   .3333
+		             P         S      3'
+		             P         S      33333
+		             P         S         .3
+		             'PPPPP    S      3333'
+
+
+		       ษออออออออออออออออออออออออออออออออป
+		       บ         Particle Menu         บ
+		       ศออออออออออออออออออออออออออออออออผ
+
+
+
+
+I have also rebuilt this menu in C 
+and have created a full script menu containing the Particle menu as well.
+Full menu is in the works.
+
+Donations are very much appreciated.
+https://www.paypal.me/Vicodin10
+Leave your LTS user name 
+and you could receive special builds for Mod Loader and more.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Created by Jay, Enjoy!
+
+
+
+			~~~ Particle Menu Changelog ~~~
+
+
+-Particle Menu v0.30.0 Beta Release.
+-Added 50 Type 2 Particles.
+-Added a few Type 2 Vehicle particles for testing.
+-Added another Type 1 Particle with Binds (Dragon Breath) by request.
+-Improved almost all particle coords and ROT to better perfect the particles.
+	These are what I have had on a little sprx I did a year ago or so.
+-Opening binds can close the menu as well and remember you last item.
+-Type 2 particle sub menu will not remember the last item and will always reset to 	highlight the Off button. For good reason.
+-The menu has been rebuilt using EROOTIIKS new base for asm. 
+-Added EROOTIIK's looped color code.
+-Removed NotYourDope's looped color code. 
+-NOTE: I will switch back to NotYourDope's Color code for Type 1 particles.
+	Read below for better explanation of each types of paricles.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+For more info and previews of Particle Menu check out website
+http://www.nextgenupdate.com/forums/gta-5-scripts-plugins/949866-ps3-xbox360-1-27-particle-menu-v0-30-0-beta-4.html
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+			~~~ All the info you need ~~~
+
+
+I have two different Type Particles in the Menu now.
+For better understanding of these particles types, I have named them "Type 1" and "Type 2" in this post.
+The basic menu is all Type 1 Particles just like it was in v0.28.1.
+The New Sub-Menu I added are all Type 2 Particles.
+These Particle Types work different as Type 1 Particles need to be looped and Type 2 Particles do not.
+Type 1 Particles use a toggle On/Off.
+Type 2 Particles are Applied and do not have a On/Off toggle.
+For type 2 I added a Remove all particles option in the beginning of the list.
+
+All these particles are custom built and only work of self.
+None should cause freezing.
+
+Type 1
+World Fire is big, try not to leave it on too long, Just a few seconds at a time. 
+I noted it as "World Fire (Danger)" so you know. 
+This is a real fire and can kill others.
+Warning: 
+Using Type 1 Particles with any menu near another mod user that has Particle (PTFX) Protection On can cause you to freeze. 
+This is how it is with any menu that has particles in it.
+Particles are safe to use around other menu's that use ptfx/lag protection as all it does is clear nearby particles.
+So if you know there is another mod user in the lobby, Be careful using Particles near that mod user.
+
+Type 2
+These Particles you can apply more than one time.
+Black sparks plays ever 7 seconds. So lets say you click it 7 times, one time per second up to 7 seconds.
+Then it will play ever second.
+Or try this, Apply the Black Sparks 5 times really fast over the first 3 seconds. 
+And then apply it 2 more times slow over the last 3 seconds.
+This will create a nice design to be played on yourself. 
+Many Type 2 Particles are likes this and can be made into all kinds of designs.
+Type 2 Particles will use a new color after each time you turn on and then off a Type 1 Particle.
+Later I will fix it to where it picks a new color every click.
+Try this, Apply Tron Trails and then turn on and then off any type 1 particle 
+and then select Tron Trials again. You will have 2 strobe Tron Trails with different colors at the same time.
+I was not done with Type 2 sub-menu so sorry for any issues.
+
+Play around with Type 2 some, apply a Type 2 particle more than once or at the pace of a music beat.
+Learn different combinations to create many nice effects.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

@@ -1,0 +1,32 @@
+.console-directory .hero{min-height:0;padding:72px 32px 44px}
+.console-directory .hero-title{font-size:clamp(2rem,4vw,3.3rem);line-height:1.12}
+.console-directory .hero-subtitle{max-width:64ch;margin-inline:auto}
+.console-directory .hero-content{padding:0}
+.console-directory .console-directory-intro{padding-bottom:24px}
+.console-directory .console-directory-intro h2{font-size:1.7rem;margin-bottom:12px}
+.console-directory .console-directory-intro p{color:var(--text-secondary);line-height:1.65}
+.console-family-nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 30px}
+.console-family-nav a{display:flex;align-items:center;min-height:44px;padding:10px 18px;border:1px solid var(--border-color,#333);border-radius:8px;color:var(--text-primary);text-decoration:none}
+.console-family-nav a:hover,.console-family-nav a:focus-visible{border-color:var(--accent-primary,#62dfb4);color:var(--accent-primary,#62dfb4)}
+.console-directory-search{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;max-width:850px}
+.console-directory-search label{grid-column:1/-1;font-weight:600;font-size:.9rem}
+.console-directory-search .search-box{width:100%;max-width:none}
+.console-directory-search .btn{min-height:48px}
+.console-directory #gameSearchStatus{margin-top:14px;font-size:.85rem}
+.console-directory .console-family{padding-top:24px;padding-bottom:36px;scroll-margin-top:90px}
+.console-directory .console-family[hidden]{display:none}
+.console-directory .console-family .section-header{text-align:left;margin-bottom:24px}
+.console-directory .console-family .section-title{font-size:1.9rem}
+.console-directory .console-family .section-subtitle{margin-left:0;max-width:65ch}
+.console-directory .games-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.console-directory .game-card{display:flex;flex-direction:column;min-width:0}
+.console-directory .game-image{height:156px;aspect-ratio:auto;flex-shrink:0;background:#141519;padding:28px;box-sizing:border-box}
+.console-directory .game-image img{width:100%;height:100%;object-fit:contain;max-width:300px;transform:none!important;filter:brightness(0) invert(1)}
+.console-directory .game-info{display:flex;flex-direction:column;flex:1;padding:20px;gap:12px}
+.console-directory .game-title{font-size:1.08rem;margin:0;line-height:1.4}
+.console-directory .game-description{margin:0;line-height:1.65;font-size:.9rem}
+.console-directory .game-link{margin-top:auto;padding-top:8px;min-height:44px;display:flex;align-items:center;gap:8px}
+.console-wordmark{text-align:center;color:#f2f4f6;max-width:100%}
+.console-wordmark span{display:block;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:750;letter-spacing:.025em;line-height:1.2}
+.console-wordmark small{display:block;margin-top:10px;font-size:.8rem;color:#aaa}
+@media(max-width:600px){.console-directory .hero{padding:44px 20px 30px}.console-directory-search{grid-template-columns:1fr}.console-directory .games-grid{grid-template-columns:1fr}.console-directory .game-image{height:150px}.console-family-nav a{flex-grow:1;justify-content:center}.console-directory .console-family{padding-top:18px}}

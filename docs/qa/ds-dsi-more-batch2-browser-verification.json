@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-02T09:42:20.596Z",
+  "passed": true,
+  "browser": "ChatGPT in-app browser",
+  "library": "http://127.0.0.1:8879/console/retro/ds.html?view=all",
+  "filters": {
+    "all": 34,
+    "games": 10,
+    "apps": 5,
+    "skins": 9,
+    "pinball": 1,
+    "dsidl": 1
+  },
+  "topicGamesCards": 10,
+  "responsive": [
+    {
+      "viewportWidth": 1280,
+      "documentWidth": 1265
+    },
+    {
+      "viewportWidth": 390,
+      "documentWidth": 375
+    },
+    {
+      "viewportWidth": 1024,
+      "documentWidth": 1009
+    }
+  ],
+  "mobileControlHeights": [
+    47.59375,
+    44,
+    47.59375
+  ],
+  "disclosures": [
+    "Space Cadet external-data requirements",
+    "dsidl DSi-only model and SHA-256 metadata"
+  ],
+  "missingLoadedImages": [],
+  "screenshots": [
+    "docs/qa/ds-dsi-more-batch2-desktop.png",
+    "docs/qa/ds-dsi-more-batch2-mobile.png"
+  ],
+  "viewportReset": true,
+  "hardwareTested": false,
+  "downloadedExecutablesRun": false
+}

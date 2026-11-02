@@ -1,0 +1,75 @@
+{
+  "note": "Verified mirrors of existing archived console ELF builds; original files, versions and backup paths are retained in the private inventory.",
+  "files": [
+    {
+      "id": "ps4-ps5-expand-ps4-ftpsrv",
+      "platform": "ps4",
+      "name": "ftpsrv-ps4.elf",
+      "version": "v0.21.1",
+      "bytes": 146720,
+      "sha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
+      "source": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps4.elf",
+      "local": "/downloads/host-payloads/ps4-ps5-expand-ps4-ftpsrv/5f00e2df7fa8/ftpsrv-ps4.elf"
+    },
+    {
+      "id": "ps4-ps5-expand-ps4-klogsrv",
+      "platform": "ps4",
+      "name": "klogsrv-ps4.elf",
+      "version": "v0.9",
+      "bytes": 91208,
+      "sha256": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
+      "source": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps4.elf",
+      "local": "/downloads/host-payloads/ps4-ps5-expand-ps4-klogsrv/7e89c33eb90d/klogsrv-ps4.elf"
+    },
+    {
+      "id": "ps4-ps5-expand-ps5-payload-manager",
+      "platform": "ps5",
+      "name": "pldmgr_v0.6.3.elf",
+      "version": "v0.6.3",
+      "bytes": 2795992,
+      "sha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4",
+      "source": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.3/pldmgr_v0.6.3.elf",
+      "local": "/downloads/host-payloads/ps4-ps5-expand-ps5-payload-manager/2a42054fd972/pldmgr_v0.6.3.elf"
+    },
+    {
+      "id": "ps4-ps5-expand-ps5-ftpsrv",
+      "platform": "ps5",
+      "name": "ftpsrv-ps5.elf",
+      "version": "v0.21.1",
+      "bytes": 191864,
+      "sha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938",
+      "source": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps5.elf",
+      "local": "/downloads/host-payloads/ps4-ps5-expand-ps5-ftpsrv/7d4b31c83eae/ftpsrv-ps5.elf"
+    },
+    {
+      "id": "ps4-ps5-expand-ps5-websrv",
+      "platform": "ps5",
+      "name": "websrv-ps5.elf",
+      "version": "v0.34",
+      "bytes": 1597864,
+      "sha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
+      "source": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/websrv-ps5.elf",
+      "local": "/downloads/host-payloads/ps4-ps5-expand-ps5-websrv/54730c867c6e/websrv-ps5.elf"
+    },
+    {
+      "id": "ps4-ps5-expand-ps5-klogsrv",
+      "platform": "ps5",
+      "name": "klogsrv-ps5.elf",
+      "version": "v0.9",
+      "bytes": 136016,
+      "sha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
+      "source": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps5.elf",
+      "local": "/downloads/host-payloads/ps4-ps5-expand-ps5-klogsrv/e828ec144231/klogsrv-ps5.elf"
+    },
+    {
+      "id": "ps4-ps5-expand-ps5-elfldr",
+      "platform": "ps5",
+      "name": "elfldr-ps5.elf",
+      "version": "v0.27",
+      "bytes": 394568,
+      "sha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
+      "source": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.27/elfldr-ps5.elf",
+      "local": "/downloads/host-payloads/ps4-ps5-expand-ps5-elfldr/82f622761017/elfldr-ps5.elf"
+    }
+  ]
+}

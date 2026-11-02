@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-11-02T14:49:12.581Z",
+  "status": "passed-locally",
+  "scope": "Repeat phone/tablet verification and expanded source-based search keywords and tags.",
+  "changes": {
+    "searchTagPagesUpdated": 84,
+    "metadataPagesUpdated": 38,
+    "pagesProcessed": 523,
+    "searchableCardAttributes": 5622,
+    "examples": [
+      "GTASA",
+      "GTA VC",
+      "MW2",
+      "MW3",
+      "BL2",
+      "BL3",
+      "L4D2",
+      "CS16",
+      "VPK package",
+      "P3T",
+      "NXTheme",
+      "WUHB",
+      "EBOOT.PBP",
+      "SHA256"
+    ],
+    "queryBehavior": "Shared card search matches words in any order and normalizes accents, apostrophes and hyphens while preserving version dots.",
+    "safeguards": [
+      "Numbered games and console generations remain distinct.",
+      "File extensions do not assign PlayStation compatibility.",
+      "Unsupported/unconfirmed tags do not produce positive platform aliases.",
+      "Vendored runtime pages and packaged/downloaded HTML remain protected."
+    ],
+    "cacheVersion": "3.3.9"
+  },
+  "browser": {
+    "pages": 501,
+    "widths": [
+      320,
+      834
+    ],
+    "checks": 1005,
+    "initialLateStylesheetCases": 3,
+    "recheckedPages": 3,
+    "finalFailures": [],
+    "interactive": [
+      "390px: theft grand returns Grand Theft Auto V, 1 game shown, no horizontal overflow.",
+      "390px: BL3 returns 1 matching file in the PS4 download centre."
+    ],
+    "screenshot": "docs/screenshots/phone-tag-search-bl3-390.jpg"
+  },
+  "tests": {
+    "total": 528,
+    "passed": 528,
+    "failed": 0
+  },
+  "metadata": {
+    "passed": true,
+    "pages": 523,
+    "drift": [],
+    "genericKeywordEntries": 0,
+    "protectedHelpersPassed": true
+  },
+  "hostedDownloads": {
+    "files": 2359,
+    "anchors": 9157,
+    "failures": []
+  },
+  "routeAudit": "Audited 480 public pages and 52894 local links/assets; 0 issue(s).",
+  "limits": [
+    "Responsive browser checks do not replace testing on physical phones/tablets.",
+    "External host availability and native save destinations retain the limits recorded in docs/phone-download-qa.json; a full external-network rescan was not performed in this keyword pass.",
+    "No payload executed, new mod/tool download added, archive version replaced, commit, publication or deployment."
+  ]
+}

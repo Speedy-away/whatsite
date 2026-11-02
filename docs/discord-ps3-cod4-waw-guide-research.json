@@ -1,0 +1,959 @@
+{
+  "discord-ps3-cod4-yardsale-v6-5": {
+    "category": "reference",
+    "readiness": "incomplete",
+    "description": "Yardsale v6.5 source reference. The file linked in the PS3 forum contains only an Xbox-labelled distribution, not a verified PS3 build.",
+    "compatibility": "Archive folder is labelled Xbox V6.5 and includes default_mp.xex. No PS3-labelled build was found.",
+    "tags": [
+      "Discord source",
+      "Xbox 360 archive",
+      "PS3 build missing",
+      "Patch"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Platform mismatch in the linked archive",
+        "text": "Static inspection found YardSale/Xbox V6.5/patch_mp.ff, default_mp.xex and Controls.txt. Keep this original archive as source evidence; it does not supply a verified PS3 build. The controls note only tentatively suggests aiming, crouching and using melee, so it is not a confirmed PS3 shortcut."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "YardSale/Xbox V6.5/patch_mp.ff",
+        "YardSale/Xbox V6.5/default_mp.xex",
+        "YardSale/Xbox V6.5/Controls.txt"
+      ],
+      "proposedArchivePlatform": "Xbox 360",
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-yardsale-v6-5",
+      "archive": "/downloads/ps3/discord-ps3-cod4-yardsale-v6-5/YardSale_v6.5.rar",
+      "sha256": "f280c20c84207df3818572301beb70cbee93df312e8280f7ba7a48a077fc8b14"
+    }
+  },
+  "discord-ps3-cod4-tree-patch-v1": {
+    "category": "reference",
+    "readiness": "incomplete",
+    "description": "Tree Patch v1 source reference. The captured download contains an Xbox-labelled build with no PS3-labelled variant.",
+    "compatibility": "Only an Xbox folder containing patch_mp.ff and default_mp.xex was found; PS3 compatibility is unverified.",
+    "tags": [
+      "Discord source",
+      "Xbox 360 archive",
+      "PS3 build missing",
+      "Patch"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Check the platform before use",
+        "text": "The preserved archive contains Tree Patch/Xbox/patch_mp.ff and default_mp.xex. No PS3 build or installation readme was present. Do not use the Xbox executable as a PS3 EBOOT or treat the patch as a verified PS3 port."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Tree Patch/Xbox/patch_mp.ff",
+        "Tree Patch/Xbox/default_mp.xex"
+      ],
+      "proposedArchivePlatform": "Xbox 360",
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-tree-patch-v1",
+      "archive": "/downloads/ps3/discord-ps3-cod4-tree-patch-v1/Tree_Patch.rar",
+      "sha256": "d00083ee6d04419281ef098bcf84b6d4932569ed561ced05fe54c80e3ae320a5"
+    }
+  },
+  "discord-ps3-cod4-plant-patch": {
+    "category": "reference",
+    "readiness": "incomplete",
+    "description": "The Plant Patch source reference. Its captured archive contains only an XBOX-labelled distribution.",
+    "compatibility": "Archive includes XBOX/patch_mp.ff and XBOX/default_mp.xex; no PS3-labelled build was found.",
+    "tags": [
+      "Discord source",
+      "Xbox 360 archive",
+      "PS3 build missing",
+      "Patch"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Platform mismatch",
+        "text": "Static inspection found The Plant Patch/XBOX/patch_mp.ff and default_mp.xex, with no PS3 folder or readme. The original download remains preserved, but it is not a verified PS3-ready distribution."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "The Plant Patch/XBOX/patch_mp.ff",
+        "The Plant Patch/XBOX/default_mp.xex"
+      ],
+      "proposedArchivePlatform": "Xbox 360",
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-plant-patch",
+      "archive": "/downloads/ps3/discord-ps3-cod4-plant-patch/The_Plant_Patch.rar",
+      "sha256": "85124e2ee29e7ee5f51aeca8a019ff78a200fdf5011c95e6638773d29769b650"
+    }
+  },
+  "discord-ps3-cod4-cabepex-v1-5": {
+    "category": "reference",
+    "readiness": "incomplete",
+    "description": "CabePex V1.5 source reference. The linked archive contains only an Xbox folder, not a verified PS3 build.",
+    "compatibility": "Xbox/default_mp.xex and Xbox/patch_mp.ff are the only build members; no PS3 variant was found.",
+    "tags": [
+      "Discord source",
+      "Xbox 360 archive",
+      "PS3 build missing",
+      "Patch"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Platform mismatch",
+        "text": "The preserved download contains Xbox/default_mp.xex and Xbox/patch_mp.ff. It does not provide a PS3-labelled port or PS3 installation instructions. Keep it as an original source archive rather than a PS3-ready file."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Xbox/default_mp.xex",
+        "Xbox/patch_mp.ff"
+      ],
+      "proposedArchivePlatform": "Xbox 360",
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-cabepex-v1-5",
+      "archive": "/downloads/ps3/discord-ps3-cod4-cabepex-v1-5/CabePex_1.5.rar",
+      "sha256": "5e589b15ba638ad971790f866db85bdfd2d1c6a1da27a747da430397e1efc7af"
+    }
+  },
+  "discord-ps3-cod4-nato-v1": {
+    "category": "script",
+    "readiness": "incomplete",
+    "description": "NaTo V1 raw script archive. Static inspection found GSC script files and a log, with no PS3 console fastfile or SPRX build.",
+    "compatibility": "Contains raw maps/mp/gametypes scripts. A ready-to-use PS3 port and its loader requirements are not supplied.",
+    "tags": [
+      "Discord source",
+      "GSC",
+      "Raw scripts",
+      "PS3 build missing"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Source files, not a console build",
+        "text": "The archive contains maps/mp/gametypes/dom.gsc, _rank.gsc and games_mp.log. No patch_mp.ff, EBOOT.BIN or SPRX was present, and no installation readme was included. The folder layout alone does not establish a supported platform or a working PS3 port."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "NaToEffects V1 for xD3ATHM0DZx/maps/mp/gametypes/dom.gsc",
+        "NaToEffects V1 for xD3ATHM0DZx/maps/mp/gametypes/_rank.gsc",
+        "NaToEffects V1 for xD3ATHM0DZx/games_mp.log"
+      ],
+      "proposedArchivePlatform": "Unspecified",
+      "proposedArchiveRole": [
+        "Source Code"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-nato-v1",
+      "archive": "/downloads/ps3/discord-ps3-cod4-nato-v1/NaToEffects_V1.rar",
+      "sha256": "0941bc623b5ac11472929e5e7c7b207e2e932e65b2e86d439a35b689e325e3cb"
+    }
+  },
+  "discord-ps3-waw-mp-purple-kush-v2": {
+    "category": "script",
+    "readiness": "incomplete",
+    "description": "Purple Kush source archive. The forum title says v2, the download name says v2.1, and the internal folder says v1.2; no PS3-ready fastfile is included.",
+    "compatibility": "Raw maps/mp GSC script tree with no console fastfile, SPRX or EBOOT. A supported PS3 build is not established.",
+    "tags": [
+      "Discord source",
+      "GSC",
+      "Raw scripts",
+      "PS3 build missing",
+      "Version labels differ"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Version and format mismatch",
+        "text": "The captured ZIP contains a maps/mp script tree under a folder labelled purple kush patch v1.2. It contains no patch_mp.ff or other ready console build. PLEASE READ FIRST!.txt contains promotional text, not porting or installation instructions. Preserve the original version labels and obtain documented build requirements before treating these scripts as a PS3 menu."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_rank.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/_load.gsc",
+        "PLEASE READ FIRST!.txt"
+      ],
+      "proposedArchivePlatform": "Unspecified",
+      "proposedArchiveRole": [
+        "Source Code"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-mp-purple-kush-v2",
+      "archive": "/downloads/ps3/discord-ps3-waw-mp-purple-kush-v2/Purple+Kush+v2.1.zip",
+      "sha256": "71391b95efad0d3a6bb7ae148c371af19de0146895c60965f60c638acc5b5bc5"
+    }
+  },
+  "discord-ps3-cod4-aspirin-azza": {
+    "tags": [
+      "Discord source",
+      "PS3-labelled fastfile",
+      "GSC",
+      "Mixed-platform archive",
+      "Trickshot"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Choose the documented archive member",
+        "text": "This archive has an aspirin_pc/maps script tree and a separate member named exactly patch_mp.ff PS3. The readme describes the trickshot menu and credits but supplies no PS3 loader, game update, region or copy destination. Do not copy the PC script tree as though it were the console build, and do not guess a rename or destination for the PS3-labelled member."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "patch_mp.ff PS3",
+        "aspirin_pc/maps/mp/gametypes/_rank.gsc",
+        "READ ME.txt"
+      ],
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-aspirin-azza",
+      "archive": "/downloads/ps3/discord-ps3-cod4-aspirin-azza/Cod4_Aspirin_Azza_PS3_PC.rar",
+      "sha256": "3e9866bd1aa450831cc8155549b8c1e538daf2fbc1cd9e47da7a82704a1d53d6"
+    }
+  },
+  "discord-ps3-cod4-project-concord": {
+    "tags": [
+      "Discord source",
+      "PS3 variant",
+      "Mixed-platform archive",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Select the PS3 folder",
+        "text": "The archive has separate Project Concord/PS3 and Project Concord/Xbox folders. The PS3 folder contains patch_mp.ff; the Xbox folder also includes default_mp.xex. Use only the PS3-labelled variant for PS3 research. No installation readme or exact game update was supplied."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Project Concord/PS3/patch_mp.ff",
+        "Project Concord/Xbox/patch_mp.ff",
+        "Project Concord/Xbox/default_mp.xex"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-project-concord",
+      "archive": "/downloads/ps3/discord-ps3-cod4-project-concord/Project_Concord.rar",
+      "sha256": "c6f3d89834032e3ea3c525ddaad2bbf7cd831a300a4410fccb66caeaf50a79df"
+    }
+  },
+  "discord-ps3-cod4-itzjxshdzn": {
+    "tags": [
+      "Discord source",
+      "PS3 variant",
+      "Mixed-platform archive",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Select the PS3 variant",
+        "text": "The Jxsh Private Patch archive contains distinct PS3 and Xbox folders. The PS3-labelled file is PS3/patch_mp.ff. The Xbox default_mp.xex belongs to the separate Xbox distribution. No readme establishes an installation path, title ID or game update for the PS3 file."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Jxsh Private Patch/PS3/patch_mp.ff",
+        "Jxsh Private Patch/Xbox/default_mp.xex"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-itzjxshdzn",
+      "archive": "/downloads/ps3/discord-ps3-cod4-itzjxshdzn/ItzJxshDzns_Private_Patch.rar",
+      "sha256": "2f300255d45361ca0fe326ce7eae3b9e6a0dc15c4e49514ca9e50fe3f0714597"
+    }
+  },
+  "discord-ps3-cod4-project-goodbye": {
+    "tags": [
+      "Discord source",
+      "PS3 variant",
+      "Mixed-platform archive",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Separate console variants",
+        "text": "The archive contains Project GoodBye/PS3/patch_mp.ff and a different Xbox folder with patch_mp.ff and default_mp.xex. Keep the variants separate. The captured archive includes no PS3 installation readme, so confirm the game update, title ID and destination before replacing an original file."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Project GoodBye/PS3/patch_mp.ff",
+        "Project GoodBye/Xbox/patch_mp.ff",
+        "Project GoodBye/Xbox/default_mp.xex"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-project-goodbye",
+      "archive": "/downloads/ps3/discord-ps3-cod4-project-goodbye/Project_GoodBye.rar",
+      "sha256": "6d683b889e8c665087b40f8e07655b96c4a5aca4766b07f55feda4c4c4397cb1"
+    }
+  },
+  "discord-ps3-cod4-dundee": {
+    "tags": [
+      "Discord source",
+      "PS3 variant",
+      "Mixed-platform archive",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Choose the correct console folder",
+        "text": "Dundee Patch contains separate PS3/patch_mp.ff and Xbox/patch_mp.ff variants; only the Xbox folder includes default_mp.xex. Do not mix those distributions. The archive provides no installation readme or exact PS3 compatibility requirement."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Dundee Patch/PS3/patch_mp.ff",
+        "Dundee Patch/Xbox/patch_mp.ff",
+        "Dundee Patch/Xbox/default_mp.xex"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-dundee",
+      "archive": "/downloads/ps3/discord-ps3-cod4-dundee/Dundee_Patch.rar",
+      "sha256": "b214423c48e96a59c99e7f5791dcedb8acabc6294e3238a26b2a410dc625c67f"
+    }
+  },
+  "discord-ps3-cod4-ivi40a3fusionz": {
+    "tags": [
+      "Discord source",
+      "PS3 variant",
+      "PC scripts",
+      "Mixed-platform archive",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "PS3 build and PC scripts are separate",
+        "text": "The archive has a PS3/patch_mp.ff member and a separate PC directory containing GSC files. The PC tree is not a PS3 console fastfile. No installation instructions or exact PS3 update and region were included."
+      }
+    ],
+    "evidence": {
+      "memberSuffixes": [
+        "/PS3/patch_mp.ff",
+        "/PC/IVI40A3Fusionz 'Unreleased Patch'/File1.gsc"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-ivi40a3fusionz",
+      "archive": "/downloads/ps3/discord-ps3-cod4-ivi40a3fusionz/IVI40A3Fusionz_Unreleased_Patch_UPDATED.rar",
+      "sha256": "3e84a50177ee552c550d653c5b446ff9f2f63acc5b438af10ecfba26ad62a106"
+    }
+  },
+  "discord-ps3-cod4-x2ezyx": {
+    "version": "Update v1.2 (archive folder label)",
+    "tags": [
+      "Discord source",
+      "PS3 variant",
+      "PC scripts",
+      "Mixed-platform archive",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Choose the PS3 fastfile",
+        "text": "The archive folder is labelled Update v1.2 and contains PS3/patch_mp.ff alongside a separate PC GSC script tree. Keep the PS3 build separate from the PC files. No readme specifies the required title ID, game update or destination."
+      }
+    ],
+    "evidence": {
+      "memberSuffixes": [
+        "/PS3/patch_mp.ff",
+        "/PC/x2EzYx--'s Patch/maps/mp/gametypes/_rank.gsc"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-x2ezyx",
+      "archive": "/downloads/ps3/discord-ps3-cod4-x2ezyx/x2EzYx--s_Private_Patch_[Update_v1.2].zip",
+      "sha256": "8c2381d2e0575e9544254c755298fbe6e3b45a7c4434559d49c802fe19b9eba0"
+    }
+  },
+  "discord-ps3-cod4-ghost-patch-v10": {
+    "tags": [
+      "Discord source",
+      "PS3-labelled archive",
+      "Extensionless patch"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Check the original filename",
+        "text": "The preserved archive contains a PS3 folder with an extensionless member named patch_mp. It supplies no readme, rename instruction or installation destination. Keep the original archive and confirm the correct format and required filename before copying or renaming this member."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "PS3/patch_mp"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-cod4-ghost-patch-v10",
+      "archive": "/downloads/ps3/discord-ps3-cod4-ghost-patch-v10/GHOST+v10.RAR",
+      "sha256": "8fb9e05028c795647e2f826bf7a10291a6cb3c4e4bf8052b496c39201478350e"
+    }
+  },
+  "discord-ps3-waw-zm-citius-album": {
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Nacht unsupported"
+    ],
+    "compatibility": "Readme says Nacht is unsupported. Exact firmware, title ID and update are not specified.",
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Readme controls and map restriction",
+        "text": "The included readme gives R2 as the menu-open button and says it does not work on Nacht. The archive contains common.ff, but it supplies no installation destination or exact game-build requirement."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Citius Album/read me.txt",
+        "Citius Album/common.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-citius-album",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-citius-album/Citius_Album.rar",
+      "sha256": "9de01f17c4e62efd2e310476e927a712165cfebb9c4a79d41c51a9a7362d82bf"
+    }
+  },
+  "discord-ps3-waw-zm-coolbunny-3-9-newer": {
+    "version": "V3.9a Beta (archive instructions)",
+    "compatibility": "Readme requires a clean, unmodified nazi_zombie_prototype.ff. Its ISO instructions and button names do not establish PS3 firmware or title-update support.",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "V3.9a Beta",
+      "Clean original file required"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Original instructions and dependency",
+        "text": "Instructions.txt identifies V3.9a Beta and requires a clean, unmodified nazi_zombie_prototype.ff in addition to the supplied common.ff and code_post_gfx.ff. It describes replacing ISO files, without a PS3-specific destination or game-update requirement."
+      },
+      {
+        "type": "text",
+        "title": "Button labels in the readme",
+        "text": "The original instructions use Xbox-style button names: go prone and press X to toggle the menu; shoot to scroll down; aim to scroll up; X selects; melee returns to the main menu. Confirm the corresponding controls for a documented PS3 port rather than assuming those labels map directly to a PS3 controller."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "CoOlBunnYMoDz V3.9a/Instructions.txt",
+        "CoOlBunnYMoDz V3.9a/common.ff",
+        "CoOlBunnYMoDz V3.9a/code_post_gfx.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-coolbunny-3-9-newer",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-coolbunny-3-9-newer/CoOlBunnYMoDz+V3.9a.zip",
+      "sha256": "543333887806100967dd8d3951bdb03f4ee6c62c17829848a51b3ce9be017cd0"
+    }
+  },
+  "discord-ps3-waw-zm-mindfxcked-v1": {
+    "compatibility": "Readme restricts the menu to Der Riese. Firmware, title ID and game update are not specified.",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Der Riese only",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Readme map and controls",
+        "text": "The readme restricts this menu to Der Riese and gives aim plus grenade as the open-menu shortcut. The archive contains common.ff; no installation destination is documented."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "M1NDFXCKED v1/READ ME.txt",
+        "M1NDFXCKED v1/common.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-mindfxcked-v1",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-mindfxcked-v1/M1NDFXCKED_v1.rar",
+      "sha256": "2cb186f88c90d98a505bb46ae938908d1037ee397f99d3a3e37e62595fa44895"
+    }
+  },
+  "discord-ps3-waw-zm-coolbunny-3-9-older": {
+    "version": "v3.9 (archive folder label)",
+    "compatibility": "Readme says Nacht is unsupported. Exact PS3 firmware, region and update are not documented.",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Nacht unsupported"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Readme restriction",
+        "text": "This separate v3.9 archive contains common.ff and a short readme stating that Nacht does not work. It does not provide installation instructions or controls. Do not apply the newer V3.9a archive's instructions without confirming they also apply to this build."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "CoolBunnyMoDz v3.9/read me.txt",
+        "CoolBunnyMoDz v3.9/common.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-coolbunny-3-9-older",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-coolbunny-3-9-older/CoolBunnyMoDz_v3.9.rar",
+      "sha256": "fb4c8a6273920f18f09d13093c49f010ee5f83cb3ab60bc965a4877fe04495eb"
+    }
+  },
+  "discord-ps3-waw-zm-infinity-v1-2": {
+    "version": "Forum title v1.2; archive labelled v1",
+    "compatibility": "Readme says Nacht is unsupported. Exact firmware, game update and title ID are unspecified.",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Nacht unsupported",
+      "Version labels differ"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Readme controls and version labels",
+        "text": "Although the forum title says v1.2, the archive folder is labelled Infinity v1. Its readme gives melee as the menu-open action and says Nacht is unsupported. Preserve both labels; the readme supplies no installation destination."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Infinity v1/READ ME.txt",
+        "Infinity v1/common.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-infinity-v1-2",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-infinity-v1-2/Infinity_v1.rar",
+      "sha256": "361bca9bf3043d5411ed8cfdb306c38adcb1d85b51739e99acecdbdf0ef8c01d"
+    }
+  },
+  "discord-ps3-waw-zm-project-sunny": {
+    "version": "v1.4 (archive folder label)",
+    "compatibility": "Readme says Nacht is unsupported and some functions do not work in this port.",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Nacht unsupported",
+      "Known limitations"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Limitations documented by the distributor",
+        "text": "The readme says Nacht does not work, notes that some functions fail, and describes the menu as originating on PC. The archive contains common.ff but gives no PS3 file destination, title ID or update requirement."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Project Sunny v1.4/read me.txt",
+        "Project Sunny v1.4/common.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-project-sunny",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-project-sunny/Project_Sunny_v1.4.rar",
+      "sha256": "eb7055c715718aa2f5337c38bfb569b7fed807903288cf043a6f65ff3113f21d"
+    }
+  },
+  "discord-ps3-waw-zm-sphinx-v2": {
+    "compatibility": "Readme says Nacht is unsupported. Exact PS3 game-build requirements are not specified.",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Nacht unsupported"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Readme controls and map restriction",
+        "text": "The readme gives aim plus melee as the open-menu shortcut and says Nacht does not work. The archive contains common.ff, with no installation destination documented."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Sphinx v2/READ ME.txt",
+        "Sphinx v2/common.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-sphinx-v2",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-sphinx-v2/Sphinx_v2.rar",
+      "sha256": "2e07064a3cb3e640dd45533be67bb14e3b2d81790a3a64df6809f61e7a5c1104"
+    }
+  },
+  "discord-ps3-waw-zm-toxiicity-v1": {
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "CFG",
+      "Original button labels"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Read the supplied control-layout instructions",
+        "text": "The archive includes common.ff, code_post_gfx.ff, a button-instructions text file and an advanced RTF guide. On the default layout, the text says to go prone and press X to open the menu. Its tactical instructions use D-pad Up for MainCFG and D-pad Down for Binds before other shortcuts. The documentation uses Xbox-style A, B, X, Y, RB and LB labels; it does not document a PS3 button mapping or file destination."
+      },
+      {
+        "type": "text",
+        "title": "Keep layout-specific binds together",
+        "text": "The advanced guide separates Default, Tactical and Lefty layouts and several CFG submenus. Their shortcuts differ. Use the included layout-specific documentation for the selected build and confirm PS3 requirements before copying files or applying those button labels."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "TOXiiCiTY v1/Instructions/BUTTON INSTUCTIONS.txt",
+        "TOXiiCiTY v1/Instructions/advance instructions.rtf",
+        "TOXiiCiTY v1/common.ff",
+        "TOXiiCiTY v1/code_post_gfx.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-toxiicity-v1",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-toxiicity-v1/TOXiiCiTY+v1.rar",
+      "sha256": "a5810fb0ea2b27c6a2aed3a799f3c945f4fb4e299daa52a9d2dc91e72e881df1"
+    }
+  },
+  "discord-ps3-waw-zm-physics-flex-v2": {
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Private-match setup"
+    ],
+    "guideBlocks": [
+      {
+        "type": "steps",
+        "title": "Included guide: private matches on other maps",
+        "items": [
+          {
+            "title": "Select a map through the online menu",
+            "text": "From the main menu, open Nazi Zombies, then Play Online, Find Game and Nazi Zombies. Select the desired map."
+          },
+          {
+            "title": "Return to private match",
+            "text": "Back out, then choose Private Match. The included note describes this preparation for maps other than Nacht der Untoten."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Installation requirements are separate",
+        "text": "The archive contains patch.ff and the map-selection note. It does not provide an installation destination, firmware requirement, title ID or exact game update."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "How to host on other maps!.txt",
+        "patch.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-physics-flex-v2",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-physics-flex-v2/Physics_'n'_Flex_V2_-_Official_Release_-_PS3.zip",
+      "sha256": "b81922cba316f1f9f2d93280549ce356798b77da8a831c2e678e3a0a2439088c"
+    }
+  },
+  "discord-ps3-waw-zm-discarded-v2": {
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Der Riese note"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Readme installation path needs confirmation",
+        "text": "The readme places patch.ff under dev_hdd0/game/(COD W@W Game ID)/USDIR/English. It spells the directory USDIR rather than USRDIR, so verify the actual directory on the matching game before copying anything. Preserve the original file; the readme does not specify a title ID or update."
+      },
+      {
+        "type": "list",
+        "title": "Readme controls",
+        "items": [
+          "Aim with L1 and use melee to open the menu.",
+          "R1 scrolls down, L1 scrolls up and Square selects.",
+          "Melee (R3) returns or closes the menu.",
+          "D-pad Up enables the menu's rank and prestige options without an on-screen confirmation, according to the readme."
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Der Riese private-match note",
+        "text": "The readme says Der Riese may appear with a checkerboard preview. It describes selecting Der Riese through online search, backing out and then opening Private Match. This is a distributor note, not a hardware test result."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Discarded v2 (PS3)/Read Me.txt",
+        "Discarded v2 (PS3)/patch.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-discarded-v2",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-discarded-v2/Discarded+v2+(PS3).rar",
+      "sha256": "1a947fef89acafb0392ab68fdbce817f4f66ffcce4c2aafb0f2d4a0b3bd51dc4"
+    }
+  },
+  "discord-ps3-waw-zm-discarded-v3": {
+    "version": "v3 (readme release date: 13 February 2014)",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Original readme"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "What this archive documents",
+        "text": "The archive includes patch.ff and a readme identifying Discarded v3, with a release date of 13 February 2014. That readme contains no installation instructions, controls or compatibility details. Do not automatically reuse v2's instructions for this separate build."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Discarded v3 PS3 Patch.ff/Read Me.txt",
+        "Discarded v3 PS3 Patch.ff/patch.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-discarded-v3",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-discarded-v3/Discarded+v3+PS3+Patch.ff.rar",
+      "sha256": "a1d4a40acf8fd788d9533bcebfbaf73f0d87f9cfed0f345925e92c3ae8c49bc6"
+    }
+  },
+  "discord-ps3-waw-zm-discarded-v4": {
+    "version": "v4 Beta (included readme)",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Fastfile",
+      "FF",
+      "Beta",
+      "Known bugs"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Beta status in the readme",
+        "text": "The included readme calls this Discarded v4 Beta and warns that bugs may remain. The archive contains patch.ff, but it does not document installation, controls, firmware or a game update. Keep the beta label and confirm those requirements independently."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "READ ME.txt",
+        "patch.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-discarded-v4",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-discarded-v4/Discarded+v4+PS3.rar",
+      "sha256": "0aaa96d047f178702ea7c08250b7ff9bdc60dbf2241262c17f5833054ff8917a"
+    }
+  },
+  "discord-ps3-waw-mp-project-trinity": {
+    "tags": [
+      "Discord source",
+      "Multiplayer",
+      "PS3 variant",
+      "Mixed-platform archive",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Separate PS3 and Xbox distributions",
+        "text": "The archive contains Project Trinity/PS3/patch_mp.ff and separate Xbox files. The readme attributes the PS3 port to MrFrosty23. Its instruction to use the supplied default_mp.xex applies to Xbox only. No PS3 copy destination, title ID or game update is given."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Project Trinity/ReadMe.txt",
+        "Project Trinity/PS3/patch_mp.ff",
+        "Project Trinity/Xbox/default_mp.xex"
+      ],
+      "mixedPlatform": true,
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-mp-project-trinity",
+      "archive": "/downloads/ps3/discord-ps3-waw-mp-project-trinity/WAW_Project_Trinity.rar",
+      "sha256": "966980623d27c687472a1196cbe16956c8d97882950fdf1ac0c6b1fc871d9250"
+    }
+  },
+  "discord-ps3-waw-zm-alpatch": {
+    "compatibility": "Archive folder is labelled Nacht Der Untoten Menu; no further map, firmware or title-update requirements are documented.",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "Nacht Der Untoten archive label",
+      "Fastfile",
+      "FF"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Archive map label",
+        "text": "The archive contains Nacht Der Untoten Menu/patch.ff, with no readme. The folder name identifies its intended map but does not prove support for other maps or provide a PS3 installation path."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Nacht Der Untoten Menu/patch.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-alpatch",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-alpatch/WAW_Zombies_PS3_Menu.rar",
+      "sha256": "16811930f98864052493ddac7b75ffeae7afed0f2b2b4ed47ddbb23ae3e598ae"
+    }
+  },
+  "discord-ps3-waw-zm-devil-modz-v2": {
+    "version": "v2 Beta [All Maps] (archive folder label)",
+    "tags": [
+      "Discord source",
+      "Zombies",
+      "PS3-labelled variant",
+      "Fastfile",
+      "FF",
+      "Beta"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Keep the source's beta and map labels",
+        "text": "The archive folder is labelled v2 Beta [All Maps] Zombies and contains a PS3/patch.ff member. No readme confirms the map claim, controls, installation path, game update or firmware. Treat All Maps as an archive label rather than a tested compatibility result."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Xx-Devil_MoDz-xX v2 Beta [All Maps]  Zombies/PS3/patch.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-zm-devil-modz-v2",
+      "archive": "/downloads/ps3/discord-ps3-waw-zm-devil-modz-v2/Xx-Devil_MoDz-xX_v2_Beta_All_Maps_Zombies.rar",
+      "sha256": "0b7e629df428c21d25382dd2d28aab558bdccb87509e8286f01457e44d29dbc7"
+    }
+  },
+  "discord-ps3-waw-mp-cloud-v7": {
+    "tags": [
+      "Discord source",
+      "Multiplayer",
+      "Fastfile",
+      "FF",
+      "Multiple patch files"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Archive contains multiple fastfiles",
+        "text": "The Cloud Patch archive includes patch_mp.ff, patch_ui.ff and patch_ui_mp.ff. No readme explains their destinations or whether all three are required together. Keep the original files and confirm the correct installation procedure for the matching PS3 game before replacing files."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "The Cloud Patch/patch_mp.ff",
+        "The Cloud Patch/patch_ui.ff",
+        "The Cloud Patch/patch_ui_mp.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-mp-cloud-v7",
+      "archive": "/downloads/ps3/discord-ps3-waw-mp-cloud-v7/The+Cloud+Patch+v7.rar",
+      "sha256": "9ccb53718af336e9d85cb65bf54be07d9eaaa587bd99fca50de8b79036f6b4c0"
+    }
+  },
+  "discord-ps3-waw-mp-purple-water-v1": {
+    "tags": [
+      "Discord source",
+      "Multiplayer",
+      "Fastfile",
+      "FF",
+      "Multiple variants"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Two patch members are present",
+        "text": "The archive contains patch_mp.ff at the top of the Purple Water folder and another under its Jamey subfolder. It supplies no readme identifying which variant to choose or a PS3 file destination. Keep both original members and confirm the intended variant rather than merging them."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "Purple Water v1 Remake By imJameYxo/patch_mp.ff",
+        "Purple Water v1 Remake By imJameYxo/Jamey/patch_mp.ff"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-mp-purple-water-v1",
+      "archive": "/downloads/ps3/discord-ps3-waw-mp-purple-water-v1/Purple_Water_v1_Remake_By_imJameYxo.rar",
+      "sha256": "8876c83a49391280300042eb79a8ff3bd357f1859aefb80655820780e0b61149"
+    }
+  },
+  "discord-ps3-waw-mp-imsnayxohd-v1": {
+    "tags": [
+      "Discord source",
+      "Multiplayer",
+      "Fastfile",
+      "FF",
+      "ZONE companion"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Preserve the companion file",
+        "text": "The archive contains patch_mp.ff together with patch_mp.zone. No readme explains the companion file or gives a PS3 installation path, update or region requirement. Keep both members intact and confirm the matching build's procedure before replacing game files."
+      }
+    ],
+    "evidence": {
+      "members": [
+        "imSnaYxoHD v1 Patch/patch_mp.ff",
+        "imSnaYxoHD v1 Patch/patch_mp.zone"
+      ],
+      "inspectionFile": "docs/discord-ps4-ps5-raw/platforms/archive-readmes.json",
+      "recordId": "discord-ps3-waw-mp-imsnayxohd-v1",
+      "archive": "/downloads/ps3/discord-ps3-waw-mp-imsnayxohd-v1/imSnaYxoHD_v1_Patch.rar",
+      "sha256": "8440f0945e8cf5beafaece8141523577f4ecffe4789421e06d84f9fcf48a2ed9"
+    }
+  }
+}

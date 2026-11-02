@@ -1,0 +1,40 @@
+.ps3-catalog .ps3-game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ps3-catalog .games-grid { align-items: start; }
+.ps3-catalog [data-ps3-entry] .guide-links { margin-top: 0; }
+.ps3-catalog .ps3-game-card img { aspect-ratio: 16/8; object-fit: cover; }
+.ps3-catalog .ps3-mod-image { background: #080b09; object-fit: contain; }
+.ps3-mod-figure { width: 100%; min-width: 0; margin: 0; }
+.ps3-mod-figure figcaption { font-size: .78rem; line-height: 1.5; color: var(--text-secondary); margin-top: 8px; }
+.ps3-catalog .ps3-meta { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 7px 16px; margin: 8px 0; font-size: .85rem; width: 100%; }
+.ps3-meta dt { color: var(--text-secondary); }
+.ps3-meta dd { margin: 0; overflow-wrap: anywhere; }
+.ps3-catalog .ps3-status { color: var(--accent-light); font-size: .8rem; }
+.ps3-catalog .ps3-filter { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; margin: 0 0 20px; }
+.ps3-filter label { display: block; margin-bottom: 8px; }
+.ps3-filter input, .ps3-filter select { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; color: var(--text-primary); background: var(--bg-secondary); font: inherit; }
+.ps3-filter input:focus-visible, .ps3-filter select:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+.ps3-catalog [hidden] { display: none !important; }
+.ps3-catalog .guide-links a { overflow-wrap: anywhere; }
+.ps3-catalog .ps3-hash { font: .72rem/1.6 monospace; overflow-wrap: anywhere; width: 100%; color: var(--text-secondary); }
+.ps3-catalog .ps3-download-record { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 14px; width: 100%; overflow-wrap: anywhere; word-wrap: break-word; }
+.ps3-download-record p { margin-bottom: 8px; }
+.ps3-ready-files, .ps3-original-files { width: 100%; min-width: 0; }
+.ps3-ready-files { border-top: 2px solid var(--accent-light); padding-top: 16px; }
+.ps3-ready-files h4, .ps3-original-files h4 { font-size: .95rem; margin-bottom: 8px; }
+.ps3-original-files { margin-top: 10px; }
+.ps3-catalog .ps3-format-table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+.ps3-format-table th, .ps3-format-table td { text-align: left; vertical-align: top; padding: 14px; border-bottom: 1px solid var(--border); }
+.ps3-format-table th { color: var(--text-primary); }
+.ps3-format-table td { color: var(--text-secondary); }
+@media(max-width: 760px) { .ps3-catalog .ps3-game-grid, .ps3-catalog .ps3-filter { grid-template-columns: 1fr; } .ps3-format-table th, .ps3-format-table td { padding: 10px 6px; } }
+
+.ps3-catalog .ps3-filter > *, .ps3-meta > * { min-width: 0; }
+.ps3-catalog .ps3-filter input, .ps3-catalog .ps3-filter select { min-width: 0; max-width: 100%; }
+.ps3-format-table th, .ps3-format-table td { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .ps3-catalog .ps3-filter input, .ps3-catalog .ps3-filter select { font-size: 1rem; }
+  .ps3-catalog .ps3-format-table { table-layout: fixed; }
+}
+@media (max-width: 380px) {
+  .ps3-catalog .ps3-meta { grid-template-columns: 76px minmax(0, 1fr); gap: 8px 10px; }
+}

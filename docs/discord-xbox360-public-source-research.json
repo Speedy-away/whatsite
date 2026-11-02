@@ -1,0 +1,825 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T12:56:22.469Z",
+  "scope": "Exact reviewed public Xbox source metadata and original ready build staging only. No execution or F writes.",
+  "sources": [
+    {
+      "id": "xbox360-gta5-boxuga-v2",
+      "source": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/tag/V2",
+      "version": "V2",
+      "title": "Version 2.0",
+      "publishedAt": "2021-12-27T12:19:02Z",
+      "body": "**update.rpf** - PS3 CFW/HEN\r\n**Boxuga.V2.Xbox.zip** - Xbox 360 RGH\r\n**Scripts.zip** - Allows version of just the scripts that can be loaded by other loaders\r\n\r\nnote i stuffed up on uploading the source so you can get it from [here](https://github.com/BoxxyDEV/Boxuga-ModLoader)",
+      "assets": [
+        {
+          "name": "Boxuga.V2.Xbox.zip",
+          "bytes": 133962616,
+          "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Boxuga.V2.Xbox.zip",
+          "digest": null
+        },
+        {
+          "name": "Scripts.zip",
+          "bytes": 1941254,
+          "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Scripts.zip",
+          "digest": null
+        },
+        {
+          "name": "update.rpf",
+          "bytes": 68136448,
+          "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/update.rpf",
+          "digest": null
+        }
+      ],
+      "selectedAsset": "Boxuga.V2.Xbox.zip"
+    },
+    {
+      "id": "xbox360-rdr-demonic-v27",
+      "source": "https://mega.nz/file/8hVjkRIJ#UxePFeoiY8Wmjf_8URM9UPC_M9deOTzL9gGO6DB-Fgw",
+      "version": "2.7 (reviewed post)",
+      "name": "[Xbox] Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu.rar",
+      "bytes": 201326777,
+      "status": "metadata-read"
+    },
+    {
+      "id": "xbox360-neighborhood",
+      "source": "https://mega.nz/file/VhlBUDIK#e_K4NJeu4TjbcJs9SP3kiUj1MP3Bhl3FjAwlbfDYbhs",
+      "version": "21256.3 (source filename)",
+      "name": "XBOX360 SDK 21256.3.exe",
+      "bytes": 1526672200,
+      "status": "metadata-read",
+      "postVersion": "Unspecified by reviewed post"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "xbox360-gta5-boxuga-v2",
+      "filename": "Boxuga.V2.Xbox.zip",
+      "sourceUrl": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Boxuga.V2.Xbox.zip",
+      "version": "V2",
+      "bytes": 133962616,
+      "sha256": "61d4da9caeccc87c6025045cb137130f84f2e11c3f337d21e175d305d4856c89",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/xbox360-gta5-boxuga-v2/Boxuga.V2.Xbox.zip",
+      "status": "staged",
+      "resumedFromBytes": 0,
+      "megaMacVerified": false,
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied",
+      "payloadExecuted": false,
+      "stagingReverifiedAt": "2026-11-02T13:41:37.911Z",
+      "prefixHex": "504b0304140000000000311695530000",
+      "platform": "Xbox 360"
+    },
+    {
+      "id": "xbox360-rdr-demonic-v27",
+      "filename": "[Xbox] Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu.rar",
+      "sourceUrl": "https://mega.nz/file/8hVjkRIJ#UxePFeoiY8Wmjf_8URM9UPC_M9deOTzL9gGO6DB-Fgw",
+      "version": "2.7 (reviewed post)",
+      "bytes": 201326777,
+      "sha256": "73e045e0aa72f89d7abd6adae558f8392469706078985bcfb49445d4784f91d5",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/xbox360-rdr-demonic-v27/[Xbox] Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu.rar",
+      "status": "staged",
+      "resumedFromBytes": 0,
+      "megaMacVerified": true,
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied",
+      "payloadExecuted": false,
+      "stagingReverifiedAt": "2026-11-02T13:41:38.097Z",
+      "prefixHex": "526172211a070100cfaf89710d010509",
+      "platform": "Xbox 360"
+    },
+    {
+      "id": "xbox360-neighborhood",
+      "filename": "XBOX360 SDK 21256.3.exe",
+      "sourceUrl": "https://mega.nz/file/VhlBUDIK#e_K4NJeu4TjbcJs9SP3kiUj1MP3Bhl3FjAwlbfDYbhs",
+      "version": "21256.3 (source filename)",
+      "bytes": 1526672200,
+      "sha256": "efec946c7b4436d53a6c41bb6bcff8373387ec97557e92f0ef672c85eadc4bc7",
+      "stagedRelative": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/xbox360-neighborhood/XBOX360 SDK 21256.3.exe",
+      "status": "staged",
+      "resumedFromBytes": 486539264,
+      "megaMacVerified": true,
+      "checksumSource": "SHA-256 computed locally; no publisher SHA-256 supplied",
+      "payloadExecuted": false,
+      "stagingReverifiedAt": "2026-11-02T13:41:39.437Z",
+      "prefixHex": "4d5a90000300000004000000ffff0000",
+      "platform": "Xbox 360",
+      "archiveRole": [
+        "Helpers",
+        "Windows"
+      ],
+      "kind": "Full Windows SDK distribution; not standalone Neighborhood or console build"
+    }
+  ],
+  "updatedAt": "2026-11-02T13:40:50.590Z",
+  "finishedAt": "2026-11-02T13:40:50.590Z",
+  "guideNotes": {
+    "xbox360-gta5-boxuga-v2": {
+      "gameId": "gta-v",
+      "category": "loader",
+      "version": "V2 (pinned release)",
+      "gameUpdate": "Not specified by release",
+      "region": "Title ID 545408A7 (source archive path)",
+      "compatibility": "The pinned V2 release labels this Xbox 360 RGH; its pinned README also lists Xbox 360 RGH/JTAG. Exact dashboard/kernel and game update requirements are not specified. This ZIP is separate from the PS3 update.rpf.",
+      "tags": [
+        "Xbox 360",
+        "GTA V",
+        "Boxuga",
+        "RGH",
+        "STFS",
+        "Title update",
+        "545408A7",
+        "JTAG"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Use the Xbox build",
+          "text": "Boxuga.V2.Xbox.zip is the Xbox 360 RGH asset from the pinned V2 release. The PS3 update.rpf is a separate release asset. Keep the complete Content hierarchy in this Xbox archive."
+        },
+        {
+          "type": "text",
+          "title": "Source paths and requirements",
+          "text": "The supplied build is Content/0000000000000000/545408A7/000B0000/tu00000009_00000000. The archive includes a zero-byte instruction file whose name says to drag the file to the USB root. Match title ID 545408A7 and verify the game update and environment before replacing existing content. The TU filename alone does not establish a numbered game update."
+        }
+      ],
+      "evidence": {
+        "release": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/tag/V2",
+        "static": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/boxuga-static.json",
+        "formatReference": "https://github.com/Free60Project/wiki/blob/master/docs/System-Software/Formats/STFS.md",
+        "readme": "https://github.com/BoxxyDEV/Boxuga-ModLoader/blob/V2/README.md"
+      }
+    },
+    "xbox360-rdr-demonic-v27": {
+      "gameId": "red-dead-redemption-undead-nightmare",
+      "category": "loader",
+      "version": "2.7 (reviewed post; archive readme does not number the build)",
+      "gameUpdate": "Latest TU (unnumbered source README claim)",
+      "region": "Media ID 5B48AF70; region-free (source README)",
+      "compatibility": "The archive README specifies Undead Nightmare NON-GOTY, Media ID 5B48AF70, region-free. Premade variants are labelled RGH. It explicitly says normal Red Dead Redemption is no longer supported. Exact dashboard/kernel and TU number are unspecified.",
+      "tags": [
+        "Xbox 360",
+        "Red Dead Redemption",
+        "Undead Nightmare",
+        "NON-GOTY",
+        "Demonic Revelations",
+        "Jedijosh",
+        "RGH",
+        "RPF6",
+        "XEX2",
+        "5B48AF70"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Required game edition",
+          "text": "The included README identifies Undead Nightmare NON-GOTY, region-free, Media ID 5B48AF70. It says normal Red Dead Redemption is no longer supported. Its patched XEX is described as using the latest title update, without a numbered TU. Preserve this source requirement and confirm the edition and update before replacement."
+        },
+        {
+          "type": "text",
+          "title": "Choose one premade base",
+          "text": "Separate Demonic and Jedijosh RGH folders each provide patch0_xenon.rpf and dlcpatch0_xenon.rpf. The author warns that running both menus together can cause problems. Loose files are also supplied for editing an existing RPF; those require the documented RPF workflow."
+        },
+        {
+          "type": "text",
+          "title": "Root files and backups",
+          "text": "The README places ROOT OF GAME FILES directly in the extracted game root, outside the RPF archives. Preserve original game files. Its RPF instructions require XML, XEDT, XSF and XTD imports to be compressed. No installation was performed during this review."
+        },
+        {
+          "type": "list",
+          "title": "Included menu controls",
+          "items": [
+            "Demonic: hold RB and press RS to open; use D-pad up/down, A to select and B to go back.",
+            "Jedijosh: hold RB and press D-pad right; use D-pad directions, A to select and B to go back.",
+            "Some options use different controls displayed by the menu."
+          ]
+        }
+      ],
+      "evidence": {
+        "static": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/rdr-static.json",
+        "videoPolicy": "Original BIK components are preserved inside the original archive. Do not embed or add separate video downloads."
+      }
+    },
+    "xbox360-neighborhood": {
+      "category": "rtm",
+      "version": "21256.3 (source filename)",
+      "compatibility": "The source file is the full Windows XBOX360 SDK 21256.3 executable, not a standalone Xbox 360 Neighborhood download or a console-side XEX. Exact Windows-version requirements have not been verified.",
+      "tags": [
+        "Xbox 360",
+        "Windows",
+        "SDK",
+        "21256.3",
+        "Neighborhood",
+        "Desktop helper"
+      ],
+      "archiveRole": [
+        "Helpers",
+        "Windows"
+      ],
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Full SDK distribution",
+          "text": "This source supplies XBOX360 SDK 21256.3.exe, a 1.53 GB Windows SDK distribution. It is not a standalone Neighborhood application or a file for Xbox 360 console storage. Preserve the original SDK filename and version."
+        },
+        {
+          "type": "text",
+          "title": "Requirements still unverified",
+          "text": "No installer was launched and no development environment or console connection was configured. Check the original distribution’s setup documentation and applicable requirements before choosing components. Windows-version compatibility and hardware connectivity are untested."
+        }
+      ],
+      "evidence": {
+        "archiveTypes": [
+          "PE",
+          "Cab"
+        ],
+        "members": [
+          {
+            "name": "XDK\\bin\\win32\\xdevkit.dll",
+            "bytes": 49152,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\x64\\xdevkit.dll",
+            "bytes": 49152,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\ExpansionInstaller\\ExpansionInstaller.xex",
+            "bytes": 4931584,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\ExpansionInstaller\\ExpansionInstaller.xdb",
+            "bytes": 9464832,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\ExpansionInstaller\\media\\ExpansionInstaller.xzp",
+            "bytes": 7414,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\ExpansionInstaller\\media\\skin.xzp",
+            "bytes": 472813,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\ExpansionInstaller\\resx\\ExpansionInstaller_all.resx",
+            "bytes": 15435,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52292916c4000\\refs.ptr",
+            "bytes": 84,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52292916c4000\\xbdm.dll",
+            "bytes": 683008,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52965BAAc4000\\refs.ptr",
+            "bytes": 82,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52965BAAc4000\\xbdm.dll",
+            "bytes": 683008,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\3B0A8BB699674F4FA395680174C37CA41\\refs.ptr",
+            "bytes": 84,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\3B0A8BB699674F4FA395680174C37CA41\\xbdm.pdb",
+            "bytes": 568320,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\7FA50C429D844363B2E14DF5106731071\\refs.ptr",
+            "bytes": 82,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\7FA50C429D844363B2E14DF5106731071\\xbdm.pdb",
+            "bytes": 568320,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\win32\\xbdm.dll",
+            "bytes": 675840,
+            "directory": false
+          },
+          {
+            "name": "XDK\\bin\\x64\\xbdm.dll",
+            "bytes": 889856,
+            "directory": false
+          },
+          {
+            "name": "XDK\\readme1st.txt",
+            "bytes": 3544,
+            "directory": false
+          },
+          {
+            "name": "XDK\\readme1st.txt",
+            "bytes": 2926,
+            "directory": false
+          }
+        ],
+        "static": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/sdk-static.json"
+      }
+    }
+  },
+  "staticEvidence": {
+    "boxuga": {
+      "id": "xbox360-gta5-boxuga-v2",
+      "archive": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/xbox360-gta5-boxuga-v2/Boxuga.V2.Xbox.zip",
+      "members": [
+        "Content\\0000000000000000\\545408A7\\000B0000\\tu00000009_00000000",
+        "Drag file into your USB on the root.txt"
+      ],
+      "buildMember": {
+        "path": "Content\\0000000000000000\\545408A7\\000B0000\\tu00000009_00000000",
+        "bytes": 134787072,
+        "sha256": "79f077391c59a9e96371ecf02427d906c4654ab1ee0bd0e52fd82b9e87466b86",
+        "prefixHex": "4c495645db699dcd247e05fc0de4e13d",
+        "format": "Xbox LIVE/STFS container"
+      },
+      "titleId": "545408A7 (source archive path)",
+      "gameUpdate": "Not specified: the TU filename alone is not a confirmed game update number",
+      "instructionFile": "Zero-byte text file; only its filename supplies the instruction",
+      "payloadExecuted": false
+    },
+    "rdr": {
+      "id": "xbox360-rdr-demonic-v27",
+      "sourceArchive": "docs/discord-ps4-ps5-raw/platforms/xbox-public-staging/xbox360-rdr-demonic-v27/[Xbox] Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu.rar",
+      "archiveFormat": "RAR5",
+      "members": [
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Mod Menu - Script Controls.txt",
+          "bytes": 1364
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Demonic - Pre-Modded RPFS [RGH]\\dlcpatch0_xenon.rpf",
+          "bytes": 2424832
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Demonic - Pre-Modded RPFS [RGH]\\patch0_xenon.rpf",
+          "bytes": 26443776
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Demonic - Pre-Modded RPFS [RGH]\\READ.txt",
+          "bytes": 608
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Jedijosh - Pre-Modded RPFS [RGH]\\dlcpatch0_xenon.rpf",
+          "bytes": 2418688
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Jedijosh - Pre-Modded RPFS [RGH]\\patch0_xenon.rpf",
+          "bytes": 26431488
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Jedijosh - Pre-Modded RPFS [RGH]\\READ.txt",
+          "bytes": 797
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\READ.txt",
+          "bytes": 4227
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\arm00.bik",
+          "bytes": 35351944
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\blk00.bik",
+          "bytes": 33040444
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\custom1.bik",
+          "bytes": 1966212
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\custom2.bik",
+          "bytes": 34757416
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\custom3.bik",
+          "bytes": 14831296
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\default.xex",
+          "bytes": 18300928
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\dlcpatch0_xenon.rpf",
+          "bytes": 1427456
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\patch0_xenon.rpf",
+          "bytes": 722944
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\dlcpatch0_xenon files\\content\\release\\dlc\\zombiepack\\system\\DesignerDefined\\ui\\fuieventmonitor_z.xsc",
+          "bytes": 30796
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\dlcpatch0_xenon files\\flash\\mp_hud.xsf",
+          "bytes": 134500
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\dlcpatch0_xenon files\\flash\\mp_hud_z.xsf",
+          "bytes": 158568
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DesignerDefined\\ui\\fuieventmonitor.xsc",
+          "bytes": 30796
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DesignerDefined\\ui\\fuieventmonitor_o.xsc",
+          "bytes": 8214
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS1.xsc",
+          "bytes": 8792
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS2.xsc",
+          "bytes": 26304
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS3.xsc",
+          "bytes": 1228
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS4.xsc",
+          "bytes": 5076
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS5.xsc",
+          "bytes": 8962
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS6.xsc",
+          "bytes": 814
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS7.xsc",
+          "bytes": 600
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS8.xsc",
+          "bytes": 2672
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\release\\scripting\\DRS9.xsc",
+          "bytes": 2484
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\ui\\pausemenu\\controlleroptions.sc.xml",
+          "bytes": 357
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\ui\\pausemenu\\options.sc.xml",
+          "bytes": 27486
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\content\\ui\\userinterface.sc.xml",
+          "bytes": 1827
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\flash\\mp_hud.xsf",
+          "bytes": 134500
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\flash\\mp_hud_z.xsf",
+          "bytes": 158568
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\flash\\startscreen.xsf",
+          "bytes": 141580
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\flash\\startscreen_z.xsf",
+          "bytes": 204472
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_abes_girl_cs.xedt",
+          "bytes": 9000
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_abes_girl_cs.xft",
+          "bytes": 981514
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_nemesis_03.xedt",
+          "bytes": 1560
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_nemesis_03.xft",
+          "bytes": 75922
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_nemesis_03_hilod.xfd",
+          "bytes": 1121278
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_nemesis_03_medlod.xfd",
+          "bytes": 163702
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy.xedt",
+          "bytes": 10282
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy.xft",
+          "bytes": 57020
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy_cs.xedt",
+          "bytes": 9124
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy_cs.xft",
+          "bytes": 928204
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy_cs_anc_paperboy_hat_cs.xft",
+          "bytes": 12370
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy_hilod.xfd",
+          "bytes": 922608
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy_medlod.xfd",
+          "bytes": 129006
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\anc_paperboy_set_anc_paperboy_hat.xft",
+          "bytes": 12398
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\horsestandard04.xft",
+          "bytes": 242190
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\horsestandard04_hilod.xtd",
+          "bytes": 557084
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\horsestandard04_medlod.xtd",
+          "bytes": 858
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\horsestandard05.xft",
+          "bytes": 242190
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\horsestandard05_hilod.xtd",
+          "bytes": 576932
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\horsestandard05_medlod.xtd",
+          "bytes": 858
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\misc_nakedguy_01.xedt",
+          "bytes": 1476
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\misc_nakedguy_01.xft",
+          "bytes": 52990
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\misc_nakedguy_01_hilod.xfd",
+          "bytes": 917970
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\fragments\\misc_nakedguy_01_medlod.xfd",
+          "bytes": 117914
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\mapres\\swall.xtd",
+          "bytes": 4019148
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\navres\\territory\\minheightgrid.xml",
+          "bytes": 21545
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\tune\\asd\\nun.xml",
+          "bytes": 12394
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\tune\\template\\template_base_animal.xml",
+          "bytes": 4005
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\tune\\template\\template_base_bird.xml",
+          "bytes": 3987
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\tune\\template\\template_base_cow.xml",
+          "bytes": 4018
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\tune\\template\\template_base_domesticated_animal.xml",
+          "bytes": 4026
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\tune\\template\\template_base_domesticated_dog.xml",
+          "bytes": 4015
+        },
+        {
+          "name": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Undead Nightmare[5B48AF70] - Loose Files For Demonic\\patch0_xenon files\\tune\\template\\template_base_wild_animal.xml",
+          "bytes": 4018
+        }
+      ],
+      "documentation": [
+        {
+          "member": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Mod Menu - Script Controls.txt",
+          "text": "Demonic Revelations:\r\n--------------------\r\nOpen: Hold RB & Press RS\r\nScroll: Dpad Up/Down [Some menus support scroll left and right, those menus have buttons on screen]\r\nSelect Option: A\r\nBack/Close: B\r\n- Some menus/options have diff controls and they show on screen for them.\r\n\r\nJedijosh Trainer:\r\n------------------\r\nI don't reccomend using demonic and josh at the same time, however it's here just to show the script works.\r\nOpen: Hold RB & Press Dpad Right\r\nScroll: Dpad Up, Down, Left, Right\r\nSelect Option: A\r\nBack/Close: B\r\nInstant Close Menu: Hold RB & Press Dpad Right Again while menu open.\r\n- Some options may have diff controls which are shown on screen.\r\n\r\n\r\nGamertag Editor:\r\n----------------\r\nHold RB & Press Dpad Left\r\nScroll: Dpad Up, Down, Left, Right\r\nSelect Option: A\r\nBack/Close: B\r\nInstant Close Menu: Hold RB & Press Dpad Left Again while menu open.\r\n\r\n\r\nAnthrax Menus:\r\n--------------\r\nOpen: Press RB + X at the same time.\r\nScroll: Dpad Up, Down, Left, Right\r\nSelect Option: A\r\nBack/Close: B\r\n\r\nVideo Loader:\r\n-------------\r\nOpen: Hold LB + RB & Press Dpad Down\r\n- menu shows rest of controls\r\n\r\nTerminate these menus anytime during gameplay however you wish.\r\nIf you have issues loading scripts, terminate all scripts and load the one you want now and it should work.\r\n- RDR Doesnt like alot of scripts being loaded in at the same time.\r\n"
+        },
+        {
+          "member": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Demonic - Pre-Modded RPFS [RGH]\\READ.txt",
+          "text": "Custom scripts in demonic are as follows\r\n\r\nCustom Scripts\r\n-----------------\r\nDRS1 = Gamertag Editor\r\nDRS2 = Jedijosh Cracked Menu\r\nDRS3 = Video Loader\r\nDRS4 = Anthrax Mini Menu (Update 2)\r\nDRS5 = Anthrax Mini Menu (Update 3)\r\nDRS6 = Joshes Standalone ServerFix Script (ported from ps3 to xbox thanks to FuhzBot)\r\nDRS7 = Demonic Standalone ServerFix (removed from menu for space, joshes is better but here if you need it)\r\nDRS8 = Undead Weapons Online - Must be ER Bypassed at game mainmenu for this to work right!\r\nDRS9 = Custom Weapons Online - Must be ER Bypassed at game mainmenu for this to work right!"
+        },
+        {
+          "member": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Jedijosh - Pre-Modded RPFS [RGH]\\READ.txt",
+          "text": "In joshes menu custom scripts go as follows\r\n\r\ncustomscript1: Demonic menu\r\n - Using demonic and josh menu together can cause alot of problems, you have been warned\r\ncustomscript2: Gamertag editor\r\ncustomscript3: Video Loader\r\ncustomscript4: Anthrax Mini Menu (Update 2)\r\ncustomscript5: Anthrax Mini menu (Update 3)\r\ncustomscript6: Joshes Standalone Server fix\r\ncustomscript7: Demonic Standalone Server fix\r\ncustomscript8: Undead Weapons Online - Must be ER Bypassed at game mainmenu for this to work right!\r\ncustomscript9: Custom Weapons Online - Must be ER Bypassed at game mainmenu for this to work right!\r\n- For undead and custom weapons, best if you only execute one of them. \r\n- if you execute both, you could have issues because the custom weapons modify and abuse the undead weapon structs"
+        },
+        {
+          "member": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\READ.txt",
+          "text": "If you use the template files from loose files, or use pre-modded demonic rpf, Online you will auto\r\nbe in the modders pool, aka a solo session friends can't join. You also can't find/join other\r\nplayers unless they are also in the modders pool. You will have to enable modders pool bypass\r\nunder misc options in the menu then find a new sesion and you will be out of modders pool.\r\nIn the pre-modded josh rpf, I did not include the template files, so import them if you want to\r\nuse them with joshes menu, just know you will have to either execute demonic along side it under joshes\r\nscript loader to bypass modders pool or you will need to create your own modders pool bypass script.\r\nThe template files are only only needed for demonic menu as is so you can play as all animals.\r\n\r\nIf for some reason you ONLY want to use joshes menu and not demonic at all, in the josh premade rpf\r\nremove the minheightgrid.xml file if you have issues spawning stuff from joshes menu\r\nit's located in navres/territory. This file is only included because it makes teleport to waypoint\r\nwork alot better in demonic menu but left it in for joshes just incase it helps with his also but never tested\r\nDemonic was built with this file in mind directly, so feel free to remove it from the rpf if it causes issues\r\nwith joshes menu.\r\n\r\n.xml files must be compressed in rpf tools for rdr.\r\n.xedt files must be compressed in rpf tools for rdr.\r\n.xsf files must be compressed in rpf tools for rdr.\r\n.xtd files must be compressed in rpf tools for rdr.\r\n\r\nROOT OF GAME FILES\r\n--------------------\r\nHere you have a patched xex to latest TU, you also have clean rpfs you can modify.\r\nAlso included is normal RDR bik video files as well as a few custom ones for video loader custom script.\r\n- NONE OF THESE FILES ARE FOR RPFS. They go directly in your extracted game root folder.\r\n\r\nComaptible Game Version\r\n-----------------------\r\nXbox: Media ID - 5B48AF70: Undead Nightmare [NON GOTY] Region free.\r\n\r\n\r\nCustom Scripts\r\n-----------------\r\nDRS1 = Gamertag Editor\r\nDRS2 = Jedijosh Cracked Menu\r\nDRS3 = Video Loader\r\nDRS4 = Anthrax Mini Menu (Update 2)\r\nDRS5 = Anthrax Mini Menu (Update 3)\r\nDRS6 = Joshes Standalone ServerFix Script (ported from ps3 to xbox thanks to FuhzBot)\r\nDRS7 = Demonic Standalone ServerFix (removed from menu for space, joshes is better but here if you need it)\r\nDRS8 = Undead Weapons Online - Must be ER Bypassed at game mainmenu for this to work right!\r\nDRS9 = Custom Weapons Online - Must be ER Bypassed at game mainmenu for this to work right!\r\n\r\nSemi outdated tuts + tools\r\n---------------------------\r\n[I get tired of remaking tuts people can't follow, I also get tired of remaking tuts each time I add new files]\r\nThese tuts could be a bit outdated but they should be good enough to get the gist on what to do.\r\n\r\nBasic Tut For Installing Demonic + Some Files: https://www.youtube.com/watch?v=GA31TSgGfCA\r\n- ^ This tut is outdated mostly because I no longer have support for NORMAL RDR version.\r\n - I may eventually go back and make it compatible with normal rdr again but it will lack features.\r\nHow To Create Videos For Video Loader: https://www.youtube.com/watch?v=21nV9ymiSkw\r\nMost Tools You Will Ever Need On RDR1: https://www.mediafire.com/folder/9no115qcmcqgd/Red+Dead+Redemption+Tools\r\n\r\nMod Menu Sources/Script Sources:\r\n--------------------------------\r\nDemonic Revelations: https://github.com/CabooseSayzWTF/Demonic-Revelations-RIP-Edition\r\nUndead Weapons Online: https://github.com/CabooseSayzWTF/RDR1-Undead-Weapons-Online\r\nCustom Weapons Online: https://github.com/CabooseSayzWTF/RDR1-Custom-Weapons-Online\r\nTheRouletteBoi SPRX Menu Base: https://github.com/TheRouletteBoi/RedDeadRedemption\r\nConnors Menu Base: https://github.com/connorms/RDR-Trainer\r\nV3 Mod Menu Base: https://github.com/Foxxyyy/RDR-Menu\r\n- The v3 base originally was made for demonic revelations V3, however due to SSD failures, and issues\r\n- I couldn't figure out, the project was canceled, so instead the base was released publicly.\r\n\r\n\r\nCredits:\r\n--------\r\nCabooseSayzWTF\r\nxTheDevilRazedMe\r\nCain532\r\nIm Foxxyyy\r\nSockstress (Райан)\r\nJamesTwt\r\nMizdx\r\nYzid\r\nConnor aka FuhzBot\r\nRouletteBoi\r\nFrostDragon\r\nGolden Bullets\r\nVision\r\nArphenion"
+        }
+      ],
+      "excludedSensitiveNames": 0,
+      "payloadExecuted": false,
+      "buildMembers": [
+        {
+          "path": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Demonic - Pre-Modded RPFS [RGH]\\dlcpatch0_xenon.rpf",
+          "bytes": 2424832,
+          "sha256": "8df34a7acfc381e770ae52f7d5d64688a2cb36d2cf105122b2d9de4929aad269",
+          "prefixHex": "525046360000005d00000000fffffffd",
+          "format": "RPF6"
+        },
+        {
+          "path": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Demonic - Pre-Modded RPFS [RGH]\\patch0_xenon.rpf",
+          "bytes": 26443776,
+          "sha256": "a0d6c4781e187410c092be2f5697e12791bb194d2b9ae8c9eca5e6b5f319873e",
+          "prefixHex": "525046360000006f00000000fffffffd",
+          "format": "RPF6"
+        },
+        {
+          "path": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Jedijosh - Pre-Modded RPFS [RGH]\\dlcpatch0_xenon.rpf",
+          "bytes": 2418688,
+          "sha256": "174f1edafc81867b2ed4b2c340fb6a875664d58afdfd329b3ced1eacbb34ca37",
+          "prefixHex": "525046360000005d00000000fffffffd",
+          "format": "RPF6"
+        },
+        {
+          "path": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\Pre-Modded RPFS\\Jedijosh - Pre-Modded RPFS [RGH]\\patch0_xenon.rpf",
+          "bytes": 26431488,
+          "sha256": "8a7c2d2b0f78ebba2ce0746a6a6225a4e74b273a19a9d64d1420dbc1c25b447e",
+          "prefixHex": "525046360000006900000000fffffffd",
+          "format": "RPF6"
+        },
+        {
+          "path": "Loose Files, Premade Rpfs, Demonic Menu, jedijosh menu [Xbox]\\ROOT OF GAME FILES\\default.xex",
+          "bytes": 18300928,
+          "sha256": "cda58bc1cbe08e296bb605349cb5b58a70609e9420e5689dc9f5d23a34242f3e",
+          "prefixHex": "58455832000000010000400000000000",
+          "format": "Xbox XEX2"
+        }
+      ],
+      "compatibility": {
+        "edition": "Undead Nightmare [NON GOTY]",
+        "mediaId": "5B48AF70",
+        "region": "Region free (source README)",
+        "gameUpdate": "Latest TU (unnumbered source README claim)",
+        "normalRdr": "README explicitly says normal RDR is no longer supported",
+        "console": "Pre-modded variants labelled RGH"
+      }
+    },
+    "sdk": {
+      "id": "xbox360-neighborhood",
+      "archiveType": "PE",
+      "totalMembers": 815,
+      "excludedSensitiveNames": 1,
+      "representativeMembers": [
+        {
+          "name": "XDK\\bin\\win32\\xdevkit.dll",
+          "bytes": 49152,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\x64\\xdevkit.dll",
+          "bytes": 49152,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\ExpansionInstaller\\ExpansionInstaller.xex",
+          "bytes": 4931584,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\ExpansionInstaller\\ExpansionInstaller.xdb",
+          "bytes": 9464832,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\ExpansionInstaller\\media\\ExpansionInstaller.xzp",
+          "bytes": 7414,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\ExpansionInstaller\\media\\skin.xzp",
+          "bytes": 472813,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\ExpansionInstaller\\resx\\ExpansionInstaller_all.resx",
+          "bytes": 15435,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52292916c4000\\refs.ptr",
+          "bytes": 84,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52292916c4000\\xbdm.dll",
+          "bytes": 683008,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52965BAAc4000\\refs.ptr",
+          "bytes": 82,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.dll\\52965BAAc4000\\xbdm.dll",
+          "bytes": 683008,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\3B0A8BB699674F4FA395680174C37CA41\\refs.ptr",
+          "bytes": 84,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\3B0A8BB699674F4FA395680174C37CA41\\xbdm.pdb",
+          "bytes": 568320,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\7FA50C429D844363B2E14DF5106731071\\refs.ptr",
+          "bytes": 82,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\xbox\\symsrv\\xbdm.pdb\\7FA50C429D844363B2E14DF5106731071\\xbdm.pdb",
+          "bytes": 568320,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\win32\\xbdm.dll",
+          "bytes": 675840,
+          "directory": false
+        },
+        {
+          "name": "XDK\\bin\\x64\\xbdm.dll",
+          "bytes": 889856,
+          "directory": false
+        },
+        {
+          "name": "XDK\\readme1st.txt",
+          "bytes": 3544,
+          "directory": false
+        },
+        {
+          "name": "XDK\\readme1st.txt",
+          "bytes": 2926,
+          "directory": false
+        }
+      ],
+      "payloadExecuted": false,
+      "archiveTypes": [
+        "PE",
+        "Cab"
+      ],
+      "neighborhoodNamedMembers": [],
+      "setupRequirements": "Exact Windows-version and connection requirements not established by this static review.",
+      "fullSdkEvidence": "PE self-extracting CAB contains815 member records, including XDK/bin/win32, XDK/bin/x64, Xbox-side tools and SDK support libraries."
+    }
+  },
+  "status": "complete-staging",
+  "stagedFiles": 3,
+  "totalBytes": 1861961593,
+  "completedAt": "2026-11-02T13:44:04.129Z",
+  "archiveStatus": "No F writes. Root must archive these originals before offering website downloads.",
+  "payloadsExecuted": false,
+  "hardwareTested": false
+}

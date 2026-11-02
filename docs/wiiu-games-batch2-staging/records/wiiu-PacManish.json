@@ -1,0 +1,52 @@
+{
+  "id": "wiiu-PacManish",
+  "title": "PacMan-ish",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "1.0.4",
+  "url": "https://wiiu.cdn.fortheusers.org/zips/PacManish.zip",
+  "source": "https://hb-app.store/wiiu/PacManish",
+  "name": "PacManish-1.0.4.zip",
+  "description": "Variation on PacMan translated for Wii U",
+  "author": "Martin Butler",
+  "details": "This is a variation on PacMan that I wrote a number of years ago. My then 8 year old son designed the screen and the images and told me how he wanted the game to play. I then wrote the game in Java. As a programming exercise I've now converted it to C, to run on the Wii U under Homebrew (https://wiiubrew.org/). It uses the OSScreen interfaces for the graphics and sndcore2 for the sound.\\n\\nThe images used by Draw.c have been converted from bitmap files into two dimensional arrays in .h files, so that they can easily be incorporated into the software. This is done using the tool https://github.com/MartinButlerAAA/ProcessBmp.\\n\\nThe Sounds.c code has been developed using https://github.com/ashquarky/LiveSynthesisU as an example. The code uses .wav sound files that have been converted to data arrays in .h files (I have borrowed the sounds I used from https://scratch.mit.edu/). The .wav files are converted to .h files using the tool https://github.com/MartinButlerAAA/ProcessWav.",
+  "md5": "b9aeb2716efea4bcec9676ef215bc717",
+  "icon": "https://wiiu.cdn.fortheusers.org/packages/PacManish/icon.png",
+  "requirements": "Aroma for the bundled WUHB. Keep the complete package; any separate RPX variant needs the environment documented by the project.",
+  "setup": "Extract the complete SD bundle to the SD root; keep every app folder, music file and companion asset. Launch the matching executable from its documented environment.",
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 3,
+    "uncompressedBytes": 1551910,
+    "builds": [
+      {
+        "path": "wiiu/apps/PacManish/PacMan-ishU.wuhb",
+        "bytes": 1550028,
+        "sha256": "fe945468867df41366a398a1c9dca083d248c71da382b2b4ac8e7507c37a4614"
+      }
+    ],
+    "xmlFiles": [],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/wiiu-PacManish.png",
+  "file": {
+    "name": "PacManish-1.0.4.zip",
+    "version": "1.0.4",
+    "bytes": 1545113,
+    "sha256": "354c8cdc2a756b1d1eeb25720aaf7995fdbe4b6e9c5597d182d34855dd803208",
+    "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/PacManish.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/PacManish-1.0.4.zip",
+    "itemId": "wiiu-games-batch2-wiiu-PacManish",
+    "platform": "Wii U",
+    "category": [
+      "Wii U",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\PacMan-ish\\Builds\\1.0.4\\PacManish-1.0.4.zip"
+  },
+  "mirrorReason": null
+}

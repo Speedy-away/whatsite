@@ -1,0 +1,40 @@
+{
+  "updatedAt": "2026-11-02T09:39:18.809Z",
+  "status": "Complete locally: matching Game downloads cards, navigation and dedicated external-directory pages added to seventeen console sections.",
+  "request": "Add supplied Vimm, DLPSGame, Vita, Switch and 3DS game-directory links to the matching console pages, plus the all-console Vault index.",
+  "catalogue": "docs/console-game-directories.json",
+  "sources": "docs/console-game-directory-source-evidence.json",
+  "builder": "scripts/console-game-directories.cjs",
+  "sharedHook": "scripts/build-console-guides.cjs calls apply() so future generated pages retain game-directory navigation/cards.",
+  "index": "/console/game-downloads/",
+  "counts": {
+    "platforms": 17,
+    "matchingLinks": 23,
+    "newPages": 18
+  },
+  "verification": "docs/qa/console-game-directories-verification.json",
+  "checks": {
+    "tests": 38,
+    "passed": 38,
+    "failed": 0,
+    "output": "docs/qa/console-game-directories-tests.txt"
+  },
+  "siteAudit": "Audited 396 public pages and 39526 local links/assets; 0 issue(s).",
+  "fullSuite": {
+    "tests": 387,
+    "passed": 384,
+    "failed": 3,
+    "output": "docs/qa/console-game-directories-all-tests.txt",
+    "reason": "Shared Xbox 360 catalogue grew from fifteen to twenty-four items; three existing exact-count fixtures still expect the old counts. No Xbox library data was edited by this task."
+  },
+  "notes": [
+    "Original files, versions and homebrew-game categories retained; this task adds external directory links only.",
+    "Exact user-supplied NSWGF 3DS URL retained alongside the separate NSWGame route.",
+    "Blocked and indexed-only links remain truthfully labelled in collapsed link checks; no individual download availability claimed.",
+    "No platform-specific source inferred for Switch 2, Xbox One / Series or Steam Deck; their pages link to the all-console index.",
+    "Original Xbox now has a native source page, so its Vimm link is included.",
+    "Unconfirmed Vimm category paths for WiiWare and additional older systems use the main Vault index rather than guessed paths."
+  ],
+  "regeneration": "node scripts/console-game-directories.cjs; --check verifies page integration without mutation. Run after builders that do not use the shared guide shell.",
+  "publication": "Local edits only; no commit, push or deployment."
+}

@@ -2,6 +2,21 @@
 
 A modern, responsive website for game cheats, modifications, and gaming tools.
 
+## Console guides and download maintenance
+
+Use the [documentation index](INDEX.md) for the current console workflow:
+
+- [PS4 downloads and files](guides/ps4-console-downloads.md)
+- [PS5 downloads and payloads](guides/ps5-console-downloads.md)
+- [File formats and archive extraction](guides/console-files-and-archives.md)
+- [Check/download newer homebrew and app versions](local-download-updates.md)
+- [Archive preservation and metadata-only index refresh](download-archive.md)
+
+The update workflow runs on demand. Preserve older versions and compatibility
+pins, archive relevant ready builds to `F:\whatsite-backup-downloads-etc`, and keep
+source code and desktop/mobile helpers separate. Follow [AGENTS.md](../AGENTS.md)
+before adding or updating downloadable files.
+
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional interface with dark theme

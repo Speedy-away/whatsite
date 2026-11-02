@@ -1,0 +1,4286 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T09:03:12.272Z",
+  "complete": true,
+  "passed": true,
+  "inputs": [
+    {
+      "file": "docs/switch-themes-catalog.json",
+      "bytes": 84558,
+      "sha256": "2288598e1b49c38ccbd64e4c215ffbd5d9ccd08d464bdf413c33b6b97e42db4c"
+    },
+    {
+      "file": "docs/switch-themes-private-inventory.json",
+      "bytes": 38170,
+      "sha256": "a4e1932a673461fab2d874a5e7cc762e116081b36ba6cf53376582cc004f6d80"
+    },
+    {
+      "file": "docs/switch-homebrew-downloads.json",
+      "bytes": 159715,
+      "sha256": "f83aecf3d07fdce3bfd2c9852ecbc71f3abb4df674b9c4a72f43c2e5c527aee8"
+    }
+  ],
+  "themes": [
+    {
+      "id": "switch-themes-1997e",
+      "title": "SWITCH2 Neon Nebula",
+      "author": "DarkMan_361985",
+      "kind": "pack",
+      "components": [
+        {
+          "id": "16FF6",
+          "path": "SW2 Neon Nebula - Player Select by DarkMan_361985 (Player Select, Transparent Playerselect by migush) (Themezer-T16FF6).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 54294,
+          "sha256": "7a9ccb987b86150e920129e22762f2500c9cb4f8d0a0f19026d2ceb17894b9e5",
+          "target": "Psl",
+          "menu": "Player Selection",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "SW2 Neon Nebula - Player Select",
+            "Author": "DarkMan_361985",
+            "Target": "psl",
+            "LayoutInfo": "Transparent Playerselect by migush",
+            "Id": "Themezer:16FF6:1786422698354"
+          },
+          "layout": {
+            "name": "Transparent Playerselect",
+            "author": "migush",
+            "targetName": "Psl.szs",
+            "targetFirmware": 1100,
+            "id": "builtin_TransparentPSLCenter"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 3043,
+              "sha256": "da033ee3f9ff5df11df76f4ef66338a599da03b066f70a98f32774ea06a09d0a",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 54548,
+              "sha256": "638709d08944d43d263eab0d8d27d9c8fa60fab86a1236bcc0f3cb0b8aa43692",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 212,
+              "sha256": "d7131668f4e563cd72fc73056a6d19db3b4f06aa21d0ce64fc26a38c2e2ba77a",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16FF2",
+          "path": "SW2 Neon Nebula - Home Menu by DarkMan_361985 (Home Menu, Switch 2 (Home Menu) by Deemitry88) (Themezer-T16FF2).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 458316,
+          "sha256": "8998f562ffe0e19848560afc15861f0d1f478ac2389e5702f8169f0e4aea1274",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "SW2 Neon Nebula - Home Menu",
+            "Author": "DarkMan_361985",
+            "Target": "home",
+            "LayoutInfo": "Switch 2 (Home Menu) by Deemitry88",
+            "Id": "Themezer:16FF2:1786422698189"
+          },
+          "layout": {
+            "name": "Switch 2 (Home Menu)",
+            "author": "Deemitry88",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer_Custom:d21ec3bf-938e-440b-b4fc-4a91fc0a5f82"
+          },
+          "commonLayout": {
+            "name": "Switch 2 (Home Menu Common)",
+            "author": "Deemitry88",
+            "targetName": null,
+            "targetFirmware": 1100,
+            "id": "Themezer_Custom:4c3d996e-7266-461d-8dc8-c22d04312d54"
+          },
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 6739,
+              "sha256": "076a53063ec71eb08aaa1da6c2b1fc42328c5a2ec7fafff15961a44c3c2c72d7",
+              "directory": false
+            },
+            {
+              "path": "common.json",
+              "bytes": 248,
+              "sha256": "ea4283d084d81ed79649f9cd5e907ed32dcd5a632f028d7612f325279315a234",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 354084,
+              "sha256": "81b0b659f23ede58056f58e75a6326dec5ce2acc633292861c2133422e8c3bc5",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 102800,
+              "sha256": "6c65d911afdcd8d91e30ddfc7474965ae1d86f88b272f2e3e4ed1c0bf2f88322",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 209,
+              "sha256": "6b2f269098aec9c6cd9eb7b33d3f69991c87ce0c7e2ddcc504cca87b6b44d8b9",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16FF4",
+          "path": "SW2 Neon Nebula - All Apps by DarkMan_361985 (All Apps, Zelda + 2Simple Custom by Merged) (Themezer-T16FF4).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 535858,
+          "sha256": "4b38b8929e8b4249ecde46e03c97e819ac9df6867ad04ee0df199855b35eecab",
+          "target": "Flaunch",
+          "menu": "All Apps",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "SW2 Neon Nebula - All Apps",
+            "Author": "DarkMan_361985",
+            "Target": "apps",
+            "LayoutInfo": "Zelda + 2Simple Custom by Merged",
+            "Id": "Themezer:16FF4:1786422698280"
+          },
+          "layout": {
+            "name": "Zelda + 2Simple Custom",
+            "author": "Merged",
+            "targetName": "Flaunch.szs",
+            "targetFirmware": 1100,
+            "id": "Themezer:175432"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 6037,
+              "sha256": "7541a251b2735c57b5dd1ff788940183b54d8d6cb98ac604f3b9e6fff4918507",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 355233,
+              "sha256": "ff107b66eb232743a49be3314b8f7edfa0f0194a83ebeff5b503ec845d60a5bf",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 179346,
+              "sha256": "a144f592b91e86371957b8ea3b416e13831ebc337c0e840725797a769eb23cbb",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 206,
+              "sha256": "a2c0174b71e5def6cdc469591e64b6800480460dd8b0becc85526d79bffbd2d2",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16FF7",
+          "path": "SW2 Neon Nebula - User Page by DarkMan_361985 (User Page, Default by Nintendo) (Themezer-T16FF7).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 458271,
+          "sha256": "5dbb88b4afa8bf068e50a0f662922a48605478c4d37a116dd360d273722ef8fb",
+          "target": "MyPage",
+          "menu": "User Page",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "SW2 Neon Nebula - User Page",
+            "Author": "DarkMan_361985",
+            "Target": "user",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:16FF7:1786422698382"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "MyPage.szs",
+            "targetFirmware": 1100,
+            "id": "Themezer:16"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 2270,
+              "sha256": "6067abc7fb191ee2f4b8708c8077913700827e53afc6d5c685fec6fad4163368",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 355233,
+              "sha256": "ff107b66eb232743a49be3314b8f7edfa0f0194a83ebeff5b503ec845d60a5bf",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 103195,
+              "sha256": "b1317a355cf1274803b4c9b0e7426608b313d1d7f9a34b29a732ca6f21ac6589",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 194,
+              "sha256": "7c7a1d507840c4477b6e9a8008f83a69a5eb17ab1f8b916b31fcb3f46867c819",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16FF3",
+          "path": "SW2 Neon Nebula - Lock Screen by DarkMan_361985 (Lockscreen, Doge Lock by suchmememanyskill) (Themezer-T16FF3).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 442668,
+          "sha256": "89f6e66a57a557f3b9b8f8830c717516e23995138b352417c9addf3636f2059d",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "SW2 Neon Nebula - Lock Screen",
+            "Author": "DarkMan_361985",
+            "Target": "lock",
+            "LayoutInfo": "Doge Lock by suchmememanyskill",
+            "Id": "Themezer:16FF3:1786422698231"
+          },
+          "layout": {
+            "name": "Doge Lock",
+            "author": "suchmememanyskill",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "builtin_ClearLock"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 1484,
+              "sha256": "9df1bcb07ce06695fdc71f153d648bd2e19044919c5aedc95aa9a7ecd44cb0c1",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 380244,
+              "sha256": "9065020ca5a3614806fa2395c3b783253a28f6ca8150367ebf2356b024949105",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 62006,
+              "sha256": "a87e30e4e5b1d094fba9c795c428bc38f02bdc30b3680736ceb75035851d85bc",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 207,
+              "sha256": "185c29bf46c8ab3bee8c096a4630c47e1168582913fb8040ac31b91e2a5611db",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16FF5",
+          "path": "SW2 Neon Nebula - Settings by DarkMan_361985 (Settings, Default by Nintendo) (Themezer-T16FF5).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 451603,
+          "sha256": "54a6205156aa6bd10555eadf0855fc70cc2d35ca492b6a3cc11abb685889f7e7",
+          "target": "Set",
+          "menu": "Settings",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "SW2 Neon Nebula - Settings",
+            "Author": "DarkMan_361985",
+            "Target": "set",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:16FF5:1786422698324"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "Set.szs",
+            "targetFirmware": 1100,
+            "id": "Themezer:1A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 2292,
+              "sha256": "e997b00ac22d6211bbda9309b6303c6e6800a0ab0321b48bf6d6341658ac64d7",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 355233,
+              "sha256": "ff107b66eb232743a49be3314b8f7edfa0f0194a83ebeff5b503ec845d60a5bf",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 96433,
+              "sha256": "bb5f4f3b691e7f120c1859f034b9cc05ce15d313e98d9c18ab202ca77d97f0fd",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 192,
+              "sha256": "860fab71ca2533be52ccd15c671590754eeee92a7f3f10c655c28bcd19147dc1",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/1997E/2026-11-02/switch2-neon-nebula-1997E.zip",
+        "bytes": 2402925,
+        "sha256": "27783fb233ee33b0624d246aa14bbbd7e0d8567dc1dbcf978820296e3f613ae9",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1997E/download?src=webapp",
+        "version": "Themezer P1997E snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/1997E.webp",
+        "bytes": 96542,
+        "sha256": "5db26ef970d92c76f6db3d02e8513f4fa5f03e35d7efbec59f6cb48913d664ea",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "SW2 Neon Nebula - Player Select by DarkMan_361985 (Player Select, Transparent Playerselect by migush) (Themezer-T16FF6).nxtheme",
+          "bytes": 54294,
+          "sha256": "7a9ccb987b86150e920129e22762f2500c9cb4f8d0a0f19026d2ceb17894b9e5",
+          "directory": false
+        },
+        {
+          "path": "SW2 Neon Nebula - Home Menu by DarkMan_361985 (Home Menu, Switch 2 (Home Menu) by Deemitry88) (Themezer-T16FF2).nxtheme",
+          "bytes": 458316,
+          "sha256": "8998f562ffe0e19848560afc15861f0d1f478ac2389e5702f8169f0e4aea1274",
+          "directory": false
+        },
+        {
+          "path": "SW2 Neon Nebula - All Apps by DarkMan_361985 (All Apps, Zelda + 2Simple Custom by Merged) (Themezer-T16FF4).nxtheme",
+          "bytes": 535858,
+          "sha256": "4b38b8929e8b4249ecde46e03c97e819ac9df6867ad04ee0df199855b35eecab",
+          "directory": false
+        },
+        {
+          "path": "SW2 Neon Nebula - User Page by DarkMan_361985 (User Page, Default by Nintendo) (Themezer-T16FF7).nxtheme",
+          "bytes": 458271,
+          "sha256": "5dbb88b4afa8bf068e50a0f662922a48605478c4d37a116dd360d273722ef8fb",
+          "directory": false
+        },
+        {
+          "path": "SW2 Neon Nebula - Lock Screen by DarkMan_361985 (Lockscreen, Doge Lock by suchmememanyskill) (Themezer-T16FF3).nxtheme",
+          "bytes": 442668,
+          "sha256": "89f6e66a57a557f3b9b8f8830c717516e23995138b352417c9addf3636f2059d",
+          "directory": false
+        },
+        {
+          "path": "SW2 Neon Nebula - Settings by DarkMan_361985 (Settings, Default by Nintendo) (Themezer-T16FF5).nxtheme",
+          "bytes": 451603,
+          "sha256": "54a6205156aa6bd10555eadf0855fc70cc2d35ca492b6a3cc11abb685889f7e7",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 2402925,
+        "sha256": "27783fb233ee33b0624d246aa14bbbd7e0d8567dc1dbcf978820296e3f613ae9",
+        "version": "Themezer P1997E snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1997E/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-1984e",
+      "title": "Cozy Snorlax Adventures",
+      "author": "Yumpzy",
+      "kind": "pack",
+      "components": [
+        {
+          "id": "16817",
+          "path": "Cozy Snorlax Adventures Player Selection by Yumpzy (Player Select, 2Simple Player Select by Limaaa) (Themezer-T16817).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 192997,
+          "sha256": "553dbb9b9cf73ce8234e89e19a1f474fa3d7ca1bef686e33c06a23acab4bc5ab",
+          "target": "Psl",
+          "menu": "Player Selection",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Cozy Snorlax Adventures Player Selection",
+            "Author": "Yumpzy",
+            "Target": "psl",
+            "LayoutInfo": "2Simple Player Select by Limaaa",
+            "Id": "Themezer:16817:1784783212667"
+          },
+          "layout": {
+            "name": "2Simple Player Select",
+            "author": "Limaaa",
+            "targetName": "Psl.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer:3D"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 2908,
+              "sha256": "ad20eef7049b72e62f610fe08455b44b4c629b25ca931b365855f62f8ab98092",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 75469,
+              "sha256": "dda7513fdeab314ad7064fd33121135835ef80b09d8ae629df64fce65e95e0f1",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 117510,
+              "sha256": "a751735be0f5338a475beee7d1c63eb688a0a8c74d686dc5e404eaa2a7a24919",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 210,
+              "sha256": "e7fe516b456a3cb53786c8b7932f2d305ea3c9f0accc468240226a8d1d9fa1a6",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16818",
+          "path": "Cozy Snorlax Adventures User Page by Yumpzy (User Page, 2Simple My Page by Limaaa) (Themezer-T16818).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 281627,
+          "sha256": "219b879f9a4ea8c813ba4d3323a207e7572e64e709d68f73448eeae115a67e5c",
+          "target": "MyPage",
+          "menu": "User Page",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Cozy Snorlax Adventures User Page",
+            "Author": "Yumpzy",
+            "Target": "user",
+            "LayoutInfo": "2Simple My Page by Limaaa",
+            "Id": "Themezer:16818:1784783212836"
+          },
+          "layout": {
+            "name": "2Simple My Page",
+            "author": "Limaaa",
+            "targetName": "MyPage.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer:3A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 7235,
+              "sha256": "3a060d58de856228ba86f81caece8e545e211d6df7f563559f9245a2bbbe2666",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 95198,
+              "sha256": "0d65f3db219d011e9af48f230dba13b14e9a85385e0403a63a80c30864df57e6",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 185935,
+              "sha256": "4124cec385d74c3b0a4da81ebec6f27dddd5662e5497910ae34ddeeeeaebf4e2",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 198,
+              "sha256": "b87aed92c94e4881891d769f997b50e6739cfb50967f56074cc2999f35d74b5a",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16815",
+          "path": "Cozy Snorlax Adventures Settings by Yumpzy (Settings, 2Simple Settings by Limaaa) (Themezer-T16815).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 324537,
+          "sha256": "f7d7e9ea6acd2e7d459b151be25f61bc7416262342691504d95e834047dc8a4b",
+          "target": "Set",
+          "menu": "Settings",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Cozy Snorlax Adventures Settings",
+            "Author": "Yumpzy",
+            "Target": "set",
+            "LayoutInfo": "2Simple Settings by Limaaa",
+            "Id": "Themezer:16815:1784783212226"
+          },
+          "layout": {
+            "name": "2Simple Settings",
+            "author": "Limaaa",
+            "targetName": "Set.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer:3C"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 22000,
+              "sha256": "9019ec1f1b9a1a71004a778c126677df010a3cf19037b2de936f8e6e2a06d686",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 130968,
+              "sha256": "59265006f38412727e690155358add90e51c11626b18ef6620a1d0415819d080",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 192744,
+              "sha256": "40cfab52ac0ce12befaa985dfe44916ac8c15e5a8551d588291985f5b9ab334b",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 197,
+              "sha256": "18fc1646884677385e12352e93cd2afd53e1e5467c6618899fc1cf949cf0a11a",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16814",
+          "path": "Cozy Snorlax Adventures Homescreen by Yumpzy (Home Menu, Small Compact Homescreen by Akai) (Themezer-T16814).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 704424,
+          "sha256": "57526856ee4c4d3e9f28da8a576d62504750cf59b4e92b53ca9726871d1a3bf8",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Cozy Snorlax Adventures Homescreen",
+            "Author": "Yumpzy",
+            "Target": "home",
+            "LayoutInfo": "Small Compact Homescreen by Akai",
+            "Id": "Themezer:16814:1787092111602"
+          },
+          "layout": {
+            "name": "Small Compact Homescreen",
+            "author": "Akai",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:F|e818c9af-ca39-48cd-8ed1-a979b69ea142"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 10035,
+              "sha256": "bf76082b77150dd76139a31682cc2f5222a723fb4c813e289ddf558a132dedae",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 546121,
+              "sha256": "6684dd10887b70175b08ef62b892550c3f63e801b9e397a68d12b9159a195030",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 157063,
+              "sha256": "675b4c3af346bcff0363a60bfac0678da520bc0aaa5954f61f09bc8e56fb80f8",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 206,
+              "sha256": "431a17498303a98031c038a9873ee03e808073680fd1b4b927df71b6762a040b",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16816",
+          "path": "Cozy Snorlax Adventures All Apps by Yumpzy (All Apps, Right Rounded by mike89101) (Themezer-T16816).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 419486,
+          "sha256": "8f107bbb755d0cd6454be43f8868fbec04734522371b64daa4b86fe1de47075b",
+          "target": "Flaunch",
+          "menu": "All Apps",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Cozy Snorlax Adventures All Apps",
+            "Author": "Yumpzy",
+            "Target": "apps",
+            "LayoutInfo": "Right Rounded by mike89101",
+            "Id": "Themezer:16816:1784783212431"
+          },
+          "layout": {
+            "name": "Right Rounded",
+            "author": "mike89101",
+            "targetName": "Flaunch.szs",
+            "targetFirmware": null,
+            "id": "Themezer:12"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 5612,
+              "sha256": "f8597f4d650aa013387a1a35695eaa219a4dea15f455303059b4690111145629",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 90714,
+              "sha256": "ca717f11d91fff2a38188ae8114d49b37ae8a3193e4435595bea3d91c08451f1",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 331159,
+              "sha256": "76f1b5c55d3279984303eea101640349d63143148782f5631276778d6187a241",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 198,
+              "sha256": "45c5aaef8f98d1fde4d44f6c4fc00573f1e4aef9ac4b64487fc2c5ddf0440ff7",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "16813",
+          "path": "Cozy Snorlax Adventures All Apps by Yumpzy (Lockscreen, Simple Lock by Akai) (Themezer-T16813).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 196995,
+          "sha256": "5a0010e4fd3f9560bb873144080590e09e77752d6951a44e19e9d32095bdd9d5",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Cozy Snorlax Adventures All Apps",
+            "Author": "Yumpzy",
+            "Target": "lock",
+            "LayoutInfo": "Simple Lock by Akai",
+            "Id": "Themezer:16813:1784783211836"
+          },
+          "layout": {
+            "name": "Simple Lock",
+            "author": "Akai",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "Themezer:A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 8457,
+              "sha256": "3202882d01ab351ffdc475c558b27c475520ed4cec906b406670595964ed9883",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 92173,
+              "sha256": "2dd6d53036a142722a668982f0082c42bdc9bdfaa59dfa11b3e15317b720b4f1",
+              "directory": false
+            },
+            {
+              "path": "lock.png",
+              "bytes": 6312,
+              "sha256": "4dcbd00fbc3f32d8c0354165ef47ab9a985713287792bd1a3a5cbcd0737f78c2",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 99040,
+              "sha256": "a6d01fc5d548c67d676afe652ba08d0d76e06401319a2c1a49f2b5d434b7a7d0",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 191,
+              "sha256": "67794ee99e90e74b44c1068e8470cbef15613c80beba58415c7c57e3ebe3d1f7",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/1984E/2026-11-02/cozy-snorlax-adventures-1984E.zip",
+        "bytes": 2121853,
+        "sha256": "6123d87ab59886a921f80648f71a56695b0ecaecfbb7e50cd8bf9c2e85f7165f",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1984E/download?src=webapp",
+        "version": "Themezer P1984E snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/1984E.webp",
+        "bytes": 145786,
+        "sha256": "95e098f38fd29675f6c0358f02c6b43f0843617b41f9c45ab4b30c9e93997c6c",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "Cozy Snorlax Adventures Player Selection by Yumpzy (Player Select, 2Simple Player Select by Limaaa) (Themezer-T16817).nxtheme",
+          "bytes": 192997,
+          "sha256": "553dbb9b9cf73ce8234e89e19a1f474fa3d7ca1bef686e33c06a23acab4bc5ab",
+          "directory": false
+        },
+        {
+          "path": "Cozy Snorlax Adventures User Page by Yumpzy (User Page, 2Simple My Page by Limaaa) (Themezer-T16818).nxtheme",
+          "bytes": 281627,
+          "sha256": "219b879f9a4ea8c813ba4d3323a207e7572e64e709d68f73448eeae115a67e5c",
+          "directory": false
+        },
+        {
+          "path": "Cozy Snorlax Adventures Settings by Yumpzy (Settings, 2Simple Settings by Limaaa) (Themezer-T16815).nxtheme",
+          "bytes": 324537,
+          "sha256": "f7d7e9ea6acd2e7d459b151be25f61bc7416262342691504d95e834047dc8a4b",
+          "directory": false
+        },
+        {
+          "path": "Cozy Snorlax Adventures Homescreen by Yumpzy (Home Menu, Small Compact Homescreen by Akai) (Themezer-T16814).nxtheme",
+          "bytes": 704424,
+          "sha256": "57526856ee4c4d3e9f28da8a576d62504750cf59b4e92b53ca9726871d1a3bf8",
+          "directory": false
+        },
+        {
+          "path": "Cozy Snorlax Adventures All Apps by Yumpzy (All Apps, Right Rounded by mike89101) (Themezer-T16816).nxtheme",
+          "bytes": 419486,
+          "sha256": "8f107bbb755d0cd6454be43f8868fbec04734522371b64daa4b86fe1de47075b",
+          "directory": false
+        },
+        {
+          "path": "Cozy Snorlax Adventures All Apps by Yumpzy (Lockscreen, Simple Lock by Akai) (Themezer-T16813).nxtheme",
+          "bytes": 196995,
+          "sha256": "5a0010e4fd3f9560bb873144080590e09e77752d6951a44e19e9d32095bdd9d5",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 2121853,
+        "sha256": "6123d87ab59886a921f80648f71a56695b0ecaecfbb7e50cd8bf9c2e85f7165f",
+        "version": "Themezer P1984E snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1984E/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-1e93c",
+      "title": "Pixel Forest",
+      "author": "soulsart",
+      "kind": "pack",
+      "components": [
+        {
+          "id": "1E93E",
+          "path": "Forest Pixel Locksreen by soulsart (Lockscreen, Simple Lock by Akai) (Themezer-T1E93E).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1228130,
+          "sha256": "2cdb8684c1aaea95d400bacc1a91b903acd0990538b763da361851c3088d5e95",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Forest Pixel Locksreen",
+            "Author": "soulsart",
+            "Target": "lock",
+            "LayoutInfo": "Simple Lock by Akai",
+            "Id": "Themezer:1E93E:1791435995029"
+          },
+          "layout": {
+            "name": "Simple Lock",
+            "author": "Akai",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "Themezer:A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 8457,
+              "sha256": "3202882d01ab351ffdc475c558b27c475520ed4cec906b406670595964ed9883",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 881048,
+              "sha256": "481bf9d78f17c7f3c83ca7a58be96dd9427a543944fe5a62b582debe8e9d456d",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 345746,
+              "sha256": "f5e08a886326755e3ebac48cf100eefb4200456d93e3ad25f22454e08f252a51",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 183,
+              "sha256": "0119604edf311ed7943f879bf4ebba8ed70be29a245738193af02cc269646206",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1E93F",
+          "path": "Forest Pixel All Apps by soulsart (All Apps, Goose Apps by GenericGoose) (Themezer-T1E93F).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1013141,
+          "sha256": "d67e40e612c268f30d525f699ed5a9f476c2c828ccacef914e1626edc5dffc32",
+          "target": "Flaunch",
+          "menu": "All Apps",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Forest Pixel All Apps",
+            "Author": "soulsart",
+            "Target": "apps",
+            "LayoutInfo": "Goose Apps by GenericGoose",
+            "Id": "Themezer:1E93F:1791435995029"
+          },
+          "layout": {
+            "name": "Goose Apps",
+            "author": "GenericGoose",
+            "targetName": "Flaunch.szs",
+            "targetFirmware": null,
+            "id": "Themezer:1F"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 1175,
+              "sha256": "e4eceb9decf3756f337a80b46dad7e783d6bbeb94c959b303aa579098e67a84a",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 661283,
+              "sha256": "feb1a2455cb16c048c8a1db17b9c0635ec0c647f21218487ecbea52766fb6f0e",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 351988,
+              "sha256": "fb089142229f04e232f99d16c700e909217bc7da46251a43378b1defff0a1f01",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 189,
+              "sha256": "97b35e4836ebbf38e1b6b37709e10836ced3ee764259b60b9ec6637b8ca75513",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1E942",
+          "path": "Forest Pixel User Page by soulsart (User Page, 2Simple My Page by Limaaa) (Themezer-T1E942).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 769080,
+          "sha256": "f1b61f86bb382aa66c43fec8e1084071702a935ecaec1f19f3fe8d68fcf05080",
+          "target": "MyPage",
+          "menu": "User Page",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Forest Pixel User Page",
+            "Author": "soulsart",
+            "Target": "user",
+            "LayoutInfo": "2Simple My Page by Limaaa",
+            "Id": "Themezer:1E942:1791446148379"
+          },
+          "layout": {
+            "name": "2Simple My Page",
+            "author": "Limaaa",
+            "targetName": "MyPage.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer:3A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 7235,
+              "sha256": "3a060d58de856228ba86f81caece8e545e211d6df7f563559f9245a2bbbe2666",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 539615,
+              "sha256": "22d077fb15ae8736e09f1311ef2e22f4863326d8393d994c1a2cb7d19279f396",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 229012,
+              "sha256": "fee291195be8d2f594cd0f3919c02971c1203bf425e8424dfb3852ff092d04cb",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 189,
+              "sha256": "78d40e90cdd6b5ac9a5af18ab4408015ea5fb043413d646f00893c2dc9b11f80",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1E943",
+          "path": "Forest Pixel Player Selection by soulsart (Player Select, Default by Nintendo) (Themezer-T1E943).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1055741,
+          "sha256": "71e3295a9869ce4411eb5d12bc276f914ea79bb4380daf9bc0901052f3daaa96",
+          "target": "Psl",
+          "menu": "Player Selection",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Forest Pixel Player Selection",
+            "Author": "soulsart",
+            "Target": "psl",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:1E943:1791435995029"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "Psl.szs",
+            "targetFirmware": null,
+            "id": "Themezer:18"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 106,
+              "sha256": "b7b0c2c5b8080bd56c405e4c4d61c05cbf2a18981dc947e4d19abeebae57f7c7",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 779585,
+              "sha256": "da4a396d5a66bbfc514b8321a53e6001c1518bf9ee4b8ecb121367a6db0372ac",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 275891,
+              "sha256": "94ae3c5a70cf4fb95a3c774863e0b8696e5ed0d935d4c8cb3fce50e9f0f58e56",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 189,
+              "sha256": "af8141555cace671fea53fb4fce0da05e9431f8015f6e33313130bf327fd878c",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1E93D",
+          "path": "Forest Pixel Home Menu by soulsart (Home Menu, Chainsaw Layout by KKerim) (Themezer-T1E93D).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1486019,
+          "sha256": "7b448c0651d2a3baca0d0844f978f718552fec697cf623da6a766411bd853a9d",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Forest Pixel Home Menu",
+            "Author": "soulsart",
+            "Target": "home",
+            "LayoutInfo": "Chainsaw Layout by KKerim",
+            "Id": "Themezer:1E93D:1791454653689"
+          },
+          "layout": {
+            "name": "Chainsaw Layout",
+            "author": "KKerim",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:23"
+          },
+          "commonLayout": {
+            "name": "Complete No Footer Common",
+            "author": "NSX",
+            "targetName": "common.szs",
+            "targetFirmware": null,
+            "id": null
+          },
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 10177,
+              "sha256": "d347bfaf6063b7524b6fca7fc138c8fe9078c3e5cf3d75c0bf70d5c29680a6f4",
+              "directory": false
+            },
+            {
+              "path": "common.json",
+              "bytes": 528,
+              "sha256": "ba74229e5e9294622e511d71fb023afafc8116f3feadd99a3294905f31c913b4",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 1181897,
+              "sha256": "7386b03af359559485335d806a52d16c28879b1df343112e44e6f58e26266b1d",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 302381,
+              "sha256": "00516dc03b24decc765bf2ef34f1aea530dc5c50d531dc37c8d366798f6233e2",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 189,
+              "sha256": "958b22a19bdc340dbdf64e732da868c508180bf06953eb940e303f504760406f",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1E940",
+          "path": "Forest Pixel Settings by soulsart (Settings, 2Simple Settings by Limaaa) (Themezer-T1E940).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 395723,
+          "sha256": "82bcd9b9ca0b514d640232d844e86e17587b5b910031b86395d6a26abb219d01",
+          "target": "Set",
+          "menu": "Settings",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Forest Pixel Settings",
+            "Author": "soulsart",
+            "Target": "set",
+            "LayoutInfo": "2Simple Settings by Limaaa",
+            "Id": "Themezer:1E940:1791455469917"
+          },
+          "layout": {
+            "name": "2Simple Settings",
+            "author": "Limaaa",
+            "targetName": "Set.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer:3C"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 22000,
+              "sha256": "9019ec1f1b9a1a71004a778c126677df010a3cf19037b2de936f8e6e2a06d686",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 265727,
+              "sha256": "d323b57e519ee7b68e99b7c7ef945619115d209787899d956fee1affe2314ba3",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 137196,
+              "sha256": "f72b56746f867f8e07deca496e024961e291fb8a91542ead719521d940dd12a8",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 188,
+              "sha256": "945696160cc39f22a9870624120bf86804ae560a9d27730c470f2773a3d1f87f",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1E941",
+          "path": "Forest Pixel News by soulsart (News, 50% Scale Everything to the left and no header by Glowmoss) (Themezer-T1E941).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 984512,
+          "sha256": "c87ac84dd1e73f0081ada99c04fda383db938dea6abb7af0a869d04045617bef",
+          "target": "Notification",
+          "menu": "News",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Forest Pixel News",
+            "Author": "soulsart",
+            "Target": "news",
+            "LayoutInfo": "50% Scale Everything to the left and no header by Glowmoss",
+            "Id": "Themezer:1E941:1791435995029"
+          },
+          "layout": {
+            "name": "50% Scale Everything to the left and no header",
+            "author": "Glowmoss",
+            "targetName": "Notification.szs",
+            "targetFirmware": null,
+            "id": "Themezer:2D"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 1061,
+              "sha256": "542b47c50b26c806883b89ce40b7aa362ea814405b24f805f7f07453cb9ad0d9",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 706276,
+              "sha256": "6f5da0e72b22e76c03424456fa5f31095199c217a8afd54f48a3902663f7260e",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 278689,
+              "sha256": "b9b6a357b5a303568960c6df4d7d00a225450d6dcae8d19e1799b91d04eab757",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 217,
+              "sha256": "c156a8f635f5c2a62f838b63ab5238e07fc4c28822524f006e2668d1f229cd72",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/1E93C/2026-11-02/pixel-forest-1E93C.zip",
+        "bytes": 6935135,
+        "sha256": "d1672e9470d5e673fe22f9a3f6368a0bfbc03e7c4790e1ff71a9b7b0deba503a",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1E93C/download?src=webapp",
+        "version": "Themezer P1E93C snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/1E93C.webp",
+        "bytes": 170032,
+        "sha256": "16a90697474916fd95d808b956bd2c3626a37f92fc1dee9b467f7f083aa77de7",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "Forest Pixel Locksreen by soulsart (Lockscreen, Simple Lock by Akai) (Themezer-T1E93E).nxtheme",
+          "bytes": 1228130,
+          "sha256": "2cdb8684c1aaea95d400bacc1a91b903acd0990538b763da361851c3088d5e95",
+          "directory": false
+        },
+        {
+          "path": "Forest Pixel All Apps by soulsart (All Apps, Goose Apps by GenericGoose) (Themezer-T1E93F).nxtheme",
+          "bytes": 1013141,
+          "sha256": "d67e40e612c268f30d525f699ed5a9f476c2c828ccacef914e1626edc5dffc32",
+          "directory": false
+        },
+        {
+          "path": "Forest Pixel User Page by soulsart (User Page, 2Simple My Page by Limaaa) (Themezer-T1E942).nxtheme",
+          "bytes": 769080,
+          "sha256": "f1b61f86bb382aa66c43fec8e1084071702a935ecaec1f19f3fe8d68fcf05080",
+          "directory": false
+        },
+        {
+          "path": "Forest Pixel Player Selection by soulsart (Player Select, Default by Nintendo) (Themezer-T1E943).nxtheme",
+          "bytes": 1055741,
+          "sha256": "71e3295a9869ce4411eb5d12bc276f914ea79bb4380daf9bc0901052f3daaa96",
+          "directory": false
+        },
+        {
+          "path": "Forest Pixel Home Menu by soulsart (Home Menu, Chainsaw Layout by KKerim) (Themezer-T1E93D).nxtheme",
+          "bytes": 1486019,
+          "sha256": "7b448c0651d2a3baca0d0844f978f718552fec697cf623da6a766411bd853a9d",
+          "directory": false
+        },
+        {
+          "path": "Forest Pixel Settings by soulsart (Settings, 2Simple Settings by Limaaa) (Themezer-T1E940).nxtheme",
+          "bytes": 395723,
+          "sha256": "82bcd9b9ca0b514d640232d844e86e17587b5b910031b86395d6a26abb219d01",
+          "directory": false
+        },
+        {
+          "path": "Forest Pixel News by soulsart (News, 50% Scale Everything to the left and no header by Glowmoss) (Themezer-T1E941).nxtheme",
+          "bytes": 984512,
+          "sha256": "c87ac84dd1e73f0081ada99c04fda383db938dea6abb7af0a869d04045617bef",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 6935135,
+        "sha256": "d1672e9470d5e673fe22f9a3f6368a0bfbc03e7c4790e1ff71a9b7b0deba503a",
+        "version": "Themezer P1E93C snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1E93C/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-18815",
+      "title": "PS5 Theme",
+      "author": "Rodel",
+      "kind": "pack",
+      "components": [
+        {
+          "id": "F386",
+          "path": "PS5 Theme Settings by Rodel (Settings, Clean Settings by Rodel) (Themezer-TF386).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 141541,
+          "sha256": "c0bbbcae313bdd69d20470217e75c517153f4b186b411c6ba82d6a259b4920e9",
+          "target": "Set",
+          "menu": "Settings",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "PS5 Theme Settings",
+            "Author": "Rodel",
+            "Target": "set",
+            "LayoutInfo": "Clean Settings by Rodel",
+            "Id": "Themezer:F386:1638601648350"
+          },
+          "layout": {
+            "name": "Clean Settings",
+            "author": "Rodel",
+            "targetName": "Set.szs",
+            "targetFirmware": null,
+            "id": "Themezer_Custom:d6aa3be8-a2e5-427a-9135-ac014cfad402"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 47210,
+              "sha256": "ee93956914394cb4fc5393dd203af616f20cb7cba2434aaf742ccc705922049a",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 44810,
+              "sha256": "190fb258039601b99defaa1ddd1a893c48bf417b50693d3b0bd9f69f5eb4c83c",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 104365,
+              "sha256": "1524569f967af17365f86d04eb0bb88ceec9c6bfc96341650aac722c9a600837",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 178,
+              "sha256": "ac07eddacc7512e7c0c506fd5a05f632f1f55d8a60f6840c6ef75c35dd149844",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "F385",
+          "path": "PS5 Theme PlayerSelect by Rodel (Player Select, Transparent Playerselect by migush) (Themezer-TF385).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 202198,
+          "sha256": "dd64a026a55c218fcadbccdc8dbd2e8a3cdfbd11c1abf953946cc689b7b58673",
+          "target": "Psl",
+          "menu": "Player Selection",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "PS5 Theme PlayerSelect",
+            "Author": "Rodel",
+            "Target": "psl",
+            "LayoutInfo": "Transparent Playerselect by migush",
+            "Id": "Themezer:F385:1638601648350"
+          },
+          "layout": {
+            "name": "Transparent Playerselect",
+            "author": "migush",
+            "targetName": "Psl.szs",
+            "targetFirmware": null,
+            "id": "builtin_TransparentPSLCenter"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 716,
+              "sha256": "0063547b46dde53eaddf025d99541841099ee39f5a13ee6cd99fe77215c1b1d9",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 96732,
+              "sha256": "e3cb95d32c7d24453ff461b6615e911c5c7db13c865d7c594e990b22787bc67e",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 110007,
+              "sha256": "41424a3ed5f787c7df0d4250ac6e750e985d4594b3a4903d083fe07f286ae124",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 193,
+              "sha256": "6e9ee83d0662ce6451eb214c5fceb3a591b403dcafc3491bd74f564590871142",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "F384",
+          "path": "PS5 Theme News by Rodel (News, 50% Scale, Everything to the left and no Header by Rodel) (Themezer-TF384).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 385509,
+          "sha256": "db62455cbc74f182e07edfeb67aac3b3a37bb1d146bdc941515005b03e830631",
+          "target": "Notification",
+          "menu": "News",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "PS5 Theme News",
+            "Author": "Rodel",
+            "Target": "news",
+            "LayoutInfo": "50% Scale, Everything to the left and no Header by Rodel",
+            "Id": "Themezer:F384:1638601648350"
+          },
+          "layout": {
+            "name": "50% Scale, Everything to the left and no Header",
+            "author": "Rodel",
+            "targetName": "Notification.szs",
+            "targetFirmware": null,
+            "id": "Themezer_Custom:ae60cad5-056a-4184-bb79-70f2dd6e6472"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 1544,
+              "sha256": "47e6a867abfc6943e383f4b2511a21abf75da84c4c34980708c315f0ea9fce23",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 139182,
+              "sha256": "1771ae6e9d6244382add93d98d22a4309364728e1fbf03bb9fcc7aed8e51f5ae",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 252423,
+              "sha256": "3fa0ef7b3671a40999642ce99c07881e389ddf199a237421a95f593259d62e5f",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 208,
+              "sha256": "e822dd791c10285408ba49205b9433c89e0a23f5e2d653b1f3043d0475898a68",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "F382",
+          "path": "PS5 Theme Home by Rodel (Home Menu, PS5 by Rodel) (Themezer-TF382).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 296658,
+          "sha256": "7a1cc6f7cd5804586c8b9502966c50cc2b064e70121c0283e693e35094c41036",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "PS5 Theme Home",
+            "Author": "Rodel",
+            "Target": "home",
+            "LayoutInfo": "PS5 by Rodel",
+            "Id": "Themezer:F382:1638601648350"
+          },
+          "layout": {
+            "name": "PS5",
+            "author": "Rodel",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer_Custom:21742f37-bb4f-4e2c-9a32-c0ec50335ee2"
+          },
+          "commonLayout": {
+            "name": "No Footer Line",
+            "author": "Rodel",
+            "targetName": null,
+            "targetFirmware": null,
+            "id": "Themezer_Custom:7e5b24a5-d8dc-411b-a159-30edcafd4f6b"
+          },
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 12847,
+              "sha256": "13e4625555ba0578a8c48d2e5b00319099d6af4856eb4735a07fa148a93de76e",
+              "directory": false
+            },
+            {
+              "path": "common.json",
+              "bytes": 917,
+              "sha256": "984e8749475e4b1c53222bd091b63ca08d4ce822541edbd68d279afd3a1358af",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 77618,
+              "sha256": "30c2d372fbfccdd441fe11a0eb43e01c487c4cc7744ddc947a40c1a188dc91d1",
+              "directory": false
+            },
+            {
+              "path": "album.png",
+              "bytes": 2395,
+              "sha256": "5184e33adc8bbc9993f504a5f15eceb58291cd55dfaaebc32cabbb3e113a766d",
+              "directory": false
+            },
+            {
+              "path": "news.png",
+              "bytes": 3954,
+              "sha256": "2e2c4b1a6d249d6dcc111ecce46f09a8a26a2fc7c20b4483e3ff72b2540c8307",
+              "directory": false
+            },
+            {
+              "path": "shop.png",
+              "bytes": 4276,
+              "sha256": "37f494f479fbb6a314d66253614a9a74ca079118bc4e8b5400ffd17046dd12fe",
+              "directory": false
+            },
+            {
+              "path": "controller.png",
+              "bytes": 4192,
+              "sha256": "2398644f541de4499665b44eef3d5fa771a43c30745b3b1ac60038a71a5e854d",
+              "directory": false
+            },
+            {
+              "path": "settings.png",
+              "bytes": 5317,
+              "sha256": "268a9786e35af13bfa64bcf6e334f803480294ed7747eb37a1a4b9c7591a0e8a",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 201789,
+              "sha256": "59048e5c949386c8c4f2b72d78d2a4b79016a5b0e7ebe02922adb3b400b9c2e3",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 164,
+              "sha256": "e0d2c46405cb0373cb94c3a774e6a52e1c75ffa954ccc9cbc93c4c66bec0a6e4",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "F383",
+          "path": "PS5 Theme LockScreen by Rodel (Lockscreen, Project-vert-lock by Rodel) (Themezer-TF383).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 170425,
+          "sha256": "1a8044c586359a2cbf78584619e0b61a68b07399a1660f11838a35eaa42d4516",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "PS5 Theme LockScreen",
+            "Author": "Rodel",
+            "Target": "lock",
+            "LayoutInfo": "Project-vert-lock by Rodel",
+            "Id": "Themezer:F383:1638601648349"
+          },
+          "layout": {
+            "name": "Project-vert-lock",
+            "author": "Rodel",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "Themezer_Custom:5f96649c-f3a3-4225-86a2-1d8b2aa583c5"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 3499,
+              "sha256": "913328d8c39295f89432c8bc0af9f947c393792785f17069f3cb7146f0fb02f9",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 78855,
+              "sha256": "4c2724c3f38361c43ba75cf61c7903c891531462c0d623435e9fe1c70ed409ee",
+              "directory": false
+            },
+            {
+              "path": "lock.png",
+              "bytes": 13730,
+              "sha256": "5f3c5dc440ecfd077ce9b52354168a81688cfbbb4a6d72386d8d15978f649e82",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 82974,
+              "sha256": "a77dfc7aa72cba710ddedec7dfd2d94f7ee6f7e20f7f105c00cca0417994583b",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 184,
+              "sha256": "d2a4c18eb9f9eb8afa88da3413d032730b08433063e8c5bc646c7e87d9eea3c9",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "F381",
+          "path": "PS5 Theme AllApps by Rodel (All Apps, Project Clean - All Apps by Rodel) (Themezer-TF381).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 368724,
+          "sha256": "77ab5c5bdc82fb9b2a3dfca953d5093813c788ba64cb39c47870a984bb498b2a",
+          "target": "Flaunch",
+          "menu": "All Apps",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "PS5 Theme AllApps",
+            "Author": "Rodel",
+            "Target": "apps",
+            "LayoutInfo": "Project Clean - All Apps by Rodel",
+            "Id": "Themezer:F381:1638601648350"
+          },
+          "layout": {
+            "name": "Project Clean - All Apps",
+            "author": "Rodel",
+            "targetName": "Flaunch.szs",
+            "targetFirmware": null,
+            "id": "Themezer_Custom:69caeebd-2afd-4fae-a594-6a0b1b5a1374"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 8907,
+              "sha256": "4d0ccfd6585a3f5f16900ee9d0cd5b353c001e5a429e8d997314edaf22335c37",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 84698,
+              "sha256": "32eb49e8edeaef99dc563887ed75c3143aa600c5e89ecf78ad8a72d24c0994bb",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 294995,
+              "sha256": "136e113bb9e004c26b761256c271d37a780e7b9bf7c38660b4482497901c2114",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 188,
+              "sha256": "68baf72f8ae5061610c2f9464b47a88d010c1525d24f1d24028d3eab2172488d",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "F387",
+          "path": "PS5 Theme UserPage by Rodel (User Page, Project- UserPage by Rodel) (Themezer-TF387).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 206907,
+          "sha256": "c82bebbdcd9c7d9ba54af955e1d4fa24af82760ebfa84e0a7145b24cdcfcc96f",
+          "target": "MyPage",
+          "menu": "User Page",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "PS5 Theme UserPage",
+            "Author": "Rodel",
+            "Target": "user",
+            "LayoutInfo": "Project- UserPage by Rodel",
+            "Id": "Themezer:F387:1638601648350"
+          },
+          "layout": {
+            "name": "Project- UserPage",
+            "author": "Rodel",
+            "targetName": "MyPage.szs",
+            "targetFirmware": null,
+            "id": "Themezer_Custom:10be55f2-867e-4f6b-99e6-959542545ddd"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 6893,
+              "sha256": "fd0e1c4d396cf7b4c248a04b476d0cbd3699188716d9b2375dc66a643aeb313d",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 88379,
+              "sha256": "1fe376e6ec936c029c9cd0ba7c651c59d55f6258e87fd905fe7e7ebf650f0cf3",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 123175,
+              "sha256": "286e42de9c8e217beab7288a116b7a7f516d4248fe7c06479c1577001df338e4",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 182,
+              "sha256": "d38332e655e6bdb736017b9f2d43c1dad986782d7e70a72213cf1dd3326b38fa",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/18815/2026-11-02/ps5-theme-18815.zip",
+        "bytes": 1773417,
+        "sha256": "9185eb857cfd833ca7af314dc2278e716abb9d753971df9f59e8c832c8111330",
+        "sourceUrl": "https://api.themezer.net/switch/packs/18815/download?src=webapp",
+        "version": "Themezer P18815 snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/18815.webp",
+        "bytes": 77092,
+        "sha256": "09a80a8b9467bc8573866f977370be588dc6a8bac96cb1e381b772e06a31163c",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "PS5 Theme Settings by Rodel (Settings, Clean Settings by Rodel) (Themezer-TF386).nxtheme",
+          "bytes": 141541,
+          "sha256": "c0bbbcae313bdd69d20470217e75c517153f4b186b411c6ba82d6a259b4920e9",
+          "directory": false
+        },
+        {
+          "path": "PS5 Theme PlayerSelect by Rodel (Player Select, Transparent Playerselect by migush) (Themezer-TF385).nxtheme",
+          "bytes": 202198,
+          "sha256": "dd64a026a55c218fcadbccdc8dbd2e8a3cdfbd11c1abf953946cc689b7b58673",
+          "directory": false
+        },
+        {
+          "path": "PS5 Theme News by Rodel (News, 50% Scale, Everything to the left and no Header by Rodel) (Themezer-TF384).nxtheme",
+          "bytes": 385509,
+          "sha256": "db62455cbc74f182e07edfeb67aac3b3a37bb1d146bdc941515005b03e830631",
+          "directory": false
+        },
+        {
+          "path": "PS5 Theme Home by Rodel (Home Menu, PS5 by Rodel) (Themezer-TF382).nxtheme",
+          "bytes": 296658,
+          "sha256": "7a1cc6f7cd5804586c8b9502966c50cc2b064e70121c0283e693e35094c41036",
+          "directory": false
+        },
+        {
+          "path": "PS5 Theme LockScreen by Rodel (Lockscreen, Project-vert-lock by Rodel) (Themezer-TF383).nxtheme",
+          "bytes": 170425,
+          "sha256": "1a8044c586359a2cbf78584619e0b61a68b07399a1660f11838a35eaa42d4516",
+          "directory": false
+        },
+        {
+          "path": "PS5 Theme AllApps by Rodel (All Apps, Project Clean - All Apps by Rodel) (Themezer-TF381).nxtheme",
+          "bytes": 368724,
+          "sha256": "77ab5c5bdc82fb9b2a3dfca953d5093813c788ba64cb39c47870a984bb498b2a",
+          "directory": false
+        },
+        {
+          "path": "PS5 Theme UserPage by Rodel (User Page, Project- UserPage by Rodel) (Themezer-TF387).nxtheme",
+          "bytes": 206907,
+          "sha256": "c82bebbdcd9c7d9ba54af955e1d4fa24af82760ebfa84e0a7145b24cdcfcc96f",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 1773417,
+        "sha256": "9185eb857cfd833ca7af314dc2278e716abb9d753971df9f59e8c832c8111330",
+        "version": "Themezer P18815 snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/packs/18815/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-e474",
+      "title": "The Great Wave off Kanagawa",
+      "author": "Ganipote",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "E474",
+          "path": "the-great-wave-off-kanagawa-E474.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 632577,
+          "sha256": "aad2d2e6afc84e67bdd5eabbbf445a0dcde42742bc31d59d165a5f612a49bccc",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "The Great Wave off Kanagawa",
+            "Author": "Ganipote",
+            "Target": "home",
+            "LayoutInfo": "Doge Layout by suchmememanyskill",
+            "Id": "Themezer:E474:1602246467877"
+          },
+          "layout": {
+            "name": "Doge Layout",
+            "author": "suchmememanyskill",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:E|7638bb49-7475-4d11-a76a-ec9d63b12b94"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 23586,
+              "sha256": "f02750347ec10023f8e667b11dbe4f1cd1e9a3fe8aed47854d6a61cbd430e92d",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 254400,
+              "sha256": "ba816f8af735abe8a585227c99e6dcfb387af8b562eb56abc520a85b7de09296",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 378434,
+              "sha256": "be7a7f0b3e1918d5e681e0d31a2b8877c67db49921f58d585dbb69cb70bf4e64",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 200,
+              "sha256": "ed6670c1d19e13e7e4c7379e22ddd39c2cefa5c67c5f5d087df3349fb85bfe52",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/E474/2026-11-02/the-great-wave-off-kanagawa-E474.nxtheme",
+        "bytes": 632577,
+        "sha256": "aad2d2e6afc84e67bdd5eabbbf445a0dcde42742bc31d59d165a5f612a49bccc",
+        "sourceUrl": "https://api.themezer.net/switch/themes/E474/download?src=webapp",
+        "version": "Themezer TE474 snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/E474.webp",
+        "bytes": 198708,
+        "sha256": "4d45dc47c115c683ce5efc34e1ea59b7edbec98dccb5750d41bae15d2789e64d",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "the-great-wave-off-kanagawa-E474.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 632577,
+        "sha256": "aad2d2e6afc84e67bdd5eabbbf445a0dcde42742bc31d59d165a5f612a49bccc",
+        "version": "Themezer TE474 snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/E474/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-1f302",
+      "title": "BLACK RAYQUAZA (LOCK)",
+      "author": "VtoSopran",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "1F302",
+          "path": "black-rayquaza-lock-1F302.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 145295,
+          "sha256": "f49438976cbd85424c401d1e64933fd0fbff3197aaa2cdbfb3ee31b2d14afcb5",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "BLACK RAYQUAZA (LOCK)",
+            "Author": "VtoSopran",
+            "Target": "lock",
+            "LayoutInfo": "Goose Lock by GenericGoose",
+            "Id": "Themezer:1F302:1792926561350"
+          },
+          "layout": {
+            "name": "Goose Lock",
+            "author": "GenericGoose",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "Themezer:1E"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 927,
+              "sha256": "464b4adf9cff3629841826f8bfd05837bd7910c8fc2cffce49c6057dc52133a3",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 71167,
+              "sha256": "d0dd9a9503790dc4995e0dbb5bd0a4d12233c78f65ca8134820bb76c6c4d4fef",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 86448,
+              "sha256": "c7176d0255439c36fca7012a2d1f780bc3266c4c388864636f0dde925e7cfbf8",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 190,
+              "sha256": "fbabe0c4440ef95d8596464cd5576fce548ef71c401d9b3308626e3e4ea26bc6",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/1F302/2026-11-02/black-rayquaza-lock-1F302.nxtheme",
+        "bytes": 145295,
+        "sha256": "f49438976cbd85424c401d1e64933fd0fbff3197aaa2cdbfb3ee31b2d14afcb5",
+        "sourceUrl": "https://api.themezer.net/switch/themes/1F302/download?src=webapp",
+        "version": "Themezer T1F302 snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/1F302.webp",
+        "bytes": 55318,
+        "sha256": "7d6eb210799446b2535620d32189c10aac7530b8a8ce467be503930ec772fbe5",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "black-rayquaza-lock-1F302.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 145295,
+        "sha256": "f49438976cbd85424c401d1e64933fd0fbff3197aaa2cdbfb3ee31b2d14afcb5",
+        "version": "Themezer T1F302 snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/1F302/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-e6bb",
+      "title": "Pixel Cyber Punk",
+      "author": "Smushi",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "E6BB",
+          "path": "pixel-cyber-punk-E6BB.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1024254,
+          "sha256": "94451cf4cb27e533c736637f9f0f90fafda8493916a6903d3c427971e28e3bb4",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Pixel Cyber Punk",
+            "Author": "Smushi",
+            "Target": "home",
+            "LayoutInfo": "Doge Layout by suchmememanyskill",
+            "Id": "Themezer:E6BB:1611546364302"
+          },
+          "layout": {
+            "name": "Doge Layout",
+            "author": "suchmememanyskill",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:E"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 12351,
+              "sha256": "d7f74e51a3e8e3622bc81b281bb19d8fc74c7230913ebbbe6ff05cfad39f4361",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 661755,
+              "sha256": "3133e903cc5454c8e69f050ea9d1fa8de8b5170f429dc002ce0036099b6996d9",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 392024,
+              "sha256": "ac3a4e076cd7b621399ec3e1ab5d15bd374cc251a10031b8bba8c620ca49b59a",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 187,
+              "sha256": "79f17f6f3fd8073a0fec9fe5e6dc0eaa3d7ac5a1a1ff09bf82aa0592ffc65966",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/E6BB/2026-11-02/pixel-cyber-punk-E6BB.nxtheme",
+        "bytes": 1024254,
+        "sha256": "94451cf4cb27e533c736637f9f0f90fafda8493916a6903d3c427971e28e3bb4",
+        "sourceUrl": "https://api.themezer.net/switch/themes/E6BB/download?src=webapp",
+        "version": "Themezer TE6BB snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/E6BB.webp",
+        "bytes": 193744,
+        "sha256": "9917256ef88bbaf385cd71746a8ae6626987890352d0142c866e57e8d3b3d936",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "pixel-cyber-punk-E6BB.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 1024254,
+        "sha256": "94451cf4cb27e533c736637f9f0f90fafda8493916a6903d3c427971e28e3bb4",
+        "version": "Themezer TE6BB snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/E6BB/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-e7cf",
+      "title": "Minimalist Zelda - Home Screen",
+      "author": "Scruff",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "E7CF",
+          "path": "minimalist-zelda-home-screen-E7CF.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 650762,
+          "sha256": "40a365d820ddad874ef6c2ee42d9f01ccdf0d22d0d87326b18552e0c3f4ac415",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Minimalist Zelda - Home Screen",
+            "Author": "Scruff",
+            "Target": "home",
+            "LayoutInfo": "Doge Layout by suchmememanyskill",
+            "Id": "Themezer:E7CF:1614821890079"
+          },
+          "layout": {
+            "name": "Doge Layout",
+            "author": "suchmememanyskill",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:E|7638bb49-7475-4d11-a76a-ec9d63b12b94"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 23586,
+              "sha256": "f02750347ec10023f8e667b11dbe4f1cd1e9a3fe8aed47854d6a61cbd430e92d",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 389368,
+              "sha256": "295616cfe1a3fc918e6d99b2e9d3396f5dc239d0149759e69f59f52e96dddef9",
+              "directory": false
+            },
+            {
+              "path": "album.png",
+              "bytes": 1400,
+              "sha256": "d738a2d6ae29c5f0be598f8131d81ec7f91ab1d36fdbc09a6fee7874f86b14dd",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 276921,
+              "sha256": "63c5a099f937e83ba74709c089db2006f2160fd25474a5a0bd2caf96acdd9cec",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 201,
+              "sha256": "280d325e565d3cf1c581f44a883450d8b25fafbe5bbaaeec3b4152927a514e1a",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/E7CF/2026-11-02/minimalist-zelda-home-screen-E7CF.nxtheme",
+        "bytes": 650762,
+        "sha256": "40a365d820ddad874ef6c2ee42d9f01ccdf0d22d0d87326b18552e0c3f4ac415",
+        "sourceUrl": "https://api.themezer.net/switch/themes/E7CF/download?src=webapp",
+        "version": "Themezer TE7CF snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/E7CF.webp",
+        "bytes": 129382,
+        "sha256": "13cd76886bd31c7094f637913209c55cc44e1fd260c29b230fa4a05358b9179f",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "minimalist-zelda-home-screen-E7CF.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 650762,
+        "sha256": "40a365d820ddad874ef6c2ee42d9f01ccdf0d22d0d87326b18552e0c3f4ac415",
+        "version": "Themezer TE7CF snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/E7CF/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-189ce",
+      "title": "Zelda Breath Of The Wild Pack With Custom Icons",
+      "author": "auslachy",
+      "kind": "pack",
+      "components": [
+        {
+          "id": "FEE0",
+          "path": "botw climbing settings by auslachy (Settings, Default by Nintendo) (Themezer-TFEE0).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1107706,
+          "sha256": "26fb7552bf0c3488d13106da092f0724c2cbc9bee566923dc5746aea7a14b1c1",
+          "target": "Set",
+          "menu": "Settings",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "botw climbing settings",
+            "Author": "auslachy",
+            "Target": "set",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:FEE0:1666661722379"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "Set.szs",
+            "targetFirmware": null,
+            "id": "Themezer:1A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 106,
+              "sha256": "16219071c20710b621ad596e96a7040c569d6f13ebdf9253838e112fb8f423ba",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 828597,
+              "sha256": "00ded3f1a901db5bad214fb579f7f35cde15f00bf866e0a32ec584048d43e70a",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 300657,
+              "sha256": "67f9a2dc4e83b6ba7680eeb6111e0343e3d1b179fa45e95cced7f1f7f07c8e26",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 181,
+              "sha256": "31c03a5f37c76cc6f2f9cd676d4648c2b648047759d9cb0a50135f9ecc087489",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "FEDE",
+          "path": "botw blue sky all apps by auslachy (All Apps, All Apps 90% Scale by suchmememanyskill) (Themezer-TFEDE).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1332166,
+          "sha256": "8746c79471b4298de33b75530234bfb8a858145bda30be88f563802a114a69a4",
+          "target": "Flaunch",
+          "menu": "All Apps",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "botw blue sky all apps",
+            "Author": "auslachy",
+            "Target": "apps",
+            "LayoutInfo": "All Apps 90% Scale by suchmememanyskill",
+            "Id": "Themezer:FEDE:1666661722379"
+          },
+          "layout": {
+            "name": "All Apps 90% Scale",
+            "author": "suchmememanyskill",
+            "targetName": "Flaunch.szs",
+            "targetFirmware": null,
+            "id": "Themezer:B|2ee3f0bc-9140-402e-bdfc-d50042c4d45e"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 1437,
+              "sha256": "ef1e524c01eedab7f177bc2d9e60e8f00ce97cd95009bb0d2610585c9d017444",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 892893,
+              "sha256": "6f55f7bc3127dd60dfd4a87c314d737039a331b0313bc83dea1310af5607a139",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 460792,
+              "sha256": "ff4db8a1fb6622e900c1c4dc83cd9c7a1404d35bee74ba202c0634e3b30e1550",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 202,
+              "sha256": "8389fbdeb1391a783240d612d7ace57830bb1450c075546589d52ad05dfba489",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "FEE2",
+          "path": "botw light grass home with custom icons by auslachy (Home Menu, Doge Layout by suchmememanyskill) (Themezer-TFEE2).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1203011,
+          "sha256": "42078d9e5d3a3b15a10852eb42cbb7d1ec65e6893f1aeabce32bbb626718cc6e",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "botw light grass home with custom icons",
+            "Author": "auslachy",
+            "Target": "home",
+            "LayoutInfo": "Doge Layout by suchmememanyskill",
+            "Id": "Themezer:FEE2:1666661722379"
+          },
+          "layout": {
+            "name": "Doge Layout",
+            "author": "suchmememanyskill",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:E|7638bb49-7475-4d11-a76a-ec9d63b12b94"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 23586,
+              "sha256": "f02750347ec10023f8e667b11dbe4f1cd1e9a3fe8aed47854d6a61cbd430e92d",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 819464,
+              "sha256": "96e276236c7c068d4efacecfbced716ef81e73f787325a2c7abfef5237ff9601",
+              "directory": false
+            },
+            {
+              "path": "album.png",
+              "bytes": 5149,
+              "sha256": "fb714ecfc9d7bfc2d7c4ec08d124b8c32a12ab728fa43b2b7b3b8745400d53a4",
+              "directory": false
+            },
+            {
+              "path": "shop.png",
+              "bytes": 6338,
+              "sha256": "9b4c7f4df2da863a750d08ffa40006db736d843b6111a73985c280a2261f73bc",
+              "directory": false
+            },
+            {
+              "path": "controller.png",
+              "bytes": 5733,
+              "sha256": "521f43ab4942f3d7b53e5a576fa9ccb96f8aee4c12724a36e4a9d4c510eeccde",
+              "directory": false
+            },
+            {
+              "path": "settings.png",
+              "bytes": 10280,
+              "sha256": "5463d48f36dbb4244d96c4a812ba2cdce7244d0ddf711977e55e1e90d40ac4bd",
+              "directory": false
+            },
+            {
+              "path": "power.png",
+              "bytes": 4722,
+              "sha256": "1655d159ee17799c140c3d3580233ff9cc221ea5bc19b132eac697fbc2c5c6ff",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 364062,
+              "sha256": "63d8f2cabc6116db072418d72ee260cea3c9ea234d6aa7550326a3cf8611ce12",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 212,
+              "sha256": "b794707e5b0bc86805b54ed5cd56aa556ac7b45f75539c5241fbdfda309a9846",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "FEDF",
+          "path": "botw champions userpage by auslachy (User Page, Default by Nintendo) (Themezer-TFEDF).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 861722,
+          "sha256": "0ceafe82ab3a62857fc7ce8c095b858ccbde282814f30bd65330eff5fc802b8f",
+          "target": "MyPage",
+          "menu": "User Page",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "botw champions userpage",
+            "Author": "auslachy",
+            "Target": "user",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:FEDF:1666661722378"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "MyPage.szs",
+            "targetFirmware": null,
+            "id": "Themezer:16"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 109,
+              "sha256": "2f12c97d8334398bd55398e22fff349f265f7119e3ff29e4e653bbaaf5215573",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 430911,
+              "sha256": "83bbe8da475cc0e1110e154976f13c37834ea82cd735918d9fd98f7551256141",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 453688,
+              "sha256": "173fc7ff7787fae00cc0281e96a5b50d2de955e30ba2b1420eb0d776ccabba11",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 183,
+              "sha256": "c514a6f16624907dc964a2fd9118d828f74bf49470561852705286e3c89f359e",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "FEE1",
+          "path": "botw dark lock simple custom triforce by auslachy (Lockscreen, Simple Lock by Akai) (Themezer-TFEE1).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 850219,
+          "sha256": "dcd194726c7b9752545a9c0d952ded547a72323ec01114dade6885f02986f1e5",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "botw dark lock simple custom triforce",
+            "Author": "auslachy",
+            "Target": "lock",
+            "LayoutInfo": "Simple Lock by Akai",
+            "Id": "Themezer:FEE1:1666661722378"
+          },
+          "layout": {
+            "name": "Simple Lock",
+            "author": "Akai",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "Themezer:A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 8457,
+              "sha256": "3202882d01ab351ffdc475c558b27c475520ed4cec906b406670595964ed9883",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 584604,
+              "sha256": "a46bd453dbfa091c58ad8b0358b041dd45f8fec413b27d6fe37f19fd1231597d",
+              "directory": false
+            },
+            {
+              "path": "lock.png",
+              "bytes": 23384,
+              "sha256": "adcc4c1690ca86a77ffd37d5747322c6ec42215b3ce4cc1f35cf3b653719b84d",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 257896,
+              "sha256": "58a8a1f0dfb02f686ddcec33e998d255d26f50768716f64e59e7fcbc438c1616",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 197,
+              "sha256": "52b2b6dc9ae10c0542d516bfd127c642445cba75ed3850c15bc741cdf465dcc3",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "FEE3",
+          "path": "botw totk player select by auslachy (Player Select, Transparent Playerselect by migush) (Themezer-TFEE3).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1141433,
+          "sha256": "2ee0b25df3de0c823a9e3ae939c9f6f20ded50ff6085a9f991b24b9b944225ca",
+          "target": "Psl",
+          "menu": "Player Selection",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "botw totk player select",
+            "Author": "auslachy",
+            "Target": "psl",
+            "LayoutInfo": "Transparent Playerselect by migush",
+            "Id": "Themezer:FEE3:1666661722379"
+          },
+          "layout": {
+            "name": "Transparent Playerselect",
+            "author": "migush",
+            "targetName": "Psl.szs",
+            "targetFirmware": null,
+            "id": "builtin_TransparentPSL90S"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 1080,
+              "sha256": "fd89a7244be1633faeb17d134dcc4a716bc1dcd2e61d918d5f5d2d62f0e39665",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 818746,
+              "sha256": "8c09416644786008a45b049d4f886905a55184411ee00d47e659435aa0653678",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 343992,
+              "sha256": "63d5fff7699bf109abb3397e5cfce2a401adf73c15edd7cbb1198fc37f4b494e",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 197,
+              "sha256": "0efbda5b99c691b64a6043ff6e1421accfb16b25485c187b21150d6a518c042c",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/189CE/2026-11-02/zelda-breath-of-the-wild-pack-with-custom-icons-189CE.zip",
+        "bytes": 6487647,
+        "sha256": "0e8a3f7f1f89cc52908be3030d10f6969ee21d6a9e14a878fbd60828b782e3ac",
+        "sourceUrl": "https://api.themezer.net/switch/packs/189CE/download?src=webapp",
+        "version": "Themezer P189CE snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/189CE.webp",
+        "bytes": 160694,
+        "sha256": "c33da5242c956c0edea833cf73ea0d3c2a7e94c16e38f515911b241bd879bbe0",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "botw climbing settings by auslachy (Settings, Default by Nintendo) (Themezer-TFEE0).nxtheme",
+          "bytes": 1107706,
+          "sha256": "26fb7552bf0c3488d13106da092f0724c2cbc9bee566923dc5746aea7a14b1c1",
+          "directory": false
+        },
+        {
+          "path": "botw blue sky all apps by auslachy (All Apps, All Apps 90% Scale by suchmememanyskill) (Themezer-TFEDE).nxtheme",
+          "bytes": 1332166,
+          "sha256": "8746c79471b4298de33b75530234bfb8a858145bda30be88f563802a114a69a4",
+          "directory": false
+        },
+        {
+          "path": "botw light grass home with custom icons by auslachy (Home Menu, Doge Layout by suchmememanyskill) (Themezer-TFEE2).nxtheme",
+          "bytes": 1203011,
+          "sha256": "42078d9e5d3a3b15a10852eb42cbb7d1ec65e6893f1aeabce32bbb626718cc6e",
+          "directory": false
+        },
+        {
+          "path": "botw champions userpage by auslachy (User Page, Default by Nintendo) (Themezer-TFEDF).nxtheme",
+          "bytes": 861722,
+          "sha256": "0ceafe82ab3a62857fc7ce8c095b858ccbde282814f30bd65330eff5fc802b8f",
+          "directory": false
+        },
+        {
+          "path": "botw dark lock simple custom triforce by auslachy (Lockscreen, Simple Lock by Akai) (Themezer-TFEE1).nxtheme",
+          "bytes": 850219,
+          "sha256": "dcd194726c7b9752545a9c0d952ded547a72323ec01114dade6885f02986f1e5",
+          "directory": false
+        },
+        {
+          "path": "botw totk player select by auslachy (Player Select, Transparent Playerselect by migush) (Themezer-TFEE3).nxtheme",
+          "bytes": 1141433,
+          "sha256": "2ee0b25df3de0c823a9e3ae939c9f6f20ded50ff6085a9f991b24b9b944225ca",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 6487647,
+        "sha256": "0e8a3f7f1f89cc52908be3030d10f6969ee21d6a9e14a878fbd60828b782e3ac",
+        "version": "Themezer P189CE snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/packs/189CE/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-190ed",
+      "title": "Shin-chan Switch",
+      "author": "hansuzhe_99327",
+      "kind": "pack",
+      "components": [
+        {
+          "id": "130B5",
+          "path": "Shin-chan Switch5 by hansuzhe_99327 (Player Select, Default by Nintendo) (Themezer-T130B5).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 459303,
+          "sha256": "fad366419a97790773ef2d17fdb3b7afd3ad267a64b356383ce7c1fe9915749a",
+          "target": "Psl",
+          "menu": "Player Selection",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Shin-chan Switch5",
+            "Author": "hansuzhe_99327",
+            "Target": "psl",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:130B5:1767688441187"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "Psl.szs",
+            "targetFirmware": null,
+            "id": "Themezer:18"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 106,
+              "sha256": "b7b0c2c5b8080bd56c405e4c4d61c05cbf2a18981dc947e4d19abeebae57f7c7",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 222904,
+              "sha256": "d43ee02bf3bbd1559b1be5de8ebc01908f4fe0390737720c5d93559e9baef97c",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 236105,
+              "sha256": "4b3fc012fab6a05169883eafe8aa3f1cc20b20b457d3fa60c2bb59a93e6ed28e",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 183,
+              "sha256": "cf6a750d668c7ff73d0559922a0d5fb94223fa20bd9a24e5374799ab718fa992",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "130B2",
+          "path": "Shin-chan Switch2 by hansuzhe_99327 (Lockscreen, Doge Lock by suchmememanyskill) (Themezer-T130B2).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 521969,
+          "sha256": "09142c0f52359180a8db59da7d656964ff3bbbddaa9b5c2d7da90026d66567b0",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Shin-chan Switch2",
+            "Author": "hansuzhe_99327",
+            "Target": "lock",
+            "LayoutInfo": "Doge Lock by suchmememanyskill",
+            "Id": "Themezer:130B2:1767688440838"
+          },
+          "layout": {
+            "name": "Doge Lock",
+            "author": "suchmememanyskill",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "builtin_ClearLock"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 1484,
+              "sha256": "9df1bcb07ce06695fdc71f153d648bd2e19044919c5aedc95aa9a7ecd44cb0c1",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 260165,
+              "sha256": "9aa88f19306c5dc1b8806704dbe609aa42a6a8b17de159eb0c44068613347b18",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 260976,
+              "sha256": "a403319a49b2fd6611752dbc6d0640ac787850c720c5c7574bdd20888c1d5397",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 195,
+              "sha256": "c00ed30fa1c3f577cf0601b146b1fdd329f736f828d9ec0437d50ab05e804de8",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "130B3",
+          "path": "Shin-chan Switch3 by hansuzhe_99327 (All Apps, Split Rounded by Glowmoss) (Themezer-T130B3).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 535538,
+          "sha256": "078e8f64744895f6fefa201a9dea7ff1f90da7b9fc9473bd2df5b0a2b81d7db9",
+          "target": "Flaunch",
+          "menu": "All Apps",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Shin-chan Switch3",
+            "Author": "hansuzhe_99327",
+            "Target": "apps",
+            "LayoutInfo": "Split Rounded by Glowmoss",
+            "Id": "Themezer:130B3:1767688440957"
+          },
+          "layout": {
+            "name": "Split Rounded",
+            "author": "Glowmoss",
+            "targetName": "Flaunch.szs",
+            "targetFirmware": null,
+            "id": "Themezer:27"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 5975,
+              "sha256": "77fd2652e83e8efc8693b13151f491f24faa8435f86203fc2766271caa6fe023",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 219002,
+              "sha256": "20565983ec816776fccee3693b1b9024fb63bfe612fd283dea12cba8e3ae2548",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 318258,
+              "sha256": "60d6a16f00ddff80cb500027caf03bfe97a65dc78bdfe8dfad1ebe33618fc4bb",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 190,
+              "sha256": "817b56ac8a46e42d1127f279e4b38c74370d411cfb2aad132a99c371982e8461",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "130B6",
+          "path": "Shin-chan Switch6 by hansuzhe_99327 (User Page, Default by Nintendo) (Themezer-T130B6).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 482101,
+          "sha256": "d9a74cf5908ceb8a0600d2206b1f68d82c8d513515e17d0d5047e5eb76873a5c",
+          "target": "MyPage",
+          "menu": "User Page",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Shin-chan Switch6",
+            "Author": "hansuzhe_99327",
+            "Target": "user",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:130B6:1767688441377"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "MyPage.szs",
+            "targetFirmware": null,
+            "id": "Themezer:16"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 109,
+              "sha256": "2f12c97d8334398bd55398e22fff349f265f7119e3ff29e4e653bbaaf5215573",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 217118,
+              "sha256": "2e6272d022c067ad2df61280070584cfbc14b7789fd091d9e7b0dbab1a0e04f7",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 265050,
+              "sha256": "9e77e510a58de3108660a00237f7917e7d1d3c86b910749975dd0b32c4a75221",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 184,
+              "sha256": "1bb49714a5a0240288d70449aef422a34ac93b93cdee90e0d63de6191ce41d29",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "130B4",
+          "path": "Shin-chan Switch4 by hansuzhe_99327 (Settings, Default by Nintendo) (Themezer-T130B4).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 517196,
+          "sha256": "b7a50778f0376f19bac5abf5ed529887aa7659393ce33282d05f51f49e46a4e5",
+          "target": "Set",
+          "menu": "Settings",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Shin-chan Switch4",
+            "Author": "hansuzhe_99327",
+            "Target": "set",
+            "LayoutInfo": "Default by Nintendo",
+            "Id": "Themezer:130B4:1767688441084"
+          },
+          "layout": {
+            "name": "Default",
+            "author": "Nintendo",
+            "targetName": "Set.szs",
+            "targetFirmware": null,
+            "id": "Themezer:1A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 106,
+              "sha256": "16219071c20710b621ad596e96a7040c569d6f13ebdf9253838e112fb8f423ba",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 244743,
+              "sha256": "8d008414675200e328f830ade8dd903e64d441405cc9fbab3e54b7254359ac4b",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 272818,
+              "sha256": "c6190e404b94cd3da45673adec4fc36069e9680f6ffaa8be55664d758ff36fb2",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 183,
+              "sha256": "45a56f745c3cf1fd405430fad528e85837f5884a2dcd8b56518763683b8d91b8",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "130B1",
+          "path": "Shin-chan Switch by hansuzhe_99327 (Home Menu, Doge Layout by suchmememanyskill) (Themezer-T130B1).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 595502,
+          "sha256": "9a8c6d5c4303d7ace3e5f2bd708d7b54b2c302c572100fe7876c84a287d378e1",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Shin-chan Switch",
+            "Author": "hansuzhe_99327",
+            "Target": "home",
+            "LayoutInfo": "Doge Layout by suchmememanyskill",
+            "Id": "Themezer:130B1:1767705335617"
+          },
+          "layout": {
+            "name": "Doge Layout",
+            "author": "suchmememanyskill",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:E|4a828fd7-2ebc-4c20-8038-c0b8bd57303f,7638bb49-7475-4d11-a76a-ec9d63b12b94"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 23764,
+              "sha256": "bcce4115cd882513339cdeb559f791974b3d5939b6d841781c3302bf24b31411",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 276608,
+              "sha256": "996f31a76af93358b51785f042a8788b926627a7b22e7add4c9bc67439264c1a",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 316632,
+              "sha256": "559acc8d2c3735309e1a2ccf18f96034df7a0cb1574823dfe387c75b11a96c7e",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 196,
+              "sha256": "9ad07e2245c9dd6aaccaccd71680a8362d34b41ba76683a082745eb3bca8eea1",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/190ED/2026-11-02/shin-chan-switch-190ED.zip",
+        "bytes": 3113443,
+        "sha256": "0bbb27966f79de27ed69feeb3518842779b30636e88506792fe24060207aadc5",
+        "sourceUrl": "https://api.themezer.net/switch/packs/190ED/download?src=webapp",
+        "version": "Themezer P190ED snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/190ED.webp",
+        "bytes": 193576,
+        "sha256": "5c542872d3958f9f8714e3947c186bf84e2bdbeb3aed83b59087b148c64feb6d",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "Shin-chan Switch5 by hansuzhe_99327 (Player Select, Default by Nintendo) (Themezer-T130B5).nxtheme",
+          "bytes": 459303,
+          "sha256": "fad366419a97790773ef2d17fdb3b7afd3ad267a64b356383ce7c1fe9915749a",
+          "directory": false
+        },
+        {
+          "path": "Shin-chan Switch2 by hansuzhe_99327 (Lockscreen, Doge Lock by suchmememanyskill) (Themezer-T130B2).nxtheme",
+          "bytes": 521969,
+          "sha256": "09142c0f52359180a8db59da7d656964ff3bbbddaa9b5c2d7da90026d66567b0",
+          "directory": false
+        },
+        {
+          "path": "Shin-chan Switch3 by hansuzhe_99327 (All Apps, Split Rounded by Glowmoss) (Themezer-T130B3).nxtheme",
+          "bytes": 535538,
+          "sha256": "078e8f64744895f6fefa201a9dea7ff1f90da7b9fc9473bd2df5b0a2b81d7db9",
+          "directory": false
+        },
+        {
+          "path": "Shin-chan Switch6 by hansuzhe_99327 (User Page, Default by Nintendo) (Themezer-T130B6).nxtheme",
+          "bytes": 482101,
+          "sha256": "d9a74cf5908ceb8a0600d2206b1f68d82c8d513515e17d0d5047e5eb76873a5c",
+          "directory": false
+        },
+        {
+          "path": "Shin-chan Switch4 by hansuzhe_99327 (Settings, Default by Nintendo) (Themezer-T130B4).nxtheme",
+          "bytes": 517196,
+          "sha256": "b7a50778f0376f19bac5abf5ed529887aa7659393ce33282d05f51f49e46a4e5",
+          "directory": false
+        },
+        {
+          "path": "Shin-chan Switch by hansuzhe_99327 (Home Menu, Doge Layout by suchmememanyskill) (Themezer-T130B1).nxtheme",
+          "bytes": 595502,
+          "sha256": "9a8c6d5c4303d7ace3e5f2bd708d7b54b2c302c572100fe7876c84a287d378e1",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 3113443,
+        "sha256": "0bbb27966f79de27ed69feeb3518842779b30636e88506792fe24060207aadc5",
+        "version": "Themezer P190ED snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/packs/190ED/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-1eb1e",
+      "title": "evangelion",
+      "author": "marius-ogiez",
+      "kind": "pack",
+      "components": [
+        {
+          "id": "1EB1F",
+          "path": "evangelion_1 by marius-ogiez (Lockscreen, Simple Lock by Akai) (Themezer-T1EB1F).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 642421,
+          "sha256": "bf5639e29abe22439fbb8797a77cd0483483865b4fa745dff41e8d98c84bc293",
+          "target": "Entrance",
+          "menu": "Lockscreen",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "evangelion_1",
+            "Author": "marius-ogiez",
+            "Target": "lock",
+            "LayoutInfo": "Simple Lock by Akai",
+            "Id": "Themezer:1EB1F:1791724151221"
+          },
+          "layout": {
+            "name": "Simple Lock",
+            "author": "Akai",
+            "targetName": "Entrance.szs",
+            "targetFirmware": null,
+            "id": "Themezer:A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 8457,
+              "sha256": "3202882d01ab351ffdc475c558b27c475520ed4cec906b406670595964ed9883",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 493196,
+              "sha256": "8fb6d147f2a1e54a1b6da333ff42c209f6a5c0a11c4f1dda75030d109a0ecb07",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 152983,
+              "sha256": "4afed9554e9b759327142411864cd2b1e2ee0692a8b1356534ab1727e6843156",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 177,
+              "sha256": "4ff7ee0bc17f5cc575017f6eefb5bc41ecdf3f88b9f33b50dba7a329704b84c7",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1EB20",
+          "path": "rei_homescreen by marius-ogiez (Home Menu, Hanazono by majutsushi) (Themezer-T1EB20).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 622423,
+          "sha256": "5d8f7722edcb3e8d4ced99593649b504b750f395005bf5c726f020f0ebc2794d",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "rei_homescreen",
+            "Author": "marius-ogiez",
+            "Target": "home",
+            "LayoutInfo": "Hanazono by majutsushi",
+            "Id": "Themezer:1EB20:1791724151221"
+          },
+          "layout": {
+            "name": "Hanazono",
+            "author": "majutsushi",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:2E"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 24617,
+              "sha256": "d52d0bc44e5c2fb1e74af7b0cf451b67c0d54103e6ae9c030d66ba7574882ed4",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 419697,
+              "sha256": "d06120946ac890a7d8819f8a4188207e0eb87402c8dfb68cf41c976356dd6bee",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 207545,
+              "sha256": "0735b1695ee7454b1f23c9870636ffea5e0647cca2492b479072678d5961b73a",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 182,
+              "sha256": "acf58e2ca7e9ee280f5f22e79b6fc8239dde4c095f1f23dc6cea0eaa92d17293",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1EB21",
+          "path": "player_shinjiasuka by marius-ogiez (Player Select, 2Simple Player Select by Limaaa) (Themezer-T1EB21).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 463311,
+          "sha256": "ea967940dcb5414046a0503c7aa06ef42b9397d1fb463d3a481440626f107367",
+          "target": "Psl",
+          "menu": "Player Selection",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "player_shinjiasuka",
+            "Author": "marius-ogiez",
+            "Target": "psl",
+            "LayoutInfo": "2Simple Player Select by Limaaa",
+            "Id": "Themezer:1EB21:1791724151221"
+          },
+          "layout": {
+            "name": "2Simple Player Select",
+            "author": "Limaaa",
+            "targetName": "Psl.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer:3D"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 2908,
+              "sha256": "ad20eef7049b72e62f610fe08455b44b4c629b25ca931b365855f62f8ab98092",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 303166,
+              "sha256": "cdab471342fdb931ace7181ae8fecd977a17e0b744976940cbc5fdd417f61c93",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 168746,
+              "sha256": "8ae24fbf2de4c068788824b14f48b53376da9beb8a58c5469b7e650808657f01",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 194,
+              "sha256": "6089a8c9ca80515e3480b4417832bf5535cb0df89d06fc81cf052755869e9f48",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1EB22",
+          "path": "allapsasuka by marius-ogiez (All Apps, Left Rounded by mike89101) (Themezer-T1EB22).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 845376,
+          "sha256": "2a28eebfd3514d76d70bc1edebff223da19b9a7052ea027753b7b79e4f9e2e38",
+          "target": "Flaunch",
+          "menu": "All Apps",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "allapsasuka",
+            "Author": "marius-ogiez",
+            "Target": "apps",
+            "LayoutInfo": "Left Rounded by mike89101",
+            "Id": "Themezer:1EB22:1791724151221"
+          },
+          "layout": {
+            "name": "Left Rounded",
+            "author": "mike89101",
+            "targetName": "Flaunch.szs",
+            "targetFirmware": null,
+            "id": "Themezer:11"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 5569,
+              "sha256": "556aa97966e8fb480ebd04bba1d1195cdd93d2de51f6ff37deb41e51f66cd554",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 537047,
+              "sha256": "dc9eb9ab88f9f1c25477b1576d89d232896eac307bb6d4ef2e09940fbe707f9d",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 317601,
+              "sha256": "3ecd3c161981fe926fba39f5c046e02978dd2fb32cb988a6c7834a758a259919",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 182,
+              "sha256": "b940f66b26b71cdea7710cdd582cbe180a2debbd8c1b08c39e5e41f695a84fef",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1EB23",
+          "path": "settings evangelion by marius-ogiez (Settings, Rearranged Settings by Glowmoss) (Themezer-T1EB23).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 361934,
+          "sha256": "3e48adc89aedaf9b1e137fefe1f4ec44c1056bc74be67524524b003df879659b",
+          "target": "Set",
+          "menu": "Settings",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "settings evangelion",
+            "Author": "marius-ogiez",
+            "Target": "set",
+            "LayoutInfo": "Rearranged Settings by Glowmoss",
+            "Id": "Themezer:1EB23:1791724151221"
+          },
+          "layout": {
+            "name": "Rearranged Settings",
+            "author": "Glowmoss",
+            "targetName": "Set.szs",
+            "targetFirmware": null,
+            "id": "Themezer:2A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 33257,
+              "sha256": "6298f1efa051d0abcc2ed29eb6512e95dce9bd4675bb431df2cf700ba9206e9d",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 238501,
+              "sha256": "88f00e37c6274cb86bd07a960e6b45a2a0647bd638238a42431755f20130d0aa",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 131260,
+              "sha256": "bf0c6d53e2830a073db99dedcafa638c8b3336f4ab31a533952223ce16113c70",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 195,
+              "sha256": "faf40033eb01b3824e4d945748fb1fcab6690ba6ccaec7c3410dfabacbf12bf6",
+              "directory": false
+            }
+          ]
+        },
+        {
+          "id": "1EB24",
+          "path": "evangelionuserpage by marius-ogiez (User Page, 2Simple My Page by Limaaa) (Themezer-T1EB24).nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 486001,
+          "sha256": "9e11ffda7da2574eea2d9cccbdb62b0aab889febf30ea0728d9ccecc374806e0",
+          "target": "MyPage",
+          "menu": "User Page",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "evangelionuserpage",
+            "Author": "marius-ogiez",
+            "Target": "user",
+            "LayoutInfo": "2Simple My Page by Limaaa",
+            "Id": "Themezer:1EB24:1791724151221"
+          },
+          "layout": {
+            "name": "2Simple My Page",
+            "author": "Limaaa",
+            "targetName": "MyPage.szs",
+            "targetFirmware": 2000,
+            "id": "Themezer:3A"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 7235,
+              "sha256": "3a060d58de856228ba86f81caece8e545e211d6df7f563559f9245a2bbbe2666",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 323116,
+              "sha256": "d885b949a8fe4d1c5dd18bc9dff08b52f13ab7e1c8581378418df88a91f1d9d3",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 168891,
+              "sha256": "ef60a517ab82bf43d8c5babff3083d7a0240401412abe08ddf32fc03d2d87ee4",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 189,
+              "sha256": "d86d68dcb7bde71ef13d3719b39a0160562b2b89035c36fc384621439d89f7cf",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/1EB1E/2026-11-02/evangelion-1EB1E.zip",
+        "bytes": 3423372,
+        "sha256": "c4ab40edffc77d01847cc1516fc93f51e2dba561ce330a4811af57720f512e92",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1EB1E/download?src=webapp",
+        "version": "Themezer P1EB1E snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/1EB1E.webp",
+        "bytes": 130458,
+        "sha256": "a52bb39e30915f41c4004c643577a710b39ab8f2a0f99b0949e0a5313c54f27a",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "evangelion_1 by marius-ogiez (Lockscreen, Simple Lock by Akai) (Themezer-T1EB1F).nxtheme",
+          "bytes": 642421,
+          "sha256": "bf5639e29abe22439fbb8797a77cd0483483865b4fa745dff41e8d98c84bc293",
+          "directory": false
+        },
+        {
+          "path": "rei_homescreen by marius-ogiez (Home Menu, Hanazono by majutsushi) (Themezer-T1EB20).nxtheme",
+          "bytes": 622423,
+          "sha256": "5d8f7722edcb3e8d4ced99593649b504b750f395005bf5c726f020f0ebc2794d",
+          "directory": false
+        },
+        {
+          "path": "player_shinjiasuka by marius-ogiez (Player Select, 2Simple Player Select by Limaaa) (Themezer-T1EB21).nxtheme",
+          "bytes": 463311,
+          "sha256": "ea967940dcb5414046a0503c7aa06ef42b9397d1fb463d3a481440626f107367",
+          "directory": false
+        },
+        {
+          "path": "allapsasuka by marius-ogiez (All Apps, Left Rounded by mike89101) (Themezer-T1EB22).nxtheme",
+          "bytes": 845376,
+          "sha256": "2a28eebfd3514d76d70bc1edebff223da19b9a7052ea027753b7b79e4f9e2e38",
+          "directory": false
+        },
+        {
+          "path": "settings evangelion by marius-ogiez (Settings, Rearranged Settings by Glowmoss) (Themezer-T1EB23).nxtheme",
+          "bytes": 361934,
+          "sha256": "3e48adc89aedaf9b1e137fefe1f4ec44c1056bc74be67524524b003df879659b",
+          "directory": false
+        },
+        {
+          "path": "evangelionuserpage by marius-ogiez (User Page, 2Simple My Page by Limaaa) (Themezer-T1EB24).nxtheme",
+          "bytes": 486001,
+          "sha256": "9e11ffda7da2574eea2d9cccbdb62b0aab889febf30ea0728d9ccecc374806e0",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 3423372,
+        "sha256": "c4ab40edffc77d01847cc1516fc93f51e2dba561ce330a4811af57720f512e92",
+        "version": "Themezer P1EB1E snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/packs/1EB1E/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-fee2",
+      "title": "botw light grass home with custom icons",
+      "author": "auslachy",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "FEE2",
+          "path": "botw-light-grass-home-with-custom-icons-FEE2.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 1203011,
+          "sha256": "42078d9e5d3a3b15a10852eb42cbb7d1ec65e6893f1aeabce32bbb626718cc6e",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "botw light grass home with custom icons",
+            "Author": "auslachy",
+            "Target": "home",
+            "LayoutInfo": "Doge Layout by suchmememanyskill",
+            "Id": "Themezer:FEE2:1666661722379"
+          },
+          "layout": {
+            "name": "Doge Layout",
+            "author": "suchmememanyskill",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:E|7638bb49-7475-4d11-a76a-ec9d63b12b94"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 23586,
+              "sha256": "f02750347ec10023f8e667b11dbe4f1cd1e9a3fe8aed47854d6a61cbd430e92d",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 819464,
+              "sha256": "96e276236c7c068d4efacecfbced716ef81e73f787325a2c7abfef5237ff9601",
+              "directory": false
+            },
+            {
+              "path": "album.png",
+              "bytes": 5149,
+              "sha256": "fb714ecfc9d7bfc2d7c4ec08d124b8c32a12ab728fa43b2b7b3b8745400d53a4",
+              "directory": false
+            },
+            {
+              "path": "shop.png",
+              "bytes": 6338,
+              "sha256": "9b4c7f4df2da863a750d08ffa40006db736d843b6111a73985c280a2261f73bc",
+              "directory": false
+            },
+            {
+              "path": "controller.png",
+              "bytes": 5733,
+              "sha256": "521f43ab4942f3d7b53e5a576fa9ccb96f8aee4c12724a36e4a9d4c510eeccde",
+              "directory": false
+            },
+            {
+              "path": "settings.png",
+              "bytes": 10280,
+              "sha256": "5463d48f36dbb4244d96c4a812ba2cdce7244d0ddf711977e55e1e90d40ac4bd",
+              "directory": false
+            },
+            {
+              "path": "power.png",
+              "bytes": 4722,
+              "sha256": "1655d159ee17799c140c3d3580233ff9cc221ea5bc19b132eac697fbc2c5c6ff",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 364062,
+              "sha256": "63d8f2cabc6116db072418d72ee260cea3c9ea234d6aa7550326a3cf8611ce12",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 212,
+              "sha256": "b794707e5b0bc86805b54ed5cd56aa556ac7b45f75539c5241fbdfda309a9846",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/FEE2/2026-11-02/botw-light-grass-home-with-custom-icons-FEE2.nxtheme",
+        "bytes": 1203011,
+        "sha256": "42078d9e5d3a3b15a10852eb42cbb7d1ec65e6893f1aeabce32bbb626718cc6e",
+        "sourceUrl": "https://api.themezer.net/switch/themes/FEE2/download?src=webapp",
+        "version": "Themezer TFEE2 snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/FEE2.webp",
+        "bytes": 202706,
+        "sha256": "57ae6b8e68f9bc510cbafee9dc7b0b4fecd478d03a4e565a617d1296087f380e",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "botw-light-grass-home-with-custom-icons-FEE2.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 1203011,
+        "sha256": "42078d9e5d3a3b15a10852eb42cbb7d1ec65e6893f1aeabce32bbb626718cc6e",
+        "version": "Themezer TFEE2 snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/FEE2/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-130b1",
+      "title": "Shin-chan Switch",
+      "author": "hansuzhe_99327",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "130B1",
+          "path": "shin-chan-switch-130B1.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 595502,
+          "sha256": "9a8c6d5c4303d7ace3e5f2bd708d7b54b2c302c572100fe7876c84a287d378e1",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Shin-chan Switch",
+            "Author": "hansuzhe_99327",
+            "Target": "home",
+            "LayoutInfo": "Doge Layout by suchmememanyskill",
+            "Id": "Themezer:130B1:1767705335617"
+          },
+          "layout": {
+            "name": "Doge Layout",
+            "author": "suchmememanyskill",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:E|4a828fd7-2ebc-4c20-8038-c0b8bd57303f,7638bb49-7475-4d11-a76a-ec9d63b12b94"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 23764,
+              "sha256": "bcce4115cd882513339cdeb559f791974b3d5939b6d841781c3302bf24b31411",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 276608,
+              "sha256": "996f31a76af93358b51785f042a8788b926627a7b22e7add4c9bc67439264c1a",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 316632,
+              "sha256": "559acc8d2c3735309e1a2ccf18f96034df7a0cb1574823dfe387c75b11a96c7e",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 196,
+              "sha256": "9ad07e2245c9dd6aaccaccd71680a8362d34b41ba76683a082745eb3bca8eea1",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/130B1/2026-11-02/shin-chan-switch-130B1.nxtheme",
+        "bytes": 595502,
+        "sha256": "9a8c6d5c4303d7ace3e5f2bd708d7b54b2c302c572100fe7876c84a287d378e1",
+        "sourceUrl": "https://api.themezer.net/switch/themes/130B1/download?src=webapp",
+        "version": "Themezer T130B1 snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/130B1.webp",
+        "bytes": 202902,
+        "sha256": "ecf46dd3f7151832c455a0f234ca18fd8e6ea6f8cc60aaefa466d45be3f66fea",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "shin-chan-switch-130B1.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 595502,
+        "sha256": "9a8c6d5c4303d7ace3e5f2bd708d7b54b2c302c572100fe7876c84a287d378e1",
+        "version": "Themezer T130B1 snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/130B1/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-156b2",
+      "title": "Light and Dark Japanese ",
+      "author": "johann-balili",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "156B2",
+          "path": "light-and-dark-japanese-156B2.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 184967,
+          "sha256": "8116fc7ca821e7d64918ead88968012519de15578abb649651fb20b44e28b0c3",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "Light and Dark Japanese ",
+            "Author": "johann-balili",
+            "Target": "home",
+            "LayoutInfo": "JAG X Project Clean by Migush, usiruktv, Healdeal",
+            "Id": "Themezer:156B2:1781356364695"
+          },
+          "layout": {
+            "name": "JAG X Project Clean",
+            "author": "Migush, usiruktv, Healdeal",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer_Custom:a736dcc4-86af-42e1-9638-c9b12e66f1a2"
+          },
+          "commonLayout": {
+            "name": "Project Clean - Common",
+            "author": "usiruktv",
+            "targetName": null,
+            "targetFirmware": null,
+            "id": "Themezer_Custom:331b5a32-8a6b-4dab-b361-64fe68dcf64c"
+          },
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 52198,
+              "sha256": "b912024900071f43ff06f7f9f21332035447f0e1e7a394c66e1a02caf654f6a5",
+              "directory": false
+            },
+            {
+              "path": "common.json",
+              "bytes": 1813,
+              "sha256": "09101df0d89f8b22ef853f251d1bd88dcefeb706f447fa3973f4d3b34607d02b",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 54234,
+              "sha256": "c7a10f1ac707448461bfecc1c1b42d6f6804371c38d3af27ee0edd8a7138b75b",
+              "directory": false
+            },
+            {
+              "path": "album.png",
+              "bytes": 3064,
+              "sha256": "06ab5aa1370edf27814d4f86d52ab1a3d58f2fc8aee761e27a1238ad699984dd",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 125233,
+              "sha256": "8cba6749cbd94a7763d83d1a926d8104a6c1afd1a764c64721e1338aaa40b751",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 220,
+              "sha256": "e9b986373ca275b87d3b595503f05116f37be84fb5cd94435b5323fc8dabcd2f",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/156B2/2026-11-02/light-and-dark-japanese-156B2.nxtheme",
+        "bytes": 184967,
+        "sha256": "8116fc7ca821e7d64918ead88968012519de15578abb649651fb20b44e28b0c3",
+        "sourceUrl": "https://api.themezer.net/switch/themes/156B2/download?src=webapp",
+        "version": "Themezer T156B2 snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/156B2.webp",
+        "bytes": 102816,
+        "sha256": "26cacd726fd4b0fb0d2ffeefcb6bc57f6b0a89b28746c73df242611126dabdcb",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "light-and-dark-japanese-156B2.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 184967,
+        "sha256": "8116fc7ca821e7d64918ead88968012519de15578abb649651fb20b44e28b0c3",
+        "version": "Themezer T156B2 snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/156B2/download?src=webapp"
+      },
+      "passed": true
+    },
+    {
+      "id": "switch-themes-1eb20",
+      "title": "rei_homescreen",
+      "author": "marius-ogiez",
+      "kind": "individual",
+      "components": [
+        {
+          "id": "1EB20",
+          "path": "rei_homescreen-1EB20.nxtheme",
+          "format": "ZIP-based NXTheme",
+          "bytes": 622423,
+          "sha256": "5d8f7722edcb3e8d4ced99593649b504b750f395005bf5c726f020f0ebc2794d",
+          "target": "ResidentMenu",
+          "menu": "Home Menu",
+          "manifest": {
+            "Version": 17,
+            "ThemeName": "rei_homescreen",
+            "Author": "marius-ogiez",
+            "Target": "home",
+            "LayoutInfo": "Hanazono by majutsushi",
+            "Id": "Themezer:1EB20:1791724151221"
+          },
+          "layout": {
+            "name": "Hanazono",
+            "author": "majutsushi",
+            "targetName": "ResidentMenu.szs",
+            "targetFirmware": null,
+            "id": "Themezer:2E"
+          },
+          "commonLayout": null,
+          "members": [
+            {
+              "path": "layout.json",
+              "bytes": 24617,
+              "sha256": "d52d0bc44e5c2fb1e74af7b0cf451b67c0d54103e6ae9c030d66ba7574882ed4",
+              "directory": false
+            },
+            {
+              "path": "image.jpg",
+              "bytes": 419697,
+              "sha256": "d06120946ac890a7d8819f8a4188207e0eb87402c8dfb68cf41c976356dd6bee",
+              "directory": false
+            },
+            {
+              "path": "preview.jpg",
+              "bytes": 207545,
+              "sha256": "0735b1695ee7454b1f23c9870636ffea5e0647cca2492b479072678d5961b73a",
+              "directory": false
+            },
+            {
+              "path": "info.json",
+              "bytes": 182,
+              "sha256": "acf58e2ca7e9ee280f5f22e79b6fc8239dde4c095f1f23dc6cea0eaa92d17293",
+              "directory": false
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "file": {
+        "local": "/downloads/nintendo-switch/themes/1EB20/2026-11-02/rei_homescreen-1EB20.nxtheme",
+        "bytes": 622423,
+        "sha256": "5d8f7722edcb3e8d4ced99593649b504b750f395005bf5c726f020f0ebc2794d",
+        "sourceUrl": "https://api.themezer.net/switch/themes/1EB20/download?src=webapp",
+        "version": "Themezer T1EB20 snapshot 2026-11-02"
+      },
+      "image": {
+        "local": "/assets/images/switch-themes/1EB20.webp",
+        "bytes": 120408,
+        "sha256": "0a3bf5066dcc629a77091e9667a22bf556eb0175dd051fcc04f7c9be2ca8aee1",
+        "format": "WebP"
+      },
+      "packMembers": [
+        {
+          "path": "rei_homescreen-1EB20.nxtheme",
+          "directory": false
+        }
+      ],
+      "archive": {
+        "passed": true,
+        "bytes": 622423,
+        "sha256": "5d8f7722edcb3e8d4ced99593649b504b750f395005bf5c726f020f0ebc2794d",
+        "version": "Themezer T1EB20 snapshot 2026-11-02",
+        "sourceUrl": "https://api.themezer.net/switch/themes/1EB20/download?src=webapp"
+      },
+      "passed": true
+    }
+  ],
+  "client": {
+    "passed": true,
+    "id": "switch-themes-themezer-nx",
+    "local": "/downloads/nintendo-switch/themes/themezer-nx/3.3.1/themezer-nx.nro",
+    "version": "3.3.1",
+    "bytes": 9730240,
+    "sha256": "c83741eafe3a999e717b056055d42df91369555d94285077ce6c117b16c0fe62",
+    "format": "NRO0",
+    "imageBytes": 9416704,
+    "fileBytes": 9730240,
+    "segments": [
+      {
+        "name": "text",
+        "offset": 0,
+        "bytes": 7118848
+      },
+      {
+        "name": "readOnly",
+        "offset": 7118848,
+        "bytes": 1961984
+      },
+      {
+        "name": "data",
+        "offset": 9080832,
+        "bytes": 335872
+      }
+    ],
+    "archive": {
+      "passed": true,
+      "bytes": 9730240,
+      "sha256": "c83741eafe3a999e717b056055d42df91369555d94285077ce6c117b16c0fe62",
+      "version": "3.3.1",
+      "sourceUrl": "https://github.com/ThemezerNX/Themezer-NX/releases/download/3.3.1/themezer-nx.nro"
+    }
+  },
+  "installer": {
+    "passed": true,
+    "local": "/downloads/nintendo-switch/NXthemes_Installer/nxt-3.0.2/NXThemesInstaller.nro",
+    "version": "nxt-3.0.2",
+    "bytes": 10467778,
+    "sha256": "36ac0fac5477e08a176b2f155b8b3c170c1291004d943541348599bae8cf97a1",
+    "format": "NRO0",
+    "imageBytes": 8609792,
+    "fileBytes": 10467778,
+    "segments": [
+      {
+        "name": "text",
+        "offset": 0,
+        "bytes": 6275072
+      },
+      {
+        "name": "readOnly",
+        "offset": 6275072,
+        "bytes": 2011136
+      },
+      {
+        "name": "data",
+        "offset": 8286208,
+        "bytes": 323584
+      }
+    ]
+  },
+  "page": {
+    "passed": true,
+    "issues": [],
+    "linksChecked": 102,
+    "links": [
+      {
+        "attribute": "href",
+        "url": "/assets/images/logo.png",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/style.css?v=3.3.2",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/assets/console-guides.css?v=3.3.2",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/languages/i18n.js?v=3",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/assets/site-ads.css?v=2",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/assets/mobile.css?v=3.3.4",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/assets/mobile-downloads.css?v=3.3.4",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/mobile-downloads.js?v=3.3.4",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/assets/switch-themes.css?v=1",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/assets/site-background.css?v=2",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/site-background.js?v=2",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "#main-content",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/logo.png",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/index.html#home",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/index.html#games",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/mods.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/games-downloads/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/apk.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/ps5/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/ps5.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/ps4/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/ps4.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/ps3/",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/ps3.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/psvita/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/psvita.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/xbox360/",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/xbox360.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/xbox-one-series.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/xbox-one-series.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/nintendo-switch.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch-2.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/nintendo-switch-2-symbol.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/steamdeck.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/platform-logos/steamdeck.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/retro/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/mods/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pc/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pc/emulators.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/source-codes/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/tools/index.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/profile.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/help.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/profile.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/profile.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/profile.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/profile.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/logo.png",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "#browse",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "#install",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/theme-desk.svg",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch/apps.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch/mods.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch/themes.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "#install",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/1997E.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/1997E/2026-11-02/switch2-neon-nebula-1997E.zip",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/1984E.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/1984E/2026-11-02/cozy-snorlax-adventures-1984E.zip",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/1E93C.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/1E93C/2026-11-02/pixel-forest-1E93C.zip",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/18815.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/18815/2026-11-02/ps5-theme-18815.zip",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/189CE.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/189CE/2026-11-02/zelda-breath-of-the-wild-pack-with-custom-icons-189CE.zip",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/190ED.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/190ED/2026-11-02/shin-chan-switch-190ED.zip",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/1EB1E.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/1EB1E/2026-11-02/evangelion-1EB1E.zip",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/E474.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/E474/2026-11-02/the-great-wave-off-kanagawa-E474.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/1F302.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/1F302/2026-11-02/black-rayquaza-lock-1F302.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/E6BB.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/E6BB/2026-11-02/pixel-cyber-punk-E6BB.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/E7CF.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/E7CF/2026-11-02/minimalist-zelda-home-screen-E7CF.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/FEE2.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/FEE2/2026-11-02/botw-light-grass-home-with-custom-icons-FEE2.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/130B1.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/130B1/2026-11-02/shin-chan-switch-130B1.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/156B2.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/156B2/2026-11-02/light-and-dark-japanese-156B2.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/images/switch-themes/1EB20.webp",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/1EB20/2026-11-02/rei_homescreen-1EB20.nxtheme",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch/apps.html#NXthemes_Installer",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/downloads/nintendo-switch/themes/themezer-nx/3.3.1/themezer-nx.nro",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/docs/switch-themes-catalog.json",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/docs/themezer-switch-catalog.json",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch/apps.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch/mods.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/console/nintendo-switch.html",
+        "passed": true
+      },
+      {
+        "attribute": "href",
+        "url": "/pages/contact.html",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/script.js?v=3.3.4",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/console-guide-dialog.js?v=4",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/site-ads.js?v=2",
+        "passed": true
+      },
+      {
+        "attribute": "src",
+        "url": "/assets/switch-themes.js?v=1",
+        "passed": true
+      }
+    ],
+    "articles": [
+      {
+        "id": "switch-themes-1997e",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-1984e",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-1e93c",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-18815",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-e474",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-1f302",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-e6bb",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-e7cf",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-189ce",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-190ed",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-1eb1e",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-fee2",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-130b1",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-156b2",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "id": "switch-themes-1eb20",
+        "passed": true,
+        "issues": []
+      }
+    ]
+  },
+  "summary": {
+    "themes": 15,
+    "packs": 7,
+    "individuals": 8,
+    "components": 52,
+    "verifiedArchives": 16
+  },
+  "issues": [],
+  "warnings": [],
+  "limitations": [
+    "Downloaded files were read and decompressed in memory; none was executed.",
+    "Container checks do not establish physical-console installation, visual appearance or firmware compatibility.",
+    "Embedded TargetFirmware is a layout compatibility level, not a tested minimum/maximum firmware range.",
+    "External source availability and physical-console operation are outside this local verifier."
+  ]
+}

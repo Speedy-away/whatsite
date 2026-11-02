@@ -1,0 +1,126 @@
+{
+  "scope": "wiiu-themes",
+  "status": "Completed locally; integration/browser QA delegated to owning Wii U chat",
+  "updatedAt": "2026-11-02T08:47:29.651Z",
+  "page": "/console/retro/wiiu-themes.html",
+  "builder": "scripts/build-wiiu-themes.cjs",
+  "export": "buildWiiUThemes",
+  "catalog": "docs/themezer-wiiu-catalog.json",
+  "archiveInventory": "docs/wiiu-themes-private-inventory.json",
+  "verification": "docs/wiiu-homebrew-themes-verification.json",
+  "files": [
+    {
+      "id": "dark-theme-purple",
+      "version": "2021-09-10T11:21:52.000Z",
+      "local": "/downloads/wiiu-themes/1F578/57d6ef2805338c20/dark-theme-purple.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F578/download?src=webapp",
+      "bytes": 3074520,
+      "sha256": "57d6ef2805338c2048a6fd95d1de46f637dfdcf5be8aa3697e796201acb429dd"
+    },
+    {
+      "id": "dark-theme-light-blue",
+      "version": "2021-09-10T11:09:24.000Z",
+      "local": "/downloads/wiiu-themes/1F579/8ddc1285ab51f11e/dark-theme-light-blue.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F579/download?src=webapp",
+      "bytes": 2848197,
+      "sha256": "8ddc1285ab51f11e3f75fa44f9aa7c9d54c858654c155f2426d34a9f393336bc"
+    },
+    {
+      "id": "vaporwave-summer",
+      "version": "2021-12-19T21:00:48.000Z",
+      "local": "/downloads/wiiu-themes/1F577/f8ff93009b3ff73e/vaporwave-summer.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F577/download?src=webapp",
+      "bytes": 3224013,
+      "sha256": "f8ff93009b3ff73ef7952e3f1237d7a3ade528753163b81f306bdc2ce63e31b0"
+    },
+    {
+      "id": "cloudy-day",
+      "version": "2024-07-12T11:22:49.329Z",
+      "local": "/downloads/wiiu-themes/1F5C3/baef8c421db1e14b/cloudy-day.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5C3/download?src=webapp",
+      "bytes": 2988507,
+      "sha256": "baef8c421db1e14b79a1a0b8d335cf75f3d0e90dd3e89da41bc79c70ae2d6fb3"
+    },
+    {
+      "id": "wii-theme-dark",
+      "version": "2024-05-25T02:17:36.026Z",
+      "local": "/downloads/wiiu-themes/1F5B6/5770dd6a9c3153c4/wii-theme-dark.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5B6/download?src=webapp",
+      "bytes": 7615845,
+      "sha256": "5770dd6a9c3153c4e623c1adbaab06c15a25685796de38809df5433e98d316b8"
+    },
+    {
+      "id": "mario-galaxy-theme-v2",
+      "version": "2024-06-22T12:46:52.000Z",
+      "local": "/downloads/wiiu-themes/1F590/82b0d7000d63d6b7/mario-galaxy-theme-v2.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F590/download?src=webapp",
+      "bytes": 10623166,
+      "sha256": "82b0d7000d63d6b755758220b5618866357c7b5cfc8b09a5393cea2e0162f3e6"
+    },
+    {
+      "id": "botw-theme",
+      "version": "2024-04-28T01:09:19.446Z",
+      "local": "/downloads/wiiu-themes/1F5A2/67b11a563c653575/botw-theme.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5A2/download?src=webapp",
+      "bytes": 15530504,
+      "sha256": "67b11a563c653575aa8de85385f30e84a5f5fdb88962df1db1f5e6065895c55a"
+    },
+    {
+      "id": "windwaker-theme",
+      "version": "2024-04-28T01:33:41.755Z",
+      "local": "/downloads/wiiu-themes/1F5A3/51b1d24a2e209d9b/windwaker-theme.utheme",
+      "sourceUrl": "https://api.themezer.net/wiiu/themes/1F5A3/download?src=webapp",
+      "bytes": 12989734,
+      "sha256": "51b1d24a2e209d9b6db3869d5a2c005aafc22b5b2aaf1fe8ea07e44a5134d2e3"
+    },
+    {
+      "id": "themiify",
+      "version": "1.2.1",
+      "local": "/downloads/wiiu-themes/tools/1.2.1/themiify.wuhb",
+      "sourceUrl": "https://github.com/ThemeCafe/Themiify/releases/download/v1.2.1/themiify.wuhb",
+      "bytes": 9445152,
+      "sha256": "970c7348b5468bc18bafc4c4e6e4c4ac4d22858731b10e26939a8b1cc426cdd4"
+    },
+    {
+      "id": "stylemiiu",
+      "version": "0.5.3",
+      "local": "/downloads/wiiu-themes/tools/0.5.3/stylemiiu.wps",
+      "sourceUrl": "https://github.com/ThemeCafe/StyleMiiU-Plugin/releases/download/0.5.3/stylemiiu.wps",
+      "bytes": 163938,
+      "sha256": "8f532f638acf1fcdfc944ddd38f3fe96a34057eede3a2be2c90b8ceecdeecbe0"
+    }
+  ],
+  "checks": {
+    "focusedNodeTests": 8,
+    "focusedNodeFailures": 0,
+    "localLinksAndAssets": 0,
+    "zipMemberCrc32": "all checked",
+    "bpsPatchCrc32": "all checked",
+    "packageMetadata": "exact title/uploader/themeID/version checked",
+    "consoleHeaders": "WUHB and ELF32 big-endian PowerPC checked"
+  },
+  "sources": {
+    "discovery": [
+      "https://themezer.net/",
+      "https://themezer.net/wiiu",
+      "https://themezer.net/wiiu/themes"
+    ],
+    "method": "Original Themezer SSR page metadata and linked official release assets; GitHub REST API rate-limited so official release HTML used",
+    "images": "Original creator/Themezer screenshot URLs, bytes and SHA-256 in catalogue"
+  },
+  "maintenance": {
+    "offlineBuild": "node scripts/build-wiiu-themes.cjs",
+    "freshDownloads": "scripts/fetch-wiiu-theme-evidence.cjs then scripts/download-wiiu-theme-catalog.cjs and scripts/download-wiiu-theme-tools.cjs, inspect versions before archive",
+    "archive": "scripts/prepare-wiiu-themes.cjs uses console-expansion-archive.cjs; normal F escalation required",
+    "preservation": "All old public and F files retained; gallery theme links are SHA-qualified; downloader guard refuses differing overwrite; original ZIP companion assets retained",
+    "globalMerge": "Coordinator should merge cooperating sidecars and refresh organized archive index once concurrent writers finish"
+  },
+  "limits": [
+    "No physical Wii U tested",
+    "No downloaded payload, WUHB or WPS executed",
+    "No per-theme numeric Menu revision or complete region matrix supplied by sources; exact BPS input bytes/CRC retained",
+    "No commit, publication or deployment"
+  ],
+  "sharedFilesModified": [],
+  "screenshots": "Owning chat is conducting browser QA at http://127.0.0.1:8765"
+}

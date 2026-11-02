@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-02T15:01:33.184Z",
+  "version": "2026.11.02.1",
+  "status": "Prepared and tested locally; requires archive/import verification and explicit helper installation before activation. Hardware untested.",
+  "artifacts": [
+    {
+      "platform": "ps4",
+      "filename": "whatsite-workspace-ps4.html",
+      "local": "/downloads/helpers/host-native-workspace/ps4/47a3c9f5208a6280/whatsite-workspace-ps4.html",
+      "immutablePath": "/downloads/helpers/host-native-workspace/ps4/47a3c9f5208a6280/whatsite-workspace-ps4.html",
+      "downloadURL": "/downloads/helpers/host-native-workspace/ps4/47a3c9f5208a6280/whatsite-workspace-ps4.html",
+      "absoluteDownloadURL": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/47a3c9f5208a6280/whatsite-workspace-ps4.html",
+      "bytes": 37139,
+      "sha256": "47a3c9f5208a6280ec4263eb34133f58b2cb72d72cacddd767e5d92a0d00b366",
+      "installPath": "/data/whatsite-workspace-ps4.html",
+      "nativeURLPath": "/data/whatsite-workspace-ps4.html",
+      "port": 8080,
+      "nativeURL": "http://{consoleIP}:8080/data/whatsite-workspace-ps4.html",
+      "views": [
+        "files",
+        "payloads",
+        "autoload"
+      ],
+      "viewQuery": "?view={view}",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-47a3c9f5208a6280\\whatsite-workspace-ps4.html",
+      "archiveStatus": "prepared-not-archived",
+      "source": {
+        "tag": "2.08",
+        "commit": "266d9b8fa7af1cd106688999f95960841c3e894d",
+        "httpSourceSHA256": "dd295327ed2cdfb87576682597e4138dbd1fc48eee4ac31115b6290a725be10c",
+        "repository": "https://github.com/cy33hc/ps4-ezremote-client",
+        "server": "https://github.com/cy33hc/ps4-ezremote-client/blob/266d9b8fa7af1cd106688999f95960841c3e894d/source/server/http_server.cpp",
+        "filesystem": "https://github.com/cy33hc/ps4-ezremote-client/blob/266d9b8fa7af1cd106688999f95960841c3e894d/source/fs.cpp"
+      }
+    },
+    {
+      "platform": "ps5",
+      "filename": "whatsite-workspace-ps5.html",
+      "local": "/downloads/helpers/host-native-workspace/ps5/3b33bd9e66e1f267/whatsite-workspace-ps5.html",
+      "immutablePath": "/downloads/helpers/host-native-workspace/ps5/3b33bd9e66e1f267/whatsite-workspace-ps5.html",
+      "downloadURL": "/downloads/helpers/host-native-workspace/ps5/3b33bd9e66e1f267/whatsite-workspace-ps5.html",
+      "absoluteDownloadURL": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/3b33bd9e66e1f267/whatsite-workspace-ps5.html",
+      "bytes": 37139,
+      "sha256": "3b33bd9e66e1f267cb0f5c536e4b2daa78b7faec7cd34c3aabcc7daaf76a5417",
+      "installPath": "/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+      "nativeURLPath": "/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+      "port": 9090,
+      "nativeURL": "http://{consoleIP}:9090/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+      "views": [
+        "files",
+        "payloads",
+        "autoload"
+      ],
+      "viewQuery": "?view={view}",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-3b33bd9e66e1f267\\whatsite-workspace-ps5.html",
+      "archiveStatus": "prepared-not-archived",
+      "source": {
+        "tag": "2.18",
+        "commit": "f3ac2abab304a807f20a8b97480dbd169e5b6be6",
+        "httpSourceSHA256": "3df2af33fb9bb04d8900f26196cfa699416b97ee78689c68479131af0b7507e0",
+        "repository": "https://github.com/cy33hc/ps5-ezremote-client",
+        "server": "https://github.com/cy33hc/ps5-ezremote-client/blob/f3ac2abab304a807f20a8b97480dbd169e5b6be6/source/server/http_server.cpp",
+        "filesystem": "https://github.com/cy33hc/ps5-ezremote-client/blob/f3ac2abab304a807f20a8b97480dbd169e5b6be6/source/fs.cpp"
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "id": "whatsite-ps4-native-workspace-47a3c9f5208a6280",
+      "title": "whatsite PS4 native file and payload workspace",
+      "platform": "PS4",
+      "category": "Tools",
+      "project": "whatsite Native Workspace",
+      "version": "2026.11.02.1-47a3c9f5208a6280",
+      "filename": "whatsite-workspace-ps4.html",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/47a3c9f5208a6280/whatsite-workspace-ps4.html",
+      "importPath": "downloads/helpers/host-native-workspace/ps4/47a3c9f5208a6280/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "archiveRole": [
+        "Helpers"
+      ],
+      "mirror": false,
+      "pages": [
+        "hosts/ps4/files/index.html",
+        "hosts/ps4/payload-manager/index.html"
+      ],
+      "expectedBytes": 37139,
+      "expectedSha256": "47a3c9f5208a6280ec4263eb34133f58b2cb72d72cacddd767e5d92a0d00b366",
+      "release": "2026.11.02.1-47a3c9f5208a6280"
+    },
+    {
+      "id": "whatsite-ps5-native-workspace-3b33bd9e66e1f267",
+      "title": "whatsite PS5 native file and payload workspace",
+      "platform": "PS5",
+      "category": "Tools",
+      "project": "whatsite Native Workspace",
+      "version": "2026.11.02.1-3b33bd9e66e1f267",
+      "filename": "whatsite-workspace-ps5.html",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/3b33bd9e66e1f267/whatsite-workspace-ps5.html",
+      "importPath": "downloads/helpers/host-native-workspace/ps5/3b33bd9e66e1f267/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "archiveRole": [
+        "Helpers"
+      ],
+      "mirror": false,
+      "pages": [
+        "hosts/ps5/files/index.html",
+        "hosts/ps5/payload-manager/index.html"
+      ],
+      "expectedBytes": 37139,
+      "expectedSha256": "3b33bd9e66e1f267cb0f5c536e4b2daa78b7faec7cd34c3aabcc7daaf76a5417",
+      "release": "2026.11.02.1-3b33bd9e66e1f267"
+    }
+  ],
+  "retainedArtifacts": [
+    {
+      "platform": "ps4",
+      "filename": "whatsite-workspace-ps4.html",
+      "local": "/downloads/helpers/host-native-workspace/ps4/61aaeb7f0fc9d6a7/whatsite-workspace-ps4.html",
+      "bytes": 35203,
+      "sha256": "61aaeb7f0fc9d6a76881d6545d9c64d1454e3dec82c344860c5f15368f873bed",
+      "status": "Retained superseded generated helper; no active public profile link.",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-61aaeb7f0fc9d6a7\\whatsite-workspace-ps4.html"
+    },
+    {
+      "platform": "ps4",
+      "filename": "whatsite-workspace-ps4.html",
+      "local": "/downloads/helpers/host-native-workspace/ps4/bcdcd5054a5d2ca2/whatsite-workspace-ps4.html",
+      "bytes": 35240,
+      "sha256": "bcdcd5054a5d2ca247cce0fab18bcb88fa26563461f2d6e63620cb4a0ba46ea1",
+      "status": "Retained superseded generated helper; no active public profile link.",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-bcdcd5054a5d2ca2\\whatsite-workspace-ps4.html"
+    },
+    {
+      "platform": "ps5",
+      "filename": "whatsite-workspace-ps5.html",
+      "local": "/downloads/helpers/host-native-workspace/ps5/78292c38110b60a6/whatsite-workspace-ps5.html",
+      "bytes": 35240,
+      "sha256": "78292c38110b60a65017eebf36e5ecc34d6f3b6c8ed538e0b710a2de00c32fe5",
+      "status": "Retained superseded generated helper; no active public profile link.",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-78292c38110b60a6\\whatsite-workspace-ps5.html"
+    },
+    {
+      "platform": "ps5",
+      "filename": "whatsite-workspace-ps5.html",
+      "local": "/downloads/helpers/host-native-workspace/ps5/bc49e5d1f366c5b8/whatsite-workspace-ps5.html",
+      "bytes": 35203,
+      "sha256": "bc49e5d1f366c5b81277bfa3424ca3550ac5fd26511a19afbcc1dd1bdcf8b015",
+      "status": "Retained superseded generated helper; no active public profile link.",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-bc49e5d1f366c5b8\\whatsite-workspace-ps5.html"
+    }
+  ],
+  "retainedArchiveJobs": [
+    {
+      "id": "whatsite-ps4-native-workspace-61aaeb7f0fc9d6a7",
+      "title": "whatsite PS4 native workspace · retained build",
+      "platform": "PS4",
+      "category": "Tools",
+      "project": "whatsite Native Workspace",
+      "version": "2026.11.02.1-61aaeb7f0fc9d6a7",
+      "release": "2026.11.02.1-61aaeb7f0fc9d6a7",
+      "filename": "whatsite-workspace-ps4.html",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/61aaeb7f0fc9d6a7/whatsite-workspace-ps4.html",
+      "importPath": "downloads/helpers/host-native-workspace/ps4/61aaeb7f0fc9d6a7/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "archiveRole": [
+        "Helpers"
+      ],
+      "mirror": false,
+      "pages": [],
+      "expectedBytes": 35203,
+      "expectedSha256": "61aaeb7f0fc9d6a76881d6545d9c64d1454e3dec82c344860c5f15368f873bed"
+    },
+    {
+      "id": "whatsite-ps4-native-workspace-bcdcd5054a5d2ca2",
+      "title": "whatsite PS4 native workspace · retained build",
+      "platform": "PS4",
+      "category": "Tools",
+      "project": "whatsite Native Workspace",
+      "version": "2026.11.02.1-bcdcd5054a5d2ca2",
+      "release": "2026.11.02.1-bcdcd5054a5d2ca2",
+      "filename": "whatsite-workspace-ps4.html",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/bcdcd5054a5d2ca2/whatsite-workspace-ps4.html",
+      "importPath": "downloads/helpers/host-native-workspace/ps4/bcdcd5054a5d2ca2/whatsite-workspace-ps4.html",
+      "kind": "generated",
+      "archiveRole": [
+        "Helpers"
+      ],
+      "mirror": false,
+      "pages": [],
+      "expectedBytes": 35240,
+      "expectedSha256": "bcdcd5054a5d2ca247cce0fab18bcb88fa26563461f2d6e63620cb4a0ba46ea1"
+    },
+    {
+      "id": "whatsite-ps5-native-workspace-78292c38110b60a6",
+      "title": "whatsite PS5 native workspace · retained build",
+      "platform": "PS5",
+      "category": "Tools",
+      "project": "whatsite Native Workspace",
+      "version": "2026.11.02.1-78292c38110b60a6",
+      "release": "2026.11.02.1-78292c38110b60a6",
+      "filename": "whatsite-workspace-ps5.html",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/78292c38110b60a6/whatsite-workspace-ps5.html",
+      "importPath": "downloads/helpers/host-native-workspace/ps5/78292c38110b60a6/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "archiveRole": [
+        "Helpers"
+      ],
+      "mirror": false,
+      "pages": [],
+      "expectedBytes": 35240,
+      "expectedSha256": "78292c38110b60a65017eebf36e5ecc34d6f3b6c8ed538e0b710a2de00c32fe5"
+    },
+    {
+      "id": "whatsite-ps5-native-workspace-bc49e5d1f366c5b8",
+      "title": "whatsite PS5 native workspace · retained build",
+      "platform": "PS5",
+      "category": "Tools",
+      "project": "whatsite Native Workspace",
+      "version": "2026.11.02.1-bc49e5d1f366c5b8",
+      "release": "2026.11.02.1-bc49e5d1f366c5b8",
+      "filename": "whatsite-workspace-ps5.html",
+      "url": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/bc49e5d1f366c5b8/whatsite-workspace-ps5.html",
+      "importPath": "downloads/helpers/host-native-workspace/ps5/bc49e5d1f366c5b8/whatsite-workspace-ps5.html",
+      "kind": "generated",
+      "archiveRole": [
+        "Helpers"
+      ],
+      "mirror": false,
+      "pages": [],
+      "expectedBytes": 35203,
+      "expectedSha256": "bc49e5d1f366c5b81277bfa3424ca3550ac5fd26511a19afbcc1dd1bdcf8b015"
+    }
+  ],
+  "archiveJobInstruction": "Import jobs plus retainedArchiveJobs. Use only artifacts for current public helper links. Existing versions must be retained.",
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/__local__/list",
+      "json": {
+        "path": "/data/payloads",
+        "onlyFolders": false
+      },
+      "result": "Array of name/type/size/date/rights records."
+    },
+    {
+      "method": "GET",
+      "path": "/__local__/downloadFile?path={encodedAbsolutePath}",
+      "result": "Raw bytes; client verifies size and bounded response."
+    },
+    {
+      "method": "POST",
+      "path": "/__local__/getContent",
+      "json": {
+        "item": "{absoluteFile}"
+      },
+      "result": "result is a string; read only after size check."
+    },
+    {
+      "method": "POST",
+      "path": "/__local__/edit",
+      "json": {
+        "item": "{uniqueConfigStagingFile}",
+        "content": "{fullPreservedText}"
+      },
+      "result": "result.success, followed by raw byte hash verification."
+    },
+    {
+      "method": "POST",
+      "path": "/__local__/upload",
+      "multipartOrdered": [
+        "destination",
+        "_chunkSize",
+        "_chunkNumber=0",
+        "_totalSize",
+        "_currentChunkSize",
+        "file"
+      ],
+      "result": "Single complete BIN/ELF or backup upload; no automatic resume/retry; verify raw saved bytes."
+    },
+    {
+      "method": "POST",
+      "path": "/__local__/createFolder",
+      "json": {
+        "newPath": "{managedAbsolutePath}"
+      },
+      "result": "Native acknowledgement followed by parent-list postcondition."
+    },
+    {
+      "method": "POST",
+      "path": "/__local__/rename",
+      "json": {
+        "item": "{source}",
+        "newItemPath": "{destination}"
+      },
+      "result": "Never overwrite a payload destination; config staging replacement follows verified backup, hash precondition and final readback."
+    }
+  ],
+  "queueFiles": {
+    "ps4": "/data/GoldHEN/payloads.ini",
+    "ps5": "/data/pldmgr/autoload.txt",
+    "ps4Note": "GoldHEN uses [AutoRun] in payloads.ini, not AutoRun.ini. Raw text editor preserves untouched lines, sections and existing line endings. No invented queue/delay syntax.",
+    "goldhenEvidence": "https://github.com/MoHadiShibli/Control4Free/blob/6a0e6925e5a9c34104512346774afbb0788c7bb3/docs/installation.md"
+  },
+  "ps5Manager": {
+    "version": "0.6.3",
+    "commit": "3f881e8e569eba3054d1784a1962439b2eee92c2",
+    "server": "https://github.com/itsPLK/ps5-payload-manager/blob/3f881e8e569eba3054d1784a1962439b2eee92c2/src/http_server.c",
+    "nativeOrigin": "http://{consoleIP}:8084",
+    "links": [
+      "/#/autoload",
+      "/#/storage",
+      "/#/settings"
+    ],
+    "constraint": "Manager embeds its web assets in the ELF, with no arbitrary local HTML route. Native management APIs require its own origin. The ezRemote workspace does not spoof Origin/Referer or call the manager API. Raw on-disk autoload edits do not prove that any active native sequence has changed."
+  },
+  "safeguards": [
+    "No API requests on page open or tab change; explicit user action required.",
+    "Public/incorrect-origin preview stays read-only; writes require a successful native directory read.",
+    "Only /data and explicitly supplied verified mount roots may be read. The authored UI stays under /data because ezRemote does not supply authoritative mount verification.",
+    "Writes limited to /data/payloads, /data/whatwhatboy, PS5 /data/pldmgr/payloads/local, and exact platform configuration plus unique backup/staging siblings.",
+    "No delete, remove, install, payload execution, TCP probe or cross-origin API requests.",
+    "BIN/ELF uploads limited to 8 MiB; binary reads 32 MiB; text editor 64 KiB; directory responses 1 MiB/5000 entries.",
+    "Every save verifies current hash, uploads and hash-verifies unique original-byte backup, rechecks original, writes/reads a unique stage, rechecks original again, then renames and verifies final bytes. Existing backups and partial stages are retained.",
+    "Native file API provides no atomic compare-and-swap. Other native writers must be idle; rechecks reduce but cannot eliminate races.",
+    "Rename/createFolder/upload native success can be misleading; client verifies actual postconditions and never retries automatically.",
+    "Pinned ezRemote singleFilename copy branch skips regular files; backup never uses /copy."
+  ],
+  "validation": {
+    "unitTest": "scripts/tests/host-native-workspace.test.cjs",
+    "unitCommand": "node --test scripts/tests/host-native-workspace.test.cjs",
+    "browserWorkflow": "Root agent owns CUA browser visual/native-origin fixture checks. This generator does not launch browser automation.",
+    "compatibility": "ES5 syntax; authored Promise fallback; UTF-8 and SHA-256 fallbacks for HTTP console origins; no Array.includes, lookbehind or Number.isSafeInteger requirement."
+  },
+  "limitations": [
+    "Installed native app and compatible homebrew environment required. Firmware support is not inferred from the workspace.",
+    "No hardware success claim; all tests use mock APIs/filesystems.",
+    "Public host cannot directly manage private console services; install and navigate to the helper’s native origin.",
+    "Autoload editor is a raw native-file editor. It does not automatically enable autoload, reorder guessed entries, run a queue or claim live settings applied.",
+    "Empty originals are backed up with zero-byte multipart uploads. Empty replacement stages also use multipart to avoid the native FS::Save empty-file handle leak.",
+    "Original files/versions and all receiver6701 helpers are unchanged."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "updatedAt": "2026-11-02T12:42:42.720Z",
+  "status": "Complete locally: ten new original downloads archived and hash-verified, page and setup guides built, browser filters/responsive layout checked, shared inventory merged and organized index refreshed.",
+  "page": "console/nintendo-switch/mods.html",
+  "selection": "docs/switch-mods-wave2-selection.json",
+  "newResources": 10,
+  "totalResources": 31,
+  "games": 13,
+  "scope": "switch-mods-wave2",
+  "downloadCommand": "node scripts/archive-switch-mod-batch.cjs",
+  "verificationCommand": "node scripts/verify-switch-mods-wave2.cjs",
+  "newIds": [
+    "mk8-item-rain",
+    "mk8-rainbow-three-laps",
+    "mk8-kill-bgm-303",
+    "mk8-kill-bgm-400",
+    "wubor-0181",
+    "smash-minecraft-skins",
+    "stage-config-111",
+    "totk-triple-buffer",
+    "paper-mario-triple-buffer",
+    "lets-go-triple-buffer"
+  ],
+  "readyFiles": 10,
+  "archiveRoot": "F:/whatsite-backup-downloads-etc",
+  "archiveInventory": "docs/switch-mods-wave2-private-inventory.json",
+  "browserVerification": "docs/qa/switch-mods-wave2-browser.json",
+  "httpVerification": "docs/qa/switch-mods-wave2-http.json",
+  "publicMirrors": 5,
+  "publisherOnlyFiles": 5,
+  "limits": [
+    "No downloaded mod, payload or game executable was run.",
+    "No physical-console installation testing.",
+    "No commit, publish or deployment.",
+    "Full site audit: 462 pages, 48813 links, eight unrelated PS5/host missing links; no Switch failures.",
+    "Shared archive index reports six missing PS3 paths, unrelated to this Switch batch; exact IDs recorded in archive-index verification."
+  ],
+  "preservation": "All earlier catalogue entries, archives and duplicate versions kept. Original publisher downloads remain public links for GameBanana and the large WuBor pack; all ten original files must remain in F:.",
+  "chatAction": "User requested deletion. Only archive API is available; current chat will be archived after saving this closeout. Permanent deletion not performed.",
+  "verification": "docs/qa/switch-mods-wave2-verification.json",
+  "wubor": {
+    "bytes": 141490113,
+    "sha256": "23dbd01ce734de29999e5f9694cca19615eb261206ea68961f5b3be9fbf5ba78",
+    "zipMembers": 2597,
+    "plugin": "ultimate/mods/wubor/plugin.nro"
+  },
+  "regressionVerification": {
+    "earlierMods": 8,
+    "passed": true
+  },
+  "archiveIndexVerification": "docs/qa/switch-mods-wave2-archive-index.json",
+  "sharedIndex": {
+    "items": 2006,
+    "fileRecords": 2952,
+    "presentFileRecords": 2946,
+    "missingPaths": 6,
+    "newSwitchFilesPresent": 10
+  }
+}

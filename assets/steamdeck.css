@@ -1,0 +1,97 @@
+/* Steam Deck directory; preserve the shared navigation, colours and mobile layer. */
+.steamdeck-page .steamdeck-hero { min-height: auto; padding: 56px 0 32px; }
+.steamdeck-page .hero-content { max-width: 1200px; text-align: left; }
+.steamdeck-breadcrumb { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; font-size: 13px; color: var(--text-muted); }
+.steamdeck-breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; color: var(--text-secondary); }
+.steamdeck-page .hero-title { max-width: 18ch; font-size: clamp(2rem, 4vw, 3.25rem); text-wrap: balance; }
+.steamdeck-page .hero-subtitle { max-width: 58ch; margin: 0 0 24px; font-size: 1rem; text-wrap: pretty; }
+.steamdeck-page .hero-buttons { justify-content: flex-start; margin-bottom: 0; }
+
+.steamdeck-start { padding: 24px 0 40px; }
+.steamdeck-start h2 { margin-bottom: 24px; font-size: 1.2rem; }
+.steamdeck-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 0; padding-left: 24px; list-style: decimal; }
+.steamdeck-steps li { padding-left: 4px; }
+.steamdeck-steps li::marker { color: var(--accent-light); font-weight: 600; }
+.steamdeck-steps h3, .steamdeck-guide-list h3 { font-size: 0.95rem; line-height: 1.5; margin-bottom: 8px; }
+.steamdeck-steps p, .steamdeck-guide-list p { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; max-width: 70ch; }
+
+.steamdeck-page .steamdeck-catalog, .steamdeck-page .steamdeck-guides { padding: 40px 0; }
+.steamdeck-page .section-header { text-align: left; margin-bottom: 24px; }
+.steamdeck-page .section-title { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 8px; }
+.steamdeck-page .section-title::after { display: none; }
+.steamdeck-page .section-subtitle { max-width: 65ch; margin: 0; font-size: 0.95rem; }
+.steamdeck-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 16px; }
+.steamdeck-page .search-container { flex: 1 1 280px; max-width: 560px; margin: 0 auto 0 0; }
+#gameSearchStatus { color: var(--text-secondary); font-size: 13px; font-variant-numeric: tabular-nums; }
+.steamdeck-reset { border: 0; border-radius: 4px; background: transparent; color: var(--accent-light); cursor: pointer; min-height: 44px; padding: 8px 4px; font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+.steamdeck-page .filter-buttons { justify-content: flex-start; margin-bottom: 32px; gap: 8px; }
+.steamdeck-page .filter-btn { min-height: 44px; border-radius: 8px; }
+
+.steamdeck-group { display: grid; grid-template-columns: minmax(140px, 0.45fr) minmax(0, 1.55fr); gap: 24px; padding: 28px 0; border-top: 1px solid var(--border); }
+.steamdeck-page [hidden] { display: none !important; }
+.steamdeck-group-title { font-size: 1.15rem; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 10px; text-wrap: balance; }
+.steamdeck-group > .section-header p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+.steamdeck-page :is(#plugins, .steamdeck-group) .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-content: start; }
+.steamdeck-page :is(#plugins, .steamdeck-group) .game-card { display: flex; flex-direction: column; border-radius: 12px; box-shadow: none; }
+.steamdeck-page :is(#plugins, .steamdeck-group) .game-card:only-child, .steamdeck-page #emulation .game-card:last-child { grid-column: 1 / -1; }
+.steamdeck-page #tool-decky,
+.steamdeck-page #launchers-proton .game-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.steamdeck-page #desktop-utilities .game-card:last-child:nth-child(odd),
+.steamdeck-page #decky-plugins .game-card:last-child:nth-child(even) { grid-column: 1 / -1; }
+.steamdeck-page :is(#plugins, .steamdeck-group) .game-info { display: flex; flex-direction: column; flex: 1; padding: 20px; min-width: 0; }
+.steamdeck-tool-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.steamdeck-tool-header img { flex-shrink: 0; width: 52px; height: 52px; object-fit: contain; }
+.steamdeck-preview { flex-shrink: 0; display: block; }
+.steamdeck-preview img { display: block; width: 88px; height: 55px; object-fit: cover; border-radius: 4px; }
+.steamdeck-tool-kind { color: var(--text-muted); font-size: 12px; margin-bottom: 4px; }
+.steamdeck-page :is(#plugins, .steamdeck-group) .game-title { font-size: 1rem; line-height: 1.4; margin: 0; }
+.steamdeck-page :is(#plugins, .steamdeck-group) .game-description { flex: 1; max-width: 70ch; line-height: 1.7; margin-bottom: 16px; }
+.steamdeck-page :is(#plugins, .steamdeck-group) .game-features { margin-bottom: 8px; }
+.steamdeck-requirement { color: var(--text-secondary); font-size: 12px; line-height: 1.6; margin-bottom: 12px; }
+.steamdeck-links { display: flex; flex-wrap: wrap; gap: 0 18px; }
+.steamdeck-links > a, .steamdeck-steps a, .steamdeck-guide-list > article > a { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; max-width: 100%; color: var(--accent-light); font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+
+.steamdeck-guide-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding-top: 8px; }
+.steamdeck-guide-list p a { color: var(--accent-light); text-decoration: underline; text-underline-offset: 3px; }
+.steamdeck-page .no-results { display: none; padding: 32px 20px; border: 1px dashed var(--border); border-radius: 12px; text-align: center; }
+.steamdeck-page .no-results h3 { font-size: 1rem; margin-bottom: 8px; }
+.steamdeck-page :is(.steamdeck-links a, .steamdeck-steps a, .steamdeck-guide-list a, .steamdeck-reset, .filter-btn):focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+.steamdeck-page :is(section[id], article[id]) { scroll-margin-top: 24px; }
+.steamdeck-guide-nav { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-bottom: 24px; }
+.steamdeck-guide-nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent-light); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.steamdeck-setup-guide { margin-bottom: 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-secondary); scroll-margin-top: 24px; }
+.steamdeck-setup-guide summary { cursor: pointer; padding: 20px; font-size: 15px; font-weight: 600; min-height: 64px; }
+.steamdeck-setup-guide[open] summary { border-bottom: 1px solid var(--border); }
+.steamdeck-guide-topic { float: right; margin-left: 12px; color: var(--text-muted); font-size: 12px; font-weight: 400; }
+.steamdeck-guide-body { padding: 20px 24px; font-size: 14px; line-height: 1.8; color: var(--text-secondary); }
+.steamdeck-guide-body > p, .steamdeck-guide-body ol { max-width: 80ch; }
+.steamdeck-guide-body ol { list-style: decimal; padding-left: 24px; margin: 16px 0; }
+.steamdeck-guide-body li { padding-left: 6px; margin-bottom: 12px; }
+.steamdeck-guide-note { border-left: 2px solid var(--accent-light); padding-left: 14px; margin-bottom: 12px; }
+.steamdeck-guides .steamdeck-guide-list { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--border); }
+.steamdeck-page :is(.steamdeck-guide-nav a, .steamdeck-setup-guide summary):focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+
+@media (max-width: 1100px) {
+    .steamdeck-group { grid-template-columns: 1fr; gap: 0; }
+}
+
+@media (max-width: 700px) {
+    .steamdeck-page .steamdeck-hero { padding: 32px 0 16px; }
+    .steamdeck-page .hero-title { max-width: 20ch; }
+    .steamdeck-page .hero-buttons { align-items: stretch; }
+    .steamdeck-page .hero-buttons .btn { width: auto; }
+    .steamdeck-steps, .steamdeck-guide-list { grid-template-columns: 1fr; gap: 20px; }
+    .steamdeck-start { padding: 20px 0 28px; }
+    .steamdeck-breadcrumb { margin-bottom: 12px; }
+    .steamdeck-page .steamdeck-catalog, .steamdeck-page .steamdeck-guides { padding: 28px 0; }
+    .steamdeck-page :is(#plugins, .steamdeck-group) .games-grid { grid-template-columns: 1fr; }
+    .steamdeck-page :is(#plugins, .steamdeck-group) .game-info { padding: 18px; }
+    .steamdeck-group { padding: 24px 0; }
+    .steamdeck-toolbar { gap: 4px 16px; }
+    .steamdeck-page .search-container { flex-basis: 100%; max-width: none; }
+    .steamdeck-reset { margin-left: auto; }
+    .steamdeck-page :is(section[id], article[id]) { scroll-margin-top: calc(var(--mobile-header-height, 72px) + 16px); }
+    .steamdeck-setup-guide { scroll-margin-top: calc(var(--mobile-header-height, 72px) + 16px); }
+    .steamdeck-setup-guide summary { padding: 18px 16px; }
+    .steamdeck-guide-body { padding: 16px; }
+}

@@ -1,0 +1,398 @@
+{
+  "checkedAt": "2026-11-02T13:13:13.865Z",
+  "scope": "Exact new button-version chooser, unified Download/Load controls, destination text nodes, handoff/errors, disabled loading notes and paired-sender prose; external-host disclosure and both source-confirmed built-in browser runtimes. Existing metadata/version templates and actual legacy option strings also checked.",
+  "limitation": "This is a scoped language/runtime audit, not a whole-site translation or linguistic-quality percentage. No console service contacted, payload sent, page rebuilt or helper package changed.",
+  "passed": true,
+  "languages": 20,
+  "dictionaryKeys": 478,
+  "newKeys": 41,
+  "runtimeLookups": 2140,
+  "sourceFiles": [
+    {
+      "file": "assets/host-dashboard.js",
+      "sha256": "f2baa6eefd6f75c9fb0491dca3e0d7517cf3ec034ecdd2ba7be47f00954f9464"
+    },
+    {
+      "file": "scripts/host-dashboard-markup.cjs",
+      "sha256": "2046fa356f4336312fd7b3efea764fcf7c41b8163d8aa1c5fe88bf03478b4c76"
+    },
+    {
+      "file": "scripts/build-host-selector.cjs",
+      "sha256": "39affbfa571f5dc15b0584aa8fffa47616d6a9fd72e34529015f14595559f4c7"
+    },
+    {
+      "file": "docs/host-runtime-builds.json",
+      "sha256": "45bea744d828122ae8622f69ad9396d849e74b8ecb876cdfe10b1c8569361d2b"
+    }
+  ],
+  "newSourceKeys": [
+    "Version choices",
+    "Load",
+    "This device",
+    "Download a copy when pressing Load",
+    "Choose a game",
+    "Open host",
+    "Choose compatible firmware and a running console loader.",
+    "Open this host on the matching console to use its built-in browser loader.",
+    "This plugin loads through the console’s native plugin manager. Web loading is not available for this build.",
+    "Install this file in the native cheat or patch manager, then enable it in the game.",
+    "No verified built-in loading method is available for this build. Setup and original sources are under Requirements.",
+    "Connect the paired desktop sender to load this ELF.",
+    "Console downloader opened. It checks the receiver queue and destination before saving. Choose the storage there.",
+    "Download requested to this device.",
+    "This entry does not provide a downloadable file.",
+    "Update the console downloader catalogue before saving this file to the console.",
+    "Choose a file from the console catalogue.",
+    "Choose PS4 or PS5.",
+    "Download uses the configured console downloader, which checks its queue and destination before saving. Without a console address, it downloads to this device. A transfer acknowledgement does not confirm execution; check the console for the result.",
+    "Use the paired sender when the browser cannot contact your {platform} loader. Open its local host page and enter the token printed on your computer. Nothing loads until you choose a payload.",
+    "Select the installed firmware and {platform} address. Load sends a compatible payload through its running console loader.",
+    "Download destination:",
+    "Download destination: {platform}",
+    "Download destination: This device",
+    "BIN · Kameleon host build",
+    "BIN · Kameleon host build · {titleIds}",
+    "BIN · Karo host build",
+    "BIN · Karo host build · {titleIds}",
+    "BIN · Nazky host build",
+    "BIN · Nazky host build · {titleIds}",
+    "Other hosts",
+    "These links open the original external hosts and setup pages.",
+    "Built-in browser loader",
+    "Open on the matching console browser and choose Start on the built-in loader page. Nothing runs when viewing the dashboard.",
+    "This PS4 bootstrap does not automatically load GoldHEN. Its raw BIN port 9020 is separate from GoldHEN HTTP port 9090 and ELF port 9021.",
+    "The bundled PS5 ELF loader is limited to the listed versions below 5.00; the upstream source reports its loader broken on 5.xx.",
+    "Static dependencies and file checksums verified. Console hardware execution has not been tested.",
+    "Native {format} listener: {transport} {port}. Match this loader’s ABI; other payload transports are separate.",
+    "BUILT-IN BROWSER LOADER · {first} … {last} ({count} listed versions)",
+    "BUILT-IN BROWSER LOADER",
+    "BUILT-IN BROWSER LOADER · {firmware}"
+  ],
+  "actualLoadingReasons": [
+    {
+      "kind": "browser",
+      "available": true,
+      "text": "Open this host on the matching console to use its built-in browser loader."
+    },
+    {
+      "kind": "plugin",
+      "available": false,
+      "text": "This plugin loads through the console’s native plugin manager. Web loading is not available for this build."
+    },
+    {
+      "kind": "data",
+      "available": false,
+      "text": "Install this file in the native cheat or patch manager, then enable it in the game."
+    },
+    {
+      "kind": "unsupported",
+      "available": false,
+      "text": "No verified built-in loading method is available for this build. Setup and original sources are under Requirements."
+    }
+  ],
+  "actualDownloadErrors": [
+    "This entry does not provide a downloadable file.",
+    "Update the console downloader catalogue before saving this file to the console.",
+    "Choose PS4 or PS5.",
+    "Choose a file from the console catalogue."
+  ],
+  "legacyVariantsChecked": 15,
+  "browserRuntimesChecked": [
+    {
+      "id": "built-in-ps4-900",
+      "title": "PS4 9.00 · PSFree / Lapse",
+      "firmwares": [
+        "9.00"
+      ],
+      "requirements": [
+        "Open on the matching console browser and choose Start on the built-in loader page. Nothing runs when viewing the dashboard.",
+        "Native BIN listener: TCP 9020. Match this loader’s ABI; other payload transports are separate.",
+        "This PS4 bootstrap does not automatically load GoldHEN. Its raw BIN port 9020 is separate from GoldHEN HTTP port 9090 and ELF port 9021.",
+        "Static dependencies and file checksums verified. Console hardware execution has not been tested."
+      ]
+    },
+    {
+      "id": "built-in-ps5-umtx",
+      "title": "PS5 · UMTX ELF loader",
+      "firmwares": [
+        "1.00",
+        "1.01",
+        "1.02",
+        "1.05",
+        "1.10",
+        "1.11",
+        "1.12",
+        "1.13",
+        "1.14",
+        "2.00",
+        "2.20",
+        "2.25",
+        "2.26",
+        "2.30",
+        "2.50",
+        "2.70",
+        "3.00",
+        "3.20",
+        "4.00",
+        "4.02",
+        "4.03",
+        "4.50",
+        "4.51"
+      ],
+      "requirements": [
+        "Open on the matching console browser and choose Start on the built-in loader page. Nothing runs when viewing the dashboard.",
+        "Native ELF listener: TCP 9021. Match this loader’s ABI; other payload transports are separate.",
+        "The bundled PS5 ELF loader is limited to the listed versions below 5.00; the upstream source reports its loader broken on 5.xx.",
+        "Static dependencies and file checksums verified. Console hardware execution has not been tested."
+      ]
+    }
+  ],
+  "protectedValues": [
+    "product and host names",
+    "game/menu/trainer versions",
+    "CUSA title IDs",
+    "file formats",
+    "user-supplied values"
+  ],
+  "checks": [
+    {
+      "language": "es",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "pt",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "fr",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "de",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "ru",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "tr",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "pl",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "it",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "zh",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "ja",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "ko",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "th",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "vi",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "id",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "hi",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "sr",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "nl",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "ka",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "ar",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    },
+    {
+      "language": "he",
+      "dictionaryKeys": 478,
+      "sourcePackKeys": 422,
+      "newSourceKeys": 41,
+      "runtimeLookups": 107,
+      "placeholderMismatches": 0,
+      "missingKeys": 0,
+      "passed": true
+    }
+  ],
+  "samples": {
+    "es": {
+      "load": "Cargar",
+      "deviceDestination": "Destino de descarga: Este dispositivo",
+      "consoleDestination": "Destino de descarga: PS5",
+      "unavailablePlugin": "Este plugin se carga mediante el gestor de plugins nativo de la consola. Esta compilación no admite carga web."
+    },
+    "fr": {
+      "load": "Charger",
+      "deviceDestination": "Destination du téléchargement: Cet appareil",
+      "consoleDestination": "Destination du téléchargement: PS5",
+      "unavailablePlugin": "Ce plugin se charge via le gestionnaire de plugins natif de la console. Le chargement web n’est pas disponible pour cette version."
+    },
+    "ja": {
+      "load": "読み込む",
+      "deviceDestination": "ダウンロードの保存先: この端末",
+      "consoleDestination": "ダウンロードの保存先: PS5",
+      "unavailablePlugin": "このプラグインはコンソール標準のプラグインマネージャーで読み込みます。このビルドはウェブからの読み込みに対応していません。"
+    },
+    "ar": {
+      "load": "تحميل",
+      "deviceDestination": "وجهة التنزيل: هذا الجهاز",
+      "consoleDestination": "وجهة التنزيل: PS5",
+      "unavailablePlugin": "تُحمّل هذه الإضافة عبر مدير الإضافات الأصلي في جهاز الألعاب. التحميل عبر الويب غير متاح لهذه النسخة."
+    },
+    "he": {
+      "load": "טעינה",
+      "deviceDestination": "יעד ההורדה: מכשיר זה",
+      "consoleDestination": "יעד ההורדה: PS5",
+      "unavailablePlugin": "תוסף זה נטען דרך מנהל התוספים המובנה בקונסולה. טעינה דרך האינטרנט אינה זמינה לגרסה זו."
+    }
+  },
+  "existingRuntimeSuite": {
+    "command": "node --test scripts/tests/i18n-runtime.test.cjs",
+    "tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "status": "passed"
+  }
+}

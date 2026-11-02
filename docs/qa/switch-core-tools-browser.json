@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-02T09:20:56.604Z",
+  "passed": true,
+  "desktop": {
+    "width": 1280,
+    "paths": [
+      "atmosphere.html",
+      "hekate.html",
+      "retroarch.html"
+    ],
+    "imagesLoaded": true,
+    "overflow": false,
+    "downloads": [
+      2,
+      2,
+      1
+    ],
+    "hubClickVerified": "Atmosphère downloads & setup"
+  },
+  "mobile": [
+    {
+      "documentWidth": 375,
+      "downloadHeight": 48,
+      "imageLoaded": true,
+      "path": "/console/nintendo-switch/atmosphere.html",
+      "viewport": 390
+    },
+    {
+      "documentWidth": 375,
+      "downloadHeight": 48,
+      "imageLoaded": true,
+      "path": "/console/nintendo-switch/hekate.html",
+      "viewport": 390
+    },
+    {
+      "documentWidth": 375,
+      "downloadHeight": 48,
+      "imageLoaded": true,
+      "path": "/console/nintendo-switch/retroarch.html",
+      "viewport": 390
+    }
+  ],
+  "screenshots": [
+    "docs/qa/switch-atmosphere-page.jpg",
+    "docs/qa/switch-hekate-page.jpg",
+    "docs/qa/switch-retroarch-page.jpg",
+    "docs/qa/switch-retroarch-mobile-download.jpg"
+  ]
+}

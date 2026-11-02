@@ -1,0 +1,189 @@
+{
+  "updatedAt": "2026-11-02T09:49:35.249Z",
+  "status": "Complete locally: remaining native Xbox page added, shared archive reconciled, current theme/download/navigation integration verified.",
+  "preview": "http://127.0.0.1:8767/console/themes.html",
+  "themes": {
+    "total": 36,
+    "readyDownloads": 36,
+    "Switch": 8,
+    "WiiU": 8,
+    "Nintendo2DS3DS": 8,
+    "PS3": 12
+  },
+  "pc": {
+    "entries": 29,
+    "archivedBuilds": 22,
+    "publicMirrors": 21,
+    "verifiedBytes": 689661708,
+    "edenNS2": "Exact requested repository has Windows source instructions; Linux untested, no verified macOS route or packaged release."
+  },
+  "archiveSnapshot": {
+    "checkedAt": "2026-11-02T08:43:08Z",
+    "items": 1351,
+    "fileRecords": 2185,
+    "missingPaths": 0,
+    "unlocatedRecords": 63,
+    "note": "Successful verified cooperative merge and organized index refresh. Other console chats can add later files; retain all sidecars/events and repeat reconciliation after they finish."
+  },
+  "verification": {
+    "focusedTests": 26,
+    "passed": 26,
+    "siteAudit": {
+      "pages": 278,
+      "links": 28939,
+      "issues": 0
+    },
+    "navigation": {
+      "pendingChanges": 0,
+      "missingDestinations": 0
+    },
+    "browser": "Theme search/reset/platform filters and PC OS/package filters passed. PC390/320 and Xbox390 phone layouts have no horizontal overflow. Xbox desktop images loaded. No console builds executed."
+  },
+  "rootEntrypoints": [
+    "node scripts/build-console-themes.cjs",
+    "node scripts/build-pc-emulators.cjs",
+    "node scripts/integrate-console-expansion.cjs"
+  ],
+  "laterReconciliation": [
+    "Read each docs/chat-handoffs/*.json before rebuilding its console.",
+    "After remaining console chats finish, rebuild theme hub and run integrate-console-expansion.cjs to connect newly ready pages.",
+    "Use normal F: escalation for node scripts/console-expansion-archive.cjs --all --verify, then node scripts/refresh-local-download-index.cjs --write.",
+    "Run node scripts/audit-site.cjs. Do not run broad legacy Retro/console builds over the scoped expansions."
+  ],
+  "threads": [
+    {
+      "scope": "switch-themes",
+      "title": "Nintendo Switch themes and Themezer",
+      "threadId": "01a19b34-2772-78c3-9b6c-8acf7693522b",
+      "canonical": "/console/nintendo-switch/themes.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "wiiu-more",
+      "title": "Wii U themes and homebrew expansion",
+      "threadId": "01a19b34-3189-7e52-943e-a756a17b1710",
+      "canonical": "/console/retro/wiiu.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "3ds-more",
+      "title": "2DS and 3DS themes, apps and games",
+      "threadId": "01a19b35-18a7-7f61-8314-2832cbec08d6",
+      "canonical": "/console/retro/3ds.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "ps3-themes",
+      "title": "PS3 themes and Themezer collection",
+      "threadId": "01a19b35-a469-7462-b301-4faecfa6ce86",
+      "canonical": "/console/ps3/themes.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "ps2-more",
+      "title": "PlayStation 2 homebrew, ports and emulators",
+      "threadId": "01a19b37-f662-7f23-a72f-a3a7e1f36494",
+      "canonical": "/console/retro/ps2.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "xbox-original",
+      "title": "Original Xbox homebrew and emulators",
+      "threadId": "01a19b39-e27d-7fc0-92b7-b088cae94b14",
+      "canonical": "/console/retro/xbox.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "gamecube-more",
+      "title": "GameCube homebrew, ports and emulators",
+      "threadId": "01a19b45-8327-7ce3-b7dd-43e14b643a9b",
+      "canonical": "/console/retro/gamecube.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "xbox-one-series",
+      "title": "Xbox One and Series Dev Mode guide",
+      "threadId": "01a19b57-c112-7281-a9ab-cbe2cadb7e52",
+      "canonical": "/console/xbox-one-series.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "switch2-console",
+      "title": "Nintendo Switch 2 console resources",
+      "threadId": "01a19b58-0fdf-7770-bc8d-3aa847244bcb",
+      "canonical": "/console/nintendo-switch-2.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "wii-more",
+      "title": "Nintendo Wii homebrew, ports and emulators",
+      "threadId": "01a19b58-21a4-7b52-8361-01ce320a6150",
+      "canonical": "/console/retro/wii.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "ds-dsi-more",
+      "title": "Nintendo DS and DSi homebrew expansion",
+      "threadId": "01a19b58-3891-7780-ad2d-6e0694b90ac3",
+      "canonical": "/console/retro/ds.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "psp-more",
+      "title": "PSP homebrew, themes, ports and emulators",
+      "threadId": "01a19b58-46bc-7a31-af8e-43e6771056a9",
+      "canonical": "/console/retro/psp.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "vita-more",
+      "title": "PS Vita homebrew, ports and emulator library",
+      "threadId": "01a19b58-55a9-72e2-9783-0af1e5bfafa7",
+      "canonical": "/console/psvita/library.html",
+      "destinationPresent": true
+    },
+    {
+      "scope": "xbox360-more",
+      "title": "Xbox 360 apps, ports and emulator library",
+      "threadId": "01a19b58-67b3-7de1-be36-431223a7526f",
+      "canonical": "/console/xbox360/library.html",
+      "destinationPresent": true
+    }
+  ],
+  "remaining": "No implementation or archive work remains in the recorded expansion. Two inaccessible/incomplete VirusMike source candidates remain truthfully unavailable; no ready build is claimed.",
+  "constraints": [
+    "Local only; no commit, publish, deployment or worktree.",
+    "No videos added to expanded pages.",
+    "All older builds and original archives retained.",
+    "No physical console installation or execution claimed."
+  ],
+  "finalVerification": "docs/qa/console-expansion-final-verification.json",
+  "finalTests": {
+    "checkedAt": "2026-11-02T09:49:35.249Z",
+    "tests": 398,
+    "passed": 398,
+    "failed": 0,
+    "scope": "All scripts/tests/*.test.cjs",
+    "output": "docs/qa/console-expansion-final-tests.txt"
+  },
+  "finalSiteAudit": {
+    "checkedAt": "2026-11-02T09:49:35.249Z",
+    "publicPages": 402,
+    "localLinksAndAssets": 40061,
+    "issues": 0,
+    "output": "docs/qa/console-expansion-final-site-audit.txt"
+  },
+  "finalArchive": {
+    "mode": "write",
+    "backupRoot": "F:\\whatsite-backup-downloads-etc",
+    "items": 1630,
+    "fileRecords": 2498,
+    "presentFileRecords": 2498,
+    "missingFileRecords": 0,
+    "missingPaths": 0,
+    "otherUnavailableRecords": 0,
+    "availability": {
+      "present": 2498
+    }
+  }
+}

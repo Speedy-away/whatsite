@@ -1,0 +1,5 @@
+.extra-game-filter { display: grid; gap: 10px; margin: 0 0 24px; max-width: 640px; }
+.extra-game-filter input { width: 100%; min-height: 48px; padding: 12px 16px; color: var(--text-primary); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); font: inherit; }
+.extra-game-filter input:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+.extra-game-filter p { color: var(--text-secondary); font-size: .875rem; }
+[data-extra-game-grid] > [hidden] { display: none !important; }

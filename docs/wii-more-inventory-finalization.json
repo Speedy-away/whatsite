@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-02T09:05:47.216Z",
+  "status": "complete",
+  "mergeCommand": "node scripts/console-expansion-archive.cjs --all --verify",
+  "merge": {
+    "items": 1401,
+    "fileRecords": 2234
+  },
+  "index": {
+    "updated": "2026-11-02T09:05:45.144Z",
+    "mode": "metadata-only",
+    "history": "F:\\whatsite-backup-downloads-etc\\archive-history\\index-refresh-2026-11-02T09-05-45-144Z-V98v6H",
+    "items": 1401,
+    "fileRecords": 2234,
+    "presentFileRecords": 2171,
+    "missingFileRecords": 0,
+    "missingPaths": 0,
+    "otherUnavailableRecords": 63,
+    "availability": {
+      "present": 2171,
+      "unlocated": 63
+    }
+  },
+  "preservation": {
+    "baselineItemComparisons": 8334,
+    "baselineFileComparisons": 13328,
+    "scopedSidecars": 14,
+    "scopedItemComparisons": 436,
+    "scopedFileComparisons": 526,
+    "lostItems": 0,
+    "lostFilesOrVersions": 0,
+    "globalInventoryItemsIdentical": true
+  },
+  "payloadsMovedReplacedDeleted": false,
+  "payloadsExecuted": false,
+  "notes": [
+    "Metadata history preserved by the merge helper and index refresher.",
+    "Older unlocated records remain truthfully labelled; zero recorded paths are missing.",
+    "Both inventories contain all current scoped sidecar records. Top-level updated timestamps can differ during concurrent metadata work."
+  ]
+}

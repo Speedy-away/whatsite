@@ -1,0 +1,32 @@
+{
+  "updatedAt": "2026-11-02T12:18:51.500Z",
+  "status": "Layout and image fixes complete locally; no deployment.",
+  "changes": [
+    "Advertisement placement now follows the entire outer content section, including nested card guides; existing misplaced ads are relocated on regeneration.",
+    "PS3 resource grids use natural card heights and no auto-pushed link gaps.",
+    "Generic title-ID placeholder rows omitted; source-confirmed regions and requirements retained.",
+    "Every resource uses its verified source image or clearly labelled game/catalogue artwork; World at War uses official cover art.",
+    "PS3 catalogue CSS cache version3.3.3 retained through shared mobile postprocessing."
+  ],
+  "verification": {
+    "testsPassed": 23,
+    "testsFailed": 0,
+    "desktopBrowserPassed": true,
+    "mobileBrowserPassed": true,
+    "adBrowserPassed": true,
+    "linksMetadataSizesPassed": true,
+    "report": "docs/ps3-browser-qa.json",
+    "desktopScreenshot": "docs/screenshots/ps3-waw-layout.png",
+    "mobileScreenshot": "docs/screenshots/ps3-waw-layout-mobile.png",
+    "adScreenshot": "docs/screenshots/ps3-waw-advertisement.png",
+    "fullSuite": {
+      "total": 441,
+      "passed": 438,
+      "failed": 3,
+      "remainingFailures": "Xbox hub/library tests; no Xbox files modified in this task.",
+      "report": "docs/qa/ps3-layout-all-tests.txt"
+    },
+    "focusedTestsPassed": 23
+  },
+  "preservation": "Download links, hashes, archived files, known compatibility restrictions and shared changes retained. No videos or downloaded payload execution."
+}

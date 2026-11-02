@@ -1,0 +1,35 @@
+✔ fallback markup remains visible without JavaScript and helpers preserve normal download links (1.6671ms)
+✔ local guide content moves once, closes, restores its position and returns focus (1.084ms)
+✔ legacy guide-only setup anchors enhance without hiding resource/download grids (0.1987ms)
+✔ popup URLs are limited to game and mod guides, including game source-code panels (0.2093ms)
+✔ PS3 per-resource guides open in a dialog while the menu card and downloads stay in place (0.183ms)
+✔ Vita jailbreak and CFW guide links keep normal full-page navigation (0.1265ms)
+✔ PS5 setup sections remain visible and use normal in-page anchors (0.1045ms)
+✔ a console landing page can open a mod guide while system guide links stay normal (3.5152ms)
+✔ modified clicks, downloads and off-site links keep their normal behavior (0.3956ms)
+✔ backdrop close requires a press and click outside, so dragging from content does not dismiss (0.2396ms)
+✔ remote content keeps relative media/download links working and namespaces IDs and references (0.1788ms)
+✔ remote guides keep marked YouTube embeds with canonical safe player settings (0.2808ms)
+✔ remote guides remove unmarked players and unapproved iframe hosts, paths and protocols (0.1925ms)
+✔ video companions retain a valid source timestamp through remote guide sanitization (0.2847ms)
+✔ failed remote guide loads fall back to the original full page (0.348ms)
+✔ closing while a remote request is pending aborts it and prevents late content insertion (0.1952ms)
+✔ current COD builder keeps reachable guide panels without videos while the media renderer retains source support (198.4167ms)
+✔ metadata traversal includes public libraries and excludes ready/downloaded HTML (0.6255ms)
+✔ main subject extraction excludes navigation, script markup and related footer links (0.5872ms)
+✔ platform prefixes respect generations and exact article routes (0.0782ms)
+✔ Safety Tips content remains available while unrelated safety callouts are excluded (0.7499ms)
+✔ description fallback names actual resources and trims at word or sentence boundaries (0.5438ms)
+✔ old source group is replaced once while surrounding navigation and content stay intact (1.2072ms)
+✔ source group inserts before Tools and preserves a page with no sidebar (0.7658ms)
+✔ category active states distinguish category roots and child pages including historic game URLs (0.4985ms)
+✔ downloaded HTML, receiver helpers and private research files keep their exact bytes (0.1989ms)
+✔ shared icon regeneration keeps the new category group idempotent (9.4742ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 276.8226

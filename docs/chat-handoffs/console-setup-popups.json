@@ -1,0 +1,47 @@
+{
+  "scope": "console-setup-popups",
+  "updatedAt": "2026-11-02T12:17:50.685Z",
+  "status": "complete locally",
+  "userRequest": "Make setup guides on other console pages open in popup boxes too",
+  "files": [
+    "assets/console-setup-popups.js",
+    "assets/console-setup-popups.css",
+    "scripts/apply-console-setup-popups.cjs",
+    "scripts/guide-popup-policy.cjs",
+    "scripts/tests/console-setup-popups.test.cjs",
+    "docs/console-setup-popups.md"
+  ],
+  "integration": {
+    "consolePagesUpdated": 204,
+    "additiveOnly": true,
+    "regeneration": "Shared guide-popup-policy imports the additive integration; node scripts/apply-console-setup-popups.cjs refreshes other generators",
+    "check": "node scripts/apply-console-setup-popups.cjs --check"
+  },
+  "verification": {
+    "focusedTests": 20,
+    "passed": 20,
+    "siteAudit": {
+      "publicPages": 429,
+      "localLinksAndAssets": 46430,
+      "issues": 0
+    },
+    "browser": "docs/qa/console-setup-popups-browser.json",
+    "representativeConsoleRoutes": 14
+  },
+  "screenshots": [
+    "docs/qa/console-setup-wii-desktop.png",
+    "docs/qa/console-setup-ps5-mobile.png"
+  ],
+  "preservation": [
+    "Download grids and firmware selectors stay in place",
+    "Existing game/mod guide dialogs retained",
+    "Existing PS2 popup implementation retained",
+    "Standalone PS4/PS5 receiver bytes excluded",
+    "No download files, archive inventory or firmware pins changed",
+    "External project documentation stays external"
+  ],
+  "remaining": [],
+  "publication": "No commit, publication or deployment",
+  "finalVerifiedAt": "2026-11-02T12:20:17.409Z",
+  "closeout": "Final checks passed; work remains local. User requested chat deletion; available control archives the chat."
+}

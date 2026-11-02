@@ -1,0 +1,49 @@
+/* Scoped DS/DSi library styles; shared guide styles remain the foundation. */
+.ds-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 14px; margin: 24px 0 12px; }
+.ds-toolbar label { display: grid; gap: 8px; flex: 1 1 240px; min-width: 0; color: var(--text-primary); font-size: .9rem; font-weight: 600; }
+.ds-toolbar label:first-child { flex-grow: 2; }
+.ds-toolbar input, .ds-toolbar select, .ds-toolbar button { box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; padding: 10px 14px; font: inherit; font-weight: 400; color: var(--text-primary); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm, 8px); }
+.ds-toolbar input::placeholder { color: var(--text-secondary); opacity: 1; }
+.ds-toolbar select { cursor: pointer; }
+.ds-toolbar button { width: auto; cursor: pointer; font-weight: 600; }
+.ds-toolbar button:hover { border-color: var(--accent-light, #8be6bf); color: var(--accent-light, #8be6bf); }
+.ds-toolbar :is(input, select, button):focus-visible, [data-ds-card] a:focus-visible, .ds-file-details summary:focus-visible { outline: 2px solid var(--accent-light, #8be6bf); outline-offset: 3px; }
+.ds-count { color: var(--text-secondary); margin: 12px 0 24px; font-size: .9rem; font-variant-numeric: tabular-nums; }
+.ds-empty { padding: 24px; margin: 24px 0; border: 1px solid var(--border); border-radius: var(--radius-sm, 8px); color: var(--text-secondary); }
+.ds-tags { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; list-style: none; }
+.ds-tags > :is(span, li) { padding: 4px 8px; border: 1px solid var(--border); border-radius: 5px; color: var(--accent-light, #a9e8d1); font-size: .73rem; line-height: 1.5; }
+.ds-file-details { width: 100%; min-width: 0; font-size: .8rem; }
+.ds-file-details summary { min-height: 44px; padding: 12px 0; color: var(--accent-light, #a9e8d1); cursor: pointer; }
+.ds-file-details dl { margin: 6px 0; }
+.ds-file-details dt { color: var(--text-primary); font-weight: 600; }
+.ds-file-details dd { margin: 4px 0 12px; color: var(--text-secondary); overflow-wrap: anywhere; }
+.ds-file-details :is(code, a), .ds-install code { overflow-wrap: anywhere; word-break: break-word; }
+.ds-file-details code { font-size: .75rem; }
+.ds-install { max-width: 100%; margin: 4px 0; padding-left: 13px; border-left: 2px solid var(--accent-light, #66d5ad); font-size: .86rem; line-height: 1.65; color: var(--text-secondary); }
+.ds-install ol, .ds-install ul { padding-left: 20px; }
+.ds-install li + li { margin-top: 8px; }
+.ds-credit { margin: 0; color: var(--text-secondary); font-size: .78rem !important; line-height: 1.5; }
+.ds-credit a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; }
+.ds-compat { color: var(--text-secondary); font-size: .86rem; line-height: 1.65; }
+.ds-models { max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-gutter: stable; }
+.ds-models table, table.ds-compat { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .9rem; }
+.ds-models :is(th, td), table.ds-compat :is(th, td) { padding: 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+.ds-models th, table.ds-compat th { color: var(--text-primary); font-weight: 600; }
+.ds-models td, table.ds-compat td { color: var(--text-secondary); line-height: 1.65; }
+.ds-models :is(a, code) { overflow-wrap: anywhere; }
+.ds-models a { display: inline-flex; align-items: center; min-height: 44px; }
+[data-ds-card] { min-width: 0; }
+[data-ds-card] .guide-links { width: 100%; }
+[data-ds-card] .guide-links a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; line-height: 1.5; }
+.guide-resource img.ds-icon { display: block; width: 100%; height: 112px; max-height: 128px; aspect-ratio: auto; object-fit: contain; image-rendering: pixelated; padding: 8px; background: rgb(0 0 0 / .12); }
+.guide-resource img.ds-logo { display: block; width: 100%; height: 112px; aspect-ratio: auto; object-fit: contain; padding: 8px; }
+.guide-resource img.ds-screenshot { display: block; width: 100%; height: auto; max-height: 280px; aspect-ratio: 256 / 384; object-fit: contain; image-rendering: auto; background: rgb(0 0 0 / .12); }
+[data-ds-card][hidden], [data-ds-group-section][hidden], [data-ds-empty][hidden] { display: none !important; }
+@media (max-width: 620px) {
+  .ds-toolbar { gap: 12px; }
+  .ds-toolbar label { flex-basis: 100%; }
+  .ds-toolbar button { width: 100%; }
+  .ds-models :is(th, td), table.ds-compat :is(th, td) { padding: 12px; }
+  [data-ds-card] .guide-links a { flex: 1 1 11rem; }
+  .guide-resource img.ds-screenshot { max-height: 260px; }
+}

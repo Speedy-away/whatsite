@@ -1,0 +1,1880 @@
+{
+  "scope": "switch-app-pages",
+  "updatedAt": "2026-11-02T12:33:15.739Z",
+  "status": "Complete locally: all 28 Switch library entries have dedicated pages. This builder owns 27 pages (13 utilities, 9 homebrew games, 5 emulators) with 28 ready files; App Store remains its existing independently owned page. Latest batch adds 16 pages (7 utilities, 9 games).",
+  "canonicalPages": [
+    "https://whatwhatboy.com/console/nintendo-switch/jksv.html",
+    "https://whatwhatboy.com/console/nintendo-switch/checkpoint.html",
+    "https://whatwhatboy.com/console/nintendo-switch/ftpd.html",
+    "https://whatwhatboy.com/console/nintendo-switch/nx-shell.html",
+    "https://whatwhatboy.com/console/nintendo-switch/nxmp.html",
+    "https://whatwhatboy.com/console/nintendo-switch/moonlight.html",
+    "https://whatwhatboy.com/console/nintendo-switch/mgba.html",
+    "https://whatwhatboy.com/console/nintendo-switch/melonds.html",
+    "https://whatwhatboy.com/console/nintendo-switch/pnes.html",
+    "https://whatwhatboy.com/console/nintendo-switch/psnes.html",
+    "https://whatwhatboy.com/console/nintendo-switch/ppsspp.html",
+    "https://whatwhatboy.com/console/nintendo-switch/homebrew-menu.html",
+    "https://whatwhatboy.com/console/nintendo-switch/ftpsrv.html",
+    "https://whatwhatboy.com/console/nintendo-switch/switchident.html",
+    "https://whatwhatboy.com/console/nintendo-switch/90dns-tester.html",
+    "https://whatwhatboy.com/console/nintendo-switch/opensupaplex.html",
+    "https://whatwhatboy.com/console/nintendo-switch/2048.html",
+    "https://whatwhatboy.com/console/nintendo-switch/sudokul.html",
+    "https://whatwhatboy.com/console/nintendo-switch/brogue-ce.html",
+    "https://whatwhatboy.com/console/nintendo-switch/minesweeper.html",
+    "https://whatwhatboy.com/console/nintendo-switch/space-game-nx.html",
+    "https://whatwhatboy.com/console/nintendo-switch/pinballnx.html",
+    "https://whatwhatboy.com/console/nintendo-switch/cpp-snake-nx.html",
+    "https://whatwhatboy.com/console/nintendo-switch/jump-n-bump.html",
+    "https://whatwhatboy.com/console/nintendo-switch/spacevue.html",
+    "https://whatwhatboy.com/console/nintendo-switch/nxthemes-installer.html",
+    "https://whatwhatboy.com/console/nintendo-switch/simplemodmanager.html"
+  ],
+  "sourceBuilders": {
+    "prepare": "node scripts/prepare-switch-app-pages.cjs",
+    "build": "node scripts/build-switch-app-pages.cjs",
+    "library": "node scripts/build-switch-homebrew.cjs",
+    "restoreHubTools": "node scripts/build-switch-resource-pages.cjs",
+    "verify": "node scripts/verify-switch-app-pages.cjs",
+    "merge": "node scripts/console-expansion-archive.cjs --inventory=docs/switch-app-pages-private-inventory.json --verify",
+    "refresh": "node scripts/refresh-local-download-index.cjs --write",
+    "embeddedIcons": "node scripts/prepare-switch-embedded-icons.cjs"
+  },
+  "content": "scripts/switch-app-page-content.cjs",
+  "catalogue": "docs/switch-app-pages.json",
+  "archiveInventory": "docs/switch-app-pages-private-inventory.json",
+  "files": [
+    {
+      "app": "JKSV",
+      "name": "JKSV.nro",
+      "version": "12/02/2025",
+      "bytes": 10130471,
+      "sha256": "a2b7f6372a4b81f3c3194aa6f96f2824bdea853b9a8ebf8c4a008d0d865a0cbf",
+      "sourceUrl": "https://github.com/J-D-K/JKSV/releases/download/12/02/2025/JKSV.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/jksv/12_02_2025/JKSV.nro",
+      "itemId": "switch-app-pages-jksv",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Saves"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 9850880,
+          "fileBytes": 10130471,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 7417856
+            },
+            {
+              "name": "readOnly",
+              "offset": 7417856,
+              "bytes": 2080768
+            },
+            {
+              "name": "data",
+              "offset": 9498624,
+              "bytes": 352256
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Saves\\JKSV\\Builds\\12_02_2025\\JKSV.nro",
+      "indexed": true
+    },
+    {
+      "app": "Checkpoint",
+      "name": "Checkpoint.nro",
+      "version": "5.3.0",
+      "bytes": 5047633,
+      "sha256": "e2c76687df29f845f11a61a62a25327703b22250d4a78dbdbed6dd1401253e48",
+      "sourceUrl": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/Checkpoint/5.3.0/Checkpoint.nro",
+      "itemId": "switch-app-pages-checkpoint",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Saves"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 4648960,
+          "fileBytes": 5047633,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 3547136
+            },
+            {
+              "name": "readOnly",
+              "offset": 3547136,
+              "bytes": 1007616
+            },
+            {
+              "name": "data",
+              "offset": 4554752,
+              "bytes": 94208
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Saves\\Checkpoint\\Builds\\5.3.0\\Checkpoint.nro",
+      "indexed": true
+    },
+    {
+      "app": "ftpd",
+      "name": "ftpd.nro",
+      "version": "3.2.1",
+      "bytes": 1533963,
+      "sha256": "cc8b2b335ccbe1bf1215a29c4ef3698effc879d3ddde2c6c0de505d14bc39c90",
+      "sourceUrl": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/ftpd/3.2.1/ftpd.nro",
+      "itemId": "switch-app-pages-ftpd",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Files & network"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 1495040,
+          "fileBytes": 1533963,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 1175552
+            },
+            {
+              "name": "readOnly",
+              "offset": 1175552,
+              "bytes": 286720
+            },
+            {
+              "name": "data",
+              "offset": 1462272,
+              "bytes": 32768
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Files & network\\ftpd\\Builds\\3.2.1\\ftpd.nro",
+      "indexed": true
+    },
+    {
+      "app": "ftpd",
+      "name": "ftpd-sd-package.zip",
+      "version": "3.2.1",
+      "bytes": 1011008,
+      "sha256": "9ea5f2397b57ac294cefc4b7e8abc3f881c23adf62060b35300ab0f1f47e92df",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/ftpd.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/ftpd/3.2.1/ftpd-sd-package.zip",
+      "itemId": "switch-app-pages-ftpd",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Files & network"
+      ],
+      "archived": true,
+      "role": "store-package",
+      "bundle": true,
+      "inspection": [
+        {
+          "path": "switch/ftpd-classic/ftpd-classic.nro",
+          "sha256": "aac80757163aea4b8919d403e98ab88a3190c9347fec4182dbcf9905ba64cbba",
+          "format": "NRO0",
+          "imageBytes": 495616,
+          "fileBytes": 519311,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 360448
+            },
+            {
+              "name": "readOnly",
+              "offset": 360448,
+              "bytes": 110592
+            },
+            {
+              "name": "data",
+              "offset": 471040,
+              "bytes": 24576
+            }
+          ]
+        },
+        {
+          "path": "switch/ftpd/ftpd.nro",
+          "sha256": "9817da81d4b1ccfbb206c9e2f425e25c0f5e0051b7a44d8556a78ee522391977",
+          "format": "NRO0",
+          "imageBytes": 1462272,
+          "fileBytes": 1501247,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 1105920
+            },
+            {
+              "name": "readOnly",
+              "offset": 1105920,
+              "bytes": 327680
+            },
+            {
+              "name": "data",
+              "offset": 1433600,
+              "bytes": 28672
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Files & network\\ftpd\\Builds\\3.2.1\\ftpd-sd-package.zip",
+      "indexed": true
+    },
+    {
+      "app": "NX-Shell",
+      "name": "NX-Shell.nro",
+      "version": "4.01",
+      "bytes": 8575621,
+      "sha256": "5aafd64efde89c0881cdbd865a1b2b054e20329d43e0bce0e1b77378977f5878",
+      "sourceUrl": "https://github.com/joel16/NX-Shell/releases/download/4.01/NX-Shell.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/NX-shell/4.01/NX-Shell.nro",
+      "itemId": "switch-app-pages-nx-shell",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Files & network"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 8523776,
+          "fileBytes": 8575621,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 5820416
+            },
+            {
+              "name": "readOnly",
+              "offset": 5820416,
+              "bytes": 2379776
+            },
+            {
+              "name": "data",
+              "offset": 8200192,
+              "bytes": 323584
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Files & network\\NX Shell\\Builds\\4.01\\NX-Shell.nro",
+      "indexed": true
+    },
+    {
+      "app": "NXMP",
+      "name": "NXMP-sd-package.zip",
+      "version": "0.9.3",
+      "bytes": 45564568,
+      "sha256": "9d9dbc1bc58ed08eeafa88fa67d61632c58195ddd17d0f37526a9d90ce1e1853",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/NXMP.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/NXMP/0.9.3/NXMP-sd-package.zip",
+      "itemId": "switch-app-pages-nxmp",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Media & streaming"
+      ],
+      "archived": true,
+      "role": "store-package",
+      "bundle": true,
+      "inspection": [
+        {
+          "path": "switch/nxmp/nxmp.nro",
+          "sha256": "00c598444c285d8b658fd001403141da2617d979d9a037577eabf37e43568665",
+          "format": "NRO0",
+          "imageBytes": 65200128,
+          "fileBytes": 66688940,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 22499328
+            },
+            {
+              "name": "readOnly",
+              "offset": 22499328,
+              "bytes": 41070592
+            },
+            {
+              "name": "data",
+              "offset": 63569920,
+              "bytes": 1630208
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Media & streaming\\nxmp\\Builds\\0.9.3\\NXMP-sd-package.zip",
+      "indexed": true
+    },
+    {
+      "app": "Moonlight-Switch",
+      "name": "Moonlight-Switch.nro",
+      "version": "1.5.0",
+      "bytes": 17677907,
+      "sha256": "594167a17b587d3bf828ea3477afbe71c114b4ef5d25940ea4ca831788d0af69",
+      "sourceUrl": "https://github.com/XITRIX/Moonlight-Switch/releases/download/v1.5.0/Moonlight-Switch.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/Moonlight-Switch/1.5.0/Moonlight-Switch.nro",
+      "itemId": "switch-app-pages-moonlight",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Media & streaming"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 17117184,
+          "fileBytes": 17677907,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 12525568
+            },
+            {
+              "name": "readOnly",
+              "offset": 12525568,
+              "bytes": 4046848
+            },
+            {
+              "name": "data",
+              "offset": 16572416,
+              "bytes": 544768
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Media & streaming\\Moonlight Switch\\Builds\\1.5.0\\Moonlight-Switch.nro",
+      "indexed": true
+    },
+    {
+      "app": "mGBA",
+      "name": "mgba.nro",
+      "version": "0.10.5",
+      "bytes": 7956467,
+      "sha256": "00607daffe2d6df20dafff5936eeec1c19e77328471abce76992edc33626ca28",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/mGBA.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/mGBA/0.10.5/mgba.nro",
+      "itemId": "switch-app-pages-mgba",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Emulators",
+        "Emulators"
+      ],
+      "archived": true,
+      "role": "extracted-nro",
+      "derivedFrom": {
+        "sha256": "20be0f72699415c2b25036833863ae1c9221be72371511bd186b28ae11214f55",
+        "member": "switch/mgba.nro"
+      },
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 7905280,
+          "fileBytes": 7956467,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 5206016
+            },
+            {
+              "name": "readOnly",
+              "offset": 5206016,
+              "bytes": 2322432
+            },
+            {
+              "name": "data",
+              "offset": 7528448,
+              "bytes": 376832
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Emulators\\Emulators\\mgba\\Builds\\0.10.5\\mgba.nro",
+      "indexed": true
+    },
+    {
+      "app": "melonDS",
+      "name": "melonDS.nro",
+      "version": "7.2.1",
+      "bytes": 3252598,
+      "sha256": "aa358df9261f8a7f160060fbaaf8b39c4b1d0a43cb72b608334f32c4cf8aef42",
+      "sourceUrl": "https://github.com/ArcDelta/melonDS/releases/download/7.2.1/melonDS.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/melonDS/7.2.1/melonDS.nro",
+      "itemId": "switch-app-pages-melonds",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Emulators",
+        "Emulators"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 2949120,
+          "fileBytes": 3252598,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 2129920
+            },
+            {
+              "name": "readOnly",
+              "offset": 2129920,
+              "bytes": 638976
+            },
+            {
+              "name": "data",
+              "offset": 2768896,
+              "bytes": 180224
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Emulators\\Emulators\\melonDS\\Builds\\7.2.1\\melonDS.nro",
+      "indexed": true
+    },
+    {
+      "app": "pNES",
+      "name": "pnes.nro",
+      "version": "7.2",
+      "bytes": 32694687,
+      "sha256": "6f640a7d3c740229247fadf81b2700b951ad76c24ca940b77eceb5f3f9cdbe9f",
+      "sourceUrl": "https://github.com/Cpasjuste/pemu/releases/download/v7.2/pnes.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/pNES/7.2/pnes.nro",
+      "itemId": "switch-app-pages-pnes",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Emulators",
+        "Emulators"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 31481856,
+          "fileBytes": 32694687,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 22233088
+            },
+            {
+              "name": "readOnly",
+              "offset": 22233088,
+              "bytes": 7401472
+            },
+            {
+              "name": "data",
+              "offset": 29634560,
+              "bytes": 1847296
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Emulators\\Emulators\\pemu\\Builds\\7.2\\pnes.nro",
+      "indexed": true
+    },
+    {
+      "app": "pSNES",
+      "name": "psnes.nro",
+      "version": "7.2",
+      "bytes": 32052730,
+      "sha256": "3343eb76f45498961cb53968451c35b20fb0ec7962060723dcad485cff6633e4",
+      "sourceUrl": "https://github.com/Cpasjuste/pemu/releases/download/v7.2/psnes.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/psnes/7.2/psnes.nro",
+      "itemId": "switch-app-pages-psnes",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Emulators",
+        "Emulators"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 31846400,
+          "fileBytes": 32052730,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 22577152
+            },
+            {
+              "name": "readOnly",
+              "offset": 22577152,
+              "bytes": 7385088
+            },
+            {
+              "name": "data",
+              "offset": 29962240,
+              "bytes": 1884160
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Emulators\\Emulators\\pemu\\Builds\\7.2\\psnes.nro",
+      "indexed": true
+    },
+    {
+      "app": "PPSSPP Standalone",
+      "name": "ppsspp-sd-package.zip",
+      "version": "1.17.x (Sept 9, 2024)",
+      "bytes": 20226510,
+      "sha256": "9296552c26d96c61f04d2aaf12f06f867cf59172b3748c1a4a97367c6361903f",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/ppsspp.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/ppsspp/1.17.x (Sept 9, 2024)/ppsspp-sd-package.zip",
+      "itemId": "switch-app-pages-ppsspp",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Emulators",
+        "Emulators"
+      ],
+      "archived": true,
+      "role": "store-package",
+      "bundle": true,
+      "inspection": [
+        {
+          "path": "switch/ppsspp/PPSSPP_GL.nro",
+          "sha256": "b27c0925f1a1ef87a470256ff208b9d549e67ebdb47c131822facbc191ab7f21",
+          "format": "NRO0",
+          "imageBytes": 21979136,
+          "fileBytes": 22001196,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 15314944
+            },
+            {
+              "name": "readOnly",
+              "offset": 15314944,
+              "bytes": 5869568
+            },
+            {
+              "name": "data",
+              "offset": 21184512,
+              "bytes": 794624
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Emulators\\Emulators\\PPSSPP Standalone\\Builds\\1.17.x (Sept 9, 2024)\\ppsspp-sd-package.zip",
+      "indexed": true
+    },
+    {
+      "app": "Homebrew Menu",
+      "name": "hbmenu.nro",
+      "version": "3.6.1",
+      "bytes": 2455539,
+      "sha256": "6cf6d130515723ebe0041c2479420caf9726895087439ff7b2e528c2ed39c100",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/hbmenu.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/hbmenu/3.6.1/hbmenu.nro",
+      "itemId": "switch-app-pages-homebrew-menu",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Essentials"
+      ],
+      "archived": true,
+      "role": "extracted-nro",
+      "derivedFrom": {
+        "sha256": "f2618e1471a6a41b3e880a27d3930cf8164ea7f3afa20466fdc9e6a4e503479a",
+        "member": "hbmenu.nro"
+      },
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 2387968,
+          "fileBytes": 2455539,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 1769472
+            },
+            {
+              "name": "readOnly",
+              "offset": 1769472,
+              "bytes": 520192
+            },
+            {
+              "name": "data",
+              "offset": 2289664,
+              "bytes": 98304
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Essentials\\nx hbmenu\\Builds\\3.6.1\\hbmenu.nro",
+      "indexed": true
+    },
+    {
+      "app": "ftpsrv",
+      "name": "ftpsrv-sd-package.zip",
+      "version": "1.2.2",
+      "bytes": 446946,
+      "sha256": "23caf41817fd0c76395623fa0611610793010a9485633e004d4b7dd29a98d2e1",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/ftpsrv.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/ftpsrv/1.2.2/ftpsrv-sd-package.zip",
+      "itemId": "switch-app-pages-ftpsrv",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Files & network"
+      ],
+      "archived": true,
+      "role": "store-package",
+      "bundle": true,
+      "inspection": [
+        {
+          "path": "switch/ftpsrv.nro",
+          "sha256": "39ee3a2bf3a2140a33c004ebd735f89c201b5c8067f7bff5500a7ee46a8bab99",
+          "format": "NRO0",
+          "imageBytes": 872448,
+          "fileBytes": 895173,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 618496
+            },
+            {
+              "name": "readOnly",
+              "offset": 618496,
+              "bytes": 229376
+            },
+            {
+              "name": "data",
+              "offset": 847872,
+              "bytes": 24576
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Files & network\\ftpsrv\\Builds\\1.2.2\\ftpsrv-sd-package.zip",
+      "indexed": true
+    },
+    {
+      "app": "SwitchIdent",
+      "name": "SwitchIdent.nro",
+      "version": "0.5",
+      "bytes": 8963995,
+      "sha256": "1f092b58256586d009219f88a22a943846d56e7eac49a9e8774e4366b87e833b",
+      "sourceUrl": "https://github.com/joel16/SwitchIdent/releases/download/0.5/SwitchIdent.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/switchident-GUI/0.5/SwitchIdent.nro",
+      "itemId": "switch-app-pages-switchident",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Diagnostics"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 8503296,
+          "fileBytes": 8963995,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 5988352
+            },
+            {
+              "name": "readOnly",
+              "offset": 5988352,
+              "bytes": 2195456
+            },
+            {
+              "name": "data",
+              "offset": 8183808,
+              "bytes": 319488
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Diagnostics\\SwitchIdent\\Builds\\0.5\\SwitchIdent.nro",
+      "indexed": true
+    },
+    {
+      "app": "Switch 90DNS tester",
+      "name": "Switch_90DNS_tester.nro",
+      "version": "1.0.4",
+      "bytes": 321486,
+      "sha256": "27db5352c32bd2a149274ef278130cff0c30dd4d9c7003836f0a874a134886d2",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/Switch_90DNS_Tester.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/Switch_90DNS_Tester/1.0.4/Switch_90DNS_tester.nro",
+      "itemId": "switch-app-pages-90dns-tester",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Diagnostics"
+      ],
+      "archived": true,
+      "role": "extracted-nro",
+      "derivedFrom": {
+        "sha256": "296d3e8f4f36aee5337001a42cb9fa6dba6fe5f82d4684c72c6ab2dce5eab27e",
+        "member": "switch/Switch_90DNS_Tester/Switch_90DNS_tester.nro"
+      },
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 270336,
+          "fileBytes": 321486,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 188416
+            },
+            {
+              "name": "readOnly",
+              "offset": 188416,
+              "bytes": 65536
+            },
+            {
+              "name": "data",
+              "offset": 253952,
+              "bytes": 16384
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Diagnostics\\Switch 90DNS tester\\Builds\\1.0.4\\Switch_90DNS_tester.nro",
+      "indexed": true
+    },
+    {
+      "app": "OpenSupaplex",
+      "name": "OpenSupaplex-sd-package.zip",
+      "version": "7.2.2",
+      "bytes": 7227648,
+      "sha256": "3cd849233c6ddc0c2f2f6f2f12d83eaabe98c7cb617ec48fb1b43168419989a1",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/OpenSupaplex.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/OpenSupaplex/7.2.2/OpenSupaplex-sd-package.zip",
+      "itemId": "switch-app-pages-opensupaplex",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "store-package",
+      "bundle": true,
+      "inspection": [
+        {
+          "path": "switch/OpenSupaplex/OpenSupaplex.nro",
+          "sha256": "009c441bf9fdced10de5cf7ca9f1c6691910014e2ae6a5db3b2caa9a56b0e819",
+          "format": "NRO0",
+          "imageBytes": 7950336,
+          "fileBytes": 8012252,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 5500928
+            },
+            {
+              "name": "readOnly",
+              "offset": 5500928,
+              "bytes": 2150400
+            },
+            {
+              "name": "data",
+              "offset": 7651328,
+              "bytes": 299008
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\open supaplex\\Builds\\7.2.2\\OpenSupaplex-sd-package.zip",
+      "indexed": true
+    },
+    {
+      "app": "2048",
+      "name": "2048.nro",
+      "version": "1.2.0",
+      "bytes": 7817135,
+      "sha256": "51f6588000d899c58faadc4443f9550f4e4bcc93719fabb3dc0537ec11037ff5",
+      "sourceUrl": "https://github.com/TooTallNate/switch-2048/releases/download/v1.2.0/2048.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/2048/1.2.0/2048.nro",
+      "itemId": "switch-app-pages-2048",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 6905856,
+          "fileBytes": 7817135,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 4272128
+            },
+            {
+              "name": "readOnly",
+              "offset": 4272128,
+              "bytes": 2469888
+            },
+            {
+              "name": "data",
+              "offset": 6742016,
+              "bytes": 163840
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\switch 2048\\Builds\\1.2.0\\2048.nro",
+      "indexed": true
+    },
+    {
+      "app": "SuDokuL",
+      "name": "SuDokuL-sd-package.zip",
+      "version": "1.5",
+      "bytes": 5433623,
+      "sha256": "e6ab197e23bcb3db79947f400acc729a49d4b6ccca886be2160c1ad57bbeb245",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/SuDokuL.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/SuDokuL/1.5/SuDokuL-sd-package.zip",
+      "itemId": "switch-app-pages-sudokul",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "store-package",
+      "bundle": true,
+      "inspection": [
+        {
+          "path": "switch/SuDokuL/SuDokuL.nro",
+          "sha256": "e02a43720751dadde37710625561abbdc39a1fa5dd91f39dbfa1e5c35edaa3c3",
+          "format": "NRO0",
+          "imageBytes": 11796480,
+          "fileBytes": 11859054,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 7434240
+            },
+            {
+              "name": "readOnly",
+              "offset": 7434240,
+              "bytes": 2809856
+            },
+            {
+              "name": "data",
+              "offset": 10244096,
+              "bytes": 1552384
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\SuDokuL\\Builds\\1.5\\SuDokuL-sd-package.zip",
+      "indexed": true
+    },
+    {
+      "app": "BrogueCE",
+      "name": "brogue.nro",
+      "version": "1.9.2-r2",
+      "bytes": 10767662,
+      "sha256": "b7d6366431be73b18b7bad0ed01fe724cd6f00cdf773a81a95d06728889cd1e6",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/BrogueCE.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/BrogueCE/1.9.2-r2/brogue.nro",
+      "itemId": "switch-app-pages-brogue-ce",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "extracted-nro",
+      "derivedFrom": {
+        "sha256": "6fe4bd2139e86d33d13b154e8d301b904121c7185eeb0f8c5aea746e9b6b15b8",
+        "member": "switch/brogue/brogue.nro"
+      },
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 9105408,
+          "fileBytes": 10767662,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 6066176
+            },
+            {
+              "name": "readOnly",
+              "offset": 6066176,
+              "bytes": 2449408
+            },
+            {
+              "name": "data",
+              "offset": 8515584,
+              "bytes": 589824
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\BrogueCE\\Builds\\1.9.2-r2\\brogue.nro",
+      "indexed": true
+    },
+    {
+      "app": "Minesweeper",
+      "name": "Minesweeper-Switch.nro",
+      "version": "2.0",
+      "bytes": 1669972,
+      "sha256": "7172be2da02fefdebde3745f15d9e7beb7f08472fad3a2cc86eb70811b22cc9d",
+      "sourceUrl": "https://github.com/rincew1nd/Minesweeper-Switch/releases/download/v2.0/Minesweeper-Switch.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/Minesweeper/2.0/Minesweeper-Switch.nro",
+      "itemId": "switch-app-pages-minesweeper",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 1572864,
+          "fileBytes": 1669972,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 1277952
+            },
+            {
+              "name": "readOnly",
+              "offset": 1277952,
+              "bytes": 237568
+            },
+            {
+              "name": "data",
+              "offset": 1515520,
+              "bytes": 57344
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\Minesweeper Switch\\Builds\\2.0\\Minesweeper-Switch.nro",
+      "indexed": true
+    },
+    {
+      "app": "Space Game NX",
+      "name": "spacenx.nro",
+      "version": "1.1",
+      "bytes": 759712,
+      "sha256": "9ca9fcc76dffd132f4ceb1a3091cf811bc4a23c5876aea35d9be6e13de254d64",
+      "sourceUrl": "https://github.com/vgmoose/space-nx/releases/download/1.1/spacenx.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/spacenx/1.1/spacenx.nro",
+      "itemId": "switch-app-pages-space-game-nx",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 712704,
+          "fileBytes": 759712,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 602112
+            },
+            {
+              "name": "readOnly",
+              "offset": 602112,
+              "bytes": 73728
+            },
+            {
+              "name": "data",
+              "offset": 675840,
+              "bytes": 36864
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\space nx\\Builds\\1.1\\spacenx.nro",
+      "indexed": true
+    },
+    {
+      "app": "pinballnx",
+      "name": "pinballnx-sd-package.zip",
+      "version": "1.0",
+      "bytes": 4507287,
+      "sha256": "d7cf0fe4bee6b9859ea0141036b69946208a966b0e5a4cbbb6a3ea797d991073",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/pinballnx.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/pinballnx/1.0/pinballnx-sd-package.zip",
+      "itemId": "switch-app-pages-pinballnx",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "store-package",
+      "bundle": true,
+      "inspection": [
+        {
+          "path": "switch/pinballnx/pinball.nro",
+          "sha256": "3609fabdb44163558eb1f554ef0a2d16c9ef12a54284d3094c7905b6903645c9",
+          "format": "NRO0",
+          "imageBytes": 9019392,
+          "fileBytes": 9657032,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 6160384
+            },
+            {
+              "name": "readOnly",
+              "offset": 6160384,
+              "bytes": 2396160
+            },
+            {
+              "name": "data",
+              "offset": 8556544,
+              "bytes": 462848
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\pinballnx\\Builds\\1.0\\pinballnx-sd-package.zip",
+      "indexed": true
+    },
+    {
+      "app": "Cpp-Snake-NX",
+      "name": "Cpp-Snake-NX.nro",
+      "version": "1.1.0",
+      "bytes": 751813,
+      "sha256": "982ff14c538bb94eb6d18411efe71e885006cf3e944da270d18cd2fa88442f16",
+      "sourceUrl": "https://github.com/CompSciOrBust/Cpp-Snake-NX/releases/download/1.1.0/Cpp-Snake-NX.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/Cpp-Snake-NX/1.1.0/Cpp-Snake-NX.nro",
+      "itemId": "switch-app-pages-cpp-snake-nx",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 729088,
+          "fileBytes": 751813,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 499712
+            },
+            {
+              "name": "readOnly",
+              "offset": 499712,
+              "bytes": 192512
+            },
+            {
+              "name": "data",
+              "offset": 692224,
+              "bytes": 36864
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\Cpp Snake NX\\Builds\\1.1.0\\Cpp-Snake-NX.nro",
+      "indexed": true
+    },
+    {
+      "app": "Jump n Bump",
+      "name": "jumpnbump.nro",
+      "version": "1.02",
+      "bytes": 8234598,
+      "sha256": "8e855038b7ab00c1a3174327d0ed0016f0da1c8d9a92035a9cc0c22dcacc252b",
+      "sourceUrl": "https://switch.cdn.fortheusers.org/zips/jumpnbump.zip",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/jumpnbump/1.02/jumpnbump.nro",
+      "itemId": "switch-app-pages-jump-n-bump",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Games",
+        "Homebrew games"
+      ],
+      "archived": true,
+      "role": "extracted-nro",
+      "derivedFrom": {
+        "sha256": "d453f238c94eb36bceff45ed89cd3618d195ce339694ccdda90ba69022997bc6",
+        "member": "switch/jumpnbump/jumpnbump.nro"
+      },
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 8192000,
+          "fileBytes": 8234598,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 5410816
+            },
+            {
+              "name": "readOnly",
+              "offset": 5410816,
+              "bytes": 2113536
+            },
+            {
+              "name": "data",
+              "offset": 7524352,
+              "bytes": 667648
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Games\\Homebrew games\\jumpnbump\\Builds\\1.02\\jumpnbump.nro",
+      "indexed": true
+    },
+    {
+      "app": "SpaceVue",
+      "name": "SpaceVue.nro",
+      "version": "3.0.1",
+      "bytes": 8421717,
+      "sha256": "cab1cc6d9f7fd08f3f1e43a161ae1077a04d8e29036699cfcb7dd2820912c0ad",
+      "sourceUrl": "https://github.com/esteban-cz/SpaceVue/releases/download/v3.0.1/SpaceVue.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/SpaceVue/3.0.1/SpaceVue.nro",
+      "itemId": "switch-app-pages-spacevue",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Diagnostics"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 8335360,
+          "fileBytes": 8421717,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 6221824
+            },
+            {
+              "name": "readOnly",
+              "offset": 6221824,
+              "bytes": 1785856
+            },
+            {
+              "name": "data",
+              "offset": 8007680,
+              "bytes": 327680
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Diagnostics\\SpaceVue\\Builds\\3.0.1\\SpaceVue.nro",
+      "indexed": true
+    },
+    {
+      "app": "NXThemes Installer",
+      "name": "NXThemesInstaller.nro",
+      "version": "nxt-3.0.2",
+      "bytes": 10467778,
+      "sha256": "36ac0fac5477e08a176b2f155b8b3c170c1291004d943541348599bae8cf97a1",
+      "sourceUrl": "https://github.com/exelix11/SwitchThemeInjector/releases/download/nxt-3.0.2/NXThemesInstaller.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/NXthemes_Installer/nxt-3.0.2/NXThemesInstaller.nro",
+      "itemId": "switch-app-pages-nxthemes-installer",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Customization"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 8609792,
+          "fileBytes": 10467778,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 6275072
+            },
+            {
+              "name": "readOnly",
+              "offset": 6275072,
+              "bytes": 2011136
+            },
+            {
+              "name": "data",
+              "offset": 8286208,
+              "bytes": 323584
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Customization\\SwitchThemeInjector\\Builds\\nxt-3.0.2\\NXThemesInstaller.nro",
+      "indexed": true
+    },
+    {
+      "app": "SimpleModManager",
+      "name": "SimpleModManager.nro",
+      "version": "2.1.4",
+      "bytes": 8771712,
+      "sha256": "50031babc9fa28da497f2f18751fc0ae6abe1a17db5ae722bff47fda53c13349",
+      "sourceUrl": "https://github.com/nadrino/SimpleModManager/releases/download/2.1.4/SimpleModManager.nro",
+      "archiveRole": [
+        "Builds"
+      ],
+      "local": "/downloads/nintendo-switch/SimpleModManager/2.1.4/SimpleModManager.nro",
+      "itemId": "switch-app-pages-simplemodmanager",
+      "platform": "Nintendo Switch",
+      "category": [
+        "Apps",
+        "Game mod tools"
+      ],
+      "archived": true,
+      "role": "official-nro",
+      "bundle": false,
+      "inspection": [
+        {
+          "format": "NRO0",
+          "imageBytes": 7278592,
+          "fileBytes": 8771712,
+          "segments": [
+            {
+              "name": "text",
+              "offset": 0,
+              "bytes": 5337088
+            },
+            {
+              "name": "readOnly",
+              "offset": 5337088,
+              "bytes": 1617920
+            },
+            {
+              "name": "data",
+              "offset": 6955008,
+              "bytes": 323584
+            }
+          ]
+        }
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Apps\\Game mod tools\\SimpleModManager\\Builds\\2.1.4\\SimpleModManager.nro",
+      "indexed": true
+    }
+  ],
+  "sources": [
+    {
+      "app": "JKSV",
+      "project": "https://github.com/J-D-K/JKSV",
+      "pinnedRelease": "https://github.com/J-D-K/JKSV/releases/tag/12/02/2025",
+      "store": "https://hb-app.store/switch/jksv",
+      "image": {
+        "local": "/assets/images/switch-homebrew/jksv.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/jksv/icon.png",
+        "credit": "JKSV project icon from its Homebrew App Store listing",
+        "bytes": 6189,
+        "sha256": "ad351ea033327deaf68aef0f6f925cdffe9ea32036a4718b1398b74829794eba"
+      }
+    },
+    {
+      "app": "Checkpoint",
+      "project": "https://github.com/BernardoGiordano/Checkpoint",
+      "pinnedRelease": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.3.0",
+      "store": "https://hb-app.store/switch/Checkpoint",
+      "image": {
+        "local": "/assets/images/switch-homebrew/Checkpoint.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/Checkpoint/icon.png",
+        "credit": "Checkpoint project icon from its Homebrew App Store listing",
+        "bytes": 9999,
+        "sha256": "abe5c748f0967f686a25183131af0a6d66e923456b1426733e432f1c6a4f717d"
+      }
+    },
+    {
+      "app": "ftpd",
+      "project": "https://github.com/mtheall/ftpd",
+      "pinnedRelease": "https://github.com/mtheall/ftpd/releases/tag/v3.2.1",
+      "store": "https://hb-app.store/switch/ftpd",
+      "image": {
+        "local": "/assets/images/switch-homebrew/ftpd.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/ftpd/icon.png",
+        "credit": "ftpd project icon from its Homebrew App Store listing",
+        "bytes": 8947,
+        "sha256": "88f6ba9c984f9a4f3d6b969ee27894116848b9a9c031bb0319c6d6044d2779fb"
+      }
+    },
+    {
+      "app": "NX-Shell",
+      "project": "https://github.com/joel16/NX-Shell",
+      "pinnedRelease": "https://github.com/joel16/NX-Shell/releases/tag/4.01",
+      "store": "https://hb-app.store/switch/NX-shell",
+      "image": {
+        "local": "/assets/images/switch-homebrew/NX-shell.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/NX-shell/icon.png",
+        "credit": "NX-Shell project icon from its Homebrew App Store listing",
+        "bytes": 2131,
+        "sha256": "9bd771eb4ab0b514aceb06a82840cc6c0fdec72c37b33bb25dc070dd19920101"
+      }
+    },
+    {
+      "app": "NXMP",
+      "project": "https://github.com/proconsule/nxmp",
+      "pinnedRelease": "https://github.com/proconsule/nxmp/releases/tag/v0.9.3",
+      "store": "https://hb-app.store/switch/NXMP",
+      "image": {
+        "local": "/assets/images/switch-homebrew/NXMP.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/NXMP/icon.png",
+        "credit": "NXMP project icon from its Homebrew App Store listing",
+        "bytes": 49051,
+        "sha256": "46e6aafa0ef6a4154ef819e9aeb69b6d3db01f17fb7230485d5e6fd07002963c"
+      }
+    },
+    {
+      "app": "Moonlight-Switch",
+      "project": "https://github.com/XITRIX/Moonlight-Switch",
+      "pinnedRelease": "https://github.com/XITRIX/Moonlight-Switch/releases/tag/v1.5.0",
+      "store": "https://hb-app.store/switch/Moonlight-Switch",
+      "image": {
+        "local": "/assets/images/switch-homebrew/Moonlight-Switch.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/Moonlight-Switch/icon.png",
+        "credit": "Moonlight-Switch project icon from its Homebrew App Store listing",
+        "bytes": 21723,
+        "sha256": "5cc49d0e282421d717f9538aaacf1ec16bd4f462f5c02824037d7f9a1cc39c2a"
+      }
+    },
+    {
+      "app": "mGBA",
+      "project": "https://github.com/mgba-emu/mgba",
+      "pinnedRelease": "https://github.com/mgba-emu/mgba/releases/tag/0.10.5",
+      "store": "https://hb-app.store/switch/mGBA",
+      "image": {
+        "local": "/assets/images/switch-homebrew/mGBA.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/mGBA/icon.png",
+        "credit": "mGBA project icon from its Homebrew App Store listing",
+        "bytes": 11034,
+        "sha256": "00db8c1684abe66fd0bf62aca288681295a1984e1f088f64ab674f902b9bf421"
+      }
+    },
+    {
+      "app": "melonDS",
+      "project": "https://github.com/ArcDelta/melonDS",
+      "pinnedRelease": "https://github.com/ArcDelta/melonDS/releases/tag/7.2.1",
+      "store": "https://hb-app.store/switch/melonDS",
+      "image": {
+        "local": "/assets/images/switch-homebrew/melonDS.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/melonDS/icon.png",
+        "credit": "melonDS project icon from its Homebrew App Store listing",
+        "bytes": 20413,
+        "sha256": "212547a45a144d98a337eac98504167f2a8ad16a13f664ebc488b8dd3a935341"
+      }
+    },
+    {
+      "app": "pNES",
+      "project": "https://github.com/Cpasjuste/pemu",
+      "pinnedRelease": "https://github.com/Cpasjuste/pemu/releases/tag/v7.2",
+      "store": "https://hb-app.store/switch/pNES",
+      "image": {
+        "local": "/assets/images/switch-homebrew/pNES.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/pNES/icon.png",
+        "credit": "pNES project icon from its Homebrew App Store listing",
+        "bytes": 8072,
+        "sha256": "52fe9d6a92de82116a0e90acf3d8014ef0b446a73d0cbe1c827944a8da561492"
+      }
+    },
+    {
+      "app": "pSNES",
+      "project": "https://github.com/Cpasjuste/pemu",
+      "pinnedRelease": "https://github.com/Cpasjuste/pemu/releases/tag/v7.2",
+      "store": "https://hb-app.store/switch/psnes",
+      "image": {
+        "local": "/assets/images/switch-homebrew/psnes.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/psnes/icon.png",
+        "credit": "pSNES project icon from its Homebrew App Store listing",
+        "bytes": 11904,
+        "sha256": "6d7c95659afb767241370783057e85c5e63e7a04f6dc715be8589d605794f57c"
+      }
+    },
+    {
+      "app": "PPSSPP Standalone",
+      "project": "https://www.ppsspp.org/legacybuilds/",
+      "pinnedRelease": "https://www.ppsspp.org/legacybuilds/",
+      "store": "https://hb-app.store/switch/ppsspp",
+      "image": {
+        "local": "/assets/images/switch-homebrew/ppsspp.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/ppsspp/icon.png",
+        "credit": "PPSSPP Standalone project icon from its Homebrew App Store listing",
+        "bytes": 68981,
+        "sha256": "9d798229d7549e5808217e0db8b32cadafeb0ab4d084a771688836e71bd1479c"
+      }
+    },
+    {
+      "app": "Homebrew Menu",
+      "project": "https://github.com/switchbrew/nx-hbmenu",
+      "pinnedRelease": "https://github.com/switchbrew/nx-hbmenu/releases/tag/v3.6.1",
+      "store": "https://hb-app.store/switch/hbmenu",
+      "image": {
+        "local": "/assets/images/switch-homebrew/hbmenu.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/hbmenu/icon.png",
+        "credit": "Homebrew Menu project icon from its Homebrew App Store listing",
+        "bytes": 9306,
+        "sha256": "850881df04357ab0d1272a4b83c9d48226600767ee71f0aed2cd7d341065185d"
+      }
+    },
+    {
+      "app": "ftpsrv",
+      "project": "https://github.com/ITotalJustice/ftpsrv",
+      "pinnedRelease": "https://github.com/ITotalJustice/ftpsrv/releases/tag/1.2.2",
+      "store": "https://hb-app.store/switch/ftpsrv",
+      "image": {
+        "local": "/assets/images/switch-homebrew/ftpsrv-embedded.jpg",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/zips/ftpsrv.zip",
+        "credit": "Original ftpsrv icon embedded in its pinned Switch NRO",
+        "member": "switch/ftpsrv.nro embedded ASET icon",
+        "bytes": 6285,
+        "sha256": "0b942950df9fb30f08336b681e24a3ceeeaa6f0915d7dd404d5ebb9bd4e15214"
+      }
+    },
+    {
+      "app": "SwitchIdent",
+      "project": "https://github.com/joel16/SwitchIdent",
+      "pinnedRelease": "https://github.com/joel16/SwitchIdent/releases/tag/0.5",
+      "store": "https://hb-app.store/switch/switchident-GUI",
+      "image": {
+        "local": "/assets/images/switch-homebrew/switchident-GUI.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/switchident-GUI/icon.png",
+        "credit": "SwitchIdent project icon from its Homebrew App Store listing",
+        "bytes": 20203,
+        "sha256": "5f64e7889bc7b79fa76471bdc1d04d13f8d6a0f0dd6307aa006a08057c8e5a6c"
+      }
+    },
+    {
+      "app": "Switch 90DNS tester",
+      "project": "https://github.com/meganukebmp/Switch_90DNS_tester",
+      "pinnedRelease": "https://github.com/meganukebmp/Switch_90DNS_tester/releases/tag/v1.1.0",
+      "store": "https://hb-app.store/switch/Switch_90DNS_Tester",
+      "image": {
+        "local": "/assets/images/switch-homebrew/Switch_90DNS_Tester-embedded.jpg",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/zips/Switch_90DNS_Tester.zip",
+        "credit": "Original Switch 90DNS tester icon embedded in its pinned Switch NRO",
+        "member": "Switch_90DNS_tester.nro embedded ASET icon",
+        "bytes": 34710,
+        "sha256": "7f02d009a288dad3eedea5c7c4742ca9667473a4009a84fdabb0ed62635ffef4"
+      }
+    },
+    {
+      "app": "OpenSupaplex",
+      "project": "https://github.com/sergiou87/open-supaplex",
+      "pinnedRelease": "https://github.com/sergiou87/open-supaplex/releases/tag/v7.2.2",
+      "store": "https://hb-app.store/switch/OpenSupaplex",
+      "image": {
+        "local": "/assets/images/switch-homebrew/OpenSupaplex.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/OpenSupaplex/icon.png",
+        "credit": "OpenSupaplex project icon from its Homebrew App Store listing",
+        "bytes": 5684,
+        "sha256": "09fe41c5b3abfea6d037032b5b25b99c704582fe27038428f40b337e2d50c275"
+      }
+    },
+    {
+      "app": "2048",
+      "project": "https://github.com/TooTallNate/switch-2048",
+      "pinnedRelease": "https://github.com/TooTallNate/switch-2048/releases/tag/v1.2.0",
+      "store": "https://hb-app.store/switch/2048",
+      "image": {
+        "local": "/assets/images/switch-homebrew/2048.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/2048/icon.png",
+        "credit": "2048 project icon from its Homebrew App Store listing",
+        "bytes": 15573,
+        "sha256": "5c1d848fa9eef0c685998caaf18f92a4af5458a11b895082163e85b8b3400813"
+      }
+    },
+    {
+      "app": "SuDokuL",
+      "project": "https://github.com/Mode8fx/SuDokuL",
+      "pinnedRelease": "https://github.com/Mode8fx/SuDokuL/releases/tag/v1.5",
+      "store": "https://hb-app.store/switch/SuDokuL",
+      "image": {
+        "local": "/assets/images/switch-homebrew/SuDokuL.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/SuDokuL/icon.png",
+        "credit": "SuDokuL project icon from its Homebrew App Store listing",
+        "bytes": 10603,
+        "sha256": "2c412166ac6c7158faa59d06caea35a510abab68db2073c5f750ee9d31ce27a4"
+      }
+    },
+    {
+      "app": "BrogueCE",
+      "project": "https://github.com/capsterx-switch/BrogueCE",
+      "pinnedRelease": "https://github.com/capsterx-switch/BrogueCE/releases/tag/v1.9.2-r2",
+      "store": "https://hb-app.store/switch/BrogueCE",
+      "image": {
+        "local": "/assets/images/switch-homebrew/BrogueCE.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/BrogueCE/icon.png",
+        "credit": "BrogueCE project icon from its Homebrew App Store listing",
+        "bytes": 18855,
+        "sha256": "9933ab0da3db337e802e353baf66938d1c8b116c0db20335727929c8278ea1fb"
+      }
+    },
+    {
+      "app": "Minesweeper",
+      "project": "https://github.com/rincew1nd/Minesweeper-Switch",
+      "pinnedRelease": "https://github.com/rincew1nd/Minesweeper-Switch/releases/tag/v2.0",
+      "store": "https://hb-app.store/switch/Minesweeper",
+      "image": {
+        "local": "/assets/images/switch-homebrew/Minesweeper.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/Minesweeper/icon.png",
+        "credit": "Minesweeper project icon from its Homebrew App Store listing",
+        "bytes": 66626,
+        "sha256": "836cb7a55506b05ac598567d0018daf0da470f30cf802e76a5a87674a3aaeef0"
+      }
+    },
+    {
+      "app": "Space Game NX",
+      "project": "https://github.com/vgmoose/space-nx",
+      "pinnedRelease": "https://github.com/vgmoose/space-nx/releases/tag/1.1",
+      "store": "https://hb-app.store/switch/spacenx",
+      "image": {
+        "local": "/assets/images/switch-homebrew/spacenx.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/spacenx/icon.png",
+        "credit": "Space Game NX project icon from its Homebrew App Store listing",
+        "bytes": 18003,
+        "sha256": "10ee2d09061a455c76b99eba0df445c931e3191e445eabadf472e5249d551c92"
+      }
+    },
+    {
+      "app": "pinballnx",
+      "project": "https://github.com/minkcv/pinballnx",
+      "pinnedRelease": "https://github.com/minkcv/pinballnx/releases/tag/1.0",
+      "store": "https://hb-app.store/switch/pinballnx",
+      "image": {
+        "local": "/assets/images/switch-homebrew/pinballnx.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/pinballnx/icon.png",
+        "credit": "pinballnx project icon from its Homebrew App Store listing",
+        "bytes": 18396,
+        "sha256": "33cd4045b3ab0359a3beab3b8a74dc78e3d74be2cceb39459be113f7abb2aef0"
+      }
+    },
+    {
+      "app": "Cpp-Snake-NX",
+      "project": "https://github.com/CompSciOrBust/Cpp-Snake-NX",
+      "pinnedRelease": "https://github.com/CompSciOrBust/Cpp-Snake-NX/releases/tag/1.1.0",
+      "store": "https://hb-app.store/switch/Cpp-Snake-NX",
+      "image": {
+        "local": "/assets/images/switch-homebrew/Cpp-Snake-NX-embedded.jpg",
+        "sourceUrl": "https://github.com/CompSciOrBust/Cpp-Snake-NX/releases/download/1.1.0/Cpp-Snake-NX.nro",
+        "credit": "Original Cpp-Snake-NX icon embedded in its pinned Switch NRO",
+        "member": "Cpp-Snake-NX.nro embedded ASET icon",
+        "bytes": 6285,
+        "sha256": "0b942950df9fb30f08336b681e24a3ceeeaa6f0915d7dd404d5ebb9bd4e15214"
+      }
+    },
+    {
+      "app": "Jump n Bump",
+      "project": "https://github.com/rsn8887/jumpnbump",
+      "pinnedRelease": "https://github.com/rsn8887/jumpnbump/releases/tag/1.02",
+      "store": "https://hb-app.store/switch/jumpnbump",
+      "image": {
+        "local": "/assets/images/switch-homebrew/jumpnbump.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/jumpnbump/icon.png",
+        "credit": "Jump n Bump project icon from its Homebrew App Store listing",
+        "bytes": 82539,
+        "sha256": "a3ad1ba70f6da7ace7a77e2e2ddfd9687d0188c7a12f7bbc6802f1044a3685fc"
+      }
+    },
+    {
+      "app": "SpaceVue",
+      "project": "https://github.com/esteban-cz/SpaceVue",
+      "pinnedRelease": "https://github.com/esteban-cz/SpaceVue/releases/tag/v3.0.1",
+      "store": "https://hb-app.store/switch/SpaceVue",
+      "image": {
+        "local": "/assets/images/switch-homebrew/SpaceVue.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/SpaceVue/icon.png",
+        "credit": "SpaceVue project icon from its Homebrew App Store listing",
+        "bytes": 70417,
+        "sha256": "f0b83c3d0ce1973decbaa41d56636b7bff6e4e169c0a7886f1cf899d09985ee7"
+      }
+    },
+    {
+      "app": "NXThemes Installer",
+      "project": "https://github.com/exelix11/SwitchThemeInjector",
+      "pinnedRelease": "https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2",
+      "store": "https://hb-app.store/switch/NXthemes_Installer",
+      "image": {
+        "local": "/assets/images/switch-homebrew/NXthemes_Installer.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/NXthemes_Installer/icon.png",
+        "credit": "NXThemes Installer project icon from its Homebrew App Store listing",
+        "bytes": 22996,
+        "sha256": "14d78fc71f0fa57292d4478eb59f3d8496dd8f44dce0532c94bbf87f3fdc759c"
+      }
+    },
+    {
+      "app": "SimpleModManager",
+      "project": "https://github.com/nadrino/SimpleModManager",
+      "pinnedRelease": "https://github.com/nadrino/SimpleModManager/releases/tag/2.1.4",
+      "store": "https://hb-app.store/switch/SimpleModManager",
+      "image": {
+        "local": "/assets/images/switch-homebrew/SimpleModManager.png",
+        "sourceUrl": "https://switch.cdn.fortheusers.org/packages/SimpleModManager/icon.png",
+        "credit": "SimpleModManager project icon from its Homebrew App Store listing",
+        "bytes": 9320,
+        "sha256": "e22310a9f8178dba5b4a74a1edc631d4ca5b1989e71c27c048554339fe337218"
+      }
+    }
+  ],
+  "verification": {
+    "fileReport": "docs/qa/switch-app-pages-verification.json",
+    "passed": true,
+    "pages": 27,
+    "files": 28,
+    "icons": 27,
+    "localLinks": 2089,
+    "browser": "docs/qa/switch-app-pages-browser.json",
+    "browserPassed": true,
+    "librarySearch": "OpenSupaplex -> one matching game -> dedicated page -> setup modal with all four steps",
+    "archiveIntegration": "All 27 scoped items / 28 files independently verified, present in shared F: inventory, organized index and CHECKSUMS.",
+    "screenshots": [
+      "docs/qa/switch-app-opensupaplex-desktop.jpg",
+      "docs/qa/switch-app-opensupaplex-mobile.jpg",
+      "docs/qa/switch-app-opensupaplex-setup.jpg",
+      "docs/qa/switch-app-opensupaplex-download.jpg"
+    ],
+    "libraryEntriesWithOwnPage": 28,
+    "inventoryReport": "docs/qa/switch-app-pages-inventory.json",
+    "globalArchiveNote": "Refresh reported six unrelated missing PS3 Discord paths. All 28 files in this Switch scope are present, independently rehashed and indexed. No unrelated files were changed.",
+    "focusedTests": {
+      "total": 22,
+      "passed": 22,
+      "failed": 0,
+      "command": "node --test scripts/tests/switch-homebrew-archive.test.cjs scripts/tests/console-guide-dialog.test.cjs"
+    }
+  },
+  "notes": [
+    "Pinned existing console builds were reused only after local/backup SHA-256 and NRO or ZIP inspection. Existing originals and old versions were kept.",
+    "NXMP and PPSSPP remain complete runtime ZIPs. ftpd offers standard NRO plus ZIP containing standard/classic variants.",
+    "PPSSPP retains explicit current-OS incompatibility warning before the download; no guessed numeric firmware range. Its store snapshot label is distinct from the official legacy page’s later 1.17.1+ label.",
+    "melonDS 7.2.1 publisher label is FW 21.x.x / AMS 1.10.0; no universal support for newer firmware is asserted. Required DS system dumps are documented but not supplied.",
+    "pNES / pSNES 7.x use optional gamelist.xml in ROM folders; old db.xml store instructions are not reused.",
+    "Moonlight documents full-RAM title redirection and a separate compatible PC host, without downloading every desktop variant.",
+    "Switch apps builder now inserts Setup & downloads links on the 11 selected cards and calls this scoped detail builder when preparation is complete. Existing app card IDs, direct downloads, versions, search/category behavior and older archive records remain.",
+    "After regenerating the apps library, run build-switch-resource-pages.cjs to retain previously added dedicated Atmosphere/Hekate/RetroArch hub routes.",
+    "Shared inventory lock contention was left intact. A cooperating writer incorporated all 11 scoped records; existence/version/hash were checked before the explicit final index refresh.",
+    "Sources were reviewed against official projects and the Switch App Store. Product icons retain original bytes, source URLs, sizes and SHA-256 values.",
+    "Continuation: seven remaining utilities and nine homebrew games now have individual image/setup/download pages. Every one of the 28 library cards links to its dedicated page, including the independently owned App Store.",
+    "Three absent store icons (ftpsrv, 90DNS tester, Cpp-Snake-NX) were recovered without modification from the verified NRO ASET sections. Source URL, member, size and SHA-256 recorded in docs/switch-app-embedded-image-sources.json. Other icons retain original PNG bytes.",
+    "Complete ftpsrv/OpenSupaplex/SuDokuL/pinballnx ZIPs preserve required configuration and runtime resources. Historical build versions and compatibility limits remain unchanged. 90DNS store 1.0.4 is explicitly distinguished from upstream 1.1.0.",
+    "Latest desktop and 390px phone checks cover all 27 generated pages; hero images load, buttons are at least 48px high, no horizontal overflow. Setup modal and library search/link flow verified."
+  ],
+  "limits": {
+    "physicalConsoleTested": false,
+    "downloadedCodeExecuted": false,
+    "commit": false,
+    "deployment": false
+  },
+  "ownedFiles": [
+    "scripts/switch-app-page-content.cjs",
+    "scripts/prepare-switch-app-pages.cjs",
+    "scripts/build-switch-app-pages.cjs",
+    "scripts/verify-switch-app-pages.cjs",
+    "assets/switch-app-details.css",
+    "docs/switch-app-pages.json",
+    "console/nintendo-switch/jksv.html",
+    "console/nintendo-switch/checkpoint.html",
+    "console/nintendo-switch/ftpd.html",
+    "console/nintendo-switch/nx-shell.html",
+    "console/nintendo-switch/nxmp.html",
+    "console/nintendo-switch/moonlight.html",
+    "console/nintendo-switch/mgba.html",
+    "console/nintendo-switch/melonds.html",
+    "console/nintendo-switch/pnes.html",
+    "console/nintendo-switch/psnes.html",
+    "console/nintendo-switch/ppsspp.html",
+    "scripts/switch-remaining-app-content.cjs",
+    "scripts/prepare-switch-embedded-icons.cjs",
+    "docs/switch-app-embedded-image-sources.json",
+    "console/nintendo-switch/homebrew-menu.html",
+    "console/nintendo-switch/ftpsrv.html",
+    "console/nintendo-switch/switchident.html",
+    "console/nintendo-switch/90dns-tester.html",
+    "console/nintendo-switch/opensupaplex.html",
+    "console/nintendo-switch/2048.html",
+    "console/nintendo-switch/sudokul.html",
+    "console/nintendo-switch/brogue-ce.html",
+    "console/nintendo-switch/minesweeper.html",
+    "console/nintendo-switch/space-game-nx.html",
+    "console/nintendo-switch/pinballnx.html",
+    "console/nintendo-switch/cpp-snake-nx.html",
+    "console/nintendo-switch/jump-n-bump.html",
+    "console/nintendo-switch/spacevue.html",
+    "console/nintendo-switch/nxthemes-installer.html",
+    "console/nintendo-switch/simplemodmanager.html"
+  ],
+  "sharedFileEdits": [
+    "scripts/build-switch-homebrew.cjs: additive detail links + scoped build hook",
+    "console/nintendo-switch/apps.html: scoped regeneration",
+    "sitemap.xml: additive canonical URLs",
+    "docs/console-expansion-handoff.json: additive scoped completion note"
+  ],
+  "previousBatches": [
+    {
+      "updatedAt": "2026-11-02T09:42:30.727Z",
+      "status": "Complete locally:11 dedicated Switch pages (6 apps / 5 emulators),12 ready builds preserved and verified, library guide links, project icons, setup/storage/compatibility content and desktop/phone QA.",
+      "pages": 11,
+      "files": 12
+    }
+  ]
+}

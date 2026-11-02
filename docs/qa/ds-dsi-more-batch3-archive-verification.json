@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-02T12:33:14.479Z",
+  "scope": "ds-dsi-more",
+  "files": 50,
+  "allSharedInventoryRecordsPresent": true,
+  "sourceVersionSizeSha256Recorded": true,
+  "siteAndBackupHashes": "docs/qa/ds-dsi-more-verification.json",
+  "merge": {
+    "sidecars": 903,
+    "items": 1973,
+    "fileRecords": 2986
+  },
+  "indexRefresh": {
+    "items": 1973,
+    "fileRecords": 2923,
+    "presentFileRecords": 2917,
+    "missingFileRecords": 6,
+    "scopedMissingFileRecords": 0,
+    "note": "Six missing records belong to other archive scopes; all 50 DS files are present. Prior metadata retained by index refresh."
+  },
+  "passed": true
+}

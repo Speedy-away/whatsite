@@ -1,0 +1,732 @@
+{
+  "discord-pc-cod4-aspirin-azza": {
+    "gameIds": [
+      "cod4"
+    ],
+    "category": "script",
+    "readiness": "incomplete",
+    "modes": [
+      "multiplayer"
+    ],
+    "description": "Aspirin Azza PC raw-script branch with a separate PS3 fastfile. A static menu-state discrepancy remains unresolved.",
+    "compatibility": "The aspirin_pc branch contains seven maps/mp/gametypes GSC scripts. dom.gsc sets MenuOpen but ADS/Attack scrolling checks OpenMenu; no OpenMenu assignment was found across those seven files. Exact PC client/update and install workflow are undocumented.",
+    "tags": [
+      "PC",
+      "Discord source",
+      "Call of Duty 4",
+      "Multiplayer",
+      "GSC scripts",
+      "PC/PS3 branches",
+      "Static menu-state concern",
+      "Incomplete"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Keep the PC script tree intact",
+        "text": "Preserve aspirin_pc/maps/mp/gametypes with all seven GSC files. The separate patch_mp.ff PS3 member belongs to the console branch. READ ME.txt gives credits/features without a PC installation destination or loading/build workflow."
+      },
+      {
+        "type": "list",
+        "title": "Controls visible in dom.gsc",
+        "items": [
+          "The opening prompt/check uses Smoke or secondary-offhand together with Frag.",
+          "Use selects and Melee backs out.",
+          "ADS/Attack are intended for scrolling, but their state guards differ from the initialized/opened field. These are engine actions, not fixed keyboard mappings."
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Unresolved source discrepancy",
+        "text": "dom.gsc assigns MenuOpen during initialization/open/close but its ADS/Attack scrolling guards test OpenMenu. No OpenMenu assignment appears in its seven PC scripts. This is a static concern rather than a runtime diagnosis; the source is unchanged. No update or map pin is supplied."
+      }
+    ],
+    "evidence": {
+      "downloadId": "discord-pc-cod4-aspirin-azza",
+      "inventoryId": "pc-discord-pc-cod4-aspirin-azza",
+      "sha256": "3e9866bd1aa450831cc8155549b8c1e538daf2fbc1cd9e47da7a82704a1d53d6",
+      "sha256Verified": true,
+      "bytes": 142923,
+      "archiveFilename": "Cod4_Aspirin_Azza_PS3_PC.rar",
+      "exactSourceUrl": "https://www.mediafire.com/file/4lrjlpv38fr9r1e/Cod4_Aspirin_Azza_PS3_PC.rar/file",
+      "sourceCapture": "docs/discord-ps4-ps5-raw/platforms/pc-cod4-aspirin-azza.json",
+      "sourcePost": "https://discord.com/channels/1528329794947776572/1554621118206320640",
+      "localArchive": "/downloads/pc/discord-pc-cod4-aspirin-azza/Cod4_Aspirin_Azza_PS3_PC.rar",
+      "members": [
+        "aspirin_pc/maps/mp/gametypes/_globallogic.gsc",
+        "aspirin_pc/maps/mp/gametypes/_killcam.gsc",
+        "aspirin_pc/maps/mp/gametypes/_rank.gsc",
+        "aspirin_pc/maps/mp/gametypes/_weapons.gsc",
+        "aspirin_pc/maps/mp/gametypes/dom.gsc",
+        "aspirin_pc/maps/mp/gametypes/mtrx.gsc",
+        "aspirin_pc/maps/mp/gametypes/_finalkills.gsc",
+        "aspirin_pc/maps/mp/gametypes",
+        "aspirin_pc/maps/mp",
+        "aspirin_pc/maps",
+        "aspirin_pc",
+        "patch_mp.ff PS3",
+        "READ ME.txt"
+      ],
+      "documentationMembers": [
+        "READ ME.txt"
+      ],
+      "scriptMembers": [
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/_rank.gsc",
+          "sha256": "9eba62b87982279923ec22d59a6a11cb0fbf1fd8b812dd78877cbceeac456737",
+          "bytes": 28836
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/mtrx.gsc",
+          "sha256": "9aca8fa12d807611d21b617cfa812c1d1a9ed2ee113af8cb355d04fa05adcdb2",
+          "bytes": 431
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/_globallogic.gsc",
+          "sha256": "51806914eb0bc6efd7f718ec9e033e7c3f536354360a08408f28f4e230eafce0",
+          "bytes": 157802
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/_killcam.gsc",
+          "sha256": "dfacdc3cbdf3207e40a312e2464b5404fc494d7f376484ae14d8c0cf506428cf",
+          "bytes": 9079
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/_rank.gsc",
+          "sha256": "9eba62b87982279923ec22d59a6a11cb0fbf1fd8b812dd78877cbceeac456737",
+          "bytes": 28836
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/_weapons.gsc",
+          "sha256": "6bf64250a18499471fe75cbc994fc77d10d0e7b31d253278016fa4c4a1082938",
+          "bytes": 40390
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "sha256": "6de64e072512f2e0c55ea675587877dc2a456732385d82737db90cbd507440c7",
+          "bytes": 85316
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/mtrx.gsc",
+          "sha256": "9aca8fa12d807611d21b617cfa812c1d1a9ed2ee113af8cb355d04fa05adcdb2",
+          "bytes": 431
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/_finalkills.gsc",
+          "sha256": "0d35ee29f26929fde44adceddc5db6f51cf8391770a8b94ca57fefacce4e058f",
+          "bytes": 19385
+        }
+      ],
+      "inspection": "Static exact-source archive/member, bounded documentation/script/header and actual SHA-256/size inspection only. No payload executed; activation/ID/configuration files excluded. No runtime compatibility test.",
+      "menuStateEvidence": [
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 21,
+          "text": "    self.MenuOpen = false;"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 363,
+          "text": "        if(self FragButtonPressed() && self SecondaryOffhandButtonPressed() && self.MenuOpen == false)"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 368,
+          "text": "        else if(self MeleeButtonPressed() && self.MenuOpen == true)"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 380,
+          "text": "        else if(self UseButtonPressed() && self.MenuOpen == true)"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 404,
+          "text": "        else if(self AdsButtonPressed() && self.OpenMenu == true)"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 414,
+          "text": "        else if(self AttackButtonPressed() && self.OpenMenu == true)"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 430,
+          "text": "    self.MenuOpen = false;"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 513,
+          "text": "    self.MenuOpen = true;"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 1398,
+          "text": "            if(self FragButtonPressed() && self.MenuOpen == false)"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 1457,
+          "text": "        if(self adsButtonPressed() && self SecondaryOffhandButtonPressed() && self UseButtonPressed() && self.menuOpen == 0 && self GetStance() == \"crouch\")"
+        },
+        {
+          "member": "aspirin_pc/maps/mp/gametypes/dom.gsc",
+          "line": 1461,
+          "text": "        if(self attackButtonPressed() && self.menuOpen == 0 && self GetStance() == \"prone\")"
+        }
+      ],
+      "sourceRoles": {
+        "pc": "Raw GSC script branch",
+        "ps3": "Separate compiled patch_mp.ff PS3 member"
+      },
+      "buildReadiness": "Incomplete PC guide due static source concern and undocumented loading workflow."
+    }
+  },
+  "discord-pc-cod4-m40a3fusionz": {
+    "gameIds": [
+      "cod4"
+    ],
+    "category": "script",
+    "version": "Unreleased Patch UPDATED (archive label)",
+    "modes": [
+      "multiplayer"
+    ],
+    "compatibility": "Archive separates PC and PS3. The PC tree supplies IVI40A3Fusionz.gsc, File1.gsc–File14.gsc and maps/mp/gametypes/_rank.gsc. It gives action-based controls but no README/install workflow, exact PC client/update or map pins.",
+    "tags": [
+      "PC",
+      "Discord source",
+      "Call of Duty 4",
+      "Multiplayer",
+      "GSC scripts",
+      "PC/PS3 branches",
+      "Unreleased Patch UPDATED",
+      "Helper scripts required"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Preserve the complete PC branch",
+        "text": "Keep the whole PC/IVI40A3Fusionz 'Unreleased Patch' directory with its main script, File1–File14 helpers and maps/mp/gametypes/_rank.gsc. The separate PS3/patch_mp.ff is a console component. No PC installation path or loader/build workflow is supplied; a raw tree is not described as a compiled PC fastfile."
+      },
+      {
+        "type": "list",
+        "title": "Actions displayed by the PC script",
+        "items": [
+          "Frag opens the mod menu; Smoke/secondary-offhand opens the player menu where available.",
+          "Attack/ADS navigate, Use or activate selects and Melee backs out.",
+          "Actions follow the player's bindings; no fixed keyboard keys or tested behavior are inferred."
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Version limit",
+        "text": "The archive says Unreleased Patch UPDATED without a numeric release. Exact PC client/update and supported maps are undocumented; verify the loading workflow before installation."
+      }
+    ],
+    "evidence": {
+      "downloadId": "discord-pc-cod4-m40a3fusionz",
+      "inventoryId": "pc-discord-pc-cod4-m40a3fusionz",
+      "sha256": "3e84a50177ee552c550d653c5b446ff9f2f63acc5b438af10ecfba26ad62a106",
+      "sha256Verified": true,
+      "bytes": 634604,
+      "archiveFilename": "IVI40A3Fusionz+'Unreleased+Patch'+UPDATED.rar",
+      "exactSourceUrl": "https://www.mediafire.com/file/w481evks0rwq78b/IVI40A3Fusionz+'Unreleased+Patch'+UPDATED.rar",
+      "sourceCapture": "docs/discord-ps4-ps5-raw/platforms/pc-cod4-m40a3fusionz.json",
+      "sourcePost": "https://discord.com/channels/1528329794947776572/1530906056962871296",
+      "localArchive": "/downloads/pc/discord-pc-cod4-m40a3fusionz/IVI40A3Fusionz+'Unreleased+Patch'+UPDATED.rar",
+      "members": [
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File1.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File10.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File11.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File12.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File13.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File14.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File2.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File3.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File4.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File5.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File6.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File7.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File8.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/File9.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/IVI40A3Fusionz.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/maps/mp/gametypes/_rank.gsc",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PS3/patch_mp.ff",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/maps/mp/gametypes",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/maps/mp",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/maps",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PS3",
+        "IVI40A3Fusionz 'Unreleased Patch' UPDATED"
+      ],
+      "documentationMembers": [],
+      "scriptMembers": [
+        {
+          "member": "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/IVI40A3Fusionz.gsc",
+          "sha256": "1a9e7f1b528f6898d97232c318c9be5bbdeb04d4ab191fd10017e80ce680d58e",
+          "bytes": 206403
+        },
+        {
+          "member": "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/maps/mp/gametypes/_rank.gsc",
+          "sha256": "a0c327bccae4277667b1878c1335c7642b392cdfd9d8f20d91a50d1f6abe79fd",
+          "bytes": 68503
+        }
+      ],
+      "inspection": "Static exact-source archive/member, bounded documentation/script/header and actual SHA-256/size inspection only. No payload executed; activation/ID/configuration files excluded. No runtime compatibility test.",
+      "controlMember": "IVI40A3Fusionz 'Unreleased Patch' UPDATED/PC/IVI40A3Fusionz 'Unreleased Patch'/IVI40A3Fusionz.gsc",
+      "controlLineRange": [
+        292,
+        355
+      ],
+      "sourceRoles": {
+        "pc": "Raw GSC scripts/helpers",
+        "ps3": "Separate compiled PS3/patch_mp.ff"
+      },
+      "buildReadiness": "PC raw-script branch present; no compiled PC fastfile or documented loading workflow supplied."
+    }
+  },
+  "discord-pc-waw-money-n-weed-v1": {
+    "gameIds": [
+      "world-at-war"
+    ],
+    "category": "script",
+    "version": "v1 (post label)",
+    "modes": [
+      "zombies"
+    ],
+    "compatibility": "Scripts explicitly branch for nazi_zombie_prototype, nazi_zombie_asylum, nazi_zombie_sumpf and nazi_zombie_factory and call Zombies functions. These are source map references, not tested support. Raw scripts/assets lack a documented PC loader/build workflow or update pin.",
+    "tags": [
+      "PC",
+      "Discord source",
+      "World at War",
+      "Zombies",
+      "v1 post label",
+      "Raw GSC scripts",
+      "Weapon assets required",
+      "QM_Dino dependency",
+      "Source map references"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Keep all runtime components together",
+        "text": "Preserve the root's maps, QM_Dino and weapons/sp trees plus missingasset.csv. The archive supplies GSC and weapon assets without a compiled fastfile or setup guide. Both New Text Document markers are empty; no install destination, supported PC client or build/loading workflow is documented."
+      },
+      {
+        "type": "list",
+        "title": "Actions in maps/_createdynents.gsc",
+        "items": [
+          "ADS plus Melee opens the menu.",
+          "Attack/ADS scroll, Use selects and Melee backs out.",
+          "These are engine actions rather than fixed keyboard bindings."
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Exact map evidence",
+        "text": "The code branches for nazi_zombie_prototype, nazi_zombie_asylum, nazi_zombie_sumpf and nazi_zombie_factory. This establishes Zombies-oriented code paths, not a compatibility test or all-map promise. No update or internal release beyond the post's v1 label is supplied."
+      }
+    ],
+    "evidence": {
+      "downloadId": "discord-pc-waw-money-n-weed-v1",
+      "inventoryId": "pc-discord-pc-waw-money-n-weed-v1",
+      "sha256": "ae68b184542a1d4e44a8ea2dfb832634dabdb8149b7737016fd1f8b56e0ed418",
+      "sha256Verified": true,
+      "bytes": 706004,
+      "archiveFilename": "^2Money+^7'n'+^2Weed.rar",
+      "exactSourceUrl": "https://www.mediafire.com/file/hc01aq44s0srhve/%5E2Money+%5E7'n'+%5E2Weed.rar",
+      "sourceCapture": "docs/discord-ps4-ps5-raw/platforms/pc-waw-money-n-weed-v1.json",
+      "sourcePost": "https://discord.com/channels/1528329794947776572/1562545848036884540",
+      "localArchive": "/downloads/pc/discord-pc-waw-money-n-weed-v1/^2Money+^7'n'+^2Weed.rar",
+      "members": [
+        "^2Money ^7'n' ^2Weed/maps/New Text Document.txt",
+        "^2Money ^7'n' ^2Weed/maps/_cheat.gsc",
+        "^2Money ^7'n' ^2Weed/maps/_createcam.gsc",
+        "^2Money ^7'n' ^2Weed/maps/_createdynents.gsc",
+        "^2Money ^7'n' ^2Weed/maps/_debug.gsc",
+        "^2Money ^7'n' ^2Weed/maps/_hud_util.gsc",
+        "^2Money ^7'n' ^2Weed/maps/_vehicle.gsc",
+        "^2Money ^7'n' ^2Weed/missingasset.csv",
+        "^2Money ^7'n' ^2Weed/QM_Dino/New Text Document.txt",
+        "^2Money ^7'n' ^2Weed/QM_Dino/_BigOne.gsc",
+        "^2Money ^7'n' ^2Weed/QM_Dino/_I.gsc",
+        "^2Money ^7'n' ^2Weed/weapons/sp",
+        "^2Money ^7'n' ^2Weed/weapons"
+      ],
+      "documentationMembers": [
+        "^2Money ^7'n' ^2Weed/maps/New Text Document.txt",
+        "^2Money ^7'n' ^2Weed/QM_Dino/New Text Document.txt"
+      ],
+      "scriptMembers": [
+        {
+          "member": "^2Money ^7'n' ^2Weed/maps/_cheat.gsc",
+          "sha256": "f7ff52bc7b5c2a96dd62d6166fef70c25d1ec8bf9c1f043342e4b2dde15832cb",
+          "bytes": 4074
+        },
+        {
+          "member": "^2Money ^7'n' ^2Weed/maps/_createcam.gsc",
+          "sha256": "bdddd44d0d3d074a102bf109ce3c5fa3dd324fa19a2568d2d9ad001c95103a3b",
+          "bytes": 43026
+        },
+        {
+          "member": "^2Money ^7'n' ^2Weed/maps/_createdynents.gsc",
+          "sha256": "a186183b530c99ac2fdcc7d4d96142cf4725a72393e2daa58116ac584310524a",
+          "bytes": 38750
+        },
+        {
+          "member": "^2Money ^7'n' ^2Weed/maps/_debug.gsc",
+          "sha256": "a646f78716fea91c85c5095d73ab7b29cdfeacf7b334404f7a292e2781638070",
+          "bytes": 74384
+        },
+        {
+          "member": "^2Money ^7'n' ^2Weed/maps/_hud_util.gsc",
+          "sha256": "ee5f34d90f83c57488daef7f43cae528aa6ac1cc095c4e68b2589e2349242a19",
+          "bytes": 12426
+        },
+        {
+          "member": "^2Money ^7'n' ^2Weed/maps/_vehicle.gsc",
+          "sha256": "b7c582204b70490784f365ae57c9fac217385457ab8c64c76aec095d597027a1",
+          "bytes": 8147
+        },
+        {
+          "member": "^2Money ^7'n' ^2Weed/QM_Dino/_BigOne.gsc",
+          "sha256": "4541c7bd625a4980b9218b55ac52135106b4636b3b938ac73137a629bdf03022",
+          "bytes": 79877
+        },
+        {
+          "member": "^2Money ^7'n' ^2Weed/QM_Dino/_I.gsc",
+          "sha256": "135f20cf6051f1b54c4d206a8ed58603181430201b3bc6c56a1ea261bd0f5b62",
+          "bytes": 73002
+        }
+      ],
+      "inspection": "Static exact-source archive/member, bounded documentation/script/header and actual SHA-256/size inspection only. No payload executed; activation/ID/configuration files excluded. No runtime compatibility test.",
+      "sourceMapIdentifiers": [
+        "nazi_zombie_prototype",
+        "nazi_zombie_asylum",
+        "nazi_zombie_sumpf",
+        "nazi_zombie_factory"
+      ],
+      "controlMember": "^2Money ^7'n' ^2Weed/maps/_createdynents.gsc",
+      "controlLines": [
+        76,
+        84,
+        92,
+        98,
+        104
+      ],
+      "emptyDocumentationVerified": true,
+      "buildReadiness": "Raw scripts and runtime assets present; PC packaging/loading workflow undocumented.",
+      "proposedArchivePlatform": "PC",
+      "proposedArchiveRole": [
+        "Source Code"
+      ],
+      "completeMemberCount": 305,
+      "memberListingScope": "Script/documentation members and asset roots shown; full archive listing inspected without reproducing every weapon filename."
+    }
+  },
+  "discord-pc-waw-physics-n-flex-v2": {
+    "gameIds": [
+      "world-at-war"
+    ],
+    "category": "script",
+    "version": "v2 (post label)",
+    "compatibility": "Source-listed PC common.ff has IWffu100 magic and little-endian header value 387. That is container evidence, not a game-update/TU or internal menu-version pin. No mode, maps, PC client or setup instructions are documented.",
+    "tags": [
+      "PC",
+      "Discord source",
+      "World at War",
+      "FastFile",
+      "common.ff",
+      "v2 post label",
+      "IWffu100",
+      "Update unspecified"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Standalone FastFile evidence",
+        "text": "The exact source supplies common.ff only. Static header inspection identifies IWffu100 and header value 387, which are not substituted for game-update or menu versions. The post supplies the v2 label."
+      },
+      {
+        "type": "text",
+        "title": "Setup remains undocumented",
+        "text": "No destination, replacement procedure, required PC client, mode, map, game update or opening control is supplied. Preserve original game files and verify these requirements before replacing data. No console title update/path is transferred from similarly named menus."
+      }
+    ],
+    "evidence": {
+      "downloadId": "discord-pc-waw-physics-n-flex-v2",
+      "inventoryId": "pc-discord-pc-waw-physics-n-flex-v2",
+      "sha256": "d841df2caf868b679746aa38e9211313c39e46f229560ddd69b968108aa4c477",
+      "sha256Verified": true,
+      "bytes": 29024448,
+      "archiveFilename": "common.ff",
+      "exactSourceUrl": "https://www.mediafire.com/file/tdp4hsdewlb3vtb/common.ff/file",
+      "sourceCapture": "docs/discord-ps4-ps5-raw/platforms/pc-waw-physics-n-flex-v2.json",
+      "sourcePost": "https://discord.com/channels/1528329794947776572/1531361912758210560",
+      "localArchive": "/downloads/pc/discord-pc-waw-physics-n-flex-v2/common.ff",
+      "members": [],
+      "documentationMembers": [],
+      "scriptMembers": [],
+      "inspection": "Static exact-source archive/member, bounded documentation/script/header and actual SHA-256/size inspection only. No payload executed; activation/ID/configuration files excluded. No runtime compatibility test.",
+      "fileHeader": {
+        "id": "discord-pc-waw-physics-n-flex-v2",
+        "filename": "common.ff",
+        "headerHex": "49576666753130308301000078daec99",
+        "magicAscii": "IWffu100",
+        "headerVersionLE": 387,
+        "headerVersionBE": 2197880832
+      },
+      "buildReadiness": "Compiled FastFile present; exact PC runtime/setup compatibility unverified.",
+      "proposedArchivePlatform": "PC",
+      "proposedArchiveRole": [
+        "Builds"
+      ]
+    }
+  },
+  "discord-pc-waw-xkovx-v3": {
+    "gameIds": [
+      "world-at-war"
+    ],
+    "category": "reference",
+    "readiness": "incomplete",
+    "version": "V3",
+    "modes": [
+      "multiplayer"
+    ],
+    "description": "PC source/platform mismatch: xKoVx V3 supplies an Xbox 360 executable/patch with XEXMenu instructions; no PC build is supplied.",
+    "compatibility": "default_mp.xex has XEX2 magic. README uses XEXMenu and LT plus Knife after spawning. No PC executable, script branch or PC loader/setup workflow, update or map pins are supplied.",
+    "tags": [
+      "PC source post",
+      "Discord source",
+      "World at War",
+      "Multiplayer",
+      "Source/platform mismatch",
+      "Xbox 360 file",
+      "XEX2",
+      "Reference",
+      "No PC build"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Xbox files retained as reference",
+        "text": "The archive contains patch_mp.ff, default_mp.xex and READ MEH!.txt. The executable begins with XEX2 and README uses XEXMenu, so the exact file is not a verified PC build. Preserve the archive without transplanting its Xbox executable or paths into a PC guide."
+      },
+      {
+        "type": "text",
+        "title": "Source instructions identify the platform",
+        "text": "The README places both files in the WAW installation using XEXMenu, then opens with LT plus Knife after spawning. This is Xbox source evidence only. It supplies no PC controls/setup or exact update/map requirements."
+      }
+    ],
+    "evidence": {
+      "downloadId": "discord-pc-waw-xkovx-v3",
+      "inventoryId": "pc-discord-pc-waw-xkovx-v3",
+      "sha256": "f6e738bc9b746eb9f9721e44ffdeac714e5f32a60aea3a248e7eacb05d193d6a",
+      "sha256Verified": true,
+      "bytes": 3111415,
+      "archiveFilename": "xKoVx+V3.rar",
+      "exactSourceUrl": "https://www.mediafire.com/download/3f7g4294xgfo4hh/xKoVx+V3.rar",
+      "sourceCapture": "docs/discord-ps4-ps5-raw/platforms/pc-waw-xkovx-v3.json",
+      "sourcePost": "https://discord.com/channels/1528329794947776572/1531356895191765062",
+      "localArchive": "/downloads/pc/discord-pc-waw-xkovx-v3/xKoVx+V3.rar",
+      "members": [
+        "patch_mp.ff",
+        "READ MEH!.txt",
+        "default_mp.xex"
+      ],
+      "documentationMembers": [
+        "READ MEH!.txt"
+      ],
+      "scriptMembers": [],
+      "inspection": "Static exact-source archive/member, bounded documentation/script/header and actual SHA-256/size inspection only. No payload executed; activation/ID/configuration files excluded. No runtime compatibility test.",
+      "memberSignature": {
+        "id": "discord-pc-waw-xkovx-v3",
+        "member": "default_mp.xex",
+        "bytes": 5767168,
+        "sha256": "0d67a7e2f63f6a5a4ef3ab80f6153e5f6120f281fd0b75b31c70cd7253aa5d7e",
+        "magicHex": "58455832"
+      },
+      "proposedArchivePlatform": "Xbox 360",
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "buildReadiness": "Xbox build present; PC readiness incomplete."
+    }
+  },
+  "discord-pc-waw-purple-kush-v2": {
+    "gameIds": [
+      "world-at-war"
+    ],
+    "category": "script",
+    "readiness": "incomplete",
+    "version": "v2 (post) / v2.1 (ZIP) / v1.2 (internal folder)",
+    "modes": [
+      "multiplayer"
+    ],
+    "description": "Purple Kush source-only GSC archive with preserved conflicting version labels; no compiled PC package or loading/build workflow is supplied.",
+    "compatibility": "Post says v2, ZIP says v2.1 and internal folder says purple kush patch v1.2. Raw maps/mp GSC files and a promotional note supply no compiled fastfile, documented PC workflow, client/update pin or controls.",
+    "tags": [
+      "PC",
+      "Discord source",
+      "World at War",
+      "Multiplayer",
+      "GSC source",
+      "Source Code",
+      "Incomplete distribution",
+      "Version discrepancy"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Retain all version labels",
+        "text": "The post, ZIP and internal directory respectively say v2, v2.1 and v1.2. No README resolves these labels; none is silently substituted for another."
+      },
+      {
+        "type": "text",
+        "title": "Source-only readiness",
+        "text": "Keep maps/mp and maps/mp/gametypes together. This is textual GSC source without a compiled fastfile or documented PC build/loading workflow. PLEASE READ FIRST!.txt is promotional and contains no setup/controls. Its PC-style tree alone does not establish ready-to-use compatibility."
+      },
+      {
+        "type": "text",
+        "title": "Exact same preserved archive",
+        "text": "This PC post uses the same URL and verified ZIP hash already preserved from the PS3/Xbox posts. Those additional posts do not establish a new build or transfer console setup requirements to PC."
+      }
+    ],
+    "evidence": {
+      "downloadId": "discord-pc-waw-purple-kush-v2",
+      "inventoryId": "pc-discord-pc-waw-purple-kush-v2",
+      "sha256": "71391b95efad0d3a6bb7ae148c371af19de0146895c60965f60c638acc5b5bc5",
+      "sha256Verified": true,
+      "bytes": 210711,
+      "archiveFilename": "Purple+Kush+v2.1.zip",
+      "exactSourceUrl": "https://www.mediafire.com/download/n62a9p45uann4j2/Purple+Kush+v2.1.zip",
+      "sourceCapture": "docs/discord-ps4-ps5-raw/platforms/pc-waw-purple-kush-v2.json",
+      "sourcePost": "https://discord.com/channels/1528329794947776572/1531351768687181987",
+      "localArchive": "/downloads/pc/discord-pc-waw-purple-kush-v2/Purple+Kush+v2.1.zip",
+      "members": [
+        "mp_^1purple kush patch v1.2/",
+        "mp_^1purple kush patch v1.2/maps/",
+        "mp_^1purple kush patch v1.2/maps/mp/",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/Clo.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/ipro.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/sd.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/so_stoned.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/squad.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_CloudMe.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_Cloudrank1.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_HideAndSeek.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_iPROFamily2.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_iPROS.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_rank.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_scoreboard.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_spawning.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_teams.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/gametypes/_tweakables.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_airfield.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_asylum.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_castle.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_courtyard.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_downfall.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_hangar.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_kneedeep.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_makin.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_nachtfeuer.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_outskirts.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_roundhouse.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_seelow.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_shrine.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_suburban.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/mp_subway.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/_createfx.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/_dogs.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/_laststand.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/_load.gsc",
+        "mp_^1purple kush patch v1.2/maps/mp/_vehicles.gsc",
+        "PLEASE READ FIRST!.txt"
+      ],
+      "documentationMembers": [
+        "PLEASE READ FIRST!.txt"
+      ],
+      "scriptMembers": [
+        {
+          "member": "mp_^1purple kush patch v1.2/maps/mp/gametypes/_rank.gsc",
+          "sha256": "5b951d5645f183ce702aacda97ec3d939a5ff23ae7a00d680024942b8bf3f79f",
+          "bytes": 34816
+        }
+      ],
+      "inspection": "Static exact-source archive/member, bounded documentation/script/header and actual SHA-256/size inspection only. No payload executed; activation/ID/configuration files excluded. No runtime compatibility test.",
+      "exactArchiveSharedWith": [
+        "discord-ps3-waw-mp-purple-kush-v2",
+        "discord-xbox360-waw-mp-purple-kush-v2"
+      ],
+      "sourceVersionLabels": {
+        "post": "v2",
+        "zip": "v2.1",
+        "internalFolder": "v1.2"
+      },
+      "buildReadiness": "Source-only/incomplete PC distribution.",
+      "proposedArchivePlatform": "PC",
+      "proposedArchiveRole": [
+        "Source Code"
+      ]
+    }
+  },
+  "discord-pc-cod4-cabepex-1-5": {
+    "gameIds": [
+      "cod4"
+    ],
+    "category": "reference",
+    "readiness": "incomplete",
+    "version": "V1.5",
+    "description": "CabePex V1.5 publisher reference. Public publisher listings say the project is unfinished; no accessible PC asset or exact setup guide was verified.",
+    "compatibility": "Publisher listings identify PC/PS3/Xbox V1.5 and an unfinished update. The exact captured publisher thread returned HTTP403. No PC archive, controls, game-update or map requirements were verified.",
+    "tags": [
+      "PC",
+      "Discord source",
+      "Call of Duty 4",
+      "CabePex V1.5",
+      "Publisher reference",
+      "Unfinished source label",
+      "PC asset unavailable"
+    ],
+    "guideBlocks": [
+      {
+        "type": "text",
+        "title": "Publisher source and access result",
+        "text": "The Discord post links the CabePex V1.5 publisher thread. Public browsing returned HTTP403 for that thread; its indexed publisher listing names PC/PS3/Xbox and says the update remains unfinished. No authentication, payment or access bypass was attempted."
+      },
+      {
+        "type": "text",
+        "title": "No verified PC asset/setup",
+        "text": "No matching PC archive or accessible installation workflow was established from this source. A console-labelled CabePex archive from another URL is not substituted for the publisher's PC version. V1.5 is the source label; controls, update and map pins remain unspecified."
+      }
+    ],
+    "evidence": {
+      "sourceCapture": "docs/discord-ps4-ps5-raw/platforms/pc-cod4-cabepex-1-5.json",
+      "sourcePost": "https://discord.com/channels/1528329794947776572/1531336691883704592",
+      "publisherUrl": "https://cabconmodding.com/threads/pc-ps3-xbox-call-of-duty-modern-warfare-mod-menu-cabepex-v1-5-by-cabcon-p-x.5957/",
+      "publisherAccess": {
+        "status": "HTTP403",
+        "unauthenticated": true,
+        "authenticationAttempted": false,
+        "paymentAttempted": false,
+        "bypassAttempted": false
+      },
+      "publisherIndexedEvidence": [
+        {
+          "url": "https://cabconmodding.com/forums/call-of-duty-modern-warfare-mods.34/",
+          "supports": "PC/PS3/Xbox V1.5 publisher thread title."
+        },
+        {
+          "url": "https://cabconmodding.com/tags/call-of-duty-modern-warfare/",
+          "supports": "Indexed author introduction says this update is still unfinished."
+        }
+      ],
+      "assetVerified": false,
+      "stagedAsset": null,
+      "limitation": "Indexed title/status excerpts establish neither an accessible PC asset nor setup instructions."
+    }
+  }
+}

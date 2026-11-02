@@ -1,0 +1,153 @@
+{
+  "discord-ps3-jimbo": {
+    "reviewed": "2026-11-02",
+    "classification": "PS3 multi-game collection resource; Multicod is not a game",
+    "supportedGameIds": ["modern-warfare-2", "modern-warfare-3", "black-ops-1", "ghosts"],
+    "confirmationBasis": "Both downloaded variants were independently hashed against the manifest and statically inspected. Game associations are established by named EBOOT archive members, not hardware tests. The four differently named SPRX files were not assigned to individual games without documentation.",
+    "hardwareTested": false,
+    "unsupportedCurrentGameIds": [],
+    "notEstablishedGameIds": ["cod4", "world-at-war", "black-ops-2", "advanced-warfare"],
+    "variants": [
+      {
+        "id": "dex",
+        "label": "PS3 DEX build",
+        "downloadId": "jimbo-dex",
+        "sourceUrl": "https://www.mediafire.com/file/hy7js8v3knwgy2l/Jimbo_%2528PS3DEX%2529.rar/file",
+        "local": "/downloads/ps3/jimbo-dex/Jimbo-PS3DEX.rar",
+        "filename": "Jimbo-PS3DEX.rar",
+        "bytes": 17004671,
+        "sha256": "9376d6970cee13003a49a6cd3a74f02f99726a06d9525301631b20f9908125fd",
+        "sha256Verified": true,
+        "supportedGameIds": ["modern-warfare-2", "modern-warfare-3", "black-ops-1", "ghosts"],
+        "gameEvidence": {
+          "modern-warfare-2": ["Jimbo Menus/EBOOTS/MW2_EBOOT.BIN"],
+          "modern-warfare-3": ["Jimbo Menus/EBOOTS/MW3_EBOOT.BIN"],
+          "black-ops-1": ["Jimbo Menus/EBOOTS/BO1_EBOOT.BIN"],
+          "ghosts": ["Jimbo Menus/EBOOTS/Ghosts_EBOOT.BIN"]
+        },
+        "readme": "Jimbo Menus/READ ME.txt",
+        "menuMembers": ["Jimbo Menus/Jimbo/Orchid.sprx", "Jimbo Menus/Jimbo/Indigo.sprx", "Jimbo Menus/Jimbo/Viridian.sprx", "Jimbo Menus/Jimbo/Azure.sprx"],
+        "requirements": "DEX is the captured source/archive label. Exact firmware, title IDs and game updates are not documented.",
+        "readmeSummary": "Copy the whole Jimbo folder to /dev_hdd0/tmp/. The selected game's EBOOT.BIN belongs in the matching /dev_hdd0/game/<BLES or BLUS title ID>/USRDIR/. Preserve the original executable. The readme does not map Orchid, Indigo, Viridian or Azure to particular games."
+      },
+      {
+        "id": "hen",
+        "label": "PS3 HEN build",
+        "downloadId": "jimbo-hen",
+        "sourceUrl": "https://www.mediafire.com/file/5uk1gc6ujjyjmel/Jimbo_%2528PS3HEN%2529.rar/file",
+        "local": "/downloads/ps3/jimbo-hen/Jimbo-PS3HEN.rar",
+        "filename": "Jimbo-PS3HEN.rar",
+        "bytes": 21258078,
+        "sha256": "7b139db0454fd255754b08a2a9fceb74354135bc2b1d965979546add93361f11",
+        "sha256Verified": true,
+        "supportedGameIds": ["modern-warfare-2", "modern-warfare-3", "black-ops-1", "ghosts"],
+        "gameEvidence": {
+          "modern-warfare-2": ["Jimbos Menus/EBOOTS/MW2_EBOOT.BIN"],
+          "modern-warfare-3": ["Jimbos Menus/EBOOTS/MW3_EBOOT.BIN"],
+          "black-ops-1": ["Jimbos Menus/EBOOTS/BO1_EBOOT.BIN"],
+          "ghosts": ["Jimbos Menus/EBOOTS/Ghosts_EBOOT.BIN"]
+        },
+        "readme": "Jimbos Menus/READ ME.txt",
+        "menuMembers": ["Jimbos Menus/Jimbo/Orchid.sprx", "Jimbos Menus/Jimbo/Indigo.sprx", "Jimbos Menus/Jimbo/Viridian.sprx", "Jimbos Menus/Jimbo/Azure.sprx"],
+        "requirements": "HEN is the captured source/archive label. Exact HFW/HEN version, title IDs and game updates are not documented.",
+        "readmeSummary": "Copy the whole Jimbo folder to /dev_hdd0/tmp/. The selected game's EBOOT.BIN belongs in the matching /dev_hdd0/game/<BLES or BLUS title ID>/USRDIR/. Preserve the original executable. The readme does not map Orchid, Indigo, Viridian or Azure to particular games."
+      }
+    ],
+    "variantDifferences": "The two separately downloaded archives have different hashes and sizes but the same four game-labelled EBOOTs and the same SPRX filenames. They remain distinct DEX and HEN downloads, not interchangeable files.",
+    "routingComparison": {"file":"docs/ps3-multicod-routing.json","status":"matches","discrepancies":[]}
+  },
+  "discord-ps3-matrixmods-v2": {
+    "reviewed": "2026-11-02",
+    "classification": "PS3 multi-game collection resource; Multicod is not a game",
+    "supportedGameIds": ["cod4", "world-at-war", "modern-warfare-2", "modern-warfare-3", "black-ops-1", "black-ops-2", "ghosts", "advanced-warfare"],
+    "confirmationBasis": "Archive hash verified against the manifest. Each listed game has a named EBOOT directory. BO1 has separate mp and zm EBOOT directories. These labels and the DEX readme establish source claims, not tested compatibility with every firmware, title ID or update.",
+    "hardwareTested": false,
+    "unsupportedCurrentGameIds": [],
+    "variants": [
+      {
+        "id": "v2-dex",
+        "label": "V2 PS3 DEX build",
+        "downloadId": "matrixmods-v2-dex",
+        "sourceUrl": "https://www.mediafire.com/file/x7zh07my3iyvole/MatrixMods_%2528PS3DEX%2529.rar/file",
+        "local": "/downloads/ps3/matrixmods-v2-dex/MatrixMods-PS3DEX.rar",
+        "filename": "MatrixMods-PS3DEX.rar",
+        "bytes": 39101677,
+        "sha256": "e8cd2f9c2d29026a4b81bf8b67c675c8ec509b973be222501642f571f3d169ef",
+        "sha256Verified": true,
+        "supportedGameIds": ["cod4", "world-at-war", "modern-warfare-2", "modern-warfare-3", "black-ops-1", "black-ops-2", "ghosts", "advanced-warfare"],
+        "gameEvidence": {
+          "cod4": ["MatrixMods/eboots/COD4/EBOOT.BIN"],
+          "world-at-war": ["MatrixMods/eboots/WAW/EBOOT.BIN"],
+          "modern-warfare-2": ["MatrixMods/eboots/MW2/EBOOT.BIN"],
+          "modern-warfare-3": ["MatrixMods/eboots/MW3/EBOOT.BIN"],
+          "black-ops-1": ["MatrixMods/eboots/BO1/mp/EBOOT.BIN", "MatrixMods/eboots/BO1/zm/EBOOT.BIN"],
+          "black-ops-2": ["MatrixMods/eboots/BO2/EBOOT.BIN"],
+          "ghosts": ["MatrixMods/eboots/GHOSTS/EBOOT.BIN"],
+          "advanced-warfare": ["MatrixMods/eboots/AW/EBOOT.BIN"]
+        },
+        "readme": "MatrixMods/READ.txt",
+        "menuMembers": ["MatrixMods/Matrix/Allegiance.sprx", "MatrixMods/Matrix/Downfall.sprx", "MatrixMods/Matrix/Evasion.sprx", "MatrixMods/Matrix/Insidious.sprx", "MatrixMods/Matrix/Oblivion.sprx", "MatrixMods/Matrix/Rebirth.sprx", "MatrixMods/Matrix/Rebirth_Zombies.sprx", "MatrixMods/Matrix/Supremacy.sprx", "MatrixMods/Matrix/Venom.sprx"],
+        "requirements": "DEX only: the included readme requires both Target Type and LV2 Kernel set to DEX in Rebug Toolbox. No HEN variant was present in this captured archive.",
+        "readmeSummary": "Put the whole Matrix folder in /dev_hdd0/tmp/ and the selected game's EBOOT in /dev_hdd0/game/<your title ID>/USRDIR/. Preserve the original game executable. The readme does not provide a complete per-game SPRX filename mapping, title IDs or game updates.",
+        "excludedInspection": "The _Key.txt member was not opened or read."
+      }
+    ],
+    "routingComparison": {"file":"docs/ps3-multicod-routing.json","status":"matches","discrepancies":[]}
+  },
+  "discord-ps3-mw2-inphect-package": {
+    "reviewed": "2026-11-02",
+    "classification": "PS3 multi-game collection resource; its capture in the MW2 forum does not limit it to MW2",
+    "supportedGameIds": ["modern-warfare-2", "modern-warfare-3", "black-ops-1", "black-ops-2", "ghosts"],
+    "confirmationBasis": "The combined archive was hashed against the manifest and statically inspected. Both SPRX variant trees and both game EBOOT sets contain all five game labels. These source-labelled members are not hardware test results.",
+    "hardwareTested": false,
+    "unsupportedCurrentGameIds": [],
+    "notEstablishedGameIds": ["cod4", "world-at-war", "advanced-warfare"],
+    "download": {
+      "downloadId":"discord-ps3-mw2-inphect-package",
+      "label":"Combined HEN/CEX and DEX PS3 archive",
+      "sourceUrl":"https://www.mediafire.com/file/mcm8474fo17o0sl/Multicod_Inphect_Paks.rar/file",
+      "local":"/downloads/ps3/discord-ps3-mw2-inphect-package/Multicod_Inphect_Paks.rar",
+      "filename":"Multicod_Inphect_Paks.rar",
+      "bytes":55497086,
+      "sha256":"edc048940bfff468165d0f0497ed629ac9dbf3cbf7616e5df5b4568f5d202f62",
+      "sha256Verified":true
+    },
+    "readme":"Read Instrctions/Instructions.txt",
+    "readmeSummary":"Rename the selected complete HEN/CEX or DEX menu folder to inphect, all lowercase, and put it in /dev_hdd0/tmp/. Preserve assets and configurations. Put only the matching game's EBOOT.BIN in /dev_hdd0/game/<BLES or BLUS title ID>/USRDIR/, preserving the original executable. Exact firmware, title IDs and game updates are unspecified.",
+    "variants": [
+      {
+        "id":"hen-cex-sprx",
+        "label":"HEN+CEX SPRX folder with HEN-labelled EBOOT set",
+        "supportedGameIds":["modern-warfare-2","modern-warfare-3","black-ops-1","black-ops-2","ghosts"],
+        "menuFolder":"Read Instrctions/HEN+CEX",
+        "ebootFolder":"Read Instrctions/EBOOTS/HEN",
+        "gameEvidence": {
+          "modern-warfare-2":["Read Instrctions/HEN+CEX/InphectMW2.sprx","Read Instrctions/EBOOTS/HEN/MW2_EBOOT.BIN"],
+          "modern-warfare-3":["Read Instrctions/HEN+CEX/InphectMW3.sprx","Read Instrctions/EBOOTS/HEN/MW3_EBOOT.BIN"],
+          "black-ops-1":["Read Instrctions/HEN+CEX/InphectBO1.sprx","Read Instrctions/EBOOTS/HEN/BO1_EBOOT.BIN"],
+          "black-ops-2":["Read Instrctions/HEN+CEX/InphectBO2.sprx","Read Instrctions/EBOOTS/HEN/BO2_EBOOT.BIN"],
+          "ghosts":["Read Instrctions/HEN+CEX/InphectGhosts.sprx","Read Instrctions/EBOOTS/HEN/Ghosts_EBOOT.BIN"]
+        },
+        "requirements":"The SPRX folder is labelled HEN+CEX and the instructions call it HEN/CEX. The executable set is labelled HEN; there is no separate CEX-labelled EBOOT set. This evidence does not establish which executable should be used on a particular CEX system."
+      },
+      {
+        "id":"dex",
+        "label":"DEX SPRX folder and DEX-labelled EBOOT set",
+        "supportedGameIds":["modern-warfare-2","modern-warfare-3","black-ops-1","black-ops-2","ghosts"],
+        "menuFolder":"Read Instrctions/DEX",
+        "ebootFolder":"Read Instrctions/EBOOTS/DEX",
+        "gameEvidence": {
+          "modern-warfare-2":["Read Instrctions/DEX/InphectMW2.sprx","Read Instrctions/EBOOTS/DEX/MW2_EBOOT.BIN"],
+          "modern-warfare-3":["Read Instrctions/DEX/InphectMW3.sprx","Read Instrctions/EBOOTS/DEX/MW3_EBOOT.BIN"],
+          "black-ops-1":["Read Instrctions/DEX/InphectBO1.sprx","Read Instrctions/EBOOTS/DEX/BO1_EBOOT.BIN"],
+          "black-ops-2":["Read Instrctions/DEX/InphectBO2.sprx","Read Instrctions/EBOOTS/DEX/BO2_EBOOT.BIN"],
+          "ghosts":["Read Instrctions/DEX/InphectGhosts.sprx","Read Instrctions/EBOOTS/DEX/Ghosts_EBOOT.BIN"]
+        },
+        "requirements":"Both the selected SPRX tree and executable set are labelled DEX. Do not mix this set with the HEN-labelled executables or HEN+CEX menu folder."
+      }
+    ],
+    "variantDifferences":"All five games are present in both sets. The package is one combined download, unlike Jimbo's two separate downloads. Menu assets and executables differ by labelled environment; no exact firmware or game-update compatibility is established.",
+    "excludedInspection":"No xuids.txt, activation, credential or key file was opened or read.",
+    "routingComparison":{"file":"docs/ps3-multicod-routing.json","status":"matches","discrepancies":[],"nuance":"Keep the HEN+CEX SPRX label distinct from the HEN-only EBOOT folder label; do not invent a separate CEX EBOOT download."}
+  }
+}

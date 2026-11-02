@@ -1,0 +1,101 @@
+{
+  "updatedAt": "2026-11-02T09:58:38.861Z",
+  "status": "Complete locally: 445 site pages refreshed;403 indexable pages; metadata check reports zero pending changes.",
+  "summary": "Updated page-specific SEO/search metadata and existing card search tags sitewide. Preserved noindex/redirect behavior, exact compatibility pins and every ready/downloader helper build.",
+  "result": "docs/qa/site-search-refresh-result.json",
+  "metadata": "docs/seo/page-metadata.json",
+  "editorialOverrides": "docs/seo/search-editorial-overrides.json",
+  "scripts": [
+    "scripts/update-page-metadata.cjs",
+    "scripts/update-site-search-tags.cjs",
+    "scripts/site-public-pages.cjs",
+    "scripts/page-search-tags.cjs",
+    "scripts/page-metadata-content.cjs",
+    "scripts/verify-site-search-metadata.cjs"
+  ],
+  "checks": {
+    "metadataPassed": true,
+    "metadataRepeatCheck": "0 pending updates across 445 pages",
+    "searchAttributeRepeatCheck": {
+      "visited": 445,
+      "changed": 0
+    },
+    "fullTests": {
+      "tests": 398,
+      "passed": 398,
+      "failed": 0,
+      "output": "docs/qa/site-search-metadata-all-tests.txt"
+    },
+    "focusedTests": {
+      "tests": 29,
+      "passed": 29,
+      "failed": 0,
+      "output": "docs/qa/site-search-metadata-focused-tests.txt"
+    },
+    "siteAudit": "Audited 403 public pages and 40392 local links/assets; 0 issue(s).",
+    "readyArtifactsPreserved": true
+  },
+  "browser": {
+    "consoleDirectoryAliases": [
+      "psvita → PlayStation Vita",
+      "ps 2 → PlayStation 2",
+      "wiiu → Nintendo Wii U",
+      "x360 → Xbox 360"
+    ],
+    "socialMetadata": "Browser parsed matching title, OG title, description, keywords, canonical and one structured-data block.",
+    "nativeExample": "Astro Bot PS5 JSON cheats retains PPSA21564 01.007.000 in its description."
+  },
+  "regeneration": [
+    "node scripts/update-page-metadata.cjs",
+    "node scripts/update-site-search-tags.cjs",
+    "node scripts/update-page-metadata.cjs --check",
+    "node scripts/update-site-search-tags.cjs --check"
+  ],
+  "preservation": {
+    "originalBaselineComparisonPassed": false,
+    "concurrentBodyChanges": [
+      "console/ps3/desktop-tools.html",
+      "console/ps3/mods/call-of-duty/advanced-warfare/index.html",
+      "console/ps3/mods/call-of-duty/black-ops-1/index.html",
+      "console/ps3/mods/call-of-duty/black-ops-2/index.html",
+      "console/ps3/mods/call-of-duty/black-ops-3/index.html",
+      "console/ps3/mods/call-of-duty/cod4/index.html",
+      "console/ps3/mods/call-of-duty/cod4-modern-warfare/index.html",
+      "console/ps3/mods/call-of-duty/ghosts/index.html",
+      "console/ps3/mods/call-of-duty/index.html",
+      "console/ps3/mods/call-of-duty/modern-warfare-2/index.html",
+      "console/ps3/mods/call-of-duty/modern-warfare-3/index.html",
+      "console/ps3/mods/call-of-duty/world-at-war/index.html",
+      "console/ps3/mods/dead-island/index.html",
+      "console/ps3/mods/dead-island-riptide/index.html",
+      "console/ps3/mods/gta-iv/index.html",
+      "console/ps3/mods/gta-v/index.html",
+      "console/ps3/mods/menus.html",
+      "console/ps3/mods/multicod/index.html",
+      "console/ps3/mods/uncharted/among-thieves/index.html",
+      "console/ps3/mods/uncharted/drakes-deception/index.html",
+      "console/ps3/mods/uncharted/drakes-fortune/index.html",
+      "console/ps3/mods/uncharted/index.html",
+      "console/retro/3ds-mods.html",
+      "console/retro/3ds-online.html",
+      "console/retro/wii/game-mods.html",
+      "console/retro/wii/mario-kart-wii.html",
+      "console/retro/wii/new-super-mario-bros-wii.html",
+      "console/retro/xbox.html"
+    ],
+    "explanation": "Other console builders refreshed page bodies while this task ran. Those changes are retained and explicitly reported rather than overwritten or silently rebased. The original-baseline verifier reports them as preservation findings; metadata checks and all three protected artifact hashes pass."
+  },
+  "notes": [
+    "Run the metadata updater and search-tag refresh after any source page builders; --check validates without writes.",
+    "The shared console guide builder also applies resource search aliases during generation.",
+    "Never update tags inside downloadable HTML tools or exact archived receiver builds; their filenames and bytes are protected.",
+    "No guarantees of ranking or indexing timing are made; this work updates the site metadata/content used by search systems."
+  ],
+  "publication": "Local only; no commit, push or deployment.",
+  "durabilityContinuation": {
+    "updatedAt": "2026-11-02T10:20:54.299Z",
+    "handoff": "docs/chat-handoffs/site-search-durable.json",
+    "result": "docs/qa/site-search-durable-verification.json",
+    "status": "Complete locally: search metadata survives page regeneration;445 pages validate and416 tests pass."
+  }
+}

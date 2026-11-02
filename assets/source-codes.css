@@ -1,0 +1,49 @@
+.source-code-page .guide-hero { padding-top: 48px; }
+.source-code-page .guide-hero-text h1 { max-width: 20ch; }
+.source-code-page .guide-hero-text p { max-width: 70ch; }
+.source-code-page .games-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.source-code-page .guide-nav [aria-current="page"] { color: var(--text-primary); text-decoration: underline; text-underline-offset: 6px; }
+.source-breadcrumb ol { display: flex; flex-wrap: wrap; gap: 6px 10px; list-style: none; margin: 0; padding: 0; }
+.source-breadcrumb li { display: flex; align-items: center; gap: 10px; }
+.source-breadcrumb li + li::before { content: "/"; color: var(--text-muted); }
+.source-breadcrumb [aria-current="page"] { color: var(--text-secondary); }
+.source-symbol { color: var(--accent-light); margin-bottom: 8px; }
+.source-symbol svg { width: 32px; height: 32px; }
+.source-code-page .source-trail { font-size: .75rem; color: var(--text-muted); }
+.source-code-page .source-directory-card h3 { font-size: 1.35rem; }
+.source-file-details { width: 100%; border-top: 1px solid var(--border); margin-top: 8px; padding-top: 12px; font-size: .8rem; }
+.source-file-details summary { cursor: pointer; color: var(--text-secondary); }
+.source-file-details summary:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+.source-file-details dl { margin-top: 16px; }
+.source-file-details dt { margin-top: 10px; color: var(--text-muted); }
+.source-file-details dd { margin: 3px 0 0; color: var(--text-secondary); overflow-wrap: anywhere; }
+.source-file-details code { font-size: .75rem; }
+.source-edition { display: inline-flex; font-size: .75rem; line-height: 1.4; padding: 5px 9px; border: 1px solid var(--border); border-radius: 5px; color: var(--accent-light); }
+.source-edition--enhanced { color: #e3c77e; }
+.source-edition-nav { display: flex; flex-wrap: wrap; gap: 12px; }
+.source-edition-nav a { display: inline-flex; align-items: center; gap: 18px; min-height: 48px; padding: 12px 18px; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.source-edition-nav span { color: var(--text-muted); font-size: .8rem; }
+.source-edition-nav a:hover { border-color: var(--accent-light); }
+.source-edition-nav a:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+.source-code-page #legacy, .source-code-page #enhanced { scroll-margin-top: 90px; }
+.source-project-card { gap: 14px; }
+.source-project-card .guide-links { margin-top: 8px; padding-top: 0; }
+.source-availability { color: var(--text-muted); font-size: .85rem; }
+.source-project-search { max-width: 640px; margin-top: 28px; }
+.source-project-search label { display: block; margin-bottom: 9px; font-size: .9rem; }
+.source-project-search-controls { display: flex; gap: 10px; }
+.source-project-search input { width: 100%; min-width: 0; min-height: 46px; padding: 10px 14px; color: var(--text-primary); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); font: inherit; }
+.source-project-search button { min-height: 46px; padding: 10px 16px; color: var(--text-primary); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); font: inherit; cursor: pointer; }
+.source-project-search button:disabled { color: var(--text-muted); cursor: default; }
+.source-project-search input:focus-visible, .source-project-search button:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+.source-project-search p { margin-top: 10px; color: var(--text-muted); font-size: .85rem; }
+.source-project-card[hidden], .source-code-page [data-source-project-section][hidden], .source-project-search [hidden] { display: none !important; }
+@media (max-width: 1100px) { .source-code-page .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .source-code-page .guide-hero { padding-top: 28px; }
+  .source-code-page .guide-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow-x: visible; }
+  .source-code-page .guide-nav > a { white-space: normal; }
+  .source-code-page .games-grid { grid-template-columns: minmax(0, 1fr); }
+  .source-code-page .guide-resource { padding: 20px; }
+  .source-breadcrumb { font-size: .75rem; }
+}

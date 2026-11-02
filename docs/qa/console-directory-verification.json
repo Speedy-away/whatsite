@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-02T09:11:28.151Z",
+  "cards": 24,
+  "groups": [
+    "PlayStation",
+    "Xbox",
+    "Nintendo",
+    "Sega",
+    "Other platforms",
+    "Themes & shared resources"
+  ],
+  "checks": {
+    "localLinksAndAnchors": true,
+    "idempotentBuild": true,
+    "legacyIntegratorPreservesGroups": true,
+    "focusedTests": 11,
+    "search": {
+      "xbox": 3,
+      "nintendo": 7,
+      "empty": 0,
+      "reset": 24
+    },
+    "responsive": {
+      "desktopWidth": 1280,
+      "desktopDocumentWidth": 1265,
+      "phoneWidth": 390,
+      "phoneDocumentWidth": 375
+    },
+    "images": "All nine existing platform SVGs use object-fit:contain and high-contrast display. Other entries use original typeset panels."
+  },
+  "errors": []
+}

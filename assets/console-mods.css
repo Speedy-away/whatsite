@@ -1,0 +1,6 @@
+.mods-console-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.mod-console-card { color: var(--text-primary); text-decoration: none; }
+.mod-console-card > img { aspect-ratio: 16 / 9; object-fit: contain; }
+.mod-console-card .guide-firmware-open { margin-top: auto; padding-top: 12px; }
+.mod-console-card:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 5px; }
+@media (max-width: 900px) { .mods-console-grid { grid-template-columns: 1fr; } }

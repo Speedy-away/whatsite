@@ -1,0 +1,315 @@
+{
+  "scope": "switch-themes",
+  "updatedAt": "2026-11-02T09:06:00.161Z",
+  "status": "Expanded:15 published themes,52 components; Switch App Store and setup pages added; hub routes/images corrected; all eight new downloaded containers archived including one review-only pack.",
+  "canonicalPageUrls": [
+    "https://whatwhatboy.com/console/nintendo-switch/themes.html"
+  ],
+  "preview": "http://127.0.0.1:8765/console/nintendo-switch/themes.html",
+  "sourceBuilderEntryPoints": {
+    "build": "node scripts/build-switch-themes.cjs",
+    "annotateExistingContainers": "node scripts/switch-theme-catalog.cjs",
+    "verify": "node scripts/verify-switch-themes.cjs",
+    "fetchPinnedSnapshots": "node scripts/prepare-switch-themes.cjs",
+    "archive": "node scripts/archive-switch-themes.cjs",
+    "sharedArchiveMerge": "node scripts/console-expansion-archive.cjs --inventory=docs/switch-themes-private-inventory.json --verify",
+    "organizedIndexRefresh": "node scripts/refresh-local-download-index.cjs --write"
+  },
+  "archiveInventoryPath": "docs/switch-themes-private-inventory.json",
+  "sharedIndexMetadata": "docs/themezer-switch-catalog.json",
+  "detailedCatalogue": "docs/switch-themes-catalog.json",
+  "evidence": "docs/switch-themes-sources.json",
+  "verifiedDownloadableFiles": [
+    {
+      "id": "switch-themes-1997e",
+      "title": "SWITCH2 Neon Nebula",
+      "name": "switch2-neon-nebula-1997E.zip",
+      "local": "/downloads/nintendo-switch/themes/1997E/2026-11-02/switch2-neon-nebula-1997E.zip",
+      "version": "Themezer P1997E snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/packs/1997E/download?src=webapp",
+      "bytes": 2402925,
+      "sha256": "27783fb233ee33b0624d246aa14bbbd7e0d8567dc1dbcf978820296e3f613ae9",
+      "header": "504b030414000000080033065a5d2741",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Theme Packs\\SWITCH2 Neon Nebula\\Builds\\Themezer P1997E snapshot 2026-11-02\\switch2-neon-nebula-1997E.zip"
+    },
+    {
+      "id": "switch-themes-1984e",
+      "title": "Cozy Snorlax Adventures",
+      "name": "cozy-snorlax-adventures-1984E.zip",
+      "local": "/downloads/nintendo-switch/themes/1984E/2026-11-02/cozy-snorlax-adventures-1984E.zip",
+      "version": "Themezer P1984E snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/packs/1984E/download?src=webapp",
+      "bytes": 2121853,
+      "sha256": "6123d87ab59886a921f80648f71a56695b0ecaecfbb7e50cd8bf9c2e85f7165f",
+      "header": "504b030414000000080020075a5dbcaf",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Theme Packs\\Cozy Snorlax Adventures\\Builds\\Themezer P1984E snapshot 2026-11-02\\cozy-snorlax-adventures-1984E.zip"
+    },
+    {
+      "id": "switch-themes-1e93c",
+      "title": "Pixel Forest",
+      "name": "pixel-forest-1E93C.zip",
+      "local": "/downloads/nintendo-switch/themes/1E93C/2026-11-02/pixel-forest-1E93C.zip",
+      "version": "Themezer P1E93C snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/packs/1E93C/download?src=webapp",
+      "bytes": 6935135,
+      "sha256": "d1672e9470d5e673fe22f9a3f6368a0bfbc03e7c4790e1ff71a9b7b0deba503a",
+      "header": "504b030414000000080068015a5d5e3a",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Theme Packs\\Pixel Forest\\Builds\\Themezer P1E93C snapshot 2026-11-02\\pixel-forest-1E93C.zip"
+    },
+    {
+      "id": "switch-themes-18815",
+      "title": "PS5 Theme",
+      "name": "ps5-theme-18815.zip",
+      "local": "/downloads/nintendo-switch/themes/18815/2026-11-02/ps5-theme-18815.zip",
+      "version": "Themezer P18815 snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/packs/18815/download?src=webapp",
+      "bytes": 1773417,
+      "sha256": "9185eb857cfd833ca7af314dc2278e716abb9d753971df9f59e8c832c8111330",
+      "header": "504b03041400000008006c1c5a5d9d20",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Theme Packs\\PS5 Theme\\Builds\\Themezer P18815 snapshot 2026-11-02\\ps5-theme-18815.zip"
+    },
+    {
+      "id": "switch-themes-e474",
+      "title": "The Great Wave off Kanagawa",
+      "name": "the-great-wave-off-kanagawa-E474.nxtheme",
+      "local": "/downloads/nintendo-switch/themes/E474/2026-11-02/the-great-wave-off-kanagawa-E474.nxtheme",
+      "version": "Themezer TE474 snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/themes/E474/download?src=webapp",
+      "bytes": 632577,
+      "sha256": "aad2d2e6afc84e67bdd5eabbbf445a0dcde42742bc31d59d165a5f612a49bccc",
+      "header": "504b03041400000008002c035a5dfcfe",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Individual Themes\\The Great Wave off Kanagawa\\Builds\\Themezer TE474 snapshot 2026-11-02\\the-great-wave-off-kanagawa-E474.nxtheme"
+    },
+    {
+      "id": "switch-themes-1f302",
+      "title": "BLACK RAYQUAZA (LOCK)",
+      "name": "black-rayquaza-lock-1F302.nxtheme",
+      "local": "/downloads/nintendo-switch/themes/1F302/2026-11-02/black-rayquaza-lock-1F302.nxtheme",
+      "version": "Themezer T1F302 snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/themes/1F302/download?src=webapp",
+      "bytes": 145295,
+      "sha256": "f49438976cbd85424c401d1e64933fd0fbff3197aaa2cdbfb3ee31b2d14afcb5",
+      "header": "504b03041400000008001b015a5d2066",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Individual Themes\\BLACK RAYQUAZA (LOCK)\\Builds\\Themezer T1F302 snapshot 2026-11-02\\black-rayquaza-lock-1F302.nxtheme"
+    },
+    {
+      "id": "switch-themes-e6bb",
+      "title": "Pixel Cyber Punk",
+      "name": "pixel-cyber-punk-E6BB.nxtheme",
+      "local": "/downloads/nintendo-switch/themes/E6BB/2026-11-02/pixel-cyber-punk-E6BB.nxtheme",
+      "version": "Themezer TE6BB snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/themes/E6BB/download?src=webapp",
+      "bytes": 1024254,
+      "sha256": "94451cf4cb27e533c736637f9f0f90fafda8493916a6903d3c427971e28e3bb4",
+      "header": "504b03041400000008009c015a5dafdb",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Individual Themes\\Pixel Cyber Punk\\Builds\\Themezer TE6BB snapshot 2026-11-02\\pixel-cyber-punk-E6BB.nxtheme"
+    },
+    {
+      "id": "switch-themes-e7cf",
+      "title": "Minimalist Zelda - Home Screen",
+      "name": "minimalist-zelda-home-screen-E7CF.nxtheme",
+      "local": "/downloads/nintendo-switch/themes/E7CF/2026-11-02/minimalist-zelda-home-screen-E7CF.nxtheme",
+      "version": "Themezer TE7CF snapshot 2026-11-02",
+      "sourceUrl": "https://api.themezer.net/switch/themes/E7CF/download?src=webapp",
+      "bytes": 650762,
+      "sha256": "40a365d820ddad874ef6c2ee42d9f01ccdf0d22d0d87326b18552e0c3f4ac415",
+      "header": "504b03041400000008007d075a5dfcfe",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Themes\\Individual Themes\\Minimalist Zelda - Home Screen\\Builds\\Themezer TE7CF snapshot 2026-11-02\\minimalist-zelda-home-screen-E7CF.nxtheme"
+    },
+    {
+      "id": "switch-themes-themezer-nx",
+      "title": "Themezer-NX",
+      "name": "themezer-nx.nro",
+      "local": "/downloads/nintendo-switch/themes/themezer-nx/3.3.1/themezer-nx.nro",
+      "version": "3.3.1",
+      "sourceUrl": "https://github.com/ThemezerNX/Themezer-NX/releases/download/3.3.1/themezer-nx.nro",
+      "bytes": 9730240,
+      "sha256": "c83741eafe3a999e717b056055d42df91369555d94285077ce6c117b16c0fe62",
+      "format": "NRO",
+      "archived": true,
+      "archiveRole": [
+        "Builds"
+      ],
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Nintendo Switch\\Tools\\Theme Installers\\Themezer NX\\Builds\\3.3.1\\themezer-nx.nro"
+    }
+  ],
+  "reusedInstaller": {
+    "version": "nxt-3.0.2",
+    "page": "/console/nintendo-switch/apps.html#NXthemes_Installer",
+    "local": "/downloads/nintendo-switch/NXthemes_Installer/nxt-3.0.2/NXThemesInstaller.nro",
+    "bytes": 10467778,
+    "sha256": "36ac0fac5477e08a176b2f155b8b3c170c1291004d943541348599bae8cf97a1",
+    "duplicated": false
+  },
+  "checks": {
+    "containerQA": "docs/qa/switch-themes-verification.json",
+    "summary": {
+      "themes": 8,
+      "packs": 4,
+      "individuals": 4,
+      "components": 30,
+      "verifiedArchives": 9
+    },
+    "passed": true,
+    "httpQA": "docs/qa/switch-themes-http.json",
+    "httpFiles": 9,
+    "httpPassed": true,
+    "inventoryQA": "docs/qa/switch-themes-inventory.json",
+    "inventoryPassed": true,
+    "browserQA": "docs/qa/switch-themes-browser.json",
+    "syntax": "All six scoped CJS/JS entry points passed node --check",
+    "localLinks": 84,
+    "officialDocumentationHEADs": {
+      "count": 11,
+      "status": 200
+    }
+  },
+  "screenshots": [
+    "docs/qa/switch-themes-desktop.jpg",
+    "docs/qa/switch-themes-mobile-hero.jpg",
+    "docs/qa/switch-themes-mobile-card.jpg"
+  ],
+  "ownedFiles": [
+    "console/nintendo-switch/themes.html",
+    "scripts/prepare-switch-themes.cjs",
+    "scripts/archive-switch-themes.cjs",
+    "scripts/switch-theme-catalog.cjs",
+    "scripts/build-switch-themes.cjs",
+    "scripts/verify-switch-themes.cjs",
+    "assets/switch-themes.css",
+    "assets/switch-themes.js",
+    "assets/images/switch-themes/theme-desk.svg",
+    "docs/switch-themes-catalog.json",
+    "docs/themezer-switch-catalog.json",
+    "docs/switch-themes-sources.json",
+    "assets/images/switch-themes/1997E.webp",
+    "assets/images/switch-themes/1984E.webp",
+    "assets/images/switch-themes/1E93C.webp",
+    "assets/images/switch-themes/18815.webp",
+    "assets/images/switch-themes/E474.webp",
+    "assets/images/switch-themes/1F302.webp",
+    "assets/images/switch-themes/E6BB.webp",
+    "assets/images/switch-themes/E7CF.webp",
+    "downloads/nintendo-switch/themes/1997E/2026-11-02/switch2-neon-nebula-1997E.zip",
+    "downloads/nintendo-switch/themes/1984E/2026-11-02/cozy-snorlax-adventures-1984E.zip",
+    "downloads/nintendo-switch/themes/1E93C/2026-11-02/pixel-forest-1E93C.zip",
+    "downloads/nintendo-switch/themes/18815/2026-11-02/ps5-theme-18815.zip",
+    "downloads/nintendo-switch/themes/E474/2026-11-02/the-great-wave-off-kanagawa-E474.nxtheme",
+    "downloads/nintendo-switch/themes/1F302/2026-11-02/black-rayquaza-lock-1F302.nxtheme",
+    "downloads/nintendo-switch/themes/E6BB/2026-11-02/pixel-cyber-punk-E6BB.nxtheme",
+    "downloads/nintendo-switch/themes/E7CF/2026-11-02/minimalist-zelda-home-screen-E7CF.nxtheme",
+    "downloads/nintendo-switch/themes/themezer-nx/3.3.1/themezer-nx.nro",
+    "docs/qa/switch-themes-desktop.jpg",
+    "docs/qa/switch-themes-mobile-hero.jpg",
+    "docs/qa/switch-themes-mobile-card.jpg",
+    "docs/qa/switch-themes-verification.json",
+    "docs/qa/switch-themes-browser.json",
+    "docs/qa/switch-themes-http.json",
+    "docs/qa/switch-themes-inventory.json"
+  ],
+  "maintenance": [
+    "Build uses only scoped data/page/assets and the shared guide shell via require; do not run the broad guide builder.",
+    "Source prepare is pinned to the2 November 2026 snapshots and refuses a different file at a published dated path; future updates need a new dated path/version, preserving all old files and archive records.",
+    "Theme layout labels and authors are derived directly from bounded original ZIP/.nxtheme files by switch-theme-catalog.cjs; build does not depend on generated QA reports.",
+    "For new snapshots: prepare, archive with normal F escalation, annotate/build/verify, shared inventory merge and index refresh. Reuse existing NXThemes Installer entry when version/hash match.",
+    "Shared root chat owns Switch hub/sidebar/sitemap/themes index; this chat did not edit those shared sources or apps builder. The generated page retains latest shared sidebar, mobile/background support and /languages/i18n.js?v=3. Dynamic result counter uses __scoobyI18n.t and scooby:langchange.",
+    "Global archive merge attempts safely yielded during concurrent intake. A cooperating merge/index refresh incorporated all nine records; both inventories, index and recorded checksums were independently checked afterward."
+  ],
+  "sharedIntegrationForRoot": [
+    "Link /console/nintendo-switch/themes.html from Switch hub/navigation and shared theme index as appropriate.",
+    "Add canonical themes URL to sitemap.xml.",
+    "Shared theme index can consume docs/themezer-switch-catalog.json:8 source-attributed entries with local previews, downloads, platform and requirements.",
+    "Reconcile docs/console-expansion-handoff.json from this scoped completion note; main handoff was left to coordinating chat to avoid overwriting concurrent updates."
+  ],
+  "constraints": {
+    "localOnly": true,
+    "noCommit": true,
+    "noDeployment": true,
+    "noWorktree": true,
+    "noVideos": true,
+    "noPayloadExecution": true,
+    "noPhysicalConsoleTest": true,
+    "sharedLanguageFilesUntouched": true
+  },
+  "limitations": [
+    "Container/publisher-hash checks do not establish physical-console installation or theme appearance.",
+    "No theme has a universally source-certified firmware/region range. Installer 3.0.2 documents 23.0/23.0.1 support with Atmosphere >= 1.12.1; check exact layout compatibility before use."
+  ],
+  "continuation": {
+    "themes": 15,
+    "packs": 7,
+    "individuals": 8,
+    "components": 52,
+    "readyArchiveCopies": 16,
+    "reviewOnly": [
+      {
+        "id": "switch-themes-195b5",
+        "reason": "Layout target differs from NXTheme manifest",
+        "file": {
+          "name": "light-and-dark-japanese-195B5.zip",
+          "local": "/downloads/nintendo-switch/themes/195B5/2026-11-02/light-and-dark-japanese-195B5.zip",
+          "version": "Themezer P195B5 snapshot 2026-11-02",
+          "sourceUrl": "https://api.themezer.net/switch/packs/195B5/download?src=webapp",
+          "bytes": 731669,
+          "sha256": "588d10b7c06ac6fda9e907aa236a3104cd023203301cfd11b040a4380345d834",
+          "header": "504b03041400000008002e035a5d445e",
+          "archived": true,
+          "archiveRole": [
+            "Builds"
+          ]
+        }
+      }
+    ],
+    "pages": [
+      "/console/nintendo-switch/app-store.html",
+      "/console/nintendo-switch/setup.html"
+    ],
+    "builder": "scripts/build-switch-resource-pages.cjs",
+    "rebuildOrder": [
+      "node scripts/build-switch-homebrew.cjs (only if modifying apps)",
+      "node scripts/build-switch-themes.cjs",
+      "node scripts/build-switch-resource-pages.cjs (after any hub rebuild)"
+    ],
+    "checks": {
+      "verifier": true,
+      "http": "docs/qa/switch-expansion-http.json",
+      "hubAppStoreClick": "Browser click lands on /console/nintendo-switch/app-store.html with Switch NRO and ZIP links, no library redirect.",
+      "desktopOverflow": false,
+      "archiveMerge": "Completed --inventory --verify;1393 items2225file records union",
+      "archiveRefresh": "Completed;zero missing tracked paths"
+    },
+    "screenshot": "docs/qa/switch-app-store-own-page.jpg"
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "scope": "xbox360-more",
+  "updatedAt": "2026-11-02T13:03:46.319Z",
+  "status": "Batch 4 complete locally; archive inventory merged and index refreshed",
+  "canonicalPages": [
+    "console/xbox360/library.html"
+  ],
+  "preview": "http://127.0.0.1:8765/console/xbox360/library.html",
+  "buildEntrypoints": [
+    "node scripts/build-xbox360-more.cjs"
+  ],
+  "catalogue": "docs/xbox360-more-library.json",
+  "research": "docs/xbox360-more-research-notes.json",
+  "privateInventory": "docs/xbox360-more-private-inventory.json",
+  "archive": {
+    "root": "F:/whatsite-backup-downloads-etc",
+    "helper": "scripts/console-expansion-archive.cjs via scripts/download-archive-layout.cjs",
+    "scopedItems": 41,
+    "readyFileRecords": 96,
+    "bytes": 1196384410,
+    "primaryDownloads": 41,
+    "alternateStorePackages": 2,
+    "preservedAllOriginals": true,
+    "globalInventoryMergedByThisChat": true,
+    "coordinatorFinalCommands": [
+      "node scripts/console-expansion-archive.cjs --all --verify",
+      "node scripts/refresh-local-download-index.cjs --write"
+    ],
+    "requiredCompanions": 3,
+    "indexRefreshed": true,
+    "report": "docs/qa/xbox360-more-batch4-archive.json"
+  },
+  "resources": [
+    "SwanStation 0.1.1.0",
+    "Balatro360 1.0.0.0: manual and store packages",
+    "Dusklight 0.1.0.0",
+    "Starship 0.2.0.0",
+    "CTR360 1.0.3.0: manual and store packages",
+    "Homebrew App Store 0.1.0.0 (native XEX, separate from Aurora Lua store)",
+    "Aurora 0.7b.2 Rev1655",
+    "Aurora A–Z 1.1 (requires exact Aurora revision and NetDbgDll slot)",
+    "Catppuccin Latte, Frappé, Macchiato and Mocha: blue-accent XZPs pinned to 21f6ef55249151cea690132b26f9ae32c078719b",
+    "Harissa64 2.0.8",
+    "HarissaDC 0.1.0-dev",
+    "Anarch360 1.0.0: self-contained CC0 native game"
+  ],
+  "implementation": {
+    "builder": "scripts/build-xbox360-more.cjs",
+    "downloader": "scripts/prepare-xbox360-more.cjs --download (requires normal F: escalation; cached inspected builds remain in docs/tmp/xbox360-more)",
+    "verification": "scripts/verify-xbox360-more.cjs",
+    "styles": "assets/xbox360-library.css",
+    "interaction": "assets/xbox360-library.js",
+    "images": "assets/images/xbox360-more/",
+    "sharedHelper": "Imported page() from build-console-guides.cjs without invoking its broad build",
+    "integrations": [
+      "Shared mobile download File options",
+      "languages/i18n.js?v=3",
+      "Emerald shared background",
+      "Existing advertisements and navigation"
+    ],
+    "features": [
+      "Search combining multiple terms and ignoring accents",
+      "Category and explicit runtime filters",
+      "Live count and accessible empty/reset state",
+      "Credited real artwork",
+      "Exact data prerequisites, format, version, bytes, SHA-256, launch executable and HDD/USB paths",
+      "Per-entry temporary-exploit limitations",
+      "Manual archive wrapper directions",
+      "Separate source/build helper roles"
+    ]
+  },
+  "verification": {
+    "passed": true,
+    "artifactReport": "docs/qa/xbox360-more-verification.json",
+    "intakeReport": "docs/qa/xbox360-more-artifacts.json",
+    "browserReport": "docs/qa/xbox360-more-batch4-browser.json",
+    "tests": {
+      "command": "node --test scripts/tests/xbox360-more.test.cjs",
+      "passed": 8,
+      "failed": 0
+    },
+    "archiveHashesVerified": 96,
+    "formats": [
+      "Native XEX2 headers and executable paths",
+      "ZIP central directories and uncompressed sizes",
+      "Publisher per-file SHA-256 where supplied",
+      "RAR Aurora.xex extracted as data and checked",
+      "Xbox 360 XUIZ XZP header/version/declared length and Aurora scene names"
+    ],
+    "localLinksAndAssets": 108,
+    "brokenImages": 0,
+    "desktop": {
+      "brokenVisibleImages": 0,
+      "documentWidth": 1265,
+      "viewport": 1280
+    },
+    "mobile": {
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "expandedSetupOverflow": false,
+      "minimumControlHeight": 48,
+      "viewport": 390
+    },
+    "liveCases": 12,
+    "hardwareExecutionTested": false,
+    "downloadedPayloadsExecuted": false
+  },
+  "screenshots": [
+    "docs/qa/xbox360-more-batch4-desktop.jpg",
+    "docs/qa/xbox360-more-batch4-mobile.jpg"
+  ],
+  "truthfulSourceNotes": [
+    "Official catalogue serial5 had stale lowercase Starship and Homebrew App Store ZIP URLs returning404. Verified manual release assets are used. Failed attempts remain in immutable scoped intake events.",
+    "GitHub API hit403 rate limit. Live official release HTML and raw manifests were read instead.",
+    "Balatro/CTR manual and store archives have the same XEX hash and support console first-run conversion. Manual CTR bundle also includes optional Windows conversion helper, not executed.",
+    "Starship, Dusklight, SwanStation, Harissa64/DC and native Homebrew App Store explicitly require RGH/JTAG; exact dashboard minimum is not published. Balatro explicitly supports ABadAvatar. Other temporary combinations are not invented.",
+    "Harissa64 artwork was extracted from the official release ZIP. HarissaDC supplies no release art; the clearly labelled console illustration is used. Anarch art is labelled original-game artwork, not an Xbox hardware screenshot.",
+    "Public page contains no machine-specific F: paths or private inventory links."
+  ],
+  "coordinatorIntegration": [
+    "Add /console/xbox360/library.html to the shared sidebar, Xbox360 hub/apps navigation and sitemap as appropriate. This chat deliberately did not edit those shared files or Xbox360 mods/MultiCOD.",
+    "Keep this scoped builder/canonical page when broad console scripts are regenerated; do not overwrite its catalogue with captured older app sections."
+  ],
+  "remainingScopedWork": [],
+  "publication": "Local only. No commit, publish, deploy, worktree or video added.",
+  "batch2": {
+    "manifest": "docs/xbox360-more-batch2.json",
+    "addedItems": 14,
+    "addedFiles": 17,
+    "addedIds": [
+      "auroraflow-global",
+      "auroraflow-en",
+      "nxe-avatar-v5",
+      "xboxone-experience",
+      "fce360-enhanced",
+      "salvia360",
+      "simple360player",
+      "multiplex360",
+      "silverdash360",
+      "quad-carnage",
+      "wowjay",
+      "nest-bound",
+      "slither360",
+      "portal-clone"
+    ],
+    "sources": [
+      "docs/xbox360-more-batch2-skins.json",
+      "docs/xbox360-more-batch2-apps.json",
+      "docs/xbox360-more-batch2-games.json"
+    ],
+    "baselinePreserved": "docs/qa/xbox360-more-batch2-baseline.json",
+    "resources": [
+      {
+        "id": "auroraflow-global",
+        "title": "AuroraFlow Global",
+        "version": "Final v1.5"
+      },
+      {
+        "id": "auroraflow-en",
+        "title": "AuroraFlow English",
+        "version": "Final v1.5"
+      },
+      {
+        "id": "nxe-avatar-v5",
+        "title": "NXE Splash + Avatar + Xbox logo",
+        "version": "v5"
+      },
+      {
+        "id": "xboxone-experience",
+        "title": "Xbox ONE Experience · Aurora0.6b",
+        "version": "Revision1 · snapshot e7c17cada718"
+      },
+      {
+        "id": "fce360-enhanced",
+        "title": "FCE360 Enhanced",
+        "version": "0.8.10"
+      },
+      {
+        "id": "salvia360",
+        "title": "Salvia 360",
+        "version": "1.1.0"
+      },
+      {
+        "id": "simple360player",
+        "title": "Simple 360 Player",
+        "version": "0.2"
+      },
+      {
+        "id": "multiplex360",
+        "title": "Multiplex 360",
+        "version": "0.4"
+      },
+      {
+        "id": "silverdash360",
+        "title": "Silverdash360",
+        "version": "0.1.3 · full 0.1.2 base + update"
+      },
+      {
+        "id": "quad-carnage",
+        "title": "Quad Carnage",
+        "version": "Publisher build · 2025-03-30 release bug-fix"
+      },
+      {
+        "id": "wowjay",
+        "title": "WowJay",
+        "version": "Unversioned publisher build · reviewed 2026-11-02"
+      },
+      {
+        "id": "nest-bound",
+        "title": "Nest Bound",
+        "version": "V1 · 2025-07-07 publisher release"
+      },
+      {
+        "id": "slither360",
+        "title": "Slither360",
+        "version": "0.10.2-dev.1 · development build"
+      },
+      {
+        "id": "portal-clone",
+        "title": "Portal Clone · tech demo",
+        "version": "Unversioned tech demo · reviewed 2026-11-02"
+      }
+    ],
+    "notes": [
+      "All17 new release files archived; all34 scope files byte-count/SHA256 verified. Original15entries/17files preserved.",
+      "AuroraFlow English/Global retain separate matching layouts. Xbox ONE Experience pinned to legacy Aurora0.6b.",
+      "Silverdash requires0.1.2 console base plus0.1.3 DLL update; both are archived and visible.",
+      "Game author-page buttons avoid expiring signed URLs and do not pretend to be direct files.",
+      "Slither bundled manifest has one documentation checksum mismatch; native XEX and atlas plus five other files match. Original archive retained unchanged.",
+      "No ready Triangle/VBA360-enhanced/current RetroArch asset verified; source archives were not substituted."
+    ]
+  },
+  "previewNote": "Final library verified on an owned loopback-only QA server; temporary tab closed and viewport reset. Owned server stopped after screenshots; shared preview and unrelated browser tabs preserved.",
+  "batch3": {
+    "manifest": "docs/xbox360-more-batch3.json",
+    "addedItems": 9,
+    "addedFiles": 59,
+    "addedIds": [
+      "snes360-enhanced",
+      "amiga360-refresh",
+      "ace-driver-collection",
+      "dashlaunch-temporary-gui",
+      "triangle-runtime",
+      "liquid-glass",
+      "polar-glass",
+      "silenthill360-alpha1",
+      "matrix-v4"
+    ],
+    "sources": [
+      "docs/xbox360-more-batch3-apps.json",
+      "docs/xbox360-more-batch3-skins.json",
+      "docs/xbox360-more-batch3-games.json"
+    ],
+    "baselinePreserved": "docs/qa/xbox360-more-batch3-baseline.json",
+    "resources": [
+      {
+        "id": "snes360-enhanced",
+        "title": "SNES360 Enhanced",
+        "version": "0.38 Beta"
+      },
+      {
+        "id": "amiga360-refresh",
+        "title": "Amiga360 Refresh 2026",
+        "version": "1.5 Feature Edition"
+      },
+      {
+        "id": "ace-driver-collection",
+        "title": "Ace Driver System 22 Collection",
+        "version": "1.0.1"
+      },
+      {
+        "id": "dashlaunch-temporary-gui",
+        "title": "DashLaunch GUI · temporary sessions",
+        "version": "21.3.2 Beta"
+      },
+      {
+        "id": "triangle-runtime",
+        "title": "Triangle · pinned runtime bundle",
+        "version": "Alpha runtime snapshot 03cb4bc8e0e1"
+      },
+      {
+        "id": "liquid-glass",
+        "title": "Liquid Glass",
+        "version": "1.0.0"
+      },
+      {
+        "id": "polar-glass",
+        "title": "Polar Glass",
+        "version": "1.0.0"
+      },
+      {
+        "id": "silenthill360-alpha1",
+        "title": "Silent Hill · Xbox 360 alpha port",
+        "version": "Xbox 360 Alpha 1 · 2026-10-29"
+      },
+      {
+        "id": "matrix-v4",
+        "title": "Matrix Code · V4 skin collection",
+        "version": "V4 · 2025-09-01 publisher update"
+      }
+    ],
+    "notes": [
+      "All 29 earlier entries and 34 earlier files are preserved with exact names, versions, sources, byte counts and hashes.",
+      "Triangle ZIP is a local convenience bundle of the 50 unchanged publisher runtime files at pinned commit03cb4bc8e0e1; all originals are separately archived, with Git blob hashes checked.",
+      "The temporary DashLaunch GUI fork requires an already-loaded launch.xex; BadUpdate/ABadAvatar support is distinct from persistent installation and Peer Pressure.",
+      "Silent Hill Xbox360Alpha1 requires personal USA BIN data and the documented BadUpdate/XeUnshackle route. No commercial game data supplied.",
+      "Sonic.exe, Sally.exe and the Silent Hill skin collection did not complete downloading. Partial files remain preserved; do not execute, publish or hash-claim them as ready builds. Use a new staging filename for future retries.",
+      "No payloads/builds executed, no physical-console testing, no commit or deployment."
+    ],
+    "unavailable": [
+      {
+        "id": "xbox360-more-sonic-exe",
+        "title": "Sonic.exe · Xbox 360 Final Update",
+        "source": "https://andkfox.itch.io/xbox360-sonicexe",
+        "status": "incomplete",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-02T12:31:32.132Z",
+            "sourceUrl": "https://andkfox.itch.io/xbox360-sonicexe",
+            "status": "incomplete-download",
+            "reason": "Original author page and ordinary free file flow verified. Node transport had DNS/connect failures; system curl recovered, but full binary downloads did not complete in the bounded retry window. Prior attempts timed out and an expired signed URL returned403. Partial bytes retained locally; no full-file SHA256 or ready-build claim.",
+            "uploadId": "19049130",
+            "expectedDownloadBytes": 99590619
+          }
+        ]
+      },
+      {
+        "id": "xbox360-more-sally-exe",
+        "title": "Sally.exe · Xbox 360 Demo1",
+        "source": "https://andkfox.itch.io/x360-sallyexe",
+        "status": "incomplete",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-02T12:31:32.132Z",
+            "sourceUrl": "https://andkfox.itch.io/x360-sallyexe",
+            "status": "incomplete-download",
+            "reason": "Original author page and ordinary free file flow verified. Node transport had DNS/connect failures; system curl recovered, but full binary downloads did not complete in the bounded retry window. Prior attempts timed out and an expired signed URL returned403. Partial bytes retained locally; no full-file SHA256 or ready-build claim.",
+            "uploadId": "18948616",
+            "expectedDownloadBytes": 126278336
+          }
+        ]
+      },
+      {
+        "id": "xbox360-more-silent-hill-skins",
+        "title": "Silent Hill · Aurora skin collection",
+        "source": "https://www.reddit.com/r/silenthill/comments/1neu5n8/",
+        "status": "incomplete",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-02T12:31:32.132Z",
+            "sourceUrl": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+            "status": "incomplete-download",
+            "reason": "Original-author Google Drive accepted the selected ZIP, but sequential and supported range transfers timed out. The range run completed112501721of154625941bytes before a request exhausted retries. Preallocated partial contains unfilled ranges and must not be treated as a valid ZIP.",
+            "expectedDownloadBytes": 154625941,
+            "completedRangeBytes": 112501721,
+            "partialFiles": [
+              "docs/tmp/xbox360-more-batch3/silent-hill.partial-1793621151574",
+              "docs/tmp/xbox360-more-batch3/silent-hill.ranged-partial-1793621616402"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "batch4": {
+    "manifest": "docs/xbox360-more-batch4.json",
+    "addedItems": 3,
+    "addedFiles": 3,
+    "addedIds": [
+      "sonic-exe",
+      "sally-exe",
+      "silent-hill-skins"
+    ],
+    "sources": [
+      "docs/xbox360-more-batch4-games.json",
+      "docs/xbox360-more-batch4-skins.json"
+    ],
+    "baselinePreserved": "docs/qa/xbox360-more-batch4-baseline.json",
+    "resources": [
+      {
+        "id": "sonic-exe",
+        "title": "Sonic.exe · Xbox 360 remake",
+        "version": "Final Update · v1.0.2"
+      },
+      {
+        "id": "sally-exe",
+        "title": "Sally.exe · Xbox 360 Demo 1",
+        "version": "Demo 1 · v0.1.0"
+      },
+      {
+        "id": "silent-hill-skins",
+        "title": "Silent Hill · Aurora skin collection",
+        "version": "Publisher collection · 2025-09-12"
+      }
+    ],
+    "notes": [
+      "Completed Sonic.exe Final Update v1.0.2, Sally.exe Demo1 v0.1.0 and the original seven-XZP Silent Hill Aurora collection after normal publisher download retries.",
+      "All38 earlier entries and93 earlier files retain exact filenames, versions, source URLs, sizes and SHA-256. All96 final archive files are verified; old staged partials remain untouched.",
+      "Resolved all three batch3 incomplete inventory records using their existing IDs; original failure-attempt history remains preserved.",
+      "Sonic and Sally launch root default.xex beside complete Media; Sally needs about819MB extracted space. Temporary-exploit compatibility is not inferred from unsigned homebrew support.",
+      "Silent Hill skin collection retains every original variant together; all seven XUIZ skins checked. Displayed Heather art is explicitly credited as packaged artwork rather than a console screenshot.",
+      "Both inventories merged, organized index refreshed, eight tests and twelve live browser checks pass. Temporary preview server and tab closed; no downloaded builds executed, physical-console testing, commit or deployment."
+    ],
+    "unavailable": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-02T12:48:06.067Z",
+  "mode": "Isolated installed Edge; offline third-party DNS; local preview",
+  "results": [
+    {
+      "page": "super-mario-galaxy-2",
+      "name": "wii-super-mario-galaxy-2-1440",
+      "screenshot": "docs/screenshots/wii-super-mario-galaxy-2-1440.png",
+      "width": 1440,
+      "height": 1100,
+      "documentWidth": 1440,
+      "checks": [
+        "Correct scoped resource count",
+        "All scoped resources visible initially",
+        "All listed packages have completed archival",
+        "Name search visibly narrows to one resource",
+        "Empty state visibly shown",
+        "Collection filter visibly narrows the list",
+        "Clear restores all resources",
+        "No videos added",
+        "Shared mobile/language/background integration",
+        "Project artwork loads",
+        "Malformed combined Wiimmfi link absent",
+        "No horizontal overflow",
+        "Cards fit the viewport"
+      ],
+      "failures": []
+    },
+    {
+      "page": "super-mario-galaxy-2",
+      "name": "wii-super-mario-galaxy-2-390",
+      "screenshot": "docs/screenshots/wii-super-mario-galaxy-2-390.png",
+      "width": 390,
+      "height": 1000,
+      "documentWidth": 390,
+      "checks": [
+        "Correct scoped resource count",
+        "All scoped resources visible initially",
+        "All listed packages have completed archival",
+        "Name search visibly narrows to one resource",
+        "Empty state visibly shown",
+        "Collection filter visibly narrows the list",
+        "Clear restores all resources",
+        "No videos added",
+        "Shared mobile/language/background integration",
+        "Project artwork loads",
+        "Malformed combined Wiimmfi link absent",
+        "No horizontal overflow",
+        "Cards fit the viewport"
+      ],
+      "failures": []
+    }
+  ]
+}

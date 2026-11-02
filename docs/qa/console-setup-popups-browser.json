@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-02",
+  "passed": true,
+  "localGuides": [
+    {
+      "hiddenCards": 0,
+      "route": "/console/ps3/hen.html",
+      "steps": 10,
+      "title": "HEN installation steps"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/ps5/y2jb.html",
+      "steps": 5,
+      "title": "Manual Y2JB installation"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/nintendo-switch/setup.html",
+      "steps": 3,
+      "title": "Start with your console model"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/xbox-one-series/install.html",
+      "steps": 7,
+      "title": "3 · Install an app & its x64 dependencies"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/psvita/cfw.html",
+      "steps": 7,
+      "title": "Install firmware 3.65 & Ensō"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/steamdeck/setup.html",
+      "steps": 4,
+      "title": "Install Decky Loader and your first plugin4 steps"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/3ds/setup.html",
+      "steps": 3,
+      "title": "Start with your model and CFW"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/nintendo-switch-2/ns2jb.html",
+      "steps": 5,
+      "title": "ns2jb"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/ps4/jailbreak.html",
+      "steps": 5,
+      "title": "Set manual DNS on PS4"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/wiiu/setup.html",
+      "steps": 6,
+      "title": "Start with your Wii U environment"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/gamecube/setup.html",
+      "steps": 4,
+      "title": "Load a GameCube homebrew app"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/psp/setup.html",
+      "steps": 4,
+      "title": "Start with your PSP"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/ds/setup.html",
+      "steps": 8,
+      "title": "Prepare and launch DS homebrew"
+    },
+    {
+      "hiddenCards": 0,
+      "route": "/console/retro/xbox.html",
+      "steps": 3,
+      "title": "Use your original Xbox"
+    }
+  ],
+  "remoteGuide": {
+    "from": "/console/wii/index.html",
+    "target": "/console/wii/setup.html",
+    "popup": true,
+    "workflowSections": 2
+  },
+  "mobile": {
+    "width": 390,
+    "dialogWidth": 352,
+    "contentWidth": 335,
+    "scrollWidth": 335,
+    "overflow": false
+  },
+  "close": {
+    "escape": true,
+    "contentRestored": true,
+    "focusReturned": true
+  },
+  "screenshots": [
+    "docs/qa/console-setup-wii-desktop.png",
+    "docs/qa/console-setup-ps5-mobile.png"
+  ]
+}

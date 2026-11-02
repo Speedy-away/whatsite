@@ -1,0 +1,32 @@
+{
+  "status": "Download attempts finished unsuccessfully: checked-range transfer and bounded normal transfer timed out. Partial files retained; no complete loader archive or new ready build claimed.",
+  "job": "gta5-spiderman-pcloud-sixth",
+  "expectedBytes": 85958721,
+  "failedProbes": [
+    {
+      "ids": [
+        "gta-v-craftysnake-v1",
+        "gta-v-4tt4ck-v9",
+        "gta-v-golden"
+      ],
+      "result": "Public MEGA API returned -6; no builds downloaded or compatibility inferred."
+    },
+    {
+      "id": "discord-ps3-gta5-loader-unknown-ghost-v73",
+      "result": "MediaFire HTTP404"
+    }
+  ],
+  "note": "Do not mark the loader archived until a complete transfer and archive inspection pass.",
+  "result": {
+    "status": "unavailable",
+    "error": "aborted",
+    "files": 0,
+    "retainedPartials": 2,
+    "mainInventoryRecorded": true
+  },
+  "archiveIndex": {
+    "items": 1877,
+    "fileRecords": 2753,
+    "missingPaths": 0
+  }
+}

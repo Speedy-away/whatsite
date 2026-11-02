@@ -1,0 +1,3179 @@
+{
+  "checkedAt": "2026-11-02T13:09:27.951Z",
+  "status": "passed",
+  "method": "Bounded independent ZIP reader using Node standard-library CRC32, inflate and SHA-256; no packager import, extraction, server startup, console contact or downloaded payload execution.",
+  "final": {
+    "version": "1.4.1+4ae2029f9107",
+    "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.4.1-4ae2029f9107.zip",
+    "bytes": 58643115,
+    "sha256": "933eb219f5152adf635ac3c3449b2b23821de76724de22b57009de25dc2dcafd",
+    "zip": {
+      "entries": 213,
+      "expandedBytes": 134151452,
+      "allCentralLocalSizesAndCRCsVerified": true,
+      "memberEvidence": [
+        {
+          "name": "assets/console-guide-dialog.js",
+          "compressedBytes": 4047,
+          "bytes": 13579,
+          "crc32": "fe32e533",
+          "sha256": "e5d28b1510a8edc77588fd1c44a363b474b87ead7dd16572d76ad2041c684ff9"
+        },
+        {
+          "name": "assets/console-guides.css",
+          "compressedBytes": 2922,
+          "bytes": 12810,
+          "crc32": "99aa5ee8",
+          "sha256": "0b28fd292d5e5f37856c91f98d28937e318a3ebd841e2eaecae8d87ff9e8dca6"
+        },
+        {
+          "name": "assets/host-console-client.js",
+          "compressedBytes": 6486,
+          "bytes": 20589,
+          "crc32": "223b1a0b",
+          "sha256": "3622792543c0de4ae13dc7686e6668aa506ba210322f66adb04a51f995333896"
+        },
+        {
+          "name": "assets/host-dashboard.css",
+          "compressedBytes": 3786,
+          "bytes": 18474,
+          "crc32": "41b382d1",
+          "sha256": "5d4ec96f269d86abf99726f4536decadbe6858d67573a8cbcbf10a02ed17e87f"
+        },
+        {
+          "name": "assets/host-dashboard.js",
+          "compressedBytes": 9764,
+          "bytes": 38964,
+          "crc32": "7879a51f",
+          "sha256": "f2baa6eefd6f75c9fb0491dca3e0d7517cf3ec034ecdd2ba7be47f00954f9464"
+        },
+        {
+          "name": "assets/host-selector.css",
+          "compressedBytes": 365,
+          "bytes": 776,
+          "crc32": "69ae0ec9",
+          "sha256": "3433b7a680e723725c3aec6b82f0b30bc8ab87701d7628ec4c43ce03955a8075"
+        },
+        {
+          "name": "assets/images/expansion-ps4-ps5/payload-manager.png",
+          "compressedBytes": 244258,
+          "bytes": 249589,
+          "crc32": "3303b7a1",
+          "sha256": "65833da925a740a5f4ae526a26e0e3ded471130164041d23a10cd08d459decab"
+        },
+        {
+          "name": "assets/images/expansion-ps4-ps5/ps4-ezremote.jpg",
+          "compressedBytes": 122368,
+          "bytes": 238069,
+          "crc32": "5d0690a1",
+          "sha256": "fd3ba2912252d89753e95cc51f699fd7acaf17dcd30f038d9038fc114e40fa01"
+        },
+        {
+          "name": "assets/images/expansion-ps4-ps5/ps5-ezremote.jpg",
+          "compressedBytes": 122368,
+          "bytes": 238069,
+          "crc32": "5d0690a1",
+          "sha256": "fd3ba2912252d89753e95cc51f699fd7acaf17dcd30f038d9038fc114e40fa01"
+        },
+        {
+          "name": "assets/images/game-patches/bloodborne-official.jpg",
+          "compressedBytes": 225432,
+          "bytes": 227582,
+          "crc32": "0fc6e002",
+          "sha256": "33f33a882619f432c4de142473520977509c731fed6f15c747cf5b9d32d7bd35"
+        },
+        {
+          "name": "assets/images/game-patches/cyberpunk-2077-official.jpg",
+          "compressedBytes": 40834,
+          "bytes": 41042,
+          "crc32": "cea62573",
+          "sha256": "7ad6e0ee4f23e26416f5663146f3e97b1c85bbfb157781027e2aa615a4be68cf"
+        },
+        {
+          "name": "assets/images/game-patches/dead-island-2-official.jpg",
+          "compressedBytes": 73613,
+          "bytes": 73636,
+          "crc32": "d4b4c2bc",
+          "sha256": "cfa188a50b1b33baa5eb21391f437376c8d88114b6816961bae6db459569cc72"
+        },
+        {
+          "name": "assets/images/game-patches/far-cry-6-official.jpg",
+          "compressedBytes": 41887,
+          "bytes": 42006,
+          "crc32": "6141fb8f",
+          "sha256": "459c8105022b61c68ab88a1c645776c0a99d753a43e82c56dd9855aa356a0abf"
+        },
+        {
+          "name": "assets/images/game-patches/far-cry-primal-official.jpg",
+          "compressedBytes": 46366,
+          "bytes": 46390,
+          "crc32": "3787e564",
+          "sha256": "18ec1879c91f16416b413e945cd1cd9d9c3f26ffa2bf1f1b1214fb7e77e5de5f"
+        },
+        {
+          "name": "assets/images/game-patches/horizon-forbidden-west-official.jpg",
+          "compressedBytes": 58646,
+          "bytes": 58665,
+          "crc32": "f505054e",
+          "sha256": "6104bbc74ffcc2c87d724897d9ea8cf59f6398af2633e5e9d4443fb4c5c0bf03"
+        },
+        {
+          "name": "assets/images/gta52.png",
+          "compressedBytes": 79518,
+          "bytes": 81020,
+          "crc32": "e35a7d39",
+          "sha256": "791da620bfb0d5fa7afdaeca71b96c957ea123710af9c223a54e67d4f103e49b"
+        },
+        {
+          "name": "assets/images/host-menus/explosive.svg",
+          "compressedBytes": 693,
+          "bytes": 1512,
+          "crc32": "c764c077",
+          "sha256": "a6553a8ee22d3a0179aac2ce7e9ba801528426220d49ed90f811fef346e251d2"
+        },
+        {
+          "name": "assets/images/host-menus/expulsion.svg",
+          "compressedBytes": 656,
+          "bytes": 1454,
+          "crc32": "a31b23dc",
+          "sha256": "c1907f6d14ed8bacb68d2eac17398f7284d3b6e3b7a36c9d0c266cbca739bf1d"
+        },
+        {
+          "name": "assets/images/host-selector/whatwhatboy-ps4.jpg",
+          "compressedBytes": 182029,
+          "bytes": 183435,
+          "crc32": "0b819b4b",
+          "sha256": "bef1a06ed2b12db203248ce9b044453ed89611cb6188e1278232f4aa8dcdc8ed"
+        },
+        {
+          "name": "assets/images/host-selector/whatwhatboy-ps5.jpg",
+          "compressedBytes": 107887,
+          "bytes": 109272,
+          "crc32": "804d0037",
+          "sha256": "c417064d8da6e7a44497888d91f89cc1e75667056451c9c69dac8b82efe1790e"
+        },
+        {
+          "name": "assets/images/host-trainers/astro-bot-19e37c8f055d.jpg",
+          "compressedBytes": 177815,
+          "bytes": 178278,
+          "crc32": "b634bde7",
+          "sha256": "19e37c8f055deef9c1dd418cd8e0bd178f33c988a8393d4d3cd58c25d03a4e15"
+        },
+        {
+          "name": "assets/images/host-trainers/black-myth-wukong-61095f57d8d6.jpg",
+          "compressedBytes": 130381,
+          "bytes": 130486,
+          "crc32": "ff596612",
+          "sha256": "61095f57d8d68223e4d8bff1a68dff1d6996161f4ea79aff415116a50b3d87ea"
+        },
+        {
+          "name": "assets/images/host-trainers/dragons-dogma-2-4474b5997a4b.jpg",
+          "compressedBytes": 274310,
+          "bytes": 274304,
+          "crc32": "8a0e5c33",
+          "sha256": "4474b5997a4b726252e7e92c76d354c8e53461e880cb2397219b6742806b012c"
+        },
+        {
+          "name": "assets/images/host-trainers/ghostrunner-2-0c6aa18bed2d.jpg",
+          "compressedBytes": 154985,
+          "bytes": 157769,
+          "crc32": "bd638e6b",
+          "sha256": "0c6aa18bed2da3f70d22432bed8d5344a01f24f0ca31da56b545c06624a27a0b"
+        },
+        {
+          "name": "assets/images/host-trainers/silent-hill-2-7e0743d7eb02.jpg",
+          "compressedBytes": 101484,
+          "bytes": 101579,
+          "crc32": "54b62bbd",
+          "sha256": "7e0743d7eb02ea5959cd22c3cf607c6d671e3656b33097550153c5c0ed50cadb"
+        },
+        {
+          "name": "assets/images/host-trainers/the-last-of-us-part-ii-remastered-f1c0691e29a5.jpg",
+          "compressedBytes": 191795,
+          "bytes": 191783,
+          "crc32": "38dabc4f",
+          "sha256": "f1c0691e29a564a0c656b14cae06194ca93d65dd653af07b9dd50311f65391b6"
+        },
+        {
+          "name": "assets/images/logo.png",
+          "compressedBytes": 22298,
+          "bytes": 23090,
+          "crc32": "e475a03e",
+          "sha256": "5dea413ba133f8236e385f9107521fd807d8ad3ad89265b8bd223072df3c0293"
+        },
+        {
+          "name": "assets/images/platform-logos/nintendo-switch-2-symbol.svg",
+          "compressedBytes": 1565,
+          "bytes": 3267,
+          "crc32": "16b08c0a",
+          "sha256": "d772c021dd7d1fb30b2373b511ae7989cfb39b3d51ce7f1c81cf0012b457e956"
+        },
+        {
+          "name": "assets/images/platform-logos/nintendo-switch.svg",
+          "compressedBytes": 948,
+          "bytes": 2086,
+          "crc32": "1549a7c9",
+          "sha256": "1de33ebc7009efbc422c6fd22d565283347090b336b53fd89f2acf46bd87dcfb"
+        },
+        {
+          "name": "assets/images/platform-logos/ps3.svg",
+          "compressedBytes": 1533,
+          "bytes": 3526,
+          "crc32": "92bcdca1",
+          "sha256": "2e5610ff2f6e8b236abe2004297cec46d05d0cf73a05e5dd734b6c3c0e84b512"
+        },
+        {
+          "name": "assets/images/platform-logos/ps4.svg",
+          "compressedBytes": 3017,
+          "bytes": 6774,
+          "crc32": "4a159dd1",
+          "sha256": "9aff461989b5423b2987f782ba0d21e9a0937689a3c53ac3b8f47d59a1d92822"
+        },
+        {
+          "name": "assets/images/platform-logos/ps5.svg",
+          "compressedBytes": 1373,
+          "bytes": 2765,
+          "crc32": "01ad4e55",
+          "sha256": "989952fcadf77f121a5e818b8f1668fd1adc43ed458c8bf0ce93890f8d6df692"
+        },
+        {
+          "name": "assets/images/platform-logos/psvita.svg",
+          "compressedBytes": 2987,
+          "bytes": 7172,
+          "crc32": "1ba21d67",
+          "sha256": "fcf17918f5c7a2be8f33103ef04da7282f3edac740f828ef5430a00de34bf568"
+        },
+        {
+          "name": "assets/images/platform-logos/steamdeck.svg",
+          "compressedBytes": 1970,
+          "bytes": 4625,
+          "crc32": "f21eade9",
+          "sha256": "601a5e0a4613d8aa79fea8d9e8833719fa9373dd5fc5761b660a6f24ff880e3b"
+        },
+        {
+          "name": "assets/images/platform-logos/xbox-one-series.svg",
+          "compressedBytes": 818,
+          "bytes": 1462,
+          "crc32": "86d4660d",
+          "sha256": "9d4aa049cb10b4a04e7bd54d4cc65348005ac2f6447e8c22ecee131b550c4997"
+        },
+        {
+          "name": "assets/images/platform-logos/xbox360.svg",
+          "compressedBytes": 3589,
+          "bytes": 8760,
+          "crc32": "edcfb288",
+          "sha256": "7e5a3be1eac0ce078551e4a7c2b6dc56d3eaf8913cdf1bff79fba80e828390d3"
+        },
+        {
+          "name": "assets/images/ps4-gta5/beach.png",
+          "compressedBytes": 419225,
+          "bytes": 419142,
+          "crc32": "6a702ee6",
+          "sha256": "c345b995bd264589e3de90635956fb5afb1b5b4608122d6f94ce6f6988236e5e"
+        },
+        {
+          "name": "assets/images/ps4-gta5/lts.png",
+          "compressedBytes": 571077,
+          "bytes": 573258,
+          "crc32": "8bb32b0e",
+          "sha256": "fffd89daabaecb2f4b0e91650e9f2e20ca80d2725b2ea1bbcb81ae7375a9c342"
+        },
+        {
+          "name": "assets/images/ps4-gta5/serendipity.png",
+          "compressedBytes": 577684,
+          "bytes": 577528,
+          "crc32": "3e58eecc",
+          "sha256": "ae705e8d1345d6ce0eec733f9a39f9e5230f6a2aa8e93df8fbda64e2bb79b6b7"
+        },
+        {
+          "name": "assets/images/ps4-gta5/velora.png",
+          "compressedBytes": 349974,
+          "bytes": 349949,
+          "crc32": "9a46360b",
+          "sha256": "0bd2d2c5a8e29e6afcc36890b00d7443eb5387bca0b2b1d3db27f4c7a7c55e4e"
+        },
+        {
+          "name": "assets/images/ps4-ps5/control.jpg",
+          "compressedBytes": 27074,
+          "bytes": 27707,
+          "crc32": "b06558e1",
+          "sha256": "bd4c3f2d967908343f34b6013810da58a69ff1fabc691157e3d8a1bc8127928b"
+        },
+        {
+          "name": "assets/images/ps4-ps5/dead-island.jpg",
+          "compressedBytes": 50690,
+          "bytes": 51031,
+          "crc32": "e81c74c3",
+          "sha256": "e1ffcff5246fadd70ced3f60ca273bf26ac36c71db6d51eb13ee4c22258a9283"
+        },
+        {
+          "name": "assets/images/ps4-ps5/doom-eternal.jpg",
+          "compressedBytes": 69454,
+          "bytes": 69469,
+          "crc32": "bd919c4f",
+          "sha256": "4b3de8b47d18a9af153f36eaf4ec31bc57f16a78f2baacdeb5b9afec97b84d77"
+        },
+        {
+          "name": "assets/images/ps4-ps5/doom.jpg",
+          "compressedBytes": 46671,
+          "bytes": 46694,
+          "crc32": "9648a391",
+          "sha256": "111921bc88b8d40bb8867d987f6a24144a41f32c495e908c93ced5443a85e355"
+        },
+        {
+          "name": "assets/images/ps4-ps5/dying-light-2.jpg",
+          "compressedBytes": 41149,
+          "bytes": 41221,
+          "crc32": "5305000c",
+          "sha256": "7fac6a047e20e7e5e57d33ce725f85208fb536fe75ff4136537a6f626e2b66ee"
+        },
+        {
+          "name": "assets/images/ps4-ps5/dying-light.jpg",
+          "compressedBytes": 52046,
+          "bytes": 52074,
+          "crc32": "a02a1755",
+          "sha256": "2f79ee2b6c92569269043fb174b4bfb46f4f1d9a5b11bd17fe2b392648699d0e"
+        },
+        {
+          "name": "assets/images/ps4-ps5/edited/gta5-cyprus-image.png",
+          "compressedBytes": 2158540,
+          "bytes": 2231473,
+          "crc32": "75698471",
+          "sha256": "5e4b3dd996111bdd0ddf06b95f1a3aa6b470b22e61e8001bb0b64cf015812656"
+        },
+        {
+          "name": "assets/images/ps4-ps5/edited/gta5-expulsion-v5-1-57-image.png",
+          "compressedBytes": 2164508,
+          "bytes": 2224761,
+          "crc32": "314b677e",
+          "sha256": "6e7146addeb7b02a8e23139e0466a7cce61baee19f556e566727b3df89db53fa"
+        },
+        {
+          "name": "assets/images/ps4-ps5/elden-ring.jpg",
+          "compressedBytes": 32657,
+          "bytes": 32689,
+          "crc32": "cedbd897",
+          "sha256": "d46402528e357350bdb31a00be57a7896238515e6dc8afc0669aa54573307c02"
+        },
+        {
+          "name": "assets/images/ps4-ps5/fallout-4.jpg",
+          "compressedBytes": 37074,
+          "bytes": 37114,
+          "crc32": "bfd28c00",
+          "sha256": "1d90e4bffb552583c8183095756edfa784e10cc2b79e552e31371de0eb83ab42"
+        },
+        {
+          "name": "assets/images/ps4-ps5/far-cry-5.jpg",
+          "compressedBytes": 55209,
+          "bytes": 55796,
+          "crc32": "4b12e0d7",
+          "sha256": "360daaf7b3ba185ddb8d7586c580d4e34d45dc31bc3eaaced10e72b5383ce918"
+        },
+        {
+          "name": "assets/images/ps4-ps5/god-of-war-ragnarok.jpg",
+          "compressedBytes": 47627,
+          "bytes": 47645,
+          "crc32": "020a3867",
+          "sha256": "6f12e8e431fc55073cd0255b9bc7c5ce7e8eeb130e31bd179a7e9ba0d2267b3a"
+        },
+        {
+          "name": "assets/images/ps4-ps5/god-of-war.jpg",
+          "compressedBytes": 37577,
+          "bytes": 37714,
+          "crc32": "8efae740",
+          "sha256": "cef450471bbaf6058991c841c30539069f436a92ba5e91994bf12d12657e3b80"
+        },
+        {
+          "name": "assets/images/ps4-ps5/horizon-zero-dawn.jpg",
+          "compressedBytes": 54062,
+          "bytes": 54076,
+          "crc32": "0d0e3a6e",
+          "sha256": "95971139817f59677278b82584523cf15d0ce57e1d3382e8753dd889e2d31334"
+        },
+        {
+          "name": "assets/images/ps4-ps5/originals/rdr2-north-beta-image.webp",
+          "compressedBytes": 54320,
+          "bytes": 54300,
+          "crc32": "765113eb",
+          "sha256": "c41f71b7e52007a191530c38dec3750a79f382e628ba79317ef172f9f6eaf20c"
+        },
+        {
+          "name": "assets/images/ps4-ps5/originals/rdr2-oyster-image.webp",
+          "compressedBytes": 83968,
+          "bytes": 83938,
+          "crc32": "54795d67",
+          "sha256": "296877dad17425a5e070e7e7e56a4781cf3d14cb9759253bd762c7effe5ef41e"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-2.jpg",
+          "compressedBytes": 38075,
+          "bytes": 38328,
+          "crc32": "df706bb2",
+          "sha256": "f9927dc9b656d7e181baa1da6d311470230dfa82c16dc6c5bd72b39c2d99ffeb"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-3.jpg",
+          "compressedBytes": 32216,
+          "bytes": 32440,
+          "crc32": "88d65ddc",
+          "sha256": "db09ce62cd562cb9867897aaba5671ae39ac5601385e6bd3b95929775e263874"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-4.jpg",
+          "compressedBytes": 28776,
+          "bytes": 28807,
+          "crc32": "0da19d75",
+          "sha256": "33c8dcd2a189dec8c053773e10df4fef2d68cb1db73ab4401de5c078b8650e4b"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-hd.jpg",
+          "compressedBytes": 44175,
+          "bytes": 44740,
+          "crc32": "868eaf8a",
+          "sha256": "785ced77787b3d3c10aed3915c52b99d1a83bd288a7c799dca96a4176668fd00"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-zero.jpg",
+          "compressedBytes": 71332,
+          "bytes": 72036,
+          "crc32": "7f5d812f",
+          "sha256": "1029d84b4bfd4dc35740cac01321ed71fa7bf0fbb53f872f5d3aa29e00ca3952"
+        },
+        {
+          "name": "assets/images/ps4-ps5/sekiro.jpg",
+          "compressedBytes": 38990,
+          "bytes": 39009,
+          "crc32": "a85b3ad6",
+          "sha256": "1a7309b8cef162b7bd4ed33ebddbc70b15734ac0250492110535a4d22eb88b5b"
+        },
+        {
+          "name": "assets/images/ps4-ps5/sonic-frontiers.jpg",
+          "compressedBytes": 55793,
+          "bytes": 55812,
+          "crc32": "eb8119b0",
+          "sha256": "02b509ae2e569475c3a240375f2060845ac4acf2a5a5307fdbf74317173aef82"
+        },
+        {
+          "name": "assets/images/ps4-ps5/spider-man-miles-morales.jpg",
+          "compressedBytes": 28150,
+          "bytes": 28196,
+          "crc32": "734de9e1",
+          "sha256": "a5d7caa2ec02c532d4f8d173f15bbc142c16e11cfbba03bb5d03b3149d32c08c"
+        },
+        {
+          "name": "assets/images/ps4-ps5/uncharted-4.jpg",
+          "compressedBytes": 30666,
+          "bytes": 30706,
+          "crc32": "8c64eb9d",
+          "sha256": "d99631d9fb57d3d6d0604997409be9ddbcb1f449fde789cfb86f3a4faba1c662"
+        },
+        {
+          "name": "assets/images/ps4-ps5/uncharted-lost-legacy.jpg",
+          "compressedBytes": 30666,
+          "bytes": 30706,
+          "crc32": "8c64eb9d",
+          "sha256": "d99631d9fb57d3d6d0604997409be9ddbcb1f449fde789cfb86f3a4faba1c662"
+        },
+        {
+          "name": "assets/images/ps4-ps5/witcher-3.jpg",
+          "compressedBytes": 39595,
+          "bytes": 39618,
+          "crc32": "9f911112",
+          "sha256": "4daa8e38c4611dda60b4dd48382f1e58f39f9e00101bd363e7390fec3aa9f3a6"
+        },
+        {
+          "name": "assets/images/rdr2.png",
+          "compressedBytes": 40576,
+          "bytes": 41820,
+          "crc32": "c2aaad1c",
+          "sha256": "1257c022f4e7958041d939130ddad03efca80e9de6af17884be2b8dfd6e1c7e1"
+        },
+        {
+          "name": "assets/mobile-downloads.css",
+          "compressedBytes": 1679,
+          "bytes": 5899,
+          "crc32": "6017c364",
+          "sha256": "902cfb07373232227086e0f0aaa17ebbaa69bb15ebc20354319c3237a1b1d91e"
+        },
+        {
+          "name": "assets/mobile-downloads.js",
+          "compressedBytes": 7870,
+          "bytes": 27351,
+          "crc32": "a62dad8d",
+          "sha256": "e177761ce0157ab4cf81db1f647360b5002a33406f7fcbc46070ffa57e7127a7"
+        },
+        {
+          "name": "assets/mobile.css",
+          "compressedBytes": 3768,
+          "bytes": 14668,
+          "crc32": "9e035710",
+          "sha256": "26f58d8b62f18641fff82525891284a685191727635379e9cd172f1fbe67c798"
+        },
+        {
+          "name": "assets/site-background.css",
+          "compressedBytes": 2194,
+          "bytes": 6839,
+          "crc32": "5a343274",
+          "sha256": "ea3aa580dba89db5052bda2432022d637072bd64956814c18e3469910f1ec589"
+        },
+        {
+          "name": "assets/site-background.js",
+          "compressedBytes": 3991,
+          "bytes": 13748,
+          "crc32": "25750274",
+          "sha256": "9e95f83705dcc28c02a3ba3bc2b7e799ab0fe089ce255faef5217b21d54687be"
+        },
+        {
+          "name": "bundle-manifest.json",
+          "compressedBytes": 18284,
+          "bytes": 88120,
+          "crc32": "e41f676c",
+          "sha256": "f122b6d9562cb9dfa9c8d08fba428e13515a7fd468895c37d90bef1f14f7ff87"
+        },
+        {
+          "name": "docs/host-actions-ps4.json",
+          "compressedBytes": 4216,
+          "bytes": 27133,
+          "crc32": "02e939e5",
+          "sha256": "c7eb3b96a35fdf3452f8521114026e0af0bf1e4d95eaacf5ed4ec292d4d54fcc"
+        },
+        {
+          "name": "docs/host-actions-ps5.json",
+          "compressedBytes": 3814,
+          "bytes": 17181,
+          "crc32": "cc33216b",
+          "sha256": "be076abca320f279d24be956cbbed8710489aceeec76beb30d18a377ea02ae81"
+        },
+        {
+          "name": "docs/host-console-services.md",
+          "compressedBytes": 5693,
+          "bytes": 14305,
+          "crc32": "364f4ce3",
+          "sha256": "39f23b802d95eb48e13460b251c4717ba1beac779afae30831529d588e7c3159"
+        },
+        {
+          "name": "docs/host-current-cheat-actions.json",
+          "compressedBytes": 2490,
+          "bytes": 21853,
+          "crc32": "1f0796c2",
+          "sha256": "abaf32a139df27da0be719f7197441694a342ba05340c0a7662054d62038b8b8"
+        },
+        {
+          "name": "docs/host-dashboard.md",
+          "compressedBytes": 4366,
+          "bytes": 10488,
+          "crc32": "d5b068bb",
+          "sha256": "cb13b45bf9e6d3f15301b1196590424741c50e06002598d1997a03ca68596e5a"
+        },
+        {
+          "name": "docs/host-extra-game-actions.json",
+          "compressedBytes": 14054,
+          "bytes": 180235,
+          "crc32": "6ffe321e",
+          "sha256": "906cebfecc1d43895fab707a5f1ceec3b374d9b682ca3ccf9adfb2934d9e502d"
+        },
+        {
+          "name": "docs/host-extra-game-trainers.md",
+          "compressedBytes": 1556,
+          "bytes": 3036,
+          "crc32": "c472c92b",
+          "sha256": "0137c44cca7877401f9f114308ba0029837f7ac6c9dab64018a2eed3eceba109"
+        },
+        {
+          "name": "docs/host-game-actions.json",
+          "compressedBytes": 4272,
+          "bytes": 39203,
+          "crc32": "8024122a",
+          "sha256": "377e64dbaf6fdab206781d587e2f6462e982080d0e139273fb947e3d4655e6bd"
+        },
+        {
+          "name": "docs/host-legacy-menu-actions.json",
+          "compressedBytes": 3642,
+          "bytes": 44523,
+          "crc32": "0d318f89",
+          "sha256": "9a421ff0c79c292f5a7c6673b0e17b98b5626f1c954ff51df165f4c7bd1cc9b5"
+        },
+        {
+          "name": "docs/host-modern-plugin-actions.json",
+          "compressedBytes": 4144,
+          "bytes": 34428,
+          "crc32": "aba14d47",
+          "sha256": "325d883a42555cb883b2675ae10d4744a5b9328e0520644c4419383ccb0ff27b"
+        },
+        {
+          "name": "docs/host-payload-management.md",
+          "compressedBytes": 3565,
+          "bytes": 9230,
+          "crc32": "1c01e04e",
+          "sha256": "e07443509e6fb39af7e6c89a9b59e8c8f6a73321e6f62ca264062d5b41e43215"
+        },
+        {
+          "name": "docs/host-payload-sender.md",
+          "compressedBytes": 2343,
+          "bytes": 5224,
+          "crc32": "51198119",
+          "sha256": "93ed16963235a532181f17a7930df3664b8db01c40fe528e9efa98bab3ac4dc9"
+        },
+        {
+          "name": "downloads/archive/5a12cb950970/orbit_store.elf",
+          "compressedBytes": 32650499,
+          "bytes": 59691728,
+          "crc32": "435e3a8a",
+          "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914"
+        },
+        {
+          "name": "downloads/archive/cd469f63fa67/ps5upload-10.6.0.elf",
+          "compressedBytes": 3195811,
+          "bytes": 6514240,
+          "crc32": "4aa79b6b",
+          "sha256": "2f67651bf1320a83202b632782a1f404543b1ea4911dfb3be5a510971f015392"
+        },
+        {
+          "name": "downloads/archive/f22d8b3749d7/shadowmountplus.elf",
+          "compressedBytes": 1666993,
+          "bytes": 3614944,
+          "crc32": "d70842ea",
+          "sha256": "08c843018750bef013fe3a4de5f80c5c9738c6c2dafa2406e6b6e68d7585f3da"
+        },
+        {
+          "name": "downloads/console-ready/expulsion-v5-ready/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx",
+          "compressedBytes": 287429,
+          "bytes": 909328,
+          "crc32": "fc0f20d0",
+          "sha256": "dfdc05bbe590bced0ca53059c017cb05c18054695a90053b7c91da269fb57dc3"
+        },
+        {
+          "name": "downloads/console-ready/expulsion-v7-ready/PS4/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx",
+          "compressedBytes": 622561,
+          "bytes": 1775984,
+          "crc32": "737da037",
+          "sha256": "823656c96305e4373ec132d8f5dfd9fa2ec24a38d941dfb980f92616d84cb268"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps4-ftpsrv/5f00e2df7fa8/ftpsrv-ps4.elf",
+          "compressedBytes": 38265,
+          "bytes": 146720,
+          "crc32": "998fe3df",
+          "sha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps4-klogsrv/7e89c33eb90d/klogsrv-ps4.elf",
+          "compressedBytes": 21780,
+          "bytes": 91208,
+          "crc32": "fce6f6d4",
+          "sha256": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-elfldr/82f622761017/elfldr-ps5.elf",
+          "compressedBytes": 105871,
+          "bytes": 394568,
+          "crc32": "2f4566d2",
+          "sha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-ftpsrv/7d4b31c83eae/ftpsrv-ps5.elf",
+          "compressedBytes": 51326,
+          "bytes": 191864,
+          "crc32": "43ec9744",
+          "sha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-klogsrv/e828ec144231/klogsrv-ps5.elf",
+          "compressedBytes": 33851,
+          "bytes": 136016,
+          "crc32": "df261812",
+          "sha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-payload-manager/2a42054fd972/pldmgr_v0.6.3.elf",
+          "compressedBytes": 1178054,
+          "bytes": 2795992,
+          "crc32": "ccd8150d",
+          "sha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-websrv/54730c867c6e/websrv-ps5.elf",
+          "compressedBytes": 673788,
+          "bytes": 1597864,
+          "crc32": "668f942f",
+          "sha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/firmware-9.00/arabicguy-gta5-100-ps4-900.bin",
+          "compressedBytes": 74607,
+          "bytes": 1055408,
+          "crc32": "78a6cc22",
+          "sha256": "0de5452601ca151ad3bb6c86c2fb97e2a0bac89b5ff77cf238638dd19bddd372"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin",
+          "compressedBytes": 479144,
+          "bytes": 1128208,
+          "crc32": "3398e3d1",
+          "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/firmware-9.00/north-beta-rdr2-129-ps4-900.bin",
+          "compressedBytes": 101347,
+          "bytes": 1219048,
+          "crc32": "4faec9d5",
+          "sha256": "5ab2f81616290b3f8c9705aaf127e6db8c006ff29da87c023c9c1ccdfb4db4eb"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-127-ps4-900.bin",
+          "compressedBytes": 72119,
+          "bytes": 1059520,
+          "crc32": "49e3dd3d",
+          "sha256": "be9ee0dacc71e94d607584770c08cdc39c1319427e9fd83424fc19dd15782aa6"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-132-ps4-900.bin",
+          "compressedBytes": 72081,
+          "bytes": 1059520,
+          "crc32": "169084aa",
+          "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin",
+          "compressedBytes": 72097,
+          "bytes": 1059520,
+          "crc32": "289080cb",
+          "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/beefqueef-gta5-133-ps4-900.bin",
+          "compressedBytes": 183757,
+          "bytes": 1073700,
+          "crc32": "35cdc7d3",
+          "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-100-ps4-900.bin",
+          "compressedBytes": 134586,
+          "bytes": 1190392,
+          "crc32": "519628b9",
+          "sha256": "199b68feb24e1d202589b7ccb7b9ee28fdf3cab5546b41bd1263939ecedb7add"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-113-ps4-900.bin",
+          "compressedBytes": 134831,
+          "bytes": 1190392,
+          "crc32": "0e566954",
+          "sha256": "089f1c3144dffb35589a7fb36a05dd54f642c1eeef3873daa3b7f4ce965af06d"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-119-ps4-900.bin",
+          "compressedBytes": 134827,
+          "bytes": 1190392,
+          "crc32": "668a523c",
+          "sha256": "370b5bd2b4bace7a2dd51bd28f9b080b1e5221f3bd9e6dec64c5e72baa183254"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-124-ps4-900.bin",
+          "compressedBytes": 135054,
+          "bytes": 1190392,
+          "crc32": "d0106a45",
+          "sha256": "58e2317dd8fe1cc44ce834a174ac06e566b34eb3709ce39e088f63aa51a5944a"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-129-ps4-900.bin",
+          "compressedBytes": 214547,
+          "bytes": 1260864,
+          "crc32": "10e9ad98",
+          "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/743646c9df9a/karo-expulsion135-game-1.35-ps4-900.bin",
+          "compressedBytes": 49709,
+          "bytes": 1055264,
+          "crc32": "9ea26ab9",
+          "sha256": "ef21be6c36b117ba8b362c1488ae887a0daece3d7a791bc2ac3130a6d27ff1af"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/743646c9df9a/karo-lts127-game-1.27-ps4-900.bin",
+          "compressedBytes": 16228,
+          "bytes": 1054664,
+          "crc32": "2a5565ef",
+          "sha256": "ead0911d40795a0503305dd739680bb3ebd3f51e9b65a9878101c4bd9c2aaf10"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/743646c9df9a/karo-menubase127-game-1.27-ps4-900.bin",
+          "compressedBytes": 19364,
+          "bytes": 1054984,
+          "crc32": "e131ee8d",
+          "sha256": "822d4897941512e8cbf29806e1985848aceb5c54bb3f9149d52df07e8b0e8545"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq134-game-1.34-ps4-900.bin",
+          "compressedBytes": 168843,
+          "bytes": 1063880,
+          "crc32": "a77d08c3",
+          "sha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq138-game-1.38-ps4-900.bin",
+          "compressedBytes": 197176,
+          "bytes": 1073836,
+          "crc32": "b111b491",
+          "sha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde132-game-1.32-ps4-900.bin",
+          "compressedBytes": 136447,
+          "bytes": 1074320,
+          "crc32": "71dcfe58",
+          "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde138-game-1.38-ps4-900.bin",
+          "compressedBytes": 168111,
+          "bytes": 592864,
+          "crc32": "a8183b51",
+          "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq138-thief-game-1.38-ps4-900.bin",
+          "compressedBytes": 183757,
+          "bytes": 1073700,
+          "crc32": "35cdc7d3",
+          "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq146-game-1.46-ps4-900.bin",
+          "compressedBytes": 171717,
+          "bytes": 480804,
+          "crc32": "a0f96566",
+          "sha256": "fbae10e4d9c0ac09e745755959a1c71a444a1c16bb5da2c51361e56fef1e2c00"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq147-game-1.47-ps4-900.bin",
+          "compressedBytes": 171628,
+          "bytes": 480740,
+          "crc32": "5e8b22cc",
+          "sha256": "a8a6789cd8873224dde81f4924cfd12f9d87f430e552d50064e9aabd23171ead"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-expulsion138-game-1.38-ps4-900.bin",
+          "compressedBytes": 87423,
+          "bytes": 1055312,
+          "crc32": "9eeab44a",
+          "sha256": "c3df5201df8b17add26ea58794d3ec95d39a021586f1e4e2517b48fa540754e1"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde132-game-1.32-ps4-900.bin",
+          "compressedBytes": 149218,
+          "bytes": 1080016,
+          "crc32": "85c293b9",
+          "sha256": "007f3418bee3f2fe27034262a84a148a9f8c0577e517133286a19c4bf18d55eb"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde133-game-1.33-ps4-900.bin",
+          "compressedBytes": 149188,
+          "bytes": 1080016,
+          "crc32": "0b181e3e",
+          "sha256": "d9ebf4cdf4150ac59865d7744713dfc99037ad75b08ea7551c5bcb3e992972a9"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin",
+          "compressedBytes": 169503,
+          "bytes": 2610904,
+          "crc32": "38c31559",
+          "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde147-game-1.47-ps4-900.bin",
+          "compressedBytes": 171112,
+          "bytes": 2819184,
+          "crc32": "5dcd9211",
+          "sha256": "beac207b97220a57f22c9a7ec9064e6fdb2ef98ec33852b2ee1c5f7a1717010f"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA01417_01.013.002.json",
+          "compressedBytes": 1268,
+          "bytes": 7658,
+          "crc32": "d7e507ce",
+          "sha256": "4eb328cdf5d89aaacf3bd24341947cd249e3396fd437961dd353a00fd0cd21e2"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA01460_01.015.001.json",
+          "compressedBytes": 658,
+          "bytes": 3717,
+          "crc32": "e6622954",
+          "sha256": "e51ef057511671d4175e6d4f3b6fa25228d7e2d6f9597daecaf43909ec21be7a"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA03831_01.041.000.json",
+          "compressedBytes": 1024,
+          "bytes": 6024,
+          "crc32": "ca843b78",
+          "sha256": "58863f93e82adcc14cc853451742c28d61ff477b45fe9b5c670496728100a0c5"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA04263_01.010.002.mc4",
+          "compressedBytes": 2977,
+          "bytes": 3928,
+          "crc32": "bdbb630a",
+          "sha256": "25c47d2bb864fd065d2645e7bc13a45b12f046c18786f310d9c217d111181910"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA04264_01.005.000.mc4",
+          "compressedBytes": 4822,
+          "bytes": 6380,
+          "crc32": "118741cc",
+          "sha256": "7460de5fa64318bc7544eeb7ae1b1ef06f148df78f2668df93d838a9c57cb695"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA04264_01.010.002.mc4",
+          "compressedBytes": 2979,
+          "bytes": 3928,
+          "crc32": "ab1b0021",
+          "sha256": "fc5de09d593fc308c10f308ea94832116b7aa6ee5c68d9eabe74f951a3db46c6"
+        },
+        {
+          "name": "downloads/hosts/ps5/game-mods/rdr2-60fps/v2.0/RedDead2.60FPS_v2.0.elf",
+          "compressedBytes": 42414,
+          "bytes": 154304,
+          "crc32": "1587723c",
+          "sha256": "646ecb71e80415ab9d9c651539451d38ee0052a5997f7ef7504a42932c7f8261"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00207-01-09/CUSA00207_01.09.json",
+          "compressedBytes": 632,
+          "bytes": 2653,
+          "crc32": "302aba44",
+          "sha256": "d4da403382829c29fcf6afe29e9bba5fae320ac73feded091f41bf8e29c7bb93"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00208-01-09/CUSA00208_01.09.json",
+          "compressedBytes": 632,
+          "bytes": 2653,
+          "crc32": "8dfb7706",
+          "sha256": "3943d226cb78133b29309dee54ccdab45a19826d7bb09eb32c8b6b461a62e1ad"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00341-01-33/CUSA00341_01.33.json",
+          "compressedBytes": 262,
+          "bytes": 504,
+          "crc32": "7678fae4",
+          "sha256": "a11a60c6aec6699d4995b9f2c0dc76e9a939b84cd8ae853acbe09039ddd36869"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00900-01-09/CUSA00900_01.09.json",
+          "compressedBytes": 631,
+          "bytes": 2653,
+          "crc32": "5c14b099",
+          "sha256": "668127e64c77985e08361dca6144088b7944542d7069330458a62c44a7ac432c"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa01067-01-00/CUSA01067_01.00.json",
+          "compressedBytes": 303,
+          "bytes": 968,
+          "crc32": "1226c350",
+          "sha256": "bb9ed3247032aab9558ecc6280e866e78dfc327239f9de1b451908801a466db3"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa02092-01-12/CUSA02092_01.12.json",
+          "compressedBytes": 290,
+          "bytes": 990,
+          "crc32": "52237e58",
+          "sha256": "58ca70551863aca205ab8fde139819494f214e22f1b98138526acb2743f1af46"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa02882-01-00/CUSA02882_01.00.json",
+          "compressedBytes": 1508,
+          "bytes": 12004,
+          "crc32": "1e3dd430",
+          "sha256": "b7999dfcc7c129efbfc08bd8a8408b0c79ef8a192ee6212a117766b77a1938a6"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa02962-01-37/CUSA02962_01.37.json",
+          "compressedBytes": 3925,
+          "bytes": 19908,
+          "crc32": "9c65413b",
+          "sha256": "1a7c447379733adce25d8c5376cf2b42f1d9225593e1daf801e5b509ae221bb5"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03290-01-03/CUSA03290_01.03.json",
+          "compressedBytes": 443,
+          "bytes": 1853,
+          "crc32": "ac1afd36",
+          "sha256": "d4fbc6fd4ec69f08eebead146971b695a5a1bf0b34ca822341354a48d10b7d68"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03291-01-03/CUSA03291_01.03.json",
+          "compressedBytes": 353,
+          "bytes": 1409,
+          "crc32": "4e8cc446",
+          "sha256": "6ababd420bc867d6dbfc36f445c4cf3b483d70249418a112955e4e53ea1cef08"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03309-01-03/CUSA03309_01.03.json",
+          "compressedBytes": 318,
+          "bytes": 1014,
+          "crc32": "11e4ee11",
+          "sha256": "3772c268ac763c020d2797cc112b78d28a9054865e77c9fb3f50661a57769065"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03991-01-00/CUSA03991_01.00.json",
+          "compressedBytes": 540,
+          "bytes": 2149,
+          "crc32": "76979905",
+          "sha256": "6d78917053ab62a993853282af124f71bc7825cb7eb276b8805c803f32230348"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03991-01-35/CUSA03991_01.35.json",
+          "compressedBytes": 971,
+          "bytes": 4863,
+          "crc32": "e496b14f",
+          "sha256": "ddbaeb4f66deadedef7dada84cfedda1c90471ae99b5874d3e0b19fa43289475"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa05574-04-06/CUSA05574_04.06.json",
+          "compressedBytes": 2273,
+          "bytes": 13640,
+          "crc32": "4321254f",
+          "sha256": "729d5e405004a3f860c866f132fa5f04a8a8c3d70244ecd1e828f4a14eed02a2"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa05904-01-15/CUSA05904_01.15.json",
+          "compressedBytes": 704,
+          "bytes": 2702,
+          "crc32": "789a3260",
+          "sha256": "6cb656425459fffe50b11920c289ec1d3b8c03ece3a741d676a0da7cee92f3f4"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa07410-01-35/CUSA07410_01.35.json",
+          "compressedBytes": 554,
+          "bytes": 2230,
+          "crc32": "8e19eae4",
+          "sha256": "5c8187ee948e54b9812e43afb1f67e0668f50908947c23243ee90c87877b5b82"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa07875-01-08/CUSA07875_01.08.json",
+          "compressedBytes": 313,
+          "bytes": 674,
+          "crc32": "dcc3221c",
+          "sha256": "b8e4db7485f9e63ac385693fc34d5c2c6469cbb2bc0dd470458f4d29c62b76ce"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa09171-01-05/CUSA09171_01.05.json",
+          "compressedBytes": 568,
+          "bytes": 2236,
+          "crc32": "4e02b8d7",
+          "sha256": "c4d14bf36ce01e00619e5491d7c354e1f1a3b1561c9b1bf52b8a9340361a2aef"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa10211-01-54/CUSA10211_01.54.json",
+          "compressedBytes": 1696,
+          "bytes": 10243,
+          "crc32": "cebdf7a9",
+          "sha256": "ead367bb8651c82b145ec8e03f7b542bdbf0e23142aefde9efe21d8457324e5a"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa11454-01-12/CUSA11454_01.12.json",
+          "compressedBytes": 514,
+          "bytes": 2350,
+          "crc32": "b8f80312",
+          "sha256": "4356e33e8d98e513a624e8bdb9b7664f80efd40062baa1e9243ef736066528c4"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa12555-01-00/CUSA12555_01.00.json",
+          "compressedBytes": 532,
+          "bytes": 2350,
+          "crc32": "a804c01c",
+          "sha256": "310516df7924cd96e7281a791ecaf94c375050bf3deb71682f57e36a19ebf505"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa12555-01-01/CUSA12555_01.01.json",
+          "compressedBytes": 532,
+          "bytes": 2349,
+          "crc32": "d76ac092",
+          "sha256": "0b8f6ecadab15f31c62174d4da876fad4a70bd0fdb7e3f3d458f50bd31d197a8"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa12555-01-30/CUSA12555_01.30.json",
+          "compressedBytes": 733,
+          "bytes": 3202,
+          "crc32": "5eecb22c",
+          "sha256": "f227052ba1366a106aae4e9d08d3bf66049c9419742208ef7b72bb50ccca122e"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa13338-01-25/CUSA13338_01.25.json",
+          "compressedBytes": 923,
+          "bytes": 4901,
+          "crc32": "eb7ce9d7",
+          "sha256": "c77e0c5970804060ccf773bbf254531a986114cdebc206df2e3809b5ed20681e"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa13801-01-06/CUSA13801_01.06.json",
+          "compressedBytes": 580,
+          "bytes": 2294,
+          "crc32": "d99466d1",
+          "sha256": "8fa4d2dc0dd3231a588c9a33a1d6d8fda1c812c458ea71b0b763805b4dac0e6b"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa14168-01-05/CUSA14168_01.05.json",
+          "compressedBytes": 364,
+          "bytes": 1019,
+          "crc32": "6376ebd0",
+          "sha256": "435d5660b04f571447073f3c4166fd5d9d2594b4ac4547850defe80744746fbc"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa15778-01-06/CUSA15778_01.06.json",
+          "compressedBytes": 366,
+          "bytes": 1168,
+          "crc32": "5e586f4a",
+          "sha256": "048ff952981d284d3994cc5688e5ee2a33d6a4a2a7ff1d8071894733c84cdf2f"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa16579-01-61/CUSA16579_01.61.json",
+          "compressedBytes": 3610,
+          "bytes": 22248,
+          "crc32": "be6ed419",
+          "sha256": "155d2921111667e912686a74d744d06212102ce15441eb2e1dd3ce5d2edda2be"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa24705-01-18/CUSA24705_01.18.json",
+          "compressedBytes": 897,
+          "bytes": 4431,
+          "crc32": "95070934",
+          "sha256": "93d3149929d21c3c5ad0ffacd22f76ee2fe0e73fa849304e3379b29a2a3f5955"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa27043-01-10/CUSA27043_01.10.json",
+          "compressedBytes": 749,
+          "bytes": 3319,
+          "crc32": "2b05eb0d",
+          "sha256": "e4d0c327f98eda803d87beffe85331bb626d25f51256b8985b80038b12e6276f"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa28561-01-18/CUSA28561_01.18.json",
+          "compressedBytes": 896,
+          "bytes": 4430,
+          "crc32": "7ce7c87b",
+          "sha256": "92078576141bc29f12a98e9ff7963c94df25f8951ab6eae7506e54156fc5b8d8"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa28863-01-22/CUSA28863_01.22.json",
+          "compressedBytes": 3168,
+          "bytes": 24786,
+          "crc32": "fe230fb7",
+          "sha256": "cfd181fb86f73ff04df1a996293f5e94ac7d6f463213dd275116005656596076"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa33388-01-04/CUSA33388_01.04.json",
+          "compressedBytes": 828,
+          "bytes": 4194,
+          "crc32": "f3264dd1",
+          "sha256": "f8bee169fbee9ca4b8f18b175c03c375b2ed0e577b6658dcbd59f49e58ef09fc"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa34386-06-02/CUSA34386_06.02.json",
+          "compressedBytes": 922,
+          "bytes": 2894,
+          "crc32": "cb169ec4",
+          "sha256": "4514eaef84d36605c9b53dfc0929b406c588652e687c6e830be2f65af5c60ee4"
+        },
+        {
+          "name": "downloads/ps4-ps5/gta5-cyprus-1-56/CyprusMenu.prx",
+          "compressedBytes": 246857,
+          "bytes": 724382,
+          "crc32": "b7d48c7a",
+          "sha256": "9bedea869077bb6016171a79823b4b98703631d904b1cb52173dd97349fbb1c0"
+        },
+        {
+          "name": "downloads/ps4-ps5/gta5-cyprus-1-57/CyprusMenu.prx",
+          "compressedBytes": 246918,
+          "bytes": 724286,
+          "crc32": "6985ecaa",
+          "sha256": "7731188ec03a0bee74fe0946ffcf6eefed466c13a9b68c4a29df3263bd724157"
+        },
+        {
+          "name": "downloads/ps4-ps5/gta5-explosive-1-57/explosive_temp.sprx",
+          "compressedBytes": 347311,
+          "bytes": 1037599,
+          "crc32": "d453bb13",
+          "sha256": "4986ff700f57d72a61516abd0daa6cf1ba557a63b4fe39c1eecc38064c1f2e6a"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa08710-01-005-000/PPSA08710_01.005.000.json",
+          "compressedBytes": 385,
+          "bytes": 1407,
+          "crc32": "6bc9f6aa",
+          "sha256": "e8acaefdb28aaa5c6f9610d39050f60e6bd0a3d71710216772c924bf05356661"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa09663-01-000-000/PPSA09663_01.000.000.json",
+          "compressedBytes": 385,
+          "bytes": 1337,
+          "crc32": "c38afa71",
+          "sha256": "64b48d7605989d5ba1c0e337b64a20e41a59f58714c4824d9e1f38a2794a99d8"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa09911-01-000-000/PPSA09911_01.000.000.json",
+          "compressedBytes": 335,
+          "bytes": 947,
+          "crc32": "51c5bd70",
+          "sha256": "489497800a06e8995a3798e601c12fa27a305fdde2f0151a980ba2b71ea2f1b3"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa10662-01-001-030/PPSA10662_01.001.030.json",
+          "compressedBytes": 467,
+          "bytes": 1640,
+          "crc32": "6bed9900",
+          "sha256": "ff004b7c81b0ebeb69a9bc3b76c4642e76495299373eb17d6b8a85cec6d0ea46"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa21564-01-007-000/PPSA21564_01.007.000.json",
+          "compressedBytes": 315,
+          "bytes": 949,
+          "crc32": "12b3fe48",
+          "sha256": "42d3d4c39c7f607eedc1205014176790eb6c782fd20f20d264fff14c41a6d683"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa23226-01-000-010/PPSA23226_01.000.010.json",
+          "compressedBytes": 403,
+          "bytes": 1577,
+          "crc32": "e79bdfe4",
+          "sha256": "067fb30324492c673cb42646f847df040f9ec28de4fda945058818ad390cd23d"
+        },
+        {
+          "name": "downloads/ps4/GTA5/156/BeachMenu156.prx",
+          "compressedBytes": 394352,
+          "bytes": 1320839,
+          "crc32": "2fd949a8",
+          "sha256": "8ca31fa51e3401f678a9514fe4a93976d5a52c685fe07a3d2772a1523c90c073"
+        },
+        {
+          "name": "downloads/ps4/GTA5/156/Velora.sprx",
+          "compressedBytes": 324063,
+          "bytes": 882981,
+          "crc32": "eb392c3d",
+          "sha256": "d50d1582a67d978e347692b3bce951262dd061a649e75410595ae36f9bec3823"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/BeachMenu157.prx",
+          "compressedBytes": 363691,
+          "bytes": 1230442,
+          "crc32": "64f282dc",
+          "sha256": "d622d3d867244e5854e4773b9e03631d24918e26b634c4b74c8678b01ed06b8a"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/LRS.prx",
+          "compressedBytes": 701855,
+          "bytes": 2187104,
+          "crc32": "88cba7d6",
+          "sha256": "4816609641ec21b9a7f151abe19eb234dee69c959d0da8a7a7c1718185704a96"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/Seren.prx",
+          "compressedBytes": 502604,
+          "bytes": 1956688,
+          "crc32": "3cbdbc04",
+          "sha256": "e4f085add22697b0bb3ef8f0028f1fe373ff4737ae3a1d7b2bb1a24afff18f35"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/Velora.sprx",
+          "compressedBytes": 720150,
+          "bytes": 1718289,
+          "crc32": "f5d89b34",
+          "sha256": "e6e79ad27a87f2b7ea9d519167e5d9c48d096bdf1a17b2abf1de70c057bd2653"
+        },
+        {
+          "name": "hosts/index.html",
+          "compressedBytes": 4562,
+          "bytes": 25816,
+          "crc32": "ab5860f2",
+          "sha256": "6aa685bd06127d689049037823d36f2af4c1a2364e4fb53178d9f92e7fbd2b93"
+        },
+        {
+          "name": "hosts/ps4/index.html",
+          "compressedBytes": 30976,
+          "bytes": 284661,
+          "crc32": "3eda6559",
+          "sha256": "f05eccea6615d4a7d3717e69f6aa6926972d2eaaa722aa4e4ac5229bc2ebb16c"
+        },
+        {
+          "name": "hosts/ps4/payload-manager/index.html",
+          "compressedBytes": 31267,
+          "bytes": 285729,
+          "crc32": "311600f0",
+          "sha256": "d4c756f9d82701a7321751ded1dfbeb48d19a60fb02c08f1b789d8123aa863af"
+        },
+        {
+          "name": "hosts/ps5/index.html",
+          "compressedBytes": 16412,
+          "bytes": 96007,
+          "crc32": "d7761e61",
+          "sha256": "102a5a2852b7f8c7bdb67237e26d3ebbabf7a0c9110ec2ce493527e9556bb12f"
+        },
+        {
+          "name": "hosts/ps5/payload-manager/index.html",
+          "compressedBytes": 16634,
+          "bytes": 97083,
+          "crc32": "711356b0",
+          "sha256": "ab6b419b80a1fdea1655bd5b39b1ec701e270058299153c9d3fbc36eba42773c"
+        },
+        {
+          "name": "languages/ar.js",
+          "compressedBytes": 10728,
+          "bytes": 46168,
+          "crc32": "27299e82",
+          "sha256": "b79f6aa3563713440f9e0e72fe378300c5c4088085f2f4b599ee7318db04194f"
+        },
+        {
+          "name": "languages/de.js",
+          "compressedBytes": 10049,
+          "bytes": 38505,
+          "crc32": "292e284e",
+          "sha256": "b75d0f9bf7e225dee646f5f539f512ec8541ad45a83cfd266eb30d73e178f18d"
+        },
+        {
+          "name": "languages/es.js",
+          "compressedBytes": 9827,
+          "bytes": 40328,
+          "crc32": "82509f82",
+          "sha256": "99308ce71d3cbc565c149f6ccb651b0acd1c89634fb51c2d410e7f90db934b3a"
+        },
+        {
+          "name": "languages/fr.js",
+          "compressedBytes": 10077,
+          "bytes": 41167,
+          "crc32": "f299d04d",
+          "sha256": "fafc3079c211e473287a139e5d9e1e7c2b796804b4a4c4854924a46ae81e99bf"
+        },
+        {
+          "name": "languages/he.js",
+          "compressedBytes": 10325,
+          "bytes": 43640,
+          "crc32": "a85d31bb",
+          "sha256": "4b69cd16f02d6a0658ab527b5dd825205aaead2e46a25d6cf91405f28706ed01"
+        },
+        {
+          "name": "languages/hi.js",
+          "compressedBytes": 11118,
+          "bytes": 57101,
+          "crc32": "b323194b",
+          "sha256": "76207a55b1a2f4c6f98482093f20a4026ed8d711559095a313d551313fcb05ce"
+        },
+        {
+          "name": "languages/i18n.js",
+          "compressedBytes": 15267,
+          "bytes": 52697,
+          "crc32": "e0708530",
+          "sha256": "bc9af98e5f7c8cf5a430edb7a5c40bb228040b4aab9a6b424e5f3730b5a78ae7"
+        },
+        {
+          "name": "languages/id.js",
+          "compressedBytes": 9340,
+          "bytes": 37214,
+          "crc32": "79d9727d",
+          "sha256": "97c1993bb23693dbd4c0a29c88727bddd8d05775e5fcca6a6f92cebab1991bc6"
+        },
+        {
+          "name": "languages/it.js",
+          "compressedBytes": 9685,
+          "bytes": 39398,
+          "crc32": "19b8390a",
+          "sha256": "11950ca7e2279bbf680445c097043998b68cbb459ed09c9e028124416a999b14"
+        },
+        {
+          "name": "languages/ja.js",
+          "compressedBytes": 10897,
+          "bytes": 44831,
+          "crc32": "638bc2f5",
+          "sha256": "6375d6cf9297d25906f367762ba18e8aa88249da571eec8de6387e9c9f5ce480"
+        },
+        {
+          "name": "languages/ka.js",
+          "compressedBytes": 11341,
+          "bytes": 65772,
+          "crc32": "b9d64003",
+          "sha256": "5622d1680ab75ece809967c090f4e69e9f9c714da81e1ee6b36379031dd03e3c"
+        },
+        {
+          "name": "languages/ko.js",
+          "compressedBytes": 10414,
+          "bytes": 40471,
+          "crc32": "fb5664b0",
+          "sha256": "9524e10588f54dc6aed256852a47f82e4620c5dfb04f6aee89675ab3322bbbc8"
+        },
+        {
+          "name": "languages/nl.js",
+          "compressedBytes": 9668,
+          "bytes": 37952,
+          "crc32": "ee27e5b0",
+          "sha256": "e86ccd323cb80f7341c80a48b08e5ab64d8ae92bff20b0e1730bc0b36de615b9"
+        },
+        {
+          "name": "languages/pl.js",
+          "compressedBytes": 10198,
+          "bytes": 38953,
+          "crc32": "06b5d0b2",
+          "sha256": "607870805ada6cc2b9cc23f0289c2dc9e121e66976b9198100948728afc946de"
+        },
+        {
+          "name": "languages/pt.js",
+          "compressedBytes": 9697,
+          "bytes": 39298,
+          "crc32": "0489cebb",
+          "sha256": "21657010637fd686b17677705f4fd29ad7609641dfd91182fc1f9ea54f0626d4"
+        },
+        {
+          "name": "languages/ru.js",
+          "compressedBytes": 11554,
+          "bytes": 50756,
+          "crc32": "681f8f25",
+          "sha256": "fc221367e96022626aee6cf7497583d9df637722b81132d959ee2ece28d5f94a"
+        },
+        {
+          "name": "languages/sr.js",
+          "compressedBytes": 11049,
+          "bytes": 49284,
+          "crc32": "4b707fcb",
+          "sha256": "1c3d4e06554294dc4d0689d1c6c1a5c5592daa32b75180b712da73cb8392757d"
+        },
+        {
+          "name": "languages/th.js",
+          "compressedBytes": 10912,
+          "bytes": 58561,
+          "crc32": "ab69ca3c",
+          "sha256": "7b3caaf81d909ee5a089811e26cf7628e3415ffae621017478b7e5a7c713ddc3"
+        },
+        {
+          "name": "languages/tr.js",
+          "compressedBytes": 9985,
+          "bytes": 39035,
+          "crc32": "abc8ceb2",
+          "sha256": "90a74fb9178db2489677fa51681434df6087ec130eac4539005b57edf6a4de86"
+        },
+        {
+          "name": "languages/vi.js",
+          "compressedBytes": 10091,
+          "bytes": 42522,
+          "crc32": "594a1973",
+          "sha256": "17b016979460f6c1a34c2ad184f73fa533ea2b825bc629afecd2ba2e6777738f"
+        },
+        {
+          "name": "languages/zh.js",
+          "compressedBytes": 10363,
+          "bytes": 36129,
+          "crc32": "623170b1",
+          "sha256": "28fd4f02205e39487dedd3cd06ff4b2a498cb695cc30fcf544737abcd727376f"
+        },
+        {
+          "name": "README.md",
+          "compressedBytes": 1580,
+          "bytes": 3179,
+          "crc32": "c91aa42f",
+          "sha256": "ccdb8c39c4573fdcd359b9ef713a6f5c897dff9a95bf3933ad71c6fa7ae89b08"
+        },
+        {
+          "name": "script.js",
+          "compressedBytes": 8685,
+          "bytes": 37669,
+          "crc32": "1e05c39c",
+          "sha256": "ae50a883978be45c3133cb1fe21bcda51bd971af367350551bc23d10b6191171"
+        },
+        {
+          "name": "scripts/console-payload-bridge.cjs",
+          "compressedBytes": 7253,
+          "bytes": 21920,
+          "crc32": "7742943f",
+          "sha256": "7890c4854c4afcc6595008a541e5294c49fab38e0ab16ce004500f09025715f4"
+        },
+        {
+          "name": "Start Sender.cmd",
+          "compressedBytes": 332,
+          "bytes": 552,
+          "crc32": "5917ba62",
+          "sha256": "ac39082d657c035e2dfad36b205220356c4be7abd1703701f5f6228c803c3c10"
+        },
+        {
+          "name": "style.css",
+          "compressedBytes": 13957,
+          "bytes": 80920,
+          "crc32": "17eb3c6b",
+          "sha256": "d781a2ff7110ba2fb3cc6cbe9f32f44fcf0ad8b15c3c32a0400c6c14b13555e6"
+        },
+        {
+          "name": "THIRD-PARTY.txt",
+          "compressedBytes": 6956,
+          "bytes": 34227,
+          "crc32": "abda3d6f",
+          "sha256": "ae99a15764e942c6635e03ca18339ef3265f3bcc1889bb5273a4d9f2d0149b7d"
+        }
+      ]
+    },
+    "manifest": {
+      "records": 212,
+      "allMemberSHA256Verified": true,
+      "snapshot": "4ae2029f91078861793caa7c26c7eb565f6d2edae020d8579c4b412b0d7c40aa",
+      "payloads": 95,
+      "actions": 133
+    },
+    "packagedUI": {
+      "syntaxParsedOnly": true,
+      "versionChoiceButtons": true,
+      "noAllCategory": true,
+      "noVersionDropdown": true,
+      "menuActions": [
+        "Download",
+        "Load"
+      ],
+      "noSeparateSaveOrMenuFileManagerControl": true,
+      "noInjectedMobileFileOptions": true,
+      "verificationMethod": "Inspect packaged HTML and action/version template source; no payload execution."
+    },
+    "browserRuntimes": {
+      "bundled": false,
+      "publicNavigationRewriteVerified": true,
+      "actions": [
+        {
+          "id": "built-in-ps4-900",
+          "platform": "ps4",
+          "localRuntimePath": "/hosts/runtime/ps4-900/",
+          "publicURL": "https://whatwhatboy.com/hosts/runtime/ps4-900/"
+        },
+        {
+          "id": "built-in-ps5-umtx",
+          "platform": "ps5",
+          "localRuntimePath": "/hosts/runtime/ps5-umtx/",
+          "publicURL": "https://whatwhatboy.com/hosts/runtime/ps5-umtx/"
+        }
+      ]
+    }
+  },
+  "interim": {
+    "version": "1.4.0+daa01c23011a",
+    "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.4.0-daa01c23011a.zip",
+    "bytes": 58643090,
+    "sha256": "d355d603da19b48e979f11ede35641dfe376c2b8d3e8c68f5c7b5973acf10266",
+    "zip": {
+      "entries": 213,
+      "expandedBytes": 134151431,
+      "allCentralLocalSizesAndCRCsVerified": true,
+      "memberEvidence": [
+        {
+          "name": "assets/console-guide-dialog.js",
+          "compressedBytes": 4047,
+          "bytes": 13579,
+          "crc32": "fe32e533",
+          "sha256": "e5d28b1510a8edc77588fd1c44a363b474b87ead7dd16572d76ad2041c684ff9"
+        },
+        {
+          "name": "assets/console-guides.css",
+          "compressedBytes": 2922,
+          "bytes": 12810,
+          "crc32": "99aa5ee8",
+          "sha256": "0b28fd292d5e5f37856c91f98d28937e318a3ebd841e2eaecae8d87ff9e8dca6"
+        },
+        {
+          "name": "assets/host-console-client.js",
+          "compressedBytes": 6486,
+          "bytes": 20589,
+          "crc32": "223b1a0b",
+          "sha256": "3622792543c0de4ae13dc7686e6668aa506ba210322f66adb04a51f995333896"
+        },
+        {
+          "name": "assets/host-dashboard.css",
+          "compressedBytes": 3786,
+          "bytes": 18474,
+          "crc32": "41b382d1",
+          "sha256": "5d4ec96f269d86abf99726f4536decadbe6858d67573a8cbcbf10a02ed17e87f"
+        },
+        {
+          "name": "assets/host-dashboard.js",
+          "compressedBytes": 9756,
+          "bytes": 38943,
+          "crc32": "21e8fc99",
+          "sha256": "a1045fe766687ece377e427129abb832ef3d3b27b45e14d17c2d3a71a0b2c56b"
+        },
+        {
+          "name": "assets/host-selector.css",
+          "compressedBytes": 365,
+          "bytes": 776,
+          "crc32": "69ae0ec9",
+          "sha256": "3433b7a680e723725c3aec6b82f0b30bc8ab87701d7628ec4c43ce03955a8075"
+        },
+        {
+          "name": "assets/images/expansion-ps4-ps5/payload-manager.png",
+          "compressedBytes": 244258,
+          "bytes": 249589,
+          "crc32": "3303b7a1",
+          "sha256": "65833da925a740a5f4ae526a26e0e3ded471130164041d23a10cd08d459decab"
+        },
+        {
+          "name": "assets/images/expansion-ps4-ps5/ps4-ezremote.jpg",
+          "compressedBytes": 122368,
+          "bytes": 238069,
+          "crc32": "5d0690a1",
+          "sha256": "fd3ba2912252d89753e95cc51f699fd7acaf17dcd30f038d9038fc114e40fa01"
+        },
+        {
+          "name": "assets/images/expansion-ps4-ps5/ps5-ezremote.jpg",
+          "compressedBytes": 122368,
+          "bytes": 238069,
+          "crc32": "5d0690a1",
+          "sha256": "fd3ba2912252d89753e95cc51f699fd7acaf17dcd30f038d9038fc114e40fa01"
+        },
+        {
+          "name": "assets/images/game-patches/bloodborne-official.jpg",
+          "compressedBytes": 225432,
+          "bytes": 227582,
+          "crc32": "0fc6e002",
+          "sha256": "33f33a882619f432c4de142473520977509c731fed6f15c747cf5b9d32d7bd35"
+        },
+        {
+          "name": "assets/images/game-patches/cyberpunk-2077-official.jpg",
+          "compressedBytes": 40834,
+          "bytes": 41042,
+          "crc32": "cea62573",
+          "sha256": "7ad6e0ee4f23e26416f5663146f3e97b1c85bbfb157781027e2aa615a4be68cf"
+        },
+        {
+          "name": "assets/images/game-patches/dead-island-2-official.jpg",
+          "compressedBytes": 73613,
+          "bytes": 73636,
+          "crc32": "d4b4c2bc",
+          "sha256": "cfa188a50b1b33baa5eb21391f437376c8d88114b6816961bae6db459569cc72"
+        },
+        {
+          "name": "assets/images/game-patches/far-cry-6-official.jpg",
+          "compressedBytes": 41887,
+          "bytes": 42006,
+          "crc32": "6141fb8f",
+          "sha256": "459c8105022b61c68ab88a1c645776c0a99d753a43e82c56dd9855aa356a0abf"
+        },
+        {
+          "name": "assets/images/game-patches/far-cry-primal-official.jpg",
+          "compressedBytes": 46366,
+          "bytes": 46390,
+          "crc32": "3787e564",
+          "sha256": "18ec1879c91f16416b413e945cd1cd9d9c3f26ffa2bf1f1b1214fb7e77e5de5f"
+        },
+        {
+          "name": "assets/images/game-patches/horizon-forbidden-west-official.jpg",
+          "compressedBytes": 58646,
+          "bytes": 58665,
+          "crc32": "f505054e",
+          "sha256": "6104bbc74ffcc2c87d724897d9ea8cf59f6398af2633e5e9d4443fb4c5c0bf03"
+        },
+        {
+          "name": "assets/images/gta52.png",
+          "compressedBytes": 79518,
+          "bytes": 81020,
+          "crc32": "e35a7d39",
+          "sha256": "791da620bfb0d5fa7afdaeca71b96c957ea123710af9c223a54e67d4f103e49b"
+        },
+        {
+          "name": "assets/images/host-menus/explosive.svg",
+          "compressedBytes": 693,
+          "bytes": 1512,
+          "crc32": "c764c077",
+          "sha256": "a6553a8ee22d3a0179aac2ce7e9ba801528426220d49ed90f811fef346e251d2"
+        },
+        {
+          "name": "assets/images/host-menus/expulsion.svg",
+          "compressedBytes": 656,
+          "bytes": 1454,
+          "crc32": "a31b23dc",
+          "sha256": "c1907f6d14ed8bacb68d2eac17398f7284d3b6e3b7a36c9d0c266cbca739bf1d"
+        },
+        {
+          "name": "assets/images/host-selector/whatwhatboy-ps4.jpg",
+          "compressedBytes": 182029,
+          "bytes": 183435,
+          "crc32": "0b819b4b",
+          "sha256": "bef1a06ed2b12db203248ce9b044453ed89611cb6188e1278232f4aa8dcdc8ed"
+        },
+        {
+          "name": "assets/images/host-selector/whatwhatboy-ps5.jpg",
+          "compressedBytes": 107887,
+          "bytes": 109272,
+          "crc32": "804d0037",
+          "sha256": "c417064d8da6e7a44497888d91f89cc1e75667056451c9c69dac8b82efe1790e"
+        },
+        {
+          "name": "assets/images/host-trainers/astro-bot-19e37c8f055d.jpg",
+          "compressedBytes": 177815,
+          "bytes": 178278,
+          "crc32": "b634bde7",
+          "sha256": "19e37c8f055deef9c1dd418cd8e0bd178f33c988a8393d4d3cd58c25d03a4e15"
+        },
+        {
+          "name": "assets/images/host-trainers/black-myth-wukong-61095f57d8d6.jpg",
+          "compressedBytes": 130381,
+          "bytes": 130486,
+          "crc32": "ff596612",
+          "sha256": "61095f57d8d68223e4d8bff1a68dff1d6996161f4ea79aff415116a50b3d87ea"
+        },
+        {
+          "name": "assets/images/host-trainers/dragons-dogma-2-4474b5997a4b.jpg",
+          "compressedBytes": 274310,
+          "bytes": 274304,
+          "crc32": "8a0e5c33",
+          "sha256": "4474b5997a4b726252e7e92c76d354c8e53461e880cb2397219b6742806b012c"
+        },
+        {
+          "name": "assets/images/host-trainers/ghostrunner-2-0c6aa18bed2d.jpg",
+          "compressedBytes": 154985,
+          "bytes": 157769,
+          "crc32": "bd638e6b",
+          "sha256": "0c6aa18bed2da3f70d22432bed8d5344a01f24f0ca31da56b545c06624a27a0b"
+        },
+        {
+          "name": "assets/images/host-trainers/silent-hill-2-7e0743d7eb02.jpg",
+          "compressedBytes": 101484,
+          "bytes": 101579,
+          "crc32": "54b62bbd",
+          "sha256": "7e0743d7eb02ea5959cd22c3cf607c6d671e3656b33097550153c5c0ed50cadb"
+        },
+        {
+          "name": "assets/images/host-trainers/the-last-of-us-part-ii-remastered-f1c0691e29a5.jpg",
+          "compressedBytes": 191795,
+          "bytes": 191783,
+          "crc32": "38dabc4f",
+          "sha256": "f1c0691e29a564a0c656b14cae06194ca93d65dd653af07b9dd50311f65391b6"
+        },
+        {
+          "name": "assets/images/logo.png",
+          "compressedBytes": 22298,
+          "bytes": 23090,
+          "crc32": "e475a03e",
+          "sha256": "5dea413ba133f8236e385f9107521fd807d8ad3ad89265b8bd223072df3c0293"
+        },
+        {
+          "name": "assets/images/platform-logos/nintendo-switch-2-symbol.svg",
+          "compressedBytes": 1565,
+          "bytes": 3267,
+          "crc32": "16b08c0a",
+          "sha256": "d772c021dd7d1fb30b2373b511ae7989cfb39b3d51ce7f1c81cf0012b457e956"
+        },
+        {
+          "name": "assets/images/platform-logos/nintendo-switch.svg",
+          "compressedBytes": 948,
+          "bytes": 2086,
+          "crc32": "1549a7c9",
+          "sha256": "1de33ebc7009efbc422c6fd22d565283347090b336b53fd89f2acf46bd87dcfb"
+        },
+        {
+          "name": "assets/images/platform-logos/ps3.svg",
+          "compressedBytes": 1533,
+          "bytes": 3526,
+          "crc32": "92bcdca1",
+          "sha256": "2e5610ff2f6e8b236abe2004297cec46d05d0cf73a05e5dd734b6c3c0e84b512"
+        },
+        {
+          "name": "assets/images/platform-logos/ps4.svg",
+          "compressedBytes": 3017,
+          "bytes": 6774,
+          "crc32": "4a159dd1",
+          "sha256": "9aff461989b5423b2987f782ba0d21e9a0937689a3c53ac3b8f47d59a1d92822"
+        },
+        {
+          "name": "assets/images/platform-logos/ps5.svg",
+          "compressedBytes": 1373,
+          "bytes": 2765,
+          "crc32": "01ad4e55",
+          "sha256": "989952fcadf77f121a5e818b8f1668fd1adc43ed458c8bf0ce93890f8d6df692"
+        },
+        {
+          "name": "assets/images/platform-logos/psvita.svg",
+          "compressedBytes": 2987,
+          "bytes": 7172,
+          "crc32": "1ba21d67",
+          "sha256": "fcf17918f5c7a2be8f33103ef04da7282f3edac740f828ef5430a00de34bf568"
+        },
+        {
+          "name": "assets/images/platform-logos/steamdeck.svg",
+          "compressedBytes": 1970,
+          "bytes": 4625,
+          "crc32": "f21eade9",
+          "sha256": "601a5e0a4613d8aa79fea8d9e8833719fa9373dd5fc5761b660a6f24ff880e3b"
+        },
+        {
+          "name": "assets/images/platform-logos/xbox-one-series.svg",
+          "compressedBytes": 818,
+          "bytes": 1462,
+          "crc32": "86d4660d",
+          "sha256": "9d4aa049cb10b4a04e7bd54d4cc65348005ac2f6447e8c22ecee131b550c4997"
+        },
+        {
+          "name": "assets/images/platform-logos/xbox360.svg",
+          "compressedBytes": 3589,
+          "bytes": 8760,
+          "crc32": "edcfb288",
+          "sha256": "7e5a3be1eac0ce078551e4a7c2b6dc56d3eaf8913cdf1bff79fba80e828390d3"
+        },
+        {
+          "name": "assets/images/ps4-gta5/beach.png",
+          "compressedBytes": 419225,
+          "bytes": 419142,
+          "crc32": "6a702ee6",
+          "sha256": "c345b995bd264589e3de90635956fb5afb1b5b4608122d6f94ce6f6988236e5e"
+        },
+        {
+          "name": "assets/images/ps4-gta5/lts.png",
+          "compressedBytes": 571077,
+          "bytes": 573258,
+          "crc32": "8bb32b0e",
+          "sha256": "fffd89daabaecb2f4b0e91650e9f2e20ca80d2725b2ea1bbcb81ae7375a9c342"
+        },
+        {
+          "name": "assets/images/ps4-gta5/serendipity.png",
+          "compressedBytes": 577684,
+          "bytes": 577528,
+          "crc32": "3e58eecc",
+          "sha256": "ae705e8d1345d6ce0eec733f9a39f9e5230f6a2aa8e93df8fbda64e2bb79b6b7"
+        },
+        {
+          "name": "assets/images/ps4-gta5/velora.png",
+          "compressedBytes": 349974,
+          "bytes": 349949,
+          "crc32": "9a46360b",
+          "sha256": "0bd2d2c5a8e29e6afcc36890b00d7443eb5387bca0b2b1d3db27f4c7a7c55e4e"
+        },
+        {
+          "name": "assets/images/ps4-ps5/control.jpg",
+          "compressedBytes": 27074,
+          "bytes": 27707,
+          "crc32": "b06558e1",
+          "sha256": "bd4c3f2d967908343f34b6013810da58a69ff1fabc691157e3d8a1bc8127928b"
+        },
+        {
+          "name": "assets/images/ps4-ps5/dead-island.jpg",
+          "compressedBytes": 50690,
+          "bytes": 51031,
+          "crc32": "e81c74c3",
+          "sha256": "e1ffcff5246fadd70ced3f60ca273bf26ac36c71db6d51eb13ee4c22258a9283"
+        },
+        {
+          "name": "assets/images/ps4-ps5/doom-eternal.jpg",
+          "compressedBytes": 69454,
+          "bytes": 69469,
+          "crc32": "bd919c4f",
+          "sha256": "4b3de8b47d18a9af153f36eaf4ec31bc57f16a78f2baacdeb5b9afec97b84d77"
+        },
+        {
+          "name": "assets/images/ps4-ps5/doom.jpg",
+          "compressedBytes": 46671,
+          "bytes": 46694,
+          "crc32": "9648a391",
+          "sha256": "111921bc88b8d40bb8867d987f6a24144a41f32c495e908c93ced5443a85e355"
+        },
+        {
+          "name": "assets/images/ps4-ps5/dying-light-2.jpg",
+          "compressedBytes": 41149,
+          "bytes": 41221,
+          "crc32": "5305000c",
+          "sha256": "7fac6a047e20e7e5e57d33ce725f85208fb536fe75ff4136537a6f626e2b66ee"
+        },
+        {
+          "name": "assets/images/ps4-ps5/dying-light.jpg",
+          "compressedBytes": 52046,
+          "bytes": 52074,
+          "crc32": "a02a1755",
+          "sha256": "2f79ee2b6c92569269043fb174b4bfb46f4f1d9a5b11bd17fe2b392648699d0e"
+        },
+        {
+          "name": "assets/images/ps4-ps5/edited/gta5-cyprus-image.png",
+          "compressedBytes": 2158540,
+          "bytes": 2231473,
+          "crc32": "75698471",
+          "sha256": "5e4b3dd996111bdd0ddf06b95f1a3aa6b470b22e61e8001bb0b64cf015812656"
+        },
+        {
+          "name": "assets/images/ps4-ps5/edited/gta5-expulsion-v5-1-57-image.png",
+          "compressedBytes": 2164508,
+          "bytes": 2224761,
+          "crc32": "314b677e",
+          "sha256": "6e7146addeb7b02a8e23139e0466a7cce61baee19f556e566727b3df89db53fa"
+        },
+        {
+          "name": "assets/images/ps4-ps5/elden-ring.jpg",
+          "compressedBytes": 32657,
+          "bytes": 32689,
+          "crc32": "cedbd897",
+          "sha256": "d46402528e357350bdb31a00be57a7896238515e6dc8afc0669aa54573307c02"
+        },
+        {
+          "name": "assets/images/ps4-ps5/fallout-4.jpg",
+          "compressedBytes": 37074,
+          "bytes": 37114,
+          "crc32": "bfd28c00",
+          "sha256": "1d90e4bffb552583c8183095756edfa784e10cc2b79e552e31371de0eb83ab42"
+        },
+        {
+          "name": "assets/images/ps4-ps5/far-cry-5.jpg",
+          "compressedBytes": 55209,
+          "bytes": 55796,
+          "crc32": "4b12e0d7",
+          "sha256": "360daaf7b3ba185ddb8d7586c580d4e34d45dc31bc3eaaced10e72b5383ce918"
+        },
+        {
+          "name": "assets/images/ps4-ps5/god-of-war-ragnarok.jpg",
+          "compressedBytes": 47627,
+          "bytes": 47645,
+          "crc32": "020a3867",
+          "sha256": "6f12e8e431fc55073cd0255b9bc7c5ce7e8eeb130e31bd179a7e9ba0d2267b3a"
+        },
+        {
+          "name": "assets/images/ps4-ps5/god-of-war.jpg",
+          "compressedBytes": 37577,
+          "bytes": 37714,
+          "crc32": "8efae740",
+          "sha256": "cef450471bbaf6058991c841c30539069f436a92ba5e91994bf12d12657e3b80"
+        },
+        {
+          "name": "assets/images/ps4-ps5/horizon-zero-dawn.jpg",
+          "compressedBytes": 54062,
+          "bytes": 54076,
+          "crc32": "0d0e3a6e",
+          "sha256": "95971139817f59677278b82584523cf15d0ce57e1d3382e8753dd889e2d31334"
+        },
+        {
+          "name": "assets/images/ps4-ps5/originals/rdr2-north-beta-image.webp",
+          "compressedBytes": 54320,
+          "bytes": 54300,
+          "crc32": "765113eb",
+          "sha256": "c41f71b7e52007a191530c38dec3750a79f382e628ba79317ef172f9f6eaf20c"
+        },
+        {
+          "name": "assets/images/ps4-ps5/originals/rdr2-oyster-image.webp",
+          "compressedBytes": 83968,
+          "bytes": 83938,
+          "crc32": "54795d67",
+          "sha256": "296877dad17425a5e070e7e7e56a4781cf3d14cb9759253bd762c7effe5ef41e"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-2.jpg",
+          "compressedBytes": 38075,
+          "bytes": 38328,
+          "crc32": "df706bb2",
+          "sha256": "f9927dc9b656d7e181baa1da6d311470230dfa82c16dc6c5bd72b39c2d99ffeb"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-3.jpg",
+          "compressedBytes": 32216,
+          "bytes": 32440,
+          "crc32": "88d65ddc",
+          "sha256": "db09ce62cd562cb9867897aaba5671ae39ac5601385e6bd3b95929775e263874"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-4.jpg",
+          "compressedBytes": 28776,
+          "bytes": 28807,
+          "crc32": "0da19d75",
+          "sha256": "33c8dcd2a189dec8c053773e10df4fef2d68cb1db73ab4401de5c078b8650e4b"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-hd.jpg",
+          "compressedBytes": 44175,
+          "bytes": 44740,
+          "crc32": "868eaf8a",
+          "sha256": "785ced77787b3d3c10aed3915c52b99d1a83bd288a7c799dca96a4176668fd00"
+        },
+        {
+          "name": "assets/images/ps4-ps5/resident-evil-zero.jpg",
+          "compressedBytes": 71332,
+          "bytes": 72036,
+          "crc32": "7f5d812f",
+          "sha256": "1029d84b4bfd4dc35740cac01321ed71fa7bf0fbb53f872f5d3aa29e00ca3952"
+        },
+        {
+          "name": "assets/images/ps4-ps5/sekiro.jpg",
+          "compressedBytes": 38990,
+          "bytes": 39009,
+          "crc32": "a85b3ad6",
+          "sha256": "1a7309b8cef162b7bd4ed33ebddbc70b15734ac0250492110535a4d22eb88b5b"
+        },
+        {
+          "name": "assets/images/ps4-ps5/sonic-frontiers.jpg",
+          "compressedBytes": 55793,
+          "bytes": 55812,
+          "crc32": "eb8119b0",
+          "sha256": "02b509ae2e569475c3a240375f2060845ac4acf2a5a5307fdbf74317173aef82"
+        },
+        {
+          "name": "assets/images/ps4-ps5/spider-man-miles-morales.jpg",
+          "compressedBytes": 28150,
+          "bytes": 28196,
+          "crc32": "734de9e1",
+          "sha256": "a5d7caa2ec02c532d4f8d173f15bbc142c16e11cfbba03bb5d03b3149d32c08c"
+        },
+        {
+          "name": "assets/images/ps4-ps5/uncharted-4.jpg",
+          "compressedBytes": 30666,
+          "bytes": 30706,
+          "crc32": "8c64eb9d",
+          "sha256": "d99631d9fb57d3d6d0604997409be9ddbcb1f449fde789cfb86f3a4faba1c662"
+        },
+        {
+          "name": "assets/images/ps4-ps5/uncharted-lost-legacy.jpg",
+          "compressedBytes": 30666,
+          "bytes": 30706,
+          "crc32": "8c64eb9d",
+          "sha256": "d99631d9fb57d3d6d0604997409be9ddbcb1f449fde789cfb86f3a4faba1c662"
+        },
+        {
+          "name": "assets/images/ps4-ps5/witcher-3.jpg",
+          "compressedBytes": 39595,
+          "bytes": 39618,
+          "crc32": "9f911112",
+          "sha256": "4daa8e38c4611dda60b4dd48382f1e58f39f9e00101bd363e7390fec3aa9f3a6"
+        },
+        {
+          "name": "assets/images/rdr2.png",
+          "compressedBytes": 40576,
+          "bytes": 41820,
+          "crc32": "c2aaad1c",
+          "sha256": "1257c022f4e7958041d939130ddad03efca80e9de6af17884be2b8dfd6e1c7e1"
+        },
+        {
+          "name": "assets/mobile-downloads.css",
+          "compressedBytes": 1679,
+          "bytes": 5899,
+          "crc32": "6017c364",
+          "sha256": "902cfb07373232227086e0f0aaa17ebbaa69bb15ebc20354319c3237a1b1d91e"
+        },
+        {
+          "name": "assets/mobile-downloads.js",
+          "compressedBytes": 7870,
+          "bytes": 27351,
+          "crc32": "a62dad8d",
+          "sha256": "e177761ce0157ab4cf81db1f647360b5002a33406f7fcbc46070ffa57e7127a7"
+        },
+        {
+          "name": "assets/mobile.css",
+          "compressedBytes": 3768,
+          "bytes": 14668,
+          "crc32": "9e035710",
+          "sha256": "26f58d8b62f18641fff82525891284a685191727635379e9cd172f1fbe67c798"
+        },
+        {
+          "name": "assets/site-background.css",
+          "compressedBytes": 2194,
+          "bytes": 6839,
+          "crc32": "5a343274",
+          "sha256": "ea3aa580dba89db5052bda2432022d637072bd64956814c18e3469910f1ec589"
+        },
+        {
+          "name": "assets/site-background.js",
+          "compressedBytes": 3991,
+          "bytes": 13748,
+          "crc32": "25750274",
+          "sha256": "9e95f83705dcc28c02a3ba3bc2b7e799ab0fe089ce255faef5217b21d54687be"
+        },
+        {
+          "name": "bundle-manifest.json",
+          "compressedBytes": 18286,
+          "bytes": 88120,
+          "crc32": "37bc8d24",
+          "sha256": "4a251854affeb6b485eb00c9c4b559e6471913e24a933f846cb8153a51d9361e"
+        },
+        {
+          "name": "docs/host-actions-ps4.json",
+          "compressedBytes": 4216,
+          "bytes": 27133,
+          "crc32": "02e939e5",
+          "sha256": "c7eb3b96a35fdf3452f8521114026e0af0bf1e4d95eaacf5ed4ec292d4d54fcc"
+        },
+        {
+          "name": "docs/host-actions-ps5.json",
+          "compressedBytes": 3814,
+          "bytes": 17181,
+          "crc32": "cc33216b",
+          "sha256": "be076abca320f279d24be956cbbed8710489aceeec76beb30d18a377ea02ae81"
+        },
+        {
+          "name": "docs/host-console-services.md",
+          "compressedBytes": 5693,
+          "bytes": 14305,
+          "crc32": "364f4ce3",
+          "sha256": "39f23b802d95eb48e13460b251c4717ba1beac779afae30831529d588e7c3159"
+        },
+        {
+          "name": "docs/host-current-cheat-actions.json",
+          "compressedBytes": 2490,
+          "bytes": 21853,
+          "crc32": "1f0796c2",
+          "sha256": "abaf32a139df27da0be719f7197441694a342ba05340c0a7662054d62038b8b8"
+        },
+        {
+          "name": "docs/host-dashboard.md",
+          "compressedBytes": 4366,
+          "bytes": 10488,
+          "crc32": "d5b068bb",
+          "sha256": "cb13b45bf9e6d3f15301b1196590424741c50e06002598d1997a03ca68596e5a"
+        },
+        {
+          "name": "docs/host-extra-game-actions.json",
+          "compressedBytes": 14054,
+          "bytes": 180235,
+          "crc32": "6ffe321e",
+          "sha256": "906cebfecc1d43895fab707a5f1ceec3b374d9b682ca3ccf9adfb2934d9e502d"
+        },
+        {
+          "name": "docs/host-extra-game-trainers.md",
+          "compressedBytes": 1556,
+          "bytes": 3036,
+          "crc32": "c472c92b",
+          "sha256": "0137c44cca7877401f9f114308ba0029837f7ac6c9dab64018a2eed3eceba109"
+        },
+        {
+          "name": "docs/host-game-actions.json",
+          "compressedBytes": 4272,
+          "bytes": 39203,
+          "crc32": "8024122a",
+          "sha256": "377e64dbaf6fdab206781d587e2f6462e982080d0e139273fb947e3d4655e6bd"
+        },
+        {
+          "name": "docs/host-legacy-menu-actions.json",
+          "compressedBytes": 3642,
+          "bytes": 44523,
+          "crc32": "0d318f89",
+          "sha256": "9a421ff0c79c292f5a7c6673b0e17b98b5626f1c954ff51df165f4c7bd1cc9b5"
+        },
+        {
+          "name": "docs/host-modern-plugin-actions.json",
+          "compressedBytes": 4144,
+          "bytes": 34428,
+          "crc32": "aba14d47",
+          "sha256": "325d883a42555cb883b2675ae10d4744a5b9328e0520644c4419383ccb0ff27b"
+        },
+        {
+          "name": "docs/host-payload-management.md",
+          "compressedBytes": 3565,
+          "bytes": 9230,
+          "crc32": "1c01e04e",
+          "sha256": "e07443509e6fb39af7e6c89a9b59e8c8f6a73321e6f62ca264062d5b41e43215"
+        },
+        {
+          "name": "docs/host-payload-sender.md",
+          "compressedBytes": 2343,
+          "bytes": 5224,
+          "crc32": "51198119",
+          "sha256": "93ed16963235a532181f17a7930df3664b8db01c40fe528e9efa98bab3ac4dc9"
+        },
+        {
+          "name": "downloads/archive/5a12cb950970/orbit_store.elf",
+          "compressedBytes": 32650499,
+          "bytes": 59691728,
+          "crc32": "435e3a8a",
+          "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914"
+        },
+        {
+          "name": "downloads/archive/cd469f63fa67/ps5upload-10.6.0.elf",
+          "compressedBytes": 3195811,
+          "bytes": 6514240,
+          "crc32": "4aa79b6b",
+          "sha256": "2f67651bf1320a83202b632782a1f404543b1ea4911dfb3be5a510971f015392"
+        },
+        {
+          "name": "downloads/archive/f22d8b3749d7/shadowmountplus.elf",
+          "compressedBytes": 1666993,
+          "bytes": 3614944,
+          "crc32": "d70842ea",
+          "sha256": "08c843018750bef013fe3a4de5f80c5c9738c6c2dafa2406e6b6e68d7585f3da"
+        },
+        {
+          "name": "downloads/console-ready/expulsion-v5-ready/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx",
+          "compressedBytes": 287429,
+          "bytes": 909328,
+          "crc32": "fc0f20d0",
+          "sha256": "dfdc05bbe590bced0ca53059c017cb05c18054695a90053b7c91da269fb57dc3"
+        },
+        {
+          "name": "downloads/console-ready/expulsion-v7-ready/PS4/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx",
+          "compressedBytes": 622561,
+          "bytes": 1775984,
+          "crc32": "737da037",
+          "sha256": "823656c96305e4373ec132d8f5dfd9fa2ec24a38d941dfb980f92616d84cb268"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps4-ftpsrv/5f00e2df7fa8/ftpsrv-ps4.elf",
+          "compressedBytes": 38265,
+          "bytes": 146720,
+          "crc32": "998fe3df",
+          "sha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps4-klogsrv/7e89c33eb90d/klogsrv-ps4.elf",
+          "compressedBytes": 21780,
+          "bytes": 91208,
+          "crc32": "fce6f6d4",
+          "sha256": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-elfldr/82f622761017/elfldr-ps5.elf",
+          "compressedBytes": 105871,
+          "bytes": 394568,
+          "crc32": "2f4566d2",
+          "sha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-ftpsrv/7d4b31c83eae/ftpsrv-ps5.elf",
+          "compressedBytes": 51326,
+          "bytes": 191864,
+          "crc32": "43ec9744",
+          "sha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-klogsrv/e828ec144231/klogsrv-ps5.elf",
+          "compressedBytes": 33851,
+          "bytes": 136016,
+          "crc32": "df261812",
+          "sha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-payload-manager/2a42054fd972/pldmgr_v0.6.3.elf",
+          "compressedBytes": 1178054,
+          "bytes": 2795992,
+          "crc32": "ccd8150d",
+          "sha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4"
+        },
+        {
+          "name": "downloads/host-payloads/ps4-ps5-expand-ps5-websrv/54730c867c6e/websrv-ps5.elf",
+          "compressedBytes": 673788,
+          "bytes": 1597864,
+          "crc32": "668f942f",
+          "sha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/firmware-9.00/arabicguy-gta5-100-ps4-900.bin",
+          "compressedBytes": 74607,
+          "bytes": 1055408,
+          "crc32": "78a6cc22",
+          "sha256": "0de5452601ca151ad3bb6c86c2fb97e2a0bac89b5ff77cf238638dd19bddd372"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/firmware-9.00/lamance-gta5-138-ps4-900.bin",
+          "compressedBytes": 479144,
+          "bytes": 1128208,
+          "crc32": "3398e3d1",
+          "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/firmware-9.00/north-beta-rdr2-129-ps4-900.bin",
+          "compressedBytes": 101347,
+          "bytes": 1219048,
+          "crc32": "4faec9d5",
+          "sha256": "5ab2f81616290b3f8c9705aaf127e6db8c006ff29da87c023c9c1ccdfb4db4eb"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-127-ps4-900.bin",
+          "compressedBytes": 72119,
+          "bytes": 1059520,
+          "crc32": "49e3dd3d",
+          "sha256": "be9ee0dacc71e94d607584770c08cdc39c1319427e9fd83424fc19dd15782aa6"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-132-ps4-900.bin",
+          "compressedBytes": 72081,
+          "bytes": 1059520,
+          "crc32": "169084aa",
+          "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/arabicguy-gta5-133-ps4-900.bin",
+          "compressedBytes": 72097,
+          "bytes": 1059520,
+          "crc32": "289080cb",
+          "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/beefqueef-gta5-133-ps4-900.bin",
+          "compressedBytes": 183757,
+          "bytes": 1073700,
+          "crc32": "35cdc7d3",
+          "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-100-ps4-900.bin",
+          "compressedBytes": 134586,
+          "bytes": 1190392,
+          "crc32": "519628b9",
+          "sha256": "199b68feb24e1d202589b7ccb7b9ee28fdf3cab5546b41bd1263939ecedb7add"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-113-ps4-900.bin",
+          "compressedBytes": 134831,
+          "bytes": 1190392,
+          "crc32": "0e566954",
+          "sha256": "089f1c3144dffb35589a7fb36a05dd54f642c1eeef3873daa3b7f4ce965af06d"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-119-ps4-900.bin",
+          "compressedBytes": 134827,
+          "bytes": 1190392,
+          "crc32": "668a523c",
+          "sha256": "370b5bd2b4bace7a2dd51bd28f9b080b1e5221f3bd9e6dec64c5e72baa183254"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-124-ps4-900.bin",
+          "compressedBytes": 135054,
+          "bytes": 1190392,
+          "crc32": "d0106a45",
+          "sha256": "58e2317dd8fe1cc44ce834a174ac06e566b34eb3709ce39e088f63aa51a5944a"
+        },
+        {
+          "name": "downloads/hosts/ps4/game-menus/nazky-af1fcfe9dc07/oysters-rdr2-129-ps4-900.bin",
+          "compressedBytes": 214547,
+          "bytes": 1260864,
+          "crc32": "10e9ad98",
+          "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/743646c9df9a/karo-expulsion135-game-1.35-ps4-900.bin",
+          "compressedBytes": 49709,
+          "bytes": 1055264,
+          "crc32": "9ea26ab9",
+          "sha256": "ef21be6c36b117ba8b362c1488ae887a0daece3d7a791bc2ac3130a6d27ff1af"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/743646c9df9a/karo-lts127-game-1.27-ps4-900.bin",
+          "compressedBytes": 16228,
+          "bytes": 1054664,
+          "crc32": "2a5565ef",
+          "sha256": "ead0911d40795a0503305dd739680bb3ebd3f51e9b65a9878101c4bd9c2aaf10"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/743646c9df9a/karo-menubase127-game-1.27-ps4-900.bin",
+          "compressedBytes": 19364,
+          "bytes": 1054984,
+          "crc32": "e131ee8d",
+          "sha256": "822d4897941512e8cbf29806e1985848aceb5c54bb3f9149d52df07e8b0e8545"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq134-game-1.34-ps4-900.bin",
+          "compressedBytes": 168843,
+          "bytes": 1063880,
+          "crc32": "a77d08c3",
+          "sha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-bq138-game-1.38-ps4-900.bin",
+          "compressedBytes": 197176,
+          "bytes": 1073836,
+          "crc32": "b111b491",
+          "sha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde132-game-1.32-ps4-900.bin",
+          "compressedBytes": 136447,
+          "bytes": 1074320,
+          "crc32": "71dcfe58",
+          "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/af1fcfe9dc07/nazky-wilde138-game-1.38-ps4-900.bin",
+          "compressedBytes": 168111,
+          "bytes": 592864,
+          "crc32": "a8183b51",
+          "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq138-thief-game-1.38-ps4-900.bin",
+          "compressedBytes": 183757,
+          "bytes": 1073700,
+          "crc32": "35cdc7d3",
+          "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq146-game-1.46-ps4-900.bin",
+          "compressedBytes": 171717,
+          "bytes": 480804,
+          "crc32": "a0f96566",
+          "sha256": "fbae10e4d9c0ac09e745755959a1c71a444a1c16bb5da2c51361e56fef1e2c00"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-bq147-game-1.47-ps4-900.bin",
+          "compressedBytes": 171628,
+          "bytes": 480740,
+          "crc32": "5e8b22cc",
+          "sha256": "a8a6789cd8873224dde81f4924cfd12f9d87f430e552d50064e9aabd23171ead"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-expulsion138-game-1.38-ps4-900.bin",
+          "compressedBytes": 87423,
+          "bytes": 1055312,
+          "crc32": "9eeab44a",
+          "sha256": "c3df5201df8b17add26ea58794d3ec95d39a021586f1e4e2517b48fa540754e1"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde132-game-1.32-ps4-900.bin",
+          "compressedBytes": 149218,
+          "bytes": 1080016,
+          "crc32": "85c293b9",
+          "sha256": "007f3418bee3f2fe27034262a84a148a9f8c0577e517133286a19c4bf18d55eb"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde133-game-1.33-ps4-900.bin",
+          "compressedBytes": 149188,
+          "bytes": 1080016,
+          "crc32": "0b181e3e",
+          "sha256": "d9ebf4cdf4150ac59865d7744713dfc99037ad75b08ea7551c5bcb3e992972a9"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde146-game-1.46-ps4-900.bin",
+          "compressedBytes": 169503,
+          "bytes": 2610904,
+          "crc32": "38c31559",
+          "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b"
+        },
+        {
+          "name": "downloads/hosts/ps4/legacy-menus/da9c138e47c5/kameleon-wilde147-game-1.47-ps4-900.bin",
+          "compressedBytes": 171112,
+          "bytes": 2819184,
+          "crc32": "5dcd9211",
+          "sha256": "beac207b97220a57f22c9a7ec9064e6fdb2ef98ec33852b2ee1c5f7a1717010f"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA01417_01.013.002.json",
+          "compressedBytes": 1268,
+          "bytes": 7658,
+          "crc32": "d7e507ce",
+          "sha256": "4eb328cdf5d89aaacf3bd24341947cd249e3396fd437961dd353a00fd0cd21e2"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA01460_01.015.001.json",
+          "compressedBytes": 658,
+          "bytes": 3717,
+          "crc32": "e6622954",
+          "sha256": "e51ef057511671d4175e6d4f3b6fa25228d7e2d6f9597daecaf43909ec21be7a"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA03831_01.041.000.json",
+          "compressedBytes": 1024,
+          "bytes": 6024,
+          "crc32": "ca843b78",
+          "sha256": "58863f93e82adcc14cc853451742c28d61ff477b45fe9b5c670496728100a0c5"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA04263_01.010.002.mc4",
+          "compressedBytes": 2977,
+          "bytes": 3928,
+          "crc32": "bdbb630a",
+          "sha256": "25c47d2bb864fd065d2645e7bc13a45b12f046c18786f310d9c217d111181910"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA04264_01.005.000.mc4",
+          "compressedBytes": 4822,
+          "bytes": 6380,
+          "crc32": "118741cc",
+          "sha256": "7460de5fa64318bc7544eeb7ae1b1ef06f148df78f2668df93d838a9c57cb695"
+        },
+        {
+          "name": "downloads/hosts/ps5/cheats/hen-cheats-collection/39a55c2b0030/PPSA04264_01.010.002.mc4",
+          "compressedBytes": 2979,
+          "bytes": 3928,
+          "crc32": "ab1b0021",
+          "sha256": "fc5de09d593fc308c10f308ea94832116b7aa6ee5c68d9eabe74f951a3db46c6"
+        },
+        {
+          "name": "downloads/hosts/ps5/game-mods/rdr2-60fps/v2.0/RedDead2.60FPS_v2.0.elf",
+          "compressedBytes": 42414,
+          "bytes": 154304,
+          "crc32": "1587723c",
+          "sha256": "646ecb71e80415ab9d9c651539451d38ee0052a5997f7ef7504a42932c7f8261"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00207-01-09/CUSA00207_01.09.json",
+          "compressedBytes": 632,
+          "bytes": 2653,
+          "crc32": "302aba44",
+          "sha256": "d4da403382829c29fcf6afe29e9bba5fae320ac73feded091f41bf8e29c7bb93"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00208-01-09/CUSA00208_01.09.json",
+          "compressedBytes": 632,
+          "bytes": 2653,
+          "crc32": "8dfb7706",
+          "sha256": "3943d226cb78133b29309dee54ccdab45a19826d7bb09eb32c8b6b461a62e1ad"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00341-01-33/CUSA00341_01.33.json",
+          "compressedBytes": 262,
+          "bytes": 504,
+          "crc32": "7678fae4",
+          "sha256": "a11a60c6aec6699d4995b9f2c0dc76e9a939b84cd8ae853acbe09039ddd36869"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa00900-01-09/CUSA00900_01.09.json",
+          "compressedBytes": 631,
+          "bytes": 2653,
+          "crc32": "5c14b099",
+          "sha256": "668127e64c77985e08361dca6144088b7944542d7069330458a62c44a7ac432c"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa01067-01-00/CUSA01067_01.00.json",
+          "compressedBytes": 303,
+          "bytes": 968,
+          "crc32": "1226c350",
+          "sha256": "bb9ed3247032aab9558ecc6280e866e78dfc327239f9de1b451908801a466db3"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa02092-01-12/CUSA02092_01.12.json",
+          "compressedBytes": 290,
+          "bytes": 990,
+          "crc32": "52237e58",
+          "sha256": "58ca70551863aca205ab8fde139819494f214e22f1b98138526acb2743f1af46"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa02882-01-00/CUSA02882_01.00.json",
+          "compressedBytes": 1508,
+          "bytes": 12004,
+          "crc32": "1e3dd430",
+          "sha256": "b7999dfcc7c129efbfc08bd8a8408b0c79ef8a192ee6212a117766b77a1938a6"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa02962-01-37/CUSA02962_01.37.json",
+          "compressedBytes": 3925,
+          "bytes": 19908,
+          "crc32": "9c65413b",
+          "sha256": "1a7c447379733adce25d8c5376cf2b42f1d9225593e1daf801e5b509ae221bb5"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03290-01-03/CUSA03290_01.03.json",
+          "compressedBytes": 443,
+          "bytes": 1853,
+          "crc32": "ac1afd36",
+          "sha256": "d4fbc6fd4ec69f08eebead146971b695a5a1bf0b34ca822341354a48d10b7d68"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03291-01-03/CUSA03291_01.03.json",
+          "compressedBytes": 353,
+          "bytes": 1409,
+          "crc32": "4e8cc446",
+          "sha256": "6ababd420bc867d6dbfc36f445c4cf3b483d70249418a112955e4e53ea1cef08"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03309-01-03/CUSA03309_01.03.json",
+          "compressedBytes": 318,
+          "bytes": 1014,
+          "crc32": "11e4ee11",
+          "sha256": "3772c268ac763c020d2797cc112b78d28a9054865e77c9fb3f50661a57769065"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03991-01-00/CUSA03991_01.00.json",
+          "compressedBytes": 540,
+          "bytes": 2149,
+          "crc32": "76979905",
+          "sha256": "6d78917053ab62a993853282af124f71bc7825cb7eb276b8805c803f32230348"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa03991-01-35/CUSA03991_01.35.json",
+          "compressedBytes": 971,
+          "bytes": 4863,
+          "crc32": "e496b14f",
+          "sha256": "ddbaeb4f66deadedef7dada84cfedda1c90471ae99b5874d3e0b19fa43289475"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa05574-04-06/CUSA05574_04.06.json",
+          "compressedBytes": 2273,
+          "bytes": 13640,
+          "crc32": "4321254f",
+          "sha256": "729d5e405004a3f860c866f132fa5f04a8a8c3d70244ecd1e828f4a14eed02a2"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa05904-01-15/CUSA05904_01.15.json",
+          "compressedBytes": 704,
+          "bytes": 2702,
+          "crc32": "789a3260",
+          "sha256": "6cb656425459fffe50b11920c289ec1d3b8c03ece3a741d676a0da7cee92f3f4"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa07410-01-35/CUSA07410_01.35.json",
+          "compressedBytes": 554,
+          "bytes": 2230,
+          "crc32": "8e19eae4",
+          "sha256": "5c8187ee948e54b9812e43afb1f67e0668f50908947c23243ee90c87877b5b82"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa07875-01-08/CUSA07875_01.08.json",
+          "compressedBytes": 313,
+          "bytes": 674,
+          "crc32": "dcc3221c",
+          "sha256": "b8e4db7485f9e63ac385693fc34d5c2c6469cbb2bc0dd470458f4d29c62b76ce"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa09171-01-05/CUSA09171_01.05.json",
+          "compressedBytes": 568,
+          "bytes": 2236,
+          "crc32": "4e02b8d7",
+          "sha256": "c4d14bf36ce01e00619e5491d7c354e1f1a3b1561c9b1bf52b8a9340361a2aef"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa10211-01-54/CUSA10211_01.54.json",
+          "compressedBytes": 1696,
+          "bytes": 10243,
+          "crc32": "cebdf7a9",
+          "sha256": "ead367bb8651c82b145ec8e03f7b542bdbf0e23142aefde9efe21d8457324e5a"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa11454-01-12/CUSA11454_01.12.json",
+          "compressedBytes": 514,
+          "bytes": 2350,
+          "crc32": "b8f80312",
+          "sha256": "4356e33e8d98e513a624e8bdb9b7664f80efd40062baa1e9243ef736066528c4"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa12555-01-00/CUSA12555_01.00.json",
+          "compressedBytes": 532,
+          "bytes": 2350,
+          "crc32": "a804c01c",
+          "sha256": "310516df7924cd96e7281a791ecaf94c375050bf3deb71682f57e36a19ebf505"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa12555-01-01/CUSA12555_01.01.json",
+          "compressedBytes": 532,
+          "bytes": 2349,
+          "crc32": "d76ac092",
+          "sha256": "0b8f6ecadab15f31c62174d4da876fad4a70bd0fdb7e3f3d458f50bd31d197a8"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa12555-01-30/CUSA12555_01.30.json",
+          "compressedBytes": 733,
+          "bytes": 3202,
+          "crc32": "5eecb22c",
+          "sha256": "f227052ba1366a106aae4e9d08d3bf66049c9419742208ef7b72bb50ccca122e"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa13338-01-25/CUSA13338_01.25.json",
+          "compressedBytes": 923,
+          "bytes": 4901,
+          "crc32": "eb7ce9d7",
+          "sha256": "c77e0c5970804060ccf773bbf254531a986114cdebc206df2e3809b5ed20681e"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa13801-01-06/CUSA13801_01.06.json",
+          "compressedBytes": 580,
+          "bytes": 2294,
+          "crc32": "d99466d1",
+          "sha256": "8fa4d2dc0dd3231a588c9a33a1d6d8fda1c812c458ea71b0b763805b4dac0e6b"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa14168-01-05/CUSA14168_01.05.json",
+          "compressedBytes": 364,
+          "bytes": 1019,
+          "crc32": "6376ebd0",
+          "sha256": "435d5660b04f571447073f3c4166fd5d9d2594b4ac4547850defe80744746fbc"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa15778-01-06/CUSA15778_01.06.json",
+          "compressedBytes": 366,
+          "bytes": 1168,
+          "crc32": "5e586f4a",
+          "sha256": "048ff952981d284d3994cc5688e5ee2a33d6a4a2a7ff1d8071894733c84cdf2f"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa16579-01-61/CUSA16579_01.61.json",
+          "compressedBytes": 3610,
+          "bytes": 22248,
+          "crc32": "be6ed419",
+          "sha256": "155d2921111667e912686a74d744d06212102ce15441eb2e1dd3ce5d2edda2be"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa24705-01-18/CUSA24705_01.18.json",
+          "compressedBytes": 897,
+          "bytes": 4431,
+          "crc32": "95070934",
+          "sha256": "93d3149929d21c3c5ad0ffacd22f76ee2fe0e73fa849304e3379b29a2a3f5955"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa27043-01-10/CUSA27043_01.10.json",
+          "compressedBytes": 749,
+          "bytes": 3319,
+          "crc32": "2b05eb0d",
+          "sha256": "e4d0c327f98eda803d87beffe85331bb626d25f51256b8985b80038b12e6276f"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa28561-01-18/CUSA28561_01.18.json",
+          "compressedBytes": 896,
+          "bytes": 4430,
+          "crc32": "7ce7c87b",
+          "sha256": "92078576141bc29f12a98e9ff7963c94df25f8951ab6eae7506e54156fc5b8d8"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa28863-01-22/CUSA28863_01.22.json",
+          "compressedBytes": 3168,
+          "bytes": 24786,
+          "crc32": "fe230fb7",
+          "sha256": "cfd181fb86f73ff04df1a996293f5e94ac7d6f463213dd275116005656596076"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa33388-01-04/CUSA33388_01.04.json",
+          "compressedBytes": 828,
+          "bytes": 4194,
+          "crc32": "f3264dd1",
+          "sha256": "f8bee169fbee9ca4b8f18b175c03c375b2ed0e577b6658dcbd59f49e58ef09fc"
+        },
+        {
+          "name": "downloads/ps4-ps5/goldhen-cusa34386-06-02/CUSA34386_06.02.json",
+          "compressedBytes": 922,
+          "bytes": 2894,
+          "crc32": "cb169ec4",
+          "sha256": "4514eaef84d36605c9b53dfc0929b406c588652e687c6e830be2f65af5c60ee4"
+        },
+        {
+          "name": "downloads/ps4-ps5/gta5-cyprus-1-56/CyprusMenu.prx",
+          "compressedBytes": 246857,
+          "bytes": 724382,
+          "crc32": "b7d48c7a",
+          "sha256": "9bedea869077bb6016171a79823b4b98703631d904b1cb52173dd97349fbb1c0"
+        },
+        {
+          "name": "downloads/ps4-ps5/gta5-cyprus-1-57/CyprusMenu.prx",
+          "compressedBytes": 246918,
+          "bytes": 724286,
+          "crc32": "6985ecaa",
+          "sha256": "7731188ec03a0bee74fe0946ffcf6eefed466c13a9b68c4a29df3263bd724157"
+        },
+        {
+          "name": "downloads/ps4-ps5/gta5-explosive-1-57/explosive_temp.sprx",
+          "compressedBytes": 347311,
+          "bytes": 1037599,
+          "crc32": "d453bb13",
+          "sha256": "4986ff700f57d72a61516abd0daa6cf1ba557a63b4fe39c1eecc38064c1f2e6a"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa08710-01-005-000/PPSA08710_01.005.000.json",
+          "compressedBytes": 385,
+          "bytes": 1407,
+          "crc32": "6bc9f6aa",
+          "sha256": "e8acaefdb28aaa5c6f9610d39050f60e6bd0a3d71710216772c924bf05356661"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa09663-01-000-000/PPSA09663_01.000.000.json",
+          "compressedBytes": 385,
+          "bytes": 1337,
+          "crc32": "c38afa71",
+          "sha256": "64b48d7605989d5ba1c0e337b64a20e41a59f58714c4824d9e1f38a2794a99d8"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa09911-01-000-000/PPSA09911_01.000.000.json",
+          "compressedBytes": 335,
+          "bytes": 947,
+          "crc32": "51c5bd70",
+          "sha256": "489497800a06e8995a3798e601c12fa27a305fdde2f0151a980ba2b71ea2f1b3"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa10662-01-001-030/PPSA10662_01.001.030.json",
+          "compressedBytes": 467,
+          "bytes": 1640,
+          "crc32": "6bed9900",
+          "sha256": "ff004b7c81b0ebeb69a9bc3b76c4642e76495299373eb17d6b8a85cec6d0ea46"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa21564-01-007-000/PPSA21564_01.007.000.json",
+          "compressedBytes": 315,
+          "bytes": 949,
+          "crc32": "12b3fe48",
+          "sha256": "42d3d4c39c7f607eedc1205014176790eb6c782fd20f20d264fff14c41a6d683"
+        },
+        {
+          "name": "downloads/ps4-ps5/ps5-native-cheats-ppsa23226-01-000-010/PPSA23226_01.000.010.json",
+          "compressedBytes": 403,
+          "bytes": 1577,
+          "crc32": "e79bdfe4",
+          "sha256": "067fb30324492c673cb42646f847df040f9ec28de4fda945058818ad390cd23d"
+        },
+        {
+          "name": "downloads/ps4/GTA5/156/BeachMenu156.prx",
+          "compressedBytes": 394352,
+          "bytes": 1320839,
+          "crc32": "2fd949a8",
+          "sha256": "8ca31fa51e3401f678a9514fe4a93976d5a52c685fe07a3d2772a1523c90c073"
+        },
+        {
+          "name": "downloads/ps4/GTA5/156/Velora.sprx",
+          "compressedBytes": 324063,
+          "bytes": 882981,
+          "crc32": "eb392c3d",
+          "sha256": "d50d1582a67d978e347692b3bce951262dd061a649e75410595ae36f9bec3823"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/BeachMenu157.prx",
+          "compressedBytes": 363691,
+          "bytes": 1230442,
+          "crc32": "64f282dc",
+          "sha256": "d622d3d867244e5854e4773b9e03631d24918e26b634c4b74c8678b01ed06b8a"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/LRS.prx",
+          "compressedBytes": 701855,
+          "bytes": 2187104,
+          "crc32": "88cba7d6",
+          "sha256": "4816609641ec21b9a7f151abe19eb234dee69c959d0da8a7a7c1718185704a96"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/Seren.prx",
+          "compressedBytes": 502604,
+          "bytes": 1956688,
+          "crc32": "3cbdbc04",
+          "sha256": "e4f085add22697b0bb3ef8f0028f1fe373ff4737ae3a1d7b2bb1a24afff18f35"
+        },
+        {
+          "name": "downloads/ps4/GTA5/157/Velora.sprx",
+          "compressedBytes": 720150,
+          "bytes": 1718289,
+          "crc32": "f5d89b34",
+          "sha256": "e6e79ad27a87f2b7ea9d519167e5d9c48d096bdf1a17b2abf1de70c057bd2653"
+        },
+        {
+          "name": "hosts/index.html",
+          "compressedBytes": 4561,
+          "bytes": 25816,
+          "crc32": "494b207e",
+          "sha256": "b615623545827003cdaee2980dbab55dfa6848ba4c6b122c8bf818933071090e"
+        },
+        {
+          "name": "hosts/ps4/index.html",
+          "compressedBytes": 30976,
+          "bytes": 284661,
+          "crc32": "6e03145c",
+          "sha256": "4ab3b7ad4de46bfa53fdb5e578f11893a8b506e6dcc5878724467d8ed530c6db"
+        },
+        {
+          "name": "hosts/ps4/payload-manager/index.html",
+          "compressedBytes": 31264,
+          "bytes": 285729,
+          "crc32": "247cbcee",
+          "sha256": "cafc5d620197177cbd24a2a31a8baf09d806440a7f6b9bcb382679f0c11dfc2a"
+        },
+        {
+          "name": "hosts/ps5/index.html",
+          "compressedBytes": 16411,
+          "bytes": 96007,
+          "crc32": "7ef4d683",
+          "sha256": "e7a1bca994ebccb2dc1a81c3f401ae9d19a46ccc953527740909d3ba42f31c33"
+        },
+        {
+          "name": "hosts/ps5/payload-manager/index.html",
+          "compressedBytes": 16620,
+          "bytes": 97083,
+          "crc32": "d91e81ca",
+          "sha256": "9d4448cddc5b6df19a065b55bcddfd903a224754376ef7a67dba104f54e7e933"
+        },
+        {
+          "name": "languages/ar.js",
+          "compressedBytes": 10728,
+          "bytes": 46168,
+          "crc32": "27299e82",
+          "sha256": "b79f6aa3563713440f9e0e72fe378300c5c4088085f2f4b599ee7318db04194f"
+        },
+        {
+          "name": "languages/de.js",
+          "compressedBytes": 10049,
+          "bytes": 38505,
+          "crc32": "292e284e",
+          "sha256": "b75d0f9bf7e225dee646f5f539f512ec8541ad45a83cfd266eb30d73e178f18d"
+        },
+        {
+          "name": "languages/es.js",
+          "compressedBytes": 9827,
+          "bytes": 40328,
+          "crc32": "82509f82",
+          "sha256": "99308ce71d3cbc565c149f6ccb651b0acd1c89634fb51c2d410e7f90db934b3a"
+        },
+        {
+          "name": "languages/fr.js",
+          "compressedBytes": 10077,
+          "bytes": 41167,
+          "crc32": "f299d04d",
+          "sha256": "fafc3079c211e473287a139e5d9e1e7c2b796804b4a4c4854924a46ae81e99bf"
+        },
+        {
+          "name": "languages/he.js",
+          "compressedBytes": 10325,
+          "bytes": 43640,
+          "crc32": "a85d31bb",
+          "sha256": "4b69cd16f02d6a0658ab527b5dd825205aaead2e46a25d6cf91405f28706ed01"
+        },
+        {
+          "name": "languages/hi.js",
+          "compressedBytes": 11118,
+          "bytes": 57101,
+          "crc32": "b323194b",
+          "sha256": "76207a55b1a2f4c6f98482093f20a4026ed8d711559095a313d551313fcb05ce"
+        },
+        {
+          "name": "languages/i18n.js",
+          "compressedBytes": 15267,
+          "bytes": 52697,
+          "crc32": "e0708530",
+          "sha256": "bc9af98e5f7c8cf5a430edb7a5c40bb228040b4aab9a6b424e5f3730b5a78ae7"
+        },
+        {
+          "name": "languages/id.js",
+          "compressedBytes": 9340,
+          "bytes": 37214,
+          "crc32": "79d9727d",
+          "sha256": "97c1993bb23693dbd4c0a29c88727bddd8d05775e5fcca6a6f92cebab1991bc6"
+        },
+        {
+          "name": "languages/it.js",
+          "compressedBytes": 9685,
+          "bytes": 39398,
+          "crc32": "19b8390a",
+          "sha256": "11950ca7e2279bbf680445c097043998b68cbb459ed09c9e028124416a999b14"
+        },
+        {
+          "name": "languages/ja.js",
+          "compressedBytes": 10897,
+          "bytes": 44831,
+          "crc32": "638bc2f5",
+          "sha256": "6375d6cf9297d25906f367762ba18e8aa88249da571eec8de6387e9c9f5ce480"
+        },
+        {
+          "name": "languages/ka.js",
+          "compressedBytes": 11341,
+          "bytes": 65772,
+          "crc32": "b9d64003",
+          "sha256": "5622d1680ab75ece809967c090f4e69e9f9c714da81e1ee6b36379031dd03e3c"
+        },
+        {
+          "name": "languages/ko.js",
+          "compressedBytes": 10414,
+          "bytes": 40471,
+          "crc32": "fb5664b0",
+          "sha256": "9524e10588f54dc6aed256852a47f82e4620c5dfb04f6aee89675ab3322bbbc8"
+        },
+        {
+          "name": "languages/nl.js",
+          "compressedBytes": 9668,
+          "bytes": 37952,
+          "crc32": "ee27e5b0",
+          "sha256": "e86ccd323cb80f7341c80a48b08e5ab64d8ae92bff20b0e1730bc0b36de615b9"
+        },
+        {
+          "name": "languages/pl.js",
+          "compressedBytes": 10198,
+          "bytes": 38953,
+          "crc32": "06b5d0b2",
+          "sha256": "607870805ada6cc2b9cc23f0289c2dc9e121e66976b9198100948728afc946de"
+        },
+        {
+          "name": "languages/pt.js",
+          "compressedBytes": 9697,
+          "bytes": 39298,
+          "crc32": "0489cebb",
+          "sha256": "21657010637fd686b17677705f4fd29ad7609641dfd91182fc1f9ea54f0626d4"
+        },
+        {
+          "name": "languages/ru.js",
+          "compressedBytes": 11554,
+          "bytes": 50756,
+          "crc32": "681f8f25",
+          "sha256": "fc221367e96022626aee6cf7497583d9df637722b81132d959ee2ece28d5f94a"
+        },
+        {
+          "name": "languages/sr.js",
+          "compressedBytes": 11049,
+          "bytes": 49284,
+          "crc32": "4b707fcb",
+          "sha256": "1c3d4e06554294dc4d0689d1c6c1a5c5592daa32b75180b712da73cb8392757d"
+        },
+        {
+          "name": "languages/th.js",
+          "compressedBytes": 10912,
+          "bytes": 58561,
+          "crc32": "ab69ca3c",
+          "sha256": "7b3caaf81d909ee5a089811e26cf7628e3415ffae621017478b7e5a7c713ddc3"
+        },
+        {
+          "name": "languages/tr.js",
+          "compressedBytes": 9985,
+          "bytes": 39035,
+          "crc32": "abc8ceb2",
+          "sha256": "90a74fb9178db2489677fa51681434df6087ec130eac4539005b57edf6a4de86"
+        },
+        {
+          "name": "languages/vi.js",
+          "compressedBytes": 10091,
+          "bytes": 42522,
+          "crc32": "594a1973",
+          "sha256": "17b016979460f6c1a34c2ad184f73fa533ea2b825bc629afecd2ba2e6777738f"
+        },
+        {
+          "name": "languages/zh.js",
+          "compressedBytes": 10363,
+          "bytes": 36129,
+          "crc32": "623170b1",
+          "sha256": "28fd4f02205e39487dedd3cd06ff4b2a498cb695cc30fcf544737abcd727376f"
+        },
+        {
+          "name": "README.md",
+          "compressedBytes": 1580,
+          "bytes": 3179,
+          "crc32": "c91aa42f",
+          "sha256": "ccdb8c39c4573fdcd359b9ef713a6f5c897dff9a95bf3933ad71c6fa7ae89b08"
+        },
+        {
+          "name": "script.js",
+          "compressedBytes": 8685,
+          "bytes": 37669,
+          "crc32": "1e05c39c",
+          "sha256": "ae50a883978be45c3133cb1fe21bcda51bd971af367350551bc23d10b6191171"
+        },
+        {
+          "name": "scripts/console-payload-bridge.cjs",
+          "compressedBytes": 7253,
+          "bytes": 21920,
+          "crc32": "7742943f",
+          "sha256": "7890c4854c4afcc6595008a541e5294c49fab38e0ab16ce004500f09025715f4"
+        },
+        {
+          "name": "Start Sender.cmd",
+          "compressedBytes": 332,
+          "bytes": 552,
+          "crc32": "5917ba62",
+          "sha256": "ac39082d657c035e2dfad36b205220356c4be7abd1703701f5f6228c803c3c10"
+        },
+        {
+          "name": "style.css",
+          "compressedBytes": 13957,
+          "bytes": 80920,
+          "crc32": "17eb3c6b",
+          "sha256": "d781a2ff7110ba2fb3cc6cbe9f32f44fcf0ad8b15c3c32a0400c6c14b13555e6"
+        },
+        {
+          "name": "THIRD-PARTY.txt",
+          "compressedBytes": 6956,
+          "bytes": 34227,
+          "crc32": "abda3d6f",
+          "sha256": "ae99a15764e942c6635e03ca18339ef3265f3bcc1889bb5273a4d9f2d0149b7d"
+        }
+      ]
+    },
+    "manifest": {
+      "records": 212,
+      "allMemberSHA256Verified": true,
+      "snapshot": "daa01c23011a975615a2a82c0d1ba4ff32b04c6a547fc026413c908ce541a34e",
+      "payloads": 95,
+      "actions": 133
+    },
+    "packagedUI": {
+      "syntaxParsedOnly": true,
+      "versionChoiceButtons": true,
+      "noAllCategory": true,
+      "noVersionDropdown": true,
+      "menuActions": [
+        "Download",
+        "Load"
+      ],
+      "noSeparateSaveOrMenuFileManagerControl": true,
+      "noInjectedMobileFileOptions": false,
+      "verificationMethod": "Inspect packaged HTML and action/version template source; no payload execution."
+    },
+    "browserRuntimes": {
+      "bundled": false,
+      "publicNavigationRewriteVerified": true,
+      "actions": [
+        {
+          "id": "built-in-ps4-900",
+          "platform": "ps4",
+          "localRuntimePath": "/hosts/runtime/ps4-900/",
+          "publicURL": "https://whatwhatboy.com/hosts/runtime/ps4-900/"
+        },
+        {
+          "id": "built-in-ps5-umtx",
+          "platform": "ps5",
+          "localRuntimePath": "/hosts/runtime/ps5-umtx/",
+          "publicURL": "https://whatwhatboy.com/hosts/runtime/ps5-umtx/"
+        }
+      ]
+    }
+  },
+  "retention": {
+    "historicalSnapshotsThrough13": 6,
+    "allSnapshots": 8,
+    "records": [
+      {
+        "version": "1.0.0+5eb56571c38f",
+        "bytes": 42179207,
+        "sha256": "5f308e76ba2ab2aae68793796d68b392b403cfd3e513fce667d5cb0a2bcf8997",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.0.0-5eb56571c38f.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.0.0+5eb56571c38f\\console-payload-sender-1.0.0-5eb56571c38f.zip"
+        ],
+        "publicAndArchiveVerified": true
+      },
+      {
+        "version": "1.1.0+92cd0383c55a",
+        "bytes": 52719477,
+        "sha256": "097d665d4a3a637abe7df6d2e6737791335d12401d508a6b9fd3d261c822d896",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.1.0-92cd0383c55a.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.1.0+92cd0383c55a\\console-payload-sender-1.1.0-92cd0383c55a.zip"
+        ],
+        "publicAndArchiveVerified": true
+      },
+      {
+        "version": "1.1.0+da62b2f10884",
+        "bytes": 52720497,
+        "sha256": "e326ca5b635bf20d86c47a46e6f6062c82ac946664dea0a89a4f87b7ba9053fc",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.1.0-da62b2f10884.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.1.0+da62b2f10884\\console-payload-sender-1.1.0-da62b2f10884.zip"
+        ],
+        "publicAndArchiveVerified": true
+      },
+      {
+        "version": "1.2.0+714681044cce",
+        "bytes": 53348198,
+        "sha256": "c82444f88b843f0a3fb75bb9d280e4406e3b115561e3cc478d13b0617cc399b8",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.2.0-714681044cce.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.2.0+714681044cce\\console-payload-sender-1.2.0-714681044cce.zip"
+        ],
+        "publicAndArchiveVerified": true
+      },
+      {
+        "version": "1.2.0+6c1da94cbfd5",
+        "bytes": 53352798,
+        "sha256": "75b86a1a37b901e1e09899375b34146009d98a34b496c38248529df94eea98a1",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.2.0-6c1da94cbfd5.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.2.0+6c1da94cbfd5\\console-payload-sender-1.2.0-6c1da94cbfd5.zip"
+        ],
+        "publicAndArchiveVerified": true
+      },
+      {
+        "version": "1.3.0+e56126d1d0c5",
+        "bytes": 58602949,
+        "sha256": "c91aa5ee95493b5439f4f4d30e72b6a038b54b04f8167487159ae7a3156a080b",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.3.0-e56126d1d0c5.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.3.0+e56126d1d0c5\\console-payload-sender-1.3.0-e56126d1d0c5.zip"
+        ],
+        "publicAndArchiveVerified": true
+      },
+      {
+        "version": "1.4.0+daa01c23011a",
+        "bytes": 58643090,
+        "sha256": "d355d603da19b48e979f11ede35641dfe376c2b8d3e8c68f5c7b5973acf10266",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.4.0-daa01c23011a.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.4.0+daa01c23011a\\console-payload-sender-1.4.0-daa01c23011a.zip"
+        ],
+        "publicAndArchiveVerified": true
+      },
+      {
+        "version": "1.4.1+4ae2029f9107",
+        "bytes": 58643115,
+        "sha256": "933eb219f5152adf635ac3c3449b2b23821de76724de22b57009de25dc2dcafd",
+        "publicPath": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.4.1-4ae2029f9107.zip",
+        "backupPaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.4.1+4ae2029f9107\\console-payload-sender-1.4.1-4ae2029f9107.zip"
+        ],
+        "publicAndArchiveVerified": true
+      }
+    ]
+  },
+  "limits": [
+    "Static file integrity and UI template verification do not prove physical PS4/PS5 loader execution.",
+    "External browser runtimes are opened on the public site and are deliberately absent from the loopback desktop helper."
+  ]
+}

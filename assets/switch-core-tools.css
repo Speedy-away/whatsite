@@ -1,0 +1,13 @@
+.core-intro{max-width:78ch;color:var(--text-secondary);line-height:1.75;margin-bottom:24px}
+.core-download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;max-width:1000px}
+.core-download{padding:26px;border:1px solid var(--border);border-radius:12px;background:var(--bg-secondary);min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:17px}
+.core-kicker{font-size:.8rem;letter-spacing:.04em;color:var(--accent-light)}
+.core-download h3{font-size:1.16rem;line-height:1.45;overflow-wrap:anywhere;width:100%}
+.core-download p{color:var(--text-secondary);font-size:.94rem}
+.core-download .btn{min-height:48px;margin-top:auto}
+.core-download details{width:100%;border-top:1px solid var(--border);padding-top:15px}
+.core-download summary{cursor:pointer;font-size:.9rem;padding:5px 0}
+.core-download details p{margin:12px 0}.core-download code{font-size:.8rem;overflow-wrap:anywhere}
+.core-storage{white-space:pre-wrap;overflow-wrap:anywhere;max-width:90ch;border:1px solid var(--border);border-radius:12px;padding:26px;background:var(--bg-secondary);font-size:.9rem;line-height:1.9}
+.console-guide .guide-hero img{object-fit:contain;background:#10191e}
+@media(max-width:600px){.core-download,.core-storage{padding:19px}.core-download-grid{grid-template-columns:minmax(0,1fr)}}

@@ -1,0 +1,252 @@
+{
+  "reviewedAt": "2026-11-02T14:52:34.407Z",
+  "method": "Unchanged live binary strings inspected as data only. No execution or binary saved.",
+  "records": [
+    {
+      "function": "load_disableupdates",
+      "url": "https://www.kmeps4.site/webpayloads/pl_disableupdates.bin",
+      "sha256": "d6d38701f5284f4764f47197052cb189a17120a7de5b961136c5f6045c30a1fc",
+      "strings": [
+        "/update/PS4UPDATE.PUP.net.temp",
+        "/update/PS4UPDATE.PUP",
+        "Disabled updates!",
+        "/system/common/lib/libc.sprx",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    },
+    {
+      "function": "load_enableupdates",
+      "url": "https://www.kmeps4.site/webpayloads/pl_enableupdates.bin",
+      "sha256": "e261f6e0d18fbe95f3998b0d4b39f0683e125a04633d5333b44ade31ca074de8",
+      "strings": [
+        "/update/PS4UPDATE.PUP.net.temp",
+        "/update/PS4UPDATE.PUP",
+        "Enabled updates!",
+        "/system/common/lib/libc.sprx",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    },
+    {
+      "function": "load_enablebrowser",
+      "url": "https://www.kmeps4.site/webpayloads/pl_enablebrowser.bin",
+      "sha256": "0e7c5fadc6fa4abbe5df7954f956d4c75aa71a4c03bcaf514c83578583a1a8ad",
+      "strings": [
+        "Enabled browser!",
+        "/system/common/lib/libc.sprx",
+        "kpayload_enable_browser",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    },
+    {
+      "function": "load_exitidu",
+      "url": "https://www.kmeps4.site/webpayloads/pl_exitidu.bin",
+      "sha256": "f3aa40ba35081f2384d4ec5382950f04769153f4da9b4240989283ad14a94c48",
+      "strings": [
+        "Exited IDU mode, restarting...",
+        "/system/common/lib/libc.sprx",
+        "kpayload_exit_idu",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser",
+        "/system/common/lib/libkernel.sprx",
+        "sceKernelReboot"
+      ]
+    },
+    {
+      "function": "load_rifrenamer",
+      "url": "https://www.kmeps4.site/webpayloads/pl_rifrenamer.bin",
+      "sha256": "8dcb00ee027503d4388f2af88a6d386049458199669209511234f7dc9d36b79e",
+      "strings": [
+        "Running RIF Renamer",
+        "/system_data/priv/license",
+        "/user/license",
+        "RIFs renamed!",
+        "/system/common/lib/libc.sprx",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    },
+    {
+      "function": "load_historyblocker",
+      "url": "https://www.kmeps4.site/webpayloads/pl_historyblocker.bin",
+      "sha256": "a10b34e1cd810b11069c00eca5ca7672a9ab9a5f1c801a81faad36f264137d38",
+      "strings": [
+        "Running History Blocker",
+        "/user/home/%x/webbrowser/endhistory.txt",
+        "History blocker enabled for: %s",
+        "History blocker disabled for: %s",
+        "/system/common/lib/libc.sprx",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser",
+        "/system/common/lib/libSceUserService.sprx"
+      ]
+    },
+    {
+      "function": "load_backupdb",
+      "url": "https://www.kmeps4.site/webpayloads/pl_backup.bin",
+      "sha256": "91eaee1292f8741bd9514fe4c4e3af99189359ae79ee3f75a7292df014d1f4b4",
+      "strings": [
+        "/system_data/priv/mms/app.bak",
+        "/system_data/priv/mms/addcont.bak",
+        "/system_data/priv/mms/av_content_bg.bak",
+        "/user/system/webkit/secure/appcache/ApplicationCache.bak",
+        "/user/system/webkit/webbrowser/appcache/ApplicationCache.bak",
+        "/system_data/priv/mms/app.db",
+        "/system_data/priv/mms/addcont.db",
+        "/system_data/priv/mms/av_content_bg.db",
+        "/user/system/webkit/secure/appcache/ApplicationCache.db",
+        "/user/system/webkit/webbrowser/appcache/ApplicationCache.db",
+        "/mnt/usb0/.probe",
+        "/mnt/usb1/.probe",
+        "Internal backup complete.",
+        "This was only a database backup, use a USB device for a full backup.",
+        "/mnt/usb1/PS4/",
+        "/mnt/usb1/PS4/Backup/",
+        "/mnt/usb1/PS4/Backup/app.db",
+        "/mnt/usb1/PS4/Backup/addcont.db",
+        "/mnt/usb1/PS4/Backup/av_content_bg.db",
+        "/mnt/usb1/PS4/Backup/UserData/",
+        "/mnt/usb1/PS4/Backup/UserData/system_data/",
+        "/mnt/usb1/PS4/Backup/UserData/system_data/savedata",
+        "/mnt/usb1/PS4/Backup/UserData/system_data/priv",
+        "/mnt/usb1/PS4/Backup/UserData/system_data/priv/home",
+        "/mnt/usb1/PS4/Backup/UserData/system_data/priv/license",
+        "/mnt/usb1/PS4/Backup/UserData/system_data/priv/activation",
+        "/mnt/usb1/PS4/Backup/UserData/user/",
+        "/mnt/usb1/PS4/Backup/UserData/user/home/",
+        "/mnt/usb1/PS4/Backup/UserData/user/trophy",
+        "/mnt/usb1/PS4/Backup/UserData/user/license",
+        "/mnt/usb1/PS4/Backup/UserData/user/settings",
+        "/mnt/usb1/PS4/Backup/UserData/user/system",
+        "/mnt/usb1/PS4/Backup/UserData/user/system/webkit",
+        "/mnt/usb1/PS4/Backup/UserData/user/system/webkit/secure",
+        "/mnt/usb1/PS4/Backup/UserData/user/system/webkit/webbrowser",
+        "/mnt/usb1/PS4/Backup/UserData/user/home",
+        "USB backup complete!",
+        "/mnt/usb0/PS4/",
+        "/mnt/usb0/PS4/Backup/",
+        "/mnt/usb0/PS4/Backup/app.db",
+        "/mnt/usb0/PS4/Backup/addcont.db",
+        "/mnt/usb0/PS4/Backup/av_content_bg.db",
+        "/mnt/usb0/PS4/Backup/UserData/",
+        "/mnt/usb0/PS4/Backup/UserData/system_data/",
+        "/mnt/usb0/PS4/Backup/UserData/system_data/savedata",
+        "/mnt/usb0/PS4/Backup/UserData/system_data/priv",
+        "/mnt/usb0/PS4/Backup/UserData/system_data/priv/home",
+        "/mnt/usb0/PS4/Backup/UserData/system_data/priv/license",
+        "/mnt/usb0/PS4/Backup/UserData/system_data/priv/activation",
+        "/mnt/usb0/PS4/Backup/UserData/user/",
+        "/mnt/usb0/PS4/Backup/UserData/user/home/",
+        "/mnt/usb0/PS4/Backup/UserData/user/trophy",
+        "/mnt/usb0/PS4/Backup/UserData/user/license",
+        "/mnt/usb0/PS4/Backup/UserData/user/settings",
+        "/mnt/usb0/PS4/Backup/UserData/user/system",
+        "/mnt/usb0/PS4/Backup/UserData/user/system/webkit",
+        "/mnt/usb0/PS4/Backup/UserData/user/system/webkit/secure",
+        "/mnt/usb0/PS4/Backup/UserData/user/system/webkit/webbrowser",
+        "/mnt/usb0/PS4/Backup/UserData/user/home",
+        "/system/common/lib/libc.sprx",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    },
+    {
+      "function": "load_restoredb",
+      "url": "https://www.kmeps4.site/webpayloads/pl_restore.bin",
+      "sha256": "20c5fd911366bf688d3c569008d1e4e9a020948a0a18ffaa3a34077d898f2a49",
+      "strings": [
+        "/mnt/usb0/.probe",
+        "/mnt/usb1/.probe",
+        "/system_data/priv/mms/app.bak",
+        "/system_data/priv/mms/app.db",
+        "/system_data/priv/mms/addcont.bak",
+        "/system_data/priv/mms/addcont.db",
+        "/system_data/priv/mms/av_content_bg.bak",
+        "/system_data/priv/mms/av_content_bg.db",
+        "/mnt/usb1/PS4/",
+        "/mnt/usb1/PS4/Backup/",
+        "/mnt/usb1/PS4/Backup/app.db",
+        "/mnt/usb1/PS4/Backup/addcont.db",
+        "/mnt/usb1/PS4/Backup/av_content_bg.db",
+        "/mnt/usb0/PS4/",
+        "/mnt/usb0/PS4/Backup/",
+        "/mnt/usb0/PS4/Backup/app.db",
+        "/mnt/usb0/PS4/Backup/addcont.db",
+        "/mnt/usb0/PS4/Backup/av_content_bg.db",
+        "Restore complete!",
+        "Rebooting console...",
+        "/system/common/lib/libc.sprx",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser",
+        "/system/common/lib/libkernel.sprx",
+        "sceKernelReboot"
+      ]
+    },
+    {
+      "function": "load_app2usb",
+      "url": "https://www.kmeps4.site/webpayloads/pl_app2usb.bin",
+      "sha256": "a2e4ae50d28f7e870df21723d976ad9a714db7cd2bb3db21cbf1aac17dc68438",
+      "strings": [
+        "To rename previously linked PKG files to the new format uncomment the line below.",
+        "To leave game updates on the internal drive uncomment the line below.",
+        "/user/app/",
+        "/app.pkg",
+        "/user/patch/",
+        "/patch.pkg",
+        "/user/addcont/",
+        "/user/appmeta/%s/pronunciation.xml",
+        "/user/appmeta/%s",
+        "/mnt/usb%i/.probe",
+        "/mnt/usb%i",
+        "/mnt/usb%i/PS4/AppToUsb.ini",
+        "app2usb.ini",
+        "/user/app",
+        "%s/PS4/updates",
+        "Moving updates to USB",
+        "/user/patch",
+        "/user/addcont",
+        "/user/appmeta",
+        "/system/common/lib/libc.sprx",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    },
+    {
+      "function": "load_todex",
+      "url": "https://www.kmeps4.site/webpayloads/pl_todex.bin",
+      "sha256": "2fc2357636a04c073d7f904fb5e7ce65f75f3aa9e561287c1123a325b53bd30c",
+      "strings": [
+        "Spoofing Target ID: 0x%hhx!",
+        "/system/common/lib/libc.sprx",
+        "kpayload_target_id",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    },
+    {
+      "function": "load_uart",
+      "url": "https://www.kmeps4.site/webpayloads/pl_permanentuart.bin",
+      "sha256": "1fe2747142285df475abbaaf2a02c28d30628d068c983d3178fab4c4609987f9",
+      "strings": [
+        "Enabled UART!",
+        "/system/common/lib/libc.sprx",
+        "kpayload_perm_uart",
+        "/system/common/lib/libSceSysUtil.sprx",
+        "/system/common/lib/libSceSystemService.sprx",
+        "sceSystemServiceLaunchWebBrowser"
+      ]
+    }
+  ]
+}

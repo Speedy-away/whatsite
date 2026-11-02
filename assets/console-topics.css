@@ -1,0 +1,16 @@
+/* Use the same category grid and card rhythm as the Xbox 360 / PS3 hubs. */
+.console-topic-page .guide-nav a[aria-current="page"] { color: var(--text-primary); text-decoration: underline; text-underline-offset: 7px; }
+.console-topic-page .guide-resource { transition: border-color .2s ease, background-color .2s ease; }
+.console-topic-page .guide-resource:focus-within { border-color: var(--accent-light); }
+.console-topic-page .guide-resource > img { height: auto; aspect-ratio: 16 / 9; }
+.console-topic-page .guide-links > a:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+.console-topic-page .steamdeck-group { padding: 0; }
+.console-topic-page .steamdeck-group-title { margin-bottom: 24px; }
+.console-topic-page details.steamdeck-guide { margin-top: 20px; }
+.console-topic-page.steamdeck-page .steamdeck-group .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-content: start; }
+.console-topic-page.steamdeck-page .steamdeck-group .game-card { display: flex; flex-direction: column; border-radius: 12px; box-shadow: none; }
+.console-topic-page.steamdeck-page .steamdeck-group .game-info { display: flex; flex-direction: column; flex: 1; padding: 20px; min-width: 0; }
+.console-topic-page.steamdeck-page .steamdeck-group .game-title { font-size: 1rem; line-height: 1.4; margin: 0; }
+.console-topic-page.steamdeck-page .steamdeck-group .game-description { flex: 1; max-width: 70ch; line-height: 1.7; margin-bottom: 16px; }
+@media (max-width: 760px) { .console-topic-page.steamdeck-page .steamdeck-group .games-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .console-topic-page .guide-resource { transition: none; } }

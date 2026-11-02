@@ -1,0 +1,1787 @@
+{
+  "checkedAt": "2026-11-02T12:50:50.696Z",
+  "resources": [
+    {
+      "id": "swanstation",
+      "title": "SwanStation",
+      "version": "0.1.1.0",
+      "files": [
+        {
+          "name": "swanstation-0.1.1.0.zip",
+          "version": "0.1.1.0",
+          "bytes": 2199302,
+          "sha256": "4a6844861dd4318fe42d65754feef4d3f822d98fa1acee4b6627626c5a224957",
+          "sourceUrl": "https://github.com/xenosworks/swanstation-xenon/releases/download/xenon-0.1.1.0/swanstation-0.1.1.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-swanstation",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "SwanStation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "balatro360",
+      "title": "Balatro360",
+      "version": "1.0.0.0",
+      "files": [
+        {
+          "name": "Balatro360-Xbox360-1.0.0.0.zip",
+          "version": "1.0.0.0",
+          "bytes": 2331470,
+          "sha256": "c63dc4ccce4c848ac8c6b975a8326686c0f32e8334897660a783dc0196535c18",
+          "sourceUrl": "https://github.com/dougieprishpreed/balatro360/releases/download/v1.0.0/Balatro360-Xbox360-1.0.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-balatro360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Balatro360"
+          ]
+        },
+        {
+          "label": "Store package · console files at ZIP root",
+          "name": "balatro360-1.0.0.0.zip",
+          "version": "1.0.0.0",
+          "bytes": 2329666,
+          "sha256": "b938c69e389e63c1ef02cdc44186717ff396f912630b769b232d53fa628941d4",
+          "sourceUrl": "https://github.com/dougieprishpreed/balatro360/releases/download/v1.0.0/balatro360-1.0.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-balatro360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Balatro360"
+          ],
+          "formatVerification": {
+            "type": "ZIP with native XEX2",
+            "entryCount": 11,
+            "uncompressedBytes": 5653126,
+            "executables": [
+              {
+                "name": "default.xex",
+                "bytes": 5468160,
+                "sha256": "972b1bca239b51a79a510b2bfd911148089faa9866ada15b55c34389eb129c7d"
+              }
+            ],
+            "upstreamFileHashesVerified": 11
+          }
+        }
+      ]
+    },
+    {
+      "id": "dusklight",
+      "title": "Dusklight",
+      "version": "0.1.0.0",
+      "files": [
+        {
+          "name": "dusklight-0.1.0.0.zip",
+          "version": "0.1.0.0",
+          "bytes": 21359103,
+          "sha256": "59b69f3e447c83165ff034d407316a1834aa6967408e935a8e51daa080993c19",
+          "sourceUrl": "https://github.com/xenosworks/dusklight-xenon/releases/download/xenon-0.1.0.0/dusklight-0.1.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-dusklight",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Dusklight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "starship",
+      "title": "Starship",
+      "version": "0.2.0.0",
+      "files": [
+        {
+          "name": "Starship-Xbox360-0.2.0.0.zip",
+          "version": "0.2.0.0",
+          "bytes": 6787372,
+          "sha256": "cfd6f0343d167869843f46d31165212249675e2ab9a28fa81e21b66947c56222",
+          "sourceUrl": "https://github.com/xenosworks/starship-xenon/releases/download/xenon-0.2.0.0/Starship-Xbox360-0.2.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-starship",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Starship"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ctr360",
+      "title": "CTR360",
+      "version": "1.0.3.0",
+      "files": [
+        {
+          "name": "CTR360-Xbox360-1.0.3.0.zip",
+          "version": "1.0.3.0",
+          "bytes": 12571568,
+          "sha256": "96fc653f711a9c94950eeb397de824c61fceb7be1c82ece71910cb5509c2ac99",
+          "sourceUrl": "https://github.com/dougieprishpreed/ctr360/releases/download/v1.0.3/CTR360-Xbox360-1.0.3.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-ctr360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "CTR360"
+          ]
+        },
+        {
+          "label": "Store package · console files at ZIP root",
+          "name": "ctr360-1.0.3.0.zip",
+          "version": "1.0.3.0",
+          "bytes": 1104285,
+          "sha256": "4b510db3cfc005af24a1a64c95cb5a524ae9075894a471f6d7a768814072d716",
+          "sourceUrl": "https://github.com/dougieprishpreed/ctr360/releases/download/v1.0.3/ctr360-1.0.3.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-ctr360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "CTR360"
+          ],
+          "formatVerification": {
+            "type": "ZIP with native XEX2",
+            "entryCount": 10,
+            "uncompressedBytes": 2296563,
+            "executables": [
+              {
+                "name": "default.xex",
+                "bytes": 2134016,
+                "sha256": "9611c0e63bdf370f25536ec85e0f4560ca266c8f89ab1712bd5dbc899a5a1e49"
+              }
+            ],
+            "upstreamFileHashesVerified": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "homebrew-app-store",
+      "title": "Homebrew App Store",
+      "version": "0.1.0.0",
+      "files": [
+        {
+          "name": "Homebrew-App-Store-Xbox360-0.1.0.0.zip",
+          "version": "0.1.0.0",
+          "bytes": 1891078,
+          "sha256": "43eaec792e733b5cacb85e299af93ac9bac00891e5abd816da65e9db0f929d33",
+          "sourceUrl": "https://github.com/xenosworks/homebrew-app-store/releases/download/v0.1.0.0/Homebrew-App-Store-Xbox360-0.1.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-homebrew-app-store",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Homebrew App Store"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aurora",
+      "title": "Aurora Dashboard",
+      "version": "0.7b.2 · Rev1655",
+      "files": [
+        {
+          "name": "Aurora 0.7b.2 - Release Package.rar",
+          "version": "0.7b.2 · Rev1655",
+          "bytes": 22647806,
+          "sha256": "0c7c765c3a5b938cfc64c71beda276a17d109b88df2a88e3f91eb1e74b7e46a0",
+          "sourceUrl": "https://phoenix.xboxunity.net/downloads/Aurora%200.7b.2%20-%20Release%20Package.rar",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-aurora",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Aurora Dashboard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aurora-az",
+      "title": "Aurora A–Z",
+      "version": "1.1",
+      "files": [
+        {
+          "name": "AuroraAZ-v1.1-Installer.zip",
+          "version": "1.1",
+          "bytes": 1623449,
+          "sha256": "725b6918c693e8bcf3f6f217f638a8fe4d1ed6b86bf0c7bdefbd8a7689fb6b27",
+          "sourceUrl": "https://github.com/haimbilia/Aurora-A-Z/releases/download/v1.1/AuroraAZ-v1.1-Installer.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-aurora-az",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Aurora A–Z"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-latte",
+      "title": "Catppuccin Latte",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Latte-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8259338,
+          "sha256": "473ef6e2cf880aba2e41be89ccbabc2f12875ab017eafaf5bd2a653c23579196",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Latte-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-latte",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Latte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-frappe",
+      "title": "Catppuccin Frappé",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Frappe-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8253241,
+          "sha256": "6649ac7add90fcc26a790845585b0b3b747211368f56e921e2792c1e426ddbf1",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Frappe-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-frappe",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Frappé"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-macchiato",
+      "title": "Catppuccin Macchiato",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Macchiato-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8253392,
+          "sha256": "49c2f5e541358c6ef45657ff6ce287fc87f5e0e7bda14aad2a408c0db6a47632",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Macchiato-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-macchiato",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Macchiato"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catppuccin-mocha",
+      "title": "Catppuccin Mocha",
+      "version": "Snapshot 21f6ef552491 · Blue accent",
+      "files": [
+        {
+          "name": "Catppuccin-Mocha-Blue.xzp",
+          "version": "Snapshot 21f6ef552491 · Blue accent",
+          "bytes": 8255172,
+          "sha256": "c96c549c3e5a70bd3c4c1e024b46f5d1f2adaec2f4067a3020a46ae752359400",
+          "sourceUrl": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Mocha-Blue.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-catppuccin-mocha",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Catppuccin Mocha"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harissa64",
+      "title": "Harissa64",
+      "version": "2.0.8",
+      "files": [
+        {
+          "name": "Harissa64-2.0.8.zip",
+          "version": "2.0.8",
+          "bytes": 39116506,
+          "sha256": "d181ce07e2b30a78e200cb4a1bea5906f0db38f54508ff109cbbd312aca3f8fc",
+          "sourceUrl": "https://github.com/kernel64/Harissa64/releases/download/v2.0.8/Harissa64-2.0.8.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-harissa64",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "Harissa64"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harissadc",
+      "title": "HarissaDC",
+      "version": "0.1.0-dev",
+      "files": [
+        {
+          "name": "HarissaDC-0.1.0-dev.zip",
+          "version": "0.1.0-dev",
+          "bytes": 21495409,
+          "sha256": "b49d608656832e2dad835f5d56ce4ee22c06b20538f7250269d4c7fd3a00bfb7",
+          "sourceUrl": "https://github.com/kernel64/HarissaDC/releases/download/v0.1.0-dev/HarissaDC-0.1.0-dev.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-harissadc",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "HarissaDC"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anarch360",
+      "title": "Anarch360",
+      "version": "1.0.0",
+      "files": [
+        {
+          "name": "anarch360.xex",
+          "version": "1.0.0",
+          "bytes": 3252224,
+          "sha256": "0652e4aaac97cbecf57ae8bbb1b87d812a80fd0595396d655b73f5c8fc01e23e",
+          "sourceUrl": "https://github.com/Fhoughton/Anarch360/releases/download/v1.0.0/anarch360.xex",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-anarch360",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Anarch360"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auroraflow-global",
+      "title": "AuroraFlow Global",
+      "version": "Final v1.5",
+      "files": [
+        {
+          "name": "AuroraFlow.Global.xzp",
+          "version": "Final v1.5",
+          "bytes": 31007960,
+          "sha256": "bdc72ccda62de7ebdaa05bccf08311ec7ce65e4ca3021f60e945af8510abeaf3",
+          "sourceUrl": "https://github.com/MaZ3PlaYZ/AuroraFlow-/releases/download/Final-v1.5/AuroraFlow.Global.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-auroraflow-global",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "AuroraFlow Global"
+          ]
+        },
+        {
+          "name": "Modern.by.MaZ3.Global.cfljson",
+          "version": "Final v1.5",
+          "bytes": 40975,
+          "sha256": "643fc6e17f24330c8cc59a1d954528365eaacf40de539f7b37cb197caf4a37ec",
+          "sourceUrl": "https://github.com/MaZ3PlaYZ/AuroraFlow-/releases/download/Final-v1.5/Modern.by.MaZ3.Global.cfljson",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-auroraflow-global",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "AuroraFlow Global"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auroraflow-en",
+      "title": "AuroraFlow English",
+      "version": "Final v1.5",
+      "files": [
+        {
+          "name": "AuroraFlow.EN.xzp",
+          "version": "Final v1.5",
+          "bytes": 31210299,
+          "sha256": "868fc3c8374c5217da4247077e51e8693cb81f146bf4d50339c9b17eac41bb83",
+          "sourceUrl": "https://github.com/MaZ3PlaYZ/AuroraFlow-/releases/download/Final-v1.5/AuroraFlow.EN.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-auroraflow-en",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "AuroraFlow English"
+          ]
+        },
+        {
+          "name": "Modern.by.MaZ3.cfljson",
+          "version": "Final v1.5",
+          "bytes": 40968,
+          "sha256": "831aed750a6fe9c8d5c6c179cc38c2f4193bb3cfe922f7152b918762b85bf412",
+          "sourceUrl": "https://github.com/MaZ3PlaYZ/AuroraFlow-/releases/download/Final-v1.5/Modern.by.MaZ3.cfljson",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-auroraflow-en",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "AuroraFlow English"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nxe-avatar-v5",
+      "title": "NXE Splash + Avatar + Xbox logo",
+      "version": "v5",
+      "files": [
+        {
+          "name": "Def-NXESp-Av-Xblogov5.xzp",
+          "version": "v5",
+          "bytes": 5605497,
+          "sha256": "b7fcd1cfbb9f4ebd96b717e6afc03716c18291d5d23185f3a94b2f5a35be7b53",
+          "sourceUrl": "https://github.com/theodor-ubp/xbox360-skins-aurora/releases/download/v5/Def-NXESp-Av-Xblogov5.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-nxe-avatar-v5",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "NXE Splash + Avatar + Xbox logo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xboxone-experience",
+      "title": "Xbox ONE Experience · Aurora0.6b",
+      "version": "Revision1 · snapshot e7c17cada718",
+      "files": [
+        {
+          "name": "XboxOneExperience.xzp",
+          "version": "Revision1 · snapshot e7c17cada718",
+          "bytes": 6420180,
+          "sha256": "bca1ecf133245b6e6a61d83633f3ef3a85c9878bf467308ec95c8fdf56fbc4c7",
+          "sourceUrl": "https://raw.githubusercontent.com/juanoliveira82/aurora-skins/e7c17cada7189fa5bee2535ed4d6b7424ad1a7a6/XboxOneExperience-Skin/XboxOneExperience.xzp",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-xboxone-experience",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Xbox ONE Experience · Aurora0.6b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fce360-enhanced",
+      "title": "FCE360 Enhanced",
+      "version": "0.8.10",
+      "files": [
+        {
+          "name": "fce360-enhanced.v0.8.10.zip",
+          "version": "0.8.10",
+          "bytes": 11968834,
+          "sha256": "52870b7d2320814f2cb0e1f5f97b2b8c533b73b752ab7a314740de2fe8f91711",
+          "sourceUrl": "https://github.com/frankischilling/fce360-enhanced/releases/download/fce360-enhanced0-8-10/fce360-enhanced.v0.8.10.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-fce360-enhanced",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "FCE360 Enhanced"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salvia360",
+      "title": "Salvia 360",
+      "version": "1.1.0",
+      "files": [
+        {
+          "name": "Salvia-360.zip",
+          "version": "1.1.0",
+          "bytes": 140795200,
+          "sha256": "3e82efe38d35aa71567faf998c7e8db75adb471964b2df8915f067327303b47c",
+          "sourceUrl": "https://github.com/danibiker/Salvia/releases/download/v1.1.0/Salvia-360.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-salvia360",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "Salvia 360"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simple360player",
+      "title": "Simple 360 Player",
+      "version": "0.2",
+      "files": [
+        {
+          "name": "Simple360Player-0.2.zip",
+          "version": "0.2",
+          "bytes": 6398773,
+          "sha256": "eadb457719b5b6c92420e1e0c8bfa0986d00dcb2727f107b8421fff72f01e226",
+          "sourceUrl": "https://github.com/HG-ERIK/simple360player/releases/download/v0.2/Simple360Player-0.2.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-simple360player",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Simple 360 Player"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multiplex360",
+      "title": "Multiplex 360",
+      "version": "0.4",
+      "files": [
+        {
+          "name": "Multiplex360-0.4.zip",
+          "version": "0.4",
+          "bytes": 6792896,
+          "sha256": "de565422ccf2789a3c9ec8305c57e6ca21981e6c7e1a8b57d413a9a56861bcc8",
+          "sourceUrl": "https://github.com/HG-ERIK/multiplex360/releases/download/v0.4/Multiplex360-0.4.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-multiplex360",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Multiplex 360"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silverdash360",
+      "title": "Silverdash360",
+      "version": "0.1.3 · full 0.1.2 base + update",
+      "files": [
+        {
+          "name": "Silverdash360-0.1.2-console.zip",
+          "version": "0.1.2 console base",
+          "bytes": 64510979,
+          "sha256": "6478589dd4963294eca15961b5ecca8347d0442b4fbc5c136d20643194c5a1f1",
+          "sourceUrl": "https://download.digiex.net/Consoles/Xbox360/Homebrew/Silverdash360-0.1.2-console.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-silverdash360",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Silverdash360"
+          ]
+        },
+        {
+          "name": "Silverdash360-0.1.3.zip",
+          "version": "0.1.3 update",
+          "bytes": 211928,
+          "sha256": "a8b64351790f0750b51143d3347a588beb00a6b71552e76eac53a633875b2adc",
+          "sourceUrl": "https://github.com/Digiex/Silverdash360/releases/download/v0.1.3/Silverdash360-0.1.3.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-silverdash360",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Silverdash360"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quad-carnage",
+      "title": "Quad Carnage",
+      "version": "Publisher build · 2025-03-30 release bug-fix",
+      "files": [
+        {
+          "name": "Quad Carnage for 360.zip",
+          "version": "Publisher build · 2025-03-30 release bug-fix",
+          "bytes": 87175153,
+          "sha256": "3df04b186612f6b10cf9ae6201c0e01f46c4753b45dcded3abff843842756b9c",
+          "sourceUrl": "https://jaredlevi.itch.io/quad-carnage#download",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-quad-carnage",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Quad Carnage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowjay",
+      "title": "WowJay",
+      "version": "Unversioned publisher build · reviewed 2026-11-02",
+      "files": [
+        {
+          "name": "WOWJAY360.7z",
+          "version": "Unversioned publisher build · reviewed 2026-11-02",
+          "bytes": 37455015,
+          "sha256": "d8d9fbfe8394c43e2c23f89ed6e5663257d4f83f2a17f8163acda6979da9eafb",
+          "sourceUrl": "https://jaredlevi.itch.io/wowjay/purchase",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-wowjay",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "WowJay"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nest-bound",
+      "title": "Nest Bound",
+      "version": "V1 · 2025-07-07 publisher release",
+      "files": [
+        {
+          "name": "NestBoud 360.zip",
+          "version": "V1 · 2025-07-07 publisher release",
+          "bytes": 52807754,
+          "sha256": "6580ec0cc55f3e44adbb1695d07cf2e83aaa9007f8d9b6e7763377459721bc62",
+          "sourceUrl": "https://jaredlevi.itch.io/nest-bound/purchase",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-nest-bound",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Nest Bound"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slither360",
+      "title": "Slither360",
+      "version": "0.10.2-dev.1 · development build",
+      "files": [
+        {
+          "name": "Slither360-v0.10.2-dev.1-PUBLIC.rar",
+          "version": "0.10.2-dev.1 · development build",
+          "bytes": 1826917,
+          "sha256": "a28c7ce96e817a4cd270fb461348c6806edbcea8283ac039655ac2e315fe4dbc",
+          "sourceUrl": "https://mathuwsgamermw.itch.io/slither360#download",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-slither360",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Slither360"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "portal-clone",
+      "title": "Portal Clone · tech demo",
+      "version": "Unversioned tech demo · reviewed 2026-11-02",
+      "files": [
+        {
+          "name": "PortalCloneXbox.rar",
+          "version": "Unversioned tech demo · reviewed 2026-11-02",
+          "bytes": 55805775,
+          "sha256": "2dbc6172f0802f8adab9e2ce53bde3d5397785caf4fca0dfac5e5d45574630cd",
+          "sourceUrl": "https://cayama0811.itch.io/portal-clone-xbox-360#download",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-portal-clone",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Portal Clone · tech demo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snes360-enhanced",
+      "title": "SNES360 Enhanced",
+      "version": "0.38 Beta",
+      "files": [
+        {
+          "name": "snes360-enhanced.v0.38.zip",
+          "version": "0.38 Beta",
+          "bytes": 11740360,
+          "sha256": "a305a177bc16d481333ed98fbfc217d0cbbc0f9775a0c54554d194ceba6176d6",
+          "sourceUrl": "https://github.com/frankischilling/snes360-enhanced/releases/download/0.38/snes360-enhanced.v0.38.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-snes360-enhanced",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "SNES360 Enhanced"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amiga360-refresh",
+      "title": "Amiga360 Refresh 2026",
+      "version": "1.5 Feature Edition",
+      "files": [
+        {
+          "name": "A360RF26-Xbox.7z",
+          "version": "1.5 Feature Edition",
+          "bytes": 14235921,
+          "sha256": "146a2e42894f57944fbc9dfebb861a6a96992c993e3dbdf32b4ba91d436ed592",
+          "sourceUrl": "https://github.com/djforrest33-hash/amiga360-refresh-2026-xbox-binaries/releases/download/v1.5-feature-edition/A360RF26-Xbox.7z",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-amiga360-refresh",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "Amiga360 Refresh 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ace-driver-collection",
+      "title": "Ace Driver System 22 Collection",
+      "version": "1.0.1",
+      "files": [
+        {
+          "name": "AceDriverCollection.zip",
+          "version": "1.0.1",
+          "bytes": 5158650,
+          "sha256": "5a2936b833b7544f804f7cf9a93c9ad31a3116841058023f18c1a6eb670e9d7f",
+          "sourceUrl": "https://github.com/wanszai/Ace-Driver-Collection-X360-Releases/releases/download/v1.0.1/AceDriverCollection.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-ace-driver-collection",
+          "platform": "Xbox 360",
+          "category": [
+            "Emulators",
+            "Ace Driver System 22 Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dashlaunch-temporary-gui",
+      "title": "DashLaunch GUI · temporary sessions",
+      "version": "21.3.2 Beta",
+      "files": [
+        {
+          "name": "DashLaunch_for_BadUpdate.xex",
+          "version": "21.3.2 Beta",
+          "bytes": 1699840,
+          "sha256": "1280828f7e33c21aa3d05ab2cbc0541e0cfa5eae0b91dcf33723ec744bcd1c9f",
+          "sourceUrl": "https://github.com/951261/dashLaunch-for-BadUpdate/releases/download/21.3.2/DashLaunch_for_BadUpdate.xex",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-dashlaunch-temporary-gui",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "DashLaunch GUI · temporary sessions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "triangle-runtime",
+      "title": "Triangle · pinned runtime bundle",
+      "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+      "files": [
+        {
+          "name": "Triangle-runtime-03cb4bc8e0e1.zip",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 17172614,
+          "sha256": "4544d5ed997ec5e3059857acd6df141a8a074895f4bd0c6875821a0f0160de2f",
+          "sourceUrl": "https://github.com/JakobRangel/Triangle/tree/03cb4bc8e0e1efd838d1f445775f08095e482e70",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Triangle.xex",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1777664,
+          "sha256": "32ccf9567f3208b04c04e0a9beaf89953c1edaefac4b45b89281b965c8913fcd",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/Triangle.xex",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "AAA_Certificate_Services.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1078,
+          "sha256": "d7a7a0fb5d7e2731d771e9484ebcdef71d5f0c3e0a2948782bc83ee0ea699ef4",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/AAA_Certificate_Services.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Baltimore_CyberTrust_Root.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 891,
+          "sha256": "16af57a9f676b0ab126095aa5ebadef22ab31119d644ac95cd4b93dbf3f26aeb",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Baltimore_CyberTrust_Root.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "COMODO_RSA_Certification_Authority.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1500,
+          "sha256": "52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/COMODO_RSA_Certification_Authority.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Certum_Trusted_Network_CA.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 959,
+          "sha256": "5c58468d55f58e497e743982d2b50010b6d165374acf83a7d4a32db768c4408e",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Certum_Trusted_Network_CA.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "DST_Root_CA_X3.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 846,
+          "sha256": "0687260331a72403d909f105e69bcf0d32e1bd2493ffc6d9206d11bcd6770739",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/DST_Root_CA_X3.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "DigiCert_Global_Root_CA.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 947,
+          "sha256": "4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/DigiCert_Global_Root_CA.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "DigiCert_Global_Root_G2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 914,
+          "sha256": "cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/DigiCert_Global_Root_G2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "DigiCert_Global_Root_G3.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 831,
+          "sha256": "61799e3594f6fa6c9f619031e4a3c9f643fda38c083704a5075e5709a21b1ab7",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/DigiCert_Global_Root_G3.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "DigiCert_Global_Root_G3_1.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 579,
+          "sha256": "31ad6648f8104138c738f39ea4320133393e3a18cc02296ef97c2ac9ef6731d0",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/DigiCert_Global_Root_G3_1.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "DigiCert_High_Assurance_EV_Root_CA.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 969,
+          "sha256": "7431e5f4c3c1ce4690774f0b61e05440883ba9a01ed00ba6abd7806ed3b118cf",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/DigiCert_High_Assurance_EV_Root_CA.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Entrust_Root_Certification_Authority.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1173,
+          "sha256": "73c176434f1bc6d5adf45b0e76e727287c8de57616c1e6e6141a2b2cbc7d8e4c",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Entrust_Root_Certification_Authority.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Entrust_Root_Certification_Authority_1.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1298,
+          "sha256": "13efb39a2f6654e8c67bd04f4c6d4c90cd6cab5091bcedc73787f6b77d3d3fe7",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Entrust_Root_Certification_Authority_1.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Entrust_Root_Certification_Authority_2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1090,
+          "sha256": "43df5774b03e7fef5fe40d931a7bedf1bb2e6b42738c4e6d3841103d3aa7f339",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Entrust_Root_Certification_Authority_2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Entrust_Root_Certification_Authority_3.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 765,
+          "sha256": "02ed0eb28c14da45165c566791700d6451d7fb56f0b2ab1d3b8eb070e56edff5",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Entrust_Root_Certification_Authority_3.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "GlobalSign_Root_CA.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 867,
+          "sha256": "cbb522d7b7f127ad6a0113865bdf1cd4102e7d0759af635a7cf4720dc963c53b",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/GlobalSign_Root_CA.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "GlobalSign_Root_CA_1.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1415,
+          "sha256": "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/GlobalSign_Root_CA_1.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "GlobalSign_Root_CA_2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 889,
+          "sha256": "ebd41040e4bb3ec742c9e381d31ef2a41a48b6685c96e7cef3c1df6cd4331c99",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/GlobalSign_Root_CA_2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Go_Daddy_Root_Certificate_Authority_-_G2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 969,
+          "sha256": "45140b3247eb9cc8c5b4f0d7b53091f73292089e6e5a63e2749dd3aca9198eda",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Go_Daddy_Root_Certificate_Authority_-_G2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Go_Daddy_Root_Certificate_Authority_-_G2_1.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1236,
+          "sha256": "973a41276ffd01e027a2aad49e34c37846d3e976ff6a620b6712e33832041aa6",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Go_Daddy_Root_Certificate_Authority_-_G2_1.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "ISRG_Root_X1.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1391,
+          "sha256": "96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/ISRG_Root_X1.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Microsoft_RSA_Root_Certificate_Authority_2017.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1452,
+          "sha256": "c741f70f4b2a8d88bf2e71c14122ef53ef10eba0cfa5e64cfa20f418853073e0",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Microsoft_RSA_Root_Certificate_Authority_2017.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Sectigo_Public_Server_Authentication_Root_R46.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1422,
+          "sha256": "7bb647a62aeeac88bf257aa522d01ffea395e0ab45c73f93f65654ec38f25a06",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Sectigo_Public_Server_Authentication_Root_R46.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Starfield_Root_Certificate_Authority_-_G2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 993,
+          "sha256": "2ce1cb0bf9d2f9e102993fbe215152c3b2dd0cabde1c68e5319b839154dbb7f5",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Starfield_Root_Certificate_Authority_-_G2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Starfield_Services_Root_Certificate_Authority_-_G2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1011,
+          "sha256": "568d6905a2c88708a4b3025190edcfedb1974a606a13c6e5290fcb2ae63edab5",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/Starfield_Services_Root_Certificate_Authority_-_G2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "T-TeleSec_GlobalRoot_Class_2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 967,
+          "sha256": "91e2f5788d5810eba7ba58737de1548a8ecacd014598bc0b143e041b17052552",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/T-TeleSec_GlobalRoot_Class_2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "USERTrust_ECC_Certification_Authority.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 905,
+          "sha256": "5dd661d3cb33b5005cbed045a223ddc4445aaa41d1acb5df700884cad9ba4195",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/USERTrust_ECC_Certification_Authority.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "USERTrust_ECC_Certification_Authority_1.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 659,
+          "sha256": "4ff460d54b9c86dabfbcfc5712e0400d2bed3fbc4d4fbdaa86e06adcd2a9ad7a",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/USERTrust_ECC_Certification_Authority_1.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "USERTrust_ECC_Certification_Authority_2.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 946,
+          "sha256": "3457106752400212903a3545ca3b2ef384a456972bd951d8d840c1b0a379efa1",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/USERTrust_ECC_Certification_Authority_2.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "USERTrust_RSA_Certification_Authority.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1506,
+          "sha256": "e793c9b02fd8aa13e21c31228accb08119643b749c898964b1746d46c3d4cbd2",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/USERTrust_RSA_Certification_Authority.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "USERTrust_RSA_Certification_Authority_1.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1559,
+          "sha256": "7fa4ff68ec04a99d7528d5085f94907f4d1dd1c5381bacdc832ed5c960214676",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/USERTrust_RSA_Certification_Authority_1.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1239,
+          "sha256": "9acfab7e43c8d880d06b262a94deeee4b4659989c3d0caf19baf6405e41ab7df",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "thawte_Primary_Root_CA.der",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1060,
+          "sha256": "8d722f81a9c113c0791df136a2966db26c950a971db46b4199f4ea54b78bfb9f",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/certs/thawte_Primary_Root_CA.der",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "A_button.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 4548,
+          "sha256": "6d8769aacff836a1edd5dbbb7f4ee7c3652b21509bd286ae77989ad1cf39952d",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/A_button.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "B_button.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 4250,
+          "sha256": "8e100cd5aa094f96e70a024eec4433e85cc2b28fd6e91fa559fb12843602ba8b",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/B_button.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Arial_12.xpr",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 118796,
+          "sha256": "2f3f1942a2ceb5a1900655d86ed5abb7ba422f3f4d98e4550dd821592bbad5d7",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/Fonts/Arial_12.xpr",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "LB_button.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 3007,
+          "sha256": "c9719656a1b8760a5a87f49ae7659c4a48693081a842c0cb98efb2a1a13a1d61",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/LB_button.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "RB_button.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 2799,
+          "sha256": "80b80b7ad1ea47e9ebd1e949f677a3a55207d47a5ca8e04e39ec20c621f6e1be",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/RB_button.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "RS_button.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 4144,
+          "sha256": "2d6bccb502e92f92864864d17063f7bb03d7b1662c975e99430cf3100f2f245f",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/RS_button.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Triangle.xex",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1777664,
+          "sha256": "dd4829adbc166169ca59cbacc2bfb69393c618edb3cfdc2a729147dee4fddacd",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/Triangle.xex",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "X_button.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 4575,
+          "sha256": "e7b5a8beb263f1e75b48c64ba57ffe002ab1b619a57cbd915f68af130c071559",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/X_button.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "Y_button.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 4346,
+          "sha256": "4da30c178e91381a3b6f7cc32be405b10a2824afc514fb12db633813e6f1639b",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/Y_button.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "delete_icon.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 455826,
+          "sha256": "4f523fbd028a78efc3fbd7c7303db71e7f615b51893cb9a3e9dc98d0046fd148",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/delete_icon.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "refresh_icon.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 497435,
+          "sha256": "02e2d0bc42ac38a07303100ea1a276733a86b3b578676c4245d628164c22a411",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/refresh_icon.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "rename_icon.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 485892,
+          "sha256": "57fabd51ea230c4dace28aee4d4093390357de9bc76245ea10ed54b76d807954",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/rename_icon.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "segoe.ttf",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 34164,
+          "sha256": "3745c347d168dd938971aed573ab2140b6a766f658c4f353f06ddc05e976ff7a",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/segoe.ttf",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "splash-dark.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 5224292,
+          "sha256": "1da8e42b86233a2f669c66577ea720c7e331dedd5d0503f767ddf69e7916d65a",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/splash-dark.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "splash.png",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 6189806,
+          "sha256": "967d93c7bd87c7be43b5031444c09d3037a23432495e1abe1bc6fb644d19a2bc",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/splash.png",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "xarialuni.ttf",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 1588364,
+          "sha256": "699b818bddd1d7f47b3ccdbf089140303198aebe297fd2e73f7d0fde604553e5",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/media/xarialuni.ttf",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        },
+        {
+          "name": "sources.json",
+          "version": "Alpha runtime snapshot 03cb4bc8e0e1",
+          "bytes": 110,
+          "sha256": "b9aeddb97c6e1fb95283077bedf304f2ba8cd7eb1572308303d5644f3cfa6d56",
+          "sourceUrl": "https://raw.githubusercontent.com/JakobRangel/Triangle/03cb4bc8e0e1efd838d1f445775f08095e482e70/sources.json",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-triangle-runtime",
+          "platform": "Xbox 360",
+          "category": [
+            "Tools",
+            "Triangle · pinned runtime bundle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liquid-glass",
+      "title": "Liquid Glass",
+      "version": "1.0.0",
+      "files": [
+        {
+          "name": "LiquidGlass-Aurora-Skin-v1.0.0.zip",
+          "version": "1.0.0",
+          "bytes": 2368113,
+          "sha256": "04b3e9328342ef6f462969fd4c694a65ba3e00ecb0eedcf2c0c28a27bc9cbec8",
+          "sourceUrl": "https://github.com/ammarsi274/liquid-glass-aurora-skin/releases/download/v1.0.0/LiquidGlass-Aurora-Skin-v1.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-liquid-glass",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Liquid Glass"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "polar-glass",
+      "title": "Polar Glass",
+      "version": "1.0.0",
+      "files": [
+        {
+          "name": "PolarGlass-Aurora-Skin-v1.0.0.zip",
+          "version": "1.0.0",
+          "bytes": 1514092,
+          "sha256": "2081dbb5378a5000e9b5186fb79ecf8ba2021e0d720c92731776cd497529bbbc",
+          "sourceUrl": "https://github.com/ammarsi274/polar-glass-aurora-skin/releases/download/v1.0.0/PolarGlass-Aurora-Skin-v1.0.0.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-polar-glass",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Polar Glass"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silenthill360-alpha1",
+      "title": "Silent Hill · Xbox 360 alpha port",
+      "version": "Xbox 360 Alpha 1 · 2026-10-29",
+      "files": [
+        {
+          "name": "SilentHill_Xbox360.zip",
+          "version": "Xbox 360 Alpha 1 · 2026-10-29",
+          "bytes": 4535839,
+          "sha256": "f9d0fccc547a0860c6541e8946f3213b2b5a7e906eb22928c4ea6936e27536e1",
+          "sourceUrl": "https://github.com/SlickAmogus/silent-hill-decomp/releases/download/xbox360-alpha-1/SilentHill_Xbox360.zip",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-silenthill360-alpha1",
+          "platform": "Xbox 360",
+          "category": [
+            "Games",
+            "Silent Hill · Xbox 360 alpha port"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matrix-v4",
+      "title": "Matrix Code · V4 skin collection",
+      "version": "V4 · 2025-09-01 publisher update",
+      "files": [
+        {
+          "name": "Matrix Skins Aurora V4.zip",
+          "version": "V4 · 2025-09-01 publisher update",
+          "bytes": 27446593,
+          "sha256": "05b079ebd41aacddca8f5dfd9cdd96fa60352680285b027f3a29d2396806a880",
+          "sourceUrl": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+          "archiveRole": [
+            "Builds"
+          ],
+          "itemId": "xbox360-more-matrix-v4",
+          "platform": "Xbox 360",
+          "category": [
+            "Themes",
+            "Matrix Code · V4 skin collection"
+          ]
+        }
+      ]
+    }
+  ]
+}

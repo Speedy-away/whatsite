@@ -1,0 +1,12 @@
+.switch-app-detail .guide-hero img{padding:28px;object-fit:contain;background:#13191f}
+.app-detail-meta{display:grid;grid-template-columns:1fr 1fr 2fr;gap:22px;padding:22px 0;margin-bottom:16px;border-block:1px solid var(--border)}
+.app-detail-meta>div{min-width:0;display:flex;flex-direction:column;gap:7px}
+.app-detail-meta span,.app-detail-muted{font-size:.86rem;color:var(--text-secondary)}
+.app-detail-meta strong,.app-detail-meta code{font-size:.97rem;overflow-wrap:anywhere}
+.app-detail-warning{border-left:3px solid #e4b963;background:#272116;padding:20px 22px;margin:0 0 24px;max-width:82ch;border-radius:0 8px 8px 0}
+.app-detail-warning strong{color:#f0cd7d}.app-detail-warning p{margin-top:8px;color:var(--text-primary)}
+.app-detail-related{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:15px}
+.app-detail-related a{display:flex;gap:14px;align-items:center;padding:18px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:9px;min-height:84px}
+.app-detail-related img{border-radius:8px;object-fit:contain}.app-detail-related span{flex:1}.app-detail-related i{font-size:.85rem}
+.app-detail-related a:focus-visible,.core-download summary:focus-visible{outline:2px solid var(--accent-light);outline-offset:4px}
+@media(max-width:600px){.app-detail-meta{grid-template-columns:1fr 1fr}.app-detail-meta>div:last-child{grid-column:1/-1}.switch-app-detail .guide-hero img{padding:22px}}

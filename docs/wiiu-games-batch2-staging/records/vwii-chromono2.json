@@ -1,0 +1,62 @@
+{
+  "id": "vwii-chromono2",
+  "title": "chro.mono 2",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "2.3.0",
+  "url": "https://hbb1.oscwii.org/api/contents/chromono2/chromono2.zip",
+  "source": "https://oscwii.org/library/app/chromono2",
+  "name": "chromono2-2.3.0.zip",
+  "description": "A very circular puzzle game",
+  "author": "thp",
+  "details": "\nchro.mono is back! New levels, new puzzle mechanics and\nadded motion controls in select levels. Solve puzzles\nwith time limits in 120 exciting levels over 6 different\nlevel packs. Improve your scores by finishing levels\nfaster than the target time.\n\nhttps://thp.itch.io/chromono2\n",
+  "expectedBytes": 2842565,
+  "icon": "https://hbb1.oscwii.org/api/contents/chromono2/icon.png",
+  "requirements": "vWii Homebrew Channel and the game’s supported Wii controls. OSC explicitly lists vWii support; Wii U GamePad support is not implied.",
+  "setup": "Extract the full ZIP to SD root. Keep /apps/<game>/boot.dol and all supplied folders together, then launch from the vWii Homebrew Channel.",
+  "supportedPlatforms": [
+    "wii",
+    "vwii",
+    "wii_mini"
+  ],
+  "peripherals": [
+    "Wii Remote"
+  ],
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 3,
+    "uncompressedBytes": 3564465,
+    "builds": [
+      {
+        "path": "apps/chromono2/boot.dol",
+        "bytes": 3552000,
+        "sha256": "1468c7b0fa6e5aae701fbe4e8e50994ea4c3e7b095fd959a86a42399cd087204"
+      }
+    ],
+    "xmlFiles": [
+      "apps/chromono2/meta.xml"
+    ],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/vwii-chromono2.png",
+  "file": {
+    "name": "chromono2-2.3.0.zip",
+    "version": "2.3.0",
+    "bytes": 2842565,
+    "sha256": "e5f216bfdf7a9e91565e994d724801144e996643ea807238187a1bb506da057d",
+    "sourceUrl": "https://hbb1.oscwii.org/api/contents/chromono2/chromono2.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/chromono2-2.3.0.zip",
+    "itemId": "wiiu-games-batch2-vwii-chromono2",
+    "platform": "Wii U",
+    "category": [
+      "vWii",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\chro.mono 2\\Builds\\2.3.0\\chromono2-2.3.0.zip"
+  },
+  "mirrorReason": null
+}

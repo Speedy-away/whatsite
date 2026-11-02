@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-11-02T09:23:26.325Z",
+  "passed": true,
+  "tools": [
+    {
+      "slug": "atmosphere",
+      "version": "1.12.1",
+      "files": [
+        {
+          "name": "atmosphere-1.12.1-master-6b0c077b4+hbl-2.4.5+hbmenu-3.6.1.zip",
+          "version": "1.12.1",
+          "bytes": 4772493,
+          "sha256": "f42161b3bce11442ea487eb84811013cf0e5ba571a7964323e206990b341a297",
+          "localPassed": true,
+          "archivePassed": true,
+          "httpStatus": 200,
+          "httpPassed": true
+        },
+        {
+          "name": "fusee.bin",
+          "version": "1.12.1",
+          "bytes": 112064,
+          "sha256": "6559017e4df5ac418ce09fb347c32d071649f8b6d3d4bac9a874505fc8bed1bd",
+          "localPassed": true,
+          "archivePassed": true,
+          "httpStatus": 200,
+          "httpPassed": true
+        }
+      ]
+    },
+    {
+      "slug": "hekate",
+      "version": "6.5.4 + Nyx 1.9.4",
+      "files": [
+        {
+          "name": "hekate_ctcaer_6.5.4.bin",
+          "version": "6.5.4 + Nyx 1.9.4",
+          "bytes": 110144,
+          "sha256": "95f6e933e32e028f3ae90f0b0857ff47800e834bdace38a0ab019d8ed35a8c24",
+          "localPassed": true,
+          "archivePassed": true,
+          "httpStatus": 200,
+          "httpPassed": true
+        },
+        {
+          "name": "hekate_ctcaer_6.5.4_Nyx_1.9.4.zip",
+          "version": "6.5.4 + Nyx 1.9.4",
+          "bytes": 895887,
+          "sha256": "a5ee4faa956f1ffe49fdd31d795be3fd556c8dffd9cbed69cec7cff92b8b43f6",
+          "localPassed": true,
+          "archivePassed": true,
+          "httpStatus": 200,
+          "httpPassed": true
+        }
+      ]
+    },
+    {
+      "slug": "retroarch",
+      "version": "1.22.2",
+      "files": [
+        {
+          "name": "RetroArch.7z",
+          "version": "1.22.2",
+          "bytes": 308863490,
+          "sha256": "bce9764137b6bce974704c4edbe55f730ec5e101dcd0cfb9058f01c160e51ddb",
+          "localPassed": true,
+          "archivePassed": true,
+          "httpStatus": 200,
+          "httpPassed": true
+        }
+      ]
+    }
+  ],
+  "localLinks": 206,
+  "images": [
+    {
+      "local": "/assets/images/switch-core-tools/atmosphere-banner.png",
+      "passed": true
+    },
+    {
+      "local": "/assets/images/switch-core-tools/hekate-workflow.svg",
+      "passed": true
+    },
+    {
+      "local": "/assets/images/switch-core-tools/retroarch-icon.jpg",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "No payload/application execution or physical-console installation was tested.",
+    "RetroArch SHA-256 is recorded locally; Atmosphere/Hekate hashes match official publisher release metadata."
+  ]
+}

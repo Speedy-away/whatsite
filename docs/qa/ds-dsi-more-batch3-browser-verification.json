@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-02T12:26:05.175Z",
+  "search": {
+    "ebook": 2,
+    "reset": "49 resources shown",
+    "games": "16 resources shown",
+    "apps": "8 resources shown",
+    "skins": "15 resources shown",
+    "emulators": "6 resources shown"
+  },
+  "viewports": [
+    {
+      "documentWidth": 1265,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "controls": [
+        47.59375,
+        44,
+        47.59375
+      ],
+      "documentWidth": 375,
+      "width": 390
+    },
+    {
+      "documentWidth": 1009,
+      "width": 1024
+    }
+  ],
+  "camera": "DSi camera test\nv1.1.0\nNDS\n\nA small camera utility that previews the DSi’s cameras and saves 640×480 PNG photos.\n\nHardware: DSi / DSi XL · DSi mode only\n\nSetup & prerequisites\nCopy dsi-camera.nds onto the DSi SD card and open it with a launcher that provides DSi-mode camera and SD access.\nSaved photos use /DCIM/100DSI00/IMG_####.PNG. Keep existing photos and available space on the card.\n\nThe .nds extension does not make this a DS / DS Lite camera app: it requires the DSi hardware cameras. The publisher supplies a separate CIA asset for another installation route; it is not included here.\n\nFiles, sizes & SHA-256\n\nDSi camera test authors · original packaged Nintendo DS banner icon\nFile options\n\nDownload dsi-camera.nds · 281.0 KiB\nFile options\nProject & requirements",
+  "passed": true,
+  "screenshots": [
+    "docs/qa/ds-dsi-more-batch3-desktop.png",
+    "docs/qa/ds-dsi-more-batch3-mobile.png"
+  ]
+}

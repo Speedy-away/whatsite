@@ -1,0 +1,912 @@
+{
+  "records": [
+    {
+      "id": "project-plus",
+      "filename": "Project+ v3.2.1 (Wii Lite).zip",
+      "bytes": 1561917280,
+      "sha256": "1691cc998b1244604e9ff3b0d82ac07111d6e388ffcc618e58d788b7be5012df",
+      "publisherSha256": "1691cc998b1244604e9ff3b0d82ac07111d6e388ffcc618e58d788b7be5012df",
+      "publisherSha256Matched": true,
+      "crcPassed": true,
+      "entryCount": 3918,
+      "uncompressedBytes": 1801986515,
+      "roots": [
+        "Project+ v3.2.1 (Wii Lite)"
+      ],
+      "nativeFiles": [
+        {
+          "path": "Project+ v3.2.1 (Wii Lite)/apps/project+/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80004000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80004000",
+              "bytes": 286496
+            },
+            {
+              "kind": "data",
+              "offset": 286784,
+              "address": "0x80049f20",
+              "bytes": 87072
+            }
+          ],
+          "bytes": 373856,
+          "sha256": "ccf42b99dc2d25b7b18886c3843441c4a8fed227244cc0e2860ccdd0874d4e08"
+        },
+        {
+          "path": "Project+ v3.2.1 (Wii Lite)/apps/project+/boot.elf",
+          "headerPassed": false,
+          "note": "Invalid ELF load segment",
+          "bytes": 1749372,
+          "sha256": "5b5e321ab0b854ada0627d823edb778fb1adc52361fde7fae2c09af1cc8cb996"
+        }
+      ],
+      "patchXml": [],
+      "readmes": {
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/gamewatch/_README_Adding_GW_Costumes.txt": "========================================\r\nGuide for Mr. Game and Watch Costumes\r\n========================================\r\nA number of changes were made for Mr. Game and Watch's costume files to support alternate costume models.\r\n\r\nCostumes 00 - 19 will use FitGameWatch00 (Default)\r\nCostumes 20 - 29 will use FitGameWatch01 (Judge)\r\nCostumes 30 - 39 will use FitGameWatch02\r\nCostumes 40 and onward will use FitGameWatch03\r\n\r\nIf you wish to adjust these ranges for further customization, see the code Project+\\Source\\LegacyTE\\LoadFlags.asm\r\n\r\n========================================\r\nAdding Mr. Game and Watch Recolors\r\n========================================\r\nAll body & border colors are set through the Animation Data[10] and Animation Data [0] [Group 1] CLR entries in each pac.\r\n\r\nAvoid using costume slots 12 and 13! They will not function correctly due to Brawl limitations, and are colored red to denote this.\r\n\r\n========================================\r\nEntry .pac file\r\n========================================\r\nFitGameWatchEntry.pac, a file loaded from the Brawl disc, was disabled due to coding limitations regarding separate entry files.\r\n\r\n========================================\r\nAdditional Bones and VIS0\r\n========================================\r\nThere are additional bones added, necessary for any new alternate costumes added to P+.\r\n\r\nEach bone listed should have the Visible property set to False if adding to a pre-existing costume.\r\n\r\nBone 98 (HeadFront): Used for when Mr. Game and Watch faces the front. Can be used to get specific looks from the front versus the side. For any new costume creators, be sure to test HeadFront, and all the VIS0 animations in FitGameWatchMotionEtc that call it.\r\n\r\nBones 99 - 102 (Entry1, Entry2, Entry3, Entry4): These bones replace the entry file, and are set up based on the frames of the entry animation. The entry objects in FitGameWatch01 are the easest way to set this up, and new costume creators should review them in their modelling software of choice.\r\n\r\n========================================\r\nIf you have any questions, please feel free to ask in the #modding-discussion channel of the Project+ Discord.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/pikachu/_README_Pikachu_Tail_Choice.txt": "========================================\r\nGuide for Pikachu Tail Changes\r\n========================================\r\n\r\nThanks to PSA edits by MarioDox and KingJigglypuff, you have the opportunity to choose the Pikachu tail you want to use.\r\nSimply hold side on the D-pad while loading a stage as Pikachu to swap from the default tail to the alternate tail. \r\nAdditional tail bones were added to accommodate this.\r\n\r\nThe following slots load the female tail by default:\r\n- 03 (Goggles)\r\n- 08 (Headphones)\r\n- 09 (May Bandana)\r\n- 11 (Party Hat)\r\n- 62 (Hidden: Pikachu Libre)\r\n\r\nIf you want an additional costume to load the female tail by default, you can either:\r\n- Add a check inside subroutine 0xFE30 in a PSA editor\r\n- Swap the visibility bones in the costume .pac file, for Tail and Tail2 and the Iron Tail bones",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/pikmin/_README_Olimar_Jetpack_Colors.txt": "========================================\r\nGuide for Olimar Jetpack Colors\r\n========================================\r\nOlimar uses a new per-costume model color system for his jetpack model.\r\n\r\nThese colors are stored in FitPikmin.pac, inside ARC ef_pikmin > Model Data [7] > AnmClr > EffPikminJetsCLR > JetPack > ConstantColorRegister2\r\n\r\nFrom here, each frame controls the costume ID corresponding to that frame, defaulting to red if not changed.\r\n\r\nFor modifying hidden costumes:\r\n61 equals AltR\r\n62 equals AltZ\r\n\r\n========================================\r\nIf you have any questions, please feel free to ask in the #modding-discussion channel of the Project+ Discord server.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/pit/_README_Adding_Pit_Costumes.txt": "========================================\r\nGuide for Adding Pit Costumes\r\n========================================\r\nPit uses custom motion trails and glow models for certain attacks involving his blades, custom gfx depending on wing color, and custom gfx depending on arrow color.\r\nAll costumes will default to the colors that the default Pit costume uses.\r\n\r\nSub Routine 0x13EA0 controls Pit's wing feather colors.\r\n\r\nSub Routines 0x126E0, 0xA010, 0x132F0, 0x14FF8 control the motion trails and glow models for Pit's blades.\r\n\r\nSub Actions 0x4C 0x62, and 0x65 (all GFX tab) control the motion trails for Pit's blade spin attacks.\r\n\r\nIn the Articles tab, in Article 0x1 (Arrow), Sub Actions 0x0, 0x1, and 0x2 control Pit's arrow trail colors.\r\n\r\nIf you have any questions, please feel free to ask in the #modding-discussion channel of the Project+ Discord server.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/pokefushigisou/_README_Adding_Ivysaur_Costumes.txt": "========================================\r\nGuide for Adding Ivysaur Costumes\r\n========================================\r\nIvysaur uses custom motion trails for certain attacks involving her vines, custom gfx depending on leaf color, and custom gfx depending on bulb explosion.\r\nAll costumes will default to the colors that the default Ivysaur costume uses.\r\n\r\nSub Actions 0x65, 0x66, and 0x1C2 (all GFX Tab), as well as Sub Routines 0x13B20, 0x14590, 0x14610, 0x1FE9C, and 0x203CC control leaf colors\r\n\r\nSub Action 0x3C (GFX Tab) controls the Flash Light Effect for Nair\r\nSub Action 0x50 (GFX Tab) controls leaf motion trails\r\nSub Action 0x5D (GFX Tab) controls Up Smash explosion colors\r\nSub Action 0x70 (Main Tab) controls the overlay effect color and gfx for landing a pummel on Ivysaur\r\nSub Action 0x1CF, 0x1D0 (all GFX Tab) controls the Neutral Special overlay effect color\r\nSub Action 0x1D7 (GFX Tab) controls Up Special glow color\r\n\r\nSub Routine 0x146F8, 0x17690, 0x17EA8 control vine motion trails\r\nSub Routine 0x226EC controls overlay effect color and sweetspot gfx for landing moves that heal (similar to Sub Action 0x70)\r\nSub Routine 0x2625C controls Seed Bomb on-hit leaf colors\r\nSub Routine 0x27EB4 controls Neutral Special bulb colors\r\n\r\nArticle 0, Sub Action 0 (GFX Tab) controls Side Special leaf effects and motion trail\r\nArticle 1, Sub Action 0 (Main Tab) controls Down Special seed model\r\nArticle 1, Sub Action 0 (GFX Tab) controls Seed Bomb gfx when it's traveling\r\nArticle 1, Sub Action 2 (GFX Tab) controls Seed Bomb gfx when it hits something\r\n\r\nHex Maniac Ivysaur costumes use Darkness on-hit effects for certain hitboxes, located in:\r\nSub Actions 0x5D, 0x65, and 0x66 (Main Tab)\r\nArticle 1, Sub Action 0 (Main Tab)\r\n\r\n========================================\r\nIf you have any questions, please feel free to ask in the #modding-discussion channel of the Project+ Discord server.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/popo/_README_Adding_Ice_Climber_Costumes.txt": "=======================================================================================\r\nGuide for Adding Ice Climber Costumes: Determining the lead Ice Climber\r\n=======================================================================================\r\nThanks to module edits by Eon, there are additional slots for the lead Ice Climber\r\n\r\nPopo will lead in slots: 0, 2, 3 (Brawl costumes), all even costumes from 6 - 19, and from 20 onward.\r\n\r\nNana will lead in slots 1, 4, 5 (Brawl costumes), and all odd costumes from 7 - 19.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/robot/_README_Adding_ROB_Costumes.txt": "========================================\r\nGuide for Adding ROB Costumes\r\n========================================\r\nAs per the LegacyTE_PSA_edits file, Kart ROB has specific effects in slots 20-29.\r\n\r\nROB uses individual Etc files for each costume. \r\nWhen adding ROB costume slots, make sure to copy an existing RobotEtc file as well, and rename it to match the costume number.\r\n\r\nThe Etc files include a GFX bank located in the \"ef_robotX[..]\" ARC that stores his armtrail texture/model.\r\nInside the RobotEtc file, rename the ef_robotX ARC so it matches the new costume number, and make the proper adjustments to the texture inside.\r\nThe spintrace texture should match ROB's arm color.",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/sonic/_README_Adding_Sonic_Costumes.txt": "========================================\r\nGuide for Adding Sonic Costumes\r\n========================================\r\n\r\nSonic uses individual Etc files for each costume. These files include a GFX bank, the \"ef_sonicX[..]\" ARC, that stores textures & models for his runtrail, special move auras, and other color data.\r\n\r\n=====================================\r\nInitial steps for new costume slots\r\n=====================================\r\nWhen adding a new Sonic costume slot, you must duplicate and rename files to match your new costume number.\r\n\r\n1. Duplicate an existing SonicEtc file and rename it to match the new costume number.\r\n2. Inside the new SonicEtc file, rename the ef_sonicX[..] ARC to match the new costume number.\r\n3. Rename the following in the EFLS and REFF nodes to match the costume number:\r\n\t- PtcSonicAttackAirLwX##\r\n\t- PtcSonicSpinTraceX##\r\n\t- PtcSonicSpinTraceLX##\r\n\t- PtcSonicIdlingX##\r\n\t- PtcSonicHomingTraceX##\r\n\t- PtcSonicGimmickJumpX##\r\n\r\nFor custom textures inside the Etc file, follow these color matching rules:\r\nhanm_zanzo00: texture color should match the top of the shoe.\r\neff_sonic_runtrace: stripes should always match the corresponding costume, and follow this color scheme (from top to bottom):\r\n\tLeg, Top of shoe, Middle of shoe, Bottom of shoe\r\n\r\n=====================================\r\nSpecial move auras\r\n=====================================\r\nSonic's spin trail models, particle effects, and smoke effects (for Jet Set costumes) are stored inside costume Etc files.\r\n\r\nColors of Sonic's spin aura are stored in Model Data nodes inside the ef_sonicX## ARC, listed below:\r\n- Model Data 0: Spin auras used on Neutral & Down specials, controlled via the Shader Color Block colors 0 and 1 in both of its materials.\r\n- Model Data 5: Aura on grounded Side Special, controlled via the LightChannel0 MaterialColor in both of its materials.\r\n- Model Data 6: Spinning aura on aerial Side Special, controlled via the LightChannel0 MaterialColor in both of its materials.\r\n- Model Data 7: Aura around slide kick during Side Special, controlled via the Shader Color Block colors 0 and 1 in both of its materials.\r\n\r\nIn Jet Set costumes Etc files, the PtcSonicRollSmokeX## REFF Particple entry controls their particle colors. \r\nColor1Secondary and Color2Secondary control the colors of the smoke. Both should be identical except for the alpha values, which should be 255 and 0 respectively.\r\n\r\nColored orb gfx on Side Special are controlled via CLR0 nodes in FitSonic.pac. Different colors can be assigned to added costumes by editing Sub Routine 0x2E5AC in a PSA editor.\r\n\r\n=====================================\r\nParticles\r\n=====================================\r\nParticle effects are controlled by Animations inside of each REFF entry of the Etc file, namely 0 and ALPHA0PRI.\r\nThese will need to be edited within a hex editor, and use RRGGBB color formatting in most cases.\r\nThe primary color for each is located between 0x00000030-0x00000032 (for RR,GG,BB respectively) and 0x00000040-0x00000042 for the secondary colors.\r\n\r\nThis is applicable to:\r\nPtcSonicSpinTraceX##\r\nPtcSonicSpinTraceLX##\r\nPtcSonicSpinTraceLZRing\r\nPtcSonicIdlingX##\r\nPtcSonicHomingTraceX##\r\nPtcSonicHomingTraceRing\r\n\r\nFor PtcSonicSpinTraceLZRing and PtcSonicHomingTraceRing, Color1Primary will need to be set to the hex color you're using as well in order to show properly in-game. Color1Secondary should also be set to a similar color.\r\n\r\nFor consistent trail colors, reference these values from Sonic's default costume: \r\n\r\nPurple: #400080, #8000FF\r\nBlue: #0000FF, #0020FF, #0040FF, #0060FF\r\nBaby blue: #40C0FF, #80DFFF, #80E0FF\r\n\r\nTrails for PtcSonicAttackAirLwX## (Down Air) and SonicGimmickJumpLight (Up Special) use a similar system, but with visibility values between each color value. \r\n\r\nStarting at 0x00000038 in both the \"0\" and \"ALPHA0PRI\" animations, they are formatted as RR VS GG VS BB VS. Most times, the VS values should be left as 00.\r\n\r\n=====================================\r\nIf you have any questions, please feel free to ask in the #modding-discussion channel of the Project+ Discord.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/wario/_README_Adding_Wario_Costumes.txt": "========================================\r\nGuide for Adding Wario Costumes\r\n========================================\r\nWario costumes work differently than most characters do due to having slot-dependent bones. \r\n\r\nSlots 0-5: Use the Biker jacket boneset\r\nSlots 6-11: Use the Classic Wario boneset\r\nSlots 12+: Use the Biker boneset again\r\n\r\nUsing the wrong boneset will crash the game! If you wish to add further costumes to Wario, make sure to use correct bone set for the slots.\r\n\r\nFor tag-based costumes, putting a Classic Wario costume over a Biker slot can have unintended character shadow effects, and can crash the game. Using a Biker costume over a Classic slot can also have unintended effects.\r\n\r\nAdditionally, Wario cannot use costume IDs 15, 31, or 47. These slots will crash when used with Wario Man. Higher numbered slots, 48-60, can be used instead.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/fighter/yoshi/_README_Adding_Yoshi_Costumes.txt": "========================================\r\nGuide for Adding Yoshi Costumes\r\n========================================\r\nYoshi uses a new color animation-based system for the egg break GFX.\r\nCostume colors and textures are tied to animation frames inside the FitYoshi.pac file > ef_yoshi ARC > Model Data [0].\r\nThe CLR and PAT groups contain color and texture pattern animations respectively, with the frame matching Yoshi's costume ID.\r\n\r\n========================================\r\nChanging Egg Shell Patterns\r\n========================================\r\nThe PAT animation entry for egg_spot controls which texture the egg spots use for defined costume ranges.\r\nBy default, this is pre-configured to change to the Yoshi_Egg_20 texture for costumes 20 - 29.\r\n\r\nTo add a custom texture for a different costume range, right-click the Texture0 node and click New Entry (or press Ctrl + H). Apply the custom texture name (and its palette) and the starting Costume ID. Then, add another PAT entry to set the end point for your texture change, in which it'll change back to using the original Yoshi_Egg texture.\r\n\r\n========================================\r\nChanging Egg Shell Colors\r\n========================================\r\n\r\nInside the EffYoshiTamagoKakeraA CLR animation, egg_spot supports up to two colors. Standard costumes use only ColorRegister1, while the Dorrie alts use ColorRegister0 and ColorRegister1.\r\nInside Texture Data [0], the red portion of the egg textures are controlled by Color 0, while Color 1 affects the blue portion of the texture.\r\n\r\nThe egg (shell) texture supports only a single color (controlled by ColorRegister0 in the CLR animation).\r\n\r\n========================================\r\nBy default, both CLR and PAT animations are pre-configured to support all 50 available costumes slots (+hidden alts). Heed no mind to everything between Frames 51 and 60, as those are filler frames to get to the hidden alts (Costume IDs 61 and 62 respectively).\r\n\r\nIf you have any questions, please feel free to ask in the #modding-discussion channel of the Project+ Discord.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/pf/menu3/readme - Autosave replays.txt": "The code menu (accessible with L + R + d-pad down) includes functionality to\r\nautomatically save match replays to the SD card!\r\n\r\nThis can be toggled on/off in-game, but can also be set to ON by default\r\nby doing the following:\r\n\r\n1. Rename data.cmnu to something else\r\n2. Rename data_AUTOSAVE_ON.cmnu to data.cmnu\r\n\r\nTo revert this, simply swap the filenames back.\r\n",
+        "Project+ v3.2.1 (Wii Lite)/Project+/Source/Injects/README.md": "## Injection GCT System (lavaInjectLoader)\r\nThis folder contains the source files for the injection .GCT files found in \"pf/injects/\"!\r\nThese injection .GCTs are special, in that rather than being included traditionally through RSBE01/BOOST.GCT, they're loaded through the lavaInjectLoader Syriinge plugin found in \"pf/plugins/\". The plugin works by iterating through and temporarily loading each group of .GCT files found in the \"pf/injects/\" folder, running the Gecko Codehandler over each file *a single time* before discarding it and loading the next. Very importantly, this means that Gecko codetypes which rely on remaining in memory (eg. C2/HOOK codes, C0/PULSE codes which expect to run every frame, etc.) *will not function correctly*, and thus should not be included in injection .GCT files! Instead, the system is intended for use with codetypes which do their work in a single round of the Codehandler, the most notable of which being the standard Memory Write codetypes (which are the meat of all of the Fighter.pac injection .GCTs in the \"pf/injects/fighter/\" folder). \r\n\r\n### Creating or Updating Inject .GCTs\r\nTo create or update an injection .GCT, simply compile the corresponding .ASM file using GCTRM, then place the resulting .GCT file into one of the subfolders within \"pf/injects/\". The loader plugin will detect it automatically and load it along with the rest of the .GCTs in that folder!\r\n\r\n### Inject Groups\r\nEach subfolder within the \"pf/injects/\" folder represents an \"Inject Group\": a group of injects that are all applied after some event happens in-game. Currently, the only subfolder is the \"pf/injects/fighter/\" folder, whose contents are applied a single time immediately after the game finishes loading and resolving the common Fighter.pac file. This makes it most appropriate for Fighter.pac injects, though technically other unrelated injects may be placed in this group as well. \r\n\r\n### The Fighter.pac Inject Group\r\nMany .asm files previously compiled and linked in to either RSBE01.GCT or BOOST.GCT have been converted into inject .GCTs to  save space in the main .GCTs. These can be found in the \"pf/injects/\" folder (subfolders are supported if necessary), and include the following:\r\n\r\n| Injection .GCT (\"/injects/\")        | Original Source File                     |\r\n|-------------------------------------|------------------------------------------|\r\n| \"DEFINE.GCT\"                        | \"Source/ProjectM/Constants.asm\"          |\r\n| \"MDEF.GCT\"                          | \"Source/Project+/Moonwalk.asm\"           |\r\n|                                     | \"Source/P+Ex/PlatformIgnore.asm\"         |\r\n|                                     | \"Source/ProjectM/PSA/Effects.asm\"        |\r\n|                                     | \"Source/ProjectM/PSA/Misc.asm\" ***\\****  |\r\n|                                     | \"Source/ProjectM/PSA/Tethers.asm\"        |\r\n|                                     | \"Source/ProjectM/PSA/TauntCancel.asm\"    |\r\n|                                     | \"Source/ProjectM/PSA/PowerShield.asm\"    |\r\n|                                     | \"Source/ProjectM/PSA/Items.asm\"          |\r\n|                                     | \"Source/ProjectM/PSA/Hitstun.asm\"        |\r\n|                                     | \"Source/ProjectM/PSA/C-Stick.asm\"        |\r\n|                                     | \"Source/ProjectM/PSA/MeteorCancel.asm\"   |\r\n|                                     | \"Source/ProjectM/PSA/WallCling.asm\"      |\r\n|                                     | \"Source/ProjectM/PSA/Glide.asm\"          |\r\n|                                     | \"Source/ProjectM/PSA/Grabs.asm\"          |\r\n|                                     | \"Source/ProjectM/PSA/SlowTurn.asm\"       |\r\n|                                     | \"Source/ProjectM/PSA/Edge.asm\"           |\r\n\r\n***\\**** *Note: This file contained a single non-Fighter.pac Injection code which was moved to a different .ASM, while the rest of the code was converted to an inject.*\r\n\r\n### lavaInjectLoader Source Code\r\nThe annotated source code for the lavaInjectLoader plugin can be found [here](https://github.com/QuickLava/lavaSyriingePlugins/tree/main/lavaInjectLoader)!\r\n"
+      },
+      "image": {
+        "path": "/assets/images/wii-brawl-galaxy/project-plus-hbc.png",
+        "credit": "Project+ \u00b7 Wii Lite project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://github.com/Project-Plus-Development-Team/PPlusReleases/releases/download/v3.2.1/Project%2B.v3.2.1.Wii.Lite.zip",
+        "sha256": "1e270000343ce212622931316d6315bc60a465153a3520a9fb8035641d57adae"
+      },
+      "format": "ZIP \u00b7 mod data + Wii launcher"
+    },
+    {
+      "id": "brawl-minus",
+      "filename": "Minusery-Console-v5.1.5.zip",
+      "bytes": 984927268,
+      "sha256": "21bf5d18f40467de108241f1a3d277a0362809aab7d373ff6805d62261e42ddc",
+      "publisherSha256": "21bf5d18f40467de108241f1a3d277a0362809aab7d373ff6805d62261e42ddc",
+      "publisherSha256Matched": true,
+      "crcPassed": true,
+      "entryCount": 3407,
+      "uncompressedBytes": 1324973759,
+      "roots": [
+        "Brawl Minus v5.1.5 Console"
+      ],
+      "nativeFiles": [
+        {
+          "path": "Brawl Minus v5.1.5 Console/apps/MinusLauncher/boot.dol",
+          "format": "DOL",
+          "headerPassed": true,
+          "entryPoint": "0x80b00000",
+          "sections": [
+            {
+              "kind": "text",
+              "offset": 256,
+              "address": "0x80b00000",
+              "bytes": 216704
+            },
+            {
+              "kind": "data",
+              "offset": 216960,
+              "address": "0x80b34e80",
+              "bytes": 41504
+            }
+          ],
+          "bytes": 258464,
+          "sha256": "aa96c0e3d5589fb09663231a41e6368bc8fd1bab6a7bcdfd44f05e7c0ecc0793"
+        },
+        {
+          "path": "Brawl Minus v5.1.5 Console/boot.elf",
+          "headerPassed": false,
+          "note": "Invalid ELF load segment",
+          "bytes": 1488828,
+          "sha256": "59b9c4f1244f5f7f34e3fa92fd82142bd9423e0b9224f281ef95661ef03deea8"
+        }
+      ],
+      "patchXml": [],
+      "readmes": {
+        "Brawl Minus v5.1.5 Console/Minusery/tools/vsdsync/README.txt": "# Virtual SD Sync\r\nv0.1.3.2\r\n\r\n**Features**\r\n- Mount sd.raw files as a virtual Windows drive\r\n- Sync files between your build directory and the sd.raw file\r\n- Unmount virtual drive after syncing\r\n- Load Dolphin after sync (optional)\r\n- Load Dolphin save state on start (optional)\r\n- Create new sd.raw file if required\r\n\r\n**How To Use**\r\n- Unpack the .rar achive\r\n- Run Setup.exe\r\n- Choose the directory of your current mods build (target files to be injected)\r\n- Locate your Dolphin sd.raw file (or create an empty one)\r\n- Configure any other optional settings\r\n- Press the Sync button and wait until finished\r\n- After the first setup, the sync can be done directly from the VSDSync.exe\r\n\r\n**Manually Mount Virtual Drive**\r\nTo manually access the files inside sd.raw, follow these instructions:\r\n- Run the mount.bat file\r\n- On My Computer, open the virtual drive\r\n- Add/Remove files as desired\r\n- Important! Be sure to run unmount.bat afterwards before testing on Dolphin\r\n\r\n**How To Create SD.raw**\r\n- Go to the SD Card Maker tab\r\n- Choose a size: 2GB, 1GB, or custom (in MB)\r\n- Click the button and wait until finished\r\n- Afterwards, move it to the correct Dolphin director\r\n\r\n**Other Notes**\r\n- The software is provided \"as is\" and comes with no warranty\r\n- Follow the instructions and make sure to backup your data\r\n- Once the Setup is done, everything should be safe and easy to use\r\n- The VSDSync.exe can be pinned to the taskbar for an even faster workflow\r\n"
+      },
+      "image": {
+        "path": "/assets/images/wii-brawl-galaxy/brawl-minus-hbc.png",
+        "credit": "Brawl Minus project \u00b7 supplied Homebrew Channel banner",
+        "sourceUrl": "https://github.com/MinuseryGames/Minusery-Dolphin/releases/download/v5.1.5/Minusery-Console-v5.1.5.zip",
+        "sha256": "b4390fa8640533392828ce0cf79c8bcac4e88be56cb1a42387b80be65e1bec23"
+      },
+      "format": "ZIP \u00b7 mod data + Wii launcher"
+    },
+    {
+      "id": "galaxy-daredevil",
+      "filename": "SMG-Daredevil-Mode.zip",
+      "bytes": 989846,
+      "sha256": "c0c8cc5141f50e0fd8db7ff602b1699265b781359841dd888b4056c399fd0328",
+      "crcPassed": true,
+      "entryCount": 55,
+      "uncompressedBytes": 1122371,
+      "roots": [
+        "riivolution",
+        "smg1daredevil"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/smg1daredevil_E.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "RMG"
+            }
+          ],
+          "regions": [
+            {
+              "type": "E"
+            }
+          ],
+          "folders": [
+            {
+              "external": "UsEnglish",
+              "disc": "/UsEnglish"
+            },
+            {
+              "external": "UsFrench",
+              "disc": "/UsFrench"
+            },
+            {
+              "external": "UsSpanish",
+              "disc": "/UsSpanish"
+            },
+            {
+              "external": "LayoutData",
+              "disc": "/LayoutData"
+            },
+            {
+              "external": "StageData",
+              "disc": "/StageData"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"RMG\">\r\n\t\t<region type=\"E\"/>\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"SMG1: Daredevil Mode\">\r\n\t\t\t<option name=\"SMG1D Core\">\r\n\t\t\t\t<choice name=\"With SD save\">\r\n\t\t\t\t\t<patch id=\"smg1d\"/>\r\n\t\t\t\t\t<patch id=\"smg1dsave\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"With Wii save\">\r\n\t\t\t\t\t<patch id=\"smg1d\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"smg1d\" root=\"/smg1daredevil\">\r\n\t\t<folder external=\"UsEnglish\" disc=\"/UsEnglish\"/>\r\n\t\t<folder external=\"UsFrench\" disc=\"/UsFrench\"/>\r\n\t\t<folder external=\"UsSpanish\" disc=\"/UsSpanish\"/>\r\n\t\t<folder external=\"LayoutData\" disc=\"/LayoutData\"/>\r\n\t\t<folder external=\"StageData\" disc=\"/StageData\"/>\r\n\t\t<memory offset=\"0x80001000\" valuefile=\"ASM/CometLimitTimers.bin\"/>\r\n\t\t<memory offset=\"0x800010A0\" valuefile=\"ASM/CheckNewCometLimitTimers_E.bin\"/>\r\n\t\t<memory offset=\"0x801D0330\" value=\"2C03000E408200183BA0000848000010\"/>\r\n\t\t<memory offset=\"0x8024D54C\" value=\"38000004\"/>\r\n\t\t<memory offset=\"0x80299B4C\" value=\"4BD67555\"/>\r\n\t\t<memory offset=\"0x802AE8A4\" value=\"3BC00001\"/>\r\n\t\t<memory offset=\"0x802AE8C4\" value=\"4800002C\"/>\r\n\t\t<memory offset=\"0x802B07A0\" value=\"60000000\"/>\r\n\t\t<memory offset=\"0x802B1C2C\" value=\"38000000\"/>\r\n\t\t<memory offset=\"0x802B1CD8\" value=\"38000000\"/>\r\n\t\t<memory offset=\"0x802DDF50\" value=\"48000060\"/>\r\n\t\t<memory offset=\"0x803CDB60\" value=\"386000004E80002000000000\"/>\r\n\t\t<memory offset=\"0x80533A28\" value=\"000000000000000000000000\"/>\r\n\t\t<memory offset=\"0x80533F80\" value=\"000000000000000000000000\"/>\r\n\t\t<memory offset=\"0x80534A34\" value=\"80266978805941DF\"/>\r\n\t</patch>\r\n\t<patch id=\"smg1dsave\" root=\"/smg1daredevil\">\r\n\t\t<savegame external=\"SaveGame/{$__gameid}{$__region}{$__maker}\" clone=\"true\"/>\r\n\t</patch>\r\n</wiidisc>"
+        },
+        {
+          "path": "riivolution/smg1daredevil_P.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "RMG"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            }
+          ],
+          "folders": [
+            {
+              "external": "EuEnglish",
+              "disc": "/EuDutch"
+            },
+            {
+              "external": "EuEnglish",
+              "disc": "/EuEnglish"
+            },
+            {
+              "external": "EuFrench",
+              "disc": "/EuFrench"
+            },
+            {
+              "external": "EuGerman",
+              "disc": "/EuGerman"
+            },
+            {
+              "external": "EuItalian",
+              "disc": "/EuItalian"
+            },
+            {
+              "external": "EuSpanish",
+              "disc": "/EuSpanish"
+            },
+            {
+              "external": "LayoutData",
+              "disc": "/LayoutData"
+            },
+            {
+              "external": "StageData",
+              "disc": "/StageData"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"RMG\">\r\n\t\t<region type=\"P\"/>\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"SMG1: Daredevil Mode\">\r\n\t\t\t<option name=\"SMG1D Core\">\r\n\t\t\t\t<choice name=\"With SD save\">\r\n\t\t\t\t\t<patch id=\"smg1d\"/>\r\n\t\t\t\t\t<patch id=\"smg1dsave\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"With Wii save\">\r\n\t\t\t\t\t<patch id=\"smg1d\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"smg1d\" root=\"/smg1daredevil\">\r\n\t\t<folder external=\"EuEnglish\" disc=\"/EuDutch\"/>\r\n\t\t<folder external=\"EuEnglish\" disc=\"/EuEnglish\"/>\r\n\t\t<folder external=\"EuFrench\" disc=\"/EuFrench\"/>\r\n\t\t<folder external=\"EuGerman\" disc=\"/EuGerman\"/>\r\n\t\t<folder external=\"EuItalian\" disc=\"/EuItalian\"/>\r\n\t\t<folder external=\"EuSpanish\" disc=\"/EuSpanish\"/>\r\n\t\t<folder external=\"LayoutData\" disc=\"/LayoutData\"/>\r\n\t\t<folder external=\"StageData\" disc=\"/StageData\"/>\r\n\t\t<memory offset=\"0x80001000\" valuefile=\"ASM/CometLimitTimers.bin\"/>\r\n\t\t<memory offset=\"0x800010A0\" valuefile=\"ASM/CheckNewCometLimitTimers_P.bin\"/>\r\n\t\t<memory offset=\"0x801D0330\" value=\"2C03000E408200183BA0000848000010\"/>\r\n\t\t<memory offset=\"0x8024D568\" value=\"38000004\"/>\r\n\t\t<memory offset=\"0x80299B68\" value=\"4BD67538\"/>\r\n\t\t<memory offset=\"0x802AE8C0\" value=\"3BC00001\"/>\r\n\t\t<memory offset=\"0x802AE8E0\" value=\"4800002C\"/>\r\n\t\t<memory offset=\"0x802B07BC\" value=\"60000000\"/>\r\n\t\t<memory offset=\"0x802B1C48\" value=\"38000000\"/>\r\n\t\t<memory offset=\"0x802B1CF4\" value=\"38000000\"/>\r\n\t\t<memory offset=\"0x802DDF6C\" value=\"48000060\"/>\r\n\t\t<memory offset=\"0x803CDB7C\" value=\"386000004E80002000000000\"/>\r\n\t\t<memory offset=\"0x80533A28\" value=\"000000000000000000000000\"/>\r\n\t\t<memory offset=\"0x80533F80\" value=\"000000000000000000000000\"/>\r\n\t\t<memory offset=\"0x80534A34\" value=\"80266994805941DF\"/>\r\n\t</patch>\r\n\t<patch id=\"smg1dsave\" root=\"/smg1daredevil\">\r\n\t\t<savegame external=\"SaveGame/{$__gameid}{$__region}{$__maker}\" clone=\"true\"/>\r\n\t</patch>\r\n</wiidisc>"
+        }
+      ],
+      "readmes": {},
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "galaxy2-daredevil",
+      "filename": "SMG2-Daredevil-Mode.zip",
+      "bytes": 790245,
+      "sha256": "a3263a0a9eb4a80287d1b7a26487132692b35375ecf3372beee5434e706f0ea4",
+      "crcPassed": true,
+      "entryCount": 57,
+      "uncompressedBytes": 855008,
+      "roots": [
+        "riivolution",
+        "smg2daredevil"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/smg2daredevil.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SB4"
+            }
+          ],
+          "regions": [
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "P"
+            }
+          ],
+          "folders": [
+            {
+              "external": "AudioRes",
+              "disc": "/AudioRes"
+            },
+            {
+              "external": "LayoutData",
+              "disc": "/LayoutData"
+            },
+            {
+              "external": "LocalizeData",
+              "disc": "/LocalizeData"
+            },
+            {
+              "external": "LocalizeData/EuEnglish",
+              "disc": "/LocalizeData/EuDutch"
+            },
+            {
+              "external": "ObjectData",
+              "disc": "/ObjectData"
+            },
+            {
+              "external": "StageData",
+              "disc": "/StageData"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"SB4\">\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"P\"/>\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"SMG2: Daredevil Mode\">\r\n\t\t\t<option name=\"SMG2D Core\">\r\n\t\t\t\t<choice name=\"With SD save\">\r\n\t\t\t\t\t<patch id=\"debug\"/>\r\n\t\t\t\t\t<patch id=\"smg2d\"/>\r\n\t\t\t\t\t<patch id=\"smg2dsave\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"With Wii save\">\r\n\t\t\t\t\t<patch id=\"debug\"/>\r\n\t\t\t\t\t<patch id=\"smg2d\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"debug\">\r\n\t\t<memory offset=\"0x804B7D90\" value=\"60000000\"/>\r\n\t\t<memory offset=\"0x804B7E54\" value=\"60000000\"/>\r\n\t\t<memory offset=\"0x805B66B4\" value=\"60000000\"/>\r\n\t</patch>\r\n\t<patch id=\"smg2d\" root=\"/smg2daredevil\">\r\n\t\t<folder external=\"AudioRes\" disc=\"/AudioRes\"/>\r\n\t\t<folder external=\"LayoutData\" disc=\"/LayoutData\"/>\r\n\t\t<folder external=\"LocalizeData\" disc=\"/LocalizeData\"/>\r\n\t\t<folder external=\"LocalizeData/EuEnglish\" disc=\"/LocalizeData/EuDutch\"/>\r\n\t\t<folder external=\"ObjectData\" disc=\"/ObjectData\"/>\r\n\t\t<folder external=\"StageData\" disc=\"/StageData\"/>\r\n\t\t<memory offset=\"0x80024ED0\" value=\"386000004E8000200000000000000000\"/>\r\n\t\t<memory offset=\"0x80295480\" value=\"2C03000E408200183BC0000848000010\"/>\r\n\t\t<memory offset=\"0x803B74D8\" value=\"38000001901E06B0901E01AC48000024\"/>\r\n\t\t<memory offset=\"0x803B919C\" value=\"41820030\"/>\r\n\t\t<memory offset=\"0x803C3528\" value=\"48000058\"/>\r\n\t\t<memory offset=\"0x803CA248\" value=\"38000000\"/>\r\n\t\t<memory offset=\"0x804D2C4C\" value=\"48000018\"/>\r\n\t\t<memory offset=\"0x80649A88\" value=\"0000000000000000\"/>\r\n\t\t<memory offset=\"0x80649C88\" value=\"0000000000000000\"/>\r\n\t\t<memory offset=\"0x80649D60\" value=\"0000000000000000\"/>\r\n\t\t<memory offset=\"0x80649D98\" value=\"0000000000000000\"/>\r\n\t\t<memory offset=\"0x8064A3CC\" value=\"8033EB00\"/>\r\n\t\t<memory offset=\"0x8064A630\" value=\"0000000000000000\"/>\r\n\t</patch>\r\n\t<patch id=\"smg2dsave\" root=\"/smg2daredevil\">\r\n\t\t<savegame external=\"SaveGame/{$__gameid}{$__region}{$__maker}\" clone=\"true\"/>\r\n\t</patch>\r\n</wiidisc>"
+        }
+      ],
+      "readmes": {},
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "super-lillie-galaxy",
+      "filename": "super_lillie_galaxy_v440_5c8ec.7z",
+      "bytes": 42463692,
+      "sha256": "038e5c17ad363d6abb64a655eeea3f3cf08bcb0c5571ef1c84081c381775ffbc",
+      "publisherMd5": "26ecdabaa2d5b0f3c547034d9065df5a",
+      "publisherMd5Matched": true,
+      "format": "7z \u00b7 Riivolution mod data",
+      "crcPassed": true,
+      "entryCount": 153,
+      "uncompressedBytes": 56733035,
+      "roots": [
+        "Lillie1",
+        "README.txt",
+        "riivolution"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/Super Lillie Galaxy.xml",
+          "discs": [
+            {
+              "game": "RMG"
+            }
+          ],
+          "regions": [
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "P"
+            },
+            {
+              "type": "K"
+            }
+          ],
+          "folders": [
+            {
+              "external": "AudioRes",
+              "disc": "/AudioRes",
+              "create": "true"
+            },
+            {
+              "external": "CnSimpChinese",
+              "disc": "/CnSimpChinese",
+              "create": "true"
+            },
+            {
+              "external": "EuDutch",
+              "disc": "/EuDutch",
+              "create": "true"
+            },
+            {
+              "external": "EuEnglish",
+              "disc": "/EuEnglish",
+              "create": "true"
+            },
+            {
+              "external": "EuFrench",
+              "disc": "/EuFrench",
+              "create": "true"
+            },
+            {
+              "external": "EuGerman",
+              "disc": "/EuGerman",
+              "create": "true"
+            },
+            {
+              "external": "EuItalian",
+              "disc": "/EuItalian",
+              "create": "true"
+            },
+            {
+              "external": "EuSpanish",
+              "disc": "/EuSpanish",
+              "create": "true"
+            },
+            {
+              "external": "JpJapanese",
+              "disc": "/JpJapanese",
+              "create": "true"
+            },
+            {
+              "external": "KrKorean",
+              "disc": "/KrKorean",
+              "create": "true"
+            },
+            {
+              "external": "LayoutData",
+              "disc": "/LayoutData",
+              "create": "true"
+            },
+            {
+              "external": "MovieData",
+              "disc": "/MovieData",
+              "create": "true"
+            },
+            {
+              "external": "ObjectData",
+              "disc": "/ObjectData",
+              "create": "true"
+            },
+            {
+              "external": "ParticleData",
+              "disc": "/ParticleData",
+              "create": "true"
+            },
+            {
+              "external": "StageData",
+              "disc": "/StageData",
+              "create": "true"
+            },
+            {
+              "external": "UsEnglish",
+              "disc": "/UsEnglish",
+              "create": "true"
+            },
+            {
+              "external": "UsFrench",
+              "disc": "/UsFrench",
+              "create": "true"
+            },
+            {
+              "external": "UsSpanish",
+              "disc": "/UsSpanish",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"RMG\">\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"P\"/>\r\n\t\t<region type=\"K\"/>\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"Super Lillie Galaxy\">\r\n\t\t\t<option name=\"Enable Super Lillie Galaxy?\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"Lillie1\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"Lillie1\" root=\"/Lillie1\">\r\n\t<!-- File Redirects -->\r\n\t\t<folder external=\"AudioRes\" disc=\"/AudioRes\" create=\"true\"/>\r\n\t\t<folder external=\"CnSimpChinese\" disc=\"/CnSimpChinese\" create=\"true\"/>\r\n\t\t<folder external=\"EuDutch\" disc=\"/EuDutch\" create=\"true\"/>\r\n\t\t<folder external=\"EuEnglish\" disc=\"/EuEnglish\" create=\"true\"/>\r\n\t\t<folder external=\"EuFrench\" disc=\"/EuFrench\" create=\"true\"/>\r\n\t\t<folder external=\"EuGerman\" disc=\"/EuGerman\" create=\"true\"/>\r\n\t\t<folder external=\"EuItalian\" disc=\"/EuItalian\" create=\"true\"/>\r\n\t\t<folder external=\"EuSpanish\" disc=\"/EuSpanish\" create=\"true\"/>\r\n\t\t<folder external=\"JpJapanese\" disc=\"/JpJapanese\" create=\"true\"/>\r\n\t\t<folder external=\"KrKorean\" disc=\"/KrKorean\" create=\"true\"/>\r\n\t\t<folder external=\"LayoutData\" disc=\"/LayoutData\" create=\"true\"/>\r\n\t\t<folder external=\"MovieData\" disc=\"/MovieData\" create=\"true\"/>\r\n\t\t<folder external=\"ObjectData\" disc=\"/ObjectData\" create=\"true\"/>\r\n\t\t<folder external=\"ParticleData\" disc=\"/ParticleData\" create=\"true\"/>\r\n\t\t<folder external=\"StageData\" disc=\"/StageData\" create=\"true\"/>\r\n\t\t<folder external=\"UsEnglish\" disc=\"/UsEnglish\" create=\"true\"/>\r\n\t\t<folder external=\"UsFrench\" disc=\"/UsFrench\" create=\"true\"/>\r\n\t\t<folder external=\"UsSpanish\" disc=\"/UsSpanish\" create=\"true\"/>\r\n\t\t<!-- Enable Crash Debugger -->\r\n\t\t<!-- RMGE -->\r\n\t\t<memory offset=\"0x8039AA2C\" value=\"60000000\" original=\"98040068\"/>\r\n\t\t<memory offset=\"0x8039AAF0\" value=\"60000000\" original=\"4082FFB8\"/>\r\n\t\t<memory offset=\"0x804A432C\" value=\"60000000\" original=\"48000160\"/>\r\n\t\t<!-- RMGP -->\r\n\t\t<memory offset=\"0x8039AA48\" value=\"60000000\" original=\"98040068\"/>\r\n\t\t<memory offset=\"0x8039AB0C\" value=\"60000000\" original=\"4082FFB8\"/>\r\n\t\t<memory offset=\"0x804A432C\" value=\"60000000\" original=\"48000160\"/>\r\n\t\t<!-- RMGJ -->\r\n\t\t<memory offset=\"0x8039AA2C\" value=\"60000000\" original=\"98040068\"/>\r\n\t\t<memory offset=\"0x8039AAF0\" value=\"60000000\" original=\"4082FFB8\"/>\r\n\t\t<memory offset=\"0x804A430C\" value=\"60000000\" original=\"48000160\"/>\r\n\t\t<!-- RMGK -->\r\n\t\t<memory offset=\"0x8039BF80\" value=\"60000000\" original=\"98040068\"/>\r\n\t\t<memory offset=\"0x8039C044\" value=\"60000000\" original=\"4082FFB8\"/>\r\n\t\t<memory offset=\"0x804A656C\" value=\"60000000\" original=\"48000160\"/>\r\n\t</patch>\r\n</wiidisc>"
+        }
+      ],
+      "readmes": {
+        "README.txt": "Installation for Dolphin Emulator on Windows PC: (Recommended method)\r\n\r\nTo install this mod, you must have a working .iso file of Super Mario Galaxy loaded within Dolphin Emulator. Once you have the game loading and working properly, you can do the following to install this mod:\r\n\r\n\r\nOr you can watch this guide video that I created:\r\n\r\nhttps://youtu.be/YLWVg0U7XfE\r\n\r\n\r\nRight click on the game title (Super Mario Galaxy) and select \"Properties\" from the list of available options\r\n\r\nNavigate to the Filesystem tab\r\n\r\nRight click on \"Disc\" and select \"Extract Entire Disc...\"\r\n\r\nNavigate to the inside of a new empty folder and select the folder. This should extract all the game files.\r\n\r\nNavigate to the folder that you extracted the game files\r\n\r\nYou should see 2 folders called \"DATA\" and \"UPDATE\". Enter the \"DATA\" folder.\r\n\r\nNow you should see a few files and a few folders. The main folders that are useful are \"files\" and \"sys\". Enter the \"files\" folder.\r\n\r\nThis is the folder that contains all of the files that the game uses to run. Drag and drop all the files included in the \"Lillie1\" folder, which should be inside the zip file you downloaded, and replace all of the files.\r\n\r\n(Optional) Add in the extra cutscenes and replace everything, they are in a separate zip file included on the mod website\r\n\r\nGo back to the \"DATA\" folder and enter the \"sys\" folder\r\n\r\nThe main useful file in this folder is the main.dol file, which is used to run the modded version of the game. To do this, drag the main.dol file into the Dolphin Emulator window to run the game with the mod installed.\r\n\r\nThe game should now load with the mod. If you see \"Super Lillie Galaxy\" on the title screen (Instead of \"Super Mario Galaxy\"), then that means this mod was installed correctly! If you see a black screen, this most likely means that you installed the mod incorrectly.\r\n\r\n\r\n(Optional) If you want this mod to appear as a separate game title in Dolphin Emulator, you can do the following:\r\n\r\n\r\nNavigate to the \"Options\" tab near the top of the Dolphin Emulator window and select \"Configuration\".\r\n\r\nNavigate to the \"Paths\" tab\r\n\r\nClick \"Add...\"\r\n\r\nNavigate to the inside of the \"sys\" folder and select it\r\n\r\nNow the modded version of the game should appear on the list of titles in Dolphin Emulator.\r\n\r\n\r\n\r\nInstallation on a modded Wii console using USB Loader: (Recommended method for console)\r\n\r\nTo install this mod on the Wii console using USB Loader, make sure that you have USB Loader installed on your Wii and have installed Super Mario Galaxy.\r\n\r\n\r\nOn a PC, download and extract Wiimm's ISO Tools and install the tool\r\n\r\nCopy in Super Mario Galaxy's .iso file that you extracted from your Wii\r\n\r\nOpen a cmd window in the root directory of Wiimm's ISO Tools\r\n\r\n\r\nRun the following command:\r\n\r\nwit EXTRACT [name of Super Mario Galaxy .iso (or .wbfs) file] GalaxyModded\r\n\r\n\r\nOpen the \"GalaxyModded\" folder\r\n\r\nOpen \"DATA\" and then \"files\"\r\n\r\nIn the \"files\" folder, drag all the files included in the Lillie1 folder in the Super Lillie Galaxy zip file and replace everything\r\n\r\n(Optional) Add in the extra cutscenes and replace everything, they are in a separate zip file included on the mod website\r\n\r\nOpen a cmd window in the root directory of Wiimm's ISO Tools\r\n\r\n\r\nRun the following command:\r\n\r\nwit COPY GalaxyModded SuperLillieGalaxy.wbfs\r\n\r\n\r\nThe above command should create a .wbfs file named SuperLillieGalaxy.wbfs\r\n\r\n\r\nIn your Wii SD card, navigate to the folder where the .wbfs file for Super Mario Galaxy was extracted to\r\n\r\nOverwrite the RMGE01.wbfs file with the modified one\r\n\r\nIf the SD card is inserted into the Wii, Super Mario Galaxy should now load into Super Lillie Galaxy\r\n\r\n(Optional) If you want to see the custom Wii banner included in the mod, you can go to the settings in USB Loader and change \"Cache BNR Files\" to Off, which should be in \"Banner Animation Settings\" on the second page\r\n\r\n\r\n\r\nInstallation on a modded Wii console using Riivolution:\r\n\r\nTo install this mod on the Wii console using Riivolution, make sure that you have Riivolution installed on your modded Wii, and that you have Super Mario Galaxy working:\r\n\r\n\r\nOn your PC, navigate to where the \"riivolution\" folder is on your SD card\r\n\r\nEnter the \"riivolution\" folder on the SD card and paste the \"Super Lillie Galaxy.xml\" inside. This is included inside the zip file you downloaded. If you are updating this mod, replace the .xml file if there is one there already.\r\n\r\nIn the Lillie1 folder, add the files in the folder titled \"Replace these files in the Lillie1 folder if you are using Riivolution on your Wii console\"\r\n\r\nDrag the \"Lillie1\" folder to the root of the SD card.\r\n\r\nIf done correctly, the mod should now be possible to load through Riivolution.\r\n\r\n\r\n\r\nThis mod has been tested on a Wii console, and also by using Dolphin Emulator on a Windows computer. The USA version was tested on console, while all other supported versions were tested using Dolphin Emulator on a Windows computer. I am not responsible for any damage done to your devices using this mod."
+      }
+    },
+    {
+      "id": "new-green-stars",
+      "filename": "smg2_the_new_green_stars_v12_7eefb.zip",
+      "bytes": 16081882,
+      "sha256": "3eb655c2342afdd4bc8b26538fa1ae10bd46d0ade7e257a7698eb7d17461b7b5",
+      "publisherMd5": "a7414ab620c3f897657976409f1cf3e8",
+      "publisherMd5Matched": true,
+      "crcPassed": true,
+      "entryCount": 852,
+      "uncompressedBytes": 16742188,
+      "roots": [
+        "SMG2 The New Green Stars"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "SMG2 The New Green Stars/riivolution/SMG2 The New Green Stars.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SB4"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            },
+            {
+              "type": "E"
+            },
+            {
+              "type": "J"
+            },
+            {
+              "type": "W"
+            }
+          ],
+          "folders": [
+            {
+              "external": "AudioRes",
+              "disc": "/AudioRes",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LayoutData",
+              "disc": "/LayoutData",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LightData",
+              "disc": "/LightData",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "ObjectData",
+              "disc": "/ObjectData",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "ParticleData",
+              "disc": "/ParticleData",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "StageData",
+              "disc": "/StageData",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "SystemData",
+              "disc": "/SystemData",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData",
+              "disc": "/LocalizeData",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/EuFrench",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/EuSpanish",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/EuItalian",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/EuDutch",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/UsFrench",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/UsSpanish",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/EuEnglish",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/JpJapanese",
+              "recursive": "true",
+              "create": "true"
+            },
+            {
+              "external": "LocalizeData/UsEnglish",
+              "disc": "/LocalizeData/AsTradChinese",
+              "recursive": "true",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"SB4\"/>\r\n\t\t<region type=\"P\"/>\r\n\t\t<region type=\"E\"/>\r\n\t\t<region type=\"J\"/>\r\n\t\t<region type=\"W\"/>\r\n\t<options>\r\n\t\t<section name=\"SMG2 The New Green Stars\">\r\n\t\t\t<option name=\"Play :)\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"SMG2TNGS\"/>\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"SMG2TNGS\" root=\"/SMG2 The New Green Stars\">\r\n\t\t<savegame external=\"SaveGame/{$__gameid}{$__region}{$__maker}\" clone=\"false\"/>\r\n\t\t<folder external=\"AudioRes\" disc=\"/AudioRes\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"LayoutData\" disc=\"/LayoutData\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"LightData\" disc=\"/LightData\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"ObjectData\" disc=\"/ObjectData\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"ParticleData\" disc=\"/ParticleData\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"StageData\" disc=\"/StageData\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"SystemData\" disc=\"/SystemData\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"LocalizeData\" disc=\"/LocalizeData\" recursive=\"true\" create=\"true\"/>\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/EuFrench\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/EuSpanish\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/EuItalian\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/EuDutch\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/UsFrench\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/UsSpanish\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/EuEnglish\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/JpJapanese\" recursive=\"true\" create=\"true\" />\r\n\t\t<folder external=\"LocalizeData/UsEnglish\" disc=\"/LocalizeData/AsTradChinese\" recursive=\"true\" create=\"true\" />\r\n\t\t<memory offset='0x80002900' value='9421FFE07C0802A69001002493E1001C93C100187C9E2378484CF9693FE080007FC5F378389F2A0038C10008484C92353BFF2A0080610008389F000E4805CC952C0300004182000C386000014800006880610008389F00154805CC792C0300004082001880610008389F001B4805CC652C0300004182000C386000024800003880610008389F00274805CC492C0300004182000C386000034800001C80610008389F002B4805CC2D200300007C000110700300058001002483E1001C83C100187C0803A6382100204E8000209421FFF07C0802A69001001493E1000C7C7F1B7848053B717FE4FB784BFFFF198001001483E1000C7C0803A6382100104E800020506F77657253746172547970650042726F6E7A6500477265656E004C6567616379477265656E0052656400426C756500' />\r\n\t\t<memory offset='0x802E01B8' value='7C030378' />\r\n\t\t<memory offset='0x802E01BC' value='4BD22811' />\r\n\t\t<memory offset='0x802E01C0' value='907E0130' />\r\n\t\t<memory offset='0x802E01F0' value='807E0130' />\r\n\t\t<memory offset='0x802DFC14' value='4BD22DB9' />\r\n\t\t<memory offset='0x802DFC20' value='60000000' />\r\n\t\t<memory offset='0x802DF0FC' value='4BD23805' />\r\n\t\t<memory offset='0x802DF100' value='7C7C1B78' />\r\n\t\t<memory offset='0x802DF104' value='2C1C0000' />\r\n\t\t<memory offset='0x802DF108' value='41820008' />\r\n\t\t<memory offset='0x8035BAC0' value='4BCA6F0D' />\r\n\t\t<memory offset='0x802DF02C' value='7C7D1B78' />\r\n\t\t<memory offset='0x802DF030' value='4800000C' />\r\n\t</patch>\r\n</wiidisc>"
+        }
+      ],
+      "readmes": {
+        "SMG2 The New Green Stars/Readme.txt": "Drag these two folders inside the root of your SD card, activate the hack in riivolution and have fun :)\n\n\r\nThanks for playing :D"
+      },
+      "format": "ZIP \u00b7 Riivolution mod data"
+    },
+    {
+      "id": "neo-mario-galaxy",
+      "filename": "nmg_v1.6.0.zip",
+      "bytes": 70237328,
+      "sha256": "78a432da16b00a6ab9215f13e33fbe93b7d069395cb17075a07eb54a223e11da",
+      "crcPassed": true,
+      "entryCount": 841,
+      "uncompressedBytes": 82096793,
+      "roots": [
+        "nmg",
+        "riivolution"
+      ],
+      "nativeFiles": [],
+      "patchXml": [
+        {
+          "path": "riivolution/nmg-SB4E.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SB4"
+            }
+          ],
+          "regions": [
+            {
+              "type": "E"
+            }
+          ],
+          "folders": [
+            {
+              "disc": "/AudioRes",
+              "external": "game/AudioRes",
+              "create": "true"
+            },
+            {
+              "disc": "/CustomCode",
+              "external": "game/CustomCode",
+              "create": "true"
+            },
+            {
+              "disc": "/HomeButton2",
+              "external": "game/HomeButton2",
+              "create": "true"
+            },
+            {
+              "disc": "/LayoutData",
+              "external": "game/LayoutData",
+              "create": "true"
+            },
+            {
+              "disc": "/LocalizeData",
+              "external": "game/LocalizeData",
+              "create": "true"
+            },
+            {
+              "disc": "/ObjectData",
+              "external": "game/ObjectData",
+              "create": "true"
+            },
+            {
+              "disc": "/ParticleData",
+              "external": "game/ParticleData",
+              "create": "true"
+            },
+            {
+              "disc": "/StageData",
+              "external": "game/StageData",
+              "create": "true"
+            },
+            {
+              "disc": "/SystemData",
+              "external": "game/SystemData",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"SB4\">\r\n\t\t<region type=\"E\" />\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"NMG (SB4E)\">\r\n\t\t\t<option name=\"Neo Mario Galaxy\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"nmg_core\" />\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t\t<option name=\"Override Language\">\r\n\t\t\t\t<choice name=\"English\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_UsEnglish\" />\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"Spanish\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_UsSpanish\" />\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"French\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_UsFrench\" />\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"nmg_core\" root=\"/nmg\">\r\n\t\t<savegame external=\"save/SB4E\" clone=\"false\" />\r\n\t\t<folder disc=\"/AudioRes\" external=\"game/AudioRes\" create=\"true\" />\r\n\t\t<folder disc=\"/CustomCode\" external=\"game/CustomCode\" create=\"true\" />\r\n\t\t<folder disc=\"/HomeButton2\" external=\"game/HomeButton2\" create=\"true\" />\r\n\t\t<folder disc=\"/LayoutData\" external=\"game/LayoutData\" create=\"true\" />\r\n\t\t<folder disc=\"/LocalizeData\" external=\"game/LocalizeData\" create=\"true\" />\r\n\t\t<folder disc=\"/ObjectData\" external=\"game/ObjectData\" create=\"true\" />\r\n\t\t<folder disc=\"/ParticleData\" external=\"game/ParticleData\" create=\"true\" />\r\n\t\t<folder disc=\"/StageData\" external=\"game/StageData\" create=\"true\" />\r\n\t\t<folder disc=\"/SystemData\" external=\"game/SystemData\" create=\"true\" />\r\n\t\t<memory offset=\"0x80001A00\" value=\"9421FFF07C0802A63C608000388000009001001493E1000C93C100088063209448023B012C0300004082000C38600000480000994803F34D7C7E1B78386000607FC4F37838A00004484FFE192C0300007C7F1B78418200143C80800080842094480000797C7F1B787FE3FB787FC4F378480000E97FE3FB78480000513C60800080BF004480DF004C7FE4FB7880FF00483863209C811F00504CC63182485B47758001001483E1000C83C100087C0803A6382100104E8000203C608000806320E4806300004E8000203C808000808420E4906400004E8000209421FFF07C0802A638A000409001001493E1000C7C9F23783880000093C100087C7E1B7848002C197FE3FB784862BFB17C651B787FC3F3787FE4FB78480028B138000000901E00407FC3F378901E0044901E0048901E004C901E0050901E0054901E0058981E005C83E1000C83C10008800100147C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7890830040480000397FE3FB78480001457FE3FB78480003F97FE3FB784800045138000001981F005C83E1000C800100147C0803A6382100104E8000209421FFE07C0802A690010024396100204862C5B53FC0800080C300407C7D1B78388000003BDE20E838A0000038E00001484B03C9907D00547FA3EB783880000048023999280300207C7F1B78408000107FA3EB78389E000048000415809D0054806400003C03B49F28006D6540820010A004000428006B00418200107FA3EB78389E0014480003E9807D0054A003000628000002418200107FA3EB78389E002C480003CD807D0054381FFFE0809D004038A0000480C3000C90DD004C7C06005080630008907D00507C661A14901D0058484FFC1980BD004C809D00547C032A14907D004438840020901D00484803F40D807D0048809D00504803F531396100204862C511800100247C0803A6382100204E8000209421FFD07C0802A690010034396100304862C48D80A300547C7A1B788083004C3FE08000800300583F2080007C85221483C300443B8400203F0048007FBC021448000254801C00003B9C0004541B023E5404463E3C1BFF012800FFFE40820010837C00003B9C0004480000087F7BF2142804004141810208387F214C5480103A7C63002E7C6903A64E800420807C00003B9C00045460000141820008480000087C7E1A14907B0000480001E0807C00003B9C00045460000141820008480000087C7E1A14B07B0000480001C0807C00003B9C00045460000141820008480000087C7E1A145460843EB01B00004800019C807C00003B9C00045460000141820008480000087C7E1A14546004215460843EB01B000041820174A07B000038030001B01B000048000164807C00003B9C00045460000141820008480000087C7E1A14801B00007C7B18505400078A506001BA901B000048000134801C00003B9C0004901B000048000124801C00003B9C0004B01B000048000114801C00003B9C0004981B000048000104807C00005460000141820008480000087C7E1A14809C00043B9C0008801B00007C002040408200DC907B0000480000D4809C0004801B0000807C00003B9C00087C002040408200BC907B0000480000B4801C0004A07B00005400043E809C00007C0300403B9C000840820098B09B000048000090801C0004887B00005400063E809C00007C0300403B9C000840820074989B00004800006C807C00003B9C00045460000141820008480000087C7E1A147C7B18503C004800506001BA901B000048000040807C00003B9C00045460000141820008480000087C7E1A147C1B185038780001540001BA7C600378901B0000480000107F43D37838992130480000D57C00D86C7C0004AC7C00DFAC7C1CE8404180FDAC7C0004AC4C00012C396100304862C241800100347C0803A6382100304E8000209421FFF07C0802A69001001493E1000C93C100088083005480A3004480640014800400107FE51A147FC5021448000014819E00007D8903A64E8004213BDE00047C1EF8404180FFEC8001001483E1000C83C100087C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7880630054484FF8B138000000901F0054901F005883E1000C800100147C0803A6382100104E8000209421FDF07C0802A63CA080007C86237890010214386100103880020038A522544CC6318248631B913C608000380000009001000838810008800320703861000C9001000C38A10010485B64A5800102147C0803A6382102104E800020FFFFFFFF2F437573746F6D436F64652F437573746F6D436F64655F534234452E62696E008000207400000000496E7374616C6C6564206D6F64756C652061742025700A2020636F6465203A207074723D25702073697A653D25640A202062737320203A207074723D25702073697A653D25640A0080003FFC42696E61727920746F6F20736D616C6C00000000556E6B6E6F776E2062696E61727920666F726D6174000000496E636F6D70617469626C652062696E6172792076657273696F6E00556E6B6E6F776E20636F6D6D616E642064657465637465640000000080001F3880001D4880001F3880001F3880001D6880001D8880001DAC80001F3880001F3880001F3880001DE480001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001E1480001E2480001E3480001E4480001E7480001E9480001EB880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001EDC80001F084B414D454B204552524F520A0A25730A00000000\" />\r\n\t\t<memory offset=\"0x804B7D38\" value=\"4BB49CC8\" />\r\n\t\t<memory offset=\"0x804B7D90\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x804B7E54\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B63A8\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B66B4\" value=\"60000000\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_UsEnglish\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000021\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_UsSpanish\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000024\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_UsFrench\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000023\" />\r\n\t</patch>\r\n</wiidisc>"
+        },
+        {
+          "path": "riivolution/nmg-SB4J.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SB4"
+            }
+          ],
+          "regions": [
+            {
+              "type": "J"
+            }
+          ],
+          "folders": [
+            {
+              "disc": "/AudioRes",
+              "external": "game/AudioRes",
+              "create": "true"
+            },
+            {
+              "disc": "/CustomCode",
+              "external": "game/CustomCode",
+              "create": "true"
+            },
+            {
+              "disc": "/HomeButton2",
+              "external": "game/HomeButton2",
+              "create": "true"
+            },
+            {
+              "disc": "/LayoutData",
+              "external": "game/LayoutData",
+              "create": "true"
+            },
+            {
+              "disc": "/LocalizeData",
+              "external": "game/LocalizeData",
+              "create": "true"
+            },
+            {
+              "disc": "/ObjectData",
+              "external": "game/ObjectData",
+              "create": "true"
+            },
+            {
+              "disc": "/ParticleData",
+              "external": "game/ParticleData",
+              "create": "true"
+            },
+            {
+              "disc": "/StageData",
+              "external": "game/StageData",
+              "create": "true"
+            },
+            {
+              "disc": "/SystemData",
+              "external": "game/SystemData",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"SB4\">\r\n\t\t<region type=\"J\" />\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"NMG (SB4J)\">\r\n\t\t\t<option name=\"Neo Mario Galaxy\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"nmg_core\" />\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"nmg_core\" root=\"/nmg\">\r\n\t\t<savegame external=\"save/SB4J\" clone=\"false\" />\r\n\t\t<folder disc=\"/AudioRes\" external=\"game/AudioRes\" create=\"true\" />\r\n\t\t<folder disc=\"/CustomCode\" external=\"game/CustomCode\" create=\"true\" />\r\n\t\t<folder disc=\"/HomeButton2\" external=\"game/HomeButton2\" create=\"true\" />\r\n\t\t<folder disc=\"/LayoutData\" external=\"game/LayoutData\" create=\"true\" />\r\n\t\t<folder disc=\"/LocalizeData\" external=\"game/LocalizeData\" create=\"true\" />\r\n\t\t<folder disc=\"/ObjectData\" external=\"game/ObjectData\" create=\"true\" />\r\n\t\t<folder disc=\"/ParticleData\" external=\"game/ParticleData\" create=\"true\" />\r\n\t\t<folder disc=\"/StageData\" external=\"game/StageData\" create=\"true\" />\r\n\t\t<folder disc=\"/SystemData\" external=\"game/SystemData\" create=\"true\" />\r\n\t\t<memory offset=\"0x80001A00\" value=\"9421FFF07C0802A63C608000388000009001001493E1000C93C100088063209448023B012C0300004082000C38600000480000994803F34D7C7E1B78386000607FC4F37838A00004484FFE192C0300007C7F1B78418200143C80800080842094480000797C7F1B787FE3FB787FC4F378480000E97FE3FB78480000513C60800080BF004480DF004C7FE4FB7880FF00483863209C811F00504CC63182485B47758001001483E1000C83C100087C0803A6382100104E8000203C608000806320E4806300004E8000203C808000808420E4906400004E8000209421FFF07C0802A638A000409001001493E1000C7C9F23783880000093C100087C7E1B7848002C197FE3FB784862BFB17C651B787FC3F3787FE4FB78480028B138000000901E00407FC3F378901E0044901E0048901E004C901E0050901E0054901E0058981E005C83E1000C83C10008800100147C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7890830040480000397FE3FB78480001457FE3FB78480003F97FE3FB784800045138000001981F005C83E1000C800100147C0803A6382100104E8000209421FFE07C0802A690010024396100204862C5B53FC0800080C300407C7D1B78388000003BDE20E838A0000038E00001484B03C9907D00547FA3EB783880000048023999280300207C7F1B78408000107FA3EB78389E000048000415809D0054806400003C03B49F28006D6540820010A004000428006B00418200107FA3EB78389E0014480003E9807D0054A003000628000002418200107FA3EB78389E002C480003CD807D0054381FFFE0809D004038A0000480C3000C90DD004C7C06005080630008907D00507C661A14901D0058484FFC1980BD004C809D00547C032A14907D004438840020901D00484803F40D807D0048809D00504803F531396100204862C511800100247C0803A6382100204E8000209421FFD07C0802A690010034396100304862C48D80A300547C7A1B788083004C3FE08000800300583F2080007C85221483C300443B8400203F0048007FBC021448000254801C00003B9C0004541B023E5404463E3C1BFF012800FFFE40820010837C00003B9C0004480000087F7BF2142804004141810208387F214C5480103A7C63002E7C6903A64E800420807C00003B9C00045460000141820008480000087C7E1A14907B0000480001E0807C00003B9C00045460000141820008480000087C7E1A14B07B0000480001C0807C00003B9C00045460000141820008480000087C7E1A145460843EB01B00004800019C807C00003B9C00045460000141820008480000087C7E1A14546004215460843EB01B000041820174A07B000038030001B01B000048000164807C00003B9C00045460000141820008480000087C7E1A14801B00007C7B18505400078A506001BA901B000048000134801C00003B9C0004901B000048000124801C00003B9C0004B01B000048000114801C00003B9C0004981B000048000104807C00005460000141820008480000087C7E1A14809C00043B9C0008801B00007C002040408200DC907B0000480000D4809C0004801B0000807C00003B9C00087C002040408200BC907B0000480000B4801C0004A07B00005400043E809C00007C0300403B9C000840820098B09B000048000090801C0004887B00005400063E809C00007C0300403B9C000840820074989B00004800006C807C00003B9C00045460000141820008480000087C7E1A147C7B18503C004800506001BA901B000048000040807C00003B9C00045460000141820008480000087C7E1A147C1B185038780001540001BA7C600378901B0000480000107F43D37838992130480000D57C00D86C7C0004AC7C00DFAC7C1CE8404180FDAC7C0004AC4C00012C396100304862C241800100347C0803A6382100304E8000209421FFF07C0802A69001001493E1000C93C100088083005480A3004480640014800400107FE51A147FC5021448000014819E00007D8903A64E8004213BDE00047C1EF8404180FFEC8001001483E1000C83C100087C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7880630054484FF8B138000000901F0054901F005883E1000C800100147C0803A6382100104E8000209421FDF07C0802A63CA080007C86237890010214386100103880020038A522544CC6318248631B913C608000380000009001000838810008800320703861000C9001000C38A10010485B64A5800102147C0803A6382102104E800020FFFFFFFF2F437573746F6D436F64652F437573746F6D436F64655F5342344A2E62696E008000207400000000496E7374616C6C6564206D6F64756C652061742025700A2020636F6465203A207074723D25702073697A653D25640A202062737320203A207074723D25702073697A653D25640A0080003FFC42696E61727920746F6F20736D616C6C00000000556E6B6E6F776E2062696E61727920666F726D6174000000496E636F6D70617469626C652062696E6172792076657273696F6E00556E6B6E6F776E20636F6D6D616E642064657465637465640000000080001F3880001D4880001F3880001F3880001D6880001D8880001DAC80001F3880001F3880001F3880001DE480001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001E1480001E2480001E3480001E4480001E7480001E9480001EB880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001EDC80001F084B414D454B204552524F520A0A25730A00000000\" />\r\n\t\t<memory offset=\"0x804B7D38\" value=\"4BB49CC8\" />\r\n\t\t<memory offset=\"0x804B7D90\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x804B7E54\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B63A8\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B66B4\" value=\"60000000\" />\r\n\t</patch>\r\n</wiidisc>"
+        },
+        {
+          "path": "riivolution/nmg-SB4K.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SB4"
+            }
+          ],
+          "regions": [
+            {
+              "type": "K"
+            }
+          ],
+          "folders": [
+            {
+              "disc": "/AudioRes",
+              "external": "game/AudioRes",
+              "create": "true"
+            },
+            {
+              "disc": "/CustomCode",
+              "external": "game/CustomCode",
+              "create": "true"
+            },
+            {
+              "disc": "/HomeButton2",
+              "external": "game/HomeButton2",
+              "create": "true"
+            },
+            {
+              "disc": "/LayoutData",
+              "external": "game/LayoutData",
+              "create": "true"
+            },
+            {
+              "disc": "/LocalizeData",
+              "external": "game/LocalizeData",
+              "create": "true"
+            },
+            {
+              "disc": "/ObjectData",
+              "external": "game/ObjectData",
+              "create": "true"
+            },
+            {
+              "disc": "/ParticleData",
+              "external": "game/ParticleData",
+              "create": "true"
+            },
+            {
+              "disc": "/StageData",
+              "external": "game/StageData",
+              "create": "true"
+            },
+            {
+              "disc": "/SystemData",
+              "external": "game/SystemData",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"SB4\">\r\n\t\t<region type=\"K\" />\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"NMG (SB4K)\">\r\n\t\t\t<option name=\"Neo Mario Galaxy\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"nmg_core\" />\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"nmg_core\" root=\"/nmg\">\r\n\t\t<savegame external=\"save/SB4K\" clone=\"false\" />\r\n\t\t<folder disc=\"/AudioRes\" external=\"game/AudioRes\" create=\"true\" />\r\n\t\t<folder disc=\"/CustomCode\" external=\"game/CustomCode\" create=\"true\" />\r\n\t\t<folder disc=\"/HomeButton2\" external=\"game/HomeButton2\" create=\"true\" />\r\n\t\t<folder disc=\"/LayoutData\" external=\"game/LayoutData\" create=\"true\" />\r\n\t\t<folder disc=\"/LocalizeData\" external=\"game/LocalizeData\" create=\"true\" />\r\n\t\t<folder disc=\"/ObjectData\" external=\"game/ObjectData\" create=\"true\" />\r\n\t\t<folder disc=\"/ParticleData\" external=\"game/ParticleData\" create=\"true\" />\r\n\t\t<folder disc=\"/StageData\" external=\"game/StageData\" create=\"true\" />\r\n\t\t<folder disc=\"/SystemData\" external=\"game/SystemData\" create=\"true\" />\r\n\t\t<memory offset=\"0x80001A00\" value=\"9421FFF07C0802A63C608000388000009001001493E1000C93C100088063209448023B012C0300004082000C38600000480000994803F34D7C7E1B78386000607FC4F37838A00004484FFEA92C0300007C7F1B78418200143C80800080842094480000797C7F1B787FE3FB787FC4F378480000E97FE3FB78480000513C60800080BF004480DF004C7FE4FB7880FF00483863209C811F00504CC63182485B48758001001483E1000C83C100087C0803A6382100104E8000203C608000806320E4806300004E8000203C808000808420E4906400004E8000209421FFF07C0802A638A000409001001493E1000C7C9F23783880000093C100087C7E1B7848002C197FE3FB784862C5217C651B787FC3F3787FE4FB78480028B138000000901E00407FC3F378901E0044901E0048901E004C901E0050901E0054901E0058981E005C83E1000C83C10008800100147C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7890830040480000397FE3FB78480001457FE3FB78480003F97FE3FB784800045138000001981F005C83E1000C800100147C0803A6382100104E8000209421FFE07C0802A690010024396100204862CB253FC0800080C300407C7D1B78388000003BDE20E838A0000038E00001484B0439907D00547FA3EB783880000048023999280300207C7F1B78408000107FA3EB78389E000048000415809D0054806400003C03B49F28006D6540820010A004000428006B00418200107FA3EB78389E0014480003E9807D0054A003000628000002418200107FA3EB78389E002C480003CD807D0054381FFFE0809D004038A0000480C3000C90DD004C7C06005080630008907D00507C661A14901D0058484FFCA980BD004C809D00547C032A14907D004438840020901D00484803F40D807D0048809D00504803F531396100204862CA81800100247C0803A6382100204E8000209421FFD07C0802A690010034396100304862C9FD80A300547C7A1B788083004C3FE08000800300583F2080007C85221483C300443B8400203F0048007FBC021448000254801C00003B9C0004541B023E5404463E3C1BFF012800FFFE40820010837C00003B9C0004480000087F7BF2142804004141810208387F214C5480103A7C63002E7C6903A64E800420807C00003B9C00045460000141820008480000087C7E1A14907B0000480001E0807C00003B9C00045460000141820008480000087C7E1A14B07B0000480001C0807C00003B9C00045460000141820008480000087C7E1A145460843EB01B00004800019C807C00003B9C00045460000141820008480000087C7E1A14546004215460843EB01B000041820174A07B000038030001B01B000048000164807C00003B9C00045460000141820008480000087C7E1A14801B00007C7B18505400078A506001BA901B000048000134801C00003B9C0004901B000048000124801C00003B9C0004B01B000048000114801C00003B9C0004981B000048000104807C00005460000141820008480000087C7E1A14809C00043B9C0008801B00007C002040408200DC907B0000480000D4809C0004801B0000807C00003B9C00087C002040408200BC907B0000480000B4801C0004A07B00005400043E809C00007C0300403B9C000840820098B09B000048000090801C0004887B00005400063E809C00007C0300403B9C000840820074989B00004800006C807C00003B9C00045460000141820008480000087C7E1A147C7B18503C004800506001BA901B000048000040807C00003B9C00045460000141820008480000087C7E1A147C1B185038780001540001BA7C600378901B0000480000107F43D37838992130480000D57C00D86C7C0004AC7C00DFAC7C1CE8404180FDAC7C0004AC4C00012C396100304862C7B1800100347C0803A6382100304E8000209421FFF07C0802A69001001493E1000C93C100088083005480A3004480640014800400107FE51A147FC5021448000014819E00007D8903A64E8004213BDE00047C1EF8404180FFEC8001001483E1000C83C100087C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7880630054484FF94138000000901F0054901F005883E1000C800100147C0803A6382100104E8000209421FDF07C0802A63CA080007C86237890010214386100103880020038A522544CC63182486321013C608000380000009001000838810008800320703861000C9001000C38A10010485B65A5800102147C0803A6382102104E800020FFFFFFFF2F437573746F6D436F64652F437573746F6D436F64655F5342344B2E62696E008000207400000000496E7374616C6C6564206D6F64756C652061742025700A2020636F6465203A207074723D25702073697A653D25640A202062737320203A207074723D25702073697A653D25640A0080003FFC42696E61727920746F6F20736D616C6C00000000556E6B6E6F776E2062696E61727920666F726D6174000000496E636F6D70617469626C652062696E6172792076657273696F6E00556E6B6E6F776E20636F6D6D616E642064657465637465640000000080001F3880001D4880001F3880001F3880001D6880001D8880001DAC80001F3880001F3880001F3880001DE480001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001E1480001E2480001E3480001E4480001E7480001E9480001EB880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001EDC80001F084B414D454B204552524F520A0A25730A00000000\" />\r\n\t\t<memory offset=\"0x804B7DA8\" value=\"4BB49C58\" />\r\n\t\t<memory offset=\"0x804B7E00\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x804B7EC4\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B64A8\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B67B4\" value=\"60000000\" />\r\n\t</patch>\r\n</wiidisc>"
+        },
+        {
+          "path": "riivolution/nmg-SB4P.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SB4"
+            }
+          ],
+          "regions": [
+            {
+              "type": "P"
+            }
+          ],
+          "folders": [
+            {
+              "disc": "/AudioRes",
+              "external": "game/AudioRes",
+              "create": "true"
+            },
+            {
+              "disc": "/CustomCode",
+              "external": "game/CustomCode",
+              "create": "true"
+            },
+            {
+              "disc": "/HomeButton2",
+              "external": "game/HomeButton2",
+              "create": "true"
+            },
+            {
+              "disc": "/LayoutData",
+              "external": "game/LayoutData",
+              "create": "true"
+            },
+            {
+              "disc": "/LocalizeData",
+              "external": "game/LocalizeData",
+              "create": "true"
+            },
+            {
+              "disc": "/ObjectData",
+              "external": "game/ObjectData",
+              "create": "true"
+            },
+            {
+              "disc": "/ParticleData",
+              "external": "game/ParticleData",
+              "create": "true"
+            },
+            {
+              "disc": "/StageData",
+              "external": "game/StageData",
+              "create": "true"
+            },
+            {
+              "disc": "/SystemData",
+              "external": "game/SystemData",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"SB4\">\r\n\t\t<region type=\"P\" />\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"NMG (SB4P)\">\r\n\t\t\t<option name=\"Neo Mario Galaxy\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"nmg_core\" />\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t\t<option name=\"Override Language\">\r\n\t\t\t\t<choice name=\"English\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_EuEnglish\" />\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"German\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_EuGerman\" />\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"Italian\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_EuItalian\" />\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"Spanish\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_EuSpanish\" />\r\n\t\t\t\t</choice>\r\n\t\t\t\t<choice name=\"French\">\r\n\t\t\t\t\t<patch id=\"nmg_locale_EuFrench\" />\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"nmg_core\" root=\"/nmg\">\r\n\t\t<savegame external=\"save/SB4P\" clone=\"false\" />\r\n\t\t<folder disc=\"/AudioRes\" external=\"game/AudioRes\" create=\"true\" />\r\n\t\t<folder disc=\"/CustomCode\" external=\"game/CustomCode\" create=\"true\" />\r\n\t\t<folder disc=\"/HomeButton2\" external=\"game/HomeButton2\" create=\"true\" />\r\n\t\t<folder disc=\"/LayoutData\" external=\"game/LayoutData\" create=\"true\" />\r\n\t\t<folder disc=\"/LocalizeData\" external=\"game/LocalizeData\" create=\"true\" />\r\n\t\t<folder disc=\"/ObjectData\" external=\"game/ObjectData\" create=\"true\" />\r\n\t\t<folder disc=\"/ParticleData\" external=\"game/ParticleData\" create=\"true\" />\r\n\t\t<folder disc=\"/StageData\" external=\"game/StageData\" create=\"true\" />\r\n\t\t<folder disc=\"/SystemData\" external=\"game/SystemData\" create=\"true\" />\r\n\t\t<memory offset=\"0x80001A00\" value=\"9421FFF07C0802A63C608000388000009001001493E1000C93C100088063209448023B012C0300004082000C38600000480000994803F34D7C7E1B78386000607FC4F37838A00004484FFE192C0300007C7F1B78418200143C80800080842094480000797C7F1B787FE3FB787FC4F378480000E97FE3FB78480000513C60800080BF004480DF004C7FE4FB7880FF00483863209C811F00504CC63182485B47758001001483E1000C83C100087C0803A6382100104E8000203C608000806320E4806300004E8000203C808000808420E4906400004E8000209421FFF07C0802A638A000409001001493E1000C7C9F23783880000093C100087C7E1B7848002C197FE3FB784862BFB17C651B787FC3F3787FE4FB78480028B138000000901E00407FC3F378901E0044901E0048901E004C901E0050901E0054901E0058981E005C83E1000C83C10008800100147C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7890830040480000397FE3FB78480001457FE3FB78480003F97FE3FB784800045138000001981F005C83E1000C800100147C0803A6382100104E8000209421FFE07C0802A690010024396100204862C5B53FC0800080C300407C7D1B78388000003BDE20E838A0000038E00001484B03C9907D00547FA3EB783880000048023999280300207C7F1B78408000107FA3EB78389E000048000415809D0054806400003C03B49F28006D6540820010A004000428006B00418200107FA3EB78389E0014480003E9807D0054A003000628000002418200107FA3EB78389E002C480003CD807D0054381FFFE0809D004038A0000480C3000C90DD004C7C06005080630008907D00507C661A14901D0058484FFC1980BD004C809D00547C032A14907D004438840020901D00484803F40D807D0048809D00504803F531396100204862C511800100247C0803A6382100204E8000209421FFD07C0802A690010034396100304862C48D80A300547C7A1B788083004C3FE08000800300583F2080007C85221483C300443B8400203F0048007FBC021448000254801C00003B9C0004541B023E5404463E3C1BFF012800FFFE40820010837C00003B9C0004480000087F7BF2142804004141810208387F214C5480103A7C63002E7C6903A64E800420807C00003B9C00045460000141820008480000087C7E1A14907B0000480001E0807C00003B9C00045460000141820008480000087C7E1A14B07B0000480001C0807C00003B9C00045460000141820008480000087C7E1A145460843EB01B00004800019C807C00003B9C00045460000141820008480000087C7E1A14546004215460843EB01B000041820174A07B000038030001B01B000048000164807C00003B9C00045460000141820008480000087C7E1A14801B00007C7B18505400078A506001BA901B000048000134801C00003B9C0004901B000048000124801C00003B9C0004B01B000048000114801C00003B9C0004981B000048000104807C00005460000141820008480000087C7E1A14809C00043B9C0008801B00007C002040408200DC907B0000480000D4809C0004801B0000807C00003B9C00087C002040408200BC907B0000480000B4801C0004A07B00005400043E809C00007C0300403B9C000840820098B09B000048000090801C0004887B00005400063E809C00007C0300403B9C000840820074989B00004800006C807C00003B9C00045460000141820008480000087C7E1A147C7B18503C004800506001BA901B000048000040807C00003B9C00045460000141820008480000087C7E1A147C1B185038780001540001BA7C600378901B0000480000107F43D37838992130480000D57C00D86C7C0004AC7C00DFAC7C1CE8404180FDAC7C0004AC4C00012C396100304862C241800100347C0803A6382100304E8000209421FFF07C0802A69001001493E1000C93C100088083005480A3004480640014800400107FE51A147FC5021448000014819E00007D8903A64E8004213BDE00047C1EF8404180FFEC8001001483E1000C83C100087C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7880630054484FF8B138000000901F0054901F005883E1000C800100147C0803A6382100104E8000209421FDF07C0802A63CA080007C86237890010214386100103880020038A522544CC6318248631B913C608000380000009001000838810008800320703861000C9001000C38A10010485B64A5800102147C0803A6382102104E800020FFFFFFFF2F437573746F6D436F64652F437573746F6D436F64655F534234502E62696E008000207400000000496E7374616C6C6564206D6F64756C652061742025700A2020636F6465203A207074723D25702073697A653D25640A202062737320203A207074723D25702073697A653D25640A0080003FFC42696E61727920746F6F20736D616C6C00000000556E6B6E6F776E2062696E61727920666F726D6174000000496E636F6D70617469626C652062696E6172792076657273696F6E00556E6B6E6F776E20636F6D6D616E642064657465637465640000000080001F3880001D4880001F3880001F3880001D6880001D8880001DAC80001F3880001F3880001F3880001DE480001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001E1480001E2480001E3480001E4480001E7480001E9480001EB880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001EDC80001F084B414D454B204552524F520A0A25730A00000000\" />\r\n\t\t<memory offset=\"0x804B7D38\" value=\"4BB49CC8\" />\r\n\t\t<memory offset=\"0x804B7D90\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x804B7E54\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B63A8\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B66B4\" value=\"60000000\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_EuEnglish\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000001\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_EuGerman\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000002\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_EuItalian\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000005\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_EuSpanish\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000004\" />\r\n\t</patch>\r\n\t<patch id=\"nmg_locale_EuFrench\">\r\n\t\t<memory offset=\"0x80003FC0\" value=\"0x80000003\" />\r\n\t</patch>\r\n</wiidisc>"
+        },
+        {
+          "path": "riivolution/nmg-SB4W.xml",
+          "root": "wiidisc",
+          "discs": [
+            {
+              "game": "SB4"
+            }
+          ],
+          "regions": [
+            {
+              "type": "W"
+            }
+          ],
+          "folders": [
+            {
+              "disc": "/AudioRes",
+              "external": "game/AudioRes",
+              "create": "true"
+            },
+            {
+              "disc": "/CustomCode",
+              "external": "game/CustomCode",
+              "create": "true"
+            },
+            {
+              "disc": "/HomeButton2",
+              "external": "game/HomeButton2",
+              "create": "true"
+            },
+            {
+              "disc": "/LayoutData",
+              "external": "game/LayoutData",
+              "create": "true"
+            },
+            {
+              "disc": "/LocalizeData",
+              "external": "game/LocalizeData",
+              "create": "true"
+            },
+            {
+              "disc": "/ObjectData",
+              "external": "game/ObjectData",
+              "create": "true"
+            },
+            {
+              "disc": "/ParticleData",
+              "external": "game/ParticleData",
+              "create": "true"
+            },
+            {
+              "disc": "/StageData",
+              "external": "game/StageData",
+              "create": "true"
+            },
+            {
+              "disc": "/SystemData",
+              "external": "game/SystemData",
+              "create": "true"
+            }
+          ],
+          "xml": "<wiidisc version=\"1\">\r\n\t<id game=\"SB4\">\r\n\t\t<region type=\"W\" />\r\n\t</id>\r\n\t<options>\r\n\t\t<section name=\"NMG (SB4W)\">\r\n\t\t\t<option name=\"Neo Mario Galaxy\">\r\n\t\t\t\t<choice name=\"Enabled\">\r\n\t\t\t\t\t<patch id=\"nmg_core\" />\r\n\t\t\t\t</choice>\r\n\t\t\t</option>\r\n\t\t</section>\r\n\t</options>\r\n\t<patch id=\"nmg_core\" root=\"/nmg\">\r\n\t\t<savegame external=\"save/SB4W\" clone=\"false\" />\r\n\t\t<folder disc=\"/AudioRes\" external=\"game/AudioRes\" create=\"true\" />\r\n\t\t<folder disc=\"/CustomCode\" external=\"game/CustomCode\" create=\"true\" />\r\n\t\t<folder disc=\"/HomeButton2\" external=\"game/HomeButton2\" create=\"true\" />\r\n\t\t<folder disc=\"/LayoutData\" external=\"game/LayoutData\" create=\"true\" />\r\n\t\t<folder disc=\"/LocalizeData\" external=\"game/LocalizeData\" create=\"true\" />\r\n\t\t<folder disc=\"/ObjectData\" external=\"game/ObjectData\" create=\"true\" />\r\n\t\t<folder disc=\"/ParticleData\" external=\"game/ParticleData\" create=\"true\" />\r\n\t\t<folder disc=\"/StageData\" external=\"game/StageData\" create=\"true\" />\r\n\t\t<folder disc=\"/SystemData\" external=\"game/SystemData\" create=\"true\" />\r\n\t\t<memory offset=\"0x80001A00\" value=\"9421FFF07C0802A63C608000388000009001001493E1000C93C100088063209448023B012C0300004082000C38600000480000994803F34D7C7E1B78386000607FC4F37838A00004484FFEA92C0300007C7F1B78418200143C80800080842094480000797C7F1B787FE3FB787FC4F378480000E97FE3FB78480000513C60800080BF004480DF004C7FE4FB7880FF00483863209C811F00504CC63182485B48758001001483E1000C83C100087C0803A6382100104E8000203C608000806320E4806300004E8000203C808000808420E4906400004E8000209421FFF07C0802A638A000409001001493E1000C7C9F23783880000093C100087C7E1B7848002C197FE3FB784862C5217C651B787FC3F3787FE4FB78480028B138000000901E00407FC3F378901E0044901E0048901E004C901E0050901E0054901E0058981E005C83E1000C83C10008800100147C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7890830040480000397FE3FB78480001457FE3FB78480003F97FE3FB784800045138000001981F005C83E1000C800100147C0803A6382100104E8000209421FFE07C0802A690010024396100204862CB253FC0800080C300407C7D1B78388000003BDE20E838A0000038E00001484B0439907D00547FA3EB783880000048023999280300207C7F1B78408000107FA3EB78389E000048000415809D0054806400003C03B49F28006D6540820010A004000428006B00418200107FA3EB78389E0014480003E9807D0054A003000628000002418200107FA3EB78389E002C480003CD807D0054381FFFE0809D004038A0000480C3000C90DD004C7C06005080630008907D00507C661A14901D0058484FFCA980BD004C809D00547C032A14907D004438840020901D00484803F40D807D0048809D00504803F531396100204862CA81800100247C0803A6382100204E8000209421FFD07C0802A690010034396100304862C9FD80A300547C7A1B788083004C3FE08000800300583F2080007C85221483C300443B8400203F0048007FBC021448000254801C00003B9C0004541B023E5404463E3C1BFF012800FFFE40820010837C00003B9C0004480000087F7BF2142804004141810208387F214C5480103A7C63002E7C6903A64E800420807C00003B9C00045460000141820008480000087C7E1A14907B0000480001E0807C00003B9C00045460000141820008480000087C7E1A14B07B0000480001C0807C00003B9C00045460000141820008480000087C7E1A145460843EB01B00004800019C807C00003B9C00045460000141820008480000087C7E1A14546004215460843EB01B000041820174A07B000038030001B01B000048000164807C00003B9C00045460000141820008480000087C7E1A14801B00007C7B18505400078A506001BA901B000048000134801C00003B9C0004901B000048000124801C00003B9C0004B01B000048000114801C00003B9C0004981B000048000104807C00005460000141820008480000087C7E1A14809C00043B9C0008801B00007C002040408200DC907B0000480000D4809C0004801B0000807C00003B9C00087C002040408200BC907B0000480000B4801C0004A07B00005400043E809C00007C0300403B9C000840820098B09B000048000090801C0004887B00005400063E809C00007C0300403B9C000840820074989B00004800006C807C00003B9C00045460000141820008480000087C7E1A147C7B18503C004800506001BA901B000048000040807C00003B9C00045460000141820008480000087C7E1A147C1B185038780001540001BA7C600378901B0000480000107F43D37838992130480000D57C00D86C7C0004AC7C00DFAC7C1CE8404180FDAC7C0004AC4C00012C396100304862C7B1800100347C0803A6382100304E8000209421FFF07C0802A69001001493E1000C93C100088083005480A3004480640014800400107FE51A147FC5021448000014819E00007D8903A64E8004213BDE00047C1EF8404180FFEC8001001483E1000C83C100087C0803A6382100104E8000209421FFF07C0802A69001001493E1000C7C7F1B7880630054484FF94138000000901F0054901F005883E1000C800100147C0803A6382100104E8000209421FDF07C0802A63CA080007C86237890010214386100103880020038A522544CC63182486321013C608000380000009001000838810008800320703861000C9001000C38A10010485B65A5800102147C0803A6382102104E800020FFFFFFFF2F437573746F6D436F64652F437573746F6D436F64655F534234572E62696E008000207400000000496E7374616C6C6564206D6F64756C652061742025700A2020636F6465203A207074723D25702073697A653D25640A202062737320203A207074723D25702073697A653D25640A0080003FFC42696E61727920746F6F20736D616C6C00000000556E6B6E6F776E2062696E61727920666F726D6174000000496E636F6D70617469626C652062696E6172792076657273696F6E00556E6B6E6F776E20636F6D6D616E642064657465637465640000000080001F3880001D4880001F3880001F3880001D6880001D8880001DAC80001F3880001F3880001F3880001DE480001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001E1480001E2480001E3480001E4480001E7480001E9480001EB880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001F3880001EDC80001F084B414D454B204552524F520A0A25730A00000000\" />\r\n\t\t<memory offset=\"0x804B7DA8\" value=\"4BB49C58\" />\r\n\t\t<memory offset=\"0x804B7E00\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x804B7EC4\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B64A8\" value=\"60000000\" />\r\n\t\t<memory offset=\"0x805B67B4\" value=\"60000000\" />\r\n\t</patch>\r\n</wiidisc>"
+        }
+      ],
+      "readmes": {},
+      "format": "ZIP \u00b7 Riivolution mod data"
+    }
+  ],
+  "downloadsExecuted": false
+}

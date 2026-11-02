@@ -1,0 +1,46 @@
+✔ console directories match actual console routes without crossing generations (13.3211ms)
+✔ the exact user-supplied category links stay assigned to their matching systems (8.9863ms)
+✔ hub integration adds a game directory card and navigation idempotently while retaining old downloads (2.9016ms)
+✔ ordinary topic pages gain navigation without an unrelated resource card (1.7826ms)
+✔ ready builds, downloaded artifacts and unrelated pages remain byte-identical (3.8012ms)
+✔ generated directory pages expose provider websites and a route back to their console (12.2974ms)
+✔ hub grouping preserves original cards, compatibility text, navigation and downloads (2.8045ms)
+✔ earlier hub layout migrates its sidebar shortcut into main without regrouping cards (0.3305ms)
+✔ hub presentation does not modify other console pages or immutable helpers (0.1608ms)
+✔ adds available destinations in the console group and preserves unrelated markup (7.8716ms)
+✔ waits for real destination pages and leaves absent console groups unchanged (3.2976ms)
+✔ dedupes relative and same-origin absolute destination rows (2.4352ms)
+✔ activates Switch 2 distinctly from original Switch and clears fallback active entries (1.8714ms)
+✔ supports Xbox nested pages and preserves active semantics when file is unknown (3.2809ms)
+✔ sidebar decorator remains compatible with old signature and new entries (9.0667ms)
+✔ immutable downloaded helpers stay byte-identical through every entry point (6.2273ms)
+✔ real logo assets are inert SVGs with viewBoxes and documented hashes (1.3845ms)
+✔ Vita topic keeps relevant categories, formats and filter hooks with an accurate static count (3.2583ms)
+✔ Wii U categories keep multiword values intact and preserve unrelated model controls (0.5283ms)
+✔ DS and 3DS category memberships use space-separated values (1.147ms)
+✔ Wii and PSP prune category buttons without deleting all, reset or model filters (0.6205ms)
+✔ non-catalogue setup content remains byte-identical (0.1554ms)
+✔ topic capture retains nested sections and stops before a sibling (2.0212ms)
+✔ attribute reads exact names and decodes category entities (1.0301ms)
+✔ article filtering preserves complete chosen downloads and surrounding controls (1.1804ms)
+✔ moved content keeps local anchors and resolves links to omitted source sections (0.371ms)
+✔ all twelve console manifests identify real content, artwork and destinations (111.7799ms)
+✔ every hub card leads to its category and deliberately retains the full library (7.9933ms)
+✔ generated category pages contain only the requested labelled articles (18.674ms)
+✔ representative topics retain complete original resource downloads and exclude other categories (21.9169ms)
+✔ original complete libraries retain their expanded resources and ready downloads (10.5156ms)
+✔ topic navigation preserves deep links, filters and deliberate libraries (1.5244ms)
+✔ topic navigation resolves relative links without changing external destinations (0.2134ms)
+✔ topic navigation protects exact archived companion and download bytes (0.0995ms)
+✔ topic sidebar activation follows hub and child topic pages idempotently (1.148ms)
+✔ original console entry pages gain a hub shortcut without changing source content (2.0775ms)
+✔ Vita shortcut belongs to the original index while its complete library stays accessible (0.1172ms)
+✔ entry shortcut preserves library queries and historic hash links and only accepts registered hubs (0.6627ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 268.0508

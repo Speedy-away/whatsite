@@ -1,0 +1,81 @@
+{
+  "updatedAt": "2026-11-02T13:40:38.230Z",
+  "status": "Complete locally: visible category imagery uses platform-specific mixes; desktop and phone checked.",
+  "request": "Update visible images across every console and related category page with mixes of emulator/tool logos, games and more.",
+  "mode": "Native HTML/CSS compositions of existing unmodified local images, not generated replacement logos or raster editing.",
+  "coverage": {
+    "eligiblePagesChecked": 513,
+    "pagesWithMixes": 33,
+    "mixes": 179,
+    "categoryCards": 178,
+    "pcOverviewHeaderMixes": 1,
+    "destinations": 144
+  },
+  "files": {
+    "manifest": "docs/category-card-art.json",
+    "renderer": "scripts/category-card-art.cjs",
+    "builder": "scripts/build-category-card-art.cjs",
+    "stylesheet": "assets/category-card-art.css",
+    "instructions": "docs/category-card-art.md"
+  },
+  "integration": [
+    "scripts/search-page-output.cjs",
+    "scripts/console-game-directories.cjs",
+    "scripts/build-console-topic-hubs.cjs"
+  ],
+  "checks": {
+    "tests": {
+      "total": 498,
+      "passed": 498,
+      "failed": 0,
+      "skipped": 0,
+      "output": "docs/qa/category-card-art-final-tests.txt"
+    },
+    "categoryRebuild": "--check passes; zero pending changes",
+    "metadataPages": 513,
+    "metadataDrift": [],
+    "genericKeywordEntries": 0,
+    "searchTagDrift": 0,
+    "siteAudit": "Audited 471 public pages and 50906 local links/assets; 0 issue(s).",
+    "protectedHelpers": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.11",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.11",
+        "livePassed": true,
+        "immutablePassed": true,
+        "previousPassed": true
+      }
+    ],
+    "readyResourceArtwork": "Every PS4/PS5 catalogue card retains the exact item.image from docs/console-download-catalog.json; regression test passes.",
+    "links": "Artwork writer asserts all existing anchor tags and script blocks are identical before and after composition."
+  },
+  "visualChecks": {
+    "desktop": "docs/qa/category-card-art-vita-desktop.jpg",
+    "phone": "docs/qa/category-card-art-vita-phone.jpg",
+    "phoneWidth": 390,
+    "pcDesktopWidth": 1280,
+    "brokenLoadedImages": 0,
+    "horizontalOverflow": false,
+    "viewportRestored": true
+  },
+  "notes": [
+    "Only primary category destinations choose the card artwork; individual application/setup-guide links are excluded.",
+    "Emulator images come from projects listed for the destination platform; native and PC emulators remain distinct.",
+    "Single-project cards retain their original artwork. Where a category only lists one project, no extra compatibility is invented to fill the layout.",
+    "No ready files, archives or immutable HTML companions were modified, downloaded or executed.",
+    "The earlier social-preview preservation baseline remains historical and is not rebased after these authorized visible artwork changes."
+  ],
+  "reports": {
+    "coverage": "docs/qa/category-card-art-coverage.json",
+    "builder": "docs/qa/category-card-art-build.json",
+    "durability": "docs/qa/site-search-durable-verification.json"
+  },
+  "publication": "Local only; no commit, push, publication or deployment."
+}

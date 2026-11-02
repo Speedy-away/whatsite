@@ -1,0 +1,66 @@
+{
+  "id": "vwii-NewoFox",
+  "title": "Newo Fox",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "1.2",
+  "url": "https://hbb1.oscwii.org/api/contents/NewoFox/NewoFox.zip",
+  "source": "https://oscwii.org/library/app/NewoFox",
+  "name": "NewoFox-1.2.zip",
+  "description": "on rails arcade shooter",
+  "author": "Owen",
+  "details": "Newo Fox - Fighter One-X on rails arcade shooter. \nGetting the highest score, go for the Top worldwide Ranking! 100 levels of fun.\n\nBut its not that simple as you think. You need to get points by destroying Enemies, getting as far as the rounds let you, until, when you arrived to the finish.  So, what are you waiting for? Get your Wiimote, sit down, keep calm and SMASH THOSE ENEMIES!\n\nDo you want to training, to putting yourself to the limit?\n\nTry changing difficulty on menu, its simple!\n- BOSS RUSH......(only bosses!)\n- HARD...........(more enemies, longer stages)\n- NORMAL.........(default)\n- EASY...........(no bosses, only space)\n- RANDOM JUMP....(option: goes to a random level)\n",
+  "expectedBytes": 4270009,
+  "icon": "https://hbb1.oscwii.org/api/contents/NewoFox/icon.png",
+  "requirements": "vWii Homebrew Channel and the game’s supported Wii controls. OSC explicitly lists vWii support; Wii U GamePad support is not implied.",
+  "setup": "Extract the full ZIP to SD root. Keep /apps/<game>/boot.dol and all supplied folders together, then launch from the vWii Homebrew Channel.",
+  "supportedPlatforms": [
+    "wii",
+    "vwii",
+    "wii_mini"
+  ],
+  "peripherals": [
+    "Wii Remote",
+    "Nunchuk",
+    "Classic Controller",
+    "GameCube Controller",
+    "SDHC"
+  ],
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 71,
+    "uncompressedBytes": 6105660,
+    "builds": [
+      {
+        "path": "apps/NewoFox/boot.dol",
+        "bytes": 1707360,
+        "sha256": "4b83d0b032cf87cff9497dfb616ea35f81aa0ecb1a3b04629ab8268ccd5cad7c"
+      }
+    ],
+    "xmlFiles": [
+      "apps/NewoFox/meta.xml"
+    ],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/vwii-NewoFox.png",
+  "file": {
+    "name": "NewoFox-1.2.zip",
+    "version": "1.2",
+    "bytes": 4270009,
+    "sha256": "9ca7af80e8b71e5de71919d3b20113ad02504d9a9df54f36d65b019d4165240d",
+    "sourceUrl": "https://hbb1.oscwii.org/api/contents/NewoFox/NewoFox.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/NewoFox-1.2.zip",
+    "itemId": "wiiu-games-batch2-vwii-NewoFox",
+    "platform": "Wii U",
+    "category": [
+      "vWii",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\vWii\\Homebrew Games\\Newo Fox\\Builds\\1.2\\NewoFox-1.2.zip"
+  },
+  "mirrorReason": null
+}

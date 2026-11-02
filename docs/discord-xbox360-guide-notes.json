@@ -1,0 +1,140 @@
+{
+  "discord-xbox360-gta5-boxuga-v2": {
+    "version": "V2",
+    "compatibility": "Xbox 360 RGH. Source archive title ID 545408A7; no numbered game title update confirmed.",
+    "downloads": [
+      {
+        "url": "https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/V2/Boxuga.V2.Xbox.zip",
+        "label": "Original Boxuga V2 Xbox RGH ZIP"
+      }
+    ],
+    "tags": [
+      "Xbox 360",
+      "RGH",
+      "GTA V",
+      "Mod loader",
+      "Boxuga",
+      "LIVE container"
+    ],
+    "guideBlocks": [
+      {
+        "type": "paragraph",
+        "title": "Source build",
+        "text": "The pinned V2 release supplies a separate Xbox 360 RGH ZIP. Its PS3 update.rpf is a different platform build."
+      },
+      {
+        "type": "paragraph",
+        "title": "Source folder layout",
+        "text": "The Xbox ZIP contains Content/0000000000000000/545408A7/000B0000/tu00000009_00000000. A zero-byte instruction file says to drag the file to the USB root. Preserve the complete source folder tree and your original game files. The filename alone does not establish a game title-update number."
+      }
+    ]
+  },
+  "discord-xbox360-other-rdr-demonic-2-7": {
+    "gameId": "red-dead-redemption-undead-nightmare",
+    "gameIds": [
+      "red-dead-redemption-undead-nightmare"
+    ],
+    "referenceGameIds": [
+      "red-dead-redemption"
+    ],
+    "version": "2.7 (post label)",
+    "gameUpdate": "Latest TU (source wording; number not supplied)",
+    "region": "Region-free; media ID 5B48AF70 (source README)",
+    "compatibility": "Undead Nightmare NON-GOTY only. Source says normal Red Dead Redemption is no longer supported.",
+    "tags": [
+      "Xbox 360",
+      "RGH",
+      "Undead Nightmare",
+      "Non-GOTY",
+      "Demonic",
+      "Jedijosh",
+      "Media ID5B48AF70"
+    ],
+    "note": "The Discord post uses the broad Red Dead Redemption title. The archive README restricts this distribution to Undead Nightmare NON-GOTY and explicitly excludes the normal game.",
+    "guideBlocks": [
+      {
+        "type": "paragraph",
+        "title": "Edition and media ID",
+        "text": "Source README: Undead Nightmare NON-GOTY, region-free, media ID 5B48AF70. Normal Red Dead Redemption is explicitly no longer supported. The requested latest title update has no number in the README."
+      },
+      {
+        "type": "list",
+        "title": "Supplied variants and controls",
+        "items": [
+          "The archive preserves loose files, ROOT OF GAME FILES and separate Demonic/Jedijosh RGH premade RPFs. Keep the original archive and game files.",
+          "Use one menu at a time: the README warns Demonic and Jedijosh together cause problems.",
+          "Demonic: RB + right stick click. Jedijosh: RB + D-pad Right. D-pad navigates, A selects and B goes back.",
+          "These are source instructions and static file checks; no console installation or execution was tested."
+        ]
+      }
+    ]
+  },
+  "discord-xbox360-programs-horizon": {
+    "downloads": [
+      {
+        "url": "https://www.wemod.com/horizon/download",
+        "label": "Original Windows helper download"
+      }
+    ]
+  },
+  "discord-xbox360-programs-xiso-extract": {
+    "downloads": [
+      {
+        "url": "https://digiex.net/attachments/isoextract-zip.7679/",
+        "label": "Original Windows helper download"
+      }
+    ]
+  },
+  "discord-xbox360-gta4-vanguard": {
+    "compatibility": "Vanguard_WAW_ZM.xex has an XEX2 header. Yeeeee.txt gives controls and describes changes, but no title update, region/media ID, required loader, installation destination or version number is supplied.",
+    "evidence": {
+      "sha256": "df10d1d7dc82d11f99856bb4065ea1985fa886d01dd49d132d83666a62dd555b",
+      "bytes": 57570,
+      "proposedArchivePlatform": "Xbox 360",
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "proposedArchiveCategory": [
+        "Games",
+        "Call of Duty: World at War"
+      ],
+      "reason": "Actual game identity established by exact archived file and README; source forum association remains explicitly unconfirmed."
+    }
+  },
+  "discord-xbox360-gta5-myten-1-3": {
+    "compatibility": "The included game list names nine games and their modes; no exact title updates, regions/media IDs, loading method, installation destination or controls are supplied. MultiCOD routing follows this explicit list only.",
+    "evidence": {
+      "sha256": "ebe74fb1a73d6d6ca03926620707356b2edd30b9e041ff2177b7bc029f301567",
+      "bytes": 239980,
+      "proposedArchivePlatform": "Xbox 360",
+      "proposedArchiveRole": [
+        "Builds"
+      ],
+      "proposedArchiveCategory": [
+        "Games",
+        "Call of Duty multi-game packs"
+      ],
+      "reason": "Actual game identity established by exact archived file and README; source forum association remains explicitly unconfirmed."
+    }
+  },
+  "discord-xbox360-programs-neighborhood": {
+    "category": "desktop-helper",
+    "version": "21256.3 (full SDK filename)",
+    "compatibility": "Windows full Xbox 360 SDK installer; not a standalone Neighborhood package or console payload.",
+    "tags": [
+      "Xbox 360",
+      "Windows helper",
+      "Neighborhood",
+      "SDK21256.3",
+      "Full SDK"
+    ],
+    "note": "The source download is the full 1.53 GB XBOX360 SDK21256.3.exe. The preserved original is saved to the local backup; the original source link remains available. It has not been run.",
+    "guideBlocks": [
+      {
+        "type": "paragraph",
+        "title": "What the source supplies",
+        "text": "The reviewed MEGA file is XBOX360 SDK21256.3.exe, a full Windows SDK installer rather than a standalone Neighborhood helper. No console installation is started by this website. The installer was archived without execution."
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+.wii-more-intro,.wii-more-provenance{max-width:80ch;color:var(--text-secondary,#b8bdc8);line-height:1.7;margin-bottom:24px}
+.wii-more-controls{display:grid;grid-template-columns:minmax(200px,1fr) minmax(160px,230px) auto;gap:16px;align-items:end;margin:28px 0 16px}
+.wii-more-controls label{display:block;font-weight:600;margin-bottom:8px}
+.wii-more-controls input,.wii-more-controls select,.wii-more-controls button,.wii-more-filters button{min-height:46px;border:1px solid #424957;border-radius:8px;background:#14181e;color:#f1f5f9;padding:11px 14px;font:inherit}
+.wii-more-controls input,.wii-more-controls select{width:100%;min-width:0}
+.wii-more-controls button,.wii-more-filters button{cursor:pointer}
+.wii-more-controls :focus-visible,.wii-more-filters button:focus-visible,.wii-more-details summary:focus-visible{outline:2px solid #6ee7b7;outline-offset:4px}
+.wii-more-filters{display:flex;flex-wrap:wrap;gap:8px}
+.wii-more-filters button[aria-pressed="true"]{background:#174838;border-color:#69c9a1;color:#e3fff1}
+#wii-more-status{color:#b8c4cf;margin:14px 0 24px}
+.wii-more-grid{align-items:start}
+.wii-more-card{min-width:0;overflow:hidden}
+.wii-more-card[hidden],#wii-more-empty[hidden]{display:none!important}
+.wii-more-card .wii-more-compatibility{font-size:.84rem;border-left:2px solid #b49a62;padding-left:12px;color:#dbcaa8}
+.wii-more-card .wii-more-art{display:flex;align-items:center;justify-content:flex-start;min-height:96px;background:#101317;border:1px solid #303640;border-radius:6px;padding:16px;margin-bottom:20px}
+.wii-more-card .wii-more-art img{width:128px;height:48px;object-fit:contain;margin:0;border-radius:0;max-width:100%}
+.wii-more-card .wii-more-topic{font-size:.88rem;color:#a9cab9;margin-top:4px}
+.wii-more-card .game-features{margin:14px 0}
+.wii-more-card .wii-more-platforms{font-size:.82rem;color:#aad8c1;margin:16px 0 12px}
+.wii-more-boot{padding:12px;border-left:2px solid #4e9175;background:#141a18;font-size:.85rem}
+.wii-more-boot span,.wii-more-boot code{display:block}
+.wii-more-boot span{color:#9aaea2;margin-bottom:6px}
+.wii-more-boot code,.wii-more-details code{overflow-wrap:anywhere;word-break:break-word}
+.wii-more-details{margin-top:20px;border-top:1px solid #343a43;padding-top:12px;font-size:.9rem;line-height:1.6}
+.wii-more-details summary{cursor:pointer;padding:8px 0;color:#c0e1d0;font-weight:600}
+.wii-more-details p{margin:14px 0}
+.wii-more-sha code{display:block;font-size:.78rem;margin-top:6px;word-break:break-all}
+.wii-more-models{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:24px}
+.wii-more-models article{border-top:2px solid #508a6c;padding:22px 0}
+.wii-more-models h3{font-size:1.1rem;margin-bottom:14px}
+.wii-more-models p{color:#bcc6c0;line-height:1.7;margin-bottom:18px}
+.wii-more-models code{display:block;overflow-wrap:anywhere;font-size:.8rem;margin:8px 0}
+.wii-more-provenance{font-size:.84rem;margin-top:30px}
+#wii-more-empty{padding:28px 0;color:#d6dfdb}
+@media(max-width:900px){.wii-more-models{grid-template-columns:1fr}.wii-more-models article{padding:18px 0}.wii-more-controls{grid-template-columns:minmax(0,1fr) minmax(140px,200px)}.wii-more-controls button{grid-column:1/-1;justify-self:start}}
+@media(max-width:560px){.wii-more-controls{grid-template-columns:1fr}.wii-more-controls button{justify-self:stretch}.wii-more-grid{grid-template-columns:minmax(0,1fr)}.wii-more-card .guide-links a{max-width:100%;overflow-wrap:anywhere}.wii-more-filters{gap:6px}.wii-more-filters button{flex:1 1 auto}}

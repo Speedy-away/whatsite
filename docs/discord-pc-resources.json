@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-11-02",
+  "scope": "Additive reviewed sources; live audit remains in progress.",
+  "games": [
+    {
+      "id": "cod4",
+      "title": "Call of Duty 4: Modern Warfare",
+      "page": "/pc/discord-mods/call-of-duty/cod4/index.html",
+      "image": "/assets/images/covers/cod4.jpg",
+      "kind": "game"
+    },
+    {
+      "id": "world-at-war",
+      "title": "Call of Duty: World at War",
+      "page": "/pc/discord-mods/call-of-duty/world-at-war/index.html",
+      "image": "/assets/images/covers/cod4.jpg",
+      "kind": "game"
+    }
+  ],
+  "resources": [
+    {
+      "id": "discord-pc-cod4-aspirin-azza",
+      "name": "Aspirin Azza",
+      "platforms": [
+        "pc"
+      ],
+      "gameId": "cod4",
+      "gameIds": [
+        "cod4"
+      ],
+      "category": "script",
+      "version": "",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "The aspirin_pc branch contains seven maps/mp/gametypes GSC scripts. dom.gsc sets MenuOpen but ADS/Attack scrolling checks OpenMenu; no OpenMenu assignment was found across those seven files. Exact PC client/update and install workflow are undocumented.",
+      "region": "",
+      "source": "https://discord.com/channels/1528329794947776572/1554621118206320640",
+      "description": "Aspirin Azza PC raw-script branch with a separate PS3 fastfile. A static menu-state discrepancy remains unresolved.",
+      "tags": [
+        "PC",
+        "Discord source",
+        "Call of Duty 4",
+        "Multiplayer",
+        "GSC scripts",
+        "PC/PS3 branches",
+        "Static menu-state concern",
+        "Incomplete"
+      ],
+      "keywords": [],
+      "downloads": [
+        {
+          "url": "https://www.mediafire.com/file/4lrjlpv38fr9r1e/Cod4_Aspirin_Azza_PS3_PC.rar/file",
+          "label": "Original source file"
+        }
+      ],
+      "references": [],
+      "note": "",
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Keep the PC script tree intact",
+          "text": "Preserve aspirin_pc/maps/mp/gametypes with all seven GSC files. The separate patch_mp.ff PS3 member belongs to the console branch. READ ME.txt gives credits/features without a PC installation destination or loading/build workflow."
+        },
+        {
+          "type": "list",
+          "title": "Controls visible in dom.gsc",
+          "items": [
+            "The opening prompt/check uses Smoke or secondary-offhand together with Frag.",
+            "Use selects and Melee backs out.",
+            "ADS/Attack are intended for scrolling, but their state guards differ from the initialized/opened field. These are engine actions, not fixed keyboard mappings."
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Unresolved source discrepancy",
+          "text": "dom.gsc assigns MenuOpen during initialization/open/close but its ADS/Attack scrolling guards test OpenMenu. No OpenMenu assignment appears in its seven PC scripts. This is a static concern rather than a runtime diagnosis; the source is unchanged. No update or map pin is supplied."
+        }
+      ],
+      "readiness": "incomplete",
+      "modes": [
+        "multiplayer"
+      ]
+    },
+    {
+      "id": "discord-pc-cod4-cabepex-1-5",
+      "name": "CabePex V1.5",
+      "platforms": [
+        "pc"
+      ],
+      "gameId": "cod4",
+      "gameIds": [
+        "cod4"
+      ],
+      "category": "reference",
+      "version": "V1.5",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "Publisher listings identify PC/PS3/Xbox V1.5 and an unfinished update. The exact captured publisher thread returned HTTP403. No PC archive, controls, game-update or map requirements were verified.",
+      "region": "",
+      "source": "https://discord.com/channels/1528329794947776572/1531336691883704592",
+      "description": "CabePex V1.5 publisher reference. Public publisher listings say the project is unfinished; no accessible PC asset or exact setup guide was verified.",
+      "tags": [
+        "PC",
+        "Discord source",
+        "Call of Duty 4",
+        "CabePex V1.5",
+        "Publisher reference",
+        "Unfinished source label",
+        "PC asset unavailable"
+      ],
+      "keywords": [],
+      "downloads": [],
+      "references": [
+        {
+          "url": "https://cabconmodding.com/threads/pc-ps3-xbox-call-of-duty-modern-warfare-mod-menu-cabepex-v1-5-by-cabcon-p-x.5957/",
+          "label": "Publisher source & requirements"
+        }
+      ],
+      "note": "",
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Publisher source and access result",
+          "text": "The Discord post links the CabePex V1.5 publisher thread. Public browsing returned HTTP403 for that thread; its indexed publisher listing names PC/PS3/Xbox and says the update remains unfinished. No authentication, payment or access bypass was attempted."
+        },
+        {
+          "type": "text",
+          "title": "No verified PC asset/setup",
+          "text": "No matching PC archive or accessible installation workflow was established from this source. A console-labelled CabePex archive from another URL is not substituted for the publisher's PC version. V1.5 is the source label; controls, update and map pins remain unspecified."
+        }
+      ],
+      "readiness": "incomplete"
+    },
+    {
+      "id": "discord-pc-cod4-m40a3fusionz",
+      "name": "IVI40A3Fusionz",
+      "platforms": [
+        "pc"
+      ],
+      "gameId": "cod4",
+      "gameIds": [
+        "cod4"
+      ],
+      "category": "script",
+      "version": "Unreleased Patch UPDATED (archive label)",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "Archive separates PC and PS3. The PC tree supplies IVI40A3Fusionz.gsc, File1.gsc–File14.gsc and maps/mp/gametypes/_rank.gsc. It gives action-based controls but no README/install workflow, exact PC client/update or map pins.",
+      "region": "",
+      "source": "https://discord.com/channels/1528329794947776572/1530906056962871296",
+      "description": "IVI40A3Fusionz · source-listed PC resource.",
+      "tags": [
+        "PC",
+        "Discord source",
+        "Call of Duty 4",
+        "Multiplayer",
+        "GSC scripts",
+        "PC/PS3 branches",
+        "Unreleased Patch UPDATED",
+        "Helper scripts required"
+      ],
+      "keywords": [],
+      "downloads": [
+        {
+          "url": "https://www.mediafire.com/file/w481evks0rwq78b/IVI40A3Fusionz+'Unreleased+Patch'+UPDATED.rar",
+          "label": "Original source file"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.mediafire.com/file/w481evks0rwq78b/IVI40A3Fusionz+%27Unreleased+Patch%27+UPDATED.rar",
+          "label": "Publisher source & requirements"
+        }
+      ],
+      "note": "",
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Preserve the complete PC branch",
+          "text": "Keep the whole PC/IVI40A3Fusionz 'Unreleased Patch' directory with its main script, File1–File14 helpers and maps/mp/gametypes/_rank.gsc. The separate PS3/patch_mp.ff is a console component. No PC installation path or loader/build workflow is supplied; a raw tree is not described as a compiled PC fastfile."
+        },
+        {
+          "type": "list",
+          "title": "Actions displayed by the PC script",
+          "items": [
+            "Frag opens the mod menu; Smoke/secondary-offhand opens the player menu where available.",
+            "Attack/ADS navigate, Use or activate selects and Melee backs out.",
+            "Actions follow the player's bindings; no fixed keyboard keys or tested behavior are inferred."
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Version limit",
+          "text": "The archive says Unreleased Patch UPDATED without a numeric release. Exact PC client/update and supported maps are undocumented; verify the loading workflow before installation."
+        }
+      ],
+      "modes": [
+        "multiplayer"
+      ]
+    },
+    {
+      "id": "discord-pc-waw-money-n-weed-v1",
+      "name": "Money 'n' Weed v1",
+      "platforms": [
+        "pc"
+      ],
+      "gameId": "world-at-war",
+      "gameIds": [
+        "world-at-war"
+      ],
+      "category": "script",
+      "version": "v1 (post label)",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "Scripts explicitly branch for nazi_zombie_prototype, nazi_zombie_asylum, nazi_zombie_sumpf and nazi_zombie_factory and call Zombies functions. These are source map references, not tested support. Raw scripts/assets lack a documented PC loader/build workflow or update pin.",
+      "region": "",
+      "source": "https://discord.com/channels/1528329794947776572/1562545848036884540",
+      "description": "Money 'n' Weed v1 · source-listed PC resource.",
+      "tags": [
+        "PC",
+        "Discord source",
+        "World at War",
+        "Zombies",
+        "v1 post label",
+        "Raw GSC scripts",
+        "Weapon assets required",
+        "QM_Dino dependency",
+        "Source map references"
+      ],
+      "keywords": [],
+      "downloads": [
+        {
+          "url": "https://www.mediafire.com/file/hc01aq44s0srhve/%5E2Money+%5E7'n'+%5E2Weed.rar",
+          "label": "Original source file"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.mediafire.com/file/hc01aq44s0srhve/%5E2Money+%5E7%27n%27+%5E2Weed.rar",
+          "label": "Publisher source & requirements"
+        }
+      ],
+      "note": "",
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Keep all runtime components together",
+          "text": "Preserve the root's maps, QM_Dino and weapons/sp trees plus missingasset.csv. The archive supplies GSC and weapon assets without a compiled fastfile or setup guide. Both New Text Document markers are empty; no install destination, supported PC client or build/loading workflow is documented."
+        },
+        {
+          "type": "list",
+          "title": "Actions in maps/_createdynents.gsc",
+          "items": [
+            "ADS plus Melee opens the menu.",
+            "Attack/ADS scroll, Use selects and Melee backs out.",
+            "These are engine actions rather than fixed keyboard bindings."
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Exact map evidence",
+          "text": "The code branches for nazi_zombie_prototype, nazi_zombie_asylum, nazi_zombie_sumpf and nazi_zombie_factory. This establishes Zombies-oriented code paths, not a compatibility test or all-map promise. No update or internal release beyond the post's v1 label is supplied."
+        }
+      ],
+      "modes": [
+        "zombies"
+      ]
+    },
+    {
+      "id": "discord-pc-waw-physics-n-flex-v2",
+      "name": "Physics 'n' Flex v2",
+      "platforms": [
+        "pc"
+      ],
+      "gameId": "world-at-war",
+      "gameIds": [
+        "world-at-war"
+      ],
+      "category": "script",
+      "version": "v2 (post label)",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "Source-listed PC common.ff has IWffu100 magic and little-endian header value 387. That is container evidence, not a game-update/TU or internal menu-version pin. No mode, maps, PC client or setup instructions are documented.",
+      "region": "",
+      "source": "https://discord.com/channels/1528329794947776572/1531361912758210560",
+      "description": "Physics 'n' Flex v2 · source-listed PC resource.",
+      "tags": [
+        "PC",
+        "Discord source",
+        "World at War",
+        "FastFile",
+        "common.ff",
+        "v2 post label",
+        "IWffu100",
+        "Update unspecified"
+      ],
+      "keywords": [],
+      "downloads": [
+        {
+          "url": "https://www.mediafire.com/file/tdp4hsdewlb3vtb/common.ff/file",
+          "label": "Original source file"
+        }
+      ],
+      "references": [],
+      "note": "",
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Standalone FastFile evidence",
+          "text": "The exact source supplies common.ff only. Static header inspection identifies IWffu100 and header value 387, which are not substituted for game-update or menu versions. The post supplies the v2 label."
+        },
+        {
+          "type": "text",
+          "title": "Setup remains undocumented",
+          "text": "No destination, replacement procedure, required PC client, mode, map, game update or opening control is supplied. Preserve original game files and verify these requirements before replacing data. No console title update/path is transferred from similarly named menus."
+        }
+      ]
+    },
+    {
+      "id": "discord-pc-waw-xkovx-v3",
+      "name": "xKoVx V3",
+      "platforms": [
+        "pc"
+      ],
+      "gameId": "world-at-war",
+      "gameIds": [
+        "world-at-war"
+      ],
+      "category": "reference",
+      "version": "V3",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "default_mp.xex has XEX2 magic. README uses XEXMenu and LT plus Knife after spawning. No PC executable, script branch or PC loader/setup workflow, update or map pins are supplied.",
+      "region": "",
+      "source": "https://discord.com/channels/1528329794947776572/1531356895191765062",
+      "description": "PC source/platform mismatch: xKoVx V3 supplies an Xbox 360 executable/patch with XEXMenu instructions; no PC build is supplied.",
+      "tags": [
+        "PC source post",
+        "Discord source",
+        "World at War",
+        "Multiplayer",
+        "Source/platform mismatch",
+        "Xbox 360 file",
+        "XEX2",
+        "Reference",
+        "No PC build"
+      ],
+      "keywords": [],
+      "downloads": [
+        {
+          "url": "https://www.mediafire.com/download/3f7g4294xgfo4hh/xKoVx+V3.rar",
+          "label": "Original source file"
+        }
+      ],
+      "references": [],
+      "note": "",
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Xbox files retained as reference",
+          "text": "The archive contains patch_mp.ff, default_mp.xex and READ MEH!.txt. The executable begins with XEX2 and README uses XEXMenu, so the exact file is not a verified PC build. Preserve the archive without transplanting its Xbox executable or paths into a PC guide."
+        },
+        {
+          "type": "text",
+          "title": "Source instructions identify the platform",
+          "text": "The README places both files in the WAW installation using XEXMenu, then opens with LT plus Knife after spawning. This is Xbox source evidence only. It supplies no PC controls/setup or exact update/map requirements."
+        }
+      ],
+      "readiness": "incomplete",
+      "modes": [
+        "multiplayer"
+      ]
+    },
+    {
+      "id": "discord-pc-waw-purple-kush-v2",
+      "name": "Purple Kush v2",
+      "platforms": [
+        "pc"
+      ],
+      "gameId": "world-at-war",
+      "gameIds": [
+        "world-at-war"
+      ],
+      "category": "script",
+      "version": "v2 (post) / v2.1 (ZIP) / v1.2 (internal folder)",
+      "gameUpdate": "Not specified by source",
+      "compatibility": "Post says v2, ZIP says v2.1 and internal folder says purple kush patch v1.2. Raw maps/mp GSC files and a promotional note supply no compiled fastfile, documented PC workflow, client/update pin or controls.",
+      "region": "",
+      "source": "https://discord.com/channels/1528329794947776572/1531351768687181987",
+      "description": "Purple Kush source-only GSC archive with preserved conflicting version labels; no compiled PC package or loading/build workflow is supplied.",
+      "tags": [
+        "PC",
+        "Discord source",
+        "World at War",
+        "Multiplayer",
+        "GSC source",
+        "Source Code",
+        "Incomplete distribution",
+        "Version discrepancy"
+      ],
+      "keywords": [],
+      "downloads": [
+        {
+          "url": "https://www.mediafire.com/download/n62a9p45uann4j2/Purple+Kush+v2.1.zip",
+          "label": "Original source file"
+        }
+      ],
+      "references": [],
+      "note": "",
+      "guideBlocks": [
+        {
+          "type": "text",
+          "title": "Retain all version labels",
+          "text": "The post, ZIP and internal directory respectively say v2, v2.1 and v1.2. No README resolves these labels; none is silently substituted for another."
+        },
+        {
+          "type": "text",
+          "title": "Source-only readiness",
+          "text": "Keep maps/mp and maps/mp/gametypes together. This is textual GSC source without a compiled fastfile or documented PC build/loading workflow. PLEASE READ FIRST!.txt is promotional and contains no setup/controls. Its PC-style tree alone does not establish ready-to-use compatibility."
+        },
+        {
+          "type": "text",
+          "title": "Exact same preserved archive",
+          "text": "This PC post uses the same URL and verified ZIP hash already preserved from the PS3/Xbox posts. Those additional posts do not establish a new build or transfer console setup requirements to PC."
+        }
+      ],
+      "readiness": "incomplete",
+      "modes": [
+        "multiplayer"
+      ]
+    }
+  ]
+}

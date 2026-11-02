@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-02T09:20:39.017Z",
+  "passed": true,
+  "browser": "ChatGPT in-app browser",
+  "page": "http://127.0.0.1:8879/console/retro/ds.html",
+  "filters": {
+    "initial": 19,
+    "wordle": 1,
+    "wordleAndEmulators": 0,
+    "emulators": 6,
+    "skins": 3,
+    "reset": 19
+  },
+  "responsive": [
+    {
+      "viewportWidth": 2334,
+      "documentWidth": 2319
+    },
+    {
+      "viewportWidth": 390,
+      "documentWidth": 375
+    },
+    {
+      "viewportWidth": 1024,
+      "documentWidth": 1009
+    }
+  ],
+  "mobileControlHeights": [
+    47.59375,
+    44,
+    47.59375
+  ],
+  "setupDisclosure": "Wordle setup opened and exact data paths visible",
+  "brokenLoadedCardImages": [],
+  "screenshots": [
+    "docs/qa/ds-dsi-more-desktop.png",
+    "docs/qa/ds-dsi-more-mobile.png"
+  ],
+  "viewportOverrideReset": true,
+  "hardwareTested": false,
+  "downloadedExecutablesRun": false
+}

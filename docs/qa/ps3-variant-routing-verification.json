@@ -1,0 +1,243 @@
+{
+  "reviewedAt": "2026-11-02T07:13:00.754Z",
+  "platform": "PS3",
+  "scope": "Existing source-labelled build branches and preserved public links. No archive extraction, payload execution, download or backup mutation.",
+  "resources": 185,
+  "publicFileLinksChecked": 665,
+  "missingPublicLinks": [],
+  "distinctSourceHenDexPairs": 1,
+  "sourceHenDexPairs": [
+    {
+      "resourceId": "discord-ps3-jimbo",
+      "downloads": [
+        {
+          "url": "https://www.mediafire.com/file/hy7js8v3knwgy2l/Jimbo_%2528PS3DEX%2529.rar/file",
+          "label": "Jimbo-PS3DEX.rar"
+        },
+        {
+          "url": "https://www.mediafire.com/file/5uk1gc6ujjyjmel/Jimbo_%2528PS3HEN%2529.rar/file",
+          "label": "Jimbo-PS3HEN.rar"
+        }
+      ],
+      "files": [
+        {
+          "local": "/downloads/ps3/jimbo-dex/Jimbo-PS3DEX.rar",
+          "bytes": 17004671,
+          "sha256": "9376d6970cee13003a49a6cd3a74f02f99726a06d9525301631b20f9908125fd",
+          "visibleOutsideDetails": true
+        },
+        {
+          "local": "/downloads/ps3/jimbo-hen/Jimbo-PS3HEN.rar",
+          "bytes": 21258078,
+          "sha256": "7b139db0454fd255754b08a2a9fceb74354135bc2b1d965979546add93361f11",
+          "visibleOutsideDetails": true
+        }
+      ]
+    }
+  ],
+  "combinedArchivesWithReviewedHenDexMembers": 8,
+  "combinedArchives": [
+    {
+      "resourceId": "gta-v-cloud-v15",
+      "method": "read-only 7-Zip entry listing",
+      "henMemberPaths": [
+        "CLOUD SPRX v1.5\\HEN((AGREGADO BLUS POR THE GAMER29 MDZ))\\BLES-07\\Cloud.sprx",
+        "CLOUD SPRX v1.5\\HEN((AGREGADO BLUS POR THE GAMER29 MDZ))\\BLES-07\\EBOOT.BIN",
+        "CLOUD SPRX v1.5\\HEN((AGREGADO BLUS POR THE GAMER29 MDZ))\\BLUS-56\\EBOOT.BIN",
+        "CLOUD SPRX v1.5\\HEN((AGREGADO BLUS POR THE GAMER29 MDZ))\\BLUS-56\\Salfety4.sprx"
+      ],
+      "dexMemberPaths": [
+        "CLOUD SPRX v1.5\\DEX\\Cloud.sprx",
+        "CLOUD SPRX v1.5\\DEX\\EBOOT.BIN"
+      ],
+      "completeInstallClaimed": false
+    },
+    {
+      "resourceId": "gta-v-weareghosts-v2",
+      "method": "read-only 7-Zip entry listing",
+      "henMemberPaths": [
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLES-HEN]\\EBOOT.BIN",
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLES-HEN]\\WeAreGhosts.sprx",
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLUS-HEN]\\EBOOT.BIN",
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLUS-HEN]\\WeAreGhosts.sprx"
+      ],
+      "dexMemberPaths": [
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLES-DEX]\\EBOOT.BIN",
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLES-DEX]\\WeAreGhosts.sprx",
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLUS-DEX]\\EBOOT.BIN",
+        "GTA 5 WeAreGhosts V2.0 SPRX MOD MENU\\WeAreGhosts sprx [BLUS-DEX]\\WeAreGhosts.sprx"
+      ],
+      "completeInstallClaimed": false
+    },
+    {
+      "resourceId": "gta-iv-orbit-free",
+      "method": "preserved extracted member metadata",
+      "henMemberPaths": [
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLES00229 (Grand Theft Auto IV)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLES00887 (GTA Episodes from Liberty City)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLUS30127 (Grand Theft Auto IV)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLUS30524 (GTA Episodes from Liberty City)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPEB00882 (Grand Theft Auto IV)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPEB00907 (GTA Episodes from Liberty City)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPUB30702 (Grand Theft Auto IV)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPUB30704 (GTA Episodes from Liberty City)\\HEN\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\HEN\\Orbit.sprx"
+      ],
+      "dexMemberPaths": [
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\DEX\\Orbit.sprx",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLES00229 (Grand Theft Auto IV)\\DEX\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLES00887 (GTA Episodes from Liberty City)\\DEX\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLUS30127 (Grand Theft Auto IV)\\DEX\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[Backup] BLUS30524 (GTA Episodes from Liberty City)\\DEX\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPEB00882 (Grand Theft Auto IV)\\DEX\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPEB00907 (GTA Episodes from Liberty City)\\DEX\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPUB30702 (Grand Theft Auto IV)\\DEX\\EBOOT.BIN",
+        "GTAIV-Orbit-Menu-Free-v1.1-(All-In-One)\\EBOOTS\\[PSN] NPUB30704 (GTA Episodes from Liberty City)\\DEX\\EBOOT.BIN"
+      ],
+      "completeInstallClaimed": false
+    },
+    {
+      "resourceId": "bo1-kebab-engine",
+      "method": "read-only 7-Zip entry listing",
+      "henMemberPaths": [
+        "Kebab Engine BO1\\Hen\\KebabBO1.sprx"
+      ],
+      "dexMemberPaths": [
+        "Kebab Engine BO1\\Dex\\KebabBO1.sprx"
+      ],
+      "completeInstallClaimed": false
+    },
+    {
+      "resourceId": "discord-ps3-cod4-forgotten-v1",
+      "method": "read-only 7-Zip entry listing",
+      "henMemberPaths": [
+        "COD4_Forgotten_V1_PS3\\EBOOTS\\(HEN)EBOOT.BIN",
+        "COD4_Forgotten_V1_PS3\\HEN SPRX\\cod4_Forgotten.sprx"
+      ],
+      "dexMemberPaths": [
+        "COD4_Forgotten_V1_PS3\\EBOOTS\\(DEX)EBOOT.BIN"
+      ],
+      "completeInstallClaimed": false
+    },
+    {
+      "resourceId": "discord-ps3-mw2-elite-bot",
+      "method": "read-only 7-Zip entry listing",
+      "henMemberPaths": [
+        "Menu\\Elite Bot HEN (MW2)\\EBOOT\\EBOOT.BIN",
+        "Menu\\Elite Bot HEN (MW2)\\tmp\\EliteBot\\EliteBotMW2.sprx"
+      ],
+      "dexMemberPaths": [
+        "Menu\\Elite Bot DEX (MW2)\\EBOOT.BIN",
+        "Menu\\Elite Bot DEX (MW2)\\EliteBot\\EliteBotMW2.sprx"
+      ],
+      "completeInstallClaimed": false
+    },
+    {
+      "resourceId": "discord-ps3-mw2-fury-v2",
+      "method": "read-only 7-Zip entry listing",
+      "henMemberPaths": [
+        "Fury V2 MW2\\tmp\\CEX , HEN\\FuryMW2.sprx"
+      ],
+      "dexMemberPaths": [
+        "Fury V2 MW2\\tmp\\DEX\\FuryMW2.sprx"
+      ],
+      "completeInstallClaimed": false
+    },
+    {
+      "resourceId": "discord-ps3-mw2-inphect-package",
+      "method": "read-only 7-Zip entry listing",
+      "henMemberPaths": [
+        "Read Instrctions\\EBOOTS\\HEN\\MW2_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\HEN\\BO1_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\HEN\\MW3_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\HEN\\Ghosts_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\HEN\\BO2_EBOOT.BIN",
+        "Read Instrctions\\HEN+CEX\\InphectMW3.sprx",
+        "Read Instrctions\\HEN+CEX\\InphectBO1.sprx",
+        "Read Instrctions\\HEN+CEX\\assets\\BO2\\unlock_all.bin",
+        "Read Instrctions\\HEN+CEX\\InphectMW2.sprx",
+        "Read Instrctions\\HEN+CEX\\InphectBO2.sprx",
+        "Read Instrctions\\HEN+CEX\\InphectGhosts.sprx"
+      ],
+      "dexMemberPaths": [
+        "Read Instrctions\\EBOOTS\\DEX\\BO1_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\DEX\\MW2_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\DEX\\BO2_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\DEX\\MW3_EBOOT.BIN",
+        "Read Instrctions\\EBOOTS\\DEX\\Ghosts_EBOOT.BIN",
+        "Read Instrctions\\DEX\\InphectGhosts.sprx",
+        "Read Instrctions\\DEX\\InphectMW3.sprx",
+        "Read Instrctions\\DEX\\InphectBO1.sprx",
+        "Read Instrctions\\DEX\\InphectBO2.sprx",
+        "Read Instrctions\\DEX\\assets\\BO2\\unlock_all.bin",
+        "Read Instrctions\\DEX\\InphectMW2.sprx"
+      ],
+      "completeInstallClaimed": false
+    }
+  ],
+  "distinctDexOnlyResource": {
+    "id": "bo1-viridian",
+    "compatibility": "Archive README requires both Target Type and LV2 Kernel to be DEX in Rebug Toolbox. The archive labels its EBOOT folder BLES-BLUS; exact title IDs and title update are not stated. CEX and HEN are not supported by this evidence."
+  },
+  "limitations": "Combined archive labels are not universal firmware, title-ID or game-update certification. Other compatibility claims were not converted into invented builds.",
+  "archiveHashChecks": [
+    {
+      "resourceId": "discord-ps3-jimbo",
+      "label": "DEX build",
+      "local": "/downloads/ps3/jimbo-dex/Jimbo-PS3DEX.rar",
+      "bytes": 17004671,
+      "sha256": "9376d6970cee13003a49a6cd3a74f02f99726a06d9525301631b20f9908125fd",
+      "matched": true
+    },
+    {
+      "resourceId": "discord-ps3-jimbo",
+      "label": "HEN build",
+      "local": "/downloads/ps3/jimbo-hen/Jimbo-PS3HEN.rar",
+      "bytes": 21258078,
+      "sha256": "7b139db0454fd255754b08a2a9fceb74354135bc2b1d965979546add93361f11",
+      "matched": true
+    },
+    {
+      "resourceId": "discord-ps3-matrixmods-v2",
+      "label": "V2 DEX build",
+      "local": "/downloads/ps3/matrixmods-v2-dex/MatrixMods-PS3DEX.rar",
+      "bytes": 39101677,
+      "sha256": "e8cd2f9c2d29026a4b81bf8b67c675c8ec509b973be222501642f571f3d169ef",
+      "matched": true
+    },
+    {
+      "resourceId": "discord-ps3-mw2-inphect-package",
+      "label": "HEN/CEX and DEX folders in one archive",
+      "local": "/downloads/ps3/discord-ps3-mw2-inphect-package/Multicod_Inphect_Paks.rar",
+      "bytes": 55497086,
+      "sha256": "edc048940bfff468165d0f0497ed629ac9dbf3cbf7616e5df5b4568f5d202f62",
+      "matched": true
+    }
+  ],
+  "archiveEvidenceErrors": [],
+  "gameRouting": {
+    "canonicalCod4Id": "cod4",
+    "canonicalCod4Url": "/console/ps3/mods/call-of-duty/cod4/",
+    "legacyAliasUrl": "/console/ps3/mods/call-of-duty/cod4-modern-warfare/",
+    "legacyAliasRetainsResourceAnchors": true,
+    "cod4GameDefinitions": 1,
+    "worldAtWarImage": "/assets/images/ps3-mods/fourth-waw-paradise.jpg",
+    "sourceRegistriesModified": false
+  },
+  "tests": {
+    "command": "node --test scripts/tests/ps3-multicod.test.cjs scripts/tests/ps3-downloads.test.cjs",
+    "passed": 11,
+    "failed": 0
+  },
+  "fullPs3Audit": {
+    "command": "node scripts/verify-ps3-catalog.cjs",
+    "completedAt": "2026-11-02T07:13:52.499Z",
+    "pages": 32,
+    "resources": 185,
+    "expansionArchiveFiles": 683,
+    "consoleFiles": 616,
+    "hashedFiles": 1459,
+    "errors": [],
+    "warnings": []
+  }
+}

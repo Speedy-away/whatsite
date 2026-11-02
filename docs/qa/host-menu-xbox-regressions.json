@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-11-02T12:57:34.474Z",
+  "scope": "The three Xbox-related failures in the saved host-menu all-tests run. Independent fresh focused suites and read-only generated-output audit.",
+  "passed": true,
+  "cause": "The saved full-suite log preceded concurrent regeneration of the Xbox library and GTA V source-resource page. The current builder output contains the missing additions and anchor.",
+  "intervention": "No builder, catalogue, page, test, language, host runtime, helper or download files were changed by this audit. Assertions were not weakened.",
+  "tests": {
+    "command": "node --test scripts/tests/discord-platform-resources.test.cjs scripts/tests/console-multicod.test.cjs scripts/tests/xbox360-more.test.cjs",
+    "tests": 20,
+    "passed": 20,
+    "failed": 0,
+    "observedResult": "Fresh focused run completed successfully before this report was written."
+  },
+  "library": {
+    "resources": 41,
+    "ready": 41,
+    "cards": 41,
+    "publisherPages": [
+      {
+        "id": "quad-carnage",
+        "url": "https://jaredlevi.itch.io/quad-carnage#download",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "wowjay",
+        "url": "https://jaredlevi.itch.io/wowjay/purchase",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "nest-bound",
+        "url": "https://jaredlevi.itch.io/nest-bound/purchase",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "slither360",
+        "url": "https://mathuwsgamermw.itch.io/slither360#download",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "portal-clone",
+        "url": "https://cayama0811.itch.io/portal-clone-xbox-360#download",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "matrix-v4",
+        "url": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "sonic-exe",
+        "url": "https://andkfox.itch.io/xbox360-sonicexe#download",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "sally-exe",
+        "url": "https://andkfox.itch.io/x360-sallyexe#download",
+        "present": true,
+        "savedAsBuild": false
+      },
+      {
+        "id": "silent-hill-skins",
+        "url": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+        "present": true,
+        "savedAsBuild": false
+      }
+    ]
+  },
+  "discord": {
+    "mappings": 230,
+    "missingAnchors": [],
+    "gtaVArticles": 61,
+    "insidiousAnchorPresent": true
+  },
+  "owners": {
+    "library": "scripts/build-xbox360-more.cjs",
+    "gamePage": "scripts/build-discord-platform-resources.cjs"
+  },
+  "evidence": [
+    {
+      "file": "docs/qa/host-menu-actions-all-tests.txt",
+      "modifiedAt": "2026-11-02T12:55:08.788Z",
+      "sha256": "54d8926990584e0cdd4c2873a3f76ed7423b8a1fed44e14b9decf8556de1c094"
+    },
+    {
+      "file": "console/xbox360/library.html",
+      "modifiedAt": "2026-11-02T12:55:36.200Z",
+      "sha256": "1280d4db903592deafab134f9c0d7978b8f11cc08b65fb900c8dd1a3e2172122"
+    },
+    {
+      "file": "console/xbox360/mods/gta-v/index.html",
+      "modifiedAt": "2026-11-02T12:56:27.703Z",
+      "sha256": "cf0156c9429a885bc8bdd486507ee8ff2399d95a2239c5685a8d8430c0541a46"
+    }
+  ],
+  "limits": [
+    "No downloaded payload or game executable executed.",
+    "No physical-console tests.",
+    "This is focused verification, not a fresh all-repository test result."
+  ]
+}

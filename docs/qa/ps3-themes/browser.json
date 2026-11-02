@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-02T08:28:17.796Z",
+  "url": "http://127.0.0.1:8765/console/ps3/themes.html",
+  "cards": 12,
+  "filters": {
+    "faxtron": 2,
+    "faxtronStatic": 0,
+    "emptyVisible": true,
+    "reset": 12,
+    "dynamic": 6,
+    "johnMarston": 1
+  },
+  "responsive": [
+    {
+      "viewport": 1280,
+      "documentWidth": 1265
+    },
+    {
+      "viewport": 1024,
+      "documentWidth": 1009
+    },
+    {
+      "viewport": 390,
+      "documentWidth": 375
+    }
+  ],
+  "phoneToolbarHeights": [
+    48,
+    46,
+    46
+  ],
+  "phoneFileDetails": {
+    "expanded": true,
+    "shaVisible": true,
+    "noHorizontalOverflow": true
+  },
+  "hasFat32": true,
+  "rdrHDOnlyVisible": true,
+  "screenshots": [
+    "docs/qa/ps3-themes/desktop.png",
+    "docs/qa/ps3-themes/mobile.png"
+  ],
+  "limits": [
+    "No physical console tested"
+  ]
+}

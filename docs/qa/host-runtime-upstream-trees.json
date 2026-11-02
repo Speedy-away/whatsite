@@ -1,0 +1,508 @@
+[
+  {
+    "repo": "kmeps4/PSFree",
+    "commit": "368d82aa40d3017c220757ce315761adb5f06678",
+    "files": [
+      {
+        "path": "AIO_Fix_Temp/patch_aio.c",
+        "size": 1815
+      },
+      {
+        "path": "AIO_Fix_Temp/vfs_aio2_pdtor.c",
+        "size": 1875
+      },
+      {
+        "path": "COPYING",
+        "size": 34523
+      },
+      {
+        "path": "LICENSE",
+        "size": 34523
+      },
+      {
+        "path": "README.md",
+        "size": 940
+      },
+      {
+        "path": "about.html",
+        "size": 5498
+      },
+      {
+        "path": "aio_patches.bin",
+        "size": 5588
+      },
+      {
+        "path": "alert.mjs",
+        "size": 1810
+      },
+      {
+        "path": "cache.html",
+        "size": 1328
+      },
+      {
+        "path": "config.mjs",
+        "size": 2115
+      },
+      {
+        "path": "fonts/FONTS.LICENSE",
+        "size": 4416
+      },
+      {
+        "path": "fonts/LiberationMono-Regular.ttf",
+        "size": 319624
+      },
+      {
+        "path": "fonts/README.txt",
+        "size": 97
+      },
+      {
+        "path": "goldhen.bin",
+        "size": 290016
+      },
+      {
+        "path": "index.html",
+        "size": 1536
+      },
+      {
+        "path": "kpatch/900.c",
+        "size": 5855
+      },
+      {
+        "path": "kpatch/900.d",
+        "size": 36
+      },
+      {
+        "path": "kpatch/900.elf",
+        "size": 5288
+      },
+      {
+        "path": "kpatch/900.o",
+        "size": 1904
+      },
+      {
+        "path": "kpatch/Makefile",
+        "size": 568
+      },
+      {
+        "path": "kpatch/script.ld",
+        "size": 160
+      },
+      {
+        "path": "kpatch/types.h",
+        "size": 921
+      },
+      {
+        "path": "kpatch/utils.h",
+        "size": 1569
+      },
+      {
+        "path": "lapse.mjs",
+        "size": 58267
+      },
+      {
+        "path": "module/chain.mjs",
+        "size": 16171
+      },
+      {
+        "path": "module/constants.mjs",
+        "size": 773
+      },
+      {
+        "path": "module/int64.mjs",
+        "size": 3560
+      },
+      {
+        "path": "module/mem.mjs",
+        "size": 12130
+      },
+      {
+        "path": "module/memtools.mjs",
+        "size": 8950
+      },
+      {
+        "path": "module/offset.mjs",
+        "size": 1931
+      },
+      {
+        "path": "module/rw.mjs",
+        "size": 4105
+      },
+      {
+        "path": "module/utils.mjs",
+        "size": 4528
+      },
+      {
+        "path": "module/view.mjs",
+        "size": 6717
+      },
+      {
+        "path": "psfree.mjs",
+        "size": 27601
+      },
+      {
+        "path": "psfree_lapse.cache",
+        "size": 389
+      },
+      {
+        "path": "rop/900.mjs",
+        "size": 11657
+      },
+      {
+        "path": "send.mjs",
+        "size": 7643
+      }
+    ]
+  },
+  {
+    "repo": "soniciso1/relapse",
+    "commit": "112dbe5949e9c3de923bb0909289c58a9c082151",
+    "files": [
+      {
+        "path": ".nojekyll",
+        "size": 0
+      },
+      {
+        "path": "README.md",
+        "size": 1030
+      },
+      {
+        "path": "api/elfldr.php",
+        "size": 1065
+      },
+      {
+        "path": "api/payload.php",
+        "size": 2332
+      },
+      {
+        "path": "api/serve.js",
+        "size": 4606
+      },
+      {
+        "path": "cat.jpg",
+        "size": 39942
+      },
+      {
+        "path": "core.js",
+        "size": 47374
+      },
+      {
+        "path": "document/en/ps5/index.html",
+        "size": 2800
+      },
+      {
+        "path": "exploit.js",
+        "size": 65977
+      },
+      {
+        "path": "firmware.js",
+        "size": 1616
+      },
+      {
+        "path": "index.html",
+        "size": 4925
+      },
+      {
+        "path": "int64.js",
+        "size": 2787
+      },
+      {
+        "path": "kexp.js",
+        "size": 17147
+      },
+      {
+        "path": "main.js",
+        "size": 59643
+      },
+      {
+        "path": "mem.js",
+        "size": 28911
+      },
+      {
+        "path": "offsets/10.00.js",
+        "size": 11410
+      },
+      {
+        "path": "offsets/10.01.js",
+        "size": 11410
+      },
+      {
+        "path": "offsets/10.20.js",
+        "size": 11410
+      },
+      {
+        "path": "offsets/10.40.js",
+        "size": 11410
+      },
+      {
+        "path": "offsets/11.00.js",
+        "size": 11410
+      },
+      {
+        "path": "offsets/11.20.js",
+        "size": 11410
+      },
+      {
+        "path": "offsets/11.60.js",
+        "size": 14323
+      },
+      {
+        "path": "offsets/12.00.js",
+        "size": 16040
+      },
+      {
+        "path": "offsets/12.02.js",
+        "size": 14469
+      },
+      {
+        "path": "offsets/12.20.js",
+        "size": 14469
+      },
+      {
+        "path": "offsets/12.40.js",
+        "size": 14469
+      },
+      {
+        "path": "offsets/12.60.js",
+        "size": 14469
+      },
+      {
+        "path": "offsets/12.70.js",
+        "size": 16289
+      },
+      {
+        "path": "offsets/13.00.js",
+        "size": 13086
+      },
+      {
+        "path": "offsets/13.20.js",
+        "size": 13086
+      },
+      {
+        "path": "offsets/13.40.js",
+        "size": 13086
+      },
+      {
+        "path": "offsets/13.42.js",
+        "size": 13086
+      },
+      {
+        "path": "offsets/13.60.js",
+        "size": 13939
+      },
+      {
+        "path": "offsets/7.00.js",
+        "size": 11330
+      },
+      {
+        "path": "offsets/7.01.js",
+        "size": 11330
+      },
+      {
+        "path": "offsets/7.20.js",
+        "size": 11350
+      },
+      {
+        "path": "offsets/7.40.js",
+        "size": 11350
+      },
+      {
+        "path": "offsets/7.60.js",
+        "size": 11350
+      },
+      {
+        "path": "offsets/7.61.js",
+        "size": 11350
+      },
+      {
+        "path": "offsets/8.00.js",
+        "size": 11370
+      },
+      {
+        "path": "offsets/8.20.js",
+        "size": 11370
+      },
+      {
+        "path": "offsets/8.40.js",
+        "size": 11370
+      },
+      {
+        "path": "offsets/8.60.js",
+        "size": 11370
+      },
+      {
+        "path": "offsets/9.00.js",
+        "size": 11407
+      },
+      {
+        "path": "offsets/9.20.js",
+        "size": 11407
+      },
+      {
+        "path": "offsets/9.40.js",
+        "size": 11407
+      },
+      {
+        "path": "offsets/9.60.js",
+        "size": 11407
+      },
+      {
+        "path": "offsets/TEMPLATE.js",
+        "size": 9795
+      },
+      {
+        "path": "payloads.js",
+        "size": 3502
+      },
+      {
+        "path": "payloads/CheatRunner_v0.17.1.elf",
+        "size": 10091832
+      },
+      {
+        "path": "payloads/Lapy-JB-Daemon_v1.2.elf",
+        "size": 154280
+      },
+      {
+        "path": "payloads/OnionHEN.elf",
+        "size": 4326024
+      },
+      {
+        "path": "payloads/PKG-Manager_v1.4.1.elf",
+        "size": 1939016
+      },
+      {
+        "path": "payloads/ShadowMountPlus_1.7beta2.elf",
+        "size": 2437704
+      },
+      {
+        "path": "payloads/WebKit-Autoloader-Installer_v0.5.2.elf",
+        "size": 2311424
+      },
+      {
+        "path": "payloads/elfldr-ps5-1360.elf",
+        "size": 397024
+      },
+      {
+        "path": "payloads/etaHEN.elf",
+        "size": 4740712
+      },
+      {
+        "path": "payloads/ftpsrv-drakmor_1.16-ng-stable.elf",
+        "size": 230640
+      },
+      {
+        "path": "payloads/ftpsrv-ps5.elf",
+        "size": 191864
+      },
+      {
+        "path": "payloads/garlic-savemgr_v1.13.1.elf",
+        "size": 1665456
+      },
+      {
+        "path": "payloads/kexp_2026_05_25.bin",
+        "size": 18912
+      },
+      {
+        "path": "payloads/klogsrv-ps5.elf",
+        "size": 136016
+      },
+      {
+        "path": "payloads/kstuff-lite_v1.11.elf",
+        "size": 1737080
+      },
+      {
+        "path": "payloads/pldmgr_v0.5.2.elf",
+        "size": 2410776
+      },
+      {
+        "path": "payloads/ps5-app-dumper_v2.00.elf",
+        "size": 1344216
+      },
+      {
+        "path": "payloads/ps5debug-NG_1.3.2.elf",
+        "size": 4059688
+      },
+      {
+        "path": "payloads/ps5upload_v5.41.0.elf",
+        "size": 2263520
+      },
+      {
+        "path": "payloads/zftpd_v1.6.0.elf",
+        "size": 19221056
+      },
+      {
+        "path": "relapse.html",
+        "size": 20396
+      },
+      {
+        "path": "rop.js",
+        "size": 19165
+      },
+      {
+        "path": "rop_slave.js",
+        "size": 85
+      },
+      {
+        "path": "syscalls.js",
+        "size": 16469
+      }
+    ]
+  },
+  {
+    "repo": "SpecterDev/PS5-IPV6-Kernel-Exploit",
+    "error": "Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "repo": "Sleirsgoevy/ps4jb2",
+    "commit": "3e6053c3e4c691a9ccdc409172293a81de00ad7f",
+    "files": [
+      {
+        "path": "Cache.manifest",
+        "size": 190
+      },
+      {
+        "path": "c-code.js",
+        "size": 6376356
+      },
+      {
+        "path": "exploit.js",
+        "size": 11933
+      },
+      {
+        "path": "index.html",
+        "size": 7703
+      },
+      {
+        "path": "malloc.js",
+        "size": 149
+      },
+      {
+        "path": "netcat.html",
+        "size": 1624
+      },
+      {
+        "path": "ps5-kstuff.bin",
+        "size": 177064
+      },
+      {
+        "path": "rop.js",
+        "size": 2889
+      },
+      {
+        "path": "sigsegv.js",
+        "size": 937
+      },
+      {
+        "path": "src/kex.c",
+        "size": 22114
+      },
+      {
+        "path": "syscalls.js",
+        "size": 14829
+      },
+      {
+        "path": "syscalls2.js",
+        "size": 11179
+      }
+    ]
+  }
+]

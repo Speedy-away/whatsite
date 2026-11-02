@@ -1,0 +1,207 @@
+{
+  "completedAt": "2026-11-02T13:13:56.647Z",
+  "status": "complete locally",
+  "scope": "PS4/PS5 host menu controls and the user-confirmed merged Download destination/check flow",
+  "behavior": {
+    "categories": [
+      "Game mods",
+      "Payloads",
+      "Loaders",
+      "Tools"
+    ],
+    "allCategoryRemoved": true,
+    "modCards": "One Choose version popup per menu family, including single-build entries",
+    "versionSelection": "Buttons with exact game/menu versions and source variants; no version dropdown",
+    "cardActions": "Only Choose version",
+    "popupActions": [
+      "Download",
+      "Load"
+    ],
+    "repeatedFileManagerActionsRemoved": true,
+    "download": "Configured console (or matching native console browser) opens the exact-file native receiver; otherwise downloads to this device. Destination visible, invalid destination errors without silent fallback.",
+    "checks": "Native receiver reads its queue on open and checks destination before explicit Save. Exact file IDs remain scoped after filters change; unknown/empty/malformed/wrong-platform IDs display unavailable and no unrelated downloads.",
+    "load": "23 source-backed transports retained; native plugins/data and14 host-only BINs have disabled Load with honest native/setup requirements. Selecting a version never sends or saves files.",
+    "externalHosts": "Collapsed Other hosts directory, accurately labelled external navigation. Two pinned first-party runtimes served from this site.",
+    "mobile": "Download opt-out prevents a third-party File options control, retaining exactly two actions."
+  },
+  "verification": {
+    "tests": {
+      "passed": 469,
+      "failed": 0,
+      "log": "docs/qa/host-menu-actions-all-tests.txt"
+    },
+    "siteAudit": {
+      "pages": 467,
+      "localReferences": 50625,
+      "issues": 0
+    },
+    "languages": {
+      "count": 20,
+      "runtimeLookups": 2140,
+      "report": "docs/qa/host-menu-actions-language.json"
+    },
+    "browser": {
+      "desktopWidth": 1280,
+      "cardsInFirstRow": 4,
+      "mobileWidth": 430,
+      "mobileScrollWidth": 430,
+      "cyprusButtons": 2,
+      "expulsionButtons": 4,
+      "oystersButtons": 5,
+      "singleBuildPopup": true,
+      "ps5Cards": 10,
+      "allPS5ModCardsHaveChooser": true,
+      "versionDropdowns": 0,
+      "mobileActionControls": 2,
+      "escapeReturnsFocus": true,
+      "pcRuntimeLoadGuarded": true
+    },
+    "payloadIntegrity": "docs/qa/host-payload-integrity.json",
+    "runtime": {
+      "files": 213,
+      "dependencies": 179,
+      "exactUpstreamFiles": 96,
+      "guardCases": 8,
+      "report": "docs/qa/host-runtime-static-verification.json"
+    },
+    "archive": {
+      "checkedAt": "2026-11-02T13:07:57.553Z",
+      "items": 2043,
+      "records": 2989,
+      "present": 2989,
+      "missing": 0
+    }
+  },
+  "sender": {
+    "id": "console-payload-sender-4ae2029f9107",
+    "name": "console-payload-sender-1.4.1-4ae2029f9107.zip",
+    "version": "1.4.1+4ae2029f9107",
+    "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.4.1-4ae2029f9107.zip",
+    "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.4.1-4ae2029f9107.zip",
+    "bytes": 58643115,
+    "sha256": "933eb219f5152adf635ac3c3449b2b23821de76724de22b57009de25dc2dcafd",
+    "snapshot": "4ae2029f91078861793caa7c26c7eb565f6d2edae020d8579c4b412b0d7c40aa",
+    "files": 213,
+    "payloads": 95,
+    "actions": 133,
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.4.1+4ae2029f9107\\console-payload-sender-1.4.1-4ae2029f9107.zip",
+    "integrityReport": "docs/qa/host-menu-actions-sender-integrity.json",
+    "preservedSnapshots": 8
+  },
+  "companions": {
+    "version": "2026.11.02.11",
+    "report": "docs/host-menu-companion-build.json",
+    "records": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.11",
+        "path": "console/ps4/whatsite-ps4.html",
+        "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.11-f359c97a07b6/whatsite-ps4.html",
+        "bytes": 649654,
+        "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a",
+        "previousSha256": "f0417719a4ed4128ce28d0d85cd833f818ce1b4853e60f72207112876b50d4d9",
+        "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-f0417719a4ed/whatsite-ps4.html",
+        "previousItems": 464,
+        "items": 473,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps4.html"
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.11",
+        "path": "console/ps5/whatsite-ps5.html",
+        "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.11-b054ff263869/whatsite-ps5.html",
+        "bytes": 548833,
+        "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e",
+        "previousSha256": "5fe16837baee7f350e39689b868e318c3b735f86b836add986a44723cb6226d3",
+        "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-5fe16837baee/whatsite-ps5.html",
+        "previousItems": 342,
+        "items": 350,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps5.html"
+      }
+    ]
+  },
+  "runtimes": [
+    {
+      "id": "ps4-900",
+      "route": "/hosts/runtime/ps4-900/",
+      "platform": "ps4",
+      "firmwares": [
+        "9.00"
+      ],
+      "listener": {
+        "transport": "tcp",
+        "port": 9020,
+        "format": "bin"
+      },
+      "source": {
+        "repository": "https://github.com/kmeps4/PSFree",
+        "commit": "368d82aa40d3017c220757ce315761adb5f06678"
+      },
+      "license": "AGPL-3.0-or-later; Liberation font OFL"
+    },
+    {
+      "id": "ps5-umtx",
+      "route": "/hosts/runtime/ps5-umtx/",
+      "platform": "ps5",
+      "firmwares": [
+        "1.00",
+        "1.01",
+        "1.02",
+        "1.05",
+        "1.10",
+        "1.11",
+        "1.12",
+        "1.13",
+        "1.14",
+        "2.00",
+        "2.20",
+        "2.25",
+        "2.26",
+        "2.30",
+        "2.50",
+        "2.70",
+        "3.00",
+        "3.20",
+        "4.00",
+        "4.02",
+        "4.03",
+        "4.50",
+        "4.51"
+      ],
+      "listener": {
+        "transport": "tcp",
+        "port": 9021,
+        "format": "elf"
+      },
+      "source": {
+        "repository": "https://github.com/PS5Dev/PS5-UMTX-Jailbreak",
+        "commit": "2cf6778ebe89ff35255e1c228826d0d2155e9d2a"
+      },
+      "license": "Unlicense host; AGPL-3.0-or-later PSFree; GPL-3.0 ELF loader"
+    }
+  ],
+  "limits": [
+    "Console hardware execution untested; no downloaded exploit/payload executed.",
+    "PS4 first-party bootstrap is exact9.00 and BIN TCP9020; no automatic GoldHEN. PS5 first-party UMTX loader uses only listed versions below5.00.",
+    "Offline PS4 cache requires text/cache-manifest server mapping absent from current local preview; online .js MIME verified.",
+    "Local changes are not published; no commit, publication or deployment performed."
+  ],
+  "reports": [
+    "docs/host-integrated-load-review.json",
+    "docs/host-load-capabilities.json",
+    "docs/host-runtime-builds.json",
+    "docs/host-runtime-downloads.json",
+    "docs/qa/host-runtime-archive-verification.json"
+  ],
+  "screenshots": [
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/cyprus-version-buttons.jpg",
+    "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/cyprus-mobile-version-buttons.jpg"
+  ],
+  "regeneration": [
+    "node scripts/build-host-selector.cjs",
+    "node scripts/verify-host-runtime-builds.cjs",
+    "node --test scripts/tests/*.test.cjs",
+    "node scripts/package-console-payload-sender.cjs --check"
+  ],
+  "preservation": "All previous menu versions, native receiver snapshots, sender ZIPs, source/build separation, compatibility pins and shared platform work retained."
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "console-themes",
+  "updatedAt": "2026-11-02T08:29:00Z",
+  "status": "Implemented locally; refresh after all console theme importers finish",
+  "canonicalPages": ["/console/themes.html"],
+  "buildEntrypoints": ["node scripts/build-console-themes.cjs"],
+  "ownedFiles": [
+    "scripts/build-console-themes.cjs",
+    "assets/console-themes.css",
+    "assets/console-themes.js",
+    "console/themes.html",
+    "docs/console-theme-hub-maintenance.md",
+    "docs/qa/console-themes-verification.json"
+  ],
+  "lastBuild": {
+    "themes": 28,
+    "downloads": 20,
+    "platforms": {"switch": 8, "3ds": 8, "wiiu": 0, "ps3": 12},
+    "warnings": []
+  },
+  "sources": [
+    "https://themezer.net/",
+    "https://themezer.net/switch/packs",
+    "https://themezer.net/switch/themes",
+    "https://themezer.net/3ds/themes",
+    "https://themezer.net/wiiu/themes",
+    "https://themezer.net/ps3/themes",
+    "https://switch.hacks.guide/homebrew/nxtheme-installer",
+    "https://themezer.net/3ds/faq/what-are-the-best-theming-tools",
+    "https://themecafe.github.io/Docs/faq/",
+    "https://manuals.playstation.net/document/en/ps3/current/settings/themesettings.html"
+  ],
+  "checks": {
+    "javascriptSyntax": "passed builder and browser asset",
+    "staticIntegrity": "zero missing internal links, zero duplicate IDs, 20 download files exist, 12 supplied SHA-256 values match",
+    "browser": "1280x720 desktop and 390x844 phone: no horizontal overflow, no failed loaded previews, keyboard source/download access, combined filters, query restoration, zero-result message and clear action passed",
+    "resetFix": "Browser QA caught native reset/microtask ordering; explicit clear now sets controls before updating results",
+    "httpHead": "Not completed: exec network returned ECONNREFUSED for localhost8765 after earlier successful browser checks",
+    "hardware": "No theme or downloaded payload executed; no physical console installation test"
+  },
+  "screenshots": [
+    "docs/screenshots/console-themes-desktop.jpg",
+    "docs/screenshots/console-themes-mobile.jpg"
+  ],
+  "archive": "No new remote files downloaded by this hub task. Download buttons reuse files owned by the console importers and their scoped private inventories. No F: mutation by this task.",
+  "integrationForRoot": [
+    "Rerun the scoped builder after docs/themezer-wiiu-catalog.json is written and the 3DS importer finishes local downloads and previews. It adds only existing console pages and existing ready files.",
+    "Add console/themes.html to the additive sitemap and shared console landing/nav managed by root.",
+    "Merge and verify console importers' private archive sidecars with console-expansion-archive.cjs; the hub does not change or claim independent F: verification.",
+    "Refresh docs/qa/console-themes-verification.json final catalogue counts and HTTP readiness once preview service is available."
+  ],
+  "constraintsPreserved": ["No videos", "No commit, deployment or publication", "No global sidebar rewrite", "No unrelated source/catalogue/immutable receiver edits", "i18n v3, mobile and background integration retained"]
+}

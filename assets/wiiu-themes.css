@@ -1,0 +1,29 @@
+.wiiu-theme-intro { max-width:72ch; color:var(--text-secondary); margin-bottom:26px; }
+.wiiu-theme-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+.wiiu-theme { min-width:0; background:var(--bg-secondary); border:1px solid var(--border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:24px; }
+.wiiu-theme[hidden] { display:none; }
+.wiiu-theme figure { margin:0; }
+.wiiu-theme figure img { width:100%; aspect-ratio:16/9; object-fit:contain; background:#16201c; display:block; }
+.wiiu-theme figcaption { padding:10px 22px; font-size:.75rem; color:var(--text-secondary); border-bottom:1px solid var(--border); }
+.wiiu-theme-body { padding:24px; display:flex; flex-direction:column; flex:1; min-width:0; }
+.wiiu-theme h3 { font-size:1.4rem; line-height:1.25; margin-bottom:8px; }
+.wiiu-theme .wiiu-theme-author { color:var(--accent-light); font-size:.875rem; margin-bottom:18px; }
+.wiiu-theme p { color:var(--text-secondary); line-height:1.6; margin-bottom:16px; }
+.wiiu-theme .wiiu-theme-requirement { font-size:.84rem; }
+.wiiu-theme .wiiu-actions { padding-top:10px; }
+.wiiu-theme details { margin-top:18px; padding-top:16px; border-top:1px solid var(--border); }
+.wiiu-theme summary { cursor:pointer; font-size:.85rem; }
+.wiiu-theme details ul { padding-left:20px; margin-top:16px; color:var(--text-secondary); font-size:.82rem; }
+.wiiu-theme details li { margin-bottom:7px; overflow-wrap:anywhere; }
+.wiiu-theme code { overflow-wrap:anywhere; font-size:.78rem; }
+.wiiu-theme-version { display:block; color:var(--text-secondary); margin:12px 0; font-size:.78rem; overflow-wrap:anywhere; }
+.wiiu-theme-tech { width:100%; border-collapse:collapse; margin:20px 0; font-size:.875rem; }
+.wiiu-theme-tech th,.wiiu-theme-tech td { text-align:left; padding:14px; border-bottom:1px solid var(--border); vertical-align:top; }
+.wiiu-theme-tech th { color:var(--text-primary); }
+.wiiu-theme-tech td { color:var(--text-secondary); }
+.wiiu-theme-tech code { overflow-wrap:anywhere; }
+.wiiu-theme-table { overflow-x:auto; }
+.wiiu-theme-layout { white-space:pre-wrap; overflow-wrap:anywhere; background:var(--bg-secondary); padding:24px; border:1px solid var(--border); border-radius:10px; font-size:.82rem; line-height:1.8; }
+.wiiu-theme-support { margin-top:22px; }
+.wiiu-theme:target { outline:2px solid var(--accent-light); outline-offset:4px; }
+@media(max-width:700px) { .wiiu-theme-grid { grid-template-columns:minmax(0,1fr); } .wiiu-theme-body { padding:20px; } .wiiu-theme-tech { font-size:.8rem; } .wiiu-theme-tech th,.wiiu-theme-tech td { padding:10px; } }

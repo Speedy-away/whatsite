@@ -1,0 +1,100 @@
+{
+  "updatedAt": "2026-11-02T09:27:46.141Z",
+  "status": "Complete locally: 12 console hubs and 60 focused topic pages match the Xbox 360 / PS3 structure.",
+  "builder": "scripts/build-console-topic-hubs.cjs",
+  "manifests": [
+    "docs/console-topic-platforms-retro.json",
+    "docs/console-topic-platforms-modern.json"
+  ],
+  "verification": "docs/qa/console-topic-hubs-verification.json",
+  "routes": [
+    {
+      "platform": "PlayStation 2",
+      "hub": "/console/ps2/",
+      "library": "/console/retro/ps2.html?view=all"
+    },
+    {
+      "platform": "Nintendo GameCube",
+      "hub": "/console/gamecube/",
+      "library": "/console/retro/gamecube.html?view=all"
+    },
+    {
+      "platform": "Nintendo Wii",
+      "hub": "/console/wii/",
+      "library": "/console/retro/wii.html?view=all"
+    },
+    {
+      "platform": "Nintendo Wii U",
+      "hub": "/console/wiiu/",
+      "library": "/console/retro/wiiu.html?view=all"
+    },
+    {
+      "platform": "PlayStation Portable",
+      "hub": "/console/psp/",
+      "library": "/console/retro/psp.html?view=all"
+    },
+    {
+      "platform": "Nintendo 2DS & 3DS",
+      "hub": "/console/3ds/",
+      "library": "/console/retro/3ds.html?view=all"
+    },
+    {
+      "platform": "Nintendo DS & DSi",
+      "hub": "/console/ds/",
+      "library": "/console/retro/ds.html?view=all"
+    },
+    {
+      "platform": "Nintendo Switch",
+      "hub": "/console/nintendo-switch/",
+      "library": "/console/nintendo-switch.html?view=all"
+    },
+    {
+      "platform": "Nintendo Switch 2",
+      "hub": "/console/nintendo-switch-2/",
+      "library": "/console/nintendo-switch-2.html?view=all"
+    },
+    {
+      "platform": "Xbox One / Series X|S",
+      "hub": "/console/xbox-one-series/",
+      "library": "/console/xbox-one-series.html?view=all"
+    },
+    {
+      "platform": "Steam Deck",
+      "hub": "/console/steamdeck/",
+      "library": "/console/steamdeck.html?view=all"
+    },
+    {
+      "platform": "PS Vita",
+      "hub": "/console/psvita/home.html",
+      "library": "/console/psvita/library.html?view=all"
+    }
+  ],
+  "preservation": "All original complete library pages, resource IDs, release/download links, compatibility requirements and older versions retained. Original no-query/no-hash entry URLs open hubs; queries and hashes retain the source libraries. Organizer and navigation explicitly skip all ready receiver builds.",
+  "rebuild": "Run node scripts/build-console-topic-hubs.cjs after any scoped source-library builder. integrate-console-expansion.cjs also performs this final organizer pass. No broad legacy expansion rebuild is needed.",
+  "tests": {
+    "tests": 29,
+    "passed": 29,
+    "failed": 0,
+    "output": "docs/qa/console-topic-hubs-focused-tests.txt"
+  },
+  "siteAudit": "Audited 363 public pages and 36288 local links/assets; 0 issue(s).",
+  "fullSuite": {
+    "tests": 374,
+    "passed": 371,
+    "failed": 3,
+    "output": "docs/qa/console-topic-hubs-all-tests.txt",
+    "failures": [
+      "Concurrent PS4 cheat artwork for goldhen-cusa03528-01-00",
+      "PS4 store fixture expects seven packages while shared data now contains nine",
+      "Switch 2 shared download inventory contains new ns2-savekit/OunceCake archives not yet linked by its source builder"
+    ],
+    "note": "Full suite is not reported as passing. The new console organization tests all pass."
+  },
+  "publication": "Local only; no commit/publish/deploy.",
+  "parallelHelpers": {
+    "organizerSkipsReadyBuilds": true,
+    "fixtureTestsPassed": true,
+    "initialCheck": "Both .7.1 live hashes matched the handoff before final checks.",
+    "finalObservation": "Live helper bytes advanced during parallel console expansion. This organizer did not generate or rewrite them; leave the new live bytes and all archive versions intact."
+  }
+}

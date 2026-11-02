@@ -1,0 +1,64 @@
+{
+  "reviewedAt": "2026-11-02T08:42:42.063Z",
+  "source": "https://sites.google.com/view/im-virusmike-exe/ps4-all-you-need",
+  "sourcePages": 18,
+  "observedDownloadLinks": 47,
+  "sourceScope": "Direct VirusMike Google Sites links and source-provided archive documentation. This audit adds no independently chosen GoldHEN game batch and does not replace the 38 pinned official GoldHEN files.",
+  "tests": {
+    "command": "node --test scripts/tests/virusmike-ps4-next.test.cjs",
+    "passed": 3,
+    "failed": 0
+  },
+  "readyArtifacts": [
+    {
+      "id": "virusmike-bo3-aio-v2",
+      "importPath": "docs/tmp/virusmike-ps4-next/GSC_Injector_GSC_Mods_AIO_Pack_By_VirusMike_V2.rar",
+      "filename": "GSC Injector & GSC Mods AIO Pack By VirusMike V2.rar",
+      "bytes": 973715,
+      "sha256": "411bd9591e4ace83cee3b54210c079d5e0675f0cb7edd57eb0caca1f8f028c65"
+    }
+  ],
+  "archiveInspection": {
+    "entries": 20,
+    "regularFiles": 16,
+    "menuScripts": 13,
+    "expandedBytes": 3773274,
+    "noLinks": true,
+    "relativePaths": true,
+    "originalInjectorRetained": true
+  },
+  "unavailable": [
+    {
+      "id": "virusmike-bo3-cjhouse",
+      "status": "incomplete-transfer",
+      "reason": "MediaFire page HTTP 200; a transfer bounded to 512 MiB and 180 seconds timed out after receiving 312508416 of 448796338 bytes. Partial bytes remain preserved; no complete or ready download is claimed.",
+      "partialPath": "docs/tmp/virusmike-ps4-next/zm_cjhouse-1793607730048.rar",
+      "partialBytes": 312508416,
+      "declaredBytes": 448796338
+    },
+    {
+      "id": "virusmike-chronoss-cheats-pack-v2",
+      "status": "unavailable",
+      "reason": "Source MediaFire page returned HTTP 404. The public MEGA alternative returned ETOOMANY (-6), reporting too many concurrent IP addresses, during bounded metadata lookup. No PKG, title ID, game list or ready build has been verified."
+    }
+  ],
+  "sharedWrites": [],
+  "pending": [
+    "Parent archives the single verified original pack before publishing its download.",
+    "Parent integrates the compact BO3 pack card and retains detailed source pins/setup in its guide.",
+    "Parent appends this audit and the two unavailable outcomes to docs/console-expansion-handoff.json."
+  ],
+  "execution": "No downloaded plugin, script, executable, PKG or game was executed. No gate bypass, commercial game-data mirroring, publication or deployment.",
+  "sourceUnavailablePages": [
+    {
+      "url": "https://sites.google.com/view/im-virusmike-exe/ps4-all-you-need/ps4-exploit-pages",
+      "status": 200,
+      "contentStatus": "Google sign-in page returned; underlying content unavailable"
+    },
+    {
+      "url": "https://sites.google.com/view/im-virusmike-exe/ps4-pkg-apps",
+      "status": 404,
+      "contentStatus": "Underlying page unavailable: HTTP 404"
+    }
+  ]
+}

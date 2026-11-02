@@ -1,0 +1,57 @@
+{
+  "id": "wiiu-ConwaysGameofLife",
+  "title": "Conway's Game of Life",
+  "platform": "Wii U",
+  "category": "Homebrew Games",
+  "version": "0.1",
+  "url": "https://wiiu.cdn.fortheusers.org/zips/ConwaysGameofLife.zip",
+  "source": "https://hb-app.store/wiiu/ConwaysGameofLife",
+  "name": "ConwaysGameofLife-0.1.zip",
+  "description": "Conway's Game of Life for the Wii U !",
+  "author": "MathewDiMarco, Benchaton",
+  "details": "Description :\\nAn implementation of Conway's Game of Life in C/C++ and SDL2.\\n\\nCells record their age. Red cells are volatile and changing; the older stationary cells emerge as\\ngreen. Hovering the pointer over groups of cells will illuminate them.\\n\\nControls :\\n+: pause/play\\nR: toggle wireframe\\nL: toggle colorization\\nZL: reduce pointer speed\\nZR: increase pointer speed\\nL Stick: move the pointer\\nDpad Up: slow down\\nDpad Down: speed up\\nA: spawn cell\\nB: delete cell\\nX: grow spawn perimeter\\nY: shrink spawn perimeter",
+  "md5": "3c4d18b49f62308e1b78d4e6e776de1e",
+  "icon": "https://wiiu.cdn.fortheusers.org/packages/ConwaysGameofLife/icon.png",
+  "requirements": "Aroma for the bundled WUHB. Keep the complete package; any separate RPX variant needs the environment documented by the project.",
+  "setup": "Extract the complete SD bundle to the SD root; keep every app folder, music file and companion asset. Launch the matching executable from its documented environment.",
+  "status": "downloaded",
+  "inspection": {
+    "crcPassed": true,
+    "entries": 4,
+    "uncompressedBytes": 1146626,
+    "builds": [
+      {
+        "path": "wiiu/apps/ConwaysGameofLife/GameofLife.wuhb",
+        "bytes": 640348,
+        "sha256": "141f79a512c09b2bc0a36ee810a900ff26040b70bd579eed1317470aca759df6"
+      },
+      {
+        "path": "wiiu/apps/ConwaysGameofLife/GameofLife.rpx",
+        "bytes": 505336,
+        "sha256": "63b23e4d0c7b304062a677b894cab8f5eaad8359362168afdbc9f197495a1c44"
+      }
+    ],
+    "xmlFiles": [],
+    "patchGameIds": []
+  },
+  "image": "/assets/images/wiiu-games-batch2/wiiu-ConwaysGameofLife.png",
+  "file": {
+    "name": "ConwaysGameofLife-0.1.zip",
+    "version": "0.1",
+    "bytes": 1132813,
+    "sha256": "0543563bb8d8bae9656d9dfcc1bbefb51642f44b454daef46a5cd9a691090e7d",
+    "sourceUrl": "https://wiiu.cdn.fortheusers.org/zips/ConwaysGameofLife.zip",
+    "archiveRole": [
+      "Builds"
+    ],
+    "local": "/downloads/wiiu-games-batch2/ConwaysGameofLife-0.1.zip",
+    "itemId": "wiiu-games-batch2-wiiu-ConwaysGameofLife",
+    "platform": "Wii U",
+    "category": [
+      "Wii U",
+      "Homebrew Games"
+    ],
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Wii U\\Wii U\\Homebrew Games\\Conway's Game of Life\\Builds\\0.1\\ConwaysGameofLife-0.1.zip"
+  },
+  "mirrorReason": null
+}

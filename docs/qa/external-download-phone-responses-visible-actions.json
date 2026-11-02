@@ -1,0 +1,2980 @@
+{
+  "generatedAt": "2026-11-02T13:05:48.762Z",
+  "sourceReport": "docs/qa/external-download-phone-responses.json",
+  "visibleActionEntries": 860,
+  "summary": {
+    "reachable-page": 431,
+    "network-error": 47,
+    "reachable-file": 338,
+    "access-blocked": 24,
+    "provider-page-unverified": 20
+  },
+  "issues": [
+    {
+      "url": "http://riptidecheats.cc/loader.html",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "pages/riptide344TRFVDV5key.html",
+          "label": "Download Loader",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RIPTIDE",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:20.190Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "http://riptidecheats.cc/loader.html",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "pages/riptide344TRFVDV5key.html",
+          "label": "Download Loader",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RIPTIDE",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:20.191Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://cdn.update.rwfc.net/RetroRewind/zip/6.13.4-full.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 1.81 GiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/mario-kart-wii.html",
+          "label": "Download ZIP · 1.81 GiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:35:07.771Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://consolemods.org/wiki/images/f/ff/Simple_360_NAND_Flasher.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/apps.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Simple 360 NAND Flasher",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:20.690Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://consolemods.org/wiki/images/f/ff/Simple_360_NAND_Flasher.7z",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5907",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 2048,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://consolemods.org/wiki/images/f/ff/Simple_360_NAND_Flasher.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/apps.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Simple 360 NAND Flasher",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:20.699Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://consolemods.org/wiki/images/f/ff/Simple_360_NAND_Flasher.7z",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5865",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 2048,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Jeff Lonestar · packaged Silent Hill 3 Heather background artwork, not a console-test screenshot",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Author download page · 147.46 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:56:30.084Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "server": "ESF"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      }
+    },
+    {
+      "url": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Jeff Lonestar · packaged Silent Hill 3 Heather background artwork, not a console-test screenshot",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Author download page · 147.46 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:56:30.085Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://drive.google.com/file/d/1rj0Q3Ug-6KOKpYfR76cDg_bPzddmSk6X/view",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "server": "ESF"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      }
+    },
+    {
+      "url": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Jeff Lonestar · packaged Matrix background artwork, not a console-test screenshot",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Author download page · 26.18 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:12.076Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "server": "ESF"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      }
+    },
+    {
+      "url": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Jeff Lonestar · packaged Matrix background artwork, not a console-test screenshot",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Author download page · 26.18 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:35:12.086Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://drive.google.com/file/d/1u7kN5qx1kYd-eeuBMOvqzwuhdbBXXNa1/view",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "server": "ESF"
+      },
+      "redirects": [],
+      "sampledBytes": 16384,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      }
+    },
+    {
+      "url": "https://gamebanana.com/dl/1224101",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:20.293Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://gamebanana.com/dl/1224101",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5765",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5765,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://gamebanana.com/dl/1224101",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:35:20.310Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://gamebanana.com/dl/1340103",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:25.150Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://gamebanana.com/dl/1340103",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5765",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5765,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://gamebanana.com/dl/1479173",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:35.315Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://gamebanana.com/dl/1479173",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5765",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5765,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://gamebanana.com/dl/1479173",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:35:41.683Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://gamebanana.com/dl/1818309",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Download console bundle",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:49.252Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://gamebanana.com/dl/1818309",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5765",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5765,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://gamebanana.com/mods/483696",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Release & source",
+          "field": "anchor"
+        },
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Documentation",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Kill BGM.bars · game 3.0.3",
+          "field": "items.url"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Kill BGM.bars · game 4.0.0",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:56.692Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://gamebanana.com/mods/483696",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5768",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5768,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://gamebanana.com/mods/496237",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Release & source",
+          "field": "anchor"
+        },
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Documentation",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Item Rain",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:03.764Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://gamebanana.com/mods/496237",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5768",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5768,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://gamebanana.com/mods/607604",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Release & source",
+          "field": "anchor"
+        },
+        {
+          "page": "console/nintendo-switch/mods.html",
+          "label": "Documentation",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "N64 Rainbow Road · three complete laps",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:07.539Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://gamebanana.com/mods/607604",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5768",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5768,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://github.com/apexlions16/OrbisShelf/releases/download/v0.2.0/OrbisShelf-v0.2.0.pkg",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ps4/apps.html",
+          "label": "Download PKG",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download OrbisShelf-v0.2.0.pkg",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "OrbisShelf · PS4",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:14.680Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/apexlions16/OrbisShelf/releases/download/v0.2.0/OrbisShelf-v0.2.0.pkg",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ps4/apps.html",
+          "label": "Download PKG",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps4/downloads.html",
+          "label": "Download OrbisShelf-v0.2.0.pkg",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "OrbisShelf · PS4",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:36:18.077Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkachanDS/releases/download/0.2.1/IkachanDS.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:37:34.595Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkachanDS/releases/download/0.2.1/IkachanDS.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/games.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:37:34.596Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/IkuReader.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:38:03.012Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/IkuReader.dsi",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:38:03.013Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/IkuReader.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "IkuReader · modern build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "IkuReader · modern build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:38:18.013Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/IkuReader.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "IkuReader · modern build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "IkuReader · modern build authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:38:18.014Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/awkitsune/IkuReader/releases/download/6.5_modern/sdcard-root.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:38:33.019Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/claudechinsta/cg-nds-input-test/releases/download/1.0.0/cg-input-test.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "CG NDS Input Test authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "CG NDS Input Test authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:41:39.111Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/claudechinsta/cg-nds-input-test/releases/download/1.0.0/cg-input-test.nds",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "CG NDS Input Test authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "CG NDS Input Test authors · original packaged Nintendo DS banner icon",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:41:39.131Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/claudechinsta/cg-nds-input-test/releases/tag/1.0.0",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Pinned release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "CG NDS Input Test · 1.0.0",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:41:54.137Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://github.com/devkitPro/nds-hb-menu/releases/download/v0.11.0/hbmenu-0.11.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "devkitPro · original BOOT.NDS menu icon from the hbmenu ready release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "devkitPro · original BOOT.NDS menu icon from the hbmenu ready release",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:44:37.916Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/devkitPro/nds-hb-menu/releases/download/v0.11.0/hbmenu-0.11.0.zip",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/apps.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ds/apps.html",
+          "label": "devkitPro · original BOOT.NDS menu icon from the hbmenu ready release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "devkitPro · original BOOT.NDS menu icon from the hbmenu ready release",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:44:39.110Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://github.com/elripalda/RecompStore/releases/download/v2.7.4/RecompStore-Installer.elf",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ps5/apps.html",
+          "label": "Download ELF",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps5/downloads.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps5/downloads.html",
+          "label": "Download RecompStore-Installer.elf",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RecompStore installer",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:47:36.759Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://gofile.io/d/AuSpG026",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps4/emulators.html",
+          "label": "Supplied download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Crema · Wii U",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:23.743Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/AuSpG026",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://gofile.io/d/AuSpG026",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps4/emulators.html",
+          "label": "Supplied download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Crema · Wii U",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:23.744Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/AuSpG026",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://gofile.io/d/oTSXa5pw",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps4/emulators.html",
+          "label": "Supplied download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RPCS3 port · PlayStation 3",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:24.180Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/oTSXa5pw",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://gofile.io/d/oTSXa5pw",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps4/emulators.html",
+          "label": "Supplied download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "RPCS3 port · PlayStation 3",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:24.181Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/oTSXa5pw",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://gofile.io/d/xycQRzqX",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "VOLT PC TO PSN RTM AIO TOOL RELAY",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:24.371Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/xycQRzqX",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://gofile.io/d/xycQRzqX",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "VOLT PC TO PSN RTM AIO TOOL RELAY",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:24.441Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://gofile.io/d/xycQRzqX",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "3358",
+        "server": "nginx"
+      },
+      "redirects": [],
+      "sampledBytes": 3358,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Gofile — Cloud Storage Made Simple"
+    },
+    {
+      "url": "https://kodi.tv/article/kodi-21-3-omega-release/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Stable release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Stable release notes",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:40.183Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://kodi.tv/article/kodi-21-3-omega-release/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5845",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5845,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://kodi.tv/article/kodi-21-3-omega-release/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Stable release notes",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Stable release notes",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:35:41.611Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://kodi.tv/download/windows/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:46.725Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://kodi.tv/download/windows/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5779",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5779,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://kodi.tv/download/windows/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/xbox-one-series/apps.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        },
+        {
+          "page": "console/xbox-one-series.html",
+          "label": "Release / publisher",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:35:47.335Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://kodi.tv/download/windows/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5715",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5715,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://mega.nz/#!a2ZXTRgA!aWQ2JkrUpXiUfpx-gTpjw0WjI5EajitnqkQR8aW6x28",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 142.97 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 142.97 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:35:50.384Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/#!a2ZXTRgA!aWQ2JkrUpXiUfpx-gTpjw0WjI5EajitnqkQR8aW6x28",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 142.97 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 142.97 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:35:50.428Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/#!S2gxSQJK!EnzSuFO3d0LtjN9gEv6jzykwGB-yRvDha3w_iWk6mNk",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 125.78 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 125.78 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:05.389Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/#!S2gxSQJK!EnzSuFO3d0LtjN9gEv6jzykwGB-yRvDha3w_iWk6mNk",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 125.78 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 125.78 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:36:05.435Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/#!T2IGCTDb!1fW9TSvsBqEuJq5Qjvh-4roAaWZ0Scx5HwPZe_mWqkU",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 65.63 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 65.63 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:20.392Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/#!T2IGCTDb!1fW9TSvsBqEuJq5Qjvh-4roAaWZ0Scx5HwPZe_mWqkU",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 65.63 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 65.63 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:36:20.440Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://mega.nz/file/Ae4xWKaY#guxkfuaYnaAof5awsJxje0N_qsRO-fjKwRJ9BkA3vYc",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 957.42 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/mario-kart-wii.html",
+          "label": "Download ZIP · 957.42 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:45.890Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/Ae4xWKaY#guxkfuaYnaAof5awsJxje0N_qsRO-fjKwRJ9BkA3vYc",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 957.42 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/mario-kart-wii.html",
+          "label": "Download ZIP · 957.42 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:36:50.397Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/aQ4CkLQC#3VnJQR37ADYUDoSuklPeUIN0SFFQDlcvIJHDVau8sPY",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Unlocker Tool",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:35:00.817Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/aQ4CkLQC#3VnJQR37ADYUDoSuklPeUIN0SFFQDlcvIJHDVau8sPY",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Unlocker Tool",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:35:00.826Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/eugETbRb#1ehlOokX_lLtIwjlzJQgsklGKMlVcWQhfHtCNjZkgOw",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 473.27 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 473.27 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:37:00.897Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/eugETbRb#1ehlOokX_lLtIwjlzJQgsklGKMlVcWQhfHtCNjZkgOw",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 473.27 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/new-super-mario-bros-wii.html",
+          "label": "Download ZIP · 473.27 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:37:05.408Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/KFgDjSLZ#rNdRxZt4N2DwCA9cfEbtVOKbrMaoB3llkbSCOtluK5Q",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-1/index.html",
+          "label": "Download Injector",
+          "field": "anchor"
+        },
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+          "label": "Download Injector",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "PS4 Payload Injector Tool",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:35:54.825Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/file/KFgDjSLZ#rNdRxZt4N2DwCA9cfEbtVOKbrMaoB3llkbSCOtluK5Q",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-1/index.html",
+          "label": "Download Injector",
+          "field": "anchor"
+        },
+        {
+          "page": "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+          "label": "Download Injector",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "PS4 Payload Injector Tool",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:35:54.853Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/folder/xhcDWTzQ#sf7Iya2oNGqQ15LWnWYjWQ",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 66.98 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/super-mario-galaxy-2.html",
+          "label": "Download ZIP · 66.98 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:56:30.086Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://mega.nz/folder/xhcDWTzQ#sf7Iya2oNGqQ15LWnWYjWQ",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/retro/wii/game-mods.html",
+          "label": "Download ZIP · 66.98 MiB",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/wii/super-mario-galaxy-2.html",
+          "label": "Download ZIP · 66.98 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:56:30.086Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://phoenix.xboxunity.net/downloads/Aurora%200.7b.2%20-%20Release%20Package.rar",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 21.60 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:36:19.112Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://pretendo.network/docs/install/wiiu",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/wiiu/online.html",
+          "label": "Official Wii U setup",
+          "field": "anchor"
+        },
+        {
+          "page": "console/wiiu/online.html",
+          "label": "PNID & installation instructions",
+          "field": "anchor"
+        },
+        {
+          "page": "console/wiiu/online.html",
+          "label": "Official account & save guidance",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:27.220Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://pretendo.network/docs/install/wiiu",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5788",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5788,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://pretendo.network/docs/install/wiiu",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/wiiu/online.html",
+          "label": "Official Wii U setup",
+          "field": "anchor"
+        },
+        {
+          "page": "console/wiiu/online.html",
+          "label": "PNID & installation instructions",
+          "field": "anchor"
+        },
+        {
+          "page": "console/wiiu/online.html",
+          "label": "Official account & save guidance",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:36:27.771Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://pretendo.network/docs/install/wiiu",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5745",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5745,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/catppuccin/aurora/21f6ef55249151cea690132b26f9ae32c078719b/themes/Catppuccin-Mocha-Blue.xzp",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/xbox360/library.html",
+          "label": "Download · 7.87 MiB",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:38:27.707Z",
+      "outcome": "network-error",
+      "error": 20,
+      "detail": "This operation was aborted"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/darker.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:40:28.964Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/darker.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:40:28.965Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DS-Homebrew/twlmenu-extras/master/_nds/TWiLightMenu/dsimenu/themes/Switch%20-%20Basic%20Light.7z",
+      "kind": "direct-file",
+      "references": [
+        {
+          "page": "console/ds/themes.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        },
+        {
+          "page": "console/retro/ds.html",
+          "label": "Publisher download",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:42:40.773Z",
+      "outcome": "network-error",
+      "error": "UND_ERR_CONNECT_TIMEOUT",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://reflourished.fandom.com/wiki/Installation_Guide",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "games-downloads/plants-vs-zombies.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "PVZ 2 Reflourished",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:28.175Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://reflourished.fandom.com/wiki/Installation_Guide",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5899",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5899,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://reflourished.fandom.com/wiki/Installation_Guide",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "games-downloads/plants-vs-zombies.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "PVZ 2 Reflourished",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:28.179Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://reflourished.fandom.com/wiki/Installation_Guide",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5834",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5834,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://riptidecheats.cc/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "pages/braindamge101.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "pages/braindamge101.html",
+          "label": "Purchase Now",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Riptide Free",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:28.653Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://riptidecheats.cc/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "pages/braindamge101.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "pages/braindamge101.html",
+          "label": "Purchase Now",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Riptide Free",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:28.729Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://usebottles.com/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "downloads/catalog.json",
+          "label": "Bottles Flatpak installer",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:36:39.729Z",
+      "outcome": "network-error",
+      "error": "ECONNRESET",
+      "detail": "fetch failed"
+    },
+    {
+      "url": "https://www.lcpdfr.com/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "mods/gta4.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "LCPDFR",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:42.410Z",
+      "outcome": "network-error",
+      "status": 0,
+      "error": "redirect limit exceeded",
+      "redirects": [
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        }
+      ],
+      "sampleFlags": {
+        "html": false,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      }
+    },
+    {
+      "url": "https://www.lcpdfr.com/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "mods/gta4.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "LCPDFR",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:42.444Z",
+      "outcome": "network-error",
+      "status": 0,
+      "error": "redirect limit exceeded",
+      "redirects": [
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        },
+        {
+          "status": 307,
+          "url": "https://www.lcpdfr.com/"
+        }
+      ],
+      "sampleFlags": {
+        "html": false,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      }
+    },
+    {
+      "url": "https://www.mediafire.com/file/45z1tjfuf0i2zt0/MAG_INJECTOR_MAGUPDATE21102026.zip/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/modern-warfare-remastered/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "MAG Menu v1 and multi-COD injector",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:48:31.869Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/45z1tjfuf0i2zt0/MAG_INJECTOR_MAGUPDATE21102026.zip/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "MAG_INJECTOR_MAGUPDATE21102026"
+    },
+    {
+      "url": "https://www.mediafire.com/file/45z1tjfuf0i2zt0/MAG_INJECTOR_MAGUPDATE21102026.zip/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/modern-warfare-remastered/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "MAG Menu v1 and multi-COD injector",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:48:33.391Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/45z1tjfuf0i2zt0/MAG_INJECTOR_MAGUPDATE21102026.zip/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "MAG_INJECTOR_MAGUPDATE21102026"
+    },
+    {
+      "url": "https://www.mediafire.com/file/7tvnntrnw9tof2c/GTA_IV_Texture_Installer_V2%255BHEN%2526CFW%255D.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/gta-iv/index.html",
+          "label": "MediaFire source",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "MediaFire source",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "GTA IV Texture Installer",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:49:47.499Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/7tvnntrnw9tof2c/GTA_IV_Texture_Installer_V2%255BHEN%2526CFW%255D.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "GTA IV Texture Installer V2[HEN&amp;CFW]"
+    },
+    {
+      "url": "https://www.mediafire.com/file/7tvnntrnw9tof2c/GTA_IV_Texture_Installer_V2%255BHEN%2526CFW%255D.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/gta-iv/index.html",
+          "label": "MediaFire source",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "MediaFire source",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "GTA IV Texture Installer",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:49:48.319Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/7tvnntrnw9tof2c/GTA_IV_Texture_Installer_V2%255BHEN%2526CFW%255D.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "GTA IV Texture Installer V2[HEN&amp;CFW]"
+    },
+    {
+      "url": "https://www.mediafire.com/file/eqvmqypdq6ddocd/PS3_Uncharted_Series_Dev_Menu_Installer_Tool_By_VirusMike.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "Installer RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/uncharted/index.html",
+          "label": "Installer RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Uncharted Series Dev Menu Installer by VirusMike",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:51:29.296Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/eqvmqypdq6ddocd/PS3_Uncharted_Series_Dev_Menu_Installer_Tool_By_VirusMike.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "PS3 Uncharted Series Dev Menu Installer Tool By VirusMike"
+    },
+    {
+      "url": "https://www.mediafire.com/file/eqvmqypdq6ddocd/PS3_Uncharted_Series_Dev_Menu_Installer_Tool_By_VirusMike.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "Installer RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/uncharted/index.html",
+          "label": "Installer RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Uncharted Series Dev Menu Installer by VirusMike",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:51:29.936Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/eqvmqypdq6ddocd/PS3_Uncharted_Series_Dev_Menu_Installer_Tool_By_VirusMike.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "PS3 Uncharted Series Dev Menu Installer Tool By VirusMike"
+    },
+    {
+      "url": "https://www.mediafire.com/file/pdqbs6ebw2797jq/",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/ghosts/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "SilentShadaw v3",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:53:20.463Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/pdqbs6ebw2797jq/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "SilentShadowV3"
+    },
+    {
+      "url": "https://www.mediafire.com/file/pdqbs6ebw2797jq/",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/mods/ps4/call-of-duty/ghosts/index.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "SilentShadaw v3",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:53:20.483Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/pdqbs6ebw2797jq/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "SilentShadowV3"
+    },
+    {
+      "url": "https://www.mediafire.com/file/ukcihgnjgnolw0v/Dead_Island_Series_Dev_Menu_Installer_V2_%255BHEN%2526CFW%255D.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/dead-island/index.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/dead-island-riptide/index.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Dead Island Series Developer Menu Installer V2",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T12:54:00.815Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/ukcihgnjgnolw0v/Dead_Island_Series_Dev_Menu_Installer_V2_%255BHEN%2526CFW%255D.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "Dead Island Series Dev Menu Installer V2 [HEN&amp;CFW]"
+    },
+    {
+      "url": "https://www.mediafire.com/file/ukcihgnjgnolw0v/Dead_Island_Series_Dev_Menu_Installer_V2_%255BHEN%2526CFW%255D.rar/file",
+      "kind": "provider-page",
+      "references": [
+        {
+          "page": "console/ps3/mods/dead-island/index.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/dead-island-riptide/index.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/mods/menus.html",
+          "label": "Original V2 RAR",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/index.html",
+          "label": "Original page",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Dead Island Series Developer Menu Installer V2",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T12:54:00.845Z",
+      "outcome": "provider-page-unverified",
+      "status": 200,
+      "finalUrl": "https://www.mediafire.com/file/ukcihgnjgnolw0v/Dead_Island_Series_Dev_Menu_Installer_V2_%255BHEN%2526CFW%255D.rar/file",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 196608,
+      "headStatus": 200,
+      "sampleFlags": {
+        "html": true,
+        "challenge": false,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "providerButton": {
+        "probeVersion": 2,
+        "found": false,
+        "htmlSampleCapped": true,
+        "note": "Public Download button only; JavaScript actions, gates, sign-in and adverts are not followed."
+      },
+      "pageTitle": "Dead Island Series Dev Menu Installer V2 [HEN&amp;CFW]"
+    },
+    {
+      "url": "https://www.nexusmods.com/oblivion/mods/22368",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "tools/mods.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Wrye Bash",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:42.558Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.nexusmods.com/oblivion/mods/22368",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5795",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5795,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.nexusmods.com/oblivion/mods/22368",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "tools/mods.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Wrye Bash",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:42.659Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.nexusmods.com/oblivion/mods/22368",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5752",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5752,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/12604",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "mods/skyrim.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "SkyUI",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:42.740Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.nexusmods.com/skyrimspecialedition/mods/12604",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5852",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5852,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/12604",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "mods/skyrim.html",
+          "label": "Download",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "SkyUI",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:42.826Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.nexusmods.com/skyrimspecialedition/mods/12604",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5810",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5810,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.psx-place.com/threads/4-93-evilnat-w-cobra-v8-5-cex-pex-d-pex.39743/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Evilnat release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Evilnat developer release and supported builds",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Release & Downloads",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Evilnat CFW Cobra",
+          "field": "items.url"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:46.157Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.psx-place.com/threads/4-93-evilnat-w-cobra-v8-5-cex-pex-d-pex.39743/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5964",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5964,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.psx-place.com/threads/4-93-evilnat-w-cobra-v8-5-cex-pex-d-pex.39743/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Evilnat release",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Evilnat developer release and supported builds",
+          "field": "anchor"
+        },
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Release & Downloads",
+          "field": "anchor"
+        },
+        {
+          "page": "downloads/catalog.json",
+          "label": "Evilnat CFW Cobra",
+          "field": "items.url"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:46.288Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.psx-place.com/threads/4-93-evilnat-w-cobra-v8-5-cex-pex-d-pex.39743/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5921",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5921,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.psx-place.com/threads/custom-firmware-ferrox-4-87-cobra-8-20.32504/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Legacy Release",
+          "field": "anchor"
+        }
+      ],
+      "device": "iphone",
+      "checkedAt": "2026-11-02T08:34:47.821Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.psx-place.com/threads/custom-firmware-ferrox-4-87-cobra-8-20.32504/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5961",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5961,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    },
+    {
+      "url": "https://www.psx-place.com/threads/custom-firmware-ferrox-4-87-cobra-8-20.32504/",
+      "kind": "download-page",
+      "references": [
+        {
+          "page": "console/ps3/cfw.html",
+          "label": "Legacy Release",
+          "field": "anchor"
+        }
+      ],
+      "device": "android",
+      "checkedAt": "2026-11-02T08:34:47.980Z",
+      "outcome": "access-blocked",
+      "status": 403,
+      "finalUrl": "https://www.psx-place.com/threads/custom-firmware-ferrox-4-87-cobra-8-20.32504/",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "5918",
+        "server": "cloudflare"
+      },
+      "redirects": [],
+      "sampledBytes": 5918,
+      "headStatus": 403,
+      "sampleFlags": {
+        "html": true,
+        "challenge": true,
+        "gitLfsPointer": false,
+        "empty": false,
+        "errorDocument": false,
+        "providerUnavailable": false
+      },
+      "pageTitle": "Just a moment..."
+    }
+  ],
+  "note": "Provider and access limitations are unverified, not asserted broken. Source/provenance-only references are excluded from this priority list."
+}

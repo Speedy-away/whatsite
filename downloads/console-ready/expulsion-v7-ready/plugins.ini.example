@@ -1,0 +1,9 @@
+; GTA V update 1.57: one shared Expulsion PRX for USA and EUR.
+; Keep the section matching your installed game. Keeping both is also fine.
+; At least the matching section/path must exist; the other region alone will not load it.
+; Merge into /data/GoldHEN/plugins.ini and preserve unrelated entries.
+[CUSA00419]
+/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx
+
+[CUSA00411]
+/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx

@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-02T12:51:19.434Z",
+  "scope": "Only exact links observed on supplied VirusMike source pages; no gates bypassed or source code executed.",
+  "attempts": [
+    {
+      "name": "CJ House custom zombie map",
+      "checkedAt": "2026-11-02T12:19:58.498Z",
+      "source": "https://www.mediafire.com/file/rbwfnw29u46mkdh/zm_cjhouse.rar/file",
+      "priorPartial": "docs/tmp/virusmike-ps4-next/zm_cjhouse-1793607730048.rar",
+      "retainedPartialBytes": 312508416,
+      "stagedPath": "docs/tmp/console-batch5/zm_cjhouse-1793621848038.rar",
+      "expectedBytes": 448796338,
+      "bytes": 324550656,
+      "complete": false,
+      "transferExitCode": 28,
+      "error": "curl: (28) Operation timed out after 150011 milliseconds with 12042240 out of 136287922 bytes received\r\n"
+    },
+    {
+      "name": "Ghosts Appendum",
+      "source": "https://mega.nz/file/Ufxg2aYK#Enfs3WutLYRsoZ1fFAAJhiMQA-5jiccQdJQJ_rpDlRA",
+      "status": "unavailable",
+      "error": "MEGA ETOOMANY (-6): Too many concurrent IP addresses are accessing this upload target URL."
+    },
+    {
+      "name": "MW2 Remastered TER152 ELF",
+      "source": "https://mega.nz/file/ZHQmVSBT#RgkE2vOLSoNZESvzo_2X4FClfI-woBExfr-vZypfLWU",
+      "status": "unavailable",
+      "error": "MEGA ETOOMANY (-6): Too many concurrent IP addresses are accessing this upload target URL."
+    },
+    {
+      "name": "Ghosts SilentShadow V2",
+      "checkedAt": "2026-11-02T12:45:55.395Z",
+      "source": "https://www.mediafire.com/file/4hsmuzvkf0gfjm9/SilentShadowV2%252BElf_Injector.rar/file",
+      "sourcePage": "https://sites.google.com/view/im-virusmike-exe/ps4-all-you-need/cod-ghosts",
+      "complete": false,
+      "error": "Direct source unavailable"
+    }
+  ]
+}

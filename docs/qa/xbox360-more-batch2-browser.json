@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-02",
+  "status": "passed",
+  "scope": "xbox360-more",
+  "resources": 29,
+  "desktop": {"viewport":1280,"documentWidth":1280},
+  "mobile": {"viewport":390,"clientWidth":375,"documentWidth":375,"gridColumns":1,"minimumControlHeight":48,"expandedSetupOverflow":false},
+  "cases": [
+    "All resources:29",
+    "Homebrew games category:6; Quad Carnage search:1",
+    "Emulators category:5",
+    "BadUpdate explicitly supported:1 (Multiplex360)",
+    "AuroraFlow search:2 separate language variants",
+    "Phone Silverdash shows base0.1.2 and required0.1.3 update as separate visible Download/File options actions",
+    "WowJay author-page link has no download attribute and retains permanent purchase/download-page URL",
+    "Legacy0.6b search:1 (Xbox ONE Experience)",
+    "No-match search shows empty state",
+    "Clear filters restores all29",
+    "Viewport override reset"
+  ],
+  "screenshots": ["docs/qa/xbox360-more-batch2-desktop.jpg","docs/qa/xbox360-more-batch2-mobile.jpg"],
+  "previewNote": "Shared8765 preview closed direct HTTP requests and browser returned cached first-batch HTML. Current29-entry files were verified through a temporary loopback-only QA preview; that owned server was stopped after screenshots. No shared preview process was changed.",
+  "physicalHardwareTested": false,
+  "downloadedBuildsExecuted": false
+}
