@@ -79,6 +79,7 @@ function scopedBuilder(){
    if(name==='./console-resource-renderer.cjs')return {createResourceRenderer:()=>({guideBlock:()=>'<p>Original requirements</p>'})};
    if(name==='./console-menu-media.cjs')return {createMenuMedia:()=>({figure:()=>'',details:()=>''})};
    if(name==='./build-xbox360-pages.cjs')return {xbox360nav:[]};
+   if(name==='./console-mod-navigation.cjs')return require('../console-mod-navigation.cjs');
    throw Error('Unexpected builder dependency '+name);
   }
  });

@@ -5,12 +5,14 @@ const crypto = require('node:crypto');
 const {Readable, Transform} = require('node:stream');
 const {pipeline} = require('node:stream/promises');
 const {destinationForFile} = require('./download-archive-layout.cjs');
+const {MAX_MIRROR_BYTES} = require('./download-mirror-policy.cjs');
 const root = path.resolve(__dirname, '..');
 const backup = path.resolve('F:/whatsite-backup-downloads-etc');
 const catalogPath = path.join(root, 'docs/gta5-pc-source-catalog.json');
 const manifestPath = path.join(root, 'downloads/source-codes/gta5-pc/manifest.json');
 const args = process.argv.slice(2);
-if (args.some(arg => !['--download', '--archive'].includes(arg))) throw Error('Use --download and/or --archive.');
+if (args.some(arg => !['--download', '--archive'].includes(arg) && !/^--skip=[a-z0-9-]+$/.test(arg))) throw Error('Use --download, --archive and optional --skip=<project-id>.');
+const skipped = new Set(args.filter(arg => arg.startsWith('--skip=')).map(arg => arg.slice(7)));
 const read = (file, fallback) => fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : fallback;
 function within(base, file) {
   const absolute = path.resolve(file), relative = path.relative(base, absolute);
@@ -37,7 +39,7 @@ async function immutableCopy(file, source, expected, base = root) {
 }
 function json(file, value) { fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n'); }
 async function download(url, project) {
-  const response = await fetch(url, {headers: {'User-Agent': 'whatsite-source-archive'}, signal: AbortSignal.timeout(900000)});
+  const response = await fetch(url, {headers: {'User-Agent': 'whatsite-source-archive'}, signal: AbortSignal.timeout(project.timeoutMs || 1800000)});
   if (!response.ok) throw Error('HTTP ' + response.status + ': ' + url);
   const max = project.maxBytes || 512 * 1024 * 1024;
   if (Number(response.headers.get('content-length')) > max) throw Error('Source ZIP exceeds limit');
@@ -67,6 +69,7 @@ async function main() {
   if (!catalog?.projects?.length) throw Error('Prepare the reviewed source catalogue first.');
   const manifest = read(manifestPath, {schemaVersion: 1, files: []});
   for (const project of catalog.projects) {
+    if (skipped.has(project.id)) continue;
     if (project.status === 'empty' || !project.commit) {
       const status = project.status === 'empty' ? 'empty' : 'unavailable';
       const reason = project.availabilityNote || (status === 'empty' ? 'No committed files.' : 'No accessible branch snapshot.');
@@ -86,11 +89,17 @@ async function main() {
     const local = '/downloads/source-codes/gta5-pc/' + project.id + '/' + filename;
     const absolute = within(root, path.join(root, local));
     let record = manifest.files.find(file => file.id === project.id && file.commit === project.commit);
-    if (!fs.existsSync(absolute)) {
+    let sourceFile = absolute;
+    if (record?.bytes >= MAX_MIRROR_BYTES && record.backupPath && fs.existsSync(record.backupPath)) {
+      sourceFile = within(backup, record.backupPath);
+      const info = await fileInfo(sourceFile);
+      if (info.bytes !== record.bytes || info.sha256 !== record.sha256) throw Error('Archived source snapshot hash changed: ' + project.id);
+    } else if (!fs.existsSync(absolute)) {
       if (!args.includes('--download')) throw Error('Source snapshot not downloaded: ' + project.id);
       try {
         const downloaded = await download(url, project);
-        await immutableCopy(absolute, downloaded.staged, downloaded);
+        if (downloaded.bytes < MAX_MIRROR_BYTES) await immutableCopy(absolute, downloaded.staged, downloaded);
+        else sourceFile = downloaded.staged; // Keep large originals outside public Git content.
         record = {id: project.id, repo: project.repo, branch: project.branch, commit: project.commit, edition: project.edition, status: 'downloaded', name: filename, local, bytes: downloaded.bytes, sha256: downloaded.sha256, sourceUrl: url, resolvedUrl: downloaded.resolvedUrl, version: project.branch + '-' + project.commit.slice(0, 12), archivedAt: new Date().toISOString(), archiveRole: ['Source Code']};
       } catch (error) {
         const attempt = {id: project.id, commit: project.commit, status: 'unavailable', sourceUrl: url, checkedAt: new Date().toISOString(), error: error.message};
@@ -99,7 +108,7 @@ async function main() {
     } else {
       const info = await fileInfo(absolute);
       if (record?.sha256 && info.sha256 !== record.sha256) throw Error('Existing snapshot hash changed: ' + project.id);
-      record = {...record, id: project.id, repo: project.repo, branch: project.branch, commit: project.commit, edition: project.edition, status: 'downloaded', name: filename, local, ...info, sourceUrl: url, resolvedUrl: record?.resolvedUrl || url, version: project.branch + '-' + project.commit.slice(0, 12), archivedAt: record?.archivedAt || new Date().toISOString(), archiveRole: ['Source Code']};
+      record = {...record, id: project.id, repo: project.repo, branch: project.branch, commit: project.commit, edition: project.edition, status: 'downloaded', name: filename, local, ...info, sourceUrl: record?.sourceUrl || url, resolvedUrl: record?.resolvedUrl || url, version: project.branch + '-' + project.commit.slice(0, 12), archivedAt: record?.archivedAt || new Date().toISOString(), archiveRole: ['Source Code']};
     }
     const itemId = 'gta5-pc-source-' + project.id + '-' + project.commit.slice(0, 12);
     const item = {id: itemId, title: project.title + ' source code · GTA 5 ' + project.edition, project: project.title, url: project.branchUrl, kind: 'github-source', platform: 'PC', category: ['Games', 'GTA5', project.edition], archiveRole: ['Source Code'], release: record.version, edition: project.edition, repository: project.repo, branch: project.branch, commit: project.commit, pages: ['source-codes/pc/gta5/index.html'], labels: ['Download source ZIP'], status: 'downloaded', sourceUrls: [project.branchUrl, project.commitUrl, url, ...(project.requestedUrl ? [project.requestedUrl] : [])], files: []};
@@ -108,7 +117,7 @@ async function main() {
       if (!fs.existsSync(backup)) throw Error('F: backup root unavailable');
       const archiveFile = {...record, releaseTag: record.version};
       const destination = within(backup, destinationForFile(backup, item, archiveFile));
-      await immutableCopy(destination, absolute, record, backup);
+      await immutableCopy(destination, sourceFile, record, backup);
       const archived = await fileInfo(destination);
       if (archived.bytes !== record.bytes || archived.sha256 !== record.sha256) throw Error('Archive verification failed');
       record.backupPath = destination;
@@ -126,7 +135,7 @@ async function main() {
     manifest.updatedAt = new Date().toISOString(); json(manifestPath, manifest);
     console.log(project.title + ': ' + record.bytes + ' bytes' + (record.backupPath ? ', F: SHA-256 verified' : ', staged locally'));
   }
-  if (catalog.projects.some(project => project.status !== 'empty' && project.commit && !manifest.files.some(file => file.id === project.id && file.commit === project.commit && file.status === 'downloaded' && (!args.includes('--archive') || file.backupPath)))) process.exitCode = 1;
+  if (catalog.projects.some(project => !skipped.has(project.id) && project.status !== 'empty' && project.commit && !manifest.files.some(file => file.id === project.id && file.commit === project.commit && file.status === 'downloaded' && (!args.includes('--archive') || file.backupPath)))) process.exitCode = 1;
 }
 if (require.main === module) main().catch(error => {console.error(error); process.exitCode = 1;});
 module.exports = {download, fileInfo, within};

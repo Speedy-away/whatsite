@@ -1,74 +1,36 @@
 {
-  "preparedAt": "2026-11-02T12:43:25.332Z",
-  "version": "2026.11.02.11",
+  "preparedAt": "2026-11-02T15:18:12.478Z",
+  "version": "2026.11.02.12",
   "jobsPath": "docs/qa/host-menu-companion-jobs.json",
-  "previousJobsPath": "docs/qa/console-expansion-batch4-helper-jobs.json",
+  "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.11.json",
   "activated": true,
   "records": [
     {
       "platform": "ps4",
-      "version": "2026.11.02.11",
+      "version": "2026.11.02.12",
       "path": "console/ps4/whatsite-ps4.html",
-      "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.11-f359c97a07b6/whatsite-ps4.html",
-      "bytes": 649654,
-      "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a",
-      "previousSha256": "f0417719a4ed4128ce28d0d85cd833f818ce1b4853e60f72207112876b50d4d9",
-      "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-f0417719a4ed/whatsite-ps4.html",
-      "previousItems": 464,
-      "items": 473,
-      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps4.html"
+      "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.12-e2cbb3de30d7/whatsite-ps4.html",
+      "bytes": 676243,
+      "sha256": "e2cbb3de30d7843a9d60e3bd1e56c5f938a27bf29682701a37d7ce7091381799",
+      "previousSha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a",
+      "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-f359c97a07b6/whatsite-ps4.html",
+      "previousItems": 473,
+      "items": 491,
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.12\\whatsite-ps4.html"
     },
     {
       "platform": "ps5",
-      "version": "2026.11.02.11",
+      "version": "2026.11.02.12",
       "path": "console/ps5/whatsite-ps5.html",
-      "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.11-b054ff263869/whatsite-ps5.html",
+      "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.12-d2c127397e2c/whatsite-ps5.html",
       "bytes": 548833,
-      "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e",
-      "previousSha256": "5fe16837baee7f350e39689b868e318c3b735f86b836add986a44723cb6226d3",
-      "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-5fe16837baee/whatsite-ps5.html",
-      "previousItems": 342,
+      "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20",
+      "previousSha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e",
+      "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-b054ff263869/whatsite-ps5.html",
+      "previousItems": 350,
       "items": 350,
-      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.11\\whatsite-ps5.html"
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.12\\whatsite-ps5.html"
     }
   ],
-  "verifiedAt": "2026-11-02T12:45:38.957Z",
-  "receiverSelectionVerification": {
-    "checkedAt": "2026-11-02T12:48:59.284Z",
-    "source": "assets/console-receiver.js",
-    "sourceSHA256": "48dcf127700dca68d00c2f1e87ce3fe66ed9812bc40ebc1e2f797013215ee0cd",
-    "behavior": [
-      "Known file/id links remain scoped to the exact catalogue entry after filters are cleared, including duplicate display names.",
-      "Unknown, empty, malformed, ambiguous or wrong-platform IDs expose no unrelated Save action and show an unavailable-file notice.",
-      "Opening a native companion may read receiver queue status but never automatically queues a download."
-    ],
-    "tests": {
-      "command": "node --test scripts/tests/console-receiver.test.cjs scripts/tests/console-receiver-preparation.test.cjs scripts/tests/host-menu-groups.test.cjs scripts/tests/console-download-center.test.cjs scripts/tests/mobile-downloads.test.cjs",
-      "passed": 64,
-      "failed": 0,
-      "method": "Deterministic synthetic DOM and receiver HTTP-transport fixtures; no console or downloaded build executed."
-    },
-    "files": [
-      {
-        "platform": "ps4",
-        "currentVersion": "2026.11.02.11",
-        "currentBytes": 649654,
-        "currentSHA256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a",
-        "liveImmutableAndBackupMatch": true,
-        "previousVersion": "2026.11.02.10",
-        "previousSHA256": "f0417719a4ed4128ce28d0d85cd833f818ce1b4853e60f72207112876b50d4d9",
-        "previousVersionRetained": true
-      },
-      {
-        "platform": "ps5",
-        "currentVersion": "2026.11.02.11",
-        "currentBytes": 548833,
-        "currentSHA256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e",
-        "liveImmutableAndBackupMatch": true,
-        "previousVersion": "2026.11.02.10",
-        "previousSHA256": "5fe16837baee7f350e39689b868e318c3b735f86b836add986a44723cb6226d3",
-        "previousVersionRetained": true
-      }
-    ]
-  }
+  "verifiedAt": "2026-11-02T15:24:32.590Z"
 }

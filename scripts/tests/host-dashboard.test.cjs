@@ -101,7 +101,10 @@ test('dedicated manager pages keep console scopes and native autoload controls s
   for (const platform of ['ps4','ps5']) {
     const html = fs.readFileSync(path.join(root,'hosts',platform,'payload-manager/index.html'),'utf8');
     assert.ok(html.includes('Connect to your '+platform.toUpperCase()));
-    assert.ok(html.includes('id="host-file-service"'));
+    assert.ok(html.includes('data-open-workspace="payloads"'));
+    assert.ok(html.includes('data-open-workspace="autoload"'));
+    assert.ok(!html.includes('id="host-action-grid"'));
+    assert.ok(!html.includes('class="host-tools-grid"'));
     if (platform === 'ps5') { assert.ok(html.includes('data-manager-route="autoload"')); assert.ok(html.includes('id="host-load-manager"')); }
     else { assert.ok(html.includes('PayLoader LaunchPad')); assert.ok(!html.includes('id="host-load-manager"')); }
   }

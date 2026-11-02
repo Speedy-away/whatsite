@@ -12,7 +12,7 @@ const crypto = require('node:crypto');
 const {normalizeAddress} = require('../assets/host-console-client.js');
 const ROOT = path.resolve(__dirname, '..');
 const MAX_FILE = 64 * 1024 * 1024;
-const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json'];
+const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json'];
 const MIME = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.ico':'image/x-icon','.woff2':'font/woff2','.elf':'application/octet-stream','.bin':'application/octet-stream'};
 function fail(code, message) { const e = new Error(message); e.code = code; return e; }
 function uncertainFailure(error) {
@@ -264,6 +264,7 @@ function staticPath(requestURL) {
   const allowed = /^\/hosts\/(?:ps[45]\/(?:(?:payload-manager|files|gta5|rdr2|other-games)\/)?)?index\.html$/.test(value) ||
     /^\/assets\/(?:images\/.+\.(?:png|jpe?g|svg|webp)|[a-z0-9._-]+\.(?:css|js))$/i.test(value) ||
     /^\/languages\/(?:i18n|[a-z-]+)\.js$/i.test(value) ||
+    /^\/downloads\/helpers\/host-native-workspace\/(ps[45])\/[a-f0-9]{16}\/whatsite-workspace-\1\.html$/.test(value) ||
     /^\/(?:script\.js|style\.css)$/.test(value) ||
     /^\/docs\/host-(?:actions-ps[45]|game-actions)\.json$/.test(value);
   return allowed ? value : null;

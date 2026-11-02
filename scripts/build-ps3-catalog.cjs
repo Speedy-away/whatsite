@@ -10,7 +10,7 @@ const guideRenderer=require('./console-resource-renderer.cjs').createResourceRen
 const menuMedia=require('./console-menu-media.cjs').createMenuMedia({root});
 const multiGame=require('./ps3-multicod-metadata.cjs');
 const matchesGame=(item,id)=>item.gameId===id || (item.gameIds || []).includes(id) || (item.indexIds || []).includes(id);
-const games = multiGame.mergeGameDefinitions([
+const games = require('./console-mod-navigation.cjs').applyGameImages(multiGame.mergeGameDefinitions([
   {id:'gta-v', title:'Grand Theft Auto V', short:'GTA V', url:'/console/ps3/mods/gta-v/', image:'/assets/images/gta52.png', summary:'Title update 1.27 loaders and SPRX menus, with HEN, DEX and region notes.', aliases:['GTA 5','GTA V','Grand Theft Auto 5','1.27']},
   {id:'gta-iv', title:'Grand Theft Auto IV', short:'GTA IV', url:'/console/ps3/mods/gta-iv/', image:'/assets/images/gta4.png', summary:'GTA IV script loaders and menu archives. Match the base game or Episodes release.', aliases:['GTA 4','GTA IV','EFLC','Episodes from Liberty City']},
   {id:'black-ops-1', parent:'call-of-duty', title:'Call of Duty: Black Ops', short:'Black Ops 1', url:'/console/ps3/mods/call-of-duty/black-ops-1/', image:'/assets/images/covers/cod-black-ops-1.jpg', aliases:['BO1','Black Ops I','Black Ops 1']},
@@ -21,7 +21,7 @@ const games = multiGame.mergeGameDefinitions([
   {id:'uncharted-3',parent:'uncharted',title:'Uncharted 3: Drake’s Deception',short:'Uncharted 3',url:'/console/ps3/mods/uncharted/drakes-deception/',image:'/assets/images/ps3-mods/uncharted-dev-installer.jpg',aliases:['Uncharted 3','Drakes Deception','BCES01175','developer menu']},
   ...read('docs/ps3-mod-resources.json',{games:[]}).games || [],
   ...(read('docs/discord-ps3-resources.json',{games:[]}).games || []).filter(game=>!(read('docs/ps3-mod-resources.json',{games:[]}).games || []).some(existing=>existing.id===game.id))
-]);
+]));
 if(new Set(games.map(game=>game.id)).size!==games.length)throw Error('Duplicate PS3 game definition');
 const labels = {sprx:'SPRX menus', loader:'Mod loaders', script:'Scripts', eboot:'EBOOT variants',texture:'Texture tools',rtm:'Windows RTM helpers', reference:'Compatibility references','dlc-reference':'DLC references', 'developer-menu':'Developer menus', app:'PS3 homebrew', tool:'PS3 tools'};
 function data() {
@@ -70,8 +70,10 @@ function card(item) {
   const supportedGames=games.filter(game=>game.parent==='call-of-duty' && matchesGame(item,game.id));
   const gameLinks=supportedGames.length>1?`<div class="ps3-supported-games"><h4>Supported games listed in the source</h4><div class="guide-links">${supportedGames.map(game=>fullLink(game.url+'#'+item.id,game.short)).join('')}</div><p>Match the resource's build, title ID and game update requirements for each game.</p></div>`:'';
   const variantMarkup=file=>{const variant=multiGame.variantForFile(item,file);return variant?`<h5>${h(variant.label)}</h5>`:'';};
+  const region=String(item.region||'').trim();
+  const hasRegion=region&&!/^(?:match your title id|not specified|not stated|unspecified)/i.test(region);
   const guideId='guide-'+item.id;
-  const guide=`<div class="guide-links"><a href="#${h(guideId)}" data-guide-open>Guide &amp; requirements</a></div><section class="ps3-resource-guide" id="${h(guideId)}" data-guide-panel data-guide-title="${h(item.name+' · Guide & requirements')}"><p>${h(item.description)}</p><dl class="ps3-meta"><dt>Game update</dt><dd>${h(item.gameUpdate||'Not specified')}</dd><dt>Build / firmware</dt><dd>${h(item.compatibility||'Not specified by source')}</dd>${item.region?`<dt>Region / title</dt><dd>${h(item.region)}</dd>`:''}</dl>${item.note?`<p>${h(item.note)}</p>`:''}${gameLinks}${menuMedia.details(item)}${(item.guideBlocks||[]).map(guideRenderer.guideBlock).join('')}</section>`;
+  const guide=`<div class="guide-links"><a href="#${h(guideId)}" data-guide-open>Guide &amp; requirements</a></div><section class="ps3-resource-guide" id="${h(guideId)}" data-guide-panel data-guide-title="${h(item.name+' · Guide & requirements')}"><p>${h(item.description)}</p><dl class="ps3-meta"><dt>Game update</dt><dd>${h(item.gameUpdate||'Not specified')}</dd><dt>Build / firmware</dt><dd>${h(item.compatibility||'Not specified by source')}</dd>${hasRegion?`<dt>Region / title</dt><dd>${h(region)}</dd>`:''}</dl>${item.note?`<p>${h(item.note)}</p>`:''}${gameLinks}${menuMedia.details(item)}${(item.guideBlocks||[]).map(guideRenderer.guideBlock).join('')}</section>`;
   const ownImage = item.image && fs.existsSync(path.join(root, item.image.slice(1))) ? item.image : '';
   const game=games.find(game=>game.id===item.gameId);
   const fallback=item.gameId==='world-at-war'?'/assets/images/ps3-mods/waw-official-cover.jpg':game?.image||'/assets/images/consoles/ps3.png';
@@ -111,7 +113,8 @@ function gameCard(game) {
 }
 function chooser() {
   const cod = resource('Call of Duty', h(games.filter(game=>game.parent==='call-of-duty').map(game=>game.short).join(', ')+': console menus, game files and separately labelled RTM helpers.'), fullLink('/console/ps3/mods/call-of-duty/', 'Choose a Call of Duty game'), '/assets/images/covers/cod-black-ops-2.jpg').replace('class="guide-resource"', 'class="guide-resource ps3-game-card"');
-  return section('games', 'Choose your PS3 game', grid(...games.filter(game=>!game.parent&&game.kind!=='collection').map(gameCard),cod).replace('class="games-grid"','class="games-grid ps3-game-grid"'), 'Game catalogues open as full pages. Start with the title update and build listed for each resource.') + section('directory', 'Find a specific menu', `<div class="guide-links">${fullLink('/console/ps3/mods/menus.html','Search all PS3 menus')}${games.filter(game=>game.kind==='collection').map(game=>fullLink(game.url,game.title)).join('')}${fullLink('/console/ps3/browser-downloads.html','Open PS3 console file list')}${fullLink('/console/ps3/desktop-tools.html','Windows RTM helpers')}</div>`);
+  const main=games.filter(game=>!game.parent&&game.kind!=='collection'), first=main.find(game=>game.id==='gta-v'), third=main.find(game=>game.id==='gta-iv');
+  return section('games', 'Choose your PS3 game', grid(...[first&&gameCard(first),cod,third&&gameCard(third),...main.filter(game=>!['gta-v','gta-iv'].includes(game.id)).map(gameCard)].filter(Boolean)).replace('class="games-grid"','class="games-grid ps3-game-grid"'), 'Game catalogues open as full pages. Start with the title update and build listed for each resource.') + section('directory', 'Find a specific menu', `<div class="guide-links">${fullLink('/console/ps3/mods/menus.html','Search all PS3 menus')}${games.filter(game=>game.kind==='collection').map(game=>fullLink(game.url,game.title)).join('')}${fullLink('/console/ps3/browser-downloads.html','Open PS3 console file list')}${fullLink('/console/ps3/desktop-tools.html','Windows RTM helpers')}</div>`);
 }
 function compatibility() {
   return section('compatibility', 'Match the build before copying files', note('<p><strong>Game update, title ID and firmware type are separate requirements.</strong> A HEN-labelled archive does not establish support for every HFW version. DEX-only SPRX files require the stated DEX environment; do not treat CEX, DEX and HEN as interchangeable.</p><p>Keep a backup of the original game files. Use each archive’s readme for the exact file destinations and loader. Downloading an SPRX does not load it; downloading a PKG does not install it. Windows RTM tools run on a computer and need the documented console-side connection method.</p>'));

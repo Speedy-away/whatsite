@@ -25,7 +25,7 @@ for (const item of review.repositories) {
     availabilityNote: note, compatibility: item.compatibilityNote || previous.compatibility || 'Legacy collection supplied by the user; current game-build compatibility is not established.',
     branchUrl: item.branchUrl || item.url + '/tree/' + item.branch, commitUrl: item.commit ? item.url + '/commit/' + item.commit : null,
     sourceEvidence: item.sourceEvidence || item.treeEvidence, group: 'gta5dump',
-    ...(item.name === 'NHA-Cleaned-Decompiled-Scripts' ? {maxBytes: 2 * 1024 ** 3, maxUncompressedBytes: 8 * 1024 ** 3} : {})});
+    ...(item.name === 'NHA-Cleaned-Decompiled-Scripts' ? {maxBytes: 2 * 1024 ** 3, maxUncompressedBytes: 8 * 1024 ** 3, timeoutMs: 3600000} : {})});
 }
 const output = {...current, checkedAt: new Date().toISOString(), coverage: {account: 'GTA5dump', repositories: 48, unavailable: projects.filter(project => project.group === 'gta5dump' && project.status === 'unavailable').length, empty: projects.filter(project => project.group === 'gta5dump' && project.status === 'empty').length}, projects};
 fs.writeFileSync(target, JSON.stringify(output, null, 2) + '\n');

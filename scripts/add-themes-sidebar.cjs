@@ -11,6 +11,7 @@ function applyThemes(html, file) {
     html = html.replace(/<nav\b[^>]*class="sidebar-nav"[^>]*>[\s\S]*?<\/nav>/, fragment => integrateThemes(fragment, file));
     const relative = String(file).replaceAll('\\','/').replace(/^\//,'');
     const themes = {'console/ps3/index.html':['/console/ps3/themes.html','PS3 themes'], 'console/psvita/home.html':['/console/psvita/themes.html','Vita themes'], 'console/ps2/index.html':['/console/ps2/themes.html','OPL themes'], 'console/psp/index.html':['/console/psp/themes.html','PSP themes'], 'console/ds/index.html':['/console/ds/themes.html','TWiLight Menu++ skins'], 'console/3ds/index.html':['/console/retro/3ds-themes.html','3DS themes'], 'console/wiiu/index.html':['/console/retro/wiiu-themes.html','Wii U themes'], 'console/nintendo-switch/index.html':['/console/nintendo-switch/themes.html','Switch themes']};
+    for(const platform of ['ps4','ps5']) themes[`console/${platform}/index.html`]=[`/console/${platform}/themes.html`,platform.toUpperCase()+' themes'];
     const owner = Object.keys(themes).find(hub => relative.startsWith(hub.slice(0,hub.lastIndexOf('/')+1)));
     const entry = themes[relative] || themes[owner];
     if (!entry || !fs.existsSync(path.join(root,entry[0].slice(1)))) return html;

@@ -28,6 +28,7 @@
 .source-code-page #legacy, .source-code-page #enhanced { scroll-margin-top: 90px; }
 .source-project-card { gap: 14px; }
 .source-project-card .guide-links { margin-top: 8px; padding-top: 0; }
+.source-download-tail { white-space: nowrap; }
 .source-availability { color: var(--text-muted); font-size: .85rem; }
 .source-project-search { max-width: 640px; margin-top: 28px; }
 .source-project-search label { display: block; margin-bottom: 9px; font-size: .9rem; }

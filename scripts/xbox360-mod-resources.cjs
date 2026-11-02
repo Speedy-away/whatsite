@@ -17,7 +17,7 @@ function gamesSection() {
   return start + '\n' + section('game-catalogue', 'Choose your Xbox 360 game', grid(...data.games.filter(game => resourcesForGame(game.id, data).length).map(game => {
     const count = resourcesForGame(game.id, data).length;
     return resource(escape(game.title), `${count} original Xbox-labelled COD4 multiplayer patch archives. Title-update and regional requirements remain unverified.`, fullLink(game.page, 'Browse ' + game.title), game.image);
-  })), 'Each game page lists only resources with evidence for that game and console.') + '\n' + end;
+  })).replace('class="games-grid"','class="games-grid menu-game-grid"'), 'Each game page lists only resources with evidence for that game and console.') + '\n' + end;
 }
 
 function archiveCard(item) {
@@ -26,7 +26,7 @@ function archiveCard(item) {
   const links = fullLink(archive.local, 'Download original RAR', archive.filename) + fullLink(archive.url, 'Original download page') + fullLink(item.source, 'Captured source post');
   return resource(escape(item.name), escape(item.description), links, '')
     .replace('<h3>', `<div class="game-features"><span class="feature">Xbox 360</span><span class="feature">COD4 multiplayer</span><span class="feature">RAR archive</span><span class="feature">${(archive.bytes / 1048576).toFixed(2)} MiB</span></div><h3>`)
-    .replace('<div class="guide-links">', `<p>${escape(item.compatibility)}</p><p><strong>Source version label:</strong> ${escape(item.version)}. <strong>Game update / region:</strong> not specified.</p><details><summary>Archive contents &amp; SHA-256</summary><ul>${item.members.map(member => `<li><code>${escape(member)}</code></li>`).join('')}</ul><p><code class="console-file-hash">${escape(archive.sha256)}</code></p><p>The retained archive bytes were checked. Console execution and title-update compatibility were not tested.</p></details><div class="guide-links">`);
+    .replace('<div class="guide-links">', `<p>${escape(item.compatibility)}</p><p><strong>Menu:</strong> ${escape(item.version)}. <strong>Game update / region:</strong> not specified.</p><details data-sha256="${escape(archive.sha256)}"><summary>Archive contents</summary><ul>${item.members.map(member => `<li><code>${escape(member)}</code></li>`).join('')}</ul><p>Console execution and title-update compatibility were not tested.</p></details><div class="guide-links">`);
 }
 
 function buildGamePages() {
@@ -40,7 +40,7 @@ function buildGamePages() {
     page(file, 'COD4 Xbox 360 Patch Menus',
       'Original Xbox-labelled COD4 multiplayer patch archives, preserved downloads and source evidence. Exact title-update and regional requirements remain unverified.',
       game.image, xbox360nav,
-      section('archives', 'COD4 multiplayer · Xbox 360 archives', note('<p>These four resources contain Xbox-labelled <code>patch_mp.ff</code> and <code>default_mp.xex</code> files for Call of Duty 4: Modern Warfare (2007). Their captured sources do not document exact title updates, regions or supported homebrew methods. Check those requirements before using a build.</p>') + grid(...entries.map(archiveCard))) +
+      section('archives', 'COD4 multiplayer · Xbox 360 archives', note('<p>These four resources contain Xbox-labelled <code>patch_mp.ff</code> and <code>default_mp.xex</code> files for Call of Duty 4: Modern Warfare (2007). Their captured sources do not document exact title updates, regions or supported homebrew methods. Check those requirements before using a build.</p>') + grid(...entries.map(archiveCard)).replace('class="games-grid"','class="games-grid menu-resource-grid"')) +
       section('preparation', 'Before using an archive', steps([
         ['Check the exact game build', 'Match the archive to your original COD4 multiplayer installation, region, media ID and title update using its source instructions. A title-update pin is not supplied here.'],
         ['Keep the original files', 'Preserve the original RAR and your existing game files. Downloading an archive does not extract it or install its contents.'],

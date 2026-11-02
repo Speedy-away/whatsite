@@ -57,6 +57,11 @@
 .host-game-filter label { font-size: .8rem; margin-bottom: 5px; }
 .host-game-filter select { padding: 9px 11px; }
 .host-action-grid.host-game-collections { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.host-native-workspace { padding:28px 0; border-bottom:1px solid #252b2a; margin-bottom:28px; }
+.host-native-workspace h2 { margin-top:9px; }
+.host-native-workspace .host-manager-actions { margin:22px 0; }
+.host-native-workspace .host-setup { margin-top:22px; }
+.host-native-workspace .host-note { max-width:85ch; }
 .host-game-collection { text-decoration: none; color: var(--text-primary); padding: 0; overflow: hidden; transition: border-color .15s; }
 .host-game-collection:hover { border-color: var(--accent-light); }
 .host-game-collection h3 { font-size: 1.1rem; margin: 0; }
@@ -209,4 +214,4 @@
 #host-version-detail .host-version-facts { font-size: .85rem; }
 .host-version-status { margin: 0; padding: 16px 24px; color: var(--text-secondary); border-top: 1px solid var(--border); font-size: .8rem; line-height: 1.6; }
 .host-version-status[data-error="true"] { color: #eead99; }
-@media (max-width: 680px) { .host-version-overlay { padding: 12px; } .host-version-header, .host-version-selector { padding: 16px; } #host-version-detail > .host-action { grid-template-columns: 1fr; } #host-version-detail .host-action-art img { height: 180px; aspect-ratio: auto; } #host-version-detail .host-action-content { padding: 16px; } .host-version-status { padding: 14px 16px; } }
+@media (max-width: 680px) { .host-version-overlay { padding: 12px; } .host-version-header, .host-version-selector { padding: 16px; } #host-version-detail > .host-action { grid-template-columns: 1fr; } #host-version-detail .host-action-art { min-height:0; } #host-version-detail .host-action-art img { height: 180px; min-height:0; aspect-ratio: auto; } #host-version-detail .host-action-content { padding: 16px; } .host-version-status { padding: 14px 16px; } }

@@ -1,0 +1,513 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T15:13:19.512Z",
+  "status": "passed",
+  "method": "Independent bounded read-only byte/hash verification against the source-reviewed jobs, live-source evidence and fresh download-audit records. No payload executed, loaded, installed or sent to a console.",
+  "summary": {
+    "utilities": 18,
+    "totalBytes": 348540,
+    "publicFilesVerified": 18,
+    "archiveFilesVerified": 18,
+    "exact1300Ports": 17,
+    "officialDebugFirmwarePins": 33,
+    "noPS5Or1400Broadening": true,
+    "allGoldhenHTTP9090": true,
+    "confirmations": 12,
+    "preservedEarlierCandidates": 2
+  },
+  "evidence": [
+    "docs/host-web-utility-jobs.json",
+    "docs/host-web-utility-actions.json",
+    "docs/qa/host-kameleon-webpayloads-source.json",
+    "docs/download-audit.json",
+    "docs/host-kameleon-existing-files.json"
+  ],
+  "files": [
+    {
+      "id": "ps4-kme-web-pkg-backup-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-pkg-backup-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_pkgbackup.bin",
+      "version": "Kameleon-13.00-2026.11.02-1a3d3dd41843",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-pkg-backup-1300\\pl_pkgbackup.bin",
+        "bytes": 33352,
+        "sha256": "1a3d3dd41843d94cc4a3517caaefe8f8996f1bda7709a5856a711bfbaca6021b",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\PKG Backup\\Builds\\Kameleon-13.00-2026.11.02-1a3d3dd41843\\pl_pkgbackup.bin",
+        "bytes": 33352,
+        "sha256": "1a3d3dd41843d94cc4a3517caaefe8f8996f1bda7709a5856a711bfbaca6021b",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-app-dumper-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-app-dumper-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_appdumper.bin",
+      "version": "Kameleon-13.00-2026.11.02-290f83e02fb0",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-app-dumper-1300\\pl_appdumper.bin",
+        "bytes": 26216,
+        "sha256": "290f83e02fb0cc86e659e7ec380021942430a7608d975f03676c8afc52ba7ab0",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\App Dumper\\Builds\\Kameleon-13.00-2026.11.02-290f83e02fb0\\pl_appdumper.bin",
+        "bytes": 26216,
+        "sha256": "290f83e02fb0cc86e659e7ec380021942430a7608d975f03676c8afc52ba7ab0",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-disable-updates-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-disable-updates-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_disableupdates.bin",
+      "version": "Kameleon-13.00-2026.11.02-d6d38701f528",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-disable-updates-1300\\pl_disableupdates.bin",
+        "bytes": 8420,
+        "sha256": "d6d38701f5284f4764f47197052cb189a17120a7de5b961136c5f6045c30a1fc",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Disable Updates\\Builds\\Kameleon-13.00-2026.11.02-d6d38701f528\\pl_disableupdates.bin",
+        "bytes": 8420,
+        "sha256": "d6d38701f5284f4764f47197052cb189a17120a7de5b961136c5f6045c30a1fc",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-enable-updates-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-enable-updates-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_enableupdates.bin",
+      "version": "Kameleon-13.00-2026.11.02-e261f6e0d18f",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-enable-updates-1300\\pl_enableupdates.bin",
+        "bytes": 8388,
+        "sha256": "e261f6e0d18fbe95f3998b0d4b39f0683e125a04633d5333b44ade31ca074de8",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Enable Updates\\Builds\\Kameleon-13.00-2026.11.02-e261f6e0d18f\\pl_enableupdates.bin",
+        "bytes": 8388,
+        "sha256": "e261f6e0d18fbe95f3998b0d4b39f0683e125a04633d5333b44ade31ca074de8",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-enable-browser-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-enable-browser-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_enablebrowser.bin",
+      "version": "Kameleon-13.00-2026.11.02-0e7c5fadc6fa",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-enable-browser-1300\\pl_enablebrowser.bin",
+        "bytes": 10420,
+        "sha256": "0e7c5fadc6fa4abbe5df7954f956d4c75aa71a4c03bcaf514c83578583a1a8ad",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Enable Browser\\Builds\\Kameleon-13.00-2026.11.02-0e7c5fadc6fa\\pl_enablebrowser.bin",
+        "bytes": 10420,
+        "sha256": "0e7c5fadc6fa4abbe5df7954f956d4c75aa71a4c03bcaf514c83578583a1a8ad",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-exit-idu-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-exit-idu-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_exitidu.bin",
+      "version": "Kameleon-13.00-2026.11.02-f3aa40ba3508",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-exit-idu-1300\\pl_exitidu.bin",
+        "bytes": 10332,
+        "sha256": "f3aa40ba35081f2384d4ec5382950f04769153f4da9b4240989283ad14a94c48",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Exit IDU\\Builds\\Kameleon-13.00-2026.11.02-f3aa40ba3508\\pl_exitidu.bin",
+        "bytes": 10332,
+        "sha256": "f3aa40ba35081f2384d4ec5382950f04769153f4da9b4240989283ad14a94c48",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-rif-renamer-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-rif-renamer-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_rifrenamer.bin",
+      "version": "Kameleon-13.00-2026.11.02-8dcb00ee0275",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-rif-renamer-1300\\pl_rifrenamer.bin",
+        "bytes": 9188,
+        "sha256": "8dcb00ee027503d4388f2af88a6d386049458199669209511234f7dc9d36b79e",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\RIF Renamer\\Builds\\Kameleon-13.00-2026.11.02-8dcb00ee0275\\pl_rifrenamer.bin",
+        "bytes": 9188,
+        "sha256": "8dcb00ee027503d4388f2af88a6d386049458199669209511234f7dc9d36b79e",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-ftp-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-ftp-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_ftp.bin",
+      "version": "Kameleon-13.00-2026.11.02-68577a874540",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-ftp-1300\\pl_ftp.bin",
+        "bytes": 27492,
+        "sha256": "68577a874540b877ba7e95906a77060ff05480b37777d81bb0a4dfe139bda1d1",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\FTP Server\\Builds\\Kameleon-13.00-2026.11.02-68577a874540\\pl_ftp.bin",
+        "bytes": 27492,
+        "sha256": "68577a874540b877ba7e95906a77060ff05480b37777d81bb0a4dfe139bda1d1",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-history-blocker-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-history-blocker-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_historyblocker.bin",
+      "version": "Kameleon-13.00-2026.11.02-a10b34e1cd81",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-history-blocker-1300\\pl_historyblocker.bin",
+        "bytes": 10972,
+        "sha256": "a10b34e1cd810b11069c00eca5ca7672a9ab9a5f1c801a81faad36f264137d38",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\History Blocker\\Builds\\Kameleon-13.00-2026.11.02-a10b34e1cd81\\pl_historyblocker.bin",
+        "bytes": 10972,
+        "sha256": "a10b34e1cd810b11069c00eca5ca7672a9ab9a5f1c801a81faad36f264137d38",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-kernel-dumper-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-kernel-dumper-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_kerneldumper.bin",
+      "version": "Kameleon-13.00-2026.11.02-e4ea6a8b13a2",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-kernel-dumper-1300\\pl_kerneldumper.bin",
+        "bytes": 18588,
+        "sha256": "e4ea6a8b13a28991ece96b70fe88baeaea1cd99aee316db218fa1ce7464956d0",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Kernel Dumper\\Builds\\Kameleon-13.00-2026.11.02-e4ea6a8b13a2\\pl_kerneldumper.bin",
+        "bytes": 18588,
+        "sha256": "e4ea6a8b13a28991ece96b70fe88baeaea1cd99aee316db218fa1ce7464956d0",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-module-dumper-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-module-dumper-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_moduledumper.bin",
+      "version": "Kameleon-13.00-2026.11.02-62640e215bec",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-module-dumper-1300\\pl_moduledumper.bin",
+        "bytes": 17772,
+        "sha256": "62640e215becf50e60690ea5867525e32443b23c1ac74f94a8c1ca78ba964457",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Kernel Module Dumper\\Builds\\Kameleon-13.00-2026.11.02-62640e215bec\\pl_moduledumper.bin",
+        "bytes": 17772,
+        "sha256": "62640e215becf50e60690ea5867525e32443b23c1ac74f94a8c1ca78ba964457",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-ps4debug-v1-1-19",
+      "inventoryId": "ps4-ps5-ps4-kme-web-ps4debug-v1-1-19",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_ps4debug.bin",
+      "version": "v1.1.19",
+      "firmwares": [
+        "5.05",
+        "5.07",
+        "6.71",
+        "6.72",
+        "7.00",
+        "7.01",
+        "7.02",
+        "7.50",
+        "7.51",
+        "7.55",
+        "8.00",
+        "8.01",
+        "8.03",
+        "8.50",
+        "8.52",
+        "9.00",
+        "9.03",
+        "9.04",
+        "9.50",
+        "9.51",
+        "9.60",
+        "10.00",
+        "10.01",
+        "10.50",
+        "10.51",
+        "10.70",
+        "10.71",
+        "11.00",
+        "11.02",
+        "11.50",
+        "11.52",
+        "12.00",
+        "12.02"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-ps4debug-v1-1-19\\pl_ps4debug.bin",
+        "bytes": 84936,
+        "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\ps4debug\\Builds\\v1.1.19\\pl_ps4debug.bin",
+        "bytes": 84936,
+        "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-db-backup-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-db-backup-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_backup.bin",
+      "version": "Kameleon-13.00-2026.11.02-91eaee1292f8",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-db-backup-1300\\pl_backup.bin",
+        "bytes": 15092,
+        "sha256": "91eaee1292f8741bd9514fe4c4e3af99189359ae79ee3f75a7292df014d1f4b4",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Database Backup\\Builds\\Kameleon-13.00-2026.11.02-91eaee1292f8\\pl_backup.bin",
+        "bytes": 15092,
+        "sha256": "91eaee1292f8741bd9514fe4c4e3af99189359ae79ee3f75a7292df014d1f4b4",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-db-restore-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-db-restore-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_restore.bin",
+      "version": "Kameleon-13.00-2026.11.02-20c5fd911366",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-db-restore-1300\\pl_restore.bin",
+        "bytes": 10796,
+        "sha256": "20c5fd911366bf688d3c569008d1e4e9a020948a0a18ffaa3a34077d898f2a49",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Database Restore\\Builds\\Kameleon-13.00-2026.11.02-20c5fd911366\\pl_restore.bin",
+        "bytes": 10796,
+        "sha256": "20c5fd911366bf688d3c569008d1e4e9a020948a0a18ffaa3a34077d898f2a49",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-app2usb-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-app2usb-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_app2usb.bin",
+      "version": "Kameleon-13.00-2026.11.02-a2e4ae50d28f",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-app2usb-1300\\pl_app2usb.bin",
+        "bytes": 25908,
+        "sha256": "a2e4ae50d28f7e870df21723d976ad9a714db7cd2bb3db21cbf1aac17dc68438",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\App2USB\\Builds\\Kameleon-13.00-2026.11.02-a2e4ae50d28f\\pl_app2usb.bin",
+        "bytes": 25908,
+        "sha256": "a2e4ae50d28f7e870df21723d976ad9a714db7cd2bb3db21cbf1aac17dc68438",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-to-dex-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-to-dex-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_todex.bin",
+      "version": "Kameleon-13.00-2026.11.02-2fc2357636a0",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-to-dex-1300\\pl_todex.bin",
+        "bytes": 10164,
+        "sha256": "2fc2357636a04c073d7f904fb5e7ce65f75f3aa9e561287c1123a325b53bd30c",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\ToDEX\\Builds\\Kameleon-13.00-2026.11.02-2fc2357636a0\\pl_todex.bin",
+        "bytes": 10164,
+        "sha256": "2fc2357636a04c073d7f904fb5e7ce65f75f3aa9e561287c1123a325b53bd30c",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-permanent-uart-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-permanent-uart-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_permanentuart.bin",
+      "version": "Kameleon-13.00-2026.11.02-1fe274714228",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-permanent-uart-1300\\pl_permanentuart.bin",
+        "bytes": 10228,
+        "sha256": "1fe2747142285df475abbaaf2a02c28d30628d068c983d3178fab4c4609987f9",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Permanent UART\\Builds\\Kameleon-13.00-2026.11.02-1fe274714228\\pl_permanentuart.bin",
+        "bytes": 10228,
+        "sha256": "1fe2747142285df475abbaaf2a02c28d30628d068c983d3178fab4c4609987f9",
+        "matchesExpected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ps4-kme-web-disable-aslr-1300",
+      "inventoryId": "ps4-ps5-ps4-kme-web-disable-aslr-1300",
+      "sourceURL": "https://www.kmeps4.site/webpayloads/pl_disableaslr.bin",
+      "version": "Kameleon-13.00-2026.11.02-9548e6163969",
+      "firmwares": [
+        "13.00"
+      ],
+      "format": "raw-x86-BIN",
+      "transport": "goldhen-http:9090",
+      "publicFile": {
+        "path": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\ps4-ps5\\ps4-kme-web-disable-aslr-1300\\pl_disableaslr.bin",
+        "bytes": 10276,
+        "sha256": "9548e6163969a77864eb4b9ef946faa9dd2322c08bf31a7af749eb123a08b59f",
+        "matchesExpected": true
+      },
+      "backupFile": {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\Web Utilities\\Disable ASLR\\Builds\\Kameleon-13.00-2026.11.02-9548e6163969\\pl_disableaslr.bin",
+        "bytes": 10276,
+        "sha256": "9548e6163969a77864eb4b9ef946faa9dd2322c08bf31a7af749eb123a08b59f",
+        "matchesExpected": true
+      },
+      "passed": true
+    }
+  ],
+  "preservedEarlierCandidates": [
+    {
+      "inventoryId": "ps4-ps5-expand-ps4-ftpsrv",
+      "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\ftpsrv\\Builds\\v0.21.1\\ftpsrv-ps4.elf",
+      "bytes": 146720,
+      "sha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
+      "passed": true
+    },
+    {
+      "inventoryId": "ps4-ps5-expand-ps4-ps4debug",
+      "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\ps4debug\\Builds\\v1.1.19\\ps4debug_v1.1.19.bin",
+      "bytes": 84936,
+      "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Transfer/operation success on physical PS4 hardware is not claimed.",
+    "The seventeen exact live 13.00 ports are not inferred to support other firmware or PS5.",
+    "Exact source distribution and author attribution retained; no invented licence grant.",
+    "This verifies the imported files and prepared action metadata. Root owns final production catalogue/UI integration and its tests."
+  ]
+}

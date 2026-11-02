@@ -104,6 +104,16 @@ function apply(file, html, data = manifest()) {
     const updated = card.html.slice(0, imageRange.start) + replacement + card.html.slice(imageRange.end);
     if (updated !== card.html) { changed = true; html = html.slice(0, card.start) + updated + html.slice(card.end); }
   }
+  // Retained hash links (for example Firmware) keep their exact destination,
+  // while their previously composed artwork still receives the merged cover.
+  const retained=[...html.matchAll(/<div\b(?=[^>]*\bdata-category-art=)[^>]*>/gi)];
+  for(const match of retained.reverse()){
+    if(attribute(match[0],'class').includes('category-art--merged'))continue;
+    const key=attribute(match[0],'data-category-art'),config=data.destinations?.[key];
+    if(!config)continue;
+    const found=range(html,match.index,match[0]);
+    if(found){html=html.slice(0,found.start)+media(config,key)+html.slice(found.end);changed=true;}
+  }
   if (changed || html.includes('data-category-art=')) {
     const tag = '<link rel="stylesheet" href="/assets/category-card-art.css?v=2">';
     let found = false;

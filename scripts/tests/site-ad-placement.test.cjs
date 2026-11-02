@@ -25,7 +25,8 @@ test('missing menu screenshots use labelled game art without replacing verified 
  const item={id:'test-image-fallback',name:'Test resource',gameId:'world-at-war',category:'script',compatibility:'Source requirements',downloads:[]};
  const fallback=card(item);
  assert.ok(fallback.includes('src="/assets/images/ps3-mods/waw-official-cover.jpg"'));
- assert.ok(fallback.includes('<figcaption>Game artwork</figcaption>'));
+ assert.ok(fallback.includes('data-menu-preview="artwork"'));
+ assert.ok(fallback.includes('alt="Call of Duty: World at War artwork"'));
  const source=card({...item,image:'/assets/images/ps3-mods/fourth-waw-paradise.jpg',imageCaption:'Verified source still'});
  assert.ok(source.includes('src="/assets/images/ps3-mods/fourth-waw-paradise.jpg"'));
  assert.ok(source.includes('Verified source still'));

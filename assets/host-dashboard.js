@@ -162,6 +162,8 @@
     var actions = catalog.actions || [], platform = catalog.platform;
     var gameScope = catalog.gameScope || '', gamesLanding = Boolean(catalog.gamesLanding);
     var client = win.HostConsoleClient, category = catalog.managerView ? 'payloads' : 'mods', bridge = null, loading = false;
+    var initialCategory = String(win.location.hash || '').replace(/^#/, '');
+    if (['mods','payloads','loaders','tools'].indexOf(initialCategory) !== -1) category = initialCategory;
     var firmware = doc.querySelector('#host-firmware'), search = doc.querySelector('#host-search'), game = doc.querySelector('#host-game'), legacy = doc.querySelector('#host-show-legacy');
     var firmwareSource = doc.querySelector('#host-firmware-source'), detection = detectBrowser(win.navigator.userAgent);
     var address = doc.querySelector('#host-console-address'), status = doc.querySelector('#host-status');
@@ -423,7 +425,7 @@
       render();
     });
     doc.querySelector('#host-loopback').addEventListener('click', function () { address.value = '127.0.0.1'; useAddress(); });
-    each(doc.querySelectorAll('[data-host-category]'), function (button) { button.addEventListener('click', function () { category = button.getAttribute('data-host-category'); each(doc.querySelectorAll('[data-host-category]'), function (item) { item.setAttribute('aria-pressed', item === button ? 'true' : 'false'); }); render(); }); });
+    each(doc.querySelectorAll('[data-host-category]'), function (button) { button.setAttribute('aria-pressed', button.getAttribute('data-host-category') === category ? 'true' : 'false'); button.addEventListener('click', function () { category = button.getAttribute('data-host-category'); each(doc.querySelectorAll('[data-host-category]'), function (item) { item.setAttribute('aria-pressed', item === button ? 'true' : 'false'); }); render(); }); });
     firmware.addEventListener('change', function () { firmwareSource.textContent = 'Firmware selection: manual'; remember(); render(); refresh(firmwareSource); }); if (search) search.addEventListener('input', render); if (game) game.addEventListener('change', render); if (legacy) legacy.addEventListener('change', render);
     function detectConsole(manualRequest) {
       invalidateChecks();

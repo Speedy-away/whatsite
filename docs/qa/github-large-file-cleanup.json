@@ -131,5 +131,27 @@
     "Per-file warning resolved. Remaining Git-eligible content is about 13.2 GiB; aggregate repository/hosting budget is not resolved by this scoped removal.",
     "Historical inventory local paths are retained as provenance; public builders fall back to source URLs for excluded mirrors.",
     "Discord resources retain source-post links; attachment URLs can expire."
+  ],
+  "followups": [
+    {
+      "completedAt": "2026-11-02T15:35:05.540Z",
+      "file": "downloads/source-codes/gta5-pc/gta5dump-gtav-2-1/GtaV_2.1-8b6fbec85361-source.zip",
+      "bytes": 301051560,
+      "sha256": "065d80ca1213536c3ab0e807b4033b45bd11ba2f227e8b770a3296c6926371ff",
+      "archiveVerified": true,
+      "action": "Removed oversized public source copy; retained verified F: original and pinned commit download.",
+      "sourceUrl": "https://codeload.github.com/GTA5dump/GtaV_2.1/zip/8b6fbec85361c835df1f8e4d70f77ea79a655f03",
+      "prevention": "Source page builder uses mirror policy; source preparer retains oversized archives in ignored staging or reuses verified F: copy; original path ignored.",
+      "verification": {
+        "gitFilesAtOrAbove95MiB": 0,
+        "focusedTestsPassed": 6,
+        "sourcePreparerDidNotRestoreOversizedCopy": true,
+        "pinnedSourceLinkVerified": true,
+        "sitePages": 492,
+        "siteLinks": 56221,
+        "linkIssues": 0
+      },
+      "published": false
+    }
   ]
 }

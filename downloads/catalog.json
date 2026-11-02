@@ -1,18 +1,19 @@
 {
-  "updated": "2026-11-02T15:06:12.197Z",
+  "updated": "2026-11-02T15:19:54.733Z",
   "scope": "Mod menus, scripts, tools and source codes; excludes games and firmware.",
   "summary": {
-    "resources": 2064,
-    "mirroredResources": 1476,
-    "mirroredFiles": 2295,
-    "mirroredBytes": 12493542362,
+    "resources": 2088,
+    "mirroredResources": 1497,
+    "mirroredFiles": 2316,
+    "mirroredBytes": 12570702574,
     "statuses": {
-      "downloaded": 1899,
+      "downloaded": 1921,
       "excluded": 111,
-      "unavailable": 51,
+      "unavailable": 52,
       "ready": 1,
       "source-only-no-published-release-asset": 1,
-      "official-on-console-delivery": 1
+      "official-on-console-delivery": 1,
+      "reference": 1
     }
   },
   "items": [
@@ -40630,6 +40631,397 @@
           "sha256": "d96f72c533fbe9dfb1b2a61475b0d45fde576b09891dc9d59cfa042aa1c1b069",
           "availability": "mirrored",
           "local": "/downloads/source-codes/gta5-pc/gta5dump-exploits-ce/EXPLOITS-CE-3630bc3a350b-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-gtav-2-1-8b6fbec85361",
+      "title": "GtaV_2.1 source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/GtaV_2.1/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "backup-only",
+      "files": [
+        {
+          "name": "GtaV_2.1-8b6fbec85361-source.zip",
+          "bytes": 301051560,
+          "sha256": "065d80ca1213536c3ab0e807b4033b45bd11ba2f227e8b770a3296c6926371ff",
+          "availability": "backup-only"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-insight-paid-66ea20d75b66",
+      "title": "insight-paid source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/insight-paid/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "insight-paid-66ea20d75b66-source.zip",
+          "bytes": 45906351,
+          "sha256": "27235409e8e0d5f4ae825accf78204176a80108b69181db2bbceeb5f3b12b1a9",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-insight-paid/insight-paid-66ea20d75b66-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-inwildmodz-d779a499dca0",
+      "title": "InWildmodz source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/InWildmodz/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "InWildmodz-d779a499dca0-source.zip",
+          "bytes": 7054245,
+          "sha256": "f4d282ebf9499ebd9eb2a95d20c39f0841ca2518d87bb6dfb337ffaacf4879f2",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-inwildmodz/InWildmodz-d779a499dca0-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-mars-1d942fc34e95",
+      "title": "mArs source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/mArs/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "mArs-1d942fc34e95-source.zip",
+          "bytes": 1323053,
+          "sha256": "66e9938b2908d036d23b6fe62789845509ae4f7fb2e1babcf1222518567982f8",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-mars/mArs-1d942fc34e95-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-menace-source-8145cc1c1881",
+      "title": "Menace-source source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/Menace-source/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "Menace-source-8145cc1c1881-source.zip",
+          "bytes": 840204,
+          "sha256": "4ce2b62c2f971e02989c49febbb85a48c5ef975bb5b6ceddd61307e5448ec446",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-menace-source/Menace-source-8145cc1c1881-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-monoply-ather-paste-49d9d4f0936e",
+      "title": "monoply-ather-paste source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/monoply-ather-paste/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "monoply-ather-paste-49d9d4f0936e-source.zip",
+          "bytes": 3814996,
+          "sha256": "31b472ee9b653c175cc780991ab1043955f7882a3634d5c409c510e0776b96a4",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-monoply-ather-paste/monoply-ather-paste-49d9d4f0936e-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-monoply-bbv1-ac831beaecda",
+      "title": "monoply-bbv1 source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/monoply-bbv1/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "monoply-bbv1-ac831beaecda-source.zip",
+          "bytes": 1305809,
+          "sha256": "3afca7e00a3949b62be1af5cf646a6278ecb94efcc01af6b5ddabb1cdca5792f",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-monoply-bbv1/monoply-bbv1-ac831beaecda-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-nano-69-5094b7124f67",
+      "title": "Nano-69 source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/Nano-69/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "Nano-69-5094b7124f67-source.zip",
+          "bytes": 917552,
+          "sha256": "c81246ff2eb49057fe1da4f08a379ab0c75cd5013386ce9255b4a22ccf146ccf",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-nano-69/Nano-69-5094b7124f67-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-nano-updated-4abea7d86544",
+      "title": "Nano-Updated source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/Nano-Updated/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "Nano-Updated-4abea7d86544-source.zip",
+          "bytes": 786359,
+          "sha256": "7e6939389aa492d18482f57f64396fba60b15752ea4374cc6d13cb509ccddc5a",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-nano-updated/Nano-Updated-4abea7d86544-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-ozark-v34-e663f2f55d77",
+      "title": "ozark-v34 source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/ozark-v34/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "ozark-v34-e663f2f55d77-source.zip",
+          "bytes": 1449754,
+          "sha256": "4f47bf541cbb874035f2eb7d5ad326d99d955b16a3de26a29002b6df01b34e43",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-ozark-v34/ozark-v34-e663f2f55d77-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-pice-project-ice-726b29956843",
+      "title": "pice-project-ice source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/pice-project-ice/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "pice-project-ice-726b29956843-source.zip",
+          "bytes": 2102126,
+          "sha256": "cfac2b081fea9da19ad7cf84c85fc6e4802779abd2581a64d5e23b13c37aee78",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-pice-project-ice/pice-project-ice-726b29956843-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-saint-b000178860ee",
+      "title": "Saint source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/Saint/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "Saint-b000178860ee-source.zip",
+          "bytes": 1456213,
+          "sha256": "934dbb8f2eb1b3afd87e72b035cbcab21903b25fc63e92748934a9de05a49d93",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-saint/Saint-b000178860ee-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-sinister-v5-6563ed976aed",
+      "title": "sinister-v5 source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/sinister-v5/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "sinister-v5-6563ed976aed-source.zip",
+          "bytes": 768105,
+          "sha256": "789bfd09e55fefa8bfc77d676bc5d89bca27e2c28fcf12ae4296a8b0670bdde9",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-sinister-v5/sinister-v5-6563ed976aed-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-spirit-e942e542b3e7",
+      "title": "Spirit source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/Spirit/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "Spirit-e942e542b3e7-source.zip",
+          "bytes": 1766973,
+          "sha256": "29273a8cdfc901e051b213a010fdfc84d6514f257bcf7a65f0973ebc402d3d89",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-spirit/Spirit-e942e542b3e7-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-sysx-923e023c7531",
+      "title": "sysx source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/sysx/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "sysx-923e023c7531-source.zip",
+          "bytes": 587064,
+          "sha256": "cd18d31063c2c8dd0b24b92a6ca39ec6dd7a79987661ebfc966718128501c26a",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-sysx/sysx-923e023c7531-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-tabmax-7dffe0e4c1f5",
+      "title": "tabmax source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/tabmax/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "tabmax-7dffe0e4c1f5-source.zip",
+          "bytes": 2343714,
+          "sha256": "d54c3bc84aec49af5a61ce12c357f61fc08583cbdfc679a688184a5837aa0843",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-tabmax/tabmax-7dffe0e4c1f5-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-tabmax-v6-v7-708939be990f",
+      "title": "Tabmax-v6-v7 source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/Tabmax-v6-v7/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "Tabmax-v6-v7-708939be990f-source.zip",
+          "bytes": 1603028,
+          "sha256": "688fc46be8d0eb47aaf81badb26ab326fb3925afbb735ad0b451188bece800a5",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-tabmax-v6-v7/Tabmax-v6-v7-708939be990f-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-vega-bigbase-dc23a8b1cf59",
+      "title": "vega-bigbase source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/vega-bigbase/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "vega-bigbase-dc23a8b1cf59-source.zip",
+          "bytes": 523257,
+          "sha256": "b04424d6e311e97d3bf83604acd964214161ad97cbe3d5a6f67775577f4246c0",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-vega-bigbase/vega-bigbase-dc23a8b1cf59-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-wildmodz-empty",
+      "title": "WildMOdz",
+      "url": "https://github.com/GTA5dump/WildMOdz/tree/main",
+      "kind": "github-source",
+      "status": "reference",
+      "availability": "unavailable",
+      "files": []
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-yimmenu-unavailable",
+      "title": "YimMenu (GTA5dump)",
+      "url": "https://github.com/GTA5dump/YimMenu/tree/master",
+      "kind": "github-source",
+      "status": "unavailable",
+      "availability": "unavailable",
+      "files": []
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-yuck-381e6cbae957",
+      "title": "yuck source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/yuck/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "yuck-381e6cbae957-source.zip",
+          "bytes": 691046,
+          "sha256": "5aea6ac378bc36b336eebfae0ec27b1579bccc8b54db02ae345a3f84d9ff0853",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-yuck/yuck-381e6cbae957-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "gta5-pc-source-gta5dump-zap-63b37299963e",
+      "title": "ZaP source code · GTA 5 Legacy",
+      "url": "https://github.com/GTA5dump/ZaP/tree/main",
+      "kind": "github-source",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "ZaP-63b37299963e-source.zip",
+          "bytes": 695287,
+          "sha256": "4a69daf49802fccd578836eb834713eaae74cf813e6947abef877d57e2a7ec8e",
+          "availability": "mirrored",
+          "local": "/downloads/source-codes/gta5-pc/gta5dump-zap/ZaP-63b37299963e-source.zip"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps4-console-downloader-2026-11-02-12",
+      "title": "whatwhatboy PS4 console downloader",
+      "url": "https://whatwhatboy.com/downloads/helpers/console-download-receivers/ps4/2026.11.02.12-e2cbb3de30d7/whatsite-ps4.html",
+      "kind": "direct",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "whatsite-ps4.html",
+          "bytes": 676243,
+          "sha256": "e2cbb3de30d7843a9d60e3bd1e56c5f938a27bf29682701a37d7ce7091381799",
+          "availability": "mirrored",
+          "local": "/downloads/ps4-ps5/whatsite-ps4-console-downloader-2026-11-02-12/whatsite-ps4.html"
+        }
+      ]
+    },
+    {
+      "id": "ps4-ps5-whatsite-ps5-console-downloader-2026-11-02-12",
+      "title": "whatwhatboy PS5 console downloader",
+      "url": "https://whatwhatboy.com/downloads/helpers/console-download-receivers/ps5/2026.11.02.12-d2c127397e2c/whatsite-ps5.html",
+      "kind": "direct",
+      "status": "downloaded",
+      "availability": "mirrored",
+      "files": [
+        {
+          "name": "whatsite-ps5.html",
+          "bytes": 548833,
+          "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20",
+          "availability": "mirrored",
+          "local": "/downloads/ps4-ps5/whatsite-ps5-console-downloader-2026-11-02-12/whatsite-ps5.html"
         }
       ]
     },

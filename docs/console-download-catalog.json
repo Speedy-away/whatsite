@@ -20,6 +20,7 @@
     "docs/host-game-actions.json",
     "docs/host-legacy-menu-actions.json",
     "docs/host-extra-game-actions.json",
+    "docs/host-web-utility-actions.json",
     "docs/console-archive-safety.json",
     "docs/ps4-ps5-launcher-build.json",
     "downloads/ps4/GTA5/manifest.json",
@@ -11788,7 +11789,7 @@
       "url": "/downloads/hosts/ps5/game-mods/rdr2-60fps/v2.0/RedDead2.60FPS_v2.0.elf",
       "bytes": 154304,
       "sha256": "646ecb71e80415ab9d9c651539451d38ee0052a5997f7ef7504a42932c7f8261",
-      "version": "1.32",
+      "version": "v2.0",
       "category": "mods",
       "compatibility": "A jailbroken PS5 with elfldr v0.27 or another loader implementing its HTTP URL interface on port 9021. A configured local sender can alternatively use the compatible raw TCP loader route. For native URL loading, the ready ELF must be published at a URL the console can reach. A computer-only 127.0.0.1 URL is not reachable from the PS5. RDR2 PS4 game update 1.32, clean and unmodified, with title ID CUSA08519, CUSA03041 or CUSA08568. Fully close RDR2, load this ELF first, wait for its ready notification, then start RDR2 within 10 minutes. This applies a runtime FPS/resolution patch; it is not a full mod menu or a PS4 payload. The author does not provide a complete validated PS5 firmware list. Check the release requirements for your existing loader and firmware. The HTTP loader accepts the request before download and execution; HTTP 200 does not confirm the patch ran. Read the console notification and /data/rdr2-60fps/rdr2-60fps.log for the actual result.",
       "image": "/assets/images/rdr2.png",
@@ -12068,6 +12069,330 @@
       ],
       "description": "GTA V · 1.27 · BIN. Follow the exact file type and console loader requirements.",
       "source": "https://github.com/KAR0218/KAR0218.github.io/blob/743646c9df9ab4c83821b660c12e23a3dda57b49/900New/index.html"
+    },
+    {
+      "id": "ps4-kme-web-pkg-backup-1300",
+      "name": "PKG Backup",
+      "filename": "pl_pkgbackup.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-pkg-backup-1300/pl_pkgbackup.bin",
+      "bytes": 33352,
+      "sha256": "1a3d3dd41843d94cc4a3517caaefe8f8996f1bda7709a5856a711bfbaca6021b",
+      "version": "Kameleon-13.00-2026.11.02-1a3d3dd41843",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. Use the matching PKG Backup configuration and preserve any existing config.cfg on the external drive root. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The PKG Backup family reads its external-drive configuration and copies the selected installed package files. Connect the intended external drive and prepare the matching config.cfg in its root. Its cusa selector chooses a title; method selects base, update, DLC or all three. Preserve the existing configuration and backup output. This 13.00 host port differs from the older official 1.3 binary; use the host snapshot identified here.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-app-dumper-1300",
+      "name": "App Dumper",
+      "filename": "pl_appdumper.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-app-dumper-1300/pl_appdumper.bin",
+      "bytes": 26216,
+      "sha256": "290f83e02fb0cc86e659e7ec380021942430a7608d975f03676c8afc52ba7ab0",
+      "version": "Kameleon-13.00-2026.11.02-290f83e02fb0",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. Follow the dumper’s storage and complete-copy instructions for your selected title. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: Creates dump output for the installed title through the App Dumper workflow. Connect the intended writable USB drive, start the target title as required by the dumper instructions and leave enough room for its complete output. A dumped app and its installation workflow are separate from downloading this BIN.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-disable-updates-1300",
+      "name": "Disable Updates",
+      "filename": "pl_disableupdates.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-disable-updates-1300/pl_disableupdates.bin",
+      "bytes": 8420,
+      "sha256": "d6d38701f5284f4764f47197052cb189a17120a7de5b961136c5f6045c30a1fc",
+      "version": "Kameleon-13.00-2026.11.02-d6d38701f528",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The exact build references /update/PS4UPDATE.PUP and /update/PS4UPDATE.PUP.net.temp and reports updates disabled.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-enable-updates-1300",
+      "name": "Enable Updates",
+      "filename": "pl_enableupdates.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-enable-updates-1300/pl_enableupdates.bin",
+      "bytes": 8388,
+      "sha256": "e261f6e0d18fbe95f3998b0d4b39f0683e125a04633d5333b44ade31ca074de8",
+      "version": "Kameleon-13.00-2026.11.02-e261f6e0d18f",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The exact build references /update/PS4UPDATE.PUP and /update/PS4UPDATE.PUP.net.temp and reports updates enabled.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-enable-browser-1300",
+      "name": "Enable Browser",
+      "filename": "pl_enablebrowser.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-enable-browser-1300/pl_enablebrowser.bin",
+      "bytes": 10420,
+      "sha256": "0e7c5fadc6fa4abbe5df7954f956d4c75aa71a4c03bcaf514c83578583a1a8ad",
+      "version": "Kameleon-13.00-2026.11.02-0e7c5fadc6fa",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The build calls its enable-browser kernel helper and reports that the browser is enabled.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-exit-idu-1300",
+      "name": "Exit IDU",
+      "filename": "pl_exitidu.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-exit-idu-1300/pl_exitidu.bin",
+      "bytes": 10332,
+      "sha256": "f3aa40ba35081f2384d4ec5382950f04769153f4da9b4240989283ad14a94c48",
+      "version": "Kameleon-13.00-2026.11.02-f3aa40ba3508",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The exact build reports exiting IDU and references sceKernelReboot.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-rif-renamer-1300",
+      "name": "RIF Renamer",
+      "filename": "pl_rifrenamer.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-rif-renamer-1300/pl_rifrenamer.bin",
+      "bytes": 9188,
+      "sha256": "8dcb00ee027503d4388f2af88a6d386049458199669209511234f7dc9d36b79e",
+      "version": "Kameleon-13.00-2026.11.02-8dcb00ee0275",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The exact build identifies /system_data/priv/license and /user/license and reports renamed RIFs.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-ftp-1300",
+      "name": "FTP Server",
+      "filename": "pl_ftp.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-ftp-1300/pl_ftp.bin",
+      "bytes": 27492,
+      "sha256": "68577a874540b877ba7e95906a77060ff05480b37777d81bb0a4dfe139bda1d1",
+      "version": "Kameleon-13.00-2026.11.02-68577a874540",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. Use the server address and port reported by the actual payload; this review does not infer them from another FTP build. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: Loads the host-distributed FTP service; it does not itself transfer an app to the console. Use the address and port shown by the running payload. No port number is borrowed from a different FTP build.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-history-blocker-1300",
+      "name": "History Blocker",
+      "filename": "pl_historyblocker.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-history-blocker-1300/pl_historyblocker.bin",
+      "bytes": 10972,
+      "sha256": "a10b34e1cd810b11069c00eca5ca7672a9ab9a5f1c801a81faad36f264137d38",
+      "version": "Kameleon-13.00-2026.11.02-a10b34e1cd81",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The build references /user/home/%x/webbrowser/endhistory.txt and contains both enabled and disabled status messages.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-kernel-dumper-1300",
+      "name": "Kernel Dumper",
+      "filename": "pl_kerneldumper.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-kernel-dumper-1300/pl_kerneldumper.bin",
+      "bytes": 18588,
+      "sha256": "e4ea6a8b13a28991ece96b70fe88baeaea1cd99aee316db218fa1ce7464956d0",
+      "version": "Kameleon-13.00-2026.11.02-e4ea6a8b13a2",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: Runs the kernel-dump utility credited by the host to Eversion and Al Azif. Connect the writable output device required by the native dumper and follow the destination/status reported on the console. The website’s download folder does not choose the dumper’s output.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-module-dumper-1300",
+      "name": "Kernel Module Dumper",
+      "filename": "pl_moduledumper.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-module-dumper-1300/pl_moduledumper.bin",
+      "bytes": 17772,
+      "sha256": "62640e215becf50e60690ea5867525e32443b23c1ac74f94a8c1ca78ba964457",
+      "version": "Kameleon-13.00-2026.11.02-62640e215bec",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: Runs the kernel-module dump utility distributed by the host. Prepare the native dumper’s required writable output device. Downloading this BIN into whatwhatboy does not configure its module-dump destination.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-ps4debug-v1-1-19",
+      "name": "ps4debug",
+      "filename": "pl_ps4debug.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-ps4debug-v1-1-19/pl_ps4debug.bin",
+      "bytes": 84936,
+      "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+      "version": "v1.1.19",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. Exact byte match to official GoldHEN/ps4debug v1.1.19; retain the publisher’s enumerated firmware whitelist. The host does not declare a 13.00 port for this file. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: Loads the already archived official v1.1.19 bytes; its supported firmware is the publisher’s explicit whitelist. Connect the matching debugger client only after the payload has started. Payload transfer acceptance is not service startup confirmation.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-db-backup-1300",
+      "name": "Database Backup",
+      "filename": "pl_backup.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-db-backup-1300/pl_backup.bin",
+      "bytes": 15092,
+      "sha256": "91eaee1292f8741bd9514fe4c4e3af99189359ae79ee3f75a7292df014d1f4b4",
+      "version": "Kameleon-13.00-2026.11.02-91eaee1292f8",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The live build includes app.db, addcont.db and av_content_bg.db, internal .bak paths, and /mnt/usb0|usb1/PS4/Backup output; its messages distinguish an internal database-only backup from a fuller USB backup. For USB output, use the intended writable device at an actual /mnt/usb0 or /mnt/usb1 mount and preserve /PS4/Backup before replacing an older backup. With no writable USB device, the build reports an internal database-only backup. That is not a full user-data backup.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-db-restore-1300",
+      "name": "Database Restore",
+      "filename": "pl_restore.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-db-restore-1300/pl_restore.bin",
+      "bytes": 10796,
+      "sha256": "20c5fd911366bf688d3c569008d1e4e9a020948a0a18ffaa3a34077d898f2a49",
+      "version": "Kameleon-13.00-2026.11.02-20c5fd911366",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. Use the original restore instructions and a matching backup for this console. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The live build references USB /PS4/Backup/{app.db,addcont.db,av_content_bg.db}, corresponding internal .bak files and a console reboot. Use a backup made for this console. The live build names /mnt/usb0/PS4/Backup/ and /mnt/usb1/PS4/Backup/; keep those database files in their original backup layout. The source family can fall back to internal /system_data/priv/mms/*.bak when USB is not writable. The database destination is /system_data/priv/mms/. Close running work and verify the intended backup before loading. The utility reports a restart after restoring; the website’s download-folder choice does not select its restore source.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-app2usb-1300",
+      "name": "App2USB",
+      "filename": "pl_app2usb.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-app2usb-1300/pl_app2usb.bin",
+      "bytes": 25908,
+      "sha256": "a2e4ae50d28f7e870df21723d976ad9a714db7cd2bb3db21cbf1aac17dc68438",
+      "version": "Kameleon-13.00-2026.11.02-a2e4ae50d28f",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. Follow the matching App2USB instructions and preserve the drive’s existing app2usb.ini configuration. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The App2USB source family copies and checks files, removes internal originals and creates links to the USB copies. Update/DLC selection follows its configuration. Use the intended supported USB file-storage drive and review its configuration before loading. Keep that drive connected for linked games to launch. The exact live build references /mnt/usbN/PS4/AppToUsb.ini and the name app2usb.ini. Preserve the configuration already used by this build instead of replacing or renaming it blindly. Match MOUNT_POINT to the actual mounted device. USB mount numbers can change and do not identify physical USB slots. Source options include IGNORE_UPDATES, MOVE_DLC and a move/ignore title list.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-to-dex-1300",
+      "name": "ToDEX",
+      "filename": "pl_todex.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-to-dex-1300/pl_todex.bin",
+      "bytes": 10164,
+      "sha256": "2fc2357636a04c073d7f904fb5e7ce65f75f3aa9e561287c1123a325b53bd30c",
+      "version": "Kameleon-13.00-2026.11.02-2fc2357636a0",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The original source calls spoof_target_id(0x82); the reviewed SDK helper patches kernel memory rather than installing firmware. This is a running-kernel target-ID utility. It does not need a USB output folder.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-permanent-uart-1300",
+      "name": "Permanent UART",
+      "filename": "pl_permanentuart.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-permanent-uart-1300/pl_permanentuart.bin",
+      "bytes": 10228,
+      "sha256": "1fe2747142285df475abbaaf2a02c28d30628d068c983d3178fab4c4609987f9",
+      "version": "Kameleon-13.00-2026.11.02-1fe274714228",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: The original source calls enable_perm_uart(); its reviewed SDK helper writes the UART flag to system-controller NVS, and the README states it persists through updates. This is a hardware diagnostics setting. No download or external-drive folder changes its destination.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
+    },
+    {
+      "id": "ps4-kme-web-disable-aslr-1300",
+      "name": "Disable ASLR",
+      "filename": "pl_disableaslr.bin",
+      "url": "/downloads/ps4-ps5/ps4-kme-web-disable-aslr-1300/pl_disableaslr.bin",
+      "bytes": 10276,
+      "sha256": "9548e6163969a77864eb4b9ef946faa9dd2322c08bf31a7af749eb123a08b59f",
+      "version": "Kameleon-13.00-2026.11.02-9548e6163969",
+      "category": "payloads",
+      "compatibility": "Already homebrew-enabled PS4 with its compatible GoldHEN HTTP BinLoader enabled; this utility does not bootstrap GoldHEN. The primary host’s button description explicitly credits a 13.00 port. This snapshot is pinned only to 13.00; no other firmware is inferred from its filename, general SDK support or a similarly named older payload. Loading sends the exact hash-pinned raw BIN through the running console service. Transfer acceptance does not prove that the utility completed its operation. No payload was run during this source/file review. Native PS5 support is not established for this exact PS4 binary. Effect: Runs the source’s Disable ASLR utility for this pinned firmware build.",
+      "image": "/assets/images/consoles/playstation.jpg",
+      "page": "/hosts/ps4/",
+      "platforms": [
+        "ps4"
+      ],
+      "description": "BIN. Follow the exact file type and console loader requirements.",
+      "source": "https://www.kmeps4.site/webpayloads/index.html"
     }
   ]
 }

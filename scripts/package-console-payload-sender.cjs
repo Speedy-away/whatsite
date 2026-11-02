@@ -11,10 +11,10 @@ const {destinationForFile} = require('./download-archive-layout.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const BACKUP = path.resolve('F:/whatsite-backup-downloads-etc');
 const OUT = 'downloads/helpers/console-payload-sender';
-const VERSION = '1.5.3';
+const VERSION = '1.6.0';
 const PREFIX = 'whatwhatboy-console-payload-sender/';
 const ORIGIN = 'https://whatwhatboy.com';
-const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json'];
+const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json'];
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const slash = value => value.split(path.sep).join('/');
 function contained(base, target) {
@@ -71,11 +71,11 @@ function quickstart() {
     'Run sends a curated, checksum-verified BIN to an already running PS4 GoldHEN HTTP loader on 9090, or an ELF to an already running compatible PS4/PS5 TCP loader on 9021. Transfer acceptance is not proof of successful execution. This helper does not jailbreak the console, create console folders, install PKGs or extract archives.\n\n' +
     'Built-in browser runtimes are public-site features and must be opened directly on a matching console. They are not included in this loopback-only desktop helper. Other hosts stay under a separate collapsed directory and retain accurately labelled external links. Public-site navigation and externally hosted fonts/icons require Internet. Local payload transfers use the files bundled here. Firmware/game compatibility remains pinned in the catalogue.\n\n' +
     'Every mod menu uses one card and a Choose version popup with version buttons, including single-build entries. Match the separate game update, menu release and original host variant before choosing Download or Load. Selecting a build does not send anything. Unknown menu versions are not inferred from game updates. Unsupported plugin/cheat/source-host-only Load methods stay disabled with their real requirements.\n\n' +
-    'Download uses the configured console receiver, or the viewing device when no console address is set. Its destination is shown beside the actions. The receiver checks its queue and chosen storage before saving; opening it submits no download. Use receiver2026.11.02.11 or newer for current exact file IDs. An invalid destination or missing file is reported without silently downloading another file or switching devices.\n\n' +
+    'Download uses the configured console receiver, or the viewing device when no console address is set. Its destination is shown beside the actions. The receiver checks its queue and chosen storage before saving; opening it submits no download. Use receiver2026.11.02.12 or newer for current exact file IDs. An invalid destination or missing file is reported without silently downloading another file or switching devices.\n\n' +
     'The optional copy-on-Load checkbox uses that same exact-file destination during the original click. It does not silently save to the computer or trigger another copy after the loader responds.\n\n' +
     'Protocol2 Check services reads the loader/manager, downloader queue and standard file-manager pages through fixed, bounded GET requests. A queue count does not verify the installed companion or storage. No generic TCP9020/9021 readiness probe is made.\n\n' +
     'If an executing request times out or loses its acknowledgement, the result is uncertain. Check the console before clearing its saved transfer warning. The dashboard locks further Load actions for that address across reloads until you explicitly clear the warning; clearing never sends or retries a payload. Other console addresses retain their own state.\n\n' +
-    'Use the console-specific Payload management page for PS4 GoldHEN LaunchPad/AutoRun or PS5 Payload Manager native controls. File-manager links target the entered console address; loopback is reserved for the matching console browser.\n\n' +
+    'GTA5, RDR2 and Other games have separate pages. File manager and Payload manager also have separate pages. Install the bundled authored native workspace HTML at its displayed console path to browse/upload payloads and edit the actual autoload file with verified backups. Native operations require ezRemote Client at its own origin; the public/desktop preview stays read-only. PS4 uses GoldHEN LaunchPad/AutoRun; PS5 also provides native Payload Manager8084 controls. A queue-file edit does not prove live autoload settings applied. File-manager links target the entered console address; loopback is reserved for the matching console browser.\n\n' +
     'Read docs/host-payload-sender.md, docs/host-console-services.md and docs/host-payload-management.md for detailed setup and limits. bundle-manifest.json lists included files, sizes and SHA-256 hashes; THIRD-PARTY.txt retains payload license/source attribution.\n';
 }
 function collectFiles(root = ROOT) {
@@ -88,7 +88,14 @@ function collectFiles(root = ROOT) {
     files.set(relative, data);
     if (scan && /\.(?:html|css|js)$/.test(relative)) queue.push(relative);
   };
-  for (const relative of ['hosts/index.html', 'hosts/ps4/index.html', 'hosts/ps5/index.html', 'hosts/ps4/payload-manager/index.html', 'hosts/ps5/payload-manager/index.html', ...['ps4','ps5'].flatMap(platform=>['files','gta5','rdr2','other-games'].map(scope=>'hosts/'+platform+'/'+scope+'/index.html')), 'style.css', 'script.js', 'assets/host-console-client.js', 'assets/host-dashboard.js', 'scripts/console-payload-bridge.cjs', 'docs/host-console-services.md', 'docs/host-payload-sender.md', 'docs/host-payload-management.md', 'docs/host-dashboard.md', 'docs/host-extra-game-trainers.md', ...CATALOGUES]) add(relative, null, true);
+  for (const relative of ['hosts/index.html', 'hosts/ps4/index.html', 'hosts/ps5/index.html', 'hosts/ps4/payload-manager/index.html', 'hosts/ps5/payload-manager/index.html', ...['ps4','ps5'].flatMap(platform=>['files','gta5','rdr2','other-games'].map(scope=>'hosts/'+platform+'/'+scope+'/index.html')), 'style.css', 'script.js', 'assets/host-console-client.js', 'assets/host-dashboard.js', 'scripts/console-payload-bridge.cjs', 'docs/host-console-services.md', 'docs/host-payload-sender.md', 'docs/host-payload-management.md', 'docs/host-native-workspace.md', 'docs/host-dashboard.md', 'docs/host-extra-game-trainers.md', ...CATALOGUES]) add(relative, null, true);
+  const workspaces = JSON.parse(readPublic('docs/host-native-workspace-build.json',root)).artifacts || [];
+  for (const workspace of workspaces) {
+    const relative = workspace.downloadURL.slice(1);
+    const bytes = readPublic(relative,root);
+    if (!staticPath('/'+relative) || sha(bytes) !== workspace.sha256 || bytes.length !== workspace.bytes) throw Error('Native workspace artifact mismatch');
+    add(relative,bytes);
+  }
   for (const [name,bytes] of [...files]) if (name.endsWith('.html')) {
     const match = bytes.toString('utf8').match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/);
     if (match) for (const action of JSON.parse(match[1]).actions) if (/^\/assets\/images\//.test(action.image || '')) add(action.image.slice(1));

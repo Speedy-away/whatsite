@@ -8,7 +8,7 @@ const image = platform => `/assets/images/host-selector/whatwhatboy-${platform}.
 function hostActions(platform) {
   const rows = [];
   const downloads = fs.existsSync(path.join(root,'docs/console-download-catalog.json')) ? JSON.parse(fs.readFileSync(path.join(root,'docs/console-download-catalog.json'),'utf8')).items : [];
-  for (const name of [`host-actions-${platform}.json`, 'host-modern-plugin-actions.json', 'host-current-cheat-actions.json', 'host-game-actions.json', 'host-legacy-menu-actions.json', 'host-extra-game-actions.json', 'host-native-payload-actions.json']) {
+  for (const name of [`host-actions-${platform}.json`, 'host-modern-plugin-actions.json', 'host-current-cheat-actions.json', 'host-game-actions.json', 'host-legacy-menu-actions.json', 'host-extra-game-actions.json', 'host-native-payload-actions.json', 'host-web-utility-actions.json']) {
     const filename = path.join(root, 'docs', name);
     if (!fs.existsSync(filename)) continue;
     const data = JSON.parse(fs.readFileSync(filename, 'utf8'));

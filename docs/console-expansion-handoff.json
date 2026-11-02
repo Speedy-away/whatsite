@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T15:12:01.353Z",
+  "updatedAt": "2026-11-02T15:35:05.540Z",
   "status": "PS4/PS5 game batch5 complete locally: sixteen new verified game downloads, compact cards, exact Save routes and shared receiver11 integration. Source-site failures and the unrelated Wii U test are recorded separately.",
   "workspace": "C:/Users/whatw/Documents/GitHub/whatsite",
   "latestUserRequests": [
@@ -2419,7 +2419,77 @@
       "Pink House public guide with login-gated downloads",
       "Invite-only publisher/service references; no server joined"
     ],
-    "publication": "Local only. No commit, push, deployment, payload execution or scheduled monitor."
+    "publication": "Local only. No commit, push, deployment, payload execution or scheduled monitor.",
+    "presentation": {
+      "updatedAt": "2026-11-02T15:35:33.209Z",
+      "status": "Complete locally: three desktop game cards, four desktop menu cards, responsive single phone column, compact downloads and source-reviewed static previews.",
+      "request": "Remove visible Builds/SHA labels, Original archives and Extracted console files headings and repeated variant instructions across PS3, Xbox 360 and PC menu cards. Preserve all download records, game routing and PS3 DEX/HEN downloads.",
+      "sharedChangesPreserved": "Retained current download-mirror policy, shared game navigation/artwork, collapsed Setup & source sections and all source-confirmed game additions from other chats.",
+      "images": {
+        "ps3NewMappings": 29,
+        "xboxPCNewMappings": 79,
+        "rendered": {
+          "ps3": {
+            "resources": 390,
+            "menuPreviews": 100,
+            "remainingArtwork": 290
+          },
+          "xbox360": {
+            "resources": 155,
+            "menuPreviews": 72,
+            "remainingArtwork": 83
+          },
+          "pc": {
+            "resources": 7,
+            "menuPreviews": 7,
+            "remainingArtwork": 0
+          }
+        },
+        "policy": "Use only visually reviewed local source images with matching hashes. Keep platform/version/component caveats; remaining unverified menus retain game artwork.",
+        "research": [
+          "docs/ps3-menu-preview-research.json",
+          "docs/xbox-pc-menu-preview-research.json"
+        ]
+      },
+      "verification": {
+        "focusedTests": {
+          "passed": 44,
+          "failed": 0,
+          "report": "docs/qa/menu-layout-focused-tests.txt"
+        },
+        "fullSuite": {
+          "tests": 537,
+          "passed": 536,
+          "failed": 1,
+          "unrelatedFailure": "host-native-workspace.test.cjs: missing Spanish translation for whatsite / console workspace in active shared host work",
+          "report": "docs/qa/menu-layout-all-tests.txt"
+        },
+        "siteAudit": {
+          "publicPages": 492,
+          "localLinksAndAssets": 56202,
+          "issues": 0,
+          "report": "docs/qa/menu-layout-site-audit.txt"
+        },
+        "metadata": {
+          "pages": 535,
+          "drift": 0,
+          "genericKeywordEntries": 0
+        },
+        "browser": {
+          "desktopGameColumns": 3,
+          "desktopMenuColumns": 4,
+          "phoneWidth": 390,
+          "phoneColumns": 1,
+          "noHorizontalOverflow": true,
+          "guidePopupsVerified": true
+        },
+        "imageReport": "docs/qa/menu-layout-image-verification.json"
+      },
+      "screenshot": "docs/qa/xbox360-menu-grid-2026-11-02.png",
+      "noNewBinaryDownloads": true,
+      "noArchiveWrites": true,
+      "publication": "Local only; no commit, push or deployment."
+    }
   },
   "originalXboxExpansion": {
     "updatedAt": "2026-11-02T09:49:35.249Z",
@@ -4570,6 +4640,49 @@
       "Per-file warning resolved. Remaining Git-eligible content is about 13.2 GiB; aggregate repository/hosting budget is not resolved by this scoped removal.",
       "Historical inventory local paths are retained as provenance; public builders fall back to source URLs for excluded mirrors.",
       "Discord resources retain source-post links; attachment URLs can expire."
+    ],
+    "followups": [
+      {
+        "completedAt": "2026-11-02T15:35:05.540Z",
+        "file": "downloads/source-codes/gta5-pc/gta5dump-gtav-2-1/GtaV_2.1-8b6fbec85361-source.zip",
+        "bytes": 301051560,
+        "sha256": "065d80ca1213536c3ab0e807b4033b45bd11ba2f227e8b770a3296c6926371ff",
+        "archiveVerified": true,
+        "action": "Removed oversized public source copy; retained verified F: original and pinned commit download.",
+        "sourceUrl": "https://codeload.github.com/GTA5dump/GtaV_2.1/zip/8b6fbec85361c835df1f8e4d70f77ea79a655f03",
+        "prevention": "Source page builder uses mirror policy; source preparer retains oversized archives in ignored staging or reuses verified F: copy; original path ignored.",
+        "verification": {
+          "gitFilesAtOrAbove95MiB": 0,
+          "focusedTestsPassed": 6,
+          "sourcePreparerDidNotRestoreOversizedCopy": true,
+          "pinnedSourceLinkVerified": true,
+          "sitePages": 492,
+          "siteLinks": 56221,
+          "linkIssues": 0
+        },
+        "published": false
+      }
     ]
+  },
+  "gta5dumpAllRepositoriesPending": {
+    "updatedAt": "2026-11-02T15:27:42.158Z",
+    "status": "All48 entries and clean UI ready; final NHA exact-commit source object database is being fetched for a local source export after ZIP timeout. Other48 catalogue ZIPs and existingMenyoo are saved. No final full-archive claim yet.",
+    "catalog": "docs/gta5-pc-source-catalog.json",
+    "review": "docs/gta5dump-all-repository-review.json",
+    "manifest": "downloads/source-codes/gta5-pc/manifest.json",
+    "remaining": "GTA5dump/NHA-Cleaned-Decompiled-Scripts@76fad386e3d047e50e7b4eeec3271ccf0df137aa",
+    "retryPath": "tmp/gta5-source-downloads/NHA-full-76fad386e3d0-retry.zip.partial",
+    "preservation": "Earlier partials and every completed source/F: archive retained. No source code built or executed.",
+    "finish": [
+      "Wait for exact-commit fetch; run node tmp/export-nha-source.cjs, then ordinary archival helper.",
+      "Wait for full retry; validateZIP end/CRC then adopt public pinned archive.",
+      "node scripts/prepare-gta5-pc-sources.cjs --archive",
+      "node scripts/build-source-code-pages.cjs",
+      "python scripts/verify-gta5-pc-source-archives.py",
+      "node scripts/verify-gta5dump-directory.cjs --base=http://127.0.0.1:64896",
+      "node scripts/refresh-local-download-index.cjs --write",
+      "Save desktop/phone screenshots then node scripts/finalize-gta5dump-all-handoff.cjs"
+    ],
+    "sourceObjectDatabase": "tmp/gta5-source-downloads/NHA-exact-commit.git"
   }
 }

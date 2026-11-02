@@ -57,7 +57,9 @@ test('game downloads, setup and library cards each use a distinct meaningful com
   const keys = ['/console/psvita/game-downloads.html', '/console/psvita/jailbreak.html', '/console/psvita/library.html?view=all'];
   const configs = keys.map(key => manifest.destinations[key]);
   assert.equal(configs[0].kind, 'downloads');
-  assert.ok(art.media(configs[0], keys[0]).includes('category-art__download'));
+  const cover=art.media(configs[0], keys[0]);
+  assert.ok(cover.includes('data-merged-cover='));
+  assert.equal((cover.match(/<img\b/g)||[]).length,1);
   assert.equal(new Set(configs.map(config => JSON.stringify(config.images))).size, 3);
   assert.ok(configs[0].images.some(image => image.sourcePage === 'console/psvita/games.html'));
   assert.ok(manifest.destinations['/console/psvita/cfw.html'].images.some(image => /vitadeploy/.test(image.src)));

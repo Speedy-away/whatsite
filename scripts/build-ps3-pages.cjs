@@ -65,11 +65,12 @@ function cards(html) {
 }
 
 function renderCard(item) {
-  if (item.html.startsWith('<article')) return item.html;
+  const toolImage={'CCAPI (Control Console API)':'ccapi','Artemis PS3':'artemis','PSNinja':'psninja'}[item.title];
+  if (item.html.startsWith('<article')) return toolImage?item.html.replace(/(<img\b[^>]*src=")[^"]+/,`$1/assets/images/game-card-covers/${toolImage}-tool-v1.svg`):item.html;
   const {resource, esc} = require('./build-console-guides.cjs');
   const h = item.html;
   const description = h.match(/<p\b[^>]*class="game-description"[^>]*>([\s\S]*?)<\/p>/)?.[1] || '';
-  const image = h.match(/<img\b[^>]*src="([^"]+)"/)?.[1] || '';
+  const image = toolImage?`/assets/images/game-card-covers/${toolImage}-tool-v1.svg`:h.match(/<img\b[^>]*src="([^"]+)"/)?.[1] || '';
   const links = [...h.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/g)].map(m => m[0]).join('') || (h.includes('No verified download linked.') ? '<span>No verified download linked.</span>' : '');
   const features = h.match(/<div class="game-features">[\s\S]*?<\/div>/)?.[0] || '';
   const status = h.match(/<span class="game-status[^"]*">([^<]*)<\/span>/)?.[1];
