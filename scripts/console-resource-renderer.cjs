@@ -4,7 +4,7 @@ const {resourceTags, resourceTerms} = require('./console-resource-tags.cjs');
 const {section, guideSection, grid, steps, videoEmbed, link, guideLink, esc} = require('./build-console-guides.cjs');
 
 const categories = {
-  menu: 'Mod menus', injector: 'Injectors', pack: 'Menu packs', script: 'Scripts', cfg: 'CFG resources',
+  menu: 'Mod menus', client: 'Server clients', injector: 'Injectors', pack: 'Menu packs', script: 'Scripts', cfg: 'CFG resources',
   rtm: 'RTM tools', cheat: 'Cheat files', dlc: 'DLC resources', reference: 'DLC compatibility references', fpkg: 'FPKG resources', source: 'Source codes'
 };
 
@@ -12,6 +12,7 @@ function createResourceRenderer({root = path.resolve(__dirname, '..'), files = [
   const storedFiles = files;
 const pluginBundles=require('./gta5-plugin-downloads.cjs').createPluginDownloads();
 const pluginDownloads=(item,downloads,legacy)=>pluginBundles.render(item,downloads,legacy);
+const requirementsMarkup=item=>(item?.requiredResources||[]).filter(r=>/^#guide-[a-z0-9-]+$/.test(r.href||'')).map(r=>`<p class="guide-required-resource">${guideLink(r.href,h(r.label))}</p>`).join('');
 const h = value => esc(String(value ?? ''));
 const lines = value => h(value).replace(/\r?\n/g, '<br>');
 
@@ -102,7 +103,7 @@ function card(item) {
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
   const tagMarkup = tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
-  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${item.description ? `<p>${lines(item.description)}</p>` : ''}${item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${tagMarkup}${buttons || detailLink ? `<div class="guide-links">${buttons}${detailLink}</div>` : ''}</article>`;
+  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${item.description ? `<p>${lines(item.description)}</p>` : ''}${item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${requirementsMarkup(item)}${tagMarkup}${buttons || detailLink ? `<div class="guide-links">${buttons}${detailLink}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
   const title = block.title ? `<h3>${h(block.title)}</h3>` : '';
@@ -142,6 +143,6 @@ function gameContent(items, prefix = '') {
   return collections + items.map(details).join('\n');
 }
 
-return {categories, h, lines, localFile, localImage, httpsUrl, youtubeVideo, videoSource, hasDetails, imageMarkup, downloadButton, pluginDownloads, card, guideBlock, videoMarkup, details, gameContent};
+return {categories, h, lines, localFile, localImage, httpsUrl, youtubeVideo, videoSource, hasDetails, imageMarkup, downloadButton, pluginDownloads, requirementsMarkup, card, guideBlock, videoMarkup, details, gameContent};
 }
 module.exports = {createResourceRenderer, categories};

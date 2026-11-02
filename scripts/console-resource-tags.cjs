@@ -17,7 +17,7 @@ const gameAliases = {
   'wwii': ['WWII', 'WW2', 'World War II', 'Call of Duty WWII']
 };
 const categoryLabels = {
-  menu: 'Mod menu', injector: 'Injector', pack: 'Menu pack', cfg: 'CFG',
+  menu: 'Mod menu', client: 'Server client', injector: 'Injector', pack: 'Menu pack', cfg: 'CFG',
   rtm: 'RTM tool', script: 'Script', cheat: 'Cheat file', reference: 'DLC reference', source: 'Source code'
 };
 const unique = values => [...new Map(values.filter(Boolean).map(value => [String(value).toLowerCase(), String(value)])).values()];

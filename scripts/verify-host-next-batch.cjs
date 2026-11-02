@@ -6,6 +6,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const assert = require('node:assert/strict');
 const {inspectZip} = require('./verify-host-menu-sender-integrity.cjs');
+const senderVersion = require('./package-console-payload-sender.cjs').VERSION;
 const root = path.resolve(__dirname, '..');
 const reportPath = 'docs/qa/host-next-batch-integrity.json';
 const prefix = 'whatwhatboy-console-payload-sender/';
@@ -174,7 +175,7 @@ function phaseIssues(c) {
   const issues = [];
   if(!c.receiver.activated||c.receiver.version!=='2026.11.02.15') issues.push('Receiver 2026.11.02.15 is not activated.');
   const latest = c.senderManifest.files.find(f=>f.url===c.senderManifest.latest);
-  if(!latest||!/^1\.9\.0\+[a-f0-9]{12}$/.test(latest.version)) issues.push('Final sender 1.9.0 is not the latest archived snapshot.');
+  if(!latest||latest.version!==senderVersion+'+'+latest.snapshot.slice(0,12)) issues.push('Current sender '+senderVersion+' is not the latest archived snapshot.');
   for(const job of c.jobs) if(!c.audit.some(i=>i.id==='ps4-ps5-'+job.id&&i.status==='downloaded')) issues.push('Archive intake is pending for '+job.id+'.');
   return issues;
 }
@@ -201,9 +202,9 @@ function inspectSender(c,info,final) {
     preservedActions = oldActions.length;
   }
   if(final) {
-    assert.equal(info.version,'1.9.0+'+info.snapshot.slice(0,12));
-    assert.equal(info.name,'console-payload-sender-1.9.0-'+info.snapshot.slice(0,12)+'.zip');
-    for(const file of [...actionFiles,'assets/host-console-client.js','assets/host-dashboard.js','scripts/console-payload-bridge.cjs',...manifest.files.filter(f=>/^languages\/.+\.js$/.test(f.name)).map(f=>f.name)]) assert.equal(sha(member(file)),sha(fs.readFileSync(path.join(root,file))),file+' is final authored source');
+    assert.equal(info.version,senderVersion+'+'+info.snapshot.slice(0,12));
+    assert.equal(info.name,'console-payload-sender-'+senderVersion+'-'+info.snapshot.slice(0,12)+'.zip');
+    for(const file of [...actionFiles,'assets/host-console-client.js','assets/host-dashboard.js','assets/host-dashboard.css','scripts/console-payload-bridge.cjs',...manifest.files.filter(f=>/^languages\/.+\.js$/.test(f.name)).map(f=>f.name)]) assert.equal(sha(member(file)),sha(fs.readFileSync(path.join(root,file))),file+' is final authored source');
     for(const file of actionFiles) assert.deepEqual(JSON.parse(member(file)).actions,read(file).actions);
     const html = member('hosts/ps4/index.html').toString('utf8');
     const embedded = JSON.parse(html.match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]).actions;
@@ -218,7 +219,7 @@ function inspectSender(c,info,final) {
 }
 function verifySenders(c) {
   const latest = c.senderManifest.files.find(f=>f.url===c.senderManifest.latest);assert.ok(latest);
-  assert.match(latest.version,/^1\.9\.0\+[a-f0-9]{12}$/,'Final sender 1.9.0 must be archived before verification');
+  assert.equal(latest.version,senderVersion+'+'+latest.snapshot.slice(0,12),'Current sender must be archived before verification');
   const reports = c.senderManifest.files.map(info=>inspectSender(c,info,info.url===latest.url));
   assert.ok(reports.length>=18);assert.equal(reports.reduce((n,r)=>n+r.preservedActions,0),174);
   return {latest:reports.find(r=>r.url===latest.url),historicalSnapshotsPreserved:17,totalSnapshotsVerified:reports.length,snapshots:reports,existingGoldHEN23StillBundled:true};
@@ -237,5 +238,5 @@ function main() {
   console.log(JSON.stringify({status:report.status,report:reportPath,pending:report.pending,error:report.error,actions:report.pins?.actions,sender:report.senders?.latest.version},null,2));
   return report;
 }
-module.exports={context,phaseIssues,verifyActionPins,verifyExcludedJavaScript,verifyArchive,verifyReaders,verifyBaseline,verifyReceivers,verifySenders,main};
+module.exports={senderVersion,context,phaseIssues,verifyActionPins,verifyExcludedJavaScript,verifyArchive,verifyReaders,verifyBaseline,verifyReceivers,verifySenders,main};
 if(require.main===module) main();

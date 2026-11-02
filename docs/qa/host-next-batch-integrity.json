@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-02T18:55:43.224Z",
+  "checkedAt": "2026-11-02T19:13:08.754Z",
   "status": "passed",
   "method": "Read bytes only; independent bounded ZIP central/local structure, CRC32 and SHA-256 verification, original-source archive pins, immutable receiver retention and unchanged native helper records.",
   "pins": {
@@ -96,23 +96,23 @@
   ],
   "senders": {
     "latest": {
-      "version": "1.9.0+8a3a74427954",
-      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
-      "bytes": 100389225,
-      "sha256": "866ef15d682b71df3667c11f289b63ba32afc28e211e61cb3a1804ad304c04a6",
-      "snapshot": "8a3a7442795435e70183e9693bd5281b4246c6b1a6a2bcd0ad17664668c338c9",
+      "version": "1.9.1+e3c3cf533eff",
+      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+      "bytes": 100386831,
+      "sha256": "0efdc2a5d05f75d2d35681ed515608e64e9b93b3167228a824726c7ea1d6d10a",
+      "snapshot": "e3c3cf533eff048f131ce0142c4f6fce0db08c9e70a55e64d08539ca0ffb57ef",
       "zipEntries": 281,
       "manifestFiles": 280,
       "payloads": 125,
       "allCRCAndSHA256Verified": true,
       "privateArchivePaths": [
-        "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.0+8a3a74427954\\console-payload-sender-1.9.0-8a3a74427954.zip"
+        "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+e3c3cf533eff\\console-payload-sender-1.9.1-e3c3cf533eff.zip"
       ],
       "preservedActions": 0,
       "originalOnlyBinaryCount": 0
     },
     "historicalSnapshotsPreserved": 17,
-    "totalSnapshotsVerified": 18,
+    "totalSnapshotsVerified": 19,
     "snapshots": [
       {
         "version": "1.0.0+5eb56571c38f",
@@ -398,6 +398,22 @@
         "allCRCAndSHA256Verified": true,
         "privateArchivePaths": [
           "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.0+8a3a74427954\\console-payload-sender-1.9.0-8a3a74427954.zip"
+        ],
+        "preservedActions": 0,
+        "originalOnlyBinaryCount": 0
+      },
+      {
+        "version": "1.9.1+e3c3cf533eff",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+        "bytes": 100386831,
+        "sha256": "0efdc2a5d05f75d2d35681ed515608e64e9b93b3167228a824726c7ea1d6d10a",
+        "snapshot": "e3c3cf533eff048f131ce0142c4f6fce0db08c9e70a55e64d08539ca0ffb57ef",
+        "zipEntries": 281,
+        "manifestFiles": 280,
+        "payloads": 125,
+        "allCRCAndSHA256Verified": true,
+        "privateArchivePaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+e3c3cf533eff\\console-payload-sender-1.9.1-e3c3cf533eff.zip"
         ],
         "preservedActions": 0,
         "originalOnlyBinaryCount": 0

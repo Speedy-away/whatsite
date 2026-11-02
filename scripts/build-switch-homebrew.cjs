@@ -8,7 +8,10 @@ const size = bytes => bytes >= 1048576 ? (bytes / 1048576).toFixed(1) + ' MiB' :
 const cataloguePage = '/console/nintendo-switch/apps.html';
 const css = '<link rel="stylesheet" href="/assets/nintendo-switch-homebrew.css?v=2">';
 const categoryUrl = category => cataloguePage + '?category=' + encodeURIComponent(category) + '#apps';
-const icon = app => fs.existsSync(path.join(root, 'assets/images/switch-homebrew', app.id + '.png')) ? '/assets/images/switch-homebrew/' + app.id + '.png' : '/assets/images/switch-homebrew/' + (app.category === 'Homebrew games' ? 'game' : 'network') + '.svg';
+const icon = app => {
+ const recovered=require('../docs/switch-homebrew-expansion-image-sources.json').images.find(image=>image.id===app.id&&image.recovery)?.file;
+ return recovered || (fs.existsSync(path.join(root, 'assets/images/switch-homebrew', app.id + '.png')) ? '/assets/images/switch-homebrew/' + app.id + '.png' : '/assets/images/switch-homebrew/' + (app.category === 'Homebrew games' ? 'game' : 'network') + '.svg');
+};
 const updatedDate = value => {
   const [day, month, year] = value.split('/').map(Number);
   return new Date(Date.UTC(year, month - 1, day)).toLocaleDateString('en-GB', {timeZone:'UTC', day:'numeric', month:'short', year:'numeric'});
@@ -32,7 +35,7 @@ function card(app, downloaded) {
   const files = [record.nro, record.officialNro, record.package, record.officialBundle].filter(Boolean).filter((file, index, all) => all.findIndex(other => other.sha256 === file.sha256) === index);
   const allSearch = [app.title, app.category, app.version, ...app.tags, app.description, app.requirements, app.installPath].join(' ');
   return `<article class="switch-app" id="${esc(app.id)}" data-switch-app data-category="${esc(app.category)}" data-search="${esc(allSearch)}">
-<header class="switch-app-head"><img src="${icon(app)}" alt="${esc(app.title)} icon" width="64" height="64" loading="lazy"><div><h3 translate="no">${esc(app.title)}</h3><div class="switch-app-category">${esc(app.category)}</div></div></header>
+<header class="switch-app-head"><img src="${icon(app)}" alt="${esc(app.title)} ${app.id==='jumpnbump'?'gameplay screenshot':'icon'}" width="64" height="64" loading="lazy"><div><h3 translate="no">${esc(app.title)}</h3><div class="switch-app-category">${esc(app.category)}</div></div></header>
 <p>${esc(app.description)}</p>
 <dl class="switch-app-meta"><dt>Store build</dt><dd translate="no">${esc(app.version)}</dd><dt>Updated</dt><dd translate="no">${esc(updatedDate(app.updated))}</dd><dt>SD path</dt><dd><code>${esc(app.installPath)}</code></dd><dt>Requires</dt><dd>${esc(app.requirements)}</dd></dl>
 <ul class="switch-app-tags" aria-label="Resource tags">${app.tags.map(tag => `<li>${esc(tag)}</li>`).join('')}</ul>

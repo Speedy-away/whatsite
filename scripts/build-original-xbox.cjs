@@ -1,7 +1,9 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
 function build(){
- const {page,section,grid,resource,note,steps,ext,link,sourceList,esc}=require('./build-console-guides.cjs');
+ const ui=require('./build-console-guides.cjs');
+ const {page,section,grid,note,steps,ext,link,sourceList,esc}=ui;
+ const resource=(title,description,actions,image)=>ui.resource(title,description,actions,image).replace(/(<article\b[^>]*>)/,'$1'+(!image?require('./console-rest-card-images.cjs').markup('console/retro/xbox.html',title):''));
  const data=JSON.parse(fs.readFileSync(path.join(root,'docs/original-xbox-catalogue.json'),'utf8'));
  const cards=data.resources.map(item=>resource(esc(item.title)+' · '+esc(item.version),esc(item.description),`<a href="${esc(item.file.local)}" download="${esc(item.file.name)}">Download ${esc(item.file.name)}</a>`+ext(item.release,'Publisher release')+`<details><summary>Setup &amp; checksum</summary><p>${esc(item.setup)}</p><p>${esc(item.notes)}</p><p>${item.file.bytes.toLocaleString('en-GB')} bytes · ZIP · contains ${esc(item.inspection.executable)}</p><p>SHA-256</p><code style="overflow-wrap:anywhere">${item.file.sha256}</code><p>Archive CRC and XBE header/section bounds checked. Console execution remains untested.</p></details>`));
  const content=section('start','Use your original Xbox',note('<p>These downloads target the original Xbox and its <code>.xbe</code> executable format. Start with an existing, working softmod or compatible modchip/TSOP setup. Xbox 360 XEX and Xbox One/Series APPX packages require different consoles.</p>')+steps([

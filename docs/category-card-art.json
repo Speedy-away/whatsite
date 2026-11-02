@@ -775,15 +775,21 @@
           "sourcePage": "console/nintendo-switch/mods.html"
         },
         {
+          "src": "/assets/images/switch-card-recovery/mario-kart.jpg",
+          "alt": "Nextendo country flag · GB · 3.0.5",
+          "label": "Nextendo country flag · GB · 3.0.5",
+          "sourcePage": "console/nintendo-switch/mods.html"
+        },
+        {
           "src": "/assets/images/switch-game-mods/arena.svg",
           "alt": "Ultimate Training Modpack",
           "label": "Ultimate Training Modpack",
           "sourcePage": "console/nintendo-switch/mods.html"
         },
         {
-          "src": "/assets/images/switch-game-mods/mod-library.svg",
-          "alt": "Super Mario Odyssey Online",
-          "label": "Super Mario Odyssey Online",
+          "src": "/assets/images/switch-card-recovery/playable-bosses.png",
+          "alt": "Competitive Playable Bosses",
+          "label": "Competitive Playable Bosses",
           "sourcePage": "console/nintendo-switch/mods.html"
         }
       ]
@@ -1033,6 +1039,12 @@
           "sourcePage": "console/ps3/downloads.html"
         },
         {
+          "src": "/assets/images/menu-previews/ps3-base/project-safe-candidate-XGKwgja1B00.jpg",
+          "alt": "Desktop RTM helpers",
+          "label": "Desktop RTM helpers",
+          "sourcePage": "console/ps3/downloads.html"
+        },
+        {
           "src": "/assets/images/ps3-resources/vimm.png",
           "alt": "Vimm’s Lair · PS3",
           "label": "Vimm’s Lair · PS3",
@@ -1249,15 +1261,15 @@
           "sourcePage": "console/ps4/emulators.html"
         },
         {
-          "src": "/assets/images/emulators/PCSX2.png",
-          "alt": "PS4SX2 · PlayStation 2",
-          "label": "PS4SX2 · PlayStation 2",
+          "src": "/assets/images/xbox-one-series/flycast.png",
+          "alt": "Resonance · Dreamcast",
+          "label": "Resonance · Dreamcast",
           "sourcePage": "console/ps4/emulators.html"
         },
         {
-          "src": "/assets/images/emulators/RPCS3.jpg",
-          "alt": "RPCS3 port · PlayStation 3",
-          "label": "RPCS3 port · PlayStation 3",
+          "src": "/assets/images/emulators/PCSX2.png",
+          "alt": "PS4SX2 · PlayStation 2",
+          "label": "PS4SX2 · PlayStation 2",
           "sourcePage": "console/ps4/emulators.html"
         }
       ]
@@ -2731,6 +2743,12 @@
           "sourcePage": "console/wiiu/mods.html"
         },
         {
+          "src": "/assets/images/wiiu-homebrew/second-wind-quest.png",
+          "alt": "Second Wind · Breath of the Wild",
+          "label": "Second Wind · Breath of the Wild",
+          "sourcePage": "console/wiiu/mods.html"
+        },
+        {
           "src": "/assets/images/wii-games-online/ctgp.png",
           "alt": "CTGP Revolution · Mario Kart Wii",
           "label": "CTGP Revolution · Mario Kart Wii",
@@ -2749,10 +2767,22 @@
       "kind": "tools",
       "images": [
         {
-          "src": "/assets/images/wiiu-homebrew/library.svg",
-          "alt": "Get online with Pretendo",
-          "label": "Get online with Pretendo",
-          "sourcePage": null
+          "src": "/assets/images/wiiu-homebrew/Inkay.png",
+          "alt": "Pretendo Network",
+          "label": "Pretendo Network",
+          "sourcePage": "console/wiiu/online.html"
+        },
+        {
+          "src": "/assets/images/wiiu-homebrew/evWii.png",
+          "alt": "Already on vWii?",
+          "label": "Already on vWii?",
+          "sourcePage": "console/wiiu/online.html"
+        },
+        {
+          "src": "/assets/images/wiiu-homebrew/SaveMiiProcessMod.png",
+          "alt": "Account and save data",
+          "label": "Account and save data",
+          "sourcePage": "console/wiiu/online.html"
         }
       ]
     },
@@ -2899,22 +2929,28 @@
       "kind": "tools",
       "images": [
         {
-          "src": "/assets/images/xbox-one-series/dolphin.png",
-          "alt": "Framework downloads",
-          "label": "Framework downloads",
-          "sourcePage": null
+          "src": "/assets/images/xbox-one-series/frameworks/9c17b521f9d6.png",
+          "alt": "Microsoft.VCLibs.140.00",
+          "label": "Microsoft.VCLibs.140.00",
+          "sourcePage": "console/xbox-one-series/dependencies.html"
         },
         {
-          "src": "/assets/images/xbox-one-series/dev-home.png",
-          "alt": "Xbox One / Series X|S",
-          "label": "Xbox One / Series X|S",
-          "sourcePage": null
+          "src": "/assets/images/xbox-one-series/frameworks/07f8b0400dfd.png",
+          "alt": "Microsoft.NET.Native.Framework.2.2",
+          "label": "Microsoft.NET.Native.Framework.2.2",
+          "sourcePage": "console/xbox-one-series/dependencies.html"
         },
         {
-          "src": "/assets/images/platform-logos/xbox-one-series.svg",
-          "alt": "Xbox One / Series X|S",
-          "label": "Xbox One / Series X|S",
-          "sourcePage": null
+          "src": "/assets/images/xbox-one-series/frameworks/27fae660d8c6.png",
+          "alt": "Microsoft.NET.Native.Runtime.2.2",
+          "label": "Microsoft.NET.Native.Runtime.2.2",
+          "sourcePage": "console/xbox-one-series/dependencies.html"
+        },
+        {
+          "src": "/assets/images/xbox-one-series/frameworks/009f7db134c6.png",
+          "alt": "Microsoft.VCLibs.140.00",
+          "label": "Microsoft.VCLibs.140.00",
+          "sourcePage": "console/xbox-one-series/dependencies.html"
         }
       ]
     },

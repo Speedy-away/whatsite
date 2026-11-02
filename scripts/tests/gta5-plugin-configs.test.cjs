@@ -4,13 +4,13 @@ const root=path.resolve(__dirname,'../..'),read=f=>JSON.parse(fs.readFileSync(pa
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const catalog=()=>read('downloads/ps4/GTA5/plugin-configs/manifest.json');
 const api=require('../../assets/gta5-plugin-downloads.js');
-test('Every plugin configuration enables one selected regional section and one exact module',()=>{
- const c=catalog();assert.equal(c.downloads.length,49);assert.equal(new Set(c.downloads.map(x=>x.resourceId)).size,20);
+test('Every plugin configuration enables one selected regional section and its exact required modules',()=>{
+ const c=catalog();assert.equal(c.downloads.length,53);assert.equal(new Set(c.downloads.map(x=>x.resourceId)).size,22);
  let count=0;for(const d of c.downloads)for(const v of d.variants)for(const region of c.regions){
   const config=v.configs[region.id],bytes=fs.readFileSync(path.join(root,'.'+config.url)),text=bytes.toString();
   assert.equal(sha(bytes),config.sha256);assert.deepEqual(text.match(/^\[CUSA\d+\]/gm),['['+region.id+']']);
-  assert.deepEqual(text.split(/\r?\n/).filter(x=>x.startsWith('/')),['/data/GoldHEN/plugins/'+config.module]);assert.ok(!text.includes('[default]'));count++;
- }assert.equal(count,114);
+  assert.deepEqual(text.split(/\r?\n/).filter(x=>x.startsWith('/')),(config.modules||[config.module]).map(m=>'/data/GoldHEN/plugins/'+m));assert.ok(!text.includes('[default]'));if(config.modules?.length>1)assert.match(d.resourceId,/^gta5-ozark-/);count++;
+ }assert.equal(count,122);
 });
 test('Scorpion 1.00 selects the EU/US binary while Oxagon keeps its actual game-update pin',()=>{
  const d=catalog().downloads;
@@ -31,7 +31,7 @@ test('BIN/CSC resources are not represented as GoldHEN plugins and original inpu
 });
 test('Every authored configuration and mirrored source has a verified local archive copy',()=>{
  const jobs=read('docs/qa/gta5-plugin-config-jobs.json').files,saved=read('docs/qa/gta5-plugin-config-archive.json').files;
- assert.equal(jobs.length,115);for(const f of jobs){const backup=saved.find(x=>x.sha256===f.sha256&&x.local===f.local);assert.ok(backup,f.local);const b=fs.readFileSync(backup.backupPath);assert.equal(b.length,f.bytes);assert.equal(sha(b),f.sha256);}
+ assert.equal(jobs.length,123);for(const f of jobs){const backup=saved.find(x=>x.sha256===f.sha256&&x.local===f.local);assert.ok(backup,f.local);const b=fs.readFileSync(backup.backupPath);assert.equal(b.length,f.bytes);assert.equal(sha(b),f.sha256);}
 });
 test('Combined ZIPs preserve original menu bytes and include the selected plugins.ini',async()=>{
  const data=read('docs/ps4-ps5-game-resources.json'),item=data.resources.find(x=>x.id==='gta5-crystalis-1-57');
@@ -54,6 +54,6 @@ test('Bundle creation rejects changed bytes, wrong region and ZIP traversal befo
  await assert.rejects(()=>api.bundle({configs:{}},'CUSA12345',{}),/Select a game region/);
 });
 test('The rendered page includes regional controls, combined actions and the moved 1.57 cards',()=>{
- const s=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');assert.ok(s.includes('/assets/gta5-plugin-downloads.js?v=1'));assert.ok(s.includes('/assets/gta5-plugin-downloads.css?v=1'));assert.ok(s.includes('Download menu + plugins.ini'));assert.ok(s.includes('Europe / EU · CUSA00411'));assert.ok(s.includes('USA · CUSA00419'));assert.ok(!s.includes('id="gallery"'));
+ const s=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');assert.ok(s.includes('/assets/gta5-plugin-downloads.js?v=2'));assert.ok(s.includes('/assets/gta5-plugin-downloads.css?v=1'));assert.ok(s.includes('Download menu + plugins.ini'));assert.ok(s.includes('Europe / EU · CUSA00411'));assert.ok(s.includes('USA · CUSA00419'));assert.ok(!s.includes('id="gallery"'));
  const section=s.match(/<section\b[^>]*\bid="v157"[^>]*>([\s\S]*?)<\/section>/)[1];for(const id of ['gta5-crystalis-1-57','gta5-velora-1-57'])assert.ok(section.includes('id="resource-'+id+'"'));
 });

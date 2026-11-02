@@ -4,8 +4,11 @@ const root=path.resolve(__dirname,'..');
 const sharp=require(require.resolve('sharp',{paths:['C:/Users/whatw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules']}));
 const projects={themezer:'https://github.com/ThemezerNX/Themezer-NX',hdr:'https://github.com/HDR-Development/HDR-Releases',arcropolis:'https://github.com/Raytwo/ARCropolis',skyline:'https://github.com/skyline-dev/skyline',smashline:'https://github.com/HDR-Development/smashline','nro-hook':'https://github.com/ultimate-research/nro-hook-plugin','hdr-launcher':'https://github.com/techyCoder81/hdr-launcher-react','playable-bosses':'https://github.com/NemesisSSBU/Playable_Bosses','smoo-plus':'https://github.com/SMOO-Plus/SMOO-Plus',civswitch:'https://github.com/Gezine/CivSwitch','ns2-savekit':'https://github.com/dougchansan/ns2-savekit',ouncecake:'https://github.com/misshexa66/OunceCake',ns2jb:'https://gitlab.com/pepsipu/ns2jb',nextendo:'https://github.com/alyeri/nextendo-mk8d-country-flags'};
 (async()=>{
- const report={checkedAt:new Date().toISOString(),scope:'Original project-published URL-preview identity images. These identify projects, not verified console UI or compatibility.',images:{},unavailable:[]};
+ const existingFile=path.join(root,'docs/switch-card-image-recovery.json');
+ const previous=fs.existsSync(existingFile)?JSON.parse(fs.readFileSync(existingFile,'utf8')):{};
+ const report={...previous,checkedAt:new Date().toISOString(),scope:'Original project-published identity images, source screenshots and official Nintendo game artwork. These identify projects or associated games, not build compatibility.',images:previous.images||{},unavailable:[]};
  for(const [id,url] of Object.entries(projects))try{
+  const saved=report.images[id];if(saved&&fs.existsSync(path.join(root,'.'+saved.image))&&crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'.'+saved.image))).digest('hex')===saved.sha256)continue;
   const response=await fetch(url);if(!response.ok)throw Error('Project HTTP '+response.status);
   const html=await response.text();
   const image=html.match(/<meta[^>]*property="og:image"[^>]*content="([^"]+)"/)?.[1]?.replaceAll('&amp;','&');

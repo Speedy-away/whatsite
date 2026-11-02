@@ -4019,6 +4019,11 @@
       "guideBlocks": [
         {
           "type": "paragraph",
+          "title": "GTA Reborn is required",
+          "text": "This Ozark setup requires GTA Reborn. Use the matching 1.56 GTARBN.sprx alongside Ozark.sprx and complete Discord registration to obtain your own /data/Reborn.txt. The combined Ozark download includes both modules and both INI paths, but cannot include your personal registration file. The supplied live-server announcement is for 1.57 only; 1.56 server access is not established."
+        },
+        {
+          "type": "paragraph",
           "title": "PS4 plugin setup",
           "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
         },
@@ -4054,14 +4059,25 @@
       ],
       "guideLabel": "Guide & requirements",
       "tags": [
-        "PS4"
+        "PS4",
+        "Requires GTA Reborn"
       ],
       "keywords": [
         "Ozark · GTA V 1.56",
         "PS4 GTA 5",
         "Grand Theft Auto V",
         "1.56"
-      ]
+      ],
+      "requiredResources": [
+        {
+          "id": "gta5-reborn-1-56",
+          "label": "GTA Reborn 1.56 required",
+          "href": "#guide-gta5-reborn-1-56",
+          "moduleDownloadId": "gta5-reborn-1-56-sprx",
+          "gameVersion": "1.56"
+        }
+      ],
+      "description": "Requires the matching GTA Reborn client and your personal /data/Reborn.txt for this server setup."
     },
     {
       "id": "gta5-beach-legacy",
@@ -4534,6 +4550,11 @@
       "guideBlocks": [
         {
           "type": "paragraph",
+          "title": "GTA Reborn is required",
+          "text": "This Ozark setup requires GTA Reborn. Use the matching 1.57 GTARBN.sprx alongside Ozark.sprx and complete Discord registration to obtain your own /data/Reborn.txt. The combined Ozark download includes both modules and both INI paths, but cannot include your personal registration file. The supplied live-server announcement is for 1.57 only; 1.56 server access is not established."
+        },
+        {
+          "type": "paragraph",
           "title": "PS4 plugin setup",
           "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
         },
@@ -4569,14 +4590,25 @@
       ],
       "guideLabel": "Guide & requirements",
       "tags": [
-        "PS4"
+        "PS4",
+        "Requires GTA Reborn"
       ],
       "keywords": [
         "Ozark · GTA V 1.57",
         "PS4 GTA 5",
         "Grand Theft Auto V",
         "1.57"
-      ]
+      ],
+      "requiredResources": [
+        {
+          "id": "gta5-reborn-1-57",
+          "label": "GTA Reborn 1.57 required",
+          "href": "#guide-gta5-reborn-1-57",
+          "moduleDownloadId": "gta5-reborn-1-57-sprx",
+          "gameVersion": "1.57"
+        }
+      ],
+      "description": "Requires the matching GTA Reborn client and your personal /data/Reborn.txt for this server setup."
     },
     {
       "id": "gta5-velora-1-56",
@@ -16289,6 +16321,310 @@
       "description": "CSC resources requiring a separate compatible script loader. The source does not specify a GTA V update.",
       "compatibilityText": "PS4 · GTA V update unspecified",
       "guideLabel": "Guide & requirements"
+    },
+    {
+      "id": "gta5-reborn-1-56",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "client",
+      "publication": "include",
+      "catalogueSection": "v156",
+      "name": "GTA Reborn",
+      "version": "PS4 client · GTA V 1.56",
+      "menuVersion": null,
+      "gameVersions": [
+        "1.56"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "titleIds": [],
+      "guideLabel": "Registration & setup guide",
+      "description": "Preserved 1.56 client from the supplied package. The supplied live-server announcement is for 1.57 only.",
+      "compatibilityText": "Package contains a 1.56 module; current live-server access for 1.56 is not established.",
+      "source": {
+        "forumTitle": "User-supplied GTA Reborn files and setup screenshots",
+        "postTitle": "GTA Reborn PS4 1.56 / 1.57",
+        "postUrl": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/qa/gta-reborn-inspection.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-reborn-1-56-sprx",
+          "label": "GTARBN.sprx · GTA V 1.56",
+          "filename": "GTARBN.sprx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reborn/1.56/GTARBN.sprx",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-reborn-1-56-package",
+          "label": "Original ZIP · choose 1.56 folder",
+          "filename": "GTA_RBN.zip",
+          "url": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+          "pluginMembers": [
+            "1.56/GTARBN.sprx"
+          ],
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/gta52.png",
+          "caption": "Grand Theft Auto V artwork; not a GTA Reborn menu screenshot."
+        },
+        {
+          "original": "/assets/images/ps4-gta5/reborn-registration-user.png",
+          "role": "guide",
+          "caption": "Original registration instructions supplied by the user; the announcement says live access is for 1.57 only."
+        },
+        {
+          "original": "/assets/images/ps4-gta5/reborn-crew-user.png",
+          "role": "guide",
+          "caption": "Original crew-command and troubleshooting instructions supplied by the user."
+        }
+      ],
+      "videos": [],
+      "controls": [],
+      "tags": [
+        "PS4",
+        "Server client",
+        "GTA Reborn",
+        "SPRX",
+        "Discord registration",
+        "Reborn.txt"
+      ],
+      "keywords": [
+        "GTA RBN",
+        "GTARBN.sprx",
+        "GTA Reborn",
+        "Ozark dependency",
+        "private server",
+        "Reborn.txt",
+        "1.56"
+      ],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Game update and server availability",
+          "text": "The ZIP contains separate 1.56/GTARBN.sprx and 1.57/GTARBN.sprx files. Choose the exact folder for your installed GTA V update. The supplied server announcement explicitly says “FOR 1.57 ONLY”; preserving the 1.56 client is not confirmation of current 1.56 server access. No PS5 or firmware compatibility is established."
+        },
+        {
+          "type": "steps",
+          "title": "Register and install",
+          "items": [
+            {
+              "title": "Register yourself in GTA Reborn Discord",
+              "text": "Use the server’s bot command /link username:YOUR_GAMERTAG. Replace YOUR_GAMERTAG with your PSN name exactly as it appears on your console, including letter case. The supplied instructions allow one registration per Discord account; each player registers from their own account."
+            },
+            {
+              "title": "Save your personal registration file",
+              "text": "The bot replies privately with Reborn.txt. Copy that exact file to /data/Reborn.txt on your PS4. It is not included in this download and must come from your own registration. The supplied instructions say there is no in-game registration."
+            },
+            {
+              "title": "Install the matching client",
+              "text": "With GTA V closed, copy the 1.56 client to /data/GoldHEN/plugins/GTARBN.sprx. The original ZIP contains both updates under different folders; the standalone download on this card is already the 1.56 file. Keep the other build separate rather than overwriting it by shared filename."
+            },
+            {
+              "title": "Merge plugins.ini",
+              "text": "Choose your installed title ID in the region selector. Merge the generated section into /data/GoldHEN/plugins.ini and retain unrelated entries. Regional configurations are templates: embedded CUSA00419 request text does not establish a complete EU/USA compatibility matrix."
+            },
+            {
+              "title": "Launch the server client",
+              "text": "Start GTA Online with the correct Reborn plugin loaded and follow the server’s instructions. The supplied setup says a missing or incomplete /data/Reborn.txt prevents patches from being applied. Confirm that the client works before adding Ozark."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Registration command from the supplied instructions",
+          "text": "/link username:YOUR_GAMERTAG"
+        },
+        {
+          "type": "code",
+          "title": "Required PS4 paths",
+          "text": "/data/Reborn.txt\n/data/GoldHEN/plugins/GTARBN.sprx\n/data/GoldHEN/plugins.ini"
+        },
+        {
+          "type": "paragraph",
+          "title": "Ozark setup",
+          "text": "This Ozark setup requires the matching GTA Reborn client. Ozark 1.56 combined downloads include this exact 1.56 Reborn module and an INI with both plugin paths. Your personal Reborn.txt is still required; it is never generated or included by the website."
+        },
+        {
+          "type": "list",
+          "title": "Other commands in the supplied guide",
+          "items": [
+            "/playersonline [minutes] lists recently active players; the supplied default is 15 minutes. Example: /playersonline minutes:60.",
+            "/viewcrews lists available crews. /createcrew creates a crew with name and tag, plus optional motto, colour, owner, public/private setting and icon.",
+            "/linkcrew crew:TAG assigns a crew; the supplied instructions also accept its name or crew_id."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Troubleshooting from the supplied guide",
+          "items": [
+            "Cannot join: check registration with /link and the presence of /data/Reborn.txt.",
+            "Patches were not applied: the supplied guide says Reborn.txt is absent or incomplete; retrieve your own file from the bot’s private reply.",
+            "Misspelled PSN name: contact the GTA Reborn server team to correct registration; do not register a friend from your account."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gta5-reborn-1-57",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "client",
+      "publication": "include",
+      "catalogueSection": "v157",
+      "name": "GTA Reborn",
+      "version": "PS4 client · GTA V 1.57",
+      "menuVersion": null,
+      "gameVersions": [
+        "1.57"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "titleIds": [],
+      "guideLabel": "Registration & setup guide",
+      "description": "Private-server client required for Ozark’s Reborn setup. Discord registration and your personal Reborn.txt are required.",
+      "compatibilityText": "The supplied announcement names GTA V 1.57 for live-server access.",
+      "source": {
+        "forumTitle": "User-supplied GTA Reborn files and setup screenshots",
+        "postTitle": "GTA Reborn PS4 1.56 / 1.57",
+        "postUrl": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/qa/gta-reborn-inspection.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-reborn-1-57-sprx",
+          "label": "GTARBN.sprx · GTA V 1.57",
+          "filename": "GTARBN.sprx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reborn/1.57/GTARBN.sprx",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-reborn-1-57-package",
+          "label": "Original ZIP · choose 1.57 folder",
+          "filename": "GTA_RBN.zip",
+          "url": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+          "pluginMembers": [
+            "1.57/GTARBN.sprx"
+          ],
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/gta52.png",
+          "caption": "Grand Theft Auto V artwork; not a GTA Reborn menu screenshot."
+        },
+        {
+          "original": "/assets/images/ps4-gta5/reborn-registration-user.png",
+          "role": "guide",
+          "caption": "Original registration instructions supplied by the user; the announcement says live access is for 1.57 only."
+        },
+        {
+          "original": "/assets/images/ps4-gta5/reborn-crew-user.png",
+          "role": "guide",
+          "caption": "Original crew-command and troubleshooting instructions supplied by the user."
+        }
+      ],
+      "videos": [],
+      "controls": [],
+      "tags": [
+        "PS4",
+        "Server client",
+        "GTA Reborn",
+        "SPRX",
+        "Discord registration",
+        "Reborn.txt"
+      ],
+      "keywords": [
+        "GTA RBN",
+        "GTARBN.sprx",
+        "GTA Reborn",
+        "Ozark dependency",
+        "private server",
+        "Reborn.txt",
+        "1.57"
+      ],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Game update and server availability",
+          "text": "The ZIP contains separate 1.56/GTARBN.sprx and 1.57/GTARBN.sprx files. Choose the exact folder for your installed GTA V update. The supplied server announcement explicitly says “FOR 1.57 ONLY”; preserving the 1.56 client is not confirmation of current 1.56 server access. No PS5 or firmware compatibility is established."
+        },
+        {
+          "type": "steps",
+          "title": "Register and install",
+          "items": [
+            {
+              "title": "Register yourself in GTA Reborn Discord",
+              "text": "Use the server’s bot command /link username:YOUR_GAMERTAG. Replace YOUR_GAMERTAG with your PSN name exactly as it appears on your console, including letter case. The supplied instructions allow one registration per Discord account; each player registers from their own account."
+            },
+            {
+              "title": "Save your personal registration file",
+              "text": "The bot replies privately with Reborn.txt. Copy that exact file to /data/Reborn.txt on your PS4. It is not included in this download and must come from your own registration. The supplied instructions say there is no in-game registration."
+            },
+            {
+              "title": "Install the matching client",
+              "text": "With GTA V closed, copy the 1.57 client to /data/GoldHEN/plugins/GTARBN.sprx. The original ZIP contains both updates under different folders; the standalone download on this card is already the 1.57 file. Keep the other build separate rather than overwriting it by shared filename."
+            },
+            {
+              "title": "Merge plugins.ini",
+              "text": "Choose your installed title ID in the region selector. Merge the generated section into /data/GoldHEN/plugins.ini and retain unrelated entries. Regional configurations are templates: embedded CUSA00419 request text does not establish a complete EU/USA compatibility matrix."
+            },
+            {
+              "title": "Launch the server client",
+              "text": "Start GTA Online with the correct Reborn plugin loaded and follow the server’s instructions. The supplied setup says a missing or incomplete /data/Reborn.txt prevents patches from being applied. Confirm that the client works before adding Ozark."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Registration command from the supplied instructions",
+          "text": "/link username:YOUR_GAMERTAG"
+        },
+        {
+          "type": "code",
+          "title": "Required PS4 paths",
+          "text": "/data/Reborn.txt\n/data/GoldHEN/plugins/GTARBN.sprx\n/data/GoldHEN/plugins.ini"
+        },
+        {
+          "type": "paragraph",
+          "title": "Ozark setup",
+          "text": "This Ozark setup requires the matching GTA Reborn client. Ozark 1.57 combined downloads include this exact 1.57 Reborn module and an INI with both plugin paths. Your personal Reborn.txt is still required; it is never generated or included by the website."
+        },
+        {
+          "type": "list",
+          "title": "Other commands in the supplied guide",
+          "items": [
+            "/playersonline [minutes] lists recently active players; the supplied default is 15 minutes. Example: /playersonline minutes:60.",
+            "/viewcrews lists available crews. /createcrew creates a crew with name and tag, plus optional motto, colour, owner, public/private setting and icon.",
+            "/linkcrew crew:TAG assigns a crew; the supplied instructions also accept its name or crew_id."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Troubleshooting from the supplied guide",
+          "items": [
+            "Cannot join: check registration with /link and the presence of /data/Reborn.txt.",
+            "Patches were not applied: the supplied guide says Reborn.txt is absent or incomplete; retrieve your own file from the bot’s private reply.",
+            "Misspelled PSN name: contact the GTA Reborn server team to correct registration; do not register a friend from your account."
+          ]
+        }
+      ]
     }
   ]
 }

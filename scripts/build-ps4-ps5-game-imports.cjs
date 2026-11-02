@@ -77,7 +77,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
     for (const item of items) {
       // The GTA V builder renders these cards in the requested update group.
       // Their guide sections are still appended below with the other details.
-      if (mode === 'mods' && gameId === 'gta5' && item.catalogueSection === 'v157') continue;
+      if (mode === 'mods' && gameId === 'gta5' && ['v156','v157'].includes(item.catalogueSection)) continue;
       const represented = legacy.some(file => matches(item, file));
       if (legacy.some(file => file.downloadsRendered && matches(item, file))) continue;
       const downloads = (item.downloads || []).filter(file => file.distribution === 'include');

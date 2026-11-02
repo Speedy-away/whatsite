@@ -1,0 +1,27 @@
+{
+  "changedPages": [
+    "console/nintendo-switch/mods.html",
+    "console/nintendo-switch/themes.html",
+    "console/nintendo-switch-2.html",
+    "console/nintendo-switch-2/civswitch.html",
+    "console/nintendo-switch-2/ns2jb.html",
+    "console/nintendo-switch-2/save-tools.html",
+    "console/nintendo-switch-2/game-tools.html"
+  ],
+  "addedImages": 21,
+  "excludedSourceImages": [
+    {
+      "id": "hdr-launcher",
+      "reason": "Original README screenshot shows the desktop HDR Ryujinx launcher, not the Switch plugin. Preserved unassigned; Switch plugin card uses associated game artwork."
+    }
+  ],
+  "exceptions": [],
+  "verifiedAssets": 6,
+  "verification": {
+    "sourceAssetsDecoded": true,
+    "originalBytesPreserved": true,
+    "nonImageContentUnchanged": true,
+    "builderSyntaxChecks": 3,
+    "switch2TestsPassed": 1
+  }
+}

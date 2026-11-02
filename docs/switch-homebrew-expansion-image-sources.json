@@ -101,13 +101,27 @@
     },
     {
       "id": "jumpnbump",
-      "url": "https://switch.cdn.fortheusers.org/packages/jumpnbump/icon.png",
+      "url": "https://raw.githubusercontent.com/rsn8887/jumpnbump/master/screenshots/jumpnbump_shot_1.png",
       "manifestUrl": "https://switch.cdn.fortheusers.org/packages/jumpnbump/manifest.install",
       "status": 200,
       "manifestStatus": 200,
-      "file": "/assets/images/switch-homebrew/jumpnbump.png",
-      "bytes": 82539,
-      "sha256": "a3ad1ba70f6da7ace7a77e2e2ddfd9687d0188c7a12f7bbc6802f1044a3685fc"
+      "file": "/assets/images/switch-homebrew/jumpnbump-gameplay-6a05aecfe667.png",
+      "bytes": 48416,
+      "sha256": "6a05aecfe667fdfb636e4d1fb74c213bbd28ac58a988b173de28b214d092b9bb",
+      "recovery": true,
+      "kind": "Original publisher gameplay screenshot",
+      "credit": "rsn8887 / Brainchild Design · original Jump n Bump gameplay screenshot",
+      "previousImage": {
+        "id": "jumpnbump",
+        "url": "https://switch.cdn.fortheusers.org/packages/jumpnbump/icon.png",
+        "manifestUrl": "https://switch.cdn.fortheusers.org/packages/jumpnbump/manifest.install",
+        "status": 200,
+        "manifestStatus": 200,
+        "file": "/assets/images/switch-homebrew/jumpnbump.png",
+        "bytes": 82539,
+        "sha256": "a3ad1ba70f6da7ace7a77e2e2ddfd9687d0188c7a12f7bbc6802f1044a3685fc"
+      },
+      "verification": "Original screenshot shared by the publisher of the Switch/Vita ports. Associated game appearance only; not a build compatibility claim. Preserved former store icon bytes because Pillow rejects its metadata although libvips decodes it."
     },
     {
       "id": "SpaceVue",

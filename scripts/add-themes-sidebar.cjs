@@ -41,7 +41,11 @@ function applyThemes(html, file) {
             ['psvita','PS Vita'], ['psp','PSP'], ['ps2','PS2'], ['ds','DS'],
             ['retro/3ds-themes.html','3DS'], ['retro/wiiu-themes.html','Wii U']
         ];
-        const directory = `<div class="themes-console-grid" data-theme-platform-directory>${choices.map(([route,label]) => `<article class="themes-console"><h3><a href="/console/${route.endsWith('.html') ? route : route + '/themes.html'}">${label} Themes</a></h3></article>`).join('')}</div>`;
+        const directory = `<div class="themes-console-grid" data-theme-platform-directory>${choices.map(([route,label]) => {
+            const platform = route.replace('retro/', '').replace('-themes.html', '');
+            const url = '/console/' + (route.endsWith('.html') ? route : route + '/themes.html');
+            return `<article class="themes-console themes-platform-card"><a href="${url}" aria-label="${label} Themes"><img src="/assets/images/merged-categories/library-${platform}-v1.png" alt="${label} console" width="1672" height="941" loading="lazy" decoding="async"><h3>${label} Themes</h3></a></article>`;
+        }).join('')}</div>`;
         html = html.replace(/<div class="themes-console-grid" data-theme-platform-directory>[\s\S]*?<\/article><\/div>/, '');
         html = html.replace(/(<section\b[^>]*id="collections"[^>]*>[\s\S]*?<h2[^>]*>[\s\S]*?<\/h2>)/, '$1' + directory);
     }

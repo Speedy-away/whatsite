@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "2026-11-02.1",
+  "revision": "2026-11-02.2",
   "regions": [
     {
       "id": "CUSA00411",
@@ -36,15 +36,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beta-rebranded/void-beta-419-prx/CUSA00411/ba546c7d6263/plugins.ini",
               "sha256": "ba546c7d626367451501dc29293c6e2141be46364be57c8076baa0921467deb3",
               "module": "VOID_Beta_419.prx",
+              "modules": [
+                "VOID_Beta_419.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beta-rebranded/void-beta-419-prx/CUSA00419/7adb9de3e9b1/plugins.ini",
               "sha256": "7adb9de3e9b1c395ddd92f898d585ae0874c513f26f6199ea06f3d3b488d49a0",
               "module": "VOID_Beta_419.prx",
+              "modules": [
+                "VOID_Beta_419.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -70,15 +77,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-100eu-prx/CUSA00411/2db27dc9a7a3/plugins.ini",
               "sha256": "2db27dc9a7a32671856362115882cbbf57620aefbe760624a55650635ebaaee3",
               "module": "ScorpionMenu-v1.2b-100EU.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-100EU.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-100eu-prx/CUSA00419/c1d5c6326dd7/plugins.ini",
               "sha256": "c1d5c6326dd7249c8b9891e906baa35b2e1b1e4569a0977043004f16179634e1",
               "module": "ScorpionMenu-v1.2b-100US.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-100US.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "scorpionmenu-v1-2b-138-prx",
@@ -90,15 +104,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-138-prx/CUSA00411/60d6bde3f442/plugins.ini",
               "sha256": "60d6bde3f44229228fb3c991cdae4a631d6a42d2404e9828574f19361f3bfb91",
               "module": "ScorpionMenu-v1.2b-138.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-138.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-138-prx/CUSA00419/4e063b14219b/plugins.ini",
               "sha256": "4e063b14219b6f859f2a356d749bae54efd26472038138eb8f9df47604a25fba",
               "module": "ScorpionMenu-v1.2b-138.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-138.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "scorpionmenu-v1-2b-143-prx",
@@ -110,15 +131,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-143-prx/CUSA00411/521df6616a3b/plugins.ini",
               "sha256": "521df6616a3b99e0c3e3773af2794742d7c44468326690e9e6cad2cd77bd4e89",
               "module": "ScorpionMenu-v1.2b-143.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-143.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-143-prx/CUSA00419/b9a97160a9be/plugins.ini",
               "sha256": "b9a97160a9be06433c3f3cee4968c74b2d9c5029c7b0e25a042bde21aa3345f9",
               "module": "ScorpionMenu-v1.2b-143.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-143.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "scorpionmenu-v1-2b-146-prx",
@@ -130,15 +158,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-146-prx/CUSA00411/32a956d2b748/plugins.ini",
               "sha256": "32a956d2b748d42a74988bb3552a92463c29917edbf9561f641137cd9defe5a9",
               "module": "ScorpionMenu-v1.2b-146.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-146.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-146-prx/CUSA00419/e92ff911570a/plugins.ini",
               "sha256": "e92ff911570a9efe76811025fc17ed244a3a90d0fec7f813cc07dc09391683a5",
               "module": "ScorpionMenu-v1.2b-146.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-146.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "scorpionmenu-v1-2b-148-prx",
@@ -150,15 +185,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-148-prx/CUSA00411/1615217ffdf6/plugins.ini",
               "sha256": "1615217ffdf6d4710055bfb60327ea85f7aebc7bcd29acfdac35f8b402cbbfed",
               "module": "ScorpionMenu-v1.2b-148.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-148.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-148-prx/CUSA00419/3e862141e85d/plugins.ini",
               "sha256": "3e862141e85d0fcc91937361334101ef9862869524f0cda57f0e4dd9965b0289",
               "module": "ScorpionMenu-v1.2b-148.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-148.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "scorpionmenu-v1-2b-149-prx",
@@ -170,15 +212,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-149-prx/CUSA00411/d0576dc0bbf6/plugins.ini",
               "sha256": "d0576dc0bbf61f91ca627f7cecdb4b3d888e2aba99174f27e1147833815a98ea",
               "module": "ScorpionMenu-v1.2b-149.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-149.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-149-prx/CUSA00419/bf4b2d9e5132/plugins.ini",
               "sha256": "bf4b2d9e5132715c10b235f46459e84f685e4d686fb989a4b3257fcb7593e98e",
               "module": "ScorpionMenu-v1.2b-149.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-149.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "scorpionmenu-v1-2b-150-prx",
@@ -190,15 +239,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-150-prx/CUSA00411/9944ae84156a/plugins.ini",
               "sha256": "9944ae84156a7e45807d79af4e3ee2ec42fcb46007d58c85363943b10face675",
               "module": "ScorpionMenu-v1.2b-150.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-150.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b/scorpionmenu-v1-2b-150-prx/CUSA00419/de6f8984ca6c/plugins.ini",
               "sha256": "de6f8984ca6cf36dc223ae4c3d6eb4ee042069b952293657bf85ee96e5ccff16",
               "module": "ScorpionMenu-v1.2b-150.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-150.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -224,15 +280,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b-module-1-48/scorpionmenu-v1-2b-148-prx/CUSA00411/1615217ffdf6/plugins.ini",
               "sha256": "1615217ffdf6d4710055bfb60327ea85f7aebc7bcd29acfdac35f8b402cbbfed",
               "module": "ScorpionMenu-v1.2b-148.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-148.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b-module-1-48/scorpionmenu-v1-2b-148-prx/CUSA00419/3e862141e85d/plugins.ini",
               "sha256": "3e862141e85d0fcc91937361334101ef9862869524f0cda57f0e4dd9965b0289",
               "module": "ScorpionMenu-v1.2b-148.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-148.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -258,15 +321,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b-module-1-49/scorpionmenu-v1-2b-149-prx/CUSA00411/d0576dc0bbf6/plugins.ini",
               "sha256": "d0576dc0bbf61f91ca627f7cecdb4b3d888e2aba99174f27e1147833815a98ea",
               "module": "ScorpionMenu-v1.2b-149.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-149.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b-module-1-49/scorpionmenu-v1-2b-149-prx/CUSA00419/bf4b2d9e5132/plugins.ini",
               "sha256": "bf4b2d9e5132715c10b235f46459e84f685e4d686fb989a4b3257fcb7593e98e",
               "module": "ScorpionMenu-v1.2b-149.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-149.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -292,15 +362,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b-module-1-50/scorpionmenu-v1-2b-150-prx/CUSA00411/9944ae84156a/plugins.ini",
               "sha256": "9944ae84156a7e45807d79af4e3ee2ec42fcb46007d58c85363943b10face675",
               "module": "ScorpionMenu-v1.2b-150.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-150.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-scorpion-v1-2b-module-1-50/scorpionmenu-v1-2b-150-prx/CUSA00419/de6f8984ca6c/plugins.ini",
               "sha256": "de6f8984ca6cf36dc223ae4c3d6eb4ee042069b952293657bf85ee96e5ccff16",
               "module": "ScorpionMenu-v1.2b-150.prx",
+              "modules": [
+                "ScorpionMenu-v1.2b-150.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -326,15 +403,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-53/cyprusmenu-prx/CUSA00411/47424613d498/plugins.ini",
               "sha256": "47424613d498020fd643e30c204dbaea38941580b841733981367d0d78f586bb",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-53/cyprusmenu-prx/CUSA00419/5e27b3e33358/plugins.ini",
               "sha256": "5e27b3e33358ce8017fea2fa8f0f9a6af995aea02f981998caf9411333e1d848",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -360,15 +444,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-54/cyprusmenu-prx/CUSA00411/d3294c64a5b4/plugins.ini",
               "sha256": "d3294c64a5b446d9c57b55123be4b0293ff9a304515d7caa82bdff89a8119d42",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-54/cyprusmenu-prx/CUSA00419/b43d3cd2b0fd/plugins.ini",
               "sha256": "b43d3cd2b0fdda5f02a2bae49b740f799772c7555f3e4844a05a1e6b65bc354c",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -394,15 +485,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-55/cyprusmenu-prx/CUSA00411/21e57b839b85/plugins.ini",
               "sha256": "21e57b839b852b9742b5791f17a7fdb9a8da21664896314efb21526103ee33cf",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-55/cyprusmenu-prx/CUSA00419/f47e5d7192ae/plugins.ini",
               "sha256": "f47e5d7192ae0e36f8b5d70241c284d01b744c2a1cef7d6d16246981d89e1a3d",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -428,15 +526,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-56/cyprusmenu-prx/CUSA00411/1eb863b53117/plugins.ini",
               "sha256": "1eb863b531173fa5749c76835fab9a4993ef70715909b349e2a98327b61b2aa3",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-56/cyprusmenu-prx/CUSA00419/9938b4d1b575/plugins.ini",
               "sha256": "9938b4d1b575a2545616faa5d842f78991620ace18f6a5cf00578bb9227a8a91",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -462,15 +567,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-57/cyprusmenu-prx/CUSA00411/d1fcb71d926f/plugins.ini",
               "sha256": "d1fcb71d926f38eb31d554dd8c8f84ac1ec1b0870948681db8ceff80f9bfc155",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-cyprus-1-57/cyprusmenu-prx/CUSA00419/21515a5b1564/plugins.ini",
               "sha256": "21515a5b15648c4f152805b890bcfc5faf5dc6c34c1c7911623a07b350f03b90",
               "module": "CyprusMenu.prx",
+              "modules": [
+                "CyprusMenu.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -496,15 +608,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-serendipity-1-57/seren-prx/CUSA00411/9e36f3feede3/plugins.ini",
               "sha256": "9e36f3feede346707412934497bf419eeae93c582033132c5f3090f006d043b2",
               "module": "Seren.prx",
+              "modules": [
+                "Seren.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-serendipity-1-57/seren-prx/CUSA00419/53fc3fe9eceb/plugins.ini",
               "sha256": "53fc3fe9eceb42ab990fc086de2a0c85cbba56d2a747b16132025419b8df9d8e",
               "module": "Seren.prx",
+              "modules": [
+                "Seren.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -530,15 +649,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-serendipity-1-57-legacy-file/seren-prx/CUSA00411/9e36f3feede3/plugins.ini",
               "sha256": "9e36f3feede346707412934497bf419eeae93c582033132c5f3090f006d043b2",
               "module": "Seren.prx",
+              "modules": [
+                "Seren.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-serendipity-1-57-legacy-file/seren-prx/CUSA00419/53fc3fe9eceb/plugins.ini",
               "sha256": "53fc3fe9eceb42ab990fc086de2a0c85cbba56d2a747b16132025419b8df9d8e",
               "module": "Seren.prx",
+              "modules": [
+                "Seren.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -566,15 +692,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-expulsion-v5-1-57/lushmodz-expulsion-1-57-prx/CUSA00411/9caf2f3b8e73/plugins.ini",
               "sha256": "9caf2f3b8e739ac2a2416585a04e7c022b498c5d18730d4c7203a85e51357b30",
               "module": "LushModz-Expulsion-1.57.prx",
+              "modules": [
+                "LushModz-Expulsion-1.57.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-expulsion-v5-1-57/lushmodz-expulsion-1-57-prx/CUSA00419/025eda4f7500/plugins.ini",
               "sha256": "025eda4f75007acd18b5dd122c6b3585520eb42bd575aa7b58dc71c734171f55",
               "module": "LushModz-Expulsion-1.57.prx",
+              "modules": [
+                "LushModz-Expulsion-1.57.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -600,15 +733,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-1-56/beachmenu156-prx/CUSA00411/d2ce6e1a1b09/plugins.ini",
               "sha256": "d2ce6e1a1b09e096b89e6558b1a1bd1cbdbe3c8e3cf251b2501df34acf775fa5",
               "module": "BeachMenu156.prx",
+              "modules": [
+                "BeachMenu156.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-1-56/beachmenu156-prx/CUSA00419/43862ceeb107/plugins.ini",
               "sha256": "43862ceeb107bb0e1d9e5173d23bb13212c3f6cf8d508e573aa0a0ebe564c19f",
               "module": "BeachMenu156.prx",
+              "modules": [
+                "BeachMenu156.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -636,15 +776,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-1-57/beachmenu157-prx/CUSA00411/c2a70687fe15/plugins.ini",
               "sha256": "c2a70687fe158bc5dc86e1c1919b63f2885332252335fd8671c5367d5a2d46e0",
               "module": "BeachMenu157.prx",
+              "modules": [
+                "BeachMenu157.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-1-57/beachmenu157-prx/CUSA00419/ca5342db4ce4/plugins.ini",
               "sha256": "ca5342db4ce4daf5426fb3f5c0f18dad7bf34a833cf83fc87e743b3d414d002c",
               "module": "BeachMenu157.prx",
+              "modules": [
+                "BeachMenu157.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -672,15 +819,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-explosive-1-52-1-53-explosive152/explosive152-sprx/CUSA00411/4c958392a208/plugins.ini",
               "sha256": "4c958392a2083fcf488b1327e12874d94ca2534b166813aa0db595aaac97d1f5",
               "module": "Explosive152.sprx",
+              "modules": [
+                "Explosive152.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-explosive-1-52-1-53-explosive152/explosive152-sprx/CUSA00419/2d947d139e8c/plugins.ini",
               "sha256": "2d947d139e8cb7da8afd13e23e71cc2f6eb4b10b1109b042528b7d724903457d",
               "module": "Explosive152.sprx",
+              "modules": [
+                "Explosive152.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -706,15 +860,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-explosive-1-52-1-53-explosive153/explosive153-sprx/CUSA00411/81cc36383800/plugins.ini",
               "sha256": "81cc36383800b6693a17050605f0918cdc738529b4734c2980ad907827d4daa8",
               "module": "Explosive153.sprx",
+              "modules": [
+                "Explosive153.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-explosive-1-52-1-53-explosive153/explosive153-sprx/CUSA00419/7800ed4e3946/plugins.ini",
               "sha256": "7800ed4e3946b0b406744e0eed1b9ac486c62fae8179cabafefe744db7d9caae",
               "module": "Explosive153.sprx",
+              "modules": [
+                "Explosive153.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -737,18 +898,37 @@
           "label": "GTA V 1.56 · Ozark.sprx",
           "configs": {
             "CUSA00411": {
-              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-56/ozark-sprx/CUSA00411/d02c92e97ffc/plugins.ini",
-              "sha256": "d02c92e97ffc39b99c1a4a76cdf707daa73cd20f145d236898bcd7139c9f43c5",
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-56/ozark-sprx/CUSA00411/511d70653477/plugins.ini",
+              "sha256": "511d7065347758486dab65de35d7472bcb01216422170315ee6c54d46893a508",
               "module": "Ozark.sprx",
+              "modules": [
+                "GTARBN.sprx",
+                "Ozark.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
-              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-56/ozark-sprx/CUSA00419/0d013f88ac50/plugins.ini",
-              "sha256": "0d013f88ac50b93dc32d117572930f599d7b89be343a89e17ea014c58adf6124",
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-56/ozark-sprx/CUSA00419/d58e224403c6/plugins.ini",
+              "sha256": "d58e224403c6cb7baeda803de7fb38990b294971942aebcc605771ead45c505c",
               "module": "Ozark.sprx",
+              "modules": [
+                "GTARBN.sprx",
+                "Ozark.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": [
+            {
+              "name": "GTARBN.sprx",
+              "url": "/downloads/ps4/GTA5/reborn/1.56/GTARBN.sprx",
+              "bytes": 255677,
+              "sha256": "b1aaba333941b6a251d892c63fc0c716870035b0be5bac09f803f7f301d92934",
+              "gameVersion": "1.56",
+              "sourceUrl": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+              "installPath": "data/GoldHEN/plugins/GTARBN.sprx"
+            }
+          ]
         }
       ],
       "aliases": [
@@ -776,15 +956,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-46-v6-2-1-dual/beach-1-46-v6-2-1-dual-prx/CUSA00411/ca610ab5238b/plugins.ini",
               "sha256": "ca610ab5238b85c1ff66edd8a1f52f50215f00e12f0e1058f2d83370d2b315aa",
               "module": "Beach-1.46-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.46-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-46-v6-2-1-dual/beach-1-46-v6-2-1-dual-prx/CUSA00419/eca62d7e8ab8/plugins.ini",
               "sha256": "eca62d7e8ab887a7da0589e053f48fbc926240fd3c57b662276aca5d0e9e5705",
               "module": "Beach-1.46-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.46-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -810,15 +997,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-47-v6-2-1-dual/beach-1-47-v6-2-1-dual-prx/CUSA00411/074decfdcdde/plugins.ini",
               "sha256": "074decfdcddeba221457cea889d69f4b3668a1f3ee8aa533b6df0558c27f56e1",
               "module": "Beach-1.47-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.47-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-47-v6-2-1-dual/beach-1-47-v6-2-1-dual-prx/CUSA00419/cc158add4883/plugins.ini",
               "sha256": "cc158add48830fececb7116e141de8a18d6daff82c3446a854884d9574b91c60",
               "module": "Beach-1.47-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.47-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -844,15 +1038,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-48-v6-2-1-dual/beach-1-48-v6-2-1-dual-prx/CUSA00411/4d585a458b5c/plugins.ini",
               "sha256": "4d585a458b5ce7b097514080e9f34a1702a1ecc6456ed7298ccd2cc309106560",
               "module": "Beach-1.48-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.48-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-48-v6-2-1-dual/beach-1-48-v6-2-1-dual-prx/CUSA00419/a48f82501d61/plugins.ini",
               "sha256": "a48f82501d612f88524cf70217b6681376295a0e51e1b1ed028f7137be226dd7",
               "module": "Beach-1.48-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.48-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -878,15 +1079,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-49-v6-2-1-dual/beach-1-49-v6-2-1-dual-prx/CUSA00411/626e8950791c/plugins.ini",
               "sha256": "626e8950791cb09a586a10172ecc93e526ca4ad300afff0ae947be51ac815d23",
               "module": "Beach-1.49-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.49-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-49-v6-2-1-dual/beach-1-49-v6-2-1-dual-prx/CUSA00419/319fd0088ad2/plugins.ini",
               "sha256": "319fd0088ad27f3db2add3bf2355dedcb2b121be49226e515b9962bf4cd7f3b2",
               "module": "Beach-1.49-v6.2.1-dual.prx",
+              "modules": [
+                "Beach-1.49-v6.2.1-dual.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -912,15 +1120,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-50-v6-6-30fps/beach-1-50-v6-6-30fps-prx/CUSA00411/66b55df53763/plugins.ini",
               "sha256": "66b55df537637de07dc69d84baef69364e7966b083e1f5706fcfa3e608d94491",
               "module": "Beach-1.50-v6.6-30fps.prx",
+              "modules": [
+                "Beach-1.50-v6.6-30fps.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-50-v6-6-30fps/beach-1-50-v6-6-30fps-prx/CUSA00419/733f985a8085/plugins.ini",
               "sha256": "733f985a808510535b7394adf84ec04f6e73c3fde90cc652b7d39a592e8c60d6",
               "module": "Beach-1.50-v6.6-30fps.prx",
+              "modules": [
+                "Beach-1.50-v6.6-30fps.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -946,15 +1161,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-50-v6-6-60fp/beach-1-50-v6-6-60fp-prx/CUSA00411/36c98006fd99/plugins.ini",
               "sha256": "36c98006fd99bbcd223ec35d1317bb565be721dd0782c6da1e0c98b972aa2945",
               "module": "Beach-1.50-v6.6-60fp.prx",
+              "modules": [
+                "Beach-1.50-v6.6-60fp.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-50-v6-6-60fp/beach-1-50-v6-6-60fp-prx/CUSA00419/43f4cff2a4cf/plugins.ini",
               "sha256": "43f4cff2a4cfab5077305eee9e948199ca28a47da0b8bf9b69d8bceca95223fe",
               "module": "Beach-1.50-v6.6-60fp.prx",
+              "modules": [
+                "Beach-1.50-v6.6-60fp.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -980,15 +1202,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-51-v6-6-30fps/beach-1-51-v6-6-30fps-prx/CUSA00411/15d1dda0459a/plugins.ini",
               "sha256": "15d1dda0459acf9848b0c22375ff43f10406dfc8abfba768c58265436ece4ff5",
               "module": "Beach-1.51-v6.6-30fps.prx",
+              "modules": [
+                "Beach-1.51-v6.6-30fps.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-51-v6-6-30fps/beach-1-51-v6-6-30fps-prx/CUSA00419/57a7013720a9/plugins.ini",
               "sha256": "57a7013720a96559800aebf2dc24b69108527f9cbe8cecf3cb20e5ee1706fb92",
               "module": "Beach-1.51-v6.6-30fps.prx",
+              "modules": [
+                "Beach-1.51-v6.6-30fps.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1014,15 +1243,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-51-v6-6-60fps/beach-1-51-v6-6-60fps-prx/CUSA00411/0acd0aca9646/plugins.ini",
               "sha256": "0acd0aca96469bae281781c865ad70230ef8978fe7f11a693a532ff415536104",
               "module": "Beach-1.51-v6.6-60fps.prx",
+              "modules": [
+                "Beach-1.51-v6.6-60fps.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-51-v6-6-60fps/beach-1-51-v6-6-60fps-prx/CUSA00419/60eca4433a2f/plugins.ini",
               "sha256": "60eca4433a2f44eb58d2b6adc998cb7abc7f86f7fdfc5580667c2a325a0a771e",
               "module": "Beach-1.51-v6.6-60fps.prx",
+              "modules": [
+                "Beach-1.51-v6.6-60fps.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1048,15 +1284,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-52b1/beach-1-52b1-prx/CUSA00411/ee98942bc152/plugins.ini",
               "sha256": "ee98942bc152ce5c11a95437f43eb497a7baddb5c90f3c1219deeb7460c55e4e",
               "module": "Beach-1.52b1.prx",
+              "modules": [
+                "Beach-1.52b1.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-1-52b1/beach-1-52b1-prx/CUSA00419/69218a6ee65f/plugins.ini",
               "sha256": "69218a6ee65f4a7055ce2ea5ac7375595d4697cef3f7bedd6d2d2b280823fe3b",
               "module": "Beach-1.52b1.prx",
+              "modules": [
+                "Beach-1.52b1.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1082,15 +1325,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-6-8v2-1-53/beach-6-8v2-1-53-prx/CUSA00411/8376f9b06376/plugins.ini",
               "sha256": "8376f9b063769ac57fb3a03684474fbe3384a928a2765ab6bf702a42c359f35a",
               "module": "Beach-6.8V2-1.53.prx",
+              "modules": [
+                "Beach-6.8V2-1.53.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-6-8v2-1-53/beach-6-8v2-1-53-prx/CUSA00419/582473ab5521/plugins.ini",
               "sha256": "582473ab5521be7cd7da847f4e645caf9615336bdcc0f8b5bb8008fc7397ec1b",
               "module": "Beach-6.8V2-1.53.prx",
+              "modules": [
+                "Beach-6.8V2-1.53.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1116,15 +1366,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-offline-1-53-6-8v3/beach-offline-1-53-6-8v3-prx/CUSA00411/cb5997990b33/plugins.ini",
               "sha256": "cb5997990b3321dec611b9b791399684468cf769b150a3fd35a1d437bc12ec8a",
               "module": "Beach-offline-1.53-6.8v3.prx",
+              "modules": [
+                "Beach-offline-1.53-6.8v3.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-offline-1-53-6-8v3/beach-offline-1-53-6-8v3-prx/CUSA00419/2c9ebb561e4a/plugins.ini",
               "sha256": "2c9ebb561e4ae339b3b4a164b7b4cce16c1ac4d02ff1a7bf5cd1b5ea128bb17d",
               "module": "Beach-offline-1.53-6.8v3.prx",
+              "modules": [
+                "Beach-offline-1.53-6.8v3.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1150,15 +1407,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-offline-1-53-6-8v4/beach-offline-1-53-6-8v4-prx/CUSA00411/963c9d556d45/plugins.ini",
               "sha256": "963c9d556d45609f6bc4e69cb0aae3de815e0e054108d4de913ea3bb3ad4e6de",
               "module": "Beach-offline-1.53-6.8v4.prx",
+              "modules": [
+                "Beach-offline-1.53-6.8v4.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach-offline-1-53-6-8v4/beach-offline-1-53-6-8v4-prx/CUSA00419/89bb4a0d2978/plugins.ini",
               "sha256": "89bb4a0d29782f279c758c482ff721d84dad4d3a056a328124cf8bab12ceaa1d",
               "module": "Beach-offline-1.53-6.8v4.prx",
+              "modules": [
+                "Beach-offline-1.53-6.8v4.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1184,15 +1448,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach149v63/beach149v63-prx/CUSA00411/2c08373462f1/plugins.ini",
               "sha256": "2c08373462f1a2e19d45c051bc2802ead22dcb56ca7ed7127b7a65e7d2592433",
               "module": "Beach149v63.prx",
+              "modules": [
+                "Beach149v63.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach149v63/beach149v63-prx/CUSA00419/a4ff32e1c3da/plugins.ini",
               "sha256": "a4ff32e1c3da26b669fea660586d51ed71dc290f05e6dede43df4e49c9aeb66b",
               "module": "Beach149v63.prx",
+              "modules": [
+                "Beach149v63.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1218,15 +1489,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach150v64/beach150v64-prx/CUSA00411/f33151f1c6d0/plugins.ini",
               "sha256": "f33151f1c6d082c0722a5e51a0a640c9f60c3faee5a669acd526ad1bced2e211",
               "module": "Beach150v64.prx",
+              "modules": [
+                "Beach150v64.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach150v64/beach150v64-prx/CUSA00419/4950661bfefd/plugins.ini",
               "sha256": "4950661bfefdef91794cc7d30ad8e1909862553629363febdaa433c4a00bf8a7",
               "module": "Beach150v64.prx",
+              "modules": [
+                "Beach150v64.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1252,15 +1530,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach150v65/beach150v65-prx/CUSA00411/fd4c9afe01b3/plugins.ini",
               "sha256": "fd4c9afe01b37cd62a76b3d9e4eb8c3645a015b068a1232065be91c4c564e1f4",
               "module": "Beach150v65.prx",
+              "modules": [
+                "Beach150v65.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-beach150v65/beach150v65-prx/CUSA00419/40206072c8d1/plugins.ini",
               "sha256": "40206072c8d158523170128ea0aa613a312dc93d6aedc9acf0d3affba734125b",
               "module": "Beach150v65.prx",
+              "modules": [
+                "Beach150v65.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1286,15 +1571,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-gtav-60fps/gtav-60fps-prx/CUSA00411/5b302553669a/plugins.ini",
               "sha256": "5b302553669a82a970a9e51d9a5df307dad8e12f21730c18c8c97a7bcc7014b3",
               "module": "gtav_60fps.prx",
+              "modules": [
+                "gtav_60fps.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-beach-legacy-gtav-60fps/gtav-60fps-prx/CUSA00419/7db0161e900f/plugins.ini",
               "sha256": "7db0161e900f9866ba100da434b29ead898df0d041381f101fe8476b41e28745",
               "module": "gtav_60fps.prx",
+              "modules": [
+                "gtav_60fps.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1320,15 +1612,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-lts-1-57-legacy-file/lrs-prx/CUSA00411/3e695d90ddf1/plugins.ini",
               "sha256": "3e695d90ddf16eb993d721702dc4df1c2217ab4ba3006254e426d804e3873474",
               "module": "LRS.prx",
+              "modules": [
+                "LRS.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-lts-1-57-legacy-file/lrs-prx/CUSA00419/bcca6bd15fc0/plugins.ini",
               "sha256": "bcca6bd15fc0d658859340f89f055408bb53cab91e2c9ec0c969a7c342eafb28",
               "module": "LRS.prx",
+              "modules": [
+                "LRS.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -1356,15 +1655,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56/oxagon-153-prx/CUSA00411/d3132c0f3b73/plugins.ini",
               "sha256": "d3132c0f3b733eb27cb6a1d110d65cc7b4f8cbc575445df8eb420473d9f90252",
               "module": "Oxagon_153.prx",
+              "modules": [
+                "Oxagon_153.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56/oxagon-153-prx/CUSA00419/18459ac33739/plugins.ini",
               "sha256": "18459ac33739bdc6c5f87a4854331f53dc5d86780e87ababcc17b22dfda08f25",
               "module": "Oxagon_153.prx",
+              "modules": [
+                "Oxagon_153.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "oxagon-156-prx",
@@ -1376,15 +1682,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56/oxagon-156-prx/CUSA00411/e4e45a1121f7/plugins.ini",
               "sha256": "e4e45a1121f77dd22ca93c4cefb027058a433c528f51733479e7e160b2008a28",
               "module": "Oxagon_156.prx",
+              "modules": [
+                "Oxagon_156.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56/oxagon-156-prx/CUSA00419/b3e5a855fbda/plugins.ini",
               "sha256": "b3e5a855fbda9d356cf6b87f43512ea4eb7833aa86ec30950e5d10d07820b0f2",
               "module": "Oxagon_156.prx",
+              "modules": [
+                "Oxagon_156.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -1412,15 +1725,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56-module-1-53/oxagon-153-prx/CUSA00411/d3132c0f3b73/plugins.ini",
               "sha256": "d3132c0f3b733eb27cb6a1d110d65cc7b4f8cbc575445df8eb420473d9f90252",
               "module": "Oxagon_153.prx",
+              "modules": [
+                "Oxagon_153.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56-module-1-53/oxagon-153-prx/CUSA00419/18459ac33739/plugins.ini",
               "sha256": "18459ac33739bdc6c5f87a4854331f53dc5d86780e87ababcc17b22dfda08f25",
               "module": "Oxagon_153.prx",
+              "modules": [
+                "Oxagon_153.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1446,15 +1766,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56-module-1-56/oxagon-156-prx/CUSA00411/e4e45a1121f7/plugins.ini",
               "sha256": "e4e45a1121f77dd22ca93c4cefb027058a433c528f51733479e7e160b2008a28",
               "module": "Oxagon_156.prx",
+              "modules": [
+                "Oxagon_156.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-1-56-module-1-56/oxagon-156-prx/CUSA00419/b3e5a855fbda/plugins.ini",
               "sha256": "b3e5a855fbda9d356cf6b87f43512ea4eb7833aa86ec30950e5d10d07820b0f2",
               "module": "Oxagon_156.prx",
+              "modules": [
+                "Oxagon_156.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1480,15 +1807,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-explosive-1-57/explosive-temp-sprx/CUSA00411/9d4ec78ec4ad/plugins.ini",
               "sha256": "9d4ec78ec4ad1afe685f51fe30d5b848e8837dfe4f544f0cf4f544b4e1496ca4",
               "module": "explosive_temp.sprx",
+              "modules": [
+                "explosive_temp.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-explosive-1-57/explosive-temp-sprx/CUSA00419/2c92dae92544/plugins.ini",
               "sha256": "2c92dae925446a14d4a4a3e7a5cd26c5599d14f5b077266e3de2b39c1d56a44f",
               "module": "explosive_temp.sprx",
+              "modules": [
+                "explosive_temp.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1511,18 +1845,37 @@
           "label": "GTA V 1.57 · Ozark.sprx",
           "configs": {
             "CUSA00411": {
-              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-57/ozark-sprx/CUSA00411/947f410f3fa6/plugins.ini",
-              "sha256": "947f410f3fa6dfa842993039cc9cf4d48affea8c4530276560a17e05df07ab78",
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-57/ozark-sprx/CUSA00411/b26980411a07/plugins.ini",
+              "sha256": "b26980411a071036cf6de28688e43cd3aa8158355795eff51d73fc38f4874bc0",
               "module": "Ozark.sprx",
+              "modules": [
+                "GTARBN.sprx",
+                "Ozark.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
-              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-57/ozark-sprx/CUSA00419/55dfe4ffc6e6/plugins.ini",
-              "sha256": "55dfe4ffc6e64396de5779c5a4f43aea32a078d4e6a63b87fe4b0b9c44f92af0",
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-ozark-1-57/ozark-sprx/CUSA00419/29941ef5e6cf/plugins.ini",
+              "sha256": "29941ef5e6cf4246ce9e40fcc249f714bfbe1d51e70ac49e651b8ea5de0fdce9",
               "module": "Ozark.sprx",
+              "modules": [
+                "GTARBN.sprx",
+                "Ozark.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": [
+            {
+              "name": "GTARBN.sprx",
+              "url": "/downloads/ps4/GTA5/reborn/1.57/GTARBN.sprx",
+              "bytes": 255629,
+              "sha256": "d762dac0be6e2f893a531813e57b60a00cdbe5182c27ef4a581964bf57e84070",
+              "gameVersion": "1.57",
+              "sourceUrl": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+              "installPath": "data/GoldHEN/plugins/GTARBN.sprx"
+            }
+          ]
         }
       ],
       "aliases": [
@@ -1550,15 +1903,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-velora-1-56/velora-sprx/CUSA00411/b6bad1d1cfeb/plugins.ini",
               "sha256": "b6bad1d1cfeb44d22b2f137e8401843db1f3eaeee2b746a206953e9f2a0196fe",
               "module": "Velora.sprx",
+              "modules": [
+                "Velora.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-velora-1-56/velora-sprx/CUSA00419/5d7abee43d10/plugins.ini",
               "sha256": "5d7abee43d10b4b5a752842fc552be1a0e5b4d0e84d130e1ca8cea1dc864b095",
               "module": "Velora.sprx",
+              "modules": [
+                "Velora.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -1586,15 +1946,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-velora-1-57/velora-sprx/CUSA00411/91ca9c423093/plugins.ini",
               "sha256": "91ca9c4230936ca5edf928727eca4fb91e08baee5fdb1d54a38b7e6ebe3528ba",
               "module": "Velora.sprx",
+              "modules": [
+                "Velora.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-velora-1-57/velora-sprx/CUSA00419/357f96d39959/plugins.ini",
               "sha256": "357f96d399594e663f08de614ea3c493aa5d15af313c4c78214bf7d3eee7b7bb",
               "module": "Velora.sprx",
+              "modules": [
+                "Velora.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1620,15 +1987,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-crystalis-1-57-package/crystalis-sprx/CUSA00411/b9061a9c11d0/plugins.ini",
               "sha256": "b9061a9c11d096cb4b063022d0716f3cfd66b09c58bbce5313117afdc6d5b4da",
               "module": "Crystalis.sprx",
+              "modules": [
+                "Crystalis.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-crystalis-1-57-package/crystalis-sprx/CUSA00419/7db73cf11e23/plugins.ini",
               "sha256": "7db73cf11e23ac9a6c51e1d4fe1223849b4d8662e7a0752b114c9808fb8a2c61",
               "module": "Crystalis.sprx",
+              "modules": [
+                "Crystalis.sprx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1654,15 +2028,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-crystalis-1-57-sprx/crystalis-sprx/CUSA00411/b9061a9c11d0/plugins.ini",
               "sha256": "b9061a9c11d096cb4b063022d0716f3cfd66b09c58bbce5313117afdc6d5b4da",
               "module": "Crystalis.sprx",
+              "modules": [
+                "Crystalis.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-crystalis-1-57-sprx/crystalis-sprx/CUSA00419/7db73cf11e23/plugins.ini",
               "sha256": "7db73cf11e23ac9a6c51e1d4fe1223849b4d8662e7a0752b114c9808fb8a2c61",
               "module": "Crystalis.sprx",
+              "modules": [
+                "Crystalis.sprx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1688,15 +2069,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-expulsion-v7-1-57-legacy-file/lushmodz-expulsion-1-57-prx/CUSA00411/c08dae4ffb8b/plugins.ini",
               "sha256": "c08dae4ffb8bc71c9f31d4ceaba17bcf7559cf90444850cb7434d938c2099efc",
               "module": "LushModz-Expulsion-1.57.prx",
+              "modules": [
+                "LushModz-Expulsion-1.57.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-expulsion-v7-1-57-legacy-file/lushmodz-expulsion-1-57-prx/CUSA00419/59b3166bc9b2/plugins.ini",
               "sha256": "59b3166bc9b24e8d86177e7797c152b06561c39a71514edfe44bb73dfb4ed1c0",
               "module": "LushModz-Expulsion-1.57.prx",
+              "modules": [
+                "LushModz-Expulsion-1.57.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -1724,15 +2112,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-velora-v1-5-1-57-legacy-file/velora-sprx/CUSA00411/99adb81ccd7c/plugins.ini",
               "sha256": "99adb81ccd7c7f20d5f146fa4a747d73a00620c53e183fe3fa46488ed89430eb",
               "module": "Velora.sprx",
+              "modules": [
+                "Velora.sprx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-velora-v1-5-1-57-legacy-file/velora-sprx/CUSA00419/006ba60547e0/plugins.ini",
               "sha256": "006ba60547e0c2503e9c30bfe6d430c1d1ea0a61bbe7cb7f2f869eb5c61ac9f5",
               "module": "Velora.sprx",
+              "modules": [
+                "Velora.sprx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -1760,15 +2155,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-legacy-file/oxagonlite-153-prx/CUSA00411/91ea34c14cd4/plugins.ini",
               "sha256": "91ea34c14cd48089767dc6f7da52e120027959206c49c3876fa8242692b1472e",
               "module": "OxagonLite_153.prx",
+              "modules": [
+                "OxagonLite_153.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-legacy-file/oxagonlite-153-prx/CUSA00419/dcb56112a073/plugins.ini",
               "sha256": "dcb56112a073ad55f656e5fee5dd608ba4fba8afd29746c48bb53de2e5863e10",
               "module": "OxagonLite_153.prx",
+              "modules": [
+                "OxagonLite_153.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         },
         {
           "key": "oxagonlite-156-prx",
@@ -1780,15 +2182,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-legacy-file/oxagonlite-156-prx/CUSA00411/b536d88738e0/plugins.ini",
               "sha256": "b536d88738e0f0db4b043f7bde9fcaf459101c01632a63fe8b76445c97b41404",
               "module": "OxagonLite_156.prx",
+              "modules": [
+                "OxagonLite_156.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-legacy-file/oxagonlite-156-prx/CUSA00419/6f0d1d031d3d/plugins.ini",
               "sha256": "6f0d1d031d3de4f42082dd88e44300e92fb81811fb7269f6ca56cd7c5aecfd42",
               "module": "OxagonLite_156.prx",
+              "modules": [
+                "OxagonLite_156.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": [
@@ -1816,15 +2225,22 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-module-1-53/oxagonlite-153-prx/CUSA00411/91ea34c14cd4/plugins.ini",
               "sha256": "91ea34c14cd48089767dc6f7da52e120027959206c49c3876fa8242692b1472e",
               "module": "OxagonLite_153.prx",
+              "modules": [
+                "OxagonLite_153.prx"
+              ],
               "sourceExample": false
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-module-1-53/oxagonlite-153-prx/CUSA00419/dcb56112a073/plugins.ini",
               "sha256": "dcb56112a073ad55f656e5fee5dd608ba4fba8afd29746c48bb53de2e5863e10",
               "module": "OxagonLite_153.prx",
+              "modules": [
+                "OxagonLite_153.prx"
+              ],
               "sourceExample": true
             }
-          }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []
@@ -1850,15 +2266,186 @@
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-module-1-56/oxagonlite-156-prx/CUSA00411/b536d88738e0/plugins.ini",
               "sha256": "b536d88738e0f0db4b043f7bde9fcaf459101c01632a63fe8b76445c97b41404",
               "module": "OxagonLite_156.prx",
+              "modules": [
+                "OxagonLite_156.prx"
+              ],
               "sourceExample": true
             },
             "CUSA00419": {
               "url": "/downloads/ps4/GTA5/plugin-configs/gta5-oxagon-lite-v1-4-module-1-56/oxagonlite-156-prx/CUSA00419/6f0d1d031d3d/plugins.ini",
               "sha256": "6f0d1d031d3de4f42082dd88e44300e92fb81811fb7269f6ca56cd7c5aecfd42",
               "module": "OxagonLite_156.prx",
+              "modules": [
+                "OxagonLite_156.prx"
+              ],
               "sourceExample": false
             }
-          }
+          },
+          "dependencies": []
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "resourceId": "gta5-reborn-1-56",
+      "downloadId": "gta5-reborn-1-56-sprx",
+      "label": "GTARBN.sprx · GTA V 1.56",
+      "name": "GTARBN.sprx",
+      "url": "/downloads/ps4/GTA5/reborn/1.56/GTARBN.sprx",
+      "sha256": "b1aaba333941b6a251d892c63fc0c716870035b0be5bac09f803f7f301d92934",
+      "bytes": 255677,
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/GTA5/reborn/1.56/GTARBN.sprx",
+      "kind": "plugin",
+      "variants": [
+        {
+          "key": "gtarbn-sprx",
+          "module": "GTARBN.sprx",
+          "gameVersion": "1.56",
+          "label": "GTA V 1.56 · GTARBN.sprx",
+          "configs": {
+            "CUSA00411": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-56-sprx/gtarbn-sprx/CUSA00411/0c4f401fe4c3/plugins.ini",
+              "sha256": "0c4f401fe4c3d687faf4d6555ca818fe8ab0e61d5a97382671396df9a7c36060",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            },
+            "CUSA00419": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-56-sprx/gtarbn-sprx/CUSA00419/f864a16d5766/plugins.ini",
+              "sha256": "f864a16d57660b38871c1df6ee7b6367667314e894813d9c1e0717ccb17d87a4",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            }
+          },
+          "dependencies": []
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "resourceId": "gta5-reborn-1-56",
+      "downloadId": "gta5-reborn-1-56-package",
+      "label": "Original ZIP · choose 1.56 folder",
+      "name": "GTA_RBN.zip",
+      "url": "/downloads/ps4/GTA5/reborn/83bcf17b3f76/GTA_RBN.zip",
+      "sha256": "83bcf17b3f76bf6be8fbac9dc31728d72581b96abec033939cbf4f2cfaf1792e",
+      "bytes": 143582,
+      "sourceUrl": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+      "kind": "package",
+      "variants": [
+        {
+          "key": "gtarbn-sprx",
+          "module": "GTARBN.sprx",
+          "gameVersion": "1.56",
+          "label": "GTA V 1.56 · GTARBN.sprx",
+          "configs": {
+            "CUSA00411": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-56-package/gtarbn-sprx/CUSA00411/0c4f401fe4c3/plugins.ini",
+              "sha256": "0c4f401fe4c3d687faf4d6555ca818fe8ab0e61d5a97382671396df9a7c36060",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            },
+            "CUSA00419": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-56-package/gtarbn-sprx/CUSA00419/f864a16d5766/plugins.ini",
+              "sha256": "f864a16d57660b38871c1df6ee7b6367667314e894813d9c1e0717ccb17d87a4",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            }
+          },
+          "dependencies": []
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "resourceId": "gta5-reborn-1-57",
+      "downloadId": "gta5-reborn-1-57-sprx",
+      "label": "GTARBN.sprx · GTA V 1.57",
+      "name": "GTARBN.sprx",
+      "url": "/downloads/ps4/GTA5/reborn/1.57/GTARBN.sprx",
+      "sha256": "d762dac0be6e2f893a531813e57b60a00cdbe5182c27ef4a581964bf57e84070",
+      "bytes": 255629,
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/GTA5/reborn/1.57/GTARBN.sprx",
+      "kind": "plugin",
+      "variants": [
+        {
+          "key": "gtarbn-sprx",
+          "module": "GTARBN.sprx",
+          "gameVersion": "1.57",
+          "label": "GTA V 1.57 · GTARBN.sprx",
+          "configs": {
+            "CUSA00411": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-57-sprx/gtarbn-sprx/CUSA00411/6512888ca466/plugins.ini",
+              "sha256": "6512888ca4667fbe11055bb8da49a96417400011da84b0048dc130f91d21ed25",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            },
+            "CUSA00419": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-57-sprx/gtarbn-sprx/CUSA00419/7d08ef0b1ea0/plugins.ini",
+              "sha256": "7d08ef0b1ea07c8d7516e66827d11bfc7d8426fef7193055fc077283cef9fa10",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            }
+          },
+          "dependencies": []
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "resourceId": "gta5-reborn-1-57",
+      "downloadId": "gta5-reborn-1-57-package",
+      "label": "Original ZIP · choose 1.57 folder",
+      "name": "GTA_RBN.zip",
+      "url": "/downloads/ps4/GTA5/reborn/83bcf17b3f76/GTA_RBN.zip",
+      "sha256": "83bcf17b3f76bf6be8fbac9dc31728d72581b96abec033939cbf4f2cfaf1792e",
+      "bytes": 143582,
+      "sourceUrl": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+      "kind": "package",
+      "variants": [
+        {
+          "key": "gtarbn-sprx",
+          "module": "GTARBN.sprx",
+          "gameVersion": "1.57",
+          "label": "GTA V 1.57 · GTARBN.sprx",
+          "configs": {
+            "CUSA00411": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-57-package/gtarbn-sprx/CUSA00411/6512888ca466/plugins.ini",
+              "sha256": "6512888ca4667fbe11055bb8da49a96417400011da84b0048dc130f91d21ed25",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            },
+            "CUSA00419": {
+              "url": "/downloads/ps4/GTA5/plugin-configs/gta5-reborn-1-57-package/gtarbn-sprx/CUSA00419/7d08ef0b1ea0/plugins.ini",
+              "sha256": "7d08ef0b1ea07c8d7516e66827d11bfc7d8426fef7193055fc077283cef9fa10",
+              "module": "GTARBN.sprx",
+              "modules": [
+                "GTARBN.sprx"
+              ],
+              "sourceExample": false
+            }
+          },
+          "dependencies": []
         }
       ],
       "aliases": []

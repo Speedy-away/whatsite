@@ -1,5 +1,8 @@
 {
   "publication20261102": {
+    "firstPublishedCommit": "61ef2a139ccba62c81aea4afe8f4a7423026dfd5",
+    "firstPublication": "1,879 files committed and pushed successfully. Temporary batch-upload branch removed.",
+    "followUpValidation": "Latest shared artwork, Themes navigation and Reborn/Ozark configuration changes validated together: 619 tests pass; site audit checks 492 pages and 57624 local links/assets with zero issues. Category-art metadata refreshed to match updated sources, retaining every link and script.",
     "request": "Sort out local pushes and new work, push everything, and merge the branch.",
     "branchIntegration": "Fetched origin and verified origin/codex/update-game-listings is already an ancestor of main; zero unique branch commits remain. Existing branch retained.",
     "snapshot": "All nonignored new and modified site files, artwork, downloads, helper versions, source scripts, tests and documentation included; local private inventories and temporary files remain governed by .gitignore. Existing downloads and old versions preserved.",
@@ -7,10 +10,12 @@
     "upload": "Use scripts/push-in-batches.cjs --push, preserving original main history and checking zero file blobs in the final metadata handoff. Repository uses the saved Speedy-away credential account."
   },
   "themesSidebarUpdate": {
+    "closeout": "Finished at user request on 2026-11-02. Final 11 focused tests pass; navigation regeneration changes zero pages. All ten console image cards were browser-verified and the site audit passed. No pending theme work; local changes retained. User requested chat deletion; available chat tool supports archiving only.",
+    "consoleImages": "All ten console choices now have matching existing platform artwork; the whole image/title card opens its theme page. Verified all ten images load in browser; site audit: 492 pages, 57543 links/assets, zero issues. Screenshot: docs/screenshots/themes-console-images.png. Changes are local.",
     "date": "2026-11-02",
-    "request": "Add expandable Themes directly below Retro inside Console, with PS3, Switch and other platform theme pages. This supersedes the earlier request to remove Themes from the sidebar.",
-    "implementation": "scripts/add-themes-sidebar.cjs integrates the nested group into existing and generated sidebars; existing console hub theme links remain. Shared CSS supports independent nested expansion without clipping. Console topic decoration preserves theme-page activation.",
-    "verification": "27 focused navigation tests passed; repeat application changed zero pages; audit checked 492 public pages and 61700 links/assets with zero issues. Browser verified PS3/Switch destinations and collapse/expand. Screenshot: docs/screenshots/themes-sidebar.png.",
+    "request": "Latest correction: Themes must be a normal sidebar link below Retro, like PlayStation. Clicking opens a page with console theme choices, not an expandable sidebar menu.",
+    "implementation": "scripts/add-themes-sidebar.cjs replaces the old dropdown with a direct /console/themes.html link and adds ten platform destinations on that page. Existing console theme pages and hub links remain.",
+    "verification": "11 focused navigation tests passed; repeat application changed zero pages; audit checked 492 public pages and 57512 links/assets with zero issues. Earlier dropdown screenshot is historical and superseded.",
     "newDownloads": 0,
     "published": false
   },
@@ -23,7 +28,7 @@
     "verification": "Local bare-remote integration test covers dry run, interrupted upload/resume, unchanged history/index/dirty files, verified final main and staging cleanup.",
     "status": "Complete: all 18 batches accepted, original four commits pushed, remote main verified at 0e3330855b61c93a8b8a74535ee3fef930c8614f, temporary codex/upload-objects-0e3330855b61 branch deleted. Repository credential username pinned locally to Speedy-away. Initial final push redundantly resent blobs and was stopped; corrected helper anchors all batch commits as direct boundary parents and verifies zero remaining file blobs before handoff. Final metadata handoff: 3574 objects; final main push: Total 0. Original commits/index/workspace preserved; substantial concurrent uncommitted changes remain local. Helper/docs/tests remain uncommitted. Resume state and completion timestamp retained in .git/batch-upload."
   },
-  "updatedAt": "2026-11-02T19:01:28.139Z",
+  "updatedAt": "2026-11-02T19:14:41.396Z",
   "status": "PS4/PS5 game batch5 complete locally: sixteen new verified game downloads, compact cards, exact Save routes and shared receiver11 integration. Source-site failures and the unrelated Wii U test are recorded separately.",
   "workspace": "C:/Users/whatw/Documents/GitHub/whatsite",
   "latestUserRequests": [
@@ -2795,6 +2800,90 @@
         "The verified beta archive is mirrored unchanged for its combined-download option; the menu identity remains VOID beta, game update unspecified.",
         "Current packaged/native helpers are untouched by these page controls."
       ]
+    },
+    "gtaRebornPS4": {
+      "completedAt": "2026-11-02T19:19:26.580Z",
+      "sourceURL": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+      "originalArchive": {
+        "name": "GTA_RBN.zip",
+        "bytes": 143582,
+        "sha256": "83bcf17b3f76bf6be8fbac9dc31728d72581b96abec033939cbf4f2cfaf1792e"
+      },
+      "resources": [
+        "gta5-reborn-1-56",
+        "gta5-reborn-1-57"
+      ],
+      "category": "client",
+      "placement": {
+        "1.56": "v156",
+        "1.57": "v157"
+      },
+      "liveServerCompatibility": "The supplied announcement explicitly limits live-server access to 1.57. The distinct preserved 1.56 module is not evidence of current server access.",
+      "setup": {
+        "plugin": "/data/GoldHEN/plugins/GTARBN.sprx",
+        "personalFile": "/data/Reborn.txt",
+        "registration": "/link username:YOUR_GAMERTAG",
+        "personalFileIncluded": false,
+        "regionMatrix": "Unconfirmed. Embedded CUSA00419 web-API text is not treated as evidence of EU/USA support."
+      },
+      "ozark": {
+        "requiredClient": "Matching Reborn build for each GTA V update",
+        "bundles": "Both Ozark download ZIPs include the unchanged Ozark archive, matching GTARBN.sprx, INI with both module paths, and setup notes. The personal registration file is never generated or included.",
+        "dependencyOrder": [
+          "GTARBN.sprx",
+          "Ozark.sprx"
+        ],
+        "originalDownloadsPreserved": true
+      },
+      "configurationCatalog": {
+        "pluginAndClientResources": 22,
+        "downloadChoices": 53,
+        "regionalConfigurations": 122,
+        "verifiedCurrentArchiveFiles": 123,
+        "priorConfigurationsPreserved": true,
+        "revision": "2026-11-02.2"
+      },
+      "verification": {
+        "tests": {
+          "passed": 53,
+          "failed": 0,
+          "report": "docs/qa/gta-reborn-tests.txt"
+        },
+        "finalFocused": {
+          "passed": 11,
+          "failed": 0,
+          "report": "docs/qa/gta-reborn-final-focused-tests.txt"
+        },
+        "siteAudit": {
+          "pages": 492,
+          "localLinksAndAssets": 57624,
+          "issues": 0,
+          "report": "docs/qa/gta-reborn-site-audit.txt"
+        },
+        "zipChecks": "docs/qa/gta-reborn-ozark-zip-checks.json",
+        "httpBundles": "docs/qa/gta-reborn-http-bundles.json",
+        "browser": "docs/qa/gta-reborn-browser.json",
+        "archiveIndex": {
+          "items": 2227,
+          "fileRecords": 3351,
+          "missingFileRecords": 0,
+          "report": "docs/qa/gta-reborn-archive-index.txt"
+        }
+      },
+      "archive": "docs/gta-reborn-ps4-private-inventory.json",
+      "keyFiles": [
+        "scripts/add-gta-reborn-ps4.cjs",
+        "scripts/tests/gta-reborn-ps4.test.cjs",
+        "docs/qa/gta-reborn-inspection.json"
+      ],
+      "resume": [
+        "Use add-gta-reborn-ps4.cjs --prepare / --archive / --integrate for original client intake. Normal escalation is still required for F: writes. Never execute downloaded modules.",
+        "Use prepare-gta5-plugin-configs.cjs --prepare / --archive to refresh the current INI catalog. Preserve prior version/hash directories. Source download.pluginMembers pins the correct module folder when the original ZIP contains both builds.",
+        "RequiredResources on each Ozark item names its matching client. Bundle code verifies dependency update/hash before including it. A required server client is allowed alongside the single menu; unrelated menus must not be co-enabled.",
+        "Rebuild only with build-ps4-mods.cjs --gta5-only. Both v156 and v157 support source-specified catalogueSection placement. Keep Crystalis/Velora placement and removed gallery intact.",
+        "GTA Reborn setup has a card under Installation & private servers and popups with both unaltered user-provided screenshots. No Discord messages, registration, account actions or physical console testing were performed.",
+        "Original GTA Reborn package plus both modules, and all current generated INIs, are verified in F:. Native/package helpers were not rebuilt."
+      ]
     }
   },
   "originalXboxExpansion": {
@@ -5476,7 +5565,7 @@
   },
   "repositoryHostReview20261102": {
     "status": "Completed locally: reviewed both exact repositories, added4 distinct original-only GTA V builds, enabled the existing official PS4 9.00 GoldHEN2.3 through paired TCP9020, activated receiver13 and archived final sender1.7.0. No commit, worktree, deployment or console execution.",
-    "updatedAt": "2026-11-02T18:56:22.250Z",
+    "updatedAt": "2026-11-02T19:14:41.396Z",
     "repositories": [
       {
         "repository": "https://github.com/GamerHack/GamerHack.github.io",
@@ -5852,14 +5941,14 @@
       ]
     },
     "latestSender": {
-      "id": "console-payload-sender-8a3a74427954",
-      "name": "console-payload-sender-1.9.0-8a3a74427954.zip",
-      "version": "1.9.0+8a3a74427954",
-      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
-      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
-      "bytes": 100389225,
-      "sha256": "866ef15d682b71df3667c11f289b63ba32afc28e211e61cb3a1804ad304c04a6",
-      "snapshot": "8a3a7442795435e70183e9693bd5281b4246c6b1a6a2bcd0ad17664668c338c9",
+      "id": "console-payload-sender-e3c3cf533eff",
+      "name": "console-payload-sender-1.9.1-e3c3cf533eff.zip",
+      "version": "1.9.1+e3c3cf533eff",
+      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+      "bytes": 100386831,
+      "sha256": "0efdc2a5d05f75d2d35681ed515608e64e9b93b3167228a824726c7ea1d6d10a",
+      "snapshot": "e3c3cf533eff048f131ce0142c4f6fce0db08c9e70a55e64d08539ca0ffb57ef",
       "files": 281,
       "payloads": 125,
       "actions": 179,
@@ -5867,7 +5956,7 @@
       "manifestFiles": 280,
       "allCRCAndSHA256Verified": true,
       "privateArchivePaths": [
-        "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.0+8a3a74427954\\console-payload-sender-1.9.0-8a3a74427954.zip"
+        "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+e3c3cf533eff\\console-payload-sender-1.9.1-e3c3cf533eff.zip"
       ],
       "preservedActions": 0,
       "originalOnlyBinaryCount": 0,
@@ -6129,7 +6218,7 @@
         "docs/qa/host-continuation-gap-audit.json"
       ],
       "resume": [
-        "Use current sender manifest and host-menu-companion-build report: sender1.9.0+8a3a74427954, receiver2026.11.02.15. Historical1.7/1.8 QA remains historical; do not restore those artifacts.",
+        "Use current manifests: image-fit correction sender1.9.1+e3c3cf533eff supersedes1.9.0; receiver remains2026.11.02.15. Preserve all historical snapshots.",
         "build-console-downloads.cjs default updates public download centers while preserving companions; never pass --companions for an unarchived overwrite. Host menu companion preparer is the immutable/archive/activate path.",
         "Keep new original BINs private in F: and direct original upstream links public. No mirror or sender-bundled copy. Native workspace artifacts remain untouched.",
         "If adding items later, preserve exact firmware/game/menu/title-ID/ABI boundaries and all old IDs/versions. Refresh relevant public outputs/category artwork after catalogue generation."
@@ -6139,6 +6228,66 @@
         "Oysters 5.05 standalone Load remains disabled.",
         "A prior1px phone overflow was not reproduced at430px; no unsupported CSS change was made."
       ]
+    },
+    "imageFitFollowup20261102": {
+      "status": "Fixed locally: full artwork in host cards and version popups on desktop and phone.",
+      "updatedAt": "2026-11-02T19:13:57.900Z",
+      "css": "assets/host-dashboard.css: object-fit contain for shared action-art and specific version-popup image; original images, box dimensions and grids unchanged.",
+      "cacheVersion": 16,
+      "cssSHA256": "8df7e0e4caa7727536af5f227363a7a5c64b2fd1281a5445d084c10db866aeff",
+      "sender": {
+        "id": "console-payload-sender-e3c3cf533eff",
+        "name": "console-payload-sender-1.9.1-e3c3cf533eff.zip",
+        "version": "1.9.1+e3c3cf533eff",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+        "bytes": 100386831,
+        "sha256": "0efdc2a5d05f75d2d35681ed515608e64e9b93b3167228a824726c7ea1d6d10a",
+        "snapshot": "e3c3cf533eff048f131ce0142c4f6fce0db08c9e70a55e64d08539ca0ffb57ef",
+        "files": 281,
+        "payloads": 125,
+        "actions": 179,
+        "zipEntries": 281,
+        "manifestFiles": 280,
+        "allCRCAndSHA256Verified": true,
+        "privateArchivePaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+e3c3cf533eff\\console-payload-sender-1.9.1-e3c3cf533eff.zip"
+        ],
+        "preservedActions": 0,
+        "originalOnlyBinaryCount": 0
+      },
+      "preserved": "All18 prior senderZIPs retained; receiver15 and both native helper artifacts unchanged.",
+      "verification": {
+        "browser": "docs/qa/host-image-fit-browser.json",
+        "tests": "docs/qa/host-image-fit-tests.txt",
+        "passed": 22,
+        "failed": 0,
+        "integrity": "docs/qa/host-next-batch-integrity.json",
+        "senderZIPsVerified": 19,
+        "archiveIndex": "docs/qa/host-image-fit-archive-index.txt",
+        "archiveItems": 2224,
+        "fileRecords": 3248,
+        "missing": 0
+      },
+      "screenshots": [
+        "docs/screenshots/host-image-fit-fixed.png",
+        "docs/screenshots/host-image-fit-fixed-phone.png"
+      ],
+      "cleanup": "Owned preview54420 stopped, tab closed and viewport reset.",
+      "limits": "No downloaded payload execution, console contact, commit, push or deployment.",
+      "closeout": {
+        "checkedAt": "2026-11-02T19:14:41.396Z",
+        "status": "Finished locally; requested image-fit work has no remaining required changes.",
+        "verified": [
+          "Current CSS hash still matches browser-verified fix.",
+          "All12 hostroutes retain CSS cacheversion16 and no action-art cover override.",
+          "Sender1.9.1 public and private archive copies match exact bytes and SHA-256.",
+          "Final screenshots and22 passing related test results saved; all18 prior sender versions retained."
+        ],
+        "userRequestedChatRemoval": true,
+        "chatAction": "Archive current chat using native app tool; permanent deletion tool is unavailable.",
+        "scope": "No commit, push, deployment, payload execution or console contact. Six other historical source candidates remain optional future review, separate from completed image-fit request."
+      }
     }
   },
   "menuImageRecovery": {

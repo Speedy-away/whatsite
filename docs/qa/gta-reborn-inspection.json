@@ -1,0 +1,44 @@
+{
+  "source": "https://cdn.discordapp.com/attachments/1527088524031950978/1535025280769327315/GTA_RBN.zip?ex=6ae99e72&is=6ae84cf2&hm=e5dd4d7cea2869aa2e2b95d37eb25128e4413dd649e795ce60acb7081f5dcbbd&",
+  "archive": {
+    "sha256": "83bcf17b3f76bf6be8fbac9dc31728d72581b96abec033939cbf4f2cfaf1792e",
+    "bytes": 143582,
+    "files": 2,
+    "personalRegistrationFileIncluded": false
+  },
+  "modules": [
+    {
+      "gameVersion": "1.56",
+      "memberPath": "1.56/GTARBN.sprx",
+      "bytes": 255677,
+      "sha256": "b1aaba333941b6a251d892c63fc0c716870035b0be5bac09f803f7f301d92934",
+      "header": "PS4 SELF with embedded x86-64 ELF",
+      "elfOffset": 352,
+      "registrationPath": "/data/Reborn.txt",
+      "embeddedTitleId": "CUSA00419 in web-API request text; not a regional compatibility matrix"
+    },
+    {
+      "gameVersion": "1.57",
+      "memberPath": "1.57/GTARBN.sprx",
+      "bytes": 255629,
+      "sha256": "d762dac0be6e2f893a531813e57b60a00cdbe5182c27ef4a581964bf57e84070",
+      "header": "PS4 SELF with embedded x86-64 ELF",
+      "elfOffset": 352,
+      "registrationPath": "/data/Reborn.txt",
+      "embeddedTitleId": "CUSA00419 in web-API request text; not a regional compatibility matrix"
+    }
+  ],
+  "pictures": [
+    {
+      "input": "C:/Users/whatw/AppData/Local/Temp/codex-clipboard-a59bb405-4c37-4460-ad3b-45657e4326b7.png",
+      "local": "/assets/images/ps4-gta5/reborn-registration-user.png",
+      "sha256": "10da241a714a502c1019728b362f64c56fb7560c2354f9f687ac489f20f653a2"
+    },
+    {
+      "input": "C:/Users/whatw/AppData/Local/Temp/codex-clipboard-ce75dba3-8f0f-45b3-b167-f3541d1c4d52.png",
+      "local": "/assets/images/ps4-gta5/reborn-crew-user.png",
+      "sha256": "8c30425cdfab22313da5205dfd4aa218130fbd10647592e7a61b2ee1e1e7c3a0"
+    }
+  ],
+  "noPayloadExecution": true
+}

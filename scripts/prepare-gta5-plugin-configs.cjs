@@ -1,16 +1,17 @@
 // Author one-menu PS4 configurations; never run or modify the preserved plugins.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const root=path.resolve(__dirname,'..'),scope='gta5-plugin-configs',revision='2026-11-02.1';
+const root=path.resolve(__dirname,'..'),scope='gta5-plugin-configs',revision='2026-11-02.2';
 const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const slug=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const regions=[{id:'CUSA00411',name:'Europe',short:'EU'},{id:'CUSA00419',name:'USA',short:'USA'}];
 const docsUrl='https://github.com/GoldHEN/GoldHEN_Plugins_Repository#quick-start';
 function preserve(local,bytes){const target=path.join(root,'.'+local);if(fs.existsSync(target)){if(sha(fs.readFileSync(target))!==sha(bytes))throw Error('Refusing to replace different bytes: '+local);}else{fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes,{flag:'wx'});}}
-function ini({resource,gameVersion,module,region,confirmed}){
+function ini({resource,gameVersion,module,region,confirmed,dependencies=[]}){
  if(!/^[^/\\\r\n]+\.(?:prx|sprx)$/i.test(module)||!regions.some(r=>r.id===region.id))throw Error('Invalid plugin configuration');
  const clean=s=>String(s).replace(/[\r\n]/g,' ');
- return '; '+clean(resource.name)+'\r\n; GTA V update: '+clean(gameVersion||'not specified by source')+'\r\n; '+region.name+' / '+region.id+'\r\n; '+(confirmed?'This title-ID entry is documented in the supplied source; console behavior is untested.':'Configuration template only: the supplied source does not confirm this regional build.')+'\r\n; Merge this section into /data/GoldHEN/plugins.ini; preserve unrelated entries.\r\n; Enable one menu at a time.\r\n['+region.id+']\r\n/data/GoldHEN/plugins/'+module+'\r\n';
+ for(const d of dependencies)if(!/^[^/\\\r\n]+\.(?:prx|sprx)$/i.test(d.name)||d.gameVersion!==gameVersion)throw Error('Dependency must match the selected game update');
+ return '; '+clean(resource.name)+'\r\n; GTA V update: '+clean(gameVersion||'not specified by source')+'\r\n; '+region.name+' / '+region.id+'\r\n; '+(confirmed?'This title-ID entry is documented in the supplied source; console behavior is untested.':'Configuration template only: the supplied source does not confirm this regional build.')+'\r\n; Merge this section into /data/GoldHEN/plugins.ini; preserve unrelated entries.\r\n; Enable one menu at a time.'+(dependencies.length?' Keep its required GTA Reborn client enabled.\r\n; Register in GTA Reborn Discord and obtain your own /data/Reborn.txt. Live announcement: 1.57 only.':'')+'\r\n['+region.id+']\r\n'+dependencies.map(d=>'/data/GoldHEN/plugins/'+d.name+'\r\n').join('')+'/data/GoldHEN/plugins/'+module+'\r\n';
 }
 function known(resource,gameVersion,region){
  if(/^gta5-expulsion-v[57]-/.test(resource.id))return true;
@@ -21,7 +22,7 @@ function known(resource,gameVersion,region){
 function prepare(){
  const data=read('docs/ps4-ps5-game-resources.json'),manifest=read('downloads/ps4-ps5/manifest.json').files;
  const reviewed=read('docs/qa/ps4-gta5-menu-archive-review.json'),legacy=read('downloads/ps4/GTA5/manifest.json').files;
- const resources=data.resources.filter(x=>x.gameIds.includes('gta5')&&x.category==='menu'),downloads=[],jobs=[],excluded=[];
+ const resources=data.resources.filter(x=>x.gameIds.includes('gta5')&&['menu','client'].includes(x.category)),downloads=[],jobs=[],excluded=[];
  for(const resource of resources)for(const download of resource.downloads.filter(x=>x.distribution==='include')){
   let saved=manifest.find(f=>f.downloadId===download.id&&f.status==='downloaded');
   if(!saved){excluded.push({resourceId:resource.id,downloadId:download.id,reason:'No verified ready file available.'});continue;}
@@ -37,7 +38,9 @@ function prepare(){
   let modules=/\.(?:prx|sprx)$/i.test(saved.name)?[saved.name]:[];
   if(/\.(?:zip|rar|7z)$/i.test(saved.name)){
    const inspection=require('./audit-console-ready-files.cjs').inspectArchive(path.join(root,'.'+local));
-   modules=inspection.entries.filter(e=>!e.directory&&/\.(?:prx|sprx)$/i.test(e.path)).map(e=>path.posix.basename(e.path));
+   const selected=inspection.entries.filter(e=>!e.directory&&/\.(?:prx|sprx)$/i.test(e.path)&&(!download.pluginMembers||download.pluginMembers.includes(e.path)));
+   if(download.pluginMembers&&selected.length!==download.pluginMembers.length)throw Error('Missing selected plugin member: '+download.id);
+   modules=selected.map(e=>path.posix.basename(e.path));
   }
   modules=[...new Set(modules)];
   if(!modules.length){excluded.push({resourceId:resource.id,downloadId:download.id,reason:'BIN, settings or script file; no PRX/SPRX to configure.'});continue;}
@@ -46,18 +49,24 @@ function prepare(){
    if(resource.id==='gta5-scorpion-v1-2b'&&/100US\.prx$/.test(module))continue;
    const scorpion=module.match(/ScorpionMenu-v1\.2b-(\d{3})/),oxagon=module.match(/Oxagon(?:Lite)?_(\d{3})/);
    const gameVersion=scorpion?'1.'+scorpion[1].slice(1):oxagon?'1.'+oxagon[1].slice(1):download.label.match(/\b1\.\d{2}\b/)?.[0]||(resource.gameVersions.length===1?resource.gameVersions[0]:null);
+   const dependencies=(resource.requiredResources||[]).filter(r=>r.moduleDownloadId).map(r=>{
+    const f=manifest.find(f=>f.downloadId===r.moduleDownloadId&&f.status==='downloaded');
+    if(!f?.local||f.gameVersion!==gameVersion||r.gameVersion!==gameVersion)throw Error('Missing matching dependency: '+resource.id);
+    const b=fs.readFileSync(path.join(root,'.'+f.local));if(sha(b)!==f.sha256)throw Error('Dependency identity differs');
+    return {name:f.name,url:f.local,bytes:f.bytes,sha256:f.sha256,gameVersion:f.gameVersion,sourceUrl:f.sourceUrl||f.source,installPath:'data/GoldHEN/plugins/'+f.name};
+   });
    const key=slug(module),configs={};
    for(const region of regions){
     const selectedModule=scorpion?.[1]==='100'?module.replace(/100EU/,region.short==='EU'?'100EU':'100US'):module;
-    const confirmed=known(resource,gameVersion,region),text=ini({resource,gameVersion,module:selectedModule,region,confirmed}),buffer=Buffer.from(text),hash=sha(buffer);
+    const confirmed=known(resource,gameVersion,region),text=ini({resource,gameVersion,module:selectedModule,region,confirmed,dependencies}),buffer=Buffer.from(text),hash=sha(buffer);
     const configLocal='/downloads/ps4/GTA5/plugin-configs/'+download.id+'/'+key+'/'+region.id+'/'+hash.slice(0,12)+'/plugins.ini';
     preserve(configLocal,buffer);
     const file={name:'plugins.ini',local:configLocal,bytes:buffer.length,sha256:hash,sourceUrl:'https://whatwhatboy.com'+configLocal,
      upstreamSource:download.url,documentation:docsUrl,resourceId:resource.id,downloadId:download.id,project:resource.name,
-     module:selectedModule,titleId:region.id,gameVersion,sourceExample:confirmed,version:revision+' - '+resource.id+' - '+key+' - '+region.id};
-    jobs.push(file);configs[region.id]={url:configLocal,sha256:hash,module:selectedModule,sourceExample:confirmed};
+     module:selectedModule,modules:[...dependencies.map(d=>d.name),selectedModule],titleId:region.id,gameVersion,sourceExample:confirmed,version:revision+' - '+resource.id+' - '+key+' - '+region.id};
+    jobs.push(file);configs[region.id]={url:configLocal,sha256:hash,module:selectedModule,modules:file.modules,sourceExample:confirmed};
    }
-   variants.push({key,module,gameVersion,label:(gameVersion?'GTA V '+gameVersion+' · ':'')+module,configs});
+   variants.push({key,module,gameVersion,label:(gameVersion?'GTA V '+gameVersion+' · ':'')+module,configs,dependencies});
   }
   downloads.push({resourceId:resource.id,downloadId:download.id,label:download.label,name:saved.name,url:local,sha256:saved.sha256,bytes:saved.bytes,
    sourceUrl:download.url,kind:/\.(?:prx|sprx)$/i.test(saved.name)?'plugin':'package',variants});

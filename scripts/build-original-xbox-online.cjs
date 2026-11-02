@@ -1,7 +1,9 @@
 const fs = require('node:fs'), path = require('node:path');
 const root = path.resolve(__dirname, '..');
 function build() {
- const { page, section, grid, resource, note, steps, ext, link, sourceList, esc } = require('./build-console-guides.cjs');
+ const ui=require('./build-console-guides.cjs');
+ const { page, section, grid, note, steps, ext, link, sourceList, esc } = ui;
+ const resource=(title,description,actions,image)=>ui.resource(title,description,actions,image).replace(/(<article\b[^>]*>)/,'$1'+(!image?require('./console-rest-card-images.cjs').markup('console/retro/xbox-online.html',title):''));
  const data = JSON.parse(fs.readFileSync(path.join(root, 'docs/original-xbox-online.json'), 'utf8'));
  const s = data.sources;
  const cards = data.games.map(game => resource(esc(game.title),

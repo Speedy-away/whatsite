@@ -7,6 +7,12 @@
 .themes-console-heading { display: flex; align-items: center; gap: 12px; }
 .themes-console-heading > i { color: var(--accent-light); font-size: 1.4rem; }
 .themes-console h3, .themes-install h3 { font-size: 1.15rem; }
+[data-theme-platform-directory] { margin-bottom: 24px; }
+.themes-console.themes-platform-card { padding: 0; overflow: hidden; }
+.themes-platform-card > a { display: block; height: 100%; color: var(--text-primary); }
+.themes-platform-card img { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; object-fit: cover; }
+.themes-platform-card h3 { padding: 18px 20px; }
+.themes-platform-card > a:hover { color: var(--accent-light); }
 .themes-console p, .themes-directory p, .themes-install p { color: var(--text-secondary); font-size: .94rem; }
 .themes-console .themes-requirement { font-size: .84rem; }
 .themes-format { color: var(--text-primary); font-size: .8rem; overflow-wrap: anywhere; }

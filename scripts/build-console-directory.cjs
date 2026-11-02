@@ -48,7 +48,7 @@ function card(row,family) {
  const logo='/assets/images/platform-logos/'+art+'.svg';
  const isLogo=fs.existsSync(path.join(root,logo.slice(1)));
  const extra=title==='Nintendo Wii U'?"<nav class=\"guide-links\" aria-label=\"Wii U resources\"><a href=\"/console/retro/wiiu.html?view=all\">Downloads</a><a href=\"/console/retro/wiiu-themes.html\">Themes</a><a href=\"/console/wiiu/online.html\">Online</a><a href=\"/console/wiiu/mods.html\">Game mods</a><a href=\"/console/wiiu/vwii.html\">vWii</a></nav>":'';
- const media=isLogo?`<img src="${logo}" alt="${esc(title)}" width="480" height="220" loading="lazy">`:`<div class="console-wordmark" aria-hidden="true"><span>${esc(art)}</span><small>${esc(title)}</small></div>`;
+ const media=isLogo?`<img src="${logo}" alt="${esc(title)}" width="480" height="220" loading="lazy">`:require('./console-rest-card-images.cjs').markup('console/index.html',title)||`<div class="console-wordmark" aria-hidden="true"><span>${esc(art)}</span><small>${esc(title)}</small></div>`;
  return `<article class="game-card"${id?` id="${id}"`:''} data-category="${family}" data-search="${esc([family,title,description].join(' ').toLowerCase())}"><div class="game-image">${media}</div><div class="game-info"><h3 class="game-title">${esc(title)}</h3><p class="game-description">${esc(description)}</p><a class="game-link" href="${url}">${url.startsWith('/pc/')?'View PC emulators':'Explore '+esc(title)} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>${extra}</div></article>`;
 }
 function build() {
@@ -70,7 +70,7 @@ function build() {
  hero=hero.replace(/Modern Consoles/g,'Browse console families');
  html=html.slice(0,heroStart)+hero+html.slice(heroEnd);
  fs.writeFileSync(file,require('./search-page-output.cjs').finish('console/index.html',require('./console-topic-navigation.cjs').apply('console/index.html',html)));
- fs.writeFileSync(path.join(root,'docs/console-directory.json'),JSON.stringify({groups:groups.map(([id,title,description,rows])=>({id,title,description,entries:rows.map(([title,url,art,description])=>({title,url:require('./console-topic-navigation.cjs').resolveRoute(url),art,description}))})),artwork:'Existing platform SVGs retain their recorded provenance. Other platform panels use original typeset labels, not official logos.',scope:'Organisation only. PC-only coverage is explicitly labelled; no new console builds or compatibility claims.'},null,2)+'\n');
+ fs.writeFileSync(path.join(root,'docs/console-directory.json'),JSON.stringify({groups:groups.map(([id,title,description,rows])=>({id,title,description,entries:rows.map(([title,url,art,description])=>({title,url:require('./console-topic-navigation.cjs').resolveRoute(url),art,description}))})),artwork:'Existing platform SVGs retain their recorded provenance. Other panels use matching existing platform/category artwork from console-rest-card-images.cjs; unmatched panels retain typeset labels.',scope:'Organisation only. PC-only coverage is explicitly labelled; no new console builds or compatibility claims.'},null,2)+'\n');
  console.log('Built console directory: '+groups.length+' groups, '+total+' cards');
 }
 module.exports={build,groups};if(require.main===module)build();
