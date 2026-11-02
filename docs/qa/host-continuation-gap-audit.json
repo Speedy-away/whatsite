@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02",
+  "scope": [
+    "assets/host-dashboard.js",
+    "assets/host-dashboard.css",
+    "assets/host-console-client.js",
+    "Selected-file bridge and authored tests",
+    "Current PS4 and GTA 5 dashboards in local CUA preview"
+  ],
+  "selectedFileMime": {
+    "status": "fixed",
+    "finding": "A valid exact BIN was rejected solely because browser File.type metadata was neither empty nor application/octet-stream.",
+    "change": "File identity now uses its BIN filename, exact declared and actual byte length, non-ELF magic check and exact SHA-256. Browser MIME metadata does not determine payload identity. Pairing, same-origin, platform, firmware, game-version and approved loader checks remain in place.",
+    "requestContentType": "application/octet-stream",
+    "tests": {
+      "command": "node --test scripts/tests/host-console-client.test.cjs",
+      "passed": 22,
+      "failed": 0,
+      "acceptedMetadataForIdenticalCheckedBytes": [
+        "",
+        "application/octet-stream",
+        "application/macbinary",
+        "application/x-binary",
+        "application/zip"
+      ],
+      "wrongBytes": "For every MIME variation, changed bytes with the same declared length fail checksum before another POST. Existing filename, length, ELF, read-timeout and prerequisite rejection coverage still passes.",
+      "transport": "Authored four-byte fixture and mocked fetch only; no real console or downloaded payload was used."
+    },
+    "filesChanged": [
+      "assets/host-console-client.js",
+      "scripts/tests/host-console-client.test.cjs"
+    ]
+  },
+  "phoneOverflow": {
+    "priorEvidence": "docs/qa/host-repository-browser.json recorded document clientWidth 430 and scrollWidth 431.",
+    "status": "not-reproduced-in-current-shared-files",
+    "method": "Read-only DOM and computed-layout measurements in CUA on a loopback preview of authored site pages. Exact 430 by 900 viewport with ArabicGuy version chooser open and firmware 9.00 selected; no console address configured.",
+    "viewport": {
+      "width": 430,
+      "height": 900
+    },
+    "documentClientWidth": 430,
+    "documentScrollWidth": 430,
+    "elementsBeyondViewportRight": 0,
+    "closedPopupAtEffectiveClientWidth430": {
+      "documentScrollWidth": 430,
+      "toolbarLeft": 33,
+      "toolbarRight": 397,
+      "toolbarWidth": 364,
+      "inputAndFormMatchToolbar": true,
+      "ipControlsFlexWrap": "wrap",
+      "addressButtonLeft": 33,
+      "addressButtonRight": 189.0625,
+      "addressButtonWidth": 156.0625
+    },
+    "conclusion": "The prior one-pixel overflow cannot be assigned a precise CSS cause from the saved evidence. Current connection and popup content fit the viewport, so no speculative CSS change was made.",
+    "cleanup": {
+      "popupClosed": true,
+      "viewportReset": true,
+      "auditTabClosed": true,
+      "ownPreviewStopped": true
+    }
+  },
+  "remainingScope": {
+    "newUiImprovementOwnedByRoot": "Expose the exact expected selected filename, byte size and SHA-256 in collapsed file details so the existing exact-file instructions are reviewable before selection.",
+    "sourceReviewOwnedByOtherAgents": "Source-backed older-firmware menu variants and a stable original FTP release are separate catalogue tasks; this audit did not infer new compatibility.",
+    "limitations": [
+      "No physical console contacted, exploit page opened, payload executed or hardware compatibility asserted.",
+      "Browser file metadata variations are authored fixtures; no claim is made that every browser or OS assigns those specific MIME values automatically.",
+      "No existing download, archived version or unrelated shared change was removed."
+    ]
+  }
+}

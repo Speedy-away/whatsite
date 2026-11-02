@@ -209,6 +209,62 @@
     } catch (e) { return Promise.resolve(failed(e)); }
     return bridgeRequest(options && options.bridgeURL, token, '/api/run', {address: address, actionId: actionId, platform: platform, firmware: options && options.firmware || '', gameVersion: options && options.gameVersion || ''}, options);
   }
+  function runFileViaBridge(address, action, file, token, platform, options) {
+    var base, metadata, expected, executionResponse = false;
+    try {
+      address = normalizeAddress(address);
+      base = bridgeOrigin(options && options.bridgeURL);
+      if (pageOrigin(options) !== base) return Promise.resolve(result('blocked','bridge-origin-required','Open the local sender dashboard, then enter its pairing token there.',{bridgeURL:base}));
+      if (!/^[a-f0-9]{48,128}$/i.test(String(token || ''))) throw fault('invalid-token','Enter the pairing token printed by the local sender.');
+      var run = action && action.run || {};
+      if (platform !== 'ps4' || !action || action.platform !== platform || action.format !== 'BIN' || run.input !== 'user-file' ||
+          !/^[a-z0-9][a-z0-9._-]{0,127}$/i.test(String(action.id || '')) ||
+          !((run.type === 'goldhen-http' && run.port === 9090) || (run.type === 'bin-tcp' && run.port === 9020)) ||
+          !/^[a-f0-9]{64}$/i.test(action.sha256 || '') || !isFinite(action.bytes) || Math.floor(action.bytes) !== action.bytes || action.bytes < 1 || action.bytes > 0x300000)
+        throw fault('invalid-user-file-action','Choose a verified selected-file BIN action.');
+      if (!action.firmwares || !action.firmwares.length || action.firmwares.some(function (fw) { return typeof fw !== 'string' || !/^\d{1,2}\.\d{2}$/.test(fw); }) || action.firmwares.indexOf(options && options.firmware) === -1)
+        throw fault('firmware-mismatch','Choose a payload matching the installed firmware.');
+      var versions = action.gameVersions && action.gameVersions.length ? action.gameVersions : action.gameVersion ? [action.gameVersion] : [];
+      if (versions.length && versions.indexOf(options && options.gameVersion) === -1) throw fault('game-version-mismatch','Select the exact game update supported by this menu.');
+      if (!file || typeof file.arrayBuffer !== 'function' || typeof file.name !== 'string' || !/\.bin$/i.test(file.name) ||
+          file.size !== action.bytes)
+        throw fault('selected-file-required','Select the exact downloaded BIN file with the listed size.');
+      expected = action.bytes;
+      metadata = JSON.stringify({address:address,actionId:action.id,platform:platform,firmware:options.firmware,gameVersion:options.gameVersion || ''});
+      if (metadata.length > 4096 || /[^\x20-\x7e]/.test(metadata)) throw fault('invalid-user-file-action','Choose a verified selected-file BIN action.');
+    } catch (error) { return Promise.resolve(failed(error)); }
+    var timer, timeout = options && options.timeoutMs || 10000;
+    var selected = new Promise(function (resolve,reject) {
+      timer = root.setTimeout(function () { reject(fault('selected-file-timeout','The selected BIN could not be read. Nothing was sent.')); },timeout);
+      Promise.resolve().then(function () { return file.arrayBuffer(); }).then(resolve,function () { reject(fault('selected-file-unreadable','The selected BIN could not be read. Nothing was sent.')); });
+    });
+    return selected.then(function (buffer) {
+      root.clearTimeout(timer);
+      var bytes;
+      try { bytes = new Uint8Array(buffer); } catch (_) { throw fault('selected-file-unreadable','The selected BIN could not be read. Nothing was sent.'); }
+      if (bytes.byteLength !== expected) throw fault('selected-file-size','The selected BIN size does not match the catalogue. Nothing was sent.');
+      if (bytes.length >= 4 && bytes[0] === 0x7f && bytes[1] === 0x45 && bytes[2] === 0x4c && bytes[3] === 0x46) throw fault('invalid-bin','Select the original flat BIN, not an ELF executable. Nothing was sent.');
+      return digestSHA256(bytes,options).then(function (digest) {
+        if (digest !== action.sha256.toLowerCase()) throw fault('checksum-mismatch','The payload checksum does not match the catalogue. Nothing was sent.');
+        if (options && typeof options.beforeDispatch === 'function') {
+          // The file read/hash can outlive the original gesture. Revalidate the
+          // captured console/pairing state immediately before offering bytes.
+          try {
+            var ready = options.beforeDispatch();
+            if (ready === false || ready && typeof ready.then === 'function') throw Error();
+          } catch (_) { throw fault('selected-file-state-changed','The console selection changed. Choose Load again.'); }
+        }
+        return request(base+'/api/run-file',{method:'POST',mode:'same-origin',credentials:'omit',cache:'no-store',redirect:'error',headers:{'X-Whatsite-Token':token,'X-Whatsite-Run':metadata,'Content-Type':'application/octet-stream'},body:bytes},options,true,true);
+      });
+    }).then(function (response) {
+      executionResponse = !(response.status >= 400 && response.status < 500);
+      if (executionResponse && !response.ok) throw fault('unexpected-response','The sender returned an unexpected response.');
+      return readResponseBody(response,'json',options);
+    }).then(function (out) {
+      if (!out || typeof out.status !== 'string' || typeof out.message !== 'string') throw fault('unexpected-response','The sender returned an unexpected response.');
+      out.bridgeURL=base;return out;
+    }).catch(function (error) { root.clearTimeout(timer); if (executionResponse) error.mayHaveExecuted=true;return failed(error,{bridgeURL:base}); });
+  }
   function inspectGoldHEN(address, options) {
     try { address = normalizeAddress(address); } catch (e) { return Promise.resolve(failed(e)); }
     if (/^https:/i.test(pageOrigin(options))) return Promise.resolve(result('blocked', 'mixed-content', 'This HTTPS page cannot contact the console HTTP loader. Use the local sender dashboard.'));
@@ -276,6 +332,6 @@
   return {normalizeAddress: normalizeAddress, serviceURL: serviceURL, buildServiceUrl: serviceURL,
     capabilities: capabilities, inspectManager: inspectManager, validatePayloadPath: validatePayloadPath,
     launchInstalled: launchInstalled, bridgeOrigin: bridgeOrigin, inspectBridge: inspectBridge, inspectConsole: inspectConsole,
-    runViaBridge: runViaBridge, inspectGoldHEN: inspectGoldHEN, sendGoldHEN: sendGoldHEN,
+    runViaBridge: runViaBridge, runFileViaBridge: runFileViaBridge, inspectGoldHEN: inspectGoldHEN, sendGoldHEN: sendGoldHEN,
     sha256: sha256, elfLaunchURL: elfLaunchURL, sendPS5ELF: sendPS5ELF};
 }));

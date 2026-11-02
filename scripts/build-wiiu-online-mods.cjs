@@ -1,5 +1,17 @@
 const fs=require('node:fs'),path=require('node:path');
-const {page,section,grid,resource,note,steps,ext,link}=require('./build-console-guides.cjs');
+const {page,section,grid,resource:baseResource,note,steps,ext,link}=require('./build-console-guides.cjs');
+const cardImages={
+ 'Pretendo Network':'/assets/images/wiiu-homebrew/Inkay.png',
+ 'Already on vWii?':'/assets/images/wiiu-homebrew/evWii.png',
+ 'Wrong network or no connection':'/assets/images/wiiu-homebrew/Inkay.png',
+ 'Account and save data':'/assets/images/wiiu-homebrew/SaveMiiProcessMod.png',
+ 'Return to the original network':'/assets/images/wiiu-homebrew/Inkay.png',
+ 'Second Wind · Breath of the Wild':'/assets/images/wiiu-homebrew/second-wind-quest.png',
+ 'Wii game matchmaking':'/assets/images/wii-games-online/wiimmfipatcher.png',
+ 'Mario Kart Wii · CTGP-R':'/assets/images/wii-games-online/ctgp-revolution.png',
+ 'Native Wii U games':'/assets/images/wiiu-homebrew/Inkay.png'
+};
+const resource=(title,description,links,image)=>baseResource(title,description,links,image||cardImages[title]);
 const root=path.resolve(__dirname,'..'),art='/assets/images/wiiu-homebrew/library.svg';
 const nav=[['/console/wiiu/','Wii U hub'],['/console/retro/wiiu.html?view=all','All downloads'],['/console/wiiu/online.html','Get online'],['/console/wiiu/mods.html','Game mods'],['/console/wiiu/vwii.html','vWii'],['/console/retro/wiiu-themes.html','Themes']];
 const app=id=>link('/console/retro/wiiu.html?view=all#'+id,'Open '+id+' download & requirements');

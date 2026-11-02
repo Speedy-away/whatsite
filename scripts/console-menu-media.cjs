@@ -4,6 +4,7 @@ function createMenuMedia({root=path.resolve(__dirname,'..')}={}){
  const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
  const records=new Map(),checked=new Map();
  const read=file=>fs.existsSync(path.join(root,file))?JSON.parse(fs.readFileSync(path.join(root,file),'utf8')):{};
+ const baseAliases={...read('docs/ps3-base-menu-image-aliases.json').resources||{},...read('docs/ps3-base-additional-image-research.json').resources||{}};
  function validImage(url,sha){
   if(typeof url!=='string'||!/^\/assets\/images\/.+\.(?:png|jpe?g|webp|avif|gif)$/i.test(url)||/[?#\\]/.test(url))return false;
   const base=path.resolve(root,'assets/images'),file=path.resolve(root,'.'+url),relative=path.relative(base,file);
@@ -26,6 +27,9 @@ function createMenuMedia({root=path.resolve(__dirname,'..')}={}){
  }
  function forItem(item){
   if(records.has(item.id))return records.get(item.id);
+  const alias=baseAliases[item.id];
+  const artworkOrMissing=!validImage(item.image)||/\/(?:covers|consoles)\/|waw-official-cover/i.test(item.image)||/cover artwork|cover.*not.*screenshot/i.test(item.imageCaption||'');
+  if(alias?.visuallyVerified&&artworkOrMissing&&validImage(alias.image,alias.sha256))return {...alias,path:alias.image,rank:1};
   if(validImage(item.image))return {path:item.image,caption:item.imageCaption||'Menu preview',imageAlt:item.imageAlt,artwork:/\/(?:covers|consoles)\/|waw-official-cover/i.test(item.image)||/cover artwork|cover.*not.*screenshot/i.test(item.imageCaption||''),rank:2};
   return null;
  }

@@ -81,6 +81,7 @@ function buildPs4Software() {
     'Browse apps'
   );
 
+  require('./playstation-nonmod-card-images.cjs').repairFiles(['console/ps4/emulators.html']);
   console.log('Built separate PS4 Payloads and Apps pages.');
 }
 

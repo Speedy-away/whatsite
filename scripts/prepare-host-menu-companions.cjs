@@ -10,18 +10,26 @@ const read = name => JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const reportPath = 'docs/host-menu-companion-build.json';
 const jobsPath = 'docs/qa/host-menu-companion-jobs.json';
-function preserve(name,bytes) {
-  const file=path.join(root,name);
+function preserve(name,bytes,outputRoot=root) {
+  const file=path.join(outputRoot,name);
   if(fs.existsSync(file)) { if(sha(fs.readFileSync(file))!==sha(bytes))throw Error('Different immutable file exists: '+name); return; }
   fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes,{flag:'wx'});
+}
+function retainJobs(version,bytes,outputRoot=root) {
+  if(!/^2026\.11\.02\.\d+$/.test(version))throw Error('Unexpected receiver version.');
+  let name='docs/qa/host-menu-companion-jobs-'+version+'.json';
+  const current=path.join(outputRoot,name);
+  // Multiple preparations may share a release number before archive activation.
+  // Keep every distinct job set instead of replacing or losing its earlier pins.
+  if(fs.existsSync(current)&&sha(fs.readFileSync(current))!==sha(bytes))name='docs/qa/host-menu-companion-jobs-'+version+'-'+sha(bytes).slice(0,12)+'.json';
+  preserve(name,bytes,outputRoot);return name;
 }
 function prepare() {
   const previousReport=fs.existsSync(path.join(root,reportPath))?read(reportPath):null;
   let previousJobsPath=previousReport?.jobsPath;
   // The rolling host job file is replaced below; retain its prior version's pins.
   if(previousJobsPath===jobsPath){
-    previousJobsPath='docs/qa/host-menu-companion-jobs-'+previousReport.version+'.json';
-    preserve(previousJobsPath,fs.readFileSync(path.join(root,jobsPath)));
+    previousJobsPath=retainJobs(previousReport.version,fs.readFileSync(path.join(root,jobsPath)));
   }
   const audit=read('docs/download-audit.json').items,catalogue=read('docs/console-download-catalog.json').items;
   const releases=audit.flatMap(item=>item.files||[]).map(f=>/^2026\.11\.02\.(\d+)$/.exec(f.version||f.releaseTag||'')).filter(Boolean).map(m=>Number(m[1]));
@@ -55,4 +63,4 @@ function activate() {
   report.activated=true;report.verifiedAt=new Date().toISOString();fs.writeFileSync(path.join(root,reportPath),JSON.stringify(report,null,2)+'\n');return report;
 }
 if(require.main===module) console.log(JSON.stringify(process.argv.includes('--activate')?activate():prepare(),null,2));
-module.exports={prepare,activate};
+module.exports={prepare,activate,retainJobs};

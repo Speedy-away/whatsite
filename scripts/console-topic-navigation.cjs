@@ -69,7 +69,7 @@ function apply(file, html, options = {}) {
   const current = available.find(platform => currentPath === '/' + platform.hubFile || currentPath.startsWith(platform.base) || matchSource(currentPath, platform));
   const output = html.replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, anchor => {
     const start = anchor.match(/^<a\b[^>]*>/i)?.[0];
-    if (!start || /\bdata-console-library\b/.test(start)) return anchor;
+    if (!start || /\b(?:data-console-library|data-theme-navigation)\b/.test(start)) return anchor;
     const match = start.match(/\bhref=(["'])([^"']*)\1/i);
     if (!match) return anchor;
     let destination = resolveRoute(match[2], file, available);

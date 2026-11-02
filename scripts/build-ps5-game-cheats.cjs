@@ -32,7 +32,7 @@ function collect() {
     if (!local.startsWith(path.join(root,'downloads') + path.sep) || !fs.existsSync(local) || fs.statSync(local).size!==entry.bytes) continue;
     const key = entry.gameSlug || slug(entry.game);
     if (!/^[a-z0-9-]+$/.test(key)) throw Error('Invalid game slug');
-    if (!groups.has(key)) groups.set(key,{slug:key,title:entry.game,image:entry.image || fallback,files:[]});
+    if (!groups.has(key)) groups.set(key,{slug:key,title:entry.game,image:require('./ps4-ps5-card-images.cjs').gameImage(key,entry.game)||entry.image||fallback,files:[]});
     groups.get(key).files.push(entry);
   }
   return [...groups.values()];
@@ -42,7 +42,7 @@ function cards(games = collect()) {
   return grid(...games.map(game=>resource(h(game.title),game.files.length+' '+(game.files.length===1?'build':'builds')+' · native PS5',link(gameURL(game),'View downloads'), game.image===fallback?'':game.image)));
 }
 function rows(game) {
-  return game.files.map(file=>`<article class="guide-resource multicod-card"><h3>${h(file.titleId)} · ${h(file.gameVersion)}</h3><p>${h(file.format)} cheat file</p><div class="guide-links"><a class="btn btn-outline" href="${h(file.url)}" download="${h(file.filename)}" data-no-file-options>Download</a><a class="btn btn-primary" href="/console/ps5/downloads.html?file=${encodeURIComponent(file.id)}#files">Save on PS5</a></div><details class="multicod-details"><summary>Setup &amp; source</summary><p>${h(file.preparation)}</p>${file.cheats?.length?`<p>Included options: ${file.cheats.map(h).join('; ')}.</p>`:''}${file.cheatDetails?.length?`<ul>${file.cheatDetails.map(option=>`<li>${h(option.name)}: ${h(option.description)}</li>`).join('')}</ul>`:''}${file.credits?.length?`<p>Credits: ${file.credits.map(h).join(', ')}</p>`:''}${file.metadataValidation?`<p>${h(file.metadataValidation)}</p>`:''}<p>Destination: <code>${h(file.installationPath)}</code></p><p><a href="${h(file.source)}" target="_blank" rel="noopener noreferrer">Publisher source</a>${file.licenceDownload?` · <a href="${h(file.licenceDownload)}">Licence</a>`:''}</p><code class="console-file-hash">SHA-256 ${h(file.sha256)}</code></details></article>`).join('');
+  return game.files.map(file=>`<article class="guide-resource multicod-card"><img src="${h(game.image)}" alt="${h(game.title)} artwork" loading="lazy" decoding="async"><h3>${h(file.titleId)} · ${h(file.gameVersion)}</h3><p>${h(file.format)} cheat file</p><div class="guide-links"><a class="btn btn-outline" href="${h(file.url)}" download="${h(file.filename)}" data-no-file-options>Download</a><a class="btn btn-primary" href="/console/ps5/downloads.html?file=${encodeURIComponent(file.id)}#files">Save on PS5</a></div><details class="multicod-details"><summary>Setup &amp; source</summary><p>${h(file.preparation)}</p>${file.cheats?.length?`<p>Included options: ${file.cheats.map(h).join('; ')}.</p>`:''}${file.cheatDetails?.length?`<ul>${file.cheatDetails.map(option=>`<li>${h(option.name)}: ${h(option.description)}</li>`).join('')}</ul>`:''}${file.credits?.length?`<p>Credits: ${file.credits.map(h).join(', ')}</p>`:''}${file.metadataValidation?`<p>${h(file.metadataValidation)}</p>`:''}<p>Destination: <code>${h(file.installationPath)}</code></p><p><a href="${h(file.source)}" target="_blank" rel="noopener noreferrer">Publisher source</a>${file.licenceDownload?` · <a href="${h(file.licenceDownload)}">Licence</a>`:''}</p><code class="console-file-hash">SHA-256 ${h(file.sha256)}</code></details></article>`).join('');
 }
 function build() {
   const games = collect();

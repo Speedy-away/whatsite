@@ -1,0 +1,1411 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-02T18:44:40.730Z",
+  "repository": {
+    "url": "https://github.com/GamerHack/GamerHack.github.io",
+    "commit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+    "branch": "main",
+    "licenseEstablished": false,
+    "licenseSource": "docs/qa/gamerhack-source-review.json",
+    "note": "The exact pinned 334-entry tree contains no LICENSE/COPYING file and the reviewed GitHub metadata has no detected licence. No separate compiled-menu redistribution grant was established."
+  },
+  "scope": {
+    "sourceDirectories": [
+      "505",
+      "672"
+    ],
+    "menuFilesCompared": 24,
+    "comparisonBasis": "Each staged original was rehashed as bytes and verified against its pinned Git tree blob. Current action manifests, generated catalogue and download audit were read again; filenames alone did not determine duplication.",
+    "actionManifestFiles": [
+      "docs/host-actions-ps4.json",
+      "docs/host-actions-ps5.json",
+      "docs/host-current-cheat-actions.json",
+      "docs/host-extra-game-actions.json",
+      "docs/host-game-actions.json",
+      "docs/host-legacy-menu-actions.json",
+      "docs/host-modern-plugin-actions.json",
+      "docs/host-native-payload-actions.json",
+      "docs/host-original-tool-actions.json",
+      "docs/host-repository-menu-actions.json",
+      "docs/host-web-utility-actions.json"
+    ],
+    "catalogueFile": "docs/console-download-catalog.json",
+    "auditFile": "docs/download-audit.json",
+    "newPreparedActionFile": "docs/host-legacy-firmware-menu-actions.json",
+    "payloadsExecuted": false,
+    "repositoryCloned": false,
+    "physicalConsoleTested": false,
+    "archiveWrites": false,
+    "sharedCatalogueWrites": false,
+    "publicMirrorsCreated": false
+  },
+  "summary": {
+    "previouslyUnrepresentedHashes": 11,
+    "flatBinCandidatesBeforeSelection": 10,
+    "selectedOriginalDownloadOnly": 4,
+    "selectedBytes": 5043456,
+    "remainingDistinctNativeCandidates": 6,
+    "misnamedJavaScriptExcluded": 1,
+    "previouslyArchivedRows": 13,
+    "newSelectedFileLoadQualified": 0,
+    "sourceExhausted": false,
+    "note": "The reviewed 5.05/6.72 menu set is fully enumerated but not exhausted as downloadable historical variants. After the four selected Oysters BINs, six distinct native files remain. No remaining file gained a verified generic sender ABI."
+  },
+  "sourceDispatch": [
+    {
+      "path": "505/index.html",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+      "sha256": "1b8fdb8d8cc186534ac1b5b58a6c60073aaecc28a7dedafaab98cf64d8fbc3f3",
+      "gitBlobSHA1": "ec9b7d4fddf3b39013bdd37055ac7225dbce3f44",
+      "firmwareLabel": "PS4 5.05 FW Host v2.5 by GamerHack",
+      "firmwareLine": 4,
+      "gameUpdateButtons": {
+        "1.00": 60,
+        "1.13": 61,
+        "1.19": 62,
+        "1.24": 63,
+        "1.29": 64
+      },
+      "nativeLoaderLines": [
+        89,
+        115
+      ],
+      "nativeContract": "load_payload GETs PLfile as ArrayBuffer, writes native words at code_addr1 + 0x100000 and calls p.fcall(code_addr1). exploit.js separately establishes native loader memory. This host-specific execution path does not establish raw BIN compatibility with GoldHEN HTTP 9090, TCP 9020 or ELF-loader protocols.",
+      "externalTransportVerified": false
+    },
+    {
+      "path": "672/index.html",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+      "sha256": "5a7876c7322a0bf65604dcc2143d4363fbb1f0d4a7d6a36de9a02d9b4b3abfd3",
+      "gitBlobSHA1": "a9fb5a8983da9bcf439211dcb0f592f170d36a5c",
+      "firmwareLabel": "PS4 6.72 Host v3.0 by GamerHack",
+      "firmwareLine": 4,
+      "legacyScriptDispatchLines": [
+        145,
+        147
+      ],
+      "nativeLoaderLines": [
+        11,
+        14
+      ],
+      "finding": "Menu functions assign the exact BIN name then call loadScript1. The pinned loadScript1 routes through getScript, which creates a script element, despite the reviewed menu files beginning with native bytes. A separate native loader is embedded earlier in the same page. Static source therefore records mixed loader paths and does not prove successful execution of these menu branches.",
+      "externalTransportVerified": false
+    }
+  ],
+  "selectedPrepared": [
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-100",
+      "sourceFile": "505/OystersMenu-v1.00.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.00.bin",
+      "sourceGitBlobSHA1": "a658ceafd4b580c1bfd71173f9c7e6ec4ec91d4c",
+      "bytes": 1260864,
+      "sha256": "09925fe9288bd9e68f49ffaffba3e92fb6ddb1c8cf416e16251cdef53f19a67a",
+      "gameVersion": "1.00",
+      "menuVersion": null,
+      "titleIds": [],
+      "firmwares": [
+        "5.05"
+      ],
+      "run": null,
+      "publicMirror": false,
+      "image": "/assets/images/ps4-ps5/originals/rdr2-oyster-image.webp"
+    },
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-113",
+      "sourceFile": "505/OystersMenu-v1.13.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.13.bin",
+      "sourceGitBlobSHA1": "5d14a719a814a38a9e2d3083b07e815f7760686a",
+      "bytes": 1260864,
+      "sha256": "38f847706303c2c2b5b71102073ac86fa534f1bc09b6c40129275a53b0c81718",
+      "gameVersion": "1.13",
+      "menuVersion": null,
+      "titleIds": [],
+      "firmwares": [
+        "5.05"
+      ],
+      "run": null,
+      "publicMirror": false,
+      "image": "/assets/images/ps4-ps5/originals/rdr2-oyster-image.webp"
+    },
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-119",
+      "sourceFile": "505/OystersMenu-v1.19.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.19.bin",
+      "sourceGitBlobSHA1": "563eab1efea2447849115fb12a86d98ff6ae43a9",
+      "bytes": 1260864,
+      "sha256": "93fd71c737f4433f72dd594685303e23183859fa448dfafefc15bd8906676f7e",
+      "gameVersion": "1.19",
+      "menuVersion": null,
+      "titleIds": [],
+      "firmwares": [
+        "5.05"
+      ],
+      "run": null,
+      "publicMirror": false,
+      "image": "/assets/images/ps4-ps5/originals/rdr2-oyster-image.webp"
+    },
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-124",
+      "sourceFile": "505/OystersMenu-v1.24.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.24.bin",
+      "sourceGitBlobSHA1": "9ec99c1ae2c4133edc4f39ac90f65890598ced8f",
+      "bytes": 1260864,
+      "sha256": "b5566c5629c86f8860ba190537e0c2a2e220c879f469a155b924467b975ec08d",
+      "gameVersion": "1.24",
+      "menuVersion": null,
+      "titleIds": [],
+      "firmwares": [
+        "5.05"
+      ],
+      "run": null,
+      "publicMirror": false,
+      "image": "/assets/images/ps4-ps5/originals/rdr2-oyster-image.webp"
+    }
+  ],
+  "explicitExclusions": [
+    {
+      "path": "505/arabic-guy127.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy127.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "8af1983411af4e6def9198142acb0f505ca4006e",
+      "bytes": 2432450,
+      "sha256": "0a13d2a758869a23259b3527a956b493c8c4708c2c6a441fb133a455ebf237cc",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "766172207061796c6f6164203d205b32",
+      "detectedFormat": "JavaScript payload array mislabeled .bin",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.27",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_arabicGuy127",
+        "functionLine": 263,
+        "buttonLine": 50,
+        "buttonText": "Arabic Guy v1.27",
+        "assignedFile": "arabic-guy127.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "exclude-misnamed-javascript",
+      "builtInLoadQualified": false,
+      "reason": "The .bin object is UTF-8 JavaScript beginning var payload = [. The pinned 5.05 dispatch nevertheless fetches it as ArrayBuffer and copies the text bytes as native words. It is not a ready raw BIN; no conversion, execution, ready-asset record, public action, inventory addition or generic BIN Load was created."
+    }
+  ],
+  "remainingDistinctCandidates": [
+    {
+      "path": "505/arabic-guy100.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy100.bin",
+      "sourceGitBlobSHA1": "bbae1123b41834a2dc3b289ebd63c38503c4049e",
+      "bytes": 1055340,
+      "sha256": "49d151bfb960fb42d465134ab91f5173407a8ac202d75d23a3b2e441bc7cffd0",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.00",
+      "menuVersion": null,
+      "titleIds": [],
+      "recommendation": "Possible later original-only historical Download; keep run:null until exact external ABI evidence is established."
+    },
+    {
+      "path": "505/WildeModz-1.33.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.33.bin",
+      "sourceGitBlobSHA1": "962e8567ae349e649da0e481feec45089eb67d05",
+      "bytes": 1074320,
+      "sha256": "1c742c48aeb6009f3e99468ab2702499ed66f0d642d624e9844a0f4aa595fb60",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.33",
+      "menuVersion": null,
+      "titleIds": [],
+      "recommendation": "Possible later original-only historical Download; keep run:null until exact external ABI evidence is established."
+    },
+    {
+      "path": "505/WildeModz-1.46.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.46.bin",
+      "sourceGitBlobSHA1": "65d7142a7d084d7a4fffc71d63e0633dd5a0701e",
+      "bytes": 29416,
+      "sha256": "f262d4878e01d057e4ee4d35a49ddf1363fa4ee9667dd50acf181a99aa8af07d",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.46",
+      "menuVersion": null,
+      "titleIds": [],
+      "recommendation": "Possible later original-only historical Download; keep run:null until exact external ABI evidence is established."
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy100.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+      "sourceGitBlobSHA1": "decebf6d379d4e283927ff51094f51ea610f5ec0",
+      "bytes": 1055064,
+      "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.00",
+      "menuVersion": null,
+      "titleIds": [],
+      "recommendation": "Defer until the mixed script/native source dispatch is resolved; original-only Download at most."
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy127.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+      "sourceGitBlobSHA1": "f37b97e4d6a65ea37e8cd6c59bea4fcda479f23d",
+      "bytes": 1055384,
+      "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.27",
+      "menuVersion": null,
+      "titleIds": [],
+      "recommendation": "Defer until the mixed script/native source dispatch is resolved; original-only Download at most."
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy132.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+      "sourceGitBlobSHA1": "691650d2ea8e65cdc3bd43a246fd942f0f9fb178",
+      "bytes": 1054936,
+      "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.32",
+      "menuVersion": null,
+      "titleIds": [],
+      "recommendation": "Defer until the mixed script/native source dispatch is resolved; original-only Download at most."
+    }
+  ],
+  "licensingAndAttribution": {
+    "upstreamHost": "GamerHack",
+    "families": [
+      "Oysters",
+      "WildeModz",
+      "ArabicGuy",
+      "Lamance"
+    ],
+    "exactCompiledMenuRedistributionEstablished": false,
+    "publicMirror": false,
+    "policy": "Original pinned upstream downloads only; preserve author/family and host attribution. No menu code, complete exploit runtime or binary is vendored.",
+    "versionBoundary": "Current Oysters SPRX release numbers and other host filenames must not be applied to these historical BINs.",
+    "officialAuthorSourceBoundary": "No original-author documentation was found that ties an external loading transport or regional title-ID list to these exact 5.05/6.72 hashes. Search results for other hosts are not substituted as proof."
+  },
+  "nextUsefulCandidate": {
+    "path": "505/WildeModz-1.33.bin",
+    "reason": "A remaining byte-distinct native file with an explicit 5.05 host selection and GTA V 1.33 game label. It adds a historical firmware variant to an existing family, rather than a new game or a verified Load route.",
+    "priority": "Lower than useful utility coverage; do not fill remaining catalogue capacity with duplicates.",
+    "builtInLoadQualified": false
+  },
+  "verification": {
+    "all24GitBlobAndSha256IdentitiesRechecked": true,
+    "all24TitleIdLiteralScanEmpty": true,
+    "titleIdScanIsNotCompatibilityProof": true,
+    "preparedActions": 4,
+    "preparedJobs": 4,
+    "metadataPreparer": "scripts/prepare-host-legacy-firmware-menus.cjs",
+    "metadataPreparerPassed": true
+  },
+  "files": [
+    {
+      "path": "505/arabic-guy100.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy100.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "bbae1123b41834a2dc3b289ebd63c38503c4049e",
+      "bytes": 1055340,
+      "sha256": "49d151bfb960fb42d465134ab91f5173407a8ac202d75d23a3b2e441bc7cffd0",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e98b050000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.00",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_arabicGuy100",
+        "functionLine": 256,
+        "buttonLine": 49,
+        "buttonText": "Arabic Guy v1.00",
+        "assignedFile": "arabic-guy100.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "distinct-remaining-native-candidate-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/arabic-guy127.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy127.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "8af1983411af4e6def9198142acb0f505ca4006e",
+      "bytes": 2432450,
+      "sha256": "0a13d2a758869a23259b3527a956b493c8c4708c2c6a441fb133a455ebf237cc",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "766172207061796c6f6164203d205b32",
+      "detectedFormat": "JavaScript payload array mislabeled .bin",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.27",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_arabicGuy127",
+        "functionLine": 263,
+        "buttonLine": 50,
+        "buttonText": "Arabic Guy v1.27",
+        "assignedFile": "arabic-guy127.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "exclude-misnamed-javascript",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/arabic-guy132.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy132.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "354974904ddc685109ffeeb8264c9dd00f4f07db",
+      "bytes": 1059520,
+      "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b140000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.32",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_arabicGuy132",
+        "functionLine": 270,
+        "buttonLine": 51,
+        "buttonText": "Arabic Guy v1.32",
+        "assignedFile": "arabic-guy132.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-arabicguy-gta5-132",
+          "catalogue": "docs/host-game-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": {
+            "type": "goldhen-http",
+            "port": 9090,
+            "statusPath": "/status",
+            "readyStatus": "ready"
+          }
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-arabicguy-gta5-132"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-http-ps4-arabicguy-gta5-132",
+          "files": [
+            {
+              "bytes": 1059520,
+              "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.32\\PSFree\\Builds\\Nazky PSFree af1fcfe9dc07 - game 1.32\\arabicguy-gta5-132-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/arabic-guy133.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy133.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "4f7a12d0aacc20f87e6f0fe536b3dd3eff9228bc",
+      "bytes": 1059520,
+      "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b140000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.33",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_arabicGuy133",
+        "functionLine": 277,
+        "buttonLine": 52,
+        "buttonText": "Arabic Guy v1.33",
+        "assignedFile": "arabic-guy133.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-arabicguy-gta5-133",
+          "catalogue": "docs/host-game-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": {
+            "type": "goldhen-http",
+            "port": 9090,
+            "statusPath": "/status",
+            "readyStatus": "ready"
+          }
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-arabicguy-gta5-133"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-arabicguy-gta5-133",
+          "files": [
+            {
+              "bytes": 1059520,
+              "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\psfree900a\\Builds\\game 1.33 - firmware 9.00 - da9c138e47c5\\arabicguy-gta5-133-ps4-900.bin"
+            }
+          ]
+        },
+        {
+          "id": "host-http-ps4-arabicguy-gta5-133",
+          "files": [
+            {
+              "bytes": 1059520,
+              "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\PSFree\\Builds\\Nazky PSFree af1fcfe9dc07 - game 1.33\\arabicguy-gta5-133-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/Lamance-v0.9-1.38.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/Lamance-v0.9-1.38.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+      "bytes": 1128208,
+      "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e99b140000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.38",
+      "menuFamily": "Lamance",
+      "menuVersion": "0.9",
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_Lamance",
+        "functionLine": 284,
+        "buttonLine": 54,
+        "buttonText": "Lamance v0.9 - 1.38",
+        "assignedFile": "Lamance-v0.9-1.38.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-lamance-gta5-138",
+          "catalogue": "docs/host-game-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": null
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-lamance-gta5-138"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-lamance-gta5-138",
+          "files": [
+            {
+              "bytes": 1128208,
+              "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\psfree900a\\Builds\\v0.9 - game 1.38 - firmware 9.00 - da9c138e47c5\\lamance-gta5-138-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/OystersMenu-v1.00.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.00.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "a658ceafd4b580c1bfd71173f9c7e6ec4ec91d4c",
+      "bytes": 1260864,
+      "sha256": "09925fe9288bd9e68f49ffaffba3e92fb6ddb1c8cf416e16251cdef53f19a67a",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e9db4f0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "RDR2",
+      "gameVersion": "1.00",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_Oysters100",
+        "functionLine": 319,
+        "buttonLine": 60,
+        "buttonText": "RDR2 v1.00",
+        "assignedFile": "OystersMenu-v1.00.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": "ps4-legacy-firmware-gamerhack-oysters505-100",
+      "decision": "prepared-original-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/OystersMenu-v1.13.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.13.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "5d14a719a814a38a9e2d3083b07e815f7760686a",
+      "bytes": 1260864,
+      "sha256": "38f847706303c2c2b5b71102073ac86fa534f1bc09b6c40129275a53b0c81718",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e9db4f0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "RDR2",
+      "gameVersion": "1.13",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_Oysters113",
+        "functionLine": 326,
+        "buttonLine": 61,
+        "buttonText": "RDR2 v1.13",
+        "assignedFile": "OystersMenu-v1.13.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": "ps4-legacy-firmware-gamerhack-oysters505-113",
+      "decision": "prepared-original-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/OystersMenu-v1.19.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.19.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "563eab1efea2447849115fb12a86d98ff6ae43a9",
+      "bytes": 1260864,
+      "sha256": "93fd71c737f4433f72dd594685303e23183859fa448dfafefc15bd8906676f7e",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e9db4f0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "RDR2",
+      "gameVersion": "1.19",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_Oysters119",
+        "functionLine": 333,
+        "buttonLine": 62,
+        "buttonText": "RDR2 v1.19",
+        "assignedFile": "OystersMenu-v1.19.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": "ps4-legacy-firmware-gamerhack-oysters505-119",
+      "decision": "prepared-original-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/OystersMenu-v1.24.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.24.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "9ec99c1ae2c4133edc4f39ac90f65890598ced8f",
+      "bytes": 1260864,
+      "sha256": "b5566c5629c86f8860ba190537e0c2a2e220c879f469a155b924467b975ec08d",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e9db4f0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "RDR2",
+      "gameVersion": "1.24",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_Oysters124",
+        "functionLine": 340,
+        "buttonLine": 63,
+        "buttonText": "RDR2 v1.24",
+        "assignedFile": "OystersMenu-v1.24.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": "ps4-legacy-firmware-gamerhack-oysters505-124",
+      "decision": "prepared-original-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/OystersMenu-v1.29.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.29.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "3daa7accd404f8e0aba7e9498b1daf7ce16d8d02",
+      "bytes": 1260864,
+      "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e9db4f0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "RDR2",
+      "gameVersion": "1.29",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_Oysters129",
+        "functionLine": 347,
+        "buttonLine": 64,
+        "buttonText": "RDR2 v1.29",
+        "assignedFile": "OystersMenu-v1.29.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-oysters-rdr2-129",
+          "catalogue": "docs/host-game-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": {
+            "type": "goldhen-http",
+            "port": 9090,
+            "statusPath": "/status",
+            "readyStatus": "ready"
+          }
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-oysters-rdr2-129"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-http-ps4-oysters-rdr2-129",
+          "files": [
+            {
+              "bytes": 1260864,
+              "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.29\\PSFree\\Builds\\Nazky PSFree af1fcfe9dc07 - game 1.29\\oysters-rdr2-129-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/WildeModz-1.32.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.32.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "ec0aac6d8c9ba7d38b5c83d628ab3c5d0c7b5885",
+      "bytes": 1074320,
+      "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e92b1c0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.32",
+      "menuFamily": "WildeModz",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_WildeModz132",
+        "functionLine": 291,
+        "buttonLine": 55,
+        "buttonText": "WildeModz-1.32",
+        "assignedFile": "WildeModz-1.32.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-legacy-nazky-wilde132",
+          "catalogue": "docs/host-legacy-menu-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": {
+            "type": "goldhen-http",
+            "port": 9090,
+            "statusPath": "/status",
+            "readyStatus": "ready"
+          }
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-legacy-nazky-wilde132"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-legacy-nazky-wilde132",
+          "files": [
+            {
+              "bytes": 1074320,
+              "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.32\\WildeModz\\Builds\\game 1.32 - PS4 9.00 - Nazky af1fcfe9dc07\\nazky-wilde132-game-1.32-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/WildeModz-1.33.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.33.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "962e8567ae349e649da0e481feec45089eb67d05",
+      "bytes": 1074320,
+      "sha256": "1c742c48aeb6009f3e99468ab2702499ed66f0d642d624e9844a0f4aa595fb60",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e92b1c0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.33",
+      "menuFamily": "WildeModz",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_WildeModz133",
+        "functionLine": 298,
+        "buttonLine": 56,
+        "buttonText": "WildeModz-1.33",
+        "assignedFile": "WildeModz-1.33.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "distinct-remaining-native-candidate-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/WildeModz-1.38.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.38.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "5e12e751558f0b32349d70f6f57492757beae7ba",
+      "bytes": 592864,
+      "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b1c0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.38",
+      "menuFamily": "WildeModz",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_WildeModz138",
+        "functionLine": 305,
+        "buttonLine": 57,
+        "buttonText": "WildeModz-1.38",
+        "assignedFile": "WildeModz-1.38.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-legacy-nazky-wilde138",
+          "catalogue": "docs/host-legacy-menu-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": {
+            "type": "goldhen-http",
+            "port": 9090,
+            "statusPath": "/status",
+            "readyStatus": "ready"
+          }
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-legacy-nazky-wilde138"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-legacy-nazky-wilde138",
+          "files": [
+            {
+              "bytes": 592864,
+              "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\WildeModz\\Builds\\game 1.38 - PS4 9.00 - Nazky af1fcfe9dc07\\nazky-wilde138-game-1.38-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "505/WildeModz-1.46.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.46.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "65d7142a7d084d7a4fffc71d63e0633dd5a0701e",
+      "bytes": 29416,
+      "sha256": "f262d4878e01d057e4ee4d35a49ddf1363fa4ee9667dd50acf181a99aa8af07d",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e9ab140000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "5.05",
+      "game": "GTA V",
+      "gameVersion": "1.46",
+      "menuFamily": "WildeModz",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/index.html",
+        "function": "load_WildeModz146",
+        "functionLine": 312,
+        "buttonLine": 58,
+        "buttonText": "WildeModz-1.46",
+        "assignedFile": "WildeModz-1.46.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "distinct-remaining-native-candidate-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/OystersMenu-v1.3.8-v1.00.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.00.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "076f88586f83333862310ec4976063c3afc3e2fe",
+      "bytes": 1567488,
+      "sha256": "4c7ce16309f7d6164bab07238f6ca864e3b5744bceea3c9d63ed894b1cd31451",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b520000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "RDR2",
+      "gameVersion": "1.00",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": "The filename contains v1.3.8, but the visible host button only establishes the RDR2 game update. No exact menu-release claim is promoted.",
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_Oysters100",
+        "functionLine": 435,
+        "buttonLine": 109,
+        "buttonText": "RDR2 v1.00",
+        "assignedFile": "OystersMenu-v1.3.8-v1.00.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-oysters-rdr2-100",
+          "files": [
+            {
+              "bytes": 1567488,
+              "sha256": "4c7ce16309f7d6164bab07238f6ca864e3b5744bceea3c9d63ed894b1cd31451",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.00\\psfree900a\\Builds\\game 1.00 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-100-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/OystersMenu-v1.3.8-v1.13.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.13.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "45ac163a206001ae246351843c0197eb71802350",
+      "bytes": 1567488,
+      "sha256": "44174737c965b5063e8257939d0a7320aab697bfdaaa1240a0c3dba90a0b144e",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b520000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "RDR2",
+      "gameVersion": "1.13",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": "The filename contains v1.3.8, but the visible host button only establishes the RDR2 game update. No exact menu-release claim is promoted.",
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_Oysters113",
+        "functionLine": 442,
+        "buttonLine": 110,
+        "buttonText": "RDR2 v1.13",
+        "assignedFile": "OystersMenu-v1.3.8-v1.13.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-oysters-rdr2-113",
+          "files": [
+            {
+              "bytes": 1567488,
+              "sha256": "44174737c965b5063e8257939d0a7320aab697bfdaaa1240a0c3dba90a0b144e",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.13\\psfree900a\\Builds\\game 1.13 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-113-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/OystersMenu-v1.3.8-v1.19.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.19.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "285a8e8cd69d40bc9684d81f4a05cbb7071b24c0",
+      "bytes": 1567488,
+      "sha256": "100e0a0e1205c764001e3a9a37557bb4ab6e02841ae8493321313f4008e40981",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b520000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "RDR2",
+      "gameVersion": "1.19",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": "The filename contains v1.3.8, but the visible host button only establishes the RDR2 game update. No exact menu-release claim is promoted.",
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_Oysters119",
+        "functionLine": 449,
+        "buttonLine": 111,
+        "buttonText": "RDR2 v1.19",
+        "assignedFile": "OystersMenu-v1.3.8-v1.19.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-oysters-rdr2-119",
+          "files": [
+            {
+              "bytes": 1567488,
+              "sha256": "100e0a0e1205c764001e3a9a37557bb4ab6e02841ae8493321313f4008e40981",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.19\\psfree900a\\Builds\\game 1.19 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-119-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/OystersMenu-v1.3.8-v1.24.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.24.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "1876ccbe363d999d3c871da60caf60cccd682ba1",
+      "bytes": 1567488,
+      "sha256": "20648156363665c6fcfd0daf77b64c1827168b5b0c775919541d277f7f6d7a93",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b520000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "RDR2",
+      "gameVersion": "1.24",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": "The filename contains v1.3.8, but the visible host button only establishes the RDR2 game update. No exact menu-release claim is promoted.",
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_Oysters124",
+        "functionLine": 456,
+        "buttonLine": 112,
+        "buttonText": "RDR2 v1.24",
+        "assignedFile": "OystersMenu-v1.3.8-v1.24.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-oysters-rdr2-124",
+          "files": [
+            {
+              "bytes": 1567488,
+              "sha256": "20648156363665c6fcfd0daf77b64c1827168b5b0c775919541d277f7f6d7a93",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.24\\psfree900a\\Builds\\game 1.24 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-124-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/OystersMenu-v1.3.8-v1.29.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/OystersMenu-v1.3.8-v1.29.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "8edbce0217a453d705b1ea8bbd84d8aeb25baa1f",
+      "bytes": 1567488,
+      "sha256": "d972ff1b73601069e1e18365d08a26637a33ce00ff0c5063aa03c1e221961aa1",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b520000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "RDR2",
+      "gameVersion": "1.29",
+      "menuFamily": "Oysters",
+      "menuVersion": null,
+      "menuVersionNote": "The filename contains v1.3.8, but the visible host button only establishes the RDR2 game update. No exact menu-release claim is promoted.",
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_Oysters129",
+        "functionLine": 463,
+        "buttonLine": 113,
+        "buttonText": "RDR2 v1.29",
+        "assignedFile": "OystersMenu-v1.3.8-v1.29.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-oysters-rdr2-129",
+          "files": [
+            {
+              "bytes": 1567488,
+              "sha256": "d972ff1b73601069e1e18365d08a26637a33ce00ff0c5063aa03c1e221961aa1",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.29\\psfree900a\\Builds\\game 1.29 - firmware 9.00 - da9c138e47c5\\oysters-rdr2-129-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy100.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "decebf6d379d4e283927ff51094f51ea610f5ec0",
+      "bytes": 1055064,
+      "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e99b040000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.00",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_ArabicGuy100",
+        "functionLine": 400,
+        "buttonLine": 103,
+        "buttonText": "Arabic Guy 1.00",
+        "assignedFile": "pl_GTA_ArabicGuy100.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "distinct-remaining-native-candidate-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy127.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "f37b97e4d6a65ea37e8cd6c59bea4fcda479f23d",
+      "bytes": 1055384,
+      "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e98b040000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.27",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_ArabicGuy127",
+        "functionLine": 407,
+        "buttonLine": 104,
+        "buttonText": "Arabic Guy 1.27",
+        "assignedFile": "pl_GTA_ArabicGuy127.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "distinct-remaining-native-candidate-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy132.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "691650d2ea8e65cdc3bd43a246fd942f0f9fb178",
+      "bytes": 1054936,
+      "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e9eb040000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.32",
+      "menuFamily": "ArabicGuy",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_ArabicGuy132",
+        "functionLine": 414,
+        "buttonLine": 105,
+        "buttonText": "Arabic Guy 1.32",
+        "assignedFile": "pl_GTA_ArabicGuy132.bin"
+      },
+      "activeActionMatches": [],
+      "catalogueMatches": [],
+      "archiveMatches": [],
+      "selectedPreparedActionId": null,
+      "decision": "distinct-remaining-native-candidate-download-only",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/pl_GTA_Lamance-v0.9-1.38.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_Lamance-v0.9-1.38.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "6147bb34f57c593aeafc20c128fc870352a739b0",
+      "bytes": 1128208,
+      "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e99b140000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.38",
+      "menuFamily": "Lamance",
+      "menuVersion": "0.9",
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_Lamance",
+        "functionLine": 421,
+        "buttonLine": 106,
+        "buttonText": "Lamance v0.9 - 1.38",
+        "assignedFile": "pl_GTA_Lamance-v0.9-1.38.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-lamance-gta5-138",
+          "catalogue": "docs/host-game-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": null
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-lamance-gta5-138"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-games-ps4-lamance-gta5-138",
+          "files": [
+            {
+              "bytes": 1128208,
+              "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.38\\psfree900a\\Builds\\v0.9 - game 1.38 - firmware 9.00 - da9c138e47c5\\lamance-gta5-138-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    },
+    {
+      "path": "672/WildeModz-1.46.bin",
+      "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/WildeModz-1.46.bin",
+      "sourceCommit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+      "sourceGitBlobSHA1": "f4ba1d660774091a90ddc20332d09516a0a3f730",
+      "bytes": 2610904,
+      "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+      "gitBlobSHA1Verified": true,
+      "first16Hex": "e96b1c0000662e0f1f84000000000090",
+      "detectedFormat": "flat native BIN header; external ABI unverified",
+      "sourcePlatform": "PS4",
+      "sourceFirmware": "6.72",
+      "game": "GTA V",
+      "gameVersion": "1.46",
+      "menuFamily": "WildeModz",
+      "menuVersion": null,
+      "menuVersionNote": null,
+      "titleIds": [],
+      "titleIdLiteralScan": [],
+      "sourceDispatch": {
+        "page": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+        "function": "load_WildeModz146",
+        "functionLine": 428,
+        "buttonLine": 107,
+        "buttonText": "WildeModz-1.46",
+        "assignedFile": "WildeModz-1.46.bin"
+      },
+      "activeActionMatches": [
+        {
+          "id": "ps4-legacy-kameleon-wilde146",
+          "catalogue": "docs/host-legacy-menu-actions.json",
+          "firmwares": [
+            "9.00"
+          ],
+          "run": null
+        }
+      ],
+      "catalogueMatches": [
+        {
+          "id": "ps4-legacy-kameleon-wilde146"
+        }
+      ],
+      "archiveMatches": [
+        {
+          "id": "host-legacy-kameleon-wilde146",
+          "files": [
+            {
+              "bytes": 2610904,
+              "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.46\\WildeModz\\Builds\\game 1.46 - PS4 9.00 - Kameleon da9c138e47c5\\kameleon-wilde146-game-1.46-ps4-900.bin"
+            }
+          ]
+        }
+      ],
+      "selectedPreparedActionId": null,
+      "decision": "already-archived-do-not-redownload",
+      "builtInLoadQualified": false
+    }
+  ]
+}

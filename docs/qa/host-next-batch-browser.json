@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-11-02T18:52:49.496Z",
+  "status": "passed",
+  "desktop": {
+    "facts": [
+      "File\nftp_server_v1.08b.bin\nFile size\n37824 B\nSHA-256\n695082f37c5cfdce14a06fbd567fa8651017ee2e31f3e95ae7a769b4287cb0e9"
+    ],
+    "scrollWidth": 1265,
+    "width": 1265,
+    "ftpCardCount": 1,
+    "filename": "ftp_server_v1.08b.bin",
+    "bytes": 37824,
+    "loadDisabledWithoutPairing": true
+  },
+  "oysters": {
+    "firmware": "5.05",
+    "cards": 1,
+    "variants": 4,
+    "gameUpdates": [
+      "1.24",
+      "1.19",
+      "1.13",
+      "1.00"
+    ],
+    "menuVersions": "Not provided",
+    "loadDisabled": true,
+    "originalPinnedDownload": true
+  },
+  "phone": {
+    "viewport": {
+      "width": 430,
+      "height": 900
+    },
+    "oysters": {
+      "choices": [
+        "Game update\n1.24\nMenu version\nNot provided\nBIN · GamerHack 5.05 build",
+        "Game update\n1.19\nMenu version\nNot provided\nBIN · GamerHack 5.05 build",
+        "Game update\n1.13\nMenu version\nNot provided\nBIN · GamerHack 5.05 build",
+        "Game update\n1.00\nMenu version\nNot provided\nBIN · GamerHack 5.05 build"
+      ],
+      "dialogWidth": 406,
+      "scrollWidth": 430,
+      "width": 430
+    },
+    "ftp": {
+      "factScrollWidth": 161,
+      "factWidth": 160.5,
+      "scrollWidth": 415,
+      "width": 415
+    },
+    "noHorizontalDocumentOverflow": true
+  },
+  "screenshots": [
+    "docs/screenshots/host-next-batch.png",
+    "docs/screenshots/host-next-batch-oysters.png",
+    "docs/screenshots/host-next-batch-phone.png"
+  ],
+  "consoleContact": false,
+  "payloadExecution": false,
+  "limitations": [
+    "Read-only local dashboard browser checks; no physical console or new transfer."
+  ],
+  "cleanup": {
+    "tabClosed": true,
+    "viewportReset": true
+  }
+}

@@ -1,10 +1,11 @@
 {
-  "checkedAt": "2026-11-02T15:53:25.163Z",
+  "checkedAt": "2026-11-02T18:39:15.602Z",
   "passed": true,
   "pages": 535,
   "metadataDrift": [],
   "genericKeywordEntries": [],
   "generatorFiles": [
+    "scripts/add-crystalis-ps4.cjs",
     "scripts/build-3ds-expansion.cjs",
     "scripts/build-3ds-mods-online.cjs",
     "scripts/build-apollo-vita.cjs",
@@ -18,6 +19,7 @@
     "scripts/build-nintendo-retro.cjs",
     "scripts/build-ps2-expansion.cjs",
     "scripts/build-ps3-browser-downloads.cjs",
+    "scripts/build-ps4-mods.cjs",
     "scripts/build-psp-more.cjs",
     "scripts/build-retro-page.cjs",
     "scripts/build-source-code-pages.cjs",
@@ -40,19 +42,19 @@
   "protectedHelpers": [
     {
       "platform": "ps4",
-      "activatedVersion": "2026.11.02.12",
+      "activatedVersion": "2026.11.02.14",
       "path": "console/ps4/whatsite-ps4.html",
       "live": {
-        "bytes": 676243,
-        "sha256": "e2cbb3de30d7843a9d60e3bd1e56c5f938a27bf29682701a37d7ce7091381799"
+        "bytes": 690171,
+        "sha256": "8c78bf41b772f9e1f0e6aeb7bfe6bd47e6d951882d74aacca5fe6b1747436d72"
       },
       "immutable": {
-        "bytes": 676243,
-        "sha256": "e2cbb3de30d7843a9d60e3bd1e56c5f938a27bf29682701a37d7ce7091381799"
+        "bytes": 690171,
+        "sha256": "8c78bf41b772f9e1f0e6aeb7bfe6bd47e6d951882d74aacca5fe6b1747436d72"
       },
       "retainedPrevious": {
-        "bytes": 649654,
-        "sha256": "f359c97a07b69203e08b138efde1e4fa5212d0a3e6fba9d4005a0307a431443a"
+        "bytes": 682288,
+        "sha256": "e5ca12699547522a14f724b96b1025c37f0af78d825d4fcb2250ba1a0d2d913e"
       },
       "livePassed": true,
       "immutablePassed": true,
@@ -60,7 +62,7 @@
     },
     {
       "platform": "ps5",
-      "activatedVersion": "2026.11.02.12",
+      "activatedVersion": "2026.11.02.14",
       "path": "console/ps5/whatsite-ps5.html",
       "live": {
         "bytes": 548833,
@@ -72,7 +74,7 @@
       },
       "retainedPrevious": {
         "bytes": 548833,
-        "sha256": "b054ff263869970bab3ea37820dbdfe432574536f41ed3d7ba5a38873b15b11e"
+        "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20"
       },
       "livePassed": true,
       "immutablePassed": true,

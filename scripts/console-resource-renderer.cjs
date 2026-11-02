@@ -4,12 +4,14 @@ const {resourceTags, resourceTerms} = require('./console-resource-tags.cjs');
 const {section, guideSection, grid, steps, videoEmbed, link, guideLink, esc} = require('./build-console-guides.cjs');
 
 const categories = {
-  menu: 'Mod menus', injector: 'Injectors', pack: 'Menu packs', cfg: 'CFG resources',
+  menu: 'Mod menus', injector: 'Injectors', pack: 'Menu packs', script: 'Scripts', cfg: 'CFG resources',
   rtm: 'RTM tools', cheat: 'Cheat files', dlc: 'DLC resources', reference: 'DLC compatibility references', fpkg: 'FPKG resources', source: 'Source codes'
 };
 
 function createResourceRenderer({root = path.resolve(__dirname, '..'), files = []} = {}) {
   const storedFiles = files;
+const pluginBundles=require('./gta5-plugin-downloads.cjs').createPluginDownloads();
+const pluginDownloads=(item,downloads,legacy)=>pluginBundles.render(item,downloads,legacy);
 const h = value => esc(String(value ?? ''));
 const lines = value => h(value).replace(/\r?\n/g, '<br>');
 
@@ -82,21 +84,25 @@ function downloadButton(file, item) {
   return `<a href="${h(url)}" class="btn btn-primary" ${stored ? 'download' : 'target="_blank" rel="noopener noreferrer"'}><i class="fas fa-download" aria-hidden="true"></i> ${h(label)}</a>`;
 }
 function card(item) {
+  const cardImage=require('./ps4-ps5-card-images.cjs').resourceImage(item);
+  const cardMedia=require('./ps4-ps5-card-images.cjs').markup(cardImage);
   if(item.compactDownload===true){
     const files=(item.downloads||[]).filter(file=>file.distribution==='include');
     const actions=files.map(file=>{
       const stored=storedFiles.find(entry=>entry.downloadId===file.id&&entry.status==='downloaded'&&localFile(entry.local,'downloads'));
       return stored?`<div class="guide-links"><a class="btn btn-outline" href="${h(stored.local)}" download="${h(file.filename)}" aria-label="Download ${h(file.filename)}" data-no-file-options>Download</a><a class="btn btn-primary" href="/console/ps4/downloads.html?file=${encodeURIComponent(file.id)}#files">Save on PS4</a></div>`:downloadButton(file,item);
     }).join('');
-    return `<article class="guide-resource multicod-card" id="resource-${h(item.id)}" data-search="${h(resourceTerms(item).join(' ').toLowerCase())}"><h3>${h(item.name)}</h3><p>${h(item.version)}</p>${actions}<details class="multicod-details"><summary>Setup &amp; source</summary><p>${lines(item.compatibilityText)}</p>${guideLink('#guide-'+item.id,'Full setup & cheat conditions')}<p><a href="${h(httpsUrl(item.source?.postUrl))}" target="_blank" rel="noopener noreferrer">Publisher source</a></p></details></article>`;
+    return `<article class="guide-resource multicod-card" id="resource-${h(item.id)}" data-search="${h(resourceTerms(item).join(' ').toLowerCase())}">${cardMedia}<h3>${h(item.name)}</h3><p>${h(item.version)}</p>${actions}<details class="multicod-details"><summary>Setup &amp; source</summary><p>${lines(item.compatibilityText)}</p>${guideLink('#guide-'+item.id,'Full setup & cheat conditions')}<p><a href="${h(httpsUrl(item.source?.postUrl))}" target="_blank" rel="noopener noreferrer">Publisher source</a></p></details></article>`;
   }
   const image = (item.images || []).find(image => image.role !== 'guide' && (localImage(image.display) || localImage(image.original)));
-  const buttons = (item.downloads || []).filter(file => file.distribution === 'include').map(file => downloadButton(file, item)).join('');
+  const includedDownloads=(item.downloads || []).filter(file => file.distribution === 'include');
+  const pairedDownloads=pluginDownloads(item,includedDownloads);
+  const buttons = pairedDownloads + includedDownloads.filter(file=>!pairedDownloads||!pluginBundles.has(file.id)).map(file => downloadButton(file, item)).join('');
   const detailLink = hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
   const tagMarkup = tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
-  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : ''}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${item.description ? `<p>${lines(item.description)}</p>` : ''}${item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${tagMarkup}${buttons || detailLink ? `<div class="guide-links">${buttons}${detailLink}</div>` : ''}</article>`;
+  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${item.description ? `<p>${lines(item.description)}</p>` : ''}${item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${tagMarkup}${buttons || detailLink ? `<div class="guide-links">${buttons}${detailLink}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
   const title = block.title ? `<h3>${h(block.title)}</h3>` : '';
@@ -136,6 +142,6 @@ function gameContent(items, prefix = '') {
   return collections + items.map(details).join('\n');
 }
 
-return {categories, h, lines, localFile, localImage, httpsUrl, youtubeVideo, videoSource, hasDetails, imageMarkup, downloadButton, card, guideBlock, videoMarkup, details, gameContent};
+return {categories, h, lines, localFile, localImage, httpsUrl, youtubeVideo, videoSource, hasDetails, imageMarkup, downloadButton, pluginDownloads, card, guideBlock, videoMarkup, details, gameContent};
 }
 module.exports = {createResourceRenderer, categories};

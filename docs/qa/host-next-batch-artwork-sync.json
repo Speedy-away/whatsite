@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-11-02T18:55:24.247Z",
+  "status": "synchronized",
+  "cause": "Catalogue rebuild correctly used already-current game-specific descriptor artwork; public download-card images and one derived category-art route still reflected earlier artwork. Default download-center rendering was run by the parent and preserved receiver15 bytes.",
+  "sourceChanges": [],
+  "changedManifestRoutes": [
+    {
+      "route": "/console/ps5/mods.html",
+      "before": {
+        "title": "PS5 mods",
+        "kind": "mods",
+        "images": [
+          {
+            "src": "/assets/images/covers/cod-black-ops-3.jpg",
+            "alt": "Call of Duty · PS4/PS5",
+            "label": "Call of Duty · PS4/PS5",
+            "sourcePage": "console/ps5/mods.html"
+          },
+          {
+            "src": "/assets/images/gta52.png",
+            "alt": "GTA V · PS4",
+            "label": "GTA V · PS4",
+            "sourcePage": "console/ps5/mods.html"
+          },
+          {
+            "src": "/assets/images/rdr2.png",
+            "alt": "Red Dead Redemption 2 · PS4",
+            "label": "Red Dead Redemption 2 · PS4",
+            "sourcePage": "console/ps5/mods.html"
+          }
+        ]
+      },
+      "after": {
+        "title": "PS5 mods",
+        "kind": "mods",
+        "images": [
+          {
+            "src": "/assets/images/host-trainers/the-last-of-us-part-ii-remastered-f1c0691e29a5.jpg",
+            "alt": "The Last of Us Part II Remastered",
+            "label": "The Last of Us Part II Remastered",
+            "sourcePage": "console/ps5/mods.html"
+          },
+          {
+            "src": "/assets/images/host-trainers/dragons-dogma-2-4474b5997a4b.jpg",
+            "alt": "Dragon's Dogma 2",
+            "label": "Dragon's Dogma 2",
+            "sourcePage": "console/ps5/mods.html"
+          },
+          {
+            "src": "/assets/images/host-trainers/silent-hill-2-7e0743d7eb02.jpg",
+            "alt": "Silent Hill 2",
+            "label": "Silent Hill 2",
+            "sourcePage": "console/ps5/mods.html"
+          },
+          {
+            "src": "/assets/images/host-trainers/astro-bot-19e37c8f055d.jpg",
+            "alt": "Astro Bot",
+            "label": "Astro Bot",
+            "sourcePage": "console/ps5/mods.html"
+          }
+        ]
+      }
+    }
+  ],
+  "changedPages": [
+    {
+      "page": "console/ps5/index.html",
+      "beforeSHA256": "35d9d6753e35ac05905c46976485516333dc71f4a303d416a0f66d8e048ba8c3",
+      "afterSHA256": "16906c09f5c573a70a0e8b07fbcf8e552a1ef0b01804a8a3b1b66dc1f5c160cf",
+      "anchorsUnchanged": true,
+      "scriptsUnchanged": true
+    }
+  ],
+  "packagedHostFilesChanged": false,
+  "downloadIdentitiesChanged": false,
+  "payloadExecution": false
+}

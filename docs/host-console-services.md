@@ -18,6 +18,8 @@ Protocol2 keeps the original top-level loader/manager result and adds the `check
 
 Execution requests that lose their acknowledgement return `uncertain` with `mayHaveExecuted:true` and `outcome:"unknown"`. This includes a post-dispatch timeout, unreadable acknowledgement, server5xx, or socket failure after bytes were offered. Known non-executing/preflight failures remain errors. Neither transport retries. The dashboard persists a warning for that target until explicit review/clear, which itself sends nothing. No generic TCP9020/9021 probe is used: a connection can consume a native one-shot payload handoff.
 
+Original-only PS4 BIN actions may opt into `run.input: "user-file"`. The paired, same-origin `/api/run-file` route reads an exact-size raw BIN body in memory with a 3 MiB hard bound and deadline. Its `X-Whatsite-Run` header accepts only the existing five metadata fields. Both browser and sender verify SHA-256 before console contact; the sender validates the curated transport, firmware and file metadata independently. It accepts no arbitrary URL, file path or port and writes no copy to disk. Normal `/api/run` rejects these opt-in actions. The fresh `userSelectedBIN` capability and matching `requiresFile` advertisement are required before the UI opens a file picker. See [original-file loading](host-original-tool-loading.md).
+
 Service checks report connectivity, readiness, the manager's application version, and an IP only if the service supplies one. The application version is **not console firmware**. These endpoints do not identify the active game or establish jailbreak compatibility. Browser user-agent firmware is separately labelled browser-reported and remains subject to manual confirmation.
 
 ## Actual transports

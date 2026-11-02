@@ -62,6 +62,7 @@ function build() {
       ['Return to the system look', 'Choose <strong>No theme / Restore stock</strong> in the manager before stopping the plugin, especially when changing game icons or fonts. Follow the project’s recovery instructions if the manager is unavailable.']
     ])) +
     section('sources', 'Release, requirements and recovery', sourceList([[release, 'PS5 Themes 1.80 release and publisher SHA-256 checksums'], [repo, 'Project setup, firmware limits and recovery documentation'], ['/console/ps5/transfer-tools.html', 'PS5 file-transfer tools']])), '#choose', 'Choose a route');
+  require('./playstation-nonmod-card-images.cjs').repairFiles(['console/ps5/themes.html']);
   metadata('console/ps5/themes.html', ['PS5 themes', 'PS5 customization', 'PS5 Themes 1.80', 'etaHEN plugin', 'PS5 ELF', 'Payload Manager', '13.42', '13.60', 'Welcome hub', 'Appearance', '8095'], '/assets/console-theme-manager.js');
 }
 module.exports = {build};

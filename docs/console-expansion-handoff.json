@@ -1,5 +1,29 @@
 {
-  "updatedAt": "2026-11-02T16:53:01.458Z",
+  "publication20261102": {
+    "request": "Sort out local pushes and new work, push everything, and merge the branch.",
+    "branchIntegration": "Fetched origin and verified origin/codex/update-game-listings is already an ancestor of main; zero unique branch commits remain. Existing branch retained.",
+    "snapshot": "All nonignored new and modified site files, artwork, downloads, helper versions, source scripts, tests and documentation included; local private inventories and temporary files remain governed by .gitignore. Existing downloads and old versions preserved.",
+    "validation": "615 tests passed, zero failures. Site audit: 492 public pages, 62357 local links/assets, zero issues. No new file exceeds GitHub's 100 MiB hard limit; no credential-pattern matches in changed text files.",
+    "upload": "Use scripts/push-in-batches.cjs --push, preserving original main history and checking zero file blobs in the final metadata handoff. Repository uses the saved Speedy-away credential account."
+  },
+  "themesSidebarUpdate": {
+    "date": "2026-11-02",
+    "request": "Add expandable Themes directly below Retro inside Console, with PS3, Switch and other platform theme pages. This supersedes the earlier request to remove Themes from the sidebar.",
+    "implementation": "scripts/add-themes-sidebar.cjs integrates the nested group into existing and generated sidebars; existing console hub theme links remain. Shared CSS supports independent nested expansion without clipping. Console topic decoration preserves theme-page activation.",
+    "verification": "27 focused navigation tests passed; repeat application changed zero pages; audit checked 492 public pages and 61700 links/assets with zero issues. Browser verified PS3/Switch destinations and collapse/expand. Screenshot: docs/screenshots/themes-sidebar.png.",
+    "newDownloads": 0,
+    "published": false
+  },
+  "gitPushRepair": {
+    "date": "2026-11-02",
+    "head": "0e3330855b61c93a8b8a74535ee3fef930c8614f",
+    "remoteMain": "31e57e7cd240d3106a264f7fcc313f7995fa26ba",
+    "finding": "Four pending commits contain 10452 new objects and 12.90 GiB of blobs; first commit alone adds 12.34 GiB. GitHub permits at most 2 GiB per push.",
+    "fix": "scripts/push-in-batches.cjs: read-only default; --push uploads 768 MiB batches to a temporary branch, then fast-forwards original main and removes temporary branch. Original commits, index and files preserved. Resumable state inside .git/batch-upload.",
+    "verification": "Local bare-remote integration test covers dry run, interrupted upload/resume, unchanged history/index/dirty files, verified final main and staging cleanup.",
+    "status": "Complete: all 18 batches accepted, original four commits pushed, remote main verified at 0e3330855b61c93a8b8a74535ee3fef930c8614f, temporary codex/upload-objects-0e3330855b61 branch deleted. Repository credential username pinned locally to Speedy-away. Initial final push redundantly resent blobs and was stopped; corrected helper anchors all batch commits as direct boundary parents and verifies zero remaining file blobs before handoff. Final metadata handoff: 3574 objects; final main push: Total 0. Original commits/index/workspace preserved; substantial concurrent uncommitted changes remain local. Helper/docs/tests remain uncommitted. Resume state and completion timestamp retained in .git/batch-upload."
+  },
+  "updatedAt": "2026-11-02T19:01:28.139Z",
   "status": "PS4/PS5 game batch5 complete locally: sixteen new verified game downloads, compact cards, exact Save routes and shared receiver11 integration. Source-site failures and the unrelated Wii U test are recorded separately.",
   "workspace": "C:/Users/whatw/Documents/GitHub/whatsite",
   "latestUserRequests": [
@@ -2533,6 +2557,244 @@
       },
       "screenshot": "docs/qa/ps3-weareghosts-file-tags-2026-11-02.png",
       "noInventoryOrArchiveMutation": true
+    },
+    "crystalisPS4": {
+      "completedAt": "2026-11-02T18:23:59.487Z",
+      "status": "Added locally and verified",
+      "request": "Add the user-supplied Crystalis SPRX PS4 archive to GTA V game update 1.57.",
+      "resourceId": "gta5-crystalis-1-57",
+      "page": "/console/mods/ps4/gta5/#resource-gta5-crystalis-1-57",
+      "sourceCapture": "docs/discord-ps4-ps5-raw/crystalis-ps4-157-user-source.json",
+      "platform": "PS4",
+      "gameUpdate": "1.57",
+      "menuVersion": null,
+      "titleIdsFromIncludedConfiguration": [
+        "CUSA00419"
+      ],
+      "files": [
+        {
+          "name": "Crystalis_SPRX_PS4_1.57.rar",
+          "bytes": 788845,
+          "sha256": "d9cea1c72deabd77a38acb806cbf2d203475da5d5b0f3e96d9d4d76aa61b5e04",
+          "local": "/downloads/ps4/GTA5/157/crystalis/Crystalis_SPRX_PS4_1.57.rar",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.57\\Crystalis\\Builds\\GTA V 1.57 - menu release unspecified\\Crystalis_SPRX_PS4_1.57.rar"
+        },
+        {
+          "name": "Crystalis.sprx",
+          "bytes": 538296,
+          "sha256": "005f707cca7f5da9092339c630b5257d5164fce10515d8f6ecb521a6d2b86158",
+          "local": "/downloads/ps4/GTA5/157/crystalis/Crystalis.sprx",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.57\\Crystalis\\Builds\\GTA V 1.57 - menu release unspecified\\Crystalis.sprx"
+        }
+      ],
+      "inspection": {
+        "archiveIntegrity": "Passed",
+        "files": 81,
+        "moduleFormat": "PS4 SELF; embedded x86-64 ELF at offset352",
+        "controlString": "L1 + Circle",
+        "dataDirectory": "/data/Crystalis",
+        "pluginPath": "/data/GoldHEN/plugins/Crystalis.sprx",
+        "exampleAlsoLists": "LSOPlugin.prx is not included; necessity undocumented; merge only the Crystalis entry, preserving existing configuration.",
+        "image": "Original256x256 archive icon; no screenshot or compatibility inference.",
+        "firmware": "Not established; no PS5 support inferred.",
+        "noDownloadedCodeExecuted": true
+      },
+      "verification": {
+        "tests": {
+          "passed": 20,
+          "failed": 0,
+          "report": "docs/qa/crystalis-ps4-157-tests.txt"
+        },
+        "http": {
+          "files": 2,
+          "status": 200,
+          "hashesMatched": true,
+          "report": "docs/qa/crystalis-ps4-157-http.json"
+        },
+        "siteAudit": {
+          "pages": 492,
+          "localReferences": 56282,
+          "issues": 0,
+          "report": "docs/qa/crystalis-ps4-157-site-audit.txt"
+        },
+        "metadataDrift": 0,
+        "archiveIndex": {
+          "items": 2170,
+          "fileRecords": 3117,
+          "present": 3117,
+          "missing": 0,
+          "report": "docs/qa/crystalis-ps4-157-archive-index.txt"
+        },
+        "browser": "Card and guide popup verified; both download controls visible."
+      },
+      "preview": {
+        "url": "http://127.0.0.1:62383/console/mods/ps4/gta5/#resource-gta5-crystalis-1-57",
+        "session": 40541,
+        "script": "scripts/serve-site-preview.cjs",
+        "note": "Old58874port unavailable; new loopback preview started."
+      },
+      "screenshot": "docs/qa/crystalis-ps4-157-page.png",
+      "publication": "Local only. No commit, push, deployment, payload execution or changes to protected host receivers."
+    },
+    "ps4Gta5MenuReview": {
+      "updatedAt": "2026-11-02T18:37:55.520Z",
+      "sourceMode": "Captured posts and exact existing files; user chose captured posts instead of a live Discord check.",
+      "resources": 26,
+      "newCatalogueEntries": [
+        "gta5-expulsion-v7-1-57",
+        "gta5-velora-v1-5-1-57",
+        "gta5-oxagon-lite-v1-4",
+        "gta5-script-loader-pack",
+        "gta5-fcloader-csc",
+        "gta5-gta-fucker-csc",
+        "gta5-random-scripts-pack"
+      ],
+      "detailedGuides": 26,
+      "addedExtractedVariants": 7,
+      "verifiedArchiveFiles": 22,
+      "ozarkImage": "/assets/images/ps4-gta5/ozark-user-preview-2026-11-02.png",
+      "limitations": [
+        "Beta has no verified preview.",
+        "Oxagon Lite README requires a key absent from its ZIP.",
+        "No console execution or physical compatibility tests."
+      ],
+      "noPayloadExecution": true,
+      "completedAt": "2026-11-02T18:41:55.213Z",
+      "sourceReview": "User chose captured posts instead of a live Discord check. Reviewed 19 existing menu resources and all 15 legacy files; 64 exact file hashes, 14 archives and 57 modules. No new live-server completeness claim.",
+      "addedDownloadRecords": 16,
+      "preservedLegacyDownloads": 15,
+      "archive": {
+        "scope": "ps4-gta5-menu-review",
+        "verifiedFiles": 22,
+        "indexItems": 2193,
+        "indexFileRecords": 3140,
+        "missingFileRecords": 0,
+        "inventory": "docs/ps4-gta5-menu-review-private-inventory.json",
+        "verification": "docs/qa/ps4-gta5-review-archive.json"
+      },
+      "verification": {
+        "focusedTests": {
+          "passed": 47,
+          "failed": 0,
+          "report": "docs/qa/ps4-gta5-review-tests.txt"
+        },
+        "siteAudit": {
+          "pages": 492,
+          "localLinksAndAssets": 56310,
+          "issues": 0,
+          "report": "docs/qa/ps4-gta5-review-site-audit.txt"
+        },
+        "http": "docs/qa/ps4-gta5-review-http.json",
+        "browser": "docs/qa/ps4-gta5-review-browser.json",
+        "searchDurability": {
+          "pages": 535,
+          "metadataDrift": 0,
+          "helpersPassed": true,
+          "report": "docs/qa/ps4-gta5-review-search-durability.txt"
+        }
+      },
+      "resume": [
+        "Use node scripts/build-ps4-mods.cjs --gta5-only for bounded GTA V catalogue/installation changes; it also refreshes the menu directory. Do not run broad console/native-helper generators for this metadata review.",
+        "Review applicator: scripts/review-ps4-gta5-menus.cjs --prepare / --archive / --integrate. F: writes still require normal tool escalation. It preserves all older files, source URLs and download IDs.",
+        "Scorpion includes game 1.48/1.49/1.50; Beach older resources also include 1.46/1.52/1.53; Oxagon Full and Lite include separate 1.53/1.56 modules. Lite requires a missing Oxagon.key, explicitly disclosed.",
+        "Ozark user screenshot remains on both catalogue cards and in their guides; all old images remain on disk. The separate supplied-screenshots gallery was removed at the user’s request. Serendipity keeps the original user-supplied screenshot. No authentic beta preview was found.",
+        "Packaged/native helpers were not rebuilt. Consult current helper manifests rather than restoring an earlier version from this handoff.",
+        "Preserve separate Expulsion v5/v7 and Velora 1.4/1.5-labelled builds. Source firmware/title IDs and menu-opening controls remain unknown unless explicitly evidenced."
+      ],
+      "keyFiles": [
+        "scripts/review-ps4-gta5-menus.cjs",
+        "scripts/tests/ps4-gta5-review.test.cjs",
+        "docs/qa/ps4-gta5-menu-archive-review.json",
+        "docs/qa/ps4-gta5-image-audit.json",
+        "assets/images/ps4-gta5/ozark-user-preview-2026-11-02.png"
+      ],
+      "layoutUpdate": {
+        "updatedAt": "2026-11-02T18:43:56.379Z",
+        "request": "Move Crystalis and Velora 1.4 into GTA V 1.57 and remove Supplied menu screenshots.",
+        "movedResources": [
+          "gta5-crystalis-1-57",
+          "gta5-velora-1-57"
+        ],
+        "section": "v157",
+        "separateGalleryRemoved": true,
+        "galleryNavigationRemoved": true,
+        "cardImagesAndGuideImagesPreserved": true,
+        "existingDownloadsPreserved": true,
+        "focusedTests": {
+          "passed": 16,
+          "failed": 0,
+          "report": "docs/qa/ps4-gta5-section-placement-tests.txt"
+        },
+        "browser": "docs/qa/ps4-gta5-section-placement.json",
+        "screenshot": "docs/qa/ps4-gta5-157-placement.png",
+        "durability": "catalogueSection: v157 in source data; base builder renders the cards and supplement skips duplicate cards while keeping guide sections. Crystalis import preserves its section."
+      }
+    },
+    "ps4Gta5PluginConfigurations": {
+      "completedAt": "2026-11-02T19:09:15.042Z",
+      "request": "For each PS4 GTA V plugin menu, offer EU CUSA00411 / USA CUSA00419 switching and download the selected menu plus plugins.ini together.",
+      "implementation": {
+        "pluginResources": 20,
+        "sourceDownloadChoices": 49,
+        "regionalConfigurations": 114,
+        "archivedFiles": 115,
+        "regions": {
+          "Europe": "CUSA00411",
+          "USA": "CUSA00419"
+        },
+        "combinedDownload": "One browser-generated ZIP contains the byte-identical original menu/archive, the selected plugins.ini and INSTALL.txt. Source and INI SHA-256 are checked before ZIP creation.",
+        "independentFiles": "Original menu and plugins.ini-only links remain available, including no-JavaScript fallbacks.",
+        "compatibility": "The switch changes the INI title ID only. Source-unconfirmed region combinations are labelled templates. Scorpion 1.00 selects actual EU/US members; Oxagon defaults preserve the existing game-update group. CSC and BIN resources do not receive fabricated plugin entries.",
+        "originalInputs": "Both supplied user INI files were read and left unchanged; blank directory-only lines are omitted."
+      },
+      "verification": {
+        "tests": {
+          "passed": 40,
+          "failed": 0,
+          "report": "docs/qa/gta5-plugin-config-tests.txt"
+        },
+        "finalFocusedTests": {
+          "passed": 7,
+          "failed": 0,
+          "report": "docs/qa/gta5-plugin-config-focused-tests.txt"
+        },
+        "siteAudit": {
+          "pages": 492,
+          "localLinksAndAssets": 62244,
+          "issues": 0,
+          "report": "docs/qa/gta5-plugin-config-site-audit.txt"
+        },
+        "browserDownload": "docs/qa/gta5-plugin-config-browser-download.json",
+        "zipChecks": "docs/qa/gta5-plugin-config-zip-checks.json",
+        "screenshot": "docs/qa/gta5-plugin-config-browser.png",
+        "searchTags": {
+          "pages": 535,
+          "changed": 0,
+          "report": "docs/qa/gta5-plugin-config-search.txt"
+        },
+        "archiveIndex": {
+          "items": 2223,
+          "fileRecords": 3247,
+          "missingFileRecords": 0,
+          "report": "docs/qa/gta5-plugin-config-archive-index.txt"
+        }
+      },
+      "archive": "docs/gta5-plugin-configs-private-inventory.json",
+      "publicManifest": "downloads/ps4/GTA5/plugin-configs/manifest.json",
+      "keyFiles": [
+        "scripts/prepare-gta5-plugin-configs.cjs",
+        "scripts/gta5-plugin-downloads.cjs",
+        "assets/gta5-plugin-downloads.js",
+        "assets/gta5-plugin-downloads.css",
+        "scripts/tests/gta5-plugin-configs.test.cjs"
+      ],
+      "resume": [
+        "Prepare configs with node scripts/prepare-gta5-plugin-configs.cjs --prepare; archive through --archive with normal F: write escalation, then refresh the organized index. No original file is modified or executed.",
+        "Regenerate the GTA V page with node scripts/build-ps4-mods.cjs --gta5-only. Keep catalogueSection v157 and the removed screenshot gallery intact.",
+        "Do not treat a generated EU/USA INI as evidence of binary compatibility. Preserve documented per-game-update module choices and missing dependency notices.",
+        "The verified beta archive is mirrored unchanged for its combined-download option; the menu identity remains VOID beta, game update unspecified.",
+        "Current packaged/native helpers are untouched by these page controls."
+      ]
     }
   },
   "originalXboxExpansion": {
@@ -5214,7 +5476,7 @@
   },
   "repositoryHostReview20261102": {
     "status": "Completed locally: reviewed both exact repositories, added4 distinct original-only GTA V builds, enabled the existing official PS4 9.00 GoldHEN2.3 through paired TCP9020, activated receiver13 and archived final sender1.7.0. No commit, worktree, deployment or console execution.",
-    "updatedAt": "2026-11-02T16:53:01.458Z",
+    "updatedAt": "2026-11-02T18:56:22.250Z",
     "repositories": [
       {
         "repository": "https://github.com/GamerHack/GamerHack.github.io",
@@ -5384,6 +5646,616 @@
       "Four original-only menu variants do not have a verified standalone Load ABI.",
       "Complete GamerHack/RAW GAME runtimes were not vendored because redistribution permissions for required components were not established.",
       "Phone browser check observed1px existing connection-form document overflow at430px; no new CSS or broad layout changes."
-    ]
+    ],
+    "originalToolsFollowup20261102": {
+      "status": "Completed locally: five original OrbisToolboxBINs, officialGoldHEN2.4b18readyBIN+archive, paired memory-only exact-file Load, receiver14 and sender1.8.0 archived/verified. No commit/deploy or payload/console execution.",
+      "updatedAt": "2026-11-02T18:39:00.244Z",
+      "sources": "Exact original OSM-Made/Orbis-Toolbox1.0.1190 and GoldHEN/GoldHEN2.4b18 release files, linked from the requested GamerHack review. docs/qa/host-original-tool-source-review.json retains branch/tag/readme/release evidence and hashes.",
+      "actions": 6,
+      "archiveFiles": [
+        {
+          "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-505",
+          "filename": "Orbis-Toolbox-505.bin",
+          "version": "1.0.1190 Alpha - firmware 5.05",
+          "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-505.bin",
+          "bytes": 626472,
+          "sha256": "657aad360767ce7f9cef3c374f8ea448870df8d3cf6534a582930bbec0b400ce",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 5.05\\Orbis-Toolbox-505.bin"
+        },
+        {
+          "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-672",
+          "filename": "Orbis-Toolbox-672.bin",
+          "version": "1.0.1190 Alpha - firmware 6.72",
+          "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-672.bin",
+          "bytes": 626504,
+          "sha256": "c19e3f0d549b241aa31febd5a5223d0bf0156bdc4e419e1083f795ea90d5ce30",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 6.72\\Orbis-Toolbox-672.bin"
+        },
+        {
+          "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-702",
+          "filename": "Orbis-Toolbox-702.bin",
+          "version": "1.0.1190 Alpha - firmware 7.02",
+          "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-702.bin",
+          "bytes": 626664,
+          "sha256": "9f8a34ff2ab3918f3a01e3126817c3c0afd4671c3f0613e05cef540cf7d79a3c",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 7.02\\Orbis-Toolbox-702.bin"
+        },
+        {
+          "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-755",
+          "filename": "Orbis-Toolbox-755.bin",
+          "version": "1.0.1190 Alpha - firmware 7.55",
+          "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-755.bin",
+          "bytes": 626664,
+          "sha256": "421131368229e986385a5a5cf4a65d1be8a5835d7ba018720b8764e00153871c",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 7.55\\Orbis-Toolbox-755.bin"
+        },
+        {
+          "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-900",
+          "filename": "Orbis-Toolbox-900.bin",
+          "version": "1.0.1190 Alpha - firmware 9.00",
+          "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin",
+          "bytes": 626392,
+          "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 9.00\\Orbis-Toolbox-900.bin"
+        },
+        {
+          "id": "ps4-ps5-host-original-goldhen-2-4b18-archive",
+          "filename": "GoldHEN_v2.4b18.7z",
+          "version": "2.4b18 - original 7z",
+          "sourceURL": "https://github.com/GoldHEN/GoldHEN/releases/download/2.4b18/GoldHEN_v2.4b18.7z",
+          "bytes": 258065,
+          "sha256": "d0c84c79f65df5afc79a00c578f33ab1aa70aeb9c205f1e789895dc7d4fca38d",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.4b18 - original 7z\\GoldHEN_v2.4b18.7z"
+        },
+        {
+          "id": "ps4-ps5-host-original-goldhen-2-4b18-ready",
+          "filename": "goldhen.bin",
+          "version": "2.4b18 - official unified BIN - f2cd6f8ec51b",
+          "sourceURL": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4/goldhen.bin",
+          "bytes": 260160,
+          "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.4b18 - official unified BIN - f2cd6f8ec51b\\goldhen.bin"
+        }
+      ],
+      "archiveBytes": 3650921,
+      "loading": {
+        "orbis": {
+          "enabled": [
+            "5.05",
+            "6.72",
+            "9.00"
+          ],
+          "downloadOnly": [
+            "7.02",
+            "7.55"
+          ],
+          "version": "1.0.1190 Alpha",
+          "transport": "GoldHEN HTTP9090 after compatible HEN; retail executables only; source rest-mode limitations retained."
+        },
+        "goldhen": {
+          "version": "2.4b18",
+          "firmwares": [
+            "9.00"
+          ],
+          "transport": "Existing PSFree/Lapse waiting raw TCP9020 only.",
+          "bytes": 260160,
+          "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+          "note": "Byte-identical to official release7z extraction and pinnedbeta rawBIN; no2.4b18.12/13xx/14.00/PS5 claim."
+        },
+        "workflow": "Download original BIN to computer, pair sender, set exact console/firmware, choose Load and select that local BIN. Browser and sender verify complete size/SHA in memory before transfer. No public mirror, selected-binary bundle or file persistence. Unknown outcomes retain existing warning lock.",
+        "guards": "Strict userSelectedBIN +requiresFile advertisement; only curated PS4/BIN opt-in on fixed9090or9020. Paired same-origin /api/run-file uses boundedrawbody+smallfive-fieldmetadata header, rejects invalid/ELF/compressed/missing/truncated/oversized/hashmismatched data beforeconsole contact. No arbitraryURL/path/port/DNSrebind/retry. Normal/api/run rejects selected-file entries. UI revalidates destination/firmware/pairing/settings after selection and again immediately beforedispatch afterhash.",
+        "copy": "Use merged Download separately for console copies. User-file Load explicitly refuses checked copy-onLoad, preserving original gesture and avoiding receiver popups before verified selection. Normal existingcopy-onLoad behavior unchanged.",
+        "earlierMenus": "Four previous GamerHack variants remain run:null; choosing original bytes does not establish their standaloneABI."
+      },
+      "preservation": {
+        "previousCatalogueFiles": 571,
+        "historicalSenders": 16,
+        "allSenders": 17,
+        "originalBinariesBundled": 0,
+        "existingGoldHEN23Bundled": true,
+        "nativeWorkspaces": "Existing active/retained self-contained helpers and native file/autoload workflows untouched."
+      },
+      "receivers": [
+        {
+          "platform": "ps4",
+          "version": "2026.11.02.14",
+          "bytes": 690171,
+          "sha256": "8c78bf41b772f9e1f0e6aeb7bfe6bd47e6d951882d74aacca5fe6b1747436d72",
+          "items": 501,
+          "previousItemsPreserved": 495,
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.14\\whatsite-ps4.html"
+        },
+        {
+          "platform": "ps5",
+          "version": "2026.11.02.14",
+          "bytes": 548833,
+          "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20",
+          "items": 350,
+          "previousItemsPreserved": 350,
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.12\\whatsite-ps5.html"
+        }
+      ],
+      "sender": {
+        "id": "console-payload-sender-a43cac98804c",
+        "name": "console-payload-sender-1.8.0-a43cac98804c.zip",
+        "version": "1.8.0+a43cac98804c",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.8.0-a43cac98804c.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.8.0-a43cac98804c.zip",
+        "bytes": 100276021,
+        "sha256": "fe74026bbb64789c85c6ce042b42e9046afaaae8c317607e4bfee8e0946914ec",
+        "snapshot": "a43cac98804cafcba4c324309f707db9f8e1c20d78447330f715f9f5cd3b023d",
+        "files": 277,
+        "payloads": 125,
+        "actions": 174,
+        "zipEntries": 277,
+        "manifestFiles": 276,
+        "allCRCAndSHA256Verified": true,
+        "selectedBinaryCountInZIP": 0,
+        "earlierUnsupportedMenuBinaryCountInZIP": 0,
+        "existingGoldHEN23StillBundled": true,
+        "allRequiredAuthoredSourceBytesMatch": true
+      },
+      "languages": {
+        "checkedAt": "2026-11-02T18:35:03.877Z",
+        "languages": 20,
+        "keys": 38,
+        "exactGeneratedEntries": 760,
+        "visualLanguageCheck": "English → Deutsch → English on original Orbis9.00card; exact DownloadURL and firmware9.00 unchanged."
+      },
+      "verification": {
+        "tests": {
+          "tests": 608,
+          "passed": 608,
+          "failed": 0,
+          "report": "docs/qa/host-original-tool-full-tests.txt"
+        },
+        "siteAudit": {
+          "pages": 492,
+          "linksAndAssets": 56282,
+          "issues": 0,
+          "report": "docs/qa/host-original-tool-site-audit.txt"
+        },
+        "integrity": "docs/qa/host-original-tool-integrity.json",
+        "browser": "docs/qa/host-original-tool-browser.json",
+        "browserResult": "ActualCUA filepicker+client+pairedmock accepted exactly626392bytes/466d816a... of originalOrbis900, one loopback mocktransfer, noDNS/consolecontact/execution. English→Deutsch→English preservedURL/fw.7.02Download-only and14.00zero matchingcards verified.",
+        "archiveIndex": {
+          "items": 2171,
+          "fileRecords": 3118,
+          "presentFileRecords": 3118,
+          "missingFileRecords": 0,
+          "report": "docs/qa/host-original-tool-archive-index.txt"
+        },
+        "runtime": "Existing213files/179dependencies/96upstreamfiles/eightauthoredguardcases pass; runtimecontentunchanged."
+      },
+      "keyFiles": [
+        "docs/host-original-tool-actions.json",
+        "docs/host-original-tool-jobs.json",
+        "docs/host-original-tool-loading.md",
+        "scripts/prepare-host-original-tools.cjs",
+        "scripts/verify-host-original-tools.cjs",
+        "scripts/tests/host-original-tools.test.cjs",
+        "scripts/tests/host-user-file-dashboard.test.cjs",
+        "scripts/tests/receiver-jobs-retention.test.cjs",
+        "i18n-tools/host-original-tool-translations.cjs"
+      ],
+      "resume": [
+        "Use current sender manifest/latest and docs/host-menu-companion-build.json rather than historical1.6/1.7 snapshot fields. Currentfinal sender1.8.0+a43cac98804c; every previous ZIP retained.",
+        "Receiver job preservation now uses a content-hash suffix when two distinct preparations share one release number, fixing the real13job collision without overwriting either old jobset. Do not replace older immutablejobs manually.",
+        "Selected-file actions require original author downloads; do not mirror/repackage those six binaries or silently turn on their old generic /api/run route.",
+        "SevenFfiles are readybuilds+originalreleasearchive, not sourcecode. Source/runtimelicensing exclusions from firstreviewremain. No Bstlar or fullrepository/sourcearchives fetched.",
+        "Keep concurrent PS4catalogue/source/push changes intact; this batch created no worktree, commit, push or deployment."
+      ],
+      "limitations": [
+        "No physical console loading, native installation, receiver saving or execution verified.",
+        "Selected BINs remain original-only downloads; the sender reads chosen exact bytes in memory only.",
+        "The four earlier GamerHack menu files retain disabled Load because their standalone ABI remains unverified."
+      ]
+    },
+    "latestSender": {
+      "id": "console-payload-sender-8a3a74427954",
+      "name": "console-payload-sender-1.9.0-8a3a74427954.zip",
+      "version": "1.9.0+8a3a74427954",
+      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
+      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
+      "bytes": 100389225,
+      "sha256": "866ef15d682b71df3667c11f289b63ba32afc28e211e61cb3a1804ad304c04a6",
+      "snapshot": "8a3a7442795435e70183e9693bd5281b4246c6b1a6a2bcd0ad17664668c338c9",
+      "files": 281,
+      "payloads": 125,
+      "actions": 179,
+      "zipEntries": 281,
+      "manifestFiles": 280,
+      "allCRCAndSHA256Verified": true,
+      "privateArchivePaths": [
+        "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.0+8a3a74427954\\console-payload-sender-1.9.0-8a3a74427954.zip"
+      ],
+      "preservedActions": 0,
+      "originalOnlyBinaryCount": 0,
+      "allRequiredAuthoredSourceBytesMatch": true
+    },
+    "latestReceivers": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.15",
+        "bytes": 698772,
+        "sha256": "102b2109995b71f49cd3237b3444ee7e6928d3ba533850c5194b09ed5bc7a3f0",
+        "previousItemsPreserved": 501,
+        "items": 506,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.15\\whatsite-ps4.html"
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.15",
+        "bytes": 548979,
+        "sha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+        "previousItemsPreserved": 350,
+        "items": 350,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.15\\whatsite-ps5.html"
+      }
+    ],
+    "nextBatchFollowup20261102": {
+      "status": "Completed locally: four original-only Oysters PS4 5.05 RDR2 game-update builds and original stable hippie68 FTP1.08b PS4 9.00 selected-file action. Receiver15 and sender1.9.0 archived and verified. No commit, push, deployment, downloaded payload execution or physical console contact.",
+      "updatedAt": "2026-11-02T18:56:22.250Z",
+      "actions": 5,
+      "archiveFiles": [
+        {
+          "id": "ps4-ps5-host-legacy-firmware-gamerhack-oysters505-100",
+          "filename": "OystersMenu-v1.00.bin",
+          "version": "game 1.00 - PS4 5.05 - GamerHack 505 23c946a7f85f - 09925fe9288b",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.00.bin",
+          "bytes": 1260864,
+          "sha256": "09925fe9288bd9e68f49ffaffba3e92fb6ddb1c8cf416e16251cdef53f19a67a",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.00\\Oysters\\Builds\\game 1.00 - PS4 5.05 - GamerHack 505 23c946a7f85f - 09925fe9288b\\OystersMenu-v1.00.bin"
+        },
+        {
+          "id": "ps4-ps5-host-legacy-firmware-gamerhack-oysters505-113",
+          "filename": "OystersMenu-v1.13.bin",
+          "version": "game 1.13 - PS4 5.05 - GamerHack 505 23c946a7f85f - 38f847706303",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.13.bin",
+          "bytes": 1260864,
+          "sha256": "38f847706303c2c2b5b71102073ac86fa534f1bc09b6c40129275a53b0c81718",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.13\\Oysters\\Builds\\game 1.13 - PS4 5.05 - GamerHack 505 23c946a7f85f - 38f847706303\\OystersMenu-v1.13.bin"
+        },
+        {
+          "id": "ps4-ps5-host-legacy-firmware-gamerhack-oysters505-119",
+          "filename": "OystersMenu-v1.19.bin",
+          "version": "game 1.19 - PS4 5.05 - GamerHack 505 23c946a7f85f - 93fd71c737f4",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.19.bin",
+          "bytes": 1260864,
+          "sha256": "93fd71c737f4433f72dd594685303e23183859fa448dfafefc15bd8906676f7e",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.19\\Oysters\\Builds\\game 1.19 - PS4 5.05 - GamerHack 505 23c946a7f85f - 93fd71c737f4\\OystersMenu-v1.19.bin"
+        },
+        {
+          "id": "ps4-ps5-host-legacy-firmware-gamerhack-oysters505-124",
+          "filename": "OystersMenu-v1.24.bin",
+          "version": "game 1.24 - PS4 5.05 - GamerHack 505 23c946a7f85f - b5566c5629c8",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/OystersMenu-v1.24.bin",
+          "bytes": 1260864,
+          "sha256": "b5566c5629c86f8860ba190537e0c2a2e220c879f469a155b924467b975ec08d",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\RDR2\\1.24\\Oysters\\Builds\\game 1.24 - PS4 5.05 - GamerHack 505 23c946a7f85f - b5566c5629c8\\OystersMenu-v1.24.bin"
+        },
+        {
+          "id": "ps4-ps5-host-original-hippie68-ftp-1-08b-900",
+          "filename": "ftp_server_v1.08b.bin",
+          "version": "1.08b - firmware 9.00",
+          "sourceURL": "https://github.com/hippie68/ps4-ftp/releases/download/v1.08b/ftp_server_v1.08b.bin",
+          "bytes": 37824,
+          "sha256": "695082f37c5cfdce14a06fbd567fa8651017ee2e31f3e95ae7a769b4287cb0e9",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\ps4 ftp\\Builds\\1.08b - firmware 9.00\\ftp_server_v1.08b.bin"
+        }
+      ],
+      "archiveBytes": 5081280,
+      "compatibility": {
+        "oysters": {
+          "firmwares": [
+            "5.05"
+          ],
+          "game": "RDR2",
+          "gameUpdates": [
+            "1.00",
+            "1.13",
+            "1.19",
+            "1.24"
+          ],
+          "menuVersion": null,
+          "titleIds": [],
+          "load": false,
+          "reason": "Source-specific in-page ABI does not establish standalone HTTP/TCP/ELF compatibility. Matching game must already boot; host labels do not establish stock game or backport compatibility."
+        },
+        "ftp": {
+          "firmwares": [
+            "9.00"
+          ],
+          "version": "1.08b",
+          "download": "Original author release asset",
+          "load": "GoldHEN HTTP9090 with paired sender and user-selected exact37824-byte BIN; browser and sender verify SHA-256 in memory. Service uses1337; SHUTDOWN stops it. No second instance."
+        }
+      },
+      "userFileFixes": {
+        "mime": "OS/browser File.type is advisory; exact .bin/size/magic/hash remain required. Wire Content-Type stays application/octet-stream.",
+        "fileFacts": "Collapsed Requirements shows protected original filename, exact integer bytes and SHA-256 for valid HTTPS user-file BIN actions. All existing selected-file actions benefit."
+      },
+      "preservation": {
+        "catalogueFiles": 577,
+        "senderSnapshots": 17,
+        "nativeHelpers": 2,
+        "all501PreviousPS4ReceiverEntriesUnchanged": true,
+        "all350PreviousPS5DownloadIdentitiesUnchanged": true,
+        "ps5ReceiverMetadataOnly": "14 already-current game-specific artwork URLs replaced generic artwork; surrounding HTML unchanged.",
+        "priorSenderActions": 174,
+        "allSenderSnapshots": 18,
+        "newOriginalBinaryCountInZIP": 0,
+        "existingGoldHEN23StillBundled": true,
+        "receiver14InventoryRepair": "Restored two missing audit rows from immutable pinned receiver14 jobs; stable/F: HTML hashes were already correct. No original file replaced."
+      },
+      "catalogue": {
+        "uniqueFiles": 582,
+        "ps4": 506,
+        "ps5": 350,
+        "maxPerPlatform": 512
+      },
+      "receivers": [
+        {
+          "platform": "ps4",
+          "version": "2026.11.02.15",
+          "bytes": 698772,
+          "sha256": "102b2109995b71f49cd3237b3444ee7e6928d3ba533850c5194b09ed5bc7a3f0",
+          "previousItemsPreserved": 501,
+          "items": 506,
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.15\\whatsite-ps4.html"
+        },
+        {
+          "platform": "ps5",
+          "version": "2026.11.02.15",
+          "bytes": 548979,
+          "sha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+          "previousItemsPreserved": 350,
+          "items": 350,
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.15\\whatsite-ps5.html"
+        }
+      ],
+      "sender": {
+        "id": "console-payload-sender-8a3a74427954",
+        "name": "console-payload-sender-1.9.0-8a3a74427954.zip",
+        "version": "1.9.0+8a3a74427954",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
+        "bytes": 100389225,
+        "sha256": "866ef15d682b71df3667c11f289b63ba32afc28e211e61cb3a1804ad304c04a6",
+        "snapshot": "8a3a7442795435e70183e9693bd5281b4246c6b1a6a2bcd0ad17664668c338c9",
+        "files": 281,
+        "payloads": 125,
+        "actions": 179,
+        "zipEntries": 281,
+        "manifestFiles": 280,
+        "allCRCAndSHA256Verified": true,
+        "privateArchivePaths": [
+          "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.0+8a3a74427954\\console-payload-sender-1.9.0-8a3a74427954.zip"
+        ],
+        "preservedActions": 0,
+        "originalOnlyBinaryCount": 0
+      },
+      "languages": {
+        "newKeys": 25,
+        "newEntries": 500,
+        "languages": 20,
+        "dictionaryKeys": 926,
+        "source": "i18n-tools/host-next-batch-translations.cjs"
+      },
+      "verification": {
+        "tests": 630,
+        "passed": 630,
+        "failed": 0,
+        "fullTests": "docs/qa/host-next-batch-full-tests.txt",
+        "integrity": "docs/qa/host-next-batch-integrity.json",
+        "browser": "docs/qa/host-next-batch-browser.json",
+        "siteAudit": "docs/qa/host-next-batch-site-audit.txt",
+        "siteAuditResult": "Audited 492 public pages and 62344 local links/assets; 0 issue(s).",
+        "artworkSync": "docs/qa/host-next-batch-artwork-sync.json",
+        "runtime": "213files/179localdependencyrefs/96upstreamfiles/eight authored guards verified; no downloaded code execution.",
+        "archiveIndex": {
+          "items": 2223,
+          "fileRecords": 3247,
+          "present": 3247,
+          "missing": 0,
+          "report": "docs/qa/host-next-batch-archive-index.txt"
+        },
+        "phone": "430x900 Oysters dialog and FTP file facts have no horizontal document overflow; temporary browser tab closed and viewport reset; owned preview stopped."
+      },
+      "exclusions": [
+        "505/arabic-guy127.bin is JavaScript despite its extension; not a ready/raw BIN action.",
+        "WebKit-only dumper/history-blocker/web-activator routes not generalized to BIN sender.",
+        "Backup source deletes an existing USB backup directory; not added. No generic ABI or redistribution permission inferred."
+      ],
+      "remaining": {
+        "candidates": [
+          {
+            "path": "505/arabic-guy100.bin",
+            "firmware": "5.05",
+            "game": "GTA V",
+            "gameVersion": "1.00",
+            "recommendation": "Possible later original-only historical Download; keep run:null until exact external ABI evidence is established."
+          },
+          {
+            "path": "505/WildeModz-1.33.bin",
+            "firmware": "5.05",
+            "game": "GTA V",
+            "gameVersion": "1.33",
+            "recommendation": "Possible later original-only historical Download; keep run:null until exact external ABI evidence is established."
+          },
+          {
+            "path": "505/WildeModz-1.46.bin",
+            "firmware": "5.05",
+            "game": "GTA V",
+            "gameVersion": "1.46",
+            "recommendation": "Possible later original-only historical Download; keep run:null until exact external ABI evidence is established."
+          },
+          {
+            "path": "672/pl_GTA_ArabicGuy100.bin",
+            "firmware": "6.72",
+            "game": "GTA V",
+            "gameVersion": "1.00",
+            "recommendation": "Defer until the mixed script/native source dispatch is resolved; original-only Download at most."
+          },
+          {
+            "path": "672/pl_GTA_ArabicGuy127.bin",
+            "firmware": "6.72",
+            "game": "GTA V",
+            "gameVersion": "1.27",
+            "recommendation": "Defer until the mixed script/native source dispatch is resolved; original-only Download at most."
+          },
+          {
+            "path": "672/pl_GTA_ArabicGuy132.bin",
+            "firmware": "6.72",
+            "game": "GTA V",
+            "gameVersion": "1.32",
+            "recommendation": "Defer until the mixed script/native source dispatch is resolved; original-only Download at most."
+          }
+        ],
+        "source": "docs/qa/host-remaining-menu-review.json",
+        "note": "Six byte-distinct native historical candidates remain for future source review; no generic Load authorized by file header. PS4 catalogue has room for six more items at current512 bound. No schedule."
+      },
+      "keyFiles": [
+        "docs/host-next-batch.md",
+        "docs/host-legacy-firmware-menu-actions.json",
+        "docs/host-legacy-firmware-menu-jobs.json",
+        "docs/host-next-utility-actions.json",
+        "docs/host-next-utility-jobs.json",
+        "scripts/prepare-host-legacy-firmware-menus.cjs",
+        "scripts/verify-host-next-batch.cjs",
+        "scripts/tests/host-next-batch.test.cjs",
+        "scripts/tests/host-file-facts.test.cjs",
+        "docs/qa/host-next-utility-source-review.json",
+        "docs/qa/host-continuation-gap-audit.json"
+      ],
+      "resume": [
+        "Use current sender manifest and host-menu-companion-build report: sender1.9.0+8a3a74427954, receiver2026.11.02.15. Historical1.7/1.8 QA remains historical; do not restore those artifacts.",
+        "build-console-downloads.cjs default updates public download centers while preserving companions; never pass --companions for an unarchived overwrite. Host menu companion preparer is the immutable/archive/activate path.",
+        "Keep new original BINs private in F: and direct original upstream links public. No mirror or sender-bundled copy. Native workspace artifacts remain untouched.",
+        "If adding items later, preserve exact firmware/game/menu/title-ID/ABI boundaries and all old IDs/versions. Refresh relevant public outputs/category artwork after catalogue generation."
+      ],
+      "limitations": [
+        "No physical console loading/FTP/receiver storage/native installation verified.",
+        "Oysters 5.05 standalone Load remains disabled.",
+        "A prior1px phone overflow was not reproduced at430px; no unsupported CSS change was made."
+      ]
+    }
+  },
+  "menuImageRecovery": {
+    "date": "2026-11-02",
+    "status": "Complete locally; all checked cards have images. Source-unavailable originals remain accurately labelled artwork.",
+    "request": "Recover missing mod-menu/game-mod images across PS3, Xbox360, PS4 and PS5, including original Discord forum screenshots and blank Matrix shared cards.",
+    "originalSourcePostPreviews": {
+      "ps3": 308,
+      "xbox360": 159,
+      "total": 467
+    },
+    "additionalPS3BaseImprovements": 16,
+    "ps4Ps5NewCardImages": 400,
+    "ps4Ps5ArtworkUpgradedToMenuPreviews": 64,
+    "pagesChecked": 183,
+    "cardsChecked": 1961,
+    "localImageReferences": 4193,
+    "emptyCards": 0,
+    "brokenImages": 0,
+    "sourcePreviewExceptions": {
+      "deletedPS3Posts": [
+        {
+          "id": "discord-ps3-mw2-xakawin",
+          "status": "source-marks-down",
+          "source": "https://discord.com/channels/1528329794947776572/1564333208009711716"
+        },
+        {
+          "id": "discord-ps3-mw2-patch-xakawin-deleted",
+          "status": "source-marks-down",
+          "source": "https://discord.com/channels/1528329794947776572/1564333510037078096"
+        }
+      ],
+      "olderPS3SourceUnavailable": [
+        {
+          "id": "bo1-tyman-zombies-rtm",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/cod-bo1/bo1-rtm-tools",
+          "status": "source-preview-unavailable",
+          "reason": "Original source links https://youtu.be/NxNZ_I3l3GE; both maxresdefault/hqdefault thumbnails return404. Indexed PS3-ID release exists but original forum returns403. No substituted Killerberg screenshot."
+        },
+        {
+          "id": "bo2-ultimate-class-tool",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/cod-bo2/bo2-rtm-tool",
+          "status": "source-preview-unavailable",
+          "reason": "Author ExIIL release https://nextgenupdate.com/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil.html retrieved200, but all seven screenshot links are replaced by login/register notices. Original Google Sites entry has no screenshot/showcase."
+        },
+        {
+          "id": "gta-iv-blackland",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/gta-iv/gta-iv-mod-menu",
+          "status": "source-preview-unavailable",
+          "reason": "Author jack4au release https://nextgenupdate.com/forums/popular-classic-games/629185-ps3-release-blackland-project.html retrieved200. Original showcase jLcktSfZdb8 thumbnails404; other embedded image URLs are emoji, not menu previews."
+        },
+        {
+          "id": "waw-trickshot-menu",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/cod-ww/ww-mod-menu",
+          "status": "source-preview-unavailable",
+          "reason": "Original Google Sites Trickshot link points to Hv1vEoHqxug, but visual verification shows OldGenModderz V2.00, not a named Trickshot menu. This mismatched showcase is not applied."
+        },
+        {
+          "id": "gta-v-mizdx-eboots",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/gta-v/gta-v-eboot",
+          "status": "source-preview-unavailable",
+          "reason": "Original EBOOT source retrieved200; no item-specific UI image/showcase. This archive contains EBOOT variants rather than an identified menu UI. Keep accurate GTA V artwork."
+        },
+        {
+          "id": "gta-v-craftysnake-v1",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/gta-v/gta-v-1-27-mods",
+          "status": "source-preview-unavailable",
+          "reason": "Original source retrieved200 explicitly marks link down and provides no image/showcase. Title-specific web search found no authoritative recoverable preview."
+        },
+        {
+          "id": "gta-v-4tt4ck-v9",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/gta-v/gta-v-1-27-mods",
+          "status": "source-preview-unavailable",
+          "reason": "Original source retrieved200 explicitly marks link down and provides no image/showcase. Exact title/version search found no matching authoritative preview."
+        },
+        {
+          "id": "gta-v-tropa022-v3",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/gta-v/gta-v-1-27-mods",
+          "status": "source-preview-unavailable",
+          "reason": "Original source retrieved200 explicitly marks link down and provides no image/showcase. Title/version search found no matching authoritative preview."
+        },
+        {
+          "id": "gta-v-golden",
+          "sourcePageUrl": "https://sites.google.com/view/im-virusmike-exe/ps3-all-you-need/gta-v/gta-v-1-27-mods",
+          "status": "source-preview-unavailable",
+          "reason": "Original source retrieved200 explicitly marks link down and provides no image/showcase. Search finds OG Gold V4, whose identity is not proven equal to Golden; not substituted."
+        }
+      ]
+    },
+    "implementation": [
+      "Recovered only image-cache responses belonging to captured source-post IDs; no account/session stores accessed.",
+      "Highest-resolution valid cached variant selected; every selected image decoded and visually reviewed. Source URLs, byte sizes and SHA-256 retained.",
+      "Current pages patched only in image figures/preview notes; existing downloads, game updates, regions, firmware and HEN/DEX variants preserved.",
+      "Persistent builders now include Matrix shared cards, compact PS4 resources, native PS5 game artwork and four older Xbox COD4 patch previews.",
+      "Original source screenshots retain mismatch notes; family previews do not change pinned archive versions."
+    ],
+    "verification": {
+      "focusedTests": 42,
+      "fullSitePages": 492,
+      "fullSiteLinksAndAssets": 62357,
+      "siteAuditIssues": 0,
+      "browserChecked": [
+        "PS3 BO1 source-post cards from user screenshot",
+        "PS4 Advanced Warfare Matrix shared resource image and update buttons",
+        "PS5 mods native game cards"
+      ],
+      "idempotentImageRepair": true,
+      "reports": [
+        "docs/qa/menu-image-recovery-final.json",
+        "docs/qa/ps4-ps5-card-image-repair.json",
+        "docs/qa/ps3-cached-menu-image-recovery.json",
+        "docs/qa/xbox-menu-image-recovery.json",
+        "docs/ps3-base-additional-image-research.json"
+      ]
+    },
+    "newBinaryDownloads": 0,
+    "archiveChanges": 0,
+    "published": false
   }
 }

@@ -78,7 +78,7 @@ test('bridge requires pairing and its own origin before any action or readable s
   r = await request('/api/status',null,{Origin:'https://evil.example'}); assert.equal(r.status,403);
   r = await request('/api/status'); assert.equal(r.status,200);
   const status = await r.json(); assert.equal(status.status,'connected'); assert.equal(status.actions[0].available,true);
-  assert.equal(status.protocolVersion,2);assert.deepEqual(status.capabilities,{serviceOverview:true,uncertainOutcomes:true});
+  assert.equal(status.protocolVersion,2);assert.deepEqual(status.capabilities,{serviceOverview:true,uncertainOutcomes:true,userSelectedBIN:true});
   r = await request('/api/run',{actionId:'fixture-ps5',platform:'ps5',address:'192.168.1.50',firmware:'9.00'},{Origin:'null'}); assert.equal(r.status,403);
   assert.equal(sent,0);
 });
@@ -265,4 +265,78 @@ test('GoldHEN bridge honors readiness and HTTP200 rather than faking a TCP resul
   let calls = 0;
   await assert.rejects(()=>bridge.sendGoldHENHTTP('192.168.1.50',data,{fetcher:async()=>{calls++;return {ok:true,status:200,json:async()=>({status:'busy'})};}}),{code:'loader-busy'});
   assert.equal(calls,1);
+});
+
+function selectedAction(bin,overrides={}) {
+  return {id:'selected-fixture',platform:'ps4',format:'BIN',bytes:bin.length,sha256:crypto.createHash('sha256').update(bin).digest('hex'),firmwares:['9.00'],gameVersion:'1.38',downloadURL:'https://github.com/original/project/releases/download/pinned/original.bin',run:{type:'goldhen-http',port:9090,input:'user-file'},...overrides};
+}
+async function selectedFixture(t,options={}) {
+  const data=fixture(t),action=selectedAction(data.bin),setup=await startFixture(t,{...data,actions:[action],...options});
+  const metadata={actionId:action.id,platform:'ps4',address:'ps4.local',firmware:'9.00',gameVersion:'1.38'};
+  function upload(bytes=data.bin,changes={},headers={}) {return fetch(setup.base+'/api/run-file',{method:'POST',headers:{Origin:setup.base,'X-Whatsite-Token':setup.token,'Content-Type':'application/octet-stream','X-Whatsite-Run':JSON.stringify({...metadata,...changes}),...headers},body:bytes});}
+  return {...data,...setup,action,metadata,upload};
+}
+test('selected-file capability requires an explicit bounded PS4 BIN contract and never treats an original URL as a local payload',async t=>{
+  let sends=0,resolves=0;
+  const f=await selectedFixture(t,{sendBIN:async()=>{sends++;},resolveAddress:async()=>{resolves++;return '192.168.1.50';}});
+  const status=await(await f.request('/api/status')).json();
+  assert.equal(status.capabilities.userSelectedBIN,true);
+  assert.deepEqual(status.actions,[{id:f.action.id,platform:'ps4',available:true,requiresFile:true,format:'BIN',bytes:f.bin.length}]);
+  assert.equal((await(await f.request('/api/run',f.metadata)).json()).code,'user-file-required');
+  assert.throws(()=>bridge.localFileFor(f.action,f.root),{code:'user-file-required'});
+  for(const change of [{platform:'ps5'},{format:'ELF'},{bytes:0},{bytes:0x300001},{sha256:'bad'},{firmwares:[]},{firmwares:['9.00–11.00']},{run:{type:'goldhen-http',port:9090}},{run:{type:'goldhen-http',port:9020,input:'user-file'}},{run:{type:'elf-tcp',port:9021,input:'user-file'}}]) {
+    const candidate={...f.action,...change};assert.throws(()=>bridge.userFileSpec(candidate));
+    if(candidate.run.input==='user-file')assert.equal(bridge.availability(candidate,f.root).available,false);
+  }
+  assert.equal(sends,0);assert.equal(resolves,0);
+});
+test('selected-file requests transfer exact memory-only verified bytes through only their curated transport',async t=>{
+  const sent=[],resolved=[],f=await selectedFixture(t,{resolveAddress:async address=>{resolved.push(address);return '192.168.1.50';},sendBIN:async(address,bytes)=>{sent.push(['http',address,bytes]);return {status:'accepted',message:'Accepted bytes; check the console.'};},sendRawBIN:async(address,bytes)=>{sent.push(['tcp',address,bytes]);return {status:'sent',message:'Sent bytes; check the console.'};},sendELF:async()=>{throw Error('Must not use ELF');}});
+  const before=fs.readdirSync(f.root,{recursive:true});
+  const first=await(await f.upload()).json();assert.equal(first.status,'accepted');assert.equal(first.sha256,f.action.sha256);
+  f.action.run={type:'bin-tcp',port:9020,input:'user-file'};
+  const second=await(await f.upload()).json();assert.equal(second.status,'sent');
+  assert.deepEqual(sent,[['http','192.168.1.50',f.bin],['tcp','192.168.1.50',f.bin]]);assert.deepEqual(resolved,['ps4.local','ps4.local']);
+  assert.deepEqual(fs.readdirSync(f.root,{recursive:true}),before,'Selected bytes are never written into the sender folder');
+  assert.deepEqual(fs.readFileSync(path.join(f.root,'downloads/fixture/menu.bin')),f.bin,'Existing local files remain unchanged');
+});
+test('selected-file header and compatibility failures are rejected before resolving or sending',async t=>{
+  let resolves=0,sends=0;const f=await selectedFixture(t,{resolveAddress:async()=>{resolves++;return '192.168.1.50';},sendBIN:async()=>{sends++;}});
+  for(const changes of [{actionId:'unknown'},{platform:'ps5'},{firmware:'13.52'},{gameVersion:'1.57'},{path:'C:/secret.bin'},{url:'http://evil/'},{port:9090},{address:['ps4.local']}]) {
+    const r=await f.upload(f.bin,changes);assert.equal(r.status,400);assert.equal((await r.json()).mayHaveExecuted,undefined);
+  }
+  for(const headers of [{'X-Whatsite-Token':''},{Origin:'https://unrelated.example'},{Origin:''},{'Content-Type':'application/json'},{'Content-Encoding':'gzip'},{'X-Whatsite-Run':'{broken'},{'X-Whatsite-Run':'x'.repeat(4097)},{'X-Whatsite-Run':'[]'}]) {
+    const r=await f.upload(f.bin,{},headers);assert.ok(r.status>=400&&r.status<500);assert.equal((await r.json()).mayHaveExecuted,undefined);
+  }
+  f.action.run=null;assert.equal((await(await f.upload()).json()).code,'unsupported-user-file');
+  assert.equal(resolves,0);assert.equal(sends,0);
+});
+test('selected-file size, hash and ELF rejection happen before any console address resolution',async t=>{
+  let resolves=0,sends=0;const f=await selectedFixture(t,{resolveAddress:async()=>{resolves++;return '192.168.1.50';},sendBIN:async()=>{sends++;}});
+  for(const bytes of [Buffer.alloc(0),Buffer.from([1,2,3]),Buffer.from([1,2,3,4,5]),Buffer.from([5,6,7,8])]) {
+    const out=await(await f.upload(bytes)).json();assert.ok(['selected-file-size','checksum-mismatch'].includes(out.code));assert.equal(out.mayHaveExecuted,undefined);
+  }
+  const elf=Buffer.from([0x7f,0x45,0x4c,0x46]);f.action.sha256=crypto.createHash('sha256').update(elf).digest('hex');
+  assert.equal((await(await f.upload(elf)).json()).code,'invalid-bin');assert.equal(resolves,0);assert.equal(sends,0);
+});
+test('selected-file stream bound handles chunked overflow, truncation, abort and deadline without keeping bytes',async()=>{
+  for(const mode of ['overflow','truncated','aborted','error','timeout']){
+    const req=new EventEmitter();let resumed=0;req.resume=()=>{resumed++;};
+    const pending=bridge.readSelectedBIN(req,4,5);
+    if(mode==='overflow')req.emit('data',Buffer.alloc(5));
+    else if(mode==='truncated'){req.emit('data',Buffer.alloc(3));req.emit('end');}
+    else if(mode!=='timeout')req.emit(mode,Error('fixture'));
+    await assert.rejects(()=>pending,error=>{assert.ok(error.code.startsWith('selected-file-'));assert.equal(error.mayHaveExecuted,undefined);return true;});
+    if(mode==='aborted')assert.doesNotThrow(()=>req.emit('error',Error('late stream error')));
+    assert.equal(resumed,1);assert.equal(req.listenerCount('data'),0);assert.equal(req.listenerCount('end'),0);
+  }
+  const req=new EventEmitter();req.resume=()=>{};const pending=bridge.readSelectedBIN(req,4);req.emit('data',Buffer.from([1,2]));req.emit('data',Buffer.from([3,4]));req.emit('end');assert.deepEqual(await pending,Buffer.from([1,2,3,4]));
+  for(const size of [0,0x300001,1.5])await assert.rejects(()=>bridge.readSelectedBIN(req,size),{code:'invalid-user-file-pin'});
+});
+test('selected-file transfer uncertainty and busy locks preserve the existing no-retry contract',async t=>{
+  let resolveFirst,sends=0;const f=await selectedFixture(t,{resolveAddress:async()=> '192.168.1.50',sendBIN:async()=>{sends++;if(sends===1)return new Promise(resolve=>{resolveFirst=resolve;});const error=Error('Lost acknowledgement');error.mayHaveExecuted=true;throw error;}});
+  const first=f.upload();while(!resolveFirst)await new Promise(resolve=>setImmediate(resolve));
+  assert.equal((await(await f.upload()).json()).code,'console-busy');assert.equal(sends,1);
+  resolveFirst({status:'accepted',message:'Bytes accepted; check console.'});assert.equal((await(await first).json()).status,'accepted');
+  const uncertain=await(await f.upload()).json();assert.equal(uncertain.status,'uncertain');assert.equal(uncertain.mayHaveExecuted,true);assert.equal(uncertain.outcome,'unknown');assert.equal(sends,2);
 });

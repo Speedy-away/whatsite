@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-02T19:11:43.590Z",
+  "status": "passed",
+  "change": "Full-image containment on shared action artwork and version popup images; same card/grid dimensions.",
+  "cards": {
+    "images": [
+      {
+        "box": [
+          228,
+          150
+        ],
+        "fit": "contain",
+        "natural": [
+          1280,
+          720
+        ]
+      }
+    ],
+    "scrollWidth": 1265,
+    "width": 1265
+  },
+  "desktop": {
+    "images": [
+      {
+        "box": [
+          421,
+          369
+        ],
+        "fit": "contain",
+        "natural": [
+          1280,
+          720
+        ]
+      }
+    ],
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  "phone": {
+    "images": [
+      {
+        "box": [
+          389,
+          180
+        ],
+        "fit": "contain",
+        "natural": [
+          1280,
+          720
+        ]
+      }
+    ],
+    "scrollWidth": 430,
+    "width": 430
+  },
+  "screenshots": [
+    "docs/screenshots/host-image-fit-fixed.png",
+    "docs/screenshots/host-image-fit-fixed-phone.png"
+  ],
+  "tabClosed": true,
+  "viewportReset": true,
+  "payloadExecution": false,
+  "consoleContact": false
+}

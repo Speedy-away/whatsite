@@ -21,12 +21,14 @@ test('Xbox Call of Duty, stealth and Myten have distinct destinations without ch
  assert.ok(myten.includes('Info.txt')||myten.includes('Source version'));
  const mislabeled=data.resources.find(x=>x.id==='discord-xbox360-gta5-myten-1-3');assert.ok(!mislabeled.gameIds.includes('gta-v'));
 });
-test('themes live on their console hubs and no longer occupy a top-level sidebar item',()=>{
+test('themes expand below Retro and preserve console hub links',()=>{
  const {applyThemes}=require('../add-themes-sidebar.cjs');
- const shell='<html><head></head><body><nav class="sidebar-nav"><li data-nav-section="themes"><a href="/console/themes.html">Themes</a></li><li>Console</li></nav><nav class="guide-nav"></nav><section id="start"><div class="games-grid"></div></section></body></html>';
- const ps3=applyThemes(shell,'console/ps3/index.html');assert.ok(!ps3.includes('data-nav-section="themes"'));assert.ok(ps3.includes('href="/console/ps3/themes.html"'));assert.ok(ps3.includes('data-console-theme-card'));assert.equal(applyThemes(ps3,'console/ps3/index.html'),ps3);
+ const shell='<html><head></head><body><nav class="sidebar-nav"><li data-nav-section="themes"><a href="/console/themes.html">Themes</a></li><li><a data-tooltip="Retro" href="/console/retro/"><span>Retro</span></a></li></nav><nav class="guide-nav"></nav><section id="start"><div class="games-grid"></div></section></body></html>';
+ const ps3=applyThemes(shell,'console/ps3/index.html');assert.ok(ps3.includes('<span>Retro</span></a></li><li class="nav-group" data-nav-section="themes"'));assert.ok(ps3.includes('href="/console/ps3/themes.html"'));assert.ok(ps3.includes('data-console-theme-card'));assert.equal(applyThemes(ps3,'console/ps3/index.html'),ps3);
  const child=applyThemes(shell,'console/ps3/apps.html');assert.ok(child.includes('href="/console/ps3/themes.html"'));assert.ok(!child.includes('data-console-theme-card'));
- const actual=read('console/ps3/index.html');assert.ok(actual.includes('href="/console/ps3/themes.html"'));assert.ok(!actual.includes('data-nav-section="themes"'));
+ const actual=read('console/ps3/index.html');assert.ok(actual.includes('href="/console/ps3/themes.html"'));assert.ok(actual.includes('data-nav-section="themes"'));
+ const theme=applyThemes(shell,'console/ps3/themes.html');assert.ok(theme.includes('class="nav-group open" data-nav-section="themes"'));assert.ok(theme.includes('data-theme-navigation aria-label="PS3 Themes" aria-current="page"'));assert.equal(applyThemes(theme,'console/ps3/themes.html'),theme);
+ const decorated=require('../sidebar-icons.cjs').decorateNavLinks(theme,{file:'console/ps3/themes.html'});assert.ok(decorated.includes('data-theme-navigation aria-label="PS3 Themes" aria-current="page"'));
 });
 test('PS5 Payload Manager lists verified native releases with their original firmware limits',()=>{
  const ui=require('../../assets/host-dashboard.js'),html=read('hosts/ps5/index.html'),actions=JSON.parse(html.match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]).actions;

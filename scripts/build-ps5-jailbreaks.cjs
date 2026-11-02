@@ -66,7 +66,7 @@ function refreshExistingGuides() {
     `<div class="guide-links">${link(selector, 'Choose a different firmware')}</div>`);
   relapse = relapse.replace(/<section\b(?=[^>]*id="compatibility")[^>]*>[\s\S]*?<\/section>/, compatibility);
   relapse = relapse.replace(/<a class="guide-video" href="https:\/\/www.youtube.com\/watch\?v=HqF1rmvA2iE"[\s\S]*?<\/a>/, videoEmbed('HqF1rmvA2iE', 'How to Jailbreak the PS5 with Relapse (13.60 or lower)'));
-  fs.writeFileSync(relapseFile, relapse);
+  fs.writeFileSync(relapseFile, require('./playstation-nonmod-card-images.cjs').decorate('console/ps5/relapse.html',relapse));
 
   const y2jbFile = path.join(root, 'console/ps5/y2jb.html');
   let y2jb = fs.readFileSync(y2jbFile, 'utf8');
@@ -76,7 +76,7 @@ function refreshExistingGuides() {
   const installerScope = note('<p><strong>This is the installer route after initial jailbreak access.</strong> Choose a firmware page first if you have not yet obtained kernel access. Maj0r also documents a separate backup-restore method for an unmodified console; that method resets console data and is outside this installer walkthrough.</p>');
   if (!y2jb.includes('This is the installer route after initial jailbreak access.')) y2jb = y2jb.replace(/(<section\b(?=[^>]*id="requirements")[^>]*>[\s\S]*?<\/h2><\/div>)/, '$1' + installerScope);
   y2jb = y2jb.replace(/<a class="guide-video" href="https:\/\/www.youtube.com\/watch\?v=9ciuKNY7T7w"[\s\S]*?<\/a>/, videoEmbed('9ciuKNY7T7w', 'Fastest PS5 Jailbreak method yet with New Y2JB!'));
-  fs.writeFileSync(y2jbFile, y2jb);
+  fs.writeFileSync(y2jbFile, require('./playstation-nonmod-card-images.cjs').decorate('console/ps5/y2jb.html',y2jb));
 }
 
 function refreshPs5NavigationAndHub() {

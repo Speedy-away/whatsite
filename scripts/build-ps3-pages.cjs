@@ -81,8 +81,8 @@ function renderCard(item) {
 function firmwareArchives() {
   const {section, grid, resource, note, ext} = require('./build-console-guides.cjs');
   return section('firmware-downloads', 'PS3 firmware archives', grid(
-    resource('PS3 OFW · official firmware', 'Browse Darthsternie’s PS3 system-firmware archive, including official releases and separately labelled hybrid and special-purpose firmware.', ext('https://darthsternie.net/ps3-firmwares/', 'Browse PS3 OFW archive')),
-    resource('PS3 CFW · custom firmware', 'Browse archived custom firmware by version and build type. Match the CEX, DEX or other listed variant to your console and installation guide.', ext('https://darthsternie.net/ps3-cfws/', 'Browse PS3 CFW archive'))
+    resource('PS3 OFW · official firmware', 'Browse Darthsternie’s PS3 system-firmware archive, including official releases and separately labelled hybrid and special-purpose firmware.', ext('https://darthsternie.net/ps3-firmwares/', 'Browse PS3 OFW archive'), '/assets/images/consoles/ps3.png'),
+    resource('PS3 CFW · custom firmware', 'Browse archived custom firmware by version and build type. Match the CEX, DEX or other listed variant to your console and installation guide.', ext('https://darthsternie.net/ps3-cfws/', 'Browse PS3 CFW archive'), '/assets/images/consoles/ps3.png')
   ) + note('<p>OFW, HFW and CFW serve different purposes. Keep the firmware version and model requirements from your chosen guide, and compare the downloaded file with the archive’s listed checksum before use.</p>'), 'Separate official and custom firmware directories from Darthsternie.');
 }
 
@@ -165,7 +165,7 @@ function buildPs3Pages(options = {}) {
     section('console-files', 'Downloads for your PS3', grid(
       resource('Console file list', 'PS3 PKGs, extracted game files and original archives, with sizes and SHA-256 hashes. No desktop helpers or other console packages.', fullPageLink('/console/ps3/browser-downloads.html','Open PS3 file list'), '/assets/images/consoles/ps3.png'),
       resource('Game mods', 'Browse the matching game, title update, region and HEN/CEX/DEX build before downloading.',fullPageLink('/console/ps3/mods.html','Choose a PS3 game'),'/assets/images/custom-mod-art/mods-ps3.jpg'),
-      resource('Desktop RTM helpers', 'Windows-side tools for PS3 games have a separate catalogue and archive role.',fullPageLink('/console/ps3/desktop-tools.html','Browse PC helpers'))
+      resource('Desktop RTM helpers', 'Windows-side tools for PS3 games have a separate catalogue and archive role.',fullPageLink('/console/ps3/desktop-tools.html','Browse PC helpers'),'/assets/images/menu-previews/ps3-base/project-safe-candidate-XGKwgja1B00.jpg')
     )) + catalog.transferWorkflow() + normalize(sectionHtml('downloads493')) + firmwareArchives() + related(), '#console-files', 'Open download options', ['PS3 PKG','PS3 browser downloads','SPRX','RAR','ZIP','webMAN MOD','homebrew','HEN','CFW']);
   if(!selected){
     catalog.build(ps3nav);

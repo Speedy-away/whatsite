@@ -12,7 +12,7 @@ const crypto = require('node:crypto');
 const {normalizeAddress} = require('../assets/host-console-client.js');
 const ROOT = path.resolve(__dirname, '..');
 const MAX_FILE = 64 * 1024 * 1024;
-const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json', 'docs/host-repository-menu-actions.json'];
+const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json', 'docs/host-repository-menu-actions.json', 'docs/host-original-tool-actions.json', 'docs/host-legacy-firmware-menu-actions.json', 'docs/host-next-utility-actions.json'];
 const MIME = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.ico':'image/x-icon','.woff2':'font/woff2','.elf':'application/octet-stream','.bin':'application/octet-stream'};
 function fail(code, message) { const e = new Error(message); e.code = code; return e; }
 function uncertainFailure(error) {
@@ -54,6 +54,7 @@ function loadActions(root = ROOT) {
   return actions;
 }
 function localFileFor(action, root = ROOT, {forRun = true} = {}) {
+  if (forRun && action.run?.input === 'user-file') throw fail('user-file-required', 'Select the exact downloaded BIN through the paired sender.');
   const url = action.downloadURL || '';
   if (!/^\/downloads\//.test(url) || /[?#\x00-\x1f\\]/.test(url)) throw fail('local-file-required', 'A locally hosted ready-to-use file is required for the sender.');
   let decoded;
@@ -81,8 +82,24 @@ function localFileFor(action, root = ROOT, {forRun = true} = {}) {
   return {file, bytes:stat.size, format};
 }
 function availability(action, root) {
+  if (action.run?.input === 'user-file') {
+    try { const item = userFileSpec(action); return {id:action.id,platform:action.platform,available:true,requiresFile:true,format:'BIN',bytes:item.bytes}; }
+    catch (e) { return {id:action.id,platform:action.platform,available:false,reason:e.code || 'file-unavailable'}; }
+  }
   try { const item = localFileFor(action, root); return {id:action.id,platform:action.platform,available:true,format:item.format,bytes:item.bytes}; }
   catch (e) { return {id:action.id,platform:action.platform,available:false,reason:e.code || 'file-unavailable'}; }
+}
+function userFileSpec(action) {
+  const run = action.run || {};
+  if (run.input !== 'user-file' || action.platform !== 'ps4' || action.format !== 'BIN' ||
+      !/^[a-z0-9][a-z0-9._-]{0,127}$/i.test(action.id || '') ||
+      !((run.type === 'goldhen-http' && run.port === 9090) || (run.type === 'bin-tcp' && run.port === 9020)))
+    throw fail('unsupported-user-file', 'This action does not support a selected BIN file.');
+  if (!Number.isSafeInteger(action.bytes) || action.bytes < 1 || action.bytes > 0x300000 || !/^[a-f0-9]{64}$/i.test(action.sha256 || ''))
+    throw fail('invalid-user-file-pin', 'The selected-file action needs an exact bounded size and SHA-256.');
+  if (!Array.isArray(action.firmwares) || !action.firmwares.length || action.firmwares.some(fw => typeof fw !== 'string' || !/^\d{1,2}\.\d{2}$/.test(fw)))
+    throw fail('invalid-user-file-pin', 'The selected-file action needs an exact firmware whitelist.');
+  return {bytes:action.bytes,sha256:action.sha256.toLowerCase()};
 }
 async function readVerifiedFile(action, root) {
   const item = localFileFor(action, root), data = await fsp.readFile(item.file);
@@ -268,6 +285,39 @@ function readJSON(req) {
     req.on('error',reject);
   });
 }
+function readSelectedBIN(req, expectedBytes, timeoutMs = 10000) {
+  if(!Number.isSafeInteger(expectedBytes)||expectedBytes<1||expectedBytes>0x300000)return Promise.reject(fail('invalid-user-file-pin','The selected-file action needs an exact bounded size and SHA-256.'));
+  return new Promise((resolve,reject) => {
+    let size=0,settled=false; const chunks=[];
+    const timer=setTimeout(()=>done(fail('selected-file-timeout','The selected BIN upload timed out. Nothing was sent to the console.')),timeoutMs);
+    function done(error) {
+      if(settled)return;settled=true;clearTimeout(timer);
+      req.removeListener('data',data);req.removeListener('end',end);req.removeListener('aborted',aborted);req.removeListener('error',errorEvent);
+      // IncomingMessage can emit error after aborted. Keep that late stream
+      // error harmless after the upload has already failed or completed.
+      req.once('error',()=>{});
+      if(error){chunks.length=0;req.resume();reject(error);}else{const bytes=Buffer.concat(chunks,size);chunks.length=0;resolve(bytes);}
+    }
+    function data(chunk){size+=chunk.length;if(size>expectedBytes)return done(fail('selected-file-size','The selected BIN size does not match the catalogue. Nothing was sent to the console.'));chunks.push(chunk);}
+    function end(){done(size===expectedBytes?null:fail('selected-file-size','The selected BIN size does not match the catalogue. Nothing was sent to the console.'));}
+    function aborted(){done(fail('selected-file-interrupted','The selected BIN upload was interrupted. Nothing was sent to the console.'));}
+    function errorEvent(){done(fail('selected-file-interrupted','The selected BIN upload was interrupted. Nothing was sent to the console.'));}
+    req.on('data',data);req.once('end',end);req.once('aborted',aborted);req.once('error',errorEvent);
+  });
+}
+function runActionFor(actions, body) {
+  if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).some(k => !['actionId','platform','address','firmware','gameVersion'].includes(k)))
+    throw fail('unexpected-field','The request contains an unsupported field.');
+  if (Object.values(body).some(value => typeof value !== 'string') || typeof body.actionId !== 'string' || typeof body.address !== 'string')
+    throw fail('invalid-action','Send a listed action and selected versions.');
+  normalizeAddress(body.address); // Syntax/private numeric scope, without DNS or a connection.
+  const action=actions.find(a=>a.id===body.actionId&&a.platform===body.platform);
+  if(!action)throw fail('unknown-action','Choose an action from this platform host catalogue.');
+  if(!body.firmware || !require('../assets/host-dashboard.js').firmwareMatches(action,body.firmware))throw fail('firmware-mismatch','Select a firmware supported by this action.');
+  const gameVersions=action.gameVersions&&action.gameVersions.length?action.gameVersions:action.gameVersion?[action.gameVersion]:[];
+  if(gameVersions.length&&!gameVersions.includes(body.gameVersion))throw fail('game-version-mismatch','Select the exact game update supported by this menu.');
+  return action;
+}
 function staticPath(requestURL) {
   const raw = requestURL.split('?')[0];
   let decoded;
@@ -284,7 +334,7 @@ function staticPath(requestURL) {
     /^\/docs\/host-(?:actions-ps[45]|game-actions)\.json$/.test(value);
   return allowed ? value : null;
 }
-function createBridge({root = ROOT, actions = loadActions(root), token = crypto.randomBytes(32).toString('hex'), resolveAddress = resolveConsoleAddress, sendELF = sendRawELF, sendBIN = sendGoldHENHTTP, sendRawBIN: sendTCPBIN = sendRawBIN, inspectServices = inspectConsoleServices} = {}) {
+function createBridge({root = ROOT, actions = loadActions(root), token = crypto.randomBytes(32).toString('hex'), resolveAddress = resolveConsoleAddress, sendELF = sendRawELF, sendBIN = sendGoldHENHTTP, sendRawBIN: sendTCPBIN = sendRawBIN, inspectServices = inspectConsoleServices, userFileTimeoutMs = 10000} = {}) {
   if (!/^[a-f0-9]{64}$/i.test(token)) throw fail('invalid-token', 'The sender token must be 32 random bytes encoded as hexadecimal.');
   root = fs.realpathSync(root);
   const busy = new Set();
@@ -297,7 +347,30 @@ function createBridge({root = ROOT, actions = loadActions(root), token = crypto.
       return json(res,403,{status:'error',code:'origin-rejected',message:'Open the sender dashboard on its own localhost address.'});
     if (req.url.startsWith('/api/')) {
       if (!equalToken(token,req.headers['x-whatsite-token'])) return json(res,401,{status:'error',code:'pairing-required',message:'Enter the current sender pairing token.'});
-      if (req.method === 'GET' && req.url === '/api/status') return json(res,200,{status:'connected',code:'sender-ready',version:'1.0.0',protocolVersion:2,capabilities:{serviceOverview:true,uncertainOutcomes:true},message:'Local sender connected. This check did not send a payload.',actions:actions.map(a => availability(a,root))});
+      if (req.method === 'GET' && req.url === '/api/status') return json(res,200,{status:'connected',code:'sender-ready',version:'1.0.0',protocolVersion:2,capabilities:{serviceOverview:true,uncertainOutcomes:true,userSelectedBIN:true},message:'Local sender connected. This check did not send a payload.',actions:actions.map(a => availability(a,root))});
+      if (req.method === 'POST' && req.url === '/api/run-file') {
+        let key,acquired=false;
+        try {
+          if(origin!=='http://'+host)throw fail('origin-rejected','Open the sender dashboard on its own localhost address.');
+          if(!/^application\/octet-stream$/i.test(req.headers['content-type']||'') || req.headers['content-encoding'])throw fail('binary-body-required','Send only the selected uncompressed BIN bytes.');
+          const header=req.headers['x-whatsite-run'];
+          if(typeof header!=='string'||header.length>4096||/[^\x20-\x7e]/.test(header))throw fail('invalid-run-header','The selected BIN action metadata is invalid.');
+          let body;try{body=JSON.parse(header);}catch(_){throw fail('invalid-run-header','The selected BIN action metadata is invalid.');}
+          const action=runActionFor(actions,body),spec=userFileSpec(action);
+          const length=req.headers['content-length'];
+          if(length!==undefined&&(!/^(?:0|[1-9]\d*)$/.test(length)||Number(length)!==spec.bytes))throw fail('selected-file-size','The selected BIN size does not match the catalogue. Nothing was sent to the console.');
+          const data=await readSelectedBIN(req,spec.bytes,userFileTimeoutMs);
+          const digest=crypto.createHash('sha256').update(data).digest('hex');
+          if(digest!==spec.sha256)throw fail('checksum-mismatch','The payload checksum does not match the catalogue. Nothing was sent.');
+          if(data.subarray(0,4).equals(Buffer.from([0x7f,0x45,0x4c,0x46])))throw fail('invalid-bin','Select the original flat BIN, not an ELF executable. Nothing was sent.');
+          const address=await resolveAddress(body.address);key=address;
+          if(busy.has(key))throw fail('console-busy','Another payload transfer is still in progress for this console.');
+          busy.add(key);acquired=true;
+          const outcome=action.run.type==='bin-tcp'?await sendTCPBIN(address,data):await sendBIN(address,data);
+          return json(res,200,{...outcome,actionId:action.id,platform:action.platform,address,sha256:digest});
+        }catch(e){res.shouldKeepAlive=false;req.resume();return json(res,e.mayHaveExecuted?200:400,{status:e.mayHaveExecuted?'uncertain':'error',code:e.code||'sender-failed',message:e.code?e.message:'The sender could not complete the action. Nothing has been confirmed on the console.',...(e.mayHaveExecuted?{mayHaveExecuted:true,outcome:'unknown'}:{})});}
+        finally{if(acquired)busy.delete(key);}
+      }
       if (req.method !== 'POST' || !['/api/run','/api/inspect'].includes(req.url)) return json(res,405,{status:'error',code:'method-rejected',message:'Use an explicit POST action.'});
       if (!/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) return json(res,415,{status:'error',code:'json-required',message:'The action request must use JSON.'});
       let key, acquired = false;
@@ -309,12 +382,8 @@ function createBridge({root = ROOT, actions = loadActions(root), token = crypto.
           const address = await resolveAddress(body.address);
           return json(res,200,await inspectServices(address,body.platform));
         }
-        if (Object.keys(body).some(k => !['actionId','platform','address','firmware','gameVersion'].includes(k))) throw fail('unexpected-field','The request contains an unsupported field.');
-        const action = actions.find(a => a.id === body.actionId && a.platform === body.platform);
-        if (!action) throw fail('unknown-action','Choose an action from this platform host catalogue.');
-        if (!body.firmware || !require('../assets/host-dashboard.js').firmwareMatches(action,body.firmware)) throw fail('firmware-mismatch','Select a firmware supported by this action.');
-        const gameVersions = action.gameVersions && action.gameVersions.length ? action.gameVersions : action.gameVersion ? [action.gameVersion] : [];
-        if (gameVersions.length && !gameVersions.includes(body.gameVersion)) throw fail('game-version-mismatch','Select the exact game update supported by this menu.');
+        const action = runActionFor(actions,body);
+        if(action.run?.input==='user-file')throw fail('user-file-required','Select the exact downloaded BIN through the paired sender.');
         const address = await resolveAddress(body.address);
         key = address;
         if (busy.has(key)) throw fail('console-busy','Another payload transfer is still in progress for this console.');
@@ -377,4 +446,4 @@ function main(args = process.argv.slice(2)) {
   return server;
 }
 if (require.main === module) { try { main(); } catch (e) { process.stderr.write(e.message + '\n'); process.exitCode = 1; } }
-module.exports = {ROOT,loadActions,localFileFor,availability,readVerifiedFile,isPrivateIPv4,resolveConsoleAddress,sendRawELF,sendRawBIN,sendGoldHENHTTP,inspectConsoleServices,equalToken,staticPath,createBridge,main};
+module.exports = {ROOT,loadActions,localFileFor,availability,userFileSpec,readSelectedBIN,readVerifiedFile,isPrivateIPv4,resolveConsoleAddress,sendRawELF,sendRawBIN,sendGoldHENHTTP,inspectConsoleServices,equalToken,staticPath,createBridge,main};

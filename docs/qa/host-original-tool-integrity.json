@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T18:36:27.035Z",
+  "status": "passed",
+  "method": "Independent bounded ZIP central/local/CRC reader plus SHA-256 rehashing of public, archived and manifest files. No payload execution or console connection.",
+  "preservedCatalogueFiles": 571,
+  "newOriginalActions": 6,
+  "archiveFiles": [
+    {
+      "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-505",
+      "filename": "Orbis-Toolbox-505.bin",
+      "version": "1.0.1190 Alpha - firmware 5.05",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-505.bin",
+      "bytes": 626472,
+      "sha256": "657aad360767ce7f9cef3c374f8ea448870df8d3cf6534a582930bbec0b400ce",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 5.05\\Orbis-Toolbox-505.bin"
+    },
+    {
+      "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-672",
+      "filename": "Orbis-Toolbox-672.bin",
+      "version": "1.0.1190 Alpha - firmware 6.72",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-672.bin",
+      "bytes": 626504,
+      "sha256": "c19e3f0d549b241aa31febd5a5223d0bf0156bdc4e419e1083f795ea90d5ce30",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 6.72\\Orbis-Toolbox-672.bin"
+    },
+    {
+      "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-702",
+      "filename": "Orbis-Toolbox-702.bin",
+      "version": "1.0.1190 Alpha - firmware 7.02",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-702.bin",
+      "bytes": 626664,
+      "sha256": "9f8a34ff2ab3918f3a01e3126817c3c0afd4671c3f0613e05cef540cf7d79a3c",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 7.02\\Orbis-Toolbox-702.bin"
+    },
+    {
+      "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-755",
+      "filename": "Orbis-Toolbox-755.bin",
+      "version": "1.0.1190 Alpha - firmware 7.55",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-755.bin",
+      "bytes": 626664,
+      "sha256": "421131368229e986385a5a5cf4a65d1be8a5835d7ba018720b8764e00153871c",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 7.55\\Orbis-Toolbox-755.bin"
+    },
+    {
+      "id": "ps4-ps5-host-original-orbis-toolbox-1-0-1190-900",
+      "filename": "Orbis-Toolbox-900.bin",
+      "version": "1.0.1190 Alpha - firmware 9.00",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin",
+      "bytes": 626392,
+      "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\Orbis Toolbox\\Builds\\1.0.1190 Alpha - firmware 9.00\\Orbis-Toolbox-900.bin"
+    },
+    {
+      "id": "ps4-ps5-host-original-goldhen-2-4b18-archive",
+      "filename": "GoldHEN_v2.4b18.7z",
+      "version": "2.4b18 - original 7z",
+      "sourceURL": "https://github.com/GoldHEN/GoldHEN/releases/download/2.4b18/GoldHEN_v2.4b18.7z",
+      "bytes": 258065,
+      "sha256": "d0c84c79f65df5afc79a00c578f33ab1aa70aeb9c205f1e789895dc7d4fca38d",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.4b18 - original 7z\\GoldHEN_v2.4b18.7z"
+    },
+    {
+      "id": "ps4-ps5-host-original-goldhen-2-4b18-ready",
+      "filename": "goldhen.bin",
+      "version": "2.4b18 - official unified BIN - f2cd6f8ec51b",
+      "sourceURL": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4/goldhen.bin",
+      "bytes": 260160,
+      "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Payloads\\GoldHEN\\GoldHEN\\Builds\\2.4b18 - official unified BIN - f2cd6f8ec51b\\goldhen.bin"
+    }
+  ],
+  "archiveBytes": 3650921,
+  "receivers": [
+    {
+      "platform": "ps4",
+      "version": "2026.11.02.14",
+      "bytes": 690171,
+      "sha256": "8c78bf41b772f9e1f0e6aeb7bfe6bd47e6d951882d74aacca5fe6b1747436d72",
+      "items": 501,
+      "previousItemsPreserved": 495,
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.14\\whatsite-ps4.html"
+    },
+    {
+      "platform": "ps5",
+      "version": "2026.11.02.14",
+      "bytes": 548833,
+      "sha256": "d2c127397e2cc270ed6944e65c720880af3fe46e8c0270b8c4df1bbedca70c20",
+      "items": 350,
+      "previousItemsPreserved": 350,
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.12\\whatsite-ps5.html"
+    }
+  ],
+  "sender": {
+    "id": "console-payload-sender-a43cac98804c",
+    "name": "console-payload-sender-1.8.0-a43cac98804c.zip",
+    "version": "1.8.0+a43cac98804c",
+    "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.8.0-a43cac98804c.zip",
+    "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.8.0-a43cac98804c.zip",
+    "bytes": 100276021,
+    "sha256": "fe74026bbb64789c85c6ce042b42e9046afaaae8c317607e4bfee8e0946914ec",
+    "snapshot": "a43cac98804cafcba4c324309f707db9f8e1c20d78447330f715f9f5cd3b023d",
+    "files": 277,
+    "payloads": 125,
+    "actions": 174,
+    "zipEntries": 277,
+    "manifestFiles": 276,
+    "allCRCAndSHA256Verified": true,
+    "selectedBinaryCountInZIP": 0,
+    "earlierUnsupportedMenuBinaryCountInZIP": 0,
+    "existingGoldHEN23StillBundled": true,
+    "allRequiredAuthoredSourceBytesMatch": true
+  },
+  "historicalSenderSnapshotsPreserved": 16,
+  "allSenderSnapshotsVerified": 17,
+  "retainedSenders": [
+    {
+      "version": "1.0.0+5eb56571c38f",
+      "bytes": 42179207,
+      "sha256": "5f308e76ba2ab2aae68793796d68b392b403cfd3e513fce667d5cb0a2bcf8997",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.0.0-5eb56571c38f.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.0.0+5eb56571c38f\\console-payload-sender-1.0.0-5eb56571c38f.zip"
+    },
+    {
+      "version": "1.1.0+92cd0383c55a",
+      "bytes": 52719477,
+      "sha256": "097d665d4a3a637abe7df6d2e6737791335d12401d508a6b9fd3d261c822d896",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.1.0-92cd0383c55a.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.1.0+92cd0383c55a\\console-payload-sender-1.1.0-92cd0383c55a.zip"
+    },
+    {
+      "version": "1.1.0+da62b2f10884",
+      "bytes": 52720497,
+      "sha256": "e326ca5b635bf20d86c47a46e6f6062c82ac946664dea0a89a4f87b7ba9053fc",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.1.0-da62b2f10884.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.1.0+da62b2f10884\\console-payload-sender-1.1.0-da62b2f10884.zip"
+    },
+    {
+      "version": "1.2.0+714681044cce",
+      "bytes": 53348198,
+      "sha256": "c82444f88b843f0a3fb75bb9d280e4406e3b115561e3cc478d13b0617cc399b8",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.2.0-714681044cce.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.2.0+714681044cce\\console-payload-sender-1.2.0-714681044cce.zip"
+    },
+    {
+      "version": "1.2.0+6c1da94cbfd5",
+      "bytes": 53352798,
+      "sha256": "75b86a1a37b901e1e09899375b34146009d98a34b496c38248529df94eea98a1",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.2.0-6c1da94cbfd5.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.2.0+6c1da94cbfd5\\console-payload-sender-1.2.0-6c1da94cbfd5.zip"
+    },
+    {
+      "version": "1.3.0+e56126d1d0c5",
+      "bytes": 58602949,
+      "sha256": "c91aa5ee95493b5439f4f4d30e72b6a038b54b04f8167487159ae7a3156a080b",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.3.0-e56126d1d0c5.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.3.0+e56126d1d0c5\\console-payload-sender-1.3.0-e56126d1d0c5.zip"
+    },
+    {
+      "version": "1.4.0+daa01c23011a",
+      "bytes": 58643090,
+      "sha256": "d355d603da19b48e979f11ede35641dfe376c2b8d3e8c68f5c7b5973acf10266",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.4.0-daa01c23011a.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.4.0+daa01c23011a\\console-payload-sender-1.4.0-daa01c23011a.zip"
+    },
+    {
+      "version": "1.4.1+4ae2029f9107",
+      "bytes": 58643115,
+      "sha256": "933eb219f5152adf635ac3c3449b2b23821de76724de22b57009de25dc2dcafd",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.4.1-4ae2029f9107.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.4.1+4ae2029f9107\\console-payload-sender-1.4.1-4ae2029f9107.zip"
+    },
+    {
+      "version": "1.5.0+a136429adde2",
+      "bytes": 58775661,
+      "sha256": "930855460776bff8b3b7a637f159a2907a90af8475c000b725c14c8f57de9a44",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.5.0-a136429adde2.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.5.0+a136429adde2\\console-payload-sender-1.5.0-a136429adde2.zip"
+    },
+    {
+      "version": "1.5.1+3dfef0b6ba96",
+      "bytes": 58776318,
+      "sha256": "c5f93806643259fddf04e8132e7a4869a8f68ea59d09f335b62bdda4353b23a4",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.5.1+3dfef0b6ba96\\console-payload-sender-1.5.1-3dfef0b6ba96.zip"
+    },
+    {
+      "version": "1.5.2+c70e79027536",
+      "bytes": 58776259,
+      "sha256": "5b71eae21035e237edc93a892f3c07056e9afc428ebfe85332b3d8dfcde3af6c",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.5.2-c70e79027536.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.5.2+c70e79027536\\console-payload-sender-1.5.2-c70e79027536.zip"
+    },
+    {
+      "version": "1.6.0+bf57d9770657",
+      "bytes": 99628320,
+      "sha256": "997e95f29841fd0c257d03aaaececdbffd0239338214ae96bbe24a40918b93a7",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-bf57d9770657.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.6.0+bf57d9770657\\console-payload-sender-1.6.0-bf57d9770657.zip"
+    },
+    {
+      "version": "1.6.0+05eb2ae569e3",
+      "bytes": 99758446,
+      "sha256": "9ede68843e23243d8969d4c2f6699983a88eecc18a18c7eabbab58997e55779d",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-05eb2ae569e3.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.6.0+05eb2ae569e3\\console-payload-sender-1.6.0-05eb2ae569e3.zip"
+    },
+    {
+      "version": "1.6.0+630bb639c32f",
+      "bytes": 99881875,
+      "sha256": "ca05b68effa75d15206d10c481b60ad04ab25e53f2f28527c374f4b8932ab56b",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-630bb639c32f.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.6.0+630bb639c32f\\console-payload-sender-1.6.0-630bb639c32f.zip"
+    },
+    {
+      "version": "1.7.0+0c9b6de455cd",
+      "bytes": 100212897,
+      "sha256": "969dd77f6a7ea34468c3451cd12ba4018ee0d2527e7095c0e36284f01740b6ee",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-0c9b6de455cd.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.7.0+0c9b6de455cd\\console-payload-sender-1.7.0-0c9b6de455cd.zip"
+    },
+    {
+      "version": "1.7.0+39f407c84929",
+      "bytes": 100212958,
+      "sha256": "76a022f26d95d23c6c03703e105a240045ed914a995e10ef94d98ee75c01970c",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-39f407c84929.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.7.0+39f407c84929\\console-payload-sender-1.7.0-39f407c84929.zip"
+    },
+    {
+      "version": "1.8.0+a43cac98804c",
+      "bytes": 100276021,
+      "sha256": "fe74026bbb64789c85c6ce042b42e9046afaaae8c317607e4bfee8e0946914ec",
+      "publicURL": "/downloads/helpers/console-payload-sender/console-payload-sender-1.8.0-a43cac98804c.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.8.0+a43cac98804c\\console-payload-sender-1.8.0-a43cac98804c.zip"
+    }
+  ],
+  "boundaries": {
+    "PS4Only": true,
+    "orbisSelectedFileFirmwares": [
+      "5.05",
+      "6.72",
+      "9.00"
+    ],
+    "orbisDownloadOnlyFirmwares": [
+      "7.02",
+      "7.55"
+    ],
+    "goldhen24LoadFirmware": [
+      "9.00"
+    ],
+    "noPS513xx14Claims": true
+  },
+  "downloadedCodeExecuted": false,
+  "consoleContact": false,
+  "limitations": [
+    "No physical console loading, native installation, receiver saving or execution verified.",
+    "Selected BINs remain original-only downloads; the sender reads chosen exact bytes in memory only.",
+    "The four earlier GamerHack menu files retain disabled Load because their standalone ABI remains unverified."
+  ]
+}

@@ -88,7 +88,9 @@ function gameContent(gameId, context = load()) {
       const current = family.games.find(mapping => mapping.gameId === gameId);
       const others = family.games.filter(mapping => mapping.gameId !== gameId);
       const ready = family.id === 'matrix-menus-ps4' ? readyFileLinks(gameId, context) : '';
-      return compactCard(family.title, '', ready ? 'PS4 · choose your installed game update' : current.support,
+      const item=current.legacy?context.legacy.find(item=>'bo3-'+item.id===current.resourceId):context.resources.get(current.resourceId);
+      const preview=require('./ps4-ps5-card-images.cjs').resourceImage(item||{gameIds:[gameId]});
+      return compactCard(family.title, preview?.src||context.games.get(gameId).cover, ready ? 'PS4 · choose your installed game update' : current.support,
         ready || `<div class="guide-links">${fullLink(indexUrl + '#multicod-' + family.id, 'Compare games')}</div>`,
         `<p>${h(current.support)}</p><p>${h(family.environment)}</p><div class="guide-links">${fullLink(current.source, 'Source')}${fullLink(indexUrl + '#multicod-' + family.id, 'Compare supported games')}${others.map(mapping => fullLink(gameUrl(mapping, context), context.games.get(mapping.gameId).title)).join('')}</div>`);
     }))}`);

@@ -113,6 +113,7 @@ function buildPs5Software() {
     '#transfer-tools',
     'Browse transfer tools'
   );
+  require('./playstation-nonmod-card-images.cjs').repairFiles(['console/ps5/emulators.html']);
   console.log('Built separate PS5 payload, app and transfer-tool pages.');
 }
 

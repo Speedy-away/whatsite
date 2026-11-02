@@ -1,0 +1,1407 @@
+{
+  "summary": {
+    "pages": 401,
+    "imageReferences": 8991,
+    "missingCards": 118,
+    "brokenImages": 0,
+    "byPlatform": {
+      "index.html": 13,
+      "nintendo-switch": 13,
+      "nintendo-switch-2": 4,
+      "nintendo-switch-2.html": 4,
+      "ps3": 7,
+      "ps4": 1,
+      "ps5": 9,
+      "retro": 32,
+      "vault.html": 6,
+      "wiiu": 9,
+      "xbox-one-series": 10,
+      "xbox-one-series.html": 10
+    }
+  },
+  "missing": [
+    {
+      "file": "console/index.html",
+      "title": "PlayStation 2",
+      "class": "game-card",
+      "id": null,
+      "start": 31739,
+      "openEnd": 31896,
+      "links": [
+        "/console/ps2/"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "PlayStation",
+      "class": "game-card",
+      "id": null,
+      "start": 32315,
+      "openEnd": 32490,
+      "links": [
+        "/pc/emulators.html#emu-duckstation"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "PlayStation Portable",
+      "class": "game-card",
+      "id": null,
+      "start": 32947,
+      "openEnd": 33100,
+      "links": [
+        "/console/psp/"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Original Xbox",
+      "class": "game-card",
+      "id": null,
+      "start": 35651,
+      "openEnd": 35823,
+      "links": [
+        "/console/retro/xbox.html"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Nintendo Wii U",
+      "class": "game-card",
+      "id": null,
+      "start": 37802,
+      "openEnd": 37956,
+      "links": [
+        "/console/wiiu/",
+        "/console/retro/wiiu.html?view=all",
+        "/console/retro/wiiu-themes.html",
+        "/console/wiiu/online.html",
+        "/console/wiiu/mods.html",
+        "/console/wiiu/vwii.html"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Nintendo Wii",
+      "class": "game-card",
+      "id": null,
+      "start": 38789,
+      "openEnd": 38934,
+      "links": [
+        "/console/wii/"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Nintendo GameCube",
+      "class": "game-card",
+      "id": null,
+      "start": 39350,
+      "openEnd": 39505,
+      "links": [
+        "/console/gamecube/"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Nintendo DS & DSi",
+      "class": "game-card",
+      "id": null,
+      "start": 39941,
+      "openEnd": 40110,
+      "links": [
+        "/console/ds/"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Nintendo 2DS & 3DS",
+      "class": "game-card",
+      "id": null,
+      "start": 40555,
+      "openEnd": 40720,
+      "links": [
+        "/console/3ds/"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Sega classics",
+      "class": "game-card",
+      "id": null,
+      "start": 41462,
+      "openEnd": 41624,
+      "links": [
+        "/pc/emulators.html#emu-genesis-plus-gx"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Console themes",
+      "class": "game-card",
+      "id": null,
+      "start": 44360,
+      "openEnd": 44535,
+      "links": [
+        "/console/themes.html"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Retro consoles",
+      "class": "game-card",
+      "id": "retro",
+      "start": 44989,
+      "openEnd": 45158,
+      "links": [
+        "/console/retro/"
+      ]
+    },
+    {
+      "file": "console/index.html",
+      "title": "Console game mods",
+      "class": "game-card",
+      "id": "game-mods",
+      "start": 45589,
+      "openEnd": 45768,
+      "links": [
+        "/console/mods/index.html"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "Nextendo country flag \u00b7 GB \u00b7 3.0.5",
+      "class": "switch-mod-card",
+      "id": "mk8-country-gb-305",
+      "start": 41510,
+      "openEnd": 42121,
+      "links": [
+        "https://raw.githubusercontent.com/alyeri/nextendo-mk8d-country-flags/a46f0ffe3c189bcc462d546aa0c875787040a92b/Consoles/Atmosphere/GB/atmosphere/exefs_patches/Nextendo%20Country%20GB/FE941ED5BA14BE5D505698DA1BBF4FE7.ips",
+        "https://github.com/alyeri/nextendo-mk8d-country-flags"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "Nextendo country flag \u00b7 GB \u00b7 4.0.0",
+      "class": "switch-mod-card",
+      "id": "mk8-country-gb-400",
+      "start": 44383,
+      "openEnd": 44938,
+      "links": [
+        "https://raw.githubusercontent.com/alyeri/nextendo-mk8d-country-flags/a46f0ffe3c189bcc462d546aa0c875787040a92b/Consoles/Atmosphere-4.0.0/GB/atmosphere/exefs_patches/Nextendo%20Country%20GB%20(MK8D%204.0.0)/2C336A9BCF79C3040CE506CDD391B578.ips",
+        "https://github.com/alyeri/nextendo-mk8d-country-flags"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "Competitive Playable Bosses",
+      "class": "switch-mod-card",
+      "id": "playable-bosses",
+      "start": 61751,
+      "openEnd": 62281,
+      "links": [
+        "https://github.com/NemesisSSBU/Playable_Bosses/releases/download/3.1.6/Competitive_Playable_Bosses_3.1.6.zip",
+        "https://github.com/NemesisSSBU/Playable_Bosses/releases/tag/3.1.6",
+        "https://gamebanana.com/mods/457095"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "HewDraw Remix \u00b7 complete Switch pack",
+      "class": "switch-mod-card",
+      "id": "hdr-package",
+      "start": 64686,
+      "openEnd": 65297,
+      "links": [
+        "https://github.com/HDR-Development/HDR-Releases",
+        "https://github.com/HDR-Development/HDR-Releases/releases/tag/v0.49.11"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "ARCropolis",
+      "class": "switch-mod-card",
+      "id": "arcropolis",
+      "start": 67340,
+      "openEnd": 67879,
+      "links": [
+        "https://github.com/Raytwo/ARCropolis/releases/download/v4.1.1/release.zip",
+        "https://github.com/Raytwo/ARCropolis/releases/tag/v4.1.1",
+        "https://github.com/Raytwo/ARCropolis/wiki/Setup-(Getting-Started)"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "Skyline runtime",
+      "class": "switch-mod-card",
+      "id": "skyline",
+      "start": 70305,
+      "openEnd": 70837,
+      "links": [
+        "https://github.com/skyline-dev/skyline/releases/download/beta/skyline.zip",
+        "https://github.com/skyline-dev/skyline/releases/tag/beta"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "Smashline \u00b7 1.6.8 compatibility build",
+      "class": "switch-mod-card",
+      "id": "smashline-168",
+      "start": 72737,
+      "openEnd": 73292,
+      "links": [
+        "https://github.com/HDR-Development/smashline/releases/download/v1.6.8/libsmashline_plugin.nro",
+        "https://github.com/HDR-Development/smashline/releases/tag/v1.6.8",
+        "https://github.com/HDR-Development/smashline/wiki/%5BREAD!%5D-Major-Update-Information"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "Smashline \u00b7 2.0.0",
+      "class": "switch-mod-card",
+      "id": "smashline-200",
+      "start": 75480,
+      "openEnd": 75997,
+      "links": [
+        "https://github.com/HDR-Development/smashline/releases/download/v2.0.0/libsmashline_plugin.nro",
+        "https://github.com/HDR-Development/smashline/releases/tag/v2.0.0",
+        "https://github.com/HDR-Development/smashline/wiki/%5BREAD!%5D-Major-Update-Information"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "NRO Hook",
+      "class": "switch-mod-card",
+      "id": "nro-hook",
+      "start": 78121,
+      "openEnd": 78566,
+      "links": [
+        "https://github.com/ultimate-research/nro-hook-plugin/releases/download/v0.4.0/libnro_hook.nro",
+        "https://github.com/ultimate-research/nro-hook-plugin/releases/tag/v0.4.0"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "HDR Launcher \u00b7 Switch plugin",
+      "class": "switch-mod-card",
+      "id": "hdr-launcher",
+      "start": 80306,
+      "openEnd": 80793,
+      "links": [
+        "https://github.com/techyCoder81/hdr-launcher-react/releases/download/v0.9.1/hdr-launcher.nro",
+        "https://github.com/techyCoder81/hdr-launcher-react/releases/tag/v0.9.1"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/mods.html",
+      "title": "SMOO+ \u00b7 Speedrun Release",
+      "class": "switch-mod-card",
+      "id": "smoo-plus",
+      "start": 92195,
+      "openEnd": 92730,
+      "links": [
+        "https://github.com/SMOO-Plus/SMOO-Plus/releases/download/SR-1.0.0/SMOO-Plus-Speedrun-Switch.zip",
+        "https://github.com/SMOO-Plus/SMOO-Plus/releases/tag/SR-1.0.0",
+        "https://github.com/Sanae6/SmoOnlineServer"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/themes.html",
+      "title": "NXThemes Installer 3.0.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 83376,
+      "openEnd": 83408,
+      "links": [
+        "/console/nintendo-switch/apps.html#NXthemes_Installer",
+        "https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch/themes.html",
+      "title": "Themezer-NX 3.3.1",
+      "class": "guide-resource",
+      "id": "themezer-nx",
+      "start": 84225,
+      "openEnd": 84274,
+      "links": [
+        "/downloads/nintendo-switch/themes/themezer-nx/3.3.1/themezer-nx.nro",
+        "https://github.com/ThemezerNX/Themezer-NX",
+        "https://github.com/ThemezerNX/Themezer-NX/releases/tag/3.3.1"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2/civswitch.html",
+      "title": "Civilization VII userland entry point, with Pico 1 and Pico 2 firmware.Requirements: Physical Switch 1 edition cartridge, game version 1.0.0, compatible RP2040/",
+      "class": "guide-resource",
+      "id": null,
+      "start": 27416,
+      "openEnd": 27466,
+      "links": [
+        "/downloads/nintendo-switch-2/civswitch/1.0/civ7-pico1.uf2",
+        "/downloads/nintendo-switch-2/civswitch/1.0/civ7-pico2.uf2",
+        "https://github.com/Gezine/CivSwitch",
+        "https://github.com/Gezine/CivSwitch/releases/download/1.0/civ7-pico1.uf2",
+        "https://github.com/Gezine/CivSwitch/releases/download/1.0/civ7-pico2.uf2"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2/game-tools.html",
+      "title": "Dump unencrypted romFS game assets and exeFS executable files from your own Switch 2 games, updates and DLC, including digital games, cards and Switch 2 Edition",
+      "class": "guide-resource",
+      "id": null,
+      "start": 27416,
+      "openEnd": 27466,
+      "links": [
+        "/downloads/nintendo-switch-2/ouncecake/e3bcbd229be2/ouncecake-e3bcbd229be2.zip",
+        "https://github.com/misshexa66/OunceCake",
+        "https://codeload.github.com/misshexa66/OunceCake/zip/e3bcbd229be2229d44f036455adddda921ade3b2"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2/ns2jb.html",
+      "title": "pepsipu\u2019s Switch 2 execution research and FS demo.Requirements: Demo: firmware 23.0.1, SmileBASIC 4.4.9, Node.js 22+ on macOS/Linux, over 20 MiB free in the Smi",
+      "class": "guide-resource",
+      "id": null,
+      "start": 27235,
+      "openEnd": 27285,
+      "links": [
+        "https://gitlab.com/pepsipu/ns2jb"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2/save-tools.html",
+      "title": "Back up, verify, restore and modify title saves through ns2jb. Includes separate Artemis Lua save-launch tools.Requirements: Patched ns2jb RPC engine, live sess",
+      "class": "guide-resource",
+      "id": null,
+      "start": 27147,
+      "openEnd": 27197,
+      "links": [
+        "/downloads/nintendo-switch-2/ns2-savekit/3b4446fb8ef0/ns2-savekit-3b4446fb8ef0.zip",
+        "https://github.com/dougchansan/ns2-savekit",
+        "https://codeload.github.com/dougchansan/ns2-savekit/zip/3b4446fb8ef044c46052a53a5836c3071891e7f3"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2.html",
+      "title": "Civilization VII userland entry point, with Pico 1 and Pico 2 firmware.Requirements: Physical Switch 1 edition cartridge, game version 1.0.0, compatible RP2040/",
+      "class": "guide-resource",
+      "id": null,
+      "start": 27330,
+      "openEnd": 27380,
+      "links": [
+        "/downloads/nintendo-switch-2/civswitch/1.0/civ7-pico1.uf2",
+        "/downloads/nintendo-switch-2/civswitch/1.0/civ7-pico2.uf2",
+        "https://github.com/Gezine/CivSwitch",
+        "https://github.com/Gezine/CivSwitch/releases/download/1.0/civ7-pico1.uf2",
+        "https://github.com/Gezine/CivSwitch/releases/download/1.0/civ7-pico2.uf2"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2.html",
+      "title": "pepsipu\u2019s Switch 2 execution research and FS demo.Requirements: Demo: firmware 23.0.1, SmileBASIC 4.4.9, Node.js 22+ on macOS/Linux, over 20 MiB free in the Smi",
+      "class": "guide-resource",
+      "id": null,
+      "start": 30040,
+      "openEnd": 30090,
+      "links": [
+        "https://gitlab.com/pepsipu/ns2jb"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2.html",
+      "title": "Back up, verify, restore and modify title saves through ns2jb. Includes separate Artemis Lua save-launch tools.Requirements: Patched ns2jb RPC engine, live sess",
+      "class": "guide-resource",
+      "id": null,
+      "start": 33420,
+      "openEnd": 33470,
+      "links": [
+        "/downloads/nintendo-switch-2/ns2-savekit/3b4446fb8ef0/ns2-savekit-3b4446fb8ef0.zip",
+        "https://github.com/dougchansan/ns2-savekit",
+        "https://codeload.github.com/dougchansan/ns2-savekit/zip/3b4446fb8ef044c46052a53a5836c3071891e7f3"
+      ]
+    },
+    {
+      "file": "console/nintendo-switch-2.html",
+      "title": "Dump unencrypted romFS game assets and exeFS executable files from your own Switch 2 games, updates and DLC, including digital games, cards and Switch 2 Edition",
+      "class": "guide-resource",
+      "id": null,
+      "start": 36962,
+      "openEnd": 37012,
+      "links": [
+        "/downloads/nintendo-switch-2/ouncecake/e3bcbd229be2/ouncecake-e3bcbd229be2.zip",
+        "https://github.com/misshexa66/OunceCake",
+        "https://codeload.github.com/misshexa66/OunceCake/zip/e3bcbd229be2229d44f036455adddda921ade3b2"
+      ]
+    },
+    {
+      "file": "console/ps3/cfw.html",
+      "title": "PS3 OFW \u00b7 official firmware",
+      "class": "guide-resource",
+      "id": null,
+      "start": 38943,
+      "openEnd": 39176,
+      "links": [
+        "https://darthsternie.net/ps3-firmwares/"
+      ]
+    },
+    {
+      "file": "console/ps3/cfw.html",
+      "title": "PS3 CFW \u00b7 custom firmware",
+      "class": "guide-resource",
+      "id": null,
+      "start": 39578,
+      "openEnd": 39811,
+      "links": [
+        "https://darthsternie.net/ps3-cfws/"
+      ]
+    },
+    {
+      "file": "console/ps3/downloads.html",
+      "title": "Desktop RTM helpers",
+      "class": "guide-resource",
+      "id": null,
+      "start": 28734,
+      "openEnd": 28877,
+      "links": [
+        "/console/ps3/desktop-tools.html"
+      ]
+    },
+    {
+      "file": "console/ps3/downloads.html",
+      "title": "PS3 OFW \u00b7 official firmware",
+      "class": "guide-resource",
+      "id": null,
+      "start": 33761,
+      "openEnd": 33994,
+      "links": [
+        "https://darthsternie.net/ps3-firmwares/"
+      ]
+    },
+    {
+      "file": "console/ps3/downloads.html",
+      "title": "PS3 CFW \u00b7 custom firmware",
+      "class": "guide-resource",
+      "id": null,
+      "start": 34396,
+      "openEnd": 34629,
+      "links": [
+        "https://darthsternie.net/ps3-cfws/"
+      ]
+    },
+    {
+      "file": "console/ps3/jailbreaks.html",
+      "title": "PS3 OFW \u00b7 official firmware",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29089,
+      "openEnd": 29322,
+      "links": [
+        "https://darthsternie.net/ps3-firmwares/"
+      ]
+    },
+    {
+      "file": "console/ps3/jailbreaks.html",
+      "title": "PS3 CFW \u00b7 custom firmware",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29724,
+      "openEnd": 29957,
+      "links": [
+        "https://darthsternie.net/ps3-cfws/"
+      ]
+    },
+    {
+      "file": "console/ps4/emulators.html",
+      "title": "Resonance \u00b7 Dreamcast",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29600,
+      "openEnd": 29761,
+      "links": [
+        "https://github.com/iHaiDeeZ/Resonance/releases"
+      ]
+    },
+    {
+      "file": "console/ps5/emulators.html",
+      "title": "PSFlycast \u00b7 Dreamcast",
+      "class": "guide-resource",
+      "id": null,
+      "start": 32425,
+      "openEnd": 32623,
+      "links": [
+        "https://github.com/Press5elect/PSFlycast/releases"
+      ]
+    },
+    {
+      "file": "console/ps5/relapse.html",
+      "title": "DNS tool",
+      "class": "guide-resource",
+      "id": null,
+      "start": 33488,
+      "openEnd": 33638,
+      "links": [
+        "https://gofile.io/d/XzXVFnOo"
+      ]
+    },
+    {
+      "file": "console/ps5/relapse.html",
+      "title": "etaHEN",
+      "class": "guide-resource",
+      "id": null,
+      "start": 33951,
+      "openEnd": 34124,
+      "links": [
+        "https://github.com/etaHEN/etaHEN/releases",
+        "https://gofile.io/d/ZZz79gu8"
+      ]
+    },
+    {
+      "file": "console/ps5/themes.html",
+      "title": "etaHEN plugin",
+      "class": "guide-resource",
+      "id": null,
+      "start": 30886,
+      "openEnd": 31105,
+      "links": [
+        "/downloads/ps4-ps5/ps5-theme--plugin/ps5-theme.plugin"
+      ]
+    },
+    {
+      "file": "console/ps5/themes.html",
+      "title": "Standalone ELF",
+      "class": "guide-resource",
+      "id": null,
+      "start": 31477,
+      "openEnd": 31711,
+      "links": [
+        "/downloads/ps4-ps5/ps5-theme--elf/ps5-theme.elf",
+        "/console/ps5/payload-manager.html"
+      ]
+    },
+    {
+      "file": "console/ps5/themes.html",
+      "title": "Recovery stop ELF",
+      "class": "guide-resource",
+      "id": null,
+      "start": 32214,
+      "openEnd": 32439,
+      "links": [
+        "/downloads/ps4-ps5/ps5-theme-stop-elf/ps5-theme-stop.elf"
+      ]
+    },
+    {
+      "file": "console/ps5/y2jb.html",
+      "title": "Y2JB Installer",
+      "class": "guide-resource",
+      "id": null,
+      "start": 28950,
+      "openEnd": 29110,
+      "links": [
+        "https://github.com/jamesst20/ps5-y2jb-installer/releases"
+      ]
+    },
+    {
+      "file": "console/ps5/y2jb.html",
+      "title": "Maj0r\u2019s Y2JB",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29484,
+      "openEnd": 29660,
+      "links": [
+        "https://github.com/notmaj0r/Y2JB/releases",
+        "https://github.com/notmaj0r/Y2JB"
+      ]
+    },
+    {
+      "file": "console/ps5/y2jb.html",
+      "title": "itsPLK Autoloader",
+      "class": "guide-resource",
+      "id": null,
+      "start": 30190,
+      "openEnd": 30369,
+      "links": [
+        "https://github.com/itsPLK/ps5-y2jb-autoloader/releases"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Xbox Live \u2192 Insignia",
+      "class": "guide-resource",
+      "id": null,
+      "start": 28626,
+      "openEnd": 28786,
+      "links": [
+        "#insignia"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "System Link \u2192 XLink Kai",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29055,
+      "openEnd": 29244,
+      "links": [
+        "#kai"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Local System Link",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29538,
+      "openEnd": 29686,
+      "links": [
+        "#local"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Same-console multiplayer",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29934,
+      "openEnd": 30148,
+      "links": [
+        "#modes"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Versus / PvP",
+      "class": "guide-resource",
+      "id": null,
+      "start": 34631,
+      "openEnd": 34834,
+      "links": [
+        "#games"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Co-op / PvE",
+      "class": "guide-resource",
+      "id": null,
+      "start": 35141,
+      "openEnd": 35316,
+      "links": [
+        "#games"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Split-screen / shared console",
+      "class": "guide-resource",
+      "id": null,
+      "start": 35587,
+      "openEnd": 35802,
+      "links": [
+        "#games"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Matchmaking / private games",
+      "class": "guide-resource",
+      "id": null,
+      "start": 36131,
+      "openEnd": 36340,
+      "links": [
+        "https://insignia.live/halo2"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Rumble Pit",
+      "class": "guide-resource",
+      "id": null,
+      "start": 37062,
+      "openEnd": 37157,
+      "links": [
+        "https://insignia.live/halo2"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Double Team",
+      "class": "guide-resource",
+      "id": null,
+      "start": 37423,
+      "openEnd": 37505,
+      "links": [
+        "https://insignia.live/halo2"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Team Slayer",
+      "class": "guide-resource",
+      "id": null,
+      "start": 37758,
+      "openEnd": 37850,
+      "links": [
+        "https://insignia.live/halo2"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Big Team Battle",
+      "class": "guide-resource",
+      "id": null,
+      "start": 38113,
+      "openEnd": 38218,
+      "links": [
+        "https://insignia.live/halo2"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Halo: Combat Evolved",
+      "class": "guide-resource",
+      "id": "game-halo-ce",
+      "start": 39318,
+      "openEnd": 39664,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Halo 2",
+      "class": "guide-resource",
+      "id": "game-halo-2",
+      "start": 40000,
+      "openEnd": 40350,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox",
+        "https://insignia.live/halo2"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Doom 3",
+      "class": "guide-resource",
+      "id": "game-doom-3",
+      "start": 40835,
+      "openEnd": 41192,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox",
+        "https://insignia.live/games/41560020"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Brute Force",
+      "class": "guide-resource",
+      "id": "game-brute-force",
+      "start": 41685,
+      "openEnd": 42019,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Call of Duty 2: Big Red One",
+      "class": "guide-resource",
+      "id": "game-cod-bro",
+      "start": 42345,
+      "openEnd": 42748,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox",
+        "https://insignia.live/games/41560051"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Forza Motorsport",
+      "class": "guide-resource",
+      "id": "game-forza",
+      "start": 43263,
+      "openEnd": 43594,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Project Gotham Racing 2",
+      "class": "guide-resource",
+      "id": "game-pgr-2",
+      "start": 43926,
+      "openEnd": 44271,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "TimeSplitters 2",
+      "class": "guide-resource",
+      "id": "game-timesplitters-2",
+      "start": 44610,
+      "openEnd": 44961,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Splinter Cell: Chaos Theory",
+      "class": "guide-resource",
+      "id": "game-chaos-theory",
+      "start": 45293,
+      "openEnd": 45660,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Rainbow Six 3",
+      "class": "guide-resource",
+      "id": "game-rainbow-six-3",
+      "start": 46003,
+      "openEnd": 46346,
+      "links": [
+        "https://www.teamxlink.co.uk/wiki/Xbox"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Xbox Live login fails",
+      "class": "guide-resource",
+      "id": null,
+      "start": 47207,
+      "openEnd": 47422,
+      "links": [
+        "https://insignia.live/guide/connect"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "No System Link lobby",
+      "class": "guide-resource",
+      "id": null,
+      "start": 47823,
+      "openEnd": 48041,
+      "links": [
+        "https://www.teamxlink.co.uk/"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Co-op option missing",
+      "class": "guide-resource",
+      "id": null,
+      "start": 48429,
+      "openEnd": 48629,
+      "links": [
+        "#games"
+      ]
+    },
+    {
+      "file": "console/retro/xbox-online.html",
+      "title": "Different Xbox generation",
+      "class": "guide-resource",
+      "id": null,
+      "start": 48925,
+      "openEnd": 49053,
+      "links": [
+        "/console/xbox360/",
+        "/console/retro/xbox.html"
+      ]
+    },
+    {
+      "file": "console/retro/xbox.html",
+      "title": "Insignia & XLink Kai",
+      "class": "guide-resource",
+      "id": null,
+      "start": 30267,
+      "openEnd": 30460,
+      "links": [
+        "/console/retro/xbox-online.html"
+      ]
+    },
+    {
+      "file": "console/retro/xbox.html",
+      "title": "Find a game mode",
+      "class": "guide-resource",
+      "id": null,
+      "start": 30785,
+      "openEnd": 30965,
+      "links": [
+        "/console/retro/xbox-online.html#games"
+      ]
+    },
+    {
+      "file": "console/retro/xbox.html",
+      "title": "LithiumX \u00b7 v0.9.7",
+      "class": "guide-resource",
+      "id": null,
+      "start": 31644,
+      "openEnd": 31788,
+      "links": [
+        "/downloads/original-xbox/lithiumx/v0.9.7/LithiumX.zip",
+        "https://github.com/Ryzee119/LithiumX/releases/tag/v0.9.7"
+      ]
+    },
+    {
+      "file": "console/retro/xbox.html",
+      "title": "NevolutionX \u00b7 v0.2.1",
+      "class": "guide-resource",
+      "id": null,
+      "start": 33017,
+      "openEnd": 33197,
+      "links": [
+        "/downloads/original-xbox/nevolutionx/v0.2.1/NevolutionX.zip",
+        "https://github.com/dracc/NevolutionX/releases/tag/v0.2.1"
+      ]
+    },
+    {
+      "file": "console/retro/xbox.html",
+      "title": "SDLPoPX \u00b7 v1.22",
+      "class": "guide-resource",
+      "id": null,
+      "start": 34607,
+      "openEnd": 34731,
+      "links": [
+        "/downloads/original-xbox/sdlpopx/v1.22/SDLPoP_Xbox.zip",
+        "https://github.com/Ryzee119/SDLPoP/releases/tag/v1.22"
+      ]
+    },
+    {
+      "file": "console/retro/xbox.html",
+      "title": "Peanut-GB Xbox port",
+      "class": "guide-resource",
+      "id": null,
+      "start": 36045,
+      "openEnd": 36245,
+      "links": [
+        "https://github.com/Ryzee119/Peanut-GB/tree/xbox/port/xbox"
+      ]
+    },
+    {
+      "file": "console/vault.html",
+      "title": "PKG-Zone",
+      "class": "guide-resource",
+      "id": "pkg-zone",
+      "start": 27872,
+      "openEnd": 27918,
+      "links": [
+        "#guide-pkg-zone",
+        "https://pkg-zone.com/",
+        "https://discord.com/channels/1528329794947776572/1562382603598696499"
+      ]
+    },
+    {
+      "file": "console/vault.html",
+      "title": "OrbisPatches",
+      "class": "guide-resource",
+      "id": "orbispatches",
+      "start": 29055,
+      "openEnd": 29105,
+      "links": [
+        "#guide-orbispatches",
+        "https://www.orbispatches.com/",
+        "https://discord.com/channels/1528329794947776572/1559942890262896720"
+      ]
+    },
+    {
+      "file": "console/vault.html",
+      "title": "Garlicsaves",
+      "class": "guide-resource",
+      "id": "garlicsaves",
+      "start": 30334,
+      "openEnd": 30383,
+      "links": [
+        "#guide-garlicsaves",
+        "https://garlicsaves.com/",
+        "https://discord.com/channels/1528329794947776572/1556276421612015717"
+      ]
+    },
+    {
+      "file": "console/vault.html",
+      "title": "SuperPSX",
+      "class": "guide-resource",
+      "id": "superpsx",
+      "start": 31605,
+      "openEnd": 31651,
+      "links": [
+        "#guide-superpsx",
+        "https://www.superpsx.com/",
+        "https://discord.com/channels/1528329794947776572/1556275419374944266"
+      ]
+    },
+    {
+      "file": "console/vault.html",
+      "title": "PlayStation Firmware",
+      "class": "guide-resource",
+      "id": "playstation-firmware",
+      "start": 32831,
+      "openEnd": 32889,
+      "links": [
+        "#guide-playstation-firmware",
+        "https://archive.midnightchannel.net/SonyPS/Firmware/?cat=ps4sys",
+        "https://discord.com/channels/1528329794947776572/1556274747241664644"
+      ]
+    },
+    {
+      "file": "console/vault.html",
+      "title": "Vimm\u2019s Lair",
+      "class": "guide-resource",
+      "id": "vimms-lair",
+      "start": 34441,
+      "openEnd": 34489,
+      "links": [
+        "#guide-vimms-lair",
+        "https://vimm.net/",
+        "https://discord.com/channels/1528329794947776572/1556267182743363605"
+      ]
+    },
+    {
+      "file": "console/wiiu/mods.html",
+      "title": "Second Wind \u00b7 Breath of the Wild",
+      "class": "guide-resource",
+      "id": null,
+      "start": 28171,
+      "openEnd": 28496,
+      "links": [
+        "https://github.com/CEObrainz/Second-Wind/blob/main/WiiU.md"
+      ]
+    },
+    {
+      "file": "console/wiiu/online.html",
+      "title": "Pretendo Network",
+      "class": "guide-resource",
+      "id": null,
+      "start": 27108,
+      "openEnd": 27310,
+      "links": [
+        "https://pretendo.network/",
+        "https://pretendo.network/docs/install/wiiu"
+      ]
+    },
+    {
+      "file": "console/wiiu/online.html",
+      "title": "Already on vWii?",
+      "class": "guide-resource",
+      "id": null,
+      "start": 27865,
+      "openEnd": 28067,
+      "links": [
+        "/console/wiiu/vwii.html#online"
+      ]
+    },
+    {
+      "file": "console/wiiu/online.html",
+      "title": "Wrong network or no connection",
+      "class": "guide-resource",
+      "id": null,
+      "start": 31147,
+      "openEnd": 31423,
+      "links": [
+        "https://github.com/PretendoNetwork/Inkay"
+      ]
+    },
+    {
+      "file": "console/wiiu/online.html",
+      "title": "Account and save data",
+      "class": "guide-resource",
+      "id": null,
+      "start": 31879,
+      "openEnd": 32122,
+      "links": [
+        "/console/retro/wiiu.html?view=all#SaveMiiProcessMod",
+        "https://pretendo.network/docs/install/wiiu"
+      ]
+    },
+    {
+      "file": "console/wiiu/online.html",
+      "title": "Return to the original network",
+      "class": "guide-resource",
+      "id": null,
+      "start": 32732,
+      "openEnd": 32997,
+      "links": [
+        "https://pretendo.network/"
+      ]
+    },
+    {
+      "file": "console/wiiu/vwii.html",
+      "title": "Wii game matchmaking",
+      "class": "guide-resource",
+      "id": null,
+      "start": 42399,
+      "openEnd": 42634,
+      "links": [
+        "https://wii.hacks.guide/nintendowfc"
+      ]
+    },
+    {
+      "file": "console/wiiu/vwii.html",
+      "title": "Mario Kart Wii \u00b7 CTGP-R",
+      "class": "guide-resource",
+      "id": null,
+      "start": 43043,
+      "openEnd": 43259,
+      "links": [
+        "https://chadsoft.co.uk/install-guide/"
+      ]
+    },
+    {
+      "file": "console/wiiu/vwii.html",
+      "title": "Native Wii U games",
+      "class": "guide-resource",
+      "id": null,
+      "start": 43648,
+      "openEnd": 43827,
+      "links": [
+        "/console/wiiu/online.html"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.VCLibs.140.00",
+      "class": "guide-resource",
+      "id": null,
+      "start": 28026,
+      "openEnd": 28058,
+      "links": [
+        "/downloads/xbox-one-series/ppsspp/Microsoft.VCLibs.x64.14.00.appx",
+        "https://www.ppsspp.org/files/1_20_4/ppsspp_uwp.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.NET.Native.Framework.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 29296,
+      "openEnd": 29328,
+      "links": [
+        "/downloads/xbox-one-series/durangoftp/Microsoft.NET.Native.Framework.2.2.appx",
+        "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.NET.Native.Runtime.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 30673,
+      "openEnd": 30705,
+      "links": [
+        "/downloads/xbox-one-series/durangoftp/Microsoft.NET.Native.Runtime.2.2.appx",
+        "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.VCLibs.140.00",
+      "class": "guide-resource",
+      "id": null,
+      "start": 32040,
+      "openEnd": 32072,
+      "links": [
+        "/downloads/xbox-one-series/durangoftp/Microsoft.VCLibs.x64.14.00.appx",
+        "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.NET.Native.Framework.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 33373,
+      "openEnd": 33405,
+      "links": [
+        "/downloads/xbox-one-series/retropass/Microsoft.NET.Native.Framework.2.2.appx",
+        "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.UI.Xaml.2.8",
+      "class": "guide-resource",
+      "id": null,
+      "start": 34746,
+      "openEnd": 34778,
+      "links": [
+        "/downloads/xbox-one-series/retropass/Microsoft.UI.Xaml.2.8.appx",
+        "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.VCLibs.140.00.UWPDesktop",
+      "class": "guide-resource",
+      "id": null,
+      "start": 36060,
+      "openEnd": 36092,
+      "links": [
+        "/downloads/xbox-one-series/retropass/Microsoft.VCLibs.x64.14.00.Desktop.appx",
+        "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.NET.CoreFramework.Debug.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 37435,
+      "openEnd": 37467,
+      "links": [
+        "/downloads/xbox-one-series/xfiles/Microsoft.NET.CoreFramework.Debug.2.2.appx",
+        "https://github.com/marcelofrau/x-files-uwp/releases/download/v1.8.0.1527/xfiles_1.8.0.1527_x64.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.NET.CoreRuntime.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 38823,
+      "openEnd": 38855,
+      "links": [
+        "/downloads/xbox-one-series/xfiles/Microsoft.NET.CoreRuntime.2.2.appx",
+        "https://github.com/marcelofrau/x-files-uwp/releases/download/v1.8.0.1527/xfiles_1.8.0.1527_x64.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "title": "Microsoft.UI.Xaml.2.7",
+      "class": "guide-resource",
+      "id": null,
+      "start": 40171,
+      "openEnd": 40203,
+      "links": [
+        "/downloads/xbox-one-series/frameworks/Microsoft.UI.Xaml.2.7.appx",
+        "https://github.com/TheElixZammuto/moonlight-xbox/releases/download/1.18.2/Microsoft.UI.Xaml.2.7.appx"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.VCLibs.140.00",
+      "class": "guide-resource",
+      "id": null,
+      "start": 185671,
+      "openEnd": 185703,
+      "links": [
+        "/downloads/xbox-one-series/ppsspp/Microsoft.VCLibs.x64.14.00.appx",
+        "https://www.ppsspp.org/files/1_20_4/ppsspp_uwp.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.NET.Native.Framework.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 186941,
+      "openEnd": 186973,
+      "links": [
+        "/downloads/xbox-one-series/durangoftp/Microsoft.NET.Native.Framework.2.2.appx",
+        "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.NET.Native.Runtime.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 188318,
+      "openEnd": 188350,
+      "links": [
+        "/downloads/xbox-one-series/durangoftp/Microsoft.NET.Native.Runtime.2.2.appx",
+        "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.VCLibs.140.00",
+      "class": "guide-resource",
+      "id": null,
+      "start": 189685,
+      "openEnd": 189717,
+      "links": [
+        "/downloads/xbox-one-series/durangoftp/Microsoft.VCLibs.x64.14.00.appx",
+        "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.NET.Native.Framework.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 191018,
+      "openEnd": 191050,
+      "links": [
+        "/downloads/xbox-one-series/retropass/Microsoft.NET.Native.Framework.2.2.appx",
+        "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.UI.Xaml.2.8",
+      "class": "guide-resource",
+      "id": null,
+      "start": 192391,
+      "openEnd": 192423,
+      "links": [
+        "/downloads/xbox-one-series/retropass/Microsoft.UI.Xaml.2.8.appx",
+        "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.VCLibs.140.00.UWPDesktop",
+      "class": "guide-resource",
+      "id": null,
+      "start": 193705,
+      "openEnd": 193737,
+      "links": [
+        "/downloads/xbox-one-series/retropass/Microsoft.VCLibs.x64.14.00.Desktop.appx",
+        "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.NET.CoreFramework.Debug.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 195080,
+      "openEnd": 195112,
+      "links": [
+        "/downloads/xbox-one-series/xfiles/Microsoft.NET.CoreFramework.Debug.2.2.appx",
+        "https://github.com/marcelofrau/x-files-uwp/releases/download/v1.8.0.1527/xfiles_1.8.0.1527_x64.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.NET.CoreRuntime.2.2",
+      "class": "guide-resource",
+      "id": null,
+      "start": 196468,
+      "openEnd": 196500,
+      "links": [
+        "/downloads/xbox-one-series/xfiles/Microsoft.NET.CoreRuntime.2.2.appx",
+        "https://github.com/marcelofrau/x-files-uwp/releases/download/v1.8.0.1527/xfiles_1.8.0.1527_x64.zip"
+      ]
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "title": "Microsoft.UI.Xaml.2.7",
+      "class": "guide-resource",
+      "id": null,
+      "start": 197816,
+      "openEnd": 197848,
+      "links": [
+        "/downloads/xbox-one-series/frameworks/Microsoft.UI.Xaml.2.7.appx",
+        "https://github.com/TheElixZammuto/moonlight-xbox/releases/download/1.18.2/Microsoft.UI.Xaml.2.7.appx"
+      ]
+    }
+  ],
+  "broken": []
+}

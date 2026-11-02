@@ -1,9 +1,16 @@
 const fs=require('node:fs');
-const {page,section,grid,resource,note,steps,videoEmbed:video,ext,link,sourceList,esc}=require('./build-console-guides.cjs');
+const {page:renderPage,section,grid,resource,note,steps,videoEmbed:video,ext,link,sourceList,esc}=require('./build-console-guides.cjs');
+// A catalogue review must not regenerate unrelated console or archived pages.
+const gtaOnly=process.argv.includes('--gta5-only');
+const page=(file,...args)=>{if(!gtaOnly||['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'].includes(file))renderPage(file,...args);};
 const imported=require('./build-ps4-ps5-game-imports.cjs').createGameImports();
 const catalog=require('./console-mod-catalog.cjs');
 const {resourceTags}=require('./console-resource-tags.cjs');
 const files=JSON.parse(fs.readFileSync('downloads/ps4/GTA5/manifest.json','utf8')).files;
+const gta157Cards=imported.forGame('gta5').filter(item=>item.catalogueSection==='v157').map(item=>{
+ if(!item.gameVersions?.includes('1.57'))throw Error('GTA V 1.57 placement requires confirmed game compatibility: '+item.id);
+ return imported.renderer.card(item);
+});
 const base='/console/mods/ps4/gta5/';
 const rdr2base='/console/mods/ps4/rdr2/';
 const codbase='/console/mods/ps4/call-of-duty/';
@@ -17,18 +24,19 @@ const rdr2menus=[
 ];
 function downloadCard(f){
  const extra=imported.legacyEnhancement('gta5',f);
- const preview=extra.image|| (f.image?{src:'/assets/images/ps4-gta5/'+f.image,alt:f.name+' supplied preview'}:null);
- const version=f.group==='scripts'?'CSC / script resources':'GTA V 1.'+f.group.slice(1);
+ const preview=/^Ozark(?:$|\s)/i.test(f.name)?{src:'/assets/images/ps4-gta5/ozark-user-preview-2026-11-02.png',alt:'Ozark menu screenshot supplied by the user; menu-family preview'}:extra.image|| (f.image?{src:'/assets/images/ps4-gta5/'+f.image,alt:f.name+' supplied preview'}:{src:'/assets/images/gta52.png',alt:'Grand Theft Auto V artwork'});
+ const version=extra.resource?.version||(f.group==='scripts'?'CSC / script resources':'GTA V 1.'+f.group.slice(1));
+ const paired=imported.renderer.pluginDownloads(extra.resource,undefined,f);
  const description=f.name==='GTA Fucker'?'CSC menu requiring a compatible script loader.':'Script resource; check the installation notes and loader requirements.';
  const tags=resourceTags(extra.resource||{name:f.name,gameIds:['gta5'],category:f.group==='scripts'?'script':'menu',gameVersions:f.group==='scripts'?[]:['1.'+f.group.slice(1)]});
- return `<article class="guide-resource" data-search="${esc(f.name.toLowerCase()+' '+version.toLowerCase())}">${preview?`<img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy">`:''}<h3>${f.name}</h3><p>${version}</p>${f.group==='scripts'?`<p>${description}</p>`:''}${catalog.tagMarkup(tags.slice(0,6))}<div class="guide-links"><a href="${esc(f.local || f.source)}" class="btn btn-primary" download><i class="fas fa-download" aria-hidden="true"></i> Download</a>${extra.guide}</div></article>`;
+ return `<article class="guide-resource"${extra.resource?` id="resource-${esc(extra.resource.id)}-legacy"`:''} data-search="${esc([f.name,version,...(extra.resource?.keywords||[])].join(' ').toLowerCase())}">${preview?`<img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy">`:''}<h3>${esc(f.name)}</h3><p>${esc(version)}</p>${extra.resource?.description?`<p>${esc(extra.resource.description)}</p>`:f.group==='scripts'?`<p>${description}</p>`:''}${catalog.tagMarkup(tags.slice(0,6))}<div class="guide-links">${paired||`<a href="${esc(f.local || f.source)}" class="btn btn-primary" download><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
 }
 function rdr2Card(menu){
  const extra=imported.legacyEnhancement('rdr2',menu);
  const preview=extra.image||{src:'/assets/images/ps4-rdr2/'+menu.image,alt:menu.name+' mod menu in Red Dead Redemption 2 on PS4'};
  return `<article class="guide-resource" data-search="${esc(menu.name.toLowerCase()+' rdr2 red dead redemption 2 ps4')}"><a href="${esc(preview.src)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(menu.name)} screenshot"><img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy"></a><h3>${menu.name}</h3>${extra.resource?.compatibilityText ? `<p>${esc(extra.resource.compatibilityText)}</p>` : ''}${catalog.tagMarkup(resourceTags(extra.resource||{name:menu.name,gameIds:['rdr2'],category:'menu'}).slice(0,6))}<div class="guide-links">${extra.downloads || `<a href="${esc(menu.url)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
 }
-require('./build-mods-hub.cjs').buildModsHub();
+if(!gtaOnly)require('./build-mods-hub.cjs').buildModsHub();
 page('console/mods/ps4/index.html','PS4/PS5 Mods / Mod Menus','Browse the PS4/PS5 collection of GTA V, Red Dead Redemption 2 and Call of Duty resources, with menu downloads, screenshots and setup guides.',image,nav,
 require('./build-console-downloads.cjs').intro('ps4')+section('games','Available games',grid(resource('Grand Theft Auto V','Menus by game update, script resources, plugin setup and supplied guides.',ext(base,'Open GTA V mods'),'/assets/images/gta52.png'),resource('Red Dead Redemption 2','North, Sheriff, Havana and Oyster resources, with supplied screenshots and videos.',ext(rdr2base,'Open RDR2 mods'),'/assets/images/rdr2.png'),resource('Call of Duty','Game-specific menus, injectors, CFG and RTM tools, screenshots and supplied guides.',ext(codbase,'Browse Call of Duty mods'),'/assets/images/covers/cod-black-ops-3.jpg'),imported.extraGameCards()))+
 section('menu-directory','Find a specific menu',`<p>Search every imported game, menu, script and tool, including older GTA V builds.</p><div class="guide-links">${link('/console/mods/ps4/menus.html','Search the menu directory')}</div>`)+
@@ -36,12 +44,11 @@ section('requirements','Before choosing a mod',note('<p>Match the console firmwa
 page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse North, Sheriff, Havana and Oyster resources for Red Dead Redemption 2, with supplied screenshots and videos.',rdr2image,nav.slice(0,5),
 section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card))), '#downloads','Browse downloads');
 page('console/mods/ps4/gta5/index.html','GTA V Mods for PS4','Browse menus by GTA V game update, CSC scripts, screenshots and supplied setup guides.',image,nav,
-section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#scripts">Scripts &amp; CSC</a><a href="#gallery">Screenshots</a></nav>`+note('<p>These version groups follow the supplied download list. They describe the <strong>GTA V game update</strong>, not the PS4 firmware. Open the game tile’s Options &gt; Information to check the installed update. Use the installation guide before copying plugins.</p><p>The original 15 downloads remain stored locally in version folders. Additional captured resources and their supplied guides appear below. Screenshot previews may show an older menu revision; they do not certify binary compatibility.</p>'))+
-section('v157','GTA V 1.57',grid(...files.filter(f=>f.group==='157').map(downloadCard)))+
+section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#scripts">Scripts &amp; CSC</a></nav>`+note('<p>These version groups follow the supplied download list. They describe the <strong>GTA V game update</strong>, not the PS4 firmware. Open the game tile’s Options &gt; Information to check the installed update. Use the installation guide before copying plugins.</p><p>For plugin menus, choose the package or game update and switch between Europe (CUSA00411) and USA (CUSA00419). Download menu + plugins.ini saves both in one ZIP. The title-ID switch changes the configuration; it does not convert the menu binary. Regional support that the source has not confirmed is labelled as a template. Merge the downloaded section into your existing plugins.ini and retain unrelated entries. <a href="https://github.com/GoldHEN/GoldHEN_Plugins_Repository#quick-start" target="_blank" rel="noopener noreferrer">GoldHEN plugin setup</a>.</p><p>The original 15 downloads remain stored locally in version folders. Additional captured resources and their supplied guides appear below. Screenshot previews may show an older menu revision; they do not certify binary compatibility.</p>'))+
+section('v157','GTA V 1.57',grid(...files.filter(f=>f.group==='157').map(downloadCard),...gta157Cards))+
 section('v156','GTA V 1.56',grid(...files.filter(f=>f.group==='156').map(downloadCard)))+
 section('scripts','Script resources & CSC menus',note('<p><strong>Archive check:</strong> the supplied Script_Loader.zip contains CSC/CTD menu resources and text notes, but no PRX/SPRX plugin. FCLoader.csc is also a script. A separate compatible script-loading plugin or menu is required to use these files.</p>')+grid(...files.filter(f=>f.group==='scripts').map(downloadCard)))+
-section('guides','Installation & private servers',grid(resource('Install PS4 GTA V menus','GoldHEN plugin paths, per-game configuration, archive-specific steps and troubleshooting.',link(base+'install.html','Read installation guide')),resource('Los Santos Online','Private-server setup resources for compatible lower-firmware PS4 configurations.',link(base+'online.html','Read server guide'))))+
-section('gallery','Supplied menu screenshots',grid(...[['oxagon.png','Oxagon'],['expulsion-preview.png','Expulsion supplied preview'],['velora.png','Velora'],['lts.png','LTS'],['beach.png','Beach'],['serendipity.png','Serendipity'],['gta-fucker.png','GTA Fucker'],['ozark.png','Ozark']].map(([file,name])=>`<figure class="guide-resource"><a href="/assets/images/ps4-gta5/${file}" target="_blank" rel="noopener noreferrer"><img src="/assets/images/ps4-gta5/${file}" alt="${name}" loading="lazy"></a><figcaption>${name}</figcaption></figure>`)))+
+section('guides','Installation & private servers',grid(resource('Install PS4 GTA V menus','GoldHEN plugin paths, per-game configuration, archive-specific steps and troubleshooting.',link(base+'install.html','Read installation guide'),'/assets/images/gta52.png'),resource('Los Santos Online','Private-server setup resources for compatible lower-firmware PS4 configurations.',link(base+'online.html','Read server guide'),'/assets/images/gta52.png')))+
 section('files','Download inventory',`<p>Folders: <code>GTA5/156</code>, <code>GTA5/157</code> and <code>GTA5/scripts</code>.</p><div class="guide-links">${link('/downloads/ps4/GTA5/manifest.json','File inventory & SHA-256 hashes')}</div>`),'#versions','Choose game version');
 
 page('console/mods/ps4/gta5/install.html','Install GTA V Mods on PS4','Set up one matching plugin at a time, preserve your configuration and distinguish PRX plugins from CSC script resources.','/assets/images/ps4-gta5/velora.png',nav,
@@ -65,7 +72,7 @@ section('expulsion','Expulsion 7.0: inspected archive layout',steps([
 /data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx</code></pre>`+note('<p>This example comes from the downloaded archive. It is for the named Expulsion 1.57 plugin, not a universal INI for every menu.</p>'))+
 section('oxagon','Oxagon / Oxagon Lite: GTA V 1.56',steps([
 ['Select the 156 plugin','The archives contain separate 153 and 156 PRX files. For this page’s 1.56 group, use <code>Oxagon_156.prx</code> or <code>OxagonLite_156.prx</code>.'],
-['Transfer plugin and data','Place the selected PRX in <code>/data/GoldHEN/plugins/</code> and the archive’s Oxagon folder under <code>/data</code>. The Lite README also requires its supplied Oxagon.key in <code>/data</code>.'],
+['Transfer plugin and data','Place the matching 1.53 or 1.56 PRX in <code>/data/GoldHEN/plugins/</code> and the archive’s Oxagon folder under <code>/data</code>. The Lite README also requires <code>/data/Oxagon.key</code>, but the preserved Lite v1.4 ZIP does not contain that file. Obtain the required matching key from the source before treating the Lite installation as complete.'],
 ['Merge the correct game entry','Use your installed GTA V title ID and the selected plugin’s exact path in plugins.ini. The archive’s region examples are examples; confirm your own game rather than inferring title ID from update number.'],
 ['Open the menu','The archive’s info.txt lists D-pad Left + Cross (X). Use one Oxagon build at a time.']
 ]))+
@@ -87,7 +94,9 @@ section('setup','Private-server setup checklist',steps([
 ['Add a menu only after connecting','Confirm the server’s rules and game-update compatibility before enabling another plugin. Test one menu at a time.']
 ])+`<div class="guide-links">${ext('https://lossantosonline.com/','Open Los Santos Online')}${link(base+'install.html','Plugin installation guide')}</div>`)+
 section('video','Private-server video companion',video('P9SAjhA-lNU','How To Play GTA Online On A Jailbroken PS4 (Private server)')+note('<p>No transcript was available for this video. The steps above are a preparation checklist, not a verified reproduction of its server-specific installation sequence. Visit the Los Santos Online website for the current client package and setup instructions.</p>')),'#setup','Read server checklist');
-require('./build-ps4-ps5-cod.cjs');
-imported.buildMods({gtaFiles:files,rdrMenus:rdr2menus});
+if(!gtaOnly)require('./build-ps4-ps5-cod.cjs');
+imported.buildMods({gtaFiles:files,rdrMenus:rdr2menus,...(gtaOnly?{gameIds:['gta5']}:{})});
+{const file='console/mods/ps4/gta5/index.html';let html=fs.readFileSync(file,'utf8');html=html.replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=1"></head>').replace('</body>','<script defer src="/assets/gta5-plugin-downloads.js?v=1"></script></body>');fs.writeFileSync(file,html);}
+if(gtaOnly)for(const file of ['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));
 catalog.build();
-console.log('Built Console Mods, PS4/PS5 Games, three GTA V pages and RDR2 with North, Sheriff and Havana downloads.');
+console.log(gtaOnly?'Built GTA V catalogue, installation guide and menu directory.':'Built Console Mods, PS4/PS5 Games, three GTA V pages and RDR2 with North, Sheriff and Havana downloads.');

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-11-02T19:11:55.511Z",
+  "changed": [
+    {
+      "file": "console/wiiu/mods.html",
+      "imagesAdded": 2
+    },
+    {
+      "file": "console/wiiu/online.html",
+      "imagesAdded": 5
+    },
+    {
+      "file": "console/wiiu/vwii.html",
+      "imagesAdded": 3
+    },
+    {
+      "file": "console/wiiu/game-downloads.html",
+      "imagesAdded": 1
+    },
+    {
+      "file": "console/xbox-one-series/dependencies.html",
+      "imagesAdded": 10
+    },
+    {
+      "file": "console/xbox-one-series.html",
+      "imagesAdded": 10
+    }
+  ],
+  "totalAdded": 31,
+  "exceptions": [],
+  "verification": "Existing source/download/checksum links preserved byte-for-byte. All added image paths exist. Package logos extracted as data; no packages executed.",
+  "secondWindArtwork": {
+    "image": "/assets/images/wiiu-homebrew/second-wind-quest.png",
+    "sourcePage": "https://gamingreinvented.com/interview/lets-interview-the-dev-team-for-botw-second-wind/",
+    "sourceImage": "https://gamingreinvented.com/wp-content/uploads/2022/03/SecondWindQuest.png",
+    "kind": "Original expansion logo used by developer interview; not a compatibility screenshot",
+    "bytes": 496167,
+    "sha256": "391b8da14a849182695fc4208a95de0562e4afe6680f31ff3e77762dae9f5eb0"
+  }
+}

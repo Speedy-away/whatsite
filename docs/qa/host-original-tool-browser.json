@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T18:35:31.460Z",
+  "method": "CUA interaction with the actual authored dashboard, browser File picker/client and a loopback-only authored bridge mock. The mock validates bytes and never resolves DNS, contacts a console service or transfers to a console.",
+  "pairing": {
+    "beforePairLoadDisabled": true,
+    "capability": "userSelectedBIN",
+    "afterPairLoadEnabled": true
+  },
+  "selectedFile": {
+    "action": "ps4-original-orbis-toolbox-1-0-1190-900",
+    "singleFilePicker": true,
+    "bytes": 626392,
+    "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+    "mockTransfers": 1,
+    "consoleContact": false,
+    "visibleResult": "Authored mock verified the selected bytes. No console was contacted."
+  },
+  "restrictions": {
+    "orbis702DownloadOnly": true,
+    "orbis702LoadButtonCount": 0,
+    "orbis1400CardCount": 0,
+    "unsupportedEarlierGamerHackMenus": "Still run:null; covered by regression tests."
+  },
+  "language": {
+    "visual": "English → Deutsch → English",
+    "translatedNewNote": true,
+    "preservedFirmware": "9.00",
+    "preservedDownloadURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin"
+  },
+  "screenshot": "docs/screenshots/host-original-tools.png",
+  "cleanup": {
+    "mockServerStopped": true,
+    "temporaryTabClosed": true
+  },
+  "limits": [
+    "No downloaded exploit or payload was executed.",
+    "No physical console, HEN loading, receiver saving or successful native execution was tested.",
+    "Cancelled/wrong-byte/stale-state/old-sender/uncertainty paths were covered with authored unit fixtures, not a console."
+  ]
+}

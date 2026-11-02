@@ -22,10 +22,12 @@ function gamesSection() {
 
 function archiveCard(item) {
   const {resource} = require('./build-console-guides.cjs');
+  const media=require('./console-menu-media.cjs').createMenuMedia({root});
+  const image=media.figure(item,read().games.find(game=>item.gameIds.includes(game.id))?.image,'Call of Duty 4: Modern Warfare');
   const archive = item.archive;
   const links = fullLink(archive.local, 'Download original RAR', archive.filename) + fullLink(archive.url, 'Original download page') + fullLink(item.source, 'Captured source post');
   return resource(escape(item.name), escape(item.description), links, '')
-    .replace('<h3>', `<div class="game-features"><span class="feature">Xbox 360</span><span class="feature">COD4 multiplayer</span><span class="feature">RAR archive</span><span class="feature">${(archive.bytes / 1048576).toFixed(2)} MiB</span></div><h3>`)
+    .replace('<h3>', `${image}<div class="game-features"><span class="feature">Xbox 360</span><span class="feature">COD4 multiplayer</span><span class="feature">RAR archive</span><span class="feature">${(archive.bytes / 1048576).toFixed(2)} MiB</span></div><h3>`)
     .replace('<div class="guide-links">', `<p>${escape(item.compatibility)}</p><p><strong>Menu:</strong> ${escape(item.version)}. <strong>Game update / region:</strong> not specified.</p><details data-sha256="${escape(archive.sha256)}"><summary>Archive contents</summary><ul>${item.members.map(member => `<li><code>${escape(member)}</code></li>`).join('')}</ul><p>Console execution and title-update compatibility were not tested.</p></details><div class="guide-links">`);
 }
 

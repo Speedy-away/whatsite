@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-02",
+  "scope": "Read-only follow-up of exact GamerHack 900v3 utility files and their original source trail. One original-author stable FTP ready BIN selected for conservative 9.00 user-file loading. No catalogue, inventory, helper, UI or archive mutation is performed by this review.",
+  "repository": {
+    "url": "https://github.com/GamerHack/GamerHack.github.io",
+    "commit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+    "path": "900v3",
+    "firmwareEvidence": "The pinned index title and heading both explicitly state PS4 9.00 FW Host v3.0.",
+    "index": {
+      "url": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/index.html",
+      "bytes": 26446,
+      "sha256": "35e4e8a549c57fc2c4a5f2a5398b5cd19aa5767d8fa3ec3bb35a3152d32f04e6",
+      "gitBlobSha1": "a18f6c873c92c8335b3e142f58e6ae42a43d4dd1"
+    },
+    "cacheManifest": {
+      "url": "https://github.com/GamerHack/GamerHack.github.io/blob/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/900v3/cache.manifest",
+      "bytes": 896,
+      "sha256": "67f1bbeca40f39db35d2c4c0d5ea38400732a897d1014314788cf71babad7284",
+      "gitBlobSha1": "fc69eaf203264b253805fdd670a9274360af540d",
+      "utilityDeclarations": [
+        "ftp.bin",
+        "backup.bin",
+        "dumper.bin",
+        "dumperG.bin",
+        "dumperMGU.bin",
+        "dumperSGU.bin",
+        "dumperU.bin",
+        "disable-updates.bin",
+        "enable-updates.bin",
+        "history-blocker.bin",
+        "ps4debug.bin"
+      ]
+    },
+    "license": "No repository redistribution licence established. Its in-page payload launch mechanism alone does not establish a native BinLoader ABI for every utility."
+  },
+  "selected": [
+    {
+      "id": "ps4-original-hippie68-ftp-1-08b-900",
+      "project": "hippie68 FTP Server",
+      "version": "1.08b",
+      "selection": "Original-author stable release, replacing no existing item. The old GamerHack FTP file remains excluded and is not silently relabelled as this release.",
+      "readyFile": {
+        "url": "https://github.com/hippie68/ps4-ftp/releases/download/v1.08b/ftp_server_v1.08b.bin",
+        "filename": "ftp_server_v1.08b.bin",
+        "bytes": 37824,
+        "sha256": "695082f37c5cfdce14a06fbd567fa8651017ee2e31f3e95ae7a769b4287cb0e9",
+        "gitBlobSha1": "fc487f2480502923283e7b7eb79367fbdaddb38e",
+        "localReviewPath": "tmp/host-repository-review/utility-next/ftp_server_v1.08b.bin",
+        "assetId": 164883784,
+        "assetCreatedAt": "2024-04-29T09:24:12Z",
+        "assetUpdatedAt": "2024-04-29T09:24:13Z",
+        "upstreamAssetDigest": null,
+        "hashOrigin": "SHA-256 calculated locally from the complete original release asset; GitHub supplies no digest for this older asset.",
+        "leadingBytesHex": "e96b530000662e0f1f84000000000090803f000f84cf00000041554154555348",
+        "formatEvidence": "Flat x86-64 native BIN; not ELF, compressed data, a source archive or an HTML error page."
+      },
+      "release": {
+        "url": "https://github.com/hippie68/ps4-ftp/releases/tag/v1.08b",
+        "id": 132374275,
+        "tag": "v1.08b",
+        "commit": "c903943d93dd082b590ee747c114a8c2436aaf71",
+        "draft": false,
+        "prerelease": false,
+        "publishedAt": "2023-12-02T10:45:11Z",
+        "changes": "Fixes failed-write SIGPIPE termination and CWD-dot control responses; disconnects clients idle for ten minutes.",
+        "firmwareClaim": "Author says the payload should work on all firmware through and including 11.02, with a jailbreak required.",
+        "conservativeActionFirmware": [
+          "9.00"
+        ],
+        "firmwareDecision": "The broad author claim is preserved as evidence only. This action exposes 9.00 alone, with the already reviewed compatible GoldHEN HTTP loader. It does not add an unverified broad firmware whitelist."
+      },
+      "source": {
+        "repository": "https://github.com/hippie68/ps4-ftp",
+        "commit": "c903943d93dd082b590ee747c114a8c2436aaf71",
+        "readme": "https://github.com/hippie68/ps4-ftp/blob/c903943d93dd082b590ee747c114a8c2436aaf71/README.md",
+        "readmeSHA256": "23368510ea44a9e0c3d146b0410dfce9f4c220b73d7f1673b02b5b91a56ec7b3",
+        "main": "https://github.com/hippie68/ps4-ftp/blob/c903943d93dd082b590ee747c114a8c2436aaf71/source/main.c",
+        "mainSHA256": "83aea15959639a01ab93547a30b90b20d6ed6b961f6b8a27453f5c99d7f7628d",
+        "makefile": "https://github.com/hippie68/ps4-ftp/blob/c903943d93dd082b590ee747c114a8c2436aaf71/Makefile",
+        "makefileSHA256": "21031a8a38818ccc3693d1baf59b82ee0bf1da82fd6b0bdb5c0eaed65c2afefa",
+        "abiEvidence": "The release source compiles with PS4, x86-64 System V ABI, position-independent code and objcopy -O binary. Its PS4 _main ignores the incoming thread argument and initializes its own kernel, libc, network and pthread imports before starting the FTP server. It does not consume a browser-specific JavaScript payload argument.",
+        "reproducibleBuildVerified": false,
+        "license": "GitHub licence metadata is null and the reviewed tree contains no LICENSE or COPYING file. A description of source availability is not treated as permission to redistribute the compiled payload."
+      },
+      "loaderContract": {
+        "run": {
+          "type": "goldhen-http",
+          "port": 9090,
+          "statusPath": "/status",
+          "readyStatus": "ready",
+          "input": "user-file"
+        },
+        "originalAuthorHost": {
+          "repository": "https://github.com/hippie68/hippie68.github.io",
+          "commit": "24905c2e85a3c7c753ded8da2e26dc368bdfde2d",
+          "index": "https://github.com/hippie68/hippie68.github.io/blob/24905c2e85a3c7c753ded8da2e26dc368bdfde2d/900/index.html#L1370-L1426",
+          "indexSHA256": "c3094e2e82a7065b61c2d746f9d41751dee1b5708708aab7a8be0a6ef021e9c0",
+          "payloadDeclaration": "https://github.com/hippie68/hippie68.github.io/blob/24905c2e85a3c7c753ded8da2e26dc368bdfde2d/900/payloads.js#L18",
+          "payloadDeclarationSHA256": "9bb30b5ae54f1439697e089048561d7ca9fab2a912e7f827dd8a3db128eb8ba6",
+          "sourceRouting": "The host README identifies ftp.bin as compiled from this author's ps4-ftp source. Its explicit 9.00 route checks HTTP9090/status, reads the native BIN and POSTs the complete array buffer to HTTP9090.",
+          "browserOnlyExceptions": [
+            "dumper.bin",
+            "history_blocker.bin",
+            "web_activator.bin"
+          ],
+          "ftpIsException": false,
+          "hostFTPBinaryIsSameReleaseAsset": false,
+          "evidenceBoundary": "The host establishes the FTP family's native GoldHEN HTTP transport and 9.00 route. It is not asserted byte-identical to the newer original stable release asset. The selected release's own flat-BIN build and self-initializing entry are separately checked."
+        },
+        "authorStatement": {
+          "url": "https://github.com/hippie68/ftpdump/discussions/22",
+          "author": "hippie68",
+          "date": "2022-05-03",
+          "finding": "The FTP author states that manual FTP payload sending should work on 9.00 and identifies GoldHEN's BinLoader as a way to launch it."
+        },
+        "reviewerConclusion": "These combined original-author sources establish an ordinary native flat FTP BIN contract on 9.00 after GoldHEN, rather than inferring the ABI from a .bin filename or from GamerHack's browser launch alone.",
+        "runtimeExecutionVerified": false,
+        "selectedFilePolicy": "Keep the original release URL for Download. Load requires the user's exact 37,824-byte file and SHA-256 match through the existing paired memory-only user-file route. No public mirror or selected binary in the sender package."
+      },
+      "deduplication": {
+        "downloadAuditMatchesBySHA256": [],
+        "catalogueMatchesBySHA256": [],
+        "existingSimilarItem": "ps4-ftpsrv is a different 146,720-byte ELF requiring a compatible ELF loader, with a different source and SHA-256. The existing Kameleon FTP BIN is exact 13.00 only.",
+        "preservation": "No existing FTP release, source URL, file, version or action is replaced."
+      }
+    }
+  ],
+  "gamerHackUtilityFilesInspected": [
+    {
+      "path": "900v3/ftp.bin",
+      "bytes": 24500,
+      "sha256": "a6d1e15b3e46bab1d627656177ac9480b03f534ae24d8a9c4e01c9d8a2d15f37",
+      "gitBlobSha1": "c54e02a78dcdaafda909589851ef94106a5b12ad",
+      "auditMatchesBySHA256": [],
+      "catalogueMatchesBySHA256": [],
+      "decision": "Excluded: unnamed old host build. Prefer the separately versioned original-author stable release above; do not relabel or replace this file."
+    },
+    {
+      "path": "900v3/backup.bin",
+      "bytes": 13124,
+      "sha256": "81d59e79c175b39a93927a07cbd4816a0f106a158457e3a62f62f5a73e359518",
+      "gitBlobSha1": "264307ca6ddeb12e1137335d4802228b2bdb9a4e",
+      "auditMatchesBySHA256": [],
+      "catalogueMatchesBySHA256": [],
+      "decision": "Excluded: exact binary-to-original-source mapping not established, and the reviewed source-family implementation replaces prior backup data."
+    },
+    {
+      "path": "900v3/dumper.bin",
+      "bytes": 21912,
+      "sha256": "02d28fcdcc72f51c133f5f274bb98430b8d7b7337f8769236f21e54da3fe77fd",
+      "gitBlobSha1": "4ba942955ca09f8af820396df54edd5f1d1a0a3f",
+      "auditMatchesBySHA256": [],
+      "catalogueMatchesBySHA256": [],
+      "decision": "Excluded: cache declares this file, while active GamerHack dump buttons use separate G/U/SGU/MGU files. Exact mapping is unverified and the original compiler host explicitly requires WebKit for its dumper."
+    },
+    {
+      "path": "900v3/disable-updates.bin",
+      "bytes": 7292,
+      "sha256": "8d7b62468074f0eb7f74f74cddde4c480ff0a9e7d664d93cc1d912e9fa06bf68",
+      "gitBlobSha1": "1ebdefaad06858649f03b07a3da0f94f0d02410c",
+      "auditMatchesBySHA256": [],
+      "catalogueMatchesBySHA256": [],
+      "decision": "Excluded: no exact original individual ready release or source correspondence established. The source-family implementation changes persistent update paths; do not pad a non-destructive utility batch with a guessed old variant."
+    },
+    {
+      "path": "900v3/history-blocker.bin",
+      "bytes": 9132,
+      "sha256": "05eb68e31a7e31810fedcc783c17268b348869ef0a1ea09752cd39bc9e1073cb",
+      "gitBlobSha1": "1e944cbf3fb9c498c2d13ffefd6f2b7ad75175a0",
+      "auditMatchesBySHA256": [],
+      "catalogueMatchesBySHA256": [],
+      "decision": "Excluded: original compiler host explicitly requires WebKit for its history-blocker payload; no native sender Load inferred for GamerHack's different binary."
+    }
+  ],
+  "otherExclusions": [
+    {
+      "item": "Scene-Collective backup source family",
+      "url": "https://github.com/Scene-Collective/ps4-backup/blob/38fc79d227f41fa957d76cc25f227c21da81c933/source/main.c",
+      "sha256": "a2932d811d89dd4f56c964c34984a900af7ba3a9aeaaf1c650b93aa9f6328551",
+      "reason": "The source deletes existing internal .bak files and recursively removes /mnt/usb0/PS4/Backup/ or /mnt/usb1/PS4/Backup/ before creating a new backup. Native ABI evidence does not make this an appropriate non-destructive addition. Source README also says encrypted backups may be unusable after reinitialization. No payload was executed."
+    },
+    {
+      "item": "Scene-Collective individual utility repositories",
+      "urls": [
+        "https://github.com/Scene-Collective/ps4-backup",
+        "https://github.com/Scene-Collective/ps4-app-dumper",
+        "https://github.com/Scene-Collective/ps4-disable-updates",
+        "https://github.com/Scene-Collective/ps4-history-blocker",
+        "https://github.com/Scene-Collective/ps4-enable-browser"
+      ],
+      "reason": "Reviewed repos supply source but no individual releases or licence. Their README ready-build link points to ps4-payload-repo, whose newest release 1.0.5 was published in 2020 and does not establish a 9.00 ready build. No source repository was cloned or built."
+    },
+    {
+      "item": "hippie68 ps4-dumper",
+      "url": "https://github.com/hippie68/ps4-dumper",
+      "status": "404",
+      "reason": "No such original-author repository was found. The author's host instead links Scene-Collective/ps4-app-dumper and explicitly routes dumper.bin through WebKit."
+    },
+    {
+      "item": "hippie68 FTP v1.09",
+      "url": "https://github.com/hippie68/ps4-ftp/releases/tag/v1.09",
+      "reason": "API marks v1.09 as prerelease. Its broader firmware-through-13.02 claim is not used to widen this stable 9.00 action. No redundant prerelease ready BIN was downloaded."
+    },
+    {
+      "item": "GamerHack900v3 enable-browser.bin",
+      "status": "404",
+      "reason": "No matching file in the pinned tree and exact raw URL returns 404. Do not invent a browser-enabler download for this host."
+    },
+    {
+      "item": "ps4debug",
+      "reason": "The existing original v1.1.19 action already includes source-confirmed firmware 9.00. Do not add an unnamed older GamerHack copy as a duplicate utility."
+    },
+    {
+      "item": "Restore, Exit IDU, ToDEX, permanent UART, southbridge, RIF tools, reset/destructive tools and unreviewed game menus",
+      "reason": "Outside this non-destructive utility follow-up. No compatibility or native ABI is inferred from filenames, the MultiCOD label, an exploit host or a browser's generic payload entry."
+    }
+  ],
+  "preparedFiles": [
+    "docs/host-next-utility-actions.json",
+    "docs/host-next-utility-jobs.json"
+  ],
+  "verification": {
+    "downloadedReadyFiles": 6,
+    "selectedReadyFiles": 1,
+    "selectedBytes": 37824,
+    "existingDownloadAuditAndCatalogueChecked": true,
+    "gamerHackBlobHashesMatchPinnedTree": true,
+    "selectedBinaryExecuted": false,
+    "hostRuntimeExecuted": false,
+    "consoleContact": false,
+    "sourceCloneOrSourceArchive": false,
+    "publicBinaryMirrorsAdded": false,
+    "fDriveWrites": false,
+    "sharedCatalogueOrInventoryChanged": false
+  },
+  "integrationNotes": [
+    "Merge the prepared single action through the existing original-only selected-file action path. Keep exact 9.00 firmware and HTTP9090 readiness/status requirements.",
+    "Archive the prepared job through normal permission tooling and refresh the organized archive index. This review only prepared the private import file and expected hash; it did not write F: or inventory records.",
+    "Keep the earlier utility, menu, Orbis Toolbox and GoldHEN records and all older binaries. Do not promote excluded browser-only payloads to native Load or bundle this original-only FTP BIN in the desktop sender."
+  ]
+}

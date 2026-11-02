@@ -108,6 +108,49 @@
     if (/^(JSON|MC4|SHN|XML)$/.test(format)) return {available:false,kind:'data',reason:'Install this file in the native cheat or patch manager, then enable it in the game.'};
     return {available:false,kind:'unsupported',reason:'No verified built-in loading method is available for this build. Setup and original sources are under Requirements.'};
   }
+  function bridgeFileReady(action, bridge, platform) {
+    if (!action || !action.run || action.run.input !== 'user-file' || action.platform !== platform || platform !== 'ps4' || action.format !== 'BIN') return false;
+    if (!(action.run.type === 'goldhen-http' && action.run.port === 9090 || action.run.type === 'bin-tcp' && action.run.port === 9020)) return false;
+    return Boolean(bridge && bridge.status === 'connected' && bridge.capabilities && bridge.capabilities.userSelectedBIN === true && bridge.actions && bridge.actions.some(function (item) {
+      return item.id === action.id && item.platform === platform && item.available === true && item.requiresFile === true && item.format === 'BIN' && item.bytes === action.bytes;
+    }));
+  }
+  function payloadFileFacts(action) {
+    if (!action || !action.run || action.run.input !== 'user-file' || action.format !== 'BIN' || typeof action.bytes !== 'number' || !isFinite(action.bytes) || Math.floor(action.bytes) !== action.bytes || action.bytes < 1 || action.bytes > 0x300000 || !/^[a-f0-9]{64}$/i.test(action.sha256 || '')) return null;
+    try {
+      var url = new URL(action.downloadURL);
+      if (url.protocol !== 'https:' || url.username || url.password) return null;
+      var name = decodeURIComponent(url.pathname.slice(url.pathname.lastIndexOf('/') + 1));
+      if (!/\.bin$/i.test(name) || /[\\/\x00-\x1f]/.test(name)) return null;
+      return {filename:name,bytes:action.bytes,sha256:action.sha256.toLowerCase()};
+    } catch (_) { return null; }
+  }
+  function choosePayloadFile(doc, win, action) {
+    return new Promise(function (resolve, reject) {
+      var input = doc.createElement('input'), settled = false, timer;
+      input.setAttribute('type','file'); input.setAttribute('accept','.bin'); input.hidden = true;
+      var schedule = win.setTimeout || setTimeout, unschedule = win.clearTimeout || clearTimeout;
+      function finish(file, error) {
+        if (settled) return; settled = true;
+        if (timer) unschedule(timer);
+        if (win.removeEventListener) win.removeEventListener('focus', focused);
+        if (input.parentNode) input.parentNode.removeChild(input);
+        if (error) reject(error); else resolve(file);
+      }
+      function changed() {
+        var files = input.files;
+        if (!files || !files.length) { finish(null); return; }
+        if (files.length !== 1 || !/\.bin$/i.test(files[0].name || '') || files[0].size !== action.bytes) { finish(null, new Error('Choose the original BIN with the exact listed file size. Nothing was sent.')); return; }
+        finish(files[0]);
+      }
+      function focused() { timer = schedule(changed,250); }
+      input.addEventListener('change',changed); input.addEventListener('cancel',function () { finish(null); });
+      if (win.addEventListener) win.addEventListener('focus',focused);
+      doc.body.appendChild(input);
+      // Stay inside the explicit Load gesture; no asynchronous preflight first.
+      try { input.click(); } catch (error) { finish(null,error); }
+    });
+  }
   function downloadPlan(action, platform, address, detected, normalize) {
     if (!action.downloadURL) throw Error('This entry does not provide a downloadable file.');
     if (String(address || '').trim() || detected.platform === platform) {
@@ -221,29 +264,33 @@
     function actionMarkup(action) {
         var download = safeURL(action.downloadURL || '', win.location.href);
         var launch = Boolean(action.launchURL), capability = loadCapability(action);
-        var canBridge = bridge && bridge.actions && bridge.actions.some(function (a) { return a.id === action.id && a.platform === platform && a.available; });
+        var needsFile = action.run && action.run.input === 'user-file';
+        var canBridge = needsFile ? bridgeFileReady(action,bridge,platform) && client && typeof client.runFileViaBridge === 'function' : bridge && bridge.actions && bridge.actions.some(function (a) { return a.id === action.id && a.platform === platform && a.available; });
         var needsFirmware = requiresFirmware(action) && !firmware.value;
         var isMenu = action.category === 'mods';
         var label = isMenu || action.run || capability.kind === 'browser' ? 'Load' : launch ? 'Open host' : '';
-        var requiresSender = action.run && (action.run.type === 'elf-tcp' || action.run.type === 'bin-tcp') && !canBridge;
+        var requiresSender = action.run && (action.run.type === 'elf-tcp' || action.run.type === 'bin-tcp' || needsFile) && !canBridge;
         var uncertain = action.run && connection.warning(configuredAddress());
         var disabled = isMenu && !capability.available || needsFirmware || requiresSender || capability.kind === 'browser' && detection.platform !== platform || loading || uncertain;
         var meta = [action.format ? String(action.format).toUpperCase() : '', action.game ? '' : action.version, firmwareLabel(action)].filter(Boolean).join(' · ');
         var details = (action.requirements || []).map(function (text) { return '<li>' + escape(text) + '</li>'; }).join('');
+        var facts = payloadFileFacts(action);
+        var fileDetails = facts ? '<dl class="host-file-facts"><div><dt>File</dt><dd><code translate="no" data-i18n-skip>' + escape(facts.filename) + '</code></dd></div><div><dt>File size</dt><dd><code translate="no" data-i18n-skip>' + facts.bytes + ' B</code></dd></div><div><dt translate="no" data-i18n-skip>SHA-256</dt><dd><code translate="no" data-i18n-skip>' + facts.sha256 + '</code></dd></div></dl>' : '';
         var links = [['source','Project source'],['licenseURL','Licence'],['instructionsURL','Instructions'],['sourceArchiveURL','Corresponding source']].map(function (entry) { var url = navigationURL(action[entry[0]]); return url ? '<a href="' + escape(url) + '" target="_blank" rel="noopener noreferrer">' + entry[1] + '</a>' : ''; }).filter(Boolean).join(' · ');
         var originalHost = action.hostURL || action.launchURL || '';
         if (originalHost.indexOf('{address}') !== -1) originalHost = '';
         originalHost = navigationURL(originalHost);
         var artwork = actionImage(action), imageLabel = imageCaption(action), releaseLabel = action.resourceType === 'cheat-definitions' ? 'Trainer version' : 'Menu version';
-        return '<article class="host-action' + (artwork ? ' host-action-with-art' : '') + '">' + (artwork ? '<figure class="host-action-art"><img src="' + escape(artwork) + '" alt="' + escape(action.label + ' · ' + imageLabel) + '" loading="lazy"></figure>' : '') + '<div class="host-action-content"><div class="host-action-title"><h3>' + escape(action.label) + '</h3>' + (action.game ? '<span>' + escape(action.game) + '</span>' : '') + '</div>' + (action.game ? '<dl class="host-version-facts"><div><dt>Game update</dt><dd>' + escape(action.gameVersion || 'Not provided') + '</dd></div><div><dt>' + releaseLabel + '</dt><dd>' + escape(action.menuVersion || 'Not provided') + '</dd></div></dl>' : '') + '<p class="host-action-meta">' + escape(meta) + '</p>' + (action.variantLabel || action.hostVariant ? '<p class="host-action-meta">' + escape(action.variantLabel || action.hostVariant) + '</p>' : '') + (action.titleIds && action.titleIds.length ? '<p class="host-action-meta">' + escape(action.titleIds.join(', ')) + '</p>' : '') + (action.supportArchiveURL ? '<p class="host-file-note">Plugin update file. First installation also needs its support files.</p>' : '') + '<div class="host-action-buttons">' +
+        return '<article class="host-action' + (artwork ? ' host-action-with-art' : '') + '">' + (artwork ? '<figure class="host-action-art"><img src="' + escape(artwork) + '" alt="' + escape(action.imageAlt || action.label + ' · ' + imageLabel) + '" loading="lazy"></figure>' : '') + '<div class="host-action-content"><div class="host-action-title"><h3>' + escape(action.label) + '</h3>' + (action.game ? '<span>' + escape(action.game) + '</span>' : '') + '</div>' + (action.game ? '<dl class="host-version-facts"><div><dt>Game update</dt><dd>' + escape(action.gameVersion || 'Not provided') + '</dd></div><div><dt>' + releaseLabel + '</dt><dd>' + escape(action.menuVersion || 'Not provided') + '</dd></div></dl>' : '') + '<p class="host-action-meta">' + escape(meta) + '</p>' + (action.variantLabel || action.hostVariant ? '<p class="host-action-meta">' + escape(action.variantLabel || action.hostVariant) + '</p>' : '') + (action.titleIds && action.titleIds.length ? '<p class="host-action-meta">' + escape(action.titleIds.join(', ')) + '</p>' : '') + (action.supportArchiveURL ? '<p class="host-file-note">Plugin update file. First installation also needs its support files.</p>' : '') + '<div class="host-action-buttons">' +
           (download ? '<a class="host-download" data-no-file-options data-download-action="' + escape(action.id) + '" href="' + escape(download) + '" download>Download</a>' : '') +
           (label ? '<button type="button" class="host-launch" data-launch="' + escape(action.id) + '"' + (disabled ? ' disabled title="' + escape(!capability.available && isMenu ? capability.reason : 'Choose compatible firmware and a running console loader.') + '"' : '') + '>' + escape(label) + '</button>' : '') + '</div>' +
           (download ? '<p class="host-download-destination">Download destination: ' + escape(String(address.value || '').trim() || detection.platform === platform ? platform.toUpperCase() : 'This device') + '</p>' : '') +
           (isMenu && !capability.available ? '<p class="host-load-note">' + escape(capability.reason) + '</p>' : '') +
           (capability.kind === 'browser' && detection.platform !== platform ? '<p class="host-load-note">' + escape(capability.reason) + '</p>' : '') +
-          (requiresSender ? '<p class="host-load-note">' + (action.run.type === 'bin-tcp' ? 'Connect the paired desktop sender to load this BIN.' : 'Connect the paired desktop sender to load this ELF.') + '</p>' : '') +
+          (requiresSender ? '<p class="host-load-note">' + (action.format === 'BIN' ? 'Connect the paired desktop sender to load this BIN.' : 'Connect the paired desktop sender to load this ELF.') + '</p>' : '') +
+          (needsFile ? '<p class="host-load-note">Load uses the original downloaded BIN you choose. The sender verifies it in memory without saving a copy.</p>' : '') +
           (uncertain ? '<p class="host-load-note">A previous transfer has an unknown result. Check the console and clear its transfer warning before loading again.</p>' : '') +
-          '<details><summary>Requirements</summary><ul>' + details + '</ul>' + (action.firmwares && action.firmwares.length ? '<p>Firmware: ' + escape(action.firmwares.join(', ')) + '</p>' : '') + (action.license ? '<p>' + escape(action.license) + '</p>' : '') + links + (action.supportArchiveURL ? ' · <a href="' + escape(navigationURL(action.supportArchiveURL)) + '">Full setup files</a>' : '') + (!action.run && originalHost ? ' · <a href="' + escape(originalHost) + '" target="_blank" rel="noopener noreferrer">Original host</a>' : '') + '</details></div></article>';
+          '<details><summary>Requirements</summary>' + fileDetails + '<ul>' + details + '</ul>' + (action.firmwares && action.firmwares.length ? '<p>Firmware: ' + escape(action.firmwares.join(', ')) + '</p>' : '') + (action.license ? '<p>' + escape(action.license) + '</p>' : '') + links + (action.supportArchiveURL ? ' · <a href="' + escape(navigationURL(action.supportArchiveURL)) + '">Full setup files</a>' : '') + (!action.run && originalHost ? ' · <a href="' + escape(originalHost) + '" target="_blank" rel="noopener noreferrer">Original host</a>' : '') + '</details></div></article>';
     }
     function groupMarkup(group) {
       if (group.actions[0].category !== 'mods') return actionMarkup(group.actions[0]);
@@ -334,20 +381,35 @@
       if (loading) { tell('A payload transfer is already in progress. Check its result before sending another.',true); return; }
       var destination; try { destination = currentAddress(); } catch (error) { tell(error.message, true); return; }
       if (connection.warning(destination)) { tell('A previous transfer has an unknown result. Check the console and clear its transfer warning before loading again.',true); return; }
-      var bridgeAction = bridge && bridge.actions && bridge.actions.some(function (a) { return a.id === action.id && a.platform === platform && a.available; });
+      var needsFile = action.run.input === 'user-file';
+      var bridgeAction = needsFile ? bridgeFileReady(action,bridge,platform) && client && typeof client.runFileViaBridge === 'function' : bridge && bridge.actions && bridge.actions.some(function (a) { return a.id === action.id && a.platform === platform && a.available; });
+      if (needsFile && !bridgeAction) { tell('Update and connect the paired desktop sender before choosing a BIN.',true); return; }
       if (bridgeAction && (!bridge.capabilities || !bridge.capabilities.uncertainOutcomes)) { tell('Update the desktop sender before loading. This version cannot report uncertain transfer results.',true); return; }
       var confirmation = action.confirmBeforeLoad;
       if (confirmation && win.__scoobyI18n && win.__scoobyI18n.t) confirmation = win.__scoobyI18n.t(confirmation);
       if (confirmation && (!win.confirm || !win.confirm(confirmation))) { tell('Load cancelled. Nothing was sent.'); return; }
       var copyControl = doc.querySelector('#host-download-on-run'), copy = copyControl && copyControl.checked;
-      if (copy) {
+      if (needsFile && copy) { tell('Use Download separately for a console copy, then turn off Download a copy when pressing Load.',true); return; }
+      if (copy && !needsFile) {
         try { requestDownload(action,null,downloadPlan(action,platform,destination,detection,client.normalizeAddress)); }
         catch (error) { tell(error.message,true); return; }
       }
-      loading = true; render(); tell('Sending the selected payload to ' + platform.toUpperCase() + ' at ' + destination + '…');
+      loading = true; render(); tell(needsFile ? 'Choose the original downloaded BIN. It must pass verification before transfer.' : 'Sending the selected payload to ' + platform.toUpperCase() + ' at ' + destination + '…');
       var request;
       try {
-      if (bridgeAction) request = client.runViaBridge(destination, action.id, token.value, platform, {bridgeURL: bridgeURL.value, origin: win.location.origin, firmware: firmware.value, gameVersion: action.gameVersion || ''});
+      if (needsFile) {
+        var selected = {address:destination,firmware:firmware.value,token:token.value,url:bridgeURL.value,generation:pairingGeneration};
+        var verifySelection = function () {
+          if (currentAddress() !== selected.address || firmware.value !== selected.firmware || token.value !== selected.token || bridgeURL.value !== selected.url || pairingGeneration !== selected.generation || !bridgeFileReady(action,bridge,platform) || connection.warning(destination)) throw Error('The console or sender settings changed. Choose Load again after reviewing them. Nothing was sent.');
+        };
+        request = choosePayloadFile(doc,win,action).then(function (file) {
+          if (!file) return {status:'cancelled',message:'Load cancelled. Nothing was sent.'};
+          verifySelection();
+          tell('Sending the selected payload to ' + platform.toUpperCase() + ' at ' + destination + '…');
+          return client.runFileViaBridge(destination,action,file,selected.token,platform,{bridgeURL:selected.url,origin:win.location.origin,firmware:selected.firmware,gameVersion:action.gameVersion || '',beforeDispatch:verifySelection});
+        });
+      }
+      else if (bridgeAction) request = client.runViaBridge(destination, action.id, token.value, platform, {bridgeURL: bridgeURL.value, origin: win.location.origin, firmware: firmware.value, gameVersion: action.gameVersion || ''});
       else if (action.run.type === 'goldhen-http') request = client.sendGoldHEN(destination, action, {origin: win.location.origin});
       else if (action.run.type === 'elf-http') request = client.sendPS5ELF(destination, action, {origin: win.location.origin});
       else if (action.run.type === 'ps5-manager') request = client.launchInstalled(destination, action.run.path, {origin: win.location.origin});
@@ -511,5 +573,5 @@
     if (doc.querySelector('meta[name="whatwhatboy-local-sender"]')) bridgeURL.value = win.location.origin;
     detectConsole(false);
   }
-  return {firmwareNumber: firmwareNumber, firmwareMatches: firmwareMatches, firmwareLabel: firmwareLabel, requiresFirmware: requiresFirmware, consoleDownloadURL: consoleDownloadURL, targetAddress:targetAddress, managerURL:managerURL,workspaceURL:workspaceURL, actionImage:actionImage, menuFamily:menuFamily, groupActions:groupActions, variantLabel:variantLabel, imageCaption:imageCaption,scopeActions:scopeActions, loadCapability:loadCapability,downloadPlan:downloadPlan,connectionState:connectionState,browserFirmware: browserFirmware, detectBrowser: detectBrowser, compareGameVersions: compareGameVersions, filterActions: filterActions, safeURL: safeURL, install: install};
+  return {firmwareNumber: firmwareNumber, firmwareMatches: firmwareMatches, firmwareLabel: firmwareLabel, requiresFirmware: requiresFirmware, consoleDownloadURL: consoleDownloadURL, targetAddress:targetAddress, managerURL:managerURL,workspaceURL:workspaceURL, actionImage:actionImage, menuFamily:menuFamily, groupActions:groupActions, variantLabel:variantLabel, imageCaption:imageCaption,scopeActions:scopeActions, loadCapability:loadCapability,bridgeFileReady:bridgeFileReady,payloadFileFacts:payloadFileFacts,choosePayloadFile:choosePayloadFile,downloadPlan:downloadPlan,connectionState:connectionState,browserFirmware: browserFirmware, detectBrowser: detectBrowser, compareGameVersions: compareGameVersions, filterActions: filterActions, safeURL: safeURL, install: install};
 }));

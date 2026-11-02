@@ -67,7 +67,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .nav-group.open > .nav-group-toggle .nav-caret { transform: rotate(180deg); }
 .nav-group.open > .nav-group-toggle { color: var(--text-primary); }
 .nav-sublist { max-height: 0; overflow: hidden; transition: max-height var(--tn); }
-.nav-group.open .nav-sublist { max-height: 480px; }
+.nav-group.open > .nav-sublist { max-height: none; }
 .nav-sublist li { margin: 2px 8px 2px 0; }
 .nav-sublink { padding-left: 44px; font-size: 13px; }
 .nav-sublink.active { padding-left: 41px; }

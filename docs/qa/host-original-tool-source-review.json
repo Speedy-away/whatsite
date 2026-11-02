@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T18:18:26.262Z",
+  "method": "Original release/API metadata, exact release-asset download hashing, bounded 7-Zip listing and one-member decompression; no binary execution or console connection.",
+  "sourceRequests": [
+    {
+      "url": "https://api.github.com/repos/OSM-Made/Orbis-Toolbox",
+      "status": 200,
+      "bytes": 5301,
+      "sha256": "8d8223a2b77f0c3ead492b3e437ecd9c4ac6a5eab0ddefb12e32e297463f9cde",
+      "file": "tmp/host-repository-review/original-tool-followup/source-0.json"
+    },
+    {
+      "url": "https://api.github.com/repos/OSM-Made/Orbis-Toolbox/branches",
+      "status": 200,
+      "bytes": 204,
+      "sha256": "4c1f1b6f420085aae47324c81bfdd514220aec7dfeb4fe5403efee86f1bd7fe0",
+      "file": "tmp/host-repository-review/original-tool-followup/source-1.json"
+    },
+    {
+      "url": "https://api.github.com/repos/OSM-Made/Orbis-Toolbox/releases/tags/1.0.1190",
+      "status": 200,
+      "bytes": 9665,
+      "sha256": "0422a07e9c69f9befee614fa3e7f8b0de8690994854b476c0aa36617add92da6",
+      "file": "tmp/host-repository-review/original-tool-followup/source-2.json"
+    },
+    {
+      "url": "https://api.github.com/repos/GoldHEN/GoldHEN",
+      "status": 200,
+      "bytes": 5929,
+      "sha256": "d723f1362d801e5557bc3d3a226a2b01ef6abf82ed833dcb515419968caeeab7",
+      "file": "tmp/host-repository-review/original-tool-followup/source-3.json"
+    },
+    {
+      "url": "https://api.github.com/repos/GoldHEN/GoldHEN/branches",
+      "status": 200,
+      "bytes": 395,
+      "sha256": "1f40fa4402deecb6f6ce67a7f693c03ed719b29023f0dc0e66443d49551ed259",
+      "file": "tmp/host-repository-review/original-tool-followup/source-4.json"
+    },
+    {
+      "url": "https://api.github.com/repos/GoldHEN/GoldHEN/releases/tags/2.4b18",
+      "status": 200,
+      "bytes": 8742,
+      "sha256": "303cf4fd96302ad37ca81f9e90e9c80145352dfc0b57960469ab880a68ae4997",
+      "file": "tmp/host-repository-review/original-tool-followup/source-5.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OSM-Made/Orbis-Toolbox/83c935231d664ee9d523edf32a1c1aecaac1a92a/README.md",
+      "status": 200,
+      "bytes": 1086,
+      "sha256": "b09a2bafa5be8cc28d610d331f08a647310808683f2611a8ef50f698e8d45e5f",
+      "file": "tmp/host-repository-review/original-tool-followup/source-6.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4/README.md",
+      "status": 200,
+      "bytes": 4763,
+      "sha256": "29c71a5526e43d7395145b10ac8a414063b58321a65784c0be2b4975c719ffd3",
+      "file": "tmp/host-repository-review/original-tool-followup/source-7.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4/goldhen.bin",
+      "status": 200,
+      "bytes": 260160,
+      "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+      "file": "tmp/host-repository-review/original-tool-followup/official-goldhen.bin"
+    }
+  ],
+  "tagPins": {
+    "orbis": {
+      "url": "https://api.github.com/repos/OSM-Made/Orbis-Toolbox/git/ref/tags/1.0.1190",
+      "commit": "83c935231d664ee9d523edf32a1c1aecaac1a92a"
+    },
+    "goldhen": {
+      "url": "https://api.github.com/repos/GoldHEN/GoldHEN/git/ref/tags/2.4b18",
+      "commit": "f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4"
+    }
+  },
+  "repositories": [
+    {
+      "repo": "OSM-Made/Orbis-Toolbox",
+      "defaultBranch": "main",
+      "branches": [
+        {
+          "name": "main",
+          "commit": "1d9a1baa91f9d12f1a6a7a646af1a3d77ebab7d1"
+        }
+      ],
+      "archived": true,
+      "apiLicense": null,
+      "tag": "1.0.1190",
+      "commit": "83c935231d664ee9d523edf32a1c1aecaac1a92a",
+      "prerelease": true,
+      "published": "2021-12-22T00:38:26Z"
+    },
+    {
+      "repo": "GoldHEN/GoldHEN",
+      "defaultBranch": "master",
+      "branches": [
+        {
+          "name": "beta",
+          "commit": "f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4"
+        },
+        {
+          "name": "master",
+          "commit": "3bb36e7a9fdc3f38147f7c59c6cbc464c9ca395c"
+        }
+      ],
+      "archived": false,
+      "apiLicense": null,
+      "tag": "2.4b18",
+      "commit": "f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4",
+      "prerelease": true,
+      "published": "2024-10-28T05:27:29Z"
+    }
+  ],
+  "sourceContracts": {
+    "orbis": {
+      "firmwareBuilds": [
+        {
+          "filename": "Orbis-Toolbox-505.bin",
+          "firmware": "5.05"
+        },
+        {
+          "filename": "Orbis-Toolbox-672.bin",
+          "firmware": "6.72"
+        },
+        {
+          "filename": "Orbis-Toolbox-702.bin",
+          "firmware": "7.02"
+        },
+        {
+          "filename": "Orbis-Toolbox-755.bin",
+          "firmware": "7.55"
+        },
+        {
+          "filename": "Orbis-Toolbox-900.bin",
+          "firmware": "9.00"
+        }
+      ],
+      "henFirst": true,
+      "retailExecutablesOnly": true,
+      "incompatible": [
+        "Hybrid Flasher",
+        "Updater POC"
+      ],
+      "originalReadmeNames": [
+        "Mira",
+        "GoldHEN"
+      ],
+      "selectedFileLoadFirmwares": [
+        "5.05",
+        "6.72",
+        "9.00"
+      ],
+      "downloadOnlyFirmwares": [
+        "7.02",
+        "7.55"
+      ],
+      "reason": "Original Orbis support does not establish GoldHEN HTTP availability on7.02/7.55. No such Load route is enabled."
+    },
+    "goldhen": {
+      "originalReleaseFirmwares": [
+        "5.05",
+        "6.71",
+        "6.72",
+        "9.00",
+        "9.60",
+        "10.00",
+        "10.01",
+        "10.50",
+        "10.70",
+        "10.71",
+        "11.00"
+      ],
+      "actionFirmware": [
+        "9.00"
+      ],
+      "previousWebKitSupportedByRelease": true,
+      "pppwnRequiresCustomStage2": true,
+      "releaseVersion": "2.4b18",
+      "excludedHostVersion": "2.4b18.12",
+      "binMatchesOriginalArchiveAndPinnedRaw": true,
+      "archiveSHA256": "d0c84c79f65df5afc79a00c578f33ab1aa70aeb9c205f1e789895dc7d4fca38d",
+      "readySHA256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+      "sourceKnownIssue": "The official GoldHEN release reports possible rest-mode crashes or malfunction with Orbis Toolbox, Apollo and Itemzflow."
+    }
+  },
+  "archiveMembers": [
+    {
+      "name": "goldhen.bin",
+      "bytes": 260160,
+      "crc32": "F431EE2B"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4763
+    },
+    {
+      "name": "CHANGELOG.md",
+      "bytes": 3569
+    },
+    {
+      "name": "CHEATMENU.md",
+      "bytes": 1599
+    },
+    {
+      "name": "THANKS.md",
+      "bytes": 1393
+    },
+    {
+      "name": "pppnw_stage2/stage2_v1.03.7z",
+      "bytes": 2163
+    }
+  ],
+  "files": [
+    {
+      "name": "Orbis-Toolbox-505.bin",
+      "bytes": 626472,
+      "sha256": "657aad360767ce7f9cef3c374f8ea448870df8d3cf6534a582930bbec0b400ce",
+      "importPath": "tmp/host-repository-review/original-tool-followup/Orbis-Toolbox-505.bin",
+      "headerHex": "e9ab050000662e0f1f84000000000090",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-505.bin",
+      "release": "1.0.1190 Alpha - firmware 5.05",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "name": "Orbis-Toolbox-672.bin",
+      "bytes": 626504,
+      "sha256": "c19e3f0d549b241aa31febd5a5223d0bf0156bdc4e419e1083f795ea90d5ce30",
+      "importPath": "tmp/host-repository-review/original-tool-followup/Orbis-Toolbox-672.bin",
+      "headerHex": "e9ab050000662e0f1f84000000000090",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-672.bin",
+      "release": "1.0.1190 Alpha - firmware 6.72",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "name": "Orbis-Toolbox-702.bin",
+      "bytes": 626664,
+      "sha256": "9f8a34ff2ab3918f3a01e3126817c3c0afd4671c3f0613e05cef540cf7d79a3c",
+      "importPath": "tmp/host-repository-review/original-tool-followup/Orbis-Toolbox-702.bin",
+      "headerHex": "e9ab050000662e0f1f84000000000090",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-702.bin",
+      "release": "1.0.1190 Alpha - firmware 7.02",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "name": "Orbis-Toolbox-755.bin",
+      "bytes": 626664,
+      "sha256": "421131368229e986385a5a5cf4a65d1be8a5835d7ba018720b8764e00153871c",
+      "importPath": "tmp/host-repository-review/original-tool-followup/Orbis-Toolbox-755.bin",
+      "headerHex": "e9ab050000662e0f1f84000000000090",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-755.bin",
+      "release": "1.0.1190 Alpha - firmware 7.55",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "name": "Orbis-Toolbox-900.bin",
+      "bytes": 626392,
+      "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+      "importPath": "tmp/host-repository-review/original-tool-followup/Orbis-Toolbox-900.bin",
+      "headerHex": "e9ab050000662e0f1f84000000000090",
+      "sourceURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin",
+      "release": "1.0.1190 Alpha - firmware 9.00",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "name": "GoldHEN_v2.4b18.7z",
+      "bytes": 258065,
+      "sha256": "d0c84c79f65df5afc79a00c578f33ab1aa70aeb9c205f1e789895dc7d4fca38d",
+      "importPath": "tmp/host-repository-review/original-tool-followup/GoldHEN_v2.4b18.7z",
+      "headerHex": "377abcaf271c0004bf979a1bcdef0300",
+      "sourceURL": "https://github.com/GoldHEN/GoldHEN/releases/download/2.4b18/GoldHEN_v2.4b18.7z",
+      "release": "2.4b18 - original 7z",
+      "existingArchive": [],
+      "existingCatalogue": []
+    },
+    {
+      "name": "goldhen.bin",
+      "bytes": 260160,
+      "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+      "importPath": "tmp/host-repository-review/original-tool-followup/goldhen.bin",
+      "headerHex": "e986110000f30f1efa55ba0400000053",
+      "sourceURL": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4/goldhen.bin",
+      "release": "2.4b18 - official unified BIN - f2cd6f8ec51b",
+      "existingArchive": [],
+      "existingCatalogue": []
+    }
+  ],
+  "actions": [
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-505",
+      "firmwares": [
+        "5.05"
+      ],
+      "run": {
+        "type": "goldhen-http",
+        "port": 9090,
+        "statusPath": "/status",
+        "readyStatus": "ready",
+        "input": "user-file"
+      },
+      "downloadURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-505.bin",
+      "sha256": "657aad360767ce7f9cef3c374f8ea448870df8d3cf6534a582930bbec0b400ce",
+      "bytes": 626472
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-672",
+      "firmwares": [
+        "6.72"
+      ],
+      "run": {
+        "type": "goldhen-http",
+        "port": 9090,
+        "statusPath": "/status",
+        "readyStatus": "ready",
+        "input": "user-file"
+      },
+      "downloadURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-672.bin",
+      "sha256": "c19e3f0d549b241aa31febd5a5223d0bf0156bdc4e419e1083f795ea90d5ce30",
+      "bytes": 626504
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-702",
+      "firmwares": [
+        "7.02"
+      ],
+      "run": null,
+      "downloadURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-702.bin",
+      "sha256": "9f8a34ff2ab3918f3a01e3126817c3c0afd4671c3f0613e05cef540cf7d79a3c",
+      "bytes": 626664
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-755",
+      "firmwares": [
+        "7.55"
+      ],
+      "run": null,
+      "downloadURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-755.bin",
+      "sha256": "421131368229e986385a5a5cf4a65d1be8a5835d7ba018720b8764e00153871c",
+      "bytes": 626664
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-900",
+      "firmwares": [
+        "9.00"
+      ],
+      "run": {
+        "type": "goldhen-http",
+        "port": 9090,
+        "statusPath": "/status",
+        "readyStatus": "ready",
+        "input": "user-file"
+      },
+      "downloadURL": "https://github.com/OSM-Made/Orbis-Toolbox/releases/download/1.0.1190/Orbis-Toolbox-900.bin",
+      "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+      "bytes": 626392
+    },
+    {
+      "id": "ps4-original-goldhen-2-4b18-900",
+      "firmwares": [
+        "9.00"
+      ],
+      "run": {
+        "type": "bin-tcp",
+        "port": 9020,
+        "input": "user-file"
+      },
+      "downloadURL": "https://raw.githubusercontent.com/GoldHEN/GoldHEN/f2cd6f8ec51b6291ef961dc6aa721c96556dbeb4/goldhen.bin",
+      "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+      "bytes": 260160
+    }
+  ],
+  "licensing": "No original repository licence grant was established. No source code/runtime or ready binary is publicly mirrored; public Download retains the original author URL. User-selected bytes are transient for the requested transfer and are not persisted or redistributed by this metadata batch.",
+  "limitations": [
+    "No downloaded file was executed. No console was contacted.",
+    "Official release support and flat-BIN structure establish source scope, not physical success on the user console.",
+    "Original Orbis pre-release is archived and must retain its HEN/retail/rest-mode requirements.",
+    "GoldHEN release firmware support is recorded separately from the deliberately restricted9.00Load action."
+  ]
+}

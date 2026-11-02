@@ -88,6 +88,8 @@ const T = {
 // Keep console controls, host selectors and safe dynamic templates in a focused pack.
 Object.assign(T, require('./console-translations.cjs'));
 Object.assign(T, require('./host-repository-translations.cjs'));
+Object.assign(T, require('./host-original-tool-translations.cjs'));
+Object.assign(T, require('./host-next-batch-translations.cjs'));
 const keys = Object.keys(T);
 let written = 0;
 

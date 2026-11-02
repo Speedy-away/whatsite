@@ -3253,7 +3253,7 @@
       "downloads": [
         {
           "id": "gta5-beta-rebranded",
-          "label": "Download",
+          "label": "Full package",
           "url": "https://cdn.discordapp.com/attachments/1566490966808989799/1566490967035613264/2TAKE1_PS4_BETA_045_TEST.zip",
           "distribution": "include"
         }
@@ -3262,7 +3262,8 @@
       "guideBlocks": [
         {
           "type": "paragraph",
-          "text": "The source provides a PS4 beta test package. The captured post supplies no installation instructions or game-update compatibility."
+          "title": "Captured beta label",
+          "text": "The captured post supplies a PS4 beta package without a GTA V update pin. File inspection identifies VOID_Beta_419.prx and the CUSA00419 example below."
         },
         {
           "type": "paragraph",
@@ -3272,10 +3273,40 @@
         {
           "type": "code",
           "text": "[CUSA00419]\n/data/GoldHEN/plugins/VOID_Beta_419.prx"
+        },
+        {
+          "type": "paragraph",
+          "title": "Package identity and compatibility",
+          "text": "The post labels this a 2TAKE1 PS4 beta test. Its actual module is VOID_Beta_419.prx; an official 2Take1 release is not established. The included configuration names CUSA00419, but supplies no GTA V update. Confirm that missing requirement with the source before installing."
+        },
+        {
+          "type": "paragraph",
+          "title": "Included files",
+          "text": "Keep the supplied data folder with the beta module. Preserve your plugins.ini and merge only its VOID entry; the sample also contains unrelated games and plugins."
         }
       ],
-      "controls": [],
-      "videos": []
+      "controls": [
+        {
+          "input": "R1 + D-pad Left",
+          "action": "Open the menu; documented by the inspected module text."
+        }
+      ],
+      "videos": [],
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "2TAKE1 PS4 beta test",
+        "PS4 GTA 5",
+        "Grand Theft Auto V"
+      ],
+      "titleIds": [
+        "CUSA00419"
+      ]
     },
     {
       "id": "gta5-scorpion-v1-2b",
@@ -3289,7 +3320,10 @@
         "1.00",
         "1.38",
         "1.43",
-        "1.46"
+        "1.46",
+        "1.48",
+        "1.49",
+        "1.50"
       ],
       "source": {
         "forumTitle": "🔵GTA5-Menus",
@@ -3304,15 +3338,37 @@
       "downloads": [
         {
           "id": "gta5-scorpion-v1-2b",
-          "label": "Download",
+          "label": "Full package",
           "url": "https://cdn.discordapp.com/attachments/1565363659226484866/1565363659884986519/GTAV-Scorpion-v1.2b.7z",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-scorpion-v1-2b-module-1-48",
+          "label": "GTA V 1.48 · module only",
+          "filename": "ScorpionMenu-v1.2b-148.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reviewed-variants/gta5-scorpion-v1-2b/ScorpionMenu-v1.2b-148.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-scorpion-v1-2b-module-1-49",
+          "label": "GTA V 1.49 · module only",
+          "filename": "ScorpionMenu-v1.2b-149.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reviewed-variants/gta5-scorpion-v1-2b/ScorpionMenu-v1.2b-149.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-scorpion-v1-2b-module-1-50",
+          "label": "GTA V 1.50 · module only",
+          "filename": "ScorpionMenu-v1.2b-150.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reviewed-variants/gta5-scorpion-v1-2b/ScorpionMenu-v1.2b-150.prx",
           "distribution": "include"
         }
       ],
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-scorpion-v1-2b-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-scorpion-v1-2b-image.png",
+          "caption": "Scorpion screenshot supplied with the captured post; supported game updates come from the archive, not the screenshot."
         }
       ],
       "guideBlocks": [
@@ -3342,11 +3398,38 @@
           "type": "code",
           "title": "Source’s GTA V 1.50 example",
           "text": "[CUSA00419]\n/data/GoldHEN/plugins/ScorpionMenu-v1.2b-150.prx=true\n\n[CUSA00411]\n/data/GoldHEN/plugins/ScorpionMenu-v1.2b-150.prx=true"
+        },
+        {
+          "type": "paragraph",
+          "title": "Choose the matching update",
+          "text": "Menu v1.2b includes separate modules for GTA V 1.00 EU/US, 1.38, 1.43, 1.46, 1.48, 1.49 and 1.50. Keep /data/Scorpion from the full archive. A module-only download omits that data folder. Use the exact selected filename in plugins.ini; the README’s 1.50 line is an example, not a universal build."
         }
       ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source title lists GTA V 1.00, 1.38, 1.43, 1.46 and “148”; the last label is preserved as supplied."
+      "compatibilityText": "PS4 · separate archive-labelled modules for GTA V 1.00, 1.38, 1.43, 1.46, 1.48, 1.49, 1.50. Keep the Scorpion data folder.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Scorpion v1.2b",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.00",
+        "1.38",
+        "1.43",
+        "1.46"
+      ],
+      "titleIds": [
+        "CUSA00419",
+        "CUSA00411"
+      ],
+      "menuVersion": "v1.2b",
+      "version": "Menu v1.2b · GTA V 1.00 / 1.38 / 1.43 / 1.46 / 1.48 / 1.49 / 1.50"
     },
     {
       "id": "gta5-cyprus",
@@ -3408,19 +3491,58 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-cyprus-image.jpg",
-          "display": "/assets/images/ps4-ps5/edited/gta5-cyprus-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-cyprus-image.jpg",
+          "caption": "Original Cyprus promotional preview from the captured source; individual game-update compatibility comes from the selected download."
         }
       ],
-      "guideBlocks": [],
-      "controls": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Choose a Cyprus module",
+          "text": "Each download is a separate CyprusMenu.prx for GTA V 1.53, 1.54, 1.55, 1.56 or 1.57. Keep the selected update label when saving files. The modules identify this as Cyprus Lite; no numeric menu release, title-ID list or firmware range was supplied."
+        },
+        {
+          "type": "paragraph",
+          "title": "Menu data",
+          "text": "The modules reference /data/Cyprus, /data/Cyprus/Textures and /data/Cyprus/CustomVehicles.ini. These standalone PRX downloads do not supply those extra assets. Obtain matching data from the source for features that need it."
+        }
+      ],
+      "controls": [
+        {
+          "input": "R1 + D-pad Left",
+          "action": "Open the menu; documented by the inspected module text."
+        }
+      ],
       "videos": [
         {
           "url": "https://www.youtube.com/watch?v=WodroCJcxfA&t=118s",
           "title": "Video supplied with the forum post"
         }
       ],
-      "compatibilityText": "Source lists GTA V game updates 1.53, 1.54, 1.55, 1.56, 1.57."
+      "compatibilityText": "Source lists GTA V game updates 1.53, 1.54, 1.55, 1.56, 1.57.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Cyprus",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.53",
+        "1.54",
+        "1.55",
+        "1.56",
+        "1.57"
+      ],
+      "menuVersion": "Lite (numeric release unspecified)"
     },
     {
       "id": "gta5-serendipity-1-57",
@@ -3446,13 +3568,51 @@
       "downloads": [
         {
           "id": "gta5-serendipity-1-57",
-          "label": "Download",
+          "label": "Full package · GTA V 1.57",
           "url": "https://www.mediafire.com/file/d9ihh3incylh88x/Serendipity.rar/file",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-serendipity-1-57-legacy-file",
+          "label": "Seren.prx · plugin only",
+          "filename": "Seren.prx",
+          "url": "https://cdn.discordapp.com/attachments/1563209961096613918/1563210180227764276/Seren.prx?ex=6ae8a9ee&is=6ae7586e&hm=7b3ccfdb3da7466417a452588e4f522591951274d24e3cde18fd97a6259e4d26&",
           "distribution": "include"
         }
       ],
-      "images": [],
-      "guideBlocks": [],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/serendipity.png",
+          "display": "/assets/images/ps4-gta5/serendipity.png",
+          "caption": "Serendipity menu preview supplied for the existing PS4 catalogue; exact revision of this archive is not independently established."
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "steps",
+          "title": "Install the supplied package",
+          "items": [
+            {
+              "title": "Choose the full archive",
+              "text": "The GTA V 1.57 package contains Seren.prx and its serendipity folder. The separate Seren.prx download is byte-identical to the archive’s module and omits the supporting data."
+            },
+            {
+              "title": "Keep the data together",
+              "text": "Preserve the folder at /data/serendipity, including settings.ini, outfits and menyoo/Spooner resources. Place Seren.prx at /data/GoldHEN/plugins/Seren.prx and use your matching title-ID section."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "title": "Release and controls",
+          "text": "The module contains both Serendipity and Velora 1.4 text. A separate Serendipity release number is not established. L3 + R3 refers to No Clip; the main menu’s opening shortcut and title-ID mapping are not documented."
+        }
+      ],
       "controls": [],
       "videos": [
         {
@@ -3460,7 +3620,20 @@
           "title": "Video supplied with the forum post"
         }
       ],
-      "compatibilityText": "The source labels this GTA V 1.57 and says “only offline and online”; these are source claims, not a compatibility test."
+      "compatibilityText": "The source labels this GTA V 1.57 and says “only offline and online”; these are source claims, not a compatibility test.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Serendipity · GTA V 1.57",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ]
     },
     {
       "id": "gta5-expulsion-v5-1-57",
@@ -3486,7 +3659,7 @@
       "downloads": [
         {
           "id": "gta5-expulsion-v5-1-57",
-          "label": "Download",
+          "label": "Full package · GTA V 1.57",
           "url": "https://www.mediafire.com/file/f20tsz8dj37n1ax/Expulsion-V5.0-PS4-1.57-Release.rar/file",
           "distribution": "include"
         }
@@ -3494,8 +3667,8 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-expulsion-v5-1-57-image.png",
-          "display": "/assets/images/ps4-ps5/edited/gta5-expulsion-v5-1-57-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-expulsion-v5-1-57-image.png",
+          "caption": "Original Expulsion v5.0 source preview; visible menu footer identifies game update1.57."
         }
       ],
       "guideBlocks": [
@@ -3557,7 +3730,20 @@
           "title": "Video supplied with the forum post"
         }
       ],
-      "compatibilityText": "Source lists GTA V game update 1.57."
+      "compatibilityText": "Source lists GTA V game update 1.57.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Expulsion V5.0 · GTA V 1.57",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ]
     },
     {
       "id": "gta5-beach-1-56",
@@ -3583,7 +3769,7 @@
       "downloads": [
         {
           "id": "gta5-beach-1-56",
-          "label": "Download",
+          "label": "Menu file · GTA V 1.56",
           "url": "https://cdn.discordapp.com/attachments/1559150712649420840/1559150713160867900/BeachMenu156.prx",
           "distribution": "include"
         }
@@ -3591,14 +3777,38 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-beach-1-56-image.jpg",
-          "display": "/assets/images/ps4-ps5/edited/gta5-beach-1-56-1-57-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-beach-1-56-image.jpg",
+          "caption": "Beach source preview; visible footer says1.57b1, while this download is pinned to GTA V1.56."
         }
       ],
-      "guideBlocks": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Standalone Beach 1.56 module",
+          "text": "Use BeachMenu156.prx for the source-labelled GTA V 1.56 download. It references /data/BeachXml and /mnt/usb0/BeachXml for XML features, but includes no XML folder. Embedded “Beach v1.72” startup text is a menu/build string, not a different GTA V update. No title-ID mapping or clear opening shortcut was supplied."
+        }
+      ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.56."
+      "compatibilityText": "Source lists GTA V game update 1.56.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Beach · GTA V 1.56",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.56"
+      ]
     },
     {
       "id": "gta5-beach-1-57",
@@ -3624,7 +3834,7 @@
       "downloads": [
         {
           "id": "gta5-beach-1-57",
-          "label": "Download",
+          "label": "Menu file · GTA V 1.57",
           "url": "https://cdn.discordapp.com/attachments/1559150589575823431/1559150590599241810/BeachMenu157.prx",
           "distribution": "include"
         }
@@ -3632,14 +3842,38 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-beach-1-57-image.jpg",
-          "display": "/assets/images/ps4-ps5/edited/gta5-beach-1-56-1-57-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-beach-1-57-image.jpg",
+          "caption": "Original Beach source preview; visible footer says1.57b1. Confirm the selected binary separately."
         }
       ],
-      "guideBlocks": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Standalone Beach 1.57 module",
+          "text": "Use BeachMenu157.prx for GTA V 1.57, separately from BeachMenu156.prx. Its configuration path is /data/BeachConf.ini. No independent menu release, title-ID mapping or clear opening shortcut was supplied."
+        }
+      ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.57."
+      "compatibilityText": "Source lists GTA V game update 1.57.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Beach · GTA V 1.57",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ]
     },
     {
       "id": "gta5-explosive-1-52-1-53",
@@ -3692,7 +3926,8 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-explosive-1-52-1-53-image.jpg",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-explosive-1-52-1-53-image.jpg",
+          "caption": "Explosive menu-family preview with a visible Build3.7.0 label; select the separately pinned GTA V game-update download."
         }
       ],
       "guideBlocks": [
@@ -3719,12 +3954,31 @@
           "type": "code",
           "title": "selfoptions.ini",
           "text": "[SelfOptions]\r\nGodmode=1\r\nSuper Jump=1\r\nNever Wanted=1\r\nWanted Level=0\r\nSuper Run=0\r\nFast Swim=0\r\nInvisibility=0\r\nNo Ragdoll=1\r\nSeatbelt=1\r\nInfinite Stamina=0\r\nRevenge=0"
+        },
+        {
+          "type": "paragraph",
+          "title": "Keep update-specific files separate",
+          "text": "Explosive152.sprx and Explosive153.sprx are different game-update builds. Preserve the source’s design.ini.txt and selfoptions.ini.txt with its instructions; do not assume that renaming another menu or using an Expulsion configuration makes it compatible."
         }
       ],
       "controls": [],
       "videos": [],
       "compatibilityText": "Source lists GTA V game updates 1.52, 1.53.",
-      "version": "v2.0"
+      "version": "v2.0",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Explosive · GTA V 1.52 / 1.53",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.52",
+        "1.53"
+      ]
     },
     {
       "id": "gta5-ozark-1-56",
@@ -3750,21 +4004,64 @@
       "downloads": [
         {
           "id": "gta5-ozark-1-56",
-          "label": "Download",
+          "label": "Full package · GTA V 1.56",
           "url": "https://cdn.discordapp.com/attachments/1553705167843754006/1553705168971894914/ozarkrbn.rar",
           "distribution": "include"
         }
       ],
       "images": [
         {
-          "original": "/assets/images/ps4-ps5/originals/gta5-ozark-1-56-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "original": "/assets/images/ps4-gta5/ozark-user-preview-2026-11-02.png",
+          "display": "/assets/images/ps4-gta5/ozark-user-preview-2026-11-02.png",
+          "caption": "Ozark menu preview supplied by the user; choose the separately pinned GTA V game-update download."
         }
       ],
-      "guideBlocks": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "steps",
+          "title": "Ozark package setup",
+          "items": [
+            {
+              "title": "Choose your GTA V update",
+              "text": "Use the full 1.56 package. The 1.56 RAR and 1.57 ZIP contain different Ozark.sprx builds; the shared filename does not make them interchangeable."
+            },
+            {
+              "title": "Keep the data folder",
+              "text": "Extract the wrapper folder, preserve its ozark folder at /data/ozark, and place the paired Ozark.sprx in /data/GoldHEN/plugins/. Keep the location, outfit and menyoo resources together."
+            },
+            {
+              "title": "Use the matching game entry",
+              "text": "The package does not supply a title-ID mapping or a clear menu-opening shortcut. Confirm these with the source; do not copy another menu’s title-ID or key combination."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "title": "Screenshot",
+          "text": "The Ozark image is the screenshot supplied by the user. It previews the menu family without establishing the selected download’s game update."
+        }
+      ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.56."
+      "compatibilityText": "Source lists GTA V game update 1.56.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Ozark · GTA V 1.56",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.56"
+      ]
     },
     {
       "id": "gta5-beach-legacy",
@@ -3775,11 +4072,14 @@
       "publication": "include",
       "name": "Beach · older GTA V updates",
       "gameVersions": [
+        "1.46",
         "1.47",
         "1.48",
         "1.49",
         "1.50",
-        "1.51"
+        "1.51",
+        "1.52",
+        "1.53"
       ],
       "source": {
         "forumTitle": "🔵GTA5-Menus",
@@ -3898,7 +4198,8 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-beach-legacy-image.jpg",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-beach-legacy-image.jpg",
+          "caption": "Beach menu-family preview: title says GTA V1.56 and the menu footer says1.55. Select the separately pinned older download."
         }
       ],
       "guideBlocks": [
@@ -3920,11 +4221,33 @@
           "type": "code",
           "title": "Folder’s separate 1.52 b1 plugins.ini example",
           "text": "; Note: lines starting with semicolon are for comments.\n; Load plugins for any title.\n\n[default]\n\n; Load plugins only for Playroom.\n\n[CUSA00419]\n/data/GoldHEN/plugins/Beach-1.52b1.prx\n\n[CUSA00411]\n/data/GoldHEN/plugins/Beach-1.52b1.prx\n\n"
+        },
+        {
+          "type": "paragraph",
+          "title": "Older game-update selection",
+          "text": "The source folder also includes explicit GTA V 1.46, 1.52 and 1.53 files. Read each download’s game-update and menu-release label separately. The separate gtav_60fps.prx has no precise game-update pin established by its filename. Retained 30/60 FPS labels do not establish independently tested frame-rate behavior."
         }
       ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game updates 1.47, 1.48, 1.49, 1.50, 1.51."
+      "compatibilityText": "PS4 · source-labelled GTA V 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53. Choose each download by its own game update and menu release.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Beach · older GTA V updates",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.47",
+        "1.48",
+        "1.49",
+        "1.50",
+        "1.51"
+      ]
     },
     {
       "id": "gta5-lts-1-57",
@@ -3950,21 +4273,44 @@
       "downloads": [
         {
           "id": "gta5-lts-1-57",
-          "label": "Download",
+          "label": "Menu file · GTA V 1.57",
           "url": "https://lbxmb.fr/api/uploads/ressources/Last%20Remake%20Standing/LRS.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-lts-1-57-legacy-file",
+          "label": "LRS.prx · GTA V 1.57",
+          "filename": "LRS.prx",
+          "url": "https://cdn.discordapp.com/attachments/1553009205764685856/1554233714660081734/LRS.prx?ex=6ae8f771&is=6ae7a5f1&hm=f6a4b81491a85c6add4b5fa02e6a9e2806d031dcbe86e51bd1966058f271a888&",
           "distribution": "include"
         }
       ],
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-lts-1-57-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-lts-1-57-image.png",
+          "caption": "LRS / LTS source preview; the image depicts the named menu family without certifying a particular game update."
         }
       ],
       "guideBlocks": [
         {
           "type": "paragraph",
           "text": "The source post is titled LTS 1.57, while its screenshot prominently labels the menu “LRS MENU” and its download is LRS.prx. These supplied labels are preserved."
+        },
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Choose the preserved LRS file",
+          "text": "The LTS source names the menu LRS in its screenshot. The earlier collection supplies LRS.prx for GTA V 1.57; that exact original is available here alongside the captured-post link. A separate menu release and title-ID mapping are not established."
+        },
+        {
+          "type": "paragraph",
+          "title": "Script and configuration folders",
+          "text": "The inspected LRS.prx references /data/LRS_csc/ for CSC scripts, plus configs, outfit, maps and car subfolders, and /data/LRS_csc/settings.ini. This standalone module does not bundle those folders. The embedded button strings do not clearly identify a menu-opening shortcut."
         }
       ],
       "controls": [],
@@ -3974,7 +4320,20 @@
           "title": "Video supplied with the forum post"
         }
       ],
-      "compatibilityText": "Source lists GTA V game update 1.57."
+      "compatibilityText": "Source lists GTA V game update 1.57.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "LTS · GTA V 1.57",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ]
     },
     {
       "id": "gta5-oxagon-1-56",
@@ -3983,8 +4342,9 @@
       ],
       "category": "menu",
       "publication": "include",
-      "name": "Oxagon · GTA V 1.56",
+      "name": "Oxagon Full v1.0",
       "gameVersions": [
+        "1.53",
         "1.56"
       ],
       "source": {
@@ -4000,21 +4360,75 @@
       "downloads": [
         {
           "id": "gta5-oxagon-1-56",
-          "label": "Download",
+          "label": "Full package",
           "url": "https://cdn.discordapp.com/attachments/1553706704741470298/1553721945709748314/Oxagon-v1.0.zip",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-oxagon-1-56-module-1-53",
+          "label": "GTA V 1.53 · module only",
+          "filename": "Oxagon_153.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reviewed-variants/gta5-oxagon-1-56/Oxagon_153.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-oxagon-1-56-module-1-56",
+          "label": "GTA V 1.56 · module only",
+          "filename": "Oxagon_156.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reviewed-variants/gta5-oxagon-1-56/Oxagon_156.prx",
           "distribution": "include"
         }
       ],
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-oxagon-1-56-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-oxagon-1-56-image.png",
+          "caption": "Oxagon source menu preview; use the selected GTA V1.56 archive and its own installation notes."
         }
       ],
-      "guideBlocks": [],
+      "guideBlocks": [
+        {
+          "type": "steps",
+          "title": "Oxagon Full v1.0 installation",
+          "items": [
+            {
+              "title": "Select the actual module",
+              "text": "The archive contains Oxagon_153.prx for GTA V 1.53 and Oxagon_156.prx for GTA V 1.56. Choose the matching file; they are separate binaries."
+            },
+            {
+              "title": "Transfer the supporting folder",
+              "text": "Copy the archive’s Oxagon folder to /data/Oxagon and the selected PRX to /data/GoldHEN/plugins/. The module-only links omit the data folder."
+            },
+            {
+              "title": "Merge the matching configuration",
+              "text": "Back up plugins.ini. The README pairs CUSA00419 with the 1.53 module and CUSA00411 with the 1.56 module. These are the supplied examples; other region/update combinations are not established."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Supplied title-ID examples",
+          "text": "[CUSA00419]\n/data/GoldHEN/plugins/Oxagon_153.prx\n\n[CUSA00411]\n/data/GoldHEN/plugins/Oxagon_156.prx"
+        }
+      ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.56."
+      "compatibilityText": "PS4 · separate GTA V 1.53 / 1.56 modules; see the README title-ID examples.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Oxagon · GTA V 1.56",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.56"
+      ],
+      "menuVersion": "Full v1.0",
+      "version": "Menu Full v1.0 · GTA V 1.53 / 1.56"
     },
     {
       "id": "gta5-explosive-1-57",
@@ -4040,7 +4454,7 @@
       "downloads": [
         {
           "id": "gta5-explosive-1-57",
-          "label": "Download",
+          "label": "Menu file · GTA V 1.57",
           "url": "https://cdn.discordapp.com/attachments/1553709164423942255/1553709165753409596/explosive_temp.sprx",
           "distribution": "include"
         }
@@ -4048,13 +4462,38 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-explosive-1-57-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-explosive-1-57-image.png",
+          "caption": "Explosive source screenshot with a visible Build3.7.0 menu label; GTA V1.57 comes from the selected source download."
         }
       ],
-      "guideBlocks": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Explosive 1.57 module",
+          "text": "This download is explosive_temp.sprx for the source-labelled GTA V 1.57 entry. Use its original name in the plugin path. No README, title-ID mapping or opening shortcut was supplied. Explosive and Expulsion remain separate menu families."
+        }
+      ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.57."
+      "compatibilityText": "Source lists GTA V game update 1.57.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Explosive · GTA V 1.57",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ]
     },
     {
       "id": "gta5-ozark-1-57",
@@ -4080,21 +4519,64 @@
       "downloads": [
         {
           "id": "gta5-ozark-1-57",
-          "label": "Download",
+          "label": "Full package · GTA V 1.57",
           "url": "https://cdn.discordapp.com/attachments/1553704618666491904/1553704653924081724/ozarkrbn.zip",
           "distribution": "include"
         }
       ],
       "images": [
         {
-          "original": "/assets/images/ps4-ps5/originals/gta5-ozark-1-57-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "original": "/assets/images/ps4-gta5/ozark-user-preview-2026-11-02.png",
+          "display": "/assets/images/ps4-gta5/ozark-user-preview-2026-11-02.png",
+          "caption": "Ozark menu preview supplied by the user; choose the separately pinned GTA V game-update download."
         }
       ],
-      "guideBlocks": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "steps",
+          "title": "Ozark package setup",
+          "items": [
+            {
+              "title": "Choose your GTA V update",
+              "text": "Use the full 1.57 package. The 1.56 RAR and 1.57 ZIP contain different Ozark.sprx builds; the shared filename does not make them interchangeable."
+            },
+            {
+              "title": "Keep the data folder",
+              "text": "Extract the wrapper folder, preserve its ozark folder at /data/ozark, and place the paired Ozark.sprx in /data/GoldHEN/plugins/. Keep the location, outfit and menyoo resources together."
+            },
+            {
+              "title": "Use the matching game entry",
+              "text": "The package does not supply a title-ID mapping or a clear menu-opening shortcut. Confirm these with the source; do not copy another menu’s title-ID or key combination."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "title": "Screenshot",
+          "text": "The Ozark image is the screenshot supplied by the user. It previews the menu family without establishing the selected download’s game update."
+        }
+      ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.57."
+      "compatibilityText": "Source lists GTA V game update 1.57.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Ozark · GTA V 1.57",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ]
     },
     {
       "id": "gta5-velora-1-56",
@@ -4120,7 +4602,7 @@
       "downloads": [
         {
           "id": "gta5-velora-1-56",
-          "label": "Download",
+          "label": "Menu file · GTA V 1.56",
           "url": "https://cdn.discordapp.com/attachments/1553703626923319356/1553703666777596074/Velora.sprx",
           "distribution": "include"
         }
@@ -4128,13 +4610,38 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-velora-1-56-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-velora-1-56-image.png",
+          "caption": "Velora source menu preview shared with the1.57 post; use the separately labelled game-update download."
         }
       ],
-      "guideBlocks": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Velora 1.56 download",
+          "text": "This is a standalone Velora.sprx for the source-labelled GTA V 1.56 entry. The module references /data/Velora/maps, vehicles, outfits, music, lua and velora_profile.ini. Matching support files are not included in this direct download; compatibility with the separate 1.57 package’s data is not established."
+        }
+      ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.56."
+      "compatibilityText": "Source lists GTA V game update 1.56.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Velora · GTA V 1.56",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.56"
+      ]
     },
     {
       "id": "gta5-velora-1-57",
@@ -4160,7 +4667,7 @@
       "downloads": [
         {
           "id": "gta5-velora-1-57",
-          "label": "Download",
+          "label": "Full package · GTA V 1.57",
           "url": "https://cdn.discordapp.com/attachments/1552385082717642872/1552385083938312294/Velora_1.4.zip",
           "distribution": "include"
         }
@@ -4168,18 +4675,44 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-velora-1-57-image.png",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-velora-1-57-image.png",
+          "caption": "Velora source menu preview shared with the1.56 post; menu1.4 and game1.57 come from the archived source labels."
         }
       ],
       "guideBlocks": [
         {
           "type": "paragraph",
           "text": "This post supplies the Velora 1.4 archive for its GTA V 1.57 entry. The separately preserved older download list also includes Velora 1.5; both archives remain available."
+        },
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Velora 1.4 package",
+          "text": "The full ZIP contains Velora.sprx and its Velora data folder. Preserve /data/Velora, including Lua compatibility files and speedometer DDS resources, with /data/GoldHEN/plugins/Velora.sprx. Menu release 1.4 and GTA V update 1.57 are separate labels. The older list’s distinct 1.5 module remains available. No title-ID mapping or fixed opening shortcut was supplied."
         }
       ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.57."
+      "compatibilityText": "Source lists GTA V game update 1.57.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Velora 1.4 · GTA V 1.57",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ],
+      "menuVersion": "1.4",
+      "catalogueSection": "v157"
     },
     {
       "id": "gta5-wildemodz-1-27",
@@ -4205,7 +4738,7 @@
       "downloads": [
         {
           "id": "gta5-wildemodz-1-27",
-          "label": "Download",
+          "label": "Menu file · GTA V 1.27",
           "url": "https://www.mediafire.com/file/j3j90nkbnz0pngu/WILDEMODZ_1.1_4.55.bin",
           "distribution": "include"
         }
@@ -4213,13 +4746,19 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-wildemodz-1-27-image.webp",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-wildemodz-1-27-image.webp",
+          "caption": "WildeModz source menu preview; the exact game/firmware scope follows the selected archived build."
         }
       ],
       "guideBlocks": [
         {
           "type": "paragraph",
           "text": "The post title lists GTA V 1.27. No firmware compatibility is established by the numbers in the supplied filename."
+        },
+        {
+          "type": "paragraph",
+          "title": "BIN download requirements",
+          "text": "The captured post labels GTA V 1.27 and supplies a WildeModz BIN. It is not a PRX/SPRX plugin. Keep the original file and use only the loader documented for that build. The filename’s 1.1 and 4.55 do not establish support for another game update or firmware. No complete loader setup or unambiguous opening shortcut was captured."
         }
       ],
       "controls": [],
@@ -4229,7 +4768,20 @@
           "title": "Video supplied with the forum post"
         }
       ],
-      "compatibilityText": "Source lists GTA V game update 1.27."
+      "compatibilityText": "Source lists GTA V game update 1.27.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "WildeModz · GTA V 1.27",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.27"
+      ]
     },
     {
       "id": "gta5-lotus-1-27",
@@ -4255,7 +4807,7 @@
       "downloads": [
         {
           "id": "gta5-lotus-1-27",
-          "label": "Download",
+          "label": "Menu file · GTA V 1.27",
           "url": "https://www.mediafire.com/file/hkk5ihte7yyqqzo/Lotus_1.03.bin/file",
           "distribution": "include"
         }
@@ -4263,18 +4815,38 @@
       "images": [
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-lotus-1-27-image.jpg",
-          "caption": "Screenshot supplied with the forum post."
+          "display": "/assets/images/ps4-ps5/originals/gta5-lotus-1-27-image.jpg",
+          "caption": "Lotus PS4 game1.27 source preview; visible menu version is1.02, while the supplied download filename says1.03."
         }
       ],
       "guideBlocks": [
         {
           "type": "paragraph",
           "text": "The post title lists GTA V 1.27. The supplied filename labels the menu 1.03; that filename is not evidence of a different game update."
+        },
+        {
+          "type": "paragraph",
+          "title": "Lotus menu and game versions",
+          "text": "The source supplies a Lotus 1.03 BIN for its GTA V 1.27 entry; the preview displays menu 1.02. Keep those labels separate. This file is not installed through plugins.ini. A matching loader, firmware matrix and unambiguous controller shortcut were not documented in the captured source."
         }
       ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.27."
+      "compatibilityText": "Source lists GTA V game update 1.27.",
+      "platforms": [
+        "ps4"
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Lotus · GTA V 1.27",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.27"
+      ],
+      "menuVersion": "1.03 (filename)"
     },
     {
       "id": "rdr2-sheriff-1-32",
@@ -15088,6 +15660,635 @@
       ],
       "videos": [],
       "compactDownload": true
+    },
+    {
+      "id": "gta5-crystalis-1-57",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "Crystalis",
+      "version": "GTA V 1.57",
+      "menuVersion": null,
+      "gameVersions": [
+        "1.57"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "titleIds": [
+        "CUSA00419"
+      ],
+      "description": "SPRX menu with its scripts, outfits and setup notes. Choose the full package to include the data folder.",
+      "compatibilityText": "PS4 · GTA V 1.57 · CUSA00419 (supplied configuration). GoldHEN plugin setup.",
+      "source": {
+        "forumTitle": "User-supplied attachment",
+        "postTitle": "Crystalis SPRX PS4 1.57",
+        "postUrl": "https://cdn.discordapp.com/attachments/1566833831695224852/1566833960695111951/Crystalis_SPRX_PS4_1.57.rar?ex=6ae9fb56&is=6ae8a9d6&hm=5ae37e2ce60fdec710795c82ec89a8a87eaf7832e4198ba24201d31e2ee02177&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/discord-ps4-ps5-raw/crystalis-ps4-157-user-source.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1566833831695224852/1566833960695111951/Crystalis_SPRX_PS4_1.57.rar?ex=6ae9fb56&is=6ae8a9d6&hm=5ae37e2ce60fdec710795c82ec89a8a87eaf7832e4198ba24201d31e2ee02177&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-crystalis-1-57-package",
+          "label": "Full package · GTA V 1.57",
+          "filename": "Crystalis_SPRX_PS4_1.57.rar",
+          "url": "https://cdn.discordapp.com/attachments/1566833831695224852/1566833960695111951/Crystalis_SPRX_PS4_1.57.rar?ex=6ae9fb56&is=6ae8a9d6&hm=5ae37e2ce60fdec710795c82ec89a8a87eaf7832e4198ba24201d31e2ee02177&",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-crystalis-1-57-sprx",
+          "label": "Crystalis.sprx · plugin only",
+          "filename": "Crystalis.sprx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/157/crystalis/Crystalis.sprx",
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/crystalis-icon.png",
+          "display": "/assets/images/ps4-gta5/crystalis-icon.png",
+          "caption": "Crystalis icon included in the supplied PS4 game1.57 archive; not a gameplay screenshot."
+        }
+      ],
+      "videos": [],
+      "controls": [
+        {
+          "input": "L1 + Circle",
+          "action": "Open the menu; this shortcut is present in the inspected module strings. Hardware behavior has not been tested."
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Choose the package",
+          "text": "Use the full package for the supplied data folder, scripts and outfits. Crystalis.sprx alone does not include those resources. 1.57 is the GTA V game update, not a menu release or console firmware version."
+        },
+        {
+          "type": "steps",
+          "title": "Included installation instructions",
+          "items": [
+            {
+              "title": "Check the installed game",
+              "text": "The archive and module name GTA V 1.57. The example configuration names CUSA00419; other regional title IDs and PS5 support are not established."
+            },
+            {
+              "title": "Keep the data folder",
+              "text": "Extract the original archive on your computer. Its installation note places the Crystalis folder under /data, giving /data/Crystalis. Preserve scripts, outfits and imgs. The note says img, but the actual archive and module both use /data/Crystalis/imgs/icon.png."
+            },
+            {
+              "title": "Place the module",
+              "text": "The supplied note places Crystalis.sprx in /data/GoldHEN/plugins/. Use a GoldHEN plugin environment compatible with your existing PS4 firmware. This SPRX is a game plugin, not a standalone BIN/ELF payload."
+            },
+            {
+              "title": "Merge your configuration",
+              "text": "Back up your existing plugins.ini. Merge the Crystalis path into the matching CUSA00419 section instead of replacing the whole file. The supplied example also lists LSOPlugin.prx, which is not included; its necessity is not documented. Preserve your unrelated plugin entries."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Crystalis entry from the supplied example",
+          "text": "[CUSA00419]\n/data/GoldHEN/plugins/Crystalis.sprx"
+        },
+        {
+          "type": "paragraph",
+          "title": "Source and inspection",
+          "text": "The supplied instalacion.txt credits FranCangel Modz. The archive passed its integrity test and contains 81 files. Crystalis.sprx has a PS4 SELF header and an embedded x86-64 ELF header. Files were inspected and hashed without execution; no firmware matrix or independent menu release number was supplied."
+        }
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Crystalis",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ],
+      "catalogueSection": "v157"
+    },
+    {
+      "id": "gta5-expulsion-v7-1-57",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "Expulsion 7.0",
+      "version": "Menu 7.0 · GTA V 1.57",
+      "gameVersions": [
+        "1.57"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "source": {
+        "forumTitle": "Preserved PS4 GTA V download list",
+        "postTitle": "Expulsion 7.0",
+        "postUrl": "https://www.mediafire.com/file/t3kgvyhof1ig5sm/Expulsion_V7.0.zip/file",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/ps4-gta5-sources.json",
+        "originalDownloadUrls": [
+          "https://www.mediafire.com/file/t3kgvyhof1ig5sm/Expulsion_V7.0.zip/file"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-expulsion-v7-1-57-legacy-file",
+          "label": "Full package · menu 7.0",
+          "filename": "Expulsion_V7.0.zip",
+          "url": "https://www.mediafire.com/file/t3kgvyhof1ig5sm/Expulsion_V7.0.zip/file",
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/expulsion-preview.png",
+          "caption": "Expulsion family preview: screenshot shows menu v5.0/game1.57; this download remains menu7.0."
+        }
+      ],
+      "videos": [],
+      "controls": [
+        {
+          "input": "Square + D-pad Right",
+          "action": "Default menu shortcut from INSTALL.txt; saved custom bindings take precedence."
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "steps",
+          "title": "Expulsion 7.0 setup",
+          "items": [
+            {
+              "title": "Check the game",
+              "text": "INSTALL.txt specifies GTA V 1.57 with CUSA00419 or CUSA00411 using the same supplied module. Menu 7.0 is the release number, not the game update."
+            },
+            {
+              "title": "Merge the supplied folders",
+              "text": "Close GTA V. Back up settings and custom files. Merge Expulsion V7.0/PS4/data/ into /data/ and PS4/user/ into /user/, retaining the provided folder names. Resolve settings conflicts deliberately rather than replacing your custom files."
+            },
+            {
+              "title": "Enable the plugin",
+              "text": "Merge the supplied LushModz-Expulsion-1.57.prx entry into the matching title-ID section of plugins.ini. Preserve unrelated entries and test one menu at a time."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Supplied plugin path",
+          "text": "/data/GoldHEN/plugins/LushModz-Expulsion-1.57.prx"
+        },
+        {
+          "type": "paragraph",
+          "title": "Preview and older build",
+          "text": "The family screenshot shows menu v5.0; this preserved package is v7.0. The separate v5.0 package remains available with its own requirements."
+        }
+      ],
+      "tags": [
+        "PS4",
+        "GoldHEN"
+      ],
+      "keywords": [
+        "Expulsion_V7.0.zip",
+        "Expulsion 7.0",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ],
+      "menuVersion": "7.0",
+      "titleIds": [
+        "CUSA00419",
+        "CUSA00411"
+      ],
+      "description": "Full PS4 GTA V 1.57 package with menu data, scripts, outfits and installation notes.",
+      "compatibilityText": "PS4 · GTA V 1.57",
+      "guideLabel": "Guide & requirements"
+    },
+    {
+      "id": "gta5-velora-v1-5-1-57",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "Velora 1.5",
+      "version": "Menu 1.5 (legacy label) · GTA V 1.57",
+      "gameVersions": [
+        "1.57"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "source": {
+        "forumTitle": "Preserved PS4 GTA V download list",
+        "postTitle": "Velora 1.5",
+        "postUrl": "https://cdn.discordapp.com/attachments/1551562290258518167/1561212081712136232/Velora.sprx?ex=6ae8a54e&is=6ae753ce&hm=6e211c1eff62ace1d7ee06de406a5c19e84dacc7888261a718dccf3024ecf2de&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/ps4-gta5-sources.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1551562290258518167/1561212081712136232/Velora.sprx?ex=6ae8a54e&is=6ae753ce&hm=6e211c1eff62ace1d7ee06de406a5c19e84dacc7888261a718dccf3024ecf2de&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-velora-v1-5-1-57-legacy-file",
+          "label": "Velora.sprx · menu 1.5 label",
+          "filename": "Velora.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1551562290258518167/1561212081712136232/Velora.sprx?ex=6ae8a54e&is=6ae753ce&hm=6e211c1eff62ace1d7ee06de406a5c19e84dacc7888261a718dccf3024ecf2de&",
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/velora.png",
+          "caption": "Velora menu-family preview; the image does not show the selected build’s exact release or game-update number."
+        }
+      ],
+      "videos": [],
+      "controls": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "PS4 plugin setup",
+          "text": "Check the installed GTA V update and regional title ID before choosing a file. Close GTA V, back up plugins.ini and use your existing compatible GoldHEN plugin environment. Merge only this menu’s entry under the matching title ID. Enable one menu at a time."
+        },
+        {
+          "type": "paragraph",
+          "title": "Standalone 1.5-labelled build",
+          "text": "The earlier list labels this GTA V 1.57 module Velora 1.5. Its strings also contain Version: 1.5, while the captured forum package is separately labelled 1.4. Preserve both originals. Place this module at /data/GoldHEN/plugins/Velora.sprx only with a matching game configuration. It references /data/Velora, Lua compatibility files and speedometer assets that are not bundled here; do not assume the 1.4 data folder is interchangeable. No title-ID mapping or resolved opening chord was supplied."
+        }
+      ],
+      "tags": [
+        "PS4",
+        "GoldHEN"
+      ],
+      "keywords": [
+        "Velora.sprx",
+        "Velora 1.5",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.57"
+      ],
+      "menuVersion": "1.5 (legacy label)",
+      "description": "Standalone Velora module from the earlier GTA V 1.57 collection; supporting data is not bundled.",
+      "compatibilityText": "PS4 · GTA V 1.57",
+      "guideLabel": "Guide & requirements"
+    },
+    {
+      "id": "gta5-oxagon-lite-v1-4",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "Oxagon Lite",
+      "version": "Menu Lite v1.4 · GTA V 1.53 / 1.56",
+      "gameVersions": [
+        "1.53",
+        "1.56"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "source": {
+        "forumTitle": "Preserved PS4 GTA V download list",
+        "postTitle": "Oxagon Lite",
+        "postUrl": "https://cdn.discordapp.com/attachments/1521234351797309481/1526678431444504676/Oxagon-Lite-v1.4.zip?ex=6ae8ea96&is=6ae79916&hm=4b19539b90824e0e0fa671cf89b0d4c45c5460438e5ad076f744d5cc2585ccdd&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/ps4-gta5-sources.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1521234351797309481/1526678431444504676/Oxagon-Lite-v1.4.zip?ex=6ae8ea96&is=6ae79916&hm=4b19539b90824e0e0fa671cf89b0d4c45c5460438e5ad076f744d5cc2585ccdd&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-oxagon-lite-v1-4-legacy-file",
+          "label": "Full package · key not included",
+          "filename": "Oxagon-Lite-v1.4.zip",
+          "url": "https://cdn.discordapp.com/attachments/1521234351797309481/1526678431444504676/Oxagon-Lite-v1.4.zip?ex=6ae8ea96&is=6ae79916&hm=4b19539b90824e0e0fa671cf89b0d4c45c5460438e5ad076f744d5cc2585ccdd&",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-oxagon-lite-v1-4-module-1-53",
+          "label": "GTA V 1.53 · module only",
+          "filename": "OxagonLite_153.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reviewed-variants/gta5-oxagon-lite-v1-4/OxagonLite_153.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "gta5-oxagon-lite-v1-4-module-1-56",
+          "label": "GTA V 1.56 · module only",
+          "filename": "OxagonLite_156.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4/GTA5/reviewed-variants/gta5-oxagon-lite-v1-4/OxagonLite_156.prx",
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/oxagon.png",
+          "caption": "Oxagon menu-family preview; exact Full/Lite variant and release are not established by this image."
+        }
+      ],
+      "videos": [],
+      "controls": [],
+      "guideBlocks": [
+        {
+          "type": "steps",
+          "title": "Oxagon Lite v1.4 requirements",
+          "items": [
+            {
+              "title": "Check the missing dependency",
+              "text": "The README requires /data/Oxagon.key, but the preserved ZIP contains no .key member. Obtain the matching required file from the source before treating this as a complete installation. The module-only links do not fix the missing dependency."
+            },
+            {
+              "title": "Choose the module",
+              "text": "Use OxagonLite_153.prx for GTA V 1.53 or OxagonLite_156.prx for GTA V 1.56. Keep the package’s Oxagon folder at /data/Oxagon and place the selected PRX in /data/GoldHEN/plugins/."
+            },
+            {
+              "title": "Preserve configuration",
+              "text": "Back up plugins.ini and merge the matching source entry for your installed game. Full v1.0 and Lite v1.4 are separate distributions; do not mix their modules or assume the same key requirement."
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "PS4",
+        "GoldHEN"
+      ],
+      "keywords": [
+        "Oxagon-Lite-v1.4.zip",
+        "Oxagon Lite",
+        "PS4 GTA 5",
+        "Grand Theft Auto V",
+        "1.53",
+        "1.56"
+      ],
+      "menuVersion": "Lite v1.4",
+      "description": "Separate GTA V 1.53/1.56 modules with the Oxagon folder. The key required by its README is missing from the ZIP.",
+      "compatibilityText": "PS4 · GTA V 1.53 / 1.56 · required key absent",
+      "guideLabel": "Guide & requirements"
+    },
+    {
+      "id": "gta5-script-loader-pack",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "pack",
+      "publication": "include",
+      "name": "Script Loader",
+      "version": "CSC resources · game update unspecified",
+      "gameVersions": [],
+      "platforms": [
+        "ps4"
+      ],
+      "source": {
+        "forumTitle": "Preserved PS4 GTA V download list",
+        "postTitle": "Script Loader",
+        "postUrl": "https://cdn.discordapp.com/attachments/1551565519306629140/1551565963395211364/Script_Loader.zip?ex=6ae87d68&is=6ae72be8&hm=96c8a504599f7acc63dd9538254d2eeebd92533262346120e5f8274d0018a9eb&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/ps4-gta5-sources.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1551565519306629140/1551565963395211364/Script_Loader.zip?ex=6ae87d68&is=6ae72be8&hm=96c8a504599f7acc63dd9538254d2eeebd92533262346120e5f8274d0018a9eb&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-script-loader-pack-legacy-file",
+          "label": "Download CSC resources",
+          "filename": "Script_Loader.zip",
+          "url": "https://cdn.discordapp.com/attachments/1551565519306629140/1551565963395211364/Script_Loader.zip?ex=6ae87d68&is=6ae72be8&hm=96c8a504599f7acc63dd9538254d2eeebd92533262346120e5f8274d0018a9eb&",
+          "distribution": "include"
+        }
+      ],
+      "images": [],
+      "videos": [],
+      "controls": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Choose a compatible script loader",
+          "text": "These CSC/CTD resources are scripts, not GoldHEN PRX/SPRX plugins. Use a loader that explicitly supports the script and your GTA V update. Put scripts in that loader’s documented script directory and open them through its interface; do not add CSC files to plugins.ini. No compatible loader binary or game-update matrix is supplied by this download."
+        },
+        {
+          "type": "list",
+          "title": "Included menu resources",
+          "items": [
+            "Destroy v3 English/Spanish, TerraModz, MoonShine v3, Insanity Ultra, Inimitable v6.5.1, Revolution, Alien Script v3, KolaKao, Brodator Beta and GTA Fucker.",
+            "The ZIP contains CSC/CTD files and notes, with no PRX/SPRX loader. Per-menu filenames give different shortcuts and stack-size notes; preserve them.",
+            "KolaKao’s README specifies stack size 1024 and R1 + D-pad Right. This applies to KolaKao, not to every script in the archive."
+          ]
+        }
+      ],
+      "tags": [
+        "PS4",
+        "CSC"
+      ],
+      "keywords": [
+        "Script_Loader.zip",
+        "Script Loader",
+        "PS4 GTA 5",
+        "Grand Theft Auto V"
+      ],
+      "description": "CSC resources requiring a separate compatible script loader. The source does not specify a GTA V update.",
+      "compatibilityText": "PS4 · GTA V update unspecified",
+      "guideLabel": "Guide & requirements"
+    },
+    {
+      "id": "gta5-fcloader-csc",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "script",
+      "publication": "include",
+      "name": "FCLoader",
+      "version": "CSC resources · game update unspecified",
+      "gameVersions": [],
+      "platforms": [
+        "ps4"
+      ],
+      "source": {
+        "forumTitle": "Preserved PS4 GTA V download list",
+        "postTitle": "FCLoader",
+        "postUrl": "https://cdn.discordapp.com/attachments/1551565519306629140/1551567930582368346/FCLoader.csc?ex=6ae87f3d&is=6ae72dbd&hm=6779d10fa413704ec99e8d1c626a76372a24ccfb647fcdcd9bab76ede88303d6&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/ps4-gta5-sources.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1551565519306629140/1551567930582368346/FCLoader.csc?ex=6ae87f3d&is=6ae72dbd&hm=6779d10fa413704ec99e8d1c626a76372a24ccfb647fcdcd9bab76ede88303d6&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-fcloader-csc-legacy-file",
+          "label": "Download CSC resources",
+          "filename": "FCLoader.csc",
+          "url": "https://cdn.discordapp.com/attachments/1551565519306629140/1551567930582368346/FCLoader.csc?ex=6ae87f3d&is=6ae72dbd&hm=6779d10fa413704ec99e8d1c626a76372a24ccfb647fcdcd9bab76ede88303d6&",
+          "distribution": "include"
+        }
+      ],
+      "images": [],
+      "videos": [],
+      "controls": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Choose a compatible script loader",
+          "text": "These CSC/CTD resources are scripts, not GoldHEN PRX/SPRX plugins. Use a loader that explicitly supports the script and your GTA V update. Put scripts in that loader’s documented script directory and open them through its interface; do not add CSC files to plugins.ini. No compatible loader binary or game-update matrix is supplied by this download."
+        },
+        {
+          "type": "paragraph",
+          "title": "FCLoader file type",
+          "text": "FCLoader.csc is itself a CSC script. Its name alone does not establish that it can replace the separate plugin needed to run CSC files. Opening controls and dependencies were not documented."
+        }
+      ],
+      "tags": [
+        "PS4",
+        "CSC"
+      ],
+      "keywords": [
+        "FCLoader.csc",
+        "FCLoader",
+        "PS4 GTA 5",
+        "Grand Theft Auto V"
+      ],
+      "description": "CSC resources requiring a separate compatible script loader. The source does not specify a GTA V update.",
+      "compatibilityText": "PS4 · GTA V update unspecified",
+      "guideLabel": "Guide & requirements"
+    },
+    {
+      "id": "gta5-gta-fucker-csc",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "script",
+      "publication": "include",
+      "name": "GTA Fucker",
+      "version": "CSC resources · game update unspecified",
+      "gameVersions": [],
+      "platforms": [
+        "ps4"
+      ],
+      "source": {
+        "forumTitle": "Preserved PS4 GTA V download list",
+        "postTitle": "GTA Fucker",
+        "postUrl": "https://cdn.discordapp.com/attachments/1551565519306629140/1552083482921009222/GTAFUCKER.csc?ex=6ae86522&is=6ae713a2&hm=dd17ffc1e5c2f364dd992b57617bc8f4edd334fabab52ee66097181222840778&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/ps4-gta5-sources.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1551565519306629140/1552083482921009222/GTAFUCKER.csc?ex=6ae86522&is=6ae713a2&hm=dd17ffc1e5c2f364dd992b57617bc8f4edd334fabab52ee66097181222840778&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-gta-fucker-csc-legacy-file",
+          "label": "Download CSC resources",
+          "filename": "GTAFUCKER.csc",
+          "url": "https://cdn.discordapp.com/attachments/1551565519306629140/1552083482921009222/GTAFUCKER.csc?ex=6ae86522&is=6ae713a2&hm=dd17ffc1e5c2f364dd992b57617bc8f4edd334fabab52ee66097181222840778&",
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/gta-fucker.png",
+          "caption": "User-supplied named CSC menu screenshot; visible footer saysV1.3, not a PS4 game-update number."
+        }
+      ],
+      "videos": [],
+      "controls": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Choose a compatible script loader",
+          "text": "These CSC/CTD resources are scripts, not GoldHEN PRX/SPRX plugins. Use a loader that explicitly supports the script and your GTA V update. Put scripts in that loader’s documented script directory and open them through its interface; do not add CSC files to plugins.ini. No compatible loader binary or game-update matrix is supplied by this download."
+        },
+        {
+          "type": "paragraph",
+          "title": "Standalone script",
+          "text": "This download is GTAFUCKER.csc. Keep it separate from the other menus’ modules and use the matching script loader’s requirements. The supplied image shows the named menu with a V1.3 footer; that is not a GTA V game-update label. No shortcut is assigned from a different archive’s similarly named script."
+        }
+      ],
+      "tags": [
+        "PS4",
+        "CSC"
+      ],
+      "keywords": [
+        "GTAFUCKER.csc",
+        "GTA Fucker",
+        "PS4 GTA 5",
+        "Grand Theft Auto V"
+      ],
+      "description": "CSC resources requiring a separate compatible script loader. The source does not specify a GTA V update.",
+      "compatibilityText": "PS4 · GTA V update unspecified",
+      "guideLabel": "Guide & requirements"
+    },
+    {
+      "id": "gta5-random-scripts-pack",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "pack",
+      "publication": "include",
+      "name": "Random Scripts Pack",
+      "version": "CSC resources · game update unspecified",
+      "gameVersions": [],
+      "platforms": [
+        "ps4"
+      ],
+      "source": {
+        "forumTitle": "Preserved PS4 GTA V download list",
+        "postTitle": "Random Scripts Pack",
+        "postUrl": "https://cdn.discordapp.com/attachments/1551565519306629140/1551566073567117362/scripts.zip?ex=6ae87d82&is=6ae72c02&hm=be8e7fbad6ec08a3151fbe3428b8f2248ce64e5747b610093b201d8963936f5b&",
+        "capturedAt": "2026-11-02",
+        "captureFile": "docs/ps4-gta5-sources.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1551565519306629140/1551566073567117362/scripts.zip?ex=6ae87d82&is=6ae72c02&hm=be8e7fbad6ec08a3151fbe3428b8f2248ce64e5747b610093b201d8963936f5b&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-random-scripts-pack-legacy-file",
+          "label": "Download CSC resources",
+          "filename": "scripts.zip",
+          "url": "https://cdn.discordapp.com/attachments/1551565519306629140/1551566073567117362/scripts.zip?ex=6ae87d82&is=6ae72c02&hm=be8e7fbad6ec08a3151fbe3428b8f2248ce64e5747b610093b201d8963936f5b&",
+          "distribution": "include"
+        }
+      ],
+      "images": [],
+      "videos": [],
+      "controls": [],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Choose a compatible script loader",
+          "text": "These CSC/CTD resources are scripts, not GoldHEN PRX/SPRX plugins. Use a loader that explicitly supports the script and your GTA V update. Put scripts in that loader’s documented script directory and open them through its interface; do not add CSC files to plugins.ini. No compatible loader binary or game-update matrix is supplied by this download."
+        },
+        {
+          "type": "list",
+          "title": "Included scripts",
+          "items": [
+            "iLLuminate, JRrecovery, krank1, Recovery v3, rock_menu2, Tgsaudoiz, ArabicGuy, Godly and NotYourDope.",
+            "The archive provides no installation README, game-update pin or separate PRX/SPRX loader."
+          ]
+        }
+      ],
+      "tags": [
+        "PS4",
+        "CSC"
+      ],
+      "keywords": [
+        "scripts.zip",
+        "Random Scripts Pack",
+        "PS4 GTA 5",
+        "Grand Theft Auto V"
+      ],
+      "description": "CSC resources requiring a separate compatible script loader. The source does not specify a GTA V update.",
+      "compatibilityText": "PS4 · GTA V update unspecified",
+      "guideLabel": "Guide & requirements"
     }
   ]
 }

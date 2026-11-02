@@ -1,5 +1,7 @@
 # GamerHack and RAW GAME: setup and compatibility
 
+The next original-source batch adds [Orbis Toolbox and official GoldHEN 2.4b18 selected-file loading](host-original-tool-loading.md), with receiver snapshot 14 and sender 1.8.0. The review and preserved builds below describe the preceding batch.
+
 Reviewed on 2 November 2026 against the exact requested repositories:
 
 | Original repository | Reviewed commit | Integration |

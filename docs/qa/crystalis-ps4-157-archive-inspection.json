@@ -1,0 +1,727 @@
+{
+  "source": {
+    "id": "crystalis-ps4-157",
+    "name": "Crystalis_SPRX_PS4_1.57.rar",
+    "bytes": 788845,
+    "sha256": "d9cea1c72deabd77a38acb806cbf2d203475da5d5b0f3e96d9d4d76aa61b5e04",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1566833831695224852/1566833960695111951/Crystalis_SPRX_PS4_1.57.rar?ex=6ae9fb56&is=6ae8a9d6&hm=5ae37e2ce60fdec710795c82ec89a8a87eaf7832e4198ba24201d31e2ee02177&",
+    "stagedRelative": "docs/discord-ps4-ps5-raw/http-staging/crystalis-ps4-157/transfer-1793643303374/Crystalis_SPRX_PS4_1.57.rar"
+  },
+  "fileCount": 81,
+  "directoryCount": 11,
+  "formats": {
+    "png": 1,
+    "xml": 59,
+    "csc": 18,
+    "sprx": 1,
+    "txt": 1,
+    "ini": 1
+  },
+  "consoleFiles": [
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Destroy.csc",
+      "directory": false,
+      "bytes": 139264,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/DevScript.csc",
+      "directory": false,
+      "bytes": 73744,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/GTAFUCKER.csc",
+      "directory": false,
+      "bytes": 237584,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Inimitable.csc",
+      "directory": false,
+      "bytes": 172032,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/krank1.csc",
+      "directory": false,
+      "bytes": 45056,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/10plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/1plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/2plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/3plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/4plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/5plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/6plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/7plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/8plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/9plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/rock_menu2.csc",
+      "directory": false,
+      "bytes": 196624,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Script.csc",
+      "directory": false,
+      "bytes": 196624,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Unrestrained.csc",
+      "directory": false,
+      "bytes": 331776,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis.sprx",
+      "directory": false,
+      "bytes": 538296,
+      "encrypted": false
+    }
+  ],
+  "documentation": [
+    {
+      "path": "Crystalis SPRX PS4 1.57/instalacion.txt",
+      "bytes": 311,
+      "sha256": "4b4462e808035f8aa44853271479bc85a171a454e3123ad507f320f07c2c62e8",
+      "text": "El plugins.ini es de ejemplo para poner si no tienes el tuyo.\r\n\r\nPega la carpeta Crystalis dentro de data/aqui.\r\nPasa la carpeta img que esta dentro de Crystalis/img a la direccion data/Crystalis/aqui.\r\n\r\nel sprx va en data/GoldHEN/plugins/aqui.\r\n\r\nSi tienes mas dudas comenta el video :)\r\n\r\nYT: FranCangel Modz"
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/plugins.ini",
+      "bytes": 84,
+      "sha256": "f375e26e957e629125e958fc972aced69f9d73aea950cbb69c82cc18900011dc",
+      "text": "[CUSA00419]\n/data/GoldHEN/plugins/LSOPlugin.prx\n/data/GoldHEN/plugins/Crystalis.sprx"
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis.sprx",
+      "bytes": 538296,
+      "sha256": "005f707cca7f5da9092339c630b5257d5164fce10515d8f6ecb521a6d2b86158",
+      "header": "4f153d1d00010112010100004004700420350800000000000a002200000000000400110000000000b00800000000000020030000000000002003000000000000",
+      "strings": [
+        "Crystalis",
+        "Welcome to Crystalis :)",
+        "Crystalis Team:",
+        "Saves to /data/Crystalis/outfits/exports. Asks for a name",
+        "/data/Crystalis/outfits",
+        "Upload .csc / .xsc / .ysc files to /data/Crystalis/scripts",
+        "/data/Crystalis",
+        "/data/Crystalis/scripts",
+        "/data/Crystalis/outfits/exports",
+        "/data/Crystalis/outfits/Male",
+        "/data/Crystalis/outfits/Female",
+        "Welcome to Crystalis SPRX!- 1.57",
+        "Crystalis: the game never started scripts (timeout)",
+        "~r~Welcome to Crystalis SPRX~w~: L1 + Circle",
+        "Guarda en /data/Crystalis/outfits/exports. Pide un nombre"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/imgs/icon.png",
+      "directory": false,
+      "bytes": 43538,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicBigHoodie.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicBlackPink.xml",
+      "directory": false,
+      "bytes": 935,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicBlackRed.xml",
+      "directory": false,
+      "bytes": 935,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicBlReGr.xml",
+      "directory": false,
+      "bytes": 930,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicChicBlWh.xml",
+      "directory": false,
+      "bytes": 932,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicGrey.xml",
+      "directory": false,
+      "bytes": 927,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicPureBlack.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicRose.xml",
+      "directory": false,
+      "bytes": 931,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleBasicShortBlWh.xml",
+      "directory": false,
+      "bytes": 937,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSkateBlackRed.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSkateBlackWhite.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialBlaBei.xml",
+      "directory": false,
+      "bytes": 934,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialBlackDress.xml",
+      "directory": false,
+      "bytes": 938,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialBlackSwimsuit.xml",
+      "directory": false,
+      "bytes": 940,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialBlCamou.xml",
+      "directory": false,
+      "bytes": 938,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialChicWhBei.xml",
+      "directory": false,
+      "bytes": 938,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialGrColour.xml",
+      "directory": false,
+      "bytes": 935,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialMBRed.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialReGrWh.xml",
+      "directory": false,
+      "bytes": 931,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialShortBeiLi.xml",
+      "directory": false,
+      "bytes": 939,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialUSA.xml",
+      "directory": false,
+      "bytes": 929,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialXMas.xml",
+      "directory": false,
+      "bytes": 931,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleSpecialYellow.xml",
+      "directory": false,
+      "bytes": 934,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardBlackRed01.xml",
+      "directory": false,
+      "bytes": 940,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardBlackRed02.xml",
+      "directory": false,
+      "bytes": 937,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardBlackRed03.xml",
+      "directory": false,
+      "bytes": 939,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardBlackRed04.xml",
+      "directory": false,
+      "bytes": 938,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardBlackRed05.xml",
+      "directory": false,
+      "bytes": 940,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardBlackWhiteSwS.xml",
+      "directory": false,
+      "bytes": 938,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardColour.xml",
+      "directory": false,
+      "bytes": 935,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardCorBei.xml",
+      "directory": false,
+      "bytes": 935,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardGirly.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardLilac.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardNakedBlack.xml",
+      "directory": false,
+      "bytes": 939,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardWhiteRed.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardWhiteRose01.xml",
+      "directory": false,
+      "bytes": 940,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM/FemaleTryhardWhiteRose02.xml",
+      "directory": false,
+      "bytes": 941,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleBlackPink.xml",
+      "directory": false,
+      "bytes": 930,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleBlackRed.xml",
+      "directory": false,
+      "bytes": 927,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleBlackWhite1.xml",
+      "directory": false,
+      "bytes": 929,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleBlackWhite2.xml",
+      "directory": false,
+      "bytes": 930,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleBUZZARD.xml",
+      "directory": false,
+      "bytes": 925,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleComandoCamo1.xml",
+      "directory": false,
+      "bytes": 931,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleComandoCamo2.xml",
+      "directory": false,
+      "bytes": 930,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleComandoDesert.xml",
+      "directory": false,
+      "bytes": 932,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleComandoGrey.xml",
+      "directory": false,
+      "bytes": 930,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleFullBlack1.xml",
+      "directory": false,
+      "bytes": 929,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleFullBlack2.xml",
+      "directory": false,
+      "bytes": 930,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleFullBlackRIP.xml",
+      "directory": false,
+      "bytes": 932,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleFullRed.xml",
+      "directory": false,
+      "bytes": 925,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleFullWhite.xml",
+      "directory": false,
+      "bytes": 927,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleGarbageBoy.xml",
+      "directory": false,
+      "bytes": 928,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleGreenWhite.xml",
+      "directory": false,
+      "bytes": 931,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleGreyBlack.xml",
+      "directory": false,
+      "bytes": 928,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleSpecialSoldier.xml",
+      "directory": false,
+      "bytes": 933,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleWhiteBlack1.xml",
+      "directory": false,
+      "bytes": 929,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleWhiteBlack2.xml",
+      "directory": false,
+      "bytes": 930,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleXmasElf.xml",
+      "directory": false,
+      "bytes": 926,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML/MaleXmasSanta.xml",
+      "directory": false,
+      "bytes": 926,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Destroy.csc",
+      "directory": false,
+      "bytes": 139264,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/DevScript.csc",
+      "directory": false,
+      "bytes": 73744,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/GTAFUCKER.csc",
+      "directory": false,
+      "bytes": 237584,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Inimitable.csc",
+      "directory": false,
+      "bytes": 172032,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/krank1.csc",
+      "directory": false,
+      "bytes": 45056,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/10plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/1plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/2plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/3plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/4plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/5plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/6plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/7plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/8plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins/9plugin.csc",
+      "directory": false,
+      "bytes": 32784,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/rock_menu2.csc",
+      "directory": false,
+      "bytes": 196624,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Script.csc",
+      "directory": false,
+      "bytes": 196624,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Unrestrained.csc",
+      "directory": false,
+      "bytes": 331776,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis.sprx",
+      "directory": false,
+      "bytes": 538296,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/instalacion.txt",
+      "directory": false,
+      "bytes": 311,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/plugins.ini",
+      "directory": false,
+      "bytes": 84,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female/PS3Outfits_FM",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male/PS3Outfits_ML",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/exports",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Female",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits/Male",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts/Pluglins",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/imgs",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/outfits",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis/scripts",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57/Crystalis",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    },
+    {
+      "path": "Crystalis SPRX PS4 1.57",
+      "directory": true,
+      "bytes": 0,
+      "encrypted": false
+    }
+  ]
+}

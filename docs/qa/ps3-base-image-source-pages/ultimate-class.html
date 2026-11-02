@@ -1,0 +1,2888 @@
+<!DOCTYPE html>
+<html data-read-only="false" lang="en" class="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FOR PS3
+
+Yo another Release c:
+
+Had this for my own, but why not share it.
+
+What can this Tool do?
+- Connect to your Ps3 (CCapi/Tmapi)
+- Change your B...">
+
+<link rel="canonical" href="https://nextgenupdate.com/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil.html">
+        
+    <meta name="csrf-token" content="Mv4vg6XH2QbvhVk9hIaob4yQmj2kGAUnga9k0LkA">
+
+    <title>Ultimate Class Tool by ExIIL - NextGenUpdate</title>
+
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:site_name" content="NextGenUpdate" />
+
+    <meta property="og:url"           content="https://nextgenupdate.com/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Ultimate Class Tool by ExIIL - NextGenUpdate" />
+<meta property="og:description"   content="FOR PS3
+
+Yo another Release c:
+
+Had this for my own, but why not share it.
+
+What can this Tool do?
+- Connect to your Ps3 (CCapi/Tmapi)
+- Change your B..." />
+<meta property="og:image"         content="https://nextgenupdate.com/images/facebook-preview.png" />
+<meta property="og:image:width"   content="1200" />
+<meta property="og:image:height"  content="630" />
+    
+    
+    <link href="/css/app.css?id=52a0869a22cc3f6d2a6019feea679abb" rel="stylesheet">
+    <link href="/css/fontawesome.css?id=14f8425be988ba63ab2e3e4335312e7c" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2&display=swap">
+        </head>
+<body class="bg-mono-eee dark:bg-mono-222 text-mono-444 dark:text-mono-eee">
+    <div id="app">
+        
+        <header class="relative z-30">
+    <nav class="bg-ngu-blue text-white" style="">
+    <div class="container mx-auto">
+        <dropdown-click>
+            <template v-slot:trigger="{ onClick }">
+                <div class="flex justify-between">
+                    <div class="flex items-center">
+                        
+                        <a class="px-3.5 py-3" href="https://nextgenupdate.com" aria-label="Go to the homepage">
+                            <img src="/images/logo-long.png" width="130" height="24" class="max-h-6" alt="NextGenUpdate Logo">
+                        </a>
+
+                        <ul class="ml-2.5 hidden md:flex items-center">
+                            
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center">
+                        
+                        <form role="form" method="GET" class="mx-4 hidden md:block" action="https://nextgenupdate.com/forums/search">
+    
+    
+            <div class="relative">
+                                <div class="flex items-stretch flex-1 bg-mono-f5f dark:bg-mono-333 rounded-sm border  border-mono-ccc dark:border-mono-444 " data-form-input>
+    
+    <input name="query" class="w-full py-1 pl-2 pr-4 dark:bg-mono-333 dark:text-mono-eee focus:border-sky-300 focus:outline-none border-mono-ccc dark:border-mono-444 text-xs text-mono-444" type="text" maxlength="512" placeholder="Search" required="required"  />
+
+    </div>
+
+
+                                <span class="absolute inset-y-0 right-1 flex items-center pl-2">
+                                    <button type="submit" class="p-1 focus:outline-none focus:shadow-outline" role="button" aria-label="Search">
+                                        <i class="fa fa-search  text-mono-444"></i>                                    </button>
+                                </span>
+                            </div>
+    </form>
+                        
+                        <button @click="onClick()" type="button" class="md:hidden bg-white border border-mono-ddd p-2 m-1 rounded-sm" aria-expanded="false">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="block rounded-sm h-0.5 w-6 bg-mono-888"></span>
+                            <span class="block rounded-sm h-0.5 w-6 bg-mono-888 mt-1"></span>
+                            <span class="block rounded-sm h-0.5 w-6 bg-mono-888 mt-1"></span>
+                        </button>
+                    </div>
+                </div>
+            </template>
+
+            
+            <template v-slot:menu="{ open }">
+                <ul v-show="open" style="display: none;" class="text-sm border-t border-mono-888">
+                    <li class="font-bold">
+    <a href="https://nextgenupdate.com" class="block w-full border-2 border-transparent mx-auto py-2 px-3.5 hover:bg-ngu-blue-dark">Home</a>
+</li>
+
+<li class="relative">
+    <dropdown-click>
+        <template v-slot:trigger="{ onClick }">
+            <button @click="onClick()" class="w-full text-left py-2 px-3.5 font-bold">
+                Forums <i class="fa fa-caret-down ml-1"></i>
+            </button>
+        </template>
+
+        
+        <template v-slot:menu="{ open }">
+            <ul v-show="open" role="menu" style="display: none;" class="pb-1 min-w-[160px]" href="https://nextgenupdate.com/forums" mobile="mobile">
+                <li class="py-1 px-5 whitespace-nowrap text-xs mono-ccc">
+    All Forums
+</li>        <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums">
+        Forums
+    </a>
+</li>        <li class="h-px my-2 mono-888"></li>        <li class="py-1 px-5 whitespace-nowrap text-xs mono-ccc">
+    Gaming Forums
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/grand-theft-auto-5">
+        GTA V
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/call-duty-series">
+        Call Of Duty Classics
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/fortnite-and-battle-royale">
+        Fortnite
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/upcoming-games">
+        Upcoming Games
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/popular-classic-games">
+        Popular &amp; Classic Games
+    </a>
+</li>    <li class="h-px my-2 mono-888"></li>    <li class="py-1 px-5 whitespace-nowrap text-xs mono-ccc">
+    Hot &amp; Latest
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/hot-posts">
+        Hot Posts
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/latest-posts">
+        Latest Posts
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/latest-comments">
+        Latest Comments
+    </a>
+</li>    <li class="h-px my-2 mono-888"></li>    <li class="py-1 px-5 whitespace-nowrap text-xs mono-ccc">
+    General Forums
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/ngu-announcements">
+        Announcements
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/general-discussion">
+        General Discussion
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/site-forum-help">
+        Site &amp; Forum Help
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/introduce-yourself-ngu">
+        Introductions
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/media-design">
+        Media &amp; Designs
+    </a>
+</li>        <li class="h-px my-2 mono-888"></li>    <li class="py-1 px-5 whitespace-nowrap text-xs mono-ccc">
+    Community
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/forums/members">
+        Members
+    </a>
+</li>
+            </ul>
+        </template>
+    </dropdown-click>
+</li>
+
+<li class="relative">
+    <dropdown-click>
+        <template v-slot:trigger="{ onClick }">
+            <button @click="onClick()" class="w-full text-left py-2 px-3.5 font-bold">
+                Games <i class="fa fa-caret-down ml-1"></i>
+            </button>
+        </template>
+
+        
+        <template v-slot:menu="{ open }">
+            <ul v-show="open" role="menu" style="display: none;" class="pb-1 min-w-[160px]" href="https://nextgenupdate.com/games/all-genres/all-platforms/alphabetically/all/1" mobile="mobile">
+                <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/games/all-genres/all-platforms/alphabetically/all/1">
+        All Games
+    </a>
+</li>
+    
+    <li class="py-1 px-5 whitespace-nowrap text-xs mono-ccc">
+    Popular Games
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/grand-theft-auto-6">
+        Grand Theft Auto 6
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/call-of-duty-black-ops-3">
+        Call of Duty: Black Ops 3
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/grand-theft-auto-v">
+        Grand Theft Auto V
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/call-of-duty-infinite-warfare">
+        Call of Duty: Infinite Warfa...
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/marvels-wolverine">
+        Marvel&#039;s Wolverine
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/call-of-duty-modern-warfare-2">
+        Call of Duty: Modern Warfare...
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/call-of-duty-black-ops-4">
+        Call of Duty: Black Ops 4
+    </a>
+</li>    
+    <li class="h-px my-2 mono-888"></li>
+    
+    <li class="py-1 px-5 whitespace-nowrap text-xs mono-ccc">
+    Latest Games
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/the-cat-in-the-hat-rainy-day-mayhem">
+        The Cat in the Hat: Rainy Da...
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/anomalith">
+        Anomalith
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/remothered-red-nuns-legacy">
+        Remothered: Red Nun’s Legacy
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/fangtopia-hunters-moon">
+        Fangtopia
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="/games/call-of-duty-modern-warfare-4">
+        Call of Duty: Modern Warfare...
+    </a>
+</li>
+            </ul>
+        </template>
+    </dropdown-click>
+</li>
+
+
+<li class="font-bold">
+    <a href="https://nextgenupdate.com/articles" class="block w-full border-2 border-transparent mx-auto py-2 px-3.5 hover:bg-ngu-blue-dark">Articles</a>
+</li><li class="font-bold">
+    <a href="https://nextgenupdate.com/mods" class="block w-full border-2 border-transparent mx-auto py-2 px-3.5 hover:bg-ngu-blue-dark">Mods</a>
+</li><li class="font-bold">
+    <a href="https://nextgenupdate.com/videos" class="block w-full border-2 border-transparent mx-auto py-2 px-3.5 hover:bg-ngu-blue-dark">Videos</a>
+</li><li class="font-bold">
+    <a href="https://nextgenupdate.com/glitches" class="block w-full border-2 border-transparent mx-auto py-2 px-3.5 hover:bg-ngu-blue-dark">Glitches</a>
+</li>            <li class="relative">
+    <dropdown-click>
+        <template v-slot:trigger="{ onClick }">
+            <button @click="onClick()" class="w-full text-left py-2 px-3.5 font-bold">
+                Login / Register <i class="fa fa-caret-down ml-1"></i>
+            </button>
+        </template>
+
+        
+        <template v-slot:menu="{ open }">
+            <ul v-show="open" role="menu" style="display: none;" class="pb-1">
+                <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-ccc">
+    Already registered?
+</li>        <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/login">
+        Login
+    </a>
+</li>        <li class="h-px my-2 bg-mono-888"></li>        <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-ccc">
+    Can&#039;t login?
+</li>        <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/password/reset">
+        Reset Password
+    </a>
+</li>        <li class="h-px my-2 bg-mono-888"></li>        <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-ccc">
+    New here?
+</li>        <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-ngu-blue-dark" href="https://nextgenupdate.com/register">
+        Register
+    </a>
+</li>
+        
+        <li class="h-px my-2 bg-mono-888"></li>        <li class="mx-3 my-1">
+    <a href="https://nextgenupdate.com/login/discord" class="block px-5 py-1 w-full text-sm text-center rounded-sm text-white bg-[#7289da]">
+        <img src="/images/misc/discord.png" alt="" class="mr-1 w-3.5 inline"> Sign in with Discord
+    </a>
+</li>        <li class="mx-3 my-1">
+    <a href="https://nextgenupdate.com/login/twitter" class="block px-5 py-1 w-full text-sm text-center rounded-sm text-white bg-black">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-3.5 h-3.5 inline mr-1 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg> Sign in with X
+    </a>
+</li>        
+        <li class="mx-3 my-1">
+    <a href="https://nextgenupdate.com/login/google" class="block px-5 py-1 w-full text-sm text-center rounded-sm mb-2 bg-white text-mono-444">
+        <i class="fa fa-google"></i> Sign in with
+            <span class="font-bold">
+                <span class="text-[#4285f4]">G</span>
+                <span class="text-[#db4437]">o</span>
+                <span class="text-[#f4b400]">o</span>
+                <span class="text-[#4285f4]">g</span>
+                <span class="text-[#0f9d58]">l</span>
+                <span class="text-[#db4437]">e</span>
+            </span>
+    </a>
+</li>
+            </ul>
+        </template>
+    </dropdown-click>
+</li>
+                </ul>
+            </template>
+        </dropdown-click>
+    </div>
+</nav>
+
+    
+    <nav class="bg-ngu-blue-dark text-white hidden md:block" style="">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+
+            
+            <div class="flex items-center">
+                <ul class="flex flex-row text-xs">
+                    <li class="">
+    <a href="https://nextgenupdate.com" class="block w-full border-2 border-transparent mx-auto py-3 px-2.5 hover:border-b-ngu-blue-light">Home</a>
+</li>
+
+<li class="relative">
+    <dropdown-hover>
+        <template v-slot:trigger="{ onMouseOver, onMouseLeave }">
+            <a href="https://nextgenupdate.com/forums" @mouseover="onMouseOver('trigger')" @mouseleave="onMouseLeave('trigger')" class="relative block w-full border-2 border-transparent mx-auto px-2.5 py-3 hover:border-b-ngu-blue-light" >
+                                    Forums
+                                                <i class="fa fa-caret-down ml-1"></i>
+                
+                            </a>
+        </template>
+
+        
+        <template v-slot:menu="{ onMouseOver, onMouseLeave, open }">
+            <div v-show="open" @mouseover="onMouseOver(&#039;menu&#039;)" @mouseleave="onMouseLeave(&#039;menu&#039;)" class="left-0 z-10 absolute py-1 text-sm drop-shadow-lg border rounded-b-sm border-mono-ccc dark:border-mono-444 text-mono-333 dark:text-mono-eee bg-white dark:bg-mono-333 min-w-[160px]" style="display: none;">
+                
+                <ul role="menu" class="">
+                    <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    Gaming Forums
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/grand-theft-auto-5">
+        GTA V
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/call-duty-series">
+        Call Of Duty Classics
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/fortnite-and-battle-royale">
+        Fortnite
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/upcoming-games">
+        Upcoming Games
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/popular-classic-games">
+        Popular &amp; Classic Games
+    </a>
+</li>    <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>    <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    Hot &amp; Latest
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/hot-posts">
+        Hot Posts
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/latest-posts">
+        Latest Posts
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/latest-comments">
+        Latest Comments
+    </a>
+</li>    <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>    <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    General Forums
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/ngu-announcements">
+        Announcements
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/general-discussion">
+        General Discussion
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/site-forum-help">
+        Site &amp; Forum Help
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/introduce-yourself-ngu">
+        Introductions
+    </a>
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/media-design">
+        Media &amp; Designs
+    </a>
+</li>        <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>    <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    Community
+</li>    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/forums/members">
+        Members
+    </a>
+</li>
+                </ul>
+            </div>
+        </template>
+    </dropdown-hover>
+</li>
+
+<li class="relative">
+    <dropdown-hover>
+        <template v-slot:trigger="{ onMouseOver, onMouseLeave }">
+            <a href="https://nextgenupdate.com/games/all-genres/all-platforms/alphabetically/all/1" @mouseover="onMouseOver('trigger')" @mouseleave="onMouseLeave('trigger')" class="relative block w-full border-2 border-transparent mx-auto px-2.5 py-3 hover:border-b-ngu-blue-light" >
+                                    Games
+                                                <i class="fa fa-caret-down ml-1"></i>
+                
+                            </a>
+        </template>
+
+        
+        <template v-slot:menu="{ onMouseOver, onMouseLeave, open }">
+            <div v-show="open" @mouseover="onMouseOver(&#039;menu&#039;)" @mouseleave="onMouseLeave(&#039;menu&#039;)" class="left-0 z-10 absolute py-1 text-sm drop-shadow-lg border rounded-b-sm border-mono-ccc dark:border-mono-444 text-mono-333 dark:text-mono-eee bg-white dark:bg-mono-333 min-w-[160px]" style="display: none;">
+                
+                <ul role="menu" class="">
+                    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/games/all-genres/all-platforms/alphabetically/all/1">
+        All Games
+    </a>
+</li>
+    
+    <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    Popular Games
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/grand-theft-auto-6">
+        Grand Theft Auto 6
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/call-of-duty-black-ops-3">
+        Call of Duty: Black Ops 3
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/grand-theft-auto-v">
+        Grand Theft Auto V
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/call-of-duty-infinite-warfare">
+        Call of Duty: Infinite Warfa...
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/marvels-wolverine">
+        Marvel&#039;s Wolverine
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/call-of-duty-modern-warfare-2">
+        Call of Duty: Modern Warfare...
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/call-of-duty-black-ops-4">
+        Call of Duty: Black Ops 4
+    </a>
+</li>    
+    <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>
+    
+    <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    Latest Games
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/the-cat-in-the-hat-rainy-day-mayhem">
+        The Cat in the Hat: Rainy Da...
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/anomalith">
+        Anomalith
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/remothered-red-nuns-legacy">
+        Remothered: Red Nun’s Legacy
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/fangtopia-hunters-moon">
+        Fangtopia
+    </a>
+</li>            <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="/games/call-of-duty-modern-warfare-4">
+        Call of Duty: Modern Warfare...
+    </a>
+</li>
+                </ul>
+            </div>
+        </template>
+    </dropdown-hover>
+</li>
+
+
+<li class="">
+    <a href="https://nextgenupdate.com/articles" class="block w-full border-2 border-transparent mx-auto py-3 px-2.5 hover:border-b-ngu-blue-light">Articles</a>
+</li><li class="">
+    <a href="https://nextgenupdate.com/mods" class="block w-full border-2 border-transparent mx-auto py-3 px-2.5 hover:border-b-ngu-blue-light">Mods</a>
+</li><li class="">
+    <a href="https://nextgenupdate.com/videos" class="block w-full border-2 border-transparent mx-auto py-3 px-2.5 hover:border-b-ngu-blue-light">Videos</a>
+</li><li class="">
+    <a href="https://nextgenupdate.com/glitches" class="block w-full border-2 border-transparent mx-auto py-3 px-2.5 hover:border-b-ngu-blue-light">Glitches</a>
+</li>
+                </ul>
+            </div>
+
+            
+            <div class="flex items-center">
+                <ul class="flex flex-row text-xs">
+                    <li class="relative">
+    <dropdown-hover>
+        <template v-slot:trigger="{ onMouseOver, onMouseLeave }">
+            <a href="https://nextgenupdate.com/login" @mouseover="onMouseOver('trigger')" @mouseleave="onMouseLeave('trigger')" class="relative block w-full border-2 border-transparent mx-auto px-2.5 py-3 hover:border-b-ngu-blue-light" >
+                                    Login / Register
+                                                <i class="fa fa-caret-down ml-1"></i>
+                
+                            </a>
+        </template>
+
+        
+        <template v-slot:menu="{ onMouseOver, onMouseLeave, open }">
+            <div v-show="open" @mouseover="onMouseOver(&#039;menu&#039;)" @mouseleave="onMouseLeave(&#039;menu&#039;)" class="right-0 z-10 absolute py-1 text-sm drop-shadow-lg border rounded-b-sm border-mono-ccc dark:border-mono-444 text-mono-333 dark:text-mono-eee bg-white dark:bg-mono-333 min-w-[220px]" style="display: none;">
+                
+                <ul role="menu" class="">
+                    <li>
+            <form role="form" method="POST" class="block mx-3 my-2" action="https://nextgenupdate.com/login">
+            <input type="hidden" name="_token" value="Mv4vg6XH2QbvhVk9hIaob4yQmj2kGAUnga9k0LkA" autocomplete="off">    
+    
+            <div class="flex items-stretch flex-1 bg-mono-f5f dark:bg-mono-333 rounded-sm border  border-mono-ccc dark:border-mono-444 mb-2" data-form-input>
+    
+    <input name="username" class="w-full px-2 py-2 dark:bg-mono-333 dark:text-mono-eee focus:border-sky-300 focus:outline-none border-mono-ccc dark:border-mono-444" type="text" placeholder="Username"  />
+
+    </div>
+
+
+                <div class="flex items-stretch flex-1 bg-mono-f5f dark:bg-mono-333 rounded-sm border  border-mono-ccc dark:border-mono-444 mb-2" data-form-input>
+    
+    <input name="password" class="w-full px-2 py-2 dark:bg-mono-333 dark:text-mono-eee focus:border-sky-300 focus:outline-none border-mono-ccc dark:border-mono-444" type="password" placeholder="Password"  />
+
+    </div>
+
+
+                <div class="pb-2">
+                    <div class="flex items-center text-mono-444 dark:text-mono-eee">    <input type="checkbox" id="navbar-remember" name="remember" class="w-4 h-4 text-ngu-blue dark:text-ngu-blue-light bg-gray-100 dark:bg-mono-333 border-gray-300 dark:border-mono-444 rounded-sm"
+          />
+
+            <label for="navbar-remember" class="ml-2 text-sm font-medium">Remember Me?</label>
+    </div>
+                </div>
+                <li>
+    <button class="text-sm px-5 py-2.5 text-center border rounded-sm text-white bg-ngu-blue hover:bg-ngu-blue-dark border-ngu-blue-dark block w-full w-full text-left" type="submit" accesskey="s"   >
+    Sign in
+</button>
+</li>
+    </form>        </li>
+
+        
+        <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>        <li class="mx-3 my-1">
+    <a href="https://nextgenupdate.com/login/discord" class="block px-5 py-1 w-full text-sm text-center rounded-sm text-white bg-[#7289da]">
+        <img src="/images/misc/discord.png" alt="" class="mr-1 w-3.5 inline"> Sign in with Discord
+    </a>
+</li>        <li class="mx-3 my-1">
+    <a href="https://nextgenupdate.com/login/twitter" class="block px-5 py-1 w-full text-sm text-center rounded-sm text-white bg-black">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-3.5 h-3.5 inline mr-1 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg> Sign in with X
+    </a>
+</li>        
+        <li class="mx-3 my-1">
+    <a href="https://nextgenupdate.com/login/google" class="block px-5 py-1 w-full text-sm text-center rounded-sm border border-mono-eee dark:border-mono-444">
+        <i class="fa fa-google"></i> Sign in with
+            <span class="font-bold">
+                <span class="text-[#4285f4]">G</span>
+                <span class="text-[#db4437]">o</span>
+                <span class="text-[#f4b400]">o</span>
+                <span class="text-[#4285f4]">g</span>
+                <span class="text-[#0f9d58]">l</span>
+                <span class="text-[#db4437]">e</span>
+            </span>
+    </a>
+</li>
+        <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>        <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    Can&#039;t login?
+</li>        <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/password/reset">
+        Reset Password
+    </a>
+</li>        <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>        <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    New here?
+</li>        <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://nextgenupdate.com/register">
+        Register
+    </a>
+</li>
+                </ul>
+            </div>
+        </template>
+    </dropdown-hover>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav></header>
+        
+        
+        <div>
+            
+<div class="container mx-auto">
+
+    
+    
+    
+    <div class="bg-white dark:bg-mono-333 px-5 py-2.5">
+        
+        
+                            
+        
+        
+    
+    <div class="mb-2.5 flex justify-between">
+        <ol id="breadcrumb" class="flex flex-wrap items-center min-w-0 text-xs">
+    <li class="inline-block overflow-hidden whitespace-nowrap text-ellipsis">
+
+    <a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue" href="https://nextgenupdate.com/forums"   >
+    <i class="fa fa-home"></i>        
+                    Forums
+</a>
+
+            <span class="text-mono-ccc px-1">/</span>
+    </li>                            <li class="inline-block overflow-hidden whitespace-nowrap text-ellipsis">
+
+    <a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue" href="/forums/games-universe"   >
+    Top Games
+</a>
+
+            <span class="text-mono-ccc px-1">/</span>
+    </li>                            <li class="inline-block overflow-hidden whitespace-nowrap text-ellipsis">
+
+    <a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue" href="/forums/call-duty-series"   >
+    Call of Duty Series
+</a>
+
+            <span class="text-mono-ccc px-1">/</span>
+    </li>                            <li class="inline-block overflow-hidden whitespace-nowrap text-ellipsis">
+
+    <a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue" href="/forums/call-duty-black-ops-2"   >
+    Call of Duty: Black Ops 2
+</a>
+
+            <span class="text-mono-ccc px-1">/</span>
+    </li>                            <li class="inline-block overflow-hidden whitespace-nowrap text-ellipsis">
+
+    <a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue" href="/forums/black-ops-2-mods-cheats-guides"   >
+    Black Ops 2 Mods, Cheats and Guides
+</a>
+
+            <span class="text-mono-ccc px-1">/</span>
+    </li>                            <li class="inline-block overflow-hidden whitespace-nowrap text-ellipsis">
+
+    <a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue" href="/forums/black-ops-2-modding-tools"   >
+    Black Ops 2 Modding Tools
+</a>
+
+            <span class="text-mono-ccc px-1">/</span>
+    </li>                        <li class="inline-block overflow-hidden whitespace-nowrap text-ellipsis text-mono-777 dark:text-mono-bbb">
+
+    Ultimate Class Tool by ExIIL
+    </li>
+</ol>
+        <div class="hidden lg:block" data-replies-pagination="top"><nav role="navigation" aria-label="Pagination Navigation" class="flex items-center justify-between">
+                    <div class="flex justify-between flex-1 sm:hidden">
+                                    <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 dark:text-mono-eee bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 cursor-default leading-5 rounded-sm">
+                        &laquo; Previous
+                    </span>
+                
+                                    <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-2.html" class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 rounded-sm hover:text-gray-500 dark:hover:text-mono-eee focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150">
+                        Next &raquo;
+                    </a>
+                            </div>
+        
+        <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between justify-center hidden">
+            
+            <div>
+                <span class="relative z-0 inline-flex shadow-sm rounded-sm">
+                    
+                                            <span aria-disabled="true" aria-label="&laquo; Previous">
+                            <span class="relative h-full inline-flex items-center px-1 py-1 text-sm font-medium text-gray-500 dark:text-mono-eee bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 cursor-default rounded-l-sm leading-5" aria-hidden="true">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </span>
+                    
+                    
+                                            
+                        
+                        
+                                                                                                                        <span aria-current="page">
+                                        <span class="relative h-full inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-white bg-ngu-blue border border-gray-300 dark:border-mono-444 cursor-default leading-5">1</span>
+                                    </span>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-2.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 2">
+                                        2
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-3.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 3">
+                                        3
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-4.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 4">
+                                        4
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-5.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 5">
+                                        5
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-6.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 6">
+                                        6
+                                    </a>
+                                                                                                        
+                    
+                                            <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-2.html" rel="next" class="relative inline-flex items-center px-1 py-1 -ml-px text-sm font-medium text-gray-500 dark:text-mono-eee bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 rounded-r-sm leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-500 dark:active:text-mono-eee transition ease-in-out duration-150" aria-label="Next &raquo;">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                                    </span>
+            </div>
+        </div>
+    </nav>
+</div>
+    </div>
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border-2 text-mono-444 dark:text-mono-eee mt-2.5 border-mono-ddd dark:border-mono-444" style="">
+    
+    
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm text-mono-777 dark:text-mono-bbb">
+    <div class="sm:border-r-2 sm:border-b-0 border-b-2 border-r-mono-ddd dark:border-r-mono-444 px-4 py-3 w-full h-full xl:col-span-6 lg:col-span-6 sm:col-span-9 col-span-12 uppercase">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <h1 class="inline"><span class="font-bold uppercase">Post:</span> Ultimate Class Tool by ExIIL</h1>
+        </div>
+    </div>
+</div>
+
+                
+                
+                
+                <div class="border-r-2 border-r-mono-ddd dark:border-r-mono-444  w-full h-full xl:col-span-2 lg:col-span-2 lg:block hidden uppercase">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis text-center">
+            <a class="overflow-hidden whitespace-nowrap text-ellipsis block w-full h-full px-4 py-3 hover:text-ngu-blue dark:hover:text-ngu-blue-light" href="https://www.facebook.com/NextGenUpdate"   >
+    <i class="fa fa-facebook-official  mr-1 hover:text-[#4267b2]"></i>                    Like
+</a>
+        </div>
+    </div>
+</div>
+
+                
+                <div class="border-r-2 border-r-mono-ddd dark:border-r-mono-444  w-full h-full col-span-2 lg:block hidden uppercase">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis text-center">
+            <a class="overflow-hidden whitespace-nowrap text-ellipsis block w-full h-full px-4 py-3 hover:text-ngu-blue dark:hover:text-ngu-blue-light" href="https://twitter.com/NextGenUpdate"   >
+    <i class="fa fa-twitter  mr-1 hover:text-[#1da1f2]"></i>                    Follow
+</a>
+        </div>
+    </div>
+</div>
+
+                
+                <div class="border-r-0  w-full h-full relative lg:col-span-2 sm:col-span-3 col-span-12">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <dropdown-hover>
+
+        <template v-slot:trigger="{ onMouseOver, onMouseLeave }">
+            <div @mouseover="onMouseOver(&quot;trigger&quot;)" @mouseleave="onMouseLeave(&quot;trigger&quot;)" class="w-full h-full px-4 py-3 cursor-pointer text-center uppercase hover:text-ngu-blue dark:hover:text-ngu-blue-light">
+                <i class="fa fa-cogs  mr-1"></i> Options
+            </div>
+        </template>
+
+        
+        <template v-slot:menu="{ onMouseOver, onMouseLeave, open }">
+            <div
+                v-show="open"
+                @mouseover="onMouseOver('menu')"
+                @mouseleave="onMouseLeave('menu')"
+                class="z-10 absolute py-1 w-full text-sm drop-shadow-lg border rounded-b-sm border-mono-ccc dark:border-mono-444 text-mono-333 dark:text-mono-eee bg-white dark:bg-mono-333"
+                style="display: none;"
+            >
+                <ul role="menu"><li>
+    <form role="form" method="GET" class="block py-1 px-5" action="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil.html/search">
+    
+    
+            <div class="flex items-stretch flex-1 bg-mono-f5f dark:bg-mono-333 rounded-sm border  border-mono-ccc dark:border-mono-444 mb-2" data-form-input>
+    
+    <input name="query" class="w-full px-2 py-2 dark:bg-mono-333 dark:text-mono-eee focus:border-sky-300 focus:outline-none border-mono-ccc dark:border-mono-444" type="text" placeholder="Search post..."  />
+
+    </div>
+
+        <button type="submit" class="block my-1.5 w-full px-3 py-1.5 bg-ngu-blue hover:bg-ngu-blue-dark border border-ngu-blue hover:border-ngu-blue-dark text-white">
+            Search
+        </button>
+    </form></li>
+                    <li class="h-px my-2 bg-mono-ccc dark:bg-mono-444"></li>                    <li class="py-1 px-5 whitespace-nowrap text-xs text-mono-777 dark:text-mono-bbb">
+    Sharing
+</li>                    <li>
+    <a class="block py-1 px-5 whitespace-nowrap hover:bg-mono-f5f dark:hover:bg-mono-222" href="https://twitter.com/intent/tweet?text=Ultimate+Class+Tool+by+ExIIL+-+https%3A%2F%2Fnextgenupdate.com%2Fforums%2Fblack-ops-2-modding-tools%2F953415-ultimate-class-tool-exiil.html+via+%40NextGenUpdate">
+        Share via Twitter
+    </a>
+</li></ul>
+            </div>
+        </template>
+    </dropdown-hover>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    
+
+    </div>
+    
+    <div>
+        <div>
+            
+            <div id="post7224022" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224022">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-22-2017, 05:54 PM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224022">
+                    #1
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/919158-exiil.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/avatars/thumbs/919158.gif?cache=1579830980" alt="ExIIL&#039;s Avatar" title="ExIIL&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/919158-exiil.html" title="ExIIL">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">ExIIL</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                <span style="color: white; background-image: url('/images/elite/rainbow-2.gif');">AstroCFG</span>
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">493</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">35,967</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">1,224</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1358020380">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jan 2013
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224022">
+                                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0629686373879809" data-ad-slot="8911196525" data-ad-format="auto" data-full-width-responsive="true"
+    ></ins>
+    <component :is="'script'">(adsbygoogle = window.adsbygoogle || []).push({});</component>
+                                                <span style="color: #FF0000">FOR PS3<br />
+</span><br />
+Yo another Release c:<br />
+<br />
+Had this for my own, but why not share it.<br />
+<br />
+What can this Tool do?<br />
+- Connect to your Ps3 (CCapi/Tmapi)<br />
+- Change your Bo2 Stats (prestige/level)<br />
+- Give you the sticky Ghosts Camo on EVERY Weapon (Online, Private, League)<br />
+- Give you Sticky camos for your Online Weapon. <span style="color: #FF0000">(Digital CE INCLUDED)</span><br />
+- Set your Primary Weapon <span style="color: #FF0000">(Secondary Weapon can be set as Primary)</span><br />
+- Set your Secondary Weapon (Every single Primary Weapon can be set a Secondary) <span style="color: #FF0000">!DOUBLE DSR, ETC POSSIBLE!</span><br />
+- Set 2nd Attachment (Primary Weapon)<br />
+- Set 3rd Attachment (Primary Weapon)<br />
+- Set 1st Attachment (Secondary Weapon)<br />
+- Set 2nd Attachment (Secondary Weapon)<br />
+- Set Every Single Perk for Perk 1,2,3,4,5 and 6<br />
+- Change your Primary grenade to everything possible <span style="color: #FF0000">(Every Primary Weapon, Every secondary Weapon, every primary grenade and every tactical grenade)</span><br />
+- Change your tactical grenade to: <span style="color: #FF0000">(Some Primary Weapons, some secondary weapons, some primary grenades (Semtex, etc), tactical grenades)</span><br />
+<span style="color: #FF0000">!4 Weapons Classes are possible! <img alt="Smile" src="https://i.imgur.com/yIlcNgV.png" class="inline"> (set up your OWN 4 Weapons class)</span><br />
+- Change your Wildcards (Very Buggy!)<br />
+- Change Reflex Crosshair from primary Weapon<br />
+- Change ED-Tech Crosshair from primary Weapon<br />
+- Change ACOG Crosshair from primary Weapon<br />
+- Change Hybrid Crosshair from primary Weapon<br />
+- Set checkerboard Scorestreaks<br />
+<br />
+Tutorial for Double Weapons:<br />
+- You NEED the Wildcard Overkill<br />
+- The 2 Weapons NEED to have DIFFERENT attachments!<br />
+<br />
+Credits:<br />
+Offsets and Bytes: <span style="color: #00FF00">ExIIL / SHModding</span> (me)<br />
+<br />
+Stats: JeWeL&#039;s Offset Thread<br />
+Ghosts Camo Bytes: xChaosMods<br />
+<br />
+Pictures:<br />
+<spoiler>
+    <br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+
+</spoiler><br />
+<br />
+Download:<br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<br />
+Virustotal: (13/63) Because of Encryption<br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span>
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0629686373879809" data-ad-slot="7427702831" data-ad-format="auto" data-full-width-responsive="true"
+    ></ins>
+    <component :is="'script'">(adsbygoogle = window.adsbygoogle || []).push({});</component>
+    
+    
+                <div class="mt-2 border border-mono-ddd dark:border-mono-444 bg-mono-f5f dark:bg-mono-333 divide-y divide-mono-ddd dark:divide-mono-444">
+            <div id="post_thanks_box_7224022" class="grid sm:grid-cols-[150px_1fr] gap-x-3 gap-y-1.5 px-3 py-2.5">
+        <div class="flex sm:flex-col gap-x-3 gap-y-1 text-xs">
+            <span class="font-bold text-mono-444 dark:text-mono-eee whitespace-nowrap">
+                <i class="fa fa-thumbs-up  mr-1 text-ngu-blue-light"></i>12 thanks
+            </span>
+
+            
+                                                </div>
+
+        
+        <div id="post_thanks_bit_7224022" class="flex flex-wrap content-start gap-1.5 max-h-[88px] overflow-y-auto">
+                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1620550-burte.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-eliteer" style="color: #FF00FF; font-weight: bold; ">BurtE</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1900044-dark-07.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">DARK-07</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1952737-irekthoessss.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">irekthoessss</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/2363949-kjdhvkhdfoaihf.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">kjdhvkhdfoaihf</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1218646-liberationmods.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">LiberationMods</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1693630-link033.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">Link033</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1473104-lucasaf01.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">lucasaf01</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/736084-percal.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">Percal</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1609758-solohoster.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">SoloHoster</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/893347-subtheky3s.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">SubTheKy3s</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1656694-sytry.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">SyTry</span></span>
+                    </a>
+                                                                <a class="px-2.5 py-0.5 border border-mono-ddd dark:border-mono-444 bg-white dark:bg-mono-222 hover:border-ngu-blue-light" href="/forums/members/1884833-vxriousmodding.html" rel="nofollow">
+                        <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">VxriousModding</span></span>
+                    </a>
+                                                </div>
+    </div>
+                                </div>
+    </div>
+
+            
+                            <form role="form" method="GET" class="flex items-center justify-end gap-2 mt-3 text-xs" action="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil.html" data-replies-sort="data-replies-sort">
+    
+    
+            <label class="mb-2 text-mono-777 dark:text-mono-bbb" for="reply-sort">Sort replies</label>
+                    <div class="w-36">
+                        <div class="flex items-stretch bg-mono-f5f dark:bg-mono-333 rounded-sm border border-mono-ccc dark:border-mono-444 mb-2" data-form-select>
+    
+    <select name="sort" class="p-2 bg-white dark:bg-mono-333 dark:text-mono-eee w-full focus:border-sky-300 focus:outline-none border-mono-ccc dark:border-mono-444" id="reply-sort" >
+        <option value="oldest" selected >
+    Oldest
+</option>                                                            <option value="thanks"  >
+    Most thanks
+</option>                                                            <option value="newest"  >
+    Newest
+</option>
+    </select>
+</div>
+
+
+                    </div>
+                    <noscript><button class="text-sm px-5 py-2.5 text-center border rounded-sm text-mono-444 dark:text-mono-eee bg-white dark:bg-mono-333 hover:bg-mono-eee dark:hover:bg-mono-222 border-mono-eee dark:border-mono-444 hover:border-mono-ddd dark:hover:border-mono-111 inline mb-2" type="submit"   >
+    Sort
+</button>
+</noscript>
+    </form>            
+            
+            <div data-replies>
+            <div id="post7224042" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #FF5E00;" id="post_panel_7224042">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #FF5E00;">
+            <div class="w-full"><div class="flex justify-between">
+                07-22-2017, 06:31 PM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224042">
+                    #2
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/683376-frosty.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/avatars/thumbs/683376.jpg?cache=1484476305" alt="Frosty&#039;s Avatar" title="Frosty&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/683376-frosty.html" title="Frosty">
+                    <span class="inline-flex items-center"><span class="role-exstaffer" style="color: #FF5E00; ">Frosty</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                error
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">9,071</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">88,201</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">353</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Former Staff
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1324314900">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Dec 2011
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224042">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by ExIIL</span>
+
+                            <a href="https://nextgenupdate.com/forums/threads/953415/replies/7224022">
+                    <tooltip label="View Post">
+                        <img src="/images/misc/quote.png" alt="View Post">
+                    </tooltip>
+                </a>
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        <span style="color: #FF0000">FOR PS3<br />
+</span><br />
+Yo another Release c:<br />
+<br />
+Had this for my own, but why not share it.<br />
+<br />
+What can this Tool do?<br />
+- Connect to your Ps3 (CCapi/Tmapi)<br />
+- Change your Bo2 Stats (prestige/level)<br />
+- Give you the sticky Ghosts Camo on EVERY Weapon (Online, Private, Lobby)<br />
+- Give you Sticky camos for your Online Weapon. <span style="color: #FF0000">(Digital CE INCLUDED)</span><br />
+- Set your Primary Weapon <span style="color: #FF0000">(Secondary Weapon can be set as Primary)</span><br />
+- Set your Secondary Weapon (Every single Primary Weapon can be set a Secondary) <span style="color: #FF0000">!DOUBLE DSR, ETC POSSIBLE!</span><br />
+- Set 2nd Attachment (Primary Weapon)<br />
+- Set 3rd Attachment (Primary Weapon)<br />
+- Set 1st Attachment (Secondary Weapon)<br />
+- Set 2nd Attachment (Secondary Weapon)<br />
+- Set Every Single Perk for Perk 1,2,3,4,5 and 6<br />
+- Change your Primary grenade to everything possible <span style="color: #FF0000">(Every Primary Weapon, Every secondary Weapon, every primary grenade and every tactical grenade)</span><br />
+- Change your tactical grenade to: <span style="color: #FF0000">(Some Primary Weapons, some secondary weapons, some primary grenades (Semtex, etc), tactical grenades)</span><br />
+<span style="color: #FF0000">!4 Weapons Classes are possible! <img alt="Smile" src="https://i.imgur.com/yIlcNgV.png" class="inline"> (set up your OWN 4 Weapons class)</span><br />
+- Change your Wildcards (Very Buggy!)<br />
+- Change Reflex Crosshair from primary Weapon<br />
+- Change ED-Tech Crosshair from primary Weapon<br />
+- Change ACOG Crosshair from primary Weapon<br />
+- Change Hybrid Crosshair from primary Weapon<br />
+- Set checkerboard Scorestreaks<br />
+<br />
+Tutorial for Double Weapons:<br />
+- You NEED the Wildcard Overkill<br />
+- The 2 Weapons NEED to have DIFFERENT attachments!<br />
+<br />
+Credits:<br />
+Offsets and Bytes: <span style="color: #00FF00">ExIIL / SHModding</span> (me)<br />
+<br />
+Stats: JeWeL&#039;s Offset Thread<br />
+Ghosts Camo Bytes: xChaosMods<br />
+<br />
+Pictures:<br />
+<spoiler>
+    <br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+
+</spoiler><br />
+<br />
+Download:<br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<br />
+Virustotal: (10/63) Because of Encryption<br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span>
+    </div>
+
+    </div><br />
+<br />
+<br />
+Sounds like the best recovery tool you could get.
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224064" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224064">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-22-2017, 07:18 PM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224064">
+                    #3
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/2009073-rexqhh.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/avatars/thumbs/2009073.jpg?cache=1495364646" alt="Rexqhh&#039;s Avatar" title="Rexqhh&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/2009073-rexqhh.html" title="Rexqhh">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">Rexqhh</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                Keeper
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">15</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">10</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">50</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1481654913">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Dec 2016
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224064">
+                                                best rtm tool
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224241" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224241">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-23-2017, 09:47 AM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224241">
+                    #4
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/1648360-agent-juan.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/default/letters/A.png" alt="Agent Juan&#039;s Avatar" title="Agent Juan&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/1648360-agent-juan.html" title="Agent Juan">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">Agent Juan</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                Little One
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">294</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">363</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">160</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1435684042">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jun 2015
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224241">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by ExIIL</span>
+
+                            <a href="https://nextgenupdate.com/forums/threads/953415/replies/7224022">
+                    <tooltip label="View Post">
+                        <img src="/images/misc/quote.png" alt="View Post">
+                    </tooltip>
+                </a>
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        <span style="color: #FF0000">FOR PS3<br />
+</span><br />
+Yo another Release c:<br />
+<br />
+Had this for my own, but why not share it.<br />
+<br />
+What can this Tool do?<br />
+- Connect to your Ps3 (CCapi/Tmapi)<br />
+- Change your Bo2 Stats (prestige/level)<br />
+- Give you the sticky Ghosts Camo on EVERY Weapon (Online, Private, Lobby)<br />
+- Give you Sticky camos for your Online Weapon. <span style="color: #FF0000">(Digital CE INCLUDED)</span><br />
+- Set your Primary Weapon <span style="color: #FF0000">(Secondary Weapon can be set as Primary)</span><br />
+- Set your Secondary Weapon (Every single Primary Weapon can be set a Secondary) <span style="color: #FF0000">!DOUBLE DSR, ETC POSSIBLE!</span><br />
+- Set 2nd Attachment (Primary Weapon)<br />
+- Set 3rd Attachment (Primary Weapon)<br />
+- Set 1st Attachment (Secondary Weapon)<br />
+- Set 2nd Attachment (Secondary Weapon)<br />
+- Set Every Single Perk for Perk 1,2,3,4,5 and 6<br />
+- Change your Primary grenade to everything possible <span style="color: #FF0000">(Every Primary Weapon, Every secondary Weapon, every primary grenade and every tactical grenade)</span><br />
+- Change your tactical grenade to: <span style="color: #FF0000">(Some Primary Weapons, some secondary weapons, some primary grenades (Semtex, etc), tactical grenades)</span><br />
+<span style="color: #FF0000">!4 Weapons Classes are possible! <img alt="Smile" src="https://i.imgur.com/yIlcNgV.png" class="inline"> (set up your OWN 4 Weapons class)</span><br />
+- Change your Wildcards (Very Buggy!)<br />
+- Change Reflex Crosshair from primary Weapon<br />
+- Change ED-Tech Crosshair from primary Weapon<br />
+- Change ACOG Crosshair from primary Weapon<br />
+- Change Hybrid Crosshair from primary Weapon<br />
+- Set checkerboard Scorestreaks<br />
+<br />
+Tutorial for Double Weapons:<br />
+- You NEED the Wildcard Overkill<br />
+- The 2 Weapons NEED to have DIFFERENT attachments!<br />
+<br />
+Credits:<br />
+Offsets and Bytes: <span style="color: #00FF00">ExIIL / SHModding</span> (me)<br />
+<br />
+Stats: JeWeL&#039;s Offset Thread<br />
+Ghosts Camo Bytes: xChaosMods<br />
+<br />
+Pictures:<br />
+<spoiler>
+    <br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+
+</spoiler><br />
+<br />
+Download:<br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span><br />
+<br />
+Virustotal: (10/63) Because of Encryption<br />
+<span class="rounded-sm inline-block px-2 py-1 text-white bg-ngu-blue border-ngu-blue-dark">You must <a href="/login" class="text-red-400">login</a> or <a href="/register" class="text-red-400">register</a> to view this content.</span>
+    </div>
+
+    </div><br />
+<br />
+Good release I must say. But when i choose "Sticky class 1 primary camos&#039;(im not in class editor) when i click on set and go into the class editor then I freeze. Why?
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224245" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224245">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-23-2017, 10:01 AM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224245">
+                    #5
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/919158-exiil.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/avatars/thumbs/919158.gif?cache=1579830980" alt="ExIIL&#039;s Avatar" title="ExIIL&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/919158-exiil.html" title="ExIIL">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">ExIIL</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                <span style="color: white; background-image: url('/images/elite/rainbow-2.gif');">AstroCFG</span>
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">493</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">35,967</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">1,224</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1358020380">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jan 2013
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224245">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by Agent</span>
+
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        Good release I must say. But when i choose "Sticky class 1 primary camos&#039;(im not in class editor) when i click on set and go into the class editor then I freeze. Why?
+    </div>
+
+    </div><br />
+<br />
+I had that bug yesterday too. Try to play 1 game after you choosed the camo and then go into the class
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224246" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224246">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-23-2017, 10:04 AM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224246">
+                    #6
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/1648360-agent-juan.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/default/letters/A.png" alt="Agent Juan&#039;s Avatar" title="Agent Juan&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/1648360-agent-juan.html" title="Agent Juan">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">Agent Juan</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                Little One
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">294</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">363</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">160</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1435684042">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jun 2015
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224246">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by ExIIL</span>
+
+                            <a href="https://nextgenupdate.com/forums/threads/953415/replies/7224245">
+                    <tooltip label="View Post">
+                        <img src="/images/misc/quote.png" alt="View Post">
+                    </tooltip>
+                </a>
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        I had that bug yesterday too. Try to play 1 game after you choosed the camo and then go into the class
+    </div>
+
+    </div><br />
+<br />
+ok thanx will try
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224251" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224251">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-23-2017, 10:18 AM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224251">
+                    #7
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/1648360-agent-juan.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/default/letters/A.png" alt="Agent Juan&#039;s Avatar" title="Agent Juan&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/1648360-agent-juan.html" title="Agent Juan">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">Agent Juan</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                Little One
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">294</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">363</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">160</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1435684042">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jun 2015
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224251">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by ExIIL</span>
+
+                            <a href="https://nextgenupdate.com/forums/threads/953415/replies/7224245">
+                    <tooltip label="View Post">
+                        <img src="/images/misc/quote.png" alt="View Post">
+                    </tooltip>
+                </a>
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        I had that bug yesterday too. Try to play 1 game after you choosed the camo and then go into the class
+    </div>
+
+    </div><br />
+<br />
+Ok when I get in a match(like every match) my ps3 freeze now. What should i do?
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224266" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224266">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-23-2017, 11:02 AM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224266">
+                    #8
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/919158-exiil.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/avatars/thumbs/919158.gif?cache=1579830980" alt="ExIIL&#039;s Avatar" title="ExIIL&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/919158-exiil.html" title="ExIIL">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">ExIIL</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                <span style="color: white; background-image: url('/images/elite/rainbow-2.gif');">AstroCFG</span>
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">493</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">35,967</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">1,224</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1358020380">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jan 2013
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224266">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by Agent</span>
+
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        Ok when I get in a match(like every match) my ps3 freeze now. What should i do?
+    </div>
+
+    </div><br />
+<br />
+Tell me on what option/camos you get a freeze, so I can fix it
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224269" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224269">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-23-2017, 11:09 AM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224269">
+                    #9
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/1648360-agent-juan.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/default/letters/A.png" alt="Agent Juan&#039;s Avatar" title="Agent Juan&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/1648360-agent-juan.html" title="Agent Juan">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">Agent Juan</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                Little One
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">294</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">363</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">160</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1435684042">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jun 2015
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224269">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by ExIIL</span>
+
+                            <a href="https://nextgenupdate.com/forums/threads/953415/replies/7224266">
+                    <tooltip label="View Post">
+                        <img src="/images/misc/quote.png" alt="View Post">
+                    </tooltip>
+                </a>
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        Tell me on what option/camos you get a freeze, so I can fix it
+    </div>
+
+    </div><br />
+<br />
+the CE something camo
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+            <div id="post7224275" class="text-xs">
+
+    
+    <div class="block w-full mb-2.5 rounded-sm border  flex flex-col min-h-[320px]" style="border-color: #A3A3A3;" id="post_panel_7224275">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1  text-white" style="background-color: #A3A3A3;">
+            <div class="w-full"><div class="flex justify-between">
+                07-23-2017, 11:17 AM
+        
+                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-1.html#post7224275">
+                    #10
+                </a>
+            </div></div>
+                    </div>
+    
+    
+    
+    <div class="grid grid-rows-1 grid-cols-12 text-sm items-center border-b-2 border-mono-f5f dark:border-mono-444">
+    <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full col-span-12 sm:col-span-8 md:col-span-5 lg:col-span-4 xl:col-span-3 sm:border-r-2 border-mono-f5f">
+    <div class="flex items-center h-full min-w-0 ">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="flex items-center">
+        <div class="bg-ngu-blue rounded-[50%] shrink-0 h-fit p-0.5">
+                    <a href="/forums/members/919158-exiil.html" class="shrink-0">
+                    <img class="w-14 h-14 rounded-[50%] shrink-0" src="/images/avatars/thumbs/919158.gif?cache=1579830980" alt="ExIIL&#039;s Avatar" title="ExIIL&#039;s Avatar" onerror="this.onerror=null;this.src=&#039;/images/misc/default-user-dark.png&#039;;">
+                </a>
+            </div>
+        <div class="ml-4">
+                            <a href="/forums/members/919158-exiil.html" title="ExIIL">
+                    <span class="inline-flex items-center"><span class="role-userer" style="color: #A3A3A3; ">ExIIL</span></span>
+                </a>
+                        <div class="text-xs w-full break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                <span style="color: white; background-image: url('/images/elite/rainbow-2.gif');">AstroCFG</span>
+            </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">493</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Posts</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden md:block col-span-2 lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">35,967</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Reputation</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-1">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center">
+        <div class="font-bold">1,224</div>
+        <div class="font-semibold text-xxs text-mono-ccc">Credits</div>
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-user  mr-2"></i> Member
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden sm:block col-span-4 md:col-span-3 lg:col-span-2 xl:border-r-2 border-mono-f5f" date="1358020380">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-clock-o  mr-2"></i> Jan 2013
+    </div>
+        </div>
+    </div>
+</div>
+                <div class="border-r-2 border-mono-f5f dark:border-mono-444 px-4 py-3 w-full h-full hidden xl:block col-span-2">
+    <div class="flex items-center h-full min-w-0 justify-center">
+        <div class="grow overflow-hidden whitespace-nowrap text-ellipsis">
+            <div class="text-center font-light">
+        <i class="fa fa-globe  mr-2"></i> NextGenUpdate
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="p-4 pb-1 break-words grow flex flex-col justify-between">
+
+            
+            <div class="mb-3" id="post_message_7224275">
+                                                <div class="block w-full mb-2.5 rounded-sm border text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444" style="">
+    
+    
+            <div class="flex justify-between text-xs px-2.5 py-1 bg-mono-aaa dark:bg-mono-222 text-mono-444 dark:text-mono-eee border-mono-aaa dark:border-mono-444 font-bold" style="">
+            <div class="w-full"><div class="flex justify-between py-1">
+            <span>Originally posted by Agent</span>
+
+                    </div></div>
+                    </div>
+    
+    
+    
+    
+
+    
+    <div class="p-2">
+        the CE something camo
+    </div>
+
+    </div><br />
+<br />
+Just tested it, works fine for me. Don&#039;t go in class editor after you have set it, go directly into online match, then the camo will stick and you can go into class editor!
+            </div>
+
+            
+            <div>
+                
+                
+                
+                                
+                
+                <div class="flex justify-between text-base mt-1 pt-1 border-t border-mono-ddd dark:border-mono-444">
+    <ul class="flex space-x-4 items-center">
+        
+        
+        
+            </ul>
+    <ul class="flex space-x-4 items-center">
+
+        
+        
+                    <li>
+                <tooltip label="Quote">
+                    <a data-mutation href="https://nextgenupdate.com/register"  rel="nofollow">
+                        <i class="fa fa-share"></i>                    </a>
+                </tooltip>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+        </div>
+    </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-replies-pagination="bottom"><nav role="navigation" aria-label="Pagination Navigation" class="flex items-center justify-between">
+                    <div class="flex justify-between flex-1 sm:hidden">
+                                    <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 dark:text-mono-eee bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 cursor-default leading-5 rounded-sm">
+                        &laquo; Previous
+                    </span>
+                
+                                    <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-2.html" class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 rounded-sm hover:text-gray-500 dark:hover:text-mono-eee focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150">
+                        Next &raquo;
+                    </a>
+                            </div>
+        
+        <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between justify-center hidden">
+                        <div>
+                <p class="hidden sm:block text-sm text-gray-700 dark:text-mono-ccc leading-5">
+                    Showing
+                                            <span class="font-medium">1</span>
+                        to
+                        <span class="font-medium">9</span>
+                                        of
+                    <span class="font-medium">49</span>
+                    results
+                </p>
+            </div>
+            
+            <div>
+                <span class="relative z-0 inline-flex shadow-sm rounded-sm">
+                    
+                                            <span aria-disabled="true" aria-label="&laquo; Previous">
+                            <span class="relative h-full inline-flex items-center px-1 py-1 text-sm font-medium text-gray-500 dark:text-mono-eee bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 cursor-default rounded-l-sm leading-5" aria-hidden="true">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </span>
+                    
+                    
+                                            
+                        
+                        
+                                                                                                                        <span aria-current="page">
+                                        <span class="relative h-full inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-white bg-ngu-blue border border-gray-300 dark:border-mono-444 cursor-default leading-5">1</span>
+                                    </span>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-2.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 2">
+                                        2
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-3.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 3">
+                                        3
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-4.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 4">
+                                        4
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-5.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 5">
+                                        5
+                                    </a>
+                                                                                                                                <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-6.html" class="relative inline-flex items-center px-3 py-1 -ml-px text-sm font-medium text-gray-700 dark:text-mono-ccc bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 leading-5 hover:text-gray-500 dark:hover:text-mono-eee focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:active:text-mono-ccc transition ease-in-out duration-150" aria-label="Go to page 6">
+                                        6
+                                    </a>
+                                                                                                        
+                    
+                                            <a href="/forums/black-ops-2-modding-tools/953415-ultimate-class-tool-exiil-2.html" rel="next" class="relative inline-flex items-center px-1 py-1 -ml-px text-sm font-medium text-gray-500 dark:text-mono-eee bg-white dark:bg-mono-333 border border-gray-300 dark:border-mono-444 rounded-r-sm leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:ring ring-gray-300 dark:ring-mono-444 focus:border-blue-300 active:bg-gray-100 active:text-gray-500 dark:active:text-mono-eee transition ease-in-out duration-150" aria-label="Next &raquo;">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                                    </span>
+            </div>
+        </div>
+    </nav>
+</div>
+    </div>
+
+    
+            <div class="flex justify-between py-6 text-xs sm:px-0 px-4">
+    <div class="flex items-top">
+        <div class="pr-6 pb-4 border-r border-mono-ccc dark:border-mono-444 text-mono-888">
+            <p class="mb-3">Copyright &copy; 2026, NextGenUpdate.<br> All Rights Reserved.</p>
+            <img src="/images/misc/footer_logo.png" width="68" height="20" alt="Gray NextGenUpdate Logo">
+        </div>
+        <ul class="px-6">
+            <li><a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue block py-px" href="https://nextgenupdate.com/forums/groups"   >
+    Website Staff
+</a>
+</li>
+            <li><a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue block py-px" href="https://nextgenupdate.com/policies/privacy-policy"   >
+    Privacy Policy
+</a>
+</li>
+            <li><a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue block py-px" href="https://nextgenupdate.com/policies/terms-of-service"   >
+    Terms of Service
+</a>
+</li>
+            <li><a class="text-ngu-blue dark:text-ngu-blue-light hover:text-ngu-blue-dark dark:hover:text-ngu-blue block py-px" href="#top" onclick="document.location.hash='top'; return false;"   >
+    Top
+</a>
+</li>
+        </ul>
+    </div>
+    <div class="sm:flex hidden items-center space-x-2 text-5xl">
+        <a class="flex h-12 items-center" href="https://x.com/NextGenUpdate" target="_blank" rel="noopener noreferrer" aria-label="Visit NextGenUpdate on X">
+            <svg class="block w-10 h-10" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                <rect width="48" height="48" rx="4" fill="#000000" />
+                <svg x="10" y="10" width="28" height="28" viewBox="0 0 1200 1227" preserveAspectRatio="xMidYMid meet">
+                    <path fill="#FFFFFF" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894L144.011 79.69h162.604l304.72 435.995 47.468 67.894 396.277 566.731H892.476L569.165 687.854v-.026Z" />
+                </svg>
+            </svg>
+        </a>
+        <a class="flex h-12 items-center" href="https://facebook.com/NextGenUpdate" target="_blank" aria-label="Visit NextGenUpdate's Facebook Page">
+            <i class="fa fa-facebook-square  text-[#3b5998] hover:text-[#314368]"></i>        </a>
+    </div>
+</div>
+    </div>
+        </div>
+    </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKZYK7G0K9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NKZYK7G0K9');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0629686373879809" crossorigin="anonymous"></script>
+        
+    
+    <script src="/js/nextgenupdate.js?id=a8b9c5bf2aed1cd93bb96d9734d4def0"></script>
+    <script>
+        window.app = {
+            name: 'NextGenUpdate',
+            defaults: {
+                avatar: '\/images\/misc\/default-user-dark.png',
+                username: 'Guest',
+            },
+        };
+    </script>
+        <script src="/js/third-party.js?id=a9bd41baf9ddf7e53838bc8da0c8549e"></script>
+
+    
+        <script>
+        // Sort and page a thread's replies in place, falling back to normal page loads without JavaScript
+        async function loadReplies(url) {
+            const replies = document.querySelector('[data-replies]');
+            replies.classList.add('opacity-60', 'pointer-events-none');
+
+            try {
+                const response = await fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
+                const page = new DOMParser().parseFromString(await response.text(), 'text/html');
+                replies.replaceWith(page.querySelector('[data-replies]'));
+                document.querySelectorAll('[data-replies-pagination]').forEach((pagination) => {
+                    pagination.replaceWith(page.querySelector('[data-replies-pagination="' + pagination.dataset.repliesPagination + '"]'));
+                });
+                history.replaceState(null, '', url);
+                document.querySelector('[data-replies-sort]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } catch {
+                window.location = url;
+            }
+        }
+
+        document.addEventListener('change', (event) => {
+            const select = event.target.closest('[data-replies-sort] select');
+            if (select == null) {
+                return;
+            }
+
+            const url = new URL(select.form.action, window.location.href);
+            if (select.value != 'oldest') {
+                url.searchParams.set('sort', select.value);
+            }
+            loadReplies(url.toString());
+        });
+
+        document.addEventListener('click', (event) => {
+            const link = event.target.closest('[data-replies-pagination] a[href]');
+            if (link == null || document.querySelector('[data-replies]') == null || event.ctrlKey || event.metaKey || event.shiftKey || event.button != 0) {
+                return;
+            }
+
+            event.preventDefault();
+            loadReplies(link.href);
+        });
+    </script>
+
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","@id":"https:\/\/nextgenupdate.com#organization","name":"NextGenUpdate","url":"https:\/\/nextgenupdate.com","logo":"https:\/\/nextgenupdate.com\/images\/logo-square.png","sameAs":["https:\/\/www.facebook.com\/nextgenupdate","https:\/\/www.instagram.com\/nextgenupdate","https:\/\/x.com\/NextGenUpdate"],"description":"NextGenUpdate is your home for all of the latest in Video Games, specializing in PS5, PS4, Xbox and PC gaming guides, mods, news, and discussions."}</script>
+                    <script type="application/ld+json">{"@type":"DiscussionForumPosting","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil.html#discussion","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil.html","text":"FOR PS3\n\n\n\nYo another Release c:\n\n\n\nHad this for my own, but why not share it.\n\n\n\nWhat can this Tool do?\n\n- Connect to your Ps3 (CCapi\/Tmapi)\n\n- Change your Bo2 Stats (prestige\/level)\n\n- Give you the sticky Ghosts Camo on EVERY Weapon (Online, Private, League)\n\n- Give you Sticky camos for your Online Weapon. (Digital CE INCLUDED)\n\n- Set your Primary Weapon (Secondary Weapon can be set as Primary)\n\n- Set your Secondary Weapon (Every single Primary Weapon can be set a Secondary) !DOUBLE DSR, ETC POSSIBLE!\n\n- Set 2nd Attachment (Primary Weapon)\n\n- Set 3rd Attachment (Primary Weapon)\n\n- Set 1st Attachment (Secondary Weapon)\n\n- Set 2nd Attachment (Secondary Weapon)\n\n- Set Every Single Perk for Perk 1,2,3,4,5 and 6\n\n- Change your Primary grenade to everything possible (Every Primary Weapon, Every secondary Weapon, every primary grenade and every tactical grenade)\n\n- Change your tactical grenade to: (Some Primary Weapons, some secondary weapons, some primary grenades (Semtex, etc), tactical grenades)\n\n!4 Weapons Classes are possible!  (set up your OWN 4 Weapons class)\n\n- Change your Wildcards (Very Buggy!)\n\n- Change Reflex Crosshair from primary Weapon\n\n- Change ED-Tech Crosshair from primary Weapon\n\n- Change ACOG Crosshair from primary Weapon\n\n- Change Hybrid Crosshair from primary Weapon\n\n- Set checkerboard Scorestreaks\n\n\n\nTutorial for Double Weapons:\n\n- You NEED the Wildcard Overkill\n\n- The 2 Weapons NEED to have DIFFERENT attachments!\n\n\n\nCredits:\n\nOffsets and Bytes: ExIIL \/ SHModding (me)\n\n\n\nStats: JeWeL\u0027s Offset Thread\n\nGhosts Camo Bytes: xChaosMods\n\n\n\nPictures:\n\n\n    \n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\n\n\n\n\n\nDownload:\n\nYou must login or register to view this content.\n\n\n\nVirustotal: (13\/63) Because of Encryption\n\nYou must login or register to view this content.","author":{"@type":"Person","name":"ExIIL","url":"https:\/\/nextgenupdate.com\/forums\/members\/919158-exiil.html"},"datePublished":"2017-07-22T17:54:32+00:00","@context":"https:\/\/schema.org","headline":"Ultimate Class Tool by ExIIL","mainEntityOfPage":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil.html","comment":[{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224042","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224042","text":"Originally posted by ExIIL\n\n                            \n                    \n                        \n                    \n                \n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        FOR PS3\n\n\n\nYo another Release c:\n\n\n\nHad this for my own, but why not share it.\n\n\n\nWhat can this Tool do?\n\n- Connect to your Ps3 (CCapi\/Tmapi)\n\n- Change your Bo2 Stats (prestige\/level)\n\n- Give you the sticky Ghosts Camo on EVERY Weapon (Online, Private, Lobby)\n\n- Give you Sticky camos for your Online Weapon. (Digital CE INCLUDED)\n\n- Set your Primary Weapon (Secondary Weapon can be set as Primary)\n\n- Set your Secondary Weapon (Every single Primary Weapon can be set a Secondary) !DOUBLE DSR, ETC POSSIBLE!\n\n- Set 2nd Attachment (Primary Weapon)\n\n- Set 3rd Attachment (Primary Weapon)\n\n- Set 1st Attachment (Secondary Weapon)\n\n- Set 2nd Attachment (Secondary Weapon)\n\n- Set Every Single Perk for Perk 1,2,3,4,5 and 6\n\n- Change your Primary grenade to everything possible (Every Primary Weapon, Every secondary Weapon, every primary grenade and every tactical grenade)\n\n- Change your tactical grenade to: (Some Primary Weapons, some secondary weapons, some primary grenades (Semtex, etc), tactical grenades)\n\n!4 Weapons Classes are possible!  (set up your OWN 4 Weapons class)\n\n- Change your Wildcards (Very Buggy!)\n\n- Change Reflex Crosshair from primary Weapon\n\n- Change ED-Tech Crosshair from primary Weapon\n\n- Change ACOG Crosshair from primary Weapon\n\n- Change Hybrid Crosshair from primary Weapon\n\n- Set checkerboard Scorestreaks\n\n\n\nTutorial for Double Weapons:\n\n- You NEED the Wildcard Overkill\n\n- The 2 Weapons NEED to have DIFFERENT attachments!\n\n\n\nCredits:\n\nOffsets and Bytes: ExIIL \/ SHModding (me)\n\n\n\nStats: JeWeL\u0027s Offset Thread\n\nGhosts Camo Bytes: xChaosMods\n\n\n\nPictures:\n\n\n    \n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\n\n\n\n\n\nDownload:\n\nYou must login or register to view this content.\n\n\n\nVirustotal: (10\/63) Because of Encryption\n\nYou must login or register to view this content.\n    \n\n\n    \n\n\n\n\n\n\nSounds like the best recovery tool you could get.","author":{"@type":"Person","name":"Frosty","url":"https:\/\/nextgenupdate.com\/forums\/members\/683376-frosty.html"},"datePublished":"2017-07-22T18:31:51+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224064","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224064","text":"best rtm tool","author":{"@type":"Person","name":"Rexqhh","url":"https:\/\/nextgenupdate.com\/forums\/members\/2009073-rexqhh.html"},"datePublished":"2017-07-22T19:18:51+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224241","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224241","text":"Originally posted by ExIIL\n\n                            \n                    \n                        \n                    \n                \n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        FOR PS3\n\n\n\nYo another Release c:\n\n\n\nHad this for my own, but why not share it.\n\n\n\nWhat can this Tool do?\n\n- Connect to your Ps3 (CCapi\/Tmapi)\n\n- Change your Bo2 Stats (prestige\/level)\n\n- Give you the sticky Ghosts Camo on EVERY Weapon (Online, Private, Lobby)\n\n- Give you Sticky camos for your Online Weapon. (Digital CE INCLUDED)\n\n- Set your Primary Weapon (Secondary Weapon can be set as Primary)\n\n- Set your Secondary Weapon (Every single Primary Weapon can be set a Secondary) !DOUBLE DSR, ETC POSSIBLE!\n\n- Set 2nd Attachment (Primary Weapon)\n\n- Set 3rd Attachment (Primary Weapon)\n\n- Set 1st Attachment (Secondary Weapon)\n\n- Set 2nd Attachment (Secondary Weapon)\n\n- Set Every Single Perk for Perk 1,2,3,4,5 and 6\n\n- Change your Primary grenade to everything possible (Every Primary Weapon, Every secondary Weapon, every primary grenade and every tactical grenade)\n\n- Change your tactical grenade to: (Some Primary Weapons, some secondary weapons, some primary grenades (Semtex, etc), tactical grenades)\n\n!4 Weapons Classes are possible!  (set up your OWN 4 Weapons class)\n\n- Change your Wildcards (Very Buggy!)\n\n- Change Reflex Crosshair from primary Weapon\n\n- Change ED-Tech Crosshair from primary Weapon\n\n- Change ACOG Crosshair from primary Weapon\n\n- Change Hybrid Crosshair from primary Weapon\n\n- Set checkerboard Scorestreaks\n\n\n\nTutorial for Double Weapons:\n\n- You NEED the Wildcard Overkill\n\n- The 2 Weapons NEED to have DIFFERENT attachments!\n\n\n\nCredits:\n\nOffsets and Bytes: ExIIL \/ SHModding (me)\n\n\n\nStats: JeWeL\u0027s Offset Thread\n\nGhosts Camo Bytes: xChaosMods\n\n\n\nPictures:\n\n\n    \n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\nYou must login or register to view this content.\n\n\n\n\n\n\nDownload:\n\nYou must login or register to view this content.\n\n\n\nVirustotal: (10\/63) Because of Encryption\n\nYou must login or register to view this content.\n    \n\n\n    \n\n\n\n\nGood release I must say. But when i choose \u0022Sticky class 1 primary camos\u0027(im not in class editor) when i click on set and go into the class editor then I freeze. Why?","author":{"@type":"Person","name":"Agent Juan","url":"https:\/\/nextgenupdate.com\/forums\/members\/1648360-agent-juan.html"},"datePublished":"2017-07-23T09:47:34+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224245","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224245","text":"Originally posted by Agent\n\n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        Good release I must say. But when i choose \u0022Sticky class 1 primary camos\u0027(im not in class editor) when i click on set and go into the class editor then I freeze. Why?\n    \n\n\n    \n\n\n\n\nI had that bug yesterday too. Try to play 1 game after you choosed the camo and then go into the class","author":{"@type":"Person","name":"ExIIL","url":"https:\/\/nextgenupdate.com\/forums\/members\/919158-exiil.html"},"datePublished":"2017-07-23T10:01:55+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224246","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224246","text":"Originally posted by ExIIL\n\n                            \n                    \n                        \n                    \n                \n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        I had that bug yesterday too. Try to play 1 game after you choosed the camo and then go into the class\n    \n\n\n    \n\n\n\n\nok thanx will try","author":{"@type":"Person","name":"Agent Juan","url":"https:\/\/nextgenupdate.com\/forums\/members\/1648360-agent-juan.html"},"datePublished":"2017-07-23T10:04:59+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224251","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224251","text":"Originally posted by ExIIL\n\n                            \n                    \n                        \n                    \n                \n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        I had that bug yesterday too. Try to play 1 game after you choosed the camo and then go into the class\n    \n\n\n    \n\n\n\n\nOk when I get in a match(like every match) my ps3 freeze now. What should i do?","author":{"@type":"Person","name":"Agent Juan","url":"https:\/\/nextgenupdate.com\/forums\/members\/1648360-agent-juan.html"},"datePublished":"2017-07-23T10:18:02+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224266","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224266","text":"Originally posted by Agent\n\n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        Ok when I get in a match(like every match) my ps3 freeze now. What should i do?\n    \n\n\n    \n\n\n\n\nTell me on what option\/camos you get a freeze, so I can fix it","author":{"@type":"Person","name":"ExIIL","url":"https:\/\/nextgenupdate.com\/forums\/members\/919158-exiil.html"},"datePublished":"2017-07-23T11:02:42+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224269","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224269","text":"Originally posted by ExIIL\n\n                            \n                    \n                        \n                    \n                \n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        Tell me on what option\/camos you get a freeze, so I can fix it\n    \n\n\n    \n\n\n\n\nthe CE something camo","author":{"@type":"Person","name":"Agent Juan","url":"https:\/\/nextgenupdate.com\/forums\/members\/1648360-agent-juan.html"},"datePublished":"2017-07-23T11:09:23+00:00"},{"@type":"Comment","@id":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224275","url":"https:\/\/nextgenupdate.com\/forums\/black-ops-2-modding-tools\/953415-ultimate-class-tool-exiil-1.html#post7224275","text":"Originally posted by Agent\n\n                    \n\n\n                    \n\n    \n    \n    \n    \n\n    \n    \n        the CE something camo\n    \n\n\n    \n\n\n\n\nJust tested it, works fine for me. Don\u0027t go in class editor after you have set it, go directly into online match, then the camo will stick and you can go into class editor!","author":{"@type":"Person","name":"ExIIL","url":"https:\/\/nextgenupdate.com\/forums\/members\/919158-exiil.html"},"datePublished":"2017-07-23T11:17:03+00:00"}]}</script>
+    <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5455df8ed450034',t:'MTc5MzY0NTg2OA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5455df8ed450034',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
