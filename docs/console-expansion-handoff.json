@@ -10101,5 +10101,56 @@
     "visualBrowserVerified": false,
     "browserLimit": "Local browser use remains disabled in Work settings; user said they would enable it, but the browser tool still reports disabled.",
     "published": false
+  },
+  "pcPortsDownloadRepairs20261103": {
+    "request": "Fix Sunshine and find working downloads for the other three Ports entries; add more keywords and tags",
+    "updated": "2026-11-03",
+    "page": "pc/ports.html",
+    "catalogue": "docs/pc-ports.json",
+    "repairSources": "docs/pc-ports-link-repairs.json",
+    "repairScript": "scripts/apply-pc-ports-link-repairs.cjs",
+    "keywordModule": "scripts/pc-ports-keywords.cjs",
+    "repairs": [
+      "Sunshine: chasem-dev SMS Launcher v0.1.68 portable Windows alternative. Original TekRantGaming 404 link preserved as history. Requires owned GMSE01 revision 0 and setup internet connection.",
+      "Serious Sam: working original SillyReEncounter-Public.zip under recomp tag, explicitly separated from the requested update-tag notes. USA G3BE9G; later PAL support is not applied to this package.",
+      "Splinter Cell: publisher V3 Windows ZIP, explicitly labelled V3 while the original requested V2 remains separately linked. Original Xbox data requirements retained.",
+      "Crackdown: saulob Crackdown Recompiled v0.6.2 Windows alternative; original SkiddyToast source project retained. TU0, title ID 4D5307DC and exact executable SHA-256/file inventory preserved."
+    ],
+    "catalogueStatus": {
+      "projects": 49,
+      "verifiedWindowsDownloadLinks": 49,
+      "clickableTags": 344,
+      "perEntrySearchKeywords": 392,
+      "keywordFeatures": "Genre, franchise, expanded console names, Windows download phrases and aliases; tag buttons filter the catalogue"
+    },
+    "preservation": "The 45 existing package records and 49 cover hashes are unchanged. Earlier source links, release notes and versions remain. Shared image and host work was preserved.",
+    "archive": {
+      "scope": "pc-ports-link-repairs",
+      "newFiles": 4,
+      "bytes": 246224806,
+      "publisherSHA256Matches": 4,
+      "zipCRCChecks": 3,
+      "indexItems": 4994,
+      "indexFileRecords": 8613,
+      "presentFileRecords": 8613,
+      "missingFileRecords": 0,
+      "indexRefreshed": true,
+      "executedDownloadedCode": false
+    },
+    "validation": {
+      "focusedTestsPassed": 69,
+      "integratedSourceRevision": "b68a3c7ea06f9f03a660799d5e93b5a97fe4572a",
+      "artifactPages": 552,
+      "artifactLinks": 51437,
+      "artifactIssues": 0,
+      "budgetedBytes": 943562110,
+      "budget": 943718400,
+      "actualArtifactBytes": 944440556,
+      "browserRenderingVerified": false
+    },
+    "codeCommit": "05a53f6c7ea884120cd555e4d7e4e1f3395bd891",
+    "deploymentRun": "https://github.com/Speedy-away/whatsite/actions/runs/41738722371",
+    "publication": "Successful integrated Pages deployment containing the repair commit. Live revision b68a3c7ea06f9f03a660799d5e93b5a97fe4572a verified at 2026-11-03T23:26:17.803Z: 49 cards/download links/source links/cover image hashes, 344 clickable tags, search assets, keyword metadata and PC navigation passed.",
+    "qa": "docs/qa/pc-ports-link-repairs.json"
   }
 }
