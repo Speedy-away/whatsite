@@ -11,6 +11,7 @@ function rawURL(name, revision = 'main') {
   return 'https://raw.githubusercontent.com/Speedy-away/whatsite/' + revision + '/' + encodePath(name);
 }
 function eligible(name) {
+  if (name.startsWith('hosts/runtime/')) return false;
   return (/^(?:downloads|hosts\/runtime)\//.test(name) || !name.split('/').some(p => p.startsWith('.'))) &&
     !/^(?:scripts|i18n-tools|design-references)\//.test(name) &&
     !/^docs\/(?:qa|screenshots|host-reviews)\//.test(name) &&

@@ -19,9 +19,9 @@ test('Pages references resolve to exact encoded repository files without modifyi
   assert.equal(image('<img src="../../assets/images/test.png">','games/example/index.html'),'<img src="'+rawURL('assets/images/test.png')+'">');
   assert.equal(image('https://example.com/assets/images/test.png','index.html'),'https://example.com/assets/images/test.png');
 });
-test('Pages excludes repository internals and QA captures but retains runtime and immutable download helpers', () => {
-  for (const name of ['.git/config','.agents/skills/a','scripts/test.cjs','docs/qa/a.txt','docs/screenshots/a.png']) assert.equal(eligible(name), false, name);
-  for (const name of ['hosts/runtime/ps4/index.html','docs/host-actions-ps4.json','downloads/helpers/old/helper.html','CNAME']) assert.equal(eligible(name), true, name);
+test('main Pages excludes migrated native hosts and internals but retains compatibility redirects and download helpers', () => {
+  for (const name of ['.git/config','.agents/skills/a','scripts/test.cjs','docs/qa/a.txt','docs/screenshots/a.png','hosts/runtime/ps4/index.html']) assert.equal(eligible(name), false, name);
+  for (const name of ['hosts/index.html','docs/host-actions-ps4.json','downloads/helpers/old/helper.html','CNAME']) assert.equal(eligible(name), true, name);
 });
 test('new native receiver snapshots fetch repository bytes directly while preserving source pins and foreign URLs', () => {
   const items = [{id:'one',url:'https://whatwhatboy.com/downloads/ps4/menu.bin',filename:'menu.bin',sha256:'a'.repeat(64),bytes:123,firmwares:['9.00']},{id:'two',url:'https://example.com/build.pkg'}];
