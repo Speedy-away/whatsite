@@ -116,11 +116,14 @@
   function packageInstallerURL(location, platform, file, size) {
     platform = platformName(platform);
     if (!receiverOrigin(location)) fail('Open the native receiver before preparing package installation.');
+    // The installed native helper currently supports local IPv4/localhost,
+    // not IPv6. Receiver downloads keep their wider host support.
+    if (String(location.hostname || '').indexOf(':') >= 0) fail('Open the native receiver before preparing package installation.');
     var originalName = String(file).slice(String(file).lastIndexOf('/')+1);
     var name = safeFilename(file), folder = safeFolder(platform, file.slice(0,file.lastIndexOf('/')));
-    if (name !== originalName) fail('The saved package filename is invalid.');
-    if (!/\.pkg$/i.test(name) || !/^(?:\/data(?:\/|$)|\/mnt\/usb\d+\/)/.test(folder+'/')) fail('Choose a saved PKG in internal storage or a verified USB folder.');
-    if (typeof size !== 'number' || !isFinite(size) || size < 1 || Math.floor(size) !== size || size > 9007199254740991) fail('The package size is unavailable.');
+    if (name !== originalName || file !== folder+'/'+name || file.length > 512) fail('The saved package filename is invalid.');
+    if (!/\.pkg$/i.test(name) || !/^(?:\/data(?:\/|$)|\/mnt\/usb[0-9]\/)/.test(folder+'/')) fail('Choose a saved PKG in internal storage or a verified USB folder.');
+    if (typeof size !== 'number' || !isFinite(size) || size < 4 || Math.floor(size) !== size || size > 9007199254740991) fail('The package size is unavailable.');
     var path = platform === 'ps4' ? '/data/whatsite-package-installer-ps4.html' : '/data/homebrew/ezremote-client/assets/whatsite-package-installer-ps5.html';
     return 'http://' + localHost(location) + ':' + (platform === 'ps4' ? '8080' : '9090') + path + '?path=' + encodeURIComponent(folder+'/'+name) + '&bytes=' + size;
   }

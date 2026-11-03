@@ -1,0 +1,631 @@
+{
+  "checkedAt": "2026-11-03T18:45:08.054Z",
+  "status": "completed-locally-with-source-defects",
+  "sourceCommit": "743646c9df9ab4c83821b660c12e23a3dda57b49",
+  "buildVersion": "51430066e375",
+  "chooser": "hosts/karo/index.html",
+  "runtime": "/hosts/runtime/karo-743646c9df9a-51430066e375/web/",
+  "sourceFolders": 29,
+  "nativeEntries": 71,
+  "enabledNativeEntries": 68,
+  "blockedNativeEntries": [
+    {
+      "id": "karo-binloader-702",
+      "folder": "binloader",
+      "path": "binloader/702/index.html",
+      "platform": "ps4",
+      "firmwares": [
+        "7.02"
+      ],
+      "label": "KARO BIN Loader 7.02",
+      "kind": "loader",
+      "contract": "Original browser-native preparation and payload loader; not the paired desktop sender or an interchangeable GoldHEN HTTP ABI. The original standalone browser entry prepares its native listener. Preserve the nested directory, scripts and original listener port.",
+      "notes": [
+        "These pages can start preparation immediately on opening; 6.72, 7.02 and 7.55 advertise port 9021.",
+        "Source matching is not a physical-console execution test."
+      ],
+      "scope": "binloader/702/",
+      "blockedReason": "Original required dependencies missing: binloader/702/offlinexmb.cache"
+    },
+    {
+      "id": "karo-restore-702d",
+      "folder": "restore",
+      "path": "restore/702d/index.html",
+      "platform": "ps4",
+      "firmwares": [
+        "7.02"
+      ],
+      "label": "KARO restore 702d",
+      "kind": "restore",
+      "contract": "Original browser-native preparation and payload loader; not the paired desktop sender or an interchangeable GoldHEN HTTP ABI. Original browser-native restore/copy preparation and its embedded or selected payload. Keep this exact entry and its relative dependencies.",
+      "notes": [
+        "This can write or restore console data; use only its original matching-console workflow. Historical variants remain separate.",
+        "Source matching is not a physical-console execution test."
+      ],
+      "scope": "restore/702d/",
+      "blockedReason": "Original required dependencies missing: restore/702d/offlinexmb.cache"
+    },
+    {
+      "id": "karo-restore-702n",
+      "folder": "restore",
+      "path": "restore/702N/index.html",
+      "platform": "ps4",
+      "firmwares": [
+        "7.02"
+      ],
+      "label": "KARO restore 702N",
+      "kind": "restore",
+      "contract": "Original browser-native preparation and payload loader; not the paired desktop sender or an interchangeable GoldHEN HTTP ABI. Original browser-native restore/copy preparation and its embedded or selected payload. Keep this exact entry and its relative dependencies.",
+      "notes": [
+        "This can write or restore console data; use only its original matching-console workflow. Historical variants remain separate.",
+        "Source matching is not a physical-console execution test."
+      ],
+      "scope": "restore/702N/",
+      "blockedReason": "Original required dependencies missing: restore/702N/offlinexmb.cache"
+    }
+  ],
+  "downloadLinksVerified": 1473,
+  "decodedBINs": 407,
+  "invalidPayloads": [
+    {
+      "path": "702/enablebrowser.bin",
+      "status": "invalid",
+      "format": "BIN",
+      "metadata": {
+        "bytes": 0
+      },
+      "issues": [
+        {
+          "code": "empty-file",
+          "message": "The original file is empty."
+        },
+        {
+          "code": "raw-bin-too-small",
+          "message": "The original flat BIN is shorter than 256 bytes; not offered as a ready payload."
+        }
+      ],
+      "hardwareVerified": false
+    },
+    {
+      "path": "ps5/pr/payloads/CheatRunner_v0.17.2.elf",
+      "status": "invalid",
+      "format": "ELF",
+      "metadata": {
+        "bytes": 2
+      },
+      "issues": [
+        {
+          "code": "elf-header-truncated",
+          "message": "The ELF64 header requires at least 64 bytes."
+        }
+      ],
+      "hardwareVerified": false
+    },
+    {
+      "path": "ps5/UMTX/payloads/OnionHENv1.11.elf",
+      "status": "invalid",
+      "format": "ELF",
+      "metadata": {
+        "bytes": 2
+      },
+      "issues": [
+        {
+          "code": "elf-header-truncated",
+          "message": "The ELF64 header requires at least 64 bytes."
+        }
+      ],
+      "hardwareVerified": false
+    },
+    {
+      "path": "ps5/UMTX/payloads/psplay.elf",
+      "status": "invalid",
+      "format": "ELF",
+      "metadata": {
+        "bytes": 133,
+        "bits": null,
+        "endianness": null
+      },
+      "issues": [
+        {
+          "code": "elf-magic",
+          "message": "The file does not start with ELF magic."
+        },
+        {
+          "code": "elf-class",
+          "message": "The console payload must be a 64-bit ELF."
+        },
+        {
+          "code": "elf-endianness",
+          "message": "The console payload must use little-endian encoding."
+        },
+        {
+          "code": "elf-ident-version",
+          "message": "The ELF identification version must be 1."
+        }
+      ],
+      "hardwareVerified": false
+    }
+  ],
+  "localUnavailable": [
+    {
+      "path": "900New/payload.js",
+      "url": "https://raw.githubusercontent.com/KAR0218/KAR0218.github.io/743646c9df9ab4c83821b660c12e23a3dda57b49/900New/payload.js",
+      "bytes": 56913,
+      "sha256": "3a0cb7491cdb4aecbb91daf0822aff301257629be7615134d512b8e49dbf818f",
+      "gitBlobSHA1": "c0fc1605abc993968383845578f18ae18505b351",
+      "status": "local-unavailable",
+      "identityVerified": false,
+      "reason": "Windows Defender Operational event 1116 quarantined this source as Trojan:JS/Cryxos.AIDB!MTB. Not restored or fetched again."
+    },
+    {
+      "path": "900NM/payload.js",
+      "url": "https://raw.githubusercontent.com/KAR0218/KAR0218.github.io/743646c9df9ab4c83821b660c12e23a3dda57b49/900NM/payload.js",
+      "bytes": 56913,
+      "sha256": "3a0cb7491cdb4aecbb91daf0822aff301257629be7615134d512b8e49dbf818f",
+      "gitBlobSHA1": "c0fc1605abc993968383845578f18ae18505b351",
+      "status": "local-unavailable",
+      "identityVerified": false,
+      "reason": "Windows Defender Operational event 1116 quarantined this source as Trojan:JS/Cryxos.AIDB!MTB. Not restored or fetched again."
+    }
+  ],
+  "packages": [
+    {
+      "folder": "505",
+      "unit": "505",
+      "label": "505",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/505/51430066e375/karo-505-743646c9df9a-51430066e375.zip",
+      "bytes": 17247734,
+      "sha256": "d4cfc2b4511856dec6e61cb5572dea88ad76f777dd66b00493f635eea7361c61",
+      "files": 189,
+      "zipEntries": 189,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "505Gold",
+      "unit": "505Gold",
+      "label": "505Gold",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/505Gold/51430066e375/karo-505Gold-743646c9df9a-51430066e375.zip",
+      "bytes": 5141457,
+      "sha256": "d29dc2fcfeaecf4f84228fae09f0030dc215a2f63626ccf4d55a80c808c0db4f",
+      "files": 88,
+      "zipEntries": 88,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "672",
+      "unit": "672",
+      "label": "672",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/672/51430066e375/karo-672-743646c9df9a-51430066e375.zip",
+      "bytes": 13050699,
+      "sha256": "c2527cb4bcd0f92fe118d2121925a468fd0f5fff2991499a4b4ac87f8f1a4b74",
+      "files": 143,
+      "zipEntries": 143,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "672A",
+      "unit": "672A",
+      "label": "672A",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/672A/51430066e375/karo-672A-743646c9df9a-51430066e375.zip",
+      "bytes": 12806701,
+      "sha256": "2525a14c7b43edb90b4df1720d9a0ddcd4b8498f424d3b30d350910d512b7c79",
+      "files": 143,
+      "zipEntries": 143,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "672L",
+      "unit": "672L",
+      "label": "672L",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/672L/51430066e375/karo-672L-743646c9df9a-51430066e375.zip",
+      "bytes": 3048481,
+      "sha256": "8ff67016d3b0cafada10f5a1761c5b6c690a9a291a55e6bb12d3353d1a82bf1e",
+      "files": 41,
+      "zipEntries": 41,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "702",
+      "unit": "702",
+      "label": "702",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/702/51430066e375/karo-702-743646c9df9a-51430066e375.zip",
+      "bytes": 3251848,
+      "sha256": "9a75986fe5f50c19bb189a95c5e880255959f1181261b8273bdf75a8fb57ba4d",
+      "files": 56,
+      "zipEntries": 56,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "702L",
+      "unit": "702L",
+      "label": "702L",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/702L/51430066e375/karo-702L-743646c9df9a-51430066e375.zip",
+      "bytes": 869101,
+      "sha256": "ac066c4f7395293437340295ade18633e3043d352e0a76122129f6aeac2e5e8e",
+      "files": 23,
+      "zipEntries": 23,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "755",
+      "unit": "755",
+      "label": "755",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/755/51430066e375/karo-755-743646c9df9a-51430066e375.zip",
+      "bytes": 7457712,
+      "sha256": "2a1ca2c7d996df44126d72159204470050e309b0993cdefdf327f54f96f3fead",
+      "files": 104,
+      "zipEntries": 104,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "755L",
+      "unit": "755L",
+      "label": "755L",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/755L/51430066e375/karo-755L-743646c9df9a-51430066e375.zip",
+      "bytes": 2901620,
+      "sha256": "a585fa0c7bae5d9d02f7b4b52ecf6c82b57657f921559ad081fdda090cde3f9e",
+      "files": 42,
+      "zipEntries": 42,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "900C",
+      "unit": "900C",
+      "label": "900C",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/900C/51430066e375/karo-900C-743646c9df9a-51430066e375.zip",
+      "bytes": 9223959,
+      "sha256": "e8d45a4a2199615d44fbe42d24e8f86725309aebc9f85043daebf5953748c5ec",
+      "files": 154,
+      "zipEntries": 154,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "900CM",
+      "unit": "900CM",
+      "label": "900CM",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/900CM/51430066e375/karo-900CM-743646c9df9a-51430066e375.zip",
+      "bytes": 9224784,
+      "sha256": "84f09e5ca9ca40ef1623f899e62bf1753c84cbd4d181afe880b262902467ec47",
+      "files": 154,
+      "zipEntries": 154,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "900L",
+      "unit": "900L",
+      "label": "900L",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/900L/51430066e375/karo-900L-743646c9df9a-51430066e375.zip",
+      "bytes": 1520869,
+      "sha256": "80960d49517fa7ea6c0a78e15d9969c7b402594a29672895ae89d47cf4c3b1bd",
+      "files": 33,
+      "zipEntries": 33,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "900N",
+      "unit": "900N",
+      "label": "900N",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/900N/51430066e375/karo-900N-743646c9df9a-51430066e375.zip",
+      "bytes": 5368987,
+      "sha256": "a7852ff26efc8f29d6c5170aff0acf5d870a164eb156304d3d097d16f92ded23",
+      "files": 102,
+      "zipEntries": 102,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "900NA",
+      "unit": "900NA",
+      "label": "900NA",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/900NA/51430066e375/karo-900NA-743646c9df9a-51430066e375.zip",
+      "bytes": 5376499,
+      "sha256": "88f11d00a3496e8d50c371ba34739cc89355916cec54795733caf10785b226b3",
+      "files": 102,
+      "zipEntries": 102,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "900NM",
+      "unit": "900NM",
+      "label": "900NM",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/900NM/51430066e375/karo-900NM-743646c9df9a-51430066e375.zip",
+      "bytes": 9721245,
+      "sha256": "4de00221bbe6c9f658bd42e49194f09105b182ee343c13b306df894375b72666",
+      "files": 159,
+      "zipEntries": 159,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "900New",
+      "unit": "900New",
+      "label": "900New",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/900New/51430066e375/karo-900New-743646c9df9a-51430066e375.zip",
+      "bytes": 9727757,
+      "sha256": "a086f1d44cefb631ccf823b0cae94d107dc3bf8b17a7fc2579a4750eca308179",
+      "files": 160,
+      "zipEntries": 160,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "G702",
+      "unit": "G702",
+      "label": "G702",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/G702/51430066e375/karo-G702-743646c9df9a-51430066e375.zip",
+      "bytes": 297310,
+      "sha256": "a8ba5c227fffacdad04de8d0b0bd10e0e79a2201c8eeb222edfbb7475f42a5d2",
+      "files": 15,
+      "zipEntries": 15,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "G755",
+      "unit": "G755",
+      "label": "G755",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/G755/51430066e375/karo-G755-743646c9df9a-51430066e375.zip",
+      "bytes": 739380,
+      "sha256": "55d0f7d90ac0bdd0b8735fc7991ac8ebff5ca93a4c00b64564690c568721b9ad",
+      "files": 16,
+      "zipEntries": 16,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "G900",
+      "unit": "G900",
+      "label": "G900",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/G900/51430066e375/karo-G900-743646c9df9a-51430066e375.zip",
+      "bytes": 536502,
+      "sha256": "30005a84189cab56b0d43a738b8432fbb9dfb7dc36576b955a05d6b689847b2a",
+      "files": 15,
+      "zipEntries": 15,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "Goldhen505",
+      "unit": "Goldhen505",
+      "label": "Goldhen505",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/Goldhen505/51430066e375/karo-Goldhen505-743646c9df9a-51430066e375.zip",
+      "bytes": 1462110,
+      "sha256": "efb9ad6ecddf14a8ce76fbe1187b31ac7542336d913927343cc46bd7432e4c6d",
+      "files": 16,
+      "zipEntries": 16,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "Goldhen672",
+      "unit": "Goldhen672",
+      "label": "Goldhen672",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/Goldhen672/51430066e375/karo-Goldhen672-743646c9df9a-51430066e375.zip",
+      "bytes": 1530868,
+      "sha256": "45dde84796e2f04147d3a41dda43876dcb40b8fe7e4f9905eed457da1b240426",
+      "files": 17,
+      "zipEntries": 17,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "binloader",
+      "unit": "binloader",
+      "label": "binloader",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/binloader/51430066e375/karo-binloader-743646c9df9a-51430066e375.zip",
+      "bytes": 1694236,
+      "sha256": "c3410d76fbc2fd78a0d845ac7317a32c42ae93bd32cae412165110259b0d6491",
+      "files": 30,
+      "zipEntries": 30,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "g2all",
+      "unit": "g2all",
+      "label": "g2all",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/g2all/51430066e375/karo-g2all-743646c9df9a-51430066e375.zip",
+      "bytes": 644254,
+      "sha256": "9d0ae0809edfe923085a13db2756596297d43065f45b3f5a833d0b9ca609b740",
+      "files": 47,
+      "zipEntries": 47,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "g2allpro",
+      "unit": "g2allpro",
+      "label": "g2allpro",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/g2allpro/51430066e375/karo-g2allpro-743646c9df9a-51430066e375.zip",
+      "bytes": 1187972,
+      "sha256": "17443c6c197c45ff136f06762283984f616ba2f0ef7832ec4ce6effa31cbddfe",
+      "files": 18,
+      "zipEntries": 18,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "g2allproold",
+      "unit": "g2allproold",
+      "label": "g2allproold",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/g2allproold/51430066e375/karo-g2allproold-743646c9df9a-51430066e375.zip",
+      "bytes": 350825,
+      "sha256": "cf7d9cd9344d0886fe13853b9cbd372998aaa30842554cdc7d494557e6cbeee5",
+      "files": 18,
+      "zipEntries": 18,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "nobd",
+      "unit": "nobd",
+      "label": "nobd",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/nobd/51430066e375/karo-nobd-743646c9df9a-51430066e375.zip",
+      "bytes": 1647467,
+      "sha256": "6b0e7ecf131827cd5aada6e090d7f55d3487f37dfe6cf2b209332a8aa1e7b9a1",
+      "files": 39,
+      "zipEntries": 39,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "restore",
+      "unit": "restore",
+      "label": "restore",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/restore/51430066e375/karo-restore-743646c9df9a-51430066e375.zip",
+      "bytes": 3034243,
+      "sha256": "a1c2caebb7e1a56d1deefa04b56ea458661ec966518d2fbec3364c85905fec54",
+      "files": 191,
+      "zipEntries": 191,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "restore2",
+      "unit": "restore2",
+      "label": "restore2",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/restore2/51430066e375/karo-restore2-743646c9df9a-51430066e375.zip",
+      "bytes": 958820,
+      "sha256": "50c7d657307a7a0ed719d85787de09f0fdb7f3c06acab7ed3f72b621c33a5051",
+      "files": 73,
+      "zipEntries": 73,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "ps5",
+      "unit": "ps5-UMTX",
+      "label": "ps5-UMTX",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/ps5-UMTX/51430066e375/karo-ps5-UMTX-743646c9df9a-51430066e375.zip",
+      "bytes": 40753809,
+      "sha256": "471c97e6ff78cfe22294809d785e425d486a5113cc99f4ce07ee41086e5c7054",
+      "files": 99,
+      "zipEntries": 99,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "ps5",
+      "unit": "ps5-P2JB",
+      "label": "ps5-P2JB",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/ps5-P2JB/51430066e375/karo-ps5-P2JB-743646c9df9a-51430066e375.zip",
+      "bytes": 20262535,
+      "sha256": "77688fc835ac1e078fa68facc109244da46d4ffe00c81db627cc7210cee3ae73",
+      "files": 137,
+      "zipEntries": 137,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "ps5",
+      "unit": "ps5-poopspl",
+      "label": "ps5-poopspl",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/ps5-poopspl/51430066e375/karo-ps5-poopspl-743646c9df9a-51430066e375.zip",
+      "bytes": 25845327,
+      "sha256": "5e6ff9c2676a0a5bad3659804b2620caaba18fe03964d8008bd0d7dc9a39ff47",
+      "files": 106,
+      "zipEntries": 106,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "ps5",
+      "unit": "ps5-relapse",
+      "label": "ps5-relapse",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/ps5-relapse/51430066e375/karo-ps5-relapse-743646c9df9a-51430066e375.zip",
+      "bytes": 41141834,
+      "sha256": "f782b01ac82f03e9edd6518905337d116614933d5ee521f18af3b4e4d3c451e2",
+      "files": 80,
+      "zipEntries": 80,
+      "allCRCAndSHA256Verified": true
+    },
+    {
+      "folder": "ps5",
+      "unit": "ps5-pr",
+      "label": "ps5-pr",
+      "version": "743646c9df9a+51430066e375",
+      "url": "/downloads/hosts/karo/743646c9df9a/ps5-pr/51430066e375/karo-ps5-pr-743646c9df9a-51430066e375.zip",
+      "bytes": 48154325,
+      "sha256": "32fbbb29108791480cd865cfe61ee8a0e4242a5a760b4d4e7b6fbbb7f20b04df",
+      "files": 152,
+      "zipEntries": 152,
+      "allCRCAndSHA256Verified": true
+    }
+  ],
+  "retainedReadyPackageVersions": 99,
+  "archiveReadbackFiles": 2521,
+  "archive": {
+    "mode": "write",
+    "backupRoot": "F:\\whatsite-backup-downloads-etc",
+    "items": 4827,
+    "fileRecords": 5951,
+    "presentFileRecords": 5951,
+    "missingFileRecords": 0,
+    "missingPaths": 0,
+    "otherUnavailableRecords": 0,
+    "availability": {
+      "present": 5951
+    }
+  },
+  "verification": {
+    "focused": {
+      "tests": 11,
+      "passed": 11,
+      "failed": 0,
+      "report": "docs/host-reviews/karo/focused-tests.txt"
+    },
+    "full": {
+      "tests": 705,
+      "passed": 705,
+      "failed": 0,
+      "report": "docs/host-reviews/karo/full-tests-final.txt"
+    },
+    "downloads": "docs/host-reviews/karo/download-verification.json",
+    "browser": "docs/host-reviews/karo/browser-verification.json",
+    "dependencies": "docs/host-reviews/karo/dependency-audit.json",
+    "siteAudit": "docs/host-reviews/karo/site-audit.txt",
+    "inventory": "docs/host-reviews/karo/download-inventory.json"
+  },
+  "sender": {
+    "id": "console-payload-sender-67197d90ab00",
+    "name": "console-payload-sender-2.0.0-67197d90ab00.zip",
+    "version": "2.0.0+67197d90ab00",
+    "url": "/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-67197d90ab00.zip",
+    "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-67197d90ab00.zip",
+    "bytes": 101851359,
+    "sha256": "92ef665afae8a2c92e67de0c3c3ed08aed22084c69262eacb70684a7b89e5fd5",
+    "snapshot": "67197d90ab0028612fb4d5fc536bb0b9c285d380be178a7991846ffd6c39026a",
+    "files": 1495,
+    "payloads": 125,
+    "actions": 185,
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\2.0.0+67197d90ab00\\console-payload-sender-2.0.0-67197d90ab00.zip",
+    "zipEntries": 1495,
+    "allCRCAndSHA256Verified": true,
+    "currentSourceSnapshotMatched": true
+  },
+  "receiverVersion": "2026.11.02.19",
+  "nativeCodeExecuted": false,
+  "consoleContact": false,
+  "hardwareExecutionVerified": false,
+  "publication": false,
+  "remaining": [
+    "Physical console execution, TLS and original AppCache/offline behaviour remain untested.",
+    "Three historical entries have missing upstream manifests; four invalid payloads stay disabled.",
+    "Two optional WebActivator sources remain quarantined by Defender; never restore or refetch them to bypass protection.",
+    "Original conditional/dormant missing assets and optional server/library requirements remain explicitly recorded."
+  ]
+}

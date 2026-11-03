@@ -56,8 +56,12 @@ const date = git(['show', '-s', '--format=%cI', head]);
 const env = {...process.env, GIT_AUTHOR_NAME: 'whatsite batch uploader', GIT_AUTHOR_EMAIL: 'batch-upload@localhost',
   GIT_COMMITTER_NAME: 'whatsite batch uploader', GIT_COMMITTER_EMAIL: 'batch-upload@localhost', GIT_AUTHOR_DATE: date, GIT_COMMITTER_DATE: date};
 let parent = base;
+// Similar retained ZIPs need the same Git pathname hint to become delta
+// candidates. Hash-only names scatter them among unrelated objects. Preserve
+// the old tree format when resuming an upload created by an earlier version.
+const groupedPaths = !state || state.treePathFormat === 'grouped';
 const commits = batches.map((part, i) => {
-  const tree = git(['mktree'], {input: part.objects.map(oid => `100644 blob ${oid}\t${oid}\n`).sort().join('')});
+  const tree = git(['mktree'], {input: part.objects.map(oid => `100644 blob ${oid}\t${oid}${groupedPaths ? '.whatsite-preserved-download-object' : ''}\n`).sort().join('')});
   const commit = git(['-c', 'commit.gpgsign=false', 'commit-tree', tree, '-p', parent],
     {input: `Upload objects ${i + 1}/${batches.length} for ${head}\n`, env});
   parent = commit;
@@ -79,7 +83,7 @@ if (commits.length) {
   console.log(`Final handoff verified locally: ${remaining.length} metadata objects, zero file blobs.`);
 }
 if (!state) {
-  state = {head, base, remoteURL, ref, commits, bytes: total, batchMiB, createdAt: new Date().toISOString()};
+  state = {head, base, remoteURL, ref, commits, bytes: total, batchMiB, treePathFormat:'grouped', createdAt: new Date().toISOString()};
   fs.mkdirSync(path.dirname(stateFile), {recursive: true});
   fs.writeFileSync(stateFile, JSON.stringify(state, null, 2) + '\n');
 }

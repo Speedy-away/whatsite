@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-03T18:23:08.231Z",
+  "checkedAt": "2026-11-03T18:24:48.150Z",
   "commit": "743646c9df9ab4c83821b660c12e23a3dda57b49",
   "status": "completed-with-upstream-findings",
   "method": "Pinned size/SHA-256/Git-blob verification; data-only ELF/BIN/BZIP2/ZIP inspection and conservative static reference scanning. No downloaded code is evaluated. Literal edges can be conditional; direct script/module closure blockers are distinguished from controls, cache lists, navigation and comments.",
@@ -76373,11 +76373,11 @@
     {
       "from": "ps5/poopspl/poopsploit/main.js",
       "reference": "rop_slave.js?v=lowfw7",
-      "target": "ps5/poopspl/rop_slave.js",
+      "target": "ps5/poopspl/poopsploit/rop_slave.js",
       "kind": "worker",
       "essential": true,
       "dormant": false,
-      "state": "missing",
+      "state": "present",
       "line": 232
     },
     {
@@ -88139,16 +88139,6 @@
       "state": "missing"
     },
     {
-      "from": "ps5/poopspl/poopsploit/main.js",
-      "reference": "rop_slave.js?v=lowfw7",
-      "target": "ps5/poopspl/rop_slave.js",
-      "kind": "worker",
-      "essential": true,
-      "dormant": false,
-      "state": "missing",
-      "line": 232
-    },
-    {
       "from": "ps5/poopspl/poopsploit/poops.html",
       "reference": "OnionHEN.elf",
       "target": "ps5/poopspl/poopsploit/OnionHEN.elf",
@@ -90011,442 +90001,2127 @@
   ],
   "entries": [
     {
+      "entry": "505/1gblinux.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/2gblinux.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/3gblinux.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/apptousb.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/baikal.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/binloader.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/blank.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/blocker.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/copych.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/db_backup.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/db_restore.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/deact1.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/deact2.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/FanControl.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/ftprw.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen1.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen2.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen21.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen212.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen22.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen223.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen224.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen23.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen24.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/goldhen2b2.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gta_v_ap_ii_intense.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gta_v_lotus104.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtava100.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtava127.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtava132.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtava133.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavi100.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavi127.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavl100.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavl127.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavl9.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavna100.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavna127.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavnyd127.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavp100.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavwm100.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/gtavwm127.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/hen18vrmod.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/hen212.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/hen213.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/hen214.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/hen214b.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
       "entry": "505/index.html",
       "defaultScriptClosureFiles": 3,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/infinix.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/kclock.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/kdamper.html",
+      "defaultScriptClosureFiles": 8,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/mirahen18.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/orbis.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/pkgb.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/ps4debug100.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/PS4REN.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/RDR2v100.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/RDR2v113.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/RDR2v119.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/RDR2v124.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/RDR2v129.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/RDR2v129H.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/react1.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/react2.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/reactM.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/RifRenamer.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/rte.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/save_backup.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/save_mounter.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/save_restore.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/todex.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/trp_backup.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/trp_restore.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/unblock.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/vtxdump.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/vtxftp.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/vtxhen16.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/vtxhen17.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/vtxhen18.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/vtxhenc0d3mod.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/Wilde32.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/Wilde33.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/Wilde38.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/xmbcache.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505/xmbinstaller.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "505/xmbinstaller.html",
+          "reference": "../offlinexmb.cache",
+          "target": "offlinexmb.cache",
+          "kind": "manifest",
+          "essential": true,
+          "dormant": false,
+          "state": "missing",
+          "line": 1
+        }
+      ]
+    },
+    {
+      "entry": "505Gold/binloader.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505Gold/deact1.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505Gold/deact2.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505Gold/FanControl.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "505Gold/index.html",
       "defaultScriptClosureFiles": 2,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505Gold/react1.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505Gold/react2.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "505Gold/reactM.html",
+      "defaultScriptClosureFiles": 2,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "672/index.html",
       "defaultScriptClosureFiles": 2,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "672A/index.html",
       "defaultScriptClosureFiles": 2,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "672L/index.html",
       "defaultScriptClosureFiles": 2,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "702/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "702/Cache.manifest",
+          "reference": "enablebrowser.bin",
+          "target": "702/enablebrowser.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "invalid",
+          "line": 17
+        }
+      ]
     },
     {
       "entry": "702/index.html",
       "defaultScriptClosureFiles": 6,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "702/Cache.manifest",
+          "reference": "enablebrowser.bin",
+          "target": "702/enablebrowser.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "invalid",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "entry": "702/web.html",
+      "defaultScriptClosureFiles": 4,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "702L/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "702L/index.html",
       "defaultScriptClosureFiles": 6,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "755/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "755/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "755L/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "755L/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "900C/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "900C/web.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "900CM/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "900CM/web.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "900L/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "900L/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "900N/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "900N/index2.html",
+      "defaultScriptClosureFiles": 5,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "900N/web.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "900NA/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "900NA/web.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "900New/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "900New/Cache.manifest",
+          "reference": "payload.js",
+          "target": "900New/payload.js",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "not-staged",
+          "line": 79
+        }
+      ]
     },
     {
       "entry": "900New/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "900New/Cache.manifest",
+          "reference": "payload.js",
+          "target": "900New/payload.js",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "not-staged",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "entry": "900New/web.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "900NM/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "900NM/Cache.manifest",
+          "reference": "payload.js",
+          "target": "900NM/payload.js",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "not-staged",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "entry": "900NM/web.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "binloader/505/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "binloader/672/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "binloader/702/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "binloader/702/index.html",
+          "reference": "offlinexmb.cache",
+          "target": "binloader/702/offlinexmb.cache",
+          "kind": "manifest",
+          "essential": true,
+          "dormant": false,
+          "state": "missing",
+          "line": 1
+        }
+      ]
     },
     {
       "entry": "binloader/755/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "binloader/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "g2all/about.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "g2all/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\700.bin",
+          "target": "g2all/kpatch\\700.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 13
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\750.bin",
+          "target": "g2all/kpatch\\750.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 14
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\800.bin",
+          "target": "g2all/kpatch\\800.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 15
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\850.bin",
+          "target": "g2all/kpatch\\850.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 16
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\900.bin",
+          "target": "g2all/kpatch\\900.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 17
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\903.bin",
+          "target": "g2all/kpatch\\903.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 18
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\950.bin",
+          "target": "g2all/kpatch\\950.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 19
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\700.mjs",
+          "target": "g2all/lapse\\ps4\\700.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 20
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\750.mjs",
+          "target": "g2all/lapse\\ps4\\750.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 21
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\751.mjs",
+          "target": "g2all/lapse\\ps4\\751.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 22
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\800.mjs",
+          "target": "g2all/lapse\\ps4\\800.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 23
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\850.mjs",
+          "target": "g2all/lapse\\ps4\\850.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 24
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\852.mjs",
+          "target": "g2all/lapse\\ps4\\852.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 25
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\900.mjs",
+          "target": "g2all/lapse\\ps4\\900.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 26
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\903.mjs",
+          "target": "g2all/lapse\\ps4\\903.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 27
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\950.mjs",
+          "target": "g2all/lapse\\ps4\\950.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 28
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\chain.mjs",
+          "target": "g2all/module\\chain.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 29
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\int64.mjs",
+          "target": "g2all/module\\int64.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 30
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\mem.mjs",
+          "target": "g2all/module\\mem.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 31
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\memtools.mjs",
+          "target": "g2all/module\\memtools.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 32
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\offset.mjs",
+          "target": "g2all/module\\offset.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 33
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\rw.mjs",
+          "target": "g2all/module\\rw.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 34
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\utils.mjs",
+          "target": "g2all/module\\utils.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 35
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\view.mjs",
+          "target": "g2all/module\\view.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 36
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\700.mjs",
+          "target": "g2all/rop\\ps4\\700.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 37
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\750.mjs",
+          "target": "g2all/rop\\ps4\\750.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 38
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\800.mjs",
+          "target": "g2all/rop\\ps4\\800.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 39
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\850.mjs",
+          "target": "g2all/rop\\ps4\\850.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 40
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\900.mjs",
+          "target": "g2all/rop\\ps4\\900.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 41
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\950.mjs",
+          "target": "g2all/rop\\ps4\\950.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 42
+        }
+      ]
     },
     {
       "entry": "g2all/index.html",
       "defaultScriptClosureFiles": 28,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\700.bin",
+          "target": "g2all/kpatch\\700.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 13
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\750.bin",
+          "target": "g2all/kpatch\\750.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 14
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\800.bin",
+          "target": "g2all/kpatch\\800.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 15
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\850.bin",
+          "target": "g2all/kpatch\\850.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 16
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\900.bin",
+          "target": "g2all/kpatch\\900.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 17
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\903.bin",
+          "target": "g2all/kpatch\\903.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 18
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "kpatch\\950.bin",
+          "target": "g2all/kpatch\\950.bin",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 19
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\700.mjs",
+          "target": "g2all/lapse\\ps4\\700.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 20
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\750.mjs",
+          "target": "g2all/lapse\\ps4\\750.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 21
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\751.mjs",
+          "target": "g2all/lapse\\ps4\\751.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 22
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\800.mjs",
+          "target": "g2all/lapse\\ps4\\800.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 23
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\850.mjs",
+          "target": "g2all/lapse\\ps4\\850.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 24
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\852.mjs",
+          "target": "g2all/lapse\\ps4\\852.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 25
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\900.mjs",
+          "target": "g2all/lapse\\ps4\\900.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 26
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\903.mjs",
+          "target": "g2all/lapse\\ps4\\903.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 27
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "lapse\\ps4\\950.mjs",
+          "target": "g2all/lapse\\ps4\\950.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 28
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\chain.mjs",
+          "target": "g2all/module\\chain.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 29
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\int64.mjs",
+          "target": "g2all/module\\int64.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 30
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\mem.mjs",
+          "target": "g2all/module\\mem.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 31
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\memtools.mjs",
+          "target": "g2all/module\\memtools.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 32
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\offset.mjs",
+          "target": "g2all/module\\offset.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 33
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\rw.mjs",
+          "target": "g2all/module\\rw.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 34
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\utils.mjs",
+          "target": "g2all/module\\utils.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 35
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "module\\view.mjs",
+          "target": "g2all/module\\view.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 36
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\700.mjs",
+          "target": "g2all/rop\\ps4\\700.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 37
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\750.mjs",
+          "target": "g2all/rop\\ps4\\750.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 38
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\800.mjs",
+          "target": "g2all/rop\\ps4\\800.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 39
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\850.mjs",
+          "target": "g2all/rop\\ps4\\850.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 40
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\900.mjs",
+          "target": "g2all/rop\\ps4\\900.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 41
+        },
+        {
+          "from": "g2all/Cache.manifest",
+          "reference": "rop\\ps4\\950.mjs",
+          "target": "g2all/rop\\ps4\\950.mjs",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "entry": "g2allpro/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "g2allpro/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "g2allproold/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "g2allproold/index.html",
       "defaultScriptClosureFiles": 2,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "G702/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "G702/index.html",
       "defaultScriptClosureFiles": 6,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "G755/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "G755/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "G900/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "G900/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "Goldhen505/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "Goldhen672/index.html",
       "defaultScriptClosureFiles": 2,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "nobd/620/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "nobd/67X/index.html",
       "defaultScriptClosureFiles": 2,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "nobd/70X/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "nobd/75X/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "nobd/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "ps5/P2JB/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "ps5/P2JB/P2JB.manifest",
+          "reference": "api/.htaccess",
+          "target": "ps5/P2JB/api/.htaccess/index.html",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "missing",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "entry": "ps5/P2JB/elf.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/P2JB/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "ps5/P2JB/p2jb.html",
+      "defaultScriptClosureFiles": 9,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "ps5/poopspl/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "ps5/poopspl/poopspl.manifest",
+          "reference": "payloads/kexp_2026_05_25.bin.orig",
+          "target": "ps5/poopspl/payloads/kexp_2026_05_25.bin.orig",
+          "kind": "cache-resource",
+          "essential": false,
+          "dormant": false,
+          "state": "not-staged",
+          "line": 44
+        }
+      ]
     },
     {
       "entry": "ps5/poopspl/document/en/ps5/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/poopspl/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "ps5/poopspl/poopsploit/elf.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "ps5/poopspl/poopsploit/poops.html",
+      "defaultScriptClosureFiles": 9,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/pr/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/pr/poops/index.html",
       "defaultScriptClosureFiles": 10,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/pr/relapse/index.html",
       "defaultScriptClosureFiles": 13,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/relapse/document/en/ps5/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/relapse/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "ps5/relapse/relapse.html",
+      "defaultScriptClosureFiles": 12,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "ps5/UMTX/cache.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "ps5/UMTX/index.html",
       "defaultScriptClosureFiles": 16,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/505/index.html",
       "defaultScriptClosureFiles": 8,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/505Gold/index.html",
       "defaultScriptClosureFiles": 8,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/505N/index.html",
       "defaultScriptClosureFiles": 8,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/672/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/672A/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/672L/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/672N/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/672NA/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/702/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/702d/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "restore/702d/index.html",
+          "reference": "offlinexmb.cache",
+          "target": "restore/702d/offlinexmb.cache",
+          "kind": "manifest",
+          "essential": true,
+          "dormant": false,
+          "state": "missing",
+          "line": 1
+        }
+      ]
     },
     {
       "entry": "restore/702L/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/702N/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": [
+        {
+          "from": "restore/702N/index.html",
+          "reference": "offlinexmb.cache",
+          "target": "restore/702N/offlinexmb.cache",
+          "kind": "manifest",
+          "essential": true,
+          "dormant": false,
+          "state": "missing",
+          "line": 1
+        }
+      ]
     },
     {
       "entry": "restore/755/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/755A/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/755L/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/755old/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/900C/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/900CM/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/900L/index.html",
       "defaultScriptClosureFiles": 12,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/900N/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/900NA/index.html",
       "defaultScriptClosureFiles": 5,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/900New/index.html",
       "defaultScriptClosureFiles": 12,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "restore2/505/copych.html",
+      "defaultScriptClosureFiles": 8,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore2/505/index.html",
       "defaultScriptClosureFiles": 8,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "restore2/505/usb.html",
+      "defaultScriptClosureFiles": 8,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "restore2/672/copych.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore2/672/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "restore2/672/usb.html",
+      "defaultScriptClosureFiles": 1,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore2/702/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore2/755/index.html",
       "defaultScriptClosureFiles": 4,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "restore2/900/copych.html",
+      "defaultScriptClosureFiles": 12,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore2/900/index.html",
       "defaultScriptClosureFiles": 12,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
+    },
+    {
+      "entry": "restore2/900/usb.html",
+      "defaultScriptClosureFiles": 12,
+      "status": "direct-script-dependencies-present",
+      "blockers": [],
+      "cacheFindings": []
     },
     {
       "entry": "restore2/index.html",
       "defaultScriptClosureFiles": 1,
       "status": "direct-script-dependencies-present",
-      "blockers": []
+      "blockers": [],
+      "cacheFindings": []
     }
   ],
   "summary": {
@@ -90456,7 +92131,7 @@
     "invalidPayloads": 4,
     "derivedBINs": 407,
     "dependencyEdges": 4209,
-    "missingOrInvalidReferences": 458,
+    "missingOrInvalidReferences": 457,
     "blockedEntries": 0,
     "externalReferences": 8,
     "dormantReferences": 62,
@@ -93253,16 +94928,6 @@
       "essential": false,
       "dormant": false,
       "state": "missing"
-    },
-    {
-      "from": "ps5/poopspl/poopsploit/main.js",
-      "reference": "rop_slave.js?v=lowfw7",
-      "target": "ps5/poopspl/rop_slave.js",
-      "kind": "worker",
-      "essential": true,
-      "dormant": false,
-      "state": "missing",
-      "line": 232
     },
     {
       "from": "ps5/poopspl/poopsploit/poops.html",

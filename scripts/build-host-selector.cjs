@@ -168,6 +168,7 @@ function buildHostSelector() {
   }
   fs.writeFileSync(sitemapFile, sitemap);
   if(fs.existsSync(path.join(root,'docs/afterglow-download-inventory.json')))require('./build-ps4-firmware.cjs').build();
+  require('./build-host-support-pages.cjs').build();
   console.log('Built /hosts/, /hosts/ps4/ and /hosts/ps5/; added first-party entries to both console host grids.');
 }
 module.exports = {buildHostSelector,hostActions};

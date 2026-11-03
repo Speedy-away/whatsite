@@ -17,7 +17,8 @@ const EXPECTED = {
 };
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const read = name => JSON.parse(fs.readFileSync(path.join(ROOT, name), 'utf8'));
-function inspectZip(bytes) {
+function inspectZip(bytes, {prefix = PREFIX} = {}) {
+  assert.match(prefix, /^[a-z0-9][a-z0-9_-]*\/$/i, 'One safe package-root directory');
   assert.ok(bytes.length <= 128*1024*1024, 'Archive byte bound');
   const end = bytes.lastIndexOf(Buffer.from('504b0506','hex'));
   assert.ok(end >= 0 && end+22 === bytes.length, 'EOCD bounds and no trailing bytes');
@@ -38,7 +39,7 @@ function inspectZip(bytes) {
     const extraLength=bytes.readUInt16LE(at+30), commentLength=bytes.readUInt16LE(at+32), local=bytes.readUInt32LE(at+42);
     const nameBytes=bytes.subarray(at+46,at+46+nameLength), name=nameBytes.toString('utf8');
     assert.ok(nameBytes.equals(Buffer.from(name)), 'Valid UTF-8 path');
-    assert.ok(name.startsWith(PREFIX) && !name.endsWith('/') && !/[\\\x00-\x1f]/.test(name));
+    assert.ok(name.startsWith(prefix) && !name.endsWith('/') && !/[\\\x00-\x1f]/.test(name));
     assert.ok(!name.split('/').some(part=>part==='..'||part==='.'||part===''), 'Bounded regular member path');
     assert.ok(!entries.has(name), 'No duplicate ZIP member');
     assert.equal(flags, 0x0800, 'UTF-8 only; no encryption or data descriptors');
@@ -59,7 +60,7 @@ function inspectZip(bytes) {
     assert.equal(data.length, size, 'Expanded member size');
     assert.equal(zlib.crc32(data), crc, 'Member CRC32');
     ranges.push([local,dataEnd]); entries.set(name,data);
-    evidence.push({name:name.slice(PREFIX.length),compressedBytes:packed,bytes:size,crc32:crc.toString(16).padStart(8,'0'),sha256:sha(data)});
+    evidence.push({name:name.slice(prefix.length),compressedBytes:packed,bytes:size,crc32:crc.toString(16).padStart(8,'0'),sha256:sha(data)});
     at += 46+nameLength+extraLength+commentLength;
   }
   assert.equal(at, end, 'Exactly parsed central records');

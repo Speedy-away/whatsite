@@ -2,7 +2,7 @@
   "checkedAt": "2026-11-03T18:18:23.342Z",
   "repo": "KAR0218/KAR0218.github.io",
   "commit": "743646c9df9ab4c83821b660c12e23a3dda57b49",
-  "status": "downloaded",
+  "status": "completed-with-local-unavailable",
   "method": "Screenshot folder runtime files and published browser-launcher release asset. Identical Git blobs fetched once, each original path preserved. Ready web scripts remain executable build dependencies; no repository source-code archive was downloaded.",
   "files": [
     {
@@ -15178,5 +15178,16 @@
     }
   ],
   "nativeCodeExecuted": false,
-  "consoleContact": false
+  "consoleContact": false,
+  "recheckedAt": "2026-11-03T18:40:34.669Z",
+  "localUnavailable": [
+    {
+      "path": "900New/payload.js",
+      "reason": "Windows Defender Operational event 1116 quarantined this source as Trojan:JS/Cryxos.AIDB!MTB. Not restored or fetched again."
+    },
+    {
+      "path": "900NM/payload.js",
+      "reason": "Windows Defender Operational event 1116 quarantined this source as Trojan:JS/Cryxos.AIDB!MTB. Not restored or fetched again."
+    }
+  ]
 }

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-03T18:34:59.714Z",
+  "url": "http://127.0.0.1:61170/hosts/karo/",
+  "method": "CUA on authored chooser only; no native runtime, UA spoofing, payload execution or console contact.",
+  "folders": 29,
+  "entries": 71,
+  "enabledDownloadLinks": 1473,
+  "desktop": {
+    "confirmed": true,
+    "loadEnabled": false
+  },
+  "missingManifestEntry": {
+    "id": "karo-binloader-702",
+    "loadEnabled": false,
+    "message": "Original required dependencies missing: binloader/702/offlinexmb.cache"
+  },
+  "phone": {
+    "viewport": 430,
+    "documentWidth": 415,
+    "horizontalOverflow": false
+  },
+  "screenshots": [
+    "docs/screenshots/karo-builds-desktop.png",
+    "docs/screenshots/karo-builds-phone.png"
+  ],
+  "nativeCodeExecuted": false,
+  "consoleContact": false
+}

@@ -1,0 +1,157 @@
+{
+  "updatedAt": "2026-11-03T18:47:48.313Z",
+  "status": "Complete locally; full-page host/tool integration, final packages and archive verified. No deployment or hardware execution.",
+  "userRequest": "Full-width PS4/PS5 host and subpages with slim Back taskbar, locally hosted tools first, separate other-host links and existing ad scripts.",
+  "completed": [
+    "Preserved shared actual-file table redesign on main PS4/PS5 hosts; full-width ordinary host subpages with slim Back/console navigation and no left sidebar.",
+    "Local PS4 WebRTE trainer with1169 valid exact game/title/update builds, explicit attach/apply, source/license/hash manifests; two malformed source files preserved and excluded.",
+    "Local ESP Web Flasher5.1.4 library and stubs with explicit device selection and programming controls; no CDN runtime dependency.",
+    "Local GoldHEN JSON cheat/download setup page, explicit PS4/PS5 Lua game-save setup pages and package-installation setup pages.",
+    "Additional licensed PSFree/Lapse runtime for17 exact7.00–9.60 firmwares, guarded start, source archives and byte-hashed compiled patches; no automatic GoldHEN.",
+    "Sidebar PS4 / PS5 webhost link immediately below Language; console chooser shows first-party features before Other hosts.",
+    "Non-mod host card preview images removed; game/mod art and exact compatibility pins preserved.",
+    "Existing labelled advertising scripts on ordinary public host/tool pages; isolated exploit runtimes and native filesystem/installer helpers remain free of third-party scripts.",
+    "Final functional UI strings in20 dictionaries with1182 entries each;186 new keys and64 native package-installer UI keys verified.",
+    "Native package helper verifies completed saved file metadata and requires explicit consent; PS4 replacement risk disclosed, PS5 acceptance not labelled installation completion.",
+    "Receiver19 shows exact saved-path report and PKG helper shortcut only after receiver-reported completion; helper independently rechecks file.",
+    "All older versions retained and20 new/current/retained tool+installer archive pairs hash verified; receiver19 and sender2.0.0 preserved before activation."
+  ],
+  "pages": [
+    "/hosts/",
+    "/hosts/ps4/",
+    "/hosts/ps5/",
+    "/hosts/tools/ps4-trainer/",
+    "/hosts/tools/esp-flasher/",
+    "/hosts/ps4/cheats/",
+    "/hosts/ps4/lua/",
+    "/hosts/ps5/lua/",
+    "/hosts/ps4/packages/",
+    "/hosts/ps5/packages/"
+  ],
+  "verification": {
+    "tests": {
+      "total": 703,
+      "passed": 703,
+      "failed": 0,
+      "report": "docs/qa/host-reset-final-tests.txt"
+    },
+    "siteAudit": {
+      "pages": 502,
+      "localReferences": 59714,
+      "issues": 0,
+      "report": "docs/qa/host-reset-site-audit.txt"
+    },
+    "runtime": {
+      "files": 273,
+      "localDependencyReferences": 341,
+      "upstreamFiles": 96,
+      "consoleGuardCases": 30
+    },
+    "languageReport": "docs/qa/host-reset-i18n-verification.json",
+    "integrityReport": "docs/qa/host-reset-integrity.json",
+    "archive": {
+      "mode": "write",
+      "backupRoot": "F:\\whatsite-backup-downloads-etc",
+      "items": 4827,
+      "fileRecords": 5951,
+      "presentFileRecords": 5951,
+      "missingFileRecords": 0,
+      "missingPaths": 0,
+      "otherUnavailableRecords": 0,
+      "availability": {
+        "present": 5951
+      }
+    },
+    "browser": [
+      "Desktop full-width PS5 file manager inspected without console contact",
+      "Local trainer search/selection inspected; Apply remained disabled without attach",
+      "ESP desktop and430px layout inspected; no overflow, no connect/flash",
+      "Spanish tool controls verified, English restored; viewport reset",
+      "Sidebar Language followed by PS4 / PS5 webhost verified and chooser navigation followed"
+    ],
+    "screenshots": [
+      "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/host-console-chooser-final.png",
+      "C:/Users/whatw/.codex/visualizations/2026/11/02/01a19a10-133b-7bb2-838d-d3c288611074/local-trainer-full-page-final.png"
+    ]
+  },
+  "sender": {
+    "id": "console-payload-sender-67197d90ab00",
+    "name": "console-payload-sender-2.0.0-67197d90ab00.zip",
+    "version": "2.0.0+67197d90ab00",
+    "url": "/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-67197d90ab00.zip",
+    "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-67197d90ab00.zip",
+    "bytes": 101851359,
+    "sha256": "92ef665afae8a2c92e67de0c3c3ed08aed22084c69262eacb70684a7b89e5fd5",
+    "snapshot": "67197d90ab0028612fb4d5fc536bb0b9c285d380be178a7991846ffd6c39026a",
+    "files": 1495,
+    "payloads": 125,
+    "actions": 185,
+    "file": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-2.0.0-67197d90ab00.zip",
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\2.0.0+67197d90ab00\\console-payload-sender-2.0.0-67197d90ab00.zip",
+    "zipEntries": 1495,
+    "manifestFiles": 1494,
+    "sourceSnapshotMatches": true,
+    "CRCAndSHA256": true,
+    "publicAndArchiveEqual": true
+  },
+  "receivers": {
+    "preparedAt": "2026-11-03T18:32:50.384Z",
+    "version": "2026.11.02.19",
+    "jobsPath": "docs/qa/host-menu-companion-jobs.json",
+    "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.18.json",
+    "activated": true,
+    "records": [
+      {
+        "platform": "ps4",
+        "version": "2026.11.02.19",
+        "path": "console/ps4/whatsite-ps4.html",
+        "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.19-2f717510aa96/whatsite-ps4.html",
+        "bytes": 733616,
+        "sha256": "2f717510aa96e3cfd8ec26f038da7abd9adc2e0a4fd7410c3d2cee23ca244818",
+        "previousSha256": "5f5be5198ed8b7016d60ca42076efd06f802be01999e64cb0025e92d78d06119",
+        "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-5f5be5198ed8/whatsite-ps4.html",
+        "previousItems": 512,
+        "items": 512,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.19\\whatsite-ps4.html"
+      },
+      {
+        "platform": "ps5",
+        "version": "2026.11.02.19",
+        "path": "console/ps5/whatsite-ps5.html",
+        "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.19-f83f4a82ba25/whatsite-ps5.html",
+        "bytes": 570248,
+        "sha256": "f83f4a82ba25fa21ed290126583bb844de8ae88d41cc32b5d5e53d29cd3e6e28",
+        "previousSha256": "ec87c87f58169bf1f05857bc6e2cddf024ad5c13469e04f890057aa2f0aa7848",
+        "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-ec87c87f5816/whatsite-ps5.html",
+        "previousItems": 350,
+        "items": 350,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.19\\whatsite-ps5.html"
+      }
+    ],
+    "verifiedAt": "2026-11-03T18:33:41.127Z"
+  },
+  "toolBuildReport": "docs/host-local-tools-build.json",
+  "toolArchiveJobs": "docs/host-local-tools-jobs.json",
+  "installerBuildReport": "docs/host-package-installer-build.json",
+  "installerArchiveJobs": "docs/qa/host-package-installer-archive-jobs.json",
+  "runtimeReports": [
+    "docs/host-runtime-builds.json",
+    "docs/host-local-loaders-review-20261103.json"
+  ],
+  "limitations": [
+    "No downloaded payload/exploit execution, physical console contact, hardware flashing, publication or deployment. Native console execution/installations remain untested.",
+    "Public pages cannot directly create console folders or access disk; existing native receivers/workspaces/services must be installed and running.",
+    "Receiver queue state4 and its native toast are reports, not final checksum proof. Native helper checks regular file path/size and no partial-download marker before one explicit install request.",
+    "Package-install shortcut uses reviewed nativeIPv4/localhost/privateDNS origins, /data or single-digit /mnt/usbN only; download receiver retains broader documented transports separately.",
+    "Existing receiver companions remain English-only. Functional public tools/native installer are translated; some source/setup guide prose stays English.",
+    "Classic unlicensed/external hosts remain secondary clearly labelled links, not fake first-party execution."
+  ],
+  "regenerate": [
+    "node scripts/build-host-selector.cjs",
+    "node scripts/prepare-host-local-tools.cjs --package (creates immutable versions; archive all jobs before considering active links final)",
+    "node scripts/prepare-host-package-installer.cjs (same preservation workflow)",
+    "node scripts/prepare-host-menu-companions.cjs then archive jobs before --activate",
+    "node scripts/package-console-payload-sender.cjs --archive (after all packaged source freezes)"
+  ],
+  "coordination": "Preserved other chats’ file-table redesign, GTA505/6.72 actions, Afterglow/firmware routes, archives and older helpers. Read their own handoff sections before extending them."
+}

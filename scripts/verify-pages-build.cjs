@@ -23,7 +23,7 @@ function walk(directory) {
       const name = decodeURIComponent(url.pathname);
       links++;
       const target = path.join(root, name);
-      if (!fs.existsSync(target) && !mapping[name]) failures.push(relative + ': ' + value);
+      if (!fs.existsSync(target)) failures.push(relative + ': ' + value + (mapping[name] ? ' (offloaded link was not rewritten)' : ''));
     }
   }
 }

@@ -4,6 +4,9 @@
 # These original input captures are checked by byte count and SHA-256.
 scripts/tests/fixtures/gta5-plugin-inputs/** -text
 
+# KARO original native scripts and guarded build snapshots use exact-byte hashes.
+hosts/runtime/karo-*/** -text
+
 # Download checksums and native runtime snapshots describe exact original bytes.
 downloads/** -text
 hosts/runtime/** -text

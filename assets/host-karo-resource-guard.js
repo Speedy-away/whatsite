@@ -10,5 +10,5 @@
  if(win.XMLHttpRequest){var open=win.XMLHttpRequest.prototype.open;win.XMLHttpRequest.prototype.open=function(method,url){var args=Array.prototype.slice.call(arguments);args[1]=route(url);return open.apply(this,args);};}
  if(win.fetch){var fetch=win.fetch;win.fetch=function(value,options){try{if(typeof value==='string'||value instanceof win.URL)return fetch.call(win,route(value),options);return fetch.call(win,value,options);}catch(e){return win.Promise.reject(e);}};}
  function disableInvalid(){Array.prototype.forEach.call(win.document.querySelectorAll('option,a,button,input'),function(node){var value=(node.value||'')+' '+(node.getAttribute('href')||'')+' '+(node.getAttribute('onclick')||'');for(var p in invalid)if(Object.prototype.hasOwnProperty.call(invalid,p)&&value.indexOf(p.split('/').pop())>=0){node.disabled=true;node.setAttribute('aria-disabled','true');node.title='Original file is invalid; preserved in the archive.';if(node.tagName==='A')node.removeAttribute('href');}});}
- win.document.addEventListener('DOMContentLoaded',disableInvalid);return{route:route};
+ win.document.addEventListener('DOMContentLoaded',function(){disableInvalid();if(win.MutationObserver)new win.MutationObserver(disableInvalid).observe(win.document.documentElement,{childList:true,subtree:true});});return{route:route};
 }));

@@ -11,7 +11,8 @@ const server=http.createServer((req,res)=>{
   if(!inside(root,target)){res.writeHead(403);res.end();return;}
   if(fs.existsSync(target)&&fs.statSync(target).isDirectory())target=path.join(target,'index.html');
   const runtime=name.startsWith('/hosts/runtime/');
-  const download=name.startsWith('/downloads/'),type=types[path.extname(target).toLowerCase()]||(runtime&&target.endsWith('.appcache')?'text/cache-manifest':runtime&&target.endsWith('.bin')?'application/octet-stream':download?'application/octet-stream':null);
+  const extension=path.extname(target).toLowerCase(),runtimeTypes={'.mjs':'text/javascript; charset=utf-8','.manifest':'text/cache-manifest','.cache':'text/cache-manifest','.appcache':'text/cache-manifest','.bin':'application/octet-stream','.elf':'application/octet-stream','.bz2':'application/octet-stream'};
+  const download=name.startsWith('/downloads/'),type=types[extension]||(runtime&&runtimeTypes[extension])||(download?'application/octet-stream':null);
   if(!type||!fs.existsSync(target)||!fs.statSync(target).isFile()){res.writeHead(404);res.end();return;}
   if(!inside(realRoot,fs.realpathSync(target))){res.writeHead(403);res.end();return;}
   const headers={'Content-Type':type,'Content-Length':fs.statSync(target).size,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
