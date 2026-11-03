@@ -1,0 +1,12 @@
+✔ Pages references resolve to exact encoded repository files without modifying compatibility or hashes (1.7408ms)
+✔ main Pages excludes migrated native hosts and internals but retains compatibility redirects and download helpers (0.2426ms)
+✔ new native receiver snapshots fetch repository bytes directly while preserving source pins and foreign URLs (4.1493ms)
+✔ runtime data transport maps only pinned GET/HEAD data files and strips cross-origin credentials (18.2196ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 98.8378

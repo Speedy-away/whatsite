@@ -84,7 +84,7 @@ function savePage(file, title, description, artwork, nav, content, primary, acti
   fs.writeFileSync(filename, require('./search-page-output.cjs').finish(file, html));
 }
 
-function buildHostSelector() {
+function buildHostSelector({hostOnly=false}={}) {
   const {section, grid, resource, link, ext, esc} = require('./build-console-guides.cjs');
   const catalog = JSON.parse(fs.readFileSync(catalogFile, 'utf8'));
   for (const platform of ['ps4', 'ps5']) {
@@ -108,7 +108,7 @@ function buildHostSelector() {
     '#consoles', 'Choose console', true);
 
   const chooserFile = path.join(root, 'hosts/index.html');
-  fs.writeFileSync(chooserFile, require('./search-page-output.cjs').finish(chooserFile, fs.readFileSync(chooserFile, 'utf8').replace('</body>', '<script defer src="/assets/host-dashboard.js?v=17"></script></body>')));
+  fs.writeFileSync(chooserFile, require('./search-page-output.cjs').finish(chooserFile, fs.readFileSync(chooserFile, 'utf8').replace('</body>', '<script defer src="/assets/host-catalog-grid.js?v=1"></script><script defer src="/assets/host-dashboard.js?v=18"></script></body>')));
 
   for (const platform of ['ps4', 'ps5']) {
     const name = platform.toUpperCase();
@@ -141,7 +141,7 @@ function buildHostSelector() {
     for (const relative of [`hosts/${platform}/index.html`,managerFile,filesPage,...gamePages]) {
       const hostFile = path.join(root,relative);
       let hostHtml = fs.readFileSync(hostFile, 'utf8').replace('console-guide host-selector', 'console-guide host-selector host-dashboard-page');
-      hostHtml = hostHtml.replace('</head>', '<link rel="stylesheet" href="/assets/host-dashboard.css?v=16"><link rel="stylesheet" href="/assets/host-webhost.css?v=2">\n</head>').replace('</body>', '<script defer src="/assets/host-console-client.js?v=15"></script><script defer src="/assets/host-dashboard.js?v=17"></script></body>');
+      hostHtml = hostHtml.replace('</head>', '<link rel="stylesheet" href="/assets/host-dashboard.css?v=16"><link rel="stylesheet" href="/assets/host-webhost.css?v=2"><link rel="stylesheet" href="/assets/host-firmware-buttons.css?v=1"><link rel="stylesheet" href="/assets/host-catalog-grid.css?v=1">\n</head>').replace('</body>', '<script defer src="/assets/host-console-client.js?v=15"></script><script defer src="/assets/host-catalog-grid.js?v=1"></script><script defer src="/assets/host-dashboard.js?v=18"></script></body>');
       if(relative===`hosts/${platform}/index.html`)hostHtml=require('./host-folder-markup.cjs').shell(hostHtml);
       fs.writeFileSync(hostFile, require('./search-page-output.cjs').finish(relative, hostHtml));
     }
@@ -149,7 +149,7 @@ function buildHostSelector() {
 
   // Only replace the host grid section in existing hubs; preserve other chats' downloads work.
   delete require.cache[require.resolve('../docs/console-exploit-hosts.json')];
-  for (const platform of ['ps4', 'ps5']) {
+  for (const platform of hostOnly?[]:['ps4', 'ps5']) {
     const file = path.join(root, `console/${platform}/index.html`);
     const html = fs.readFileSync(file, 'utf8');
     const sectionMarkup = require('./build-console-guides.cjs').hostSection(platform);
@@ -160,6 +160,7 @@ function buildHostSelector() {
     fs.writeFileSync(file, require('./search-page-output.cjs').finish(file, updated));
   }
 
+  if(!hostOnly){
   const sitemapFile = path.join(root, 'sitemap.xml');
   let sitemap = fs.readFileSync(sitemapFile, 'utf8');
   for (const suffix of ['', 'ps4/', 'ps5/',...['ps4','ps5'].flatMap(platform=>['payload-manager','files','gta5','rdr2','other-games'].map(page=>platform+'/'+page+'/'))]) {
@@ -168,8 +169,9 @@ function buildHostSelector() {
   }
   fs.writeFileSync(sitemapFile, sitemap);
   if(fs.existsSync(path.join(root,'docs/afterglow-download-inventory.json')))require('./build-ps4-firmware.cjs').build();
+  }
   require('./build-host-support-pages.cjs').build();
   console.log('Built /hosts/, /hosts/ps4/ and /hosts/ps5/; added first-party entries to both console host grids.');
 }
 module.exports = {buildHostSelector,hostActions};
-if (require.main === module) buildHostSelector();
+if (require.main === module) buildHostSelector({hostOnly:process.argv.includes('--host-only')});

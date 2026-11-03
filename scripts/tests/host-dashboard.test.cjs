@@ -118,8 +118,8 @@ test('generated dashboards have selectors, separate catalogues and immutable rea
     assert.equal(data.platform,platform);
     assert.ok(data.actions.length);
     assert.ok(data.actions.every(a => a.platform === platform));
-    assert.ok(html.includes('value="13.52"') || platform === 'ps5');
-    if (platform === 'ps4') { assert.ok(html.includes('value="14.00"')); assert.ok(html.includes('id="host-firmware-note"')); }
+    assert.ok(html.includes('data-host-firmware="13.52"') || platform === 'ps5');
+    if (platform === 'ps4') { assert.ok(html.includes('data-host-firmware="14.00"')); assert.ok(html.includes('id="host-firmware-note"')); }
     for (const action of data.actions.filter(a => a.run && a.downloadURL)) {
       if (action.run.input === 'user-file') {
         assert.equal(action.platform,'ps4');assert.equal(action.format,'BIN');assert.equal(action.publicMirror,false);

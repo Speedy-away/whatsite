@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, '..');
 function buildPs4Goldhen() {
   const {page, section, grid, resource, note, steps, ext, link, sourceList, esc} = require('./build-console-guides.cjs');
   const iso = JSON.parse(fs.readFileSync(path.join(root, 'docs/ps4-goldhen14.json'), 'utf8'));
+  const bin = JSON.parse(fs.readFileSync(path.join(root, 'docs/ps4-goldhen-supplied-bin.json'), 'utf8'));
   const artwork = JSON.parse(fs.readFileSync(path.join(root, 'docs/console-software-images.json'), 'utf8')).goldhen.image;
   const official = 'https://github.com/GoldHEN/GoldHEN';
   const officialRelease = official + '/releases/tag/2.3';
@@ -23,13 +24,13 @@ function buildPs4Goldhen() {
   const isoDownload = `<a href="${esc(iso.file.local)}" data-original-href="${esc(iso.jobs[0].url)}" download>Download GOLDHEN14.iso · ${(iso.file.bytes / 1048576).toFixed(1)} MiB <i class="fas fa-download" aria-hidden="true"></i></a>`;
 
   page('console/ps4/goldhen.html', 'GoldHEN & PS4 HEN Downloads',
-    'GoldHEN v2.4b18.13 from SiSTRo, adding PS4 14.00 support, plus archived GoldHEN 2.3 and the separately supplied HEN ISO.',
+    'Download the supplied goldhen.bin directly, plus archived GoldHEN 2.3 and the separately supplied HEN ISO. Match each build to your firmware and exploit.',
     artwork, nav,
     section('downloads', 'Choose the correct HEN resource',
       note('<p><strong>Match the firmware, exploit and payload separately.</strong> GoldHEN is a PS4 homebrew enabler loaded through a compatible jailbreak. SiSTRo’s v2.4b18.13 beta adds PS4 14.00 support. The separately supplied GOLDHEN14.iso has not been verified as an official GoldHEN release.</p>') + grid(
-        resource('GoldHEN v2.4b18.13 · SiSTRo',
-          'Official beta release adding PS4 firmware 14.00 support and fixing an FTP SIZE issue. Get the release from SiSTRo’s Ko-fi page and follow its instructions for your firmware and exploit.',
-          ext(currentRelease, 'Get GoldHEN v2.4b18.13') + ext(official, 'Official project'), artwork)
+        resource('GoldHEN · goldhen.bin',
+          'Download the supplied GoldHEN BIN directly. Use a build matching your console firmware and exploit; this file’s version and firmware support have not been independently verified.',
+          `<a href="${esc(bin.local)}" download="goldhen.bin">Download goldhen.bin · ${(bin.bytes / 1024).toFixed(1)} KiB <i class="fas fa-download" aria-hidden="true"></i></a>`, artwork)
           .replace('<article ', '<article id="current-goldhen" '),
         resource('GoldHEN · official project',
           'The existing archived download is GoldHEN 2.3. Extract the archive and use only the payload for firmware supported by that release and your exploit. The official project documents homebrew, debugging, package installation, FTP and other release-specific features.',
@@ -55,7 +56,7 @@ function buildPs4Goldhen() {
       [officialRelease, 'Pinned GoldHEN 2.3 release notes'],
       ['https://github.com/GoldHEN/GoldHEN_Plugins_Repository', 'Official GoldHEN plugin documentation']
     ])), '#downloads', 'Choose a HEN resource');
-  return {page: 'console/ps4/goldhen.html', officialVersion: '2.4b18.13', currentRelease, archivedVersion: '2.3', suppliedISO: iso.file.local};
+  return {page: 'console/ps4/goldhen.html', suppliedBIN: bin.local, currentRelease, archivedVersion: '2.3', suppliedISO: iso.file.local};
 }
 
 if (require.main === module) console.log(JSON.stringify(buildPs4Goldhen()));

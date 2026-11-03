@@ -1,0 +1,24 @@
+{"revision":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","base":"/WWB-HOST","origin":"https://speedy-away.github.io","bytes":2277,"budget":922746880,"files":7,"offloadedFiles":1,"nativeScriptsUnchanged":1,"cacheManifestAliases":0,"historicalLandings":0,"activeKaro":"hosts/runtime/karo-fixture/"}
+{"revision":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","base":"/WWB-HOST","origin":"https://speedy-away.github.io","bytes":2201,"budget":922746880,"files":7,"offloadedFiles":0,"nativeScriptsUnchanged":1,"cacheManifestAliases":1,"historicalLandings":0,"activeKaro":"hosts/runtime/karo-fixture/"}
+✔ project publishing resolves the home consoles, keeps original native bytes, and offloads exact preserved ZIP paths (22.86ms)
+✔ original cache files get exact MIME aliases in direct and guarded HTML without changing source files (18.6291ms)
+✔ live HTTP checks resolve project aliases, query strings and immutable external downloads (0.6875ms)
+✔ Pages references resolve to exact encoded repository files without modifying compatibility or hashes (1.3952ms)
+✔ main Pages excludes migrated native hosts and internals but retains compatibility redirects and download helpers (0.3362ms)
+✔ new native receiver snapshots fetch repository bytes directly while preserving source pins and foreign URLs (3.592ms)
+✔ runtime data transport maps only pinned GET/HEAD data files and strips cross-origin credentials (17.0144ms)
+✔ sparse deployment reads unfetched file sizes and materializes exact filenames without fetching excluded downloads (452.9142ms)
+✔ a truncated recursive tree is completed from subtrees without requesting file blobs (9.175ms)
+✔ the sparse planner accepts file sizes without any local Git repository or missing binary (2.7942ms)
+✔ source-first cleanup identifies games/apps and excludes mods, payloads and helper snapshots (0.7912ms)
+✔ mutable publisher packages and extracted files carry visible delivery requirements (1.9788ms)
+✔ only version-pinned assets qualify and extracted builds retain their exact ready file (0.5507ms)
+✔ an upstream delivery mapping prevents restoring a verified large mirror in future catalogue builds (6.8913ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 529.3747

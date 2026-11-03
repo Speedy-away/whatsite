@@ -53,3 +53,10 @@ test('the extracted-build server serves module/cache MIME types and never execut
 test('ZIP validation accepts only the explicit package root and still rejects traversal or a wrong root',()=>{
  const {zip}=require('../package-console-payload-sender.cjs'),{inspectZip}=require('../verify-host-menu-sender-integrity.cjs'),bytes=zip(new Map([['fixture.txt',Buffer.from('inert fixture')]]),{prefix:'karo-fixture/'});assert.throws(()=>inspectZip(bytes));assert.equal(inspectZip(bytes,{prefix:'karo-fixture/'}).entryCount,1);assert.throws(()=>inspectZip(bytes,{prefix:'../karo-fixture/'}));assert.throws(()=>inspectZip(bytes,{prefix:'wrong/'}));
 });
+
+test('verified original repairs retain exact identities and online-only entries preserve the original native chain',()=>{
+ const b=read('docs/host-reviews/karo/build.json'),r=read('docs/host-reviews/karo/original-payload-repairs.json');assert.equal(b.repairs.length,3);assert.equal(b.entries.filter(e=>e.blockedReason).length,0);assert.equal(b.entries.filter(e=>e.onlineOnly).length,3);
+ for(const f of r.repairs){const target=fs.readFileSync(path.join(root,b.runtime,f.originalPath));assert.equal(target.length,f.bytes);assert.equal(sha(target),f.sha256);assert.ok(b.downloads.some(d=>d.repaired&&d.sha256===f.sha256&&d.sourceURL===f.url));assert.ok(b.downloads.some(d=>d.invalid&&d.path===f.originalPath));}
+ for(const e of b.entries.filter(e=>e.onlineOnly)){assert.ok(e.notes.some(n=>n.includes('Online loading only')));const source=fs.readFileSync(path.join(root,'tmp/karo-review',b.commit,e.path),'utf8');assert.match(source,/<body[^>]*onload=["']go\(\)/i);}
+ const unresolved=r.unresolved[0];assert.equal(unresolved.status,'unmapped-placeholder-not-renamed');assert.ok(b.downloads.find(d=>d.path===unresolved.originalPath).invalid);
+});

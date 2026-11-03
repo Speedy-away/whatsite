@@ -46700,6 +46700,101 @@
       ]
     },
     {
+      "id": "karo-repair-72b5c9df0b0e-36ad03e236e6",
+      "title": "KARO verified original repair pr/payloads/CheatRunner_v0.17.2.elf",
+      "project": "KARO ps5",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "ps5",
+        "Verified originals"
+      ],
+      "version": "v0.17.2-36ad03e236e6",
+      "url": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.17.2/CheatRunner.elf",
+      "filename": "CheatRunner.elf",
+      "importPath": "tmp/karo-repairs/cheatrunner/v0.17.2/CheatRunner.elf",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 10091832,
+      "expectedSha256": "36ad03e236e6603aaaf05d95ed3399c7b54475a9bceba085cbe02899bc88ae0f",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-repair-8761186b4b97-e3392379d5bc",
+      "title": "KARO verified original repair UMTX/payloads/psplay.elf",
+      "project": "KARO ps5",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "ps5",
+        "Verified originals"
+      ],
+      "version": "KARO743646c9df9a exactLFSobject-e3392379d5bc",
+      "url": "https://media.githubusercontent.com/media/KAR0218/KAR0218.github.io/743646c9df9ab4c83821b660c12e23a3dda57b49/ps5/UMTX/payloads/psplay.elf",
+      "filename": "psplay.elf",
+      "importPath": "tmp/karo-repairs/psplay/e3392379d5bc/psplay.elf",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 32294128,
+      "expectedSha256": "e3392379d5bc6ca4e44cb0d2a1d8921083b2c3ea480725f68378831874542d8d",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-repair-bed310621476-caa7fec3b657",
+      "title": "KARO verified original repair enablebrowser.bin",
+      "project": "KARO 702",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "702",
+        "Verified originals"
+      ],
+      "version": "Scene Collective payloads1.0.5-caa7fec3b657",
+      "url": "https://github.com/Scene-Collective/ps4-payload-repo/releases/download/1.0.5/payloads_1.0.5.zip",
+      "filename": "Enable-Browser.bin",
+      "importPath": "tmp/karo-repairs/enable-browser/1.0.5/Enable-Browser.bin",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 10114,
+      "expectedSha256": "caa7fec3b657d60c86b5ffce01e868f9499544c53116a138dd9f68ecb15bd7b4",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-repair-original-archive-04aae9039d84",
+      "title": "Original publisher Scene Collective payloads1.0.5",
+      "project": "KARO verified originals",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO"
+      ],
+      "version": "Scene Collective payloads1.0.5",
+      "url": "https://github.com/Scene-Collective/ps4-payload-repo/releases/download/1.0.5/payloads_1.0.5.zip",
+      "filename": "payloads_1.0.5.zip",
+      "importPath": "tmp/karo-repairs/enable-browser/payloads_1.0.5.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 81442,
+      "expectedSha256": "04aae9039d84b0baa0f86a6773ce10ce5f0b466d7185bfbf4df41e06da063650",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
       "id": "karo-decoded-9e1e49bb2599",
       "title": "KARO 672 decoded BIN · avatar.bin",
       "project": "KARO 672",
@@ -56468,7 +56563,7 @@
       ]
     },
     {
-      "id": "karo-ready-505-51430066e375",
+      "id": "karo-ready-505-e3c0caf3db54",
       "title": "KARO 505 ready web-host build",
       "project": "KARO 505",
       "platform": "PS4",
@@ -56477,22 +56572,22 @@
         "KARO",
         "505"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/505/51430066e375/karo-505-743646c9df9a-51430066e375.zip",
-      "filename": "karo-505-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/505/51430066e375/karo-505-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/505/e3c0caf3db54/karo-505-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-505-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/505/e3c0caf3db54/karo-505-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 17247734,
-      "expectedSha256": "d4cfc2b4511856dec6e61cb5572dea88ad76f777dd66b00493f635eea7361c61",
+      "expectedBytes": 17247735,
+      "expectedSha256": "76974be9e5d03e7de2c3c6c9f4cfc3f0046b6f44589dbfebfc62cd5f5f2ff90c",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-505Gold-51430066e375",
+      "id": "karo-ready-505Gold-e3c0caf3db54",
       "title": "KARO 505Gold ready web-host build",
       "project": "KARO 505Gold",
       "platform": "PS4",
@@ -56501,22 +56596,22 @@
         "KARO",
         "505Gold"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/505Gold/51430066e375/karo-505Gold-743646c9df9a-51430066e375.zip",
-      "filename": "karo-505Gold-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/505Gold/51430066e375/karo-505Gold-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/505Gold/e3c0caf3db54/karo-505Gold-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-505Gold-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/505Gold/e3c0caf3db54/karo-505Gold-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 5141457,
-      "expectedSha256": "d29dc2fcfeaecf4f84228fae09f0030dc215a2f63626ccf4d55a80c808c0db4f",
+      "expectedSha256": "ab6ba947a87781b7b14d16ceee2c5d0e700b84ae1c99eaf1038184f9af69605b",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-672-51430066e375",
+      "id": "karo-ready-672-e3c0caf3db54",
       "title": "KARO 672 ready web-host build",
       "project": "KARO 672",
       "platform": "PS4",
@@ -56525,22 +56620,22 @@
         "KARO",
         "672"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672/51430066e375/karo-672-743646c9df9a-51430066e375.zip",
-      "filename": "karo-672-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/672/51430066e375/karo-672-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672/e3c0caf3db54/karo-672-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-672-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/672/e3c0caf3db54/karo-672-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 13050699,
-      "expectedSha256": "c2527cb4bcd0f92fe118d2121925a468fd0f5fff2991499a4b4ac87f8f1a4b74",
+      "expectedSha256": "582dcce243572eb54730cc86cbf05e123241f26375cff1185b54bd5129fcf69e",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-672A-51430066e375",
+      "id": "karo-ready-672A-e3c0caf3db54",
       "title": "KARO 672A ready web-host build",
       "project": "KARO 672A",
       "platform": "PS4",
@@ -56549,22 +56644,22 @@
         "KARO",
         "672A"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672A/51430066e375/karo-672A-743646c9df9a-51430066e375.zip",
-      "filename": "karo-672A-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/672A/51430066e375/karo-672A-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672A/e3c0caf3db54/karo-672A-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-672A-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/672A/e3c0caf3db54/karo-672A-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 12806701,
-      "expectedSha256": "2525a14c7b43edb90b4df1720d9a0ddcd4b8498f424d3b30d350910d512b7c79",
+      "expectedSha256": "e4d3c6520c9a9d7a55834664cf46e8ede9096c2070a3e35ef2636278cfd2052c",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-672L-51430066e375",
+      "id": "karo-ready-672L-e3c0caf3db54",
       "title": "KARO 672L ready web-host build",
       "project": "KARO 672L",
       "platform": "PS4",
@@ -56573,22 +56668,22 @@
         "KARO",
         "672L"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672L/51430066e375/karo-672L-743646c9df9a-51430066e375.zip",
-      "filename": "karo-672L-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/672L/51430066e375/karo-672L-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672L/e3c0caf3db54/karo-672L-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-672L-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/672L/e3c0caf3db54/karo-672L-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 3048481,
-      "expectedSha256": "8ff67016d3b0cafada10f5a1761c5b6c690a9a291a55e6bb12d3353d1a82bf1e",
+      "expectedSha256": "cf92429d39a8ebf78149ce82f1e27eaa00333c56ed441fb092f232f682ff85c0",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-702-51430066e375",
+      "id": "karo-ready-702-e3c0caf3db54",
       "title": "KARO 702 ready web-host build",
       "project": "KARO 702",
       "platform": "PS4",
@@ -56597,22 +56692,22 @@
         "KARO",
         "702"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/702/51430066e375/karo-702-743646c9df9a-51430066e375.zip",
-      "filename": "karo-702-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/702/51430066e375/karo-702-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/702/e3c0caf3db54/karo-702-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-702-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/702/e3c0caf3db54/karo-702-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 3251848,
-      "expectedSha256": "9a75986fe5f50c19bb189a95c5e880255959f1181261b8273bdf75a8fb57ba4d",
+      "expectedBytes": 3256932,
+      "expectedSha256": "c21b16b17d32aeedc68bd7b9d3597fa078384072cfe3cd563f0a9509db8e934f",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-702L-51430066e375",
+      "id": "karo-ready-702L-e3c0caf3db54",
       "title": "KARO 702L ready web-host build",
       "project": "KARO 702L",
       "platform": "PS4",
@@ -56621,22 +56716,22 @@
         "KARO",
         "702L"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/702L/51430066e375/karo-702L-743646c9df9a-51430066e375.zip",
-      "filename": "karo-702L-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/702L/51430066e375/karo-702L-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/702L/e3c0caf3db54/karo-702L-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-702L-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/702L/e3c0caf3db54/karo-702L-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 869101,
-      "expectedSha256": "ac066c4f7395293437340295ade18633e3043d352e0a76122129f6aeac2e5e8e",
+      "expectedBytes": 869102,
+      "expectedSha256": "02139776ba1b96b9512599b9990a0ae4623a9729fb955e7b90a2d6d432d2307a",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-755-51430066e375",
+      "id": "karo-ready-755-e3c0caf3db54",
       "title": "KARO 755 ready web-host build",
       "project": "KARO 755",
       "platform": "PS4",
@@ -56645,22 +56740,22 @@
         "KARO",
         "755"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/755/51430066e375/karo-755-743646c9df9a-51430066e375.zip",
-      "filename": "karo-755-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/755/51430066e375/karo-755-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/755/e3c0caf3db54/karo-755-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-755-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/755/e3c0caf3db54/karo-755-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 7457712,
-      "expectedSha256": "2a1ca2c7d996df44126d72159204470050e309b0993cdefdf327f54f96f3fead",
+      "expectedBytes": 7457711,
+      "expectedSha256": "324f2c9544bec5513ad2e8502e9353e5f8b94647e451d2a16e8506e06bf9aa97",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-755L-51430066e375",
+      "id": "karo-ready-755L-e3c0caf3db54",
       "title": "KARO 755L ready web-host build",
       "project": "KARO 755L",
       "platform": "PS4",
@@ -56669,22 +56764,22 @@
         "KARO",
         "755L"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/755L/51430066e375/karo-755L-743646c9df9a-51430066e375.zip",
-      "filename": "karo-755L-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/755L/51430066e375/karo-755L-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/755L/e3c0caf3db54/karo-755L-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-755L-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/755L/e3c0caf3db54/karo-755L-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 2901620,
-      "expectedSha256": "a585fa0c7bae5d9d02f7b4b52ecf6c82b57657f921559ad081fdda090cde3f9e",
+      "expectedSha256": "254de9ccc9fc75177ce90e166e013832652a569e39832328f61cef07f36c26da",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-900C-51430066e375",
+      "id": "karo-ready-900C-e3c0caf3db54",
       "title": "KARO 900C ready web-host build",
       "project": "KARO 900C",
       "platform": "PS4",
@@ -56693,22 +56788,22 @@
         "KARO",
         "900C"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900C/51430066e375/karo-900C-743646c9df9a-51430066e375.zip",
-      "filename": "karo-900C-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/900C/51430066e375/karo-900C-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900C/e3c0caf3db54/karo-900C-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-900C-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900C/e3c0caf3db54/karo-900C-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 9223959,
-      "expectedSha256": "e8d45a4a2199615d44fbe42d24e8f86725309aebc9f85043daebf5953748c5ec",
+      "expectedBytes": 9223960,
+      "expectedSha256": "62a67f1cd4d9b9ba71de87c1a90cd07a7a012ae41acc971cef7e92e15b8f48ad",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-900CM-51430066e375",
+      "id": "karo-ready-900CM-e3c0caf3db54",
       "title": "KARO 900CM ready web-host build",
       "project": "KARO 900CM",
       "platform": "PS4",
@@ -56717,22 +56812,22 @@
         "KARO",
         "900CM"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900CM/51430066e375/karo-900CM-743646c9df9a-51430066e375.zip",
-      "filename": "karo-900CM-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/900CM/51430066e375/karo-900CM-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900CM/e3c0caf3db54/karo-900CM-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-900CM-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900CM/e3c0caf3db54/karo-900CM-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 9224784,
-      "expectedSha256": "84f09e5ca9ca40ef1623f899e62bf1753c84cbd4d181afe880b262902467ec47",
+      "expectedBytes": 9224785,
+      "expectedSha256": "39522eea07fe27909c5c8048f61906edda735ed3a96e19d025be0c6f08d2e1ff",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-900L-51430066e375",
+      "id": "karo-ready-900L-e3c0caf3db54",
       "title": "KARO 900L ready web-host build",
       "project": "KARO 900L",
       "platform": "PS4",
@@ -56741,22 +56836,22 @@
         "KARO",
         "900L"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900L/51430066e375/karo-900L-743646c9df9a-51430066e375.zip",
-      "filename": "karo-900L-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/900L/51430066e375/karo-900L-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900L/e3c0caf3db54/karo-900L-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-900L-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900L/e3c0caf3db54/karo-900L-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 1520869,
-      "expectedSha256": "80960d49517fa7ea6c0a78e15d9969c7b402594a29672895ae89d47cf4c3b1bd",
+      "expectedSha256": "8538f531a5de22b3c0cb6b901a7a0c9e12897725c11f281ae2d262fe11f7a6f2",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-900N-51430066e375",
+      "id": "karo-ready-900N-e3c0caf3db54",
       "title": "KARO 900N ready web-host build",
       "project": "KARO 900N",
       "platform": "PS4",
@@ -56765,22 +56860,22 @@
         "KARO",
         "900N"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900N/51430066e375/karo-900N-743646c9df9a-51430066e375.zip",
-      "filename": "karo-900N-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/900N/51430066e375/karo-900N-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900N/e3c0caf3db54/karo-900N-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-900N-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900N/e3c0caf3db54/karo-900N-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 5368987,
-      "expectedSha256": "a7852ff26efc8f29d6c5170aff0acf5d870a164eb156304d3d097d16f92ded23",
+      "expectedSha256": "f91ef65a98f6665f9357e871d3f0b7ac43e3f439adf36a0c95ee50cd568d341c",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-900NA-51430066e375",
+      "id": "karo-ready-900NA-e3c0caf3db54",
       "title": "KARO 900NA ready web-host build",
       "project": "KARO 900NA",
       "platform": "PS4",
@@ -56789,22 +56884,22 @@
         "KARO",
         "900NA"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900NA/51430066e375/karo-900NA-743646c9df9a-51430066e375.zip",
-      "filename": "karo-900NA-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/900NA/51430066e375/karo-900NA-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900NA/e3c0caf3db54/karo-900NA-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-900NA-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900NA/e3c0caf3db54/karo-900NA-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 5376499,
-      "expectedSha256": "88f11d00a3496e8d50c371ba34739cc89355916cec54795733caf10785b226b3",
+      "expectedSha256": "f1b09af4a7b4f9625ae0917ea36e03d0e99787f924ae99de994dd836a88e2c59",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-900NM-51430066e375",
+      "id": "karo-ready-900NM-e3c0caf3db54",
       "title": "KARO 900NM ready web-host build",
       "project": "KARO 900NM",
       "platform": "PS4",
@@ -56813,22 +56908,22 @@
         "KARO",
         "900NM"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900NM/51430066e375/karo-900NM-743646c9df9a-51430066e375.zip",
-      "filename": "karo-900NM-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/900NM/51430066e375/karo-900NM-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900NM/e3c0caf3db54/karo-900NM-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-900NM-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900NM/e3c0caf3db54/karo-900NM-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 9721245,
-      "expectedSha256": "4de00221bbe6c9f658bd42e49194f09105b182ee343c13b306df894375b72666",
+      "expectedSha256": "34e642f56698dce517dedb5f39f639386003758e88b1d09f872633215bb604cd",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-900New-51430066e375",
+      "id": "karo-ready-900New-e3c0caf3db54",
       "title": "KARO 900New ready web-host build",
       "project": "KARO 900New",
       "platform": "PS4",
@@ -56837,22 +56932,22 @@
         "KARO",
         "900New"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900New/51430066e375/karo-900New-743646c9df9a-51430066e375.zip",
-      "filename": "karo-900New-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/900New/51430066e375/karo-900New-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900New/e3c0caf3db54/karo-900New-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-900New-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900New/e3c0caf3db54/karo-900New-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 9727757,
-      "expectedSha256": "a086f1d44cefb631ccf823b0cae94d107dc3bf8b17a7fc2579a4750eca308179",
+      "expectedBytes": 9727758,
+      "expectedSha256": "f6ad5086d773359c47c8601a2e02dff15303bd8ef8788a929b558cf46e1492b4",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-G702-51430066e375",
+      "id": "karo-ready-G702-e3c0caf3db54",
       "title": "KARO G702 ready web-host build",
       "project": "KARO G702",
       "platform": "PS4",
@@ -56861,22 +56956,22 @@
         "KARO",
         "G702"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G702/51430066e375/karo-G702-743646c9df9a-51430066e375.zip",
-      "filename": "karo-G702-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/G702/51430066e375/karo-G702-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G702/e3c0caf3db54/karo-G702-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-G702-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/G702/e3c0caf3db54/karo-G702-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 297310,
-      "expectedSha256": "a8ba5c227fffacdad04de8d0b0bd10e0e79a2201c8eeb222edfbb7475f42a5d2",
+      "expectedBytes": 297311,
+      "expectedSha256": "9feb72d992b9f9d07fec10fd28a92a693bcc54ed24a53f0bd6648e2d0652e2cc",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-G755-51430066e375",
+      "id": "karo-ready-G755-e3c0caf3db54",
       "title": "KARO G755 ready web-host build",
       "project": "KARO G755",
       "platform": "PS4",
@@ -56885,22 +56980,22 @@
         "KARO",
         "G755"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G755/51430066e375/karo-G755-743646c9df9a-51430066e375.zip",
-      "filename": "karo-G755-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/G755/51430066e375/karo-G755-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G755/e3c0caf3db54/karo-G755-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-G755-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/G755/e3c0caf3db54/karo-G755-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 739380,
-      "expectedSha256": "55d0f7d90ac0bdd0b8735fc7991ac8ebff5ca93a4c00b64564690c568721b9ad",
+      "expectedBytes": 739381,
+      "expectedSha256": "d3bf56e4b3adf761b90d94f2ae227afa30c88945997abb1468997ddde41a9698",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-G900-51430066e375",
+      "id": "karo-ready-G900-e3c0caf3db54",
       "title": "KARO G900 ready web-host build",
       "project": "KARO G900",
       "platform": "PS4",
@@ -56909,22 +57004,22 @@
         "KARO",
         "G900"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G900/51430066e375/karo-G900-743646c9df9a-51430066e375.zip",
-      "filename": "karo-G900-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/G900/51430066e375/karo-G900-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G900/e3c0caf3db54/karo-G900-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-G900-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/G900/e3c0caf3db54/karo-G900-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 536502,
-      "expectedSha256": "30005a84189cab56b0d43a738b8432fbb9dfb7dc36576b955a05d6b689847b2a",
+      "expectedSha256": "8546ca31f186400f7785a5769ac432a73c3fae207a907112a1c07aa918202023",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-Goldhen505-51430066e375",
+      "id": "karo-ready-Goldhen505-e3c0caf3db54",
       "title": "KARO Goldhen505 ready web-host build",
       "project": "KARO Goldhen505",
       "platform": "PS4",
@@ -56933,22 +57028,22 @@
         "KARO",
         "Goldhen505"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/Goldhen505/51430066e375/karo-Goldhen505-743646c9df9a-51430066e375.zip",
-      "filename": "karo-Goldhen505-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/Goldhen505/51430066e375/karo-Goldhen505-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/Goldhen505/e3c0caf3db54/karo-Goldhen505-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-Goldhen505-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/Goldhen505/e3c0caf3db54/karo-Goldhen505-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 1462110,
-      "expectedSha256": "efb9ad6ecddf14a8ce76fbe1187b31ac7542336d913927343cc46bd7432e4c6d",
+      "expectedBytes": 1462111,
+      "expectedSha256": "a4b0d0f582ab1309fca09e2688374000a6ccd6938ff1fe1e8f68e89ba6db4303",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-Goldhen672-51430066e375",
+      "id": "karo-ready-Goldhen672-e3c0caf3db54",
       "title": "KARO Goldhen672 ready web-host build",
       "project": "KARO Goldhen672",
       "platform": "PS4",
@@ -56957,22 +57052,22 @@
         "KARO",
         "Goldhen672"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/Goldhen672/51430066e375/karo-Goldhen672-743646c9df9a-51430066e375.zip",
-      "filename": "karo-Goldhen672-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/Goldhen672/51430066e375/karo-Goldhen672-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/Goldhen672/e3c0caf3db54/karo-Goldhen672-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-Goldhen672-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/Goldhen672/e3c0caf3db54/karo-Goldhen672-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 1530868,
-      "expectedSha256": "45dde84796e2f04147d3a41dda43876dcb40b8fe7e4f9905eed457da1b240426",
+      "expectedSha256": "a64ad8dc87563e93ebc63cfdd79baff74466ba9edb247ceffb7a2d517691f062",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-binloader-51430066e375",
+      "id": "karo-ready-binloader-e3c0caf3db54",
       "title": "KARO binloader ready web-host build",
       "project": "KARO binloader",
       "platform": "PS4",
@@ -56981,22 +57076,22 @@
         "KARO",
         "binloader"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/binloader/51430066e375/karo-binloader-743646c9df9a-51430066e375.zip",
-      "filename": "karo-binloader-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/binloader/51430066e375/karo-binloader-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/binloader/e3c0caf3db54/karo-binloader-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-binloader-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/binloader/e3c0caf3db54/karo-binloader-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 1694236,
-      "expectedSha256": "c3410d76fbc2fd78a0d845ac7317a32c42ae93bd32cae412165110259b0d6491",
+      "expectedBytes": 1694289,
+      "expectedSha256": "ba36ec05ecfb0f0595c2b02b7fe0cca0eaf3801137d11fa41d66ad14207ffab5",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-g2all-51430066e375",
+      "id": "karo-ready-g2all-e3c0caf3db54",
       "title": "KARO g2all ready web-host build",
       "project": "KARO g2all",
       "platform": "PS4",
@@ -57005,22 +57100,22 @@
         "KARO",
         "g2all"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2all/51430066e375/karo-g2all-743646c9df9a-51430066e375.zip",
-      "filename": "karo-g2all-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/g2all/51430066e375/karo-g2all-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2all/e3c0caf3db54/karo-g2all-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-g2all-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/g2all/e3c0caf3db54/karo-g2all-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 644254,
-      "expectedSha256": "9d0ae0809edfe923085a13db2756596297d43065f45b3f5a833d0b9ca609b740",
+      "expectedBytes": 644255,
+      "expectedSha256": "838395abade3665bd45d70d4049cdeedd3fc6d95d77637029c98b6df88665d92",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-g2allpro-51430066e375",
+      "id": "karo-ready-g2allpro-e3c0caf3db54",
       "title": "KARO g2allpro ready web-host build",
       "project": "KARO g2allpro",
       "platform": "PS4",
@@ -57029,22 +57124,22 @@
         "KARO",
         "g2allpro"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2allpro/51430066e375/karo-g2allpro-743646c9df9a-51430066e375.zip",
-      "filename": "karo-g2allpro-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/g2allpro/51430066e375/karo-g2allpro-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2allpro/e3c0caf3db54/karo-g2allpro-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-g2allpro-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/g2allpro/e3c0caf3db54/karo-g2allpro-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 1187972,
-      "expectedSha256": "17443c6c197c45ff136f06762283984f616ba2f0ef7832ec4ce6effa31cbddfe",
+      "expectedSha256": "d1971b2cdb0e5f728997340d88a3d52332c64b6dd1153b9a79269f88a23b3b4c",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-g2allproold-51430066e375",
+      "id": "karo-ready-g2allproold-e3c0caf3db54",
       "title": "KARO g2allproold ready web-host build",
       "project": "KARO g2allproold",
       "platform": "PS4",
@@ -57053,22 +57148,22 @@
         "KARO",
         "g2allproold"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2allproold/51430066e375/karo-g2allproold-743646c9df9a-51430066e375.zip",
-      "filename": "karo-g2allproold-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/g2allproold/51430066e375/karo-g2allproold-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2allproold/e3c0caf3db54/karo-g2allproold-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-g2allproold-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/g2allproold/e3c0caf3db54/karo-g2allproold-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 350825,
-      "expectedSha256": "cf7d9cd9344d0886fe13853b9cbd372998aaa30842554cdc7d494557e6cbeee5",
+      "expectedBytes": 350827,
+      "expectedSha256": "aa10067ec260624ebdf6d38987ad1d3fe3d38026241c8d612bc568601be12366",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-nobd-51430066e375",
+      "id": "karo-ready-nobd-e3c0caf3db54",
       "title": "KARO nobd ready web-host build",
       "project": "KARO nobd",
       "platform": "PS4",
@@ -57077,22 +57172,22 @@
         "KARO",
         "nobd"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/nobd/51430066e375/karo-nobd-743646c9df9a-51430066e375.zip",
-      "filename": "karo-nobd-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/nobd/51430066e375/karo-nobd-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/nobd/e3c0caf3db54/karo-nobd-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-nobd-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/nobd/e3c0caf3db54/karo-nobd-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 1647467,
-      "expectedSha256": "6b0e7ecf131827cd5aada6e090d7f55d3487f37dfe6cf2b209332a8aa1e7b9a1",
+      "expectedBytes": 1647468,
+      "expectedSha256": "77e87d72603124d7f726dab188246a958a22d50718c9e9fe97e416d42ffdbfd4",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-restore-51430066e375",
+      "id": "karo-ready-restore-e3c0caf3db54",
       "title": "KARO restore ready web-host build",
       "project": "KARO restore",
       "platform": "PS4",
@@ -57101,22 +57196,22 @@
         "KARO",
         "restore"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/restore/51430066e375/karo-restore-743646c9df9a-51430066e375.zip",
-      "filename": "karo-restore-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/restore/51430066e375/karo-restore-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/restore/e3c0caf3db54/karo-restore-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-restore-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/restore/e3c0caf3db54/karo-restore-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 3034243,
-      "expectedSha256": "a1c2caebb7e1a56d1deefa04b56ea458661ec966518d2fbec3364c85905fec54",
+      "expectedBytes": 3034335,
+      "expectedSha256": "3aba2f455e4e0ab7d0d19085c5127f6aa6eb56c2e0b7f93a09790d5615cda11f",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-restore2-51430066e375",
+      "id": "karo-ready-restore2-e3c0caf3db54",
       "title": "KARO restore2 ready web-host build",
       "project": "KARO restore2",
       "platform": "PS4",
@@ -57125,22 +57220,22 @@
         "KARO",
         "restore2"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/restore2/51430066e375/karo-restore2-743646c9df9a-51430066e375.zip",
-      "filename": "karo-restore2-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/restore2/51430066e375/karo-restore2-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/restore2/e3c0caf3db54/karo-restore2-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-restore2-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/restore2/e3c0caf3db54/karo-restore2-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
       "expectedBytes": 958820,
-      "expectedSha256": "50c7d657307a7a0ed719d85787de09f0fdb7f3c06acab7ed3f72b621c33a5051",
+      "expectedSha256": "e52990c19775cffbc443299d86d8451ba6f7009137b73a0487cf7aedad456f18",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-ps5-UMTX-51430066e375",
+      "id": "karo-ready-ps5-UMTX-e3c0caf3db54",
       "title": "KARO ps5-UMTX ready web-host build",
       "project": "KARO ps5-UMTX",
       "platform": "PS5",
@@ -57149,22 +57244,22 @@
         "KARO",
         "ps5"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-UMTX/51430066e375/karo-ps5-UMTX-743646c9df9a-51430066e375.zip",
-      "filename": "karo-ps5-UMTX-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-UMTX/51430066e375/karo-ps5-UMTX-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-UMTX/e3c0caf3db54/karo-ps5-UMTX-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-ps5-UMTX-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-UMTX/e3c0caf3db54/karo-ps5-UMTX-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 40753809,
-      "expectedSha256": "471c97e6ff78cfe22294809d785e425d486a5113cc99f4ce07ee41086e5c7054",
+      "expectedBytes": 53943498,
+      "expectedSha256": "68decc6eac330711016b4886d7fdbc16b0731fd0bba3920e3f8add3271de111a",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-ps5-P2JB-51430066e375",
+      "id": "karo-ready-ps5-P2JB-e3c0caf3db54",
       "title": "KARO ps5-P2JB ready web-host build",
       "project": "KARO ps5-P2JB",
       "platform": "PS5",
@@ -57173,22 +57268,22 @@
         "KARO",
         "ps5"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-P2JB/51430066e375/karo-ps5-P2JB-743646c9df9a-51430066e375.zip",
-      "filename": "karo-ps5-P2JB-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-P2JB/51430066e375/karo-ps5-P2JB-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-P2JB/e3c0caf3db54/karo-ps5-P2JB-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-ps5-P2JB-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-P2JB/e3c0caf3db54/karo-ps5-P2JB-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 20262535,
-      "expectedSha256": "77688fc835ac1e078fa68facc109244da46d4ffe00c81db627cc7210cee3ae73",
+      "expectedBytes": 20262532,
+      "expectedSha256": "e769b11ee17d4b2de380f432d4e0c14987e7a4102782ccca30f4432ba47ce89c",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-ps5-poopspl-51430066e375",
+      "id": "karo-ready-ps5-poopspl-e3c0caf3db54",
       "title": "KARO ps5-poopspl ready web-host build",
       "project": "KARO ps5-poopspl",
       "platform": "PS5",
@@ -57197,22 +57292,22 @@
         "KARO",
         "ps5"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-poopspl/51430066e375/karo-ps5-poopspl-743646c9df9a-51430066e375.zip",
-      "filename": "karo-ps5-poopspl-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-poopspl/51430066e375/karo-ps5-poopspl-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-poopspl/e3c0caf3db54/karo-ps5-poopspl-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-ps5-poopspl-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-poopspl/e3c0caf3db54/karo-ps5-poopspl-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 25845327,
-      "expectedSha256": "5e6ff9c2676a0a5bad3659804b2620caaba18fe03964d8008bd0d7dc9a39ff47",
+      "expectedBytes": 25845331,
+      "expectedSha256": "4bd13f06b2e6d7c321fc8bfdcb16b8d27f785e24b891ce16760093843eb77495",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-ps5-relapse-51430066e375",
+      "id": "karo-ready-ps5-relapse-e3c0caf3db54",
       "title": "KARO ps5-relapse ready web-host build",
       "project": "KARO ps5-relapse",
       "platform": "PS5",
@@ -57221,22 +57316,22 @@
         "KARO",
         "ps5"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-relapse/51430066e375/karo-ps5-relapse-743646c9df9a-51430066e375.zip",
-      "filename": "karo-ps5-relapse-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-relapse/51430066e375/karo-ps5-relapse-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-relapse/e3c0caf3db54/karo-ps5-relapse-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-ps5-relapse-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-relapse/e3c0caf3db54/karo-ps5-relapse-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 41141834,
-      "expectedSha256": "f782b01ac82f03e9edd6518905337d116614933d5ee521f18af3b4e4d3c451e2",
+      "expectedBytes": 41141835,
+      "expectedSha256": "a334edea2d5f44cd28ef39d2ee1dbfcc8ea6691bb2c128708d23a8e8c312217c",
       "pages": [
         "hosts/karo/index.html"
       ]
     },
     {
-      "id": "karo-ready-ps5-pr-51430066e375",
+      "id": "karo-ready-ps5-pr-e3c0caf3db54",
       "title": "KARO ps5-pr ready web-host build",
       "project": "KARO ps5-pr",
       "platform": "PS5",
@@ -57245,16 +57340,16 @@
         "KARO",
         "ps5"
       ],
-      "version": "743646c9df9a+51430066e375",
-      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-pr/51430066e375/karo-ps5-pr-743646c9df9a-51430066e375.zip",
-      "filename": "karo-ps5-pr-743646c9df9a-51430066e375.zip",
-      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-pr/51430066e375/karo-ps5-pr-743646c9df9a-51430066e375.zip",
+      "version": "743646c9df9a+e3c0caf3db54",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-pr/e3c0caf3db54/karo-ps5-pr-743646c9df9a-e3c0caf3db54.zip",
+      "filename": "karo-ps5-pr-743646c9df9a-e3c0caf3db54.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-pr/e3c0caf3db54/karo-ps5-pr-743646c9df9a-e3c0caf3db54.zip",
       "mirror": false,
       "archiveRole": [
         "Builds"
       ],
-      "expectedBytes": 48154325,
-      "expectedSha256": "32fbbb29108791480cd865cfe61ee8a0e4242a5a760b4d4e7b6fbbb7f20b04df",
+      "expectedBytes": 56180300,
+      "expectedSha256": "010e41a01b4142acda8b7b0847d99b95f97e67537c89279d66f3d7a1a36e2fff",
       "pages": [
         "hosts/karo/index.html"
       ]
@@ -59631,6 +59726,798 @@
       ],
       "expectedBytes": 48154229,
       "expectedSha256": "bb7d98e89f2f9f686214d53cf1e91b3d2c2728105c66885c47da143eb5c9570e",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-505-51430066e375",
+      "title": "KARO 505 ready web-host build",
+      "project": "KARO 505",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "505"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/505/51430066e375/karo-505-743646c9df9a-51430066e375.zip",
+      "filename": "karo-505-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/505/51430066e375/karo-505-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 17247734,
+      "expectedSha256": "d4cfc2b4511856dec6e61cb5572dea88ad76f777dd66b00493f635eea7361c61",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-505Gold-51430066e375",
+      "title": "KARO 505Gold ready web-host build",
+      "project": "KARO 505Gold",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "505Gold"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/505Gold/51430066e375/karo-505Gold-743646c9df9a-51430066e375.zip",
+      "filename": "karo-505Gold-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/505Gold/51430066e375/karo-505Gold-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 5141457,
+      "expectedSha256": "d29dc2fcfeaecf4f84228fae09f0030dc215a2f63626ccf4d55a80c808c0db4f",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-672-51430066e375",
+      "title": "KARO 672 ready web-host build",
+      "project": "KARO 672",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "672"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672/51430066e375/karo-672-743646c9df9a-51430066e375.zip",
+      "filename": "karo-672-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/672/51430066e375/karo-672-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 13050699,
+      "expectedSha256": "c2527cb4bcd0f92fe118d2121925a468fd0f5fff2991499a4b4ac87f8f1a4b74",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-672A-51430066e375",
+      "title": "KARO 672A ready web-host build",
+      "project": "KARO 672A",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "672A"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672A/51430066e375/karo-672A-743646c9df9a-51430066e375.zip",
+      "filename": "karo-672A-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/672A/51430066e375/karo-672A-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 12806701,
+      "expectedSha256": "2525a14c7b43edb90b4df1720d9a0ddcd4b8498f424d3b30d350910d512b7c79",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-672L-51430066e375",
+      "title": "KARO 672L ready web-host build",
+      "project": "KARO 672L",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "672L"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/672L/51430066e375/karo-672L-743646c9df9a-51430066e375.zip",
+      "filename": "karo-672L-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/672L/51430066e375/karo-672L-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 3048481,
+      "expectedSha256": "8ff67016d3b0cafada10f5a1761c5b6c690a9a291a55e6bb12d3353d1a82bf1e",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-702-51430066e375",
+      "title": "KARO 702 ready web-host build",
+      "project": "KARO 702",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "702"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/702/51430066e375/karo-702-743646c9df9a-51430066e375.zip",
+      "filename": "karo-702-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/702/51430066e375/karo-702-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 3251848,
+      "expectedSha256": "9a75986fe5f50c19bb189a95c5e880255959f1181261b8273bdf75a8fb57ba4d",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-702L-51430066e375",
+      "title": "KARO 702L ready web-host build",
+      "project": "KARO 702L",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "702L"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/702L/51430066e375/karo-702L-743646c9df9a-51430066e375.zip",
+      "filename": "karo-702L-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/702L/51430066e375/karo-702L-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 869101,
+      "expectedSha256": "ac066c4f7395293437340295ade18633e3043d352e0a76122129f6aeac2e5e8e",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-755-51430066e375",
+      "title": "KARO 755 ready web-host build",
+      "project": "KARO 755",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "755"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/755/51430066e375/karo-755-743646c9df9a-51430066e375.zip",
+      "filename": "karo-755-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/755/51430066e375/karo-755-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 7457712,
+      "expectedSha256": "2a1ca2c7d996df44126d72159204470050e309b0993cdefdf327f54f96f3fead",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-755L-51430066e375",
+      "title": "KARO 755L ready web-host build",
+      "project": "KARO 755L",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "755L"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/755L/51430066e375/karo-755L-743646c9df9a-51430066e375.zip",
+      "filename": "karo-755L-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/755L/51430066e375/karo-755L-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 2901620,
+      "expectedSha256": "a585fa0c7bae5d9d02f7b4b52ecf6c82b57657f921559ad081fdda090cde3f9e",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-900C-51430066e375",
+      "title": "KARO 900C ready web-host build",
+      "project": "KARO 900C",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "900C"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900C/51430066e375/karo-900C-743646c9df9a-51430066e375.zip",
+      "filename": "karo-900C-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900C/51430066e375/karo-900C-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 9223959,
+      "expectedSha256": "e8d45a4a2199615d44fbe42d24e8f86725309aebc9f85043daebf5953748c5ec",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-900CM-51430066e375",
+      "title": "KARO 900CM ready web-host build",
+      "project": "KARO 900CM",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "900CM"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900CM/51430066e375/karo-900CM-743646c9df9a-51430066e375.zip",
+      "filename": "karo-900CM-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900CM/51430066e375/karo-900CM-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 9224784,
+      "expectedSha256": "84f09e5ca9ca40ef1623f899e62bf1753c84cbd4d181afe880b262902467ec47",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-900L-51430066e375",
+      "title": "KARO 900L ready web-host build",
+      "project": "KARO 900L",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "900L"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900L/51430066e375/karo-900L-743646c9df9a-51430066e375.zip",
+      "filename": "karo-900L-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900L/51430066e375/karo-900L-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 1520869,
+      "expectedSha256": "80960d49517fa7ea6c0a78e15d9969c7b402594a29672895ae89d47cf4c3b1bd",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-900N-51430066e375",
+      "title": "KARO 900N ready web-host build",
+      "project": "KARO 900N",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "900N"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900N/51430066e375/karo-900N-743646c9df9a-51430066e375.zip",
+      "filename": "karo-900N-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900N/51430066e375/karo-900N-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 5368987,
+      "expectedSha256": "a7852ff26efc8f29d6c5170aff0acf5d870a164eb156304d3d097d16f92ded23",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-900NA-51430066e375",
+      "title": "KARO 900NA ready web-host build",
+      "project": "KARO 900NA",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "900NA"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900NA/51430066e375/karo-900NA-743646c9df9a-51430066e375.zip",
+      "filename": "karo-900NA-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900NA/51430066e375/karo-900NA-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 5376499,
+      "expectedSha256": "88f11d00a3496e8d50c371ba34739cc89355916cec54795733caf10785b226b3",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-900NM-51430066e375",
+      "title": "KARO 900NM ready web-host build",
+      "project": "KARO 900NM",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "900NM"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900NM/51430066e375/karo-900NM-743646c9df9a-51430066e375.zip",
+      "filename": "karo-900NM-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900NM/51430066e375/karo-900NM-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 9721245,
+      "expectedSha256": "4de00221bbe6c9f658bd42e49194f09105b182ee343c13b306df894375b72666",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-900New-51430066e375",
+      "title": "KARO 900New ready web-host build",
+      "project": "KARO 900New",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "900New"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/900New/51430066e375/karo-900New-743646c9df9a-51430066e375.zip",
+      "filename": "karo-900New-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/900New/51430066e375/karo-900New-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 9727757,
+      "expectedSha256": "a086f1d44cefb631ccf823b0cae94d107dc3bf8b17a7fc2579a4750eca308179",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-G702-51430066e375",
+      "title": "KARO G702 ready web-host build",
+      "project": "KARO G702",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "G702"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G702/51430066e375/karo-G702-743646c9df9a-51430066e375.zip",
+      "filename": "karo-G702-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/G702/51430066e375/karo-G702-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 297310,
+      "expectedSha256": "a8ba5c227fffacdad04de8d0b0bd10e0e79a2201c8eeb222edfbb7475f42a5d2",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-G755-51430066e375",
+      "title": "KARO G755 ready web-host build",
+      "project": "KARO G755",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "G755"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G755/51430066e375/karo-G755-743646c9df9a-51430066e375.zip",
+      "filename": "karo-G755-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/G755/51430066e375/karo-G755-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 739380,
+      "expectedSha256": "55d0f7d90ac0bdd0b8735fc7991ac8ebff5ca93a4c00b64564690c568721b9ad",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-G900-51430066e375",
+      "title": "KARO G900 ready web-host build",
+      "project": "KARO G900",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "G900"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/G900/51430066e375/karo-G900-743646c9df9a-51430066e375.zip",
+      "filename": "karo-G900-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/G900/51430066e375/karo-G900-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 536502,
+      "expectedSha256": "30005a84189cab56b0d43a738b8432fbb9dfb7dc36576b955a05d6b689847b2a",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-Goldhen505-51430066e375",
+      "title": "KARO Goldhen505 ready web-host build",
+      "project": "KARO Goldhen505",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "Goldhen505"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/Goldhen505/51430066e375/karo-Goldhen505-743646c9df9a-51430066e375.zip",
+      "filename": "karo-Goldhen505-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/Goldhen505/51430066e375/karo-Goldhen505-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 1462110,
+      "expectedSha256": "efb9ad6ecddf14a8ce76fbe1187b31ac7542336d913927343cc46bd7432e4c6d",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-Goldhen672-51430066e375",
+      "title": "KARO Goldhen672 ready web-host build",
+      "project": "KARO Goldhen672",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "Goldhen672"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/Goldhen672/51430066e375/karo-Goldhen672-743646c9df9a-51430066e375.zip",
+      "filename": "karo-Goldhen672-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/Goldhen672/51430066e375/karo-Goldhen672-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 1530868,
+      "expectedSha256": "45dde84796e2f04147d3a41dda43876dcb40b8fe7e4f9905eed457da1b240426",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-binloader-51430066e375",
+      "title": "KARO binloader ready web-host build",
+      "project": "KARO binloader",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "binloader"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/binloader/51430066e375/karo-binloader-743646c9df9a-51430066e375.zip",
+      "filename": "karo-binloader-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/binloader/51430066e375/karo-binloader-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 1694236,
+      "expectedSha256": "c3410d76fbc2fd78a0d845ac7317a32c42ae93bd32cae412165110259b0d6491",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-g2all-51430066e375",
+      "title": "KARO g2all ready web-host build",
+      "project": "KARO g2all",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "g2all"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2all/51430066e375/karo-g2all-743646c9df9a-51430066e375.zip",
+      "filename": "karo-g2all-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/g2all/51430066e375/karo-g2all-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 644254,
+      "expectedSha256": "9d0ae0809edfe923085a13db2756596297d43065f45b3f5a833d0b9ca609b740",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-g2allpro-51430066e375",
+      "title": "KARO g2allpro ready web-host build",
+      "project": "KARO g2allpro",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "g2allpro"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2allpro/51430066e375/karo-g2allpro-743646c9df9a-51430066e375.zip",
+      "filename": "karo-g2allpro-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/g2allpro/51430066e375/karo-g2allpro-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 1187972,
+      "expectedSha256": "17443c6c197c45ff136f06762283984f616ba2f0ef7832ec4ce6effa31cbddfe",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-g2allproold-51430066e375",
+      "title": "KARO g2allproold ready web-host build",
+      "project": "KARO g2allproold",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "g2allproold"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/g2allproold/51430066e375/karo-g2allproold-743646c9df9a-51430066e375.zip",
+      "filename": "karo-g2allproold-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/g2allproold/51430066e375/karo-g2allproold-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 350825,
+      "expectedSha256": "cf7d9cd9344d0886fe13853b9cbd372998aaa30842554cdc7d494557e6cbeee5",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-nobd-51430066e375",
+      "title": "KARO nobd ready web-host build",
+      "project": "KARO nobd",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "nobd"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/nobd/51430066e375/karo-nobd-743646c9df9a-51430066e375.zip",
+      "filename": "karo-nobd-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/nobd/51430066e375/karo-nobd-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 1647467,
+      "expectedSha256": "6b0e7ecf131827cd5aada6e090d7f55d3487f37dfe6cf2b209332a8aa1e7b9a1",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-restore-51430066e375",
+      "title": "KARO restore ready web-host build",
+      "project": "KARO restore",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "restore"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/restore/51430066e375/karo-restore-743646c9df9a-51430066e375.zip",
+      "filename": "karo-restore-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/restore/51430066e375/karo-restore-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 3034243,
+      "expectedSha256": "a1c2caebb7e1a56d1deefa04b56ea458661ec966518d2fbec3364c85905fec54",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-restore2-51430066e375",
+      "title": "KARO restore2 ready web-host build",
+      "project": "KARO restore2",
+      "platform": "PS4",
+      "category": [
+        "Hosts",
+        "KARO",
+        "restore2"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/restore2/51430066e375/karo-restore2-743646c9df9a-51430066e375.zip",
+      "filename": "karo-restore2-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/restore2/51430066e375/karo-restore2-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 958820,
+      "expectedSha256": "50c7d657307a7a0ed719d85787de09f0fdb7f3c06acab7ed3f72b621c33a5051",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-ps5-UMTX-51430066e375",
+      "title": "KARO ps5-UMTX ready web-host build",
+      "project": "KARO ps5-UMTX",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "KARO",
+        "ps5"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-UMTX/51430066e375/karo-ps5-UMTX-743646c9df9a-51430066e375.zip",
+      "filename": "karo-ps5-UMTX-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-UMTX/51430066e375/karo-ps5-UMTX-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 40753809,
+      "expectedSha256": "471c97e6ff78cfe22294809d785e425d486a5113cc99f4ce07ee41086e5c7054",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-ps5-P2JB-51430066e375",
+      "title": "KARO ps5-P2JB ready web-host build",
+      "project": "KARO ps5-P2JB",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "KARO",
+        "ps5"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-P2JB/51430066e375/karo-ps5-P2JB-743646c9df9a-51430066e375.zip",
+      "filename": "karo-ps5-P2JB-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-P2JB/51430066e375/karo-ps5-P2JB-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 20262535,
+      "expectedSha256": "77688fc835ac1e078fa68facc109244da46d4ffe00c81db627cc7210cee3ae73",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-ps5-poopspl-51430066e375",
+      "title": "KARO ps5-poopspl ready web-host build",
+      "project": "KARO ps5-poopspl",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "KARO",
+        "ps5"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-poopspl/51430066e375/karo-ps5-poopspl-743646c9df9a-51430066e375.zip",
+      "filename": "karo-ps5-poopspl-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-poopspl/51430066e375/karo-ps5-poopspl-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 25845327,
+      "expectedSha256": "5e6ff9c2676a0a5bad3659804b2620caaba18fe03964d8008bd0d7dc9a39ff47",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-ps5-relapse-51430066e375",
+      "title": "KARO ps5-relapse ready web-host build",
+      "project": "KARO ps5-relapse",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "KARO",
+        "ps5"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-relapse/51430066e375/karo-ps5-relapse-743646c9df9a-51430066e375.zip",
+      "filename": "karo-ps5-relapse-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-relapse/51430066e375/karo-ps5-relapse-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 41141834,
+      "expectedSha256": "f782b01ac82f03e9edd6518905337d116614933d5ee521f18af3b4e4d3c451e2",
+      "pages": [
+        "hosts/karo/index.html"
+      ]
+    },
+    {
+      "id": "karo-ready-ps5-pr-51430066e375",
+      "title": "KARO ps5-pr ready web-host build",
+      "project": "KARO ps5-pr",
+      "platform": "PS5",
+      "category": [
+        "Hosts",
+        "KARO",
+        "ps5"
+      ],
+      "version": "743646c9df9a+51430066e375",
+      "url": "https://whatwhatboy.com/downloads/hosts/karo/743646c9df9a/ps5-pr/51430066e375/karo-ps5-pr-743646c9df9a-51430066e375.zip",
+      "filename": "karo-ps5-pr-743646c9df9a-51430066e375.zip",
+      "importPath": "downloads/hosts/karo/743646c9df9a/ps5-pr/51430066e375/karo-ps5-pr-743646c9df9a-51430066e375.zip",
+      "mirror": false,
+      "archiveRole": [
+        "Builds"
+      ],
+      "expectedBytes": 48154325,
+      "expectedSha256": "32fbbb29108791480cd865cfe61ee8a0e4242a5a760b4d4e7b6fbbb7f20b04df",
       "pages": [
         "hosts/karo/index.html"
       ]

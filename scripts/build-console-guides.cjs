@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const esc = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
-const template = fs.readFileSync(path.join(root, 'console/index.html'), 'utf8');
+const template = fs.readFileSync(path.join(root, fs.existsSync(path.join(root,'console/index.html'))?'console/index.html':'scripts/templates/host-page.html'), 'utf8');
 const sidebar = require('./sidebar-icons.cjs').decorateNavLinks(template.slice(template.indexOf('    <!-- Sidebar Navigation -->'), template.indexOf('    <!-- Main Content -->')).replace(/((?:href|src)=")([^"]*)"/g, (all, prefix, value) => {
   if (/^(?:https?:|mailto:|#)/.test(value)) return all;
   const resolved = new URL(value, 'https://whatwhatboy.com/console/index.html');

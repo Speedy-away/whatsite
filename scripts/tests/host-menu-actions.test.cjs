@@ -50,7 +50,7 @@ test('generated chooser has separate categories and button choices instead of a 
   for(const platform of ['ps4','ps5']) {
     const html=fs.readFileSync(path.join(root,'hosts',platform,'index.html'),'utf8');
     assert.ok(!html.includes('data-host-category="all"'));
-    assert.ok(html.includes('"fileListView":true'));
+    assert.ok(html.includes('"catalogGrid":true'));
     assert.ok(html.includes('?view=mods'));
     assert.ok(html.includes('id="host-version-choices"'));
     assert.ok(!html.includes('id="host-version-select"'));

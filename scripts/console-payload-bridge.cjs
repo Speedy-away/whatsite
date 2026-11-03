@@ -327,7 +327,7 @@ function staticPath(requestURL) {
   if (value === '/') value = '/hosts/';
   if (value.endsWith('/') && value.startsWith('/hosts/')) value += 'index.html';
   const allowed = /^\/hosts\/(?:ps[45]\/(?:(?:payload-manager|files|gta5|rdr2|other-games|cheats|lua|packages)\/)?)?index\.html$/.test(value) ||
-    /^\/hosts\/tools\/(?:ps4-trainer|esp-flasher)\/(?:[a-z0-9_ .()+@/-]+\.(?:html|json|js|txt|md))$/i.test(value) ||
+    /^\/hosts\/tools\/(?:ps4-trainer|esp-flasher)\/(?:[a-z0-9_ .()+@/-]+\.(?:html|json|js|txt|md|svg))$/i.test(value) ||
     /^\/assets\/(?:images\/.+\.(?:png|jpe?g|svg|webp)|[a-z0-9._-]+\.(?:css|js))$/i.test(value) ||
     /^\/languages\/(?:i18n|[a-z-]+)\.js$/i.test(value) ||
     /^\/downloads\/helpers\/host-native-workspace\/(ps[45])\/[a-f0-9]{16}\/whatsite-workspace-\1\.html$/.test(value) ||

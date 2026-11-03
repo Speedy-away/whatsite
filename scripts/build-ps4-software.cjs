@@ -57,6 +57,12 @@ function buildPs4Software() {
     nav,
     require('./console-store-cards.cjs').storeIntro('ps4') + intro('ps4') + require('./console-store-cards.cjs').storeCards('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
       resource(
+        'trophy_unlockers',
+        'PS4 trophy unlocker collection with game-specific packages, a guide and separate Windows desktop tools. Match each package to its game title ID and region.',
+        ext('https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers', 'Open trophy_unlockers'),
+        ps4Image
+      ).replace('<article ', '<article id="trophy-unlockers" '),
+      resource(
         'Apollo Save Tool · PS4',
         'Manage, export, import, patch and resign PS4 saves directly on your homebrew-enabled console.',
         '<a href="/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg" data-original-href="https://github.com/bucanero/apollo-ps4/releases" download>Download for PS4 <i class="fas fa-download" aria-hidden="true"></i></a>' + ext('https://github.com/bucanero/apollo-ps4', 'Project & setup'),

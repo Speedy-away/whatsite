@@ -8,7 +8,7 @@
  document.querySelectorAll('.host-file-tabs a').forEach(function(link){if(new URL(link.href).searchParams.get('view')===selected)link.setAttribute('aria-current','page');});
  var firmwareControl=document.querySelector('.host-firmware-control');
  if(firmwareControl)document.getElementById('host-file-firmware').appendChild(firmwareControl);
- if(firmwareControl)firmwareControl.hidden=selected!=='loaders'&&selected!=='connection';
+ if(firmwareControl)firmwareControl.hidden=selected==='sender';
  var fileToolbar=document.getElementById('host-file-firmware');
  ['.host-search','#host-game-filter'].forEach(function(selector){var item=document.querySelector(selector);if(item)fileToolbar.appendChild(item);});
  var search=document.querySelector('.host-search');if(search)search.hidden=selected==='connection'||selected==='sender';
@@ -22,7 +22,7 @@
  if(selected){
   var button=document.querySelector('[data-host-category="'+selected+'"]');
   var title=document.getElementById('host-folder-title');
-    title.textContent=selected==='loaders'?document.querySelector('#host-firmware option').textContent:button?button.textContent:labels[selected];
+    title.textContent=selected==='loaders'?labels.loaders:button?button.textContent:labels[selected];
   document.getElementById('host-folder-path').textContent=' / '+title.textContent;
   var back=document.querySelector('.host-taskbar a');back.href=selected==='loaders'?'/hosts/':base;
   if(button)button.click();

@@ -855,4 +855,5 @@ for(const key of ['{name} · {platform} mods','Other games · {platform} mods','
 Object.assign(table, require('./host-reset-translations.cjs'));
 Object.assign(table, require('./host-tool-translations.cjs'));
 Object.assign(table, require('./host-trainer-errors-translations.cjs'));
+Object.assign(table, require('./host-trainer-gallery-translations.cjs'));
 module.exports = table;

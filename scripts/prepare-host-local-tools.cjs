@@ -34,6 +34,9 @@ async function fetchSources(){
   return{trainer:{files:records.length,games:games.length,unavailable,repairs},esp:{files:espRecords.length}};
 }
 function packageTools(){
+  const trainerEntry=fs.readFileSync(path.join(root,'hosts/tools/ps4-trainer/index.html'),'utf8');
+  if(!trainerEntry.includes('id="host-trainer"'))throw Error('This checkout redirects hosts to WWB-HOST. Build local tool packages in the independent host repository, preserving the main-site redirect.');
+  require('./build-host-trainer-art.cjs').build();
   const previous=fs.existsSync(path.join(root,'docs/host-local-tools-build.json'))?JSON.parse(fs.readFileSync(path.join(root,'docs/host-local-tools-build.json'))):null,artifacts=[],jobs=[];
   for(const scope of ['ps4-trainer','esp-flasher']){
     const base='hosts/tools/'+scope,files=new Map();
@@ -44,11 +47,12 @@ function packageTools(){
     if(after!==before)fs.writeFileSync(entryPath,after);
     function walk(relative){for(const item of fs.readdirSync(path.join(root,relative),{withFileTypes:true})){if(item.name==='downloads.json')continue;const name=relative+'/'+item.name;if(item.isDirectory())walk(name);else files.set(name,fs.readFileSync(path.join(root,name)));}}
     walk(base);for(const asset of ['assets/host-trainer.css','assets/host-webhost.css','assets/site-ads.css','assets/site-ads.js','assets/site-background.css','assets/site-background.js',...(scope==='ps4-trainer'?['assets/host-trainer.js']:['assets/host-esp-flasher.js'])])files.set(asset,fs.readFileSync(path.join(root,asset)));
+    if(scope==='ps4-trainer')for(const record of Object.values(JSON.parse(fs.readFileSync(path.join(root,base,'tile-art.json'),'utf8')).covers)){const asset=record.image.replace(/^\//,'');files.set(asset,fs.readFileSync(path.join(root,asset)));}
     for(const name of fs.readdirSync(path.join(root,'languages')).filter(name=>/^(?:i18n|[a-z-]+)\.js$/.test(name)))files.set('languages/'+name,fs.readFileSync(path.join(root,'languages',name))); 
     files.set('README.md',Buffer.from('# '+scope+' web tool\n\nServe this folder as the web root using a static HTTP server, then open /'+base+'/. HTTPS or localhost is required for Web Serial. Do not open index.html through file://. No application contacts a console or serial device merely by opening. Trainer requires a compatible already-running WebRTE on PS4 HTTP771 and the exact game/title/update. All firmware-dependent services are separate. Flasher requires your own compatible ESP hardware and user-selected BINs/offsets. Original licenses and hash manifests are included. The existing site advertising provider requires Internet; ads are optional to the local tool operation and cannot make a hardware or console request by themselves.\n'));
     const manifest=[...files].map(([name,b])=>({name,bytes:b.length,sha256:sha(b)})).sort((a,b)=>a.name.localeCompare(b.name)),snapshot=sha(Buffer.from(JSON.stringify(manifest))),bytes=zip(files,{prefix:'whatwhatboy-local-tools/'}),hash=sha(bytes),filename=scope+'-'+snapshot.slice(0,16)+'.zip',relative='downloads/helpers/host-local-tools/'+scope+'/'+filename;
     preserve(relative,bytes);const version='2026.11.03.1+'+snapshot.slice(0,16),platform=scope==='ps4-trainer'?'PS4':'PC';
-    const job={id:'whatsite-'+scope+'-'+snapshot.slice(0,16),title:'whatwhatboy '+(scope==='ps4-trainer'?'PS4 local WebRTE trainer':'local ESP Web Flasher'),platform,category:'Tools',project:'whatsite Local Host Tools',version,release:version,filename,url:'https://whatwhatboy.com/'+relative,importPath:relative,kind:'generated',archiveRole:['Helpers'],mirror:false,pages:[base+'/index.html'],expectedBytes:bytes.length,expectedSha256:hash};
+    const job={id:'whatsite-'+scope+'-'+snapshot.slice(0,16),title:'whatwhatboy '+(scope==='ps4-trainer'?'PS4 local WebRTE trainer':'local ESP Web Flasher'),platform,category:'Tools',project:'whatsite Local Host Tools',version,release:version,filename,url:(fs.existsSync(path.join(root,'docs/migration/status.json'))?'https://raw.githubusercontent.com/Speedy-away/WWB-HOST/main/':'https://whatwhatboy.com/')+relative,importPath:relative,kind:'generated',archiveRole:['Helpers'],mirror:false,pages:[base+'/index.html'],expectedBytes:bytes.length,expectedSha256:hash};
     const artifact={scope,version,local:'/'+relative,bytes:bytes.length,sha256:hash,files:files.size,manifest,expectedArchivePath:destinationForFile('F:/whatsite-backup-downloads-etc',job,{name:filename,version,archiveRole:['Helpers']})};artifacts.push(artifact);jobs.push(job);fs.writeFileSync(path.join(root,base,'downloads.json'),JSON.stringify({version,download:'/'+relative,bytes:bytes.length,sha256:hash},null,2)+'\n');
   }
   const retainedArtifacts=[...(previous?.artifacts||[]),...(previous?.retainedArtifacts||[])].filter((item,index,all)=>!artifacts.some(current=>current.sha256===item.sha256)&&all.findIndex(other=>other.sha256===item.sha256)===index);
@@ -56,6 +60,7 @@ function packageTools(){
   jobs.push(...retainedJobs);
   const report={schemaVersion:1,retainedArtifacts,preparedAt:new Date().toISOString(),status:'Prepared locally; archive import and root integration remain required. No console or hardware execution.',artifacts,jobs};fs.writeFileSync(path.join(root,'docs/host-local-tools-build.json'),JSON.stringify(report,null,2)+'\n');fs.writeFileSync(path.join(root,'docs/host-local-tools-jobs.json'),JSON.stringify({jobs},null,2)+'\n');return report;
 }
-async function main(){if(process.argv.includes('--fetch'))console.log(JSON.stringify(await fetchSources()));if(process.argv.includes('--package'))console.log(JSON.stringify(packageTools().artifacts.map(a=>({scope:a.scope,local:a.local,bytes:a.bytes,sha256:a.sha256}))));}
+function writeTrainerPage(){const entry='hosts/tools/ps4-trainer/index.html',before=fs.readFileSync(path.join(root,entry),'utf8');if(!before.includes('id="host-trainer"'))throw Error('Preserve the main-site redirect; write trainer UI in WWB-HOST.');fs.writeFileSync(path.join(root,entry),fs.readFileSync(path.join(root,'scripts/templates/host-trainer.html')));}
+async function main(){if(process.argv.includes('--trainer-ui'))writeTrainerPage();if(process.argv.includes('--artwork'))console.log(JSON.stringify(require('./build-host-trainer-art.cjs').build()));if(process.argv.includes('--fetch'))console.log(JSON.stringify(await fetchSources()));if(process.argv.includes('--package'))console.log(JSON.stringify(packageTools().artifacts.map(a=>({scope:a.scope,local:a.local,bytes:a.bytes,sha256:a.sha256}))));}
 if(require.main===module)main().catch(e=>{console.error(e);process.exitCode=1;});
-module.exports={TRAINER,ESP,fetchSources,packageTools};
+module.exports={TRAINER,ESP,fetchSources,packageTools,writeTrainerPage};

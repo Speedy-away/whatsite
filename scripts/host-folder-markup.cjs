@@ -11,8 +11,6 @@ function organize(markup,platform){
  const tail='</details>\n  <p class="host-note">Download uses';
  if(!html.includes(tail))throw Error('Sender markup boundary changed');
  html=html.replace(tail,'</details></section>\n  <p class="host-note">Download uses');
- html=html.replace('"gamesLanding":true','"gamesLanding":true,"fileListView":true');
- html=html.replace('<div class="host-action-grid" id="host-action-grid">','<div class="host-file-columns"><span>File</span><span>Format</span><span>File size</span><span>Firmware</span><span>Actions</span></div><div class="host-action-grid" id="host-action-grid">');
  return directory+html+'<div id="host-support-overlay" class="host-support-overlay" role="dialog" aria-modal="true" aria-labelledby="host-support-title" hidden><section><header><h2 id="host-support-title">Requirements</h2><button id="host-support-close" type="button" aria-label="Close">'+icon('close')+'</button></header><h3 id="host-support-filename" translate="no"></h3><p id="host-support-facts" translate="no"></p><div class="host-support-body"><p id="host-support-text"></p></div><div id="host-support-links" class="host-support-links"></div></section></div>';
 }
 function shell(html){
@@ -24,6 +22,6 @@ function shell(html){
  result=result.replace(/<header class="guide-hero">[\s\S]*?<\/header>/,'').replace(/<div class="container"><nav class="guide-nav"[\s\S]*?<\/nav><\/div>/,'');
  result=result.replace(/<link rel="stylesheet" href="https:\/\/fonts.googleapis.com[^>]+>/,'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">');
  result=result.replace('</head>','<link rel="stylesheet" href="/assets/host-file-browser.css?v=1"></head>');
- return result.replace('</body>','<script defer src="/assets/host-folders.js?v=2"></script></body>');
+ return result.replace('</body>','<script defer src="/assets/host-folders.js?v=3"></script></body>');
 }
 module.exports={organize,shell};

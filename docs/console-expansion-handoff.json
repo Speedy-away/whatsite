@@ -8866,6 +8866,89 @@
       "docs/host-reviews/karo/README.md"
     ]
   },
+  "hostRepositoryMigration20261103": {
+    "updatedAt": "2026-11-03T20:20:44.583Z",
+    "status": "Completed and published. Illustrated home, original cache resources, Load/Download URLs and main-site handoff verified.",
+    "repository": "https://github.com/Speedy-away/WWB-HOST",
+    "localRepository": "C:/Users/whatw/Documents/GitHub/WWB-HOST",
+    "pagesURL": "https://speedy-away.github.io/WWB-HOST/",
+    "pagesEnabled": true,
+    "rootHome": "index.html",
+    "copy": "docs/host-repository-migration-copy.json",
+    "copiedFiles": 15914,
+    "copiedBytes": 8813270537,
+    "activeKaroBuild": "e3c0caf3db54",
+    "karo": {
+      "nativeEntries": 71,
+      "onlineOnlyEntries": 3,
+      "verifiedOriginalPayloadRepairs": 3,
+      "unmappedOnionPlaceholder": "Preserved disabled; the real OnionHEN v0.9.0 / kstuff 1.11 build remains correctly labelled.",
+      "quarantinedFiles": "Two optional WebActivator sources remain blocked. Nothing was restored, refetched or bypassed."
+    },
+    "verification": {
+      "newPagesBytes": 842053203,
+      "publicLoadDownloadURLs": 1553,
+      "exactArabicBuilds": 3,
+      "nativeScriptsUnchanged": 848,
+      "originalCacheManifests": 30,
+      "existingCacheResourcesOnSameOrigin": 1491,
+      "cacheIssues": 0,
+      "retainedZIPsHTTP": 165,
+      "projectPublisherFixture": "3 passed",
+      "repairGuardTests": "12 passed",
+      "mainPagesTests": "4 passed",
+      "mainSiteAudit": "479 pages / 56,599 links / zero issues before publication",
+      "browser": "Local browser automation is disabled in Work settings; no workaround or rendered-browser verification was used."
+    },
+    "push": {
+      "status": "completed",
+      "initialBatches": 10,
+      "batchMiB": 512,
+      "initialHead": "ab488849eccc87a3f101d6d7bfda3b2c4d80757f",
+      "homeHead": "0716f70dc70d0b9efebe157f6b3ad34008f65fee",
+      "productionHead": "65ebb2fae24f01b261aece1bfc826cc231431b43",
+      "productionRun": 41710687092,
+      "mainHead": "fe5386a1738bc9d3d40a9c77c81313fb2d9a4d11",
+      "mainRun": 41707006458,
+      "publicationReport": "docs/host-repository-publication.json",
+      "finalVerificationMetadataHead": "a483d4105cfbee5421cbee9e32d5c728647f772a",
+      "finalVerificationMetadataPushed": true
+    },
+    "remaining": [],
+    "hardwareExecutionVerified": false,
+    "published": true,
+    "home": {
+      "file": "C:/Users/whatw/Documents/GitHub/WWB-HOST/index.html",
+      "css": "assets/host-home.css",
+      "images": 6,
+      "features": [
+        "PS4 and PS5 console photography",
+        "KARO feature",
+        "GTA V and RDR2 previews",
+        "Tools and downloads",
+        "165 retained ready ZIP versions"
+      ]
+    },
+    "mainSite": {
+      "published": true,
+      "commit": "fe5386a1738bc9d3d40a9c77c81313fb2d9a4d11",
+      "localBranchAligned": true,
+      "hostNavigation": "https://speedy-away.github.io/WWB-HOST/",
+      "oldHostLandings": "Preserve the requested host path, query and fragment when forwarding to the new project site.",
+      "workingChanges": "Unrelated working edits and staged work were preserved."
+    },
+    "archive": {
+      "fileRecords": 5988,
+      "missingFileRecords": 0,
+      "verifiedRepositoryPackages": 165,
+      "repositoryRevision": "4639d34aedb8aa2c50221d1bababab4ac4433d90",
+      "report": "docs/host-reviews/karo/archive-index-after-repository-move.txt",
+      "urlMigrationReport": "docs/host-reviews/karo/archive-repository-migration.json",
+      "preservation": "Every older version, file and former source URL is retained. Sources, builds and helpers remain separated."
+    },
+    "lateSharedHostWork": "In-progress main-work copies remain in WWB-HOST/docs/migration/retained-in-progress-main-work. Active trainer/gallery/catalogue edits in WWB-HOST were left untouched.",
+    "maintenance": "Future host development belongs in WWB-HOST. Preserve its sender-release publishing support when changing the Pages publisher; do not copy historical whatsite helpers over concurrent target changes."
+  },
   "sourceLinkCleanup20261103": {
     "date": "2026-11-03",
     "request": "Clean up large games, apps and homebrew: save ready copies locally and publish original GitHub/publisher links. Keep game mods mirrored.",
@@ -8941,6 +9024,58 @@
     "preservation": "All working/F: files, older versions, original Git history and legacy helper dependencies retained.",
     "status": "Validated completed cleanup; ready to push"
   },
+  "ps4TrophyUnlockers": {
+    "date": "2026-11-03",
+    "request": "Add trophy_unlockers to PS4 Apps linking to the supplied MediaFire folder; download all files locally in a trophy_unlockers folder.",
+    "source": "https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers",
+    "page": "console/ps4/apps.html",
+    "files": 2497,
+    "bytes": 39757179998,
+    "downloadScript": "scripts/download-trophy-unlockers.cjs",
+    "progress": "docs/qa/trophy-unlockers-progress.json",
+    "listing": "docs/qa/trophy-unlockers-listing.json",
+    "status": "Source-link card added and site audit passed. Full local archive running; resume with node scripts/download-trophy-unlockers.cjs, then refresh-local-download-index.cjs --write.",
+    "archiveLayout": "F:/whatsite-backup-downloads-etc/files/PS4/Apps/trophy_unlockers; console Builds, Windows Helpers and guide Metadata separated. Size and SHA-256 verified; no downloaded payload executed.",
+    "published": false
+  },
+  "hostGallery20261103": {
+    "status": "Complete locally in WWB-HOST; primary host galleries, button firmware selection and trainer popup. Publishing is managed by the separate migration chat.",
+    "report": "docs/host-gallery-update.json",
+    "preview": "http://127.0.0.1:61823/WWB-HOST/hosts/ps4/?view=mods",
+    "tests": {
+      "total": 67,
+      "passed": 67,
+      "failed": 0,
+      "report": "docs/qa/host-gallery-tests.txt"
+    },
+    "senderVersion": "2.1.0+8d8bda70ee88",
+    "sourceChangesNeedPublication": true,
+    "repository": "C:/Users/whatw/Documents/GitHub/WWB-HOST",
+    "mainSiteRedirectsPreserved": true,
+    "browserQA": "Local browser use is disabled in Work settings. No visual/browser QA claimed, no workaround automation used.",
+    "archiveRecords": 5992,
+    "toolArchiveJobs": 16,
+    "regenerateInIndependentRepositoryOnly": true
+  },
+  "ps4GoldhenSuppliedBin": {
+    "date": "2026-11-03",
+    "request": "Use desktop goldhen.bin as the actual GoldHEN download instead of the Ko-fi link.",
+    "file": {
+      "name": "goldhen.bin",
+      "version": "User-supplied snapshot 2026-11-03",
+      "bytes": 297496,
+      "sha256": "39452f5e1c305ac9efcb4745eef7958b4db8c6d85299529f08700970b009ea4d",
+      "local": "/downloads/ps4/goldhen/user-supplied-39452f5e1c30/goldhen.bin",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/goldhen/user-supplied-39452f5e1c30/goldhen.bin",
+      "provenance": "User-supplied desktop goldhen.bin; exact original bytes preserved.",
+      "releasePage": "https://ko-fi.com/s/e694c36022",
+      "compatibility": "File version and firmware support not independently verified."
+    },
+    "page": "console/ps4/goldhen.html",
+    "status": "Primary card now serves exact supplied BIN. Release page retained only in documentation; no unverified file-version or firmware claims. Older GoldHEN archive and ISO retained.",
+    "archive": "Exact supplied BIN saved on F: and rehashed successfully. Scoped inventory complete; final global merge deferred until trophy bulk intake stops changing its sidecar. Trophy completion merges all scoped records and refreshes index.",
+    "published": false
+  },
   "downloadSizeCleanup20261103": {
     "report": "docs/qa/download-size-cleanup.json",
     "status": "Published and live verified",
@@ -8951,5 +9086,80 @@
     "downloadBytesVerified": true,
     "archivePresentRecords": 5994,
     "archiveMissingRecords": 0
+  },
+  "hostHomeImages20261103": {
+    "repository": "C:/Users/whatw/Documents/GitHub/WWB-HOST",
+    "preview": "http://127.0.0.1:57296/WWB-HOST/",
+    "report": "C:/Users/whatw/Documents/GitHub/WWB-HOST/docs/home-image-polish.json",
+    "images": 12,
+    "illustratedToolCards": 4,
+    "allReferencesVerified": true,
+    "publication": false,
+    "browserQA": "Not performed; local browser use disabled in Work settings."
+  },
+  "hostPageTheme20261103": {
+    "checkedAt": "2026-11-03T20:36:35.258Z",
+    "status": "published-and-verified",
+    "commit": "468339255178965af15d2cc484550eb0917a8419",
+    "deployment": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41712758658",
+    "pages": 24,
+    "uniqueHeaderImages": 11,
+    "behaviorTestsPassed": 29,
+    "liveLoadDownloadURLs": 1553,
+    "nativeScriptsUnchanged": 848,
+    "cacheManifestAliases": 7,
+    "retainedBuildVersions": 165,
+    "nativeRuntimeFilesChanged": 0,
+    "downloadFilesChanged": 0,
+    "browserRenderVerified": false,
+    "hardwareExecutionVerified": false,
+    "pagesBuild": {
+      "revision": "468339255178965af15d2cc484550eb0917a8419",
+      "base": "/WWB-HOST",
+      "origin": "https://speedy-away.github.io",
+      "bytes": 842068498,
+      "budget": 922746880,
+      "files": 5568,
+      "offloadedFiles": 274,
+      "nativeScriptsUnchanged": 848,
+      "cacheManifestAliases": 7,
+      "historicalLandings": 804,
+      "activeKaro": "hosts/runtime/karo-743646c9df9a-e3c0caf3db54/"
+    },
+    "repository": "C:/Users/whatw/Documents/GitHub/WWB-HOST",
+    "maintenance": "Future host UI changes belong in WWB-HOST. Shared theme lives in assets/host-pages.css and scripts/style-host-pages.cjs; the publisher reapplies it to regenerated authored pages.",
+    "report": "docs/migration/page-theme-publication.json"
+  },
+  "pendingChangesPublication20261103": {
+    "date": "2026-11-03",
+    "request": "Push the pending changes shown in GitHub Desktop and update the site.",
+    "status": "Validated snapshot ready for commit and push",
+    "scope": "All pending nonignored source, documentation, historical host runtime/download copies, GoldHEN BIN and trophy source listing. Active host development stays in WWB-HOST.",
+    "preservation": "Existing working files, downloads, archive versions and Git history retained. Main-site host redirects preserved, including the 404 fallback.",
+    "hostCopyVerification": {
+      "files": 2605,
+      "byteIdenticalInIndependentRepository": 2605,
+      "missing": 0,
+      "different": 0
+    },
+    "validation": {
+      "siteAudit": "479 pages, 56366 local links/assets, zero issues",
+      "deploymentTests": "14 passed, zero failed",
+      "fullSuite": {
+        "total": 740,
+        "passed": 724,
+        "failed": 16,
+        "report": "docs/qa/pending-publication-full-tests-20261103.txt"
+      },
+      "limitations": "Full suite retains failing expectations around migrated host content, historical source-link delivery, retained sender snapshots and social preview coverage; no hardware or browser execution claimed."
+    },
+    "trophyArchive": {
+      "sourceListingPublished": true,
+      "total": 2497,
+      "downloadedAtReview": 2055,
+      "failedAtReview": 17,
+      "complete": false,
+      "progress": "docs/qa/trophy-unlockers-progress.json"
+    }
   }
 }

@@ -22,7 +22,7 @@ function page(data,{standalone=false}={}){
 }
 function main(){
  const acquisition=read('docs/host-reviews/karo/runtime-acquisition.json'),audit=read('docs/host-reviews/karo/dependency-audit.json');if(audit.commit!==commit)throw Error('Audit the pinned runtime first');
- const repairs=[],onlineOnly=new Set();
+ const repairReport=read('docs/host-reviews/karo/original-payload-repairs.json'),manifestReview=read('docs/host-reviews/karo/original-manifest-repairs.json'),repairs=repairReport.repairs,onlineOnly=new Set(manifestReview.nativeCases.map(x=>x.entry.path));
  const entries=require('./karo-loader-contracts.cjs').entries(),controller=fs.readFileSync(path.join(root,'assets/host-karo-builds.js'),'utf8'),resourceGuard=fs.readFileSync(path.join(root,'assets/host-karo-resource-guard.js'),'utf8'),css=fs.readFileSync(path.join(root,'assets/host-karo-builds.css'));
  for(const e of entries){if(onlineOnly.has(e.path)){e.onlineOnly=true;e.notes.push('Original cache manifest is absent; verified native go() runs independently. Online loading only, no offline claim.');}e.scope ||= e.path.slice(0,e.path.lastIndexOf('/')+1);const result=audit.entries.find(x=>x.entry===e.path),cache=audit.missingReferences.filter(x=>x.from===e.path&&x.kind==='manifest'&&!onlineOnly.has(e.path));if(result?.blockers.length||cache.length)e.blockedReason='Original required dependencies missing: '+[...new Set([...(result?.blockers||[]),...cache].map(x=>x.target))].join(', ');}
  const bad=new Map(audit.invalidPayloads.map(f=>[f.path,(f.issues||[]).map(x=>x.message).join('; ')||'Invalid original file']));for(const f of audit.localUnavailable||[])bad.set(f.path,f.reason||'Locally unavailable original source');

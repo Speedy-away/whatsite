@@ -11,6 +11,8 @@ function rawURL(name, revision = 'main') {
   return 'https://raw.githubusercontent.com/Speedy-away/whatsite/' + revision + '/' + encodePath(name);
 }
 function eligible(name) {
+  // Native host runtimes now belong to the independent WWB-HOST repository.
+  // Main-site /hosts pages are small compatibility redirects only.
   if (name.startsWith('hosts/runtime/')) return false;
   return (/^(?:downloads|hosts\/runtime)\//.test(name) || !name.split('/').some(p => p.startsWith('.'))) &&
     !/^(?:scripts|i18n-tools|design-references)\//.test(name) &&
@@ -24,7 +26,6 @@ function treeFiles(root) {
     const sizes=new Map(data.files.map(file=>{if(!Number.isSafeInteger(file.bytes)||file.bytes<0)throw Error('Invalid repository file size');return [file.name,file.bytes];}));
     return {names:[...sizes.keys()],sizes};
   }
-
   const entries = execFileSync('git', ['ls-tree', '-r', '-l', '-z', 'HEAD'], {cwd:root,maxBuffer:64*1024*1024}).toString().split('\0').filter(Boolean);
   const sizes = new Map(entries.map(entry => {const at=entry.indexOf('\t');return [entry.slice(at+1),Number(entry.slice(0,at).trim().split(/\s+/).at(-1))];}));
   return {names:[...sizes.keys()],sizes};
