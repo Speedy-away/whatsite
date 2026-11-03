@@ -1,0 +1,118 @@
+{
+  "reviewed": "2026-11-03",
+  "scope": "pc-ports-link-repairs",
+  "entries": [
+    {
+      "id": "super-mario-sunshine",
+      "title": "Super Mario Sunshine · SMS Launcher",
+      "repo": "chasem-dev/sms-launcher",
+      "tag": "v0.1.68",
+      "asset": "SMS-Launcher-0.1.68-win-portable.exe",
+      "source": "https://github.com/chasem-dev/sms-launcher",
+      "release": "https://github.com/chasem-dev/sms-launcher/releases/tag/v0.1.68",
+      "download": {
+        "name": "SMS-Launcher-0.1.68-win-portable.exe",
+        "version": "v0.1.68",
+        "bytes": 125151471,
+        "sha256": "8f979e552235e457bc6edaaea0b733fcabe868e42d2a74a093dc5ca3abb50594",
+        "sourceUrl": "https://github.com/chasem-dev/sms-launcher/releases/download/v0.1.68/SMS-Launcher-0.1.68-win-portable.exe",
+        "archiveRole": [
+          "Helpers",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-super-mario-sunshine",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "super-mario-sunshine",
+          "Ports"
+        ],
+        "upstreamSha256": "8f979e552235e457bc6edaaea0b733fcabe868e42d2a74a093dc5ca3abb50594"
+      }
+    },
+    {
+      "id": "serious-sam-next-encounter",
+      "title": "Serious Sam: Next Encounter · original public package",
+      "repo": "takoshero96/Silly-ReEncounter",
+      "tag": "recomp",
+      "asset": "SillyReEncounter-Public.zip",
+      "source": "https://github.com/takoshero96/Silly-ReEncounter",
+      "release": "https://github.com/takoshero96/Silly-ReEncounter/releases/tag/recomp",
+      "download": {
+        "name": "SillyReEncounter-Public.zip",
+        "version": "recomp",
+        "bytes": 4548648,
+        "sha256": "eed4098c1b5f2de75abb935c58f86743ef0087a499710b259cf4955c6688d2d6",
+        "sourceUrl": "https://github.com/takoshero96/Silly-ReEncounter/releases/download/recomp/SillyReEncounter-Public.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-serious-sam-next-encounter",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "serious-sam-next-encounter",
+          "Ports"
+        ],
+        "upstreamSha256": "eed4098c1b5f2de75abb935c58f86743ef0087a499710b259cf4955c6688d2d6"
+      }
+    },
+    {
+      "id": "tom-clancy-s-splinter-cell-double-agent",
+      "title": "Splinter Cell: Double Agent · V3",
+      "repo": "TGP482/SCDA-XBERecomp",
+      "tag": "V3",
+      "asset": "SCDA-XBERecomp.zip",
+      "source": "https://github.com/TGP482/SCDA-XBERecomp",
+      "release": "https://github.com/TGP482/SCDA-XBERecomp/releases/tag/V3",
+      "download": {
+        "name": "SCDA-XBERecomp.zip",
+        "version": "V3",
+        "bytes": 73479363,
+        "sha256": "3f1bb078a2d9857ad0a29ed793c14a79b1fa747ca9420cccc828db591fa8416a",
+        "sourceUrl": "https://github.com/TGP482/SCDA-XBERecomp/releases/download/V3/SCDA-XBERecomp.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-tom-clancy-s-splinter-cell-double-agent",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "tom-clancy-s-splinter-cell-double-agent",
+          "Ports"
+        ],
+        "upstreamSha256": "3f1bb078a2d9857ad0a29ed793c14a79b1fa747ca9420cccc828db591fa8416a"
+      }
+    },
+    {
+      "id": "crackdown",
+      "title": "Crackdown · saulob alternative",
+      "repo": "saulob/crackdown-xbox360-recompiled",
+      "tag": "v0.6.2",
+      "asset": "Crackdown-v0.6.2-windows-x64.zip",
+      "source": "https://github.com/saulob/crackdown-xbox360-recompiled",
+      "release": "https://github.com/saulob/crackdown-xbox360-recompiled/releases/tag/v0.6.2",
+      "download": {
+        "name": "Crackdown-v0.6.2-windows-x64.zip",
+        "version": "v0.6.2",
+        "bytes": 43045324,
+        "sha256": "fa1a6f9a46a3d9ea213a9898b86f11fcc35c855ddf6e42322e81ded15550b421",
+        "sourceUrl": "https://github.com/saulob/crackdown-xbox360-recompiled/releases/download/v0.6.2/Crackdown-v0.6.2-windows-x64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-crackdown",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "crackdown",
+          "Ports"
+        ],
+        "upstreamSha256": "fa1a6f9a46a3d9ea213a9898b86f11fcc35c855ddf6e42322e81ded15550b421"
+      }
+    }
+  ]
+}

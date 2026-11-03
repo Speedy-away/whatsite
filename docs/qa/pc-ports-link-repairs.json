@@ -1,0 +1,16 @@
+{
+  "reviewed": "2026-11-03",
+  "scope": "Repair four Ports downloads and expand tags",
+  "page": "pc/ports.html",
+  "repairs": [
+    {"game": "Super Mario Sunshine", "download": "chasem-dev/sms-launcher v0.1.68 portable Windows launcher", "previous": "TekRantGaming/sms-pc-port remains HTTP 404 and is retained as original-source history", "gamePin": "North America GMSE01 revision 0; owned disc and setup connection required"},
+    {"game": "Serious Sam: Next Encounter", "download": "takoshero96/Silly-ReEncounter recomp tag / SillyReEncounter-Public.zip", "previous": "Requested update tag retained as release notes; original public build is separately labelled", "gamePin": "USA G3BE9G; later update-tag PAL support is not applied to this original package"},
+    {"game": "Splinter Cell: Double Agent", "download": "TGP482/SCDA-XBERecomp V3 / SCDA-XBERecomp.zip", "previous": "Requested V2 remains separately linked; V3 is explicitly labelled", "gamePin": "Original Xbox extracted default.xbe, sc4_adv.xbe, Default/Media/adv folders"},
+    {"game": "Crackdown", "download": "saulob/crackdown-xbox360-recompiled v0.6.2 Windows x64", "previous": "Original SkiddyToast source-build project retained as source history", "gamePin": "Xbox 360 TU0, title ID 4D5307DC, exact Default.xex SHA-256 and 196-file inventory retained"}
+  ],
+  "catalogue": {"projects": 49, "windowsDownloadLinks": 49, "searchableTags": 344, "perEntryKeywords": 392, "searchFeatures": "Genre, franchise, expanded console names, game aliases and Windows download phrases; clickable tags filter the catalogue", "unchanged": "All 45 previous download records and all 49 artwork hashes remain unchanged"},
+  "archive": {"scope": "pc-ports-link-repairs", "files": 4, "bytes": 246224806, "upstreamSHA256Matches": 4, "zipCRCChecks": 3, "executedDownloadedCode": false, "indexRefresh": {"items": 4994, "fileRecords": 8613, "presentFileRecords": 8613, "missingFileRecords": 0}},
+  "validation": {"catalogueTestsPassed": 8, "committedSourceTests": "Pending", "productionArtifact": "Pending", "deployment": "Pending"},
+  "browserRenderingVerified": false,
+  "preservation": "Old sources, requested release notes, compatibility pins and archive versions remain. Shared host and image/layout work is excluded from this change."
+}

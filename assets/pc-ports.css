@@ -21,6 +21,8 @@
 .ports-page .port-body p{font-size:.9rem;line-height:1.65;color:var(--text-secondary);margin:10px 0}
 .ports-page .port-tags{list-style:none;padding:0;margin:16px 0;display:flex;flex-wrap:wrap;gap:6px}
 .ports-page .port-tags li{font-size:.7rem;line-height:1.4;padding:5px 7px;background:var(--bg-tertiary,#202227);border-radius:4px;color:var(--text-secondary);overflow-wrap:anywhere}
+.ports-page .port-tags button{font:inherit;line-height:inherit;color:inherit;background:transparent;border:0;padding:0;text-align:left;cursor:pointer}
+.ports-page .port-tags button:hover{color:var(--accent-primary,#6fe4bb)}
 .ports-page .port-state{font-size:.75rem;color:var(--accent-primary,#6fe4bb);margin-bottom:10px}
 .ports-page .port-state--unavailable{color:#e8ba83}
 .ports-page .port-actions{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:18px 0;font-size:.85rem;font-weight:600}

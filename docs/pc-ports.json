@@ -17,12 +17,18 @@
         "burnout 3 pc burnout3",
         "Burnout 3: Takedown pc port",
         "burnout 3 takedown",
-        "burnout3-pc"
+        "burnout3-pc",
+        "Sony PlayStation 2 PS2",
+        "Burnout Racing"
       ],
       "tags": [
         "Burnout 3: Takedown PC port",
         "PS2",
-        "Recompilation"
+        "Recompilation",
+        "Racing",
+        "Burnout",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/burnout-3-takedown.jpg",
@@ -50,29 +56,50 @@
         ],
         "upstreamSha256": "9a0c8d72040755b8bed19b78505ca000dbc88037ab6d08ecca2f19bdaf5dca68"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Racing",
+      "franchise": "Burnout",
+      "keywords": [
+        "Burnout 3: Takedown PC port download",
+        "Burnout 3: Takedown Windows download",
+        "Burnout 3: Takedown Windows PC",
+        "Burnout PC ports",
+        "Racing games on PC",
+        "console games on PC",
+        "PS2 to PC",
+        "v0.8.0-alpha"
+      ]
     },
     {
       "id": "super-mario-sunshine",
       "requestedTitle": "Super Mario Sunshine",
       "title": "Super Mario Sunshine",
       "platform": "GameCube",
-      "kind": "Recompilation",
-      "source": "https://github.com/TekRantGaming/sms-pc-port",
-      "repository": "https://github.com/TekRantGaming/sms-pc-port",
-      "availability": "unavailable",
-      "requirements": "The supplied repository and release metadata returned HTTP 404 on review. No replacement project or working build is assumed.",
-      "summary": "Requested Super Mario Sunshine project; the supplied repository was unavailable at review.",
+      "kind": "Launcher",
+      "source": "https://github.com/chasem-dev/sms-launcher",
+      "repository": "https://github.com/chasem-dev/sms-launcher",
+      "availability": "release",
+      "requirements": "64-bit Windows and an internet connection for setup. Use your own North American Super Mario Sunshine disc, GMSE01 revision 0, as ISO, NKit ISO, GCM or Dolphin CISO. The launcher prepares the game locally; no disc image is included.",
+      "summary": "SMS Launcher by chasem-dev sets up the native Sunshine port from your own disc image.",
       "aliases": [
         "mario sunshine sms",
         "Super Mario Sunshine pc port",
         "super mario sunshine",
-        "sms-pc-port"
+        "sms-pc-port",
+        "SMS Launcher",
+        "Delfino Plaza",
+        "Nintendo GameCube GCN GC NGC",
+        "sms-launcher",
+        "Super Mario 3D Platformer"
       ],
       "tags": [
         "Super Mario Sunshine PC port",
         "GameCube",
-        "Recompilation"
+        "Launcher",
+        "3D Platformer",
+        "Super Mario",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/super-mario-sunshine.png",
@@ -83,7 +110,47 @@
         "bytes": 57282,
         "sha256": "b973d2881c0a3365813b3f6abc52982aae6a61f7a044f2b31cbbf891a08de9bf"
       },
-      "archiveStatus": "not-published"
+      "archiveStatus": "downloaded",
+      "originalRequirements": "The supplied repository and release metadata returned HTTP 404 on review. No replacement project or working build is assumed.",
+      "originalSource": "https://github.com/TekRantGaming/sms-pc-port",
+      "release": {
+        "tag": "v0.1.68",
+        "url": "https://github.com/chasem-dev/sms-launcher/releases/tag/v0.1.68",
+        "prerelease": false
+      },
+      "download": {
+        "name": "SMS-Launcher-0.1.68-win-portable.exe",
+        "version": "v0.1.68",
+        "bytes": 125151471,
+        "sha256": "8f979e552235e457bc6edaaea0b733fcabe868e42d2a74a093dc5ca3abb50594",
+        "sourceUrl": "https://github.com/chasem-dev/sms-launcher/releases/download/v0.1.68/SMS-Launcher-0.1.68-win-portable.exe",
+        "archiveRole": [
+          "Helpers",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-super-mario-sunshine",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "super-mario-sunshine",
+          "Ports"
+        ],
+        "upstreamSha256": "8f979e552235e457bc6edaaea0b733fcabe868e42d2a74a093dc5ca3abb50594"
+      },
+      "originalLinkStatus": "Former TekRantGaming repository returned HTTP 404",
+      "deliveryNote": "Working alternative: SMS Launcher v0.1.68 portable Windows executable. This replaces the unavailable TekRantGaming link; it is a different project, clearly identified here.",
+      "genre": "3D Platformer",
+      "franchise": "Super Mario",
+      "keywords": [
+        "Super Mario Sunshine PC port download",
+        "Super Mario Sunshine Windows download",
+        "Super Mario Sunshine Windows PC",
+        "Super Mario PC ports",
+        "3D Platformer games on PC",
+        "console games on PC",
+        "GameCube to PC",
+        "v0.1.68"
+      ]
     },
     {
       "id": "ratchet-clank",
@@ -100,12 +167,18 @@
         "ratchet and clank rerac re rac",
         "Ratchet & Clank pc port",
         "ratchet clank",
-        "rerac-launcher"
+        "rerac-launcher",
+        "Sony PlayStation 2 PS2",
+        "Ratchet & Clank Action Platformer"
       ],
       "tags": [
         "Ratchet & Clank PC port",
         "PS2",
-        "Launcher"
+        "Launcher",
+        "Action Platformer",
+        "Ratchet & Clank",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/ratchet-clank.jpg",
@@ -133,7 +206,19 @@
         ],
         "upstreamSha256": "3c10da4f607d305660e31dd1c181241eb4119e3bd690a62f73fa3a2d324f2b74"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action Platformer",
+      "franchise": "Ratchet & Clank",
+      "keywords": [
+        "Ratchet & Clank PC port download",
+        "Ratchet & Clank Windows download",
+        "Ratchet & Clank Windows PC",
+        "Ratchet & Clank PC ports",
+        "Action Platformer games on PC",
+        "console games on PC",
+        "PS2 to PC",
+        "v0.3.1-alpha"
+      ]
     },
     {
       "id": "the-legend-of-zelda-the-wind-waker",
@@ -150,12 +235,22 @@
         "windwaker wind waker zelda",
         "The Legend of Zelda: The Wind Waker pc port",
         "the legend of zelda the wind waker",
-        "Wind-Waker-Recomp"
+        "Wind-Waker-Recomp",
+        "Windwaker",
+        "Wind Waker",
+        "WW Recomp",
+        "BlueWake",
+        "Nintendo GameCube GCN GC NGC",
+        "The Legend of Zelda Action Adventure"
       ],
       "tags": [
         "The Legend of Zelda: The Wind Waker PC port",
         "GameCube",
-        "Recompilation"
+        "Recompilation",
+        "Action Adventure",
+        "The Legend of Zelda",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/the-legend-of-zelda-the-wind-waker.jpg",
@@ -184,7 +279,19 @@
         "upstreamSha256": "c56325884ef6f3f4cc502dd6c129e16a6d66316082a546bb3a99476dcd668f66"
       },
       "archiveStatus": "downloaded",
-      "deliveryNote": "The supplied Wind Waker project directs Windows downloads to BlueWake. Original project link retained."
+      "deliveryNote": "The supplied Wind Waker project directs Windows downloads to BlueWake. Original project link retained.",
+      "genre": "Action Adventure",
+      "franchise": "The Legend of Zelda",
+      "keywords": [
+        "The Legend of Zelda: The Wind Waker PC port download",
+        "The Legend of Zelda: The Wind Waker Windows download",
+        "The Legend of Zelda: The Wind Waker Windows PC",
+        "The Legend of Zelda PC ports",
+        "Action Adventure games on PC",
+        "console games on PC",
+        "GameCube to PC",
+        "v0.10.0"
+      ]
     },
     {
       "id": "spider-man-edge-of-time",
@@ -201,12 +308,18 @@
         "spiderman edge of time",
         "Spider-Man: Edge of Time pc port",
         "spider man edge of time",
-        "EdgeOfTimeRecomp"
+        "EdgeOfTimeRecomp",
+        "Microsoft Xbox 360 X360",
+        "Spider-Man Action Adventure"
       ],
       "tags": [
         "Spider-Man: Edge of Time PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Action Adventure",
+        "Spider-Man",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/spider-man-edge-of-time.jpg",
@@ -234,7 +347,19 @@
         ],
         "upstreamSha256": "bed8dd834db8a44e46647e5cc988947ecac16ff3ab48daed619f8279045585fa"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action Adventure",
+      "franchise": "Spider-Man",
+      "keywords": [
+        "Spider-Man: Edge of Time PC port download",
+        "Spider-Man: Edge of Time Windows download",
+        "Spider-Man: Edge of Time Windows PC",
+        "Spider-Man PC ports",
+        "Action Adventure games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v1.1"
+      ]
     },
     {
       "id": "infamous-second-son",
@@ -251,12 +376,18 @@
         "infamous second son iss",
         "inFAMOUS Second Son pc port",
         "infamous second son",
-        "iss_pc"
+        "iss_pc",
+        "Sony PlayStation 4 PS4",
+        "inFAMOUS Open-world Action"
       ],
       "tags": [
         "inFAMOUS Second Son PC port",
         "PS4",
-        "PC port"
+        "PC port",
+        "Open-world Action",
+        "inFAMOUS",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/infamous-second-son.jpg",
@@ -284,7 +415,19 @@
         ],
         "upstreamSha256": "25cf4c6a27547b0d714efee15ceb7058165f316ae65348d2a8e583650154e4ca"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Open-world Action",
+      "franchise": "inFAMOUS",
+      "keywords": [
+        "inFAMOUS Second Son PC port download",
+        "inFAMOUS Second Son Windows download",
+        "inFAMOUS Second Son Windows PC",
+        "inFAMOUS PC ports",
+        "Open-world Action games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "v1.0"
+      ]
     },
     {
       "id": "uncharted-the-nathan-drake-collection",
@@ -301,12 +444,22 @@
         "uncharted nathan drake collection",
         "Uncharted: The Nathan Drake Collection pc port",
         "uncharted the nathan drake collection",
-        "uncharted_pc"
+        "uncharted_pc",
+        "Uncharted 1 2 3",
+        "Drakes Fortune",
+        "Among Thieves",
+        "Drakes Deception",
+        "Sony PlayStation 4 PS4",
+        "Uncharted Action Adventure"
       ],
       "tags": [
         "Uncharted: The Nathan Drake Collection PC port",
         "PS4",
-        "PC port"
+        "PC port",
+        "Action Adventure",
+        "Uncharted",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/uncharted-the-nathan-drake-collection.png",
@@ -334,7 +487,19 @@
         ],
         "upstreamSha256": "df161cab9272484f0f652ad9ef597a61f80fc52e1c83a5790489798fc22f0c07"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action Adventure",
+      "franchise": "Uncharted",
+      "keywords": [
+        "Uncharted: The Nathan Drake Collection PC port download",
+        "Uncharted: The Nathan Drake Collection Windows download",
+        "Uncharted: The Nathan Drake Collection Windows PC",
+        "Uncharted PC ports",
+        "Action Adventure games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "v0.3.11"
+      ]
     },
     {
       "id": "god-of-war-iii",
@@ -351,12 +516,20 @@
         "god of war 3 gow3 spartanport",
         "God of War III pc port",
         "god of war iii",
-        "SpartanPort"
+        "SpartanPort",
+        "God of War 3 Remastered",
+        "GOW3",
+        "Sony PlayStation 4 PS4",
+        "God of War Hack and Slash"
       ],
       "tags": [
         "God of War III PC port",
         "PS4",
-        "PC port"
+        "PC port",
+        "Hack and Slash",
+        "God of War",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/god-of-war-iii.jpg",
@@ -384,7 +557,19 @@
         ],
         "upstreamSha256": "5fdc28e3c993b2f434c189d5bb5a00dff0117715d17990153b09707fb8367638"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Hack and Slash",
+      "franchise": "God of War",
+      "keywords": [
+        "God of War III PC port download",
+        "God of War III Remastered Windows download",
+        "God of War III Windows PC",
+        "God of War PC ports",
+        "Hack and Slash games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "windows-v3.0.0"
+      ]
     },
     {
       "id": "bloodborne",
@@ -401,12 +586,19 @@
         "bloodborne pc port blood borne",
         "Bloodborne pc port",
         "bloodborne",
-        "bloodborne_pc"
+        "bloodborne_pc",
+        "Sony PlayStation 4 PS4",
+        "Bloodborne Action RPG"
       ],
       "tags": [
         "Bloodborne PC port",
         "PS4",
-        "PC port"
+        "PC port",
+        "Action RPG",
+        "Bloodborne",
+        "Windows",
+        "Console to PC",
+        "Soulslike"
       ],
       "cover": {
         "path": "/assets/images/ports/bloodborne.webp",
@@ -434,7 +626,19 @@
         ],
         "upstreamSha256": "b3444c6a4d201e75f2b3ea80f2f4663bfa8e78eda7652054819ba8622cc7a759"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action RPG",
+      "franchise": "Bloodborne",
+      "keywords": [
+        "Bloodborne PC port download",
+        "Bloodborne Windows download",
+        "Bloodborne Windows PC",
+        "Bloodborne PC ports",
+        "Action RPG games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "windows-v1.9.7"
+      ]
     },
     {
       "id": "sin-and-punishment",
@@ -451,12 +655,18 @@
         "sin & punishment n64 snp",
         "Sin and Punishment pc port",
         "sin and punishment",
-        "snprecomp"
+        "snprecomp",
+        "Nintendo 64 N64",
+        "Sin and Punishment Rail Shooter"
       ],
       "tags": [
         "Sin and Punishment PC port",
         "Nintendo 64",
-        "Recompilation"
+        "Recompilation",
+        "Rail Shooter",
+        "Sin and Punishment",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/sin-and-punishment.jpg",
@@ -484,7 +694,19 @@
         ],
         "upstreamSha256": "207e37a5f68119e12a59e57b2e0add40c212a406a14ee11650901c2b20fed829"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Rail Shooter",
+      "franchise": "Sin and Punishment",
+      "keywords": [
+        "Sin and Punishment PC port download",
+        "Sin and Punishment Windows download",
+        "Sin and Punishment Windows PC",
+        "Sin and Punishment PC ports",
+        "Rail Shooter games on PC",
+        "console games on PC",
+        "Nintendo 64 to PC",
+        "0.2.10"
+      ]
     },
     {
       "id": "pokemon-snap",
@@ -501,12 +723,18 @@
         "pokemon snap snap64",
         "Pokémon Snap pc port",
         "pokemon snap",
-        "Snap64Recomp"
+        "Snap64Recomp",
+        "Nintendo 64 N64",
+        "Pokémon Photography"
       ],
       "tags": [
         "Pokémon Snap PC port",
         "Nintendo 64",
-        "Recompilation"
+        "Recompilation",
+        "Photography",
+        "Pokémon",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/pokemon-snap.webp",
@@ -534,7 +762,19 @@
         ],
         "upstreamSha256": "73bd4f7fae0f41670d9222af1f7287dfe60978997128a5926179e48d28ac351d"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Photography",
+      "franchise": "Pokémon",
+      "keywords": [
+        "Pokémon Snap PC port download",
+        "Pokémon Snap Windows download",
+        "Pokémon Snap Windows PC",
+        "Pokémon PC ports",
+        "Photography games on PC",
+        "console games on PC",
+        "Nintendo 64 to PC",
+        "v1.1.6"
+      ]
     },
     {
       "id": "007-the-world-is-not-enough",
@@ -551,12 +791,18 @@
         "007 james bond world is not enough twipe",
         "007: The World Is Not Enough pc port",
         "007 the world is not enough",
-        "TWIPE_00Sheven"
+        "TWIPE_00Sheven",
+        "Nintendo 64 N64",
+        "James Bond 007 FPS"
       ],
       "tags": [
         "007: The World Is Not Enough PC port",
         "Nintendo 64",
-        "Recompilation"
+        "Recompilation",
+        "FPS",
+        "James Bond 007",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/007-the-world-is-not-enough.png",
@@ -584,7 +830,19 @@
         ],
         "upstreamSha256": "c409afc085fcbd5346e794ca30e13c4421e5f4a367481f2c02001355e5cb0707"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "FPS",
+      "franchise": "James Bond 007",
+      "keywords": [
+        "007: The World Is Not Enough PC port download",
+        "007: The World Is Not Enough Windows download",
+        "007: The World Is Not Enough Windows PC",
+        "James Bond 007 PC ports",
+        "FPS games on PC",
+        "console games on PC",
+        "Nintendo 64 to PC",
+        "ICHGYTW_0.1.96"
+      ]
     },
     {
       "id": "ace-combat-5-the-unsung-war",
@@ -601,12 +859,18 @@
         "ace combat 5 ac5",
         "Ace Combat 5: The Unsung War pc port",
         "ace combat 5 the unsung war",
-        "Ace-Combat-5-Static-recompilation"
+        "Ace-Combat-5-Static-recompilation",
+        "Sony PlayStation 2 PS2",
+        "Ace Combat Flight Combat"
       ],
       "tags": [
         "Ace Combat 5: The Unsung War PC port",
         "PS2",
-        "Recompilation"
+        "Recompilation",
+        "Flight Combat",
+        "Ace Combat",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/ace-combat-5-the-unsung-war.webp",
@@ -634,7 +898,19 @@
         ],
         "upstreamSha256": "0bb98ade5279bc3785cd892fbcbd9acc44b562cdaa079118546d52b5bb2edf41"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Flight Combat",
+      "franchise": "Ace Combat",
+      "keywords": [
+        "Ace Combat 5: The Unsung War PC port download",
+        "Ace Combat 5: The Unsung War Windows download",
+        "Ace Combat 5: The Unsung War Windows PC",
+        "Ace Combat PC ports",
+        "Flight Combat games on PC",
+        "console games on PC",
+        "PS2 to PC",
+        "V3.0"
+      ]
     },
     {
       "id": "ridge-racer-v",
@@ -651,12 +927,19 @@
         "ridge racer 5 fukami",
         "Ridge Racer V pc port",
         "ridge racer v",
-        "fukami"
+        "fukami",
+        "Ridge Racer 5",
+        "Sony PlayStation 2 PS2",
+        "Ridge Racer Racing"
       ],
       "tags": [
         "Ridge Racer V PC port",
         "PS2",
-        "Recompilation"
+        "Recompilation",
+        "Racing",
+        "Ridge Racer",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/ridge-racer-v.webp",
@@ -684,7 +967,19 @@
         ],
         "upstreamSha256": "855031d3d240c36cbe5272a19a550fe742bb7b5f2d0bbdb7987b7e496a232d3a"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Racing",
+      "franchise": "Ridge Racer",
+      "keywords": [
+        "Ridge Racer V PC port download",
+        "Ridge Racer V Windows download",
+        "Ridge Racer V Windows PC",
+        "Ridge Racer PC ports",
+        "Racing games on PC",
+        "console games on PC",
+        "PS2 to PC",
+        "v1.1.0"
+      ]
     },
     {
       "id": "soulcalibur",
@@ -700,12 +995,18 @@
         "soul calibur voldorium",
         "Soulcalibur pc port",
         "soulcalibur",
-        "voldorium"
+        "voldorium",
+        "Sega Dreamcast DC",
+        "Soulcalibur Fighting"
       ],
       "tags": [
         "Soulcalibur PC port",
         "Dreamcast",
-        "Recompilation"
+        "Recompilation",
+        "Fighting",
+        "Soulcalibur",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/soulcalibur.webp",
@@ -733,7 +1034,19 @@
         ],
         "upstreamSha256": "01e1cbb32c3eb208b2f76a8e9d05e754c175f079c31c65e981b32f912bf7a4ea"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Fighting",
+      "franchise": "Soulcalibur",
+      "keywords": [
+        "Soulcalibur PC port download",
+        "Soulcalibur Windows download",
+        "Soulcalibur Windows PC",
+        "Soulcalibur PC ports",
+        "Fighting games on PC",
+        "console games on PC",
+        "Dreamcast to PC",
+        "v1.1.3"
+      ]
     },
     {
       "id": "eternal-darkness-sanity-s-requiem",
@@ -750,12 +1063,18 @@
         "eternal darkness sanitys requiem",
         "Eternal Darkness: Sanity's Requiem pc port",
         "eternal darkness sanity s requiem",
-        "EternalDarknessRecomp"
+        "EternalDarknessRecomp",
+        "Nintendo GameCube GCN GC NGC",
+        "Eternal Darkness Survival Horror"
       ],
       "tags": [
         "Eternal Darkness: Sanity's Requiem PC port",
         "GameCube",
-        "Recompilation"
+        "Recompilation",
+        "Survival Horror",
+        "Eternal Darkness",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/eternal-darkness-sanity-s-requiem.webp",
@@ -783,7 +1102,19 @@
         ],
         "upstreamSha256": "010020309969752c50da8affb323d0e5e55fd1ba85bc738074423de092d7e331"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Survival Horror",
+      "franchise": "Eternal Darkness",
+      "keywords": [
+        "Eternal Darkness: Sanity's Requiem PC port download",
+        "Eternal Darkness: Sanity's Requiem Windows download",
+        "Eternal Darkness: Sanity's Requiem Windows PC",
+        "Eternal Darkness PC ports",
+        "Survival Horror games on PC",
+        "console games on PC",
+        "GameCube to PC",
+        "v0.9.6"
+      ]
     },
     {
       "id": "new-super-mario-bros-wii",
@@ -800,12 +1131,18 @@
         "nsmb wii new super mario bros multiplayer",
         "New Super Mario Bros. Wii pc port",
         "new super mario bros wii",
-        "NSMB-Wii-Multiplayer-Recompilation"
+        "NSMB-Wii-Multiplayer-Recompilation",
+        "Nintendo Wii",
+        "Super Mario 2D Platformer"
       ],
       "tags": [
         "New Super Mario Bros. Wii PC port",
         "Wii",
-        "Recompilation"
+        "Recompilation",
+        "2D Platformer",
+        "Super Mario",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/new-super-mario-bros-wii.webp",
@@ -833,7 +1170,19 @@
         ],
         "upstreamSha256": "63589bbb6116a1a15a825244fba183bc6913643607f1d720026d098f1ba52dab"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "2D Platformer",
+      "franchise": "Super Mario",
+      "keywords": [
+        "New Super Mario Bros. Wii PC port download",
+        "New Super Mario Bros. Wii Windows download",
+        "New Super Mario Bros. Wii Windows PC",
+        "Super Mario PC ports",
+        "2D Platformer games on PC",
+        "console games on PC",
+        "Wii to PC",
+        "v0.2.2"
+      ]
     },
     {
       "id": "scooby-doo-night-of-100-frights",
@@ -850,12 +1199,18 @@
         "scooby doo refrightened",
         "Scooby-Doo! Night of 100 Frights pc port",
         "scooby doo night of 100 frights",
-        "Scooby-Doo-Refrightened"
+        "Scooby-Doo-Refrightened",
+        "Nintendo GameCube GCN GC NGC",
+        "Scooby-Doo 3D Platformer"
       ],
       "tags": [
         "Scooby-Doo! Night of 100 Frights PC port",
         "GameCube",
-        "Recompilation"
+        "Recompilation",
+        "3D Platformer",
+        "Scooby-Doo",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/scooby-doo-night-of-100-frights.webp",
@@ -883,7 +1238,19 @@
         ],
         "upstreamSha256": "57d887112a8637c7371bcae0a6f0f9c0ac1371c21b0c49a9b77e4a1d46a73287"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "3D Platformer",
+      "franchise": "Scooby-Doo",
+      "keywords": [
+        "Scooby-Doo! Night of 100 Frights PC port download",
+        "Scooby-Doo! Night of 100 Frights Windows download",
+        "Scooby-Doo! Night of 100 Frights Windows PC",
+        "Scooby-Doo PC ports",
+        "3D Platformer games on PC",
+        "console games on PC",
+        "GameCube to PC",
+        "v1.0.2"
+      ]
     },
     {
       "id": "serious-sam-next-encounter",
@@ -893,19 +1260,28 @@
       "kind": "Recompilation",
       "source": "https://github.com/takoshero96/Silly-ReEncounter/releases/tag/update",
       "repository": "https://github.com/takoshero96/Silly-ReEncounter",
-      "availability": "project",
-      "requirements": "GameCube USA, G3BE9G. The update tag has release notes but no attached build asset at review. The documented launcher builds from your own disc.",
-      "summary": "Serious Sam: Next Encounter on PC through the linked recompilation project.",
+      "availability": "release",
+      "requirements": "Original public package: GameCube USA G3BE9G, Windows 10/11 64-bit and OpenGL 3.3. It builds from your own disc and downloads its compiler on first setup. This package is not the later update-tag engine.",
+      "summary": "Original Silly ReEncounter public launcher and build kit for Serious Sam: Next Encounter.",
       "aliases": [
         "serious sam next encounter silly re encounter",
         "Serious Sam: Next Encounter pc port",
         "serious sam next encounter",
-        "Silly-ReEncounter"
+        "Silly-ReEncounter",
+        "SSNE",
+        "Silly ReEncounter",
+        "Silly Re Encounter",
+        "Nintendo GameCube GCN GC NGC",
+        "Serious Sam FPS"
       ],
       "tags": [
         "Serious Sam: Next Encounter PC port",
         "GameCube",
-        "Recompilation"
+        "Recompilation",
+        "FPS",
+        "Serious Sam",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/serious-sam-next-encounter.jpg",
@@ -917,11 +1293,49 @@
         "sha256": "e77baac5eaf0fededc5ff277548ca2d2472c4d31cce07c943941d98ee2762248"
       },
       "release": {
+        "tag": "recomp",
+        "url": "https://github.com/takoshero96/Silly-ReEncounter/releases/tag/recomp",
+        "prerelease": false
+      },
+      "archiveStatus": "downloaded",
+      "originalRequirements": "GameCube USA, G3BE9G. The update tag has release notes but no attached build asset at review. The documented launcher builds from your own disc.",
+      "requestedRelease": {
         "tag": "update",
         "url": "https://github.com/takoshero96/Silly-ReEncounter/releases/tag/update",
         "prerelease": false
       },
-      "archiveStatus": "not-published"
+      "download": {
+        "name": "SillyReEncounter-Public.zip",
+        "version": "recomp",
+        "bytes": 4548648,
+        "sha256": "eed4098c1b5f2de75abb935c58f86743ef0087a499710b259cf4955c6688d2d6",
+        "sourceUrl": "https://github.com/takoshero96/Silly-ReEncounter/releases/download/recomp/SillyReEncounter-Public.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-serious-sam-next-encounter",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "serious-sam-next-encounter",
+          "Ports"
+        ],
+        "upstreamSha256": "eed4098c1b5f2de75abb935c58f86743ef0087a499710b259cf4955c6688d2d6"
+      },
+      "deliveryNote": "The requested update tag has notes but no attached build. The working download is explicitly pinned to the original recomp tag. Later update notes, including PAL support, are kept separate and are not applied to this USA package.",
+      "genre": "FPS",
+      "franchise": "Serious Sam",
+      "keywords": [
+        "Serious Sam: Next Encounter PC port download",
+        "Serious Sam: Next Encounter Windows download",
+        "Serious Sam: Next Encounter Windows PC",
+        "Serious Sam PC ports",
+        "FPS games on PC",
+        "console games on PC",
+        "GameCube to PC",
+        "recomp"
+      ]
     },
     {
       "id": "skies-of-arcadia-legends",
@@ -937,13 +1351,18 @@
       "aliases": [
         "skies of arcadia legends",
         "Skies of Arcadia Legends pc port",
-        "skies of arcadia legends",
-        "SkiesOfArcadiaLegends-Recomp"
+        "SkiesOfArcadiaLegends-Recomp",
+        "Nintendo GameCube GCN GC NGC",
+        "Skies of Arcadia JRPG"
       ],
       "tags": [
         "Skies of Arcadia Legends PC port",
         "GameCube",
-        "Recompilation"
+        "Recompilation",
+        "JRPG",
+        "Skies of Arcadia",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/skies-of-arcadia-legends.webp",
@@ -971,7 +1390,19 @@
         ],
         "upstreamSha256": "1863cf52a364eb3f7487130c91b352a3661f94017cab35095b5bfcd7459c8b9c"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "JRPG",
+      "franchise": "Skies of Arcadia",
+      "keywords": [
+        "Skies of Arcadia Legends PC port download",
+        "Skies of Arcadia Legends Windows download",
+        "Skies of Arcadia Legends Windows PC",
+        "Skies of Arcadia PC ports",
+        "JRPG games on PC",
+        "console games on PC",
+        "GameCube to PC",
+        "perftest1"
+      ]
     },
     {
       "id": "super-smash-bros-melee",
@@ -988,12 +1419,18 @@
         "smash bros melee ssbm",
         "Super Smash Bros. Melee pc port",
         "super smash bros melee",
-        "gd-melee-workspace"
+        "gd-melee-workspace",
+        "Nintendo GameCube GCN GC NGC",
+        "Super Smash Bros. Platform Fighter"
       ],
       "tags": [
         "Super Smash Bros. Melee PC port",
         "GameCube",
-        "Recompilation"
+        "Recompilation",
+        "Platform Fighter",
+        "Super Smash Bros.",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/super-smash-bros-melee.png",
@@ -1021,7 +1458,19 @@
         ],
         "upstreamSha256": "3e6c41bf555bd3e5ceb7bbb2d53a5a86572a3de359757e47dbc9c5f1b48db13c"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Platform Fighter",
+      "franchise": "Super Smash Bros.",
+      "keywords": [
+        "Super Smash Bros. Melee PC port download",
+        "Super Smash Bros. Melee Windows download",
+        "Super Smash Bros. Melee Windows PC",
+        "Super Smash Bros. PC ports",
+        "Platform Fighter games on PC",
+        "console games on PC",
+        "GameCube to PC",
+        "v0.3.0"
+      ]
     },
     {
       "id": "super-mario-galaxy",
@@ -1038,12 +1487,18 @@
         "mario galaxy nebula",
         "Super Mario Galaxy pc port",
         "super mario galaxy",
-        "nebula"
+        "nebula",
+        "Nintendo Wii",
+        "Super Mario 3D Platformer"
       ],
       "tags": [
         "Super Mario Galaxy PC port",
         "Wii",
-        "Recompilation"
+        "Recompilation",
+        "3D Platformer",
+        "Super Mario",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/super-mario-galaxy.webp",
@@ -1071,7 +1526,19 @@
         ],
         "upstreamSha256": "93d2542de34147f3808469e02067e2c42a822bb2380eca3c33388a70834bf9c8"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "3D Platformer",
+      "franchise": "Super Mario",
+      "keywords": [
+        "Super Mario Galaxy PC port download",
+        "Super Mario Galaxy Windows download",
+        "Super Mario Galaxy Windows PC",
+        "Super Mario PC ports",
+        "3D Platformer games on PC",
+        "console games on PC",
+        "Wii to PC",
+        "v1.0.1"
+      ]
     },
     {
       "id": "super-paper-mario",
@@ -1088,12 +1555,18 @@
         "super paper mario wii new super paper bros",
         "Super Paper Mario pc port",
         "super paper mario",
-        "NewSuperPaperBros"
+        "NewSuperPaperBros",
+        "Nintendo Wii",
+        "Paper Mario Action Platformer"
       ],
       "tags": [
         "Super Paper Mario PC port",
         "Wii",
-        "Recompilation"
+        "Recompilation",
+        "Action Platformer",
+        "Paper Mario",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/super-paper-mario.webp",
@@ -1121,7 +1594,19 @@
         ],
         "upstreamSha256": "2acd168996f603be77fafc797959d6fd5dfd69ea220d9c9aa684efef7f52e99e"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action Platformer",
+      "franchise": "Paper Mario",
+      "keywords": [
+        "Super Paper Mario PC port download",
+        "Super Paper Mario Windows download",
+        "Super Paper Mario Windows PC",
+        "Paper Mario PC ports",
+        "Action Platformer games on PC",
+        "console games on PC",
+        "Wii to PC",
+        "v1.0.8"
+      ]
     },
     {
       "id": "wario-land-shake-it",
@@ -1138,12 +1623,18 @@
         "wario land shake it shake dimension",
         "Wario Land: Shake It! pc port",
         "wario land shake it",
-        "Wario-Land-Shake-It-Native-PC"
+        "Wario-Land-Shake-It-Native-PC",
+        "Nintendo Wii",
+        "Wario Land 2D Platformer"
       ],
       "tags": [
         "Wario Land: Shake It! PC port",
         "Wii",
-        "Recompilation"
+        "Recompilation",
+        "2D Platformer",
+        "Wario Land",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/wario-land-shake-it.webp",
@@ -1171,7 +1662,19 @@
         ],
         "upstreamSha256": "2ad23afa4afafbbe0a0109e221e65c16261b73197ea5ed2a4c8f05d47df920c1"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "2D Platformer",
+      "franchise": "Wario Land",
+      "keywords": [
+        "Wario Land: Shake It! PC port download",
+        "Wario Land: Shake It! Windows download",
+        "Wario Land: Shake It! Windows PC",
+        "Wario Land PC ports",
+        "2D Platformer games on PC",
+        "console games on PC",
+        "Wii to PC",
+        "v0.3.1"
+      ]
     },
     {
       "id": "007-from-russia-with-love",
@@ -1188,12 +1691,18 @@
         "007 james bond from russia with love frwl",
         "007: From Russia with Love pc port",
         "007 from russia with love",
-        "007FRWL-XBERecomp"
+        "007FRWL-XBERecomp",
+        "Microsoft Original Xbox OG Xbox",
+        "James Bond 007 Third-person Shooter"
       ],
       "tags": [
         "007: From Russia with Love PC port",
         "Xbox",
-        "Recompilation"
+        "Recompilation",
+        "Third-person Shooter",
+        "James Bond 007",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/007-from-russia-with-love.jpg",
@@ -1221,7 +1730,19 @@
         ],
         "upstreamSha256": "038482a48081eb554b008d06eed3bee4558392ac7217c05b9f8970e21e4e41d4"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Third-person Shooter",
+      "franchise": "James Bond 007",
+      "keywords": [
+        "007: From Russia with Love PC port download",
+        "007: From Russia with Love Windows download",
+        "007: From Russia with Love Windows PC",
+        "James Bond 007 PC ports",
+        "Third-person Shooter games on PC",
+        "console games on PC",
+        "Xbox to PC",
+        "V2"
+      ]
     },
     {
       "id": "dead-or-alive-3",
@@ -1238,12 +1759,18 @@
         "dead or alive 3 doa3",
         "Dead or Alive 3 pc port",
         "dead or alive 3",
-        "doa3-recomp"
+        "doa3-recomp",
+        "Microsoft Original Xbox OG Xbox",
+        "Dead or Alive Fighting"
       ],
       "tags": [
         "Dead or Alive 3 PC port",
         "Xbox",
-        "Recompilation"
+        "Recompilation",
+        "Fighting",
+        "Dead or Alive",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/dead-or-alive-3.webp",
@@ -1271,7 +1798,19 @@
         ],
         "upstreamSha256": "4d749122ceb7ba27a95798c99961cd06a64b3468f6a695bcf06da7efa6fd4e68"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Fighting",
+      "franchise": "Dead or Alive",
+      "keywords": [
+        "Dead or Alive 3 PC port download",
+        "Dead or Alive 3 Windows download",
+        "Dead or Alive 3 Windows PC",
+        "Dead or Alive PC ports",
+        "Fighting games on PC",
+        "console games on PC",
+        "Xbox to PC",
+        "v1.0.7"
+      ]
     },
     {
       "id": "def-jam-fight-for-ny",
@@ -1288,12 +1827,18 @@
         "deaf jam fight for ny def jam ffny",
         "Def Jam: Fight for NY pc port",
         "def jam fight for ny",
-        "DefJamFFNY-recomp"
+        "DefJamFFNY-recomp",
+        "Microsoft Original Xbox OG Xbox",
+        "Def Jam Wrestling"
       ],
       "tags": [
         "Def Jam: Fight for NY PC port",
         "Xbox",
-        "Recompilation"
+        "Recompilation",
+        "Wrestling",
+        "Def Jam",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/def-jam-fight-for-ny.webp",
@@ -1321,7 +1866,19 @@
         ],
         "upstreamSha256": "c2ab03ffbfa7fd5df1420e9f703bc232442c05ac8bac931a80d857dbee72821b"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Wrestling",
+      "franchise": "Def Jam",
+      "keywords": [
+        "Def Jam: Fight for NY PC port download",
+        "Def Jam: Fight for NY Windows download",
+        "Def Jam: Fight for NY Windows PC",
+        "Def Jam PC ports",
+        "Wrestling games on PC",
+        "console games on PC",
+        "Xbox to PC",
+        "v0.12.1"
+      ]
     },
     {
       "id": "far-cry-instincts",
@@ -1338,12 +1895,18 @@
         "far cry instincts fci",
         "Far Cry Instincts pc port",
         "far cry instincts",
-        "fci-recomp"
+        "fci-recomp",
+        "Microsoft Original Xbox OG Xbox",
+        "Far Cry FPS"
       ],
       "tags": [
         "Far Cry Instincts PC port",
         "Xbox",
-        "Recompilation"
+        "Recompilation",
+        "FPS",
+        "Far Cry",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/far-cry-instincts.webp",
@@ -1371,7 +1934,19 @@
         ],
         "upstreamSha256": "c67a6c88b3cb117f79979ef7bde0ae45f0653b43f5dacf46a6bfb51d9e2c26f7"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "FPS",
+      "franchise": "Far Cry",
+      "keywords": [
+        "Far Cry Instincts PC port download",
+        "Far Cry Instincts Windows download",
+        "Far Cry Instincts Windows PC",
+        "Far Cry PC ports",
+        "FPS games on PC",
+        "console games on PC",
+        "Xbox to PC",
+        "v0.2.2"
+      ]
     },
     {
       "id": "the-lord-of-the-rings-the-two-towers",
@@ -1388,12 +1963,18 @@
         "lotr two towers tootawers",
         "The Lord of the Rings: The Two Towers pc port",
         "the lord of the rings the two towers",
-        "TooTawersRecomp"
+        "TooTawersRecomp",
+        "Microsoft Original Xbox OG Xbox",
+        "The Lord of the Rings Hack and Slash"
       ],
       "tags": [
         "The Lord of the Rings: The Two Towers PC port",
         "Xbox",
-        "Recompilation"
+        "Recompilation",
+        "Hack and Slash",
+        "The Lord of the Rings",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/the-lord-of-the-rings-the-two-towers.webp",
@@ -1421,7 +2002,19 @@
         ],
         "upstreamSha256": "1900f7f3801bcf58f46402e56c3d942cf6e751c9d453bf6ee44e15b7d814b96f"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Hack and Slash",
+      "franchise": "The Lord of the Rings",
+      "keywords": [
+        "The Lord of the Rings: The Two Towers PC port download",
+        "The Lord of the Rings: The Two Towers Windows download",
+        "The Lord of the Rings: The Two Towers Windows PC",
+        "The Lord of the Rings PC ports",
+        "Hack and Slash games on PC",
+        "console games on PC",
+        "Xbox to PC",
+        "1.9.7"
+      ]
     },
     {
       "id": "the-lord-of-the-rings-the-return-of-the-king",
@@ -1438,12 +2031,18 @@
         "lotr return of the king athelas",
         "The Lord of the Rings: The Return of the King pc port",
         "the lord of the rings the return of the king",
-        "Athelas"
+        "Athelas",
+        "Microsoft Original Xbox OG Xbox",
+        "The Lord of the Rings Hack and Slash"
       ],
       "tags": [
         "The Lord of the Rings: The Return of the King PC port",
         "Xbox",
-        "Recompilation"
+        "Recompilation",
+        "Hack and Slash",
+        "The Lord of the Rings",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/the-lord-of-the-rings-the-return-of-the-king.jpg",
@@ -1471,7 +2070,19 @@
         ],
         "upstreamSha256": "9591c2aacdc7d79a554d93654fc2618a95198d3ff346b5d1c19a34e08d37fe77"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Hack and Slash",
+      "franchise": "The Lord of the Rings",
+      "keywords": [
+        "The Lord of the Rings: The Return of the King PC port download",
+        "The Lord of the Rings: The Return of the King Windows download",
+        "The Lord of the Rings: The Return of the King Windows PC",
+        "The Lord of the Rings PC ports",
+        "Hack and Slash games on PC",
+        "console games on PC",
+        "Xbox to PC",
+        "1.6.1"
+      ]
     },
     {
       "id": "tom-clancy-s-splinter-cell-double-agent",
@@ -1481,19 +2092,28 @@
       "kind": "Recompilation",
       "source": "https://github.com/TGP482/SCDA-XBERecomp/releases/tag/V2",
       "repository": "https://github.com/TGP482/SCDA-XBERecomp",
-      "availability": "project",
-      "requirements": "Original Xbox version. Requires your own default.xbe, sc4_adv.xbe and documented game-data folders. The requested V2 tag has no attached build asset at review.",
-      "summary": "Tom Clancy's Splinter Cell: Double Agent on PC through the linked recompilation project.",
+      "availability": "release",
+      "requirements": "V3 Windows x64 package for the original Xbox game. Provide your own extracted default.xbe, sc4_adv.xbe and the Default, Media and adv folders. Follow V3 installation instructions; this is not the Xbox 360/PC edition of Double Agent.",
+      "summary": "Original Xbox Double Agent through the publisher’s downloadable V3 Windows package.",
       "aliases": [
         "splinter cell double agent scda",
         "Tom Clancy's Splinter Cell: Double Agent pc port",
         "tom clancy s splinter cell double agent",
-        "SCDA-XBERecomp"
+        "SCDA-XBERecomp",
+        "SCDA",
+        "SC Double Agent",
+        "Xbox Double Agent",
+        "Microsoft Original Xbox OG Xbox",
+        "Splinter Cell Stealth"
       ],
       "tags": [
         "Tom Clancy's Splinter Cell: Double Agent PC port",
         "Xbox",
-        "Recompilation"
+        "Recompilation",
+        "Stealth",
+        "Splinter Cell",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/tom-clancy-s-splinter-cell-double-agent.webp",
@@ -1505,11 +2125,49 @@
         "sha256": "d8af733748097e49484217ee9ebe1529f0f0cb78a0410aeb127d069a514f7434"
       },
       "release": {
+        "tag": "V3",
+        "url": "https://github.com/TGP482/SCDA-XBERecomp/releases/tag/V3",
+        "prerelease": false
+      },
+      "archiveStatus": "downloaded",
+      "originalRequirements": "Original Xbox version. Requires your own default.xbe, sc4_adv.xbe and documented game-data folders. The requested V2 tag has no attached build asset at review.",
+      "requestedRelease": {
         "tag": "V2",
         "url": "https://github.com/TGP482/SCDA-XBERecomp/releases/tag/V2",
         "prerelease": false
       },
-      "archiveStatus": "not-published"
+      "download": {
+        "name": "SCDA-XBERecomp.zip",
+        "version": "V3",
+        "bytes": 73479363,
+        "sha256": "3f1bb078a2d9857ad0a29ed793c14a79b1fa747ca9420cccc828db591fa8416a",
+        "sourceUrl": "https://github.com/TGP482/SCDA-XBERecomp/releases/download/V3/SCDA-XBERecomp.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-tom-clancy-s-splinter-cell-double-agent",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "tom-clancy-s-splinter-cell-double-agent",
+          "Ports"
+        ],
+        "upstreamSha256": "3f1bb078a2d9857ad0a29ed793c14a79b1fa747ca9420cccc828db591fa8416a"
+      },
+      "deliveryNote": "V2 remains linked as the originally requested release. Its build attachment is absent; the working download is explicitly labelled V3 rather than silently substituted as V2.",
+      "genre": "Stealth",
+      "franchise": "Splinter Cell",
+      "keywords": [
+        "Tom Clancy's Splinter Cell: Double Agent PC port download",
+        "Tom Clancy's Splinter Cell: Double Agent Windows download",
+        "Tom Clancy's Splinter Cell: Double Agent Windows PC",
+        "Splinter Cell PC ports",
+        "Stealth games on PC",
+        "console games on PC",
+        "Xbox to PC",
+        "V3"
+      ]
     },
     {
       "id": "army-of-two",
@@ -1526,12 +2184,18 @@
         "army of two aot",
         "Army of Two pc port",
         "army of two",
-        "ArmyOfTwoRecompilation"
+        "ArmyOfTwoRecompilation",
+        "Microsoft Xbox 360 X360",
+        "Army of Two Co-op Shooter"
       ],
       "tags": [
         "Army of Two PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Co-op Shooter",
+        "Army of Two",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/army-of-two.webp",
@@ -1559,7 +2223,19 @@
         ],
         "upstreamSha256": "467009648b8c7418a1493b1d577c81c000dad5cc13bc2a53623b29ca4780bf74"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Co-op Shooter",
+      "franchise": "Army of Two",
+      "keywords": [
+        "Army of Two PC port download",
+        "Army of Two Windows download",
+        "Army of Two Windows PC",
+        "Army of Two PC ports",
+        "Co-op Shooter games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v1.3.5"
+      ]
     },
     {
       "id": "crackdown",
@@ -1567,21 +2243,31 @@
       "title": "Crackdown",
       "platform": "Xbox 360",
       "kind": "Recompilation",
-      "source": "https://github.com/SkiddyToast/Crackdown",
-      "repository": "https://github.com/SkiddyToast/Crackdown",
-      "availability": "project",
-      "requirements": "Unfinished source-build project for Crackdown Xbox 360 TU0. No packaged release was published at review; the README specifies ReXGlue SDK 0.2.2.",
-      "summary": "Crackdown on PC through the linked recompilation project.",
+      "source": "https://github.com/saulob/crackdown-xbox360-recompiled",
+      "repository": "https://github.com/saulob/crackdown-xbox360-recompiled",
+      "availability": "release",
+      "requirements": "Xbox 360 original retail disc without a title update (TU0), title ID 4D5307DC. Default.xex: 14,270,464 bytes, SHA-256 7AAA7A8920D1C3C737E58CF583DEBAFE6013BE0A96BEC3EC136E5DE7E3377E5A. Requires all 196 game files (6,555,220,594 bytes), Windows 10/11 x64 and DirectX 12.",
+      "summary": "Downloadable Crackdown Recompiled Windows alternative maintained by saulob.",
       "aliases": [
         "crackdown pc",
         "Crackdown pc port",
-        "crackdown",
-        "Crackdown"
+        "Crackdown",
+        "Crackdown 1",
+        "Crackdown Recompiled",
+        "SkiddyToast",
+        "saulob",
+        "Microsoft Xbox 360 X360",
+        "crackdown-xbox360-recompiled",
+        "Crackdown Open-world Action"
       ],
       "tags": [
         "Crackdown PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Open-world Action",
+        "Crackdown",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/crackdown.webp",
@@ -1592,7 +2278,46 @@
         "bytes": 24076,
         "sha256": "03bd5351078adbf9e256c5e4258c94fcfbf3cedf0dddf850f93bf6656f3df28c"
       },
-      "archiveStatus": "not-published"
+      "archiveStatus": "downloaded",
+      "originalRequirements": "Unfinished source-build project for Crackdown Xbox 360 TU0. No packaged release was published at review; the README specifies ReXGlue SDK 0.2.2.",
+      "originalSource": "https://github.com/SkiddyToast/Crackdown",
+      "release": {
+        "tag": "v0.6.2",
+        "url": "https://github.com/saulob/crackdown-xbox360-recompiled/releases/tag/v0.6.2",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Crackdown-v0.6.2-windows-x64.zip",
+        "version": "v0.6.2",
+        "bytes": 43045324,
+        "sha256": "fa1a6f9a46a3d9ea213a9898b86f11fcc35c855ddf6e42322e81ded15550b421",
+        "sourceUrl": "https://github.com/saulob/crackdown-xbox360-recompiled/releases/download/v0.6.2/Crackdown-v0.6.2-windows-x64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-ports-link-repairs-crackdown",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "crackdown",
+          "Ports"
+        ],
+        "upstreamSha256": "fa1a6f9a46a3d9ea213a9898b86f11fcc35c855ddf6e42322e81ded15550b421"
+      },
+      "deliveryNote": "Working alternative: saulob’s Crackdown Recompiled v0.6.2. The original SkiddyToast source-build project remains linked separately. Its SDK 0.2.2 source-build requirement is not applied to this alternative package.",
+      "genre": "Open-world Action",
+      "franchise": "Crackdown",
+      "keywords": [
+        "Crackdown PC port download",
+        "Crackdown Windows download",
+        "Crackdown Windows PC",
+        "Crackdown PC ports",
+        "Open-world Action games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v0.6.2"
+      ]
     },
     {
       "id": "dead-rising-2-case-zero",
@@ -1609,12 +2334,18 @@
         "dead rising 2 case zero dr2",
         "Dead Rising 2: Case Zero pc port",
         "dead rising 2 case zero",
-        "Dead_Rising_2_Case_Zero_Xenon_Recomp"
+        "Dead_Rising_2_Case_Zero_Xenon_Recomp",
+        "Microsoft Xbox 360 X360",
+        "Dead Rising Survival Horror"
       ],
       "tags": [
         "Dead Rising 2: Case Zero PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Survival Horror",
+        "Dead Rising",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/dead-rising-2-case-zero.webp",
@@ -1642,7 +2373,19 @@
         ],
         "upstreamSha256": "f821dd717c08baa83b06ae11ece1963835bbe07816b43a52792f3040cfd99a28"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Survival Horror",
+      "franchise": "Dead Rising",
+      "keywords": [
+        "Dead Rising 2: Case Zero PC port download",
+        "Dead Rising 2: Case Zero Windows download",
+        "Dead Rising 2: Case Zero Windows PC",
+        "Dead Rising PC ports",
+        "Survival Horror games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v1.1.3"
+      ]
     },
     {
       "id": "forza-horizon",
@@ -1659,12 +2402,18 @@
         "forza horizon 1 pinyon shift",
         "Forza Horizon pc port",
         "forza horizon",
-        "pinyon-shift"
+        "pinyon-shift",
+        "Microsoft Xbox 360 X360",
+        "Forza Open-world Racing"
       ],
       "tags": [
         "Forza Horizon PC port",
         "Xbox 360",
-        "Launcher"
+        "Launcher",
+        "Open-world Racing",
+        "Forza",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/forza-horizon.webp",
@@ -1692,7 +2441,19 @@
         ],
         "upstreamSha256": "b38fe82590702388a450dc685dd29d71850ce3eff5e36947b264d99e59b31585"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Open-world Racing",
+      "franchise": "Forza",
+      "keywords": [
+        "Forza Horizon PC port download",
+        "Forza Horizon Windows download",
+        "Forza Horizon Windows PC",
+        "Forza PC ports",
+        "Open-world Racing games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v0.6.1"
+      ]
     },
     {
       "id": "geometry-wars-retro-evolved-2",
@@ -1709,12 +2470,18 @@
         "geometry wars 2 retro evolved",
         "Geometry Wars: Retro Evolved 2 pc port",
         "geometry wars retro evolved 2",
-        "geometry-wars-retro-evolved-2-recompiled"
+        "geometry-wars-retro-evolved-2-recompiled",
+        "Microsoft Xbox 360 X360",
+        "Geometry Wars Twin-stick Shooter"
       ],
       "tags": [
         "Geometry Wars: Retro Evolved 2 PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Twin-stick Shooter",
+        "Geometry Wars",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/geometry-wars-retro-evolved-2.webp",
@@ -1742,7 +2509,19 @@
         ],
         "upstreamSha256": "7a3862ab73e5f5d9536d58c5eb9c15cad89a492d9266d6ae399089140d1b5b08"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Twin-stick Shooter",
+      "franchise": "Geometry Wars",
+      "keywords": [
+        "Geometry Wars: Retro Evolved 2 PC port download",
+        "Geometry Wars: Retro Evolved 2 Windows download",
+        "Geometry Wars: Retro Evolved 2 Windows PC",
+        "Geometry Wars PC ports",
+        "Twin-stick Shooter games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v0.6.1"
+      ]
     },
     {
       "id": "peter-jackson-s-king-kong",
@@ -1759,12 +2538,18 @@
         "peter jacksons king kong",
         "Peter Jackson's King Kong pc port",
         "peter jackson s king kong",
-        "king-kong-recompiled"
+        "king-kong-recompiled",
+        "Microsoft Xbox 360 X360",
+        "King Kong Action Adventure"
       ],
       "tags": [
         "Peter Jackson's King Kong PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Action Adventure",
+        "King Kong",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/peter-jackson-s-king-kong.jpg",
@@ -1792,7 +2577,19 @@
         ],
         "upstreamSha256": "b9d72901f9a6c619782f9cde1a9533cb5256ec8fcf8f0b015c2a35caa056e104"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action Adventure",
+      "franchise": "King Kong",
+      "keywords": [
+        "Peter Jackson's King Kong PC port download",
+        "Peter Jackson's King Kong Windows download",
+        "Peter Jackson's King Kong Windows PC",
+        "King Kong PC ports",
+        "Action Adventure games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v1.9.13"
+      ]
     },
     {
       "id": "call-of-duty-modern-warfare-2",
@@ -1809,12 +2606,19 @@
         "cod modern warfare 2 mw2 2009",
         "Call of Duty: Modern Warfare 2 pc port",
         "call of duty modern warfare 2",
-        "mw2-recompiled"
+        "mw2-recompiled",
+        "COD MW2 2009",
+        "Microsoft Xbox 360 X360",
+        "Call of Duty FPS"
       ],
       "tags": [
         "Call of Duty: Modern Warfare 2 PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "FPS",
+        "Call of Duty",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/call-of-duty-modern-warfare-2.webp",
@@ -1842,7 +2646,19 @@
         ],
         "upstreamSha256": "622f7888623ffa63d7d8375b034fcf06fad7157e101e9d7f31dde5c6b44a3534"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "FPS",
+      "franchise": "Call of Duty",
+      "keywords": [
+        "Call of Duty: Modern Warfare 2 PC port download",
+        "Call of Duty: Modern Warfare 2 Windows download",
+        "Call of Duty: Modern Warfare 2 Windows PC",
+        "Call of Duty PC ports",
+        "FPS games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v0.8.0"
+      ]
     },
     {
       "id": "splatterhouse",
@@ -1859,12 +2675,18 @@
         "splatterhouse 2010",
         "Splatterhouse pc port",
         "splatterhouse",
-        "splatterhouse-decomp"
+        "splatterhouse-decomp",
+        "Microsoft Xbox 360 X360",
+        "Splatterhouse Beat ’em Up"
       ],
       "tags": [
         "Splatterhouse PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Beat ’em Up",
+        "Splatterhouse",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/splatterhouse.webp",
@@ -1892,7 +2714,19 @@
         ],
         "upstreamSha256": "8940ae9ecd0e4aed97a8d77513abd0537bd5a01f1439b0ad736be6e0e8ec4d78"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Beat ’em Up",
+      "franchise": "Splatterhouse",
+      "keywords": [
+        "Splatterhouse PC port download",
+        "Splatterhouse Windows download",
+        "Splatterhouse Windows PC",
+        "Splatterhouse PC ports",
+        "Beat ’em Up games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v0.3"
+      ]
     },
     {
       "id": "tekken-6-native-online",
@@ -1909,12 +2743,18 @@
         "tekken 6 native online t6",
         "Tekken 6 Native Online pc port",
         "tekken 6 native online",
-        "Tekken6-native-online"
+        "Tekken6-native-online",
+        "Microsoft Xbox 360 X360",
+        "Tekken Fighting"
       ],
       "tags": [
         "Tekken 6 Native Online PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Fighting",
+        "Tekken",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/tekken-6-native-online.webp",
@@ -1949,7 +2789,19 @@
         ],
         "upstreamSha256": "cf43f14cf40640470afbcbf7365afe293e60fa7ba2875932dee4a0f8833b6367"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Fighting",
+      "franchise": "Tekken",
+      "keywords": [
+        "Tekken 6 Native Online PC port download",
+        "Tekken 6 Native Online Windows download",
+        "Tekken 6 Native Online Windows PC",
+        "Tekken PC ports",
+        "Fighting games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v2.7.1"
+      ]
     },
     {
       "id": "wet",
@@ -1966,12 +2818,18 @@
         "wet recomp",
         "WET pc port",
         "wet",
-        "WetRecomp"
+        "WetRecomp",
+        "Microsoft Xbox 360 X360",
+        "WET Action Shooter"
       ],
       "tags": [
         "WET PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Action Shooter",
+        "WET",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/wet.webp",
@@ -1999,7 +2857,19 @@
         ],
         "upstreamSha256": "859e2d03b0013148a28ab1973d18dc829c431322854de79cf92aa4c4fa5c8723"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action Shooter",
+      "franchise": "WET",
+      "keywords": [
+        "WET PC port download",
+        "WET Windows download",
+        "WET Windows PC",
+        "WET PC ports",
+        "Action Shooter games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "1.5"
+      ]
     },
     {
       "id": "wwe-smackdown-vs-raw-2011",
@@ -2016,12 +2886,18 @@
         "wwe smackdown vs raw 2011 svr2011",
         "WWE SmackDown vs. Raw 2011 pc port",
         "wwe smackdown vs raw 2011",
-        "wwe-svr2011-pc"
+        "wwe-svr2011-pc",
+        "Microsoft Xbox 360 X360",
+        "WWE Wrestling"
       ],
       "tags": [
         "WWE SmackDown vs. Raw 2011 PC port",
         "Xbox 360",
-        "Recompilation"
+        "Recompilation",
+        "Wrestling",
+        "WWE",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/wwe-smackdown-vs-raw-2011.webp",
@@ -2056,7 +2932,19 @@
         ],
         "upstreamSha256": "0d868c26108ee4cb8df2e588a90b3170c36aeb768669b4ca196230c00c3f23a5"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Wrestling",
+      "franchise": "WWE",
+      "keywords": [
+        "WWE SmackDown vs. Raw 2011 PC port download",
+        "WWE SmackDown vs. Raw 2011 Windows download",
+        "WWE SmackDown vs. Raw 2011 Windows PC",
+        "WWE PC ports",
+        "Wrestling games on PC",
+        "console games on PC",
+        "Xbox 360 to PC",
+        "v2.1.5"
+      ]
     },
     {
       "id": "infamous",
@@ -2073,12 +2961,21 @@
         "infamous 1 reborn",
         "inFAMOUS pc port",
         "infamous",
-        "inFAMOUS-Reborn-PS3"
+        "inFAMOUS-Reborn-PS3",
+        "inFAMOUS 2",
+        "Festival of Blood",
+        "UGC restoration server",
+        "Sony PlayStation 3 PS3",
+        "inFAMOUS UGC Tools"
       ],
       "tags": [
         "PC companion tool",
         "PS3",
-        "Companion server"
+        "Companion server",
+        "UGC Tools",
+        "inFAMOUS",
+        "Windows",
+        "Game Tools"
       ],
       "cover": {
         "path": "/assets/images/ports/infamous-2.png",
@@ -2113,7 +3010,19 @@
         ],
         "upstreamSha256": "e54f4480c1fd6ee2d43acb76dd14c13a76d89c17522075a2f3d07671cc09fde5"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "UGC Tools",
+      "franchise": "inFAMOUS",
+      "keywords": [
+        "inFAMOUS PC tool download",
+        "inFAMOUS Reborn · UGC server Windows download",
+        "inFAMOUS Windows PC",
+        "inFAMOUS PC tools",
+        "UGC Tools tools on PC",
+        "desktop game companion tools",
+        "PS3 to PC",
+        "1.0.3"
+      ]
     },
     {
       "id": "resident-evil-code-veronica",
@@ -2130,12 +3039,20 @@
         "resident evil code veronica re code veronica",
         "Resident Evil Code: Veronica pc port",
         "resident evil code veronica",
-        "RE-Code-Veronica-Recomp"
+        "RE-Code-Veronica-Recomp",
+        "RECVX",
+        "Code Veronica X HD",
+        "Sony PlayStation 3 PS3",
+        "Resident Evil Survival Horror"
       ],
       "tags": [
         "Resident Evil Code: Veronica PC port",
         "PS3",
-        "Recompilation"
+        "Recompilation",
+        "Survival Horror",
+        "Resident Evil",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/resident-evil-code-veronica.jpg",
@@ -2170,7 +3087,19 @@
         ],
         "upstreamSha256": "ce2106841fea272a42163f9f13bca2ac813c18363f04485d3dd5c7a199f09329"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Survival Horror",
+      "franchise": "Resident Evil",
+      "keywords": [
+        "Resident Evil Code: Veronica PC port download",
+        "Resident Evil Code: Veronica X Windows download",
+        "Resident Evil Code: Veronica Windows PC",
+        "Resident Evil PC ports",
+        "Survival Horror games on PC",
+        "console games on PC",
+        "PS3 to PC",
+        "v1.1.12"
+      ]
     },
     {
       "id": "crash-team-racing-nitro-fueled",
@@ -2187,12 +3116,18 @@
         "crash team racing nitro fuelled fueled ctr",
         "Crash Team Racing Nitro-Fueled pc port",
         "crash team racing nitro fueled",
-        "CTR-NitroFueled-PC"
+        "CTR-NitroFueled-PC",
+        "Sony PlayStation 4 PS4",
+        "Crash Bandicoot Kart Racing"
       ],
       "tags": [
         "Crash Team Racing Nitro-Fueled PC port",
         "PS4",
-        "PC port"
+        "PC port",
+        "Kart Racing",
+        "Crash Bandicoot",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/crash-team-racing-nitro-fueled.webp",
@@ -2227,7 +3162,19 @@
         ],
         "upstreamSha256": "3f20aa19094cb11d4d86c798a21f117ae9013e9c5d061c422c08b5bbe5560fe5"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Kart Racing",
+      "franchise": "Crash Bandicoot",
+      "keywords": [
+        "Crash Team Racing Nitro-Fueled PC port download",
+        "Crash Team Racing Nitro-Fueled Windows download",
+        "Crash Team Racing Nitro-Fueled Windows PC",
+        "Crash Bandicoot PC ports",
+        "Kart Racing games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "v0.4"
+      ]
     },
     {
       "id": "driveclub",
@@ -2244,12 +3191,18 @@
         "drive club driveclub pc wrapper",
         "Driveclub pc port",
         "driveclub",
-        "Driveclub-pc-wrapper"
+        "Driveclub-pc-wrapper",
+        "Sony PlayStation 4 PS4",
+        "Driveclub Racing"
       ],
       "tags": [
         "Driveclub PC port",
         "PS4",
-        "Compatibility wrapper"
+        "Compatibility wrapper",
+        "Racing",
+        "Driveclub",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/driveclub.jpg",
@@ -2284,7 +3237,19 @@
         ],
         "upstreamSha256": "71aee3d44b87286d889693b5d81f83dbadba28096a3d3ee5c25e5d582cd8cc8e"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Racing",
+      "franchise": "Driveclub",
+      "keywords": [
+        "Driveclub PC port download",
+        "Driveclub Windows download",
+        "Driveclub Windows PC",
+        "Driveclub PC ports",
+        "Racing games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "0.2.5"
+      ]
     },
     {
       "id": "gravity-rush-2",
@@ -2301,12 +3266,18 @@
         "gravity rush 2 gr2",
         "Gravity Rush 2 pc port",
         "gravity rush 2",
-        "gr2_pc"
+        "gr2_pc",
+        "Sony PlayStation 4 PS4",
+        "Gravity Rush Action Adventure"
       ],
       "tags": [
         "Gravity Rush 2 PC port",
         "PS4",
-        "PC port"
+        "PC port",
+        "Action Adventure",
+        "Gravity Rush",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/gravity-rush-2.jpg",
@@ -2341,7 +3312,19 @@
         ],
         "upstreamSha256": "4fe3d0e2da7e1fa0a9dfaa231b2b35b62ce08e9ebf31c5cea75584c41dd253c6"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Action Adventure",
+      "franchise": "Gravity Rush",
+      "keywords": [
+        "Gravity Rush 2 PC port download",
+        "Gravity Rush 2 Windows download",
+        "Gravity Rush 2 Windows PC",
+        "Gravity Rush PC ports",
+        "Action Adventure games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "v2026.10.24-a2e69a1"
+      ]
     },
     {
       "id": "the-last-guardian",
@@ -2358,12 +3341,18 @@
         "the last guardian tlg",
         "The Last Guardian pc port",
         "the last guardian",
-        "tlg_pc"
+        "tlg_pc",
+        "Sony PlayStation 4 PS4",
+        "The Last Guardian Puzzle Adventure"
       ],
       "tags": [
         "The Last Guardian PC port",
         "PS4",
-        "PC port"
+        "PC port",
+        "Puzzle Adventure",
+        "The Last Guardian",
+        "Windows",
+        "Console to PC"
       ],
       "cover": {
         "path": "/assets/images/ports/the-last-guardian.jpg",
@@ -2398,7 +3387,19 @@
         ],
         "upstreamSha256": "4c05012aac3f80751acb6821d6deaafd4266e6188d480517a1c5907d0c7ded5b"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Puzzle Adventure",
+      "franchise": "The Last Guardian",
+      "keywords": [
+        "The Last Guardian PC port download",
+        "The Last Guardian Windows download",
+        "The Last Guardian Windows PC",
+        "The Last Guardian PC ports",
+        "Puzzle Adventure games on PC",
+        "console games on PC",
+        "PS4 to PC",
+        "v2026.10.24-1a130dd"
+      ]
     },
     {
       "id": "prince-of-persia-mod-manager-openjade",
@@ -2415,12 +3416,18 @@
         "prince of persia manager openjade pop mod manager",
         "Prince of Persia Mod Manager / OpenJade pc port",
         "prince of persia mod manager openjade",
-        "PoP-Mod-Manager"
+        "PoP-Mod-Manager",
+        "Windows desktop helper",
+        "Prince of Persia Mod Tools"
       ],
       "tags": [
         "PC companion tool",
         "PC helper",
-        "Mod manager"
+        "Mod manager",
+        "Mod Tools",
+        "Prince of Persia",
+        "Windows",
+        "Game Tools"
       ],
       "cover": {
         "path": "/assets/images/ports/prince-of-persia-mod-manager-openjade.jpg",
@@ -2455,7 +3462,19 @@
         ],
         "upstreamSha256": "6be71d48f180f6ee5c5089b3cf0259d2f4862c570dc1fd1c00ef7835538414e8"
       },
-      "archiveStatus": "downloaded"
+      "archiveStatus": "downloaded",
+      "genre": "Mod Tools",
+      "franchise": "Prince of Persia",
+      "keywords": [
+        "Prince of Persia Mod Manager / OpenJade PC tool download",
+        "Prince of Persia Mod Manager / OpenJade Windows download",
+        "Prince of Persia Mod Manager / OpenJade Windows PC",
+        "Prince of Persia PC tools",
+        "Mod Tools tools on PC",
+        "desktop game companion tools",
+        "PC helper to PC",
+        "v2.1.2"
+      ]
     }
   ]
 }

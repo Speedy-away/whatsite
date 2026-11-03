@@ -7,14 +7,14 @@ const {normalize, matches, mount} = require('../../assets/pc-ports.js');
 const data = require('../../docs/pc-ports.json');
 const root = path.resolve(__dirname, '../..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
-const searchable = entry => ({search: [entry.title, entry.requestedTitle, ...entry.aliases, ...entry.tags, entry.platform].join(' '), platform: entry.platform, availability: entry.availability});
+const searchable = entry => ({search: [entry.title, entry.requestedTitle, ...entry.aliases, ...entry.tags, ...(entry.keywords || []), entry.platform].join(' '), platform: entry.platform, availability: entry.availability});
 test('Ports includes all 49 requested sources with exact supplied release pins', () => {
   assert.equal(data.entries.length, 49);
-  assert.equal(data.entries.filter(e => e.download).length, 45, 'All available selected packages are archived before publication');
+  assert.equal(data.entries.filter(e => e.download).length, 49, 'All listed projects now have archived Windows packages');
   assert.equal(new Set(data.entries.map(e => e.source)).size, 49);
   for (const entry of data.entries) {
     const tag = new URL(entry.source).pathname.match(/\/releases\/tag\/(.+)$/)?.[1];
-    if (tag) assert.equal(entry.release.tag, decodeURIComponent(tag), entry.id);
+    if (tag) assert.equal((entry.requestedRelease || entry.release).tag, decodeURIComponent(tag), entry.id);
     assert.ok(entry.requirements && entry.cover && entry.aliases.length, entry.id);
     if (entry.download) {
       assert.equal(entry.download.version, entry.release.tag);
@@ -34,23 +34,34 @@ test('game aliases and accents find the intended cards with AND search and exact
 });
 test('filter controls hide cards, announce counts and restore the complete list', () => {
   function control(value='') { return {value, handlers:{}, addEventListener(type, fn){this.handlers[type]=fn;}, focus(){this.focused=true;}}; }
-  const query=control(), platform=control(), availability=control(), reset=control(), count={}, empty={};
+  const query=control(), platform=control(), availability=control(), reset=control(), count={}, empty={}, racing=control();
+  racing.getAttribute=()=> 'Racing';
   const cards=data.entries.map(e=>({hidden:false,getAttribute(name){return {'data-search':searchable(e).search,'data-platform':e.platform,'data-availability':e.availability}[name];}}));
   const controls={'[data-ports-query]':query,'[data-ports-platform]':platform,'[data-ports-availability]':availability,'[data-ports-count]':count,'[data-ports-empty]':empty,'[data-ports-reset]':reset};
-  mount({querySelector(){return {querySelector(s){return controls[s];},querySelectorAll(s){return s==='[data-port-card]'?cards:[];}};}});
+  mount({querySelector(){return {querySelector(s){return controls[s];},querySelectorAll(s){return s==='[data-port-card]'?cards:[racing];}};}});
   query.value='Bloodborne pc port';query.handlers.input();
   assert.equal(cards.filter(c=>!c.hidden).length,1);assert.equal(count.textContent,'1 of 49 projects');
   platform.value='GameCube';platform.handlers.change();assert.equal(empty.hidden,false);
   reset.handlers.click();assert.equal(cards.filter(c=>!c.hidden).length,49);assert.equal(empty.hidden,true);assert.equal(query.focused,true);
+  racing.handlers.click();assert.equal(query.value,'Racing');assert.ok(cards.filter(c=>!c.hidden).length>1);assert.ok(cards.filter(c=>!c.hidden).length<49);
 });
-test('project statuses distinguish unavailable sources, build docs and companion tools', () => {
+test('working alternatives retain previous requested links and companion-tool distinctions', () => {
   const byId = id => data.entries.find(e=>e.id===id);
-  assert.equal(byId('super-mario-sunshine').availability,'unavailable');assert.equal(byId('super-mario-sunshine').download,undefined);
-  assert.equal(byId('crackdown').availability,'project');
+  assert.ok(data.entries.every(e=>e.availability==='release'));
+  assert.equal(byId('super-mario-sunshine').source,'https://github.com/chasem-dev/sms-launcher');assert.equal(byId('super-mario-sunshine').originalSource,'https://github.com/TekRantGaming/sms-pc-port');
+  assert.equal(byId('crackdown').source,'https://github.com/saulob/crackdown-xbox360-recompiled');assert.equal(byId('crackdown').originalSource,'https://github.com/SkiddyToast/Crackdown');
+  assert.equal(byId('serious-sam-next-encounter').requestedRelease.tag,'update');assert.equal(byId('serious-sam-next-encounter').download.version,'recomp');
+  assert.equal(byId('tom-clancy-s-splinter-cell-double-agent').requestedRelease.tag,'V2');assert.equal(byId('tom-clancy-s-splinter-cell-double-agent').download.version,'V3');
   assert.equal(byId('infamous').kind,'Companion server');assert.match(byId('infamous').requirements,/not a PC port/);
   assert.equal(byId('prince-of-persia-mod-manager-openjade').kind,'Mod manager');
   assert.equal(byId('god-of-war-iii').platform,'PS4');assert.equal(byId('resident-evil-code-veronica').platform,'PS3');assert.equal(byId('crash-team-racing-nitro-fueled').platform,'PS4');
   assert.match(byId('bloodborne').requirements,/CUSA03173/);assert.match(byId('pokemon-snap').requirements,/edc7c49/);assert.match(byId('eternal-darkness-sanity-s-requiem').requirements,/USA disc GEDE01 is explicitly unsupported/);
+});
+test('expanded tags cover every game and retain truthful search and version labels', () => {
+  for(const entry of data.entries){assert.ok(entry.tags.length>=6,entry.id);assert.ok(entry.keywords.length>=7,entry.id);assert.ok(entry.genre&&entry.franchise,entry.id);}
+  for(const [query,id] of [['PlayStation 4 Bloodborne Windows download','bloodborne'],['Nintendo GameCube Mario Sunshine Windows download','super-mario-sunshine'],['Soulslike','bloodborne'],['SCDA V3 download','tom-clancy-s-splinter-cell-double-agent'],['JRPG','skies-of-arcadia-legends']])assert.ok(matches(searchable(data.entries.find(e=>e.id===id)),query,'',''),query);
+  const html=read('pc/ports.html');for(const id of ['super-mario-sunshine','serious-sam-next-encounter','tom-clancy-s-splinter-cell-double-agent','crackdown']){const e=data.entries.find(e=>e.id===id),card=html.slice(html.indexOf('id="'+id+'"')).split('</article>')[0];assert.ok(card.includes('Windows download · '+e.download.version));if(e.requestedRelease)assert.ok(card.includes(e.requestedRelease.url));if(e.originalSource)assert.ok(card.includes(e.originalSource));}
+  assert.ok(html.includes('data-port-keyword="Racing"'));
 });
 test('every source cover remains intact and the layout fits instead of cropping', () => {
   const html = read('pc/ports.html'), css = read('assets/pc-ports.css');
