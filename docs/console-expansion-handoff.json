@@ -9209,7 +9209,7 @@
   "testFailureAndSidebarFix20261103": {
     "date": "2026-11-03",
     "request": "Fix all sixteen test failures, push remaining changes, and keep one PS4 / PS5 Host sidebar link below Language.",
-    "status": "Validated; ready for publication",
+    "status": "Pushed and deployed successfully; all 761 tests pass",
     "fixes": [
       "Migration tests verify exact WWB-HOST redirects and query/fragment preservation, while retained authored components render only in memory. No active host pages regenerated here.",
       "Publisher delivery tests verify the approved mapping and preserved local file sizes/SHA-256 instead of requiring removed binary mirrors.",
@@ -9218,14 +9218,147 @@
       "Language initialization reuses the canonical host link, removes the legacy duplicate, and moves it below Language; 479 static sidebars use PS4 / PS5 Host."
     ],
     "tests": {
-      "fullSuite": 756,
-      "passed": 756,
+      "fullSuite": 761,
+      "passed": 761,
       "failed": 0,
       "focusedAfterFinalTestRefinement": 13,
       "siteAudit": "479 pages, 56366 local links/assets, zero issues",
       "report": "docs/qa/test-failure-fixes-20261103.txt"
     },
     "hostPendingSource": "Other ongoing host-authored assets and inert tests are retained as source only in this snapshot. Their review reports identify required integration in WWB-HOST; no active host regeneration or overwrite is authorized by this main-site test fix.",
-    "preservation": "All download versions, native runtime bytes, local archive files and migration redirects retained."
+    "preservation": "All download versions, native runtime bytes, local archive files and migration redirects retained.",
+    "commit": "d697bb01e8f2e5a5f7bbad8fa9784eb1c084f429",
+    "productionVerification": {
+      "bytes": 943514673,
+      "pages": 545,
+      "links": 50662,
+      "issues": 0
+    },
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41722644837",
+    "deploymentConclusion": "success",
+    "liveVerification": "Homepage has exactly one canonical host link with PS4 / PS5 Host label; served Language initializer reuses that item, removes the old duplicate and appends it below Language.",
+    "browserRenderVerified": false
+  },
+  "hostConsolePerformance20261103": {
+    "updatedAt": "2026-11-03T21:25:34.459Z",
+    "status": "published-and-verified",
+    "baseline": "bf348610c9ab6a6cf3819833d2eb5d6ebacb86d4",
+    "changes": [
+      "Console catalogue first batch:12 text entries; Show more keeps all entries reachable",
+      "Console trainer first batch:18 entries, no cover images",
+      "Static console artwork deferred; desktop artwork retained",
+      "Hidden animated background and unrelated main-site script removed from authored host deployment",
+      "Unused external font stylesheet removed",
+      "English refresh skips translation scans; language switching still restores source strings",
+      "Catalogue groups cached and redundant JSON parse/grouping removed",
+      "Console search debounced 120 ms"
+    ],
+    "regressionTests": 166,
+    "fixtureComparison": {
+      "entries": 100,
+      "consoleInitialTiles": 12,
+      "desktopTiles": 100,
+      "allEntriesReachable": true,
+      "consoleImageSourceAssignments": 0
+    },
+    "nativeRuntimeFilesChanged": 0,
+    "downloadFilesChanged": 0,
+    "hardwareMeasured": false,
+    "browserRenderVerified": false,
+    "checkedAt": "2026-11-03T21:30:57.500Z",
+    "revision": "2b2cbb563491698019f1a487d3eb2a62499d8e5f",
+    "deployment": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41721967832",
+    "publicPages": [
+      {
+        "path": "",
+        "status": 200,
+        "scriptCount": 2,
+        "deferredStaticImages": 5
+      },
+      {
+        "path": "hosts/ps4/",
+        "status": 200,
+        "scriptCount": 9,
+        "deferredStaticImages": 1
+      },
+      {
+        "path": "hosts/ps5/",
+        "status": 200,
+        "scriptCount": 9,
+        "deferredStaticImages": 1
+      },
+      {
+        "path": "hosts/ps4/gta5/",
+        "status": 200,
+        "scriptCount": 7,
+        "deferredStaticImages": 12
+      },
+      {
+        "path": "hosts/ps5/gta5/",
+        "status": 200,
+        "scriptCount": 7,
+        "deferredStaticImages": 12
+      },
+      {
+        "path": "hosts/tools/ps4-trainer/",
+        "status": 200,
+        "scriptCount": 3,
+        "deferredStaticImages": 1
+      }
+    ],
+    "pagesBuild": {
+      "revision": "2b2cbb563491698019f1a487d3eb2a62499d8e5f",
+      "base": "/WWB-HOST",
+      "origin": "https://speedy-away.github.io",
+      "bytes": 842382267,
+      "budget": 922746880,
+      "files": 5587,
+      "offloadedFiles": 274,
+      "nativeScriptsUnchanged": 848,
+      "cacheManifestAliases": 7,
+      "historicalLandings": 804,
+      "activeKaro": "hosts/runtime/karo-743646c9df9a-e3c0caf3db54/"
+    }
+  },
+  "trophyAndToolsSearchRefresh": {
+    "date": "2026-11-03",
+    "pages": [
+      "console/ps4/apps.html",
+      "console/ps4/goldhen.html",
+      "console/ps4/transfer-tools.html",
+      "console/ps4/downloads.html",
+      "console/mods/ps4/gta5/index.html",
+      "console/mods/ps4/rdr2/index.html",
+      "tools/index.html",
+      "tools/injectors.html",
+      "tools/mods.html"
+    ],
+    "trophySearchPhrases": [
+      "trophy unlockers",
+      "trophy unlock",
+      "trophy hack",
+      "playstation trophy unlocker",
+      "playstation trophy hack",
+      "ps4 trophy unlocker",
+      "trophy unlock tool"
+    ],
+    "visibleTrophyTags": [
+      "PS4",
+      "Trophy unlocker",
+      "PKG",
+      "Windows tools"
+    ],
+    "metadataStable": true,
+    "searchTagsStable": true,
+    "focusedTests": 19,
+    "siteAudit": {
+      "pages": 479,
+      "linksAndAssets": 56366,
+      "issues": 0
+    },
+    "published": false,
+    "request": "Expand trophy unlocker keywords and tags plus related tools, GoldHEN, plugin configuration and file transfer search terms.",
+    "durability": "docs/seo/search-editorial-overrides.json, scripts/page-search-tags.cjs and scripts/build-ps4-software.cjs retain terms during regeneration.",
+    "preservation": "All downloads, URLs, title IDs and compatibility pins retained; no download files changed."
   }
 }
