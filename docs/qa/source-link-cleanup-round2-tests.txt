@@ -1,0 +1,16 @@
+✔ public mirrors require an existing in-root file below the size ceiling (5.0718ms)
+✔ sparse deployment reads unfetched file sizes and materializes exact filenames without fetching excluded downloads (285.4394ms)
+✔ a truncated recursive tree is completed from subtrees without requesting file blobs (6.3571ms)
+✔ the sparse planner accepts file sizes without any local Git repository or missing binary (2.0678ms)
+✔ source-first cleanup identifies games/apps and excludes mods, payloads and helper snapshots (1.0207ms)
+✔ mutable publisher packages and extracted files carry visible delivery requirements (2.1181ms)
+✔ only version-pinned assets qualify and extracted builds retain their exact ready file (0.5565ms)
+✔ an upstream delivery mapping prevents restoring a verified large mirror in future catalogue builds (5.2501ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.4862

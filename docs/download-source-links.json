@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-03T19:23:28.185Z",
+  "updated": "2026-11-03T19:43:26.697Z",
   "minimumBytes": 10485760,
   "delivery": "upstream-first; ready files and all older versions stay in the local archive",
   "preserved": "Game mods, native host payloads, source archives, immutable helpers and extracted files without their own version-pinned asset URLs.",
@@ -8,24 +8,29 @@
     {
       "local": "/downloads/archive/1c4a479dbe0f/cemu-2.6-windows-x64.zip",
       "url": "https://github.com/cemu-project/Cemu/releases/download/v2.6/cemu-2.6-windows-x64.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Cemu (Wii U)",
       "name": "cemu-2.6-windows-x64.zip",
       "bytes": 26374093,
-      "sha256": "a6bcc2bc42a362d10213819948f3152fae7d47f70067f25939b51d3ddcfb0896"
+      "sha256": "a6bcc2bc42a362d10213819948f3152fae7d47f70067f25939b51d3ddcfb0896",
+      "version": "v2.6"
     },
     {
       "local": "/downloads/archive/4eaf291daf32/shadps4-win64-sdl-0.21.0.zip",
       "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.21.0/shadps4-win64-sdl-0.21.0.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "shadPS4 (PlayStation 4)",
       "name": "shadps4-win64-sdl-0.21.0.zip",
       "bytes": 31725856,
-      "sha256": "95295b8f109663f70c2dac685e6232aa97be1353f6ed0a5d5e0c5dd24a797d88"
+      "sha256": "95295b8f109663f70c2dac685e6232aa97be1353f6ed0a5d5e0c5dd24a797d88",
+      "version": "v.0.21.0"
     },
     {
       "local": "/downloads/archive/628642807328/Resonance-v01.41.pkg",
       "url": "https://github.com/iHaiDeeZ/Resonance/releases/download/v01.41/Resonance-v01.41.pkg",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Resonance · Dreamcast",
       "name": "Resonance-v01.41.pkg",
@@ -37,6 +42,7 @@
     {
       "local": "/downloads/archive/640d68a152b5/PS5SX2-vk-285-182.zip",
       "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-182/PS5SX2-vk-285-182.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "PS5SX2 · PlayStation 2",
       "name": "PS5SX2-vk-285-182.zip",
@@ -48,6 +54,7 @@
     {
       "local": "/downloads/archive/7d1b737c85a3/PPSA97358.zip",
       "url": "https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/PPSA97358.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "XPSemu · Original Xbox",
       "name": "PPSA97358.zip",
@@ -57,36 +64,77 @@
       "retainRepositoryForLegacyReceiver": true
     },
     {
+      "local": "/downloads/archive/84490ca8dc8a/IRISMAN_4.91_older.pkg",
+      "url": "https://github.com/aldostools/IRISMAN/releases/download/4.91/IRISMAN_4.91_older.pkg",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "IRISMAN",
+      "name": "IRISMAN_4.91_older.pkg",
+      "version": "4.91",
+      "bytes": 25534528,
+      "sha256": "e9056c6bf6312b438bea6f50725013b523d699e42504cb84547f0950eeb544db"
+    },
+    {
+      "local": "/downloads/archive/84490ca8dc8a/IRISMAN_4.91.pkg",
+      "url": "https://github.com/aldostools/IRISMAN/releases/download/4.91/IRISMAN_4.91.pkg",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "IRISMAN",
+      "name": "IRISMAN_4.91.pkg",
+      "version": "4.91",
+      "bytes": 25537488,
+      "sha256": "8569d8461ca20cf35e8752ea94648d2cafc5182b18f8f71f5f4f3d90d9e538b8"
+    },
+    {
       "local": "/downloads/archive/85feb8ec5b14/pcsx2-v2.8.2-windows-x64-installer.exe",
       "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.8.2/pcsx2-v2.8.2-windows-x64-installer.exe",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "PCSX2 (PlayStation 2)",
       "name": "pcsx2-v2.8.2-windows-x64-installer.exe",
       "bytes": 46714216,
-      "sha256": "3422f3705ccc641b7e4fdf3f280d635d05c3c8b53a56c3af55d9df115bdcf768"
+      "sha256": "3422f3705ccc641b7e4fdf3f280d635d05c3c8b53a56c3af55d9df115bdcf768",
+      "version": "v2.8.2"
     },
     {
       "local": "/downloads/archive/85feb8ec5b14/pcsx2-v2.8.2-windows-x64-Qt.7z",
       "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.8.2/pcsx2-v2.8.2-windows-x64-Qt.7z",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "PCSX2 (PlayStation 2)",
       "name": "pcsx2-v2.8.2-windows-x64-Qt.7z",
       "bytes": 25670075,
-      "sha256": "7dfc829ca1994cc1045ac49f05e39b6cf968b72e6a374c40e05c2a2b4ac200b4"
+      "sha256": "7dfc829ca1994cc1045ac49f05e39b6cf968b72e6a374c40e05c2a2b4ac200b4",
+      "version": "v2.8.2"
+    },
+    {
+      "local": "/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg",
+      "url": "https://github.com/bucanero/apollo-ps4/releases/download/v2.4.0/IV0000-APOL00004_00-APOLLO0000000PS4.pkg",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "Apollo Save Tool PS4 2.4.0",
+      "name": "IV0000-APOL00004_00-APOLLO0000000PS4.pkg",
+      "bytes": 22806528,
+      "sha256": "ec34add4d2857fa3c947ed5666735a5c35ddb3e47d8be925b36e9ad408f7c090",
+      "retainRepositoryForLegacyReceiver": true,
+      "version": "v2.4.0"
     },
     {
       "local": "/downloads/archive/b171167057ba/IV0000-PCSX20007_00-PS4SX2EMU0000001.pkg",
       "url": "https://github.com/Phoenixx1202/PS4SX2/releases/download/01.00/IV0000-PCSX20007_00-PS4SX2EMU0000001.pkg",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "PS4SX2 · PlayStation 2",
       "name": "IV0000-PCSX20007_00-PS4SX2EMU0000001.pkg",
       "bytes": 53149696,
       "sha256": "0f9161be1397fd675277357828fb9cbc0c314abfb84779263a31262023df606b",
-      "retainRepositoryForLegacyReceiver": true
+      "retainRepositoryForLegacyReceiver": true,
+      "version": "01.00"
     },
     {
       "local": "/downloads/archive/cd469f63fa67/PS5Upload-10.6.0-win-x64-setup.exe",
       "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.6.0/PS5Upload-10.6.0-win-x64-setup.exe",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "PS5upload",
       "name": "PS5Upload-10.6.0-win-x64-setup.exe",
@@ -97,6 +145,7 @@
     {
       "local": "/downloads/archive/cd469f63fa67/PS5Upload-10.6.0-win-x64.zip",
       "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.6.0/PS5Upload-10.6.0-win-x64.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "PS5upload",
       "name": "PS5Upload-10.6.0-win-x64.zip",
@@ -107,6 +156,7 @@
     {
       "local": "/downloads/archive/cd469f63fa67/ps5upload-engine-10.6.0-windows-x64.exe",
       "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.6.0/ps5upload-engine-10.6.0-windows-x64.exe",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "PS5upload",
       "name": "ps5upload-engine-10.6.0-windows-x64.exe",
@@ -115,8 +165,31 @@
       "sha256": "8c788d4e487eca92cbd608802544f2e82502969bafe025cff01f9b1f2de6c0f4"
     },
     {
+      "local": "/downloads/archive/d399822b2a60/PS2_Classics_Launcher.pkg",
+      "url": "https://github.com/aldostools/webMAN-MOD/releases/download/1.47.50/PS2_Classics_Launcher.pkg",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "webMAN MOD",
+      "name": "PS2_Classics_Launcher.pkg",
+      "version": "1.47.50",
+      "bytes": 18571728,
+      "sha256": "f052e88d09f59d4739a85924fe6c377f3f412b20dcd80cd576dfa9fb389640e6"
+    },
+    {
+      "local": "/downloads/archive/d399822b2a60/webMAN_MOD_1.47.50_Installer.pkg",
+      "url": "https://github.com/aldostools/webMAN-MOD/releases/download/1.47.50/webMAN_MOD_1.47.50_Installer.pkg",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "webMAN MOD",
+      "name": "webMAN_MOD_1.47.50_Installer.pkg",
+      "version": "1.47.50",
+      "bytes": 14901872,
+      "sha256": "7c45d96cc2f126ecdcd22d4d3675ccacadbba9e4c8785072e41134bf60f303d1"
+    },
+    {
       "local": "/downloads/archive/ddcf24160dd6/PPSA99000.zip",
       "url": "https://github.com/darkxex/ProsperoStore/releases/download/v1.000.116/PPSA99000.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "ProsperoStore",
       "name": "PPSA99000.zip",
@@ -128,24 +201,29 @@
     {
       "local": "/downloads/archive/dfd445506a4e/rpcs3-v0.0.43-20551-ad468a13_win64_msvc.7z",
       "url": "https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-ad468a13f6374f364467a9e4988e95938c37bb42/rpcs3-v0.0.43-20551-ad468a13_win64_msvc.7z",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "RPCS3 (PlayStation 3)",
       "name": "rpcs3-v0.0.43-20551-ad468a13_win64_msvc.7z",
       "bytes": 37195158,
-      "sha256": "41bcdaca12a15a10503dffecee67df47847de1f0b1ba8735e81f4d20354673e6"
+      "sha256": "41bcdaca12a15a10503dffecee67df47847de1f0b1ba8735e81f4d20354673e6",
+      "version": "build-ad468a13f6374f364467a9e4988e95938c37bb42"
     },
     {
       "local": "/downloads/archive/f01c37cdc919/mGBA-0.10.5-win64.7z",
       "url": "https://github.com/mgba-emu/mgba/releases/download/0.10.5/mGBA-0.10.5-win64.7z",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "mGBA (Game Boy Advance)",
       "name": "mGBA-0.10.5-win64.7z",
       "bytes": 14156919,
-      "sha256": "b497a57c7d9093834dadc64f33a90f7c411439c21fdb8a0143255a45ea37563a"
+      "sha256": "b497a57c7d9093834dadc64f33a90f7c411439c21fdb8a0143255a45ea37563a",
+      "version": "0.10.5"
     },
     {
       "local": "/downloads/ds-dsi-more/punch-a-rooney/1.0.1/Punch-A-Rooney.nds",
       "url": "https://github.com/seaners42/Punch-A-Rooney/releases/download/1.0.1/Punch-A-Rooney.nds",
+      "sourceVersionPinned": true,
       "category": "games",
       "title": "PUNCH-A-ROONEY!",
       "name": "Punch-A-Rooney.nds",
@@ -156,6 +234,7 @@
     {
       "local": "/downloads/ds-dsi-more/terrariads/0.2/TerrariaDS.nds",
       "url": "https://github.com/AzizBgBoss/TerrariaDS/releases/download/0.2/TerrariaDS.nds",
+      "sourceVersionPinned": true,
       "category": "games",
       "title": "TerrariaDS",
       "name": "TerrariaDS.nds",
@@ -166,6 +245,7 @@
     {
       "local": "/downloads/nintendo-switch/appstore/2.3.2/appstore.nro",
       "url": "https://github.com/fortheusers/hb-appstore/releases/download/v2.3.2/appstore.nro",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Homebrew App Store",
       "name": "appstore.nro",
@@ -174,38 +254,116 @@
       "sha256": "de1ab28c4c142cafd45fb4bfef9ce560122d8aec063f5947982c759e3691e978"
     },
     {
+      "local": "/downloads/nintendo-switch/BrogueCE/1.9.2-r2/brogue.nro",
+      "url": "https://switch.cdn.fortheusers.org/zips/BrogueCE.zip",
+      "sourceVersionPinned": false,
+      "category": "games",
+      "title": "BrogueCE",
+      "name": "brogue.nro",
+      "version": "1.9.2-r2",
+      "bytes": 10767662,
+      "sha256": "b7d6366431be73b18b7bad0ed01fe724cd6f00cdf773a81a95d06728889cd1e6",
+      "linkNote": "Original ZIP; extract brogue.nro. Upstream version may change; archived 1.9.2-r2 kept locally",
+      "sourceBytes": 4428182,
+      "sourceSha256": "6fe4bd2139e86d33d13b154e8d301b904121c7185eeb0f8c5aea746e9b6b15b8",
+      "requiresExtraction": true
+    },
+    {
       "local": "/downloads/nintendo-switch/Moonlight-Switch/1.5.0/Moonlight-Switch.nro",
-      "url": "https://github.com/XITRIX/Moonlight-Switch/releases/download/v1.5.0/Moonlight-Switch.nro",
+      "url": "https://switch.cdn.fortheusers.org/zips/Moonlight-Switch.zip",
+      "sourceVersionPinned": false,
       "category": "apps-homebrew",
       "title": "Moonlight-Switch",
       "name": "Moonlight-Switch.nro",
       "version": "1.5.0",
       "bytes": 17677907,
-      "sha256": "594167a17b587d3bf828ea3477afbe71c114b4ef5d25940ea4ca831788d0af69"
+      "sha256": "594167a17b587d3bf828ea3477afbe71c114b4ef5d25940ea4ca831788d0af69",
+      "linkNote": "Original ZIP; extract Moonlight-Switch.nro. Upstream version may change; archived 1.5.0 kept locally",
+      "sourceBytes": 8836707,
+      "sourceSha256": "a1468c68c5334ed1df69e817706d666ed3bfcee0f2f6e4172e862966bd2a5ba9",
+      "requiresExtraction": true
+    },
+    {
+      "local": "/downloads/nintendo-switch/NXMP/0.9.3/NXMP-sd-package.zip",
+      "url": "https://switch.cdn.fortheusers.org/zips/NXMP.zip",
+      "sourceVersionPinned": false,
+      "category": "apps-homebrew",
+      "title": "NXMP",
+      "name": "NXMP-sd-package.zip",
+      "version": "0.9.3",
+      "bytes": 45564568,
+      "sha256": "9d9dbc1bc58ed08eeafa88fa67d61632c58195ddd17d0f37526a9d90ce1e1853",
+      "linkNote": "Upstream version may change; archived 0.9.3 kept locally"
     },
     {
       "local": "/downloads/nintendo-switch/pNES/7.2/pnes.nro",
-      "url": "https://github.com/Cpasjuste/pemu/releases/download/v7.2/pnes.nro",
+      "url": "https://switch.cdn.fortheusers.org/zips/pNES.zip",
+      "sourceVersionPinned": false,
       "category": "apps-homebrew",
       "title": "pNES",
       "name": "pnes.nro",
       "version": "7.2",
       "bytes": 32694687,
-      "sha256": "6f640a7d3c740229247fadf81b2700b951ad76c24ca940b77eceb5f3f9cdbe9f"
+      "sha256": "6f640a7d3c740229247fadf81b2700b951ad76c24ca940b77eceb5f3f9cdbe9f",
+      "linkNote": "Original ZIP; extract pnes.nro. Upstream version may change; archived 7.2 kept locally",
+      "sourceBytes": 14989033,
+      "sourceSha256": "610c2941b64c231959dc0ad968bbba029b0fc3e3664c06f06c2821c4e4f7cd81",
+      "requiresExtraction": true
+    },
+    {
+      "local": "/downloads/nintendo-switch/ppsspp/1.17.x (Sept 9, 2024)/ppsspp-sd-package.zip",
+      "url": "https://switch.cdn.fortheusers.org/zips/ppsspp.zip",
+      "sourceVersionPinned": false,
+      "category": "apps-homebrew",
+      "title": "PPSSPP Standalone",
+      "name": "ppsspp-sd-package.zip",
+      "version": "1.17.x (Sept 9, 2024)",
+      "bytes": 20226510,
+      "sha256": "9296552c26d96c61f04d2aaf12f06f867cf59172b3748c1a4a97367c6361903f",
+      "linkNote": "Upstream version may change; archived 1.17.x (Sept 9, 2024) kept locally"
     },
     {
       "local": "/downloads/nintendo-switch/psnes/7.2/psnes.nro",
-      "url": "https://github.com/Cpasjuste/pemu/releases/download/v7.2/psnes.nro",
+      "url": "https://switch.cdn.fortheusers.org/zips/psnes.zip",
+      "sourceVersionPinned": false,
       "category": "apps-homebrew",
       "title": "pSNES",
       "name": "psnes.nro",
       "version": "7.2",
       "bytes": 32052730,
-      "sha256": "3343eb76f45498961cb53968451c35b20fb0ec7962060723dcad485cff6633e4"
+      "sha256": "3343eb76f45498961cb53968451c35b20fb0ec7962060723dcad485cff6633e4",
+      "linkNote": "Original ZIP; extract psnes.nro. Upstream version may change; archived 7.2 kept locally",
+      "sourceBytes": 14858460,
+      "sourceSha256": "2986e7ed26c8adaa729e9341fe22469fe8e8496b7c8407c40b3e4833d6011391",
+      "requiresExtraction": true
+    },
+    {
+      "local": "/downloads/ps3/ps3-filemanager-zarh/9982749f91df/FileManager_v1.41.pkg",
+      "url": "https://github.com/Zarh/ManaGunZ/releases/download/1.41/FileManager_v1.41.pkg",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "File Manager by Zarh",
+      "name": "FileManager_v1.41.pkg",
+      "version": "1.41",
+      "bytes": 12429328,
+      "sha256": "9982749f91df332996fa5582c3cf2422811bb3ba693215115a08d785c9b0b29a"
+    },
+    {
+      "local": "/downloads/ps4-ps5/fps-ps4-cheats-manager-1-2-2/IV0000-CHTM00777_00-PS4CHEATSMANAGER.pkg",
+      "url": "https://github.com/bucanero/PS4CheatsManager/releases/download/v1.2.2/IV0000-CHTM00777_00-PS4CHEATSMANAGER.pkg",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "PS4 Cheats Manager 1.2.2",
+      "name": "IV0000-CHTM00777_00-PS4CHEATSMANAGER.pkg",
+      "version": "v1.2.2",
+      "bytes": 19202048,
+      "sha256": "73f93d0c8343a0c9805768b68402dbba45c87f8bb882584e6aad503d79753b82",
+      "retainRepositoryForLegacyReceiver": true
     },
     {
       "local": "/downloads/ps4-ps5/ps4-store-scratch-everywhere-1-3/scratch-ps4.pkg",
       "url": "https://github.com/ScratchEverywhere/ScratchEverywhere/releases/download/1.3/scratch-ps4.pkg",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Scratch Everywhere! · PS4",
       "name": "scratch-ps4.pkg",
@@ -217,6 +375,7 @@
     {
       "local": "/downloads/ps4-ps5/ps4-store-switchfin-0-9-4/IV0001-SFIN00000_00-SFIN000000009400.pkg",
       "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/IV0001-SFIN00000_00-SFIN000000009400.pkg",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Switchfin · PS4 Jellyfin client",
       "name": "IV0001-SFIN00000_00-SFIN000000009400.pkg",
@@ -228,6 +387,7 @@
     {
       "local": "/downloads/ps4-ps5/ps4-store-wiliwili-1-6-0/wiliwili-PS4.pkg",
       "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-PS4.pkg",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "wiliwili · PS4",
       "name": "wiliwili-PS4.pkg",
@@ -239,6 +399,7 @@
     {
       "local": "/downloads/ps4-ps5/ps5-store-ppsa98427/PPSA98427.zip",
       "url": "https://github.com/LoZazaMastro/CD-Player/releases/download/v1.1.2/PPSA98427.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "CD Player · PS5 1.1.2",
       "name": "PPSA98427.zip",
@@ -250,6 +411,7 @@
     {
       "local": "/downloads/ps4-ps5/ps5-store-ppsa99001/PPSA99001.zip",
       "url": "https://github.com/bornaradusin/ProsperoRadio/releases/download/01.000.010/PPSA99001.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "ProsperoRadio · PS5 01.000.010",
       "name": "PPSA99001.zip",
@@ -261,6 +423,7 @@
     {
       "local": "/downloads/ps4-ps5/ps5-store-ppsa99051/PPSA99051.zip",
       "url": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/download/01.000.003/PPSA99051.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Surround Sound Studio · PS5 01.000.003",
       "name": "PPSA99051.zip",
@@ -270,8 +433,20 @@
       "retainRepositoryForLegacyReceiver": true
     },
     {
+      "local": "/downloads/psp-more/ark4/v42069r206/ARK4.zip",
+      "url": "https://github.com/PSP-Archive/ARK-4/releases/download/v42069r206/ARK4.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "ARK-4 · final release",
+      "name": "ARK4.zip",
+      "version": "v4.20.69 r206",
+      "bytes": 40193265,
+      "sha256": "d38f3dda6f18b783bdb05a9c1bf6ed46bf4cbd7963a66db4eca9f6b2fd32c483"
+    },
+    {
       "local": "/downloads/psp-more/crosscraft/v1.3/CrossCraft-PSP.zip",
       "url": "https://github.com/CrossCraft/CrossCraft-Classic/releases/download/v1.3/CrossCraft-PSP.zip",
+      "sourceVersionPinned": true,
       "category": "games",
       "title": "CrossCraft Classic",
       "name": "CrossCraft-PSP.zip",
@@ -282,6 +457,7 @@
     {
       "local": "/downloads/psp-more/daedalus/1.1.8/DaedalusX64_1_1_8.zip",
       "url": "https://github.com/DaedalusX64/daedalus/releases/download/1.1.8/DaedalusX64_1_1_8.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "DaedalusX64",
       "name": "DaedalusX64_1_1_8.zip",
@@ -290,8 +466,34 @@
       "sha256": "7e734cb48ba092b44a60c61218c5d6789a23db43f4909beb8cb1a783fe658224"
     },
     {
+      "local": "/downloads/psp-more/nzportable/nightly--pin-retrieval-date-and-build-version.txt-/nzportable-psp.zip",
+      "url": "https://github.com/nzp-team/nzportable/releases/download/nightly/nzportable-psp.zip",
+      "sourceVersionPinned": false,
+      "category": "games",
+      "title": "Nazi Zombies: Portable",
+      "name": "nzportable-psp.zip",
+      "version": "2.0.0-indev+20261031133122 · snapshot 2026-11-02",
+      "bytes": 64684966,
+      "sha256": "e859ceda7068178d67eddac5c03bdb6c3fcdfb2fe78d172e57098105f6ed3590",
+      "linkNote": "Upstream version may change; archived 2.0.0-indev+20261031133122 · snapshot 2026-11-02 kept locally; publisher download differs from the archived build",
+      "upstreamBytes": 64705071,
+      "archivedBuildDiffersFromUpstream": true
+    },
+    {
+      "local": "/downloads/psp-more/scummvm/2026.4.0/scummvm-2026.4.0-psp.zip",
+      "url": "https://downloads.scummvm.org/frs/scummvm/2026.4.0/scummvm-2026.4.0-psp.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "ScummVM",
+      "name": "scummvm-2026.4.0-psp.zip",
+      "version": "2026.4.0",
+      "bytes": 84983547,
+      "sha256": "779926abf21b70e79ec34727396e6e9c80b89ca11f653f982e71a4c430113a98"
+    },
+    {
       "local": "/downloads/psp-more/wagic/wagic-v0.25.5/Wagic-core-0255.zip",
       "url": "https://github.com/WagicProject/wagic/releases/download/wagic-v0.25.5/Wagic-core-0255.zip",
+      "sourceVersionPinned": true,
       "category": "games",
       "title": "Wagic, the Homebrew",
       "name": "Wagic-core-0255.zip",
@@ -302,6 +504,7 @@
     {
       "local": "/downloads/psp-more/wagic/wagic-v0.25.5/WagicPSP-0255.zip",
       "url": "https://github.com/WagicProject/wagic/releases/download/wagic-v0.25.5/WagicPSP-0255.zip",
+      "sourceVersionPinned": true,
       "category": "games",
       "title": "Wagic, the Homebrew",
       "name": "WagicPSP-0255.zip",
@@ -330,8 +533,122 @@
       "sha256": "37d685b02f5bb06904043a21d25687401f751d665864ff4537baebe7b1a669bc"
     },
     {
+      "local": "/downloads/wii-more/scummvm-2026.1.0.zip",
+      "url": "https://hbb1.oscwii.org/api/contents/scummvm/scummvm.zip",
+      "sourceVersionPinned": false,
+      "category": "apps-homebrew",
+      "title": "ScummVM",
+      "name": "scummvm-2026.1.0.zip",
+      "version": "2026.1.0",
+      "bytes": 73135442,
+      "sha256": "cf7a756cb4e153f59f79fe0ec444c2a0fb007ebb4c192a7de0c11bbaabcab4ef",
+      "linkNote": "Upstream version may change; archived 2026.1.0 kept locally"
+    },
+    {
+      "local": "/downloads/wiiu-more/coldstart-wiiu/3.6.0/coldstart-wiiu-sd-package.zip",
+      "url": "https://wiiu.cdn.fortheusers.org/zips/coldstart-wiiu.zip",
+      "sourceVersionPinned": false,
+      "category": "games",
+      "title": "COLD START",
+      "name": "coldstart-wiiu-sd-package.zip",
+      "version": "3.6.0",
+      "bytes": 53648381,
+      "sha256": "de0541971d00fd32e6d8c081918ceb5346c3f8c5bda980b13c02c9ac5b8eaf75",
+      "linkNote": "Upstream version may change; archived 3.6.0 kept locally"
+    },
+    {
+      "local": "/downloads/wiiu-more/vgedit/2.2.1/vgedit-sd-package.zip",
+      "url": "https://wiiu.cdn.fortheusers.org/zips/vgedit.zip",
+      "sourceVersionPinned": false,
+      "category": "apps-homebrew",
+      "title": "vgedit",
+      "name": "vgedit-sd-package.zip",
+      "version": "2.2.1",
+      "bytes": 18079487,
+      "sha256": "04990f8db9d3e26fbdd79a1e7f91935bcc0184617bff318ce322f84e5b421ac7",
+      "linkNote": "Upstream version may change; archived 2.2.1 kept locally"
+    },
+    {
+      "local": "/downloads/wiiu/Dynamismal/1.2.2/dynamismal_wiiu.wuhb",
+      "url": "https://wiiu.cdn.fortheusers.org/zips/Dynamismal.zip",
+      "sourceVersionPinned": false,
+      "category": "games",
+      "title": "Dynamismal",
+      "name": "dynamismal_wiiu.wuhb",
+      "version": "1.2.2",
+      "bytes": 17201656,
+      "sha256": "d17353a02331a207d4d1f78d6ca4dbf9a8d2427fb9eafad28521b770a2732b75",
+      "linkNote": "Original ZIP; extract dynamismal_wiiu.wuhb. Upstream version may change; archived 1.2.2 kept locally",
+      "sourceBytes": 17010568,
+      "sourceSha256": "407c82a4a84b5fe8db835424fbeba3deaed8815f03020f9c45cf89cf92105905",
+      "requiresExtraction": true
+    },
+    {
+      "local": "/downloads/wiiu/Dynamismal/1.2.2/Dynamismal-sd-package.zip",
+      "url": "https://wiiu.cdn.fortheusers.org/zips/Dynamismal.zip",
+      "sourceVersionPinned": false,
+      "category": "games",
+      "title": "Dynamismal",
+      "name": "Dynamismal-sd-package.zip",
+      "version": "1.2.2",
+      "bytes": 17010568,
+      "sha256": "407c82a4a84b5fe8db835424fbeba3deaed8815f03020f9c45cf89cf92105905",
+      "linkNote": "Upstream version may change; archived 1.2.2 kept locally"
+    },
+    {
+      "local": "/downloads/wiiu/retroarch/1.22.1/retroarch-sd-package.zip",
+      "url": "https://wiiu.cdn.fortheusers.org/zips/retroarch.zip",
+      "sourceVersionPinned": false,
+      "category": "apps-homebrew",
+      "title": "RetroArch",
+      "name": "retroarch-sd-package.zip",
+      "version": "1.22.1",
+      "bytes": 34227001,
+      "sha256": "0efb679f0938fc462d10c664b0a6709dcd9fb7d3452025786d11af3557a24ecc",
+      "linkNote": "Upstream version may change; archived 1.22.1 kept locally"
+    },
+    {
+      "local": "/downloads/wiiu/SnakeBattleRoyale/1.1.0/SnakeBattleRoyale-sd-package.zip",
+      "url": "https://wiiu.cdn.fortheusers.org/zips/SnakeBattleRoyale.zip",
+      "sourceVersionPinned": false,
+      "category": "games",
+      "title": "Snake Battle Royale",
+      "name": "SnakeBattleRoyale-sd-package.zip",
+      "version": "1.1.0",
+      "bytes": 10783137,
+      "sha256": "7b856f2955c3be8986fefd6b427924438c95d82d71e0709eee5c7403adbfb238",
+      "linkNote": "Upstream version may change; archived 1.1.0 kept locally"
+    },
+    {
+      "local": "/downloads/wiiu/SnakeBattleRoyale/1.1.0/snakebattleroyale.wuhb",
+      "url": "https://wiiu.cdn.fortheusers.org/zips/SnakeBattleRoyale.zip",
+      "sourceVersionPinned": false,
+      "category": "games",
+      "title": "Snake Battle Royale",
+      "name": "snakebattleroyale.wuhb",
+      "version": "1.1.0",
+      "bytes": 11079908,
+      "sha256": "163e107c409297743e38b5f05ebf88e73aadbc74b092e9f96a821b80093ef47d",
+      "linkNote": "Original ZIP; extract snakebattleroyale.wuhb. Upstream version may change; archived 1.1.0 kept locally",
+      "sourceBytes": 10783137,
+      "sourceSha256": "7b856f2955c3be8986fefd6b427924438c95d82d71e0709eee5c7403adbfb238",
+      "requiresExtraction": true
+    },
+    {
+      "local": "/downloads/xbox-one-series/2ship/2ship2harkinian.msixbundle",
+      "url": "https://github.com/XboxEmulationHub/2ship2harkinian-uwp/releases/download/0.1.0-uwp/2ship2harkinian.msixbundle",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "2 Ship 2 Harkinian UWP · Majora’s Mask engine",
+      "name": "2ship2harkinian.msixbundle",
+      "version": "0.1.0-uwp",
+      "bytes": 15119651,
+      "sha256": "2fea17c535a5512e80696beae976ab04844752add9accbaa7f13bc1260c87938"
+    },
+    {
       "local": "/downloads/xbox-one-series/azahar/Azahar_0.2126.2.1.msix",
       "url": "https://github.com/danprice142/Azahar-UWP/releases/download/0.2126.2.1/Azahar_0.2126.2.1.msix",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Azahar UWP · Nintendo 3DS",
       "name": "Azahar_0.2126.2.1.msix",
@@ -342,6 +659,7 @@
     {
       "local": "/downloads/xbox-one-series/cemu/Cemu_0.2.6.7.msix",
       "url": "https://github.com/danprice142/Cemu-UWP/releases/download/0.2.6.7/Cemu_0.2.6.7.msix",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Cemu UWP · Wii U",
       "name": "Cemu_0.2.6.7.msix",
@@ -352,6 +670,7 @@
     {
       "local": "/downloads/xbox-one-series/dolphin/Dolphin_1.2.0.2.msix",
       "url": "https://github.com/danprice142/dolphin-uwp/releases/download/1.2.0.2/Dolphin_1.2.0.2.msix",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Dolphin UWP · GameCube & Wii",
       "name": "Dolphin_1.2.0.2.msix",
@@ -362,6 +681,7 @@
     {
       "local": "/downloads/xbox-one-series/dolphin/DolphinWinRT_1.1.9.0_x64.msix",
       "url": "https://github.com/XboxEmulationHub/dolphin/releases/download/1.1.9.0/DolphinWinRT_1.1.9.0_x64.msix",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Dolphin UWP · GameCube & Wii",
       "name": "DolphinWinRT_1.1.9.0_x64.msix",
@@ -370,8 +690,57 @@
       "sha256": "2769144eb413b09b337b2821e2f849cbe7a60095a1516b3a5538ef48b8d638fb"
     },
     {
+      "local": "/downloads/xbox-one-series/durangoftp/DurangoFTP_1.4.5.0_Test.zip",
+      "url": "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases/download/v1.2/DurangoFTP_1.4.5.0_Test.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "DurangoFTP · local file transfer",
+      "name": "DurangoFTP_1.4.5.0_Test.zip",
+      "version": "v1.2 (package 1.4.5.0)",
+      "bytes": 26126513,
+      "sha256": "ce40692f61aa17c22642469e26f9795c47fd2ea7578696700edd07bfaea0a5a1"
+    },
+    {
+      "local": "/downloads/xbox-one-series/moonlight/moonlight-xbox-dx_1.18.2.0_x64.msixbundle",
+      "url": "https://github.com/TheElixZammuto/moonlight-xbox/releases/download/1.18.2/moonlight-xbox-dx_1.18.2.0_x64.msixbundle",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "Moonlight Xbox · PC streaming",
+      "name": "moonlight-xbox-dx_1.18.2.0_x64.msixbundle",
+      "version": "1.18.2.0",
+      "bytes": 13459313,
+      "sha256": "613716e3d3d1c2d2a12cd4ef8a3544509d4ca05941a601fd5c7105e1d09caafd"
+    },
+    {
+      "local": "/downloads/xbox-one-series/ppsspp/PPSSPP_UWP_1.20.4.0_x64.msix",
+      "url": "https://www.ppsspp.org/files/1_20_4/ppsspp_uwp.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "PPSSPP · PlayStation Portable",
+      "name": "PPSSPP_UWP_1.20.4.0_x64.msix",
+      "version": "1.20.4",
+      "bytes": 24343573,
+      "sha256": "54fe98b9252ec40ca0506b52785bf442d4f297d13a6d3c4cfc621fdfa4da41ab",
+      "linkNote": "Original ZIP; extract PPSSPP_UWP_1.20.4.0_x64.msix",
+      "sourceBytes": 28367846,
+      "sourceSha256": "ddea08aceb0766c7594b2c35dede23bcf88185e147f9906b098fee9754d86aab",
+      "requiresExtraction": true
+    },
+    {
+      "local": "/downloads/xbox-one-series/ppsspp/ppsspp_uwp.zip",
+      "url": "https://www.ppsspp.org/files/1_20_4/ppsspp_uwp.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "PPSSPP · PlayStation Portable",
+      "name": "ppsspp_uwp.zip",
+      "version": "1.20.4",
+      "bytes": 28367846,
+      "sha256": "ddea08aceb0766c7594b2c35dede23bcf88185e147f9906b098fee9754d86aab"
+    },
+    {
       "local": "/downloads/xbox-one-series/retroarch/RetroArch-SeriesConsoles.appx",
       "url": "https://github.com/XboxEmulationHub/RetroArch/releases/download/08-19-2026/RetroArch-SeriesConsoles.appx",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "RetroArch · multi-system emulation",
       "name": "RetroArch-SeriesConsoles.appx",
@@ -382,6 +751,7 @@
     {
       "local": "/downloads/xbox-one-series/retroarch/RetroArch-XboxOne.appx",
       "url": "https://github.com/XboxEmulationHub/RetroArch/releases/download/08-19-2026/RetroArch-XboxOne.appx",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "RetroArch · multi-system emulation",
       "name": "RetroArch-XboxOne.appx",
@@ -390,8 +760,20 @@
       "sha256": "55c2518291b87e8fa1b0b9ea03b2ef745692719bd6854e0b98c82ba2ea79d024"
     },
     {
+      "local": "/downloads/xbox-one-series/retropass/RetroPass_v1.13.0.zip",
+      "url": "https://github.com/retropassdev/RetroPass/releases/download/RetroPass_v1.13.0/RetroPass_v1.13.0.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "RetroPass · library frontend",
+      "name": "RetroPass_v1.13.0.zip",
+      "version": "1.13.0",
+      "bytes": 55541698,
+      "sha256": "b9b05a402a412f552fd0f9bf16d8245af520c69f62983de3d806211f5919e898"
+    },
+    {
       "local": "/downloads/xbox-one-series/scummvm/scummvm-uwp_2026.3.1.155_x64.zip",
       "url": "https://github.com/marcelofrau/scummvm-uwp/releases/download/v2026.3.1.155/scummvm-uwp_2026.3.1.155_x64.zip",
+      "sourceVersionPinned": true,
       "category": "games",
       "title": "ScummVM UWP · adventure games",
       "name": "scummvm-uwp_2026.3.1.155_x64.zip",
@@ -400,8 +782,24 @@
       "sha256": "db9f8f46c70830fd7cc014746b23111d0bf998434de5b44bf0e8eec442b32dfa"
     },
     {
+      "local": "/downloads/xbox-one-series/scummvm/ScummVMLauncher_2026.3.1.155_x64.msix",
+      "url": "https://github.com/marcelofrau/scummvm-uwp/releases/download/v2026.3.1.155/scummvm-uwp_2026.3.1.155_x64.zip",
+      "sourceVersionPinned": true,
+      "category": "games",
+      "title": "ScummVM UWP · adventure games",
+      "name": "ScummVMLauncher_2026.3.1.155_x64.msix",
+      "version": "2026.3.1.155",
+      "bytes": 140040826,
+      "sha256": "0edd4bb4665e05a2904eee3ad32c032201d82685a0a9b217d94e20203a5bfcae",
+      "linkNote": "Original ZIP; extract ScummVMLauncher_2026.3.1.155_x64.msix",
+      "sourceBytes": 140759062,
+      "sourceSha256": "db9f8f46c70830fd7cc014746b23111d0bf998434de5b44bf0e8eec442b32dfa",
+      "requiresExtraction": true
+    },
+    {
       "local": "/downloads/xbox-one-series/xbsx2/XBSX2_2.0.9.2_AVX2.msixbundle",
       "url": "https://github.com/XboxEmulationHub/XBSX2/releases/download/v2.0.9.2/XBSX2_2.0.9.2_AVX2.msixbundle",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "XBSX2 · PlayStation 2",
       "name": "XBSX2_2.0.9.2_AVX2.msixbundle",
@@ -412,6 +810,7 @@
     {
       "local": "/downloads/xbox-one-series/xbsx2/XBSX2_2.0.9.2_SSE4.msixbundle",
       "url": "https://github.com/XboxEmulationHub/XBSX2/releases/download/v2.0.9.2/XBSX2_2.0.9.2_SSE4.msixbundle",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "XBSX2 · PlayStation 2",
       "name": "XBSX2_2.0.9.2_SSE4.msixbundle",
@@ -422,6 +821,7 @@
     {
       "local": "/downloads/xbox-one-series/xemu/Xemu_0.9.1010.0_x64.appx",
       "url": "https://github.com/skitzellez/xemu-uwp/releases/download/uwp-0.9.1010.0/Xemu_0.9.1010.0_x64.appx",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "xemu UWP · original Xbox",
       "name": "Xemu_0.9.1010.0_x64.appx",
@@ -430,8 +830,50 @@
       "sha256": "1c4c16a72c3045f2044423f869f7d98e9cd33a9b2cb25ed55ef3ca1f367b2b20"
     },
     {
+      "local": "/downloads/xbox-one-series/xfiles/XFiles_1.8.0.1527_x64.msix",
+      "url": "https://github.com/marcelofrau/x-files-uwp/releases/download/v1.8.0.1527/xfiles_1.8.0.1527_x64.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "X-Files · file manager",
+      "name": "XFiles_1.8.0.1527_x64.msix",
+      "version": "1.8.0.1527",
+      "bytes": 13435767,
+      "sha256": "0dc2a30abe95724ead5e0b1f45539fdef565af0e0353e26c945c9218f5e4dd96",
+      "linkNote": "Original ZIP; extract XFiles_1.8.0.1527_x64.msix",
+      "sourceBytes": 32121103,
+      "sourceSha256": "b2f0c1ba0e507de822e3becfffd2367141562ff067ed36ab4735f034a5360b48",
+      "requiresExtraction": true
+    },
+    {
+      "local": "/downloads/xbox-one-series/xfiles/xfiles_1.8.0.1527_x64.zip",
+      "url": "https://github.com/marcelofrau/x-files-uwp/releases/download/v1.8.0.1527/xfiles_1.8.0.1527_x64.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "X-Files · file manager",
+      "name": "xfiles_1.8.0.1527_x64.zip",
+      "version": "1.8.0.1527",
+      "bytes": 32121103,
+      "sha256": "b2f0c1ba0e507de822e3becfffd2367141562ff067ed36ab4735f034a5360b48"
+    },
+    {
+      "local": "/downloads/xbox-one-series/ymir/ymir-sdl3_0.4.2.1_x64_RelWithDebInfo.msix",
+      "url": "https://github.com/marcelofrau/Ymir/releases/download/uwp-v0.4.2.1/ymir-uwp_0.4.2.1_x64.zip",
+      "sourceVersionPinned": true,
+      "category": "apps-homebrew",
+      "title": "Ymir UWP · Sega Saturn",
+      "name": "ymir-sdl3_0.4.2.1_x64_RelWithDebInfo.msix",
+      "version": "0.4.2.1",
+      "bytes": 16782742,
+      "sha256": "3903302f059de596e2427956527df7a34a0833cdef2a49972fe4e0e30f92c128",
+      "linkNote": "Original ZIP; extract ymir-sdl3_0.4.2.1_x64_RelWithDebInfo.msix",
+      "sourceBytes": 17719079,
+      "sourceSha256": "675334878027bde884927b723e9c7864e910e7633acd97ce41bc3cdcc3ff2b83",
+      "requiresExtraction": true
+    },
+    {
       "local": "/downloads/xbox-one-series/ymir/ymir-uwp_0.4.2.1_x64.zip",
       "url": "https://github.com/marcelofrau/Ymir/releases/download/uwp-v0.4.2.1/ymir-uwp_0.4.2.1_x64.zip",
+      "sourceVersionPinned": true,
       "category": "apps-homebrew",
       "title": "Ymir UWP · Sega Saturn",
       "name": "ymir-uwp_0.4.2.1_x64.zip",

@@ -93,6 +93,7 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   names ||= tree ? tree.names : execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], {cwd: root, maxBuffer: 64 * 1024 * 1024}).toString().split('\0').filter(Boolean);
   if (fs.existsSync(output)) throw Error('Use a fresh output directory; existing files are never removed');
   const result = plan(root, names, revision, tree?.sizes), rewrite = rewriter(result.offloaded);
+  const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const runtimeFiles = Object.fromEntries([...result.offloaded].filter(([name]) => name.startsWith('hosts/runtime/')).map(([name, url]) => ['/' + name, url]));
   for (const {name} of result.files) {
@@ -101,7 +102,9 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
     fs.mkdirSync(path.dirname(destination), {recursive: true});
     // Immutable downloads and receiver snapshots keep their exact archived bytes.
     if ((!name.startsWith('downloads/') || name === 'downloads/index.html') && !/^console\/ps[45]\/whatsite-ps[45]\.html$/.test(name) && /\.(?:html|js|css|json|xml|md|txt)$/i.test(name)) {
-      let content = rewrite(fs.readFileSync(path.join(root, name), 'utf8'), name);
+      let source=fs.readFileSync(path.join(root, name), 'utf8');
+      if(name.endsWith('.html'))source=require('./source-download-notes.cjs').annotate(source,name,deliveryEntries);
+      let content = rewrite(source, name);
       if (/^hosts\/runtime\/karo-[^/]+\/web\/.+\.html$/i.test(name) && Object.keys(runtimeFiles).length) {
         const adapter = '<script src="/pages-runtime-map.js"></script><script src="/assets/pages-runtime-files.js"></script>';
         content = /<head\b[^>]*>/i.test(content) ? content.replace(/<head\b[^>]*>/i, head => head + adapter) : adapter + content;

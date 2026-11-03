@@ -8880,5 +8880,65 @@
     "preservation": "No working downloads, F: archives, older versions or Git history deleted. Native host Load files, eleven legacy receiver mirrors, game mods and immutable helper snapshots preserved.",
     "futureWorkflow": "New games/apps/homebrew use source links and local archive copies; large binary mirrors do not enter the site repository. Pinned version and compatibility requirements stay intact.",
     "validation": "Archive sizes and SHA-256 checked; upstream HEAD and byte counts checked for every converted file. Source-link and sparse-checkout policy tests passed."
+  },
+  "sourceLinkCleanupContinuation20261103": {
+    "date": "2026-11-03",
+    "request": "Continue the rest of the large games, apps and homebrew with original download links and retained local copies; leave game mods unchanged and push.",
+    "newSourceLinks": 31,
+    "totalSourceLinks": 74,
+    "removedMirrors": 28,
+    "removedBytes": 823859248,
+    "preservedLocalFiles": true,
+    "changedPages": [
+      "console/nintendo-switch/apps.html",
+      "console/nintendo-switch/brogue-ce.html",
+      "console/nintendo-switch/nxmp.html",
+      "console/nintendo-switch/ppsspp.html",
+      "console/ps3/apps.html",
+      "console/ps3/browser-downloads.html",
+      "console/ps3/transfer-tools.html",
+      "console/ps4/apps.html",
+      "console/ps4/downloads.html",
+      "console/ps4/game-patches.html",
+      "console/ps4/index.html",
+      "console/psp/emulators.html",
+      "console/psp/games.html",
+      "console/psp/setup.html",
+      "console/retro/psp.html",
+      "console/retro/wii.html",
+      "console/retro/wiiu.html",
+      "console/wii/emulators.html",
+      "console/wiiu/apps.html",
+      "console/wiiu/emulators.html",
+      "console/wiiu/games.html",
+      "console/wiiu/vwii.html",
+      "console/xbox-one-series.html",
+      "console/xbox-one-series/apps.html",
+      "console/xbox-one-series/dependencies.html",
+      "downloads/index.html"
+    ],
+    "retainedCompatibilityFiles": [
+      "/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg",
+      "/downloads/ps4-ps5/fps-ps4-cheats-manager-1-2-2/IV0000-CHTM00777_00-PS4CHEATSMANAGER.pkg"
+    ],
+    "remaining": [
+      {
+        "title": "Itemzflow Game Manager · PS4",
+        "reason": "The operation was aborted due to timeout"
+      }
+    ],
+    "minimumBytes": 10485760,
+    "archiveVerification": "Every converted ready file verified by size and SHA-256 in F:; extracted-file source ZIPs independently verified. No downloaded code executed.",
+    "sourceDelivery": "Version-specific publisher assets used where available. Original ZIP links show extraction requirements. Mutable homebrew-store/nightly sources visibly state that their version may change and keep the archived build identity.",
+    "gameModChanges": 0,
+    "tests": {
+      "passed": 8,
+      "failed": 0,
+      "report": "docs/qa/source-link-cleanup-round2-tests.txt"
+    },
+    "sourcePolicy": "docs/download-source-links.json",
+    "privateVerification": "docs/qa/source-link-cleanup.json",
+    "preservation": "All working/F: files, older versions, original Git history and legacy helper dependencies retained.",
+    "status": "Validated completed cleanup; ready to push"
   }
 }
