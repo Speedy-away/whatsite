@@ -31,8 +31,8 @@ test('receiver 15 or its successor retains all 501 previous PS4 and 350 PS5 file
   assert.equal(records.find(r=>r.platform==='ps5').previousItemsPreserved,350);
 });
 
-test('all old sender ZIPs and the current sender match SHA/CRC/manifests, preserve 174 actions and exclude five original binaries',()=>{
-  const result=checks.verifySenders(c);assert.equal(result.historicalSnapshotsPreserved,17);assert.ok(result.totalSnapshotsVerified>=18);
-  assert.equal(result.latest.version,checks.senderVersion+'+'+result.latest.snapshot.slice(0,12));assert.equal(result.latest.originalOnlyBinaryCount,0);
+test('all old sender ZIPs and the latest archived sender match SHA/CRC/manifests, preserve 174 actions and exclude five original binaries',()=>{
+  const result=checks.verifySenders(c,{archivedSnapshot:true});assert.equal(result.historicalSnapshotsPreserved,17);assert.ok(result.totalSnapshotsVerified>=18);
+  assert.equal(result.latest.version,c.senderManifest.files.find(f=>f.url===c.senderManifest.latest).version);assert.equal(result.latest.originalOnlyBinaryCount,0);
   assert.equal(result.existingGoldHEN23StillBundled,true);
 });

@@ -53,7 +53,7 @@ test('every pinned original and deployed file matches recorded bytes; kernel cod
 test('runtime isolation, dependency closure, honest firmware pins and ad separation',()=>{
  const run=read(build.base+'/web/jb.html');assert.doesNotMatch(run,/src=|site-ads|i18n|analytics|invoke\.js/);assert.match(run,/import\('\.\/jb.js'\)/);
  for(const f of build.files.filter(f=>f.path.startsWith('web/')&&/\.js$/.test(f.path))){const text=read(build.base+'/'+f.path);for(const m of text.matchAll(/(?:from\s+|import\s*\(\s*)["']\.\/([^"']+)["']/g))assert.ok(fs.existsSync(path.join(root,build.base,'web',m[1])),m[1]);}
- for(const page of ['firmware','afterglow']){const html=read('hosts/ps4/'+page+'/index.html');assert.match(html,/BEGIN SITE AD/);assert.match(html,/Advertisement/);assert.doesNotMatch(html,/<(?:video|iframe)\b/);}
+ for(const page of ['firmware','afterglow']){const html=require('./migration-contracts.cjs').hostRedirect('hosts/ps4/'+page+'/index.html');assert.doesNotMatch(html,/<(?:video|iframe)\b/);}
  const routes=JSON.parse(read('docs/ps4-firmware-routes.json'));assert.deepEqual(routes.routes.find(r=>r.id==='afterglow').firmwares,['13.52','14.00']);assert.equal(routes.routes.filter(r=>r.firmwares.includes('14.00')).length,1);assert.equal(routes.versions.includes('13.51'),false);
  const action=require('../build-host-selector.cjs').hostActions('ps4').find(a=>a.id==='built-in-ps4-afterglow');assert.deepEqual(action.firmwares,['13.52','14.00']);assert.equal(action.run,undefined);assert.equal(require('../build-host-selector.cjs').hostActions('ps5').some(a=>a.id==='built-in-ps4-afterglow'),false);
 });
@@ -66,8 +66,10 @@ test('runtime ZIPs use their own folder; sender ZIP default stays unchanged',()=
  }
 });
 test('firmware folders cover each exact supported version and use full-page top navigation',()=>{
- const html=read('hosts/ps4/firmware/index.html');
+ require('./migration-contracts.cjs').hostRedirect('hosts/ps4/firmware/index.html');
  const routes=JSON.parse(read('docs/ps4-firmware-routes.json'));
+ const directory=require('../ps4-firmware-directory.cjs');
+ const html=directory.fullPage('<html><head></head><body><main class="main-content">'+directory.directory(routes.versions,routes.routes)+'</main></body></html>',true);
  assert.deepEqual([...html.matchAll(/data-folder="([^"]+)"/g)].map(m=>m[1]),[...routes.versions].reverse());
  assert.match(html,/class="firmware-taskbar"/);assert.doesNotMatch(html,/id="sidebar"|<header class="guide-hero">/);
  for(const r of routes.routes)assert.ok(html.includes('href="'+r.url.replaceAll('&','&amp;')+'"'),r.id);

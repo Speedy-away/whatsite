@@ -38,7 +38,7 @@ test('Wii U expansion preserves every baseline version, original URL and thirty 
   }
   for (const file of baseline.files) {
     verifyFile(file);
-    assert.ok(page.includes(file.local), 'Preserved visible download ' + file.local);
+    require('./migration-contracts.cjs').visibleDownload(page,file);
   }
 });
 
@@ -64,7 +64,7 @@ test('additional Wii U apps retain complete original containers and real console
     assert.equal(record.package.archived, true);
     const card = page.split(`<article id="${app.id}"`)[1]?.split('</article>')[0];
     assert.ok(card, app.id + ' visible application card');
-    assert.ok(card.includes(record.package.local), app.id + ' complete package available from card');
+    require('./migration-contracts.cjs').visibleDownload(card,record.package);
     const original = verifyFile(record.package);
     const source = store.find(item => item.name === app.id);
     assert.equal(app.version, source.version, app.id + ' captured store version');

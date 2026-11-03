@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-03T21:22:00.169Z",
+  "status": "New authored assets and inert tests ready for root integration into WWB-HOST. Assets alone do not stop the existing background script without the documented early hooks.",
+  "sourceFiles": [
+    {
+      "path": "assets/host-console-lite.js",
+      "bytes": 2825,
+      "sha256": "9d9ab3bec81e326a3e0e25a5ae9d78f7c227f2c91aa29e8c19a9e38731af3b22"
+    },
+    {
+      "path": "assets/host-console-lite.css",
+      "bytes": 2044,
+      "sha256": "3dd888034e935844363ee210eb667331f19e632a5d6077dc07c6c4b162dec8eb"
+    },
+    {
+      "path": "scripts/tests/host-console-lite.test.cjs",
+      "bytes": 3697,
+      "sha256": "747c9b6058b8cf8459d3efe6af3604c00aafc55888f22fdd6a4de35586cb2f0e"
+    }
+  ],
+  "scope": "PS4/PS5 user agents only; PC/mobile and native isolated runtime documents are unaffected.",
+  "policy": {
+    "global": "window.WhatsiteConsoleLite",
+    "enabled": "Console UA and eligible authored document",
+    "features": [
+      "background=false",
+      "decorative-motion=false",
+      "global-search=false",
+      "smooth-scroll=false",
+      "i18n-observer/i18n-refresh=false only while current language is en",
+      "Host search, downloads, payload/native controls and language selector remain enabled"
+    ],
+    "imageBatch": {
+      "console": 21,
+      "other": 70
+    },
+    "sideEffects": "One document class and platform attribute. No timers, DOM scans, observers, elements, requests, canvas or native code."
+  },
+  "integration": [
+    {
+      "file": "Public authored page head",
+      "instruction": "Load non-deferred /assets/host-console-lite.js before all deferred/shared background/i18n/global app scripts. Load host-console-lite.css after shared page CSS. Exclude native web/upstream/cache/payload documents."
+    },
+    {
+      "file": "assets/site-background.js",
+      "instruction": "Immediately after strict mode, return when window.WhatsiteConsoleLite exists, enabled and shouldRun(background) is false, before document.body work or canvas creation."
+    },
+    {
+      "file": "script.js",
+      "instruction": "initSiteBackground early return on the same policy to avoid dynamic script injection. Gate initSearch with global-search; hero/stats/scroll with decorative-motion; smooth scroll with smooth-scroll. Keep functional sidebar/forms/accessibility code where still needed."
+    },
+    {
+      "file": "languages/i18n.js",
+      "instruction": "At startObserver entry, if console policy shouldObserveLanguage(current) is false: disconnect existing observer, set observer=null, return. Keep observer and normal setLang/apply for every non-English language. refresh can return early for console current=en; setLang already restores English once before its event."
+    },
+    {
+      "file": "assets/host-trainer.js",
+      "instruction": "Root-owned optional patch: initial visible and show-more batch use console policy.imageBatch (21) rather than70. Exact query/catalogue still covers all1169 builds. Do not fetch trainer definitions before explicit build selection."
+    }
+  ],
+  "verification": {
+    "command": "node --test scripts/tests/host-console-lite.test.cjs",
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "testsCover": [
+      "Console UA detection, PC exclusion and native path exclusions",
+      "Saved/browser non-English language preservation and English-only traversal policy",
+      "Inert early install with no network, timers, canvas or observers; CSS retains44px actions and visible focus"
+    ],
+    "physicalConsoleProfile": false,
+    "browser": "Disabled. No browser/headless workaround attempted.",
+    "limitations": [
+      "No real PS4/PS5 performance, bandwidth, memory or execution claim.",
+      "Third-party ad CPU/network behaviour has not been measured.",
+      "Shared early hooks must be integrated before the background cost is actually removed."
+    ]
+  },
+  "audit": "docs/host-compact-readonly-audit.json"
+}

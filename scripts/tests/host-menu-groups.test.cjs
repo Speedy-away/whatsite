@@ -56,7 +56,7 @@ test('new receiver snapshots preserve previous files and resolve every host Save
     const parse=bytes=>JSON.parse(bytes.toString().match(/<script id="receiver-catalog" type="application\/json">([\s\S]*?)<\/script>/)[1]).items;
     const items=parse(current);
     for(const old of parse(retained)){const after=items.find(a=>a.id===old.id);assert.ok(after,old.id);assert.equal(after.sha256,old.sha256);assert.equal(after.filename,old.filename);}
-    const html=fs.readFileSync(path.join(root,'hosts',record.platform,'index.html'),'utf8');
+    const html=require('./migration-contracts.cjs').hostMarkup('hosts/'+record.platform+'/index.html');
     const host=JSON.parse(html.match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
     for(const action of host.actions.filter(a=>a.consoleFileId)) {const item=items.find(a=>a.id===action.consoleFileId);assert.ok(item,action.id);assert.equal(item.sha256,action.sha256,action.id);}
   }

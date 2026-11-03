@@ -48,7 +48,7 @@ test('every downloadable host action has an exact native file ID without broaden
 
 test('generated chooser has separate categories and button choices instead of a version select',()=>{
   for(const platform of ['ps4','ps5']) {
-    const html=fs.readFileSync(path.join(root,'hosts',platform,'index.html'),'utf8');
+    const html=require('./migration-contracts.cjs').hostMarkup('hosts/'+platform+'/index.html');
     assert.ok(!html.includes('data-host-category="all"'));
     assert.ok(html.includes('"catalogGrid":true'));
     assert.ok(html.includes('?view=mods'));

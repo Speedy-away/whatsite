@@ -78,7 +78,10 @@ test('every eligible page has a valid primary preview and a unique original vect
     }
     assert.equal(image.type, 'image/png', page);
     assert.ok(image.title && image.alt && image.source, page);
-    const expectedTitle = previews.displayTitle(metadata.transform(page, fs.readFileSync(path.join(root, page), 'utf8')).metadata.title);
+    const html=fs.readFileSync(path.join(root,page),'utf8');
+    const migrated=/^hosts\//.test(page)&&/http-equiv="refresh"/i.test(html);
+    if(migrated)require('./migration-contracts.cjs').hostRedirect(page);
+    const expectedTitle = migrated?image.title:previews.displayTitle(metadata.transform(page,html).metadata.title);
     assert.equal(image.title, expectedTitle, page + ' retains its exact page title');
     verifyPng(image.path, image.sha256, image.bytes, page, image);
     const native = image.cardPath ? {

@@ -9034,9 +9034,9 @@
     "downloadScript": "scripts/download-trophy-unlockers.cjs",
     "progress": "docs/qa/trophy-unlockers-progress.json",
     "listing": "docs/qa/trophy-unlockers-listing.json",
-    "status": "Complete: all folder files downloaded and verified; shared inventories merged and organized archive index refreshed.",
+    "status": "Complete: all 2497 files saved locally; zero missing or failed; expected MediaFire hashes matched. Verification report: docs/qa/trophy-unlockers-verification.json.",
     "archiveLayout": "F:/whatsite-backup-downloads-etc/files/PS4/Apps/trophy_unlockers; console Builds, Windows Helpers and guide Metadata separated. Size and SHA-256 verified; no downloaded payload executed.",
-    "published": false,
+    "published": true,
     "completedAt": "2026-11-03T21:19:42.000Z",
     "downloaded": 2497,
     "failed": 0,
@@ -9205,5 +9205,27 @@
       "Provenance evidence lookup follows original migration workspace"
     ],
     "allOlderDownloadAndRuntimeFilesPreserved": true
+  },
+  "testFailureAndSidebarFix20261103": {
+    "date": "2026-11-03",
+    "request": "Fix all sixteen test failures, push remaining changes, and keep one PS4 / PS5 Host sidebar link below Language.",
+    "status": "Validated; ready for publication",
+    "fixes": [
+      "Migration tests verify exact WWB-HOST redirects and query/fragment preservation, while retained authored components render only in memory. No active host pages regenerated here.",
+      "Publisher delivery tests verify the approved mapping and preserved local file sizes/SHA-256 instead of requiring removed binary mirrors.",
+      "Immutable sender audits compare archived manifests, CRC/SHA, action pins and F: copies; release-closeout verification still requires current source by default.",
+      "Redirects retain historical preview artifacts and validate their migration destination separately from active-page title checks.",
+      "Language initialization reuses the canonical host link, removes the legacy duplicate, and moves it below Language; 479 static sidebars use PS4 / PS5 Host."
+    ],
+    "tests": {
+      "fullSuite": 756,
+      "passed": 756,
+      "failed": 0,
+      "focusedAfterFinalTestRefinement": 13,
+      "siteAudit": "479 pages, 56366 local links/assets, zero issues",
+      "report": "docs/qa/test-failure-fixes-20261103.txt"
+    },
+    "hostPendingSource": "Other ongoing host-authored assets and inert tests are retained as source only in this snapshot. Their review reports identify required integration in WWB-HOST; no active host regeneration or overwrite is authorized by this main-site test fix.",
+    "preservation": "All download versions, native runtime bytes, local archive files and migration redirects retained."
   }
 }

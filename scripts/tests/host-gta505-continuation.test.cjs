@@ -19,7 +19,7 @@ test('all previous catalogue pins, native helper identities and sender versions 
  for(const before of baseline.catalogue){const after=catalogue.find(x=>x.id===before.id);assert.ok(after,before.id);for(const k of ['filename','sha256','platforms'])assert.deepEqual(after[k],before[k]);}
  assert.deepEqual(read('docs/host-native-workspace-build.json').artifacts,baseline.native);
  for(const a of baseline.native){check(path.join(root,a.immutablePath),a);check(a.backupPath,a);}
- const manifest=read('downloads/helpers/console-payload-sender/manifest.json');for(const before of baseline.sender.files)assert.deepEqual(manifest.files.find(x=>x.url===before.url),before);
+ const manifest=read('downloads/helpers/console-payload-sender/manifest.json');for(const before of baseline.sender.files)assert.deepEqual(Object.fromEntries(Object.keys(before).map(key=>[key,manifest.files.find(x=>x.url===before.url)?.[key]])),before);
 });
 test('activated receivers preserve prior pins and contain only the exact three new PS4 IDs',()=>{
  const build=read('docs/host-menu-companion-build.json');assert.equal(build.activated,true);

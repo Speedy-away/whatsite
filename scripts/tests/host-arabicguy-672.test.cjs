@@ -102,7 +102,7 @@ test('each catalogue popup uses its exact original Download or receiver ID and o
  }
 });
 test('the generated GTA V page keeps one top navigation bar around its version popup',()=>{
- const html=fs.readFileSync(path.resolve(__dirname,'../../hosts/ps4/gta5/index.html'),'utf8');
+ const html=require('./migration-contracts.cjs').hostMarkup('hosts/ps4/gta5/index.html');
  assert.equal((html.match(/<nav\b[^>]*class="[^"]*\bhost-taskbar\b/g)||[]).length,1);
  assert.equal((html.match(/id="host-version-overlay"/g)||[]).length,1);
 });

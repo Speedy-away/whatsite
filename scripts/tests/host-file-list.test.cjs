@@ -4,7 +4,7 @@ const {fixture}=require('./host-continuation-dom.cjs');
 const root=path.resolve(__dirname,'../..');
 test('both main hubs use gallery navigation with a top taskbar and preserve every current action',()=>{
  for(const platform of ['ps4','ps5']){
-  const html=fs.readFileSync(path.join(root,'hosts',platform,'index.html'),'utf8');
+  const html=require('./migration-contracts.cjs').hostMarkup('hosts/'+platform+'/index.html');
   assert.match(html,/class="host-file-tabs"/);assert.match(html,/class="host-taskbar"/);
   assert.doesNotMatch(html,/id="sidebar"|class="host-folder-row"|<header class="guide-hero">/);
   const data=JSON.parse(html.match(/id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);

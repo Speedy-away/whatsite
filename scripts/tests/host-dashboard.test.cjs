@@ -99,7 +99,7 @@ test('native manager screens use documented PS5 hash routes, never a fabricated 
 
 test('dedicated manager pages keep console scopes and native autoload controls separate', () => {
   for (const platform of ['ps4','ps5']) {
-    const html = fs.readFileSync(path.join(root,'hosts',platform,'payload-manager/index.html'),'utf8');
+    const html = require('./migration-contracts.cjs').hostMarkup('hosts/'+platform+'/payload-manager/index.html');
     assert.ok(html.includes('Connect to your '+platform.toUpperCase()));
     assert.ok(html.includes('data-open-workspace="payloads"'));
     assert.ok(html.includes('data-open-workspace="autoload"'));
@@ -112,7 +112,7 @@ test('dedicated manager pages keep console scopes and native autoload controls s
 
 test('generated dashboards have selectors, separate catalogues and immutable ready-file links', () => {
   for (const platform of ['ps4','ps5']) {
-    const html = fs.readFileSync(path.join(root,'hosts',platform,'index.html'),'utf8');
+    const html = require('./migration-contracts.cjs').hostMarkup('hosts/'+platform+'/index.html');
     for (const id of ['host-console-address','host-firmware','host-game','host-download-on-run','host-actions-data','host-detect','host-check-services','host-show-legacy']) assert.ok(html.includes('id="'+id+'"'), id);
     const data = JSON.parse(html.match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
     assert.equal(data.platform,platform);

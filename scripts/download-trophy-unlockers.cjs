@@ -51,7 +51,7 @@ async function main(){
   records.push({...metadata,backupPath:target});complete++;checkpoint();
   if(complete%25===0)console.log(JSON.stringify({complete,total:files.length,failed:errors.length}));
  }catch(error){errors.push({name:sourceFile.filename,sourceUrl:sourceFile.links.normal_download,error:error.message});checkpoint();console.log('Unavailable: '+sourceFile.filename+' - '+error.message);}}}
- await Promise.all(Array.from({length:32},worker));checkpoint();
+ await Promise.all(Array.from({length:8},worker));checkpoint();
  await intake.appendInventory({scope,items:[{...item,files:records,status:errors.length?'partial':'downloaded'}]});
  await intake.mergeInventory({inventory:intake.inventoryPath(scope)});
  require('node:child_process').execFileSync(process.execPath,[path.join(__dirname,'refresh-local-download-index.cjs'),'--write'],{stdio:'inherit'});

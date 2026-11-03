@@ -31,7 +31,7 @@ test('Themes below Retro opens a page and preserves console hub links',()=>{
  const decorated=require('../sidebar-icons.cjs').decorateNavLinks(theme,{file:'console/themes.html'});assert.ok(decorated.includes('data-tooltip="Themes" aria-label="Themes" aria-current="page"'));
 });
 test('PS5 Payload Manager lists verified native releases with their original firmware limits',()=>{
- const ui=require('../../assets/host-dashboard.js'),html=read('hosts/ps5/index.html'),actions=JSON.parse(html.match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]).actions;
+ const ui=require('../../assets/host-dashboard.js'),html=require('./migration-contracts.cjs').hostMarkup('hosts/ps5/index.html'),actions=JSON.parse(html.match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]).actions;
  const payloads=ui.filterActions(actions,'payloads','','','',true);assert.ok(payloads.length>=19);
  for(const action of require('../../docs/host-native-payload-actions.json').actions){
   assert.ok(payloads.some(x=>x.id===action.id),action.id);const bytes=fs.readFileSync(path.join(root,action.downloadURL));assert.equal(bytes.length,action.bytes);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),action.sha256);

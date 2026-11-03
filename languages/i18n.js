@@ -788,21 +788,26 @@
       showPicker(true);
     });
     list.appendChild(li);
-    if (!list.querySelector('.webhost-nav-link')) {
-      var webItem = sample.parentNode.cloneNode(true);
-      var webLink = webItem.querySelector('.nav-link');
-      webLink.classList.remove('active');
-      webLink.classList.add('webhost-nav-link');
-      webLink.setAttribute('href', '/hosts/');
-      webLink.setAttribute('data-tooltip', 'PS4 / PS5 webhost');
-      webLink.setAttribute('aria-label', 'PS4 / PS5 webhost');
-      webLink.removeAttribute('aria-current');
-      var webIcon = webLink.querySelector('.nav-icon') || webLink.querySelector('i');
-      if (webIcon) webIcon.outerHTML = '<svg class="nav-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4M8 9v4m-2-2h4m5 0h2"/></svg>';
-      var webLabel = webLink.querySelector('span');
-      if (webLabel) webLabel.textContent = 'PS4 / PS5 webhost';
-      list.appendChild(webItem);
+    var webItems = list.querySelectorAll('[data-webhost-navigation], .webhost-nav-link');
+    var webItem = null;
+    for (var wi = 0; wi < webItems.length; wi++) {
+      var candidate = webItems[wi].tagName === 'LI' ? webItems[wi] : webItems[wi].parentNode;
+      if (!webItem) webItem = candidate;
+      else if (candidate !== webItem && candidate.parentNode) candidate.parentNode.removeChild(candidate);
     }
+    if (!webItem) webItem = sample.parentNode.cloneNode(true);
+    webItem.setAttribute('data-webhost-navigation', '');
+    var webLink = webItem.querySelector('.nav-link');
+    webLink.classList.remove('active');
+    webLink.classList.add('webhost-nav-link');
+    webLink.setAttribute('href', 'https://speedy-away.github.io/WWB-HOST/');
+    webLink.setAttribute('data-tooltip', 'PS4 / PS5 Host');
+    webLink.setAttribute('aria-label', 'PS4 / PS5 Host');
+    webLink.removeAttribute('aria-current');
+    var webLabel = webLink.querySelector('span');
+    if (webLabel) webLabel.textContent = 'PS4 / PS5 Host';
+    list.appendChild(webItem);
+
   }
 
   function mount(el) {

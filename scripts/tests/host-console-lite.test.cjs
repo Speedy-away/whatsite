@@ -1,0 +1,18 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const api=require('../../assets/host-console-lite.js'),root=path.resolve(__dirname,'../..');
+const ps4='Mozilla/5.0 (PlayStation 4 9.00) AppleWebKit/605.1.15',ps5='Mozilla/5.0 (PlayStation; PlayStation 5/7.61) AppleWebKit/605.1.15';
+test('light presentation applies only to PS4/PS5 browsers and excludes native runtime documents',()=>{
+ assert.equal(api.platform(ps4),'ps4');assert.equal(api.platform(ps5),'ps5');for(const ua of ['Mozilla/5.0 (Windows NT 10.0; Win64; x64)','Mozilla/5.0 (PlayStation 3; 4.93)','Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)'])assert.equal(api.policy(ua,'/hosts/ps4/','en').enabled,false);
+ for(const p of ['/hosts/ps4/','/WWB-HOST/hosts/ps5/files/','/WWB-HOST/hosts/tools/ps4-trainer/','/hosts/runtime/ps5-umtx/','/hosts/runtime/ps4-900/index.html'])assert.equal(api.policy(ps4,p,'en').enabled,true,p);
+ for(const p of ['/hosts/runtime/ps5-umtx/web/index.html','/hosts/runtime/ps5-umtx/upstream/index.html','/WWB-HOST/hosts/runtime/karo-743646c9df9a-e3c0caf3db54/web/900L/index.html','/hosts/runtime/ps4-afterglow-acf25a831725/web/index.html'])assert.equal(api.policy(ps4,p,'en').enabled,false,p);
+});
+test('saved and browser-selected languages stay supported, while only English translation traversal is skipped',()=>{
+ assert.equal(api.initialLanguage({languages:['de-DE','en-US']},{getItem:()=>null}),'de');assert.equal(api.initialLanguage({language:'en-US'},{getItem:()=>'ar'}),'ar');assert.equal(api.initialLanguage({language:'ja-JP'},{getItem:()=>{throw Error('Storage unavailable');}}),'ja');assert.equal(api.initialLanguage({languages:['xx-ZZ']},null),'en');
+ const state=api.policy(ps4,'/hosts/ps4/','en');assert.equal(state.imageBatch,21);assert.equal(state.shouldRun('background'),false);assert.equal(state.shouldRun('global-search'),false);assert.equal(state.shouldObserveLanguage('en'),false);for(const code of ['de','ar','he','ja','pt']){assert.equal(state.shouldObserveLanguage(code),true);assert.equal(state.shouldRun('i18n-refresh',code),true);}for(const feature of ['host-search','native-controls','payload-loading','downloads','i18n-selector'])assert.equal(state.shouldRun(feature),true);assert.equal(api.policy('Windows','/hosts/ps4/','en').shouldRun('background'),true);
+});
+test('early console script only marks document policy: no request, timer, observer, canvas or payload side effects',()=>{
+ const attrs={},classes=[],calls=[];const window={navigator:{userAgent:ps5,languages:['en-US']},location:{pathname:'/WWB-HOST/hosts/ps5/'},localStorage:{getItem:()=>null},document:{documentElement:{classList:{add:v=>classes.push(v)},setAttribute:(k,v)=>attrs[k]=v},createElement:()=>{calls.push('createElement');throw Error('Unexpected DOM creation');}},fetch:()=>calls.push('fetch'),setTimeout:()=>calls.push('timer'),requestAnimationFrame:()=>calls.push('animation'),MutationObserver:class{constructor(){calls.push('observer');}},XMLHttpRequest:class{constructor(){calls.push('xhr');}}};
+ vm.runInNewContext(fs.readFileSync(path.join(root,'assets/host-console-lite.js'),'utf8'),{window});assert.equal(window.WhatsiteConsoleLite.enabled,true);assert.deepEqual(classes,['host-console-lite']);assert.deepEqual(attrs,{'data-host-console':'ps5'});assert.deepEqual(calls,[]);
+ const css=fs.readFileSync(path.join(root,'assets/host-console-lite.css'),'utf8');assert.match(css,/animation:none!important/);assert.match(css,/backdrop-filter:none!important/);assert.match(css,/min-height:44px/);assert.doesNotMatch(css,/@import|url\(|display:none[^}]*\.host-status|pointer-events:none/);
+});

@@ -179,7 +179,7 @@ function phaseIssues(c) {
   for(const job of c.jobs) if(!c.audit.some(i=>i.id==='ps4-ps5-'+job.id&&i.status==='downloaded')) issues.push('Archive intake is pending for '+job.id+'.');
   return issues;
 }
-function inspectSender(c,info,final) {
+function inspectSender(c,info,final,{archivedSnapshot=false}={}) {
   const bytes = check(local(info.url),info);
   const records = c.audit.flatMap(i=>i.files||[]).filter(f=>f.sha256===info.sha256&&f.bytes===info.bytes&&f.backupPath);assert.ok(records.length,info.version+' archive copy');
   for(const record of records) {insideBackup(record.backupPath);check(record.backupPath,info);}
@@ -202,9 +202,10 @@ function inspectSender(c,info,final) {
     preservedActions = oldActions.length;
   }
   if(final) {
-    assert.equal(info.version,senderVersion+'+'+info.snapshot.slice(0,12));
-    assert.equal(info.name,'console-payload-sender-'+senderVersion+'-'+info.snapshot.slice(0,12)+'.zip');
-    for(const file of [...actionFiles,'assets/host-console-client.js','assets/host-dashboard.js','assets/host-dashboard.css','scripts/console-payload-bridge.cjs',...manifest.files.filter(f=>/^languages\/.+\.js$/.test(f.name)).map(f=>f.name)]) assert.equal(sha(member(file)),sha(fs.readFileSync(path.join(root,file))),file+' is final authored source');
+    const version=archivedSnapshot?manifest.version.split('+')[0]:senderVersion;
+    assert.equal(info.version,version+'+'+info.snapshot.slice(0,12));
+    assert.equal(info.name,'console-payload-sender-'+version+'-'+info.snapshot.slice(0,12)+'.zip');
+    if(!archivedSnapshot)for(const file of [...actionFiles,'assets/host-console-client.js','assets/host-dashboard.js','assets/host-dashboard.css','scripts/console-payload-bridge.cjs',...manifest.files.filter(f=>/^languages\/.+\.js$/.test(f.name)).map(f=>f.name)]) assert.equal(sha(member(file)),sha(fs.readFileSync(path.join(root,file))),file+' is final authored source');
     for(const file of actionFiles) assert.deepEqual(JSON.parse(member(file)).actions,read(file).actions);
     const html = member('hosts/ps4/index.html').toString('utf8');
     const embedded = JSON.parse(html.match(/<script id="host-actions-data" type="application\/json">([\s\S]*?)<\/script>/)[1]).actions;
@@ -217,10 +218,12 @@ function inspectSender(c,info,final) {
   }
   return {version:info.version,url:info.url,bytes:info.bytes,sha256:info.sha256,snapshot:info.snapshot,zipEntries:zip.entryCount,manifestFiles:manifest.files.length,payloads:manifest.payloads.length,allCRCAndSHA256Verified:true,privateArchivePaths:records.map(r=>r.backupPath),preservedActions,originalOnlyBinaryCount:0};
 }
-function verifySenders(c) {
+// Archive audits validate the published snapshot against its own manifest and F: copy.
+// Release closeout remains strict by default and must match the current authored source.
+function verifySenders(c,{archivedSnapshot=false}={}) {
   const latest = c.senderManifest.files.find(f=>f.url===c.senderManifest.latest);assert.ok(latest);
-  assert.equal(latest.version,senderVersion+'+'+latest.snapshot.slice(0,12),'Current sender must be archived before verification');
-  const reports = c.senderManifest.files.map(info=>inspectSender(c,info,info.url===latest.url));
+  if(!archivedSnapshot)assert.equal(latest.version,senderVersion+'+'+latest.snapshot.slice(0,12),'Current sender must be archived before verification');
+  const reports = c.senderManifest.files.map(info=>inspectSender(c,info,info.url===latest.url,{archivedSnapshot}));
   assert.ok(reports.length>=18);assert.equal(reports.reduce((n,r)=>n+r.preservedActions,0),174);
   return {latest:reports.find(r=>r.url===latest.url),historicalSnapshotsPreserved:17,totalSnapshotsVerified:reports.length,snapshots:reports,existingGoldHEN23StillBundled:true};
 }

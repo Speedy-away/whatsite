@@ -140,7 +140,7 @@ test('representative topics retain complete original resource downloads and excl
       assert.deepEqual(downloadLinks(copied), downloadLinks(original), topic + '#' + id + ' keeps all ready files');
       assert.deepEqual(linkDestinations(copied).filter(link => /^https?:/.test(link)),
         linkDestinations(original).filter(link => /^https?:/.test(link)), topic + '#' + id + ' keeps publisher downloads and documentation');
-      for (const link of downloadLinks(original)) assert.ok(exists(link), 'Original download exists: ' + link);
+      for (const link of downloadLinks(original)) assert.ok(require('./migration-contracts.cjs').downloadExists(link), 'Original download exists: ' + link);
     }
     for (const id of exclude) assert.ok(!ids.includes(id), topic + ' excludes unrelated ' + id);
   }
