@@ -9356,10 +9356,12 @@
       "linksAndAssets": 56366,
       "issues": 0
     },
-    "published": false,
+    "published": true,
     "request": "Expand trophy unlocker keywords and tags plus related tools, GoldHEN, plugin configuration and file transfer search terms.",
     "durability": "docs/seo/search-editorial-overrides.json, scripts/page-search-tags.cjs and scripts/build-ps4-software.cjs retain terms during regeneration.",
-    "preservation": "All downloads, URLs, title IDs and compatibility pins retained; no download files changed."
+    "preservation": "All downloads, URLs, title IDs and compatibility pins retained; no download files changed.",
+    "publicationCommit": "a791e3335304b941ed68f655e1f5fa6e260bf232",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41730414814"
   },
   "apkTVPhone20261103": {
     "page": "pages/apk.html",
@@ -9424,7 +9426,9 @@
     "metadataAndSearchTagsStable": true,
     "compatibility": "Search aliases do not claim hardware testing or new firmware support. All original host destinations and firmware pins retained.",
     "hostOwnership": "Updated main-site hub and guide metadata only; independent WWB-HOST files and migrated redirects retained.",
-    "published": false
+    "published": true,
+    "publicationCommit": "a791e3335304b941ed68f655e1f5fa6e260bf232",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41730414814"
   },
   "orbitPs5GameDownloadCard": {
     "date": "2026-11-03",
@@ -9457,7 +9461,9 @@
       "gamePageRegenerationStable": true
     },
     "preservation": "Existing DLPSGame directory, older Orbit archives and pinned version retained.",
-    "published": false
+    "published": true,
+    "publicationCommit": "a791e3335304b941ed68f655e1f5fa6e260bf232",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41730414814"
   },
   "freeStoreSearchRefresh": {
     "date": "2026-11-03",
@@ -9491,7 +9497,9 @@
       "siteAuditIssues": 0,
       "metadataAndSearchStable": true
     },
-    "published": false
+    "published": true,
+    "publicationCommit": "a791e3335304b941ed68f655e1f5fa6e260bf232",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41730414814"
   },
   "hostRemainingConsolePerformance20261103": {
     "status": "Pushed, GitHub Pages deployed successfully and live verified",
@@ -9556,7 +9564,9 @@
     "myten": "Game-specific artwork on source-confirmed cross-listings; original previews retained in source details. Both supplied builds remain linked; V1.3 post / exact 1.2 module distinction retained. All nine game/mode pins preserved.",
     "stealthServers": "Dedicated main Xbox 360 hub card and navigation; removed stealth game card and server resources from Mods / Mod Menus collection. Original destination retained.",
     "preservation": "All original artwork, payloads, older builds, download URLs and firmware/game pins retained.",
-    "published": false
+    "published": true,
+    "publicationCommit": "a791e3335304b941ed68f655e1f5fa6e260bf232",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41730414814"
   },
   "apkRepairsPhoneToolsPVZ20261103": {
     "status": "Published and live verified",
@@ -9581,5 +9591,99 @@
     "commit": "5282e92f4a8887418fac838395cdb83db7ada36e",
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41729655428",
     "liveVerified": true
+  },
+  "hostSitewidePerformance20261103": {
+    "status": "Pushed, deployed successfully and fully live verified",
+    "commit": "4fa06f41d0de8e9f8e2921f781cf8b9b71916ea5",
+    "repository": "Speedy-away/WWB-HOST",
+    "run": 41730210213,
+    "worktree": "C:/Users/whatw/Documents/GitHub/whatsite/tmp/remaining-host-performance",
+    "report": "docs/migration/sitewide-console-performance.json",
+    "tests": 227,
+    "runtimeDocumentsOptimized": 213,
+    "routingAliasesVerified": 6395,
+    "sharedCatalogueFiles": 4,
+    "cataloguePages": 13,
+    "preservedCatalogueRecords": 1028,
+    "resumeNote": "Performance work is isolated from concurrent compact/gallery/patch changes in the primary WWB-HOST checkout. Preserve these new publisher helpers and cache keys when integrating that work. No downloads or native files changed.",
+    "liveVerifier": "tmp/verify-host-wide-merged-live.cjs",
+    "mergedCommit": "0488479b84f9ca3ffe1c12c0a9fc44a23d7e67e4",
+    "supersededRun": 41729816635,
+    "runtimeRoutingBytesAtPublishedRevision": 222159,
+    "fullRoutingBytesAtPublishedRevision": 1027171,
+    "verificationMetadataCommit": "ab13024a588309f67ce19b2ea3cc008d82108df6",
+    "workflow": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41730210213",
+    "liveCheckedAt": "2026-11-03T22:28:19.615Z",
+    "livePages": 1104,
+    "liveSharedCatalogueFiles": 4,
+    "reportAbsolute": "C:/Users/whatw/Documents/GitHub/whatsite/tmp/remaining-host-performance/docs/migration/sitewide-console-performance.json",
+    "limits": [
+      "Static HTTP and authored adapter verification only; no browser or native console execution"
+    ]
+  },
+  "sitewideRefreshPublication20261103": {
+    "commit": "a791e3335304b941ed68f655e1f5fa6e260bf232",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41730414814",
+    "checkedAt": "2026-11-03T22:29:08.337Z",
+    "pages": [
+      {
+        "route": "/console/xbox360/",
+        "status": 200
+      },
+      {
+        "route": "/console/xbox360/mods/index.html",
+        "status": 200
+      },
+      {
+        "route": "/console/xbox360/mods/gta-san-andreas/",
+        "status": 200
+      },
+      {
+        "route": "/console/ps5/apps.html",
+        "status": 200
+      },
+      {
+        "route": "/console/nintendo-switch/apps.html",
+        "status": 200
+      },
+      {
+        "route": "/console/ps4/apps.html",
+        "status": 200
+      },
+      {
+        "route": "/console/ps5/game-downloads.html",
+        "status": 200
+      },
+      {
+        "route": "/console/ps4/goldhen.html",
+        "status": 200
+      }
+    ],
+    "optimizedImage": {
+      "url": "https://whatwhatboy.com/assets/images/merged-categories/optimized/library-xbox360-v1-960.jpg",
+      "bytes": 94329,
+      "sha256": "276bd26bcdd56fb3e6446fc509d90807230c7eec2a71d3907af68b8602deb434",
+      "matchesCommitted": true
+    },
+    "mytenVerified": true,
+    "stealthHubVerified": true,
+    "keywordsVerified": true,
+    "orbitDownloadVerified": true,
+    "goldhenLinkRetained": true,
+    "cropFixVerified": true,
+    "status": "Pushed and deployed successfully",
+    "files": 1328,
+    "sourceTests": {
+      "passed": 66,
+      "failed": 0
+    },
+    "production": {
+      "bytes": 945087969,
+      "pages": 545,
+      "links": 50961,
+      "issues": 0
+    },
+    "preservation": "Unrelated host working files and shared staging preserved; original images and every older download retained. Main-site host redirects preserved.",
+    "browserRenderVerified": false
   }
 }

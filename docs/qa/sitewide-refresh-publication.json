@@ -1,0 +1,65 @@
+{
+  "commit": "a791e3335304b941ed68f655e1f5fa6e260bf232",
+  "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41730414814",
+  "checkedAt": "2026-11-03T22:29:08.337Z",
+  "pages": [
+    {
+      "route": "/console/xbox360/",
+      "status": 200
+    },
+    {
+      "route": "/console/xbox360/mods/index.html",
+      "status": 200
+    },
+    {
+      "route": "/console/xbox360/mods/gta-san-andreas/",
+      "status": 200
+    },
+    {
+      "route": "/console/ps5/apps.html",
+      "status": 200
+    },
+    {
+      "route": "/console/nintendo-switch/apps.html",
+      "status": 200
+    },
+    {
+      "route": "/console/ps4/apps.html",
+      "status": 200
+    },
+    {
+      "route": "/console/ps5/game-downloads.html",
+      "status": 200
+    },
+    {
+      "route": "/console/ps4/goldhen.html",
+      "status": 200
+    }
+  ],
+  "optimizedImage": {
+    "url": "https://whatwhatboy.com/assets/images/merged-categories/optimized/library-xbox360-v1-960.jpg",
+    "bytes": 94329,
+    "sha256": "276bd26bcdd56fb3e6446fc509d90807230c7eec2a71d3907af68b8602deb434",
+    "matchesCommitted": true
+  },
+  "mytenVerified": true,
+  "stealthHubVerified": true,
+  "keywordsVerified": true,
+  "orbitDownloadVerified": true,
+  "goldhenLinkRetained": true,
+  "cropFixVerified": true,
+  "status": "Pushed and deployed successfully",
+  "files": 1328,
+  "sourceTests": {
+    "passed": 66,
+    "failed": 0
+  },
+  "production": {
+    "bytes": 945087969,
+    "pages": 545,
+    "links": 50961,
+    "issues": 0
+  },
+  "preservation": "Unrelated host working files and shared staging preserved; original images and every older download retained. Main-site host redirects preserved.",
+  "browserRenderVerified": false
+}
