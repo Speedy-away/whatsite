@@ -17,6 +17,16 @@ test('responsive markup retains alt text and links and is stable on repeated app
  assert.equal(apply('console/xbox360/index.html',out),out);
  assert.equal(apply('downloads/ready/index.html',html),html);
 });
+test('relative images and inline hero styles fit narrow phone containers',()=>{
+ const source=Object.keys(read('docs/optimized-category-covers.json').images)[0];
+ const relative='../../'+source.slice(1);
+ const html=`<img src="${relative}" alt="Full cover" style="max-width: 360px; object-fit: cover;">`;
+ const out=apply('games/gta/index.html',html);
+ assert.ok(out.includes('srcset='));assert.ok(out.includes('object-fit:contain'));
+ assert.ok(out.includes('max-width:min(360px,100%)'));
+ assert.ok(out.includes('sizes="(max-width: 600px) calc(100vw - 48px)'));
+ assert.equal(apply('games/gta/index.html',out),out);
+});
 test('category compositions are self-contained and retain every source asset',()=>{
  for(const c of Object.values(read('docs/category-composite-covers.json').routes)){
   const svg=fs.readFileSync(path.join(root,'.'+c.path),'utf8');assert.ok(svg.startsWith('<svg'));assert.ok(!/href="https?:/.test(svg));

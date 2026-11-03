@@ -190,9 +190,9 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .game-card { position: relative; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-card); overflow: hidden; transition: transform var(--tf), border-color var(--tf); }
 .game-card:hover { transform: translateY(-4px); border-color: var(--border-hover); }
 .game-image { position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; }
-.game-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--tn); }
+.game-image img { width: 100%; height: 100%; object-fit: contain; transition: transform var(--tn); }
 .game-image-label { padding: 24px; color: var(--text-primary); font-size: 2rem; font-weight: 700; line-height: 1.2; text-align: center; }
-.game-card:hover .game-image img { transform: scale(1.05); }
+.game-card:hover .game-image img { transform: none; }
 .game-overlay { position: absolute; top: 12px; right: 12px; display: flex; gap: 6px; }
 .game-status { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
 .game-status.available { background: rgba(16,185,129,0.2); color: var(--success); border: 1px solid rgba(16,185,129,0.3); }
@@ -215,7 +215,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .tool-card { display: flex; align-items: flex-start; gap: 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-card); padding: 20px; transition: border-color var(--tf), transform var(--tf); }
 .tool-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
 .tool-icon { flex-shrink: 0; }
-.tool-icon img { width: 48px; height: 48px; border-radius: var(--radius-btn); object-fit: cover; }
+.tool-icon img { width: 48px; height: 48px; border-radius: var(--radius-btn); object-fit: contain; }
 .tool-info h4 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
 .tool-info p { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5; }
 .tool-link { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--accent-glow); color: var(--accent-light); border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; transition: all var(--tf); text-decoration: none; }
@@ -226,7 +226,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .console-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-card); overflow: hidden; transition: border-color var(--tf), transform var(--tf); }
 .console-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
 .console-image { aspect-ratio: 16/10; overflow: hidden; background: var(--bg-tertiary); }
-.console-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--tn); }
+.console-image img { width: 100%; height: 100%; object-fit: contain; transition: transform var(--tn); }
 .console-card:hover .console-image img { transform: scale(1.05); }
 .console-info { padding: 16px; }
 .console-info h4 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }

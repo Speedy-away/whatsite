@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-03",
+  "status": "Repairs verified locally; publication pending",
+  "liveAuditBefore": {
+    "sitemapURLs": 506,
+    "urlForms": 800,
+    "uniqueImages": 2023,
+    "stylesheets": 60,
+    "brokenImageURLs": [
+      "https://raw.githubusercontent.com/XXTOUCOXX/INF_DATA/refs/heads/main/Outfits/S512/BarbieGaaby/image_1.png",
+      "https://raw.githubusercontent.com/XXTOUCOXX/INF_DATA/refs/heads/main/Vehicles/S512/3/image_1.png",
+      "https://scoobymenu.cc/assets/images/previews/rdr2/rdr2-dual-ui.webp"
+    ],
+    "missingViewport": 0,
+    "decodedImages": 2020,
+    "decodeFailures": 0,
+    "portsRoute": "Initial deployment-time 404 resolved to HTTP 200 on recheck."
+  },
+  "repairs": [
+    "Replaced the unavailable Scooby RDR2 preview with the current publisher screenshot.",
+    "Replaced unavailable outfit/vehicle thumbnails with accurately labelled GTA V artwork.",
+    "Fixed responsive handling of relative image URLs and old derivative paths.",
+    "Removed crop rules from game/console cards, tool icons, category composites and hero images; kept avatar behavior.",
+    "Changed inline hero crops to contain and capped their width for narrow phones.",
+    "Reduced opaque-alpha and transparent PNG delivery sizes; kept all originals and older delivery copies."
+  ],
+  "delivery": {
+    "images": 401,
+    "sourceBytes": 365700698,
+    "deliveryBytes960": 31783271,
+    "largest480": 83289,
+    "largest960": 236845
+  },
+  "tests": {
+    "passed": 51,
+    "failed": 0
+  },
+  "visualBrowserVerified": false,
+  "browserLimit": "Local browser use remains disabled in Work settings; user said they would enable it, but the browser tool still reports disabled.",
+  "published": false
+}

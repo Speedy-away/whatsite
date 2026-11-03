@@ -5,10 +5,13 @@ function manifest(){if(!fs.existsSync(manifestPath))return {images:{}};const sta
 function apply(file,html){
  if(!require('./site-public-pages.cjs').eligible(file)||require('./page-search-tags.cjs').protectedFile(file,html))return html;
  const images=manifest().images,reverse=new Map(Object.entries(images).flatMap(([original,item])=>item.variants.map(v=>[v.path,original])));
- return html.replace(/(\/assets\/(?:console-guides|console-menu-catalog|ps3-catalog)\.css)\?[^"']*/g,'$1?v=20261103-images').replace(/<img\b[^>]*>/gi,tag=>{
-  const src=tag.match(/\bsrc="([^"]*)"/)?.[1],original=reverse.get(src)||src,item=images[original];if(!item)return tag;
+ return html.replace(/((?:\/|\.\.\/)*(?:assets\/(?:console-guides|console-menu-catalog|ps3-catalog|mobile)|style)\.css)\?[^"']*/g,'$1?v=20261103-mobile-images').replace(/<img\b[^>]*>/gi,tag=>{
+  if(!/\b(?:profile-avatar|avatar)\b/.test(tag))tag=tag.replace(/\bstyle=(["'])(.*?)\1/gi,(_,quote,value)=>'style='+quote+value.replace(/object-fit\s*:\s*cover/gi,'object-fit:contain').replace(/max-width\s*:\s*(\d+)px/gi,'max-width:min($1px,100%)')+quote);
+  const src=tag.match(/\bsrc=["']([^"']*)["']/)?.[1];let original=tag.match(/\bdata-original-image=["']([^"']*)["']/)?.[1]||reverse.get(src)||src;
+  if(!images[original])try{const url=new URL(src,'https://whatwhatboy.com/'+file);if(url.origin==='https://whatwhatboy.com')original=reverse.get(url.pathname)||decodeURIComponent(url.pathname);}catch{}
+  const item=images[original];if(!item)return tag;
   const variants=[...new Map(item.variants.map(v=>[v.width,v])).values()],last=variants.at(-1),srcset=variants.map(v=>v.path+' '+v.width+'w').join(', ');
-  let output=tag.replace(/\s(?:srcset|sizes|data-original-image)="[^"]*"/g,'').replace(/\bsrc="[^"]*"/,'src="'+last.path+'"');
+  let output=tag.replace(/\s(?:srcset|sizes|data-original-image)=["'][^"']*["']/g,'').replace(/\bsrc=["'][^"']*["']/,'src="'+last.path+'"');
   if(!/\bwidth=/.test(output))output=output.replace(/>$/,' width="'+last.width+'">');
   if(!/\bheight=/.test(output))output=output.replace(/>$/,' height="'+last.height+'">');
   if(!/\bdecoding=/.test(output))output=output.replace(/>$/,' decoding="async">');
