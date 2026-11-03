@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-03",
+  "page": "pages/apk.html",
+  "source": "https://letscrackon.org/downloads/",
+  "request": "Remove the displayed Downloader URL step; add TV and Phone tabs inside APK Apps, with iOS, Android and Harmony under Phone.",
+  "apps": 21,
+  "archived": 13,
+  "sourceUnavailable": 8,
+  "archiveBytes": 297454058,
+  "archiveVerification": "All thirteen local F: files rehashed against source size/SHA-256; APK ZIP signature and AndroidManifest.xml presence checked without executing downloads.",
+  "archiveIndexRefreshed": true,
+  "tests": {
+    "affected": 45,
+    "passed": 45,
+    "failed": 0,
+    "fullSuite": {
+      "total": 774,
+      "passed": 768,
+      "failed": 6,
+      "context": "All six failures belong to concurrent host development and newly added host pages, outside this APK change."
+    }
+  },
+  "siteAudit": "481 public pages, 56386 links/assets, zero issues in shared working tree",
+  "accessibility": "Keyboard arrow/Home/End navigation, roving tab stops, tab/panel names, deep links, browser Back support and visible no-script fallback tested.",
+  "design": {
+    "mode": "Preserve existing dark emerald styling and route/title/canonical/older APK Time file.",
+    "DESIGN_VARIANCE": 3,
+    "MOTION_INTENSITY": 1,
+    "VISUAL_DENSITY": 5,
+    "preflight": "Consistent dark palette, readable contrast, responsive 3/2/1 card columns, 48px tabs, no new images or animation needed for this directory; existing legal copy retained."
+  },
+  "browserRendered": false,
+  "preservation": "No existing downloads, older F: versions, native host files or migration redirects changed. New APK binaries remain local and source links are published."
+}

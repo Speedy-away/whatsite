@@ -1,0 +1,19 @@
+.apk-directory{--app-accent:#65dfb5;--app-border:#303638;--app-radius:12px}
+.app-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px;border-bottom:1px solid var(--app-border);padding:0 0 12px}
+.app-tabs a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:104px;padding:10px 24px;border:1px solid var(--app-border);border-radius:var(--app-radius);color:#e4e8e6;font-weight:600;text-decoration:none;background:#151a19}
+.app-tabs a[aria-selected=true]{background:var(--app-accent);border-color:var(--app-accent);color:#10251d}
+.app-tabs a:hover{border-color:var(--app-accent)}
+.app-tabs a:focus-visible,.apk-directory a:focus-visible,.app-panel:focus-visible{outline:3px solid var(--app-accent);outline-offset:4px}
+.app-panel[hidden]{display:none!important}
+.app-panel{scroll-margin-top:84px}.app-panel>h2{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 12px}.app-panel>p{color:#b8c3be;max-width:68ch;line-height:1.65;margin-bottom:28px}
+.app-group{margin:38px 0}.app-group h3{font-size:1.25rem;margin-bottom:18px}
+.app-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.app-card{padding:24px;border:1px solid var(--app-border);border-radius:var(--app-radius);background:#111615;display:flex;flex-direction:column;gap:12px;min-width:0}
+.app-card h4{font-size:1.12rem;margin:0;color:#f0f4f2}.app-card p{font-size:.94rem;line-height:1.6;margin:0;color:#b8c3be}
+.app-card .app-version{font-size:.82rem;color:#aab8b0;overflow-wrap:anywhere}.app-card .app-links{margin-top:auto;padding-top:10px;display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.app-card a{color:var(--app-accent);font-size:.94rem;text-underline-offset:4px}.app-card .app-download{display:inline-flex;padding:9px 14px;border:1px solid var(--app-border);border-radius:8px;text-decoration:none;color:#e9f2ed;min-height:42px;align-items:center;white-space:nowrap}
+.app-source{padding-top:22px;border-top:1px solid var(--app-border);font-size:.9rem;line-height:1.6;color:#b8c3be}.app-source a{color:var(--app-accent)}
+.apk-directory .section{padding-top:34px;padding-bottom:34px}.apk-directory .page-header{padding-bottom:20px}.apk-directory .page-subtitle{max-width:60ch;margin-inline:auto}
+.apk-directory .phone-tabs{margin-top:24px}.apk-directory .app-section-heading{margin-bottom:24px}
+@media(max-width:1100px){.app-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.app-grid{grid-template-columns:minmax(0,1fr)}.app-card{padding:20px}.app-tabs{gap:8px}.app-tabs a{padding:10px 16px;min-width:86px;flex:1}.app-group{margin:28px 0}}
