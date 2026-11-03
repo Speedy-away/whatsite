@@ -15,6 +15,7 @@ const xbox360nav = [
   [base, 'Xbox 360'], [base + 'jailbreaks.html', 'Jailbreak'],
   [base + 'payloads.html', 'Payloads'], [base + 'apps.html', 'Apps & Dashboards'],
   [base + 'tools.html', 'PC Tools'], [base + 'mods.html', 'Mods / Mod Menus'],
+  [base + 'mods/stealth-servers/index.html', 'Stealth Servers'],
   [base + 'downloads.html', 'Downloads']
 ];
 const methodNav = [
@@ -80,6 +81,7 @@ function buildXbox360Pages() {
       resource('Apps & dashboards', 'Aurora, FreeStyle Dash, XeXMenu, XM360, RetroArch and other Xbox 360 utilities.', link(base + 'apps.html', 'Browse apps'), image.aurora),
       resource('PC tools', 'FATXplorer, Velocity and XeCLI for storage, package inspection and supported console connections.', link(base + 'tools.html', 'Open PC tools'), image.tools),
       resource('Mods / Mod Menus', 'Trainer, visual-mod, save-editing and modding-tool information for Xbox 360 games.', fullPageLink(base + 'mods.html', 'Browse mods / mod menus'), image.library),
+      resource('Stealth Servers', 'Xbox 360 online-service references and server-specific setup requirements.', link(base + 'mods/stealth-servers/index.html', 'Browse stealth servers'), '/assets/images/merged-categories/category-network-v1.png'),
       resource('Downloads', 'Find installers, firmware references, trial files, the backwards-compatibility pack and game-library directory.', link(base + 'downloads.html', 'Browse downloads'), image.compatibility)
     ), 'Choose the method that matches your console, then find compatible apps and downloads.'), '#start', 'Choose a page');
 

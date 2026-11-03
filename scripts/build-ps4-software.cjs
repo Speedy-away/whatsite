@@ -58,10 +58,10 @@ function buildPs4Software() {
     require('./console-store-cards.cjs').storeIntro('ps4') + intro('ps4') + require('./console-store-cards.cjs').storeCards('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
       resource(
         'trophy_unlockers',
-        'PS4 trophy unlocker collection with game-specific packages, a guide and separate Windows desktop tools. Match each package to its game title ID and region.',
+        'PS4 trophy unlocker collection with game-specific PKG files, a guide, TrophyUnlocker for Windows and PS4PKGViewer. Match each package to its game title ID and region.',
         ext('https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers', 'Open trophy_unlockers'),
         ps4Image
-      ).replace('<article ', '<article id="trophy-unlockers" '),
+      ).replace('<article ', '<article id="trophy-unlockers" ').replace('<div class="guide-links">', '<ul class="guide-resource-tags" aria-label="Tags"><li class="feature-tag">PS4</li><li class="feature-tag">Trophy unlocker</li><li class="feature-tag">PKG</li><li class="feature-tag">Windows tools</li></ul><div class="guide-links">'),
       resource(
         'Apollo Save Tool · PS4',
         'Manage, export, import, patch and resign PS4 saves directly on your homebrew-enabled console.',

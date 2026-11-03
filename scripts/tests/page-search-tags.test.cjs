@@ -3,6 +3,26 @@ const assert = require('node:assert/strict');
 const {apply, aliasesFor, resourceTerms, decode} = require('../page-search-tags.cjs');
 const search = html => decode(html.match(/data-(?:library-)?search=(["'])([\s\S]*?)\1/)[2]);
 
+test('host cards use their visible console labels without making the host grid searchable', () => {
+  const input = '<div class="guide-host-grid"><a class="guide-host" href="https://example.test/pinned"><h3>Karo</h3><span class="feature-tag">PS4</span><span class="feature-tag">Browser host</span></a></div>';
+  const output = apply('console/ps4/index.html', input);
+  assert.ok(output.startsWith('<div class="guide-host-grid"><a '));
+  assert.ok(search(output).includes('ps4 host'));
+  assert.ok(search(output).includes('ps4 online host'));
+  assert.ok(!search(output).includes('ps5 host'));
+  assert.ok(!search(output).includes('webkit'));
+  assert.ok(output.includes('href="https://example.test/pinned"'));
+  assert.equal(apply('console/ps4/index.html', output), output);
+});
+
+test('WebKit aliases follow the named entry point without claiming working firmware', () => {
+  const output = apply('console/ps5/index.html', '<a class="guide-host" href="https://example.test/entry"><h3>WebKit Autoloader</h3><span class="feature-tag">PS5</span></a>');
+  assert.ok(search(output).includes('webkit exploit'));
+  assert.ok(search(output).includes('ps5 host'));
+  assert.ok(!search(output).includes('ps4 host'));
+  assert.ok(!search(output).includes('working'));
+});
+
 test('game-name aliases distinguish numbered games and console generations', () => {
   assert.ok(aliasesFor('GTA V').includes('Grand Theft Auto 5'));
   assert.ok(aliasesFor('Black Ops III').includes('BO3'));

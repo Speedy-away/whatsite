@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-03",
+  "request": "Add Orbit Store to the PS5 Game Downloads page and add an explicit download button.",
+  "pages": [
+    "console/ps5/game-downloads.html",
+    "console/ps5/apps.html"
+  ],
+  "version": "1.8.1",
+  "download": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf",
+  "image": "/assets/images/console-software/orbit.jpg",
+  "archive": {
+    "alreadyPresent": true,
+    "bytes": 59691728,
+    "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914",
+    "rehashed": true,
+    "upstreamStatus": 200,
+    "upstreamSizeMatched": true
+  },
+  "implementation": "Shared orbitStoreCard in console-game-directories.cjs, used by PS5 Apps builder and inserted during game-directory regeneration.",
+  "validation": {
+    "focusedTests": 7,
+    "failed": 0,
+    "siteAudit": {
+      "pages": 481,
+      "linksAndAssets": 56389,
+      "issues": 0
+    },
+    "directButtonsAndArtworkChecked": true,
+    "gamePageRegenerationStable": true
+  },
+  "preservation": "Existing DLPSGame directory, older Orbit archives and pinned version retained.",
+  "published": false
+}

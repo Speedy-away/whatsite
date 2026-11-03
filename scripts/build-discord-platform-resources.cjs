@@ -14,7 +14,7 @@ function filesFor(item,inventory){
  const seen=new Set();return files.filter(file=>{if(seen.has(file.local||file.backupPath))return false;seen.add(file.local||file.backupPath);return true;});
 }
 function search(item,games){return [item.name,item.description,item.version,item.gameUpdate,item.compatibility,item.region,...item.tags,...item.keywords,...games.filter(g=>item.gameIds.includes(g.id)).map(g=>g.title),...(item.guideBlocks||[]).flatMap(b=>[b.title,b.text,...(b.items||[]).map(x=>typeof x==='string'?x:x.title+' '+x.text)])].filter(Boolean).join(' ').toLowerCase();}
-function card(item,games,inventory){
+function card(item,games,inventory,contextGame=null){
  const files=filesFor(item,inventory),available=files.filter(f=>{const stored=publicMirror(f.local,root);return stored&&stored.bytes===f.bytes;});
  const links=available.map(f=>`<div class="menu-download"><a href="${h(f.local)}" download data-sha256="${h(f.sha256)}" data-i18n-skip translate="no">${h(f.name)}</a> <small>${(f.bytes/1048576).toFixed(2)} MiB</small></div>`).join('');
  const cross=item.gameIds.length>1?`<h4>Source-confirmed games</h4><div class="guide-links">${games.filter(g=>item.gameIds.includes(g.id)).map(g=>ui.link(g.page+'#'+item.id,h(g.title))).join('')}</div>`:'';
@@ -26,9 +26,12 @@ function card(item,games,inventory){
  const guideId='guide-'+item.id;
  const guide=`<div class="guide-links"><a href="#${h(guideId)}" data-guide-open>Guide &amp; requirements</a></div><section id="${h(guideId)}" data-guide-panel data-guide-title="${h(item.name+' · Guide & requirements')}"><p>${h(item.description)}</p><dl class="ps3-meta"><dt>Game update</dt><dd>${h(item.gameUpdate)}</dd><dt>Build / region</dt><dd>${h(item.compatibility)} ${h(item.region)}</dd></dl><p>${h(status)}</p>${item.note?`<p>${h(item.note)}</p>`:''}${cross}${failureReferences}${menuMedia.details(item)}${(item.guideBlocks||[]).map(renderer.guideBlock).join('')}</section>`;
  const game=games.find(g=>g.id===item.gameId)||games.find(g=>item.gameIds.includes(g.id));
- const media=menuMedia.figure(item,game?.image,game?.title);
+ const contextual=contextGame&&item.gameIds.length>1&&item.gameIds.includes(contextGame.id);
+ const media=contextual?`<figure class="menu-preview" data-menu-preview="artwork"><img src="${h(contextGame.image)}" alt="${h(contextGame.title)} game artwork for the multi-game ${h(item.name)} collection" loading="lazy" decoding="async"></figure>`:menuMedia.figure(item,game?.image,game?.title);
+ const description=contextual&&/myten/i.test(item.name)?`Myten multi-game menu for ${contextGame.title}. Nine games supported; check the game-specific modes.`:item.description;
+ const sourcePreview=contextual?`<details><summary>Original multi-game preview</summary>${menuMedia.figure(item,game?.image,game?.title)}</details>`:'';
  const details=`<details class="menu-card-links"><summary>Setup &amp; source</summary><dl class="ps3-meta"><dt>Source version</dt><dd>${h(item.version||'Not specified')}</dd><dt>Game update</dt><dd>${h(item.gameUpdate||'Not specified by source')}</dd><dt>Build / region</dt><dd>${h(item.compatibility)} ${h(item.region)}</dd></dl><p>${h(status)}</p>${item.note?`<p>${h(item.note)}</p>`:''}${cross}${failureReferences}${guide}<div class="guide-links">${originals}${refs}${ui.ext(item.source,'Original Discord post (sign-in may be needed)')}</div></details>`;
- return `<article class="guide-resource menu-card" id="${h(item.id)}" data-ps3-entry data-game="${h(item.gameId)}" data-games="${h(unique([item.gameId,...item.gameIds,...(item.indexIds||[])]).join(' '))}" data-type="${h(item.category)}" data-search="${h(search(item,games))}">${media}<h3>${h(item.name)}</h3><p class="menu-description">${h(item.description)}</p>${item.readiness==='incomplete'?'<p class="menu-card-note">Source limitations · read setup</p>':''}<div class="menu-downloads">${links}</div>${details}</article>`;
+ return `<article class="guide-resource menu-card" id="${h(item.id)}" data-ps3-entry data-game="${h(item.gameId)}" data-games="${h(unique([item.gameId,...item.gameIds,...(item.indexIds||[])]).join(' '))}" data-type="${h(item.category)}" data-search="${h(search(item,games))}">${media}<h3>${h(item.name)}</h3><p class="menu-description${/myten/i.test(item.name)?' menu-description--complete':''}">${h(description)}</p>${item.readiness==='incomplete'?'<p class="menu-card-note">Source limitations · read setup</p>':''}<div class="menu-downloads">${links}</div>${details.replace('<summary>Setup &amp; source</summary>','<summary>Setup &amp; source</summary>'+sourcePreview)}</article>`;
 }
 function filters(items,games){return `<div class="ps3-filter"><div><label for="ps3Search">Search menus, builds or compatibility</label><input id="ps3Search" type="search" placeholder="Menu name, title update or file format"></div><div><label for="ps3Game">Game or collection</label><select id="ps3Game"><option value="">All resources</option>${games.map(g=>`<option value="${h(g.id)}">${h(g.title)}</option>`).join('')}</select></div><div><label for="ps3Type">Resource type</label><select id="ps3Type"><option value="">All types</option>${unique(items.map(x=>x.category)).map(x=>`<option value="${h(x)}">${h(x)}</option>`).join('')}</select></div></div><p id="ps3Count" role="status">${items.length} resources</p><p id="ps3Empty" hidden>No matching resources.</p>`;}
 function insert(file,content,marker){
@@ -57,12 +60,14 @@ function build(collection,{onlyPages}={}){
  const inventory=read('docs/download-audit.json',{items:[]}).items;
  const help=ui.note('<p>Choose the game and its exact update first. A multi-game collection only lists games explicitly confirmed in the source or archive. Downloading a file does not install or run it. Preserve the original archive and game files.</p>');
  const assets='<link rel="stylesheet" href="/assets/ps3-catalog.css?v=1"><link rel="stylesheet" href="/assets/console-menu-catalog.css?v=1"><script defer src="/assets/ps3-catalog.js?v=1"></script>';
- const menuGrid=items=>ui.grid(...items.map(x=>card(x,data.games,inventory))).replace('class="games-grid"','class="games-grid menu-resource-grid"');
+ const menuGrid=(items,game=null)=>ui.grid(...items.map(x=>card(x,data.games,inventory,game))).replace('class="games-grid"','class="games-grid menu-resource-grid"');
  const gameCard=g=>ui.resource(h(g.title),h(g.summary||(g.kind==='collection'?'Multi-game resources with supported titles listed per build.':g.kind==='tools'?'Tools and service links with their own setup requirements.':'Mod menus and downloads for '+g.title+'.')),ui.link(g.page,'Browse '+g.title),g.image);
  const gameGrid=games=>ui.grid(...games.map(gameCard)).replace('class="games-grid"','class="games-grid menu-game-grid"');
  const directory=base+'index.html';
+ const modResources=data.resources.filter(item=>item.gameId!=='stealth-servers');
+ const modGames=data.games.filter(game=>game.id!=='stealth-servers');
  const overview=grouped?ui.section('games','Choose your Xbox 360 game or tool',gameGrid(grouped.overview)):'';
- if(requested(directory))ui.page(directory.slice(1),platform+' Mods & Mod Menus',platform+' game menus, tools, source references and separately labelled original downloads.',data.games[0].image,nav,overview+ui.section('resources','Search '+platform+' resources',help+filters(data.resources,data.games)+menuGrid(data.resources))+assets,grouped?'#games':'#resources',grouped?'Choose a game':'Search resources');
+ if(requested(directory))ui.page(directory.slice(1),platform+' Mods & Mod Menus',platform+' game menus, tools, source references and separately labelled original downloads.',data.games[0].image,nav,overview+ui.section('resources','Search '+platform+' resources',help+filters(modResources,modGames)+menuGrid(modResources))+assets,grouped?'#games':'#resources',grouped?'Choose a game':'Search resources');
  if(grouped){
   if(requested(grouped.cod.page))ui.page(grouped.cod.page.slice(1),'Xbox 360 Call of Duty Mods','Choose a Call of Duty game for Xbox 360 mod menus, supported builds and downloads.',grouped.cod.image,nav,ui.section('games','Call of Duty · Xbox 360',gameGrid(grouped.codGames))+ui.section('collections','Multi-game collections',gameGrid([data.games.find(g=>g.id==='multicod'),grouped.multi].filter(Boolean)))+assets,'#games','Choose a Call of Duty game');
   if(requested(grouped.multi.page))ui.page(grouped.multi.page.slice(1),'Xbox 360 Multi-game Tools & Mod Menus','Browse Myten versions and Call of Duty multi-game collections with source-confirmed game support.',grouped.multi.image,nav,ui.section('families','Multi-game tools & mod menus',gameGrid([grouped.myten,data.games.find(g=>g.id==='multicod')].filter(Boolean)))+assets,'#families','Choose a family');
@@ -74,7 +79,7 @@ function build(collection,{onlyPages}={}){
  for(const game of data.games){
   if(!requested(game.page))continue;
   const entries=data.resources.filter(x=>x.gameId===game.id||x.gameIds.includes(game.id)||(x.indexIds||[]).includes(game.id)||(x.referenceGameIds||[]).includes(game.id));if(!entries.length)continue;
-  const content=ui.section('discord-resources',game.title+' · reviewed sources',help+filters(entries,[game])+menuGrid(entries))+assets;
+  const content=ui.section('discord-resources',game.title+' · reviewed sources',help+filters(entries,[game])+menuGrid(entries,game))+assets;
   const file=path.join(root,game.page.slice(1));
   if(collection==='xbox360'&&game.id==='cod4'&&fs.existsSync(file))insert(file,content,'DISCORD PLATFORM RESOURCES');
   else ui.page(game.page.slice(1),game.title+' · '+platform+' Resources',game.title+' '+platform+' mod menus, original files, compatibility notes and guides.',game.image,nav,content,'#discord-resources','Browse resources');

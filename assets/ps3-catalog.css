@@ -1,7 +1,7 @@
 .ps3-catalog .ps3-game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ps3-catalog .games-grid { align-items: start; }
 .ps3-catalog [data-ps3-entry] .guide-links { margin-top: 0; }
-.ps3-catalog .ps3-game-card img { aspect-ratio: 16/8; object-fit: cover; }
+.ps3-catalog .ps3-game-card img { aspect-ratio: 16/9; object-fit: contain; background:#0a0d0e; }
 .ps3-catalog .ps3-mod-image { background: #080b09; object-fit: contain; }
 .ps3-mod-figure { width: 100%; min-width: 0; margin: 0; }
 .ps3-mod-figure figcaption { font-size: .78rem; line-height: 1.5; color: var(--text-secondary); margin-top: 8px; }

@@ -1,0 +1,59 @@
+"""Create responsive delivery copies; never replace the original illustrations."""
+import hashlib
+import json
+import re
+import subprocess
+from pathlib import Path
+from PIL import Image, ImageOps
+
+root = Path(__file__).resolve().parent.parent
+manifest = json.loads((root / 'docs/merged-category-covers.json').read_text(encoding='utf-8'))
+output = root / 'assets/images/merged-categories/optimized'
+output.mkdir(parents=True, exist_ok=True)
+images = {}
+for cover in manifest['covers'].values():
+    source = root / cover['path'].lstrip('/')
+    variants = []
+    with Image.open(source) as original:
+        original = ImageOps.exif_transpose(original).convert('RGB')
+        for width in (480, 960):
+            image = original.copy()
+            image.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
+            target = output / f'{source.stem}-{width}.jpg'
+            image.save(target, 'JPEG', quality=82, optimize=True, progressive=True)
+            data = target.read_bytes()
+            variants.append({'path': '/' + target.relative_to(root).as_posix(), 'width': image.width,
+                             'height': image.height, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+    images[cover['path']] = {'originalBytes': source.stat().st_size, 'variants': variants}
+pages = json.loads(subprocess.check_output(['node', '-e', "console.log(JSON.stringify(require('./scripts/site-public-pages.cjs').pages()))"], cwd=root, text=True))
+additional = set()
+for page in pages:
+    html = Path(page).read_text(encoding='utf-8')
+    for source in re.findall(r'(?:src|data-original-image)="(/assets/images/[^"?#]+)"', html):
+        file = root / source.lstrip('/')
+        if source not in images and file.suffix.lower() in ('.png', '.jpg', '.jpeg', '.webp', '.avif') and file.exists() and file.stat().st_size > 200000:
+            additional.add(source)
+for source in sorted(additional):
+    path = root / source.lstrip('/')
+    variants = []
+    with Image.open(path) as original:
+        if getattr(original, 'is_animated', False):
+            continue
+        original = ImageOps.exif_transpose(original)
+        alpha = 'A' in original.getbands() or 'transparency' in original.info
+        original = original.convert('RGBA' if alpha else 'RGB')
+        for width in (480, 960):
+            image = original.copy()
+            image.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
+            identity = hashlib.sha256(source.encode()).hexdigest()[:16]
+            target = output / f'asset-{identity}-{width}.{"png" if alpha else "jpg"}'
+            image.save(target, 'PNG', optimize=True) if alpha else image.save(target, 'JPEG', quality=82, optimize=True, progressive=True)
+            data = target.read_bytes()
+            variants.append({'path': '/' + target.relative_to(root).as_posix(), 'width': image.width,
+                             'height': image.height, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+    if variants[-1]['bytes'] < path.stat().st_size:
+        images[source] = {'originalBytes': path.stat().st_size, 'variants': variants}
+report = {'policy': 'Responsive progressive JPEG delivery copies; all original PNGs retained.', 'images': images}
+(root / 'docs/optimized-category-covers.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+print(json.dumps({'images': len(images), 'originalBytes': sum(i['originalBytes'] for i in images.values()),
+                  'deliveryBytes960': sum(i['variants'][-1]['bytes'] for i in images.values())}))

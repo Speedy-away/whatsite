@@ -32,7 +32,7 @@ function collect(destination) {
     const heading = block.match(/<h[234]\b[^>]*>([\s\S]*?)<\/h[234]>/i)?.[1];
     const tag = block.match(/<img\b[^>]*>/i)?.[0];
     if (!tag || !heading) continue;
-    let src = art.attribute(tag, 'src');
+    let src = art.attribute(tag, 'data-original-image') || art.attribute(tag, 'src');
     // The older PC list uses Citra's artwork for the successor project. Use
     // the site's existing actual Azahar logo in the new category composition.
     if (plain(heading) === 'Azahar' && /\/Citra\.jpg$/.test(src)) src = '/assets/images/xbox-one-series/azahar.png';
@@ -116,6 +116,13 @@ function buildManifest() {
   }
   const allGames = directories.map(platform => destinations[art.route(platform.base + 'game-downloads.html')]?.images[0]).filter(Boolean);
   add('/console/game-downloads/index.html', 'Console game downloads', 'downloads', [], allGames.slice(0, 4));
+  const myten='/console/xbox360/mods/multi-game-tools/myten/index.html';
+  add(myten,'Myten multi-game menus','mods',[],[
+    image('/assets/images/game-card-covers/gta-san-andreas-official-v1.jpg','GTA San Andreas',myten.slice(1)),
+    image('/assets/images/covers/cod-mw2-2009.jpg','Modern Warfare 2 (2009)',myten.slice(1)),
+    image('/assets/images/covers/cod-black-ops-3.jpg','Black Ops 3',myten.slice(1)),
+    image('/assets/images/game-card-covers/quantum-of-solace-official-v1.jpg','Quantum of Solace',myten.slice(1))
+  ]);
   return {version: 'category-card-art-v1', policy: 'Native HTML/CSS composition of unchanged existing local artwork; sourcePage records identify where projects are listed. No emulator/platform compatibility inferred.', destinations: Object.fromEntries(Object.entries(destinations).sort(([a], [b]) => a.localeCompare(b)))};
 }
 function links(html) { return [...html.matchAll(/<a\b[^>]*>/gi)].map(match => match[0]); }

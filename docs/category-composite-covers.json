@@ -1,0 +1,1339 @@
+{
+  "policy": "Single self-contained SVG compositions using existing game/app images; originals retained.",
+  "routes": {
+    "/console/3ds/apps.html": {
+      "id": "composite-720622ba9a2d",
+      "path": "/assets/images/category-composites/720622ba9a2d.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 41776,
+      "sha256": "7fbd17748d8451999d99b8ffdd9881068b9835718f4ea10a894d3bbb7e15d88b",
+      "title": "Apps & save tools",
+      "alt": "Combined Apps & save tools artwork: Luma3DS CFW, GodMode9, Universal-Updater, Checkpoint",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/luma.png",
+        "/assets/images/expansion-nintendo-retro/godmode9.png",
+        "/assets/images/expansion-nintendo-retro/universal-updater.png",
+        "/assets/images/expansion-nintendo-retro/checkpoint.png"
+      ]
+    },
+    "/console/3ds/games.html": {
+      "id": "composite-1c967a3e068a",
+      "path": "/assets/images/category-composites/1c967a3e068a.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 27027,
+      "sha256": "7d53df4b43dfc45918d3162fd561c5b8851a3f02594e4f9e67624eb1d6ac462e",
+      "title": "Homebrew games & ports",
+      "alt": "Combined Homebrew games & ports artwork: Super-Haxagon, prboom3ds, Flappy-Bird",
+      "sourceImages": [
+        "/assets/images/3ds-more/apps/super-haxagon.png",
+        "/assets/images/3ds-more/games.svg",
+        "/assets/images/3ds-more/apps/flappy-bird.png"
+      ]
+    },
+    "/console/3ds/setup.html": {
+      "id": "composite-daf9f8a1b469",
+      "path": "/assets/images/category-composites/daf9f8a1b469.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 22125,
+      "sha256": "b97c99fcc482abca0c77470caba5e03fff773df28411212c346b76b6f297e5df",
+      "title": "CFW & core setup",
+      "alt": "Combined CFW & core setup artwork: CFW & core setup, Nintendo 2DS & 3DS",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/luma.png",
+        "/assets/images/3ds-more/hero.svg"
+      ]
+    },
+    "/console/ds/apps.html": {
+      "id": "composite-53eb3944aa46",
+      "path": "/assets/images/category-composites/53eb3944aa46.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 33320,
+      "sha256": "8119027d6f2969957fe097bb8bd581586d47fa5df3314ba50400e2cb8028a1a9",
+      "title": "Apps & launch tools",
+      "alt": "Combined Apps & launch tools artwork: TWiLight Menu++, nds-bootstrap, GodMode9i, ftpd \u00b7 Nintendo DS build",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/twilight.png",
+        "/assets/images/expansion-nintendo-retro/nds-bootstrap.png",
+        "/assets/images/expansion-nintendo-retro/godmode9i.png",
+        "/assets/images/expansion-nintendo-retro/ftpd.png"
+      ]
+    },
+    "/console/ds/games.html": {
+      "id": "composite-febf9270e05b",
+      "path": "/assets/images/category-composites/febf9270e05b.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 29116,
+      "sha256": "c40fa0091eaf355a4ca43b772bcc1b2c16684ad39327b478c2a8fad55dd1450b",
+      "title": "Homebrew games & ports",
+      "alt": "Combined Homebrew games & ports artwork: Wordle DS, Aperture Science DS \u00b7 portalDS, Counter Strike DS, PUNCH-A-ROONEY!",
+      "sourceImages": [
+        "/assets/images/ds-dsi-more/wordle-ds.png",
+        "/assets/images/ds-dsi-more/portalds.png",
+        "/assets/images/ds-dsi-more/counter-strike-ds.png",
+        "/assets/images/ds-dsi-more/punch-a-rooney.png"
+      ]
+    },
+    "/console/gamecube/save-disc-tools.html": {
+      "id": "composite-efcf3613f236",
+      "path": "/assets/images/category-composites/efcf3613f236.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 5122,
+      "sha256": "17aaeffd31af4e10ada2143a1ce55b790868e0dc310ff3a621c0cbfeec520a0c",
+      "title": "Disc & memory-card tools",
+      "alt": "Combined Disc & memory-card tools artwork: GCMM \u00b7 GameCube saves, CleanRip \u00b7 GameCube build",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/gcmm.png",
+        "/assets/images/expansion-nintendo-retro/cleanrip.png"
+      ]
+    },
+    "/console/gamecube/setup.html": {
+      "id": "composite-84aaff2a8351",
+      "path": "/assets/images/category-composites/84aaff2a8351.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 27210,
+      "sha256": "3804afb805438ffc96c7129d7a51d331587d00d29d798a4191e7e134f2a15568",
+      "title": "App installation & documentation",
+      "alt": "Combined App installation & documentation artwork: App installation & documentation, Nintendo GameCube",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/cleanrip.png",
+        "/assets/images/expansion-nintendo-retro/gamecube.png"
+      ]
+    },
+    "/console/mods/ps4/index.html": {
+      "id": "composite-92184b19cb86",
+      "path": "/assets/images/category-composites/92184b19cb86.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 108428,
+      "sha256": "3dbdb872bcee88997d1f01d3c11cd3b066c363e1c41549063ad44cbb9da37807",
+      "title": "PS4/PS5 Mods / Mod Menus",
+      "alt": "Combined PS4/PS5 Mods / Mod Menus artwork: Grand Theft Auto V, Red Dead Redemption 2, Call of Duty, Other Games",
+      "sourceImages": [
+        "/assets/images/gta52.png",
+        "/assets/images/rdr2.png",
+        "/assets/images/covers/cod-black-ops-3.jpg",
+        "/assets/images/ps4-ps5/dying-light-2.jpg"
+      ]
+    },
+    "/console/nintendo-switch-2.html?view=all": {
+      "id": "composite-571aa57118b7",
+      "path": "/assets/images/category-composites/571aa57118b7.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 19825,
+      "sha256": "3821198acf7aee6d827f799da38d65372b9cf2e58278e98714a4b5f9f43900fe",
+      "title": "Nintendo Switch 2 full library",
+      "alt": "Combined Nintendo Switch 2 full library artwork: Nintendo Switch 2, Nintendo Switch 2",
+      "sourceImages": [
+        "/assets/images/switch2-console/console.jpg",
+        "/assets/images/platform-logos/nintendo-switch-2.svg"
+      ]
+    },
+    "/console/nintendo-switch-2/civswitch.html": {
+      "id": "composite-46d73fe43628",
+      "path": "/assets/images/category-composites/46d73fe43628.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 19825,
+      "sha256": "3821198acf7aee6d827f799da38d65372b9cf2e58278e98714a4b5f9f43900fe",
+      "title": "CivSwitch entry point",
+      "alt": "Combined CivSwitch entry point artwork: CivSwitch entry point, Nintendo Switch 2",
+      "sourceImages": [
+        "/assets/images/switch2-console/console.jpg",
+        "/assets/images/platform-logos/nintendo-switch-2.svg"
+      ]
+    },
+    "/console/nintendo-switch-2/game-tools.html": {
+      "id": "composite-d4dd939d2ee2",
+      "path": "/assets/images/category-composites/d4dd939d2ee2.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 31743,
+      "sha256": "0e37480c05181b19901bbd2d4a1b958b687f22d5de4b3ac96eb0b6f0428bcda2",
+      "title": "Game & asset tools",
+      "alt": "Combined Game & asset tools artwork: Game & asset tools, Nintendo Switch 2, Nintendo Switch 2",
+      "sourceImages": [
+        "/assets/images/switch2-console/joy-con-2.jpg",
+        "/assets/images/switch2-console/console.jpg",
+        "/assets/images/platform-logos/nintendo-switch-2.svg"
+      ]
+    },
+    "/console/nintendo-switch-2/ns2jb.html": {
+      "id": "composite-e45c3c244f95",
+      "path": "/assets/images/category-composites/e45c3c244f95.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 19825,
+      "sha256": "946045d8ef6c468ab20dbae2a451444909a46b39ef417adbf045a9f3d3858252",
+      "title": "ns2jb research",
+      "alt": "Combined ns2jb research artwork: ns2jb research, Nintendo Switch 2",
+      "sourceImages": [
+        "/assets/images/platform-logos/nintendo-switch-2.svg",
+        "/assets/images/switch2-console/console.jpg"
+      ]
+    },
+    "/console/nintendo-switch-2/save-tools.html": {
+      "id": "composite-196e3288e09b",
+      "path": "/assets/images/category-composites/196e3288e09b.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 29171,
+      "sha256": "09559cf549f89f784bc6b03c895f35ed807e8bb1b39230e9348001b2148664b6",
+      "title": "Save backup tools",
+      "alt": "Combined Save backup tools artwork: Save backup tools, Nintendo Switch 2, Nintendo Switch 2",
+      "sourceImages": [
+        "/assets/images/switch2-console/dock.jpg",
+        "/assets/images/switch2-console/console.jpg",
+        "/assets/images/platform-logos/nintendo-switch-2.svg"
+      ]
+    },
+    "/console/nintendo-switch.html?view=all": {
+      "id": "composite-d4a0823831f0",
+      "path": "/assets/images/category-composites/d4a0823831f0.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 19744,
+      "sha256": "d652a7a7b84d29f400b9d8089619297777b7113c22a5302dc61a8ef3e9d83793",
+      "title": "Nintendo Switch full library",
+      "alt": "Combined Nintendo Switch full library artwork: Homebrew App Store, mGBA, OpenSupaplex",
+      "sourceImages": [
+        "/assets/images/switch-homebrew/appstore.png",
+        "/assets/images/switch-homebrew/mGBA.png",
+        "/assets/images/switch-homebrew/OpenSupaplex.png"
+      ]
+    },
+    "/console/nintendo-switch/app-store.html": {
+      "id": "composite-c405ebd14fe9",
+      "path": "/assets/images/category-composites/c405ebd14fe9.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 14707,
+      "sha256": "a51e643f8f49c882988afde5c9d0266828341d88b5b832fd47d7bbf53364d259",
+      "title": "Homebrew App Store",
+      "alt": "Combined Homebrew App Store artwork: Homebrew App Store 2.3.2, Nintendo Switch, Nintendo Switch",
+      "sourceImages": [
+        "/assets/images/switch-homebrew/appstore.png",
+        "/assets/images/consoles/nintendo-switch.jpg",
+        "/assets/images/platform-logos/nintendo-switch.svg"
+      ]
+    },
+    "/console/nintendo-switch/apps.html": {
+      "id": "composite-f73f1b86e2df",
+      "path": "/assets/images/category-composites/f73f1b86e2df.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 20372,
+      "sha256": "5284b68808ffd660f87a8db6ebbe6ddc8cd68233ddfad77f6837e4dee95743b2",
+      "title": "Apps & utilities",
+      "alt": "Combined Apps & utilities artwork: Homebrew App Store, Homebrew Menu, JKSV, Checkpoint",
+      "sourceImages": [
+        "/assets/images/switch-homebrew/appstore.png",
+        "/assets/images/switch-homebrew/hbmenu.png",
+        "/assets/images/switch-homebrew/jksv.png",
+        "/assets/images/switch-homebrew/Checkpoint.png"
+      ]
+    },
+    "/console/nintendo-switch/apps.html?category=Homebrew%20games": {
+      "id": "composite-b145e60d2dcb",
+      "path": "/assets/images/category-composites/b145e60d2dcb.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 32652,
+      "sha256": "8feffa7bf01ea143daabd6e100e15fe0122c39cca2ae0c124adc8a20f34fba86",
+      "title": "Homebrew games",
+      "alt": "Combined Homebrew games artwork: OpenSupaplex, 2048, SuDokuL, BrogueCE",
+      "sourceImages": [
+        "/assets/images/switch-homebrew/OpenSupaplex.png",
+        "/assets/images/switch-homebrew/2048.png",
+        "/assets/images/switch-homebrew/SuDokuL.png",
+        "/assets/images/switch-homebrew/BrogueCE.png"
+      ]
+    },
+    "/console/nintendo-switch/cfw.html": {
+      "id": "composite-2b64b69f4359",
+      "path": "/assets/images/category-composites/2b64b69f4359.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 6869,
+      "sha256": "5685d24c1457f90448b9c1805f6dac279de210fd3c58ca79ff50fcda802b87bd",
+      "title": "CFW & bootloader",
+      "alt": "Combined CFW & bootloader artwork: CFW & bootloader, Nintendo Switch",
+      "sourceImages": [
+        "/assets/images/switch-core-tools/atmosphere-banner.png",
+        "/assets/images/platform-logos/nintendo-switch.svg"
+      ]
+    },
+    "/console/nintendo-switch/firmware.html": {
+      "id": "composite-38bd7d3dbb86",
+      "path": "/assets/images/category-composites/38bd7d3dbb86.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 4180,
+      "sha256": "dee199a94a5be29d53669cac0418f072d7ca42cc5e81251a2f31a3fdd928ef41",
+      "title": "Firmware archive",
+      "alt": "Combined Firmware archive artwork: Firmware archive, Nintendo Switch",
+      "sourceImages": [
+        "/assets/images/switch-themes/boot-recovery.svg",
+        "/assets/images/platform-logos/nintendo-switch.svg"
+      ]
+    },
+    "/console/nintendo-switch/mods.html": {
+      "id": "composite-9d02446ef256",
+      "path": "/assets/images/category-composites/9d02446ef256.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 108166,
+      "sha256": "cd311a77a4be5315a401738952dbaf43c0752d61930944f8c74d8991d2b32ccc",
+      "title": "Game mods",
+      "alt": "Combined Game mods artwork: CTGP Deluxe, Nextendo country flag \u00b7 GB \u00b7 3.0.5, Ultimate Training Modpack, Competitive Playable Bosses",
+      "sourceImages": [
+        "/assets/images/switch-game-mods/racing.svg",
+        "/assets/images/switch-card-recovery/mario-kart.jpg",
+        "/assets/images/switch-game-mods/arena.svg",
+        "/assets/images/switch-card-recovery/playable-bosses.png"
+      ]
+    },
+    "/console/nintendo-switch/setup.html": {
+      "id": "composite-055a49a07dff",
+      "path": "/assets/images/category-composites/055a49a07dff.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 4180,
+      "sha256": "af41ea18b729a0a59e9072029b4747b40690295db9db7bba57fcba7bdc53c335",
+      "title": "Homebrew setup",
+      "alt": "Combined Homebrew setup artwork: Homebrew setup, Nintendo Switch",
+      "sourceImages": [
+        "/assets/images/switch-themes/switch-setup.svg",
+        "/assets/images/platform-logos/nintendo-switch.svg"
+      ]
+    },
+    "/console/ps2/apps.html": {
+      "id": "composite-c6c69019686b",
+      "path": "/assets/images/category-composites/c6c69019686b.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 68316,
+      "sha256": "afd4d6b361707638fdedb96cb21a974195693cffd3dfdf6cac144e59146d6b08",
+      "title": "Apps & tools",
+      "alt": "Combined Apps & tools artwork: Open PS2 Loader, wLaunchELF, Apollo Save Tool \u00b7 PS2, PS2Ident",
+      "sourceImages": [
+        "/assets/images/expansion-ps2/opl.png",
+        "/assets/images/expansion-ps2/wlaunchelf-screen.png",
+        "/assets/images/expansion-ps2/apollo.png",
+        "/assets/images/expansion-ps2/ps2ident.png"
+      ]
+    },
+    "/console/ps2/games.html": {
+      "id": "composite-34bfa5a40670",
+      "path": "/assets/images/category-composites/34bfa5a40670.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 4265,
+      "sha256": "7866959e1c58f8edf04205aaf96000c3e3e48f63628904fbff6d6084f29e5c24",
+      "title": "Homebrew games & ports",
+      "alt": "Combined Homebrew games & ports artwork: SuperTux, Quake \u00b7 PS2 engine port, Quake II \u00b7 PS2 engine port",
+      "sourceImages": [
+        "/assets/images/ps2-expansion/supertux.svg",
+        "/assets/images/ps2-expansion/quake.svg",
+        "/assets/images/ps2-expansion/quake2.svg"
+      ]
+    },
+    "/console/ps2/storage.html": {
+      "id": "composite-2d228448d4f0",
+      "path": "/assets/images/category-composites/2d228448d4f0.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 46506,
+      "sha256": "e24e3a26d26b6ac21cfc6f0e5f4acac7d75ef4e702313f62402a95c74f598143",
+      "title": "Storage & installation",
+      "alt": "Combined Storage & installation artwork: USB & app folders, Saves & virtual memory cards",
+      "sourceImages": [
+        "/assets/images/expansion-ps2/opl.png",
+        "/assets/images/expansion-ps2/apollo.png"
+      ]
+    },
+    "/console/ps3/apps.html": {
+      "id": "composite-b60bfeed2906",
+      "path": "/assets/images/category-composites/b60bfeed2906.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 38064,
+      "sha256": "f2d6980d93bb31c2f876984a1fd511de8146e6b8d00f16c990bf99d79d7ac9db",
+      "title": "PS3 apps",
+      "alt": "Combined PS3 apps artwork: multiMAN, IRISMAN, PKGi \u00b7 PS3, prepISO",
+      "sourceImages": [
+        "/assets/images/ps3-resources/multiman.png",
+        "/assets/images/expansion-ps3/irisman.png",
+        "/assets/images/ps3-resources/pkgi.png",
+        "/assets/images/expansion-ps3/prepiso.png"
+      ]
+    },
+    "/console/ps3/jailbreaks.html": {
+      "id": "composite-356b17c675b8",
+      "path": "/assets/images/category-composites/356b17c675b8.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 22606,
+      "sha256": "c6cf8fb0a2feebcc7766f4a176f1086def8bb07027001a98ca5f63a15fca6eee",
+      "title": "PS3 jailbreaks",
+      "alt": "Combined PS3 jailbreaks artwork: HEN on HFW 4.93.1, Evilnat 4.93 CFW",
+      "sourceImages": [
+        "/assets/images/ps3-resources/ps3xploit.jpg",
+        "/assets/images/consoles/ps3.png"
+      ]
+    },
+    "/console/ps3/mods.html": {
+      "id": "composite-fb90d73a2bc6",
+      "path": "/assets/images/category-composites/fb90d73a2bc6.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 136600,
+      "sha256": "291bd153c3e79c4dada4e1da3db2b06afd8b3c8fbf79164c75b3a3563fa8f206",
+      "title": "PS3 mods",
+      "alt": "Combined PS3 mods artwork: Grand Theft Auto V, Call of Duty, Grand Theft Auto IV, Uncharted series",
+      "sourceImages": [
+        "/assets/images/gta52.png",
+        "/assets/images/covers/cod-black-ops-2.jpg",
+        "/assets/images/gta4.png",
+        "/assets/images/game-card-covers/uncharted-1-official-v1.jpg"
+      ]
+    },
+    "/console/ps3/save-tools.html": {
+      "id": "composite-c529aeaecf4f",
+      "path": "/assets/images/category-composites/c529aeaecf4f.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 64854,
+      "sha256": "8d02768e9e026698ed342463f9349d34f673dea5a613109fe9ca4937b7973602",
+      "title": "PS3 save tools",
+      "alt": "Combined PS3 save tools artwork: Apollo Save Tool \u00b7 PS3, Bruteforce Save Data",
+      "sourceImages": [
+        "/assets/images/consoles/apollo-save-tool.png",
+        "/assets/images/consoles/ps3.png"
+      ]
+    },
+    "/console/ps3/transfer-tools.html": {
+      "id": "composite-d6e83d4637b6",
+      "path": "/assets/images/category-composites/d6e83d4637b6.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 29248,
+      "sha256": "b26c571ff114735f04f50d00c6ce2ba31a7350381bada3571c6bdc15d7e6db10",
+      "title": "PS3 transfer tools",
+      "alt": "Combined PS3 transfer tools artwork: webMAN MOD, ezRemote Client, Simple File Manager, File Manager by Zarh",
+      "sourceImages": [
+        "/assets/images/expansion-ps3/webman.png",
+        "/assets/images/expansion-ps3/ezremote.png",
+        "/assets/images/expansion-ps3/simplefm.png",
+        "/assets/images/expansion-ps3/managunz.png"
+      ]
+    },
+    "/console/ps4/apps.html": {
+      "id": "composite-32b6613bc806",
+      "path": "/assets/images/category-composites/32b6613bc806.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 30057,
+      "sha256": "6eef76e879dfcc4a31ae3cbc1288628b33a2295da45524bef61b8780f6923951",
+      "title": "PS4 apps",
+      "alt": "Combined PS4 apps artwork: Scratch Everywhere! \u00b7 PS4, PS MTP Explorer \u00b7 PS4, Switchfin \u00b7 PS4 Jellyfin client, wiliwili \u00b7 PS4",
+      "sourceImages": [
+        "/assets/images/ps4-store-apps/scratch-everywhere.png",
+        "/assets/images/ps4-store-apps/mtp-explorer.svg",
+        "/assets/images/ps4-store-apps/switchfin.svg",
+        "/assets/images/ps4-store-apps/wiliwili.svg"
+      ]
+    },
+    "/console/ps4/jailbreaks.html": {
+      "id": "composite-495db0c41543",
+      "path": "/assets/images/category-composites/495db0c41543.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 19206,
+      "sha256": "4ed90c65843c7c9c0e839c5a7463dc1e4d16e9eb016e518ca1038cc0aaabcd5f",
+      "title": "PS4 jailbreaks",
+      "alt": "Combined PS4 jailbreaks artwork: PS4 system software & recovery, GoldHEN page",
+      "sourceImages": [
+        "/assets/images/consoles/playstation.jpg",
+        "/assets/images/console-software/goldhen.png"
+      ]
+    },
+    "/console/ps4/payloads.html": {
+      "id": "composite-32f88b9fc0a8",
+      "path": "/assets/images/category-composites/32f88b9fc0a8.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 52284,
+      "sha256": "46626c5ff93cde089d2e0a6b7f6de807c034c71901b5cee69eee4ce9b31b5532",
+      "title": "PS4 payloads",
+      "alt": "Combined PS4 payloads artwork: GoldHEN, ftpsrv \u00b7 PS4, klogsrv \u00b7 PS4, ps4debug",
+      "sourceImages": [
+        "/assets/images/console-software/goldhen.png",
+        "/assets/images/expansion-ps4-ps5/ftpsrv.png",
+        "/assets/images/expansion-ps4-ps5/klogsrv.png",
+        "/assets/images/consoles/playstation.jpg"
+      ]
+    },
+    "/console/ps4/transfer-tools.html": {
+      "id": "composite-2ecec34a0152",
+      "path": "/assets/images/category-composites/2ecec34a0152.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 28350,
+      "sha256": "cee4ad0cf3f8d432d8c8c4d0689cb1412d2bb0f7108b6f684703bbc66a90c120",
+      "title": "PS4 transfer tools",
+      "alt": "Combined PS4 transfer tools artwork: ezRemote Client 2.08, whatwhatboy console downloader",
+      "sourceImages": [
+        "/assets/images/expansion-ps4-ps5/ps4-ezremote.jpg",
+        "/assets/images/console-software/whatsite-launcher.png"
+      ]
+    },
+    "/console/ps5/apps.html": {
+      "id": "composite-6eac90d0ec34",
+      "path": "/assets/images/category-composites/6eac90d0ec34.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 38408,
+      "sha256": "775960c346461d2a4244f362da6cca7ff32e9af15d9ee31e7f1f4b993960f8ff",
+      "title": "PS5 apps",
+      "alt": "Combined PS5 apps artwork: Prospero Explorer, Prospero Multi Tools, DriftCheck, ScreenTester5",
+      "sourceImages": [
+        "/assets/images/console-software/store/ppsa99109.webp",
+        "/assets/images/console-software/store/ppsa99110.webp",
+        "/assets/images/console-software/store/ppsa98766.webp",
+        "/assets/images/console-software/store/ppsa69420.webp"
+      ]
+    },
+    "/console/ps5/jailbreaks.html": {
+      "id": "composite-fd1317d841bb",
+      "path": "/assets/images/category-composites/fd1317d841bb.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 47374,
+      "sha256": "1fbe757558499157b6f8d19651a71869a86eca9c655c7b0808e720dea536bd00",
+      "title": "PS5 jailbreaks",
+      "alt": "Combined PS5 jailbreaks artwork: PS5 system software & recovery, Y2JB installer & autoloader",
+      "sourceImages": [
+        "/assets/images/consoles/ps5-featured-image.avif",
+        "/assets/images/consoles/ps5-y2jb.jpg"
+      ]
+    },
+    "/console/ps5/mods.html": {
+      "id": "composite-a6f402e2c283",
+      "path": "/assets/images/category-composites/a6f402e2c283.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 90072,
+      "sha256": "5e3f428bb4e6bcdee9414954a4655568097c999d134ed12486f2ea1b7e9bf34b",
+      "title": "PS5 mods",
+      "alt": "Combined PS5 mods artwork: The Last of Us Part II Remastered, Dragon's Dogma 2, Silent Hill 2, Astro Bot",
+      "sourceImages": [
+        "/assets/images/host-trainers/the-last-of-us-part-ii-remastered-f1c0691e29a5.jpg",
+        "/assets/images/host-trainers/dragons-dogma-2-4474b5997a4b.jpg",
+        "/assets/images/host-trainers/silent-hill-2-7e0743d7eb02.jpg",
+        "/assets/images/host-trainers/astro-bot-19e37c8f055d.jpg"
+      ]
+    },
+    "/console/ps5/payloads.html": {
+      "id": "composite-4f60ce174aff",
+      "path": "/assets/images/category-composites/4f60ce174aff.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 75684,
+      "sha256": "977d95143fbcaa18f2903d045243334623223a23337d8433778092f7156077c1",
+      "title": "PS5 payloads",
+      "alt": "Combined PS5 payloads artwork: ShadowMountPlus, etaHEN, klogsrv \u00b7 PS5, ELF Loader \u00b7 PS5",
+      "sourceImages": [
+        "/assets/images/console-software/shadowmountplus.png",
+        "/assets/images/console-software/etahen.jpg",
+        "/assets/images/expansion-ps4-ps5/klogsrv.png",
+        "/assets/images/expansion-ps4-ps5/elfldr.png"
+      ]
+    },
+    "/console/ps5/transfer-tools.html": {
+      "id": "composite-5617e18dfdef",
+      "path": "/assets/images/category-composites/5617e18dfdef.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 61452,
+      "sha256": "9424e3b84ec77fa65e6934cf799195c24642b59d2696f192700e64e5ef575294",
+      "title": "PS5 transfer tools",
+      "alt": "Combined PS5 transfer tools artwork: PS5upload, ezRemote Client \u00b7 PS5, ftpsrv \u00b7 PS5, websrv \u00b7 PS5",
+      "sourceImages": [
+        "/assets/images/console-software/ps5upload.png",
+        "/assets/images/expansion-ps4-ps5/ps5-ezremote.jpg",
+        "/assets/images/expansion-ps4-ps5/ftpsrv.png",
+        "/assets/images/expansion-ps4-ps5/websrv.png"
+      ]
+    },
+    "/console/psp/apps.html": {
+      "id": "composite-eca3ebd81f81",
+      "path": "/assets/images/category-composites/eca3ebd81f81.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 47900,
+      "sha256": "1714969b10f9fe150343ba9698bb00ccc92c1779c5d1a7c6769f1dd243a43c56",
+      "title": "Apps & utilities",
+      "alt": "Combined Apps & utilities artwork: Apollo Save Tool, CMFileManager PSP, Homebrew Sorter Ultimate, PKGi PSP",
+      "sourceImages": [
+        "/assets/images/psp-more/apollo.png",
+        "/assets/images/psp-more/cmfilemanager.png",
+        "/assets/images/psp-more/homebrew-sorter.png",
+        "/assets/images/psp-more/pkgi.png"
+      ]
+    },
+    "/console/psp/games.html": {
+      "id": "composite-f1ba5482e391",
+      "path": "/assets/images/category-composites/f1ba5482e391.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 123128,
+      "sha256": "806c9a6d093bbbec58b7c03966398b866e9bf9c62d40b78e30464b6eb36b402c",
+      "title": "Homebrew games & ports",
+      "alt": "Combined Homebrew games & ports artwork: OpenSupaplex, Ccleste, Nazi Zombies: Portable, Wagic, the Homebrew",
+      "sourceImages": [
+        "/assets/images/psp-more/opensupaplex.png",
+        "/assets/images/psp-more/ccleste.png",
+        "/assets/images/psp-more/nzportable.png",
+        "/assets/images/psp-more/wagic.png"
+      ]
+    },
+    "/console/psp/plugins.html": {
+      "id": "composite-6e71490da900",
+      "path": "/assets/images/category-composites/6e71490da900.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 14898,
+      "sha256": "4ace4746c86ae5bb132cfd99fcc6ac79afb96bef8caaa0188af5a58ed61dcf25",
+      "title": "CXMB & theme plugins",
+      "alt": "Combined CXMB & theme plugins artwork: CXMB \u00b7 custom theme plugin, PlayStation Portable",
+      "sourceImages": [
+        "/assets/images/psp-more/jumbled-ctf.jpg",
+        "/assets/images/psp-more/ark4.png"
+      ]
+    },
+    "/console/psvita/apps.html": {
+      "id": "composite-6b234288d9fd",
+      "path": "/assets/images/category-composites/6b234288d9fd.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 64820,
+      "sha256": "40490020a20deb51da411eba4334bdc76bb506166db61b9d3bcf045e5975cf73",
+      "title": "Apps & essential tools",
+      "alt": "Combined Apps & essential tools artwork: VitaShell, VitaDeploy, Apollo Save Tool, VitaDB Downloader",
+      "sourceImages": [
+        "/assets/images/expansion-vita/vitashell.png",
+        "/assets/images/expansion-vita/vitadeploy.png",
+        "/assets/images/consoles/apollo-save-tool.png",
+        "/assets/images/expansion-vita/vitadb.png"
+      ]
+    },
+    "/console/psvita/cfw.html": {
+      "id": "composite-f027b2827499",
+      "path": "/assets/images/category-composites/f027b2827499.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 13949,
+      "sha256": "06afed63e8c29701dfd9042d50251fef2d0a972683bb655ca8ab4bc47ef57d8e",
+      "title": "CFW & Ens\u014d",
+      "alt": "Combined CFW & Ens\u014d artwork: VitaDeploy, PS Vita",
+      "sourceImages": [
+        "/assets/images/expansion-vita/vitadeploy.png",
+        "/assets/images/platform-logos/psvita.svg"
+      ]
+    },
+    "/console/psvita/firmware.html": {
+      "id": "composite-33d3caf9c790",
+      "path": "/assets/images/category-composites/33d3caf9c790.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 13949,
+      "sha256": "06afed63e8c29701dfd9042d50251fef2d0a972683bb655ca8ab4bc47ef57d8e",
+      "title": "Firmware archive",
+      "alt": "Combined Firmware archive artwork: Firmware archive, PS Vita",
+      "sourceImages": [
+        "/assets/images/expansion-vita/vitadeploy.png",
+        "/assets/images/platform-logos/psvita.svg"
+      ]
+    },
+    "/console/psvita/games.html": {
+      "id": "composite-63598b89ff92",
+      "path": "/assets/images/category-composites/63598b89ff92.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 26768,
+      "sha256": "0a8d4eaa4ecf3ad9259e53a52fbfc94806ebf806fe6527c22a17f5c3e417a7ea",
+      "title": "Games & source ports",
+      "alt": "Combined Games & source ports artwork: SuperTux Classic, Jump \u2019n\u2019 Bump, Enigma, Chocolate Doom",
+      "sourceImages": [
+        "/assets/images/vita-more/supertux.png",
+        "/assets/images/vita-more/jumpnbump.png",
+        "/assets/images/vita-more/enigma.png",
+        "/assets/images/vita-more/chocolate-doom.png"
+      ]
+    },
+    "/console/psvita/jailbreak.html": {
+      "id": "composite-a2a122b84fff",
+      "path": "/assets/images/category-composites/a2a122b84fff.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 36030,
+      "sha256": "1c8a6bb6edbab76201ded5f00247a66feb557606ce970619e26451a745f9bc6f",
+      "title": "Jailbreak & homebrew setup",
+      "alt": "Combined Jailbreak & homebrew setup artwork: HENlo setup, VitaDeploy",
+      "sourceImages": [
+        "/assets/images/custom-console-art/vita-henlo.jpg",
+        "/assets/images/expansion-vita/vitadeploy.png"
+      ]
+    },
+    "/console/psvita/library.html?view=all": {
+      "id": "composite-977bb21b0514",
+      "path": "/assets/images/category-composites/977bb21b0514.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 72604,
+      "sha256": "fbddf3c3df48b1c6e5832bf199cfdcc831da196b979e4b1e8aedb0ecbaf96c16",
+      "title": "PS Vita full library",
+      "alt": "Combined PS Vita full library artwork: VitaShell, mGBA, SuperTux Classic, PSVshell",
+      "sourceImages": [
+        "/assets/images/expansion-vita/vitashell.png",
+        "/assets/images/vita-more/mgba.png",
+        "/assets/images/vita-more/supertux.png",
+        "/assets/images/vita-more/psvshell-screenshot.png"
+      ]
+    },
+    "/console/psvita/plugins.html": {
+      "id": "composite-985aac132fb7",
+      "path": "/assets/images/category-composites/985aac132fb7.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 98916,
+      "sha256": "a315f7450e5f8fbbe6a185d3e401ecc36a494c051d75677b3f4e05fe7156ee48",
+      "title": "Plugins & controls",
+      "alt": "Combined Plugins & controls artwork: PSVshell, shellbat, reVita",
+      "sourceImages": [
+        "/assets/images/vita-more/psvshell-screenshot.png",
+        "/assets/images/vita-more/shellbat-screenshot.jpg",
+        "/assets/images/vita-more/revita-screenshot.png"
+      ]
+    },
+    "/console/psvita/save-tools.html": {
+      "id": "composite-a618f11006a7",
+      "path": "/assets/images/category-composites/a618f11006a7.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 96743,
+      "sha256": "7eef4b7207293e0e8a206c785980b15d9f398e95cffa7c5d69dc3f31b5697a0c",
+      "title": "Save tools",
+      "alt": "Combined Save tools artwork: Apollo Save Tool \u00b7 PS Vita, PS Vita, PS Vita",
+      "sourceImages": [
+        "/assets/images/consoles/apollo-save-tool.png",
+        "/assets/images/custom-console-art/vita-henlo.jpg",
+        "/assets/images/platform-logos/psvita.svg"
+      ]
+    },
+    "/console/retro/3ds.html?view=all": {
+      "id": "composite-1d4d6647fe35",
+      "path": "/assets/images/category-composites/1d4d6647fe35.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 44616,
+      "sha256": "36bdd81474eac6ff9e69c88c6b9c77bac77e4f19626808d1c65b627bdb773dc0",
+      "title": "Nintendo 2DS & 3DS full library",
+      "alt": "Combined Nintendo 2DS & 3DS full library artwork: Luma3DS CFW, DaedalusX64-3DS, Super-Haxagon",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/luma.png",
+        "/assets/images/3ds-more/apps/daedalusx64.png",
+        "/assets/images/3ds-more/apps/super-haxagon.png"
+      ]
+    },
+    "/console/retro/ds.html?view=all": {
+      "id": "composite-d7342ebfc260",
+      "path": "/assets/images/category-composites/d7342ebfc260.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 17444,
+      "sha256": "ecd790922b608ae78df9efd7e6790eed4cfd0463f40b5fac90e873ba4c103f17",
+      "title": "Nintendo DS & DSi full library",
+      "alt": "Combined Nintendo DS & DSi full library artwork: TWiLight Menu++, nesDS, Wordle DS",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/twilight.png",
+        "/assets/images/ds-dsi-more/nesds.png",
+        "/assets/images/ds-dsi-more/wordle-ds.png"
+      ]
+    },
+    "/console/retro/gamecube.html?view=all": {
+      "id": "composite-8f2160aa0e45",
+      "path": "/assets/images/category-composites/8f2160aa0e45.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 29660,
+      "sha256": "c2abbfc3e3436094ba1fea45a3701c5065e2bc4369d657da7ebabe2b7b856b7c",
+      "title": "Nintendo GameCube full library",
+      "alt": "Combined Nintendo GameCube full library artwork: Homebrew on an unmodified GameCube, Storage & hardware boot methods, CleanRip \u00b7 GameCube build",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/gamecube.png",
+        "/assets/images/expansion-nintendo-retro/gcmm.png",
+        "/assets/images/expansion-nintendo-retro/cleanrip.png"
+      ]
+    },
+    "/console/retro/ps2.html?view=all": {
+      "id": "composite-6bb834eb0f12",
+      "path": "/assets/images/category-composites/6bb834eb0f12.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 9550,
+      "sha256": "221dbfdf39ef8a0d29863b820988390be58424505a4fd6ae7b6c2113b44a3571",
+      "title": "PlayStation 2 full library",
+      "alt": "Combined PlayStation 2 full library artwork: Open PS2 Loader, FCEUmm-PS2, SuperTux",
+      "sourceImages": [
+        "/assets/images/expansion-ps2/opl.png",
+        "/assets/images/ps2-expansion/fceumm.svg",
+        "/assets/images/ps2-expansion/supertux.svg"
+      ]
+    },
+    "/console/retro/psp.html?view=all": {
+      "id": "composite-4c3ca389b9a3",
+      "path": "/assets/images/category-composites/4c3ca389b9a3.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 74860,
+      "sha256": "ec2ebfdc54eee47982202ec73b854117b3e03e21cdf460731b9b2ccf2a7489a1",
+      "title": "PlayStation Portable full library",
+      "alt": "Combined PlayStation Portable full library artwork: Apollo Save Tool, DaedalusX64, OpenSupaplex, CXMB \u00b7 custom theme plugin",
+      "sourceImages": [
+        "/assets/images/psp-more/apollo.png",
+        "/assets/images/psp-more/daedalus.png",
+        "/assets/images/psp-more/opensupaplex.png",
+        "/assets/images/psp-more/jumbled-ctf.jpg"
+      ]
+    },
+    "/console/retro/wii.html?view=all": {
+      "id": "composite-6df394781389",
+      "path": "/assets/images/category-composites/6df394781389.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 11120,
+      "sha256": "f9a8f380cbf772d63cf830332a05f901324df8194d71ebec0034c1f2770f0f16",
+      "title": "Nintendo Wii full library",
+      "alt": "Combined Nintendo Wii full library artwork: WiiMC, Snes9x GX, Cave Story",
+      "sourceImages": [
+        "/assets/images/wii-more/wiimc.png",
+        "/assets/images/wii-more/snes9xgx.png",
+        "/assets/images/wii-more/cavestory.png"
+      ]
+    },
+    "/console/retro/wiiu.html?view=all": {
+      "id": "composite-6bf70dd8135f",
+      "path": "/assets/images/category-composites/6bf70dd8135f.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 29516,
+      "sha256": "8a6496e56db8ab8e5088c309fb3054907c4be9d804f0622c98a7ea24cc0a3f86",
+      "title": "Nintendo Wii U full library",
+      "alt": "Combined Nintendo Wii U full library artwork: Homebrew App Store, RetroArch, Connect4, SDCafiine",
+      "sourceImages": [
+        "/assets/images/wiiu-homebrew/appstore.png",
+        "/assets/images/wiiu-homebrew/retroarch.png",
+        "/assets/images/wiiu-homebrew/Connect4.png",
+        "/assets/images/wiiu-homebrew/SDCafiine_WUPS.png"
+      ]
+    },
+    "/console/steamdeck.html?view=all": {
+      "id": "composite-43feb9bcc694",
+      "path": "/assets/images/category-composites/43feb9bcc694.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 18830,
+      "sha256": "83ad5c56e7de82264a9fa45d47ea78775e70381f2b6b96eded7776a8ef206dc7",
+      "title": "Steam Deck full library",
+      "alt": "Combined Steam Deck full library artwork: EmuDeck, Decky Loader",
+      "sourceImages": [
+        "/assets/images/steamdeck/emudeck-icon.png",
+        "/assets/images/steamdeck/decky-icon.png"
+      ]
+    },
+    "/console/steamdeck/launchers.html": {
+      "id": "composite-b556c96b7705",
+      "path": "/assets/images/category-composites/b556c96b7705.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 34952,
+      "sha256": "dc1028a08b321ce462dc63de0a851f381ee12de047ba87cbd9b58f73d4158c63",
+      "title": "Launchers, Proton & fixes",
+      "alt": "Combined Launchers, Proton & fixes artwork: Heroic Games Launcher, ProtonUp-Qt, Lutris, Protontricks",
+      "sourceImages": [
+        "/assets/images/steamdeck/heroic.png",
+        "/assets/images/steamdeck/protonup-qt.png",
+        "/assets/images/steamdeck/lutris.png",
+        "/assets/images/steamdeck/protontricks.png"
+      ]
+    },
+    "/console/steamdeck/plugins.html": {
+      "id": "composite-18007df8e5a1",
+      "path": "/assets/images/category-composites/18007df8e5a1.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 95332,
+      "sha256": "8b1f5b590338681618c3b1aead9babab5e0c9a46ec4715fc1c0b04b2d61b1fd6",
+      "title": "Plugins & customization",
+      "alt": "Combined Plugins & customization artwork: Decky Loader, CSS Loader, SteamGridDB, ProtonDB Badges",
+      "sourceImages": [
+        "/assets/images/steamdeck/decky-icon.png",
+        "/assets/images/steamdeck/css-loader.png",
+        "/assets/images/steamdeck/steamgriddb.png",
+        "/assets/images/steamdeck/protondb-badges.png"
+      ]
+    },
+    "/console/steamdeck/remote-play.html": {
+      "id": "composite-26762990d4b4",
+      "path": "/assets/images/category-composites/26762990d4b4.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 200277,
+      "sha256": "4a4b150cae0a57181411df9856c917f392332ac444a37476710d1c5631701216",
+      "title": "Remote play",
+      "alt": "Combined Remote play artwork: Moonlight, chiaki-ng",
+      "sourceImages": [
+        "/assets/images/steamdeck/moonlight.png",
+        "/assets/images/steamdeck/chiaki-ng.svg"
+      ]
+    },
+    "/console/steamdeck/setup.html": {
+      "id": "composite-41cb8fc388ea",
+      "path": "/assets/images/category-composites/41cb8fc388ea.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 22689,
+      "sha256": "44b1f5635beda8bff78a5b446e9dc8c2172a512312c2c11abb2b676f4992b43d",
+      "title": "Setup & compatibility",
+      "alt": "Combined Setup & compatibility artwork: Setup & compatibility, Steam Deck",
+      "sourceImages": [
+        "/assets/images/steamdeck/protonup-qt.png",
+        "/assets/images/platform-logos/steamdeck.svg"
+      ]
+    },
+    "/console/steamdeck/tools.html": {
+      "id": "composite-e2067cea6ce7",
+      "path": "/assets/images/category-composites/e2067cea6ce7.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 24048,
+      "sha256": "a17b65f7e79a474a451a0b68555c149cf5f927c13a1b36dd82f5bf72a5ef4663",
+      "title": "Files & desktop tools",
+      "alt": "Combined Files & desktop tools artwork: Flatseal, LocalSend, Syncthing, Filelight",
+      "sourceImages": [
+        "/assets/images/steamdeck/flatseal.png",
+        "/assets/images/steamdeck/localsend.png",
+        "/assets/images/steamdeck/syncthing.png",
+        "/assets/images/steamdeck/filelight.png"
+      ]
+    },
+    "/console/wii/apps.html": {
+      "id": "composite-af166b210df9",
+      "path": "/assets/images/category-composites/af166b210df9.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 22788,
+      "sha256": "eb0c7a7d43c2022d3d4827f77b49106dac2430aaf2509213430a10466371929e",
+      "title": "Apps & system tools",
+      "alt": "Combined Apps & system tools artwork: WiiMC, WiiXplorer, Priiloader, USB Loader GX",
+      "sourceImages": [
+        "/assets/images/wii-more/wiimc.png",
+        "/assets/images/wii-more/wiixplorer.png",
+        "/assets/images/expansion-nintendo-retro/priiloader.png",
+        "/assets/images/expansion-nintendo-retro/usbloadergx.png"
+      ]
+    },
+    "/console/wii/gamecube.html": {
+      "id": "composite-da99de9b7ee1",
+      "path": "/assets/images/category-composites/da99de9b7ee1.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 7468,
+      "sha256": "9280fba13e4cde66375f3103de0e14760f72071f41254bc153904f44be430cdd",
+      "title": "GameCube software & tools",
+      "alt": "Combined GameCube software & tools artwork: Nintendont, CleanRip \u00b7 Wii build, GCMM \u00b7 memory-card manager",
+      "sourceImages": [
+        "/assets/images/expansion-nintendo-retro/nintendont.png",
+        "/assets/images/expansion-nintendo-retro/cleanrip.png",
+        "/assets/images/expansion-nintendo-retro/gcmm.png"
+      ]
+    },
+    "/console/wii/games.html": {
+      "id": "composite-59b125f61068",
+      "path": "/assets/images/category-composites/59b125f61068.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 11136,
+      "sha256": "fc40196d889860883dadb581d5ff6b44bd719e1305c54814bec7f8fc5c0a5cb3",
+      "title": "Homebrew games",
+      "alt": "Combined Homebrew games artwork: Cave Story, SuperTux Wii, Helium Boy",
+      "sourceImages": [
+        "/assets/images/wii-more/cavestory.png",
+        "/assets/images/wii-more/supertux.png",
+        "/assets/images/wii-more/helium.png"
+      ]
+    },
+    "/console/wiiu/apps.html": {
+      "id": "composite-02e6b81f4415",
+      "path": "/assets/images/category-composites/02e6b81f4415.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 32516,
+      "sha256": "a5a72b469478b24a8efa2e7ade90e0e77b7439c18da8a921b095c78bf95d4ba7",
+      "title": "Apps & utilities",
+      "alt": "Combined Apps & utilities artwork: Homebrew App Store, Aroma Updater, WiiUIdent, SaveMii /ProcessMod",
+      "sourceImages": [
+        "/assets/images/wiiu-homebrew/appstore.png",
+        "/assets/images/wiiu-homebrew/AromaUpdater.png",
+        "/assets/images/wiiu-homebrew/WiiUIdent.png",
+        "/assets/images/wiiu-homebrew/SaveMiiProcessMod.png"
+      ]
+    },
+    "/console/wiiu/games.html": {
+      "id": "composite-45bc89427505",
+      "path": "/assets/images/category-composites/45bc89427505.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 35244,
+      "sha256": "c13f5a63ba0d8f4624db26cce94b33429f5ab6dd33ab348812480e071b3bcc23",
+      "title": "Homebrew games & ports",
+      "alt": "Combined Homebrew games & ports artwork: Connect4, Dynamismal, Snake Battle Royale, SuDokuL",
+      "sourceImages": [
+        "/assets/images/wiiu-homebrew/Connect4.png",
+        "/assets/images/wiiu-homebrew/Dynamismal.png",
+        "/assets/images/wiiu-homebrew/SnakeBattleRoyale.png",
+        "/assets/images/wiiu-homebrew/SuDokuL.png"
+      ]
+    },
+    "/console/wiiu/mods.html": {
+      "id": "composite-e233943e1171",
+      "path": "/assets/images/category-composites/e233943e1171.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 50704,
+      "sha256": "063463e032494966b4af7673b438d2a8ffc19357296d5f56ebf5f6956927a3c0",
+      "title": "Game mods & patches",
+      "alt": "Combined Game mods & patches artwork: SDCafiine, Second Wind \u00b7 Breath of the Wild, CTGP Revolution \u00b7 Mario Kart Wii, Riivolution",
+      "sourceImages": [
+        "/assets/images/wiiu-homebrew/SDCafiine_WUPS.png",
+        "/assets/images/wiiu-homebrew/second-wind-quest.png",
+        "/assets/images/wii-games-online/ctgp.png",
+        "/assets/images/wiiu-games-batch2/vwii-riivolution.png"
+      ]
+    },
+    "/console/wiiu/online.html": {
+      "id": "composite-51e6630fdcb8",
+      "path": "/assets/images/category-composites/51e6630fdcb8.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 34428,
+      "sha256": "776aec83e1b54987d3c7821928399e8079dff8711f0a10a0eac94cd8c9bf8182",
+      "title": "Get online with Pretendo",
+      "alt": "Combined Get online with Pretendo artwork: Pretendo Network, Already on vWii?, Account and save data",
+      "sourceImages": [
+        "/assets/images/wiiu-homebrew/Inkay.png",
+        "/assets/images/wiiu-homebrew/evWii.png",
+        "/assets/images/wiiu-homebrew/SaveMiiProcessMod.png"
+      ]
+    },
+    "/console/wiiu/plugins.html": {
+      "id": "composite-31c307d0e884",
+      "path": "/assets/images/category-composites/31c307d0e884.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 49216,
+      "sha256": "938e49008d99cb1f167e77a0a009c21bec145e1fe67dab16bb9347cda1a2ebd5",
+      "title": "Plugins & mods",
+      "alt": "Combined Plugins & mods artwork: SDCafiine, Inkay, evWii, GamePad Auto Standby",
+      "sourceImages": [
+        "/assets/images/wiiu-homebrew/SDCafiine_WUPS.png",
+        "/assets/images/wiiu-homebrew/Inkay.png",
+        "/assets/images/wiiu-homebrew/evWii.png",
+        "/assets/images/wiiu-homebrew-more/GamePadAutoStandby.png"
+      ]
+    },
+    "/console/wiiu/setup.html": {
+      "id": "composite-609695ff4329",
+      "path": "/assets/images/category-composites/609695ff4329.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 14401,
+      "sha256": "6bb35ff9f7d9f169d32dd5312f9c24a2d694df668171be22762145b8d1d942d4",
+      "title": "Environment & installation",
+      "alt": "Combined Environment & installation artwork: Environment & installation, Nintendo Wii U",
+      "sourceImages": [
+        "/assets/images/wiiu-homebrew/AromaUpdater.png",
+        "/assets/images/wiiu-homebrew/library.svg"
+      ]
+    },
+    "/console/wiiu/vwii.html": {
+      "id": "composite-ad0572fe5dd2",
+      "path": "/assets/images/category-composites/ad0572fe5dd2.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 14340,
+      "sha256": "60b11d865b4032dc89d2ba9f970b1b38e0dfa8d6d4bf4b85fd235307c7dc8e1a",
+      "title": "vWii on Wii U",
+      "alt": "Combined vWii on Wii U artwork: WiiMC \u00b7 1.3.4, Cave Story \u00b7 1.0.1, SuperTux Wii \u00b7 0.1.4-wii-d.07, Snes9x GX \u00b7 5.0.4",
+      "sourceImages": [
+        "/assets/images/wii-more/wiimc.png",
+        "/assets/images/wii-more/cavestory.png",
+        "/assets/images/wii-more/supertux.png",
+        "/assets/images/wii-more/snes9xgx.png"
+      ]
+    },
+    "/console/xbox-one-series.html?view=all": {
+      "id": "composite-066a02768b41",
+      "path": "/assets/images/category-composites/066a02768b41.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 37140,
+      "sha256": "1102937124a1dd1b70f6deb87e89f66d6315c3cb4a039faad2a53828f69b1313",
+      "title": "Xbox One / Series X|S full library",
+      "alt": "Combined Xbox One / Series X|S full library artwork: XBSX2 \u00b7 PlayStation 2, Dolphin UWP \u00b7 GameCube & Wii, PPSSPP \u00b7 PlayStation Portable, Flycast \u00b7 Dreamcast & arcade",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/xbsx2.png",
+        "/assets/images/xbox-one-series/dolphin.png",
+        "/assets/images/xbox-one-series/ppsspp.png",
+        "/assets/images/xbox-one-series/flycast.png"
+      ]
+    },
+    "/console/xbox-one-series/apps.html": {
+      "id": "composite-cd6b846afabd",
+      "path": "/assets/images/category-composites/cd6b846afabd.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 37140,
+      "sha256": "1102937124a1dd1b70f6deb87e89f66d6315c3cb4a039faad2a53828f69b1313",
+      "title": "Apps & emulators",
+      "alt": "Combined Apps & emulators artwork: XBSX2 \u00b7 PlayStation 2, Dolphin UWP \u00b7 GameCube & Wii, PPSSPP \u00b7 PlayStation Portable, Flycast \u00b7 Dreamcast & arcade",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/xbsx2.png",
+        "/assets/images/xbox-one-series/dolphin.png",
+        "/assets/images/xbox-one-series/ppsspp.png",
+        "/assets/images/xbox-one-series/flycast.png"
+      ]
+    },
+    "/console/xbox-one-series/dependencies.html": {
+      "id": "composite-1628f20f951e",
+      "path": "/assets/images/category-composites/1628f20f951e.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 4316,
+      "sha256": "0aa7b4d06c6144831c2ef1c7745b11b4411ffb072e9a3238fd0a196f88fdac9c",
+      "title": "Framework downloads",
+      "alt": "Combined Framework downloads artwork: Microsoft.VCLibs.140.00, Microsoft.NET.Native.Framework.2.2, Microsoft.NET.Native.Runtime.2.2, Microsoft.VCLibs.140.00",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/frameworks/9c17b521f9d6.png",
+        "/assets/images/xbox-one-series/frameworks/07f8b0400dfd.png",
+        "/assets/images/xbox-one-series/frameworks/27fae660d8c6.png",
+        "/assets/images/xbox-one-series/frameworks/009f7db134c6.png"
+      ]
+    },
+    "/console/xbox-one-series/dev-mode.html": {
+      "id": "composite-0604690c9057",
+      "path": "/assets/images/category-composites/0604690c9057.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 18409,
+      "sha256": "3c884d157321f34edecbcb3aa2a20e1c07292d1aef568ebbd92b49c1da0b9801",
+      "title": "Developer Mode setup",
+      "alt": "Combined Developer Mode setup artwork: Developer Mode setup, Xbox One / Series X|S",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/dev-home.png",
+        "/assets/images/platform-logos/xbox-one-series.svg"
+      ]
+    },
+    "/console/xbox-one-series/device-portal.html": {
+      "id": "composite-9ae676233957",
+      "path": "/assets/images/category-composites/9ae676233957.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 32531,
+      "sha256": "75545bc0713a9800119de4091764192c2b6a2e80f7992a6c74260ffebc2d2a91",
+      "title": "Device Portal",
+      "alt": "Combined Device Portal artwork: Device Portal, Xbox One / Series X|S, Xbox One / Series X|S",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/remote-access.png",
+        "/assets/images/xbox-one-series/dev-home.png",
+        "/assets/images/platform-logos/xbox-one-series.svg"
+      ]
+    },
+    "/console/xbox-one-series/install.html": {
+      "id": "composite-bcdb5d5ceb0a",
+      "path": "/assets/images/category-composites/bcdb5d5ceb0a.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 29839,
+      "sha256": "20f3ef780f3eee1d4d6f51a26da8cf42adbf38610e972ee9ea9e9b09cb917472",
+      "title": "Install apps",
+      "alt": "Combined Install apps artwork: Install apps, Xbox One / Series X|S, Xbox One / Series X|S",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/ppsspp.png",
+        "/assets/images/xbox-one-series/dev-home.png",
+        "/assets/images/platform-logos/xbox-one-series.svg"
+      ]
+    },
+    "/console/xbox-one-series/retail-mode.html": {
+      "id": "composite-aebc3e7e175c",
+      "path": "/assets/images/category-composites/aebc3e7e175c.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 18409,
+      "sha256": "3c884d157321f34edecbcb3aa2a20e1c07292d1aef568ebbd92b49c1da0b9801",
+      "title": "Retail Mode & app removal",
+      "alt": "Combined Retail Mode & app removal artwork: Retail Mode & app removal, Xbox One / Series X|S",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/dev-home.png",
+        "/assets/images/platform-logos/xbox-one-series.svg"
+      ]
+    },
+    "/console/xbox-one-series/storage.html": {
+      "id": "composite-9c5b36b06f89",
+      "path": "/assets/images/category-composites/9c5b36b06f89.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 21279,
+      "sha256": "eca1b429e683e6d9a3b8aa097f4b62a60a62c8486302fad2bc24b1bd2b261b15",
+      "title": "Storage & save backups",
+      "alt": "Combined Storage & save backups artwork: Storage & save backups, Xbox One / Series X|S, Xbox One / Series X|S",
+      "sourceImages": [
+        "/assets/images/xbox-one-series/durangoftp.png",
+        "/assets/images/xbox-one-series/dev-home.png",
+        "/assets/images/platform-logos/xbox-one-series.svg"
+      ]
+    },
+    "/console/xbox360/apps.html": {
+      "id": "composite-b205f2ed6c3d",
+      "path": "/assets/images/category-composites/b205f2ed6c3d.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 31712,
+      "sha256": "7a18cfd108c35f91071b8385ce4133cbaa25ca0510d01a25bf0168d84e8c78bf",
+      "title": "XBOX360 apps",
+      "alt": "Combined XBOX360 apps artwork: Aurora Dashboard 0.7b, FreeStyle Dash, RetroArch 360",
+      "sourceImages": [
+        "/assets/images/expansion-xbox360/aurora.png",
+        "/assets/images/consoles/xbox360.png",
+        "/assets/images/emulators/retroarch.png"
+      ]
+    },
+    "/console/xbox360/hardware.html": {
+      "id": "composite-72f9c82d6d98",
+      "path": "/assets/images/category-composites/72f9c82d6d98.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 125192,
+      "sha256": "c3459a290c4aecebf587fce748a163182469bf41198275247c769be62e4f3554",
+      "title": "XBOX360 hardware",
+      "alt": "Combined XBOX360 hardware artwork: JTAG Installation, RGH 1.2/2.0/3.0, CoolRunner & Matrix",
+      "sourceImages": [
+        "/assets/images/custom-console-art/xbox360-jtag.jpg",
+        "/assets/images/custom-console-art/xbox360-rgh.jpg",
+        "/assets/images/custom-console-art/xbox360-glitch-chips.jpg"
+      ]
+    },
+    "/console/xbox360/jailbreaks.html": {
+      "id": "composite-99440b2b25b1",
+      "path": "/assets/images/category-composites/99440b2b25b1.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 72146,
+      "sha256": "3032aa189f563a345ace1ecbadad8c2c938753a738506df3f66d531e0b1beeed",
+      "title": "XBOX360 jailbreaks",
+      "alt": "Combined XBOX360 jailbreaks artwork: Peer Pressure \u00b7 persistent softmod, JTAG / RGH \u00b7 hardware",
+      "sourceImages": [
+        "/assets/images/custom-console-art/xbox360-peer-pressure.jpg",
+        "/assets/images/custom-console-art/xbox360-jtag.jpg"
+      ]
+    },
+    "/console/xbox360/mods.html": {
+      "id": "composite-59f5b7dbe01c",
+      "path": "/assets/images/category-composites/59f5b7dbe01c.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 117256,
+      "sha256": "0bf3a9b81787542136bd8a5710ea9faa418a0ac013b28e7624013d2342ae1650",
+      "title": "XBOX360 mods",
+      "alt": "Combined XBOX360 mods artwork: Grand Theft Auto V, Call of Duty, Grand Theft Auto IV, Grand Theft Auto: San Andreas",
+      "sourceImages": [
+        "/assets/images/gta52.png",
+        "/assets/images/covers/cod-black-ops-2.jpg",
+        "/assets/images/gta4.png",
+        "/assets/images/game-card-covers/gta-san-andreas-official-v1.jpg"
+      ]
+    },
+    "/console/xbox360/mods/index.html": {
+      "id": "composite-d702374b490b",
+      "path": "/assets/images/category-composites/d702374b490b.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 117256,
+      "sha256": "0bf3a9b81787542136bd8a5710ea9faa418a0ac013b28e7624013d2342ae1650",
+      "title": "Xbox 360 Mods & Mod Menus",
+      "alt": "Combined Xbox 360 Mods & Mod Menus artwork: Grand Theft Auto V, Call of Duty, Grand Theft Auto IV, Grand Theft Auto: San Andreas",
+      "sourceImages": [
+        "/assets/images/gta52.png",
+        "/assets/images/covers/cod-black-ops-2.jpg",
+        "/assets/images/gta4.png",
+        "/assets/images/game-card-covers/gta-san-andreas-official-v1.jpg"
+      ]
+    },
+    "/console/xbox360/payloads.html": {
+      "id": "composite-683011bc6842",
+      "path": "/assets/images/category-composites/683011bc6842.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 30784,
+      "sha256": "5006f148bf7c93af9625762fcf81b4af18811f562282d17225a4388b6dc7a070",
+      "title": "XBOX360 payloads",
+      "alt": "Combined XBOX360 payloads artwork: BadUpdate 1.3, ABadAvatar \u00b7 public beta, FreeMyXe 1.2.1, XeUnshackle \u00b7 beta 1.03",
+      "sourceImages": [
+        "/assets/images/expansion-xbox360/badupdate-late.png",
+        "/assets/images/consoles/xbox360.png",
+        "/assets/images/expansion-xbox360/free60.png",
+        "/assets/images/expansion-xbox360/xeunshackle.png"
+      ]
+    },
+    "/console/xbox360/tools.html": {
+      "id": "composite-4eb46fa0322e",
+      "path": "/assets/images/category-composites/4eb46fa0322e.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 39052,
+      "sha256": "fdd0e64bf6ef4c9a22a724ff103eecce59f28d17c62f54995415c2ae74ee64a4",
+      "title": "XBOX360 tools",
+      "alt": "Combined XBOX360 tools artwork: FATXplorer \u00b7 Windows x64, Velocity \u00b7 Windows, XeCLI 2.0 \u00b7 Windows x64",
+      "sourceImages": [
+        "/assets/images/expansion-xbox360/fatxplorer.png",
+        "/assets/images/expansion-xbox360/velocity.png",
+        "/assets/images/expansion-xbox360/xecli.png"
+      ]
+    },
+    "/console/xbox360/mods/multi-game-tools/myten/index.html": {
+      "id": "composite-59c17afbdf26",
+      "path": "/assets/images/category-composites/59c17afbdf26.svg",
+      "width": 960,
+      "height": 540,
+      "bytes": 98304,
+      "sha256": "b0aec3e76e929184309a740641bb409d8b74fd97c384af50d5b643270289c836",
+      "title": "Myten multi-game menus",
+      "alt": "Combined Myten multi-game menus artwork: GTA San Andreas, Modern Warfare 2 (2009), Black Ops 3, Quantum of Solace",
+      "sourceImages": [
+        "/assets/images/game-card-covers/gta-san-andreas-official-v1.jpg",
+        "/assets/images/covers/cod-mw2-2009.jpg",
+        "/assets/images/covers/cod-black-ops-3.jpg",
+        "/assets/images/game-card-covers/quantum-of-solace-official-v1.jpg"
+      ]
+    }
+  }
+}

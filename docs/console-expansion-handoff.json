@@ -9384,6 +9384,180 @@
     "commit": "8b8ea137a442240a092164a69a0883ecd7804e6c",
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41725254784"
   },
+  "ps4Ps5HostSearchRefresh": {
+    "date": "2026-11-03",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps4/jailbreaks.html",
+      "console/ps4/payloads.html",
+      "console/ps5/index.html",
+      "console/ps5/jailbreaks.html",
+      "console/ps5/payloads.html",
+      "console/ps4/jailbreak-13-52.html",
+      "console/ps4/jailbreak.html",
+      "console/ps5/y2jb.html",
+      "console/ps5/downloads.html"
+    ],
+    "topics": [
+      "PS4 / PS5 host",
+      "WebKit exploit",
+      "browser exploit",
+      "online jailbreak",
+      "host updates",
+      "jailbreak updates",
+      "working jailbreak firmware",
+      "firmware compatibility",
+      "DNS settings",
+      "payload loaders",
+      "Y2JB setup"
+    ],
+    "searchHostCards": true,
+    "focusedTests": {
+      "passed": 21,
+      "failed": 0
+    },
+    "siteAudit": {
+      "pages": 481,
+      "linksAndAssets": 56386,
+      "issues": 0
+    },
+    "metadataAndSearchTagsStable": true,
+    "compatibility": "Search aliases do not claim hardware testing or new firmware support. All original host destinations and firmware pins retained.",
+    "hostOwnership": "Updated main-site hub and guide metadata only; independent WWB-HOST files and migrated redirects retained.",
+    "published": false
+  },
+  "orbitPs5GameDownloadCard": {
+    "date": "2026-11-03",
+    "request": "Add Orbit Store to the PS5 Game Downloads page and add an explicit download button.",
+    "pages": [
+      "console/ps5/game-downloads.html",
+      "console/ps5/apps.html"
+    ],
+    "version": "1.8.1",
+    "download": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf",
+    "image": "/assets/images/console-software/orbit.jpg",
+    "archive": {
+      "alreadyPresent": true,
+      "bytes": 59691728,
+      "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914",
+      "rehashed": true,
+      "upstreamStatus": 200,
+      "upstreamSizeMatched": true
+    },
+    "implementation": "Shared orbitStoreCard in console-game-directories.cjs, used by PS5 Apps builder and inserted during game-directory regeneration.",
+    "validation": {
+      "focusedTests": 7,
+      "failed": 0,
+      "siteAudit": {
+        "pages": 481,
+        "linksAndAssets": 56389,
+        "issues": 0
+      },
+      "directButtonsAndArtworkChecked": true,
+      "gamePageRegenerationStable": true
+    },
+    "preservation": "Existing DLPSGame directory, older Orbit archives and pinned version retained.",
+    "published": false
+  },
+  "freeStoreSearchRefresh": {
+    "date": "2026-11-03",
+    "pages": [
+      "console/ps4/apps.html",
+      "console/ps5/apps.html",
+      "console/ps5/game-downloads.html",
+      "console/ps4/downloads.html",
+      "console/ps5/downloads.html"
+    ],
+    "terms": [
+      "freeshop",
+      "free shop",
+      "free store",
+      "free homebrew store",
+      "console app store",
+      "homebrew app store",
+      "homebrew downloader",
+      "PS4 app downloader",
+      "PS5 app downloader",
+      "Orbit Store download",
+      "ProsperoStore",
+      "RecompStore",
+      "PKG-Zone"
+    ],
+    "durability": "Shared named-store aliases, editorial metadata and store card generator search fields.",
+    "preservation": "Existing trophy searches, source links, version pins and local downloads retained. Search aliases describe the listed stores; no new application or broader compatibility added.",
+    "validation": {
+      "focusedTests": 21,
+      "failures": 0,
+      "siteAuditIssues": 0,
+      "metadataAndSearchStable": true
+    },
+    "published": false
+  },
+  "hostRemainingConsolePerformance20261103": {
+    "status": "Pushed, GitHub Pages deployed successfully and live verified",
+    "repository": "Speedy-away/WWB-HOST",
+    "commit": "c6687a91f49ee688d3d6f4a5df7d07600c88dcad",
+    "run": 41728129691,
+    "worktree": "C:/Users/whatw/Documents/GitHub/whatsite/tmp/remaining-host-performance",
+    "branch": "codex/remaining-host-performance",
+    "report": "docs/migration/remaining-console-performance.json",
+    "tests": 215,
+    "karoInitialBytes": {
+      "before": 933837,
+      "after": 94646
+    },
+    "preserved": {
+      "payloadRows": 1446,
+      "olderDownloads": 165,
+      "nativeScripts": 849,
+      "cacheResources": 1491
+    },
+    "resumeNote": "Functional changes were made in an isolated worktree to preserve ongoing changes in WWB-HOST. Do not overwrite shared dirty files; integrate upstream changes normally. No binary/download/native files were changed by this performance commit.",
+    "liveVerifier": "tmp/verify-rest-performance-live.cjs",
+    "limits": [
+      "No physical-console timing or native execution test",
+      "Browser automation unavailable in Work settings"
+    ],
+    "verificationMetadataCommit": "3afab3f1cb836f652e33b28843c2d9f3ed88234f",
+    "deploymentUrl": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41728129691",
+    "liveCheckedAt": "2026-11-03T22:12:20.323Z",
+    "liveAuthoredPages": 24,
+    "liveFragmentPairs": 62,
+    "liveReport": "C:/Users/whatw/Documents/GitHub/whatsite/tmp/remaining-host-performance/docs/migration/remaining-console-performance.json"
+  },
+  "sitewideSearchAndImageRefresh": {
+    "date": "2026-11-03",
+    "publicPages": 481,
+    "eligiblePages": 547,
+    "searchableCards": 5894,
+    "optimizedImages": 378,
+    "sourceBytes": 343458673,
+    "deliveryBytes960": 49967228,
+    "reductionPercent": 85.5,
+    "categoryCompositions": 88,
+    "responsiveImageReferences": 1063,
+    "xboxHubImageBytes": 536153,
+    "focusedTests": {
+      "passed": 55,
+      "failed": 0
+    },
+    "metadataDrift": 0,
+    "searchTagDrift": 0,
+    "browserVerification": "Unavailable: local browser use disabled in Work settings.",
+    "siteAudit": {
+      "pages": 481,
+      "linksAndAssets": 56521,
+      "issues": 2,
+      "remainingIssues": [
+        "Unrelated untracked hosts/ps4/exploit/gamerhack-505/index.html canonical missing from sitemap",
+        "Unrelated untracked hosts/ps4/exploit/gamerhack-672goldhen/index.html canonical missing from sitemap"
+      ]
+    },
+    "myten": "Game-specific artwork on source-confirmed cross-listings; original previews retained in source details. Both supplied builds remain linked; V1.3 post / exact 1.2 module distinction retained. All nine game/mode pins preserved.",
+    "stealthServers": "Dedicated main Xbox 360 hub card and navigation; removed stealth game card and server resources from Mods / Mod Menus collection. Original destination retained.",
+    "preservation": "All original artwork, payloads, older builds, download URLs and firmware/game pins retained.",
+    "published": false
+  },
   "apkRepairsPhoneToolsPVZ20261103": {
     "status": "Validated; ready for publication",
     "report": "docs/qa/apk-repairs-phone-tools-pvz.json",

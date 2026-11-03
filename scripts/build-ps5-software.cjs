@@ -62,12 +62,7 @@ function buildPs5Software() {
         archivedRelease('/console/ps5/downloads.html?file=ps5-ddcf24160dd6-ppsa99000-zip#files', 'https://github.com/darkxex/ProsperoStore/releases') + ext('https://homebrew.page/', 'Homebrew catalog'),
         image('prosperostore')
       ),
-      resource(
-        'Orbit Store 1.8.1',
-        'PS5 download manager and store interface. Use the supplied release or check newer release notes for your setup.',
-        ext('https://github.com/saawant12/orbit-store-ps5/releases/tag/v1.8.1', '1.8.1 release') + ext('https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf', 'orbit_store.elf'),
-        image('orbit')
-      ),
+      require('./console-game-directories.cjs').orbitStoreCard(),
       resource(
         'PS5 Payload Manager · v0.6.3',
         'Load the pinned ELF through your compatible homebrew environment, then open its dashboard on port 8084. Import and launch payloads with explicit actions inside the manager.',

@@ -10,6 +10,43 @@ const plain = value => decode(String(value).replace(/<script\b[^>]*>[\s\S]*?<\/s
 const fold = value => String(value).normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/[’‘]/g, "'").replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim();
 const unique = values => [...new Map(values.filter(Boolean).map(value => [fold(value), String(value).trim()])).values()];
 const groups = [
+  [/\b(?:universal[- ]updater|open shop channel)\b/i, ['free homebrew apps', 'homebrew app store', 'homebrew downloader', 'free store', 'free shop', 'freeshop']],
+  [/\batmosph[eè]re\b/i, ['Atmosphere', 'Nintendo Switch custom firmware', 'Switch CFW']],
+  [/\bhekate\b/i, ['Hekate', 'Switch bootloader', 'Switch boot menu', 'RCM bootloader']],
+  [/\b(?:dbi|tinfoil|awoo|tinwoo|tinleaf)\b/i, ['Switch package installer', 'Switch installation tools', 'Switch file management']],
+  [/\b(?:luma3ds|godmode9)\b/i, ['Nintendo 3DS homebrew tools', '3DS custom firmware tools']],
+  [/\b(?:twilight menu|nds-bootstrap)\b/i, ['Nintendo DS homebrew', 'DSi homebrew launcher', 'DS game launcher']],
+  [/\b(?:ps3hen|ps3 hen)\b/i, ['PS3HEN', 'PS3 homebrew enabler', 'PS3 HEN setup']],
+  [/\b(?:multiman|irisman|webman mod)\b/i, ['PS3 file manager', 'PS3 homebrew utilities', 'PS3 game management']],
+  [/\b(?:pkgj|vitadb|vitashell)\b/i, ['PS Vita homebrew apps', 'Vita app downloads', 'Vita package tools']],
+  [/\b(?:aurora|freestyle dash|xexmenu)\b/i, ['Xbox 360 dashboard', 'Xbox 360 homebrew apps', 'Xbox 360 app launcher']],
+  [/\b(?:swiss|nintendont)\b/i, ['GameCube homebrew loader', 'GameCube game launcher']],
+  [/\b(?:open ps2 loader|wlaunchelf|freemcboot|opentuna)\b/i, ['PS2 homebrew tools', 'PlayStation 2 setup', 'PS2 homebrew loader']],
+  [/\bretroarch\b/i, ['RetroArch', 'multi-system emulator', 'emulator cores', 'retro game emulation']],
+  [/\b(?:save manager|save backup|checkpoint|jksv)\b/i, ['save manager', 'save backups', 'save restore', 'game save tools']],
+  [/\b(?:file manager|file browser)\b/i, ['file manager', 'file browser', 'storage tools', 'file transfer tools']],
+  [/\b(?:source code|source codes|source archive)\b/i, ['source code downloads', 'source archives', 'developer resources']],
+  [/\blua\b/i, ['Lua scripts', 'Lua script downloads', 'Lua scripting']],
+  [/\bgsc\b/i, ['Call of Duty scripts', 'GSC scripts', 'script modding tools']],
+  [/\bcsc\b/i, ['CSC scripts', 'script modding tools']],
+  [/\bapk\b/i, ['APK downloads', 'Android apps', 'Android app installer']],
+  [/\b(?:orbit store|prosperostore|recompstore|homebrew (?:app )?store)\b/i, ['homebrew store', 'homebrew app store', 'free homebrew store', 'free store', 'free shop', 'freeshop', 'console app store', 'homebrew downloader', 'store app download']],
+  [/\b(?:web[ -]?kit)\b/i, ['WebKit', 'WebKit exploit', 'browser WebKit exploit', 'WebKit exploit host']],
+  [/\b(?:browser host|exploit host|jailbreak host)s?\b/i, ['browser exploit host', 'online exploit host', 'online jailbreak host', 'console jailbreak host']],
+  [/\beta[ -]?hen\b/i, ['etaHEN', 'eta HEN', 'PS5 homebrew enabler', 'PS5 payload setup']],
+  [/\by2jb\b/i, ['Y2JB', 'PS5 YouTube jailbreak setup', 'Y2JB installer', 'Y2JB autoloader']],
+  [/\btrophy[ _-]*unlock(?:er|ers)?\b/i, ['trophy unlockers', 'trophy unlocker', 'trophy_unlockers', 'trophy unlock', 'trophy hack', 'trophy hacking', 'trophy tool', 'trophy unlock tool', 'PlayStation trophy unlocker', 'PlayStation trophy hack', 'PS4 trophy unlocker', 'PS4 trophy hack', 'PS4 trophy tools', 'PS4 trophy unlocker PKG']],
+  [/\b(?:goldhen)\b/i, ['GoldHEN', 'Gold HEN', 'PS4 homebrew enabler', 'GoldHEN payload', 'goldhen.bin']],
+  [/\bplugins\.ini\b/i, ['plugins.ini', 'GoldHEN plugin configuration', 'PS4 plugin setup', 'PRX plugin configuration', 'regional title IDs', 'CUSA title ID']],
+  [/\bapollo save tool\b/i, ['Apollo Save Tool', 'save manager', 'save backup', 'save import', 'save export', 'save resigning']],
+  [/\bps4[- ]?xplorer\b/i, ['PS4-Xplorer', 'PS4 file manager', 'PS4 file browser', 'PS4 storage manager']],
+  [/\bezremote\b/i, ['ezRemote Client', 'console file manager', 'remote file transfer', 'FTP file transfer', 'SFTP file transfer', 'SMB network share', 'WebDAV file transfer']],
+  [/\bpayload guest\b/i, ['Payload Guest', 'PS4 BIN loader', 'PS4 payload loader', 'PS4 payload launcher']],
+  [/\bps4pkgviewer\b/i, ['PS4PKGViewer', 'PS4 PKG viewer', 'PS4 package information', 'PS4 package title ID', 'Windows PKG tool']],
+  [/\bcheat engine\b/i, ['Cheat Engine', 'PC memory editor', 'memory scanner', 'cheat table', 'CT files']],
+  [/\b(?:extreme injector|xenos|gh injector)\b/i, ['DLL injector', 'DLL injection tool', 'Windows injection tool']],
+  [/\b(?:mod organizer 2|vortex)\b/i, ['mod manager', 'mod profiles', 'mod installation tool']],
+  [/\b(?:reshade|enb(?: series)?)\b/i, ['graphics modding tool', 'post-processing tool', 'shader presets']],
   [/\b(?:gta\s*(?:v|5)|grand theft auto\s*(?:v|5))\b/i, ['GTA V', 'GTA 5', 'GTA5', 'Grand Theft Auto V', 'Grand Theft Auto 5']],
   [/\b(?:gta\s*(?:iv|4)|grand theft auto\s*(?:iv|4))\b/i, ['GTA IV', 'GTA 4', 'GTA4', 'Grand Theft Auto IV', 'Grand Theft Auto 4']],
   [/\b(?:rdr\s*2|red dead redemption\s*(?:2|ii))\b/i, ['RDR2', 'RDR 2', 'Red Dead Redemption 2', 'Red Dead Redemption II']],
@@ -92,7 +129,9 @@ function resourceTerms(card) {
   // Negative compatibility tags remain visible/searchable, but must not add
   // positive platform aliases. A file format alone never assigns a platform.
   const positiveLabels=labels.filter(label=>!/\b(?:not (?:compatible|supported|tested|verified|available)|unsupported|unconfirmed|unverified|untested|no (?:native |verified |confirmed )?(?:support|ps[1-5]|xbox))\b/i.test(label));
-  return unique([title, ...labels, ...[title, ...positiveLabels].flatMap(aliasesFor)]);
+  const host = /class=["'](?:[^"']*\s)?guide-host(?:\s|["'])/.test(card.slice(0, card.indexOf('>') + 1));
+  const hostTerms = host ? positiveLabels.filter(label => /^PS[45]$/i.test(label)).flatMap(platform => [`${platform} host`, `${platform} exploit host`, `${platform} browser host`, `${platform} online host`, `${platform} jailbreak host`, `${platform} ${title} host`]) : [];
+  return unique([title, ...labels, ...[title, ...positiveLabels].flatMap(aliasesFor), ...hostTerms]);
 }
 function protectedFile(file, html = '') {
   const relative = (path.isAbsolute(file) && !/^\/(?:console|downloads)\//.test(file) ? path.relative(root, file) : file).replaceAll('\\', '/').replace(/^\/+/, '').split(/[?#]/)[0];
@@ -112,7 +151,8 @@ function apply(file, html) {
     const tag = start.match(/^<(article|div|a|li)\b/i)?.[1]?.toLowerCase();
     if (!tag) continue;
     const found = start.match(searchAttribute);
-    const native = /\sdata-(?:ps2-item|vita-item|ds-card|three-ds-card|wii-card|wiiu-app|xbox-app|library-card)(?=\s|=|>)/.test(start);
+    const native = /\sdata-(?:ps2-item|vita-item|ds-card|three-ds-card|wii-card|wiiu-app|xbox-app|library-card)(?=\s|=|>)/.test(start)
+      || /class=["'](?:[^"']*\s)?guide-host(?:\s|["'])/.test(start);
     if (!found && !native) continue;
     let depth = 1, end = -1;
     for (let j = i + 1; j < tokens.length; j++) {

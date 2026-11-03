@@ -108,7 +108,11 @@
   .guide-dialog__body { padding: 20px; }
 }
 .guide-code { max-width: 100%; overflow-x: auto; padding: 20px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); margin: 20px 0; }
-.console-guide .game-image img { object-fit: fill; object-position: center; }
+.console-guide .game-image img { object-fit: contain; object-position: center; background:#0a0d0e; }
+.console-guide .guide-resource > img[src*="/covers/"],
+.console-guide .guide-resource > img[src*="/game-card-covers/"],
+.console-guide .guide-hero img[src*="/covers/"],
+.console-guide .guide-hero img[src*="/game-card-covers/"] { object-fit:contain; background:#0a0d0e; }
 .console-guide .game-card:hover .game-image img { transform: none; }
 @media (max-width: 760px) {
   .console-guide .guide-hero-grid { grid-template-columns: 1fr; gap: 24px; }

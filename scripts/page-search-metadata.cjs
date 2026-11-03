@@ -388,7 +388,11 @@ function transform(file, before, options = {}) {
   const aliasModule = path.join(__dirname, 'page-search-tags.cjs');
   if (!noindex && !redirect && fs.existsSync(aliasModule)) {
     const subjectHeadings = subject + ' ' + [...content.matchAll(/<h[123]\b[^>]*>([\s\S]*?)<\/h[123]>/gi)].map(m => plain(m[1])).join(' ');
-    terms.push(...require(aliasModule).aliasesFor(subjectHeadings));
+    const discovery = require(aliasModule).aliasesFor(subjectHeadings);
+    // Reserve a bounded share for functional search terms even on curated pages.
+    const names = new Set(['freeshop', 'free shop', 'free store', 'free homebrew store', 'homebrew app store', 'source code downloads', 'source archives', 'save backups', 'save restore', 'file transfer tools', 'emulator cores', 'Lua script downloads']);
+    terms.splice(1, 0, ...discovery.filter(term => names.has(term)).slice(0, 6));
+    terms.push(...discovery);
   }
   terms.push('whatwhatboy');
   const keywordLimit = /^console\/ps[45]\/index\.html$/.test(relative) ? 60 : 35;

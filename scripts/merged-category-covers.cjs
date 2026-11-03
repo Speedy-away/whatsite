@@ -4,6 +4,8 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const file = path.join(root, 'docs/merged-category-covers.json');
 let cache, stamp;
+let compositeCache,compositeStamp;
+function composite(key){const file=path.join(root,'docs/category-composite-covers.json');if(!fs.existsSync(file))return null;const stat=fs.statSync(file),next=stat.mtimeMs+':'+stat.size;if(next!==compositeStamp){compositeCache=JSON.parse(fs.readFileSync(file,'utf8'));compositeStamp=next;}return compositeCache.routes[key]||null;}
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 function read() {
   if (!fs.existsSync(file)) return null;
@@ -12,6 +14,7 @@ function read() {
   return cache;
 }
 function get(key, kind = 'tools') {
+  const combined=composite(key);if(combined)return combined;
   const data = read();
   if (!data) return null;
   const fallback = kind === 'themes' ? 'category-themes-universal' : kind === 'emulators' ? 'emulators-emulators' : ['games','mods'].includes(kind) ? 'category-'+kind : kind === 'downloads' ? 'library-game-downloads' : 'category-apps';
@@ -19,7 +22,7 @@ function get(key, kind = 'tools') {
 }
 function image(cover, alt, className = '') {
   if (!cover) return '';
-  return `<img${className ? ` class="${esc(className)}"` : ''} src="${esc(cover.path)}" alt="${esc(alt || cover.alt)}" width="${cover.width}" height="${cover.height}" loading="lazy" decoding="async">`;
+  return require('./responsive-category-images.cjs').apply('console/index.html', `<img${className ? ` class="${esc(className)}"` : ''} src="${esc(cover.path)}" alt="${esc(alt || cover.alt)}" width="${cover.width}" height="${cover.height}" loading="lazy" decoding="async">`);
 }
 function render(key, config = {}) {
   const cover = get(key, config.kind);

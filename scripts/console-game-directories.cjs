@@ -6,6 +6,10 @@ const registry = () => JSON.parse(fs.readFileSync(path.join(root, 'docs/console-
 const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const normalized = file => (/^\/(?:console|downloads|pc|source-codes)\//.test(file) ? file : path.isAbsolute(file) ? path.relative(root, file) : file).replaceAll('\\', '/').replace(/^\/+/, '').split(/[?#]/)[0];
 const directoryPath = platform => platform.base + 'game-downloads.html';
+function orbitStoreCard() {
+  const image = JSON.parse(fs.readFileSync(path.join(root, 'docs/console-software-images.json'), 'utf8')).orbit.image;
+  return `<article class="guide-resource" id="orbit-store" data-search="orbit store 1.8.1 ps5 playstation 5 download manager game downloads homebrew store orbit_store.elf"><img src="${esc(image)}" alt="Orbit Store 1.8.1 interface on PS5" loading="lazy"><h3>Orbit Store 1.8.1</h3><p>PS5 download manager and store interface. Download the pinned ELF and launch it through Payload Manager or your compatible ELF loader.</p><div class="guide-links"><a href="https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf" download="orbit_store.elf">Download orbit_store.elf <i class="fas fa-download" aria-hidden="true"></i></a>${external('https://github.com/saawant12/orbit-store-ps5/releases/tag/v1.8.1', '1.8.1 release')}<a href="/console/ps5/apps.html#install">Setup guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
+}
 function platformFor(file, data = registry()) {
   const current = '/' + normalized(file);
   return data.platforms.find(p => current.startsWith(p.base) || current === p.hub || current === '/' + p.source || (p.aliases || []).includes(current)) || null;
@@ -43,6 +47,17 @@ function apply(file, html, data = registry()) {
   });
   if (!hasNav) html = html.replace(/<main\b[^>]*>|<div\b(?=[^>]*\bid="main-content")[^>]*>/i, main => main + `<div class="container"><nav class="guide-nav" aria-label="${esc(platform.title)} game downloads">${item}</nav></div>`);
   const current = '/' + normalized(file), hubFile = platform.hub.endsWith('/') ? platform.hub + 'index.html' : platform.hub;
+  if (current === destination && platform.id === 'ps5') {
+    const existing = range(html, 'article', tag => /\bid="orbit-store"/.test(tag));
+    if (existing) html = html.slice(0, existing.start) + orbitStoreCard() + html.slice(existing.end);
+    else {
+      const section = range(html, 'section', tag => /\bid="game-directories"/.test(tag));
+      if (section) {
+        const block = html.slice(section.start, section.end).replace('<div class="games-grid">', '<div class="games-grid">' + orbitStoreCard());
+        html = html.slice(0, section.start) + block + html.slice(section.end);
+      }
+    }
+  }
   if (current === destination && platform.directoryMode === 'curated-library') {
     const block = directorySection(platform);
     const existing = range(html, 'section', tag => /\bid="game-directories"/.test(tag));
@@ -125,7 +140,7 @@ function build() {
     if (platform.directoryMode === 'curated-library') continue;
     const destination = directoryPath(platform), file = destination.slice(1);
     const content = platform.providers.length
-      ? guides.section('game-directories', `${esc(platform.title)} game downloads`, guides.grid(...platform.providers.map(provider => providerCard(provider, platform))), 'Choose an external directory for this console.')
+      ? guides.section('game-directories', `${esc(platform.title)} game downloads`, guides.grid(...platform.providers.map(provider => providerCard(provider, platform))), platform.id === 'ps5' ? 'Download Orbit Store or choose an external game directory for this console.' : 'Choose an external directory for this console.')
       : guides.section('game-directories', 'Browse games by console', `<p>Browse the all-console index and choose the exact platform named by the source website.</p><div class="guide-links"><a href="/console/game-downloads/">Browse all console directories <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>`);
     guides.page(file, `${platform.title} Game Downloads`, `External game directories for ${platform.title}. Open a source website and check its console, region and file-format details.`, platform.image, [[platform.hub, platform.title], [destination, 'Game downloads'], ['/console/game-downloads/', 'All consoles']], content + guides.section('more-directories', 'More game directories', `<div class="guide-links"><a href="/console/game-downloads/">All console game directories <i class="fas fa-arrow-right" aria-hidden="true"></i></a>${external('https://vimm.net/vault', 'Vimm’s Vault · all systems')}${external('https://dlpsgame.com/', 'DLPSGame · all games')}</div>`), '#game-directories', 'Browse game directories');
     prepare(file);
@@ -158,5 +173,5 @@ function build() {
   const integration = updatePublicPages();
   return {platforms: data.platforms.length, platformLinks: data.platforms.reduce((n, p) => n + p.providers.length, 0), files, integration};
 }
-module.exports = {registry, directoryPath, platformFor, protectedFile, apply, updatePublicPages, build};
+module.exports = {registry, directoryPath, platformFor, protectedFile, apply, updatePublicPages, build, orbitStoreCard};
 if (require.main === module) console.log(JSON.stringify(process.argv.includes('--check') ? updatePublicPages({check: true}) : build(), null, 2));

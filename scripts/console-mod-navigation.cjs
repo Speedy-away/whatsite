@@ -25,9 +25,9 @@ function xbox(data){
  const resources=data.resources.map(item=>/^discord-xbox360-stealth-/.test(item.id)?{...item,gameId:stealth.id}:item);
  const cod={id:'call-of-duty',title:'Call of Duty',page:base+'call-of-duty/index.html',image:'/assets/images/covers/cod-black-ops-2.jpg',kind:'collection',summary:'Choose a Call of Duty game for its mod menus and supported builds.'};
  const multi={id:'multi-game-tools',title:'Multi-game tools & mod menus',page:base+'multi-game-tools/index.html',image:'/assets/images/merged-categories/category-mods-v1.png',kind:'collection',summary:'Myten and multi-game collections, with a separate page for each family.'};
- const myten={id:'myten',title:'Myten',page:base+'multi-game-tools/myten/index.html',image:'/assets/images/menu-previews/xbox360/mw2-campaign-myten-v12-source.jpg',kind:'collection',summary:'Myten versions, downloads and their documented supported games.'};
+ const myten={id:'myten',title:'Myten',page:base+'multi-game-tools/myten/index.html',image:require('./merged-category-covers.cjs').get(base+'multi-game-tools/myten/index.html','mods').path,kind:'collection',summary:'Myten versions, downloads and their documented supported games.'};
  const codGames=games.filter(g=>g.page.includes('/call-of-duty/'));
- const overview=[games.find(g=>g.id==='gta-v'),cod,games.find(g=>g.id==='gta-iv'),...games.filter(g=>g.kind==='game'&&!g.page.includes('/call-of-duty/')&&!['gta-v','gta-iv'].includes(g.id)),stealth,multi,games.find(g=>g.id==='tools')].filter(Boolean);
+ const overview=[games.find(g=>g.id==='gta-v'),cod,games.find(g=>g.id==='gta-iv'),...games.filter(g=>g.kind==='game'&&!g.page.includes('/call-of-duty/')&&!['gta-v','gta-iv'].includes(g.id)),multi,games.find(g=>g.id==='tools')].filter(Boolean);
  return {games,resources,cod,codGames,multi,myten,overview};
 }
 module.exports={applyGameImages,xbox};

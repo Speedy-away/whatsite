@@ -90,11 +90,11 @@ function rewriter(offloaded) {
       .replace(/(url\(["']?)([^"'<>\s)]+)(["']?\))/g, replaceRelative);
   };
 }
-function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revision = 'main', names} = {}) {
+function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revision = 'main', names, sizes} = {}) {
   const sparse = process.env.WHATSITE_SPARSE_PAGES === '1', tree = sparse ? treeFiles(root) : null;
   names ||= tree ? tree.names : execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], {cwd: root, maxBuffer: 64 * 1024 * 1024}).toString().split('\0').filter(Boolean);
   if (fs.existsSync(output)) throw Error('Use a fresh output directory; existing files are never removed');
-  const result = plan(root, names, revision, tree?.sizes), rewrite = rewriter(result.offloaded);
+  const result = plan(root, names, revision, tree?.sizes || sizes), rewrite = rewriter(result.offloaded);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const runtimeFiles = Object.fromEntries([...result.offloaded].filter(([name]) => name.startsWith('hosts/runtime/')).map(([name, url]) => ['/' + name, url]));
