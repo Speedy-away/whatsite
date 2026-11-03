@@ -30,5 +30,21 @@ test('directory removes the old Downloader instruction, preserves APK Time and e
  assert.ok(html.includes('https://appgallery.huawei.com/'));assert.ok(html.includes('https://apps.apple.com/'));assert.ok(html.includes('https://play.google.com/'));
  assert.ok(!html.includes(' hidden'),'No-script users can read every section');
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
- for(const app of catalog.apps){const card=builder.appCard(app);if(app.status==='archived'){assert.ok(card.includes(app.downloadURL.replaceAll('&','&amp;')));assert.ok(app.file.bytes>0);assert.match(app.file.sha256,/^[a-f0-9]{64}$/);}else {assert.ok(!card.includes('>Download APK</a>'));assert.ok(card.includes('unavailable'));}}
+ for(const app of catalog.apps){const card=builder.appCard(app);if(app.status==='archived'){assert.ok(card.includes(app.downloadURL.replaceAll('&','&amp;')));assert.ok(app.file.bytes>0);assert.match(app.file.sha256,/^[a-f0-9]{64}$/);}else if(app.delivery){assert.ok(card.includes(app.delivery.url.replaceAll('&','&amp;')));assert.ok(!card.includes('>Download APK</a>'));}else {assert.ok(!card.includes('>Download APK</a>'));assert.ok(card.includes('unavailable'));}}
+});
+
+test('all eight repaired entries keep their old source and use accurately labelled APK, store or exact-version actions',()=>{
+ const c=JSON.parse(read('docs/apk-app-catalog.json'));
+ for(const id of ['file-synced','unlinked','applinked','launcher-manager','peacock-tv','xumo','tv-launcher','atv-launcher']){
+  const app=c.apps.find(a=>a.id===id);assert.ok(app.retainedSources.length);assert.equal(app.retainedSources[0].status,'source-unavailable');
+  assert.ok(app.status==='archived'||app.delivery);
+  if(app.repair){assert.equal(app.repair.manifest.versionName,app.file.version);assert.ok(app.repair.manifest.package);}
+ }
+ assert.match(c.apps.find(a=>a.id==='tv-launcher').delivery.url,/tvlauncher-3-1-1/);
+ assert.match(c.apps.find(a=>a.id==='atv-launcher').delivery.description,/paid Pro/);
+});
+test('Phone expands each platform with verified store or publisher identities and direct app anchors',()=>{
+ const p=JSON.parse(read('docs/phone-app-catalog.json')),html=builder.render(read('scripts/templates/apk-page.html'),JSON.parse(read('docs/apk-app-catalog.json')),p);
+ assert.equal(p.apps.filter(a=>a.platform==='ios').length,12);assert.equal(p.apps.filter(a=>a.platform==='android').length,12);assert.equal(p.apps.filter(a=>a.platform==='harmony').length,7);
+ for(const app of p.apps){assert.ok(app.checkedAt&&app.storeTitle&&app.source);assert.ok(html.includes('id="app-'+app.id+'"'));assert.ok(html.includes(app.url.replaceAll('&','&amp;')));const f=fixture('#app-'+app.id);assert.equal(f.panels.phone.hidden,false);assert.equal(f.panels['phone-'+app.platform].hidden,false);}
 });

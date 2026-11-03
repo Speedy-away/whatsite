@@ -9383,5 +9383,26 @@
     "originalInstructionRemoved": true,
     "commit": "8b8ea137a442240a092164a69a0883ecd7804e6c",
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41725254784"
+  },
+  "apkRepairsPhoneToolsPVZ20261103": {
+    "status": "Validated; ready for publication",
+    "report": "docs/qa/apk-repairs-phone-tools-pvz.json",
+    "repairedEntries": 8,
+    "recoveredAPKs": 4,
+    "officialStoreRoutes": 3,
+    "exactVersionReleasePages": 1,
+    "addedPhoneApps": 31,
+    "platforms": {
+      "added": 31,
+      "ios": 12,
+      "android": 12,
+      "harmony": 7,
+      "verification": "Apple lookup and Google Play listing identities verified; Huawei publisher pages checked. Device/region/OS eligibility remains controlled by the source."
+    },
+    "toolCardsFixed": true,
+    "pvzMovedToGameMods": true,
+    "olderDownloadsAndURLsPreserved": true,
+    "tests": "49 affected tests + 3 targeted renderer checks pass.",
+    "archiveRefreshed": true
   }
 }

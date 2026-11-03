@@ -101,7 +101,15 @@ function apply(file, html, data = manifest()) {
     // Detailed resource entries remain outside the destination map.
     if (!imageRange) imageRange = {start: heading.index, end: heading.index};
     const replacement = media(chosen.config, chosen.key);
-    const updated = card.html.slice(0, imageRange.start) + replacement + card.html.slice(imageRange.end);
+    let updated = card.html.slice(0, imageRange.start) + replacement + card.html.slice(imageRange.end);
+    // Compact tool cards reserve a small icon slot; never insert a full cover
+    // into their text column, where it stretches every card in the grid row.
+    if (/\bclass="[^"]*\btool-card\b/.test(card.html.match(/^<[^>]*>/)[0])) {
+      const cleared = card.html.slice(0, imageRange.start) + card.html.slice(imageRange.end);
+      const icon = /<div\b(?=[^>]*\bclass="[^"]*\btool-icon\b)[^>]*>/i.exec(cleared);
+      const slot = icon && range(cleared, icon.index, icon[0]);
+      if (slot) updated = cleared.slice(0, slot.start) + icon[0] + replacement + '</div>' + cleared.slice(slot.end);
+    }
     if (updated !== card.html) { changed = true; html = html.slice(0, card.start) + updated + html.slice(card.end); }
   }
   // Retained hash links (for example Firmware) keep their exact destination,
@@ -115,7 +123,8 @@ function apply(file, html, data = manifest()) {
     if(found){html=html.slice(0,found.start)+media(config,key)+html.slice(found.end);changed=true;}
   }
   if (changed || html.includes('data-category-art=')) {
-    const tag = '<link rel="stylesheet" href="/assets/category-card-art.css?v=2">';
+    const version = /\bclass="[^"]*\btool-card\b/.test(html) ? 3 : 2;
+    const tag = '<link rel="stylesheet" href="/assets/category-card-art.css?v='+version+'">';
     let found = false;
     html = html.replace(/<link\b(?=[^>]*href=["'][^"']*\/assets\/category-card-art\.css(?:\?[^"']*)?["'])[^>]*>/gi, () => { if (found) return ''; found = true; return tag; });
     if (!found) html = html.replace('</head>', tag + '\n</head>');

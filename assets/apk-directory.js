@@ -2,6 +2,8 @@
  'use strict';
  function selection(hash){
   const value=String(hash||'').replace(/^#/,'');
+  const app=value.match(/^app-(ios|android|harmony)-/);
+  if(app)return {device:'phone',phone:'phone-'+app[1]};
   if(value==='app-aurora-store')return {device:'phone',phone:'phone-android'};
   return {device:/^phone(?:-|$)/.test(value)?'phone':'tv',phone:['phone-ios','phone-android','phone-harmony'].includes(value)?value:'phone-ios'};
  }

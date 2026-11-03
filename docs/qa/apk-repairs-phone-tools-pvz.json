@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-03",
+  "status": "Validated; ready for publication",
+  "requests": [
+    "Repair eight unavailable APK app entries and expand Phone apps for iOS, Android and Harmony.",
+    "Fix oversized Injectors & Tools artwork and uneven home tool cards.",
+    "Move Plants vs Zombies Fusion into Game Mods."
+  ],
+  "repairs": {
+    "recoveredAPKs": 4,
+    "newArchiveBytes": 17254194,
+    "officialStoreRoutes": 3,
+    "exactVersionReleasePages": 1,
+    "originalSourcesRetained": true,
+    "notes": [
+      "FileSynced mirror 4.3 stays distinct from unreachable publisher 4.8.",
+      "Unlinked stable-channel APK has a locally verified 2.0.4 snapshot.",
+      "AppLinked 2.0.12 package com.i4apps.applinkednew verified.",
+      "Launcher Manager Google/Android TV 1.0.4 is separate from the retained unavailable Fire TV 1.1.8 source.",
+      "Peacock and Xumo use official device/region-dependent store listings. ATV Launcher is explicitly the paid Pro store release.",
+      "TVLauncher retains exact 3.1.1 release-page routing. Its APK was not downloaded or claimed locally."
+    ]
+  },
+  "phone": {
+    "added": 31,
+    "ios": 12,
+    "android": 12,
+    "harmony": 7,
+    "verification": "Apple lookup and Google Play listing identities verified; Huawei publisher pages checked. Device/region/OS eligibility remains controlled by the source."
+  },
+  "tools": {
+    "iconSize": 48,
+    "coverMovedIntoIconSlot": true,
+    "generatorDurable": true,
+    "actionsPreserved": true
+  },
+  "pvz": {
+    "removedFrom": "games-downloads/index.html",
+    "movedTo": "pages/mods.html",
+    "preservedDetailURL": "games-downloads/plants-vs-zombies.html",
+    "resourceFilesChanged": 0
+  },
+  "validation": {
+    "affectedTests": 49,
+    "toolRendererTests": 3,
+    "failedAffectedTests": 0,
+    "archive": "Four APKs rehashed from F: and binary manifests checked as data; index refreshed.",
+    "sharedAudit": "481 pages and 56521 links/assets checked; two unrelated untracked host pages are absent from the main-site sitemap.",
+    "sharedCategoryChecks": "Two existing failures concern concurrent responsive-image optimizations and their metadata; focused layout cases pass."
+  },
+  "browserRendered": false
+}

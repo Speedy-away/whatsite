@@ -9,6 +9,16 @@ const manifest = require('../../docs/category-card-art.json');
 const fixture = '<html><head><title>Fixture</title></head><body><main><article class="guide-resource" data-search="keep"><img src="/old.png" alt="Old image"><h3>Emulators</h3><p>Exact requirements 1.73 remain here.</p><div class="guide-links"><a href="/console/psvita/emulators.html">Browse</a><a href="/downloads/pinned-v1.vpk" download>Exact ready file</a></div></article><script>const version="1.73";</script></main></body></html>';
 const links = html => [...html.matchAll(/<a\b[^>]*>/g)].map(x => x[0]);
 
+test('compact tool cards put merged artwork inside the icon slot and preserve their actions',()=>{
+ const input='<html><head></head><body><div class="tool-card"><div class="tool-icon"></div><div class="tool-info"><div class="category-art" data-category-art="/tools/injectors.html"><img src="/old.png"></div><h3>Injectors &amp; Tools</h3><p>DLL injectors</p><a href="/tools/injectors.html">Browse tools</a></div></div></body></html>';
+ const output=art.apply('index.html',input);
+ assert.match(output,/<div class="tool-icon"><div class="category-art/);
+ assert.doesNotMatch(output,/<div class="tool-info">\s*<div class="category-art/);
+ assert.deepEqual(links(output),links(input));
+ assert.equal(art.apply('index.html',output),output);
+ assert.match(fs.readFileSync(path.join(__dirname,'../../assets/category-card-art.css'),'utf8'),/\.tools-grid \.tool-icon \.category-art[^}]*width: 48px; height: 48px/);
+});
+
 test('category composition keeps links, pins, search terms and scripts and is idempotent', () => {
   const output = art.apply('console/psvita/home.html', fixture);
   assert.match(output, /data-category-art="\/console\/psvita\/emulators.html"/);
@@ -92,7 +102,7 @@ test('ready-download catalogue cards retain their precise per-resource images', 
       assert.ok(item, id);
       assert.ok(!card.html.includes('data-category-art='), id);
       const tag = card.html.match(/<img\b[^>]*>/)?.[0];
-      assert.equal(tag ? art.attribute(tag, 'src') : '', item.image || '', id);
+      assert.equal(tag ? art.attribute(tag, 'data-original-image') || art.attribute(tag, 'src') : '', item.image || '', id);
     }
   }
 });

@@ -1,6 +1,6 @@
 {
   "source": "https://letscrackon.org/downloads/",
-  "checkedAt": "2026-11-03T21:40:02.668Z",
+  "checkedAt": "2026-11-03T22:04:42.405Z",
   "apps": [
     {
       "id": "file-synced",
@@ -8,9 +8,44 @@
       "url": "https://letscrackon.org/filesynced-download/",
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
-      "downloadURL": "https://dl.hiddengem.appboxes.co/downloaders/FileSynced.apk",
-      "status": "source-unavailable",
-      "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co"
+      "downloadURL": "https://docsquiffy.com/api/downloads/33/file",
+      "status": "archived",
+      "retainedSources": [
+        {
+          "url": "https://letscrackon.org/filesynced-download/",
+          "downloadURL": "https://dl.hiddengem.appboxes.co/downloaders/FileSynced.apk",
+          "status": "source-unavailable",
+          "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "file": {
+        "name": "FileSynced-4.3.apk",
+        "version": "4.3",
+        "bytes": 5364744,
+        "sha256": "78bae6aa72884e8d3f6d816650d62ddb0453dfda94e131a53fd32d1311933220",
+        "sourceUrl": "https://docsquiffy.com/api/downloads/33/file",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "apk-tv-repairs-file-synced",
+        "platform": "Android TV",
+        "category": [
+          "Apps"
+        ]
+      },
+      "repair": {
+        "kind": "apk",
+        "source": "https://docsquiffy.com/apks",
+        "description": "Mirror build 4.3. The publisher’s 4.8 host was unreachable; versions are kept separate.",
+        "manifest": {
+          "versionCode": 9,
+          "versionName": "4.3",
+          "package": "com.filesynced.app"
+        },
+        "mutable": false,
+        "checkedAt": "2026-11-03T22:04:36.059Z"
+      }
     },
     {
       "id": "unlinked",
@@ -18,9 +53,44 @@
       "url": "https://letscrackon.org/unlinked-download/",
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
-      "downloadURL": "https://dl.hiddengem.appboxes.co/downloaders/Unlinked.apk",
-      "status": "source-unavailable",
-      "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co"
+      "downloadURL": "https://github.com/un-linked/unlinked/releases/download/stable/android.apk",
+      "status": "archived",
+      "retainedSources": [
+        {
+          "url": "https://letscrackon.org/unlinked-download/",
+          "downloadURL": "https://dl.hiddengem.appboxes.co/downloaders/Unlinked.apk",
+          "status": "source-unavailable",
+          "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "file": {
+        "name": "Unlinked-2.0.4.apk",
+        "version": "2.0.4",
+        "bytes": 3944369,
+        "sha256": "99afef0d875bd8dbd4fd70a922de9f7017c5bf91dc6c9d36e70411c8084d61e9",
+        "sourceUrl": "https://github.com/un-linked/unlinked/releases/download/stable/android.apk",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "apk-tv-repairs-unlinked",
+        "platform": "Android TV",
+        "category": [
+          "Apps"
+        ]
+      },
+      "repair": {
+        "kind": "apk",
+        "source": "https://github.com/un-linked/unlinked/releases/tag/stable",
+        "description": "Publisher stable-channel APK. The locally archived snapshot is version 2.0.4.",
+        "manifest": {
+          "versionCode": 14,
+          "versionName": "2.0.4",
+          "package": "link.unlinked"
+        },
+        "mutable": true,
+        "checkedAt": "2026-11-03T22:04:38.127Z"
+      }
     },
     {
       "id": "applinked",
@@ -28,9 +98,44 @@
       "url": "https://letscrackon.org/applinked-download/",
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
-      "downloadURL": "https://dl.hiddengem.appboxes.co/downloaders/applinked.apk",
-      "status": "source-unavailable",
-      "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co"
+      "downloadURL": "https://www.mediafire.com/file/9c00ev9vuz52837/Applinked_2.0.12.apk/file",
+      "status": "archived",
+      "retainedSources": [
+        {
+          "url": "https://letscrackon.org/applinked-download/",
+          "downloadURL": "https://dl.hiddengem.appboxes.co/downloaders/applinked.apk",
+          "status": "source-unavailable",
+          "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "file": {
+        "name": "AppLinked-2.0.12.apk",
+        "version": "2.0.12",
+        "bytes": 6487027,
+        "sha256": "3b919f8b34985409f7138f2d50dd0d59757c8dcc592b58f490e362760e41f74b",
+        "sourceUrl": "https://www.mediafire.com/file/9c00ev9vuz52837/Applinked_2.0.12.apk/file",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "apk-tv-repairs-applinked",
+        "platform": "Android TV",
+        "category": [
+          "Apps"
+        ]
+      },
+      "repair": {
+        "kind": "apk",
+        "source": "https://applinked.org/download/",
+        "description": "AppLinked 2.0.12 from the replacement download page’s MediaFire link.",
+        "manifest": {
+          "versionCode": 126,
+          "versionName": "2.0.12",
+          "package": "com.i4apps.applinkednew"
+        },
+        "mutable": false,
+        "checkedAt": "2026-11-03T22:04:40.490Z"
+      }
     },
     {
       "id": "aptoide-tv",
@@ -86,8 +191,52 @@
       "url": "https://letscrackon.org/launcher-manager/",
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
-      "status": "source-unavailable",
-      "error": "No direct APK exposed by source page"
+      "status": "archived",
+      "retainedSources": [
+        {
+          "url": "https://letscrackon.org/launcher-manager/",
+          "downloadURL": null,
+          "status": "source-unavailable",
+          "error": "No direct APK exposed by source page",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://forum.xda-developers.com/attachments/lm-fos-1-1-8-apk.5862251/",
+          "version": "1.1.8",
+          "platform": "Fire TV",
+          "status": "source-unavailable",
+          "error": "HTTP 403",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "downloadURL": "https://docsquiffy.com/api/downloads/347/file",
+      "file": {
+        "name": "Launcher-Manager-ATV-1.0.4.apk",
+        "version": "1.0.4",
+        "bytes": 1458054,
+        "sha256": "582ad9e16eb9d01157cdcd3b967c552a6f2ad3df462f9c92bca82c3ab6867647",
+        "sourceUrl": "https://docsquiffy.com/api/downloads/347/file",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "apk-tv-repairs-launcher-manager",
+        "platform": "Android TV",
+        "category": [
+          "Apps"
+        ]
+      },
+      "repair": {
+        "kind": "apk",
+        "source": "https://docsquiffy.com/apks",
+        "description": "Google / Android TV build 1.0.4. This is separate from the older Fire TV 1.1.8 build.",
+        "manifest": {
+          "versionCode": 104,
+          "versionName": "1.0.4",
+          "package": "com.wolf.google.lm"
+        },
+        "mutable": false,
+        "checkedAt": "2026-11-03T22:04:42.399Z"
+      }
     },
     {
       "id": "mouse-toggle-firestick",
@@ -264,8 +413,24 @@
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
       "downloadURL": "https://archive.org/download/peacock-tv-1.4.21-peacocktv-google/Peacock%20TV_1.4.21-peacocktvGoogle.apk",
-      "status": "source-unavailable",
-      "error": "curl: (22) The requested URL returned error: 403"
+      "status": "store-linked",
+      "retainedSources": [
+        {
+          "url": "https://archive.org/download/peacock-tv-1.4.21-peacocktv-google/Peacock%20TV_1.4.21-peacocktvGoogle.apk",
+          "downloadURL": "https://archive.org/download/peacock-tv-1.4.21-peacocktv-google/Peacock%20TV_1.4.21-peacocktvGoogle.apk",
+          "status": "source-unavailable",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "delivery": {
+        "kind": "store",
+        "url": "https://play.google.com/store/apps/details?id=com.peacocktv.peacockandroid",
+        "label": "Open Google Play",
+        "version": "Store-managed release",
+        "description": "Official store release. Peacock requires a supported device and US availability; subscription terms apply.",
+        "checkedAt": "2026-11-03T22:04:42.401Z"
+      }
     },
     {
       "id": "pluto-tv",
@@ -322,8 +487,24 @@
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
       "downloadURL": "https://dl.hiddengem.appboxes.co/Streaming/xumotv.apk",
-      "status": "source-unavailable",
-      "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co"
+      "status": "store-linked",
+      "retainedSources": [
+        {
+          "url": "https://letscrackon.org/xumo-tv-download/",
+          "downloadURL": "https://dl.hiddengem.appboxes.co/Streaming/xumotv.apk",
+          "status": "source-unavailable",
+          "error": "curl: (6) Could not resolve host: dl.hiddengem.appboxes.co",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "delivery": {
+        "kind": "store",
+        "url": "https://play.google.com/store/apps/details?id=com.xumo.xumo.tv",
+        "label": "Open Google Play",
+        "version": "Store-managed release",
+        "description": "Official Xumo Play TV listing. Check availability for your device and region.",
+        "checkedAt": "2026-11-03T22:04:42.403Z"
+      }
     },
     {
       "id": "downloader",
@@ -356,8 +537,24 @@
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
       "downloadURL": "https://archive.org/download/tvlauncher3.1.1com.awe.dev.pro.tv/TVLauncher%203.1.1%20com.awe.dev.pro.tv.apk",
-      "status": "source-unavailable",
-      "error": "curl: (22) The requested URL returned error: 403"
+      "status": "release-linked",
+      "retainedSources": [
+        {
+          "url": "https://letscrackon.org/tv-launcher/",
+          "downloadURL": "https://archive.org/download/tvlauncher3.1.1com.awe.dev.pro.tv/TVLauncher%203.1.1%20com.awe.dev.pro.tv.apk",
+          "status": "source-unavailable",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "delivery": {
+        "kind": "release-page",
+        "url": "https://www.apkmirror.com/apk/awesome-development/tvlauncher/tvlauncher-3-1-1-release/tvlauncher-3-1-1-android-apk-download/",
+        "label": "Open 3.1.1 release",
+        "version": "3.1.1 beta",
+        "description": "Alternate release page for the original 3.1.1 version. Complete its download in your browser; no APK copy is claimed here.",
+        "checkedAt": "2026-11-03T22:04:42.405Z"
+      }
     },
     {
       "id": "wolf-launcher",
@@ -390,8 +587,24 @@
       "platform": "tv",
       "source": "https://letscrackon.org/downloads/",
       "downloadURL": "https://archive.org/download/atvlauncher0.0.11proca.dstudio.atvlauncher.pro/ATV%20Launcher%200.0.11-pro%20ca.dstudio.atvlauncher.pro.apk",
-      "status": "source-unavailable",
-      "error": "curl: (22) The requested URL returned error: 403"
+      "status": "store-linked",
+      "retainedSources": [
+        {
+          "url": "https://letscrackon.org/atv-launcher/",
+          "downloadURL": "https://archive.org/download/atvlauncher0.0.11proca.dstudio.atvlauncher.pro/ATV%20Launcher%200.0.11-pro%20ca.dstudio.atvlauncher.pro.apk",
+          "status": "source-unavailable",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "delivery": {
+        "kind": "store",
+        "url": "https://play.google.com/store/apps/details?id=ca.dstudio.atvlauncher.pro",
+        "label": "Open Google Play",
+        "version": "Store-managed release",
+        "description": "Official paid Pro release on Google Play. The older 0.0.11-pro archive remains a separate historical source.",
+        "checkedAt": "2026-11-03T22:04:42.405Z"
+      }
     }
   ]
 }
