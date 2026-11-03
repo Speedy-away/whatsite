@@ -8116,7 +8116,7 @@
   "publication20261103": {
     "date": "2026-11-03",
     "request": "Push everything and fix the failed GitHub Pages deployment.",
-    "status": "Completed snapshot frozen for publication; later WWB-HOST migration and KARO repair work excluded",
+    "status": "Completed prior-turn snapshots pushed and verified on origin/main; size-checked custom Pages deployment enabled",
     "failure": {
       "run": 41509659158,
       "artifactBytes": 14461735754,
@@ -8146,59 +8146,75 @@
     },
     "siteAudit": "Audited 501 public pages and 58150 local links/assets; 0 issue(s).",
     "sender": {
-      "id": "console-payload-sender-3860a0014162",
-      "name": "console-payload-sender-2.0.0-3860a0014162.zip",
-      "version": "2.0.0+3860a0014162",
-      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-3860a0014162.zip",
-      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-3860a0014162.zip",
-      "bytes": 101847522,
-      "sha256": "a2ec5e44332601827d66a576ca9f5a56f3d801ce0e2f7758d700c38a42c960e6",
-      "snapshot": "3860a001416283f7a0e435cc1fdb424be6ef00794096bdd38e2f30fd88f17fbf",
+      "id": "console-payload-sender-67197d90ab00",
+      "name": "console-payload-sender-2.0.0-67197d90ab00.zip",
+      "version": "2.0.0+67197d90ab00",
+      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-67197d90ab00.zip",
+      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-67197d90ab00.zip",
+      "bytes": 101851359,
+      "sha256": "92ef665afae8a2c92e67de0c3c3ed08aed22084c69262eacb70684a7b89e5fd5",
+      "snapshot": "67197d90ab0028612fb4d5fc536bb0b9c285d380be178a7991846ffd6c39026a",
       "files": 1495,
       "payloads": 125,
       "actions": 185,
-      "file": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-2.0.0-3860a0014162.zip",
-      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\2.0.0+3860a0014162\\console-payload-sender-2.0.0-3860a0014162.zip"
+      "file": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-2.0.0-67197d90ab00.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\2.0.0+67197d90ab00\\console-payload-sender-2.0.0-67197d90ab00.zip"
     },
     "receivers": {
-      "preparedAt": "2026-11-03T18:17:21.129Z",
-      "version": "2026.11.02.18",
+      "preparedAt": "2026-11-03T18:32:50.384Z",
+      "version": "2026.11.02.19",
       "jobsPath": "docs/qa/host-menu-companion-jobs.json",
-      "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.17.json",
+      "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.18.json",
       "activated": true,
       "records": [
         {
           "platform": "ps4",
-          "version": "2026.11.02.18",
+          "version": "2026.11.02.19",
           "path": "console/ps4/whatsite-ps4.html",
-          "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.18-5f5be5198ed8/whatsite-ps4.html",
-          "bytes": 733290,
-          "sha256": "5f5be5198ed8b7016d60ca42076efd06f802be01999e64cb0025e92d78d06119",
-          "previousSha256": "1bcb67270ddab4b6ac7b45bf892319e6c3acd6da1e44a1a72c05df1529bda558",
-          "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-1bcb67270dda/whatsite-ps4.html",
+          "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.19-2f717510aa96/whatsite-ps4.html",
+          "bytes": 733616,
+          "sha256": "2f717510aa96e3cfd8ec26f038da7abd9adc2e0a4fd7410c3d2cee23ca244818",
+          "previousSha256": "5f5be5198ed8b7016d60ca42076efd06f802be01999e64cb0025e92d78d06119",
+          "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-5f5be5198ed8/whatsite-ps4.html",
           "previousItems": 512,
           "items": 512,
-          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.18\\whatsite-ps4.html"
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.19\\whatsite-ps4.html"
         },
         {
           "platform": "ps5",
-          "version": "2026.11.02.18",
+          "version": "2026.11.02.19",
           "path": "console/ps5/whatsite-ps5.html",
-          "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.18-ec87c87f5816/whatsite-ps5.html",
-          "bytes": 569922,
-          "sha256": "ec87c87f58169bf1f05857bc6e2cddf024ad5c13469e04f890057aa2f0aa7848",
-          "previousSha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
-          "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-59f5b1b38142/whatsite-ps5.html",
+          "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.19-f83f4a82ba25/whatsite-ps5.html",
+          "bytes": 570248,
+          "sha256": "f83f4a82ba25fa21ed290126583bb844de8ae88d41cc32b5d5e53d29cd3e6e28",
+          "previousSha256": "ec87c87f58169bf1f05857bc6e2cddf024ad5c13469e04f890057aa2f0aa7848",
+          "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-ec87c87f5816/whatsite-ps5.html",
           "previousItems": 350,
           "items": 350,
-          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.18\\whatsite-ps5.html"
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.19\\whatsite-ps5.html"
         }
       ],
-      "verifiedAt": "2026-11-03T18:17:57.731Z"
+      "verifiedAt": "2026-11-03T18:33:41.127Z"
     },
     "archiveIndex": "docs/qa/repo-publish-archive-index.txt",
     "preservation": "Every previous download, sender and native helper snapshot retained. Download/runtime/helper bytes and bundled original SVG bytes excluded from Git newline normalization. No payload executed; hardware remains untested.",
-    "completedKaroVersion": "51430066e375"
+    "completedKaroVersion": "51430066e375",
+    "publishedCommit": "30701ca3b83b954e50dfd47c8e2996a9dc350e9d",
+    "commitVerification": {
+      "revision": "30701ca3b83b954e50dfd47c8e2996a9dc350e9d",
+      "build": {
+        "revision": "30701ca3b83b954e50dfd47c8e2996a9dc350e9d",
+        "bytes": 943474470,
+        "budget": 943718400,
+        "hostedFiles": 10185,
+        "repositoryFiles": 1966,
+        "protectedNativeFiles": 125
+      },
+      "links": "{\"bytes\":944890185,\"pages\":545,\"links\":52120,\"offloadedFiles\":1966,\"issues\":0}",
+      "status": 0
+    },
+    "followUpScope": "Included completed KARO 51430066e375 and host/helper closeout. Later WWB-HOST migration, original-payload repair work and new firmware UI work remain local for their owning chats.",
+    "pagesRun": "https://github.com/Speedy-away/whatsite/actions/runs/41701192546"
   },
   "karoBuilds20261103": {
     "checkedAt": "2026-11-03T18:45:08.054Z",
