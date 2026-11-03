@@ -11,11 +11,13 @@ function apply(file,html){
   if(!images[original])try{const url=new URL(src,'https://whatwhatboy.com/'+file);if(url.origin==='https://whatwhatboy.com')original=reverse.get(url.pathname)||decodeURIComponent(url.pathname);}catch{}
   const item=images[original];if(!item)return tag;
   const variants=[...new Map(item.variants.map(v=>[v.width,v])).values()],last=variants.at(-1),srcset=variants.map(v=>v.path+' '+v.width+'w').join(', ');
+  const declaredWidth=Number(tag.match(/\bwidth=["'](\d+)["']/)?.[1]);
+  const sizes=declaredWidth>0&&declaredWidth<=160?declaredWidth+'px':'(max-width: 600px) calc(100vw - 48px), (max-width: 1000px) 45vw, 480px';
   let output=tag.replace(/\s(?:srcset|sizes|data-original-image)=["'][^"']*["']/g,'').replace(/\bsrc=["'][^"']*["']/,'src="'+last.path+'"');
   if(!/\bwidth=/.test(output))output=output.replace(/>$/,' width="'+last.width+'">');
   if(!/\bheight=/.test(output))output=output.replace(/>$/,' height="'+last.height+'">');
   if(!/\bdecoding=/.test(output))output=output.replace(/>$/,' decoding="async">');
-  return output.replace(/>$/,' srcset="'+srcset+'" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1000px) 45vw, 480px" data-original-image="'+original+'">');
+  return output.replace(/>$/,' srcset="'+srcset+'" sizes="'+sizes+'" data-original-image="'+original+'">');
  });
 }
 module.exports={apply};

@@ -46,6 +46,27 @@ for source in sorted(additional):
     variants = []
     with Image.open(path) as original:
         if getattr(original, 'is_animated', False):
+            if source == '/assets/images/steamdeck/steamgriddb.png':
+                frames, durations = [], []
+                for frame_index in range(original.n_frames):
+                    original.seek(frame_index)
+                    frames.append(original.convert('RGBA').copy())
+                    durations.append(original.info.get('duration', 100))
+                for width in (88, 176):
+                    small = [frame.resize((width, round(frame.height * width / frame.width)), Image.Resampling.LANCZOS) for frame in frames]
+                    sheet = Image.new('RGB', (width * 8, small[0].height * ((len(small) + 7) // 8)))
+                    for index, frame in enumerate(small):
+                        sheet.paste(frame.convert('RGB'), ((index % 8) * width, (index // 8) * small[0].height))
+                    palette = sheet.quantize(colors=192, method=Image.Quantize.MEDIANCUT)
+                    small = [frame.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE) for frame in small]
+                    for frame in small:
+                        frame.info.clear()
+                    target = output / f'steamgriddb-animated-{width}.png'
+                    small[0].save(target, 'PNG', save_all=True, append_images=small[1:], duration=durations, loop=0, optimize=True)
+                    data = target.read_bytes()
+                    variants.append({'path': '/' + target.relative_to(root).as_posix(), 'width': small[0].width,
+                                     'height': small[0].height, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+                images[source] = {'originalBytes': path.stat().st_size, 'animated': True, 'variants': variants}
             continue
         original = ImageOps.exif_transpose(original)
         alpha = 'A' in original.getbands() or 'transparency' in original.info

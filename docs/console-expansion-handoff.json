@@ -10102,6 +10102,42 @@
     "browserLimit": "Local browser use remains disabled in Work settings; user said they would enable it, but the browser tool still reports disabled.",
     "published": false
   },
+  "sameOriginConsoleLoads20261103": {
+    "updatedAt": "2026-11-03T23:28:53.997Z",
+    "hostRepository": "Speedy-away/WWB-HOST",
+    "publishedCommit": "2986784ed180731a0f6ca9e8bb01f274d9c973a6",
+    "workflow": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41738510347",
+    "status": "Published and live verified",
+    "request": "All active PS4 and PS5 console Load routes remain hosted on WWB-HOST. Show firmware grid only in Choose firmware; Payloads, Game mods and Tools show directly.",
+    "firmwareChoices": {
+      "ps4": 34,
+      "ps5": 62
+    },
+    "tests": {
+      "passed": 112,
+      "failed": 0
+    },
+    "preservation": "Reused preserved pinned ready builds; no new native downloads, no old versions removed. Shared host checkout was not reset or resolved. Work is committed in isolated worktree tmp/ps5-original-hosts.",
+    "qa": "docs/qa/site-hosted-loads.json in WWB-HOST",
+    "hardwareTested": false,
+    "live": {
+      "status": "passed",
+      "verifiedAt": "2026-11-03T23:28:43.540Z",
+      "commit": "2986784ed180731a0f6ca9e8bb01f274d9c973a6",
+      "platforms": {
+        "ps4": {
+          "firmwareChoices": 34,
+          "localRoutes": 5
+        },
+        "ps5": {
+          "firmwareChoices": 62,
+          "localRoutes": 2
+        }
+      },
+      "firmwareGridOnly": "Choose firmware",
+      "nativeCodeExecuted": false
+    }
+  },
   "pcPortsDownloadRepairs20261103": {
     "request": "Fix Sunshine and find working downloads for the other three Ports entries; add more keywords and tags",
     "updated": "2026-11-03",
