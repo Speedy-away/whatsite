@@ -1,0 +1,30 @@
+{
+  "reviewed": "2026-11-03",
+  "scope": "PC Game Mods expansion",
+  "gamesAdded": ["Minecraft Java", "Stardew Valley", "Terraria", "Hollow Knight", "Celeste", "Elden Ring"],
+  "listingsAdded": 19,
+  "pinnedReadyFiles": 12,
+  "authorResourcesOrDirectories": 7,
+  "archivedBytes": 263847356,
+  "archiveScope": "pc-game-mods-expansion",
+  "archiveVerification": "All 12 release files passed size, ZIP CRC integrity and SHA-256 verification; published upstream SHA-256/SHA-512 values matched where available. Archive intake verified copies and retained version/source/size/hash records.",
+  "websiteDelivery": "Original version-specific GitHub release assets and Modrinth CDN URLs; no new binary mirrors in the repository.",
+  "compatibility": [
+    "Minecraft Java 1.21.1, Java 21, Fabric Loader 0.16.0+; Iris dependency pinned to the listed Sodium version. Upstream Iris filename beta.1 remains visible.",
+    "SMAPI 4.5.2 requires desktop Stardew Valley 1.6.14+; no Android compatibility claim.",
+    "Terraria author resources do not silently substitute old tModLoader 0.11.8.3 GitHub binaries for current builds.",
+    "Hollow Knight API v77 Windows targets game 1.5.78.11833. Randomizer dependency names remain explicit.",
+    "Everest stable-1.6662.0 is the full manual-install build; Windows Store edition excluded per the author.",
+    "Seamless Co-op v2.0.1 remains pinned to Elden Ring 1.17."
+  ],
+  "preservation": "All five existing Game Mods collections, existing download URLs, prior social-preview assets and every archive version remain preserved.",
+  "checks": {
+    "focusedCatalogueTests": "5 passed",
+    "metadata": "All seven affected pages validated",
+    "socialPreviews": "Six new game cards plus refreshed Game Mods hub card; scoped generation idempotent",
+    "productionBuild": "Pending committed-source validation",
+    "deployment": "Pending publication",
+    "browserRendering": "Not verified; browser automation disabled in Work settings",
+    "downloadExecution": "No downloaded executable, installer, JAR or payload was executed"
+  }
+}

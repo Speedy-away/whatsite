@@ -97,7 +97,7 @@ function writeNew(file, bytes) {
   fs.writeFileSync(file, bytes);
   return true;
 }
-async function build({check = false} = {}) {
+async function build({check = false, files = null} = {}) {
   const sharp = bundled('sharp');
   const metadataEngine = require('./page-search-metadata.cjs');
   const imageDir = path.join(root, 'assets/images/social/pages'), sourceDir = path.join(root, 'assets/images/social/sources');
@@ -106,10 +106,19 @@ async function build({check = false} = {}) {
   const overrideDocument = fs.existsSync(overridePath) ? JSON.parse(fs.readFileSync(overridePath, 'utf8')) : {};
   const overrides = overrideDocument.images || overrideDocument;
   if (!overrides || typeof overrides !== 'object' || Array.isArray(overrides)) throw Error('Invalid social image overrides: expected an images object');
-  const manifest = {version: rendererVersion, width, height, renderer: 'Original SVG rendered by bundled sharp; Arial Bold measured with @napi-rs/canvas.', images: {}};
+  const manifestPath = path.join(root, 'docs/seo/social-images.json');
+  const selected = files ? new Set(files) : null;
+  const publicFiles = pages();
+  if (selected) {
+    if (!selected.size) throw Error('Select at least one public page');
+    const known = new Set(publicFiles.map(relativePath));
+    for (const file of selected) if (!known.has(file)) throw Error('Unknown public page: ' + file);
+  }
+  const manifest = {version: rendererVersion, width, height, renderer: 'Original SVG rendered by bundled sharp; Arial Bold measured with @napi-rs/canvas.', images: selected && fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')).images : {}};
   let created = 0;
-  for (const file of pages()) {
+  for (const file of publicFiles) {
     const page = relativePath(file), html = fs.readFileSync(file, 'utf8');
+    if (selected && !selected.has(page)) continue;
     const record = metadataEngine.transform(page, html).metadata;
     if (!record) continue;
     const title = displayTitle(record.title), svg = renderCard({page, title});
@@ -147,7 +156,11 @@ async function build({check = false} = {}) {
     }
   }
   for (const page of Object.keys(overrides)) if (!Object.hasOwn(manifest.images, page)) throw Error('Social image override references a page outside public scope: ' + page);
-  const manifestPath = path.join(root, 'docs/seo/social-images.json');
+  // A scoped update keeps the same manifest ordering as a full regeneration.
+  if (selected) {
+    const order = [...publicFiles.map(relativePath), ...Object.keys(manifest.images)];
+    manifest.images = Object.fromEntries([...new Set(order)].filter(page => Object.hasOwn(manifest.images, page)).map(page => [page, manifest.images[page]]));
+  }
   const json = JSON.stringify(manifest, null, 2) + '\n';
   if (check) {
     if (!fs.existsSync(manifestPath) || fs.readFileSync(manifestPath, 'utf8') !== json) throw Error('Social preview manifest needs refresh');

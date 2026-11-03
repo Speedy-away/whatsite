@@ -1,0 +1,519 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-03",
+  "games": [
+    {
+      "id": "minecraft",
+      "title": "Minecraft Java",
+      "image": "/assets/images/minecraft1.png",
+      "description": "Fabric performance mods, shaders and shared APIs, pinned to Minecraft Java 1.21.1.",
+      "requirements": "These files target Minecraft Java 1.21.1 with Java 21 and Fabric Loader 0.16.0 or later, not Bedrock. Include Fabric API for Sodium’s required API modules. Iris below requires the exact Sodium build listed alongside it; its upstream filename is labelled beta.1.",
+      "setup": "Install Fabric for Minecraft Java 1.21.1, then place the chosen JARs in that profile’s mods folder. Iris needs Sodium; shader packs are separate downloads.",
+      "help": "https://fabricmc.net/use/installer/"
+    },
+    {
+      "id": "stardew-valley",
+      "title": "Stardew Valley",
+      "steam": 413150,
+      "description": "SMAPI, automation, shared storage and content-pack tools for your farm.",
+      "requirements": "SMAPI 4.5.2 requires Stardew Valley 1.6.14 or later on Windows, Linux, macOS or Steam Deck. This desktop installer is not an Android SMAPI build. Author pages below have their own version and dependency requirements.",
+      "setup": "Install the matching SMAPI build using its included instructions. Open each author page and choose a mod file matching your game and SMAPI version; extract its mod folder into Mods.",
+      "help": "https://smapi.io/",
+      "image": "/assets/images/pc-mod-expansion/stardew-valley.jpg",
+      "imageSource": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1786554168",
+        "page": "https://store.steampowered.com/app/413150/",
+        "sha256": "6f173dfb051a350dffdc1668b466b30b884ee2d080725c995fdbc89bcfd4565b",
+        "bytes": 58853
+      }
+    },
+    {
+      "id": "terraria",
+      "title": "Terraria",
+      "steam": 105600,
+      "description": "tModLoader and author resources for crafting searches and boss progression.",
+      "requirements": "Use mods built for your tModLoader branch. The old Recipe Browser and Boss Checklist GitHub binaries target tModLoader 0.11.8.3, so they are not presented as current downloads here.",
+      "setup": "Install the pinned tModLoader build using its release instructions or use the supported Steam installation. Find compatible Recipe Browser and Boss Checklist versions through its Mod Browser or the author pages.",
+      "help": "https://github.com/tModLoader/tModLoader/wiki/tModLoader-guide-for-players",
+      "image": "/assets/images/pc-mod-expansion/terraria.jpg",
+      "imageSource": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1792530636",
+        "page": "https://store.steampowered.com/app/105600/",
+        "sha256": "866a45d030cf6af1fe06fd311a57cb472cb12411b2cdfe78391fd8b8ce4ab4bd",
+        "bytes": 62177
+      }
+    },
+    {
+      "id": "hollow-knight",
+      "title": "Hollow Knight",
+      "steam": 367520,
+      "description": "Randomizer 4, the Modding API and Lumafly for managing your mod setup.",
+      "requirements": "Modding API v77 targets Hollow Knight 1.5.78.11833 on Windows. Randomizer 4 requires Hollow Knight 1.5+, MenuChanger, ItemChanger, RandomizerCore and RandomizerCore.Json; it does not support game 1.4.3.2 or earlier.",
+      "setup": "Lumafly can manage compatible mods and dependencies. For manual installation, follow the API and Randomizer documentation and install every required dependency before enabling Randomizer.",
+      "help": "https://github.com/homothetyhk/RandomizerMod#dependencies",
+      "image": "/assets/images/pc-mod-expansion/hollow-knight.jpg",
+      "imageSource": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/3c3489495136b26b34f8a9543c7f5645b99d388c/header.jpg?t=1776125684",
+        "page": "https://store.steampowered.com/app/367520/",
+        "sha256": "8886d642286de5411b216173b078d9d95f97cb5343e8d8042970ca4ba40d5d7d",
+        "bytes": 57481
+      }
+    },
+    {
+      "id": "celeste",
+      "title": "Celeste",
+      "steam": 504230,
+      "description": "Everest and community map resources for new climbs and campaigns.",
+      "requirements": "Everest supports desktop Steam, itch.io and Epic versions of Celeste on Windows, Linux and macOS. The Windows Store edition is not supported. Map packs can require additional helper mods and minimum Everest builds.",
+      "setup": "For manual setup, copy the contents of main.zip’s main folder beside Celeste.exe and follow the official MiniInstaller instructions for your OS. Map ZIPs go in Mods without extracting them; install their dependencies too.",
+      "help": "https://everestapi.github.io/#installing-everest",
+      "image": "/assets/images/pc-mod-expansion/celeste.jpg",
+      "imageSource": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1714089525",
+        "page": "https://store.steampowered.com/app/504230/",
+        "sha256": "a0469dca08cbdc24fc10bd27ce6fe95350cde85b8441e37175356e6021365a64",
+        "bytes": 44591
+      }
+    },
+    {
+      "id": "elden-ring",
+      "title": "Elden Ring",
+      "steam": 1245620,
+      "description": "Seamless Co-op with an explicit game-version pin and author setup notes.",
+      "requirements": "Seamless Co-op v2.0.1 is the author’s update for Elden Ring game version 1.17. Match this pinned build to that game version; do not substitute a newer game update without checking the author’s release notes.",
+      "setup": "Read the setup instructions included in the release and the author’s documentation. All players need a compatible mod and game version; configure and launch the mod as the author describes.",
+      "help": "https://github.com/yuiamoroll/EldenRingSeamlessCoopRelease",
+      "image": "/assets/images/pc-mod-expansion/elden-ring.jpg",
+      "imageSource": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+        "page": "https://store.steampowered.com/app/1245620/",
+        "sha256": "d46402528e357350bdb31a00be57a7896238515e6dc8afc0669aa54573307c02",
+        "bytes": 32689
+      }
+    }
+  ],
+  "entries": [
+    {
+      "game": "minecraft",
+      "id": "sodium",
+      "title": "Sodium",
+      "kind": "Performance mod",
+      "description": "Improves rendering performance.",
+      "compatibility": "Minecraft Java 1.21.1 · Fabric",
+      "source": "https://modrinth.com/mod/sodium/version/SMxNOGZ6",
+      "version": "mc1.21.1-0.8.13-fabric",
+      "dependencies": [],
+      "download": {
+        "name": "sodium-fabric-0.8.13+mc1.21.1.jar",
+        "version": "mc1.21.1-0.8.13-fabric",
+        "bytes": 1574609,
+        "sha256": "3d43c14985a4deb19c654aad3393b454cf57e1ebcbba86c4ae6a98dfc60eca2d",
+        "sourceUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-sodium",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Minecraft Java",
+          "Mods"
+        ],
+        "upstreamSha512": "8614a374593698069a80ac74de8cd9c28f3928d16819a0e0d6320b538e823f7e54e8be06d5ea5a9c268beb0e02073209d1f831a02dede851588b972367680853"
+      }
+    },
+    {
+      "game": "minecraft",
+      "id": "iris",
+      "title": "Iris",
+      "kind": "Shader loader",
+      "description": "Adds shader-pack support; shader packs are downloaded separately.",
+      "compatibility": "Minecraft Java 1.21.1 · Fabric · requires Sodium mc1.21.1-0.8.13-fabric; filename contains beta.1.",
+      "source": "https://modrinth.com/mod/iris/version/bAo1Qhte",
+      "version": "1.8.14-beta.1+1.21.1-fabric",
+      "dependencies": [
+        {
+          "version_id": "SMxNOGZ6",
+          "project_id": "AANobbMI",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "download": {
+        "name": "iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
+        "version": "1.8.14-beta.1+1.21.1-fabric",
+        "bytes": 2791343,
+        "sha256": "0ceb694040b4628bf3fa02286cfe5f0db833195669ab07f8caa4001359763eff",
+        "sourceUrl": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-iris",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Minecraft Java",
+          "Mods"
+        ],
+        "upstreamSha512": "a7fbb629793c52f0be8b049f787cb598879239b1ad8e1de62e103c8b9efff140e3232b93ef1f14e505d262897d8cf9505b1126396429ad4056bff969c8674e52"
+      }
+    },
+    {
+      "game": "minecraft",
+      "id": "lithium",
+      "title": "Lithium",
+      "kind": "Performance mod",
+      "description": "Optimizes game logic without replacing the game’s mechanics.",
+      "compatibility": "Minecraft Java 1.21.1 · Fabric",
+      "source": "https://modrinth.com/mod/lithium/version/N08Z8wog",
+      "version": "mc1.21.1-0.15.4-fabric",
+      "dependencies": [],
+      "download": {
+        "name": "lithium-fabric-0.15.4+mc1.21.1.jar",
+        "version": "mc1.21.1-0.15.4-fabric",
+        "bytes": 797454,
+        "sha256": "92329d98c57f5a22091a0adb509fdb1d60113a5602c708b799b13134bad13baa",
+        "sourceUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/N08Z8wog/lithium-fabric-0.15.4%2Bmc1.21.1.jar",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-lithium",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Minecraft Java",
+          "Mods"
+        ],
+        "upstreamSha512": "182064b00e6315e2255b857eaab8eb759e6b042ebd4cc8b855ff0d93f875a5a7188fac49f878d7b29d4ef7e6b6341190ad7f6f6f39f4a6d2c62003468b08e4c6"
+      }
+    },
+    {
+      "game": "minecraft",
+      "id": "ferrite-core",
+      "title": "FerriteCore",
+      "kind": "Performance mod",
+      "description": "Reduces memory use.",
+      "compatibility": "Minecraft Java 1.21.1 · Fabric",
+      "source": "https://modrinth.com/mod/ferrite-core/version/sOzRw3CG",
+      "version": "7.0.3-fabric",
+      "dependencies": [],
+      "download": {
+        "name": "ferritecore-7.0.3-fabric.jar",
+        "version": "7.0.3-fabric",
+        "bytes": 123450,
+        "sha256": "98c3ab1d5aab8f14b5d082d3f1a467727fd335f02d124555c94339761c4c18f2",
+        "sourceUrl": "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-ferrite-core",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Minecraft Java",
+          "Mods"
+        ],
+        "upstreamSha512": "3ad31620fac4ff44327dc7dedbe162b2d978f3f246dc16255a6e400ce9592a0d326fe36a626f3c1bf30a11f813093cbb4dcc107af039cff724d0cdf648541fdf"
+      }
+    },
+    {
+      "game": "minecraft",
+      "id": "fabric-api",
+      "title": "Fabric API",
+      "kind": "Shared API",
+      "description": "Common APIs required by many Fabric mods.",
+      "compatibility": "Minecraft Java 1.21.1 · Fabric",
+      "source": "https://modrinth.com/mod/fabric-api/version/Mys3P7lK",
+      "version": "0.116.17+1.21.1",
+      "dependencies": [],
+      "download": {
+        "name": "fabric-api-0.116.17+1.21.1.jar",
+        "version": "0.116.17+1.21.1",
+        "bytes": 2452735,
+        "sha256": "79ac44b40780acbd884b34c50be1e39af682847e5f5cb3b1fddeeaa768dce800",
+        "sourceUrl": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Mys3P7lK/fabric-api-0.116.17%2B1.21.1.jar",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-fabric-api",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Minecraft Java",
+          "Mods"
+        ],
+        "upstreamSha512": "98c478217da19181f0e4df3ea6c2da6bdbda271c7544a4aea048513a49b444f1ff5b71dc0df6303017c48e8ff69b7bb6af6179bdf0d0e09ab3c1ee08411857a8"
+      }
+    },
+    {
+      "game": "stardew-valley",
+      "id": "smapi",
+      "title": "SMAPI",
+      "kind": "Mod loader",
+      "description": "Desktop installer for the Stardew Valley mod loader.",
+      "compatibility": "Stardew Valley 1.6.14+ · desktop",
+      "source": "https://github.com/Pathoschild/SMAPI/releases/tag/4.5.2",
+      "version": "4.5.2",
+      "download": {
+        "name": "SMAPI-4.5.2-installer.zip",
+        "version": "4.5.2",
+        "bytes": 41889142,
+        "sha256": "dd01ddca7b566bfe0d3b3d2d03833496abc56c53da976241f2ab443f5484acc4",
+        "sourceUrl": "https://github.com/Pathoschild/SMAPI/releases/download/4.5.2/SMAPI-4.5.2-installer.zip",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-smapi",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Stardew Valley",
+          "Mods"
+        ],
+        "upstreamSha256": "dd01ddca7b566bfe0d3b3d2d03833496abc56c53da976241f2ab443f5484acc4"
+      }
+    },
+    {
+      "game": "stardew-valley",
+      "id": "automate",
+      "title": "Automate",
+      "kind": "Author resource",
+      "description": "Connect machines and chests to automate processing.",
+      "compatibility": "Choose a desktop build matching your Stardew Valley and SMAPI versions on the author page.",
+      "source": "https://www.nexusmods.com/stardewvalley/mods/1063",
+      "documentation": "https://github.com/Pathoschild/StardewMods/tree/develop/Automate",
+      "availability": "Author page; no direct release file archived. Downloads may require a Nexus account."
+    },
+    {
+      "game": "stardew-valley",
+      "id": "chests-anywhere",
+      "title": "Chests Anywhere",
+      "kind": "Author resource",
+      "description": "Access and organize your chests from elsewhere in the game.",
+      "compatibility": "Choose a desktop build matching your Stardew Valley and SMAPI versions on the author page.",
+      "source": "https://www.nexusmods.com/stardewvalley/mods/518",
+      "documentation": "https://github.com/Pathoschild/StardewMods/tree/develop/ChestsAnywhere",
+      "availability": "Author page; no direct release file archived. Downloads may require a Nexus account."
+    },
+    {
+      "game": "stardew-valley",
+      "id": "content-patcher",
+      "title": "Content Patcher",
+      "kind": "Author resource",
+      "description": "Load content packs without replacing the original XNB files.",
+      "compatibility": "Choose a desktop build matching your Stardew Valley and SMAPI versions on the author page.",
+      "source": "https://www.nexusmods.com/stardewvalley/mods/1915",
+      "documentation": "https://github.com/Pathoschild/StardewMods/tree/develop/ContentPatcher",
+      "availability": "Author page; no direct release file archived. Downloads may require a Nexus account."
+    },
+    {
+      "game": "stardew-valley",
+      "id": "data-layers",
+      "title": "Data Layers",
+      "kind": "Author resource",
+      "description": "View coverage and other useful world-data overlays.",
+      "compatibility": "Choose a desktop build matching your Stardew Valley and SMAPI versions on the author page.",
+      "source": "https://www.nexusmods.com/stardewvalley/mods/1691",
+      "documentation": "https://github.com/Pathoschild/StardewMods/tree/develop/DataLayers",
+      "availability": "Author page; no direct release file archived. Downloads may require a Nexus account."
+    },
+    {
+      "game": "terraria",
+      "id": "tmodloader",
+      "title": "tModLoader",
+      "kind": "Mod loader",
+      "description": "Pinned stable loader release; not the ExampleMod source/sample package.",
+      "compatibility": "Stable release v2026.09.3.1 · match mods to this loader branch",
+      "source": "https://github.com/tModLoader/tModLoader/releases/tag/v2026.09.3.1",
+      "version": "v2026.09.3.1",
+      "download": {
+        "name": "tModLoader.zip",
+        "version": "v2026.09.3.1",
+        "bytes": 61159864,
+        "sha256": "5aaed81b245044286c3ade200f8bac9162ef932ee8ff11a31e05da49a186c07b",
+        "sourceUrl": "https://github.com/tModLoader/tModLoader/releases/download/v2026.09.3.1/tModLoader.zip",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-tmodloader",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Terraria",
+          "Mods"
+        ],
+        "upstreamSha256": "5aaed81b245044286c3ade200f8bac9162ef932ee8ff11a31e05da49a186c07b"
+      }
+    },
+    {
+      "game": "terraria",
+      "id": "recipe-browser",
+      "title": "Recipe Browser",
+      "kind": "Author resource",
+      "description": "Search recipes and ingredient uses while playing.",
+      "compatibility": "Use the author’s compatible Mod Browser / Workshop release. Legacy GitHub binaries are not linked as current builds.",
+      "source": "https://github.com/JavidPack/RecipeBrowser",
+      "availability": "Author documentation; no compatible current standalone binary archived."
+    },
+    {
+      "game": "terraria",
+      "id": "boss-checklist",
+      "title": "Boss Checklist",
+      "kind": "Author resource",
+      "description": "Track boss progression and completed encounters.",
+      "compatibility": "Use the author’s compatible Mod Browser / Workshop release. Legacy GitHub binaries are not linked as current builds.",
+      "source": "https://github.com/JavidPack/BossChecklist",
+      "availability": "Author documentation; no compatible current standalone binary archived."
+    },
+    {
+      "game": "hollow-knight",
+      "id": "randomizer",
+      "title": "Randomizer 4",
+      "kind": "Gameplay mod",
+      "description": "Randomize items and transitions for a different route through Hallownest.",
+      "compatibility": "Hollow Knight 1.5+ · requires Modding API, MenuChanger, ItemChanger, RandomizerCore and RandomizerCore.Json",
+      "source": "https://github.com/homothetyhk/RandomizerMod/releases/tag/v4.1.6%2B987",
+      "version": "v4.1.6+987",
+      "download": {
+        "name": "RandomizerMod.zip",
+        "version": "v4.1.6+987",
+        "bytes": 322302,
+        "sha256": "3e57698b63a4379ff8068a7467d401c9365071a94121dc7d06ede8b472261059",
+        "sourceUrl": "https://github.com/homothetyhk/RandomizerMod/releases/download/v4.1.6%2B987/RandomizerMod.zip",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-randomizer",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Hollow Knight",
+          "Mods"
+        ],
+        "upstreamSha256": "3e57698b63a4379ff8068a7467d401c9365071a94121dc7d06ede8b472261059"
+      }
+    },
+    {
+      "game": "hollow-knight",
+      "id": "modding-api",
+      "title": "Hollow Knight Modding API",
+      "kind": "Mod loader",
+      "description": "Windows API build for the exact game patch shown here.",
+      "compatibility": "Windows · Hollow Knight 1.5.78.11833 · API v77",
+      "source": "https://github.com/hk-modding/api/releases/tag/1.5.78.11833-77",
+      "version": "1.5.78.11833-77",
+      "download": {
+        "name": "moddingapi.v77.windows.zip",
+        "version": "1.5.78.11833-77",
+        "bytes": 7024251,
+        "sha256": "bc9f0db3d0916b05cd5a2420bb602fb1b239ce3ff6c289fd84bffb682fb8f1d6",
+        "sourceUrl": "https://github.com/hk-modding/api/releases/download/1.5.78.11833-77/moddingapi.v77.windows.zip",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-modding-api",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Hollow Knight",
+          "Mods"
+        ],
+        "upstreamSha256": "bc9f0db3d0916b05cd5a2420bb602fb1b239ce3ff6c289fd84bffb682fb8f1d6"
+      }
+    },
+    {
+      "game": "hollow-knight",
+      "id": "lumafly",
+      "title": "Lumafly",
+      "kind": "Mod manager",
+      "description": "Windows helper for installing and managing Hollow Knight mods.",
+      "compatibility": "Windows desktop helper · follow Lumafly’s supported-game instructions",
+      "source": "https://github.com/TheMulhima/Lumafly/releases/tag/v3.3.0.0",
+      "version": "v3.3.0.0",
+      "download": {
+        "name": "Lumafly-Windows.zip",
+        "version": "v3.3.0.0",
+        "bytes": 65998197,
+        "sha256": "d422bf910657ebdb7e001a3ba6b96822b86bf6ebdc9b60856c3e04a1d8adfb6c",
+        "sourceUrl": "https://github.com/TheMulhima/Lumafly/releases/download/v3.3.0.0/Lumafly-Windows.zip",
+        "archiveRole": [
+          "Helpers",
+          "Windows"
+        ],
+        "itemId": "pc-game-mods-expansion-lumafly",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Hollow Knight",
+          "Mods"
+        ]
+      }
+    },
+    {
+      "game": "celeste",
+      "id": "everest",
+      "title": "Everest",
+      "kind": "Mod loader",
+      "description": "Full manual-install build of the stable Celeste mod loader.",
+      "compatibility": "Desktop Steam / itch.io / Epic · Windows, Linux, macOS · excludes Windows Store",
+      "source": "https://github.com/EverestAPI/Everest/releases/tag/stable-1.6662.0",
+      "version": "stable-1.6662.0",
+      "download": {
+        "name": "main.zip",
+        "version": "stable-1.6662.0",
+        "bytes": 71635660,
+        "sha256": "365256741ed8982e3512fb8afa233feee1a18900073776b7edf2cd0b1872c1ba",
+        "sourceUrl": "https://github.com/EverestAPI/Everest/releases/download/stable-1.6662.0/main.zip",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-everest",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Celeste",
+          "Mods"
+        ],
+        "upstreamSha256": "365256741ed8982e3512fb8afa233feee1a18900073776b7edf2cd0b1872c1ba"
+      }
+    },
+    {
+      "game": "celeste",
+      "id": "maps",
+      "title": "Celeste maps & campaigns",
+      "kind": "Mod directory",
+      "description": "Browse community maps, texture packs and gameplay mods through the catalogue linked by the Everest team.",
+      "compatibility": "Each map lists its own Everest and helper requirements.",
+      "source": "https://gamebanana.com/games/6460",
+      "availability": "Community catalogue; individual map downloads are not archived as a bundle."
+    },
+    {
+      "game": "elden-ring",
+      "id": "seamless-coop",
+      "title": "Seamless Co-op",
+      "kind": "Gameplay mod",
+      "description": "Cooperative play using the author’s separate mod setup.",
+      "compatibility": "Elden Ring 1.17 · Seamless Co-op v2.0.1",
+      "source": "https://github.com/yuiamoroll/EldenRingSeamlessCoopRelease/releases/tag/v2.0.1",
+      "version": "v2.0.1",
+      "download": {
+        "name": "Seamless.Co-op.v2.0.1.zip",
+        "version": "v2.0.1",
+        "bytes": 8078349,
+        "sha256": "848ae27e1c77217590dac401c012a17d9b4f05b9b9a24aa33af54d8d7b8ba2a1",
+        "sourceUrl": "https://github.com/yuiamoroll/EldenRingSeamlessCoopRelease/releases/download/v2.0.1/Seamless.Co-op.v2.0.1.zip",
+        "archiveRole": [
+          "Builds"
+        ],
+        "itemId": "pc-game-mods-expansion-seamless-coop",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Elden Ring",
+          "Mods"
+        ],
+        "upstreamSha256": "848ae27e1c77217590dac401c012a17d9b4f05b9b9a24aa33af54d8d7b8ba2a1"
+      }
+    }
+  ]
+}
