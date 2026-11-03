@@ -9559,7 +9559,7 @@
     "published": false
   },
   "apkRepairsPhoneToolsPVZ20261103": {
-    "status": "Validated; ready for publication",
+    "status": "Published and live verified",
     "report": "docs/qa/apk-repairs-phone-tools-pvz.json",
     "repairedEntries": 8,
     "recoveredAPKs": 4,
@@ -9576,7 +9576,10 @@
     "toolCardsFixed": true,
     "pvzMovedToGameMods": true,
     "olderDownloadsAndURLsPreserved": true,
-    "tests": "49 affected tests + 3 targeted renderer checks pass.",
-    "archiveRefreshed": true
+    "tests": "49 affected tests and all 9 committed-source artwork checks pass; 58 checks total.",
+    "archiveRefreshed": true,
+    "commit": "5282e92f4a8887418fac838395cdb83db7ada36e",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41729655428",
+    "liveVerified": true
   }
 }

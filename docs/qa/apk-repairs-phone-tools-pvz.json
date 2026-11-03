@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "status": "Validated; ready for publication",
+  "status": "Published and live verified",
   "requests": [
     "Repair eight unavailable APK app entries and expand Phone apps for iOS, Android and Harmony.",
     "Fix oversized Injectors & Tools artwork and uneven home tool cards.",
@@ -42,11 +42,23 @@
   },
   "validation": {
     "affectedTests": 49,
-    "toolRendererTests": 3,
+    "toolRendererTests": 9,
     "failedAffectedTests": 0,
     "archive": "Four APKs rehashed from F: and binary manifests checked as data; index refreshed.",
     "sharedAudit": "481 pages and 56521 links/assets checked; two unrelated untracked host pages are absent from the main-site sitemap.",
-    "sharedCategoryChecks": "Two existing failures concern concurrent responsive-image optimizations and their metadata; focused layout cases pass."
+    "sharedCategoryChecks": "All nine category/artwork checks pass against the exact committed source snapshot. Concurrent working-tree image changes were excluded without altering them.",
+    "totalPassingChecks": 58
   },
-  "browserRendered": false
+  "browserRendered": false,
+  "commit": "5282e92f4a8887418fac838395cdb83db7ada36e",
+  "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41729655428",
+  "productionBuild": {
+    "revision": "5282e92f4a8887418fac838395cdb83db7ada36e",
+    "bytes": 942891872,
+    "budget": 943718400,
+    "hostedFiles": 8102,
+    "repositoryFiles": 1224,
+    "protectedNativeFiles": 125
+  },
+  "liveVerification": "Four home tool cards use compact icon slots and the 48px artwork rule is served; PvZ Fusion appears in Game Mods and is removed from the download index; all 31 new Phone app cards and the repaired install/download actions are present."
 }
