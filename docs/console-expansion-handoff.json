@@ -8940,5 +8940,10 @@
     "privateVerification": "docs/qa/source-link-cleanup.json",
     "preservation": "All working/F: files, older versions, original Git history and legacy helper dependencies retained.",
     "status": "Validated completed cleanup; ready to push"
+  },
+  "downloadSizeCleanup20261103": {
+    "report": "docs/qa/download-size-cleanup.json",
+    "status": "Both repo current trees cleaned; all local copies preserved. Host UI changes owned by WWB-HOST.",
+    "originalCommit": "fe5386a1738bc9d3d40a9c77c81313fb2d9a4d11"
   }
 }
