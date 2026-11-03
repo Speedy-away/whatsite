@@ -9363,7 +9363,7 @@
   },
   "apkTVPhone20261103": {
     "page": "pages/apk.html",
-    "status": "Validated; ready for publication",
+    "status": "Published and live verified",
     "source": "https://letscrackon.org/downloads/",
     "tabs": [
       "TV",
@@ -9380,6 +9380,8 @@
     "archiveBytes": 297454058,
     "report": "docs/qa/apk-tv-phone-update.json",
     "tests": "45 affected checks passed; shared full suite has six unrelated concurrent-host failures.",
-    "originalInstructionRemoved": true
+    "originalInstructionRemoved": true,
+    "commit": "8b8ea137a442240a092164a69a0883ecd7804e6c",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41725254784"
   }
 }
