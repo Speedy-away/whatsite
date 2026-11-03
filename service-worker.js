@@ -62,6 +62,9 @@ self.addEventListener('fetch', (event) => {
     if (event.request.method !== 'GET') return;
     const url = new URL(event.request.url);
     if (url.origin !== self.location.origin) return;
+    // Self-contained console runtimes own their appcache and failure handling.
+    // Never mix their modules or replace an unavailable run page with site HTML.
+    if (url.pathname.startsWith('/hosts/runtime/')) return;
     // Local QA pages must show their real network result, never a cached site.
     if (url.pathname.startsWith('/.playwright-cli/') || url.pathname.startsWith('/.playwright/')) return;
 

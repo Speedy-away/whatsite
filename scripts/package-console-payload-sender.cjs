@@ -11,10 +11,10 @@ const {destinationForFile} = require('./download-archive-layout.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const BACKUP = path.resolve('F:/whatsite-backup-downloads-etc');
 const OUT = 'downloads/helpers/console-payload-sender';
-const VERSION = '1.9.1';
+const VERSION = '2.0.0';
 const PREFIX = 'whatwhatboy-console-payload-sender/';
 const ORIGIN = 'https://whatwhatboy.com';
-const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json', 'docs/host-repository-menu-actions.json', 'docs/host-original-tool-actions.json', 'docs/host-legacy-firmware-menu-actions.json', 'docs/host-next-utility-actions.json'];
+const CATALOGUES = ['docs/host-actions-ps4.json', 'docs/host-actions-ps5.json', 'docs/host-game-actions.json', 'docs/host-modern-plugin-actions.json', 'docs/host-current-cheat-actions.json', 'docs/host-legacy-menu-actions.json', 'docs/host-extra-game-actions.json', 'docs/host-native-payload-actions.json', 'docs/host-web-utility-actions.json', 'docs/host-repository-menu-actions.json', 'docs/host-original-tool-actions.json', 'docs/host-legacy-firmware-menu-actions.json', 'docs/host-next-utility-actions.json', 'docs/host-gta505-continuation-actions.json', 'docs/host-arabicguy-672-actions.json'];
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const slash = value => value.split(path.sep).join('/');
 function contained(base, target) {
@@ -89,7 +89,11 @@ function collectFiles(root = ROOT) {
     files.set(relative, data);
     if (scan && /\.(?:html|css|js)$/.test(relative)) queue.push(relative);
   };
-  for (const relative of ['hosts/index.html', 'hosts/ps4/index.html', 'hosts/ps5/index.html', 'hosts/ps4/payload-manager/index.html', 'hosts/ps5/payload-manager/index.html', ...['ps4','ps5'].flatMap(platform=>['files','gta5','rdr2','other-games'].map(scope=>'hosts/'+platform+'/'+scope+'/index.html')), 'style.css', 'script.js', 'assets/host-console-client.js', 'assets/host-dashboard.js', 'scripts/console-payload-bridge.cjs', 'docs/host-console-services.md', 'docs/host-payload-sender.md', 'docs/host-payload-management.md', 'docs/host-native-workspace.md', 'docs/host-dashboard.md', 'docs/host-extra-game-trainers.md', 'docs/host-original-tool-loading.md', 'docs/host-next-batch.md', 'docs/screenshots/host-next-batch-oysters.png', ...CATALOGUES]) add(relative, null, true);
+  for (const relative of ['hosts/index.html', 'hosts/ps4/index.html', 'hosts/ps5/index.html', 'hosts/ps4/payload-manager/index.html', 'hosts/ps5/payload-manager/index.html', ...['ps4','ps5'].flatMap(platform=>['files','gta5','rdr2','other-games','lua','packages',...(platform==='ps4'?['cheats']:[])].map(scope=>'hosts/'+platform+'/'+scope+'/index.html')), 'style.css', 'script.js', 'assets/host-console-client.js', 'assets/host-dashboard.js', 'scripts/console-payload-bridge.cjs', 'docs/host-console-services.md', 'docs/host-payload-sender.md', 'docs/host-payload-management.md', 'docs/host-native-workspace.md', 'docs/host-dashboard.md', 'docs/host-extra-game-trainers.md', 'docs/host-original-tool-loading.md', 'docs/host-next-batch.md', 'docs/host-gta505-continuation.md', 'docs/host-reviews/ps4/6.72/arabicguy/README.md', 'docs/screenshots/host-next-batch-oysters.png', ...CATALOGUES]) add(relative, null, true);
+  function addToolDirectory(relative){for(const entry of fs.readdirSync(path.join(root,relative),{withFileTypes:true})){const name=relative+'/'+entry.name;if(entry.isDirectory())addToolDirectory(name);else if(/\.(?:html|json|js|txt|md)$/.test(name)){if(!staticPath('/'+name))throw Error('Tooloutsideallowlist '+name);add(name,null,true);}}}
+  for(const tool of ['ps4-trainer','esp-flasher'])addToolDirectory('hosts/tools/'+tool);
+  const installers=JSON.parse(readPublic('docs/host-package-installer-build.json',root)).artifacts||[];
+  for(const item of installers){const relative=item.downloadURL.slice(1),data=readPublic(relative,root);if(!staticPath('/'+relative)||sha(data)!==item.sha256||data.length!==item.bytes)throw Error('Installerartifactchanged');add(relative,data);}
   const workspaces = JSON.parse(readPublic('docs/host-native-workspace-build.json',root)).artifacts || [];
   for (const workspace of workspaces) {
     const relative = workspace.downloadURL.slice(1);
@@ -128,10 +132,10 @@ function collectFiles(root = ROOT) {
 // Files have a fixed DOS timestamp; immutable snapshots are named by content.
 const crcTable = Array.from({length:256}, (_, n) => { for (let k = 0; k < 8; k++) n = n & 1 ? 0xedb88320 ^ n >>> 1 : n >>> 1; return n >>> 0; });
 function crc32(bytes) { let crc = 0xffffffff; for (const b of bytes) crc = crcTable[(crc ^ b) & 255] ^ crc >>> 8; return (crc ^ 0xffffffff) >>> 0; }
-function zip(files) {
+function zip(files, {prefix = PREFIX} = {}) {
   const chunks = [], central = []; let offset = 0;
   for (const [relative, data] of [...files].sort(([a],[b]) => a.localeCompare(b))) {
-    const name = Buffer.from(PREFIX + relative), packed = zlib.deflateRawSync(data, {level:9}), crc = crc32(data);
+    const name = Buffer.from(prefix + relative), packed = zlib.deflateRawSync(data, {level:9}), crc = crc32(data);
     const h = Buffer.alloc(30); h.writeUInt32LE(0x04034b50); h.writeUInt16LE(20,4); h.writeUInt16LE(0x0800,6); h.writeUInt16LE(8,8); h.writeUInt16LE(33,12); h.writeUInt32LE(crc,14); h.writeUInt32LE(packed.length,18); h.writeUInt32LE(data.length,22); h.writeUInt16LE(name.length,26);
     chunks.push(h,name,packed);
     const c = Buffer.alloc(46); c.writeUInt32LE(0x02014b50); c.writeUInt16LE(20,4); c.writeUInt16LE(20,6); c.writeUInt16LE(0x0800,8); c.writeUInt16LE(8,10); c.writeUInt16LE(33,14); c.writeUInt32LE(crc,16); c.writeUInt32LE(packed.length,20); c.writeUInt32LE(data.length,24); c.writeUInt16LE(name.length,28); c.writeUInt32LE(offset,42);

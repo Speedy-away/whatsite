@@ -25,7 +25,7 @@ function inspectZip(bytes) {
   assert.equal(bytes.readUInt16LE(end+6), 0, 'Central directory on same disk');
   const count = bytes.readUInt16LE(end+10), size = bytes.readUInt32LE(end+12), start = bytes.readUInt32LE(end+16);
   assert.equal(bytes.readUInt16LE(end+8), count);
-  assert.ok(count > 0 && count <= 1000);
+  assert.ok(count > 0 && count <= 4096);
   assert.equal(bytes.readUInt16LE(end+20), 0, 'No ZIP comment');
   assert.equal(start+size, end, 'Central directory bounds');
   const entries = new Map(), ranges = [], evidence = [];

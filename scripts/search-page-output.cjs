@@ -8,7 +8,7 @@ function finish(file, html) {
   const navigable = require('./console-game-directories.cjs').apply(relative, html);
   const themed = require('./add-themes-sidebar.cjs').applyThemes(navigable, relative);
   const illustrated = require('./category-card-art.cjs').apply(relative, themed);
-  const searchable = tags.apply(relative, illustrated);
+  const searchable = tags.apply(relative, require('./host-page-shell.cjs').apply(relative,illustrated));
   return metadata.transform(relative, searchable).html;
 }
 module.exports = {finish};

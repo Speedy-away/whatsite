@@ -1,0 +1,19 @@
+✔ construction and public previews never issue a native request (2.2784ms)
+✔ only bounded absolute data PKGs and exact whole-byte expectations are accepted (0.2295ms)
+✔ verification reads one exact parent, rejects absent, partial and mismatched files without installation (0.9194ms)
+✔ installation requires the actual unchanged verification object and explicit consent (0.291ms)
+✔ metadata changes are caught in the fresh read before any install write or guard (0.3977ms)
+✔ one explicit exact install request keeps a durable guard and never claims completed installation (0.6214ms)
+✔ unknown and negative native results are retained across reloads without automatic retry (0.524ms)
+✔ overlapping operations and a guard written by another window cannot send a second install (2.37ms)
+✔ a storage failure stops dispatch and the older-WebKit fallback retains native guards (24.703ms)
+✔ rendering native and public pages only preselects a path, leaving install disabled and making no requests (3.1851ms)
+✔ prepared immutable helpers contain exact authored bytes, native guards and archive jobs without external scripts (143.6721ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 250.7086

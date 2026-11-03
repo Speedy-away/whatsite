@@ -23,6 +23,19 @@ for(const m of builds.runtimes){
   if(/\.(?:html|css)$/.test(file.path))for(const hit of text.matchAll(/url\(\s*['"]?([^)'"\s]+)['"]?\s*\)/g))exists(base,file.path,hit[1]);
  }
  const guard=fs.readFileSync(path.join(base,'guard.js'),'utf8');
+ if(m.id==='ps4-psfree-700-960'){
+  // This newer authored guard uses a disabled Start control and one-use ticket,
+  // rather than the original two runtimes' window flag. Evaluate only this guard.
+  for(const fw of [...m.firmwares,'5.05','6.72','10.00','13.52','14.00']){
+   const supported=m.firmwares.includes(fw),button={disabled:true},status={};let ticket=null;
+   const context={navigator:{userAgent:'Mozilla/5.0 (PlayStation 4/'+fw+')'},document:{getElementById:id=>id==='runtime-start'?button:status},sessionStorage:{setItem:(key,value)=>{ticket=JSON.parse(value);}},location:{href:''},Date};
+   vm.runInNewContext(guard,context);if(button.disabled===supported||context.location.href||ticket)throw Error('New runtime entry guard failed');
+   if(supported){button.onclick();if(context.location.href!=='web/index.html'||ticket.firmware!==fw)throw Error('New runtime ticket failed');}
+  }
+  if(!m.license.includes('AGPL')||m.listener.port!==9020||m.listener.format!=='bin')throw Error('Unexpected runtime contract');
+  for(const patch of m.compiler.records){const b=fs.readFileSync(path.join(base,'web/kpatch',patch.name+'.bin'));if(b.length!==patch.bytes||sha(b)!==patch.sha256)throw Error('Compiled patch changed');}
+  continue;
+ }
  for(const [ua,expected]of [['Mozilla/5.0 Windows NT 10.0',false],['Mozilla/5.0 (PlayStation 4/9.00)',m.console==='ps4'],['Mozilla/5.0 (PlayStation; PlayStation 5/4.03)',m.console==='ps5'],['Mozilla/5.0 (PlayStation; PlayStation 5/5.00)',false]]){const c={navigator:{userAgent:ua},window:{},document:{getElementById:()=>null}};vm.runInNewContext(guard,c);if(c.window.whatsiteRuntimeAllowed!==expected)throw Error('Console guard failed');}
  if(m.console==='ps4'){
   const lapse=fs.readFileSync(path.join(base,'web/lapse.js'),'utf8');if(lapse.includes('PayloadLoader("goldhen.bin")'))throw Error('Unexpected automatic GoldHEN');

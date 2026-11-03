@@ -7,6 +7,18 @@ const slug=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/
 const regions=[{id:'CUSA00411',name:'Europe',short:'EU'},{id:'CUSA00419',name:'USA',short:'USA'}];
 const docsUrl='https://github.com/GoldHEN/GoldHEN_Plugins_Repository#quick-start';
 function preserve(local,bytes){const target=path.join(root,'.'+local);if(fs.existsSync(target)){if(sha(fs.readFileSync(target))!==sha(bytes))throw Error('Refusing to replace different bytes: '+local);}else{fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes,{flag:'wx'});}}
+function preserveInputExamples(){
+ const file='docs/qa/gta5-plugin-config-inputs.json',report=read(file);
+ const inputFiles=report.inputFiles.map(input=>{
+  const bytes=Buffer.from(input.text,'utf8');
+  if(bytes.length!==input.bytes||sha(bytes)!==input.sha256)throw Error('Captured input example differs from its original identity: '+input.file);
+  const snapshot='scripts/tests/fixtures/gta5-plugin-inputs/'+input.sha256+'/plugins.ini';
+  preserve('/'+snapshot,bytes);
+  return {...input,snapshot};
+ });
+ fs.writeFileSync(path.join(root,file),JSON.stringify({...report,inputFiles,notes:'Exact original input captures retained with their original paths, byte counts and SHA-256. Tests and regeneration use immutable repository snapshots; live Desktop/Downloads files are not required or modified. Blank directory-only lines are omitted from generated one-menu configurations.'},null,2)+'\n');
+ return inputFiles;
+}
 function ini({resource,gameVersion,module,region,confirmed,dependencies=[]}){
  if(!/^[^/\\\r\n]+\.(?:prx|sprx)$/i.test(module)||!regions.some(r=>r.id===region.id))throw Error('Invalid plugin configuration');
  const clean=s=>String(s).replace(/[\r\n]/g,' ');
@@ -20,6 +32,7 @@ function known(resource,gameVersion,region){
  return (resource.titleIds||[]).includes(region.id);
 }
 function prepare(){
+ preserveInputExamples();
  const data=read('docs/ps4-ps5-game-resources.json'),manifest=read('downloads/ps4-ps5/manifest.json').files;
  const reviewed=read('docs/qa/ps4-gta5-menu-archive-review.json'),legacy=read('downloads/ps4/GTA5/manifest.json').files;
  const resources=data.resources.filter(x=>x.gameIds.includes('gta5')&&['menu','client'].includes(x.category)),downloads=[],jobs=[],excluded=[];
@@ -77,8 +90,6 @@ function prepare(){
  const dir=path.join(root,'downloads/ps4/GTA5/plugin-configs');fs.mkdirSync(dir,{recursive:true});
  fs.writeFileSync(path.join(dir,'manifest.json'),JSON.stringify(output,null,2)+'\n');
  fs.writeFileSync(path.join(root,'docs/qa/gta5-plugin-config-jobs.json'),JSON.stringify({scope,revision,files:jobs},null,2)+'\n');
- const inputFiles=['C:/Users/whatw/Desktop/plugins.ini','C:/Users/whatw/Downloads/plugins.ini'].map(file=>{const b=fs.readFileSync(file);return {file,bytes:b.length,sha256:sha(b),text:b.toString('utf8')};});
- fs.writeFileSync(path.join(root,'docs/qa/gta5-plugin-config-inputs.json'),JSON.stringify({inputFiles,notes:'Original user files were read and retained unchanged. Blank directory-only lines are omitted from the generated one-menu configurations.',documentation:docsUrl},null,2)+'\n');
  return {downloads:downloads.length,configurations:jobs.filter(x=>!x.isOriginal).length,pluginResources:new Set(downloads.map(x=>x.resourceId)).size};
 }
 async function archive(){
@@ -102,4 +113,4 @@ async function archive(){
  await intake.mergeInventory({inventory:intake.inventoryPath(scope),verifyFiles:false});return {files:records.length};
 }
 if(require.main===module)(async()=>{const flag=process.argv[2];console.log(JSON.stringify(flag==='--prepare'?prepare():flag==='--archive'?await archive():(()=>{throw Error('Use --prepare or --archive');})(),null,2));})().catch(e=>{console.error(e);process.exitCode=1;});
-module.exports={prepare,archive,ini,known,regions};
+module.exports={prepare,archive,ini,known,regions,preserveInputExamples};

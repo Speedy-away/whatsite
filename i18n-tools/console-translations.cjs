@@ -851,4 +851,8 @@ for (const [specific, generic] of [
 ]) row(specific,LANGS.map(code=>table[generic][code].replace('{name}',table['Other games'][code])).join('|'));
 
 for(const key of ['{name} · {platform} mods','Other games · {platform} mods','{platform} file manager',"whatwhatboy's · {platform} payload manager"])table[key+' | whatwhatboy']=Object.fromEntries(LANGS.map(code=>[code,table[key][code]+' | whatwhatboy']));
+// Authored webhost controls and local tools use the same 20-language dictionaries.
+Object.assign(table, require('./host-reset-translations.cjs'));
+Object.assign(table, require('./host-tool-translations.cjs'));
+Object.assign(table, require('./host-trainer-errors-translations.cjs'));
 module.exports = table;

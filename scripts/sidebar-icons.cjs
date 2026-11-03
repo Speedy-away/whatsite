@@ -28,7 +28,7 @@ const labels = {
   'Game Mods': 'puzzle', 'Game Downloads': 'download', 'APK Downloads': 'android',
   Console: 'console', Retro: 'retro', 'Console Mods': 'puzzle', Mods: 'puzzle', 'Mods / Mod Menus': 'puzzle',
   Emulators: 'emulator', 'Source Codes': 'code', 'Game Source Codes': 'gameSource',
-  Tools: 'toolbox', Community: 'community', Profile: 'profile', 'Help & FAQ': 'help', Language: 'language'
+  Tools: 'toolbox', Community: 'community', Profile: 'profile', 'Help & FAQ': 'help', Language: 'language', 'PS4 / PS5 webhost': 'console'
 };
 const esc = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 function icon(id, caret = false) {
@@ -36,6 +36,7 @@ function icon(id, caret = false) {
   return `<svg class="nav-icon${caret ? ' nav-caret' : ''}" data-nav-icon="${id}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${caret ? 12 : 20}" height="${caret ? 12 : 20}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${shapes[id]}</svg>`;
 }
 function decorateNavLinks(fragment, options = {}) {
+  fragment = require('./host-webhost-navigation.cjs').integrateWebhostLink(fragment);
   fragment = require('./add-themes-sidebar.cjs').integrateThemes(fragment, options.file);
   fragment = require('./integrate-console-platforms.cjs').integrateConsoleList(fragment, options);
   fragment = require('./source-code-navigation.cjs').integrateSourceCodes(fragment, options.file);

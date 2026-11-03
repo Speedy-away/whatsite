@@ -1,0 +1,54 @@
+✔ firmware matching preserves exact compatibility and never fills whitelist gaps (0.7061ms)
+✔ console firmware detection uses the matching console browser identifier (0.6499ms)
+✔ newer GTA plugin builds are the default and old BIN menus remain explicitly accessible (0.2655ms)
+✔ Run requires a selected firmware even when upstream provides no complete matrix (0.0724ms)
+✔ game filters retain the exact game update and separate PS4 from PS5 data (4.9485ms)
+✔ unsafe launch URLs and blank values do not become actionable links (0.1843ms)
+✔ console saving uses each platform native receiver and rejects arbitrary destinations (1.331ms)
+✔ a desktop cannot mistake its own loopback service for a console (0.3333ms)
+✔ native manager screens use documented PS5 hash routes, never a fabricated web API (0.2518ms)
+✔ dedicated manager pages keep console scopes and native autoload controls separate (1.9025ms)
+✔ generated dashboards have selectors, separate catalogues and immutable ready-file links (12.5177ms)
+✔ merged Download keeps device and console destinations distinct without silent fallback (2.0481ms)
+✔ Load capabilities never present plugin installation or an external host as a direct transfer (0.4156ms)
+✔ every downloadable host action has an exact native file ID without broadening duplicate-byte compatibility (29.3821ms)
+✖ generated chooser has separate categories and button choices instead of a version select (3.8117ms)
+✔ three game scopes partition every real mod variant exactly once without losing pins or shared tools (29.2778ms)
+✔ dedicated file and payload pages contain connection and native workspace controls without the hub or menu library (63.7134ms)
+✔ native workspace links keep exact platform origins and reject unreviewed views or address injection (0.8219ms)
+✔ sender serves only named game/workspace routes and exact immutable authored helper names (0.4229ms)
+✔ new eighteen web utilities are direct verified PS4 BIN actions and retain exact firmware exclusions (33.2083ms)
+✔ declining an effect confirmation prevents both the optional copy and console transmission (4.5676ms)
+✔ menu images retain accessible descriptions without visible image-role badges in cards and popups (0.6365ms)
+✔ dedicated workspace boot tolerates absent library and modal controls without sending anything (1.7626ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 22
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 201.5875
+
+✖ failing tests:
+
+test at scripts\tests\host-menu-actions.test.cjs:49:1
+✖ generated chooser has separate categories and button choices instead of a version select (3.8117ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(html.includes('data-host-category="mods" aria-pressed="true"'))
+  
+      at TestContext.<anonymous> (C:\Users\whatw\Documents\GitHub\whatsite\scripts\tests\host-menu-actions.test.cjs:53:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

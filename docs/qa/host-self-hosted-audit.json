@@ -1,0 +1,1491 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-03T17:30:02.431Z",
+  "status": "Baseline inventory plus completed image-policy checks; local integrations remain in progress in parent task.",
+  "method": "Read authored modules, source/catalogue metadata and native artifact files as data; static URL candidates only. No browser/network console requests, downloaded-code evaluation, payload execution or archive mutations.",
+  "imagePolicy": {
+    "test": "scripts/tests/host-self-hosted.test.cjs",
+    "passed": 3,
+    "nonModImages": false,
+    "gameFamilyAndPopupImagesRetained": true,
+    "sourceMetadataRetained": true
+  },
+  "baseline": {
+    "actions": 185,
+    "normalizedActions": 188,
+    "remoteLaunches": [
+      {
+        "id": "gamerhack-g2all",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://gamerhack.github.io/g2all/",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-g2allpro",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/g2allpro/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-900-light",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/900L/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-900-manual",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/900NM/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-900-new",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/900New/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-900-goldhen",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/G900/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-505",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/505/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-672",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/672/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-672-auto",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/672A/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-702",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/702/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-755",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/755/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-g2all",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/g2all/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-binloader-505",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/binloader/505/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-binloader-672",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/binloader/672/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-binloader-702",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/binloader/702/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-binloader-755",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://karo218.ir/binloader/755/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-900-fontface",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.kmeps4.site/900/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-900-psfree-auto",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.kmeps4.site/psfree900a/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-900-psfree-manual",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.kmeps4.site/psfree900m/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-900-phive",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.kmeps4.site/psphive/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-psfree-lapse",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.kmeps4.site/psfree/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-prb",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.kmeps4.site/prb/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "wrozen-phwoar",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.wrozen.com/phwoar/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "wrozen-xproject",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.wrozen.com/xproject/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "wrozen-phive",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.wrozen.com/phive/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "wrozen-phivev3",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.wrozen.com/phivev3/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "wrozen-leeful900",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.wrozen.com/leeful900/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "wrozen-phivevfree",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://www.wrozen.com/phivevfree/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-webpayloads",
+        "platform": "ps4",
+        "category": "payloads",
+        "url": "https://www.kmeps4.site/webpayloads/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-copy-cheats",
+        "platform": "ps4",
+        "category": "tools",
+        "url": "https://karo218.ir/copych/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "karo-offline-trainer",
+        "platform": "ps4",
+        "category": "tools",
+        "url": "https://karo218.ir/PS4TRAINER/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-offline-trainer",
+        "platform": "ps4",
+        "category": "tools",
+        "url": "https://www.kmeps4.site/trainer/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "kme-esp-flasher",
+        "platform": "ps4",
+        "category": "tools",
+        "url": "https://www.kmeps4.site/EspWeb/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "wrozen-linux-baikal",
+        "platform": "ps4",
+        "category": "tools",
+        "url": "https://www.wrozen.com/baikal/index.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "ps4-lua-game-loader",
+        "platform": "ps4",
+        "category": "tools",
+        "url": "https://github.com/n0llptr/remote_lua_loader/blob/main/SETUP.md",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "raw13g-1302-1352",
+        "platform": "ps4",
+        "category": "loaders",
+        "url": "https://raw13g.github.io/",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "ps5-relapse",
+        "platform": "ps5",
+        "category": "loaders",
+        "url": "https://soniciso1.github.io/relapse/relapse.html",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "ps5-umtx2",
+        "platform": "ps5",
+        "category": "loaders",
+        "url": "https://umtx2.pages.dev/",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "ps5-lua-game-loader",
+        "platform": "ps5",
+        "category": "tools",
+        "url": "https://github.com/n0llptr/remote_lua_loader/blob/main/SETUP.md",
+        "primaryMenuLoadAvailable": null
+      },
+      {
+        "id": "ps4-arabicguy-gta5-100",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-lamance-gta5-138",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-north-beta-rdr2-129",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-bq138-thief",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-bq146",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-bq147",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde132",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde133",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde146",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde147",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-kameleon-expulsion138",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://www.kmeps4.site/",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-karo-expulsion135",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://karo218.ir/900New/index.html",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-karo-menubase127",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://karo218.ir/900New/index.html",
+        "primaryMenuLoadAvailable": false
+      },
+      {
+        "id": "ps4-legacy-karo-lts127",
+        "platform": "ps4",
+        "category": "mods",
+        "url": "https://karo218.ir/900New/index.html",
+        "primaryMenuLoadAvailable": false
+      }
+    ],
+    "readyActions": 143,
+    "archiveRecordSizeChecks": [
+      {
+        "id": "ps4-ftpsrv-elf",
+        "sha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
+        "bytes": 146720,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-klogsrv-elf",
+        "sha256": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
+        "bytes": 91208,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-goldhen-2-3-900-binloader",
+        "sha256": "c9b8f33d28258af9e80465da591868dada25a1454f30f63882668d5e0dcff9c2",
+        "bytes": 282648,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-payload-manager",
+        "sha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4",
+        "bytes": 2795992,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-websrv",
+        "sha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
+        "bytes": 1597864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-ftpsrv",
+        "sha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938",
+        "bytes": 191864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-klogsrv",
+        "sha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
+        "bytes": 136016,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-elfldr",
+        "sha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
+        "bytes": 394568,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-arabicguy-gta5-100",
+        "sha256": "0de5452601ca151ad3bb6c86c2fb97e2a0bac89b5ff77cf238638dd19bddd372",
+        "bytes": 1055408,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-arabicguy-gta5-127",
+        "sha256": "be9ee0dacc71e94d607584770c08cdc39c1319427e9fd83424fc19dd15782aa6",
+        "bytes": 1059520,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-arabicguy-gta5-132",
+        "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+        "bytes": 1059520,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-arabicguy-gta5-133",
+        "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+        "bytes": 1059520,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-beefqueef-gta5-133",
+        "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6",
+        "bytes": 1073700,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-lamance-gta5-138",
+        "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+        "bytes": 1128208,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-oysters-rdr2-100",
+        "sha256": "199b68feb24e1d202589b7ccb7b9ee28fdf3cab5546b41bd1263939ecedb7add",
+        "bytes": 1190392,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-oysters-rdr2-113",
+        "sha256": "089f1c3144dffb35589a7fb36a05dd54f642c1eeef3873daa3b7f4ce965af06d",
+        "bytes": 1190392,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-oysters-rdr2-119",
+        "sha256": "370b5bd2b4bace7a2dd51bd28f9b080b1e5221f3bd9e6dec64c5e72baa183254",
+        "bytes": 1190392,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-oysters-rdr2-124",
+        "sha256": "58e2317dd8fe1cc44ce834a174ac06e566b34eb3709ce39e088f63aa51a5944a",
+        "bytes": 1190392,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-oysters-rdr2-129",
+        "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+        "bytes": 1260864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-north-beta-rdr2-129",
+        "sha256": "5ab2f81616290b3f8c9705aaf127e6db8c006ff29da87c023c9c1ccdfb4db4eb",
+        "bytes": 1219048,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-rdr2-60fps-v2-0",
+        "sha256": "646ecb71e80415ab9d9c651539451d38ee0052a5997f7ef7504a42932c7f8261",
+        "bytes": 154304,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-modern-gta5-157-expulsion-v7-0",
+        "sha256": "823656c96305e4373ec132d8f5dfd9fa2ec24a38d941dfb980f92616d84cb268",
+        "bytes": 1775984,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-modern-gta5-157-beach",
+        "sha256": "d622d3d867244e5854e4773b9e03631d24918e26b634c4b74c8678b01ed06b8a",
+        "bytes": 1230442,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-modern-gta5-cyprus-1-57",
+        "sha256": "7731188ec03a0bee74fe0946ffcf6eefed466c13a9b68c4a29df3263bd724157",
+        "bytes": 724286,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-modern-gta5-explosive-1-57",
+        "sha256": "4986ff700f57d72a61516abd0daa6cf1ba557a63b4fe39c1eecc38064c1f2e6a",
+        "bytes": 1037599,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-modern-gta5-157-expulsion-v5-0",
+        "sha256": "dfdc05bbe590bced0ca53059c017cb05c18054695a90053b7c91da269fb57dc3",
+        "bytes": 909328,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-modern-gta5-157-lts",
+        "sha256": "4816609641ec21b9a7f151abe19eb234dee69c959d0da8a7a7c1718185704a96",
+        "bytes": 2187104,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-modern-gta5-157-serendipity",
+        "sha256": "e4f085add22697b0bb3ef8f0028f1fe373ff4737ae3a1d7b2bb1a24afff18f35",
+        "bytes": 1956688,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-modern-gta5-157-velora-1-5",
+        "sha256": "e6e79ad27a87f2b7ea9d519167e5d9c48d096bdf1a17b2abf1de70c057bd2653",
+        "bytes": 1718289,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-modern-gta5-156-beach",
+        "sha256": "8ca31fa51e3401f678a9514fe4a93976d5a52c685fe07a3d2772a1523c90c073",
+        "bytes": 1320839,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-modern-gta5-cyprus-1-56",
+        "sha256": "9bedea869077bb6016171a79823b4b98703631d904b1cb52173dd97349fbb1c0",
+        "bytes": 724382,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-modern-gta5-156-velora",
+        "sha256": "d50d1582a67d978e347692b3bce951262dd061a649e75410595ae36f9bec3823",
+        "bytes": 882981,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "gta5-ps5-04263-01010002",
+        "sha256": "25c47d2bb864fd065d2645e7bc13a45b12f046c18786f310d9c217d111181910",
+        "bytes": 3928,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "gta5-ps5-04264-01005000",
+        "sha256": "7460de5fa64318bc7544eeb7ae1b1ef06f148df78f2668df93d838a9c57cb695",
+        "bytes": 6380,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "gta5-ps5-04264-01010002",
+        "sha256": "fc5de09d593fc308c10f308ea94832116b7aa6ee5c68d9eabe74f951a3db46c6",
+        "bytes": 3928,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "miles-morales-ps5-01417-01013002",
+        "sha256": "4eb328cdf5d89aaacf3bd24341947cd249e3396fd437961dd353a00fd0cd21e2",
+        "bytes": 7658,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "miles-morales-ps5-01460-01015001",
+        "sha256": "e51ef057511671d4175e6d4f3b6fa25228d7e2d6f9597daecaf43909ec21be7a",
+        "bytes": 3717,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "sonic-frontiers-ps5-03831-01041000",
+        "sha256": "58863f93e82adcc14cc853451742c28d61ff477b45fe9b5c670496728100a0c5",
+        "bytes": 6024,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-nazky-bq134",
+        "sha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5",
+        "bytes": 1063880,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-nazky-bq138",
+        "sha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e",
+        "bytes": 1073836,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-nazky-wilde132",
+        "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+        "bytes": 1074320,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-nazky-wilde138",
+        "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+        "bytes": 592864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-kameleon-bq138-thief",
+        "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6",
+        "bytes": 1073700,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-legacy-kameleon-bq146",
+        "sha256": "fbae10e4d9c0ac09e745755959a1c71a444a1c16bb5da2c51361e56fef1e2c00",
+        "bytes": 480804,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-kameleon-bq147",
+        "sha256": "a8a6789cd8873224dde81f4924cfd12f9d87f430e552d50064e9aabd23171ead",
+        "bytes": 480740,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde132",
+        "sha256": "007f3418bee3f2fe27034262a84a148a9f8c0577e517133286a19c4bf18d55eb",
+        "bytes": 1080016,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde133",
+        "sha256": "d9ebf4cdf4150ac59865d7744713dfc99037ad75b08ea7551c5bcb3e992972a9",
+        "bytes": 1080016,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde146",
+        "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+        "bytes": 2610904,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-kameleon-wilde147",
+        "sha256": "beac207b97220a57f22c9a7ec9064e6fdb2ef98ec33852b2ee1c5f7a1717010f",
+        "bytes": 2819184,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-kameleon-expulsion138",
+        "sha256": "c3df5201df8b17add26ea58794d3ec95d39a021586f1e4e2517b48fa540754e1",
+        "bytes": 1055312,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-karo-expulsion135",
+        "sha256": "ef21be6c36b117ba8b362c1488ae887a0daece3d7a791bc2ac3130a6d27ff1af",
+        "bytes": 1055264,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-karo-menubase127",
+        "sha256": "822d4897941512e8cbf29806e1985848aceb5c54bb3f9149d52df07e8b0e8545",
+        "bytes": 1054984,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-karo-lts127",
+        "sha256": "ead0911d40795a0503305dd739680bb3ebd3f51e9b65a9878101c4bd9c2aaf10",
+        "bytes": 1054664,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa03290-01-03",
+        "sha256": "d4fbc6fd4ec69f08eebead146971b695a5a1bf0b34ca822341354a48d10b7d68",
+        "bytes": 1853,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa03291-01-03",
+        "sha256": "6ababd420bc867d6dbfc36f445c4cf3b483d70249418a112955e4e53ea1cef08",
+        "bytes": 1409,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa03991-01-00",
+        "sha256": "6d78917053ab62a993853282af124f71bc7825cb7eb276b8805c803f32230348",
+        "bytes": 2149,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa03991-01-35",
+        "sha256": "ddbaeb4f66deadedef7dada84cfedda1c90471ae99b5874d3e0b19fa43289475",
+        "bytes": 4863,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa12555-01-00",
+        "sha256": "310516df7924cd96e7281a791ecaf94c375050bf3deb71682f57e36a19ebf505",
+        "bytes": 2350,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa12555-01-01",
+        "sha256": "0b8f6ecadab15f31c62174d4da876fad4a70bd0fdb7e3f3d458f50bd31d197a8",
+        "bytes": 2349,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa12555-01-30",
+        "sha256": "f227052ba1366a106aae4e9d08d3bf66049c9419742208ef7b72bb50ccca122e",
+        "bytes": 3202,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa27043-01-10",
+        "sha256": "e4d0c327f98eda803d87beffe85331bb626d25f51256b8985b80038b12e6276f",
+        "bytes": 3319,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa02962-01-37",
+        "sha256": "1a7c447379733adce25d8c5376cf2b42f1d9225593e1daf801e5b509ae221bb5",
+        "bytes": 19908,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa05574-04-06",
+        "sha256": "729d5e405004a3f860c866f132fa5f04a8a8c3d70244ecd1e828f4a14eed02a2",
+        "bytes": 13640,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa07410-01-35",
+        "sha256": "5c8187ee948e54b9812e43afb1f67e0668f50908947c23243ee90c87877b5b82",
+        "bytes": 2230,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa34386-06-02",
+        "sha256": "4514eaef84d36605c9b53dfc0929b406c588652e687c6e830be2f65af5c60ee4",
+        "bytes": 2894,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa10211-01-54",
+        "sha256": "ead367bb8651c82b145ec8e03f7b542bdbf0e23142aefde9efe21d8457324e5a",
+        "bytes": 10243,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa09171-01-05",
+        "sha256": "c4d14bf36ce01e00619e5491d7c354e1f1a3b1561c9b1bf52b8a9340361a2aef",
+        "bytes": 2236,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa14168-01-05",
+        "sha256": "435d5660b04f571447073f3c4166fd5d9d2594b4ac4547850defe80744746fbc",
+        "bytes": 1019,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa33388-01-04",
+        "sha256": "f8bee169fbee9ca4b8f18b175c03c375b2ed0e577b6658dcbd59f49e58ef09fc",
+        "bytes": 4194,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa28863-01-22",
+        "sha256": "cfd181fb86f73ff04df1a996293f5e94ac7d6f463213dd275116005656596076",
+        "bytes": 24786,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa13801-01-06",
+        "sha256": "8fa4d2dc0dd3231a588c9a33a1d6d8fda1c812c458ea71b0b763805b4dac0e6b",
+        "bytes": 2294,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa02092-01-12",
+        "sha256": "58ca70551863aca205ab8fde139819494f214e22f1b98138526acb2743f1af46",
+        "bytes": 990,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa13338-01-25",
+        "sha256": "c77e0c5970804060ccf773bbf254531a986114cdebc206df2e3809b5ed20681e",
+        "bytes": 4901,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa05904-01-15",
+        "sha256": "6cb656425459fffe50b11920c289ec1d3b8c03ece3a741d676a0da7cee92f3f4",
+        "bytes": 2702,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa11454-01-12",
+        "sha256": "4356e33e8d98e513a624e8bdb9b7664f80efd40062baa1e9243ef736066528c4",
+        "bytes": 2350,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa00341-01-33",
+        "sha256": "a11a60c6aec6699d4995b9f2c0dc76e9a939b84cd8ae853acbe09039ddd36869",
+        "bytes": 504,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa07875-01-08",
+        "sha256": "b8e4db7485f9e63ac385693fc34d5c2c6469cbb2bc0dd470458f4d29c62b76ce",
+        "bytes": 674,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa00207-01-09",
+        "sha256": "d4da403382829c29fcf6afe29e9bba5fae320ac73feded091f41bf8e29c7bb93",
+        "bytes": 2653,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa00208-01-09",
+        "sha256": "3943d226cb78133b29309dee54ccdab45a19826d7bb09eb32c8b6b461a62e1ad",
+        "bytes": 2653,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa00900-01-09",
+        "sha256": "668127e64c77985e08361dca6144088b7944542d7069330458a62c44a7ac432c",
+        "bytes": 2653,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa16579-01-61",
+        "sha256": "155d2921111667e912686a74d744d06212102ce15441eb2e1dd3ce5d2edda2be",
+        "bytes": 22248,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa15778-01-06",
+        "sha256": "048ff952981d284d3994cc5688e5ee2a33d6a4a2a7ff1d8071894733c84cdf2f",
+        "bytes": 1168,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa03309-01-03",
+        "sha256": "3772c268ac763c020d2797cc112b78d28a9054865e77c9fb3f50661a57769065",
+        "bytes": 1014,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa24705-01-18",
+        "sha256": "93d3149929d21c3c5ad0ffacd22f76ee2fe0e73fa849304e3379b29a2a3f5955",
+        "bytes": 4431,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa28561-01-18",
+        "sha256": "92078576141bc29f12a98e9ff7963c94df25f8951ab6eae7506e54156fc5b8d8",
+        "bytes": 4430,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa01067-01-00",
+        "sha256": "bb9ed3247032aab9558ecc6280e866e78dfc327239f9de1b451908801a466db3",
+        "bytes": 968,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "goldhen-cusa02882-01-00",
+        "sha256": "b7999dfcc7c129efbfc08bd8a8408b0c79ef8a192ee6212a117766b77a1938a6",
+        "bytes": 12004,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-native-cheats-ppsa10662-01-001-030",
+        "sha256": "ff004b7c81b0ebeb69a9bc3b76c4642e76495299373eb17d6b8a85cec6d0ea46",
+        "bytes": 1640,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-native-cheats-ppsa09663-01-000-000",
+        "sha256": "64b48d7605989d5ba1c0e337b64a20e41a59f58714c4824d9e1f38a2794a99d8",
+        "bytes": 1337,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-native-cheats-ppsa08710-01-005-000",
+        "sha256": "e8acaefdb28aaa5c6f9610d39050f60e6bd0a3d71710216772c924bf05356661",
+        "bytes": 1407,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-native-cheats-ppsa21564-01-007-000",
+        "sha256": "42d3d4c39c7f607eedc1205014176790eb6c782fd20f20d264fff14c41a6d683",
+        "bytes": 949,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-native-cheats-ppsa23226-01-000-010",
+        "sha256": "067fb30324492c673cb42646f847df040f9ec28de4fda945058818ad390cd23d",
+        "bytes": 1577,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps5-native-cheats-ppsa09911-01-000-000",
+        "sha256": "489497800a06e8995a3798e601c12fa27a305fdde2f0151a980ba2b71ea2f1b3",
+        "bytes": 947,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-ezremote-ezremote-loader-1-01-elf",
+        "sha256": "eda226e008efae5f14bd9e4fb0dd27ee198d1e3b525aa4ab1079e410e66f5e3c",
+        "bytes": 7351176,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-garlic",
+        "sha256": "aaec2cb0a39e94217665652fd84fa7706f09c9f8640c07785b6a68b1711f18fc",
+        "bytes": 1721560,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-78aec0f39465-etahen-2-5b-bin",
+        "sha256": "4845cac45095361b8983b14d6690622183b0dcfbf6d7fda16e161aa91ff0531e",
+        "bytes": 4678728,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-640d68a152b5-ps5sx2installer-elf",
+        "sha256": "efdec4f8d968ef4a7c1880e75d26b96d212a042a6c208de46f0a859609f6224c",
+        "bytes": 1163520,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-640d68a152b5-ps5sxhelper-elf",
+        "sha256": "fece3ee9c7e035c51319af018ae6865f0bf5db182074dafd0502c3bb2d5ee7d2",
+        "bytes": 2439560,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-3a4d278d7ff5-ps5x360-helper-elf",
+        "sha256": "4a0250329e63b376f620511c4b6e2c6a2eb959e056824abde27947bf53f07b59",
+        "bytes": 1295832,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-7d1b737c85a3-helper-elf",
+        "sha256": "31c8a3479937e310f758d36d87c937c91ae942921fa4645473b3d228a7d88959",
+        "bytes": 111032,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-theme-stop-elf",
+        "sha256": "90a1ee926eba4277e1ed2827191151872e4d113de0c566614db51d1b4506230c",
+        "bytes": 156288,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-theme--elf",
+        "sha256": "e27473f0f5d3a9c544ed075f3f0a0e831377e0ab5e6316dce81ad732a99c04eb",
+        "bytes": 1284704,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-fps-ps5-patch-system-38108724867",
+        "sha256": "10d8636e1b0f07f3f046aadb5c050a24ed9b0fae3585ec29a1ecabec07035589",
+        "bytes": 1794904,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "library-ps5-recompstore-installer-2-7-4",
+        "sha256": "3a20194226cf5e1ee66a5a67d81610c1ac9bf82deee7b791c752d0e7d6202d5c",
+        "bytes": 26794760,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-pkg-backup-1300",
+        "sha256": "1a3d3dd41843d94cc4a3517caaefe8f8996f1bda7709a5856a711bfbaca6021b",
+        "bytes": 33352,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-app-dumper-1300",
+        "sha256": "290f83e02fb0cc86e659e7ec380021942430a7608d975f03676c8afc52ba7ab0",
+        "bytes": 26216,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-disable-updates-1300",
+        "sha256": "d6d38701f5284f4764f47197052cb189a17120a7de5b961136c5f6045c30a1fc",
+        "bytes": 8420,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-enable-updates-1300",
+        "sha256": "e261f6e0d18fbe95f3998b0d4b39f0683e125a04633d5333b44ade31ca074de8",
+        "bytes": 8388,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-enable-browser-1300",
+        "sha256": "0e7c5fadc6fa4abbe5df7954f956d4c75aa71a4c03bcaf514c83578583a1a8ad",
+        "bytes": 10420,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-exit-idu-1300",
+        "sha256": "f3aa40ba35081f2384d4ec5382950f04769153f4da9b4240989283ad14a94c48",
+        "bytes": 10332,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-rif-renamer-1300",
+        "sha256": "8dcb00ee027503d4388f2af88a6d386049458199669209511234f7dc9d36b79e",
+        "bytes": 9188,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-ftp-1300",
+        "sha256": "68577a874540b877ba7e95906a77060ff05480b37777d81bb0a4dfe139bda1d1",
+        "bytes": 27492,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-history-blocker-1300",
+        "sha256": "a10b34e1cd810b11069c00eca5ca7672a9ab9a5f1c801a81faad36f264137d38",
+        "bytes": 10972,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-kernel-dumper-1300",
+        "sha256": "e4ea6a8b13a28991ece96b70fe88baeaea1cd99aee316db218fa1ce7464956d0",
+        "bytes": 18588,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-module-dumper-1300",
+        "sha256": "62640e215becf50e60690ea5867525e32443b23c1ac74f94a8c1ca78ba964457",
+        "bytes": 17772,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-ps4debug-v1-1-19",
+        "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+        "bytes": 84936,
+        "recordMatches": 2,
+        "matchingSizeArchiveCopies": 2
+      },
+      {
+        "id": "ps4-kme-web-db-backup-1300",
+        "sha256": "91eaee1292f8741bd9514fe4c4e3af99189359ae79ee3f75a7292df014d1f4b4",
+        "bytes": 15092,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-db-restore-1300",
+        "sha256": "20c5fd911366bf688d3c569008d1e4e9a020948a0a18ffaa3a34077d898f2a49",
+        "bytes": 10796,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-app2usb-1300",
+        "sha256": "a2e4ae50d28f7e870df21723d976ad9a714db7cd2bb3db21cbf1aac17dc68438",
+        "bytes": 25908,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-to-dex-1300",
+        "sha256": "2fc2357636a04c073d7f904fb5e7ce65f75f3aa9e561287c1123a325b53bd30c",
+        "bytes": 10164,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-permanent-uart-1300",
+        "sha256": "1fe2747142285df475abbaaf2a02c28d30628d068c983d3178fab4c4609987f9",
+        "bytes": 10228,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-kme-web-disable-aslr-1300",
+        "sha256": "9548e6163969a77864eb4b9ef946faa9dd2322c08bf31a7af749eb123a08b59f",
+        "bytes": 10276,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-repository-gamerhack-wildemodz138",
+        "sha256": "e82fe24709f9155bc1c77ffa1b2318bee03b5ec7bb4d120b7aadf21b48f6adf8",
+        "bytes": 593216,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-repository-gamerhack-arabicguy100",
+        "sha256": "80849dc10d770b5e4596b0c32774b03b156245c18f1527157d6a967854b990a8",
+        "bytes": 1055408,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-repository-gamerhack-arabicguy127",
+        "sha256": "a603fa84029a0c9bd29e3e5d6ea2f97aa668f0600403c4102f4c35b186b982f4",
+        "bytes": 1055408,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-repository-gamerhack-arabicguy132",
+        "sha256": "3dddf0161fb409e7e9711c6b53e4eaef4c34f9768e263a9821b217b1bde00daa",
+        "bytes": 1055408,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-original-orbis-toolbox-1-0-1190-505",
+        "sha256": "657aad360767ce7f9cef3c374f8ea448870df8d3cf6534a582930bbec0b400ce",
+        "bytes": 626472,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-original-orbis-toolbox-1-0-1190-672",
+        "sha256": "c19e3f0d549b241aa31febd5a5223d0bf0156bdc4e419e1083f795ea90d5ce30",
+        "bytes": 626504,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-original-orbis-toolbox-1-0-1190-702",
+        "sha256": "9f8a34ff2ab3918f3a01e3126817c3c0afd4671c3f0613e05cef540cf7d79a3c",
+        "bytes": 626664,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-original-orbis-toolbox-1-0-1190-755",
+        "sha256": "421131368229e986385a5a5cf4a65d1be8a5835d7ba018720b8764e00153871c",
+        "bytes": 626664,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-original-orbis-toolbox-1-0-1190-900",
+        "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+        "bytes": 626392,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-original-goldhen-2-4b18-900",
+        "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+        "bytes": 260160,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-firmware-gamerhack-oysters505-100",
+        "sha256": "09925fe9288bd9e68f49ffaffba3e92fb6ddb1c8cf416e16251cdef53f19a67a",
+        "bytes": 1260864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-firmware-gamerhack-oysters505-113",
+        "sha256": "38f847706303c2c2b5b71102073ac86fa534f1bc09b6c40129275a53b0c81718",
+        "bytes": 1260864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-firmware-gamerhack-oysters505-119",
+        "sha256": "93fd71c737f4433f72dd594685303e23183859fa448dfafefc15bd8906676f7e",
+        "bytes": 1260864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-legacy-firmware-gamerhack-oysters505-124",
+        "sha256": "b5566c5629c86f8860ba190537e0c2a2e220c879f469a155b924467b975ec08d",
+        "bytes": 1260864,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-original-hippie68-ftp-1-08b-900",
+        "sha256": "695082f37c5cfdce14a06fbd567fa8651017ee2e31f3e95ae7a769b4287cb0e9",
+        "bytes": 37824,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-gta505-gamerhack-arabicguy505100",
+        "sha256": "49d151bfb960fb42d465134ab91f5173407a8ac202d75d23a3b2e441bc7cffd0",
+        "bytes": 1055340,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-gta505-gamerhack-wildemodz505133",
+        "sha256": "1c742c48aeb6009f3e99468ab2702499ed66f0d642d624e9844a0f4aa595fb60",
+        "bytes": 1074320,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-gta505-gamerhack-wildemodz505146",
+        "sha256": "f262d4878e01d057e4ee4d35a49ddf1363fa4ee9667dd50acf181a99aa8af07d",
+        "bytes": 29416,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-arabicguy-672-100",
+        "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+        "bytes": 1055064,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-arabicguy-672-127",
+        "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+        "bytes": 1055384,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      },
+      {
+        "id": "ps4-arabicguy-672-132",
+        "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+        "bytes": 1054936,
+        "recordMatches": 1,
+        "matchingSizeArchiveCopies": 1
+      }
+    ],
+    "allReadyActionsHaveSizeMatchedArchiveCopy": true
+  },
+  "runtimes": [
+    {
+      "id": "ps4-900",
+      "platform": "ps4",
+      "entry": "/hosts/runtime/ps4-900/",
+      "firmwares": [
+        "9.00"
+      ],
+      "files": 72,
+      "source": {
+        "repository": "https://github.com/kmeps4/PSFree",
+        "commit": "368d82aa40d3017c220757ce315761adb5f06678"
+      },
+      "hardwareExecution": false,
+      "staticRemoteResourceCandidates": []
+    },
+    {
+      "id": "ps5-umtx",
+      "platform": "ps5",
+      "entry": "/hosts/runtime/ps5-umtx/",
+      "firmwares": [
+        "1.00",
+        "1.01",
+        "1.02",
+        "1.05",
+        "1.10",
+        "1.11",
+        "1.12",
+        "1.13",
+        "1.14",
+        "2.00",
+        "2.20",
+        "2.25",
+        "2.26",
+        "2.30",
+        "2.50",
+        "2.70",
+        "3.00",
+        "3.20",
+        "4.00",
+        "4.02",
+        "4.03",
+        "4.50",
+        "4.51"
+      ],
+      "files": 141,
+      "source": {
+        "repository": "https://github.com/PS5Dev/PS5-UMTX-Jailbreak",
+        "commit": "2cf6778ebe89ff35255e1c228826d0d2155e9d2a"
+      },
+      "hardwareExecution": false,
+      "staticRemoteResourceCandidates": []
+    }
+  ],
+  "findings": [
+    "Remote launch URLs in raw provenance catalogues are not necessarily primary live controls: disabled standalone mod Load remains disabled and original-host links are provenance. Parent route-map review must inspect normalized live actions.",
+    "A local page that merely redirects, embeds an external host iframe or loads remote runtime dependencies is not a fully self-hosted implementation.",
+    "Current pinned runtime static active-resource scan found 0 remote resource candidates; dynamic network construction requires source review.",
+    "Archive check here verifies record presence and matching file size only. Parent final integrity pass must rehash relevant public/archive bytes."
+  ],
+  "sourceHashes": [
+    {
+      "file": "assets/host-dashboard.js",
+      "sha256": "6dbf4c2d94b98d0146220fcef62edce41011375e347457df0fd50be38f4df48a"
+    },
+    {
+      "file": "scripts/build-host-selector.cjs",
+      "sha256": "1afcbda39d66400b5ecd9a9fe4ee0dcef72df09cb73201452885865a65c74eda"
+    },
+    {
+      "file": "scripts/tests/host-self-hosted.test.cjs",
+      "sha256": "1b01db6a4b8397d4b6d20356a4f4eb35ca615d2e2467ddfa9c06c2f9b369b79a"
+    }
+  ],
+  "latestChecks": {
+    "checkedAt": "2026-11-03T18:19:23.303Z",
+    "testCommand": "node --test scripts/tests/host-self-hosted.test.cjs scripts/tests/host-package-installer.test.cjs",
+    "passed": 17,
+    "failed": 0,
+    "scope": "Image policy, exact pinned runtime bytes, authored native PKG workflow and inline language subset. Original baseline remains a historical raw inventory, not a claim of active external launch buttons.",
+    "nativePackageHelperArtifacts": [
+      {
+        "platform": "ps4",
+        "local": "/downloads/helpers/host-package-installer/ps4/faa27756cd456320/whatsite-package-installer-ps4.html",
+        "bytes": 241332,
+        "sha256": "faa27756cd4563207626a8db78f9e4ef858b95a76163b2076b10b00a6fd3a4b0"
+      },
+      {
+        "platform": "ps5",
+        "local": "/downloads/helpers/host-package-installer/ps5/48aa27c4c9899826/whatsite-package-installer-ps5.html",
+        "bytes": 241332,
+        "sha256": "48aa27c4c9899826f8dc4cb7ecdbf24b360fe7ee7fc884a7c74a8cd8030f5e98"
+      }
+    ],
+    "limitations": "No actual console, firmware exploitation, payload execution, native install, OS notification or archive write occurred in these checks."
+  }
+}

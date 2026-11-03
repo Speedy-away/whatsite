@@ -1,0 +1,35 @@
+✔ construction and public previews never issue a native request (2.5641ms)
+✔ only bounded absolute data PKGs and exact whole-byte expectations are accepted (0.3722ms)
+✔ verification reads one exact parent, rejects absent, partial and mismatched files without installation (0.9373ms)
+✔ installation requires the actual unchanged verification object and explicit consent (0.2897ms)
+✔ metadata changes are caught in the fresh read before any install write or guard (0.469ms)
+✔ one explicit exact install request keeps a durable guard and never claims completed installation (1.3741ms)
+✔ unknown and negative native results are retained across reloads without automatic retry (1.1431ms)
+✔ overlapping operations and a guard written by another window cannot send a second install (4.2446ms)
+✔ a storage failure stops dispatch and the older-WebKit fallback retains native guards (32.1802ms)
+✔ rendering native and public pages only preselects a path, leaving install disabled and making no requests (5.0437ms)
+✖ prepared immutable helpers contain exact authored bytes, native guards and archive jobs without external scripts (9.7349ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 10
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 147.8423
+
+✖ failing tests:
+
+test at scripts\tests\host-package-installer.test.cjs:61:1
+✖ prepared immutable helpers contain exact authored bytes, native guards and archive jobs without external scripts (9.7349ms)
+  Error: Missing package installer translation es: The PS4 native installer can uninstall or replace an existing application with the same title ID. Review the selected package before continuing.
+      at nativeDictionaries (C:\Users\whatw\Documents\GitHub\whatsite\scripts\prepare-host-package-installer.cjs:17:74)
+      at render (C:\Users\whatw\Documents\GitHub\whatsite\scripts\prepare-host-package-installer.cjs:23:51)
+      at Object.prepare (C:\Users\whatw\Documents\GitHub\whatsite\scripts\prepare-host-package-installer.cjs:35:29)
+      at TestContext.<anonymous> (C:\Users\whatw\Documents\GitHub\whatsite\scripts\tests\host-package-installer.test.cjs:62:81)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

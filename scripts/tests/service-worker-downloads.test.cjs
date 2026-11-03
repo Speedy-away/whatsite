@@ -28,6 +28,12 @@ test('hosted binaries, inventories and file fetches use native network downloads
     assert.deepEqual(app.writes,[]);
     assert.deepEqual(app.matches,[]);
 });
+
+test('isolated console runtime documents, modules and appcache bypass UI-cache interception', () => {
+    const app=worker({offline:true});
+    for(const name of ['/hosts/runtime/ps4-afterglow-test/web/index.html','/hosts/runtime/ps4-afterglow-test/web/jb.js','/hosts/runtime/ps4-afterglow-test/web/cache.appcache'])assert.equal(app.request(name),undefined);
+    assert.deepEqual(app.writes,[]);assert.deepEqual(app.matches,[]);
+});
 test('uncached nested pages receive a self-contained offline explanation instead of the wrong homepage', async () => {
     const app=worker({offline:true});
     const page=await app.request('/pages/help.html');

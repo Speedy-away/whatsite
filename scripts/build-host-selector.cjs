@@ -8,7 +8,7 @@ const image = platform => `/assets/images/host-selector/whatwhatboy-${platform}.
 function hostActions(platform) {
   const rows = [];
   const downloads = fs.existsSync(path.join(root,'docs/console-download-catalog.json')) ? JSON.parse(fs.readFileSync(path.join(root,'docs/console-download-catalog.json'),'utf8')).items : [];
-  for (const name of [`host-actions-${platform}.json`, 'host-modern-plugin-actions.json', 'host-current-cheat-actions.json', 'host-game-actions.json', 'host-legacy-menu-actions.json', 'host-extra-game-actions.json', 'host-native-payload-actions.json', 'host-web-utility-actions.json', 'host-repository-menu-actions.json', 'host-original-tool-actions.json', 'host-legacy-firmware-menu-actions.json', 'host-next-utility-actions.json']) {
+  for (const name of [`host-actions-${platform}.json`, 'host-modern-plugin-actions.json', 'host-current-cheat-actions.json', 'host-game-actions.json', 'host-legacy-menu-actions.json', 'host-extra-game-actions.json', 'host-native-payload-actions.json', 'host-web-utility-actions.json', 'host-repository-menu-actions.json', 'host-original-tool-actions.json', 'host-legacy-firmware-menu-actions.json', 'host-next-utility-actions.json', 'host-gta505-continuation-actions.json', 'host-arabicguy-672-actions.json']) {
     const filename = path.join(root, 'docs', name);
     if (!fs.existsSync(filename)) continue;
     const data = JSON.parse(fs.readFileSync(filename, 'utf8'));
@@ -51,7 +51,11 @@ function hostActions(platform) {
         'Static dependencies and file checksums verified. Console hardware execution has not been tested.'
       ]});
   }
-  return [...new Map(rows.map(action => [action.id, action])).values()];
+  if(platform==='ps4'&&fs.existsSync(path.join(root,'docs/afterglow-download-inventory.json'))){
+    const build=JSON.parse(fs.readFileSync(path.join(root,'docs/afterglow-build.json'),'utf8'));
+    rows.unshift({id:'built-in-ps4-afterglow',runtimeId:'ps4-afterglow',platform:'ps4',label:'Afterglow · ps4-hen / GoldHEN',category:'loaders',format:'Built-in browser loader',firmwares:['13.52','14.00'],launchURL:build.entry,image:image('ps4'),source:'https://github.com/well0nez/afterglow-web/tree/'+build.commit,instructionsURL:'/hosts/ps4/afterglow/',requirements:['PS4 browser required','13.52 / 14.00 only','Autostart is opt-in']});
+  }
+  return [...new Map(rows.map(action => [action.id, action])).values()].map(require('./host-first-party-navigation.cjs').bind).filter(Boolean);
 }
 
 const {dashboard,workspaceDashboard} = require('./host-dashboard-markup.cjs');
@@ -65,6 +69,12 @@ function savePage(file, title, description, artwork, nav, content, primary, acti
   html = html.replace(/class="nav-link nav-sublink active" aria-current="page"/g, 'class="nav-link nav-sublink"');
   html = html.replace('</head>', '<link rel="stylesheet" href="/assets/host-selector.css?v=1">\n</head>');
   html = html.replace('<body class="console-guide">', '<body class="console-guide host-selector">');
+  const parent=file==='hosts/index.html'?'/' : /^hosts\/ps[45]\/index\.html$/.test(file)?'/hosts/':'/hosts/'+(file.includes('/ps5/')?'ps5':'ps4')+'/';
+  // The shared guide shell can already supply this bar. Replace that one owned
+  // navigation block before inserting the host route's bar, so builds stay singular.
+  html=html.replace(/<nav\b[^>]*class=["'][^"']*\bhost-taskbar\b[^"']*["'][^>]*>[\s\S]*?<\/nav>/gi,'');
+  html=html.replace(/(<body\b[^>]*>)/,'$1<nav class="host-taskbar" aria-label="Webhost taskbar"><a href="'+parent+'">← Back</a><a class="host-taskbar-brand" href="/hosts/">whatwhatboy webhost</a><a href="/hosts/ps4/">PS4</a><a href="/hosts/ps5/">PS5</a><a href="/">Site home</a></nav>');
+  if(!html.includes('/assets/host-webhost.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/host-webhost.css?v=2"></head>');
   html = html.replace('<a class="btn btn-outline" href="/pc/">PC</a>', '');
   html = html.replace(/(<meta name="keywords" content=")[^"]*(")/, '$1whatwhatboy hosts, PS4 exploit hosts, PS5 exploit hosts, firmware selector, console IP, GTA V mod menus, RDR2 mods, ELF loader, BIN loader, offline trainer, file explorer, console downloads, payloads$2');
   if (chooser) {
@@ -90,27 +100,24 @@ function buildHostSelector() {
   fs.writeFileSync(catalogFile, JSON.stringify(catalog, null, 2) + '\n');
 
   const address = '<p id="host-auto-detect" class="host-note">Open this page in your console browser for automatic firmware detection.</p><a id="host-detected-link" class="host-service-link" hidden></a><p class="host-address"><span>Easy address</span><a href="/hosts/"><code translate="no" data-i18n-skip>whatwhatboy.com/hosts/</code></a></p>';
-  const cards = ['ps4', 'ps5'].map(platform => {
-    const name = platform.toUpperCase();
-    return `<a class="guide-resource guide-firmware-card host-console-card" href="/hosts/${platform}/"><img src="${image(platform)}" width="1672" height="941" alt="${name} console and controller" loading="lazy"><h3 translate="no">${name}</h3><p>Launchers, payloads, game mods and console tools for ${name}.</p><span class="guide-firmware-open">Open ${name} <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>`;
-  });
-  savePage('hosts/index.html', brand,
+  const cards = ['ps4','ps5'].map(platform=>'<a class="host-console-choice" href="/hosts/'+platform+'/"><span class="host-eyebrow">PlayStation '+platform.slice(-1)+'</span><h3>'+platform.toUpperCase()+'</h3><p>Firmware, payloads, game mods and console files.</p><strong>Open '+platform.toUpperCase()+' →</strong></a>');
+  savePage('hosts/index.html', 'PS4 / PS5 webhost',
     'Choose your console to launch payloads, mod menus and tools.', image('ps5'),
     [['/hosts/', brand], ['/hosts/ps4/', 'PS4'], ['/hosts/ps5/', 'PS5'], ['/guides/console-files/', 'Guides']],
     section('consoles', 'Choose your console', address + grid(...cards).replace('class="games-grid"', 'class="games-grid host-console-grid"')),
     '#consoles', 'Choose console', true);
 
   const chooserFile = path.join(root, 'hosts/index.html');
-  fs.writeFileSync(chooserFile, require('./search-page-output.cjs').finish(chooserFile, fs.readFileSync(chooserFile, 'utf8').replace('</body>', '<script defer src="/assets/host-dashboard.js?v=15"></script></body>')));
+  fs.writeFileSync(chooserFile, require('./search-page-output.cjs').finish(chooserFile, fs.readFileSync(chooserFile, 'utf8').replace('</body>', '<script defer src="/assets/host-dashboard.js?v=17"></script></body>')));
 
   for (const platform of ['ps4', 'ps5']) {
     const name = platform.toUpperCase();
     const base = `/console/${platform}/`;
     const actions = hostActions(platform);
     if (!actions.length) throw Error('The verified action catalogue is not ready: ' + platform);
-    savePage(`hosts/${platform}/index.html`, `${brand} · ${name}`,
-      'Launch compatible payloads, game menus and console tools.', image(platform),
-      [['/hosts/', 'Choose another console'], [`/hosts/${platform}/`, name], [base + 'downloads.html', 'Downloads'], [`/guides/console-files/${platform}.html`, 'Guides']],
+    savePage(`hosts/${platform}/index.html`, `${name} webhost`,
+      'Choose firmware, load compatible payloads and manage your console files.', image(platform),
+      [['/hosts/', 'Choose another console'], [`/hosts/${platform}/`, name], ...(platform==='ps4'?[['/hosts/ps4/firmware/','Firmware selection']]:[]), [base + 'downloads.html', 'Downloads'], [`/guides/console-files/${platform}.html`, 'Guides']],
       section('actions', 'Host controls', dashboard(platform, actions,{gamesLanding:true})), '#actions', 'Open host', true);
     const gamePages = [];
     for (const [scope,label] of [['gta5','GTA 5'],['rdr2','RDR2'],['other-games','Other games']]) {
@@ -134,7 +141,8 @@ function buildHostSelector() {
     for (const relative of [`hosts/${platform}/index.html`,managerFile,filesPage,...gamePages]) {
       const hostFile = path.join(root,relative);
       let hostHtml = fs.readFileSync(hostFile, 'utf8').replace('console-guide host-selector', 'console-guide host-selector host-dashboard-page');
-      hostHtml = hostHtml.replace('</head>', '<link rel="stylesheet" href="/assets/host-dashboard.css?v=16">\n</head>').replace('</body>', '<script defer src="/assets/host-console-client.js?v=15"></script><script defer src="/assets/host-dashboard.js?v=15"></script></body>');
+      hostHtml = hostHtml.replace('</head>', '<link rel="stylesheet" href="/assets/host-dashboard.css?v=16"><link rel="stylesheet" href="/assets/host-webhost.css?v=2">\n</head>').replace('</body>', '<script defer src="/assets/host-console-client.js?v=15"></script><script defer src="/assets/host-dashboard.js?v=17"></script></body>');
+      if(relative===`hosts/${platform}/index.html`)hostHtml=require('./host-folder-markup.cjs').shell(hostHtml);
       fs.writeFileSync(hostFile, require('./search-page-output.cjs').finish(relative, hostHtml));
     }
   }
@@ -159,7 +167,8 @@ function buildHostSelector() {
     if (!sitemap.includes(`<loc>${url}</loc>`)) sitemap = sitemap.replace('</urlset>', `  <url><loc>${url}</loc><lastmod>2026-11-02</lastmod></url>\n</urlset>`);
   }
   fs.writeFileSync(sitemapFile, sitemap);
+  if(fs.existsSync(path.join(root,'docs/afterglow-download-inventory.json')))require('./build-ps4-firmware.cjs').build();
   console.log('Built /hosts/, /hosts/ps4/ and /hosts/ps5/; added first-party entries to both console host grids.');
 }
-if (require.main === module) buildHostSelector();
 module.exports = {buildHostSelector,hostActions};
+if (require.main === module) buildHostSelector();

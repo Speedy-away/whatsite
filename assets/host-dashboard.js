@@ -103,7 +103,7 @@
   function loadCapability(action) {
     var type = action.run && action.run.type, format = String(action.format || '').toUpperCase();
     if (['goldhen-http','elf-http','elf-tcp','ps5-manager'].indexOf(type) !== -1 || type === 'bin-tcp' && action.platform === 'ps4' && format === 'BIN' && action.run.port === 9020) return {available:true,kind:'payload',reason:''};
-    if (action.runtimeId && /^\/hosts\/runtime\//.test(action.launchURL || '')) return {available:true,kind:'browser',reason:'Open this host on the matching console to use its built-in browser loader.'};
+    if (action.runtimeId && /^\/hosts\/runtime\//.test(action.launchURL || '')) return {available:true,kind:'browser',reason:action.browserLoadMessage || 'Open this host on the matching console to use its built-in browser loader.'};
     if (/^(PRX|SPRX)$/.test(format)) return {available:false,kind:'plugin',reason:'This plugin loads through the console’s native plugin manager. Web loading is not available for this build.'};
     if (/^(JSON|MC4|SHN|XML)$/.test(format)) return {available:false,kind:'data',reason:'Install this file in the native cheat or patch manager, then enable it in the game.'};
     return {available:false,kind:'unsupported',reason:'No verified built-in loading method is available for this build. Setup and original sources are under Requirements.'};
@@ -203,8 +203,9 @@
     var source = doc.querySelector('#host-actions-data'); if (!source) return;
     var catalog; try { catalog = JSON.parse(source.textContent); } catch (_) { return; }
     var actions = catalog.actions || [], platform = catalog.platform;
-    var gameScope = catalog.gameScope || '', gamesLanding = Boolean(catalog.gamesLanding);
-    var client = win.HostConsoleClient, category = catalog.managerView ? 'payloads' : 'mods', bridge = null, loading = false;
+    var fileListView=Boolean(catalog.fileListView);
+    var gameScope = catalog.gameScope || '', gamesLanding = Boolean(catalog.gamesLanding)&&!fileListView;
+    var client = win.HostConsoleClient, category = catalog.initialCategory || (catalog.managerView ? 'payloads' : 'mods'), bridge = null, loading = false;
     var initialCategory = String(win.location.hash || '').replace(/^#/, '');
     if (['mods','payloads','loaders','tools'].indexOf(initialCategory) !== -1) category = initialCategory;
     var firmware = doc.querySelector('#host-firmware'), search = doc.querySelector('#host-search'), game = doc.querySelector('#host-game'), legacy = doc.querySelector('#host-show-legacy');
@@ -262,13 +263,14 @@
       return plan;
     }
     function actionMarkup(action) {
+        if(fileListView&&!activeGroup)return fileMarkup(action);
         var download = safeURL(action.downloadURL || '', win.location.href);
         var launch = Boolean(action.launchURL), capability = loadCapability(action);
         var needsFile = action.run && action.run.input === 'user-file';
         var canBridge = needsFile ? bridgeFileReady(action,bridge,platform) && client && typeof client.runFileViaBridge === 'function' : bridge && bridge.actions && bridge.actions.some(function (a) { return a.id === action.id && a.platform === platform && a.available; });
         var needsFirmware = requiresFirmware(action) && !firmware.value;
         var isMenu = action.category === 'mods';
-        var label = isMenu || action.run || capability.kind === 'browser' ? 'Load' : launch ? 'Open host' : '';
+        var label = isMenu || action.run || capability.kind === 'browser' ? 'Load' : launch ? (action.launchLabel || 'Open tool') : '';
         var requiresSender = action.run && (action.run.type === 'elf-tcp' || action.run.type === 'bin-tcp' || needsFile) && !canBridge;
         var uncertain = action.run && connection.warning(configuredAddress());
         var disabled = isMenu && !capability.available || needsFirmware || requiresSender || capability.kind === 'browser' && detection.platform !== platform || loading || uncertain;
@@ -280,7 +282,7 @@
         var originalHost = action.hostURL || action.launchURL || '';
         if (originalHost.indexOf('{address}') !== -1) originalHost = '';
         originalHost = navigationURL(originalHost);
-        var artwork = actionImage(action), imageLabel = imageCaption(action), releaseLabel = action.resourceType === 'cheat-definitions' ? 'Trainer version' : 'Menu version';
+        var artwork = isMenu ? actionImage(action) : '', imageLabel = imageCaption(action), releaseLabel = action.resourceType === 'cheat-definitions' ? 'Trainer version' : 'Menu version';
         return '<article class="host-action' + (artwork ? ' host-action-with-art' : '') + '">' + (artwork ? '<figure class="host-action-art"><img src="' + escape(artwork) + '" alt="' + escape(action.imageAlt || action.label + ' · ' + imageLabel) + '" loading="lazy"></figure>' : '') + '<div class="host-action-content"><div class="host-action-title"><h3>' + escape(action.label) + '</h3>' + (action.game ? '<span>' + escape(action.game) + '</span>' : '') + '</div>' + (action.game ? '<dl class="host-version-facts"><div><dt>Game update</dt><dd>' + escape(action.gameVersion || 'Not provided') + '</dd></div><div><dt>' + releaseLabel + '</dt><dd>' + escape(action.menuVersion || 'Not provided') + '</dd></div></dl>' : '') + '<p class="host-action-meta">' + escape(meta) + '</p>' + (action.variantLabel || action.hostVariant ? '<p class="host-action-meta">' + escape(action.variantLabel || action.hostVariant) + '</p>' : '') + (action.titleIds && action.titleIds.length ? '<p class="host-action-meta">' + escape(action.titleIds.join(', ')) + '</p>' : '') + (action.supportArchiveURL ? '<p class="host-file-note">Plugin update file. First installation also needs its support files.</p>' : '') + '<div class="host-action-buttons">' +
           (download ? '<a class="host-download" data-no-file-options data-download-action="' + escape(action.id) + '" href="' + escape(download) + '" download>Download</a>' : '') +
           (label ? '<button type="button" class="host-launch" data-launch="' + escape(action.id) + '"' + (disabled ? ' disabled title="' + escape(!capability.available && isMenu ? capability.reason : 'Choose compatible firmware and a running console loader.') + '"' : '') + '>' + escape(label) + '</button>' : '') + '</div>' +
@@ -291,6 +293,47 @@
           (needsFile ? '<p class="host-load-note">Load uses the original downloaded BIN you choose. The sender verifies it in memory without saving a copy.</p>' : '') +
           (uncertain ? '<p class="host-load-note">A previous transfer has an unknown result. Check the console and clear its transfer warning before loading again.</p>' : '') +
           '<details><summary>Requirements</summary>' + fileDetails + '<ul>' + details + '</ul>' + (action.firmwares && action.firmwares.length ? '<p>Firmware: ' + escape(action.firmwares.join(', ')) + '</p>' : '') + (action.license ? '<p>' + escape(action.license) + '</p>' : '') + links + (action.supportArchiveURL ? ' · <a href="' + escape(navigationURL(action.supportArchiveURL)) + '">Full setup files</a>' : '') + (!action.run && originalHost ? ' · <a href="' + escape(originalHost) + '" target="_blank" rel="noopener noreferrer">Original host</a>' : '') + '</details></div></article>';
+    }
+    function showSupport(action){
+      var overlay=doc.querySelector('#host-support-overlay');if(!overlay)return;
+      var fw=action.firmwares&&action.firmwares.length?action.firmwares.join(', '):action.firmwareMax?'≤ '+action.firmwareMax:firmwareLabel(action);
+      var fact=payloadFileFacts(action),evidence=fact?'\n'+fact.filename+' · '+fact.bytes+' B\nSHA-256: '+fact.sha256:'';
+      doc.querySelector('#host-support-text').textContent=platform.toUpperCase()+' · '+fw+'\n'+(action.requirements||[]).join('\n')+evidence;
+      var filenameNode=doc.querySelector('#host-support-filename'),factsNode=doc.querySelector('#host-support-facts'),linksNode=doc.querySelector('#host-support-links');
+      if(filenameNode)filenameNode.textContent=fact?fact.filename:action.downloadURL?decodeURIComponent(action.downloadURL.split('/').pop().split('?')[0]):action.label;
+      if(factsNode)factsNode.textContent=[action.format,Number.isSafeInteger(action.bytes)?action.bytes.toLocaleString()+' B':'',action.game,action.gameVersion].filter(Boolean).join(' · ');
+      if(linksNode)linksNode.innerHTML=[['source','Project source'],['licenseURL','Licence'],['instructionsURL','Instructions'],['sourceArchiveURL','Corresponding source']].map(function(entry){var link=navigationURL(action[entry[0]]);return link?'<a href="'+escape(link)+'" target="_blank" rel="noopener noreferrer">'+entry[1]+' <span aria-hidden="true">↗</span></a>':'';}).join('');
+      var previousFocus=doc.activeElement;
+      overlay.hidden=false;var close=doc.querySelector('#host-support-close');close.onclick=function(){overlay.hidden=true;if(previousFocus&&previousFocus.focus)previousFocus.focus();};close.focus();
+      overlay.onkeydown=function(event){
+        if(event.key==='Escape'){close.onclick();return;}
+        if(event.key==='Tab'){
+          var focusable=[close].concat(linksNode?Array.prototype.slice.call(linksNode.querySelectorAll('a[href]')):[]),last=focusable[focusable.length-1];
+          if(event.shiftKey&&doc.activeElement===close){event.preventDefault();last.focus();}
+          else if(!event.shiftKey&&doc.activeElement===last){event.preventDefault();close.focus();}
+        }
+      };
+      overlay.onclick=function(event){if(event.target===overlay)close.onclick();};
+    }
+    function fileMarkup(action){
+      var capability=loadCapability(action),facts=payloadFileFacts(action),url=safeURL(action.downloadURL||'',win.location.href);
+      var filename=facts?facts.filename:action.downloadURL?decodeURIComponent(action.downloadURL.split('/').pop().split('?')[0]):action.label;
+      var title=category==='loaders'?platform.toUpperCase()+' '+(firmware.value||''):filename;
+      var canBridge=bridge&&bridge.actions&&bridge.actions.some(function(a){return a.id===action.id&&a.platform===platform&&a.available;});
+      var requiresSender=action.run&&(action.run.type==='elf-tcp'||action.run.type==='bin-tcp'||action.run.input==='user-file')&&!canBridge;
+      var disabled=loading||requiresFirmware(action)&&!firmware.value||requiresSender||action.category==='mods'&&!capability.available||capability.kind==='browser'&&detection.platform!==platform||action.run&&connection.warning(configuredAddress());
+      var reason=requiresSender?'Connect the paired desktop sender to load this file.':requiresFirmware(action)&&!firmware.value?'Choose your installed firmware first.':capability.kind==='browser'&&detection.platform!==platform?capability.reason:action.category==='mods'&&!capability.available?capability.reason:loading?'Loading…':'Check the console and its running loader before trying again.';
+      var pins=(action.firmwares||[]),restriction=pins.length?pins.join(', '):action.firmwareMax?'≤ '+action.firmwareMax:'';
+      var fileBytes=facts?facts.bytes:action.bytes,size='—';
+      if(Number.isSafeInteger(fileBytes)){var divisor=fileBytes>=1048576?1048576:fileBytes>=1024?1024:1,unit=divisor===1048576?'MiB':divisor===1024?'KiB':'B',value=fileBytes/divisor;size=(divisor===1?String(value):value.toFixed(value<10?1:0))+' '+unit;}
+      var format=/browser|html/i.test(action.format||'')?'HTML':action.format||'—';
+      var subtitle=[action.game,action.label,action.gameVersion,action.menuVersion].filter(Boolean).join(' · ');
+      if(subtitle===title||category==='loaders')subtitle='';
+      var icon='<svg class="host-file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg>';
+      var arrow='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v9m-3-3 3 3 3-3M4 13v4h12v-4"/></svg>';
+      var play='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="m7 4 9 6-9 6z"/></svg>';
+      var info='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 9v5m0-8v.1"/></svg>';
+      return '<article class="host-action host-file-row"><div class="host-file-line"><div class="host-file-identity"><span class="host-file-glyph">'+icon+'</span><div><h3 translate="no">'+escape(title)+'</h3>'+(subtitle?'<small>'+escape(subtitle)+'</small>':'')+'</div></div><span class="host-file-type" translate="no">'+escape(format)+'</span><span class="host-file-size" translate="no" title="'+(Number.isSafeInteger(fileBytes)?fileBytes+' B':'')+'">'+size+'</span><div class="host-file-compat">'+(restriction?'<button type="button" class="host-support-check" data-support-action="'+escape(action.id)+'" title="'+escape(restriction)+'"><span translate="no">'+escape(pins.length>2?'…':restriction)+'</span></button>':'<span class="host-file-unspecified">—</span>')+'</div><div class="host-action-buttons">'+(url?'<a class="host-download" data-no-file-options data-download-action="'+escape(action.id)+'" href="'+escape(url)+'" download>'+arrow+'<span>Download</span></a>':'')+(action.run||action.launchURL?'<button class="host-launch" type="button" data-launch="'+escape(action.id)+'"'+(disabled?' disabled title="'+escape(reason)+'"':'')+'>'+play+'<span>Load</span></button>':'')+'<button type="button" class="host-file-info" data-support-action="'+escape(action.id)+'" aria-label="Requirements" title="Requirements">'+info+'</button></div></div></article>';
     }
     function groupMarkup(group) {
       if (group.actions[0].category !== 'mods') return actionMarkup(group.actions[0]);
@@ -334,14 +377,21 @@
       var firmwareNote = doc.querySelector('#host-firmware-note');
       if (firmwareNote) firmwareNote.hidden = firmware.value !== '14.00';
       if (grid) {
-      var visible = filterActions(scopeActions(actions,gameScope), category, firmware.value, search.value, category === 'mods' ? game.value : '', legacy.checked);
+      var visible = filterActions(scopeActions(actions,gameScope), category, fileListView&&category!=='loaders'?'':firmware.value, search.value, category === 'mods' ? game.value : '', legacy.checked);
+      if(fileListView&&category==='loaders'&&!firmware.value)visible=[];
       doc.querySelector('#host-game-filter').hidden = category !== 'mods' || gamesLanding || gameScope === 'gta5' || gameScope === 'rdr2';
       if (category === 'mods' && gamesLanding) grid.classList.add('host-game-collections'); else grid.classList.remove('host-game-collections');
       renderedGroups = groupActions(visible);
-      count.textContent = renderedGroups.length + ' cards · ' + visible.length + ' variants';
+      count.textContent = fileListView?String(visible.length):renderedGroups.length + ' cards · ' + visible.length + ' variants';
       if (category === 'mods' && gamesLanding) {
         count.textContent = '3 game pages';
         grid.innerHTML = collectionMarkup(visible);
+      } else if(fileListView){
+        if(category==='loaders'&&visible.length){
+          var preferred=visible.filter(function(a){return !!a.runtimeId;});if(!preferred.length)preferred=[visible[0]];
+          var alternatives=visible.filter(function(a){return preferred.indexOf(a)===-1;});
+          grid.innerHTML=preferred.map(actionMarkup).join('')+(alternatives.length?'<details class="host-other-hosts"><summary>Other hosts</summary>'+alternatives.map(actionMarkup).join('')+'</details>':'');
+        }else grid.innerHTML=visible.map(actionMarkup).join('');
       } else if (category === 'loaders') {
         var localGroups = [], otherGroups = [];
         renderedGroups.forEach(function (group) { (group.actions[0].runtimeId ? localGroups : otherGroups).push(group); });
@@ -424,10 +474,11 @@
     function handleActionClick(event) {
       var button = event.target;
       var container = event.currentTarget;
-      while (button && button !== container && !button.hasAttribute('data-launch') && !button.hasAttribute('data-open-action') && !button.hasAttribute('data-download-action') && !button.hasAttribute('data-choose-group')) button = button.parentNode;
+      while (button && button !== container && !button.hasAttribute('data-launch') && !button.hasAttribute('data-open-action') && !button.hasAttribute('data-download-action') && !button.hasAttribute('data-choose-group') && !button.hasAttribute('data-support-action')) button = button.parentNode;
       if (!button || button === container) return;
       if (button.hasAttribute('data-choose-group')) { openVersions(renderedGroups.filter(function (g) { return g.id === button.getAttribute('data-choose-group'); })[0],button); return; }
-      var action = actionById(button.getAttribute('data-launch') || button.getAttribute('data-open-action') || button.getAttribute('data-download-action')); if (!action) return;
+      var action = actionById(button.getAttribute('data-launch') || button.getAttribute('data-open-action') || button.getAttribute('data-download-action') || button.getAttribute('data-support-action')); if (!action) return;
+      if(button.hasAttribute('data-support-action')){showSupport(action);return;}
       if (button.hasAttribute('data-download-action')) {
         try {
           if (!client && (String(address.value || '').trim() || detection.platform === platform)) throw Error('The console connection helper is unavailable. Reload this page.');
@@ -437,7 +488,7 @@
       }
       if (button.hasAttribute('data-open-action')) { try { win.open(launchURL(action), '_blank', 'noopener'); tell('Opening the installed service. Its availability has not been verified.'); } catch (error) { tell(error.message, true); } return; }
       if (requiresFirmware(action) && !firmware.value) { tell('Choose your installed firmware first.', true); return; }
-      if (!firmwareMatches(action, firmware.value)) { tell('Choose a payload matching the installed firmware.', true); return; }
+      if (!firmwareMatches(action, firmware.value)) { if(fileListView)showSupport(action);tell('Choose a payload matching the installed firmware.', true); return; }
       if (action.run && (action.run.type === 'goldhen-http' || action.run.type === 'elf-http' || action.run.type === 'ps5-manager' || bridge)) { runAction(action); return; }
       if (action.run && (action.run.type === 'elf-tcp' || action.run.type === 'bin-tcp') && !action.launchURL) { doc.querySelector('.host-sender').open = true; tell(action.run.type === 'bin-tcp' ? 'Connect the paired desktop sender to load this BIN.' : 'Start the local sender, open its host page, and connect with the pairing token to run ELF files.'); return; }
       if (action.category === 'mods' && !loadCapability(action).available) { tell(loadCapability(action).reason,true); return; }

@@ -30,6 +30,8 @@ test('later page-generator assets retain their ordering without repeated backgro
     const original = improve('<html><head><title>Home</title></head><body>Content</body></html>', 'index.html');
     const withMobile = original.replace('</head>', '<link rel="stylesheet" href="/assets/mobile.css?v=3.3.0"></head>');
     assert.equal(improve(withMobile, 'index.html'), withMobile);
+    const withLaterClass = original.replace('class="site-atmosphere"', 'class="site-atmosphere host-selector"');
+    assert.equal(improve(withLaterClass, 'index.html'), withLaterClass);
 });
 
 test('palette mapping stays stable for platform and resource sections', () => {
@@ -53,7 +55,7 @@ test('palette mapping stays stable for platform and resource sections', () => {
 test('redirects and helper or self-contained payload pages remain unchanged', () => {
     const normal = '<html><head></head><body><main>Content</main></body></html>';
     const redirect = '<html><head><meta content="0;url=/" http-equiv="refresh"></head><body>Redirect</body></html>';
-    for (const [html, file] of [[redirect, 'old.html'], [normal, 'free-keys/sponsor-frame.html'], [normal, 'console/ps4/whatsite-ps4.html'], [normal, 'console/ps5/whatsite-ps5.html']]) {
+    for (const [html, file] of [[redirect, 'old.html'], [normal, '.tmp/source-review/index.html'], [normal, 'free-keys/sponsor-frame.html'], [normal, 'console/ps4/whatsite-ps4.html'], [normal, 'console/ps5/whatsite-ps5.html']]) {
         assert.equal(eligible(html, file), false);
         assert.equal(improve(html, file), html);
     }
@@ -65,7 +67,7 @@ test('site pages include current background assets or the generator-safe shared 
     const relative = file => path.relative(path.resolve(__dirname, '../..'), file).replaceAll('\\', '/');
     const routes = files.map(relative);
     for (const route of ['index.html', '404.html', 'free-keys/scooby/index.html', 'downloads/index.html', 'console/ps5/index.html', 'pages/help.html']) assert.ok(routes.includes(route), route);
-    assert.ok(!routes.some(route => route.startsWith('api/') || route === 'free-keys/sponsor-frame.html' || /^downloads\/(?!index\.html$)/.test(route)));
+    assert.ok(!routes.some(route => route.split('/').some(part => part.startsWith('.')) || route.startsWith('api/') || route === 'free-keys/sponsor-frame.html' || /^downloads\/(?!index\.html$)/.test(route)));
     for (const file of files) {
         const html = fs.readFileSync(file, 'utf8');
         // Other page builders can run independently of the static pass. Their

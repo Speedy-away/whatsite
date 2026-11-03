@@ -1,0 +1,44 @@
+✔ both main hubs are file views with top navigation and preserve every current action (30.0514ms)
+✔ file rows remain visible across firmware changes and preserve exact filename and download ID (2.6172ms)
+✔ firmware check opens a requirement popup, and mismatched Load cannot transmit (0.7999ms)
+✔ integration preserves page content and is idempotent for root and nested pages (1.4961ms)
+✔ homepage migration removes old runtime, canvas and motion button while retaining the homepage stylesheet (0.2244ms)
+✔ later page-generator assets retain their ordering without repeated background rewrites (0.4788ms)
+✔ palette mapping stays stable for platform and resource sections (0.1312ms)
+✔ redirects and helper or self-contained payload pages remain unchanged (0.1111ms)
+✖ site pages include current background assets or the generator-safe shared loader (743.6794ms)
+✔ PS3 file-list regeneration retains background integration and plain download links (842.572ms)
+✔ social titles wrap without dropping exact game, platform or version wording (125.4234ms)
+✔ original SVG cards escape title markup and retain page-specific text (1.0572ms)
+✔ platform themes distinguish console families without changing the page title (0.2181ms)
+✔ every eligible page has a valid primary preview and a unique original vector card (1828.2667ms)
+✔ configured illustrated previews remain primary while native cards stay available (1.9001ms)
+✔ preview coverage excludes ready receivers and downloaded HTML tools (1.1652ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 15
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2034.0967
+
+✖ failing tests:
+
+test at scripts\tests\site-background-integration.test.cjs:63:1
+✖ site pages include current background assets or the generator-safe shared loader (743.6794ms)
+  AssertionError [ERR_ASSERTION]: hosts/tools/esp-flasher/index.html needs background integration
+      at TestContext.<anonymous> (C:\Users\whatw\Documents\GitHub\whatsite\scripts\tests\site-background-integration.test.cjs:78:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

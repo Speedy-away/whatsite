@@ -5,6 +5,18 @@ const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt
 function renderCompanion(platform, items) {
   platform = String(platform).toLowerCase();
   if (!['ps4', 'ps5'].includes(platform) || !Array.isArray(items)) throw Error('Expected a PS4/PS5 platform and item array.');
+  // Native clients cannot follow the JavaScript fallback on a Pages 404.
+  // Fetch versioned ready files directly from the preserved repository instead.
+  const {rawURL} = require('./build-pages.cjs');
+  items = items.map(item => {
+    try {
+      const url = new URL(item.url, 'https://whatwhatboy.com');
+      if (url.origin === 'https://whatwhatboy.com' && url.pathname.startsWith('/downloads/') && !/\.(?:html|js|css|json|wasm)$/i.test(url.pathname)) {
+        return {...item, url: rawURL(decodeURIComponent(url.pathname.slice(1)))};
+      }
+    } catch {}
+    return item;
+  });
   const name = platform.toUpperCase();
   const localFile = platform === 'ps4' ? '/data/whatsite-ps4.html' : '/whatsite-ps5.html';
   const catalog = JSON.stringify({platform, items}).replaceAll('<', '\\u003c').replaceAll('&', '\\u0026').replaceAll('\u2028', '\\u2028').replaceAll('\u2029', '\\u2029');

@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-03T17:36:25.352Z",
+  "method": "Supported CUA on the generated catalogue and a loopback server serving only the authored controller; no upstream exploit runtime pages opened.",
+  "catalogue": {
+    "firmware": "6.72",
+    "arabicGuyFamilyCards": 1,
+    "versionButtons": 3,
+    "gameUpdates": [
+      "1.32",
+      "1.27",
+      "1.00"
+    ],
+    "menuVersion": "Not provided",
+    "pinnedOriginalDownload": true,
+    "desktopLoadDisabled": true,
+    "fourDesktopColumns": true,
+    "artworkObjectFit": "contain",
+    "phone": {
+      "viewport": 430,
+      "documentWidth": 430
+    }
+  },
+  "controller": {
+    "sha256": "91b39cd007ee6d6dcd5f19a078cb152b33687bbf2d6b09a784f13ad953948780",
+    "phone": {
+      "viewport": 430,
+      "documentWidth": 415
+    },
+    "manualSelectionGameUpdate": "1.32",
+    "confirmationCheckedOnDesktop": true,
+    "prepareRemainedDisabled": true,
+    "loadRemainedDisabled": true,
+    "externalScriptElements": 0,
+    "sourceExecutionDuringQA": false,
+    "languages": "English → Spanish → English; common controls and dependency warning translated. Long guide prose retains English fallback."
+  },
+  "screenshots": [
+    "docs/screenshots/arabicguy-672-phone.png",
+    "docs/screenshots/arabicguy-672-controller-phone.png"
+  ],
+  "cleanup": "Owned tabs closed and temporary viewport reset."
+}

@@ -10,12 +10,16 @@ const server=http.createServer((req,res)=>{
   let target=path.resolve(root,'.'+name);
   if(!inside(root,target)){res.writeHead(403);res.end();return;}
   if(fs.existsSync(target)&&fs.statSync(target).isDirectory())target=path.join(target,'index.html');
-  const download=name.startsWith('/downloads/'),type=types[path.extname(target).toLowerCase()]||(download?'application/octet-stream':null);
+  const runtime=name.startsWith('/hosts/runtime/');
+  const download=name.startsWith('/downloads/'),type=types[path.extname(target).toLowerCase()]||(runtime&&target.endsWith('.appcache')?'text/cache-manifest':runtime&&target.endsWith('.bin')?'application/octet-stream':download?'application/octet-stream':null);
   if(!type||!fs.existsSync(target)||!fs.statSync(target).isFile()){res.writeHead(404);res.end();return;}
   if(!inside(realRoot,fs.realpathSync(target))){res.writeHead(403);res.end();return;}
   const headers={'Content-Type':type,'Content-Length':fs.statSync(target).size,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
+  if(runtime)headers['Cache-Control']='no-cache, must-revalidate';
   if(download&&!['.html','.json'].includes(path.extname(target).toLowerCase()))headers['Content-Disposition']="attachment; filename*=UTF-8''"+encodeURIComponent(path.basename(target));
   res.writeHead(200,headers);if(req.method==='HEAD')res.end();else fs.createReadStream(target).on('error',()=>res.destroy()).pipe(res);
  }catch{res.writeHead(400);res.end();}
 });
-server.listen(0,'127.0.0.1',()=>console.log('Local site preview: http://127.0.0.1:'+server.address().port+'/console/xbox360/mods/'));
+const requestedPort=Number(process.env.WHATSITE_PREVIEW_PORT||0);
+if(!Number.isInteger(requestedPort)||requestedPort<0||requestedPort>65535)throw Error('Invalid preview port');
+server.listen(requestedPort,'127.0.0.1',()=>console.log('Local site preview: http://127.0.0.1:'+server.address().port+'/hosts/ps4/firmware/'));

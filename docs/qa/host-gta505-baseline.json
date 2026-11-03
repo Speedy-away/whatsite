@@ -1,0 +1,5264 @@
+{
+  "catalogue": [
+    {
+      "id": "ps4-homebrew-store",
+      "filename": "Store-R2.pkg",
+      "sha256": "7eab6de7d8542e0ce9b00656b42932ae7dd3d682d0008625ebd082fc996f32bc",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-ezremote",
+      "filename": "ezremote_client.pkg",
+      "sha256": "8c05370922547e3b33a55338d67e6845e59dae22592ca1d89d31d632813443be",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-ipi",
+      "filename": "IV0000-BREW00050_00-IPI0000000000000.pkg",
+      "sha256": "bbed864ce78026df37a9b87f79f15b9f32000f083eeaf25bc3597dde6f6155b3",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-games-installer",
+      "filename": "PS4Game_installer-r40.pkg",
+      "sha256": "e6e882a049a85e7864f25d56f84a7af29937f8b71ca54a19bfac085e1b7da805",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-payload-guest",
+      "filename": "IV0000-AZIF00003_00-PAYLOADGUEST0000.pkg",
+      "sha256": "db77ccd143c00d55ced7c6d9cc6990870801e6ab2a89e786249c962fb1376fa4",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-ftpsrv",
+      "filename": "ftpsrv-ps4.elf",
+      "sha256": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-klogsrv",
+      "filename": "klogsrv-ps4.elf",
+      "sha256": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-ps4debug",
+      "filename": "ps4debug_v1.1.19.bin",
+      "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gdbsrv",
+      "filename": "gdbsrv-ps4.elf",
+      "sha256": "fc91ea233cdbb47acd8087b93d557d9f8a663d0f47cb75908a05a024d07e7efb",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-ezremote-ezremote-client-zip",
+      "filename": "ezremote-client.zip",
+      "sha256": "3917ba70508364ee147f585ff0a5d50226ecc2e22e2281c809d2ebdc031a6d34",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-ezremote-ezremote-loader-1-01-elf",
+      "filename": "ezRemote-Loader-1.01.elf",
+      "sha256": "eda226e008efae5f14bd9e4fb0dd27ee198d1e3b525aa4ab1079e410e66f5e3c",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-payload-manager",
+      "filename": "pldmgr_v0.6.3.elf",
+      "sha256": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-ffplay",
+      "filename": "FFplay.zip",
+      "sha256": "0aba52625552e499ab77632ad7c0bfbecf836a62376d7649acaeaa894130e97b",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-pkginstall",
+      "filename": "PKGInstall.zip",
+      "sha256": "b8c8a03ea1379957b3038c8d3d09acd1395ae8e1161837f369597993552d528a",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-garlic",
+      "filename": "garlic-savemgr.elf",
+      "sha256": "aaec2cb0a39e94217665652fd84fa7706f09c9f8640c07785b6a68b1711f18fc",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-ftpsrv",
+      "filename": "ftpsrv-ps5.elf",
+      "sha256": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-websrv",
+      "filename": "websrv-ps5.elf",
+      "sha256": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-klogsrv",
+      "filename": "klogsrv-ps5.elf",
+      "sha256": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-elfldr",
+      "filename": "elfldr-ps5.elf",
+      "sha256": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-f07434d99146-goldhen-v2-3-7z",
+      "filename": "GoldHEN_v2.3.7z",
+      "sha256": "fc49f6ada1d73da63187f27c4dc1e1569aff3c355d3d5ae5acf9a674e268ac68",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-86923843b6f3-iv0000-apol00004-00-apollo0000000ps4-pkg",
+      "filename": "IV0000-APOL00004_00-APOLLO0000000PS4.pkg",
+      "sha256": "ec34add4d2857fa3c947ed5666735a5c35ddb3e47d8be925b36e9ad408f7c090",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-f22d8b3749d7-shadowmountplus-elf",
+      "filename": "shadowmountplus.elf",
+      "sha256": "08c843018750bef013fe3a4de5f80c5c9738c6c2dafa2406e6b6e68d7585f3da",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-f22d8b3749d7-shadowmountplus-1-7beta11-zip",
+      "filename": "ShadowMountPlus_1.7beta11.zip",
+      "sha256": "8c268495c644850ab1eaad3dd7f12b71c0a4a20b6c030042ca743cd28afc49b6",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-78aec0f39465-etahen-2-5b-bin",
+      "filename": "etaHEN-2.5B.bin",
+      "sha256": "4845cac45095361b8983b14d6690622183b0dcfbf6d7fda16e161aa91ff0531e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-cd469f63fa67-ps5upload-10-6-0-elf",
+      "filename": "ps5upload-10.6.0.elf",
+      "sha256": "2f67651bf1320a83202b632782a1f404543b1ea4911dfb3be5a510971f015392",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-036a862b2f14-playden-ps5-0-8-0-zip",
+      "filename": "playden-ps5-0.8.0.zip",
+      "sha256": "4758ca04ba1b35a15bb31b406c20dede2d4bbd70165d24f7e6ac9feb059dbfec",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-ddcf24160dd6-ppsa99000-zip",
+      "filename": "PPSA99000.zip",
+      "sha256": "c2b5d18b9eba3daf1395729dd2b410ea6a6161542b49ce415d4b4c84b986cbb4",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-5a12cb950970-orbit-store-elf",
+      "filename": "orbit_store.elf",
+      "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-aa7beb68a4bc-dolphinps4-v04-19-pkg",
+      "filename": "DolphinPS4-v04.19.pkg",
+      "sha256": "c97e8790a51f496dd7849fa837ef61f15290ba8f5bd73cfe090a07cf2f959650",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-12c7a1cb9614-crema-v03-30-pkg",
+      "filename": "Crema-v03.30.pkg",
+      "sha256": "6b03ec37c9e7e89645784cbd8555a87d02f96a70182413c7cfea42049d0dee1d",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-628642807328-resonance-v01-41-pkg",
+      "filename": "Resonance-v01.41.pkg",
+      "sha256": "47c04310506fd819db9d31d5bdc721e19b36a73320e18923866c83b34b367720",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-b171167057ba-iv0000-pcsx20007-00-ps4sx2emu0000001-pkg",
+      "filename": "IV0000-PCSX20007_00-PS4SX2EMU0000001.pkg",
+      "sha256": "0f9161be1397fd675277357828fb9cbc0c314abfb84779263a31262023df606b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-2adda4a14f5d-rpcs3-port-for-ps4-v0-40-by-roberix-studio-pkg",
+      "filename": "RPCS3.PORT.FOR.PS4.v0.40.by.Roberix.Studio.pkg",
+      "sha256": "a49bcca52a584bcbac29d6abb5a875e3d371f9a790b81929bb8ba8ec33cd6670",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-640d68a152b5-ps5sx2-vk-285-182-zip",
+      "filename": "PS5SX2-vk-285-182.zip",
+      "sha256": "739c652acab11fc4eb79a7e20a67d22183ee97ea5292d3b8330bf5dbca412076",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-640d68a152b5-ps5sx2installer-elf",
+      "filename": "PS5SX2Installer.elf",
+      "sha256": "efdec4f8d968ef4a7c1880e75d26b96d212a042a6c208de46f0a859609f6224c",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-640d68a152b5-ps5sxhelper-elf",
+      "filename": "PS5SXHelper.elf",
+      "sha256": "fece3ee9c7e035c51319af018ae6865f0bf5db182074dafd0502c3bb2d5ee7d2",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-24e9baa79ea0-porpoise-4-0-zip",
+      "filename": "Porpoise-4.0.zip",
+      "sha256": "bce438cc8f436e177ae33b47a43aba82a7020e9db9b2b94c14055b4b7db2328e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-ffa3d0d38f43-ps5-ecam-v5-1-0-zip",
+      "filename": "PS5-ECAM-v5.1.0.zip",
+      "sha256": "c6a0c0b50617d923a5e7a5cb37d799c746118342cd850d5bca634c3670a6562f",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-3a4d278d7ff5-ppsa50011-zip",
+      "filename": "PPSA50011.zip",
+      "sha256": "230359c2638f99add3972147e1690e62d8984a37c00181501680bdda7c1096c8",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-3a4d278d7ff5-ps5x360-helper-elf",
+      "filename": "PS5X360-Helper.elf",
+      "sha256": "4a0250329e63b376f620511c4b6e2c6a2eb959e056824abde27947bf53f07b59",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-7d1b737c85a3-ppsa97358-zip",
+      "filename": "PPSA97358.zip",
+      "sha256": "494682ff5073985422fd8961cc617b8e3bdbdb2dedd85b69dadbd06f709953e9",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-7d1b737c85a3-helper-elf",
+      "filename": "helper.elf",
+      "sha256": "31c8a3479937e310f758d36d87c937c91ae942921fa4645473b3d228a7d88959",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-27a850f2459f-ps5-retroarch-v4-0-0-beta-4-zip",
+      "filename": "PS5_RetroArch-v4.0.0-beta-4.zip",
+      "sha256": "dad4f20204446a66dd05edb67cdf720988ca06119396f79a5e9ed876dc3d6012",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-c0009d75bd21-psflycast-v1-3-5-zip",
+      "filename": "PSFlyCast-v1.3.5.zip",
+      "sha256": "70ab96b021731af85a948dcba71bc701c2883e11694c4a89dda8c3ecdf38e09c",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-gta5-157-expulsion-7-0",
+      "filename": "Expulsion_V7.0.zip",
+      "sha256": "1e947e676dd228ebb34f61282fa4de343d503fc4b8b5cfa1d5a86d8bead5cad4",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-157-ozark",
+      "filename": "ozarkrbn_1.zip",
+      "sha256": "cc2605fb2c06c404970bd58d9a85864ec399858c22341b0a731e291e517cf985",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-157-velora-1-5",
+      "filename": "Velora.sprx",
+      "sha256": "e6e79ad27a87f2b7ea9d519167e5d9c48d096bdf1a17b2abf1de70c057bd2653",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-157-beach",
+      "filename": "BeachMenu157.prx",
+      "sha256": "d622d3d867244e5854e4773b9e03631d24918e26b634c4b74c8678b01ed06b8a",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-157-lts",
+      "filename": "LRS.prx",
+      "sha256": "4816609641ec21b9a7f151abe19eb234dee69c959d0da8a7a7c1718185704a96",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-157-serendipity",
+      "filename": "Seren.prx",
+      "sha256": "e4f085add22697b0bb3ef8f0028f1fe373ff4737ae3a1d7b2bb1a24afff18f35",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-156-ozark",
+      "filename": "ozarkrbn_2.rar",
+      "sha256": "4c181bc3f63dec638a71c7673cdda5ca4150a9acebf321ab6d7d53dd402ae445",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-156-velora",
+      "filename": "Velora.sprx",
+      "sha256": "d50d1582a67d978e347692b3bce951262dd061a649e75410595ae36f9bec3823",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-156-oxagon-full",
+      "filename": "Oxagon-v1.0.zip",
+      "sha256": "fac5dd065475242c7f92d2f5b8344028311524009a99fb75817a6dec7cc45070",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-156-oxagon-lite",
+      "filename": "Oxagon-Lite-v1.4.zip",
+      "sha256": "b327e4236ae0c2e74576be85bf2f86e66e061af35e5c8fd768aab92aaeb1ab38",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-gta5-156-beach",
+      "filename": "BeachMenu156.prx",
+      "sha256": "8ca31fa51e3401f678a9514fe4a93976d5a52c685fe07a3d2772a1523c90c073",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-bo3-injector",
+      "filename": "T7_GSC_Injector.prx",
+      "sha256": "7f0e438620094e864e2912ec56542835ee4fa6d03f419e609ea4749f331ff573",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-bo3-muzzman",
+      "filename": "MuzzMan_Bo3_Menu_Pack.zip",
+      "sha256": "ac6f817b5c16f9e20a43886d26ce53612131c3b7725288af1aa22e68378365ad",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-bo3-daybreak",
+      "filename": "Bo3_ZM_DayBreakCUSA02624.zip",
+      "sha256": "3332a95740ec8b8aa083b9ed30691f1921fdf8bdae0e2e7f955ca24350135467",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-rdr2-north-beta-northbeta011-rar",
+      "filename": "NorthBeta011.rar",
+      "sha256": "53c14325c96129436165116982add7ecc871362cb5492b3f5cad653cc0fd04b8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-rdr2-sheriff-rdr2-modmenu-rar",
+      "filename": "RDR2-ModMenu.rar",
+      "sha256": "c6b5de3dce13895953ed147f51182cb904687433f854bf3e4c557ea70aae2c81",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-rdr2-havana-rdr3payload-100-sprx",
+      "filename": "rdr3Payload_100.sprx",
+      "sha256": "df33c1fdc272cbdb081c60848ae654c0bd86f56b90f4ab7da7827a59492d5555",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-rdr2-havana-rdr3payload-129-sprx",
+      "filename": "rdr3Payload_129.sprx",
+      "sha256": "d4534fcae611d232a89bf2dd91f104148c2066750236703127445632365e4c83",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-rdr2-havana-rdr3payload-132-sprx",
+      "filename": "rdr3Payload_132.sprx",
+      "sha256": "b465b1f7aaa7d4a523db3b00618613b1e1d3ab9984d59461710fc4749356e36b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-ps5-bo1-bo2-gsc-injector-pack",
+      "filename": "place20me20in20data-GoldHENorETA.rar",
+      "sha256": "cd22d34f001b9beee4c22d704bd75de664b445f65471dbbc837989ece34428be",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-ps5-bo1-bo2-gsc-injector-prx",
+      "filename": "gsc2520injector.prx",
+      "sha256": "8bc257d7b10b07b51a52add92b803e7c70c801007c6b6b564a761d1776694a62",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03290-01-03",
+      "filename": "CUSA03290_01.03.json",
+      "sha256": "d4fbc6fd4ec69f08eebead146971b695a5a1bf0b34ca822341354a48d10b7d68",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03291-01-03",
+      "filename": "CUSA03291_01.03.json",
+      "sha256": "6ababd420bc867d6dbfc36f445c4cf3b483d70249418a112955e4e53ea1cef08",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03991-01-00",
+      "filename": "CUSA03991_01.00.json",
+      "sha256": "6d78917053ab62a993853282af124f71bc7825cb7eb276b8805c803f32230348",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03991-01-35",
+      "filename": "CUSA03991_01.35.json",
+      "sha256": "ddbaeb4f66deadedef7dada84cfedda1c90471ae99b5874d3e0b19fa43289475",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa12555-01-00",
+      "filename": "CUSA12555_01.00.json",
+      "sha256": "310516df7924cd96e7281a791ecaf94c375050bf3deb71682f57e36a19ebf505",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa12555-01-01",
+      "filename": "CUSA12555_01.01.json",
+      "sha256": "0b8f6ecadab15f31c62174d4da876fad4a70bd0fdb7e3f3d458f50bd31d197a8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa12555-01-30",
+      "filename": "CUSA12555_01.30.json",
+      "sha256": "f227052ba1366a106aae4e9d08d3bf66049c9419742208ef7b72bb50ccca122e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-theme-stop-elf",
+      "filename": "ps5-theme-stop.elf",
+      "sha256": "90a1ee926eba4277e1ed2827191151872e4d113de0c566614db51d1b4506230c",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-theme--elf",
+      "filename": "ps5-theme.elf",
+      "sha256": "e27473f0f5d3a9c544ed075f3f0a0e831377e0ab5e6316dce81ad732a99c04eb",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-theme--plugin",
+      "filename": "ps5-theme.plugin",
+      "sha256": "91b8143abcf4a54ee84f3de6c167d95f07002b3f8cf5f51ff6508e9f245534de",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "expulsion-v5-ready-0b8241baaa1b",
+      "filename": "LushModz-Expulsion-1.57.prx",
+      "sha256": "dfdc05bbe590bced0ca53059c017cb05c18054695a90053b7c91da269fb57dc3",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "expulsion-v7-ready-b163fbc0653f",
+      "filename": "LushModz-Expulsion-1.57.prx",
+      "sha256": "823656c96305e4373ec132d8f5dfd9fa2ec24a38d941dfb980f92616d84cb268",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "expulsion-v7-ready-676be86e7c0f",
+      "filename": "MountMod.lua",
+      "sha256": "81f65463bc42e1999e8696b7a7513261f685d071d4a94e6397e41d4dc333f123",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "expulsion-v7-ready-a081531539e4",
+      "filename": "LushModzFunV1Menu.lua",
+      "sha256": "679d2af45a7a9759b58748954c93d6413944c23096c79f459a06f44312d1a862",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-2-3-5-05",
+      "filename": "goldhen_2.3_505.bin",
+      "sha256": "a58e3633c6992b0b392a572679ba56d2a5344d03ad715e0cf30df3341f17e6be",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-2-3-6-72",
+      "filename": "goldhen_2.3_672.bin",
+      "sha256": "75218e080d6a46c3778ef1e4338d453e8c2ce8ff1bc368818943bd21a1d5e681",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-2-3-9-00",
+      "filename": "goldhen_2.3_900.bin",
+      "sha256": "c9b8f33d28258af9e80465da591868dada25a1454f30f63882668d5e0dcff9c2",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-bo3-100",
+      "filename": "BO3_100.elf",
+      "sha256": "f676ae332f20e81fc2ac31c450835e198c5d16c0bbaac7361388f9219df458ef",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-bo3-126",
+      "filename": "BO3_126.elf",
+      "sha256": "27ca886fb12d178c62ecedc3cb64961c60fee5f82d6e4a91ce5ae9ff6f6e815b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-ghosts-100",
+      "filename": "Ghosts_100.elf",
+      "sha256": "11ec8f73e5965a7ed908cfa5d72d344080d4c79ab39dcfad4504172a307700ca",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-ghosts-120",
+      "filename": "Ghosts_120.elf",
+      "sha256": "794e3232e862c9f3bf0bd950dbb30e74182e0e0ce6c989ae7efcec5efca4cd6a",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-aw-100",
+      "filename": "AW_100.elf",
+      "sha256": "4f196d7ae8271e351bfb1ce20e9a106f8857f81121168a43fb3f6841b9fc355f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-aw-123",
+      "filename": "AW_123.elf",
+      "sha256": "03bf6ebf4bc68c22f12fc4b2348aba05ec5323b128b287eb0ff7f3f2390ba57e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-mwr-102",
+      "filename": "MWR_102.elf",
+      "sha256": "96b858b3b5147d848488f1e31a0159c4732f9a28c6f666610d38255d8f08c231",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "matrix-ps4-mwr-113",
+      "filename": "MWR_113.elf",
+      "sha256": "42bc11612c904b18df4413ab3bf2f9c466da30b1615d83d2c8daf4b266695bf8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa05625-01-44",
+      "filename": "CUSA05625_01.44.json",
+      "sha256": "887fce113fe3a9623f7b5acb4d0798eb584d6e12a3c6a772d13b6d8660a3f4a8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa09303-01-56",
+      "filename": "CUSA09303_01.56.json",
+      "sha256": "e82b4f87211f71d558e98262ace90140aedcbf220ffbf374b69a28f1148bad0c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa18534-08-00",
+      "filename": "CUSA18534_08.00.json",
+      "sha256": "ad903da2c07965a8caf15abc10edd88b5892d6bcb3c050f6f3d0896daca4c8fd",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa02962-01-37",
+      "filename": "CUSA02962_01.37.json",
+      "sha256": "1a7c447379733adce25d8c5376cf2b42f1d9225593e1daf801e5b509ae221bb5",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa05574-04-06",
+      "filename": "CUSA05574_04.06.json",
+      "sha256": "729d5e405004a3f860c866f132fa5f04a8a8c3d70244ecd1e828f4a14eed02a2",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa07410-01-35",
+      "filename": "CUSA07410_01.35.json",
+      "sha256": "5c8187ee948e54b9812e43afb1f67e0668f50908947c23243ee90c87877b5b82",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa34386-06-02",
+      "filename": "CUSA34386_06.02.json",
+      "sha256": "4514eaef84d36605c9b53dfc0929b406c588652e687c6e830be2f65af5c60ee4",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa10211-01-54",
+      "filename": "CUSA10211_01.54.json",
+      "sha256": "ead367bb8651c82b145ec8e03f7b542bdbf0e23142aefde9efe21d8457324e5a",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa09171-01-05",
+      "filename": "CUSA09171_01.05.json",
+      "sha256": "c4d14bf36ce01e00619e5491d7c354e1f1a3b1561c9b1bf52b8a9340361a2aef",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa14168-01-05",
+      "filename": "CUSA14168_01.05.json",
+      "sha256": "435d5660b04f571447073f3c4166fd5d9d2594b4ac4547850defe80744746fbc",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa33388-01-04",
+      "filename": "CUSA33388_01.04.json",
+      "sha256": "f8bee169fbee9ca4b8f18b175c03c375b2ed0e577b6658dcbd59f49e58ef09fc",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa28863-01-22",
+      "filename": "CUSA28863_01.22.json",
+      "sha256": "cfd181fb86f73ff04df1a996293f5e94ac7d6f463213dd275116005656596076",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa13801-01-06",
+      "filename": "CUSA13801_01.06.json",
+      "sha256": "8fa4d2dc0dd3231a588c9a33a1d6d8fda1c812c458ea71b0b763805b4dac0e6b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa06164-01-04",
+      "filename": "CUSA06164_01.04.json",
+      "sha256": "91042efbb8172b3c69f0f075f688b9fb75378fad8f1d1d6b9234ac0938fec215",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa02092-01-12",
+      "filename": "CUSA02092_01.12.json",
+      "sha256": "58ca70551863aca205ab8fde139819494f214e22f1b98138526acb2743f1af46",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa13338-01-25",
+      "filename": "CUSA13338_01.25.json",
+      "sha256": "c77e0c5970804060ccf773bbf254531a986114cdebc206df2e3809b5ed20681e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa05904-01-15",
+      "filename": "CUSA05904_01.15.json",
+      "sha256": "6cb656425459fffe50b11920c289ec1d3b8c03ece3a741d676a0da7cee92f3f4",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01589-01-02",
+      "filename": "CUSA01589_01.02.json",
+      "sha256": "ae539396d46f093d204b6711394a4df240fa5a785496ec4f3f8165e7ffb8f711",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00135-01-15",
+      "filename": "CUSA00135_01.15.json",
+      "sha256": "48de16803a94ea153f4b3d057576062ee4604ed326c045ece963a50bed110be5",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa02000-01-02",
+      "filename": "CUSA02000_01.02.json",
+      "sha256": "3cfeb184262239474b307c6700235c19ca894caeb82609ed54d807a7575779f2",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03979-01-03",
+      "filename": "CUSA03979_01.03.json",
+      "sha256": "aa486f3005a5d42967917d1ba7f80a43181cbe796e7aac583f9c069048e9d485",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03980-01-02",
+      "filename": "CUSA03980_01.02.json",
+      "sha256": "5b66b81b7dc6194b68fbf81d24ed43892869907e0db1beb035da3440e12261c5",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa09175-01-81",
+      "filename": "CUSA09175_01.81.json",
+      "sha256": "22777eeb0ff6477c3553da0a0b64e6be9d929b7a671cfdbf9f3e75577bd75f11",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00717-01-08",
+      "filename": "CUSA00717_01.08.json",
+      "sha256": "f4cad337fd51b34c48d450519426d4cc2dc519521fa510bf2d759c4b440401a6",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa11260-01-13",
+      "filename": "CUSA11260_01.13.json",
+      "sha256": "3d03f9d84a322edbe79f30f1be8e41796e83a463879473af441a8ea14fb0e2cf",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa13233-02-18",
+      "filename": "CUSA13233_02.18.json",
+      "sha256": "bf3aaf4caaabeadf74d3bda57c3d5cddda245bf13a806af5b77c1ba7a0b2d7a7",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa11993-01-19",
+      "filename": "CUSA11993_01.19.json",
+      "sha256": "b9243a2d4dfca28e5c486b46f09b3591a9c0146e32564e8122c2d6d06a2d061c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa17776-01-09",
+      "filename": "CUSA17776_01.09.json",
+      "sha256": "180902ffcc686d95e0f623e70feba02c70d4251ca01cab4c3ddc49660f7cb987",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa11454-01-12",
+      "filename": "CUSA11454_01.12.json",
+      "sha256": "4356e33e8d98e513a624e8bdb9b7664f80efd40062baa1e9243ef736066528c4",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa04480-01-06",
+      "filename": "CUSA04480_01.06.json",
+      "sha256": "8bc08ae21a293cea7a9bddc4d29e763abf7732a6ac09a2c70a3a63a79dbe3951",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa18742-01-03",
+      "filename": "CUSA18742_01.03.json",
+      "sha256": "1a720a85329c2e5d224684e09aec62ba5b661ef5d46dbb2a644b11d7c7503574",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00552-01-11",
+      "filename": "CUSA00552_01.11.json",
+      "sha256": "36711940f5c91d370a31f3d610e934ec8077967dd14c958c687af4ec0bb709bc",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa10249-01-09",
+      "filename": "CUSA10249_01.09.json",
+      "sha256": "c8fc693b9f2e93acea70ddb50ed8765b8999a65ec473a4586a0189691e53344e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00341-01-33",
+      "filename": "CUSA00341_01.33.json",
+      "sha256": "a11a60c6aec6699d4995b9f2c0dc76e9a939b84cd8ae853acbe09039ddd36869",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa07875-01-08",
+      "filename": "CUSA07875_01.08.json",
+      "sha256": "b8e4db7485f9e63ac385693fc34d5c2c6469cbb2bc0dd470458f4d29c62b76ce",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00362-01-04",
+      "filename": "CUSA00362_01.04.json",
+      "sha256": "b4ccd16830033ca80fb57cdfe7abb0e516c4dfee48de3c0c9708b3dede9fc42e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01140-01-16",
+      "filename": "CUSA01140_01.16.json",
+      "sha256": "a18a29e6f7dc098fecb9e508a5742783acb06c039cb1520cf62b99614a7d727d",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa11407-01-08",
+      "filename": "CUSA11407_01.08.json",
+      "sha256": "2f7b1091a3af3e183ba2f85e820da9348063a8e689fd2a11fe91059a83fc9fe2",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00207-01-09",
+      "filename": "CUSA00207_01.09.json",
+      "sha256": "d4da403382829c29fcf6afe29e9bba5fae320ac73feded091f41bf8e29c7bb93",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00208-01-09",
+      "filename": "CUSA00208_01.09.json",
+      "sha256": "3943d226cb78133b29309dee54ccdab45a19826d7bb09eb32c8b6b461a62e1ad",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00900-01-09",
+      "filename": "CUSA00900_01.09.json",
+      "sha256": "668127e64c77985e08361dca6144088b7944542d7069330458a62c44a7ac432c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa02376-01-52",
+      "filename": "CUSA02376_01.52.json",
+      "sha256": "935b474c4787729321c8bf0156aae20ba443c9d463a314eed9f8ef94a306ec14",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa16579-01-61",
+      "filename": "CUSA16579_01.61.json",
+      "sha256": "155d2921111667e912686a74d744d06212102ce15441eb2e1dd3ce5d2edda2be",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa27043-01-10",
+      "filename": "CUSA27043_01.10.json",
+      "sha256": "e4d0c327f98eda803d87beffe85331bb626d25f51256b8985b80038b12e6276f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa02231-01-00",
+      "filename": "CUSA02231_01.00.json",
+      "sha256": "18d1091ab1bb81763c2dd87d71ae13f34e85491a9dd9f0add28d3f5fdf3e95fa",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa15778-01-06",
+      "filename": "CUSA15778_01.06.json",
+      "sha256": "048ff952981d284d3994cc5688e5ee2a33d6a4a2a7ff1d8071894733c84cdf2f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03309-01-03",
+      "filename": "CUSA03309_01.03.json",
+      "sha256": "3772c268ac763c020d2797cc112b78d28a9054865e77c9fb3f50661a57769065",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03694-01-11",
+      "filename": "CUSA03694_01.11.json",
+      "sha256": "ab85a39a513bad5a0b9b64bbd9ac319bc09f002d11d793b8cf90cbc3f2dd5b19",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa04943-01-11",
+      "filename": "CUSA04943_01.11.json",
+      "sha256": "211f86f43e7c6fd79374eb040c562c9234e516b7108424c9a26d0ee4ac64c61e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01493-01-05",
+      "filename": "CUSA01493_01.05.json",
+      "sha256": "cc0a2f8433c80c4d1636a4530d2557bdc05225872030e3fce3db4aba1d06a5f2",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa02747-01-05",
+      "filename": "CUSA02747_01.05.json",
+      "sha256": "ef699b5a2563c4a582ff2700ed81e35a78c5d5b3abd5fae7c3d3044863cf7c8e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01073-01-09",
+      "filename": "CUSA01073_01.09.json",
+      "sha256": "a16eeafc64c5aff394f7de3dd82543004378b0a45197ceeb147b7d6bfeea4228",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa36843-01-03",
+      "filename": "CUSA36843_01.03.json",
+      "sha256": "0c69c2ced417633e6b15b3d6832f07b0a719ae7152732141a103dd582c9cd9f8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa08809-01-01",
+      "filename": "CUSA08809_01.01.json",
+      "sha256": "00cd1514bb2d5a19269321bf4289ef9d678c6ad50bfa842f851b80c696782324",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00203-01-06",
+      "filename": "CUSA00203_01.06.json",
+      "sha256": "df667685c55b1fbbcc4baa2832a4c7274beeca217ac7c19e0e602e7c251af701",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00100-01-02",
+      "filename": "CUSA00100_01.02.json",
+      "sha256": "014b034b1f49d67865c88c3cabe4a7ac51622946f35eb6471da2cc749dc7ac0c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00785-01-02",
+      "filename": "CUSA00785_01.02.json",
+      "sha256": "c5af433774bf78e01089403f82212824068fefe84b3d07baa40f18307597e31d",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa07052-01-02",
+      "filename": "CUSA07052_01.02.json",
+      "sha256": "142c48c9c7cf37bdb505584640f775c8b8cd9c24bf732fffd619937ee9696774",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa07187-01-02",
+      "filename": "CUSA07187_01.02.json",
+      "sha256": "687891048cf56af219b1c6951739bd0dc962cf48f569190ade23515cdac5d289",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa24705-01-18",
+      "filename": "CUSA24705_01.18.json",
+      "sha256": "93d3149929d21c3c5ad0ffacd22f76ee2fe0e73fa849304e3379b29a2a3f5955",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa28561-01-18",
+      "filename": "CUSA28561_01.18.json",
+      "sha256": "92078576141bc29f12a98e9ff7963c94df25f8951ab6eae7506e54156fc5b8d8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa24899-01-03",
+      "filename": "CUSA24899_01.03.json",
+      "sha256": "8e0077f79aaacc831d1cdd964501c5f9a9956c2952b19c3b5538aec178e1ddd8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa12824-01-05",
+      "filename": "CUSA12824_01.05.json",
+      "sha256": "1b6beaa17babb4e999e1ac00165478c4042880063113655083a06882b941ad5e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00503-01-12",
+      "filename": "CUSA00503_01.12.json",
+      "sha256": "5268cb539731eaa8f803547facee3902833602194a5ca2dc43a38c497699b16a",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa24853-02-08",
+      "filename": "CUSA24853_02.08.json",
+      "sha256": "8e79324ac4722982a6ed1eea33b1ab06312e9edfbdfce0120f2b6fdf7b0e3b4b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa15090-01-07",
+      "filename": "CUSA15090_01.07.json",
+      "sha256": "9262575ce77589ced459e3566c79b970fe5728e8e695d7d6572554658659e0e1",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa36986-01-27",
+      "filename": "CUSA36986_01.27.json",
+      "sha256": "689c9980ffe34445e5d5c9302043bec1ef0fefdf4c15587f0034266ab202ed7c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01067-01-00",
+      "filename": "CUSA01067_01.00.json",
+      "sha256": "bb9ed3247032aab9558ecc6280e866e78dfc327239f9de1b451908801a466db3",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa28194-01-10",
+      "filename": "CUSA28194_01.10.json",
+      "sha256": "efc0d7b600871cc0137b25fad081b27cc44b8c5fdfedaae15fddfc02e75b7f42",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01836-01-14",
+      "filename": "CUSA01836_01.14.json",
+      "sha256": "ae46b1b68c3de0a67148b820079989a5d3c5bd75c098381a678b1bcb0d614fcc",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa13689-01-04",
+      "filename": "CUSA13689_01.04.json",
+      "sha256": "540301a23cd5fc9455b14f2f0fb0e1263ad532978dca20c0cbf54a6c7ccfa23c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01615-01-29",
+      "filename": "CUSA01615_01.29.json",
+      "sha256": "b0ed507c5b2c32da749d71bf4bf4fd0d0073338af2150c5703daba5b3f8dd3b3",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa17419-01-01",
+      "filename": "CUSA17419_01.01.json",
+      "sha256": "05fc225e414cf61ff4fa2716f2e62d60861b0752482f461d639728f91a3febb7",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa11560-01-03",
+      "filename": "CUSA11560_01.03.json",
+      "sha256": "f07962132e635fdc3693628f47198b8fa1c296f7e2cda2a0e7a3ec436f72e22f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa01499-01-00",
+      "filename": "CUSA01499_01.00.json",
+      "sha256": "416f1760d1029d4dcf67f9a8b9f9f0a1a84df92b50be729b88ddff5fc01f7947",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa26615-01-07",
+      "filename": "CUSA26615_01.07.json",
+      "sha256": "aade40b44743022dfc15dc2798a0726ba8b8fece60695bdabf0fbbb0db57e12c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa13197-01-09",
+      "filename": "CUSA13197_01.09.json",
+      "sha256": "b75a381d8bc183ba8938f0cb0799f926d933f8d1577f60e81e626c3a8be74356",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03528-01-00",
+      "filename": "CUSA03528_01.00.json",
+      "sha256": "4a29980c693383e048e6e2d27bee2b282a01b82ebfa3d4dff03dc28ff0146049",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa02882-01-00",
+      "filename": "CUSA02882_01.00.json",
+      "sha256": "b7999dfcc7c129efbfc08bd8a8408b0c79ef8a192ee6212a117766b77a1938a6",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa37321-01-08",
+      "filename": "CUSA37321_01.08.json",
+      "sha256": "663ab691e022a3d9566b33e07f84376a4b58a1efbdb67fae15b9a9327a2a113b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa12085-01-03",
+      "filename": "CUSA12085_01.03.json",
+      "sha256": "bc41dccb116dc39bcc50bc4cec4aa473aee740d97f874835c44edfbe90541868",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa28183-01-11",
+      "filename": "CUSA28183_01.11.json",
+      "sha256": "ea840b7768f50c23c7c323e307d7bd949e894895c2b500f9b0d078a0a304568e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03803-01-04",
+      "filename": "CUSA03803_01.04.json",
+      "sha256": "df71cfce9719552591ac3c1c329a05131beb3ef749acb90d957fcbac053e4b59",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa29007-01-00",
+      "filename": "CUSA29007_01.00.json",
+      "sha256": "bbd9701f2bbad788b599a3cd9c860ba860355ebe1e9191fec42e2b46b9808cba",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa18100-01-03",
+      "filename": "CUSA18100_01.03.json",
+      "sha256": "522c828f2e191b9cd3e46786f2f7bff17be855eb8d5763b0a7e9102413b1d03c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa13152-01-04",
+      "filename": "CUSA13152_01.04.json",
+      "sha256": "183f83ba28277f0dd07e1a1715127ad65e4acad7721ef46343afa20597425d87",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00938-01-00",
+      "filename": "CUSA00938_01.00.json",
+      "sha256": "e9d660ffcac0902a99d55328d036ed60c61de64a4ad56a5a70ed0541af0903c9",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa15526-01-27",
+      "filename": "CUSA15526_01.27.json",
+      "sha256": "190023243ad55c87fe760e770c8b09f28645c6ac7d717ac98152487ec25c590c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa05133-01-05",
+      "filename": "CUSA05133_01.05.json",
+      "sha256": "982a7b6c5bb9056b009f1fc4cdee68d1f8b1923a3e207675f3f5bb98e82ab20b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa04482-01-12",
+      "filename": "CUSA04482_01.12.json",
+      "sha256": "ce94848fb1d408ced6b3e6e1ed086b8b7ffbdf8d6ce5662a9af9bcbf674f1e20",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa03551-01-00",
+      "filename": "CUSA03551_01.00.json",
+      "sha256": "e5ffe78407e681cbe0a934548d09165e69933343deaac3a2b77b74c2907d3c39",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa08025-01-16",
+      "filename": "CUSA08025_01.16.json",
+      "sha256": "c078461b37e3dce130eadcadde5d792a26526b4b76339205a1521ec2564dc201",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa18659-01-03",
+      "filename": "CUSA18659_01.03.json",
+      "sha256": "609d6ed67ee8521f4b4d45e0c63d04ce7465cfd2e009b08a8d00c70ffd058841",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa08558-01-01",
+      "filename": "CUSA08558_01.01.json",
+      "sha256": "d21cbdfba5527b3b243f740ee88b848b1b9dd55bd88392b9756372eaac47c828",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa06633-01-03",
+      "filename": "CUSA06633_01.03.json",
+      "sha256": "9e410fbc10a06e6e3a9d4bd8901e951011c20c764ae328ab0b6faac9fb27f38e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa08798-01-11",
+      "filename": "CUSA08798_01.11.json",
+      "sha256": "57a8bc03a71a91dadc20b198f8248d88ee6f1f69ab2c9da53e5b05c453e6d4c0",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "goldhen-cusa00054-01-04",
+      "filename": "CUSA00054_01.04.json",
+      "sha256": "00192834617284a64ef7c684fc4dd414b2f27dda0d9fbdc22a76753d57b770de",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "fps-cusa00208-1792785960",
+      "filename": "CUSA00208.xml",
+      "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00900-1792785960",
+      "filename": "CUSA00900.xml",
+      "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03014-1792785960",
+      "filename": "CUSA03014.xml",
+      "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03023-1792785960",
+      "filename": "CUSA03023.xml",
+      "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01363-1792785960",
+      "filename": "CUSA01363.xml",
+      "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03173-1792785960",
+      "filename": "CUSA03173.xml",
+      "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00207-1792785960",
+      "filename": "CUSA00207.xml",
+      "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08519-1792785960",
+      "filename": "CUSA08519.xml",
+      "sha256": "567dc63c9d72dad78d5e2ebd8870445d5bcd175a658982d35b3e7ce3a9cf3f1d",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03041-1792785960",
+      "filename": "CUSA03041.xml",
+      "sha256": "567dc63c9d72dad78d5e2ebd8870445d5bcd175a658982d35b3e7ce3a9cf3f1d",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08568-1792785960",
+      "filename": "CUSA08568.xml",
+      "sha256": "567dc63c9d72dad78d5e2ebd8870445d5bcd175a658982d35b3e7ce3a9cf3f1d",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02376-1792785960",
+      "filename": "CUSA02376.xml",
+      "sha256": "8cb91f467f1f3db042d9c7e9edeef98521a0e5237895f6fbf0e6727be330f1b7",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00663-1792785960",
+      "filename": "CUSA00663.xml",
+      "sha256": "2fb93cf2e0ffb5be08086595e26e9ad20827cb2ac8989cac838cd77ddc4b8f4b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00135-1792785960",
+      "filename": "CUSA00135.xml",
+      "sha256": "b009a9eb9332e1e0092bc29be66932fd426f9eeb2e71b9c441fc51066f5214a3",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00133-1792785960",
+      "filename": "CUSA00133.xml",
+      "sha256": "b009a9eb9332e1e0092bc29be66932fd426f9eeb2e71b9c441fc51066f5214a3",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01009-1792785960",
+      "filename": "CUSA01009.xml",
+      "sha256": "b009a9eb9332e1e0092bc29be66932fd426f9eeb2e71b9c441fc51066f5214a3",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07402-1792785960",
+      "filename": "CUSA07402.xml",
+      "sha256": "8955ef655e0f0b88680eb0101d522e73b295961ad439cd763df09acac9aff019",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07399-1792785960",
+      "filename": "CUSA07399.xml",
+      "sha256": "8955ef655e0f0b88680eb0101d522e73b295961ad439cd763df09acac9aff019",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13795-1792785960",
+      "filename": "CUSA13795.xml",
+      "sha256": "9305656dff1efe68fa9a6a143b77b6b3eaca01b2cb731c1212c98f0237b54b96",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa16579-1792785960",
+      "filename": "CUSA16579.xml",
+      "sha256": "fe14db37c42e9395d4c074666235d9ad7a9ed7b92409db315e749d4bec0adfb6",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07339-1792785960",
+      "filename": "CUSA07339.xml",
+      "sha256": "972d03d2f7f7db482b02fd447821e8205142688d705874bfa4c74a1f5be47dfc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03388-1792785960",
+      "filename": "CUSA03388.xml",
+      "sha256": "972d03d2f7f7db482b02fd447821e8205142688d705874bfa4c74a1f5be47dfc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03365-1792785960",
+      "filename": "CUSA03365.xml",
+      "sha256": "972d03d2f7f7db482b02fd447821e8205142688d705874bfa4c74a1f5be47dfc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa27043-1792785960",
+      "filename": "CUSA27043.xml",
+      "sha256": "2662288f48d633f386acbcba27d6dd6fe260071498c4bae17ac867519ef85ac9",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01014-1792785960",
+      "filename": "CUSA01014.xml",
+      "sha256": "2662288f48d633f386acbcba27d6dd6fe260071498c4bae17ac867519ef85ac9",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-ppsa01341-1792785960",
+      "filename": "PPSA01341.xml",
+      "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-ppsa01340-1792785960",
+      "filename": "PPSA01340.xml",
+      "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-ppsa01339-1792785960",
+      "filename": "PPSA01339.xml",
+      "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-ppsa01342-1792785960",
+      "filename": "PPSA01342.xml",
+      "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02218-1792785960",
+      "filename": "CUSA02218.xml",
+      "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02230-1792785960",
+      "filename": "CUSA02230.xml",
+      "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02231-1792785960",
+      "filename": "CUSA02231.xml",
+      "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02441-1792785960",
+      "filename": "CUSA02441.xml",
+      "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00003-1792785960",
+      "filename": "CUSA00003.xml",
+      "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00066-1792785960",
+      "filename": "CUSA00066.xml",
+      "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00064-1792785960",
+      "filename": "CUSA00064.xml",
+      "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00879-1792785960",
+      "filename": "CUSA00879.xml",
+      "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00093-1792785960",
+      "filename": "CUSA00093.xml",
+      "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02010-1792785960",
+      "filename": "CUSA02010.xml",
+      "sha256": "46e6108f07181bdd9c94589335e58e6a27c19559b2683840bc6359e0f58d9d05",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa12555-1792785960",
+      "filename": "CUSA12555.xml",
+      "sha256": "4bad4c8ebcda38118ec860f30d3c7ee283cce238a07eb7e343e8927e9671f049",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03450-1792785960",
+      "filename": "CUSA03450.xml",
+      "sha256": "c17b95c228075d89f531d323662bece04e9e8df836ab97715cd1dac9d7b6dd89",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02962-1792785960",
+      "filename": "CUSA02962.xml",
+      "sha256": "c17b95c228075d89f531d323662bece04e9e8df836ab97715cd1dac9d7b6dd89",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02557-1792785960",
+      "filename": "CUSA02557.xml",
+      "sha256": "c17b95c228075d89f531d323662bece04e9e8df836ab97715cd1dac9d7b6dd89",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa15778-1792785960",
+      "filename": "CUSA15778.xml",
+      "sha256": "5b919e1d4b9c8d5d41708b9902f293169dd3dc598a460026c7d75621cc4635df",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03309-1792785960",
+      "filename": "CUSA03309.xml",
+      "sha256": "7da6fba27aca0cb2b5ad1e2c0ff68e2d76810b69268e5dc7f6833cf4e6adc803",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07410-1792785960",
+      "filename": "CUSA07410.xml",
+      "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07408-1792785960",
+      "filename": "CUSA07408.xml",
+      "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07435-1792785960",
+      "filename": "CUSA07435.xml",
+      "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07412-1792785960",
+      "filename": "CUSA07412.xml",
+      "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07411-1792785960",
+      "filename": "CUSA07411.xml",
+      "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00880-1792785960",
+      "filename": "CUSA00880.xml",
+      "sha256": "df1b37ae2fdac0f07b6f0e7d35d6486323f718791b1258ddd34fbee4ea582a76",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00411-1792785960",
+      "filename": "CUSA00411.xml",
+      "sha256": "df1b37ae2fdac0f07b6f0e7d35d6486323f718791b1258ddd34fbee4ea582a76",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00419-1792785960",
+      "filename": "CUSA00419.xml",
+      "sha256": "df1b37ae2fdac0f07b6f0e7d35d6486323f718791b1258ddd34fbee4ea582a76",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00547-1792785960",
+      "filename": "CUSA00547.xml",
+      "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa04943-1792785960",
+      "filename": "CUSA04943.xml",
+      "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa04934-1792785960",
+      "filename": "CUSA04934.xml",
+      "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03694-1792785960",
+      "filename": "CUSA03694.xml",
+      "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01493-1792785960",
+      "filename": "CUSA01493.xml",
+      "sha256": "29b2eb135580a4feb2cf44dd98bfb62e67105fe9ce397f4807c88642d3f8e777",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02748-1792785960",
+      "filename": "CUSA02748.xml",
+      "sha256": "29b2eb135580a4feb2cf44dd98bfb62e67105fe9ce397f4807c88642d3f8e777",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02747-1792785960",
+      "filename": "CUSA02747.xml",
+      "sha256": "29b2eb135580a4feb2cf44dd98bfb62e67105fe9ce397f4807c88642d3f8e777",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa12635-1792785960",
+      "filename": "CUSA12635.xml",
+      "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09254-1792785960",
+      "filename": "CUSA09254.xml",
+      "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13217-1792785960",
+      "filename": "CUSA13217.xml",
+      "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13318-1792785960",
+      "filename": "CUSA13318.xml",
+      "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09264-1792785960",
+      "filename": "CUSA09264.xml",
+      "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00054-1792785960",
+      "filename": "CUSA00054.xml",
+      "sha256": "3ae729a83b72398f4f5faafe50eb80ff2fc99104faaa440dffa3826ac9a4e0e8",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00103-1792785960",
+      "filename": "CUSA00103.xml",
+      "sha256": "3ae729a83b72398f4f5faafe50eb80ff2fc99104faaa440dffa3826ac9a4e0e8",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-ppsa15304-1792785960",
+      "filename": "PPSA15304.xml",
+      "sha256": "3d3fe487f0f89574f2e9026e8e2884ef75a80eb179c5246462c556f018d5edfe",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01928-1792785960",
+      "filename": "CUSA01928.xml",
+      "sha256": "21b9c862a9d1ecc893cc5757a8571c52f53889d83859d86675c1870a157bd5bb",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01073-1792785960",
+      "filename": "CUSA01073.xml",
+      "sha256": "21b9c862a9d1ecc893cc5757a8571c52f53889d83859d86675c1870a157bd5bb",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36845-1792785960",
+      "filename": "CUSA36845.xml",
+      "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36844-1792785960",
+      "filename": "CUSA36844.xml",
+      "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36843-1792785960",
+      "filename": "CUSA36843.xml",
+      "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36842-1792785960",
+      "filename": "CUSA36842.xml",
+      "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa33388-1792785960",
+      "filename": "CUSA33388.xml",
+      "sha256": "2f053e0512c79938af60ad98a96595d3ac4a4480c42ac7d57bf62bb2a40f8498",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa33387-1792785960",
+      "filename": "CUSA33387.xml",
+      "sha256": "2f053e0512c79938af60ad98a96595d3ac4a4480c42ac7d57bf62bb2a40f8498",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa35714-1792785960",
+      "filename": "CUSA35714.xml",
+      "sha256": "2f053e0512c79938af60ad98a96595d3ac4a4480c42ac7d57bf62bb2a40f8498",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13801-1792785960",
+      "filename": "CUSA13801.xml",
+      "sha256": "162c05a4599ba82d8b890f1c84dae8fb8749c886a31fba957f4d083dc97bce96",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13910-1792785960",
+      "filename": "CUSA13910.xml",
+      "sha256": "162c05a4599ba82d8b890f1c84dae8fb8749c886a31fba957f4d083dc97bce96",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa12047-1792785960",
+      "filename": "CUSA12047.xml",
+      "sha256": "162c05a4599ba82d8b890f1c84dae8fb8749c886a31fba957f4d083dc97bce96",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08034-1792785960",
+      "filename": "CUSA08034.xml",
+      "sha256": "0275336fc830f405ec717b883be9936346b8b5b953751ba6feb332e782d2be12",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08804-1792785960",
+      "filename": "CUSA08804.xml",
+      "sha256": "0275336fc830f405ec717b883be9936346b8b5b953751ba6feb332e782d2be12",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08809-1792785960",
+      "filename": "CUSA08809.xml",
+      "sha256": "0275336fc830f405ec717b883be9936346b8b5b953751ba6feb332e782d2be12",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00203-1792785960",
+      "filename": "CUSA00203.xml",
+      "sha256": "5379a14ac088ef5e40f2ac2f2f8f0fab886437e7da171887873268c091fb2a72",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03745-1792785960",
+      "filename": "CUSA03745.xml",
+      "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03627-1792785960",
+      "filename": "CUSA03627.xml",
+      "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa04936-1792785960",
+      "filename": "CUSA04936.xml",
+      "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05152-1792785960",
+      "filename": "CUSA05152.xml",
+      "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa14006-1792785960",
+      "filename": "CUSA14006.xml",
+      "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13986-1792785960",
+      "filename": "CUSA13986.xml",
+      "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10249-1792785960",
+      "filename": "CUSA10249.xml",
+      "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07820-1792785960",
+      "filename": "CUSA07820.xml",
+      "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00556-1792785960",
+      "filename": "CUSA00556.xml",
+      "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00552-1792785960",
+      "filename": "CUSA00552.xml",
+      "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00557-1792785960",
+      "filename": "CUSA00557.xml",
+      "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00559-1792785960",
+      "filename": "CUSA00559.xml",
+      "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00076-1792785960",
+      "filename": "CUSA00076.xml",
+      "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00670-1792785960",
+      "filename": "CUSA00670.xml",
+      "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00070-1792785960",
+      "filename": "CUSA00070.xml",
+      "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00785-1792785960",
+      "filename": "CUSA00785.xml",
+      "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00100-1792785960",
+      "filename": "CUSA00100.xml",
+      "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00035-1792785960",
+      "filename": "CUSA00035.xml",
+      "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05644-1792785960",
+      "filename": "CUSA05644.xml",
+      "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05571-1792785960",
+      "filename": "CUSA05571.xml",
+      "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05572-1792785960",
+      "filename": "CUSA05572.xml",
+      "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05573-1792785960",
+      "filename": "CUSA05573.xml",
+      "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05725-1792785960",
+      "filename": "CUSA05725.xml",
+      "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05574-1792785960",
+      "filename": "CUSA05574.xml",
+      "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-ps4-patch-system-38108724867",
+      "filename": "patch-bundle-loader-orbis.elf",
+      "sha256": "2467743d9cbda07a09647324201c530c6bffaa3b3a456dee0990821aa2eb82ad",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "fps-ps5-patch-system-38108724867",
+      "filename": "patch-bundle-loader-prospero.elf",
+      "sha256": "10d8636e1b0f07f3f046aadb5c050a24ed9b0fae3585ec29a1ecabec07035589",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-ps4-cheats-manager-1-2-2",
+      "filename": "IV0000-CHTM00777_00-PS4CHEATSMANAGER.pkg",
+      "sha256": "73f93d0c8343a0c9805768b68402dbba45c87f8bb882584e6aad503d79753b82",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "fps-goldhen-plugins-1-188",
+      "filename": "GoldPlugins-1.188-caacf011.zip",
+      "sha256": "50a6f41aa97eb266c51392e463033ba44fab2eb334156f8597f56dcf2b817791",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "fps-goldhen-game-patch-1-188",
+      "filename": "game_patch.prx",
+      "sha256": "9ee2c7c4499b2935a3b4e5cf9fb574c19ce6a3cb2360ffabc45981d97104677b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "fps-cusa00362-1792785960",
+      "filename": "CUSA00362.xml",
+      "sha256": "bdedee4c034409c3b07e31b46a3caf790d1521b4119459bf634347804b9d15a2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00363-1792785960",
+      "filename": "CUSA00363.xml",
+      "sha256": "bdedee4c034409c3b07e31b46a3caf790d1521b4119459bf634347804b9d15a2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa32599-1792785960",
+      "filename": "CUSA32599.xml",
+      "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa32598-1792785960",
+      "filename": "CUSA32598.xml",
+      "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa25368-1792785960",
+      "filename": "CUSA25368.xml",
+      "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa32600-1792785960",
+      "filename": "CUSA32600.xml",
+      "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08966-1792785960",
+      "filename": "CUSA08966.xml",
+      "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09115-1792785960",
+      "filename": "CUSA09115.xml",
+      "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09176-1792785960",
+      "filename": "CUSA09176.xml",
+      "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09175-1792785960",
+      "filename": "CUSA09175.xml",
+      "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00717-1792785960",
+      "filename": "CUSA00717.xml",
+      "sha256": "886b0f67f6909a096702a8f71c86380c24eb6aa3b91e5a2c8b959ecb4fdeeb16",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa18723-1792785960",
+      "filename": "CUSA18723.xml",
+      "sha256": "511c1e99a332d2b7ead340e91ddfe20b60bb47d05ac481f69a244f569f6ef0ba",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28527-1792785960",
+      "filename": "CUSA28527.xml",
+      "sha256": "511c1e99a332d2b7ead340e91ddfe20b60bb47d05ac481f69a244f569f6ef0ba",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28863-1792785960",
+      "filename": "CUSA28863.xml",
+      "sha256": "511c1e99a332d2b7ead340e91ddfe20b60bb47d05ac481f69a244f569f6ef0ba",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07052-1792785960",
+      "filename": "CUSA07052.xml",
+      "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07187-1792785960",
+      "filename": "CUSA07187.xml",
+      "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07211-1792785960",
+      "filename": "CUSA07211.xml",
+      "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa16170-1792785960",
+      "filename": "CUSA16170.xml",
+      "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01570-1792785960",
+      "filename": "CUSA01570.xml",
+      "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01706-1792785960",
+      "filename": "CUSA01706.xml",
+      "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01633-1792785960",
+      "filename": "CUSA01633.xml",
+      "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01615-1792785960",
+      "filename": "CUSA01615.xml",
+      "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11456-1792785960",
+      "filename": "CUSA11456.xml",
+      "sha256": "c09eb41cf0c68491894efc55ed4b7c92e07bece16f6a72e85197fdbee547f890",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13323-1792785960",
+      "filename": "CUSA13323.xml",
+      "sha256": "c09eb41cf0c68491894efc55ed4b7c92e07bece16f6a72e85197fdbee547f890",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28561-1792785960",
+      "filename": "CUSA28561.xml",
+      "sha256": "07fb0148a2e8b2a6c7081ace774b04a55ceaa477e69fb422f289ca0f6f9ba46f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28563-1792785960",
+      "filename": "CUSA28563.xml",
+      "sha256": "07fb0148a2e8b2a6c7081ace774b04a55ceaa477e69fb422f289ca0f6f9ba46f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa24705-1792785960",
+      "filename": "CUSA24705.xml",
+      "sha256": "07fb0148a2e8b2a6c7081ace774b04a55ceaa477e69fb422f289ca0f6f9ba46f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01021-1792785960",
+      "filename": "CUSA01021.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10237-1792785960",
+      "filename": "CUSA10237.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10211-1792785960",
+      "filename": "CUSA10211.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07798-1792785960",
+      "filename": "CUSA07798.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05661-1792785960",
+      "filename": "CUSA05661.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07762-1792785960",
+      "filename": "CUSA07762.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07350-1792785960",
+      "filename": "CUSA07350.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10213-1792785960",
+      "filename": "CUSA10213.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10212-1792785960",
+      "filename": "CUSA10212.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07319-1792785960",
+      "filename": "CUSA07319.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10234-1792785960",
+      "filename": "CUSA10234.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07326-1792785960",
+      "filename": "CUSA07326.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07320-1792785960",
+      "filename": "CUSA07320.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01967-1792785960",
+      "filename": "CUSA01967.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05682-1792785960",
+      "filename": "CUSA05682.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10218-1792785960",
+      "filename": "CUSA10218.xml",
+      "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09893-1792785960",
+      "filename": "CUSA09893.xml",
+      "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02299-1792785960",
+      "filename": "CUSA02299.xml",
+      "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11994-1792785960",
+      "filename": "CUSA11994.xml",
+      "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11995-1792785960",
+      "filename": "CUSA11995.xml",
+      "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09751-1792785960",
+      "filename": "CUSA09751.xml",
+      "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11993-1792785960",
+      "filename": "CUSA11993.xml",
+      "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa20177-1792785960",
+      "filename": "CUSA20177.xml",
+      "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17776-1792785960",
+      "filename": "CUSA17776.xml",
+      "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17722-1792785960",
+      "filename": "CUSA17722.xml",
+      "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa18748-1792785960",
+      "filename": "CUSA18748.xml",
+      "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17839-1792785960",
+      "filename": "CUSA17839.xml",
+      "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17416-1792785960",
+      "filename": "CUSA17416.xml",
+      "sha256": "dc9819ddea6fa700cca4756fa4c1d42760e9a2f78271a297e0cc0666373d66df",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08644-1792785960",
+      "filename": "CUSA08644.xml",
+      "sha256": "dc9819ddea6fa700cca4756fa4c1d42760e9a2f78271a297e0cc0666373d66df",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17419-1792785960",
+      "filename": "CUSA17419.xml",
+      "sha256": "dc9819ddea6fa700cca4756fa4c1d42760e9a2f78271a297e0cc0666373d66df",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01111-1792785960",
+      "filename": "CUSA01111.xml",
+      "sha256": "c83c35791ca305da37a2817c6a277a8ccf2796bb3fc42d751f51339e61c87b86",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa24899-1792785960",
+      "filename": "CUSA24899.xml",
+      "sha256": "708bd1d942e0b8282f933ee5a4996c408bad7bfebf4c81b56da233b92ac91cd1",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa10123-1792785960",
+      "filename": "CUSA10123.xml",
+      "sha256": "a65a5b5cb66ecebab2c39d6bdf3a4e0cbd73f10df169106b6270559fc8382226",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05008-1792785960",
+      "filename": "CUSA05008.xml",
+      "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa04893-1792785960",
+      "filename": "CUSA04893.xml",
+      "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05943-1792785960",
+      "filename": "CUSA05943.xml",
+      "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11875-1792785960",
+      "filename": "CUSA11875.xml",
+      "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11834-1792785960",
+      "filename": "CUSA11834.xml",
+      "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11851-1792785960",
+      "filename": "CUSA11851.xml",
+      "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31348-1792785960",
+      "filename": "CUSA31348.xml",
+      "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31351-1792785960",
+      "filename": "CUSA31351.xml",
+      "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31350-1792785960",
+      "filename": "CUSA31350.xml",
+      "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31349-1792785960",
+      "filename": "CUSA31349.xml",
+      "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01836-1792785960",
+      "filename": "CUSA01836.xml",
+      "sha256": "abae8486f65189018daf791a031ee4c654c904afea62bac1321e2b1746823f18",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00503-1792785960",
+      "filename": "CUSA00503.xml",
+      "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00220-1792785960",
+      "filename": "CUSA00220.xml",
+      "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01425-1792785960",
+      "filename": "CUSA01425.xml",
+      "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00728-1792785960",
+      "filename": "CUSA00728.xml",
+      "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa09431-1792785960",
+      "filename": "CUSA09431.xml",
+      "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07340-1792785960",
+      "filename": "CUSA07340.xml",
+      "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07316-1792785960",
+      "filename": "CUSA07316.xml",
+      "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa25470-1792785960",
+      "filename": "CUSA25470.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34384-1792785960",
+      "filename": "CUSA34384.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31680-1792785960",
+      "filename": "CUSA31680.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31681-1792785960",
+      "filename": "CUSA31681.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34394-1792785960",
+      "filename": "CUSA34394.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa25471-1792785960",
+      "filename": "CUSA25471.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31678-1792785960",
+      "filename": "CUSA31678.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34387-1792785960",
+      "filename": "CUSA34387.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34259-1792785960",
+      "filename": "CUSA34259.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34395-1792785960",
+      "filename": "CUSA34395.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34393-1792785960",
+      "filename": "CUSA34393.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34385-1792785960",
+      "filename": "CUSA34385.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34256-1792785960",
+      "filename": "CUSA34256.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34389-1792785960",
+      "filename": "CUSA34389.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34386-1792785960",
+      "filename": "CUSA34386.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa25468-1792785960",
+      "filename": "CUSA25468.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34258-1792785960",
+      "filename": "CUSA34258.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34257-1792785960",
+      "filename": "CUSA34257.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31679-1792785960",
+      "filename": "CUSA31679.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34391-1792785960",
+      "filename": "CUSA34391.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34390-1792785960",
+      "filename": "CUSA34390.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34392-1792785960",
+      "filename": "CUSA34392.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34388-1792785960",
+      "filename": "CUSA34388.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa34357-1792785960",
+      "filename": "CUSA34357.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa25469-1792785960",
+      "filename": "CUSA25469.xml",
+      "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa12824-1792785960",
+      "filename": "CUSA12824.xml",
+      "sha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa12771-1792785960",
+      "filename": "CUSA12771.xml",
+      "sha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa24853-1792785960",
+      "filename": "CUSA24853.xml",
+      "sha256": "a08ac4bb2e0b79aa02ba81476cb961f882f6b41c771c7d4528472c1d5f7c19bf",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36849-1792785960",
+      "filename": "CUSA36849.xml",
+      "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36848-1792785960",
+      "filename": "CUSA36848.xml",
+      "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36847-1792785960",
+      "filename": "CUSA36847.xml",
+      "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36850-1792785960",
+      "filename": "CUSA36850.xml",
+      "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17941-1792785960",
+      "filename": "CUSA17941.xml",
+      "sha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa24801-1792785960",
+      "filename": "CUSA24801.xml",
+      "sha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa15090-1792785960",
+      "filename": "CUSA15090.xml",
+      "sha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa15081-1792785960",
+      "filename": "CUSA15081.xml",
+      "sha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01067-1792785960",
+      "filename": "CUSA01067.xml",
+      "sha256": "71a20a192d72b61142bc5e965138ece1711cfaf5efc7c7b6369902a11cca3ef4",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05794-1792785960",
+      "filename": "CUSA05794.xml",
+      "sha256": "768e183acbbb7acf475e43e28ca107eec7ece74d8a055e41cc1eba663a74eca0",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05333-1792785960",
+      "filename": "CUSA05333.xml",
+      "sha256": "b50644f6733b1c49a25b9aeebea5e8131ae7d6453fab045fe22ac1d8f890914f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28194-1792785960",
+      "filename": "CUSA28194.xml",
+      "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa32054-1792785960",
+      "filename": "CUSA32054.xml",
+      "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28193-1792785960",
+      "filename": "CUSA28193.xml",
+      "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13689-1792785960",
+      "filename": "CUSA13689.xml",
+      "sha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa16285-1792785960",
+      "filename": "CUSA16285.xml",
+      "sha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36846-1792785960",
+      "filename": "CUSA36846.xml",
+      "sha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36986-1792785960",
+      "filename": "CUSA36986.xml",
+      "sha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08548-1792785960",
+      "filename": "CUSA08548.xml",
+      "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08652-1792785960",
+      "filename": "CUSA08652.xml",
+      "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17033-1792785960",
+      "filename": "CUSA17033.xml",
+      "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00009-1792785960",
+      "filename": "CUSA00009.xml",
+      "sha256": "8fade2be1a71083f76fb72b7cbd1424c816067783912f28831f525c8e6f4c74f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11560-1792785960",
+      "filename": "CUSA11560.xml",
+      "sha256": "d9ead8f6a7cc255b113b9308be6eb78216dbf4072f217e9babf409ff7a0ce030",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa37321-1792785960",
+      "filename": "CUSA37321.xml",
+      "sha256": "549777a667a31e6a0dc8fa6a4fc035c6c91e0e04f650f26b08dfa07e499d7cf1",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03528-1792785960",
+      "filename": "CUSA03528.xml",
+      "sha256": "0f1b4f5246d9445f52237bf39a7e7a2934450baca05a573742c93c85262cb692",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03245-1792785960",
+      "filename": "CUSA03245.xml",
+      "sha256": "0f1b4f5246d9445f52237bf39a7e7a2934450baca05a573742c93c85262cb692",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28987-1792785960",
+      "filename": "CUSA28987.xml",
+      "sha256": "9b74575cf2ca60dd5d8cd3bc526e883c238e120eea760982e8a3d29d4dcb67f2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa26615-1792785960",
+      "filename": "CUSA26615.xml",
+      "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa26616-1792785960",
+      "filename": "CUSA26616.xml",
+      "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa26617-1792785960",
+      "filename": "CUSA26617.xml",
+      "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa40382-1792785960",
+      "filename": "CUSA40382.xml",
+      "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13197-1792785960",
+      "filename": "CUSA13197.xml",
+      "sha256": "00d65ebf63a581c387314469e754f1a64c987314aa644475432217575a78f452",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08479-1792785960",
+      "filename": "CUSA08479.xml",
+      "sha256": "0f6ca4a7421634dc35bddddc0ae5ca0585ec187922c9b3afb11555b6433ad9c4",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa08487-1792785960",
+      "filename": "CUSA08487.xml",
+      "sha256": "0f6ca4a7421634dc35bddddc0ae5ca0585ec187922c9b3afb11555b6433ad9c4",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa12982-1792785960",
+      "filename": "CUSA12982.xml",
+      "sha256": "fbd01bbfd5bb909a8e0f0d916c2f7ef03fd284fe13bf0b53c65d6d3f1291222f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa11227-1792785960",
+      "filename": "CUSA11227.xml",
+      "sha256": "fbd01bbfd5bb909a8e0f0d916c2f7ef03fd284fe13bf0b53c65d6d3f1291222f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01499-1792785960",
+      "filename": "CUSA01499.xml",
+      "sha256": "a04dbd123d86152fec9e5b2acf9c9908817d4a006be5a980762fd8114d62de8d",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01566-1792785960",
+      "filename": "CUSA01566.xml",
+      "sha256": "a04dbd123d86152fec9e5b2acf9c9908817d4a006be5a980762fd8114d62de8d",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa01542-1792785960",
+      "filename": "CUSA01542.xml",
+      "sha256": "a04dbd123d86152fec9e5b2acf9c9908817d4a006be5a980762fd8114d62de8d",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05999-1792785960",
+      "filename": "CUSA05999.xml",
+      "sha256": "40611309baac6527c064046890f713886d78a55d7f148a50be3fbc0d3b00a6a6",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa05986-1792785960",
+      "filename": "CUSA05986.xml",
+      "sha256": "40611309baac6527c064046890f713886d78a55d7f148a50be3fbc0d3b00a6a6",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa37522-1792785960",
+      "filename": "CUSA37522.xml",
+      "sha256": "c60085e206257ef16ec987937959b811a786d80accf8b47cd86bfbf3a6d0b1c4",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa02882-1792785960",
+      "filename": "CUSA02882.xml",
+      "sha256": "6df715ff05f30e5fcd35ee155d31638b9d0a94ca6c0edd0c7cb867844511eecc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa27729-1792785960",
+      "filename": "CUSA27729.xml",
+      "sha256": "cb238bee7f0c1867eae87fdb19e6921d3dd6e2ce950424159e80d1215b339d66",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa27730-1792785960",
+      "filename": "CUSA27730.xml",
+      "sha256": "cb238bee7f0c1867eae87fdb19e6921d3dd6e2ce950424159e80d1215b339d66",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa12085-1792785960",
+      "filename": "CUSA12085.xml",
+      "sha256": "6ec8c2467c5140d254fc804f4e6b98b523caa37717e87e5b7b12c6a2739d26ce",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31500-1792785960",
+      "filename": "CUSA31500.xml",
+      "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31499-1792785960",
+      "filename": "CUSA31499.xml",
+      "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31497-1792785960",
+      "filename": "CUSA31497.xml",
+      "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa31498-1792785960",
+      "filename": "CUSA31498.xml",
+      "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03293-1792785960",
+      "filename": "CUSA03293.xml",
+      "sha256": "4f038b5a2db645d54e479a5d89ec8c444f36b6f4d4c5ba968c079918d1897ce9",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa40994-1792785960",
+      "filename": "CUSA40994.xml",
+      "sha256": "ffe2c763804910116a4f16e0af75d71c04bcc832ab59220cd0b4a6a8bee44d23",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17301-1792785960",
+      "filename": "CUSA17301.xml",
+      "sha256": "e28b97d2671192afbd8e9ed90925db1e002c24b058aa714cacce4e7a93df767e",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa14253-1792785960",
+      "filename": "CUSA14253.xml",
+      "sha256": "801caeb8d2842c10b493e09daecb84daf1137f0c897e886dd0e9d544f661d3b2",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa17157-1792785960",
+      "filename": "CUSA17157.xml",
+      "sha256": "20f60281495a4556a95124477e982b6b97fffbf996216a3529dc0ca049098f8f",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa29007-1792785960",
+      "filename": "CUSA29007.xml",
+      "sha256": "8e75a38cfd09c42b5f51291ea8fff3a3586a6f19fb3ce62421025bc1b4f72c10",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa36876-1792785960",
+      "filename": "CUSA36876.xml",
+      "sha256": "42401c8b443e2992071373495d017648cf7c2755ad2525165b8ed9633298a3d3",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa07511-1792785960",
+      "filename": "CUSA07511.xml",
+      "sha256": "9d9b6643443182f9d34a326c08d78c82ffeb8acc7579f96ecd7c09802472351c",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa00938-1792785960",
+      "filename": "CUSA00938.xml",
+      "sha256": "bdcd36ef2dfca788ff1fedc9a82877466735e41c8b1e5528a63586bf66310f59",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa28183-1792785960",
+      "filename": "CUSA28183.xml",
+      "sha256": "df828ae316e7a09f76c3693ed626670295aca4ef462f1b14c708d7a78bd05b9e",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa18097-1792785960",
+      "filename": "CUSA18097.xml",
+      "sha256": "a3c1c0d2965f60e1e31f7565c25ed88dcd5668ea79a1ab219e531bbdd7d66ebc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa19278-1792785960",
+      "filename": "CUSA19278.xml",
+      "sha256": "a3c1c0d2965f60e1e31f7565c25ed88dcd5668ea79a1ab219e531bbdd7d66ebc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa18100-1792785960",
+      "filename": "CUSA18100.xml",
+      "sha256": "a3c1c0d2965f60e1e31f7565c25ed88dcd5668ea79a1ab219e531bbdd7d66ebc",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa44422-1792785960",
+      "filename": "CUSA44422.xml",
+      "sha256": "a0342ee2b8aa72bf56fff5aa60af296a8c1a161fd5e725488a2ca7ba8645450b",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa13152-1792785960",
+      "filename": "CUSA13152.xml",
+      "sha256": "6d79c0280a1662ded5b5fe0b73487f38e746e44975c09e0f15668880fa1251a1",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03824-1792785960",
+      "filename": "CUSA03824.xml",
+      "sha256": "93b939848c47946c9edd9aeadab0de4c6b1f16302c3177d030515168d6666b76",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-cusa03803-1792785960",
+      "filename": "CUSA03803.xml",
+      "sha256": "93b939848c47946c9edd9aeadab0de4c6b1f16302c3177d030515168d6666b76",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa99109",
+      "filename": "ProsperoExplorer-v1.zip",
+      "sha256": "3eaee706e8aca772fce734b494e56729ddedec218597ab9baf940094a0cdfc7e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa99110",
+      "filename": "ProsperoMultiTools.zip",
+      "sha256": "0e7c60d0e860cd0cafb939f668ccae57f53503f2c2371b4193a81ab306346d6b",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa98766",
+      "filename": "PPSA98766.zip",
+      "sha256": "06fa838c0747ea25075876e28df9c684d17988938b82707c9592f1d2c217c86c",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa69420",
+      "filename": "PPSA69420.zip",
+      "sha256": "49a5c6d7bbb08f5a1539feb65b7fd2b537b6d7b304bdd3eed1c923e4ccbec8fd",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa96024",
+      "filename": "chiral-ftp-ps5-1.1.zip",
+      "sha256": "ff5dcee48e4c853c039af444bb3d16172b1b14dd6a71e948d0715d55f4c9e067",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa99001",
+      "filename": "PPSA99001.zip",
+      "sha256": "cadcb62e3a55ed0f81fa449dd53a9e52edbc2ebb1cb0e4148c9b1d7a3085e370",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa98427",
+      "filename": "PPSA98427.zip",
+      "sha256": "f394c3a84ce61a95b67a7c0987edea596abdffe5f3b170f9e05983dc2286837d",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa99051",
+      "filename": "PPSA99051.zip",
+      "sha256": "fcb4e3cb794d36b30b9dee9ed86f0eea317e7c0071d193c18d9a07734e7beb69",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-ppsa11019",
+      "filename": "PPSA11019.zip",
+      "sha256": "ac97390d6fb853334f4ed85226842dd24d40ff68edbc605b53047c2158f33a1d",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-prwb00001",
+      "filename": "PRWB00001.zip",
+      "sha256": "77cfede8773b58650684a82e051d001bee0d2d9a864ae5dafb6004453ddc5b93",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-store-scratch-everywhere-1-3",
+      "filename": "scratch-ps4.pkg",
+      "sha256": "9f89fcca1a6d7e45bf851f3c9039a9596523481ebd67f6fe27a4445d5a11add1",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-mtp-explorer-2-0-0",
+      "filename": "PS-MTP-Explorer-2.0.0.pkg",
+      "sha256": "9e7802be92a4be9b4fa3e3f68715b8d6d87d7daccb889f8ae14d347129710eb2",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-switchfin-0-9-4",
+      "filename": "IV0001-SFIN00000_00-SFIN000000009400.pkg",
+      "sha256": "2d0dac54eaec7cf9b86a7a169cb9b88409327fc10bff8c10ea42357d4ba3661c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-wiliwili-1-6-0",
+      "filename": "wiliwili-PS4.pkg",
+      "sha256": "d9f089bed9d8352ea6f78d6e93fcb5eea22caad29768ff553d87adb0e79bffba",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-sponsorblock-installer-1-0-0",
+      "filename": "IV0000-YTSB42069_00-SPONSORBLK000000.pkg",
+      "sha256": "f167ef235426b6fd6b59d2adfd2597a11884d244517c6ddc82c526bdfdfd6c5f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-itemzflow-1-08",
+      "filename": "Itemzflow-PS4-1.08.pkg",
+      "sha256": "acd4f37aad8d686a433e73f1b44a3e87b513c10ee7303ff965cb3dc54048e60e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-xplorer-2-07",
+      "filename": "PS4-Xplorer-2.07.pkg",
+      "sha256": "e7a9296c15c30ee70a4ceac468b4f6952a3c658419b460247f3f80efc9aff5a0",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-orbisshelf-0-2-0",
+      "filename": "OrbisShelf-v0.2.0.pkg",
+      "sha256": "546101fd77b6e4203d986d90bdbeca497f0379e07629cfbfc4b292947aa5a778",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-store-pplay-3-8",
+      "filename": "pplay-3.8_ps4.zip",
+      "sha256": "4df671ac087354b23e3fa43975abe8fee0cecb18bcbe12dc14612fce772ec90f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-store-prosperolight-01-000-110",
+      "filename": "PPSA99002.zip",
+      "sha256": "f29935f3bd9d61926c1ea63f8d34019fff19ee993e8d030ee373c004efd974ba",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-store-recompstore-2-7-4",
+      "filename": "PPSA92000.zip",
+      "sha256": "2c7a58ef65d08974cb43a0045388be457b21a1fde3f98d6ecfd77eae6d309601",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-recompstore-installer-2-7-4",
+      "filename": "RecompStore-Installer.elf",
+      "sha256": "3a20194226cf5e1ee66a5a67d81610c1ac9bf82deee7b791c752d0e7d6202d5c",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "virusmike-bo3-aio-v2",
+      "filename": "GSC Injector & GSC Mods AIO Pack By VirusMike V2.rar",
+      "sha256": "411bd9591e4ace83cee3b54210c079d5e0675f0cb7edd57eb0caca1f8f028c65",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-native-cheats-ppsa10662-01-001-030",
+      "filename": "PPSA10662_01.001.030.json",
+      "sha256": "ff004b7c81b0ebeb69a9bc3b76c4642e76495299373eb17d6b8a85cec6d0ea46",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-cheats-ppsa09663-01-000-000",
+      "filename": "PPSA09663_01.000.000.json",
+      "sha256": "64b48d7605989d5ba1c0e337b64a20e41a59f58714c4824d9e1f38a2794a99d8",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-cheats-ppsa08710-01-005-000",
+      "filename": "PPSA08710_01.005.000.json",
+      "sha256": "e8acaefdb28aaa5c6f9610d39050f60e6bd0a3d71710216772c924bf05356661",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-cheats-ppsa21564-01-007-000",
+      "filename": "PPSA21564_01.007.000.json",
+      "sha256": "42d3d4c39c7f607eedc1205014176790eb6c782fd20f20d264fff14c41a6d683",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-cheats-ppsa23226-01-000-010",
+      "filename": "PPSA23226_01.000.010.json",
+      "sha256": "067fb30324492c673cb42646f847df040f9ec28de4fda945058818ad390cd23d",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-cheats-ppsa09911-01-000-000",
+      "filename": "PPSA09911_01.000.000.json",
+      "sha256": "489497800a06e8995a3798e601c12fa27a305fdde2f0151a980ba2b71ea2f1b3",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa01342-01-004-000",
+      "filename": "PPSA01342_01.004.000.shn",
+      "sha256": "97de311640e5fe95ef9300e1adbb1bc980de01abe58524fc246eed80ef068d1f",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa01619-01-000-004",
+      "filename": "PPSA01619_01.000.004.shn",
+      "sha256": "96fbd86f92fb01427b179d3aef103befc5f30bb95b567599a4b35d670bdf670c",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa01861-01-000-010",
+      "filename": "PPSA01861_01.000.010.shn",
+      "sha256": "a46d39f8636c1a203cd93cba196244b06f1399ef56dbbe90590f2fea69f7fd8f",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa01925-01-000-003",
+      "filename": "PPSA01925_01.000.003.shn",
+      "sha256": "2754a9259cb466143684a679dc530eefdcdaa5abaa67280da3d231f71b7751db",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa07576-01-000-000",
+      "filename": "PPSA07576_01.000.000.shn",
+      "sha256": "9835b51e4a0a75bf423be0e6efecc9c54d27b471baafb1dc2df247e917771ce6",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa05366-01-005-000",
+      "filename": "PPSA05366_01.005.000.shn",
+      "sha256": "578426e46afcc00f3e922df180b6709654e55d3e2e79d68ccfb3067ae2b3a3dd",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa02745-01-000-004",
+      "filename": "PPSA02745_01.000.004.shn",
+      "sha256": "b371b77a4f8db2da9044c3d0f0f6b8c1778955cab33ded3c697ba8331e091bf3",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps5-native-shn-ppsa10261-01-000-000",
+      "filename": "PPSA10261_01.000.000.shn",
+      "sha256": "dba06d37d05af2235029d33b2c506940c9cbd2c128f37965ed636aea60e8920e",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "fps-patch-archive-1792785960",
+      "filename": "patch1.zip",
+      "sha256": "bd35217d12986ed16a8cde6e6a0e6bd34e80a40292bfbdffa81055146f684ab7",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-expulsion-v5-zip",
+      "filename": "Expulsion-V5.0-PS4-1.57.zip",
+      "sha256": "633093c6b25571db7782495488268aa21f8603c0613ba5f2c5e16b1b97fa0447",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-whatsite-site-launcher",
+      "filename": "IV9999-WHAT00001_00-WHATWHATBOY00001-A0100-V0100.pkg",
+      "sha256": "fa4e6e16bd0512c064d548d127d86d9e95992f03425646bcd1cb2b04489f1914",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-modern-gta5-cyprus-1-57",
+      "filename": "CyprusMenu.prx",
+      "sha256": "7731188ec03a0bee74fe0946ffcf6eefed466c13a9b68c4a29df3263bd724157",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-modern-gta5-explosive-1-57",
+      "filename": "explosive_temp.sprx",
+      "sha256": "4986ff700f57d72a61516abd0daa6cf1ba557a63b4fe39c1eecc38064c1f2e6a",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-modern-gta5-cyprus-1-56",
+      "filename": "CyprusMenu.prx",
+      "sha256": "9bedea869077bb6016171a79823b4b98703631d904b1cb52173dd97349fbb1c0",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "gta5-ps5-04263-01010002",
+      "filename": "PPSA04263_01.010.002.mc4",
+      "sha256": "25c47d2bb864fd065d2645e7bc13a45b12f046c18786f310d9c217d111181910",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "gta5-ps5-04264-01005000",
+      "filename": "PPSA04264_01.005.000.mc4",
+      "sha256": "7460de5fa64318bc7544eeb7ae1b1ef06f148df78f2668df93d838a9c57cb695",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "gta5-ps5-04264-01010002",
+      "filename": "PPSA04264_01.010.002.mc4",
+      "sha256": "fc5de09d593fc308c10f308ea94832116b7aa6ee5c68d9eabe74f951a3db46c6",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "miles-morales-ps5-01417-01013002",
+      "filename": "PPSA01417_01.013.002.json",
+      "sha256": "4eb328cdf5d89aaacf3bd24341947cd249e3396fd437961dd353a00fd0cd21e2",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "miles-morales-ps5-01460-01015001",
+      "filename": "PPSA01460_01.015.001.json",
+      "sha256": "e51ef057511671d4175e6d4f3b6fa25228d7e2d6f9597daecaf43909ec21be7a",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "sonic-frontiers-ps5-03831-01041000",
+      "filename": "PPSA03831_01.041.000.json",
+      "sha256": "58863f93e82adcc14cc853451742c28d61ff477b45fe9b5c670496728100a0c5",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-arabicguy-gta5-100",
+      "filename": "arabicguy-gta5-100-ps4-900.bin",
+      "sha256": "0de5452601ca151ad3bb6c86c2fb97e2a0bac89b5ff77cf238638dd19bddd372",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-arabicguy-gta5-127",
+      "filename": "arabicguy-gta5-127-ps4-900.bin",
+      "sha256": "be9ee0dacc71e94d607584770c08cdc39c1319427e9fd83424fc19dd15782aa6",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-arabicguy-gta5-132",
+      "filename": "arabicguy-gta5-132-ps4-900.bin",
+      "sha256": "7b9c1242b0c18c4e8ce43216518c09bb8550ad31328a3dc16185d8d2ee7f7b8b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-arabicguy-gta5-133",
+      "filename": "arabicguy-gta5-133-ps4-900.bin",
+      "sha256": "617318304d6303272e5d6287f812e7c8a4c6cf99684c5664b5ec27a6704bc85b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-beefqueef-gta5-133",
+      "filename": "beefqueef-gta5-133-ps4-900.bin",
+      "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-lamance-gta5-138",
+      "filename": "lamance-gta5-138-ps4-900.bin",
+      "sha256": "7c9985cae235bffd95092765a6f294d668ab8f0421344dbef6b6ddd1230b3745",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-oysters-rdr2-100",
+      "filename": "oysters-rdr2-100-ps4-900.bin",
+      "sha256": "199b68feb24e1d202589b7ccb7b9ee28fdf3cab5546b41bd1263939ecedb7add",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-oysters-rdr2-113",
+      "filename": "oysters-rdr2-113-ps4-900.bin",
+      "sha256": "089f1c3144dffb35589a7fb36a05dd54f642c1eeef3873daa3b7f4ce965af06d",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-oysters-rdr2-119",
+      "filename": "oysters-rdr2-119-ps4-900.bin",
+      "sha256": "370b5bd2b4bace7a2dd51bd28f9b080b1e5221f3bd9e6dec64c5e72baa183254",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-oysters-rdr2-124",
+      "filename": "oysters-rdr2-124-ps4-900.bin",
+      "sha256": "58e2317dd8fe1cc44ce834a174ac06e566b34eb3709ce39e088f63aa51a5944a",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-oysters-rdr2-129",
+      "filename": "oysters-rdr2-129-ps4-900.bin",
+      "sha256": "424f9dbf4813cd55366d446d36d0dc84aa950025a6341a47d1ac0f5f8dbf6986",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-north-beta-rdr2-129",
+      "filename": "north-beta-rdr2-129-ps4-900.bin",
+      "sha256": "5ab2f81616290b3f8c9705aaf127e6db8c006ff29da87c023c9c1ccdfb4db4eb",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps5-rdr2-60fps-v2-0",
+      "filename": "RedDead2.60FPS_v2.0.elf",
+      "sha256": "646ecb71e80415ab9d9c651539451d38ee0052a5997f7ef7504a42932c7f8261",
+      "platforms": [
+        "ps5"
+      ]
+    },
+    {
+      "id": "ps4-legacy-nazky-bq134",
+      "filename": "nazky-bq134-game-1.34-ps4-900.bin",
+      "sha256": "e34c81b6464dbc58fe69458823d8e4029c93d4e9bfdc601c56f8430b4c3aaaf5",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-nazky-bq138",
+      "filename": "nazky-bq138-game-1.38-ps4-900.bin",
+      "sha256": "1c649bab177d47b0128b28b16e1b5002195f5ebf4d4eddb06dc54f6965f93e9e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-nazky-wilde132",
+      "filename": "nazky-wilde132-game-1.32-ps4-900.bin",
+      "sha256": "f8ec40617e59fcfbba033547f17a567c82ed50fb00563f3349f0d88283ccd2b9",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-nazky-wilde138",
+      "filename": "nazky-wilde138-game-1.38-ps4-900.bin",
+      "sha256": "2da00a14596b5e148097d209c3ca440c064e85356d10d61f584743a59895ce92",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-bq138-thief",
+      "filename": "kameleon-bq138-thief-game-1.38-ps4-900.bin",
+      "sha256": "0339fe9288121cb7c74ef81a55cc7b8620d4383c8f053014671340fa7d6204e6",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-bq146",
+      "filename": "kameleon-bq146-game-1.46-ps4-900.bin",
+      "sha256": "fbae10e4d9c0ac09e745755959a1c71a444a1c16bb5da2c51361e56fef1e2c00",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-bq147",
+      "filename": "kameleon-bq147-game-1.47-ps4-900.bin",
+      "sha256": "a8a6789cd8873224dde81f4924cfd12f9d87f430e552d50064e9aabd23171ead",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-wilde132",
+      "filename": "kameleon-wilde132-game-1.32-ps4-900.bin",
+      "sha256": "007f3418bee3f2fe27034262a84a148a9f8c0577e517133286a19c4bf18d55eb",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-wilde133",
+      "filename": "kameleon-wilde133-game-1.33-ps4-900.bin",
+      "sha256": "d9ebf4cdf4150ac59865d7744713dfc99037ad75b08ea7551c5bcb3e992972a9",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-wilde146",
+      "filename": "kameleon-wilde146-game-1.46-ps4-900.bin",
+      "sha256": "9a8bc055f89a056b12b5bfd56c8b4b55f4f66025e9bea48475eae38b25f1a45b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-wilde147",
+      "filename": "kameleon-wilde147-game-1.47-ps4-900.bin",
+      "sha256": "beac207b97220a57f22c9a7ec9064e6fdb2ef98ec33852b2ee1c5f7a1717010f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-kameleon-expulsion138",
+      "filename": "kameleon-expulsion138-game-1.38-ps4-900.bin",
+      "sha256": "c3df5201df8b17add26ea58794d3ec95d39a021586f1e4e2517b48fa540754e1",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-karo-expulsion135",
+      "filename": "karo-expulsion135-game-1.35-ps4-900.bin",
+      "sha256": "ef21be6c36b117ba8b362c1488ae887a0daece3d7a791bc2ac3130a6d27ff1af",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-karo-menubase127",
+      "filename": "karo-menubase127-game-1.27-ps4-900.bin",
+      "sha256": "822d4897941512e8cbf29806e1985848aceb5c54bb3f9149d52df07e8b0e8545",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-karo-lts127",
+      "filename": "karo-lts127-game-1.27-ps4-900.bin",
+      "sha256": "ead0911d40795a0503305dd739680bb3ebd3f51e9b65a9878101c4bd9c2aaf10",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-pkg-backup-1300",
+      "filename": "pl_pkgbackup.bin",
+      "sha256": "1a3d3dd41843d94cc4a3517caaefe8f8996f1bda7709a5856a711bfbaca6021b",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-app-dumper-1300",
+      "filename": "pl_appdumper.bin",
+      "sha256": "290f83e02fb0cc86e659e7ec380021942430a7608d975f03676c8afc52ba7ab0",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-disable-updates-1300",
+      "filename": "pl_disableupdates.bin",
+      "sha256": "d6d38701f5284f4764f47197052cb189a17120a7de5b961136c5f6045c30a1fc",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-enable-updates-1300",
+      "filename": "pl_enableupdates.bin",
+      "sha256": "e261f6e0d18fbe95f3998b0d4b39f0683e125a04633d5333b44ade31ca074de8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-enable-browser-1300",
+      "filename": "pl_enablebrowser.bin",
+      "sha256": "0e7c5fadc6fa4abbe5df7954f956d4c75aa71a4c03bcaf514c83578583a1a8ad",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-exit-idu-1300",
+      "filename": "pl_exitidu.bin",
+      "sha256": "f3aa40ba35081f2384d4ec5382950f04769153f4da9b4240989283ad14a94c48",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-rif-renamer-1300",
+      "filename": "pl_rifrenamer.bin",
+      "sha256": "8dcb00ee027503d4388f2af88a6d386049458199669209511234f7dc9d36b79e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-ftp-1300",
+      "filename": "pl_ftp.bin",
+      "sha256": "68577a874540b877ba7e95906a77060ff05480b37777d81bb0a4dfe139bda1d1",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-history-blocker-1300",
+      "filename": "pl_historyblocker.bin",
+      "sha256": "a10b34e1cd810b11069c00eca5ca7672a9ab9a5f1c801a81faad36f264137d38",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-kernel-dumper-1300",
+      "filename": "pl_kerneldumper.bin",
+      "sha256": "e4ea6a8b13a28991ece96b70fe88baeaea1cd99aee316db218fa1ce7464956d0",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-module-dumper-1300",
+      "filename": "pl_moduledumper.bin",
+      "sha256": "62640e215becf50e60690ea5867525e32443b23c1ac74f94a8c1ca78ba964457",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-ps4debug-v1-1-19",
+      "filename": "pl_ps4debug.bin",
+      "sha256": "8af40c2412768bb2cd64c46b9913ee2f7ff2f076c98f6a2f5c7c0534aee15b2e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-db-backup-1300",
+      "filename": "pl_backup.bin",
+      "sha256": "91eaee1292f8741bd9514fe4c4e3af99189359ae79ee3f75a7292df014d1f4b4",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-db-restore-1300",
+      "filename": "pl_restore.bin",
+      "sha256": "20c5fd911366bf688d3c569008d1e4e9a020948a0a18ffaa3a34077d898f2a49",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-app2usb-1300",
+      "filename": "pl_app2usb.bin",
+      "sha256": "a2e4ae50d28f7e870df21723d976ad9a714db7cd2bb3db21cbf1aac17dc68438",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-to-dex-1300",
+      "filename": "pl_todex.bin",
+      "sha256": "2fc2357636a04c073d7f904fb5e7ce65f75f3aa9e561287c1123a325b53bd30c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-permanent-uart-1300",
+      "filename": "pl_permanentuart.bin",
+      "sha256": "1fe2747142285df475abbaaf2a02c28d30628d068c983d3178fab4c4609987f9",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-kme-web-disable-aslr-1300",
+      "filename": "pl_disableaslr.bin",
+      "sha256": "9548e6163969a77864eb4b9ef946faa9dd2322c08bf31a7af749eb123a08b59f",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-repository-gamerhack-wildemodz138",
+      "filename": "WildeModz-1.38.bin",
+      "sha256": "e82fe24709f9155bc1c77ffa1b2318bee03b5ec7bb4d120b7aadf21b48f6adf8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-repository-gamerhack-arabicguy100",
+      "filename": "arabic-guy100.bin",
+      "sha256": "80849dc10d770b5e4596b0c32774b03b156245c18f1527157d6a967854b990a8",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-repository-gamerhack-arabicguy127",
+      "filename": "arabic-guy127.bin",
+      "sha256": "a603fa84029a0c9bd29e3e5d6ea2f97aa668f0600403c4102f4c35b186b982f4",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-repository-gamerhack-arabicguy132",
+      "filename": "arabic-guy132.bin",
+      "sha256": "3dddf0161fb409e7e9711c6b53e4eaef4c34f9768e263a9821b217b1bde00daa",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-505",
+      "filename": "Orbis-Toolbox-505.bin",
+      "sha256": "657aad360767ce7f9cef3c374f8ea448870df8d3cf6534a582930bbec0b400ce",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-672",
+      "filename": "Orbis-Toolbox-672.bin",
+      "sha256": "c19e3f0d549b241aa31febd5a5223d0bf0156bdc4e419e1083f795ea90d5ce30",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-702",
+      "filename": "Orbis-Toolbox-702.bin",
+      "sha256": "9f8a34ff2ab3918f3a01e3126817c3c0afd4671c3f0613e05cef540cf7d79a3c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-755",
+      "filename": "Orbis-Toolbox-755.bin",
+      "sha256": "421131368229e986385a5a5cf4a65d1be8a5835d7ba018720b8764e00153871c",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-original-orbis-toolbox-1-0-1190-900",
+      "filename": "Orbis-Toolbox-900.bin",
+      "sha256": "466d816ad26393deb6476c90acda77cb80a6e2c7a15ed70cf588c9447b0a7835",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-original-goldhen-2-4b18-900",
+      "filename": "goldhen.bin",
+      "sha256": "eb9fee5e9e3618c0a144a6fc6b8fc1ec7e89cf06483ad64ae7c1085efc9525a3",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-100",
+      "filename": "OystersMenu-v1.00.bin",
+      "sha256": "09925fe9288bd9e68f49ffaffba3e92fb6ddb1c8cf416e16251cdef53f19a67a",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-113",
+      "filename": "OystersMenu-v1.13.bin",
+      "sha256": "38f847706303c2c2b5b71102073ac86fa534f1bc09b6c40129275a53b0c81718",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-119",
+      "filename": "OystersMenu-v1.19.bin",
+      "sha256": "93fd71c737f4433f72dd594685303e23183859fa448dfafefc15bd8906676f7e",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-legacy-firmware-gamerhack-oysters505-124",
+      "filename": "OystersMenu-v1.24.bin",
+      "sha256": "b5566c5629c86f8860ba190537e0c2a2e220c879f469a155b924467b975ec08d",
+      "platforms": [
+        "ps4"
+      ]
+    },
+    {
+      "id": "ps4-original-hippie68-ftp-1-08b-900",
+      "filename": "ftp_server_v1.08b.bin",
+      "sha256": "695082f37c5cfdce14a06fbd567fa8651017ee2e31f3e95ae7a769b4287cb0e9",
+      "platforms": [
+        "ps4"
+      ]
+    }
+  ],
+  "sender": {
+    "schemaVersion": 1,
+    "files": [
+      {
+        "id": "console-payload-sender-5eb56571c38f",
+        "name": "console-payload-sender-1.0.0-5eb56571c38f.zip",
+        "version": "1.0.0+5eb56571c38f",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.0.0-5eb56571c38f.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.0.0-5eb56571c38f.zip",
+        "bytes": 42179207,
+        "sha256": "5f308e76ba2ab2aae68793796d68b392b403cfd3e513fce667d5cb0a2bcf8997",
+        "snapshot": "5eb56571c38f8ef322e30c249f35fc65d8bfa582dfab9ce87bd7b2e0ee598f11",
+        "files": 78,
+        "payloads": 23,
+        "actions": 61
+      },
+      {
+        "id": "console-payload-sender-92cd0383c55a",
+        "name": "console-payload-sender-1.1.0-92cd0383c55a.zip",
+        "version": "1.1.0+92cd0383c55a",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.1.0-92cd0383c55a.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.1.0-92cd0383c55a.zip",
+        "bytes": 52719477,
+        "sha256": "097d665d4a3a637abe7df6d2e6737791335d12401d508a6b9fd3d261c822d896",
+        "snapshot": "92cd0383c55acfb56caa19902e41bf3a10d794b79319cbd195c7349bbce52711",
+        "files": 108,
+        "payloads": 40,
+        "actions": 78
+      },
+      {
+        "id": "console-payload-sender-da62b2f10884",
+        "name": "console-payload-sender-1.1.0-da62b2f10884.zip",
+        "version": "1.1.0+da62b2f10884",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.1.0-da62b2f10884.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.1.0-da62b2f10884.zip",
+        "bytes": 52720497,
+        "sha256": "e326ca5b635bf20d86c47a46e6f6062c82ac946664dea0a89a4f87b7ba9053fc",
+        "snapshot": "da62b2f108843da1d3dc0245bba97524cc05f14ad28fec6514ca3b244d174512",
+        "files": 108,
+        "payloads": 40,
+        "actions": 78
+      },
+      {
+        "id": "console-payload-sender-714681044cce",
+        "name": "console-payload-sender-1.2.0-714681044cce.zip",
+        "version": "1.2.0+714681044cce",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.2.0-714681044cce.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.2.0-714681044cce.zip",
+        "bytes": 53348198,
+        "sha256": "c82444f88b843f0a3fb75bb9d280e4406e3b115561e3cc478d13b0617cc399b8",
+        "snapshot": "714681044ccef916f43c331cea15bdca99ef70f9cee613b74b73002b02aeaf7c",
+        "files": 118,
+        "payloads": 40,
+        "actions": 78
+      },
+      {
+        "id": "console-payload-sender-6c1da94cbfd5",
+        "name": "console-payload-sender-1.2.0-6c1da94cbfd5.zip",
+        "version": "1.2.0+6c1da94cbfd5",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.2.0-6c1da94cbfd5.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.2.0-6c1da94cbfd5.zip",
+        "bytes": 53352798,
+        "sha256": "75b86a1a37b901e1e09899375b34146009d98a34b496c38248529df94eea98a1",
+        "snapshot": "6c1da94cbfd5f70e813f272792a011006594b351ee13f7c66aca025db3295520",
+        "files": 118,
+        "payloads": 40,
+        "actions": 78
+      },
+      {
+        "id": "console-payload-sender-e56126d1d0c5",
+        "name": "console-payload-sender-1.3.0-e56126d1d0c5.zip",
+        "version": "1.3.0+e56126d1d0c5",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.3.0-e56126d1d0c5.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.3.0-e56126d1d0c5.zip",
+        "bytes": 58602949,
+        "sha256": "c91aa5ee95493b5439f4f4d30e72b6a038b54b04f8167487159ae7a3156a080b",
+        "snapshot": "e56126d1d0c57da4bd219c59537fc7b5ba5fcdd37549d6ae6bf2690d12374333",
+        "files": 213,
+        "payloads": 95,
+        "actions": 133
+      },
+      {
+        "id": "console-payload-sender-daa01c23011a",
+        "name": "console-payload-sender-1.4.0-daa01c23011a.zip",
+        "version": "1.4.0+daa01c23011a",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.4.0-daa01c23011a.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.4.0-daa01c23011a.zip",
+        "bytes": 58643090,
+        "sha256": "d355d603da19b48e979f11ede35641dfe376c2b8d3e8c68f5c7b5973acf10266",
+        "snapshot": "daa01c23011a975615a2a82c0d1ba4ff32b04c6a547fc026413c908ce541a34e",
+        "files": 213,
+        "payloads": 95,
+        "actions": 133
+      },
+      {
+        "id": "console-payload-sender-4ae2029f9107",
+        "name": "console-payload-sender-1.4.1-4ae2029f9107.zip",
+        "version": "1.4.1+4ae2029f9107",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.4.1-4ae2029f9107.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.4.1-4ae2029f9107.zip",
+        "bytes": 58643115,
+        "sha256": "933eb219f5152adf635ac3c3449b2b23821de76724de22b57009de25dc2dcafd",
+        "snapshot": "4ae2029f91078861793caa7c26c7eb565f6d2edae020d8579c4b412b0d7c40aa",
+        "files": 213,
+        "payloads": 95,
+        "actions": 133
+      },
+      {
+        "id": "console-payload-sender-a136429adde2",
+        "name": "console-payload-sender-1.5.0-a136429adde2.zip",
+        "version": "1.5.0+a136429adde2",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.5.0-a136429adde2.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.5.0-a136429adde2.zip",
+        "bytes": 58775661,
+        "sha256": "930855460776bff8b3b7a637f159a2907a90af8475c000b725c14c8f57de9a44",
+        "snapshot": "a136429adde2b36db7410ba777671f0028cd165523cd607d8833473be1cfb762",
+        "files": 213,
+        "payloads": 95,
+        "actions": 133
+      },
+      {
+        "id": "console-payload-sender-3dfef0b6ba96",
+        "name": "console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+        "version": "1.5.1+3dfef0b6ba96",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.5.1-3dfef0b6ba96.zip",
+        "bytes": 58776318,
+        "sha256": "c5f93806643259fddf04e8132e7a4869a8f68ea59d09f335b62bdda4353b23a4",
+        "snapshot": "3dfef0b6ba961aef28da472cb57aeb27cd6506791f4330f3154ccd111116e6fd",
+        "files": 213,
+        "payloads": 95,
+        "actions": 133
+      },
+      {
+        "id": "console-payload-sender-c70e79027536",
+        "name": "console-payload-sender-1.5.2-c70e79027536.zip",
+        "version": "1.5.2+c70e79027536",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.5.2-c70e79027536.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.5.2-c70e79027536.zip",
+        "bytes": 58776259,
+        "sha256": "5b71eae21035e237edc93a892f3c07056e9afc428ebfe85332b3d8dfcde3af6c",
+        "snapshot": "c70e7902753607107c0cc779be82f4cefb562bcde3c57214df7fc279ee719786",
+        "files": 213,
+        "payloads": 95,
+        "actions": 133
+      },
+      {
+        "id": "console-payload-sender-bf57d9770657",
+        "name": "console-payload-sender-1.6.0-bf57d9770657.zip",
+        "version": "1.6.0+bf57d9770657",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-bf57d9770657.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-bf57d9770657.zip",
+        "bytes": 99628320,
+        "sha256": "997e95f29841fd0c257d03aaaececdbffd0239338214ae96bbe24a40918b93a7",
+        "snapshot": "bf57d9770657c1bd40402d96294c8083b6868f6b5020621b0675b968c1fb8f0f",
+        "files": 272,
+        "payloads": 124,
+        "actions": 162
+      },
+      {
+        "id": "console-payload-sender-05eb2ae569e3",
+        "name": "console-payload-sender-1.6.0-05eb2ae569e3.zip",
+        "version": "1.6.0+05eb2ae569e3",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-05eb2ae569e3.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-05eb2ae569e3.zip",
+        "bytes": 99758446,
+        "sha256": "9ede68843e23243d8969d4c2f6699983a88eecc18a18c7eabbab58997e55779d",
+        "snapshot": "05eb2ae569e3e4ad4649edc3df06c916f6719f073e4ec45476fe3ef5282367a3",
+        "files": 272,
+        "payloads": 124,
+        "actions": 162
+      },
+      {
+        "id": "console-payload-sender-630bb639c32f",
+        "name": "console-payload-sender-1.6.0-630bb639c32f.zip",
+        "version": "1.6.0+630bb639c32f",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-630bb639c32f.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.6.0-630bb639c32f.zip",
+        "bytes": 99881875,
+        "sha256": "ca05b68effa75d15206d10c481b60ad04ab25e53f2f28527c374f4b8932ab56b",
+        "snapshot": "630bb639c32f6e4e12035a55ee4b79076e9f334ad9a63b97a38bd83e9024929a",
+        "files": 272,
+        "payloads": 124,
+        "actions": 162
+      },
+      {
+        "id": "console-payload-sender-0c9b6de455cd",
+        "name": "console-payload-sender-1.7.0-0c9b6de455cd.zip",
+        "version": "1.7.0+0c9b6de455cd",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-0c9b6de455cd.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-0c9b6de455cd.zip",
+        "bytes": 100212897,
+        "sha256": "969dd77f6a7ea34468c3451cd12ba4018ee0d2527e7095c0e36284f01740b6ee",
+        "snapshot": "0c9b6de455cd1e1fc37cd592de1f6478521a85da4c7b19478b410d7f469354ca",
+        "files": 275,
+        "payloads": 125,
+        "actions": 168
+      },
+      {
+        "id": "console-payload-sender-39f407c84929",
+        "name": "console-payload-sender-1.7.0-39f407c84929.zip",
+        "version": "1.7.0+39f407c84929",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-39f407c84929.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.7.0-39f407c84929.zip",
+        "bytes": 100212958,
+        "sha256": "76a022f26d95d23c6c03703e105a240045ed914a995e10ef94d98ee75c01970c",
+        "snapshot": "39f407c849299abfec8ebe3e18052e0d2277a8eb9b6da74d5cf9bacf6142b7b9",
+        "files": 275,
+        "payloads": 125,
+        "actions": 168
+      },
+      {
+        "id": "console-payload-sender-a43cac98804c",
+        "name": "console-payload-sender-1.8.0-a43cac98804c.zip",
+        "version": "1.8.0+a43cac98804c",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.8.0-a43cac98804c.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.8.0-a43cac98804c.zip",
+        "bytes": 100276021,
+        "sha256": "fe74026bbb64789c85c6ce042b42e9046afaaae8c317607e4bfee8e0946914ec",
+        "snapshot": "a43cac98804cafcba4c324309f707db9f8e1c20d78447330f715f9f5cd3b023d",
+        "files": 277,
+        "payloads": 125,
+        "actions": 174
+      },
+      {
+        "id": "console-payload-sender-8a3a74427954",
+        "name": "console-payload-sender-1.9.0-8a3a74427954.zip",
+        "version": "1.9.0+8a3a74427954",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.0-8a3a74427954.zip",
+        "bytes": 100389225,
+        "sha256": "866ef15d682b71df3667c11f289b63ba32afc28e211e61cb3a1804ad304c04a6",
+        "snapshot": "8a3a7442795435e70183e9693bd5281b4246c6b1a6a2bcd0ad17664668c338c9",
+        "files": 281,
+        "payloads": 125,
+        "actions": 179
+      },
+      {
+        "id": "console-payload-sender-e3c3cf533eff",
+        "name": "console-payload-sender-1.9.1-e3c3cf533eff.zip",
+        "version": "1.9.1+e3c3cf533eff",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-e3c3cf533eff.zip",
+        "bytes": 100386831,
+        "sha256": "0efdc2a5d05f75d2d35681ed515608e64e9b93b3167228a824726c7ea1d6d10a",
+        "snapshot": "e3c3cf533eff048f131ce0142c4f6fce0db08c9e70a55e64d08539ca0ffb57ef",
+        "files": 281,
+        "payloads": 125,
+        "actions": 179
+      },
+      {
+        "id": "console-payload-sender-453ea6d091dd",
+        "name": "console-payload-sender-1.9.1-453ea6d091dd.zip",
+        "version": "1.9.1+453ea6d091dd",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-453ea6d091dd.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-453ea6d091dd.zip",
+        "bytes": 100391320,
+        "sha256": "a4f6e7aabd5baf2ec69e0f4ca6a566857c939a0cbf8a7024ad0e3cc7b3a4f269",
+        "snapshot": "453ea6d091dd507017d8cd33c1ab19ec6d6ea87b13dacc2be7cc0baeb634a0ee",
+        "files": 281,
+        "payloads": 125,
+        "actions": 179
+      }
+    ],
+    "latest": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-453ea6d091dd.zip"
+  },
+  "native": [
+    {
+      "platform": "ps4",
+      "filename": "whatsite-workspace-ps4.html",
+      "local": "/downloads/helpers/host-native-workspace/ps4/7cefa37d8cdd39ad/whatsite-workspace-ps4.html",
+      "immutablePath": "/downloads/helpers/host-native-workspace/ps4/7cefa37d8cdd39ad/whatsite-workspace-ps4.html",
+      "downloadURL": "/downloads/helpers/host-native-workspace/ps4/7cefa37d8cdd39ad/whatsite-workspace-ps4.html",
+      "absoluteDownloadURL": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps4/7cefa37d8cdd39ad/whatsite-workspace-ps4.html",
+      "bytes": 348534,
+      "sha256": "7cefa37d8cdd39adc132298bea24429c33ef7a8248b9b2c177fdb5aaf441c92a",
+      "installPath": "/data/whatsite-workspace-ps4.html",
+      "nativeURLPath": "/data/whatsite-workspace-ps4.html",
+      "port": 8080,
+      "nativeURL": "http://{consoleIP}:8080/data/whatsite-workspace-ps4.html",
+      "views": [
+        "files",
+        "payloads",
+        "autoload"
+      ],
+      "viewQuery": "?view={view}",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-7cefa37d8cdd39ad\\whatsite-workspace-ps4.html",
+      "archiveStatus": "verified",
+      "source": {
+        "tag": "2.08",
+        "commit": "266d9b8fa7af1cd106688999f95960841c3e894d",
+        "httpSourceSHA256": "dd295327ed2cdfb87576682597e4138dbd1fc48eee4ac31115b6290a725be10c",
+        "repository": "https://github.com/cy33hc/ps4-ezremote-client",
+        "server": "https://github.com/cy33hc/ps4-ezremote-client/blob/266d9b8fa7af1cd106688999f95960841c3e894d/source/server/http_server.cpp",
+        "filesystem": "https://github.com/cy33hc/ps4-ezremote-client/blob/266d9b8fa7af1cd106688999f95960841c3e894d/source/fs.cpp"
+      },
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-7cefa37d8cdd39ad\\whatsite-workspace-ps4.html"
+    },
+    {
+      "platform": "ps5",
+      "filename": "whatsite-workspace-ps5.html",
+      "local": "/downloads/helpers/host-native-workspace/ps5/032c28a8bd60c7c9/whatsite-workspace-ps5.html",
+      "immutablePath": "/downloads/helpers/host-native-workspace/ps5/032c28a8bd60c7c9/whatsite-workspace-ps5.html",
+      "downloadURL": "/downloads/helpers/host-native-workspace/ps5/032c28a8bd60c7c9/whatsite-workspace-ps5.html",
+      "absoluteDownloadURL": "https://whatwhatboy.com/downloads/helpers/host-native-workspace/ps5/032c28a8bd60c7c9/whatsite-workspace-ps5.html",
+      "bytes": 348534,
+      "sha256": "032c28a8bd60c7c9ff9580244375af95d78924d9b4d7e12272058fc2afd53333",
+      "installPath": "/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+      "nativeURLPath": "/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+      "port": 9090,
+      "nativeURL": "http://{consoleIP}:9090/data/homebrew/ezremote-client/assets/whatsite-workspace-ps5.html",
+      "views": [
+        "files",
+        "payloads",
+        "autoload"
+      ],
+      "viewQuery": "?view={view}",
+      "expectedArchivePath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-032c28a8bd60c7c9\\whatsite-workspace-ps5.html",
+      "archiveStatus": "verified",
+      "source": {
+        "tag": "2.18",
+        "commit": "f3ac2abab304a807f20a8b97480dbd169e5b6be6",
+        "httpSourceSHA256": "3df2af33fb9bb04d8900f26196cfa699416b97ee78689c68479131af0b7507e0",
+        "repository": "https://github.com/cy33hc/ps5-ezremote-client",
+        "server": "https://github.com/cy33hc/ps5-ezremote-client/blob/f3ac2abab304a807f20a8b97480dbd169e5b6be6/source/server/http_server.cpp",
+        "filesystem": "https://github.com/cy33hc/ps5-ezremote-client/blob/f3ac2abab304a807f20a8b97480dbd169e5b6be6/source/fs.cpp"
+      },
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Native Workspace\\Helpers\\2026.11.02.1-032c28a8bd60c7c9\\whatsite-workspace-ps5.html"
+    }
+  ]
+}

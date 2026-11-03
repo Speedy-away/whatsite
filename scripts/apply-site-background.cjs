@@ -16,6 +16,7 @@ function routeFor(file) {
 
 function eligible(html, file) {
     const route = routeFor(file);
+    if (route.split('/').some(part => part.startsWith('.'))) return false;
     if (/^hosts\/runtime(?:\/|$)/.test(route)) return false;
     if (!/<head\b/i.test(html) || !/<body\b/i.test(html)) return false;
     if (/<meta\b[^>]*http-equiv\s*=\s*["']refresh["']/i.test(html)) return false;
@@ -31,7 +32,7 @@ function pages(directory = root) {
     return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
         const file = path.join(directory, entry.name);
         if (entry.isDirectory()) {
-            if (excluded.has(entry.name)) return [];
+            if (entry.name.startsWith('.') || excluded.has(entry.name)) return [];
             // Only the browser-facing download library belongs to the site shell.
             if (entry.name === 'downloads') {
                 const index = path.join(file, 'index.html');
@@ -64,8 +65,8 @@ function improve(html, file = 'index.html') {
         tag = tag.replace(/\s+data-background-theme\s*=\s*["'][^"']*["']/gi, '');
         if (/\bclass\s*=\s*["']/i.test(tag)) {
             tag = tag.replace(/\bclass\s*=\s*(["'])([^"']*)\1/i, (_, quote, names) => {
-                const classes = names.split(/\s+/).filter(Boolean).filter(name => name !== 'site-atmosphere');
-                classes.push('site-atmosphere');
+                const classes = names.split(/\s+/).filter(Boolean).filter((name,index,all) => name !== 'site-atmosphere' || all.indexOf(name) === index);
+                if (!classes.includes('site-atmosphere')) classes.push('site-atmosphere');
                 return 'class=' + quote + classes.join(' ') + quote;
             });
         } else tag = tag.replace(/>$/, ' class="site-atmosphere">');

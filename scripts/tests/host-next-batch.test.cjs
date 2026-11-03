@@ -25,7 +25,7 @@ test('577 catalogue pins, all seventeen previous sender records and both active 
   assert.deepEqual(checks.verifyBaseline(c),{catalogueFiles:577,senderSnapshots:17,nativeHelpers:2});
 });
 
-test('receiver 15 retains all 501 previous PS4 and 350 PS5 files and maps the five new originals exactly',()=>{
+test('receiver 15 or its successor retains all 501 previous PS4 and 350 PS5 files and maps the five originals exactly',()=>{
   const records=checks.verifyReceivers(c);assert.equal(records.length,2);
   assert.equal(records.find(r=>r.platform==='ps4').previousItemsPreserved,501);
   assert.equal(records.find(r=>r.platform==='ps5').previousItemsPreserved,350);

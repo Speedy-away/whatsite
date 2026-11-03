@@ -87,13 +87,14 @@ test('the integrated catalogues preserve historical actions from their separate 
   assert.ok(checked>100,'The preservation test must cover the historical collection');
 });
 
-test('RAW GAME remains an exact four-firmware external host rather than a vendored runtime',()=>{
-  const raw = all.ps4.find(action=>action.id==='raw13g-1302-1352');
+test('RAW GAME source record keeps its exact external contract and remains excluded from the first-party catalogue',()=>{
+  const raw = read('docs/host-actions-ps4.json').actions.find(action=>action.id==='raw13g-1302-1352');
   assert.ok(raw);assert.deepEqual(raw.firmwares,['13.02','13.04','13.50','13.52']);
   assert.equal(raw.launchURL,'https://raw13g.github.io/');assert.equal(raw.format,'HTML host');assert.equal(raw.automatic,true);
   assert.equal(raw.sourceCommit,'9ba2f0719591d6900d91aba6cc5291f8fff97e6d');
   assert.ok(!raw.runtimeId);assert.ok(!raw.run);assert.ok(!raw.downloadURL);
   assert.equal(ui.loadCapability(raw).available,false);
+  assert.ok(!all.ps4.some(action=>action.id===raw.id));
   for (const firmware of ['13.00','13.51','14.00','12.52']) assert.equal(ui.firmwareMatches(raw,firmware),false,firmware);
   assert.ok(!all.ps5.some(action=>action.id===raw.id));
   const runtimes = read('docs/host-runtime-builds.json').runtimes;

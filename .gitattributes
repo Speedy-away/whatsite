@@ -1,2 +1,12 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# These original input captures are checked by byte count and SHA-256.
+scripts/tests/fixtures/gta5-plugin-inputs/** -text
+
+# Download checksums and native runtime snapshots describe exact original bytes.
+downloads/** -text
+hosts/runtime/** -text
+console/ps4/whatsite-ps4.html -text
+console/ps5/whatsite-ps5.html -text
+assets/images/platform-logos/*.svg -text

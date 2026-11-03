@@ -8,7 +8,8 @@ const script = '<script defer src="/assets/site-ads.js?v=2"></script>';
 
 function eligible(file, html) {
   html = html.replace(/<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->/g, '');
-  return /^(?:console|pc)\//.test(file.replaceAll('\\', '/')) &&
+  return /^(?:console|pc|hosts)\//.test(file.replaceAll('\\', '/')) &&
+    !/^hosts\/runtime\//.test(file.replaceAll('\\', '/')) &&
     !/^console\/ps[45]\/whatsite-ps[45]\.html$/.test(file.replaceAll('\\', '/')) &&
     !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html) &&
     !/http-equiv=["']refresh/i.test(html) &&
@@ -56,7 +57,7 @@ function addExisting() {
   const files = dir => fs.readdirSync(dir, {withFileTypes: true}).flatMap(entry => entry.isDirectory()
     ? files(path.join(dir, entry.name)) : entry.name.endsWith('.html') ? [path.join(dir, entry.name)] : []);
   let changed = 0, total = 0;
-  for (const file of [...files(path.join(root, 'console')), ...files(path.join(root, 'pc'))]) {
+  for (const file of [...files(path.join(root, 'console')), ...files(path.join(root, 'pc')), ...files(path.join(root,'hosts')).filter(file=>!path.relative(root,file).replaceAll('\\','/').startsWith('hosts/runtime/'))]) {
     const relative = path.relative(root, file).replaceAll('\\', '/');
     const before = fs.readFileSync(file, 'utf8');
     if (!eligible(relative, before)) continue;

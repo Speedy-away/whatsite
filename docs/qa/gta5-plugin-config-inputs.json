@@ -4,15 +4,17 @@
       "file": "C:/Users/whatw/Desktop/plugins.ini",
       "bytes": 80,
       "sha256": "7a156bf915cf1d90e9cb6a17d980c33b257c7726502d416a9e981051a30849ac",
-      "text": "[CUSA00411]\n/data/GoldHEN/plugins/\n/data/GoldHEN/plugins/\n/data/GoldHEN/plugins/"
+      "text": "[CUSA00411]\n/data/GoldHEN/plugins/\n/data/GoldHEN/plugins/\n/data/GoldHEN/plugins/",
+      "snapshot": "scripts/tests/fixtures/gta5-plugin-inputs/7a156bf915cf1d90e9cb6a17d980c33b257c7726502d416a9e981051a30849ac/plugins.ini"
     },
     {
       "file": "C:/Users/whatw/Downloads/plugins.ini",
       "bytes": 95,
       "sha256": "67c034d5b3454776cbce415efee5b5e27f905c42d5c82d05d3883b55eb75c965",
-      "text": "[CUSA00419]\n/data/GoldHEN/plugins/Crystalis.sprx\n/data/GoldHEN/plugins/\n/data/GoldHEN/plugins/\n"
+      "text": "[CUSA00419]\n/data/GoldHEN/plugins/Crystalis.sprx\n/data/GoldHEN/plugins/\n/data/GoldHEN/plugins/\n",
+      "snapshot": "scripts/tests/fixtures/gta5-plugin-inputs/67c034d5b3454776cbce415efee5b5e27f905c42d5c82d05d3883b55eb75c965/plugins.ini"
     }
   ],
-  "notes": "Original user files were read and retained unchanged. Blank directory-only lines are omitted from the generated one-menu configurations.",
+  "notes": "Exact original input captures retained with their original paths, byte counts and SHA-256. Tests and regeneration use immutable repository snapshots; live Desktop/Downloads files are not required or modified. Blank directory-only lines are omitted from generated one-menu configurations.",
   "documentation": "https://github.com/GoldHEN/GoldHEN_Plugins_Repository#quick-start"
 }

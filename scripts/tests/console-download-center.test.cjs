@@ -37,17 +37,19 @@ test('console catalogues contain only reviewed PS4/PS5 builds and keep platform 
   assert.throws(() => getCatalog('ps3'), /Expected ps4 or ps5/);
   for (const item of catalogue.filter(item => /GTA V game update/.test(item.compatibility))) {
     assert.deepEqual(item.platforms, ['ps4']);
-    if (item.id.startsWith('ps4-legacy-') || item.id.startsWith('ps4-repository-gamerhack-')) {
-      const sourceCatalogue = item.id.startsWith('ps4-repository-gamerhack-') ? 'docs/host-repository-menu-actions.json' : 'docs/host-legacy-menu-actions.json';
+    if (item.id.startsWith('ps4-legacy-') || item.id.startsWith('ps4-repository-gamerhack-') || item.id.startsWith('ps4-gta505-gamerhack-') || item.id.startsWith('ps4-arabicguy-672-')) {
+      const is505 = item.id.startsWith('ps4-gta505-gamerhack-');
+      const is672 = item.id.startsWith('ps4-arabicguy-672-');
+      const sourceCatalogue = is672 ? 'docs/host-arabicguy-672-actions.json' : is505 ? 'docs/host-gta505-continuation-actions.json' : item.id.startsWith('ps4-repository-gamerhack-') ? 'docs/host-repository-menu-actions.json' : 'docs/host-legacy-menu-actions.json';
       const action = readJson(sourceCatalogue).actions.find(action => action.id === item.id);
       assert.ok(action, item.id + ' has original source evidence');
-      assert.deepEqual(action.firmwares, ['9.00']);
+      assert.deepEqual(action.firmwares, [is672 ? '6.72' : is505 ? '5.05' : '9.00']);
       assert.equal(item.compatibility, action.requirements.join(' '));
       assert.equal(item.url, action.downloadURL);
       assert.equal(item.bytes, action.bytes);
       assert.equal(item.sha256, action.sha256);
       assert.equal(item.source, action.source);
-      assert.equal(item.version, action.menuVersion || action.gameVersion);
+      assert.equal(item.version, action.menuVersion || action.version || action.gameVersion);
       continue;
     }
     assert.match(item.compatibility, /1\.(?:56|57)/);

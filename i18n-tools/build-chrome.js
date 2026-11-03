@@ -90,7 +90,11 @@ Object.assign(T, require('./console-translations.cjs'));
 Object.assign(T, require('./host-repository-translations.cjs'));
 Object.assign(T, require('./host-original-tool-translations.cjs'));
 Object.assign(T, require('./host-next-batch-translations.cjs'));
+Object.assign(T, require('./host-gta505-continuation-translations.cjs'));
+Object.assign(T, require('./host-arabicguy-672-translations.cjs'));
+Object.assign(T, require('./host-package-installer-translations.cjs'));
 Object.assign(T, require('./site-refresh-translations.cjs'));
+Object.assign(T, require('./afterglow-translations.cjs'));
 const keys = Object.keys(T);
 let written = 0;
 

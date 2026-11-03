@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-11-03T17:42:40.483Z",
+  "status": "passed",
+  "method": "Bounded HTTPS GET, exact URL/size/SHA-256 comparison and original BIN Git-blob/archive matching. No custom Origin, native source evaluation, payload execution or console contact.",
+  "files": [
+    {
+      "path": "672/index.html",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+      "status": 200,
+      "bytes": 1334148,
+      "sha256": "5a7876c7322a0bf65604dcc2143d4363fbb1f0d4a7d6a36de9a02d9b4b3abfd3",
+      "cors": "*",
+      "contentType": "text/plain; charset=utf-8",
+      "downloadName": null,
+      "gameVersion": null,
+      "archiveMatches": false
+    },
+    {
+      "path": "672/jb2.js",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/jb2.js",
+      "status": 200,
+      "bytes": 800857,
+      "sha256": "364fbbb1091ddd5e6b68447b92e57c87a5cab26aa5a8122a018e7ae3905959eb",
+      "cors": "*",
+      "contentType": "text/plain; charset=utf-8",
+      "downloadName": null,
+      "gameVersion": null,
+      "archiveMatches": false
+    },
+    {
+      "path": "672/pl_loader.js",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_loader.js",
+      "status": 200,
+      "bytes": 501574,
+      "sha256": "d1950c98f4225abd58fa1166d2b7b3f50fae215fa0c1d50d5d7c47a39f12b13f",
+      "cors": "*",
+      "contentType": "text/plain; charset=utf-8",
+      "downloadName": null,
+      "gameVersion": null,
+      "archiveMatches": false
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy100.bin",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+      "status": 200,
+      "bytes": 1055064,
+      "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+      "cors": "*",
+      "contentType": "application/octet-stream",
+      "downloadName": "pl_GTA_ArabicGuy100.bin",
+      "gameVersion": "1.00",
+      "archiveMatches": true
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy127.bin",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+      "status": 200,
+      "bytes": 1055384,
+      "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+      "cors": "*",
+      "contentType": "application/octet-stream",
+      "downloadName": "pl_GTA_ArabicGuy127.bin",
+      "gameVersion": "1.27",
+      "archiveMatches": true
+    },
+    {
+      "path": "672/pl_GTA_ArabicGuy132.bin",
+      "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+      "status": 200,
+      "bytes": 1054936,
+      "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+      "cors": "*",
+      "contentType": "application/octet-stream",
+      "downloadName": "pl_GTA_ArabicGuy132.bin",
+      "gameVersion": "1.32",
+      "archiveMatches": true
+    }
+  ],
+  "consoleExecutionVerified": false
+}

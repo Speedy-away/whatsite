@@ -1,0 +1,19 @@
+✔ configured raster previews replace stale image metadata consistently and idempotently (10.265ms)
+✔ page schema uses the exact social image, description, MIME type and pixel dimensions (1.052ms)
+✔ noindex and redirect previews retain their directives and suppress indexable schema (2.1529ms)
+✔ receiver and downloaded HTML remain byte-identical even when a preview is configured (0.1354ms)
+✔ default engine configuration selects the generated manifest without a special caller option (3.1838ms)
+✔ social titles wrap without dropping exact game, platform or version wording (124.4454ms)
+✔ original SVG cards escape title markup and retain page-specific text (0.9143ms)
+✔ platform themes distinguish console families without changing the page title (0.1741ms)
+✔ every eligible page has a valid primary preview and a unique original vector card (1824.8556ms)
+✔ configured illustrated previews remain primary while native cards stay available (2.1913ms)
+✔ preview coverage excludes ready receivers and downloaded HTML tools (1.2444ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2025.3707

@@ -113,6 +113,17 @@
     return receiverOrigin({protocol:location.protocol,hostname:location.hostname,port:'6701'}) && String(location.port) === (platform === 'ps4' ? '8080' : '9090');
   }
   function localHost(location) { if(!receiverOrigin({protocol:'http:',hostname:location.hostname,port:'6701'}))return '127.0.0.1';var host = String(location.hostname); return host.indexOf(':') >= 0 && host.charAt(0) !== '[' ? '[' + host + ']' : host; }
+  function packageInstallerURL(location, platform, file, size) {
+    platform = platformName(platform);
+    if (!receiverOrigin(location)) fail('Open the native receiver before preparing package installation.');
+    var originalName = String(file).slice(String(file).lastIndexOf('/')+1);
+    var name = safeFilename(file), folder = safeFolder(platform, file.slice(0,file.lastIndexOf('/')));
+    if (name !== originalName) fail('The saved package filename is invalid.');
+    if (!/\.pkg$/i.test(name) || !/^(?:\/data(?:\/|$)|\/mnt\/usb\d+\/)/.test(folder+'/')) fail('Choose a saved PKG in internal storage or a verified USB folder.');
+    if (typeof size !== 'number' || !isFinite(size) || size < 1 || Math.floor(size) !== size || size > 9007199254740991) fail('The package size is unavailable.');
+    var path = platform === 'ps4' ? '/data/whatsite-package-installer-ps4.html' : '/data/homebrew/ezremote-client/assets/whatsite-package-installer-ps5.html';
+    return 'http://' + localHost(location) + ':' + (platform === 'ps4' ? '8080' : '9090') + path + '?path=' + encodeURIComponent(folder+'/'+name) + '&bytes=' + size;
+  }
   function downloadFolder(platform, folder) {
     folder = safeFolder(platform, folder);
     return /\/whatwhatboy$/.test(folder) ? folder : folder + '/whatwhatboy';
@@ -496,6 +507,10 @@
           for (var i = 0; i < states.length; i++) if (states[i].path === job.body.dest_path) { job.progress = progress(states[i]); found = true; }
           if (!found && job.confirmed && job.progress && !job.progress.complete) job.progress = {label:'The queue record is no longer available. Inspect this destination in the file manager before retrying.',phase:'unknown',percent:0};
           if (found) job.confirmed = true;
+          if (found && job.progress.complete && !job.completionAnnounced) {
+            job.completionAnnounced = true;
+            announce('Receiver reports saved to: ' + job.body.dest_path + '. Check the native file before installation.');
+          }
           paint(key);
         }
       }
@@ -517,6 +532,12 @@
         card.status.textContent = p.label + (p.total ? ' · ' + formatBytes(p.transferred) + ' / ' + formatBytes(p.total) : '') + ' · ' + job.body.dest_path + (p.phase === 'failed' ? ' · Check free space, the mounted device and file URL in ezRemote. The receiver may retry automatically; no duplicate will be sent here.' : '') + (p.complete ? ' · Confirm the saved file and checksum before following its install or load guide.' : '');
         card.status.setAttribute('data-state', p.phase); card.bar.value = p.percent || 0;
         card.bar.hidden = !p.total; card.button.disabled = true;
+        if (card.installLink) {
+          card.installLink.hidden = true;
+          if (allowed && p.complete && job.confirmed) {
+            try { card.installLink.href=packageInstallerURL(window.location,platform,job.body.dest_path,card.item.bytes);card.installLink.hidden=false; } catch (_) {}
+          }
+        }
       }
       function save(item) {
         var body;
@@ -573,7 +594,8 @@
             var guide = text(article, 'a', 'Setup & compatibility', 'receiver-guide');
             guide.href = 'https://whatwhatboy.com' + item.page; guide.target = '_blank'; guide.rel = 'noopener noreferrer';
           }
-          var extractLink = null;
+          var extractLink = null, installLink = null;
+          if (/\.pkg$/i.test(item.filename || '')) { installLink=text(article,'a','Verify & install PKG','receiver-guide'); installLink.target='_blank'; installLink.rel='noopener noreferrer'; installLink.hidden=true; }
           if (isArchive(item)) { extractLink=text(article,'a','Extract a saved copy on console','receiver-guide'); extractLink.target='_blank'; extractLink.rel='noopener noreferrer'; }
           if (/^[a-f0-9]{64}$/i.test(item.sha256 || '')) {
             var details = document.createElement('details'); article.appendChild(details);
@@ -583,7 +605,7 @@
           button.onclick = (function (selected) { return function () { save(selected); }; }(item));
           var status = text(article, 'p', '', 'receiver-file-status'); status.setAttribute('aria-live', 'polite');
           var bar = document.createElement('progress'); bar.max = 100; bar.value = 0; bar.hidden = true; bar.setAttribute('aria-label', 'Download progress'); article.appendChild(bar);
-          cards[item.id] = {button: button, status: status, bar: bar, extractLink:extractLink, item:item}; paint(item.id);
+          cards[item.id] = {button: button, status: status, bar: bar, extractLink:extractLink, installLink:installLink, item:item}; paint(item.id);
         }
         document.getElementById('receiver-count').textContent = count + ' files' + (format && format.value === 'ready' ? ' · archive files hidden' : '');
         if (!count) text(list, 'p', unavailableFile ? 'The requested file is unavailable in this installed ' + platform.toUpperCase() + ' downloader. Update the companion from the site and open the file again. No download was queued.' : 'No files match these filters. Choose All files to include archives, or clear the search.', unavailableFile ? 'receiver-error' : '');
@@ -665,5 +687,5 @@
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
   }
-  return {parseUrl: parseUrl, receiverOrigin: receiverOrigin, safeFolder: safeFolder, safeFilename: safeFilename, makeRequest: makeRequest, submission: submission, progress: progress, filesystemURL: filesystemURL, mountedStorage: mountedStorage, folderEntries: folderEntries, managerOrigin:managerOrigin, downloadFolder:downloadFolder, preparationURL:preparationURL, receiverURL:receiverURL, sha256Bytes:sha256Bytes, reviewedArchive:reviewedArchive, createManagerClient:createManagerClient, createClient: createClient, formatBytes: formatBytes, isArchive:isArchive, preparation:preparation, matches: matches, install: install};
+  return {packageInstallerURL:packageInstallerURL,parseUrl: parseUrl, receiverOrigin: receiverOrigin, safeFolder: safeFolder, safeFilename: safeFilename, makeRequest: makeRequest, submission: submission, progress: progress, filesystemURL: filesystemURL, mountedStorage: mountedStorage, folderEntries: folderEntries, managerOrigin:managerOrigin, downloadFolder:downloadFolder, preparationURL:preparationURL, receiverURL:receiverURL, sha256Bytes:sha256Bytes, reviewedArchive:reviewedArchive, createManagerClient:createManagerClient, createClient: createClient, formatBytes: formatBytes, isArchive:isArchive, preparation:preparation, matches: matches, install: install};
 }));

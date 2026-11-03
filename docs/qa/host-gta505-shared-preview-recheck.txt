@@ -1,0 +1,157 @@
+✔ social titles wrap without dropping exact game, platform or version wording (117.2972ms)
+✔ original SVG cards escape title markup and retain page-specific text (0.9328ms)
+✔ platform themes distinguish console families without changing the page title (0.1883ms)
+✖ every eligible page has a valid primary preview and a unique original vector card (18.2829ms)
+✔ configured illustrated previews remain primary while native cards stay available (1.5904ms)
+✔ preview coverage excludes ready receivers and downloaded HTML tools (1.2343ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 199.9338
+
+✖ failing tests:
+
+test at scripts\tests\social-previews.test.cjs:64:1
+✖ every eligible page has a valid primary preview and a unique original vector card (18.2829ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      '404.html',
+      'api/scooby-key.html',
+      'apk.html',
+      'console/3ds/apps.html',
+  ...
+      'hosts/index.html',
+  -   'hosts/ps4/afterglow/index.html',
+      'hosts/ps4/files/index.html',
+  -   'hosts/ps4/firmware/index.html',
+      'hosts/ps4/gta5/index.html',
+      'hosts/ps4/index.html',
+      'hosts/ps4/other-games/index.html',
+      'hosts/ps4/payload-manager/index.html',
+      'hosts/ps4/rdr2/index.html',
+  
+      at TestContext.<anonymous> (C:\Users\whatw\Documents\GitHub\whatsite\scripts\tests\social-previews.test.cjs:68:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      '404.html',                                                           'api/scooby-key.html',
+      'apk.html',                                                           'console/3ds/apps.html',
+      'console/3ds/emulators.html',                                         'console/3ds/game-downloads.html',
+      'console/3ds/games.html',                                             'console/3ds/index.html',
+      'console/3ds/setup.html',                                             'console/ds/apps.html',
+      'console/ds/emulators.html',                                          'console/ds/game-downloads.html',
+      'console/ds/games.html',                                              'console/ds/index.html',
+      'console/ds/setup.html',                                              'console/ds/themes.html',
+      'console/emulators.html',                                             'console/game-downloads/index.html',
+      'console/gamecube/apps.html',                                         'console/gamecube/boot-methods.html',
+      'console/gamecube/game-downloads.html',                               'console/gamecube/index.html',
+      'console/gamecube/save-disc-tools.html',                              'console/gamecube/setup.html',
+      'console/index.html',                                                 'console/mods/index.html',
+      'console/mods/ps4/alien-isolation/index.html',                        'console/mods/ps4/assassin-s-creed-syndicate/index.html',
+      'console/mods/ps4/assassins-creed-iii-remastered/index.html',         'console/mods/ps4/assassins-creed-odyssey/index.html',
+      'console/mods/ps4/assassins-creed-origins/index.html',                'console/mods/ps4/assassins-creed-valhalla/index.html',
+      'console/mods/ps4/atomic-heart/index.html',                           'console/mods/ps4/batman-arkham-city/index.html',
+      'console/mods/ps4/batman-arkham-knight/index.html',                   'console/mods/ps4/bioshock-collection/index.html',
+      'console/mods/ps4/bioshock-infinite/index.html',                      'console/mods/ps4/bloodborne/index.html',
+      'console/mods/ps4/borderlands-3/index.html',                          'console/mods/ps4/bully/index.html',
+      'console/mods/ps4/call-of-duty/advanced-warfare/index.html',          'console/mods/ps4/call-of-duty/black-ops-1/index.html',
+      'console/mods/ps4/call-of-duty/black-ops-2/index.html',               'console/mods/ps4/call-of-duty/black-ops-3/index.html',
+      'console/mods/ps4/call-of-duty/black-ops-4/index.html',               'console/mods/ps4/call-of-duty/cold-war/index.html',
+      'console/mods/ps4/call-of-duty/ghosts/index.html',                    'console/mods/ps4/call-of-duty/index.html',
+      'console/mods/ps4/call-of-duty/infinite-warfare/index.html',          'console/mods/ps4/call-of-duty/modern-warfare-2-remastered/index.html',
+      'console/mods/ps4/call-of-duty/modern-warfare-remastered/index.html', 'console/mods/ps4/call-of-duty/multicod/index.html',
+      'console/mods/ps4/call-of-duty/wwii/index.html',                      'console/mods/ps4/control/index.html',
+      'console/mods/ps4/crysis-remastered/index.html',                      'console/mods/ps4/cyberpunk-2077/index.html',
+      'console/mods/ps4/dark-souls-2/index.html',                           'console/mods/ps4/darksiders-iii/index.html',
+      'console/mods/ps4/days-gone/index.html',                              'console/mods/ps4/dead-island-2/index.html',
+      'console/mods/ps4/dead-island/index.html',                            'console/mods/ps4/dead-rising-4/index.html',
+      'console/mods/ps4/deadpool/index.html',                               'console/mods/ps4/death-stranding/index.html',
+      'console/mods/ps4/detroit-become-human/index.html',                   'console/mods/ps4/deus-ex-mankind-divided/index.html',
+      'console/mods/ps4/dishonored-definitive-edition/index.html',          'console/mods/ps4/doom-eternal/index.html',
+      'console/mods/ps4/doom/index.html',                                   'console/mods/ps4/dragon-age-inquisition/index.html',
+      'console/mods/ps4/dying-light-2/index.html',                          'console/mods/ps4/dying-light/index.html',
+      'console/mods/ps4/elden-ring/index.html',                             'console/mods/ps4/evil-within-2/index.html',
+      'console/mods/ps4/fallout-4/index.html',                              'console/mods/ps4/far-cry-3-blood-dragon/index.html',
+      'console/mods/ps4/far-cry-5/index.html',                              'console/mods/ps4/far-cry-6/index.html',
+      'console/mods/ps4/far-cry-primal/index.html',                         'console/mods/ps4/final-fantasy-vii-remake/index.html',
+      'console/mods/ps4/final-fantasy-xv/index.html',                       'console/mods/ps4/ghost-of-tsushima/index.html',
+      'console/mods/ps4/god-of-war-ragnarok/index.html',                    'console/mods/ps4/god-of-war/index.html',
+      'console/mods/ps4/gravity-rush-2/index.html',                         'console/mods/ps4/gta-vice-city-definitive/index.html',
+      'console/mods/ps4/gta5/index.html',                                   'console/mods/ps4/gta5/install.html',
+      'console/mods/ps4/gta5/online.html',                                  'console/mods/ps4/hogwarts-legacy/index.html',
+      'console/mods/ps4/homefront-the-revolution/index.html',               'console/mods/ps4/horizon-forbidden-west/index.html',
+      'console/mods/ps4/horizon-zero-dawn/index.html',                      'console/mods/ps4/index.html',
+      'console/mods/ps4/judgment/index.html',                               'console/mods/ps4/just-cause-3/index.html',
+      'console/mods/ps4/kena-bridge-of-spirits/index.html',                 'console/mods/ps4/lost-judgment/index.html',
+      'console/mods/ps4/mad-max/index.html',                                'console/mods/ps4/mafia-definitive-edition/index.html',
+      ... 435 more items
+    ],
+    expected: [
+      '404.html',                                                           'api/scooby-key.html',
+      'apk.html',                                                           'console/3ds/apps.html',
+      'console/3ds/emulators.html',                                         'console/3ds/game-downloads.html',
+      'console/3ds/games.html',                                             'console/3ds/index.html',
+      'console/3ds/setup.html',                                             'console/ds/apps.html',
+      'console/ds/emulators.html',                                          'console/ds/game-downloads.html',
+      'console/ds/games.html',                                              'console/ds/index.html',
+      'console/ds/setup.html',                                              'console/ds/themes.html',
+      'console/emulators.html',                                             'console/game-downloads/index.html',
+      'console/gamecube/apps.html',                                         'console/gamecube/boot-methods.html',
+      'console/gamecube/game-downloads.html',                               'console/gamecube/index.html',
+      'console/gamecube/save-disc-tools.html',                              'console/gamecube/setup.html',
+      'console/index.html',                                                 'console/mods/index.html',
+      'console/mods/ps4/alien-isolation/index.html',                        'console/mods/ps4/assassin-s-creed-syndicate/index.html',
+      'console/mods/ps4/assassins-creed-iii-remastered/index.html',         'console/mods/ps4/assassins-creed-odyssey/index.html',
+      'console/mods/ps4/assassins-creed-origins/index.html',                'console/mods/ps4/assassins-creed-valhalla/index.html',
+      'console/mods/ps4/atomic-heart/index.html',                           'console/mods/ps4/batman-arkham-city/index.html',
+      'console/mods/ps4/batman-arkham-knight/index.html',                   'console/mods/ps4/bioshock-collection/index.html',
+      'console/mods/ps4/bioshock-infinite/index.html',                      'console/mods/ps4/bloodborne/index.html',
+      'console/mods/ps4/borderlands-3/index.html',                          'console/mods/ps4/bully/index.html',
+      'console/mods/ps4/call-of-duty/advanced-warfare/index.html',          'console/mods/ps4/call-of-duty/black-ops-1/index.html',
+      'console/mods/ps4/call-of-duty/black-ops-2/index.html',               'console/mods/ps4/call-of-duty/black-ops-3/index.html',
+      'console/mods/ps4/call-of-duty/black-ops-4/index.html',               'console/mods/ps4/call-of-duty/cold-war/index.html',
+      'console/mods/ps4/call-of-duty/ghosts/index.html',                    'console/mods/ps4/call-of-duty/index.html',
+      'console/mods/ps4/call-of-duty/infinite-warfare/index.html',          'console/mods/ps4/call-of-duty/modern-warfare-2-remastered/index.html',
+      'console/mods/ps4/call-of-duty/modern-warfare-remastered/index.html', 'console/mods/ps4/call-of-duty/multicod/index.html',
+      'console/mods/ps4/call-of-duty/wwii/index.html',                      'console/mods/ps4/control/index.html',
+      'console/mods/ps4/crysis-remastered/index.html',                      'console/mods/ps4/cyberpunk-2077/index.html',
+      'console/mods/ps4/dark-souls-2/index.html',                           'console/mods/ps4/darksiders-iii/index.html',
+      'console/mods/ps4/days-gone/index.html',                              'console/mods/ps4/dead-island-2/index.html',
+      'console/mods/ps4/dead-island/index.html',                            'console/mods/ps4/dead-rising-4/index.html',
+      'console/mods/ps4/deadpool/index.html',                               'console/mods/ps4/death-stranding/index.html',
+      'console/mods/ps4/detroit-become-human/index.html',                   'console/mods/ps4/deus-ex-mankind-divided/index.html',
+      'console/mods/ps4/dishonored-definitive-edition/index.html',          'console/mods/ps4/doom-eternal/index.html',
+      'console/mods/ps4/doom/index.html',                                   'console/mods/ps4/dragon-age-inquisition/index.html',
+      'console/mods/ps4/dying-light-2/index.html',                          'console/mods/ps4/dying-light/index.html',
+      'console/mods/ps4/elden-ring/index.html',                             'console/mods/ps4/evil-within-2/index.html',
+      'console/mods/ps4/fallout-4/index.html',                              'console/mods/ps4/far-cry-3-blood-dragon/index.html',
+      'console/mods/ps4/far-cry-5/index.html',                              'console/mods/ps4/far-cry-6/index.html',
+      'console/mods/ps4/far-cry-primal/index.html',                         'console/mods/ps4/final-fantasy-vii-remake/index.html',
+      'console/mods/ps4/final-fantasy-xv/index.html',                       'console/mods/ps4/ghost-of-tsushima/index.html',
+      'console/mods/ps4/god-of-war-ragnarok/index.html',                    'console/mods/ps4/god-of-war/index.html',
+      'console/mods/ps4/gravity-rush-2/index.html',                         'console/mods/ps4/gta-vice-city-definitive/index.html',
+      'console/mods/ps4/gta5/index.html',                                   'console/mods/ps4/gta5/install.html',
+      'console/mods/ps4/gta5/online.html',                                  'console/mods/ps4/hogwarts-legacy/index.html',
+      'console/mods/ps4/homefront-the-revolution/index.html',               'console/mods/ps4/horizon-forbidden-west/index.html',
+      'console/mods/ps4/horizon-zero-dawn/index.html',                      'console/mods/ps4/index.html',
+      'console/mods/ps4/judgment/index.html',                               'console/mods/ps4/just-cause-3/index.html',
+      'console/mods/ps4/kena-bridge-of-spirits/index.html',                 'console/mods/ps4/lost-judgment/index.html',
+      'console/mods/ps4/mad-max/index.html',                                'console/mods/ps4/mafia-definitive-edition/index.html',
+      ... 437 more items
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

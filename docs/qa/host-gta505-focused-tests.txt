@@ -1,0 +1,67 @@
+✔ console catalogues contain only reviewed PS4/PS5 builds and keep platform scopes separate (17.8087ms)
+✔ expanded catalogue retains bounded capacity and refuses missing platforms or duplicate identities (0.5719ms)
+✔ native feeds exclude archives, cheat JSON, plugins and unsupported platform builds (2.5644ms)
+✔ console address, receiver selection and filters preserve exact platform behavior (0.3553ms)
+✔ ready-file filtering keeps original archives available without treating them as executable builds (0.1407ms)
+✔ public console catalogue defaults to ready files and combines format with the search (1.6029ms)
+✔ an intentional original-archive link selects the archive without hiding it behind the ready default (0.8983ms)
+✔ routine page builds preserve archived companions; regeneration requires the explicit option (7.7441ms)
+✔ every card exposes its direct Download beside Save before the collapsed technical details (2.2258ms)
+✔ reviewed preparation instructions are text and retain their title/update markers (1.7436ms)
+✔ applying a console address updates actual receiver and client-preparation routes while download URLs stay pinned (0.5892ms)
+✔ XML catalogue deduplication retains regional filenames and resolves each console guide separately (3.3177ms)
+✔ download desk renders platform-specific actions, compatibility and truthful storage guidance (1.9424ms)
+✔ three exact 5.05 GTA V downloads stay grouped, original-only and unavailable to every Load path (27.4086ms)
+✔ all previous catalogue pins, native helper identities and sender versions are retained (5.8019ms)
+✔ activated receivers preserve prior pins and contain only the exact three new PS4 IDs (6.7498ms)
+✔ new requirement translations cover all twenty languages and preserve literal firmware and game updates (50.5215ms)
+✔ four Oysters 5.05 game updates and original FTP 1.08b retain exact identity and compatibility pins (2.4532ms)
+✔ misnamed 5.05 ArabicGuy JavaScript is explicitly excluded from ready files and raw BIN Load (8.2174ms)
+✔ five original-only ready BINs have source/version/size/SHA pins and verified private F: archive bytes (8.9878ms)
+✔ all readers expose five PS4 additions and preserve one Oysters family while only FTP permits selected-file Load (35.8322ms)
+✔ 577 catalogue pins, all seventeen previous sender records and both active native helpers remain unchanged (6.2044ms)
+✔ receiver 15 or its successor retains all 501 previous PS4 and 350 PS5 files and maps the five originals exactly (16.7909ms)
+✖ all old sender ZIPs and the current sender match SHA/CRC/manifests, preserve 174 actions and exclude five original binaries (10074.9123ms)
+✔ integration preserves page content and is idempotent for root and nested pages (1.5681ms)
+✔ homepage migration removes old runtime, canvas and motion button while retaining the homepage stylesheet (0.2395ms)
+✔ later page-generator assets retain their ordering without repeated background rewrites (0.5532ms)
+✔ palette mapping stays stable for platform and resource sections (0.1368ms)
+✔ redirects and helper or self-contained payload pages remain unchanged (0.1053ms)
+✔ site pages include current background assets or the generator-safe shared loader (791.8254ms)
+✔ PS3 file-list regeneration retains background integration and plain download links (783.6813ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 30
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10259.3796
+
+✖ failing tests:
+
+test at scripts\tests\host-next-batch.test.cjs:34:1
+✖ all old sender ZIPs and the current sender match SHA/CRC/manifests, preserve 174 actions and exclude five original binaries (10074.9123ms)
+  AssertionError [ERR_ASSERTION]: languages/ar.js is final authored source
+  + actual - expected
+  
+  + '3b03da9ae7610632cbc033a522e2ce8da30704a23de7200e00a34afbd76f84ad'
+  - '28c90f8c9e2386de71e498aa64ca732a5a8e210a4fc8351d5f5d628af134d0a5'
+  
+      at inspectSender (C:\Users\whatw\Documents\GitHub\whatsite\scripts\verify-host-next-batch.cjs:207:251)
+      at C:\Users\whatw\Documents\GitHub\whatsite\scripts\verify-host-next-batch.cjs:223:52
+      at Array.map (<anonymous>)
+      at Object.verifySenders (C:\Users\whatw\Documents\GitHub\whatsite\scripts\verify-host-next-batch.cjs:223:42)
+      at TestContext.<anonymous> (C:\Users\whatw\Documents\GitHub\whatsite\scripts\tests\host-next-batch.test.cjs:35:23)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3b03da9ae7610632cbc033a522e2ce8da30704a23de7200e00a34afbd76f84ad',
+    expected: '28c90f8c9e2386de71e498aa64ca732a5a8e210a4fc8351d5f5d628af134d0a5',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

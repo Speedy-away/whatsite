@@ -8,7 +8,7 @@ function deferred() {
   const promise = new Promise((yes,no)=>{resolve=yes;reject=no;});
   return {promise,resolve,reject};
 }
-function fixture({platform='ps4',storage=new Map(),actions,pairDeferred=false}={}) {
+function fixture({platform='ps4',storage=new Map(),actions,pairDeferred=false,fileListView=false,userAgent='Fixture desktop browser'}={}) {
   const created=[],opened=[],anchorClicks=[],checks=[],sends=[],pairs=[],windowEvents={};
   let gestureDepth=0,document;
   function matches(node, selector) {
@@ -48,13 +48,15 @@ function fixture({platform='ps4',storage=new Map(),actions,pairDeferred=false}={
   const ids={};
   const names=['actions-data','firmware','search','game','show-legacy','firmware-source','console-address','status','action-grid','action-count','version-overlay','version-choices','version-detail','bridge-url','bridge-token','service-status','service-checks','check-services','version-status','version-title','version-game','firmware-note','game-filter','empty','transfer-warning','transfer-warning-target','download-on-run','version-close','address-form','address-display','loopback','detect','detected-device','browser-firmware','other-console','clear-transfer-warning','connect-bridge','open-bridge'];
   for(const name of names)ids['host-'+name]=element(/(?:check-services|version-close|loopback|detect|clear-transfer-warning|connect-bridge|open-bridge)$/.test(name)?'button':'div');
+  for(const name of ['support-overlay','support-title','support-text','support-close'])ids['host-'+name]=element(name==='support-close'?'button':'div');
+  ids['host-support-overlay'].hidden=true;
   ids['host-version-overlay'].hidden=true;
   ids['host-firmware'].options=[{value:platform==='ps4'?'9.00':'4.51'}];
   ids['host-show-legacy'].checked=true;
   ids['host-bridge-url'].value='http://127.0.0.1:8766';ids['host-bridge-token'].value='fixture-token';
   const defaultAction={id:platform+'-fixture-menu-157',label:'Fixture menu',menuFamily:'Fixture menu',platform,category:'mods',game:'Fixture game',gameVersion:'1.57',menuVersion:'2.0',firmwares:[platform==='ps4'?'9.00':'4.51'],format:platform==='ps4'?'BIN':'ELF',run:{type:platform==='ps4'?'goldhen-http':'elf-http',port:platform==='ps4'?9090:9021},downloadURL:'/downloads/fixture/menu.'+(platform==='ps4'?'bin':'elf'),consoleFileId:platform+'-exact-file-157',requirements:[]};
   actions=actions||[defaultAction];
-  ids['host-actions-data'].textContent=JSON.stringify({platform,actions});
+  ids['host-actions-data'].textContent=JSON.stringify({platform,actions,fileListView});
   const storageKey='whatwhatboy.host.'+platform;
   if(!storage.has(storageKey))storage.set(storageKey,JSON.stringify({address:'192.168.1.40',firmware:platform==='ps4'?'9.00':'4.51'}));
   const sender=element('details'),info=element('div');
@@ -70,7 +72,7 @@ function fixture({platform='ps4',storage=new Map(),actions,pairDeferred=false}={
     runViaBridge(address,actionId){return queue(sends,{method:'bridge',address,actionId});},
     launchInstalled(address,itemPath){return queue(sends,{method:'installed',address,itemPath});}
   };
-  const window={HostConsoleClient:client,navigator:{userAgent:'Fixture desktop browser'},location:{href:'http://127.0.0.1:8766/hosts/'+platform+'/',origin:'http://127.0.0.1:8766'},localStorage:{getItem(key){return storage.get(key)||null;},setItem(key,value){storage.set(key,value);}},open(url,target,features){opened.push({url,target,features,duringGesture:gestureDepth>0});return{};},addEventListener(type,handler){(windowEvents[type]||=[]).push(handler);}};
+  const window={HostConsoleClient:client,navigator:{userAgent},location:{href:'http://127.0.0.1:8766/hosts/'+platform+'/',origin:'http://127.0.0.1:8766'},localStorage:{getItem(key){return storage.get(key)||null;},setItem(key,value){storage.set(key,value);}},open(url,target,features){opened.push({url,target,features,duringGesture:gestureDepth>0});return{};},addEventListener(type,handler){(windowEvents[type]||=[]).push(handler);}};
   dashboard.install(document,window);
   function clickWithin(container,selector){const target=container.querySelector(selector);if(!target)throw Error('Missing fixture control '+selector);return container.fire('click',{target});}
   return {platform,actions,ids,storage,storageKey,checks,sends,pairs,opened,anchorClicks,document,window,

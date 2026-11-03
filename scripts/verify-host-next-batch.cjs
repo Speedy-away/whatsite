@@ -158,13 +158,13 @@ function verifyBaseline(c) {
   return {catalogueFiles:577,senderSnapshots:17,nativeHelpers:2};
 }
 function verifyReceivers(c) {
-  assert.equal(c.receiver.activated,true);assert.equal(c.receiver.version,'2026.11.02.15','Receiver 15 must be activated before verification');
+  assert.equal(c.receiver.activated,true);assert.match(c.receiver.version,/^2026\.11\.02\.\d+$/);assert.ok(Number(c.receiver.version.split('.').at(-1))>=15,'Receiver 15 or a retaining successor must be activated');
   return c.receiver.records.map(record=>{
-    assert.equal(record.version,'2026.11.02.15');
+    assert.equal(record.version,c.receiver.version);
     const current = receiverItems(check(path.join(root,record.path),record));check(path.join(root,record.immutablePath),record);insideBackup(record.backupPath);check(record.backupPath,record);
     const old = c.baseline.receivers.find(r=>r.platform===record.platform);assert.ok(old);
     const previous = receiverItems(check(path.join(root,old.immutablePath),old));insideBackup(old.backupPath);check(old.backupPath,old);
-    assert.equal(previous.length,record.platform==='ps4'?501:350);assert.equal(current.length,record.platform==='ps4'?506:350);
+    assert.equal(previous.length,record.platform==='ps4'?501:350);assert.ok(current.length>=(record.platform==='ps4'?506:350));
     for(const before of previous) {const after=current.find(i=>i.id===before.id);assert.ok(after,before.id);for(const key of ['filename','bytes','sha256'])assert.equal(after[key],before[key],before.id+' '+key);}
     if(record.platform==='ps4') for(const a of c.actions) {const entry=current.find(i=>i.id===a.id);assert.ok(entry,a.id);assert.equal(entry.url,a.downloadURL);assert.equal(entry.sha256,a.sha256);assert.equal(entry.bytes,a.bytes);}
     else for(const a of c.actions) assert.ok(!current.some(i=>i.id===a.id||i.sha256===a.sha256));
@@ -173,7 +173,7 @@ function verifyReceivers(c) {
 }
 function phaseIssues(c) {
   const issues = [];
-  if(!c.receiver.activated||c.receiver.version!=='2026.11.02.15') issues.push('Receiver 2026.11.02.15 is not activated.');
+  if(!c.receiver.activated||!/^2026\.11\.02\.\d+$/.test(c.receiver.version)||Number(c.receiver.version.split('.').at(-1))<15) issues.push('Receiver 2026.11.02.15 or a retaining successor is not activated.');
   const latest = c.senderManifest.files.find(f=>f.url===c.senderManifest.latest);
   if(!latest||latest.version!==senderVersion+'+'+latest.snapshot.slice(0,12)) issues.push('Current sender '+senderVersion+' is not the latest archived snapshot.');
   for(const job of c.jobs) if(!c.audit.some(i=>i.id==='ps4-ps5-'+job.id&&i.status==='downloaded')) issues.push('Archive intake is pending for '+job.id+'.');

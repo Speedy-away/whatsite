@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-03T18:22:18.384Z",
+  "source": "Microsoft-Windows-Windows Defender/Operational, event1116 (read-only check)",
+  "detection": "Trojan:JS/Cryxos.AIDB!MTB",
+  "files": [
+    "900New/payload.js",
+    "900NM/payload.js"
+  ],
+  "status": "quarantined-not-restored",
+  "action": "Affected loader paths disabled; no exclusion, restoration, retry, encoding or other bypass performed.",
+  "codeExecuted": false
+}

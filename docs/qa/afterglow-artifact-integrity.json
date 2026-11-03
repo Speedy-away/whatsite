@@ -1,0 +1,56 @@
+{
+  "payloadsExecuted": false,
+  "method": "Independent Python ZIP/CRC/SHA reader; no extraction or execution",
+  "artifacts": [
+    {
+      "name": "afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+      "bytes": 535596,
+      "sha256": "5dc1ddd60b9fcbb0b7fb96b6294666580b55ab5a286861eabee2aa0987019384",
+      "backupVerified": true,
+      "zipMembersVerified": 27
+    },
+    {
+      "name": "afterglow-source-acf25a831725-8db24b508bab.zip",
+      "bytes": 228497,
+      "sha256": "8db24b508bab3b4c7cc0db66e1f78f2fc292294f8ea67ea10c247ed6e46135e4",
+      "backupVerified": true,
+      "zipMembersVerified": 42
+    },
+    {
+      "name": "goldhen.bin",
+      "bytes": 297496,
+      "sha256": "39452f5e1c305ac9efcb4745eef7958b4db8c6d85299529f08700970b009ea4d",
+      "backupVerified": true,
+      "zipMembersVerified": null
+    },
+    {
+      "name": "hen.bin",
+      "bytes": 500448,
+      "sha256": "364e5f6fd59e8a7afc207c70e27b840699f8173f3ae0241b63bc6dec6b394bfe",
+      "backupVerified": true,
+      "zipMembersVerified": null
+    },
+    {
+      "name": "patchset-1352.bin",
+      "bytes": 632,
+      "sha256": "adfb9771904f71cd1f5a82cbded8ac46c7ffeb3df974579535cf711904ac347e",
+      "backupVerified": true,
+      "zipMembersVerified": null
+    },
+    {
+      "name": "patchset-1400.bin",
+      "bytes": 641,
+      "sha256": "615f275b96831cc04173757db39e93f0d27b52888976af2a6444604aa8ac5dbf",
+      "backupVerified": true,
+      "zipMembersVerified": null
+    }
+  ],
+  "sender": {
+    "version": "1.9.1+24bbed9cc369",
+    "bytes": 100413152,
+    "sha256": "201e3b8956b3b3375801149ca0150a9184c16ffc04800b7ecdbd09843f2cf32d",
+    "zipMembers": 283,
+    "manifestRecords": 282,
+    "backupVerified": true
+  }
+}

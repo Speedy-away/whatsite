@@ -25,9 +25,23 @@ test('Scorpion 1.00 selects the EU/US binary while Oxagon keeps its actual game-
  const rows=JSON.parse(html.match(/data-plugin-choices="([^"]+)"/)[1].replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&#39;/g,"'"));
  assert.equal(rows[0].gameVersion,'1.56');assert.ok(!rows[1].label.includes('1.56'));assert.ok(rows[1].label.includes('1.53'));
 });
-test('BIN/CSC resources are not represented as GoldHEN plugins and original inputs remain unchanged',()=>{
+test('BIN/CSC resources are not represented as GoldHEN plugins and portable original input captures remain byte-exact',()=>{
  for(const d of catalog().downloads){assert.ok(!/lotus|wildemodz|fcloader|random-scripts|gta-fucker/.test(d.resourceId));assert.ok(d.variants.every(v=>/\.(prx|sprx)$/i.test(v.module)));}
- for(const f of read('docs/qa/gta5-plugin-config-inputs.json').inputFiles)assert.equal(sha(fs.readFileSync(f.file)),f.sha256);
+ for(const f of read('docs/qa/gta5-plugin-config-inputs.json').inputFiles){
+  assert.match(f.snapshot,/^scripts\/tests\/fixtures\/gta5-plugin-inputs\/[a-f0-9]{64}\/plugins\.ini$/);
+  const b=fs.readFileSync(path.join(root,f.snapshot));assert.equal(b.length,f.bytes);assert.equal(sha(b),f.sha256);assert.equal(b.toString('utf8'),f.text);
+ }
+});
+
+test('input-example regeneration never needs the original Desktop or Downloads paths',()=>{
+ const vm=require('node:vm'),filename=path.join(root,'scripts/prepare-gta5-plugin-configs.cjs'),writes=new Map();
+ const originalPaths=new Set(read('docs/qa/gta5-plugin-config-inputs.json').inputFiles.map(f=>path.resolve(f.file)));
+ const memoryFs={...fs,readFileSync(file,...args){assert.ok(!originalPaths.has(path.resolve(file)),'Do not read mutable user input paths');return fs.readFileSync(file,...args);},writeFileSync(file,data){writes.set(path.resolve(file),data);},mkdirSync(){}};
+ const localRequire=require('node:module').createRequire(filename),module={exports:{}};
+ vm.runInNewContext(fs.readFileSync(filename,'utf8'),{module,exports:module.exports,__dirname:path.dirname(filename),require(name){return name==='node:fs'?memoryFs:localRequire(name);},Buffer,console},{filename});
+ const examples=module.exports.preserveInputExamples();assert.equal(examples.length,2);
+ const report=JSON.parse(writes.get(path.join(root,'docs/qa/gta5-plugin-config-inputs.json')));
+ for(const example of report.inputFiles){assert.ok(example.snapshot);assert.equal(sha(Buffer.from(example.text)),example.sha256);}
 });
 test('Every authored configuration and mirrored source has a verified local archive copy',()=>{
  const jobs=read('docs/qa/gta5-plugin-config-jobs.json').files,saved=read('docs/qa/gta5-plugin-config-archive.json').files;

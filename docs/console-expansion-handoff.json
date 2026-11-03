@@ -6291,6 +6291,764 @@
         "chatAction": "Archive current chat using native app tool; permanent deletion tool is unavailable.",
         "scope": "No commit, push, deployment, payload execution or console contact. Six other historical source candidates remain optional future review, separate from completed image-fit request."
       }
+    },
+    "continuation20261103": {
+      "updatedAt": "2026-11-03T16:57:55.367Z",
+      "status": "Three source-confirmed historical PS4 5.05 GTA V variants added locally and F: archived. Download and exact receiver mapping enabled; unsupported standalone Load remains disabled. No publication or payload execution.",
+      "repositories": [
+        {
+          "repo": "GamerHack/GamerHack.github.io",
+          "commit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+          "branches": [
+            {
+              "name": "main",
+              "sha": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68"
+            }
+          ],
+          "releases": [],
+          "tags": []
+        },
+        {
+          "repo": "raw13g/raw13g.github.io",
+          "commit": "9ba2f0719591d6900d91aba6cc5291f8fff97e6d",
+          "branches": [
+            {
+              "name": "main",
+              "sha": "9ba2f0719591d6900d91aba6cc5291f8fff97e6d"
+            }
+          ],
+          "releases": [],
+          "tags": []
+        }
+      ],
+      "completed": [
+        {
+          "id": "ps4-gta505-gamerhack-arabicguy505100",
+          "filename": "arabic-guy100.bin",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/arabic-guy100.bin",
+          "version": "game 1.00 - PS4 5.05 - GamerHack 505 23c946a7f85f - 49d151bfb960",
+          "bytes": 1055340,
+          "sha256": "49d151bfb960fb42d465134ab91f5173407a8ac202d75d23a3b2e441bc7cffd0",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.00\\ArabicGuy\\Builds\\game 1.00 - PS4 5.05 - GamerHack 505 23c946a7f85f - 49d151bfb960\\arabic-guy100.bin"
+        },
+        {
+          "id": "ps4-gta505-gamerhack-wildemodz505133",
+          "filename": "WildeModz-1.33.bin",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.33.bin",
+          "version": "game 1.33 - PS4 5.05 - GamerHack 505 23c946a7f85f - 1c742c48aeb6",
+          "bytes": 1074320,
+          "sha256": "1c742c48aeb6009f3e99468ab2702499ed66f0d642d624e9844a0f4aa595fb60",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.33\\WildeModz\\Builds\\game 1.33 - PS4 5.05 - GamerHack 505 23c946a7f85f - 1c742c48aeb6\\WildeModz-1.33.bin"
+        },
+        {
+          "id": "ps4-gta505-gamerhack-wildemodz505146",
+          "filename": "WildeModz-1.46.bin",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/505/WildeModz-1.46.bin",
+          "version": "game 1.46 - PS4 5.05 - GamerHack 505 23c946a7f85f - f262d4878e01",
+          "bytes": 29416,
+          "sha256": "f262d4878e01d057e4ee4d35a49ddf1363fa4ee9667dd50acf181a99aa8af07d",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.46\\WildeModz\\Builds\\game 1.46 - PS4 5.05 - GamerHack 505 23c946a7f85f - f262d4878e01\\WildeModz-1.46.bin"
+        }
+      ],
+      "sourceReview": "docs/qa/host-source-refresh-20261103.json",
+      "ui": "Existing ArabicGuy and WildeModz families reused; no additional family cards. Version buttons, separate game updates/menu versions, full uncropped artwork, four desktop columns and 430px phone popup verified. Existing PS4/PS5 child-page and native-workspace boundaries retained.",
+      "languages": "Eight additional exact/template requirement keys generated in all20 dictionaries by deriving existing reviewed translations with literal firmware/host/game substitutions. Spanish compatibility text browser-verified; original licence attribution remains English fallback.",
+      "receivers": {
+        "preparedAt": "2026-11-03T16:50:38.959Z",
+        "version": "2026.11.02.16",
+        "jobsPath": "docs/qa/host-menu-companion-jobs.json",
+        "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.15.json",
+        "activated": true,
+        "records": [
+          {
+            "platform": "ps4",
+            "version": "2026.11.02.16",
+            "path": "console/ps4/whatsite-ps4.html",
+            "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.16-9290dc5f2854/whatsite-ps4.html",
+            "bytes": 703883,
+            "sha256": "9290dc5f28547fa523c0b44a673965be0366ab91585cea70508182ffd21b3e1b",
+            "previousSha256": "102b2109995b71f49cd3237b3444ee7e6928d3ba533850c5194b09ed5bc7a3f0",
+            "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-102b2109995b/whatsite-ps4.html",
+            "previousItems": 506,
+            "items": 509,
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.16\\whatsite-ps4.html"
+          },
+          {
+            "platform": "ps5",
+            "version": "2026.11.02.16",
+            "path": "console/ps5/whatsite-ps5.html",
+            "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.16-59f5b1b38142/whatsite-ps5.html",
+            "bytes": 548979,
+            "sha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+            "previousSha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+            "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-59f5b1b38142/whatsite-ps5.html",
+            "previousItems": 350,
+            "items": 350,
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.15\\whatsite-ps5.html"
+          }
+        ],
+        "verifiedAt": "2026-11-03T16:50:50.478Z"
+      },
+      "sender": {
+        "id": "console-payload-sender-3ee1cb95a23a",
+        "name": "console-payload-sender-1.9.1-3ee1cb95a23a.zip",
+        "version": "1.9.1+3ee1cb95a23a",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-3ee1cb95a23a.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-3ee1cb95a23a.zip",
+        "bytes": 100412484,
+        "sha256": "64acdac2876091f239100f76befae5a6c82e11760df27eb03e20e4d6a00a6552",
+        "snapshot": "3ee1cb95a23a53a70392c4ba3d04e3895d33a9369d6414f31015dc9f1b5d589f",
+        "files": 283,
+        "payloads": 125,
+        "actions": 182,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+3ee1cb95a23a\\console-payload-sender-1.9.1-3ee1cb95a23a.zip",
+        "zipEntries": 283,
+        "manifestFiles": 282,
+        "allCRCAndSHA256Verified": true,
+        "originalOnlyBinaryCount": 0
+      },
+      "preservation": {
+        "baselineCataloguePins": 582,
+        "baselineSenderVersions": 20,
+        "nativeHelpersUnchanged": 2,
+        "interimSenderSnapshotsAlsoRetained": [
+          "1.9.1+5cd57fb1ee09",
+          "1.9.1+b5d1eecaa124"
+        ],
+        "noBinaryPublicMirrors": true,
+        "originalOnlyBinaryCount": 0
+      },
+      "verification": {
+        "tests": {
+          "total": 632,
+          "passed": 631,
+          "failed": 1,
+          "report": "docs/qa/host-gta505-tests-final.txt"
+        },
+        "integrity": "docs/qa/host-gta505-integrity.json",
+        "browser": "docs/qa/host-gta505-browser.json",
+        "siteAudit": "docs/qa/host-gta505-site-audit.txt",
+        "archiveIndex": {
+          "mode": "write",
+          "backupRoot": "F:\\whatsite-backup-downloads-etc",
+          "items": 2242,
+          "fileRecords": 3366,
+          "presentFileRecords": 3366,
+          "missingFileRecords": 0,
+          "missingPaths": 0,
+          "otherUnavailableRecords": 0,
+          "availability": {
+            "present": 3366
+          }
+        }
+      },
+      "remaining": [
+        "Three6.72 ArabicGuy candidates remain deferred: native file bytes conflict with script-element dispatch; no working standalone ABI established.",
+        "5.05 ArabicGuy1.27 is JavaScript despite its BIN extension and stays excluded.",
+        "raw13g unchanged; licence excludes required primitives/patches/payloads and original-source checks still404. Do not vendor or imply a built-in/PS5 runtime.",
+        "Hardware execution, installation and real-console storage transfers remain untested. Downloaded payloads were never executed.",
+        "Concurrent Afterglow/firmware pages are owned by another chat. Shared-workspace test failures, if any, remain recorded honestly in the final test log; do not regenerate their pages from an older snapshot."
+      ],
+      "resume": [
+        "Use current host-menu-companion-build.json and sender manifest as authoritative, preserving every historical snapshot. Receiver version2026.11.02.16 follows the existing series; preparation/verification timestamps are3November.",
+        "New catalogue is host-gta505-continuation-actions.json, registered in selector, console catalogue, bridge and sender. Preparation verifies fresh static source bytes against pinned Git blob/SHA identities.",
+        "Background integration now rejects hidden temporary directories so source/runtime review files cannot be modified by a broad styling pass.",
+        "Concurrent shared language/dashboard edits required two extra immutable sender snapshots; both are retained and the final snapshot was independently ZIP CRC/SHA-verified against current shared source at its recorded time."
+      ],
+      "published": false,
+      "committed": false
+    },
+    "arabicguy672Followup20261103": {
+      "updatedAt": "2026-11-03T18:07:55.047Z",
+      "status": "Complete locally: original test failures fixed; current full suite passes. All three 6.72 ArabicGuy Download/Load routes rechecked with verified bytes and inert native fixtures. Internet required; physical PS4 execution remains untested.",
+      "request": "Continue remaining6.72 ArabicGuy builds, check/integrate the original loader, match source behaviour and organize new folders while preserving every existing version.",
+      "repositories": [
+        {
+          "repo": "GamerHack/GamerHack.github.io",
+          "commit": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+          "branch": "main",
+          "license": null
+        },
+        {
+          "repo": "KAR0218/KAR0218.github.io",
+          "commit": "743646c9df9ab4c83821b660c12e23a3dda57b49",
+          "branch": "main",
+          "license": null
+        }
+      ],
+      "correction": "The prior deferral stopped at script-element dispatch. Original pl_loader.js has a raw-BIN ArrayBuffer branch and native PL_loader ROP path. The controller bypasses script insertion of BIN bytes, preserves original native source/BIN bytes, and verifies the same input path with a memory Blob before native preparation.",
+      "actions": [
+        {
+          "id": "ps4-arabicguy-672-100",
+          "game": "GTA V",
+          "gameVersion": "1.00",
+          "menuVersion": null,
+          "firmwares": [
+            "6.72"
+          ],
+          "titleIds": [],
+          "bytes": 1055064,
+          "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+          "launchURL": "/hosts/runtime/ps4-672-arabicguy-23c946a7f85f/index.html?build=100",
+          "run": null
+        },
+        {
+          "id": "ps4-arabicguy-672-127",
+          "game": "GTA V",
+          "gameVersion": "1.27",
+          "menuVersion": null,
+          "firmwares": [
+            "6.72"
+          ],
+          "titleIds": [],
+          "bytes": 1055384,
+          "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+          "launchURL": "/hosts/runtime/ps4-672-arabicguy-23c946a7f85f/index.html?build=127",
+          "run": null
+        },
+        {
+          "id": "ps4-arabicguy-672-132",
+          "game": "GTA V",
+          "gameVersion": "1.32",
+          "menuVersion": null,
+          "firmwares": [
+            "6.72"
+          ],
+          "titleIds": [],
+          "bytes": 1054936,
+          "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+          "sourceURL": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+          "launchURL": "/hosts/runtime/ps4-672-arabicguy-23c946a7f85f/index.html?build=132",
+          "run": null
+        }
+      ],
+      "controller": {
+        "entry": "hosts/runtime/ps4-672-arabicguy-23c946a7f85f/index.html",
+        "immutablePath": "downloads/helpers/arabicguy-672/91b39cd007ee6d6d/whatsite-arabicguy-672.html",
+        "bytes": 26398,
+        "sha256": "91b39cd007ee6d6dcd5f19a078cb152b33687bbf2d6b09a784f13ad953948780"
+      },
+      "dependencies": {
+        "html": {
+          "path": "672/index.html",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+          "bytes": 1334148,
+          "sha256": "5a7876c7322a0bf65604dcc2143d4363fbb1f0d4a7d6a36de9a02d9b4b3abfd3"
+        },
+        "kernel": {
+          "path": "672/jb2.js",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/jb2.js",
+          "bytes": 800857,
+          "sha256": "364fbbb1091ddd5e6b68447b92e57c87a5cab26aa5a8122a018e7ae3905959eb"
+        },
+        "loader": {
+          "path": "672/pl_loader.js",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_loader.js",
+          "bytes": 501574,
+          "sha256": "d1950c98f4225abd58fa1166d2b7b3f50fae215fa0c1d50d5d7c47a39f12b13f"
+        },
+        "boot": {
+          "path": "672/index.html#inline-script-0",
+          "bytes": 1319553,
+          "sha256": "d370393716783b9a6cb764d59c3cc9a5cf264f5385684d560ff8c62f276b78fe"
+        },
+        "builds": {
+          "100": {
+            "path": "672/pl_GTA_ArabicGuy100.bin",
+            "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+            "bytes": 1055064,
+            "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+            "gameVersion": "1.00",
+            "filename": "pl_GTA_ArabicGuy100.bin"
+          },
+          "127": {
+            "path": "672/pl_GTA_ArabicGuy127.bin",
+            "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+            "bytes": 1055384,
+            "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+            "gameVersion": "1.27",
+            "filename": "pl_GTA_ArabicGuy127.bin"
+          },
+          "132": {
+            "path": "672/pl_GTA_ArabicGuy132.bin",
+            "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+            "bytes": 1054936,
+            "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+            "gameVersion": "1.32",
+            "filename": "pl_GTA_ArabicGuy132.bin"
+          }
+        }
+      },
+      "originals": [
+        {
+          "id": "host-arabicguy-672-100",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+          "version": "game 1.00 - PS4 6.72 - GamerHack 672 23c946a7f85f - 41a189bec891",
+          "filename": "pl_GTA_ArabicGuy100.bin",
+          "bytes": 1055064,
+          "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.00\\ArabicGuy\\Builds\\game 1.00 - PS4 6.72 - GamerHack 672 23c946a7f85f - 41a189bec891\\pl_GTA_ArabicGuy100.bin",
+          "role": [
+            "Builds"
+          ]
+        },
+        {
+          "id": "host-arabicguy-672-127",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+          "version": "game 1.27 - PS4 6.72 - GamerHack 672 23c946a7f85f - 1291b7a2f14b",
+          "filename": "pl_GTA_ArabicGuy127.bin",
+          "bytes": 1055384,
+          "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.27\\ArabicGuy\\Builds\\game 1.27 - PS4 6.72 - GamerHack 672 23c946a7f85f - 1291b7a2f14b\\pl_GTA_ArabicGuy127.bin",
+          "role": [
+            "Builds"
+          ]
+        },
+        {
+          "id": "host-arabicguy-672-132",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+          "version": "game 1.32 - PS4 6.72 - GamerHack 672 23c946a7f85f - c868f5f52fa6",
+          "filename": "pl_GTA_ArabicGuy132.bin",
+          "bytes": 1054936,
+          "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.32\\ArabicGuy\\Builds\\game 1.32 - PS4 6.72 - GamerHack 672 23c946a7f85f - c868f5f52fa6\\pl_GTA_ArabicGuy132.bin",
+          "role": [
+            "Builds"
+          ]
+        },
+        {
+          "id": "arabicguy-672-controller-91b39cd007ee",
+          "url": "https://whatwhatboy.com/downloads/helpers/arabicguy-672/91b39cd007ee6d6d/whatsite-arabicguy-672.html",
+          "version": "2026.11.03.1-91b39cd007ee",
+          "filename": "whatsite-arabicguy-672.html",
+          "bytes": 26398,
+          "sha256": "91b39cd007ee6d6dcd5f19a078cb152b33687bbf2d6b09a784f13ad953948780",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\6.72\\ArabicGuy Original Loader\\Helpers\\2026.11.03.1-91b39cd007ee\\whatsite-arabicguy-672.html",
+          "role": [
+            "Helpers"
+          ]
+        },
+        {
+          "id": "arabicguy-672-original-index-html",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/index.html",
+          "version": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+          "filename": "index.html",
+          "bytes": 1334148,
+          "sha256": "5a7876c7322a0bf65604dcc2143d4363fbb1f0d4a7d6a36de9a02d9b4b3abfd3",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\6.72\\GamerHack Original Loader\\Source Code\\23c946a7f85f1338ea2b78163e72e0ce9bc82b68\\index.html",
+          "role": [
+            "Source Code"
+          ]
+        },
+        {
+          "id": "arabicguy-672-original-jb2-js",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/jb2.js",
+          "version": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+          "filename": "jb2.js",
+          "bytes": 800857,
+          "sha256": "364fbbb1091ddd5e6b68447b92e57c87a5cab26aa5a8122a018e7ae3905959eb",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\6.72\\GamerHack Original Loader\\Source Code\\23c946a7f85f1338ea2b78163e72e0ce9bc82b68\\jb2.js",
+          "role": [
+            "Source Code"
+          ]
+        },
+        {
+          "id": "arabicguy-672-original-pl-loader-js",
+          "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_loader.js",
+          "version": "23c946a7f85f1338ea2b78163e72e0ce9bc82b68",
+          "filename": "pl_loader.js",
+          "bytes": 501574,
+          "sha256": "d1950c98f4225abd58fa1166d2b7b3f50fae215fa0c1d50d5d7c47a39f12b13f",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\6.72\\GamerHack Original Loader\\Source Code\\23c946a7f85f1338ea2b78163e72e0ce9bc82b68\\pl_loader.js",
+          "role": [
+            "Source Code"
+          ]
+        },
+        {
+          "id": "arabicguy-672-controller-966df89eb2a9",
+          "url": "https://whatwhatboy.com/downloads/helpers/arabicguy-672/966df89eb2a99e83/whatsite-arabicguy-672.html",
+          "version": "2026.11.03.1-966df89eb2a9",
+          "filename": "whatsite-arabicguy-672.html",
+          "bytes": 25971,
+          "sha256": "966df89eb2a99e836afc7eddac267a17c0f4fc3387f852ee680b6b0ee9801749",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\6.72\\ArabicGuy Original Loader\\Helpers\\2026.11.03.1-966df89eb2a9\\whatsite-arabicguy-672.html",
+          "role": [
+            "Helpers"
+          ]
+        },
+        {
+          "id": "arabicguy-672-controller-fca42b2462fe",
+          "url": "https://whatwhatboy.com/downloads/helpers/arabicguy-672/fca42b2462fe53cb/whatsite-arabicguy-672.html",
+          "version": "2026.11.03.1-fca42b2462fe",
+          "filename": "whatsite-arabicguy-672.html",
+          "bytes": 25552,
+          "sha256": "fca42b2462fe53cbe378603de1ed92cd6e8bb450a8d6d512a1dfddee3c1390b4",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\6.72\\ArabicGuy Original Loader\\Helpers\\2026.11.03.1-fca42b2462fe\\whatsite-arabicguy-672.html",
+          "role": [
+            "Helpers"
+          ]
+        },
+        {
+          "id": "arabicguy-672-controller-8ffc2f8670b3",
+          "url": "https://whatwhatboy.com/downloads/helpers/arabicguy-672/8ffc2f8670b39dd4/whatsite-arabicguy-672.html",
+          "version": "2026.11.03.1-8ffc2f8670b3",
+          "filename": "whatsite-arabicguy-672.html",
+          "bytes": 24765,
+          "sha256": "8ffc2f8670b39dd4ae5e23f11eafe668324504d3cdb493b75e472f51cf70a6df",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\6.72\\ArabicGuy Original Loader\\Helpers\\2026.11.03.1-8ffc2f8670b3\\whatsite-arabicguy-672.html",
+          "role": [
+            "Helpers"
+          ]
+        },
+        {
+          "id": "arabicguy-672-controller-9217594fe03b",
+          "url": "https://whatwhatboy.com/downloads/helpers/arabicguy-672/9217594fe03b6a7c/whatsite-arabicguy-672.html",
+          "version": "2026.11.03.1-9217594fe03b",
+          "filename": "whatsite-arabicguy-672.html",
+          "bytes": 17867,
+          "sha256": "9217594fe03b6a7cab6ad421bb9c47643b3b25770c742a059997f00093e0a061",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\6.72\\ArabicGuy Original Loader\\Helpers\\2026.11.03.1-9217594fe03b\\whatsite-arabicguy-672.html",
+          "role": [
+            "Helpers"
+          ]
+        }
+      ],
+      "nativeContract": {
+        "type": "Original browser-native ROP, not GoldHEN HTTP/TCP or ELF",
+        "actualBrowser": "PS4 6.72",
+        "workflow": [
+          "Explicit confirmation and Prepare",
+          "All four pinned upstream responses verified by size/SHA before native code",
+          "Blob/ArrayBuffer readback preflight",
+          "Exact original first inline bootstrap and jb2.js",
+          "Original kernel success branch reported, not execution proof",
+          "Separate explicit Load through unchanged pl_loader.js and verified memory Blob"
+        ],
+        "automaticRetry": false,
+        "autostart": false,
+        "restoredPagesBlocked": true,
+        "uncertainAttemptLocked": true,
+        "hardwareVerified": false,
+        "originalRuntimePubliclyMirrored": false,
+        "originalMenusPubliclyMirrored": false
+      },
+      "organization": {
+        "review": "docs/host-reviews/ps4/6.72/arabicguy",
+        "runtime": "/hosts/runtime/ps4-672-arabicguy-23c946a7f85f/",
+        "helpers": "downloads/helpers/arabicguy-672/<hash>/",
+        "readyBINs": "PS4/Games/GTA5/<game-update>/ArabicGuy/Builds/<version>/",
+        "sources": "PS4/Hosts/6.72/GamerHack Original Loader/Source Code/<commit>/",
+        "controllers": "PS4/Tools/6.72/ArabicGuy Original Loader/Helpers/<version>/",
+        "retainedControllerBuilds": 5
+      },
+      "receivers": {
+        "preparedAt": "2026-11-03T17:20:58.117Z",
+        "version": "2026.11.02.17",
+        "jobsPath": "docs/qa/host-menu-companion-jobs.json",
+        "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.16.json",
+        "activated": true,
+        "records": [
+          {
+            "platform": "ps4",
+            "version": "2026.11.02.17",
+            "path": "console/ps4/whatsite-ps4.html",
+            "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.17-1bcb67270dda/whatsite-ps4.html",
+            "bytes": 709574,
+            "sha256": "1bcb67270ddab4b6ac7b45bf892319e6c3acd6da1e44a1a72c05df1529bda558",
+            "previousSha256": "9290dc5f28547fa523c0b44a673965be0366ab91585cea70508182ffd21b3e1b",
+            "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-9290dc5f2854/whatsite-ps4.html",
+            "previousItems": 509,
+            "items": 512,
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.17\\whatsite-ps4.html"
+          },
+          {
+            "platform": "ps5",
+            "version": "2026.11.02.17",
+            "path": "console/ps5/whatsite-ps5.html",
+            "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.17-59f5b1b38142/whatsite-ps5.html",
+            "bytes": 548979,
+            "sha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+            "previousSha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+            "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-59f5b1b38142/whatsite-ps5.html",
+            "previousItems": 350,
+            "items": 350,
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.15\\whatsite-ps5.html"
+          }
+        ],
+        "verifiedAt": "2026-11-03T17:21:50.422Z"
+      },
+      "sender": {
+        "id": "console-payload-sender-4d6a3263f2c7",
+        "name": "console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+        "version": "2.0.0+4d6a3263f2c7",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+        "bytes": 101677302,
+        "sha256": "3fc41d0b8516f4b329b0d53c2dd269b0dc1697c37a264d872b2cf2c902e267cc",
+        "snapshot": "4d6a3263f2c728651a8e179ac895402a76670aaf6b176cdcd70d84757971c2d9",
+        "files": 1495,
+        "payloads": 125,
+        "actions": 185,
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\2.0.0+4d6a3263f2c7\\console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+        "zipEntries": 1495,
+        "allCRCAndSHA256Verified": true,
+        "originalNativeBinariesBundled": 0
+      },
+      "preservation": {
+        "baselineCataloguePins": 585,
+        "nativeHelpersUnchanged": 2,
+        "baselineSenderVersionsRetained": 24,
+        "everyOlderFilePreserved": true
+      },
+      "verification": {
+        "focused": {
+          "tests": 47,
+          "passed": 47,
+          "failed": 0,
+          "report": "docs/host-reviews/ps4/6.72/arabicguy/focused-tests-repair.txt"
+        },
+        "full": {
+          "tests": 681,
+          "passed": 681,
+          "failed": 0,
+          "report": "docs/host-reviews/ps4/6.72/arabicguy/full-tests-repair-final.txt",
+          "remainingFailures": []
+        },
+        "integrity": "docs/host-reviews/ps4/6.72/arabicguy/integrity.json",
+        "contract": "docs/host-reviews/ps4/6.72/arabicguy/loader-contract.json",
+        "browser": "docs/host-reviews/ps4/6.72/arabicguy/browser-repair.json",
+        "siteAudit": "docs/host-reviews/ps4/6.72/arabicguy/site-audit-repair.txt",
+        "archiveIndex": {
+          "mode": "write",
+          "backupRoot": "F:\\whatsite-backup-downloads-etc",
+          "items": 2283,
+          "fileRecords": 3407,
+          "presentFileRecords": 3407,
+          "missingFileRecords": 0,
+          "missingPaths": 0,
+          "otherUnavailableRecords": 0,
+          "availability": {
+            "present": 3407
+          }
+        },
+        "gitBlobAndSHA256SourceIdentitiesVerified": true,
+        "upstreamHEADAndCORS": "docs/host-reviews/ps4/6.72/arabicguy/upstream-availability.json",
+        "previousFull": {
+          "tests": 671,
+          "passed": 669,
+          "failed": 2,
+          "report": "docs/host-reviews/ps4/6.72/arabicguy/full-tests-final.txt",
+          "remainingFailures": [
+            "Concurrent gta5-plugin-configs test references missing C:/Users/whatw/Desktop/plugins.ini; no Desktop file was created or changed here.",
+            "Concurrent hosts/tools/esp-flasher/index.html is missing shared background integration; that page belongs to the main host integration work."
+          ]
+        },
+        "repair": "docs/host-reviews/ps4/6.72/arabicguy/repair-verification.json",
+        "previousFocused": {
+          "tests": 26,
+          "passed": 26,
+          "failed": 0,
+          "report": "docs/host-reviews/ps4/6.72/arabicguy/focused-tests.txt"
+        },
+        "previousBrowser": "docs/host-reviews/ps4/6.72/arabicguy/browser.json",
+        "previousSiteAudit": "docs/host-reviews/ps4/6.72/arabicguy/site-audit.txt",
+        "downloads": "docs/host-reviews/ps4/6.72/arabicguy/download-verification.json"
+      },
+      "languages": "New6.72 firmware/game/variant strings and three controller labels added to all20 dictionaries. The self-contained controller embeds shared common translations. Long workflow/source prose remains English fallback.",
+      "remaining": [
+        "No remaining distinct 5.05/6.72 native candidates from the six-file historical list: three5.05 added earlier, these three6.72 now added. The misnamed5.05 ArabicGuy1.27 JavaScript remains excluded from raw-BIN downloads.",
+        "Physical PS4 browser/TLS compatibility, kernel preparation, game attach timing, regional title-ID matching and menu execution still require real-console validation. Source matching is not hardware proof.",
+        "Internet and original upstream CORS/availability are required. This is a first-party controller with upstream native dependencies, not an offline runtime mirror or an external-host redirect.",
+        "PS4 catalogue is at its existing512-item bound; review bounds and receiver/queue limits before any future additions, rather than dropping old entries.",
+        "KAR0218 screenshot source matches743646c9df9a; selected6.72 loader sources compared, but no ArabicGuy-named assets or exact per-game mapping justify substituting it.",
+        "Shared host/tool work continues independently; the full suite passed at this recorded snapshot."
+      ],
+      "resume": [
+        "Use current host-menu-companion-build.json and sender manifest as authoritative. Preserve all prior snapshots, including the cee16ad6e0df/b9f907326150 interims and any later shared snapshot.",
+        "Active controller hash is in prepared.json/integrity.json. Keep all five controller artifacts already recorded by archive jobs; never replace a different immutable destination.",
+        "Do not represent sender delivery, original messages or the original kernel success branch as confirmed menu execution. Do not enable generic user-file sender loading for these builds."
+      ],
+      "payloadsExecuted": false,
+      "consoleContact": false,
+      "published": false,
+      "committed": false,
+      "repair20261103": {
+        "checkedAt": "2026-11-03T18:07:55.047Z",
+        "status": "passed",
+        "tests": {
+          "tests": 681,
+          "passed": 681,
+          "failed": 0,
+          "report": "docs/host-reviews/ps4/6.72/arabicguy/full-tests-repair-final.txt"
+        },
+        "focused": {
+          "tests": 47,
+          "passed": 47,
+          "failed": 0,
+          "report": "docs/host-reviews/ps4/6.72/arabicguy/focused-tests-repair.txt"
+        },
+        "builds": [
+          {
+            "path": "672/pl_GTA_ArabicGuy100.bin",
+            "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy100.bin",
+            "status": 200,
+            "bytes": 1055064,
+            "sha256": "41a189bec891d371cb48fe5d727b986bdb0ae15a50fc6a0df4e2106caa6041d5",
+            "cors": "*",
+            "contentType": "application/octet-stream",
+            "downloadName": "pl_GTA_ArabicGuy100.bin",
+            "gameVersion": "1.00",
+            "archiveMatches": true
+          },
+          {
+            "path": "672/pl_GTA_ArabicGuy127.bin",
+            "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy127.bin",
+            "status": 200,
+            "bytes": 1055384,
+            "sha256": "1291b7a2f14b888bea93a076beb889a8980be8d92b489f62f742e0cc2126b5ee",
+            "cors": "*",
+            "contentType": "application/octet-stream",
+            "downloadName": "pl_GTA_ArabicGuy127.bin",
+            "gameVersion": "1.27",
+            "archiveMatches": true
+          },
+          {
+            "path": "672/pl_GTA_ArabicGuy132.bin",
+            "url": "https://raw.githubusercontent.com/GamerHack/GamerHack.github.io/23c946a7f85f1338ea2b78163e72e0ce9bc82b68/672/pl_GTA_ArabicGuy132.bin",
+            "status": 200,
+            "bytes": 1054936,
+            "sha256": "c868f5f52fa6ead0464f37066702865470f4010210b2ade595b47cf490b6e6ae",
+            "cors": "*",
+            "contentType": "application/octet-stream",
+            "downloadName": "pl_GTA_ArabicGuy132.bin",
+            "gameVersion": "1.32",
+            "archiveMatches": true
+          }
+        ],
+        "downloadMethod": "Bounded HTTPS GET, exact URL/size/SHA-256 comparison and original BIN Git-blob/archive matching. No custom Origin, native source evaluation, payload execution or console contact.",
+        "controller": {
+          "entry": "hosts/runtime/ps4-672-arabicguy-23c946a7f85f/index.html",
+          "immutablePath": "downloads/helpers/arabicguy-672/91b39cd007ee6d6d/whatsite-arabicguy-672.html",
+          "bytes": 26398,
+          "sha256": "91b39cd007ee6d6dcd5f19a078cb152b33687bbf2d6b09a784f13ad953948780"
+        },
+        "receivers": {
+          "preparedAt": "2026-11-03T17:20:58.117Z",
+          "version": "2026.11.02.17",
+          "jobsPath": "docs/qa/host-menu-companion-jobs.json",
+          "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.16.json",
+          "activated": true,
+          "records": [
+            {
+              "platform": "ps4",
+              "version": "2026.11.02.17",
+              "path": "console/ps4/whatsite-ps4.html",
+              "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.17-1bcb67270dda/whatsite-ps4.html",
+              "bytes": 709574,
+              "sha256": "1bcb67270ddab4b6ac7b45bf892319e6c3acd6da1e44a1a72c05df1529bda558",
+              "previousSha256": "9290dc5f28547fa523c0b44a673965be0366ab91585cea70508182ffd21b3e1b",
+              "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-9290dc5f2854/whatsite-ps4.html",
+              "previousItems": 509,
+              "items": 512,
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.17\\whatsite-ps4.html"
+            },
+            {
+              "platform": "ps5",
+              "version": "2026.11.02.17",
+              "path": "console/ps5/whatsite-ps5.html",
+              "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.17-59f5b1b38142/whatsite-ps5.html",
+              "bytes": 548979,
+              "sha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+              "previousSha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+              "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-59f5b1b38142/whatsite-ps5.html",
+              "previousItems": 350,
+              "items": 350,
+              "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.15\\whatsite-ps5.html"
+            }
+          ],
+          "verifiedAt": "2026-11-03T17:21:50.422Z"
+        },
+        "sender": {
+          "id": "console-payload-sender-4d6a3263f2c7",
+          "name": "console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+          "version": "2.0.0+4d6a3263f2c7",
+          "url": "/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+          "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+          "bytes": 101677302,
+          "sha256": "3fc41d0b8516f4b329b0d53c2dd269b0dc1697c37a264d872b2cf2c902e267cc",
+          "snapshot": "4d6a3263f2c728651a8e179ac895402a76670aaf6b176cdcd70d84757971c2d9",
+          "files": 1495,
+          "payloads": 125,
+          "actions": 185,
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\2.0.0+4d6a3263f2c7\\console-payload-sender-2.0.0-4d6a3263f2c7.zip",
+          "zipEntries": 1495,
+          "allCRCAndSHA256Verified": true,
+          "originalNativeBinariesBundled": 0
+        },
+        "toolPackages": [
+          {
+            "scope": "ps4-trainer",
+            "version": "2026.11.03.1+9d478615034cc5be",
+            "local": "/downloads/helpers/host-local-tools/ps4-trainer/ps4-trainer-9d478615034cc5be.zip",
+            "bytes": 1795256,
+            "sha256": "90aff20e99db89fe94cda75f9cfbf1497c2114d1b1753245d7b8da8ad33ad6bc",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Local Host Tools\\Helpers\\2026.11.03.1+9d478615034cc5be\\ps4-trainer-9d478615034cc5be.zip"
+          },
+          {
+            "scope": "esp-flasher",
+            "version": "2026.11.03.1+1dc3a9e8539ed665",
+            "local": "/downloads/helpers/host-local-tools/esp-flasher/esp-flasher-1dc3a9e8539ed665.zip",
+            "bytes": 721293,
+            "sha256": "50c0cb16875ff4596603470528cc24fe1c14c431499587ed738884502b439f08",
+            "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\whatsite Local Host Tools\\Helpers\\2026.11.03.1+1dc3a9e8539ed665\\esp-flasher-1dc3a9e8539ed665.zip"
+          }
+        ],
+        "retainedToolPackages": 10,
+        "inputExamples": [
+          {
+            "originalPath": "C:/Users/whatw/Desktop/plugins.ini",
+            "snapshot": "scripts/tests/fixtures/gta5-plugin-inputs/7a156bf915cf1d90e9cb6a17d980c33b257c7726502d416a9e981051a30849ac/plugins.ini",
+            "bytes": 80,
+            "sha256": "7a156bf915cf1d90e9cb6a17d980c33b257c7726502d416a9e981051a30849ac"
+          },
+          {
+            "originalPath": "C:/Users/whatw/Downloads/plugins.ini",
+            "snapshot": "scripts/tests/fixtures/gta5-plugin-inputs/67c034d5b3454776cbce415efee5b5e27f905c42d5c82d05d3883b55eb75c965/plugins.ini",
+            "bytes": 95,
+            "sha256": "67c034d5b3454776cbce415efee5b5e27f905c42d5c82d05d3883b55eb75c965"
+          }
+        ],
+        "archive": {
+          "mode": "write",
+          "backupRoot": "F:\\whatsite-backup-downloads-etc",
+          "items": 2283,
+          "fileRecords": 3407,
+          "presentFileRecords": 3407,
+          "missingFileRecords": 0,
+          "missingPaths": 0,
+          "otherUnavailableRecords": 0,
+          "availability": {
+            "present": 3407
+          }
+        },
+        "browser": "docs/host-reviews/ps4/6.72/arabicguy/browser-repair.json",
+        "siteAudit": "docs/host-reviews/ps4/6.72/arabicguy/site-audit-repair.txt",
+        "fixes": [
+          "Original plugin input checks use byte-exact repository captures instead of mutable Desktop/Downloads paths; regeneration preserves captures and Git retains their line endings.",
+          "Authored trainer/flasher pages and their ready ZIPs include the shared background assets; old packages and vendor files are preserved.",
+          "Background integration preserves later-added body class ordering and remains idempotent.",
+          "RAW GAME source-contract assertions remain intact while recognizing its exclusion from the first-party catalogue.",
+          "The GTA V popup has one generated top navigation bar.",
+          "All three 6.72 variants were checked through real HTTPS download hashes, exact receiver IDs, popup routes, and inert Prepare/Load/uncertain-state tests.",
+          "The sender packages cheats only for PS4, where that route exists; new shared cheats/Lua/packages pages have social-preview and sitemap entries."
+        ],
+        "nativeCodeExecuted": false,
+        "consoleContact": false,
+        "hardwareExecutionVerified": false,
+        "published": false
+      }
     }
   },
   "menuImageRecovery": {
@@ -6527,5 +7285,778 @@
     },
     "published": false,
     "archiveChanges": 0
+  },
+  "ps4GoldhenKofiUpdate": {
+    "date": "2026-11-03",
+    "request": "Update PS4 GoldHEN with the supplied Ko-fi link.",
+    "page": "console/ps4/goldhen.html",
+    "sourceURL": "https://ko-fi.com/s/e694c36022",
+    "version": "2.4b18.13",
+    "changes": "Current beta release card and source link added; publisher-confirmed 14.00 support and FTP SIZE fix. Archived 2.3 and supplied ISO preserved, along with all existing page assets.",
+    "archiveStatus": "No direct asset URL exposed by inspected publisher page; no file downloaded. Size and SHA-256 unknown; recorded in docs/ps4-goldhen-kofi.json.",
+    "published": false
+  },
+  "selfHostedHostTools20261103": {
+    "updatedAt": "2026-11-03T16:56:18.441Z",
+    "status": "In progress in main host chat01a19a10: remove non-mod action cardimages, bring remaining external tools into first-party site; research loader/source equivalents.",
+    "userRequest": "All tools/loaders shouldbe hostedandbuiltinto ownsite, notOpenhost redirects. Remove payload/tool/project previewimages showninscreenshot.",
+    "owners": {
+      "main": "assets/host-dashboard.js cardpolicy/first-party actionrouting and sharedgeneratorintegration; archive/packageafterallsharedchangesstable",
+      "localTools": "subagent researchingfive screenshottools+GoldHENwebpayloads/Lua",
+      "loaderReview": "subagent researching externalPS4/PS5 loaderdependencies"
+    },
+    "coordination": "Afterglow/firmware chat01a1a251 and GamerHack/raw13g chat01a1a24f active. Preserve theirnewfiles and generator/datachanges; donot overwrite wholefiles or archivedhelpers.",
+    "completed": [
+      "Non-mod hostactioncardpreviewimagesremovedinsource; game/menuartretained."
+    ],
+    "limits": [
+      "No downloadedpayloadexecution, hardwareflashing, consolecontact, publication or deployment."
+    ]
+  },
+  "ps4AfterglowFirmware20261103": {
+    "status": "Complete locally; hardware/offline validation outstanding",
+    "updatedAt": "2026-11-03T17:16:58.131Z",
+    "source": "https://github.com/well0nez/afterglow-web",
+    "commit": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+    "pages": [
+      "/hosts/ps4/firmware/",
+      "/hosts/ps4/afterglow/",
+      "/hosts/runtime/ps4-afterglow-acf25a831725/web/index.html"
+    ],
+    "firmwareChooser": {
+      "versions": 39,
+      "routes": 33,
+      "source": "docs/ps4-firmware-routes.json",
+      "manualSelectionSeparateFromBrowserFact": true,
+      "afterglowOnly": [
+        "13.52",
+        "14.00"
+      ],
+      "earlierRoutes": "Existing exact browser hosts and PS4 9.00 first-party PSFree/Lapse retained; PPPwn Ethernet and pOOBs4 modified USB routes separate. No unsupported gaps or unrelated payload compatibility inferred."
+    },
+    "implementation": [
+      "Landing-only opt-in choice persistence and five-second countdown",
+      "Cancellation clears pending cache start",
+      "Exact actual PS4 UA gate before module import",
+      "One-use 30-second session ticket consumed before module import; same-directory referrer plus navigation-type checks",
+      "Run restores redirect with restored=1; no automatic rearm",
+      "Original upstream jb.js referrer/failure/watchdog guards retained byte-for-byte",
+      "All exploit, primitive, patchset and payload bytes unchanged",
+      "Application-cache manifest rebuilt with hashes; code/payload MIME and revalidation headers supported by static server",
+      "No ads or shared scripts in run document"
+    ],
+    "sourceReview": "docs/afterglow-source-review.json",
+    "artifacts": [
+      {
+        "id": "afterglow-builds-5dc1ddd60b9f",
+        "title": "Afterglow PS4 Builds",
+        "project": "Afterglow",
+        "platform": "PS4",
+        "category": [
+          "Hosts"
+        ],
+        "archiveRole": [
+          "Builds"
+        ],
+        "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2",
+        "url": "https://github.com/well0nez/afterglow-web/tree/acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+        "local": "/downloads/hosts/afterglow/afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+        "importPath": "downloads/hosts/afterglow/afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+        "filename": "afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+        "bytes": 535596,
+        "sha256": "5dc1ddd60b9fcbb0b7fb96b6294666580b55ab5a286861eabee2aa0987019384",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\afterglow web\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2\\afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip"
+      },
+      {
+        "id": "afterglow-source-code-8db24b508bab",
+        "title": "Afterglow PS4 Source Code",
+        "project": "Afterglow",
+        "platform": "PS4",
+        "category": [
+          "Hosts"
+        ],
+        "archiveRole": [
+          "Source Code"
+        ],
+        "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2",
+        "url": "https://github.com/well0nez/afterglow-web/tree/acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+        "local": "/downloads/hosts/afterglow/afterglow-source-acf25a831725-8db24b508bab.zip",
+        "importPath": "downloads/hosts/afterglow/afterglow-source-acf25a831725-8db24b508bab.zip",
+        "filename": "afterglow-source-acf25a831725-8db24b508bab.zip",
+        "bytes": 228497,
+        "sha256": "8db24b508bab3b4c7cc0db66e1f78f2fc292294f8ea67ea10c247ed6e46135e4",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\afterglow web\\Source Code\\acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2\\afterglow-source-acf25a831725-8db24b508bab.zip"
+      },
+      {
+        "id": "afterglow-goldhen-bin-39452f5e1c30",
+        "title": "Afterglow goldhen.bin",
+        "project": "Afterglow",
+        "platform": "PS4",
+        "category": [
+          "Hosts"
+        ],
+        "archiveRole": [
+          "Builds"
+        ],
+        "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+        "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/goldhen.bin",
+        "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/goldhen.bin",
+        "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/goldhen.bin",
+        "filename": "goldhen.bin",
+        "bytes": 297496,
+        "sha256": "39452f5e1c305ac9efcb4745eef7958b4db8c6d85299529f08700970b009ea4d",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\goldhen.bin"
+      },
+      {
+        "id": "afterglow-hen-bin-364e5f6fd59e",
+        "title": "Afterglow hen.bin",
+        "project": "Afterglow",
+        "platform": "PS4",
+        "category": [
+          "Hosts"
+        ],
+        "archiveRole": [
+          "Builds"
+        ],
+        "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+        "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/hen.bin",
+        "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/hen.bin",
+        "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/hen.bin",
+        "filename": "hen.bin",
+        "bytes": 500448,
+        "sha256": "364e5f6fd59e8a7afc207c70e27b840699f8173f3ae0241b63bc6dec6b394bfe",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\hen.bin"
+      },
+      {
+        "id": "afterglow-patchset-1352-bin-adfb9771904f",
+        "title": "Afterglow patchset-1352.bin",
+        "project": "Afterglow",
+        "platform": "PS4",
+        "category": [
+          "Hosts"
+        ],
+        "archiveRole": [
+          "Builds"
+        ],
+        "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+        "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/patchset-1352.bin",
+        "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1352.bin",
+        "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1352.bin",
+        "filename": "patchset-1352.bin",
+        "bytes": 632,
+        "sha256": "adfb9771904f71cd1f5a82cbded8ac46c7ffeb3df974579535cf711904ac347e",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\patchset-1352.bin"
+      },
+      {
+        "id": "afterglow-patchset-1400-bin-615f275b9683",
+        "title": "Afterglow patchset-1400.bin",
+        "project": "Afterglow",
+        "platform": "PS4",
+        "category": [
+          "Hosts"
+        ],
+        "archiveRole": [
+          "Builds"
+        ],
+        "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+        "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/patchset-1400.bin",
+        "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1400.bin",
+        "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1400.bin",
+        "filename": "patchset-1400.bin",
+        "bytes": 641,
+        "sha256": "615f275b96831cc04173757db39e93f0d27b52888976af2a6444604aa8ac5dbf",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\patchset-1400.bin"
+      }
+    ],
+    "advertisements": "Existing labelled provider placement on firmware chooser and Afterglow guide, below first content section. None on isolated runtime landing/run documents or in runtime appcache.",
+    "helpers": {
+      "sender": {
+        "id": "console-payload-sender-24bbed9cc369",
+        "name": "console-payload-sender-1.9.1-24bbed9cc369.zip",
+        "version": "1.9.1+24bbed9cc369",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-24bbed9cc369.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-24bbed9cc369.zip",
+        "bytes": 100413152,
+        "sha256": "201e3b8956b3b3375801149ca0150a9184c16ffc04800b7ecdbd09843f2cf32d",
+        "snapshot": "24bbed9cc369ee8eba2e03095be067ac6d716baafb8bfe3c2ed7cc01660afe4a",
+        "files": 283,
+        "payloads": 125,
+        "actions": 182,
+        "file": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.9.1-24bbed9cc369.zip",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+24bbed9cc369\\console-payload-sender-1.9.1-24bbed9cc369.zip"
+      },
+      "receivers": "No new console catalogue IDs introduced by this task; current receiver16 and native workspaces from concurrent work preserved. Afterglow files are runtime-specific, not generic console transport actions.",
+      "retention": "All earlier sender/runtime/source ZIPs retained publicly and in F: inventory; no payload executed."
+    },
+    "verification": {
+      "tests": 636,
+      "failed": 0,
+      "testReport": "docs/qa/afterglow-final-full-tests.txt",
+      "siteAudit": {
+        "pages": 494,
+        "linksAndAssets": 57773,
+        "issues": 0,
+        "report": "docs/qa/afterglow-site-audit.txt"
+      },
+      "artifactIntegrity": "docs/qa/afterglow-artifact-integrity.json",
+      "archiveIndex": {
+        "mode": "write",
+        "backupRoot": "F:\\whatsite-backup-downloads-etc",
+        "items": 2245,
+        "fileRecords": 3369,
+        "presentFileRecords": 3369,
+        "missingFileRecords": 0,
+        "missingPaths": 0,
+        "otherUnavailableRecords": 0,
+        "availability": {
+          "present": 3369
+        }
+      },
+      "browser": {
+        "actualRuntimeOpened": false,
+        "inertController": "Both GoldHEN and patched HEN targets captured as text; opt-in countdown observed",
+        "chooser": "14.00 only Afterglow; 9.00 retains browser/USB/PPPwn methods; Spanish controls verified and English restored",
+        "headers": "HEAD confirms .appcache text/cache-manifest, runtime no-cache/must-revalidate, payload data reachable",
+        "screenshots": [
+          "docs/screenshots/ps4-firmware-afterglow.png",
+          "docs/screenshots/afterglow-inert-controls.png"
+        ]
+      }
+    },
+    "limits": [
+      "Hardware execution and PS4 offline persistence untested",
+      "Browser viewport override did not change IAB dimensions, so phone rendering was not verified in this session",
+      "Controls translated in 20 dictionaries; long guide prose and upstream run diagnostics retain English fallback"
+    ],
+    "publication": {
+      "committed": false,
+      "pushed": false,
+      "deployed": false
+    },
+    "resume": [
+      "Do not replace bundled HEN or GoldHEN using filenames or UI branding as version evidence.",
+      "Build runtime from pinned required files, archive before activation, regenerate chooser using build-ps4-firmware.cjs.",
+      "Preserve shared GTA5 5.05 continuation and GoldHEN Ko-fi work.",
+      "Python server requires installed Python3; server script works cross-platform.",
+      "At owner request, loopback preview is running on port8765 and firmware directory tab is left open. Server supports WHATSITE_PREVIEW_PORT; do not stop it merely for QA cleanup."
+    ],
+    "remainingChecks": [
+      "Physical PS4 13.52 and 14.00 validation by owner",
+      "PS4 offline appcache installation and update behavior",
+      "Independent upstream licensing/permission clarification if needed"
+    ],
+    "folderLayout": {
+      "date": "2026-11-03",
+      "status": "Complete locally; preview running at user request",
+      "url": "http://127.0.0.1:8765/hosts/ps4/firmware/",
+      "changes": [
+        "Full-width firmware folder rows, newest firmware first; no sidebar or oversized hero",
+        "Opening a folder uses a shareable ?fw= version URL and shows only its exact routes",
+        "Sticky top bar with Back, PS4 host, firmware navigation and existing language control",
+        "Route requirements remain expandable; built-in, external, Ethernet and USB methods stay separately labelled",
+        "Afterglow landing gets a back/navigation bar and responsive larger controls; run document and all exploit/native bytes unchanged"
+      ],
+      "browser": {
+        "folderRootVerified": true,
+        "firmware1400OnlyAfterglow": true,
+        "backVerified": true,
+        "actualRuntimeOpened": false,
+        "landing": "Authored inert fixture only; no exploit module or payload execution",
+        "screenshots": [
+          "docs/screenshots/ps4-firmware-folders.png",
+          "docs/screenshots/afterglow-full-page-inert.png"
+        ]
+      },
+      "tests": {
+        "passed": 20,
+        "failed": 0,
+        "report": "docs/qa/afterglow-folder-tests.txt"
+      },
+      "audit": {
+        "report": "docs/qa/afterglow-folder-site-audit.txt",
+        "note": "Full audit initially found five missing links on concurrently created ESP flasher and PS4 trainer pages, outside this layout change. Do not overwrite their work."
+      },
+      "artifacts": [
+        {
+          "id": "afterglow-builds-5dc1ddd60b9f",
+          "title": "Afterglow PS4 Builds",
+          "project": "Afterglow",
+          "platform": "PS4",
+          "category": [
+            "Hosts"
+          ],
+          "archiveRole": [
+            "Builds"
+          ],
+          "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2",
+          "url": "https://github.com/well0nez/afterglow-web/tree/acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+          "local": "/downloads/hosts/afterglow/afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+          "importPath": "downloads/hosts/afterglow/afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+          "filename": "afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+          "bytes": 535596,
+          "sha256": "5dc1ddd60b9fcbb0b7fb96b6294666580b55ab5a286861eabee2aa0987019384",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\afterglow web\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2\\afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip"
+        },
+        {
+          "id": "afterglow-source-code-8db24b508bab",
+          "title": "Afterglow PS4 Source Code",
+          "project": "Afterglow",
+          "platform": "PS4",
+          "category": [
+            "Hosts"
+          ],
+          "archiveRole": [
+            "Source Code"
+          ],
+          "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2",
+          "url": "https://github.com/well0nez/afterglow-web/tree/acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+          "local": "/downloads/hosts/afterglow/afterglow-source-acf25a831725-8db24b508bab.zip",
+          "importPath": "downloads/hosts/afterglow/afterglow-source-acf25a831725-8db24b508bab.zip",
+          "filename": "afterglow-source-acf25a831725-8db24b508bab.zip",
+          "bytes": 228497,
+          "sha256": "8db24b508bab3b4c7cc0db66e1f78f2fc292294f8ea67ea10c247ed6e46135e4",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\afterglow web\\Source Code\\acf25a831725f0d44fcb64725d4ce35acbba8f9d-integration-v2\\afterglow-source-acf25a831725-8db24b508bab.zip"
+        },
+        {
+          "id": "afterglow-goldhen-bin-39452f5e1c30",
+          "title": "Afterglow goldhen.bin",
+          "project": "Afterglow",
+          "platform": "PS4",
+          "category": [
+            "Hosts"
+          ],
+          "archiveRole": [
+            "Builds"
+          ],
+          "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+          "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/goldhen.bin",
+          "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/goldhen.bin",
+          "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/goldhen.bin",
+          "filename": "goldhen.bin",
+          "bytes": 297496,
+          "sha256": "39452f5e1c305ac9efcb4745eef7958b4db8c6d85299529f08700970b009ea4d",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\goldhen.bin"
+        },
+        {
+          "id": "afterglow-hen-bin-364e5f6fd59e",
+          "title": "Afterglow hen.bin",
+          "project": "Afterglow",
+          "platform": "PS4",
+          "category": [
+            "Hosts"
+          ],
+          "archiveRole": [
+            "Builds"
+          ],
+          "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+          "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/hen.bin",
+          "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/hen.bin",
+          "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/hen.bin",
+          "filename": "hen.bin",
+          "bytes": 500448,
+          "sha256": "364e5f6fd59e8a7afc207c70e27b840699f8173f3ae0241b63bc6dec6b394bfe",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\hen.bin"
+        },
+        {
+          "id": "afterglow-patchset-1352-bin-adfb9771904f",
+          "title": "Afterglow patchset-1352.bin",
+          "project": "Afterglow",
+          "platform": "PS4",
+          "category": [
+            "Hosts"
+          ],
+          "archiveRole": [
+            "Builds"
+          ],
+          "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+          "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/patchset-1352.bin",
+          "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1352.bin",
+          "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1352.bin",
+          "filename": "patchset-1352.bin",
+          "bytes": 632,
+          "sha256": "adfb9771904f71cd1f5a82cbded8ac46c7ffeb3df974579535cf711904ac347e",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\patchset-1352.bin"
+        },
+        {
+          "id": "afterglow-patchset-1400-bin-615f275b9683",
+          "title": "Afterglow patchset-1400.bin",
+          "project": "Afterglow",
+          "platform": "PS4",
+          "category": [
+            "Hosts"
+          ],
+          "archiveRole": [
+            "Builds"
+          ],
+          "version": "acf25a831725f0d44fcb64725d4ce35acbba8f9d",
+          "url": "https://raw.githubusercontent.com/well0nez/afterglow-web/acf25a831725f0d44fcb64725d4ce35acbba8f9d/patchset-1400.bin",
+          "local": "/hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1400.bin",
+          "importPath": "hosts/runtime/ps4-afterglow-acf25a831725/web/patchset-1400.bin",
+          "filename": "patchset-1400.bin",
+          "bytes": 641,
+          "sha256": "615f275b96831cc04173757db39e93f0d27b52888976af2a6444604aa8ac5dbf",
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Hosts\\Afterglow\\Builds\\acf25a831725f0d44fcb64725d4ce35acbba8f9d\\patchset-1400.bin"
+        }
+      ],
+      "artifactIntegrity": {
+        "payloadsExecuted": false,
+        "method": "Independent Python ZIP/CRC/SHA reader; no extraction or execution",
+        "artifacts": [
+          {
+            "name": "afterglow-runtime-acf25a831725-5dc1ddd60b9f.zip",
+            "bytes": 535596,
+            "sha256": "5dc1ddd60b9fcbb0b7fb96b6294666580b55ab5a286861eabee2aa0987019384",
+            "backupVerified": true,
+            "zipMembersVerified": 27
+          },
+          {
+            "name": "afterglow-source-acf25a831725-8db24b508bab.zip",
+            "bytes": 228497,
+            "sha256": "8db24b508bab3b4c7cc0db66e1f78f2fc292294f8ea67ea10c247ed6e46135e4",
+            "backupVerified": true,
+            "zipMembersVerified": 42
+          },
+          {
+            "name": "goldhen.bin",
+            "bytes": 297496,
+            "sha256": "39452f5e1c305ac9efcb4745eef7958b4db8c6d85299529f08700970b009ea4d",
+            "backupVerified": true,
+            "zipMembersVerified": null
+          },
+          {
+            "name": "hen.bin",
+            "bytes": 500448,
+            "sha256": "364e5f6fd59e8a7afc207c70e27b840699f8173f3ae0241b63bc6dec6b394bfe",
+            "backupVerified": true,
+            "zipMembersVerified": null
+          },
+          {
+            "name": "patchset-1352.bin",
+            "bytes": 632,
+            "sha256": "adfb9771904f71cd1f5a82cbded8ac46c7ffeb3df974579535cf711904ac347e",
+            "backupVerified": true,
+            "zipMembersVerified": null
+          },
+          {
+            "name": "patchset-1400.bin",
+            "bytes": 641,
+            "sha256": "615f275b96831cc04173757db39e93f0d27b52888976af2a6444604aa8ac5dbf",
+            "backupVerified": true,
+            "zipMembersVerified": null
+          }
+        ],
+        "sender": {
+          "version": "1.9.1+24bbed9cc369",
+          "bytes": 100413152,
+          "sha256": "201e3b8956b3b3375801149ca0150a9184c16ffc04800b7ecdbd09843f2cf32d",
+          "zipMembers": 283,
+          "manifestRecords": 282,
+          "backupVerified": true
+        }
+      },
+      "archiveIndex": "docs/qa/afterglow-folder-archive-index.txt",
+      "published": false
+    }
+  },
+  "hostFileView20261103": {
+    "date": "2026-11-03",
+    "status": "Complete locally; original folder request corrected to actual file-list views",
+    "userClarification": "Use actual files in explorer-like rows; no folder navigation or repeated exploit-host names. Choose firmware for exploit routes. Browse all payload/game files independently of firmware; show source-pinned compatibility in a support popup and keep Load guards.",
+    "pages": [
+      "/hosts/ps4/",
+      "/hosts/ps5/"
+    ],
+    "views": [
+      "loaders",
+      "payloads",
+      "mods",
+      "tools",
+      "connection",
+      "sender"
+    ],
+    "changes": [
+      "Full-width Name/Format/Size/Actions file rows; filenames remain original",
+      "Top Back bar and compact category navigation; no sidebar or hero",
+      "Exploit view is Choose firmware; preferred reviewed route first and alternatives collapsed, with source attribution retained in requirements",
+      "Payload and game-mod browsing no longer hides files based on selected firmware; existing firmware lists, ranges, game/title/update pins and native transports unchanged",
+      "Restricted files have clickable firmware checks. Mismatched Load opens support details and refuses dispatch",
+      "Connection/sender/file/payload-manager workspaces retained; per-game version popups and four-column game pages preserved",
+      "Unknown compatibility is not labelled universal; loader prerequisites remain visible in Requirements",
+      "File-table labels added to all twenty generated language dictionaries"
+    ],
+    "verification": {
+      "focusedTests": {
+        "passed": 45,
+        "failed": 0,
+        "report": "docs/qa/host-files-focused-tests.txt"
+      },
+      "fullSuite": {
+        "tests": 671,
+        "passed": 668,
+        "failed": 3,
+        "report": "docs/qa/host-files-final-full-tests.txt",
+        "remaining": [
+          "Missing external original C:/Users/whatw/Desktop/plugins.ini",
+          "Older RAW GAME external-only expectation conflicts with concurrent source integration",
+          "Concurrent hosts/tools/esp-flasher page lacks expected global background integration"
+        ]
+      },
+      "siteAudit": {
+        "pages": 496,
+        "links": 57743,
+        "issues": 0,
+        "report": "docs/qa/host-files-site-audit.txt"
+      },
+      "browser": [
+        "PS4 and PS5 actual file rows inspected",
+        "PS4 firmware restriction popup opened without any Load",
+        "PS4 all-game file view inspected",
+        "No exploit execution or console contact"
+      ],
+      "screenshots": [
+        "docs/screenshots/ps4-host-file-list.png",
+        "docs/screenshots/ps5-host-file-list.png",
+        "docs/screenshots/ps4-file-support-popup.png"
+      ],
+      "sender": {
+        "id": "console-payload-sender-8b87dc630f9e",
+        "name": "console-payload-sender-1.9.1-8b87dc630f9e.zip",
+        "version": "1.9.1+8b87dc630f9e",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-8b87dc630f9e.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-8b87dc630f9e.zip",
+        "bytes": 100291819,
+        "sha256": "52360c03b297f5caf6b452f363982a7ff134ca409c67c7e627c62168fdc2090a",
+        "snapshot": "8b87dc630f9eeaefc64570c589836c66e0a11942029eff1e753abcf01dbefd9a",
+        "files": 287,
+        "payloads": 125,
+        "actions": 185,
+        "file": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.9.1-8b87dc630f9e.zip",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+8b87dc630f9e\\console-payload-sender-1.9.1-8b87dc630f9e.zip",
+        "zipEntries": 287,
+        "manifestFiles": 286,
+        "allCRCAndSHA256Verified": true,
+        "publicAndFArchiveVerified": true,
+        "finalSourceSnapshotMatches": true
+      },
+      "archive": {
+        "mode": "write",
+        "backupRoot": "F:\\whatsite-backup-downloads-etc",
+        "items": 2263,
+        "fileRecords": 3387,
+        "presentFileRecords": 3387,
+        "missingFileRecords": 0,
+        "missingPaths": 0,
+        "otherUnavailableRecords": 0,
+        "availability": {
+          "present": 3387
+        }
+      }
+    },
+    "preservation": "No new payload/console catalogue IDs or receiver versions introduced by this layout change. Existing platform-specific/native artifacts and every old sender/archive retained.",
+    "preview": "http://127.0.0.1:8765/hosts/ps4/?view=payloads",
+    "published": false
+  },
+  "ps4UserPluginTemplates": {
+    "date": "2026-11-03",
+    "request": "Add user-supplied GTA5 and RDR2 plugins.ini downloads at the top of their PS4 game mods pages, showing EU / USA / JP title IDs.",
+    "pages": [
+      "console/mods/ps4/gta5/index.html",
+      "console/mods/ps4/rdr2/index.html"
+    ],
+    "manifest": "downloads/ps4/plugin-templates/manifest.json",
+    "implementation": "scripts/ps4-user-plugin-templates.cjs; build-ps4-mods.cjs includes the same top sections.",
+    "preservation": "Both original desktop files are byte-identical to the public downloads and F: archive copies. All supplied title IDs, including hyphens, retained. Existing menu downloads and plugin configurations retained.",
+    "content": "Clearly labelled INI templates: directory-only plugin lines require exact plugin filenames. No binary compatibility inferred from the regional section labels.",
+    "validation": "Both source/public/archive copies checked by SHA-256; all six title IDs and first-section placement checked; repeat section application unchanged; site audit: 496 public pages / 57745 links and assets / zero issues; both scripts pass syntax checks.",
+    "archive": "Two originals saved and rehashed through console-expansion-archive.cjs using download-archive-layout.cjs. Shared inventories merged; organized archive index refreshed: 2274 items / 3398 present file records / zero missing. All previous files and metadata history preserved.",
+    "published": false
+  },
+  "hostVisualRedesign20261103": {
+    "date": "2026-11-03",
+    "status": "Visual redesign complete locally",
+    "request": "Redesign the main PS4 and PS5 hosts fully while retaining actual file lists, full-page use, top Back navigation and pinned compatibility.",
+    "pages": [
+      "/hosts/ps4/",
+      "/hosts/ps5/"
+    ],
+    "changes": [
+      "Graphite surfaces, Manrope typography, muted mint actions and compact detached top navigation",
+      "Aligned File/Format/File size/Firmware/Actions columns and original filenames; approximately 71px desktop rows",
+      "Visible file counts, compact search and primary category tabs; secondary utilities in More",
+      "Structured file-details popup for every file, source links, Escape, focus trapping and return focus",
+      "Phone layout, scrolling translated tabs, Arabic RTL and onscreen language picker",
+      "Explicit accessible labels for icon-only phone controls",
+      "All existing download IDs, firmware/game pins and pre-dispatch Load guards preserved; no transport or payload byte changes"
+    ],
+    "verification": {
+      "focusedTests": {
+        "tests": 52,
+        "passed": 52,
+        "failed": 0,
+        "report": "docs/qa/host-redesign-focused-tests.txt",
+        "failures": []
+      },
+      "fullSuite": {
+        "tests": 680,
+        "passed": 678,
+        "failed": 2,
+        "report": "docs/qa/host-redesign-full-tests.txt",
+        "failures": [
+          "all old sender ZIPs and the current sender match SHA/CRC/manifests, preserve 174 actions and exclude five original binaries",
+          "prepared immutable helpers contain exact authored bytes, native guards and archive jobs without external scripts"
+        ],
+        "note": "The full-suite sender-source hash failure predates this rebuilt sender; the final independent ZIP and current-source snapshot verification above confirms parity. The package-installer check still reports a missing Spanish native-helper warning translation from concurrent helper work. No immutable native artifact was replaced to satisfy that check."
+      },
+      "siteAudit": {
+        "pages": 496,
+        "links": 57791,
+        "issues": 0,
+        "report": "docs/qa/host-redesign-site-audit.txt"
+      },
+      "browser": [
+        "PS4 and PS5 desktop tables inspected",
+        "430px phone viewport and Arabic RTL inspected without document overflow; English restored and viewport reset",
+        "More menu and file-details keyboard focus verified",
+        "No payload or exploit executed; no console service contacted"
+      ],
+      "screenshots": [
+        "docs/screenshots/host-redesign-ps4.png",
+        "docs/screenshots/host-redesign-ps5.png",
+        "docs/screenshots/host-redesign-phone.png",
+        "docs/screenshots/host-redesign-file-details.png",
+        "docs/screenshots/host-redesign-firmware.png"
+      ],
+      "sender": {
+        "id": "console-payload-sender-246831ed1c7c",
+        "name": "console-payload-sender-1.9.1-246831ed1c7c.zip",
+        "version": "1.9.1+246831ed1c7c",
+        "url": "/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-246831ed1c7c.zip",
+        "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-1.9.1-246831ed1c7c.zip",
+        "bytes": 100337924,
+        "sha256": "40b91c66b8d3d0418c8214bf3a2276ed2a02d9d4e317c8a9b84803f57c0ae049",
+        "snapshot": "246831ed1c7c1b2ca014dd9712d3947e5aa5e7176e711f4bba1867f10a80fede",
+        "files": 289,
+        "payloads": 125,
+        "actions": 185,
+        "file": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-1.9.1-246831ed1c7c.zip",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\1.9.1+246831ed1c7c\\console-payload-sender-1.9.1-246831ed1c7c.zip",
+        "zipEntries": 289,
+        "manifestFiles": 288,
+        "allCRCAndSHA256Verified": true,
+        "publicAndFArchiveVerified": true,
+        "finalSourceSnapshotMatches": true
+      },
+      "archive": {
+        "mode": "write",
+        "backupRoot": "F:\\whatsite-backup-downloads-etc",
+        "items": 2280,
+        "fileRecords": 3404,
+        "presentFileRecords": 3404,
+        "missingFileRecords": 0,
+        "missingPaths": 0,
+        "otherUnavailableRecords": 0,
+        "availability": {
+          "present": 3404
+        }
+      }
+    },
+    "sourceHashes": {
+      "scripts/host-folder-markup.cjs": "642b6ff543a1b1b65e5d1ea068d6dc3298440508ee8475c20107a733dc626a27",
+      "assets/host-file-browser.css": "35fedbaa2320d08f25f5faba76e448ef1b8faf2aa72e2c94c3842024bfaa42e3",
+      "assets/host-folders.js": "3d617e8e75ce1473a2c69ee354df0a2b927c9f438f755f45765f1b3ced8e4f9c",
+      "assets/host-dashboard.js": "2041d8fd9cf4d3a00063f89c95efc8757cc146975a13ecd2bab03809086380dc",
+      "i18n-tools/afterglow-translations.cjs": "9d90bf8010dca5c2e2088ef5b2a72e26426bfc83c25b3f69e334bc5c873fac09",
+      "i18n-tools/build-chrome.js": "4e2c1c65d258061475decc6afce596225ec9d570b477596e87aa5e93973b01e2",
+      "scripts/tests/host-file-redesign.test.cjs": "b0b2ec4fc477e31c9f82ce12f60ba5c14e9685acd28e11efab3c4ece82b60dd2"
+    },
+    "preservation": "All earlier files and helper builds retained. No new payload IDs or native receiver builds from this visual work.",
+    "preview": "http://127.0.0.1:8765/hosts/ps4/?view=loaders",
+    "published": false
+  },
+  "publication20261103": {
+    "date": "2026-11-03",
+    "request": "Push everything and fix the failed GitHub Pages deployment.",
+    "status": "Validated; preparing commit and upload",
+    "failure": {
+      "run": 41509659158,
+      "artifactBytes": 14461735754,
+      "message": "Artifact exceeded GitHub Pages 1 GB limit"
+    },
+    "solution": "Custom Pages workflow stages a maximum 900 MiB site. Large downloads stay in the complete Git repository and F: archive, with public links routed to exact repository files. Native host Load files remain same-origin and unchanged. New native receiver snapshots fetch ready files directly from the repository; install the latest helper to use those updated URLs.",
+    "workflow": ".github/workflows/pages.yml",
+    "pagesBuild": {
+      "revision": "main",
+      "bytes": 943563361,
+      "budget": 943718400,
+      "hostedFiles": 8105,
+      "repositoryFiles": 1333,
+      "protectedNativeFiles": 125
+    },
+    "pagesLinks": {
+      "bytes": 944171080,
+      "pages": 544,
+      "links": 52616,
+      "offloadedFiles": 1333,
+      "issues": 0
+    },
+    "tests": {
+      "passed": 706,
+      "failed": 0,
+      "report": "docs/qa/repo-publish-tests-final.txt"
+    },
+    "siteAudit": "Audited 501 public pages and 58150 local links/assets; 0 issue(s).",
+    "sender": {
+      "id": "console-payload-sender-3860a0014162",
+      "name": "console-payload-sender-2.0.0-3860a0014162.zip",
+      "version": "2.0.0+3860a0014162",
+      "url": "/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-3860a0014162.zip",
+      "source": "https://whatwhatboy.com/downloads/helpers/console-payload-sender/console-payload-sender-2.0.0-3860a0014162.zip",
+      "bytes": 101847522,
+      "sha256": "a2ec5e44332601827d66a576ca9f5a56f3d801ce0e2f7758d700c38a42c960e6",
+      "snapshot": "3860a001416283f7a0e435cc1fdb424be6ef00794096bdd38e2f30fd88f17fbf",
+      "files": 1495,
+      "payloads": 125,
+      "actions": 185,
+      "file": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\downloads\\helpers\\console-payload-sender\\console-payload-sender-2.0.0-3860a0014162.zip",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PC\\Tools\\Console Payload Sender\\Helpers\\2.0.0+3860a0014162\\console-payload-sender-2.0.0-3860a0014162.zip"
+    },
+    "receivers": {
+      "preparedAt": "2026-11-03T18:17:21.129Z",
+      "version": "2026.11.02.18",
+      "jobsPath": "docs/qa/host-menu-companion-jobs.json",
+      "previousJobsPath": "docs/qa/host-menu-companion-jobs-2026.11.02.17.json",
+      "activated": true,
+      "records": [
+        {
+          "platform": "ps4",
+          "version": "2026.11.02.18",
+          "path": "console/ps4/whatsite-ps4.html",
+          "immutablePath": "downloads/helpers/console-download-receivers/ps4/2026.11.02.18-5f5be5198ed8/whatsite-ps4.html",
+          "bytes": 733290,
+          "sha256": "5f5be5198ed8b7016d60ca42076efd06f802be01999e64cb0025e92d78d06119",
+          "previousSha256": "1bcb67270ddab4b6ac7b45bf892319e6c3acd6da1e44a1a72c05df1529bda558",
+          "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps4/retained-1bcb67270dda/whatsite-ps4.html",
+          "previousItems": 512,
+          "items": 512,
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.18\\whatsite-ps4.html"
+        },
+        {
+          "platform": "ps5",
+          "version": "2026.11.02.18",
+          "path": "console/ps5/whatsite-ps5.html",
+          "immutablePath": "downloads/helpers/console-download-receivers/ps5/2026.11.02.18-ec87c87f5816/whatsite-ps5.html",
+          "bytes": 569922,
+          "sha256": "ec87c87f58169bf1f05857bc6e2cddf024ad5c13469e04f890057aa2f0aa7848",
+          "previousSha256": "59f5b1b38142d28757c70880003244f288e9a4d65e513e761f919939c8df74cb",
+          "previousPublicSnapshot": "downloads/helpers/console-download-receivers/ps5/retained-59f5b1b38142/whatsite-ps5.html",
+          "previousItems": 350,
+          "items": 350,
+          "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS5\\Tools\\whatsite Console Downloader\\Builds\\2026.11.02.18\\whatsite-ps5.html"
+        }
+      ],
+      "verifiedAt": "2026-11-03T18:17:57.731Z"
+    },
+    "archiveIndex": "docs/qa/repo-publish-archive-index.txt",
+    "preservation": "Every previous download, sender and native helper snapshot retained. Download/runtime/helper bytes and bundled original SVG bytes excluded from Git newline normalization. No payload executed; hardware remains untested."
   }
 }
