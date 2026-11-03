@@ -9034,9 +9034,13 @@
     "downloadScript": "scripts/download-trophy-unlockers.cjs",
     "progress": "docs/qa/trophy-unlockers-progress.json",
     "listing": "docs/qa/trophy-unlockers-listing.json",
-    "status": "Source-link card added and site audit passed. Full local archive running; resume with node scripts/download-trophy-unlockers.cjs, then refresh-local-download-index.cjs --write.",
+    "status": "Complete: all folder files downloaded and verified; shared inventories merged and organized archive index refreshed.",
     "archiveLayout": "F:/whatsite-backup-downloads-etc/files/PS4/Apps/trophy_unlockers; console Builds, Windows Helpers and guide Metadata separated. Size and SHA-256 verified; no downloaded payload executed.",
-    "published": false
+    "published": false,
+    "completedAt": "2026-11-03T21:19:42.000Z",
+    "downloaded": 2497,
+    "failed": 0,
+    "verification": "All 2497 files / 39757179998 bytes verified against MediaFire SHA-256 and sizes; 2494 PS4 packages, 2 Windows helpers, 1 guide. Final shared archive index: 8492 present file records / zero missing. See docs/qa/trophy-unlockers-verification.json."
   },
   "hostGallery20261103": {
     "status": "Complete locally in WWB-HOST; primary host galleries, button firmware selection and trainer popup. Publishing is managed by the separate migration chat.",
@@ -9073,7 +9077,7 @@
     },
     "page": "console/ps4/goldhen.html",
     "status": "Primary card now serves exact supplied BIN. Release page retained only in documentation; no unverified file-version or firmware claims. Older GoldHEN archive and ISO retained.",
-    "archive": "Exact supplied BIN saved on F: and rehashed successfully. Scoped inventory complete; final global merge deferred until trophy bulk intake stops changing its sidecar. Trophy completion merges all scoped records and refreshes index.",
+    "archive": "Complete: exact supplied BIN saved and rehashed on F:, scoped and global inventories merged, organized archive index refreshed.",
     "published": false
   },
   "downloadSizeCleanup20261103": {
@@ -9133,7 +9137,7 @@
   "pendingChangesPublication20261103": {
     "date": "2026-11-03",
     "request": "Push the pending changes shown in GitHub Desktop and update the site.",
-    "status": "Validated snapshot ready for commit and push",
+    "status": "Pushed and deployed successfully; live download bytes and links verified",
     "scope": "All pending nonignored source, documentation, historical host runtime/download copies, GoldHEN BIN and trophy source listing. Active host development stays in WWB-HOST.",
     "preservation": "Existing working files, downloads, archive versions and Git history retained. Main-site host redirects preserved, including the 404 fallback.",
     "hostCopyVerification": {
@@ -9160,6 +9164,46 @@
       "failedAtReview": 17,
       "complete": false,
       "progress": "docs/qa/trophy-unlockers-progress.json"
-    }
+    },
+    "commit": "cc673301d22f33cf762f574f4dc17277c2b22db6",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41720720551",
+    "deploymentConclusion": "success",
+    "liveVerification": {
+      "goldhenBytes": 297496,
+      "goldhenSHA256": "39452f5e1c305ac9efcb4745eef7958b4db8c6d85299529f08700970b009ea4d",
+      "trophySourceLink": true,
+      "host404Fallback": true
+    },
+    "upload": "HTTP/1.1 batch helper completed; origin/main verified; temporary branch removed; original history preserved",
+    "productionVerification": {
+      "bytes": 943405928,
+      "pages": 545,
+      "links": 50662,
+      "issues": 0
+    },
+    "sharedWork": "New edits arrived during upload and remain in the shared checkout. No active host regeneration or concurrent source changes were overwritten."
+  },
+  "hostCompleteAudit20261103": {
+    "checkedAt": "2026-11-03T21:12:59.633Z",
+    "status": "passed",
+    "revision": "166665902edfd386daf0fb249473648c0d382035",
+    "deployment": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41718999722",
+    "pages": 25,
+    "publicImageURLs": 152,
+    "authoredActionURLs": 230,
+    "legacyLoadDownloadURLs": 1553,
+    "behaviorAndProvenanceTests": 150,
+    "failures": [],
+    "browserRenderVerified": false,
+    "hardwareExecutionVerified": false,
+    "checkerCorrection": "Six homepage-relative image references were initially parsed as domain-root paths. Their actual declared src values were resolved against the deployed project URL and rechecked successfully.",
+    "repository": "C:/Users/whatw/Documents/GitHub/WWB-HOST",
+    "fixes": [
+      "Mobile CSS specificity and stylesheet cache version",
+      "Three missing social-preview images replaced by existing local artwork",
+      "GoldHEN download explicitly offered on PC/mobile; matching PS4 Load preserved",
+      "Provenance evidence lookup follows original migration workspace"
+    ],
+    "allOlderDownloadAndRuntimeFilesPreserved": true
   }
 }
