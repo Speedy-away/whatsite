@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-11-03T20:36:00.446Z",
-  "status": "Validated locally; publication pending",
+  "status": "Published and live verified",
   "cleanup": {
     "archivesPerRepository": 23,
     "bytesRemovedPerRepository": 2311897445,
@@ -194,10 +194,31 @@
   "verification": {
     "hostTests": 38,
     "mainTests": 9,
-    "hostArtifactBytes": 842396748,
+    "hostArtifactBytes": 842382857,
     "nativeScriptsUnchanged": 848,
     "cacheResourcesRetained": 1491,
     "brokenBuildLinks": 0,
-    "visualPreview": "Unavailable: browser use disabled in Work settings"
+    "visualPreview": "Unavailable: browser use disabled in Work settings",
+    "mainArtifactBytes": 944149935,
+    "archiveIndex": {
+      "presentFileRecords": 5994,
+      "missingFileRecords": 0
+    }
+  },
+  "live": {
+    "checkedAt": "2026-11-03T20:43:16.733Z",
+    "host": "e20e7bad3131d0bc732c3a9686388bc7b1bceedc",
+    "main": "5255e8f961727f4ea1f82247405c3fd436e4beda",
+    "goldhenBytes": 297496,
+    "goldhenSHA256": "39452f5e1c305ac9efcb4745eef7958b4db8c6d85299529f08700970b009ea4d",
+    "goldhenActiveEntries": 1,
+    "ps4AndPS5ActivityLogs": true,
+    "largePressedFirmwareButtons": true,
+    "textOnlyLoaderGrid": true,
+    "pagesDeployments": "success"
+  },
+  "deployments": {
+    "main": "https://github.com/Speedy-away/whatsite/actions/runs/41714333328",
+    "host": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41714543273"
   }
 }
