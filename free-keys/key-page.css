@@ -107,7 +107,7 @@ button, a { touch-action: manipulation; }
 .key-timer i { font-size: 12px; }
 
 .product-art { border-radius: 12px; overflow: hidden; margin-bottom: 18px; border: 1px solid var(--border); background: var(--surface-2); }
-.product-art img { width: 100%; max-height: 160px; object-fit: cover; display: block; }
+.product-art img { width: 100%; max-height: 160px; object-fit:contain; display: block; }
 
 .scope-note {
     display: flex;
@@ -304,7 +304,7 @@ button, a { touch-action: manipulation; }
     transition: border-color 0.15s ease;
 }
 .product-link:hover { border-color: var(--border-strong); }
-.product-link img { width: 44px; height: 44px; border-radius: 9px; object-fit: cover; flex-shrink: 0; }
+.product-link img { width: 44px; height: 44px; border-radius: 9px; object-fit:contain; flex-shrink: 0; }
 .product-link span { display: flex; flex-direction: column; flex: 1; min-width: 0; font-size: 13px; color: var(--muted); }
 .product-link strong { font-size: 15px; font-weight: 600; color: var(--text); }
 .product-link b { color: var(--muted); font-weight: 400; }

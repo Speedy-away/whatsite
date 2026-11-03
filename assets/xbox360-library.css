@@ -12,7 +12,7 @@
 [data-xbox360-library] .library-card{padding:0;overflow:hidden;min-width:0}
 [data-xbox360-library] .library-card[hidden],[data-xbox360-library] #library-empty[hidden]{display:none!important}
 [data-xbox360-library] .library-art{margin:0}
-[data-xbox360-library] .library-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:0}
+[data-xbox360-library] .library-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:0}
 [data-xbox360-library] .library-art figcaption{font-size:.7rem;padding:.5rem 1rem;line-height:1.5;color:#a8b3ad;background:rgba(0,0,0,.22)}
 [data-xbox360-library] .library-art figcaption a{color:inherit;text-decoration:none}
 [data-xbox360-library] .library-card-body{padding:1.5rem}

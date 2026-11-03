@@ -123,7 +123,7 @@ function apply(file, html, data = manifest()) {
     if(found){html=html.slice(0,found.start)+media(config,key)+html.slice(found.end);changed=true;}
   }
   if (changed || html.includes('data-category-art=')) {
-    const version = '20261103-mobile-images';
+    const version = '20261103-mobile-images-2';
     const tag = '<link rel="stylesheet" href="/assets/category-card-art.css?v='+version+'">';
     let found = false;
     html = html.replace(/<link\b(?=[^>]*href=["'][^"']*\/assets\/category-card-art\.css(?:\?[^"']*)?["'])[^>]*>/gi, () => { if (found) return ''; found = true; return tag; });

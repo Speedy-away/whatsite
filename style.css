@@ -227,7 +227,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .console-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
 .console-image { aspect-ratio: 16/10; overflow: hidden; background: var(--bg-tertiary); }
 .console-image img { width: 100%; height: 100%; object-fit: contain; transition: transform var(--tn); }
-.console-card:hover .console-image img { transform: scale(1.05); }
+.console-card:hover .console-image img { transform:none; }
 .console-info { padding: 16px; }
 .console-info h4 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
 .console-info p { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5; }
@@ -505,9 +505,9 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .cheat-card.featured { border-color: var(--accent); }
 .cheat-card.essential { border-color: var(--success); }
 .cheat-image { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--bg-tertiary); }
-.cheat-image img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: transform var(--tn); }
+.cheat-image img { width: 100%; height: 100%; object-fit:contain; cursor: pointer; transition: transform var(--tn); }
 .cheat-image img.cheat-logo { object-fit: contain; padding: 12px; background: #050505; }
-.cheat-card:hover .cheat-image img { transform: scale(1.05); }
+.cheat-card:hover .cheat-image img { transform:none; }
 .cheat-header { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; flex-wrap: wrap; }
 .cheat-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--accent-glow); border-radius: var(--radius-btn); color: var(--accent-light); font-size: 18px; flex-shrink: 0; }
 .cheat-info { flex: 1 1 auto; min-width: 120px; }

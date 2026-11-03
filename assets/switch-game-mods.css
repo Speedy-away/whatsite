@@ -8,7 +8,7 @@
 .switch-mod-grid[hidden], #catalogue .section-header[hidden] { display:none; }
 .switch-mod-filters > *, .switch-mod-games > * { min-width:0; }
 .switch-mod-filters input, .switch-mod-filters select { min-width:0; max-width:100%; }
-.switch-mod-card>img { width:100%; aspect-ratio:2/1; object-fit:cover; border-radius:10px; margin-bottom:20px; }
+.switch-mod-card>img { width:100%; aspect-ratio:2/1; object-fit:contain; border-radius:10px; margin-bottom:20px; }
 .switch-mod-card h3 { font-size:1.3rem; margin:0 0 8px; }
 .switch-mod-kind { display:block; color:var(--accent-light); font-size:.8rem; margin-bottom:18px; }
 .switch-mod-card p { margin-bottom:16px; font-size:.94rem; color:var(--text-secondary); }

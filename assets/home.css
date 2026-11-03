@@ -121,7 +121,7 @@
 .home-page .tool-card { flex-direction: row; border: 1px solid var(--border); border-radius: 12px; background: #111114; padding: 24px; gap: 18px; align-items: flex-start; }
 .home-page .tool-card:hover { transform: none; border-color: var(--border-hover); }
 .home-page .tool-icon { width: 48px; height: 48px; border-radius: 8px; flex-shrink: 0; background: #222229; }
-.home-page .tool-icon img { width: 48px; height: 48px; object-fit: cover; border-radius: 8px; }
+.home-page .tool-icon img { width: 48px; height: 48px; object-fit:contain; border-radius: 8px; }
 .home-page .tool-info h3 { font-size: 16px; font-weight: 600; margin-bottom: 5px; letter-spacing: -.02em; }
 .home-page .tool-info p { font-size: 12px; color: var(--home-muted); line-height: 1.65; margin-bottom: 12px; }
 .home-page .tool-link { min-height: 44px; display: inline-flex; align-items: center; gap: 10px; font-size: 12px; }

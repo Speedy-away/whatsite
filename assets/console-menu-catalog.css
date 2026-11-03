@@ -14,7 +14,7 @@
 .menu-resource-grid .feature-tag { padding:3px 6px; font-size:.7rem; }
 .menu-preview { width:100%; margin:0; min-width:0; }
 .menu-preview > a { display:block; width:100%; border-radius:8px; overflow:hidden; background:#080b09; }
-.menu-resource-grid .menu-preview img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:0; }
+.menu-resource-grid .menu-preview img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:0; }
 .menu-resource-grid .menu-preview[data-menu-preview="source"] img,
 .menu-resource-grid .menu-preview[data-menu-preview="family"] img { object-fit:contain; }
 .menu-preview figcaption { margin-top:6px; color:var(--text-secondary); font-size:.7rem; line-height:1.4; }

@@ -10048,7 +10048,18 @@
     "sourceReportAbsolute": "C:/Users/whatw/Documents/GitHub/whatsite/tmp/remaining-host-performance/docs/migration/goldhen-popup-smooth-rendering.json",
     "limits": [
       "Static HTTP and authored adapter verification only; no browser or native console execution"
-    ]
+    ],
+    "pageFirmwareBlock": {
+      "status": "Pushed, deployed successfully and live verified",
+      "commit": "2ed22a4ad0c5e3a38784399d891fcb95c95238eb",
+      "run": 41737946944,
+      "change": "Hide .host-firmware-control for view=goldhen. Keep all nine firmware choices inside the GoldHEN popup. Other firmware views, Load/Download guards and old files remain unchanged.",
+      "testsPassed": 16,
+      "liveVerifier": "tmp/verify-goldhen-control-hide.cjs",
+      "checkedAt": "2026-11-03T23:19:46.080Z",
+      "url": "https://speedy-away.github.io/WWB-HOST/hosts/ps4/?view=goldhen",
+      "viewsChecked": 6
+    }
   },
   "liveImageMobileAudit": {
     "date": "2026-11-03",
