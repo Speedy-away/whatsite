@@ -1,0 +1,2461 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-03",
+  "entries": [
+    {
+      "id": "burnout-3-takedown",
+      "requestedTitle": "Burnout 3: Takedown",
+      "title": "Burnout 3: Takedown",
+      "platform": "PS2",
+      "kind": "Recompilation",
+      "source": "https://github.com/danielgomesvieira2000/burnout3-pc",
+      "repository": "https://github.com/danielgomesvieira2000/burnout3-pc",
+      "availability": "release",
+      "requirements": "PS2 NTSC-U, SLUS-21050. Alpha build; supply your own matching disc image.",
+      "summary": "Burnout 3: Takedown on PC through the linked recompilation project.",
+      "aliases": [
+        "burnout 3 pc burnout3",
+        "Burnout 3: Takedown pc port",
+        "burnout 3 takedown",
+        "burnout3-pc"
+      ],
+      "tags": [
+        "Burnout 3: Takedown PC port",
+        "PS2",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/burnout-3-takedown.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/93/Burnout_3_-_Takedown_Coverart.jpg",
+        "page": "https://en.wikipedia.org/wiki/Burnout_3%3A_Takedown",
+        "width": 275,
+        "height": 330,
+        "bytes": 95787,
+        "sha256": "ac6056e56401be937575cbdd149c60375c36375033ac62b4e8cc3135c0109cbb"
+      },
+      "release": {
+        "tag": "v0.8.0-alpha",
+        "url": "https://github.com/danielgomesvieira2000/burnout3-pc/releases/tag/v0.8.0-alpha",
+        "prerelease": true
+      },
+      "download": {
+        "name": "Burnout3-PC-0.8.0-alpha-windows-x64.zip",
+        "version": "v0.8.0-alpha",
+        "bytes": 46089696,
+        "sha256": "9a0c8d72040755b8bed19b78505ca000dbc88037ab6d08ecca2f19bdaf5dca68",
+        "sourceUrl": "https://github.com/danielgomesvieira2000/burnout3-pc/releases/download/v0.8.0-alpha/Burnout3-PC-0.8.0-alpha-windows-x64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "9a0c8d72040755b8bed19b78505ca000dbc88037ab6d08ecca2f19bdaf5dca68"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "super-mario-sunshine",
+      "requestedTitle": "Super Mario Sunshine",
+      "title": "Super Mario Sunshine",
+      "platform": "GameCube",
+      "kind": "Recompilation",
+      "source": "https://github.com/TekRantGaming/sms-pc-port",
+      "repository": "https://github.com/TekRantGaming/sms-pc-port",
+      "availability": "unavailable",
+      "requirements": "The supplied repository and release metadata returned HTTP 404 on review. No replacement project or working build is assumed.",
+      "summary": "Requested Super Mario Sunshine project; the supplied repository was unavailable at review.",
+      "aliases": [
+        "mario sunshine sms",
+        "Super Mario Sunshine pc port",
+        "super mario sunshine",
+        "sms-pc-port"
+      ],
+      "tags": [
+        "Super Mario Sunshine PC port",
+        "GameCube",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/super-mario-sunshine.png",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/05/Super_Mario_Sunshine_Box_Art.png",
+        "page": "https://en.wikipedia.org/wiki/Super_Mario_Sunshine",
+        "width": 261,
+        "height": 363,
+        "bytes": 57282,
+        "sha256": "b973d2881c0a3365813b3f6abc52982aae6a61f7a044f2b31cbbf891a08de9bf"
+      },
+      "archiveStatus": "not-published"
+    },
+    {
+      "id": "ratchet-clank",
+      "requestedTitle": "Ratchet & Clank",
+      "title": "Ratchet & Clank",
+      "platform": "PS2",
+      "kind": "Launcher",
+      "source": "https://github.com/re-rac/rerac-launcher",
+      "repository": "https://github.com/re-rac/rerac-launcher",
+      "availability": "release",
+      "requirements": "Ratchet & Clank (2002), PS2 NTSC-U, SCUS-97199, version 1.00. This download is the ReRAC launcher, not a game-data bundle.",
+      "summary": "Ratchet & Clank on PC through the linked launcher project.",
+      "aliases": [
+        "ratchet and clank rerac re rac",
+        "Ratchet & Clank pc port",
+        "ratchet clank",
+        "rerac-launcher"
+      ],
+      "tags": [
+        "Ratchet & Clank PC port",
+        "PS2",
+        "Launcher"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/ratchet-clank.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b6/RaCbox.jpg",
+        "page": "https://en.wikipedia.org/wiki/Ratchet_%26_Clank_(2002_video_game)",
+        "width": 265,
+        "height": 376,
+        "bytes": 154289,
+        "sha256": "b6702d2399a230db58447be90313a322e144cbecc8d4f52b4990f75056bb829a"
+      },
+      "release": {
+        "tag": "v0.3.1-alpha",
+        "url": "https://github.com/re-rac/rerac-launcher/releases/tag/v0.3.1-alpha",
+        "prerelease": true
+      },
+      "download": {
+        "name": "rerac-launcher-windows-x64.msi",
+        "version": "v0.3.1-alpha",
+        "bytes": 4931584,
+        "sha256": "3c10da4f607d305660e31dd1c181241eb4119e3bd690a62f73fa3a2d324f2b74",
+        "sourceUrl": "https://github.com/re-rac/rerac-launcher/releases/download/v0.3.1-alpha/rerac-launcher-windows-x64.msi",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "3c10da4f607d305660e31dd1c181241eb4119e3bd690a62f73fa3a2d324f2b74"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "the-legend-of-zelda-the-wind-waker",
+      "requestedTitle": "The Legend of Zelda: The Wind Waker",
+      "title": "The Legend of Zelda: The Wind Waker",
+      "platform": "GameCube",
+      "kind": "Recompilation",
+      "source": "https://github.com/elliotttate/Wind-Waker-Recomp",
+      "repository": "https://github.com/elliotttate/Wind-Waker-Recomp",
+      "availability": "release",
+      "requirements": "The supplied project documents a move of Windows builds to BlueWake. Use your own compatible GameCube disc and follow the pinned BlueWake release requirements.",
+      "summary": "The Legend of Zelda: The Wind Waker on PC through the linked recompilation project.",
+      "aliases": [
+        "windwaker wind waker zelda",
+        "The Legend of Zelda: The Wind Waker pc port",
+        "the legend of zelda the wind waker",
+        "Wind-Waker-Recomp"
+      ],
+      "tags": [
+        "The Legend of Zelda: The Wind Waker PC port",
+        "GameCube",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/the-legend-of-zelda-the-wind-waker.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/79/The_Legend_of_Zelda_The_Wind_Waker.jpg",
+        "page": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_The_Wind_Waker",
+        "width": 256,
+        "height": 309,
+        "bytes": 37371,
+        "sha256": "a0e8e911b145fe134968b791a5563f7d0624b113f9cbc3a646142174313e4552"
+      },
+      "release": {
+        "tag": "v0.10.0",
+        "url": "https://github.com/chrissotraidis/bluewake/releases/tag/v0.10.0",
+        "prerelease": false
+      },
+      "download": {
+        "name": "BlueWake-v0.10.0-windows-x64.zip",
+        "version": "v0.10.0",
+        "bytes": 228756634,
+        "sha256": "c56325884ef6f3f4cc502dd6c129e16a6d66316082a546bb3a99476dcd668f66",
+        "sourceUrl": "https://github.com/chrissotraidis/bluewake/releases/download/v0.10.0/BlueWake-v0.10.0-windows-x64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "c56325884ef6f3f4cc502dd6c129e16a6d66316082a546bb3a99476dcd668f66"
+      },
+      "archiveStatus": "downloaded",
+      "deliveryNote": "The supplied Wind Waker project directs Windows downloads to BlueWake. Original project link retained."
+    },
+    {
+      "id": "spider-man-edge-of-time",
+      "requestedTitle": "Spider-Man: Edge of Time",
+      "title": "Spider-Man: Edge of Time",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/goliathret/EdgeOfTimeRecomp",
+      "repository": "https://github.com/goliathret/EdgeOfTimeRecomp",
+      "availability": "release",
+      "requirements": "Supply your own compatible Xbox 360 game files. This v1.1 release contains an asset whose filename still says v1.0.0; the original name is preserved.",
+      "summary": "Spider-Man: Edge of Time on PC through the linked recompilation project.",
+      "aliases": [
+        "spiderman edge of time",
+        "Spider-Man: Edge of Time pc port",
+        "spider man edge of time",
+        "EdgeOfTimeRecomp"
+      ],
+      "tags": [
+        "Spider-Man: Edge of Time PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/spider-man-edge-of-time.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/df/Spider-Man_Edge_of_Time.jpg",
+        "page": "https://en.wikipedia.org/wiki/Spider-Man%3A_Edge_of_Time",
+        "width": 274,
+        "height": 363,
+        "bytes": 26122,
+        "sha256": "20da5e9495e4af10d680cb92fbb76fd484714babf13da35894039e5142689d3f"
+      },
+      "release": {
+        "tag": "v1.1",
+        "url": "https://github.com/goliathret/EdgeOfTimeRecomp/releases/tag/v1.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "EdgeOfTimeRecomp-v1.0.0-20261030_1906-win-amd64.zip",
+        "version": "v1.1",
+        "bytes": 192213315,
+        "sha256": "bed8dd834db8a44e46647e5cc988947ecac16ff3ab48daed619f8279045585fa",
+        "sourceUrl": "https://github.com/goliathret/EdgeOfTimeRecomp/releases/download/v1.1/EdgeOfTimeRecomp-v1.0.0-20261030_1906-win-amd64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "bed8dd834db8a44e46647e5cc988947ecac16ff3ab48daed619f8279045585fa"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "infamous-second-son",
+      "requestedTitle": "inFAMOUS Second Son",
+      "title": "inFAMOUS Second Son",
+      "platform": "PS4",
+      "kind": "PC port",
+      "source": "https://github.com/HayatoG/iss_pc",
+      "repository": "https://github.com/HayatoG/iss_pc",
+      "availability": "release",
+      "requirements": "PS4 CUSA00223 (US), base game 1.00 with update 1.07 merged into one game folder. Supply your own dump.",
+      "summary": "inFAMOUS Second Son on PC through the linked pc port project.",
+      "aliases": [
+        "infamous second son iss",
+        "inFAMOUS Second Son pc port",
+        "infamous second son",
+        "iss_pc"
+      ],
+      "tags": [
+        "inFAMOUS Second Son PC port",
+        "PS4",
+        "PC port"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/infamous-second-son.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Infamous_second_son_boxart.jpg",
+        "page": "https://en.wikipedia.org/wiki/Infamous_Second_Son",
+        "width": 304,
+        "height": 328,
+        "bytes": 27225,
+        "sha256": "1db46b9ad2fa56a5ab297be809eddd781dc7b71048a001f430dd56dfcbd319e2"
+      },
+      "release": {
+        "tag": "v1.0",
+        "url": "https://github.com/HayatoG/iss_pc/releases/tag/v1.0",
+        "prerelease": false
+      },
+      "download": {
+        "name": "infamous-windows-x86_64.zip",
+        "version": "v1.0",
+        "bytes": 122650527,
+        "sha256": "25cf4c6a27547b0d714efee15ceb7058165f316ae65348d2a8e583650154e4ca",
+        "sourceUrl": "https://github.com/HayatoG/iss_pc/releases/download/v1.0/infamous-windows-x86_64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "25cf4c6a27547b0d714efee15ceb7058165f316ae65348d2a8e583650154e4ca"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "uncharted-the-nathan-drake-collection",
+      "requestedTitle": "Uncharted: The Nathan Drake Collection",
+      "title": "Uncharted: The Nathan Drake Collection",
+      "platform": "PS4",
+      "kind": "PC port",
+      "source": "https://github.com/Supermedo/uncharted_pc",
+      "repository": "https://github.com/Supermedo/uncharted_pc",
+      "availability": "release",
+      "requirements": "Your own decrypted PS4 collection dump, including the documented CUSA02343 / CUSA02320 variants and the collection’s game-data folders.",
+      "summary": "Uncharted: The Nathan Drake Collection on PC through the linked pc port project.",
+      "aliases": [
+        "uncharted nathan drake collection",
+        "Uncharted: The Nathan Drake Collection pc port",
+        "uncharted the nathan drake collection",
+        "uncharted_pc"
+      ],
+      "tags": [
+        "Uncharted: The Nathan Drake Collection PC port",
+        "PS4",
+        "PC port"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/uncharted-the-nathan-drake-collection.png",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/c9/Nathan_Drake_Collection_cover_art.png",
+        "page": "https://en.wikipedia.org/wiki/Uncharted%3A_The_Nathan_Drake_Collection",
+        "width": 294,
+        "height": 339,
+        "bytes": 172044,
+        "sha256": "0d39f1636f88f47d5cbbdb66fb0f5830683e5842d3f29a94e1de0dca10e61301"
+      },
+      "release": {
+        "tag": "v0.3.11",
+        "url": "https://github.com/Supermedo/uncharted_pc/releases/tag/v0.3.11",
+        "prerelease": false
+      },
+      "download": {
+        "name": "uncharted-windows.zip",
+        "version": "v0.3.11",
+        "bytes": 122897652,
+        "sha256": "df161cab9272484f0f652ad9ef597a61f80fc52e1c83a5790489798fc22f0c07",
+        "sourceUrl": "https://github.com/Supermedo/uncharted_pc/releases/download/v0.3.11/uncharted-windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "df161cab9272484f0f652ad9ef597a61f80fc52e1c83a5790489798fc22f0c07"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "god-of-war-iii",
+      "requestedTitle": "God of War III",
+      "title": "God of War III Remastered",
+      "platform": "PS4",
+      "kind": "PC port",
+      "source": "https://github.com/FelipePrado0/SpartanPort",
+      "repository": "https://github.com/FelipePrado0/SpartanPort",
+      "availability": "release",
+      "requirements": "God of War III Remastered on PS4, not the PS3 original. Tested game IDs CUSA01623 / CUSA01715, versions 01.00 and 01.02.",
+      "summary": "God of War III Remastered on PC through the linked pc port project.",
+      "aliases": [
+        "god of war 3 gow3 spartanport",
+        "God of War III pc port",
+        "god of war iii",
+        "SpartanPort"
+      ],
+      "tags": [
+        "God of War III PC port",
+        "PS4",
+        "PC port"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/god-of-war-iii.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/8/8b/God_of_War_III_cover_art.jpg",
+        "page": "https://en.wikipedia.org/wiki/God_of_War_III",
+        "width": 294,
+        "height": 337,
+        "bytes": 33573,
+        "sha256": "c43c6ee0a18e799258a042860711d65695deb640dbe47b482fea40fa49fd515c"
+      },
+      "release": {
+        "tag": "windows-v3.0.0",
+        "url": "https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v3.0.0",
+        "prerelease": false
+      },
+      "download": {
+        "name": "spartanport-windows.zip",
+        "version": "windows-v3.0.0",
+        "bytes": 100867042,
+        "sha256": "5fdc28e3c993b2f434c189d5bb5a00dff0117715d17990153b09707fb8367638",
+        "sourceUrl": "https://github.com/FelipePrado0/SpartanPort/releases/download/windows-v3.0.0/spartanport-windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "5fdc28e3c993b2f434c189d5bb5a00dff0117715d17990153b09707fb8367638"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "bloodborne",
+      "requestedTitle": "Bloodborne",
+      "title": "Bloodborne",
+      "platform": "PS4",
+      "kind": "PC port",
+      "source": "https://github.com/Supermedo/bloodborne_pc",
+      "repository": "https://github.com/Supermedo/bloodborne_pc",
+      "availability": "release",
+      "requirements": "Your own decrypted PS4 dump, CUSA03173. Game version 1.09 is required for the documented community frame-rate and effects patches; other versions are described as running at 30 FPS.",
+      "summary": "Bloodborne on PC through the linked pc port project.",
+      "aliases": [
+        "bloodborne pc port blood borne",
+        "Bloodborne pc port",
+        "bloodborne",
+        "bloodborne_pc"
+      ],
+      "tags": [
+        "Bloodborne PC port",
+        "PS4",
+        "PC port"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/bloodborne.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/bloodborne-for-windows/cover-264.d7febb9be1.webp",
+        "page": "https://recomp.gg/p/bloodborne-pc",
+        "width": 264,
+        "height": 352,
+        "bytes": 17442,
+        "sha256": "d7febb9be1a934c591eb553210418884ab623071d166885e399a555f62f6231f"
+      },
+      "release": {
+        "tag": "windows-v1.9.7",
+        "url": "https://github.com/Supermedo/bloodborne_pc/releases/tag/windows-v1.9.7",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Bloodborne-Windows.zip",
+        "version": "windows-v1.9.7",
+        "bytes": 193766434,
+        "sha256": "b3444c6a4d201e75f2b3ea80f2f4663bfa8e78eda7652054819ba8622cc7a759",
+        "sourceUrl": "https://github.com/Supermedo/bloodborne_pc/releases/download/windows-v1.9.7/Bloodborne-Windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "b3444c6a4d201e75f2b3ea80f2f4663bfa8e78eda7652054819ba8622cc7a759"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "sin-and-punishment",
+      "requestedTitle": "Sin and Punishment",
+      "title": "Sin and Punishment",
+      "platform": "Nintendo 64",
+      "kind": "Recompilation",
+      "source": "https://github.com/wootbeer/snprecomp",
+      "repository": "https://github.com/wootbeer/snprecomp",
+      "availability": "release",
+      "requirements": "Use one of the exact Japanese or English-translated ROM builds in the project’s supported-ROM SHA-1 table. Other ROMs are not implied to work.",
+      "summary": "Sin and Punishment on PC through the linked recompilation project.",
+      "aliases": [
+        "sin & punishment n64 snp",
+        "Sin and Punishment pc port",
+        "sin and punishment",
+        "snprecomp"
+      ],
+      "tags": [
+        "Sin and Punishment PC port",
+        "Nintendo 64",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/sin-and-punishment.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/68/N64_-_Sin_%26_Punishment.jpg",
+        "page": "https://en.wikipedia.org/wiki/Sin%20and%20Punishment",
+        "width": 250,
+        "height": 348,
+        "bytes": 85723,
+        "sha256": "081d218cf417cfa0b08d5d9d9c0aaf80b926d930863c273854ab472744ce99e5"
+      },
+      "release": {
+        "tag": "0.2.10",
+        "url": "https://github.com/wootbeer/snprecomp/releases/tag/0.2.10",
+        "prerelease": false
+      },
+      "download": {
+        "name": "SnPRecompiled-0.2.10-windows.zip",
+        "version": "0.2.10",
+        "bytes": 17275709,
+        "sha256": "207e37a5f68119e12a59e57b2e0add40c212a406a14ee11650901c2b20fed829",
+        "sourceUrl": "https://github.com/wootbeer/snprecomp/releases/download/0.2.10/SnPRecompiled-0.2.10-windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "207e37a5f68119e12a59e57b2e0add40c212a406a14ee11650901c2b20fed829"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "pokemon-snap",
+      "requestedTitle": "Pokémon Snap",
+      "title": "Pokémon Snap",
+      "platform": "Nintendo 64",
+      "kind": "Recompilation",
+      "source": "https://github.com/JackandBeans/Snap64Recomp/releases/tag/v1.1.6",
+      "repository": "https://github.com/JackandBeans/Snap64Recomp",
+      "availability": "release",
+      "requirements": "US N64 cartridge ROM only. Required ROM SHA-1: edc7c49cc568c045fe48be0d18011c30f393cbaf. Other regional releases are not supported by this build.",
+      "summary": "Pokémon Snap on PC through the linked recompilation project.",
+      "aliases": [
+        "pokemon snap snap64",
+        "Pokémon Snap pc port",
+        "pokemon snap",
+        "Snap64Recomp"
+      ],
+      "tags": [
+        "Pokémon Snap PC port",
+        "Nintendo 64",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/pokemon-snap.webp",
+        "sourceUrl": "https://recomp.gg/media/pokemon-snap/cover-528.7526356142.webp",
+        "page": "https://recomp.gg/p/snap64recomp",
+        "width": 528,
+        "height": 704,
+        "bytes": 43192,
+        "sha256": "75263561429c847b12ec66cf57cca9201fd3efdb8d8d7def9b36262d416ba83b"
+      },
+      "release": {
+        "tag": "v1.1.6",
+        "url": "https://github.com/JackandBeans/Snap64Recomp/releases/tag/v1.1.6",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Snap64Recomp-1.1.6-win64.zip",
+        "version": "v1.1.6",
+        "bytes": 16580695,
+        "sha256": "73bd4f7fae0f41670d9222af1f7287dfe60978997128a5926179e48d28ac351d",
+        "sourceUrl": "https://github.com/JackandBeans/Snap64Recomp/releases/download/v1.1.6/Snap64Recomp-1.1.6-win64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "73bd4f7fae0f41670d9222af1f7287dfe60978997128a5926179e48d28ac351d"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "007-the-world-is-not-enough",
+      "requestedTitle": "007: The World Is Not Enough",
+      "title": "007: The World Is Not Enough",
+      "platform": "Nintendo 64",
+      "kind": "Recompilation",
+      "source": "https://github.com/riseio/TWIPE_00Sheven",
+      "repository": "https://github.com/riseio/TWIPE_00Sheven",
+      "availability": "release",
+      "requirements": "The World Is Not Enough (USA), N64 revision 0. The launcher builds locally from your own matching ROM.",
+      "summary": "007: The World Is Not Enough on PC through the linked recompilation project.",
+      "aliases": [
+        "007 james bond world is not enough twipe",
+        "007: The World Is Not Enough pc port",
+        "007 the world is not enough",
+        "TWIPE_00Sheven"
+      ],
+      "tags": [
+        "007: The World Is Not Enough PC port",
+        "Nintendo 64",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/007-the-world-is-not-enough.png",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/12/The_World_Is_Not_Enough_Coverart.png",
+        "page": "https://en.wikipedia.org/wiki/The_World_Is_Not_Enough_(Nintendo_64_video_game)",
+        "width": 256,
+        "height": 178,
+        "bytes": 94674,
+        "sha256": "4302f1e0edc78fa7bd05b480fdb43542f35cb5167bbeb3a784115a74fccfd570"
+      },
+      "release": {
+        "tag": "ICHGYTW_0.1.96",
+        "url": "https://github.com/riseio/TWIPE_00Sheven/releases/tag/ICHGYTW_0.1.96",
+        "prerelease": false
+      },
+      "download": {
+        "name": "ICHGYTW-Portable.exe",
+        "version": "ICHGYTW_0.1.96",
+        "bytes": 99857920,
+        "sha256": "c409afc085fcbd5346e794ca30e13c4421e5f4a367481f2c02001355e5cb0707",
+        "sourceUrl": "https://github.com/riseio/TWIPE_00Sheven/releases/download/ICHGYTW_0.1.96/ICHGYTW-Portable.exe",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "c409afc085fcbd5346e794ca30e13c4421e5f4a367481f2c02001355e5cb0707"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "ace-combat-5-the-unsung-war",
+      "requestedTitle": "Ace Combat 5: The Unsung War",
+      "title": "Ace Combat 5: The Unsung War",
+      "platform": "PS2",
+      "kind": "Recompilation",
+      "source": "https://github.com/sal063/Ace-Combat-5-Static-recompilation/releases/tag/V3.0",
+      "repository": "https://github.com/sal063/Ace-Combat-5-Static-recompilation",
+      "availability": "release",
+      "requirements": "PS2 NTSC-U / US, SLUS-20851. Other regions are not supported. Match the SLUS_208.51 executable hash in the pinned project documentation.",
+      "summary": "Ace Combat 5: The Unsung War on PC through the linked recompilation project.",
+      "aliases": [
+        "ace combat 5 ac5",
+        "Ace Combat 5: The Unsung War pc port",
+        "ace combat 5 the unsung war",
+        "Ace-Combat-5-Static-recompilation"
+      ],
+      "tags": [
+        "Ace Combat 5: The Unsung War PC port",
+        "PS2",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/ace-combat-5-the-unsung-war.webp",
+        "sourceUrl": "https://recomp.gg/media/index/ace-combat-5-the-unsung-war/cover-264.c1f0ff94f2.webp",
+        "page": "https://recomp.gg/p/ace-combat-5-static-recompilation",
+        "width": 264,
+        "height": 352,
+        "bytes": 16502,
+        "sha256": "c1f0ff94f2afa9dccc506b88a59db58194deae0a85ea03fb77ed702effecab01"
+      },
+      "release": {
+        "tag": "V3.0",
+        "url": "https://github.com/sal063/Ace-Combat-5-Static-recompilation/releases/tag/V3.0",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Release.rar",
+        "version": "V3.0",
+        "bytes": 12747852,
+        "sha256": "0bb98ade5279bc3785cd892fbcbd9acc44b562cdaa079118546d52b5bb2edf41",
+        "sourceUrl": "https://github.com/sal063/Ace-Combat-5-Static-recompilation/releases/download/V3.0/Release.rar",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "0bb98ade5279bc3785cd892fbcbd9acc44b562cdaa079118546d52b5bb2edf41"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "ridge-racer-v",
+      "requestedTitle": "Ridge Racer V",
+      "title": "Ridge Racer V",
+      "platform": "PS2",
+      "kind": "Recompilation",
+      "source": "https://github.com/danisandoval/fukami/releases/tag/v1.1.0",
+      "repository": "https://github.com/danisandoval/fukami",
+      "availability": "release",
+      "requirements": "PS2 USA, SLUS-20002 / SLUS_200.02 only. The application checks the source disc hashes.",
+      "summary": "Ridge Racer V on PC through the linked recompilation project.",
+      "aliases": [
+        "ridge racer 5 fukami",
+        "Ridge Racer V pc port",
+        "ridge racer v",
+        "fukami"
+      ],
+      "tags": [
+        "Ridge Racer V PC port",
+        "PS2",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/ridge-racer-v.webp",
+        "sourceUrl": "https://recomp.gg/media/index/ridge-racer-v/cover-264.114d31a9d1.webp",
+        "page": "https://recomp.gg/p/fukami",
+        "width": 264,
+        "height": 352,
+        "bytes": 13502,
+        "sha256": "114d31a9d13dd7a249a44fe0ae601837cbdbe1764ca717f4fb0c2faa7d21cc3f"
+      },
+      "release": {
+        "tag": "v1.1.0",
+        "url": "https://github.com/danisandoval/fukami/releases/tag/v1.1.0",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Fukami-1.1.0-windows-x86_64.zip",
+        "version": "v1.1.0",
+        "bytes": 23694239,
+        "sha256": "855031d3d240c36cbe5272a19a550fe742bb7b5f2d0bbdb7987b7e496a232d3a",
+        "sourceUrl": "https://github.com/danisandoval/fukami/releases/download/v1.1.0/Fukami-1.1.0-windows-x86_64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "855031d3d240c36cbe5272a19a550fe742bb7b5f2d0bbdb7987b7e496a232d3a"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "soulcalibur",
+      "requestedTitle": "Soulcalibur",
+      "title": "Soulcalibur",
+      "platform": "Dreamcast",
+      "kind": "Recompilation",
+      "source": "https://recomp.gg/p/voldorium",
+      "availability": "release",
+      "requirements": "Voldorium’s Dreamcast recompilation. Check the pinned v1.1.3 release for source-game and installation requirements.",
+      "summary": "Soulcalibur on PC through the linked recompilation project.",
+      "aliases": [
+        "soul calibur voldorium",
+        "Soulcalibur pc port",
+        "soulcalibur",
+        "voldorium"
+      ],
+      "tags": [
+        "Soulcalibur PC port",
+        "Dreamcast",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/soulcalibur.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/soulcalibur/cover-264.683f3dfc9b.webp",
+        "page": "https://recomp.gg/p/voldorium",
+        "width": 264,
+        "height": 352,
+        "bytes": 27478,
+        "sha256": "683f3dfc9b0cc5b2eb3e92e8808faec1a9167d11482f6b21dbe417065b3e74a1"
+      },
+      "release": {
+        "tag": "v1.1.3",
+        "url": "https://github.com/enrique363/voldorium/releases/tag/v1.1.3",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Voldorium-1.1.3-windows.zip",
+        "version": "v1.1.3",
+        "bytes": 1749291,
+        "sha256": "01e1cbb32c3eb208b2f76a8e9d05e754c175f079c31c65e981b32f912bf7a4ea",
+        "sourceUrl": "https://github.com/enrique363/voldorium/releases/download/v1.1.3/Voldorium-1.1.3-windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "01e1cbb32c3eb208b2f76a8e9d05e754c175f079c31c65e981b32f912bf7a4ea"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "eternal-darkness-sanity-s-requiem",
+      "requestedTitle": "Eternal Darkness: Sanity's Requiem",
+      "title": "Eternal Darkness: Sanity's Requiem",
+      "platform": "GameCube",
+      "kind": "Recompilation",
+      "source": "https://github.com/griches/EternalDarknessRecomp/releases/tag/v0.9.6",
+      "repository": "https://github.com/griches/EternalDarknessRecomp",
+      "availability": "release",
+      "requirements": "European GameCube disc GEDP01 only. The USA disc GEDE01 is explicitly unsupported by the pinned build.",
+      "summary": "Eternal Darkness: Sanity's Requiem on PC through the linked recompilation project.",
+      "aliases": [
+        "eternal darkness sanitys requiem",
+        "Eternal Darkness: Sanity's Requiem pc port",
+        "eternal darkness sanity s requiem",
+        "EternalDarknessRecomp"
+      ],
+      "tags": [
+        "Eternal Darkness: Sanity's Requiem PC port",
+        "GameCube",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/eternal-darkness-sanity-s-requiem.webp",
+        "sourceUrl": "https://recomp.gg/media/index/eternal-darkness-sanity-s-requiem/cover-264.e4e3616a28.webp",
+        "page": "https://recomp.gg/p/eternaldarknessrecomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 11708,
+        "sha256": "e4e3616a28c1301769ef0ae30b9e1b4b376a62163d0d4d7924c207ab73994ad8"
+      },
+      "release": {
+        "tag": "v0.9.6",
+        "url": "https://github.com/griches/EternalDarknessRecomp/releases/tag/v0.9.6",
+        "prerelease": false
+      },
+      "download": {
+        "name": "EternalDarkness-windows-x64-202610200024-1cb3fe6.zip",
+        "version": "v0.9.6",
+        "bytes": 46900147,
+        "sha256": "010020309969752c50da8affb323d0e5e55fd1ba85bc738074423de092d7e331",
+        "sourceUrl": "https://github.com/griches/EternalDarknessRecomp/releases/download/v0.9.6/EternalDarkness-windows-x64-202610200024-1cb3fe6.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "010020309969752c50da8affb323d0e5e55fd1ba85bc738074423de092d7e331"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "new-super-mario-bros-wii",
+      "requestedTitle": "New Super Mario Bros. Wii",
+      "title": "New Super Mario Bros. Wii",
+      "platform": "Wii",
+      "kind": "Recompilation",
+      "source": "https://github.com/WitherBlitz/NSMB-Wii-Multiplayer-Recompilation/releases/tag/v0.2.2",
+      "repository": "https://github.com/WitherBlitz/NSMB-Wii-Multiplayer-Recompilation",
+      "availability": "release",
+      "requirements": "USA Wii disc SMNE01, revision 1. Extract your own disc using the project’s documented Dolphin workflow.",
+      "summary": "New Super Mario Bros. Wii on PC through the linked recompilation project.",
+      "aliases": [
+        "nsmb wii new super mario bros multiplayer",
+        "New Super Mario Bros. Wii pc port",
+        "new super mario bros wii",
+        "NSMB-Wii-Multiplayer-Recompilation"
+      ],
+      "tags": [
+        "New Super Mario Bros. Wii PC port",
+        "Wii",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/new-super-mario-bros-wii.webp",
+        "sourceUrl": "https://recomp.gg/media/index/new-super-mario-bros-wii/cover-264.dadde297f4.webp",
+        "page": "https://recomp.gg/p/nsmb-wii-multiplayer-decompilation",
+        "width": 264,
+        "height": 352,
+        "bytes": 17474,
+        "sha256": "dadde297f42cd2d05cd799176372f558a85946344d30e798e9319d4bbe8f3a0d"
+      },
+      "release": {
+        "tag": "v0.2.2",
+        "url": "https://github.com/WitherBlitz/NSMB-Wii-Multiplayer-Recompilation/releases/tag/v0.2.2",
+        "prerelease": false
+      },
+      "download": {
+        "name": "NSMBW-0.2.2-windows-x64.zip",
+        "version": "v0.2.2",
+        "bytes": 74462458,
+        "sha256": "63589bbb6116a1a15a825244fba183bc6913643607f1d720026d098f1ba52dab",
+        "sourceUrl": "https://github.com/WitherBlitz/NSMB-Wii-Multiplayer-Recompilation/releases/download/v0.2.2/NSMBW-0.2.2-windows-x64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "63589bbb6116a1a15a825244fba183bc6913643607f1d720026d098f1ba52dab"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "scooby-doo-night-of-100-frights",
+      "requestedTitle": "Scooby-Doo! Night of 100 Frights",
+      "title": "Scooby-Doo! Night of 100 Frights",
+      "platform": "GameCube",
+      "kind": "Recompilation",
+      "source": "https://github.com/josiahg2502-glitch/Scooby-Doo-Refrightened/releases/tag/v1.0.2",
+      "repository": "https://github.com/josiahg2502-glitch/Scooby-Doo-Refrightened",
+      "availability": "release",
+      "requirements": "GameCube USA v1.01, GIHE78 revision 1. Windows 10/11, 64-bit.",
+      "summary": "Scooby-Doo! Night of 100 Frights on PC through the linked recompilation project.",
+      "aliases": [
+        "scooby doo refrightened",
+        "Scooby-Doo! Night of 100 Frights pc port",
+        "scooby doo night of 100 frights",
+        "Scooby-Doo-Refrightened"
+      ],
+      "tags": [
+        "Scooby-Doo! Night of 100 Frights PC port",
+        "GameCube",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/scooby-doo-night-of-100-frights.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/scooby-doo-night-of-100-frights/cover-264.88678e3f72.webp",
+        "page": "https://recomp.gg/p/scooby-doo-refrightened",
+        "width": 264,
+        "height": 352,
+        "bytes": 30486,
+        "sha256": "88678e3f728e05c33aa2710df50563a87b5c283372dc8c01ad2a348a287f3a96"
+      },
+      "release": {
+        "tag": "v1.0.2",
+        "url": "https://github.com/josiahg2502-glitch/Scooby-Doo-Refrightened/releases/tag/v1.0.2",
+        "prerelease": false
+      },
+      "download": {
+        "name": "ScoobyDooRefrightened.zip",
+        "version": "v1.0.2",
+        "bytes": 693354313,
+        "sha256": "57d887112a8637c7371bcae0a6f0f9c0ac1371c21b0c49a9b77e4a1d46a73287",
+        "sourceUrl": "https://github.com/josiahg2502-glitch/Scooby-Doo-Refrightened/releases/download/v1.0.2/ScoobyDooRefrightened.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "57d887112a8637c7371bcae0a6f0f9c0ac1371c21b0c49a9b77e4a1d46a73287"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "serious-sam-next-encounter",
+      "requestedTitle": "Serious Sam: Next Encounter",
+      "title": "Serious Sam: Next Encounter",
+      "platform": "GameCube",
+      "kind": "Recompilation",
+      "source": "https://github.com/takoshero96/Silly-ReEncounter/releases/tag/update",
+      "repository": "https://github.com/takoshero96/Silly-ReEncounter",
+      "availability": "project",
+      "requirements": "GameCube USA, G3BE9G. The update tag has release notes but no attached build asset at review. The documented launcher builds from your own disc.",
+      "summary": "Serious Sam: Next Encounter on PC through the linked recompilation project.",
+      "aliases": [
+        "serious sam next encounter silly re encounter",
+        "Serious Sam: Next Encounter pc port",
+        "serious sam next encounter",
+        "Silly-ReEncounter"
+      ],
+      "tags": [
+        "Serious Sam: Next Encounter PC port",
+        "GameCube",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/serious-sam-next-encounter.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/64/Serious_Sam_Next_Encounter.jpg",
+        "page": "https://en.wikipedia.org/wiki/Serious_Sam%3A_Next_Encounter",
+        "width": 267,
+        "height": 373,
+        "bytes": 62117,
+        "sha256": "e77baac5eaf0fededc5ff277548ca2d2472c4d31cce07c943941d98ee2762248"
+      },
+      "release": {
+        "tag": "update",
+        "url": "https://github.com/takoshero96/Silly-ReEncounter/releases/tag/update",
+        "prerelease": false
+      },
+      "archiveStatus": "not-published"
+    },
+    {
+      "id": "skies-of-arcadia-legends",
+      "requestedTitle": "Skies of Arcadia Legends",
+      "title": "Skies of Arcadia Legends",
+      "platform": "GameCube",
+      "kind": "Recompilation",
+      "source": "https://github.com/ogdanimal/SkiesOfArcadiaLegends-Recomp",
+      "repository": "https://github.com/ogdanimal/SkiesOfArcadiaLegends-Recomp",
+      "availability": "release",
+      "requirements": "Original GameCube USA GEAE8P, Europe GEAP8P or Japan GEAJ8P disc. This is the perftest1 testing release.",
+      "summary": "Skies of Arcadia Legends on PC through the linked recompilation project.",
+      "aliases": [
+        "skies of arcadia legends",
+        "Skies of Arcadia Legends pc port",
+        "skies of arcadia legends",
+        "SkiesOfArcadiaLegends-Recomp"
+      ],
+      "tags": [
+        "Skies of Arcadia Legends PC port",
+        "GameCube",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/skies-of-arcadia-legends.webp",
+        "sourceUrl": "https://recomp.gg/media/index/skies-of-arcadia-legends/cover-264.caa50313a9.webp",
+        "page": "https://recomp.gg/p/skiesofarcadialegends-recomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 22292,
+        "sha256": "caa50313a9901516db51f567a1575be5ffc630db68d7fff5de05d594ad89ff42"
+      },
+      "release": {
+        "tag": "perftest1",
+        "url": "https://github.com/ogdanimal/SkiesOfArcadiaLegends-Recomp/releases/tag/perftest1",
+        "prerelease": true
+      },
+      "download": {
+        "name": "SkiesOfArcadiaLegends-v0.83.0-perftest1-windows.zip",
+        "version": "perftest1",
+        "bytes": 56909365,
+        "sha256": "1863cf52a364eb3f7487130c91b352a3661f94017cab35095b5bfcd7459c8b9c",
+        "sourceUrl": "https://github.com/ogdanimal/SkiesOfArcadiaLegends-Recomp/releases/download/perftest1/SkiesOfArcadiaLegends-v0.83.0-perftest1-windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "1863cf52a364eb3f7487130c91b352a3661f94017cab35095b5bfcd7459c8b9c"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "super-smash-bros-melee",
+      "requestedTitle": "Super Smash Bros. Melee",
+      "title": "Super Smash Bros. Melee",
+      "platform": "GameCube",
+      "kind": "Recompilation",
+      "source": "https://github.com/GurekamDhillon/gd-melee-workspace/releases/tag/v0.3.0",
+      "repository": "https://github.com/GurekamDhillon/gd-melee-workspace",
+      "availability": "release",
+      "requirements": "GameCube NTSC 1.02, GALE01. Use a matching disc; other game revisions are not assumed compatible.",
+      "summary": "Super Smash Bros. Melee on PC through the linked recompilation project.",
+      "aliases": [
+        "smash bros melee ssbm",
+        "Super Smash Bros. Melee pc port",
+        "super smash bros melee",
+        "gd-melee-workspace"
+      ],
+      "tags": [
+        "Super Smash Bros. Melee PC port",
+        "GameCube",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/super-smash-bros-melee.png",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/75/Super_Smash_Bros_Melee_box_art.png",
+        "page": "https://en.wikipedia.org/wiki/Super_Smash_Bros._Melee",
+        "width": 267,
+        "height": 373,
+        "bytes": 180313,
+        "sha256": "ee435c281716986ced0d1612a24681af53d4f974d57ea053de69c116b8af41c8"
+      },
+      "release": {
+        "tag": "v0.3.0",
+        "url": "https://github.com/GurekamDhillon/gd-melee-workspace/releases/tag/v0.3.0",
+        "prerelease": false
+      },
+      "download": {
+        "name": "GDMelee-0.3.0-win64.zip",
+        "version": "v0.3.0",
+        "bytes": 34302072,
+        "sha256": "3e6c41bf555bd3e5ceb7bbb2d53a5a86572a3de359757e47dbc9c5f1b48db13c",
+        "sourceUrl": "https://github.com/GurekamDhillon/gd-melee-workspace/releases/download/v0.3.0/GDMelee-0.3.0-win64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "3e6c41bf555bd3e5ceb7bbb2d53a5a86572a3de359757e47dbc9c5f1b48db13c"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "super-mario-galaxy",
+      "requestedTitle": "Super Mario Galaxy",
+      "title": "Super Mario Galaxy",
+      "platform": "Wii",
+      "kind": "Recompilation",
+      "source": "https://github.com/keepvaibin/nebula/releases/tag/v1.0.1",
+      "repository": "https://github.com/keepvaibin/nebula",
+      "availability": "release",
+      "requirements": "Wii USA RMGE01, revision 0. The installer accepts the supported disc / extracted game route documented by Nebula.",
+      "summary": "Super Mario Galaxy on PC through the linked recompilation project.",
+      "aliases": [
+        "mario galaxy nebula",
+        "Super Mario Galaxy pc port",
+        "super mario galaxy",
+        "nebula"
+      ],
+      "tags": [
+        "Super Mario Galaxy PC port",
+        "Wii",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/super-mario-galaxy.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/super-mario-galaxy/cover-264.48acb9fb79.webp",
+        "page": "https://recomp.gg/p/nebula",
+        "width": 264,
+        "height": 352,
+        "bytes": 25170,
+        "sha256": "48acb9fb79af78913ab62d366a02fa9379a1e9562dc1424826b52e74206f8549"
+      },
+      "release": {
+        "tag": "v1.0.1",
+        "url": "https://github.com/keepvaibin/nebula/releases/tag/v1.0.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Nebula-Setup.exe",
+        "version": "v1.0.1",
+        "bytes": 35131392,
+        "sha256": "93d2542de34147f3808469e02067e2c42a822bb2380eca3c33388a70834bf9c8",
+        "sourceUrl": "https://github.com/keepvaibin/nebula/releases/download/v1.0.1/Nebula-Setup.exe",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "93d2542de34147f3808469e02067e2c42a822bb2380eca3c33388a70834bf9c8"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "super-paper-mario",
+      "requestedTitle": "Super Paper Mario",
+      "title": "Super Paper Mario",
+      "platform": "Wii",
+      "kind": "Recompilation",
+      "source": "https://github.com/josiahg2502-glitch/NewSuperPaperBros/releases",
+      "repository": "https://github.com/josiahg2502-glitch/NewSuperPaperBros",
+      "availability": "release",
+      "requirements": "Wii USA R8PE01 revision 0 or European R8PP01. Keep the regional files and installation route matched.",
+      "summary": "Super Paper Mario on PC through the linked recompilation project.",
+      "aliases": [
+        "super paper mario wii new super paper bros",
+        "Super Paper Mario pc port",
+        "super paper mario",
+        "NewSuperPaperBros"
+      ],
+      "tags": [
+        "Super Paper Mario PC port",
+        "Wii",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/super-paper-mario.webp",
+        "sourceUrl": "https://recomp.gg/media/index/super-paper-mario/cover-264.ca76dcb806.webp",
+        "page": "https://recomp.gg/p/newsuperpaperbros",
+        "width": 264,
+        "height": 352,
+        "bytes": 30168,
+        "sha256": "ca76dcb8067a84a448b95b60e382e68c95c3ffbee588d3bcf567e4a425f01a2b"
+      },
+      "release": {
+        "tag": "v1.0.8",
+        "url": "https://github.com/josiahg2502-glitch/NewSuperPaperBros/releases/tag/v1.0.8",
+        "prerelease": false
+      },
+      "download": {
+        "name": "NewSuperPaperBros.zip",
+        "version": "v1.0.8",
+        "bytes": 373391295,
+        "sha256": "2acd168996f603be77fafc797959d6fd5dfd69ea220d9c9aa684efef7f52e99e",
+        "sourceUrl": "https://github.com/josiahg2502-glitch/NewSuperPaperBros/releases/download/v1.0.8/NewSuperPaperBros.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "2acd168996f603be77fafc797959d6fd5dfd69ea220d9c9aa684efef7f52e99e"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "wario-land-shake-it",
+      "requestedTitle": "Wario Land: Shake It!",
+      "title": "Wario Land: Shake It!",
+      "platform": "Wii",
+      "kind": "Recompilation",
+      "source": "https://github.com/santiagovalencia109/Wario-Land-Shake-It-Native-PC",
+      "repository": "https://github.com/santiagovalencia109/Wario-Land-Shake-It-Native-PC",
+      "availability": "release",
+      "requirements": "Wii USA RWLE01. Testing build; the project documents remaining untested features.",
+      "summary": "Wario Land: Shake It! on PC through the linked recompilation project.",
+      "aliases": [
+        "wario land shake it shake dimension",
+        "Wario Land: Shake It! pc port",
+        "wario land shake it",
+        "Wario-Land-Shake-It-Native-PC"
+      ],
+      "tags": [
+        "Wario Land: Shake It! PC port",
+        "Wii",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/wario-land-shake-it.webp",
+        "sourceUrl": "https://recomp.gg/media/index/wario-land-shake-it/cover-264.a18eda7be7.webp",
+        "page": "https://recomp.gg/p/wario-land-shake-it-native-pc",
+        "width": 264,
+        "height": 352,
+        "bytes": 33842,
+        "sha256": "a18eda7be73a8e5a12c2211ff90655c1b9884659f36fab44556474b833fde6f7"
+      },
+      "release": {
+        "tag": "v0.3.1",
+        "url": "https://github.com/santiagovalencia109/Wario-Land-Shake-It-Native-PC/releases/tag/v0.3.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "WarioRecomp-0.3.1.zip",
+        "version": "v0.3.1",
+        "bytes": 294761456,
+        "sha256": "2ad23afa4afafbbe0a0109e221e65c16261b73197ea5ed2a4c8f05d47df920c1",
+        "sourceUrl": "https://github.com/santiagovalencia109/Wario-Land-Shake-It-Native-PC/releases/download/v0.3.1/WarioRecomp-0.3.1.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "2ad23afa4afafbbe0a0109e221e65c16261b73197ea5ed2a4c8f05d47df920c1"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "007-from-russia-with-love",
+      "requestedTitle": "007: From Russia with Love",
+      "title": "007: From Russia with Love",
+      "platform": "Xbox",
+      "kind": "Recompilation",
+      "source": "https://github.com/TGP482/007FRWL-XBERecomp",
+      "repository": "https://github.com/TGP482/007FRWL-XBERecomp",
+      "availability": "release",
+      "requirements": "Original Xbox. Supply your own extracted game data and default.xbe; the pinned documentation lists USA, Europe and Asia executable variants.",
+      "summary": "007: From Russia with Love on PC through the linked recompilation project.",
+      "aliases": [
+        "007 james bond from russia with love frwl",
+        "007: From Russia with Love pc port",
+        "007 from russia with love",
+        "007FRWL-XBERecomp"
+      ],
+      "tags": [
+        "007: From Russia with Love PC port",
+        "Xbox",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/007-from-russia-with-love.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/30/From_Russia_with_Love_game_cover.jpg",
+        "page": "https://en.wikipedia.org/wiki/From_Russia_with_Love_(video_game)",
+        "width": 256,
+        "height": 326,
+        "bytes": 21618,
+        "sha256": "51c6da8233c64832fa5f1f23a3013dab4c2233eac30343c6f9a888fd4ddd58d8"
+      },
+      "release": {
+        "tag": "V2",
+        "url": "https://github.com/TGP482/007FRWL-XBERecomp/releases/tag/V2",
+        "prerelease": false
+      },
+      "download": {
+        "name": "007FRWL-XBERecomp.zip",
+        "version": "V2",
+        "bytes": 70964784,
+        "sha256": "038482a48081eb554b008d06eed3bee4558392ac7217c05b9f8970e21e4e41d4",
+        "sourceUrl": "https://github.com/TGP482/007FRWL-XBERecomp/releases/download/V2/007FRWL-XBERecomp.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "038482a48081eb554b008d06eed3bee4558392ac7217c05b9f8970e21e4e41d4"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "dead-or-alive-3",
+      "requestedTitle": "Dead or Alive 3",
+      "title": "Dead or Alive 3",
+      "platform": "Xbox",
+      "kind": "Recompilation",
+      "source": "https://github.com/parkerallan/doa3-recomp/releases/tag/v1.0.7",
+      "repository": "https://github.com/parkerallan/doa3-recomp",
+      "availability": "release",
+      "requirements": "Original Xbox USA release, as your own supported XISO or extracted game. Follow the pinned launcher import instructions.",
+      "summary": "Dead or Alive 3 on PC through the linked recompilation project.",
+      "aliases": [
+        "dead or alive 3 doa3",
+        "Dead or Alive 3 pc port",
+        "dead or alive 3",
+        "doa3-recomp"
+      ],
+      "tags": [
+        "Dead or Alive 3 PC port",
+        "Xbox",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/dead-or-alive-3.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/dead-or-alive-3/cover-264.f39437476c.webp",
+        "page": "https://recomp.gg/p/doa3-recomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 10454,
+        "sha256": "f39437476c68e8233db8f12a6630bcc481a71eb63c6e161897f8d5c5479eb1be"
+      },
+      "release": {
+        "tag": "v1.0.7",
+        "url": "https://github.com/parkerallan/doa3-recomp/releases/tag/v1.0.7",
+        "prerelease": false
+      },
+      "download": {
+        "name": "DOA3-v1.0.7-win64.zip",
+        "version": "v1.0.7",
+        "bytes": 8222510,
+        "sha256": "4d749122ceb7ba27a95798c99961cd06a64b3468f6a695bcf06da7efa6fd4e68",
+        "sourceUrl": "https://github.com/parkerallan/doa3-recomp/releases/download/v1.0.7/DOA3-v1.0.7-win64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "4d749122ceb7ba27a95798c99961cd06a64b3468f6a695bcf06da7efa6fd4e68"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "def-jam-fight-for-ny",
+      "requestedTitle": "Def Jam: Fight for NY",
+      "title": "Def Jam: Fight for NY",
+      "platform": "Xbox",
+      "kind": "Recompilation",
+      "source": "https://github.com/vyanhursky/DefJamFFNY-recomp/releases/tag/v0.12.1",
+      "repository": "https://github.com/vyanhursky/DefJamFFNY-recomp",
+      "availability": "release",
+      "requirements": "Your own supported USA Xbox disc image or extracted dump. Setup validates and builds from that matching game data.",
+      "summary": "Def Jam: Fight for NY on PC through the linked recompilation project.",
+      "aliases": [
+        "deaf jam fight for ny def jam ffny",
+        "Def Jam: Fight for NY pc port",
+        "def jam fight for ny",
+        "DefJamFFNY-recomp"
+      ],
+      "tags": [
+        "Def Jam: Fight for NY PC port",
+        "Xbox",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/def-jam-fight-for-ny.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/def-jam-fight-for-ny/cover-264.1cba948bd2.webp",
+        "page": "https://recomp.gg/p/defjamffny-recomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 14904,
+        "sha256": "1cba948bd21bcef7c27de108594e97ab421ced97ce288dc3112b7b12e8917618"
+      },
+      "release": {
+        "tag": "v0.12.1",
+        "url": "https://github.com/vyanhursky/DefJamFFNY-recomp/releases/tag/v0.12.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "DefJamSetup-0.12.1-windows-x64.exe",
+        "version": "v0.12.1",
+        "bytes": 59151872,
+        "sha256": "c2ab03ffbfa7fd5df1420e9f703bc232442c05ac8bac931a80d857dbee72821b",
+        "sourceUrl": "https://github.com/vyanhursky/DefJamFFNY-recomp/releases/download/v0.12.1/DefJamSetup-0.12.1-windows-x64.exe",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "c2ab03ffbfa7fd5df1420e9f703bc232442c05ac8bac931a80d857dbee72821b"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "far-cry-instincts",
+      "requestedTitle": "Far Cry Instincts",
+      "title": "Far Cry Instincts",
+      "platform": "Xbox",
+      "kind": "Recompilation",
+      "source": "https://github.com/VinceIP/fci-recomp/releases/tag/v0.2.2",
+      "repository": "https://github.com/VinceIP/fci-recomp",
+      "availability": "release",
+      "requirements": "Original Xbox Far Cry Instincts title ID 55530008, version 1. The project also lists Evolution title ID 55530060, version 3 as a separate supported game.",
+      "summary": "Far Cry Instincts on PC through the linked recompilation project.",
+      "aliases": [
+        "far cry instincts fci",
+        "Far Cry Instincts pc port",
+        "far cry instincts",
+        "fci-recomp"
+      ],
+      "tags": [
+        "Far Cry Instincts PC port",
+        "Xbox",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/far-cry-instincts.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/far-cry-instincts/cover-264.6b75bfe293.webp",
+        "page": "https://recomp.gg/p/fci-recomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 24172,
+        "sha256": "6b75bfe293813e3ef14152e2205f8723cbdd69b994741460435ad74187197a68"
+      },
+      "release": {
+        "tag": "v0.2.2",
+        "url": "https://github.com/VinceIP/fci-recomp/releases/tag/v0.2.2",
+        "prerelease": false
+      },
+      "download": {
+        "name": "fci-recomp-0.2.2.zip",
+        "version": "v0.2.2",
+        "bytes": 3181555,
+        "sha256": "c67a6c88b3cb117f79979ef7bde0ae45f0653b43f5dacf46a6bfb51d9e2c26f7",
+        "sourceUrl": "https://github.com/VinceIP/fci-recomp/releases/download/v0.2.2/fci-recomp-0.2.2.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "c67a6c88b3cb117f79979ef7bde0ae45f0653b43f5dacf46a6bfb51d9e2c26f7"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "the-lord-of-the-rings-the-two-towers",
+      "requestedTitle": "The Lord of the Rings: The Two Towers",
+      "title": "The Lord of the Rings: The Two Towers",
+      "platform": "Xbox",
+      "kind": "Recompilation",
+      "source": "https://github.com/Gumpolas/TooTawersRecomp/releases/tag/1.9.7",
+      "repository": "https://github.com/Gumpolas/TooTawersRecomp",
+      "availability": "release",
+      "requirements": "Original Xbox USA retail release. The translator checks the extracted game executable before building.",
+      "summary": "The Lord of the Rings: The Two Towers on PC through the linked recompilation project.",
+      "aliases": [
+        "lotr two towers tootawers",
+        "The Lord of the Rings: The Two Towers pc port",
+        "the lord of the rings the two towers",
+        "TooTawersRecomp"
+      ],
+      "tags": [
+        "The Lord of the Rings: The Two Towers PC port",
+        "Xbox",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/the-lord-of-the-rings-the-two-towers.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/the-lord-of-the-rings-the-two-towers/cover-264.fc69580555.webp",
+        "page": "https://recomp.gg/p/tootawersrecomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 24672,
+        "sha256": "fc69580555e7489038182ec9ab0882ee07bab0ebaab9c5600ad989c9f753a6fb"
+      },
+      "release": {
+        "tag": "1.9.7",
+        "url": "https://github.com/Gumpolas/TooTawersRecomp/releases/tag/1.9.7",
+        "prerelease": false
+      },
+      "download": {
+        "name": "TwoTowers-Recompiled-v1.9.7-win64.zip",
+        "version": "1.9.7",
+        "bytes": 173882082,
+        "sha256": "1900f7f3801bcf58f46402e56c3d942cf6e751c9d453bf6ee44e15b7d814b96f",
+        "sourceUrl": "https://github.com/Gumpolas/TooTawersRecomp/releases/download/1.9.7/TwoTowers-Recompiled-v1.9.7-win64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "1900f7f3801bcf58f46402e56c3d942cf6e751c9d453bf6ee44e15b7d814b96f"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "the-lord-of-the-rings-the-return-of-the-king",
+      "requestedTitle": "The Lord of the Rings: The Return of the King",
+      "title": "The Lord of the Rings: The Return of the King",
+      "platform": "Xbox",
+      "kind": "Recompilation",
+      "source": "https://github.com/Shagg88/Athelas/releases/tag/1.6.1",
+      "repository": "https://github.com/Shagg88/Athelas",
+      "availability": "release",
+      "requirements": "Original Xbox project. Supply your own game files and follow the exact Athelas 1.6.1 setup instructions.",
+      "summary": "The Lord of the Rings: The Return of the King on PC through the linked recompilation project.",
+      "aliases": [
+        "lotr return of the king athelas",
+        "The Lord of the Rings: The Return of the King pc port",
+        "the lord of the rings the return of the king",
+        "Athelas"
+      ],
+      "tags": [
+        "The Lord of the Rings: The Return of the King PC port",
+        "Xbox",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/the-lord-of-the-rings-the-return-of-the-king.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/40/Rotkboxart2.jpg",
+        "page": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings%3A_The_Return_of_the_King_(video_game)",
+        "width": 259,
+        "height": 388,
+        "bytes": 62215,
+        "sha256": "0e9753e3cfc81175a73acb4523ff4e627c341c4a82c27b1cbcc0e206172c0412"
+      },
+      "release": {
+        "tag": "1.6.1",
+        "url": "https://github.com/Shagg88/Athelas/releases/tag/1.6.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Athelas-1.6.1.zip",
+        "version": "1.6.1",
+        "bytes": 78978499,
+        "sha256": "9591c2aacdc7d79a554d93654fc2618a95198d3ff346b5d1c19a34e08d37fe77",
+        "sourceUrl": "https://github.com/Shagg88/Athelas/releases/download/1.6.1/Athelas-1.6.1.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "9591c2aacdc7d79a554d93654fc2618a95198d3ff346b5d1c19a34e08d37fe77"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "tom-clancy-s-splinter-cell-double-agent",
+      "requestedTitle": "Tom Clancy's Splinter Cell: Double Agent",
+      "title": "Tom Clancy's Splinter Cell: Double Agent",
+      "platform": "Xbox",
+      "kind": "Recompilation",
+      "source": "https://github.com/TGP482/SCDA-XBERecomp/releases/tag/V2",
+      "repository": "https://github.com/TGP482/SCDA-XBERecomp",
+      "availability": "project",
+      "requirements": "Original Xbox version. Requires your own default.xbe, sc4_adv.xbe and documented game-data folders. The requested V2 tag has no attached build asset at review.",
+      "summary": "Tom Clancy's Splinter Cell: Double Agent on PC through the linked recompilation project.",
+      "aliases": [
+        "splinter cell double agent scda",
+        "Tom Clancy's Splinter Cell: Double Agent pc port",
+        "tom clancy s splinter cell double agent",
+        "SCDA-XBERecomp"
+      ],
+      "tags": [
+        "Tom Clancy's Splinter Cell: Double Agent PC port",
+        "Xbox",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/tom-clancy-s-splinter-cell-double-agent.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/tom-clancys-splinter-cell-double-agent/cover-264.d8af733748.webp",
+        "page": "https://recomp.gg/p/scda-xberecomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 17690,
+        "sha256": "d8af733748097e49484217ee9ebe1529f0f0cb78a0410aeb127d069a514f7434"
+      },
+      "release": {
+        "tag": "V2",
+        "url": "https://github.com/TGP482/SCDA-XBERecomp/releases/tag/V2",
+        "prerelease": false
+      },
+      "archiveStatus": "not-published"
+    },
+    {
+      "id": "army-of-two",
+      "requestedTitle": "Army of Two",
+      "title": "Army of Two",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/OpenPortroid/ArmyOfTwoRecompilation/releases/tag/v1.3.5",
+      "repository": "https://github.com/OpenPortroid/ArmyOfTwoRecompilation",
+      "availability": "release",
+      "requirements": "Xbox 360 European release with Title Update 2. The project lists DLC as optional.",
+      "summary": "Army of Two on PC through the linked recompilation project.",
+      "aliases": [
+        "army of two aot",
+        "Army of Two pc port",
+        "army of two",
+        "ArmyOfTwoRecompilation"
+      ],
+      "tags": [
+        "Army of Two PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/army-of-two.webp",
+        "sourceUrl": "https://recomp.gg/media/index/army-of-two/cover-264.55110fed1c.webp",
+        "page": "https://recomp.gg/p/armyoftworecompilation",
+        "width": 264,
+        "height": 352,
+        "bytes": 25110,
+        "sha256": "55110fed1cb71f3dbe1acf52e87e40977d4d4643e3a22a01c0d753ef976a4d1d"
+      },
+      "release": {
+        "tag": "v1.3.5",
+        "url": "https://github.com/OpenPortroid/ArmyOfTwoRecompilation/releases/tag/v1.3.5",
+        "prerelease": false
+      },
+      "download": {
+        "name": "ArmyOfTwo-v1.3.5.zip",
+        "version": "v1.3.5",
+        "bytes": 34944499,
+        "sha256": "467009648b8c7418a1493b1d577c81c000dad5cc13bc2a53623b29ca4780bf74",
+        "sourceUrl": "https://github.com/OpenPortroid/ArmyOfTwoRecompilation/releases/download/v1.3.5/ArmyOfTwo-v1.3.5.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "467009648b8c7418a1493b1d577c81c000dad5cc13bc2a53623b29ca4780bf74"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "crackdown",
+      "requestedTitle": "Crackdown",
+      "title": "Crackdown",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/SkiddyToast/Crackdown",
+      "repository": "https://github.com/SkiddyToast/Crackdown",
+      "availability": "project",
+      "requirements": "Unfinished source-build project for Crackdown Xbox 360 TU0. No packaged release was published at review; the README specifies ReXGlue SDK 0.2.2.",
+      "summary": "Crackdown on PC through the linked recompilation project.",
+      "aliases": [
+        "crackdown pc",
+        "Crackdown pc port",
+        "crackdown",
+        "Crackdown"
+      ],
+      "tags": [
+        "Crackdown PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/crackdown.webp",
+        "sourceUrl": "https://recomp.gg/media/index/crackdown/cover-264.03bd535107.webp",
+        "page": "https://recomp.gg/p/crackdown",
+        "width": 264,
+        "height": 352,
+        "bytes": 24076,
+        "sha256": "03bd5351078adbf9e256c5e4258c94fcfbf3cedf0dddf850f93bf6656f3df28c"
+      },
+      "archiveStatus": "not-published"
+    },
+    {
+      "id": "dead-rising-2-case-zero",
+      "requestedTitle": "Dead Rising 2: Case Zero",
+      "title": "Dead Rising 2: Case Zero",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/wivi514/Dead_Rising_2_Case_Zero_Xenon_Recomp/releases/tag/v1.1.3",
+      "repository": "https://github.com/wivi514/Dead_Rising_2_Case_Zero_Xenon_Recomp",
+      "availability": "release",
+      "requirements": "Xbox 360 Case Zero. Match the source-game files and setup checks documented by the pinned v1.1.3 release.",
+      "summary": "Dead Rising 2: Case Zero on PC through the linked recompilation project.",
+      "aliases": [
+        "dead rising 2 case zero dr2",
+        "Dead Rising 2: Case Zero pc port",
+        "dead rising 2 case zero",
+        "Dead_Rising_2_Case_Zero_Xenon_Recomp"
+      ],
+      "tags": [
+        "Dead Rising 2: Case Zero PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/dead-rising-2-case-zero.webp",
+        "sourceUrl": "https://recomp.gg/media/index/dead-rising-2-case-zero/cover-264.e5c13025dc.webp",
+        "page": "https://recomp.gg/p/dead-rising-2-case-zero-xenon-recomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 16438,
+        "sha256": "e5c13025dc70ed499aa1b7405a0ca2cd18f04a40cca6cc24fa77a8673b3ed578"
+      },
+      "release": {
+        "tag": "v1.1.3",
+        "url": "https://github.com/wivi514/Dead_Rising_2_Case_Zero_Xenon_Recomp/releases/tag/v1.1.3",
+        "prerelease": false
+      },
+      "download": {
+        "name": "CaseZeroRecomp-windows-x86_64.zip",
+        "version": "v1.1.3",
+        "bytes": 24956419,
+        "sha256": "f821dd717c08baa83b06ae11ece1963835bbe07816b43a52792f3040cfd99a28",
+        "sourceUrl": "https://github.com/wivi514/Dead_Rising_2_Case_Zero_Xenon_Recomp/releases/download/v1.1.3/CaseZeroRecomp-windows-x86_64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "f821dd717c08baa83b06ae11ece1963835bbe07816b43a52792f3040cfd99a28"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "forza-horizon",
+      "requestedTitle": "Forza Horizon",
+      "title": "Forza Horizon",
+      "platform": "Xbox 360",
+      "kind": "Launcher",
+      "source": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.6.1",
+      "repository": "https://github.com/arcanite24/pinyon-shift",
+      "availability": "release",
+      "requirements": "Xbox 360 USA retail disc, serial MS-2505, title ID 4D5309C9. The project describes an optional title-update-v4 build for Rally and 1000 Club.",
+      "summary": "Forza Horizon on PC through the linked launcher project.",
+      "aliases": [
+        "forza horizon 1 pinyon shift",
+        "Forza Horizon pc port",
+        "forza horizon",
+        "pinyon-shift"
+      ],
+      "tags": [
+        "Forza Horizon PC port",
+        "Xbox 360",
+        "Launcher"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/forza-horizon.webp",
+        "sourceUrl": "https://recomp.gg/media/index/forza-horizon/cover-264.33e5dc1c8b.webp",
+        "page": "https://recomp.gg/p/pinyon-shift",
+        "width": 264,
+        "height": 352,
+        "bytes": 14674,
+        "sha256": "33e5dc1c8b15a70775ff29fb68590df051ff4b24f441ca1764e896e7480640bf"
+      },
+      "release": {
+        "tag": "v0.6.1",
+        "url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.6.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "PinyonShift-Launcher.zip",
+        "version": "v0.6.1",
+        "bytes": 68852039,
+        "sha256": "b38fe82590702388a450dc685dd29d71850ce3eff5e36947b264d99e59b31585",
+        "sourceUrl": "https://github.com/arcanite24/pinyon-shift/releases/download/v0.6.1/PinyonShift-Launcher.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "b38fe82590702388a450dc685dd29d71850ce3eff5e36947b264d99e59b31585"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "geometry-wars-retro-evolved-2",
+      "requestedTitle": "Geometry Wars: Retro Evolved 2",
+      "title": "Geometry Wars: Retro Evolved 2",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/saulob/geometry-wars-retro-evolved-2-recompiled/releases/tag/v0.6.1",
+      "repository": "https://github.com/saulob/geometry-wars-retro-evolved-2-recompiled",
+      "availability": "release",
+      "requirements": "Xbox Live Arcade title ID 584108FF, game version 0.0.1.2. Match the executable size and hashes in the pinned release documentation.",
+      "summary": "Geometry Wars: Retro Evolved 2 on PC through the linked recompilation project.",
+      "aliases": [
+        "geometry wars 2 retro evolved",
+        "Geometry Wars: Retro Evolved 2 pc port",
+        "geometry wars retro evolved 2",
+        "geometry-wars-retro-evolved-2-recompiled"
+      ],
+      "tags": [
+        "Geometry Wars: Retro Evolved 2 PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/geometry-wars-retro-evolved-2.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/geometry-wars-retro-evolved-2/cover-264.77ee4e7a0f.webp",
+        "page": "https://recomp.gg/p/geometry-wars-retro-evolved-2-recompiled",
+        "width": 264,
+        "height": 352,
+        "bytes": 14696,
+        "sha256": "77ee4e7a0f02fc814638b55adf08558a932445ef2c7ae385fe446fc7bfa0be94"
+      },
+      "release": {
+        "tag": "v0.6.1",
+        "url": "https://github.com/saulob/geometry-wars-retro-evolved-2-recompiled/releases/tag/v0.6.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "GeometryWarsRetroEvolved2-v0.6.1-windows-x64.zip",
+        "version": "v0.6.1",
+        "bytes": 9627860,
+        "sha256": "7a3862ab73e5f5d9536d58c5eb9c15cad89a492d9266d6ae399089140d1b5b08",
+        "sourceUrl": "https://github.com/saulob/geometry-wars-retro-evolved-2-recompiled/releases/download/v0.6.1/GeometryWarsRetroEvolved2-v0.6.1-windows-x64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "7a3862ab73e5f5d9536d58c5eb9c15cad89a492d9266d6ae399089140d1b5b08"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "peter-jackson-s-king-kong",
+      "requestedTitle": "Peter Jackson's King Kong",
+      "title": "Peter Jackson's King Kong",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/TekRantGaming/king-kong-recompiled/releases/tag/v1.9.13",
+      "repository": "https://github.com/TekRantGaming/king-kong-recompiled",
+      "availability": "release",
+      "requirements": "Xbox 360 USA / Europe disc, title ID 555307D3, game version 0.0.0.1. Keep the documented disc checksum pin.",
+      "summary": "Peter Jackson's King Kong on PC through the linked recompilation project.",
+      "aliases": [
+        "peter jacksons king kong",
+        "Peter Jackson's King Kong pc port",
+        "peter jackson s king kong",
+        "king-kong-recompiled"
+      ],
+      "tags": [
+        "Peter Jackson's King Kong PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/peter-jackson-s-king-kong.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/King-kong-cover-pc.jpg",
+        "page": "https://en.wikipedia.org/wiki/King_Kong_(2005_video_game)",
+        "width": 256,
+        "height": 361,
+        "bytes": 44338,
+        "sha256": "baba2c6a61fee7907514e50fad1b891860db350ff8c4f8e6a793b617398b07b5"
+      },
+      "release": {
+        "tag": "v1.9.13",
+        "url": "https://github.com/TekRantGaming/king-kong-recompiled/releases/tag/v1.9.13",
+        "prerelease": false
+      },
+      "download": {
+        "name": "KingKong-v1.9.13-windows-x64.zip",
+        "version": "v1.9.13",
+        "bytes": 22914490,
+        "sha256": "b9d72901f9a6c619782f9cde1a9533cb5256ec8fcf8f0b015c2a35caa056e104",
+        "sourceUrl": "https://github.com/TekRantGaming/king-kong-recompiled/releases/download/v1.9.13/KingKong-v1.9.13-windows-x64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "b9d72901f9a6c619782f9cde1a9533cb5256ec8fcf8f0b015c2a35caa056e104"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "call-of-duty-modern-warfare-2",
+      "requestedTitle": "Call of Duty: Modern Warfare 2",
+      "title": "Call of Duty: Modern Warfare 2",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/PaulCombal/mw2-recompiled/releases/tag/v0.8.0",
+      "repository": "https://github.com/PaulCombal/mw2-recompiled",
+      "availability": "release",
+      "requirements": "Xbox 360 disc version 1.0.557 (USA / Europe). The documented launcher applies Title Update 6. This is the 2009 game, not Modern Warfare II (2022).",
+      "summary": "Call of Duty: Modern Warfare 2 on PC through the linked recompilation project.",
+      "aliases": [
+        "cod modern warfare 2 mw2 2009",
+        "Call of Duty: Modern Warfare 2 pc port",
+        "call of duty modern warfare 2",
+        "mw2-recompiled"
+      ],
+      "tags": [
+        "Call of Duty: Modern Warfare 2 PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/call-of-duty-modern-warfare-2.webp",
+        "sourceUrl": "https://recomp.gg/media/index/call-of-duty-modern-warfare-2/cover-264.d77c91291a.webp",
+        "page": "https://recomp.gg/p/mw2-recompiled",
+        "width": 264,
+        "height": 352,
+        "bytes": 16928,
+        "sha256": "d77c91291a967a1176782c0409ba4747da3f992c7811a944f0e897e22ef401fd"
+      },
+      "release": {
+        "tag": "v0.8.0",
+        "url": "https://github.com/PaulCombal/mw2-recompiled/releases/tag/v0.8.0",
+        "prerelease": false
+      },
+      "download": {
+        "name": "mw2-v0.8.0-windows.zip",
+        "version": "v0.8.0",
+        "bytes": 19042917,
+        "sha256": "622f7888623ffa63d7d8375b034fcf06fad7157e101e9d7f31dde5c6b44a3534",
+        "sourceUrl": "https://github.com/PaulCombal/mw2-recompiled/releases/download/v0.8.0/mw2-v0.8.0-windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "622f7888623ffa63d7d8375b034fcf06fad7157e101e9d7f31dde5c6b44a3534"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "splatterhouse",
+      "requestedTitle": "Splatterhouse",
+      "title": "Splatterhouse",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/0c0de/splatterhouse-decomp",
+      "repository": "https://github.com/0c0de/splatterhouse-decomp",
+      "availability": "release",
+      "requirements": "Splatterhouse (2010), Xbox 360 title ID 4E4D07F0. Supply your own matching game executable and data.",
+      "summary": "Splatterhouse on PC through the linked recompilation project.",
+      "aliases": [
+        "splatterhouse 2010",
+        "Splatterhouse pc port",
+        "splatterhouse",
+        "splatterhouse-decomp"
+      ],
+      "tags": [
+        "Splatterhouse PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/splatterhouse.webp",
+        "sourceUrl": "https://recomp.gg/media/index/splatterhouse/cover-264.df56fa327f.webp",
+        "page": "https://recomp.gg/p/splatterhouse-decomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 14254,
+        "sha256": "df56fa327f66a46b219a5ce3a670296a3f2c8667d20f489f9c2fcae4e18e3155"
+      },
+      "release": {
+        "tag": "v0.3",
+        "url": "https://github.com/0c0de/splatterhouse-decomp/releases/tag/v0.3",
+        "prerelease": false
+      },
+      "download": {
+        "name": "splatterhouse-decomp-release.zip",
+        "version": "v0.3",
+        "bytes": 35648027,
+        "sha256": "8940ae9ecd0e4aed97a8d77513abd0537bd5a01f1439b0ad736be6e0e8ec4d78",
+        "sourceUrl": "https://github.com/0c0de/splatterhouse-decomp/releases/download/v0.3/splatterhouse-decomp-release.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "8940ae9ecd0e4aed97a8d77513abd0537bd5a01f1439b0ad736be6e0e8ec4d78"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "tekken-6-native-online",
+      "requestedTitle": "Tekken 6 Native Online",
+      "title": "Tekken 6 Native Online",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/Ekspym/Tekken6-native-online/releases",
+      "repository": "https://github.com/Ekspym/Tekken6-native-online",
+      "availability": "release",
+      "requirements": "Xbox 360 USA / Europe, revision 1. Full package selected; the separate patch-only package is not substituted.",
+      "summary": "Tekken 6 Native Online on PC through the linked recompilation project.",
+      "aliases": [
+        "tekken 6 native online t6",
+        "Tekken 6 Native Online pc port",
+        "tekken 6 native online",
+        "Tekken6-native-online"
+      ],
+      "tags": [
+        "Tekken 6 Native Online PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/tekken-6-native-online.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/tekken-6/cover-264.a655a86c92.webp",
+        "page": "https://recomp.gg/p/tekken6-native-online",
+        "width": 264,
+        "height": 352,
+        "bytes": 22158,
+        "sha256": "a655a86c92faa672ce7d6a9219a317b74c02cec949a64e5d0bd44dceb7598849"
+      },
+      "release": {
+        "tag": "v2.7.1",
+        "url": "https://github.com/Ekspym/Tekken6-native-online/releases/tag/v2.7.1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "tekken6_native_online.zip",
+        "version": "v2.7.1",
+        "bytes": 197739657,
+        "sha256": "cf43f14cf40640470afbcbf7365afe293e60fa7ba2875932dee4a0f8833b6367",
+        "sourceUrl": "https://github.com/Ekspym/Tekken6-native-online/releases/download/v2.7.1/tekken6_native_online.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-tekken-6-native-online",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Tekken 6 Native Online",
+          "Ports"
+        ],
+        "upstreamSha256": "cf43f14cf40640470afbcbf7365afe293e60fa7ba2875932dee4a0f8833b6367"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "wet",
+      "requestedTitle": "WET",
+      "title": "WET",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/nikolaygorb/WetRecomp/releases/tag/1.5",
+      "repository": "https://github.com/nikolaygorb/WetRecomp",
+      "availability": "release",
+      "requirements": "Xbox 360 title ID 425307DB, disc XA-2498, media ID 3077A693 and module hash 9A084828F85F951B.",
+      "summary": "WET on PC through the linked recompilation project.",
+      "aliases": [
+        "wet recomp",
+        "WET pc port",
+        "wet",
+        "WetRecomp"
+      ],
+      "tags": [
+        "WET PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/wet.webp",
+        "sourceUrl": "https://recomp.gg/media/index/wet/cover-264.b02d028bc5.webp",
+        "page": "https://recomp.gg/p/wetrecomp",
+        "width": 264,
+        "height": 352,
+        "bytes": 24242,
+        "sha256": "b02d028bc5fe865fe1a4e87860cdff335d99f17558e354e5a9d2efd737389099"
+      },
+      "release": {
+        "tag": "1.5",
+        "url": "https://github.com/nikolaygorb/WetRecomp/releases/tag/1.5",
+        "prerelease": false
+      },
+      "download": {
+        "name": "wet-recomp-win64.zip",
+        "version": "1.5",
+        "bytes": 32308107,
+        "sha256": "859e2d03b0013148a28ab1973d18dc829c431322854de79cf92aa4c4fa5c8723",
+        "sourceUrl": "https://github.com/nikolaygorb/WetRecomp/releases/download/1.5/wet-recomp-win64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "upstreamSha256": "859e2d03b0013148a28ab1973d18dc829c431322854de79cf92aa4c4fa5c8723"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "wwe-smackdown-vs-raw-2011",
+      "requestedTitle": "WWE SmackDown vs. Raw 2011",
+      "title": "WWE SmackDown vs. Raw 2011",
+      "platform": "Xbox 360",
+      "kind": "Recompilation",
+      "source": "https://github.com/KaikoClanworth1/wwe-svr2011-pc/releases/tag/v2.1.5",
+      "repository": "https://github.com/KaikoClanworth1/wwe-svr2011-pc",
+      "availability": "release",
+      "requirements": "Xbox 360 version. Use your own disc image. The PC package is selected; the optional mods ZIP and Android build are separate downloads.",
+      "summary": "WWE SmackDown vs. Raw 2011 on PC through the linked recompilation project.",
+      "aliases": [
+        "wwe smackdown vs raw 2011 svr2011",
+        "WWE SmackDown vs. Raw 2011 pc port",
+        "wwe smackdown vs raw 2011",
+        "wwe-svr2011-pc"
+      ],
+      "tags": [
+        "WWE SmackDown vs. Raw 2011 PC port",
+        "Xbox 360",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/wwe-smackdown-vs-raw-2011.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/wwe-smackdown-vs-raw-2011/cover-264.03693a84ca.webp",
+        "page": "https://recomp.gg/p/wwe-svr2011-pc",
+        "width": 264,
+        "height": 352,
+        "bytes": 28092,
+        "sha256": "03693a84ca4cf5ca7def10873fb8bc4a347237e583985604100725eb928214e3"
+      },
+      "release": {
+        "tag": "v2.1.5",
+        "url": "https://github.com/KaikoClanworth1/wwe-svr2011-pc/releases/tag/v2.1.5",
+        "prerelease": false
+      },
+      "download": {
+        "name": "SvR2011-PC-v2.1.5.zip",
+        "version": "v2.1.5",
+        "bytes": 565928602,
+        "sha256": "0d868c26108ee4cb8df2e588a90b3170c36aeb768669b4ca196230c00c3f23a5",
+        "sourceUrl": "https://github.com/KaikoClanworth1/wwe-svr2011-pc/releases/download/v2.1.5/SvR2011-PC-v2.1.5.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-wwe-smackdown-vs-raw-2011",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "WWE SmackDown vs. Raw 2011",
+          "Ports"
+        ],
+        "upstreamSha256": "0d868c26108ee4cb8df2e588a90b3170c36aeb768669b4ca196230c00c3f23a5"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "infamous",
+      "requestedTitle": "inFAMOUS",
+      "title": "inFAMOUS Reborn · UGC server",
+      "platform": "PS3",
+      "kind": "Companion server",
+      "source": "https://github.com/adamstark1/inFAMOUS-Reborn-PS3",
+      "repository": "https://github.com/adamstark1/inFAMOUS-Reborn-PS3",
+      "availability": "release",
+      "requirements": "Companion server / launcher for PS3 inFAMOUS 2 and inFAMOUS: Festival of Blood UGC. This repository is not a PC port of the original inFAMOUS game.",
+      "summary": "Restore user-generated content for inFAMOUS 2 and Festival of Blood on PS3 using a PC-hosted companion server.",
+      "aliases": [
+        "infamous 1 reborn",
+        "inFAMOUS pc port",
+        "infamous",
+        "inFAMOUS-Reborn-PS3"
+      ],
+      "tags": [
+        "PC companion tool",
+        "PS3",
+        "Companion server"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/infamous-2.png",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Infamous_2.png",
+        "page": "https://en.wikipedia.org/wiki/Infamous_2",
+        "width": 256,
+        "height": 295,
+        "bytes": 156039,
+        "sha256": "a2a9772436ead87dc8b546eb49d155000f78cfa73d0ae5df124bf7c53bed5733"
+      },
+      "release": {
+        "tag": "1.0.3",
+        "url": "https://github.com/adamstark1/inFAMOUS-Reborn-PS3/releases/tag/1.0.3",
+        "prerelease": false
+      },
+      "download": {
+        "name": "inFAMOUS-Reborn-Windows.zip",
+        "version": "1.0.3",
+        "bytes": 81302337,
+        "sha256": "e54f4480c1fd6ee2d43acb76dd14c13a76d89c17522075a2f3d07671cc09fde5",
+        "sourceUrl": "https://github.com/adamstark1/inFAMOUS-Reborn-PS3/releases/download/1.0.3/inFAMOUS-Reborn-Windows.zip",
+        "archiveRole": [
+          "Helpers",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-infamous",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "inFAMOUS 2 and Festival of Blood",
+          "Tools"
+        ],
+        "upstreamSha256": "e54f4480c1fd6ee2d43acb76dd14c13a76d89c17522075a2f3d07671cc09fde5"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "resident-evil-code-veronica",
+      "requestedTitle": "Resident Evil Code: Veronica",
+      "title": "Resident Evil Code: Veronica X",
+      "platform": "PS3",
+      "kind": "Recompilation",
+      "source": "https://github.com/kastieloficial/RE-Code-Veronica-Recomp",
+      "repository": "https://github.com/kastieloficial/RE-Code-Veronica-Recomp",
+      "availability": "release",
+      "requirements": "Code: Veronica X, PS3 PSN version. The author documents EU / JP / US game preparation. This is not the Dreamcast original; the optional PKG extractor is a separate helper.",
+      "summary": "Resident Evil Code: Veronica X on PC through the linked recompilation project.",
+      "aliases": [
+        "resident evil code veronica re code veronica",
+        "Resident Evil Code: Veronica pc port",
+        "resident evil code veronica",
+        "RE-Code-Veronica-Recomp"
+      ],
+      "tags": [
+        "Resident Evil Code: Veronica PC port",
+        "PS3",
+        "Recompilation"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/resident-evil-code-veronica.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/RECV_boxart.jpg",
+        "page": "https://en.wikipedia.org/wiki/Resident_Evil_%E2%80%93_Code%3A_Veronica",
+        "width": 259,
+        "height": 388,
+        "bytes": 42339,
+        "sha256": "7ae69eba95a0f1f39cf5a8da60658b5d70455044234122bbdbe814e1271275ee"
+      },
+      "release": {
+        "tag": "v1.1.12",
+        "url": "https://github.com/kastieloficial/RE-Code-Veronica-PS3-HD-Recomp-PC/releases/tag/v1.1.12",
+        "prerelease": false
+      },
+      "download": {
+        "name": "CodeVeronica-PC-v1.1.12.zip",
+        "version": "v1.1.12",
+        "bytes": 531506233,
+        "sha256": "ce2106841fea272a42163f9f13bca2ac813c18363f04485d3dd5c7a199f09329",
+        "sourceUrl": "https://github.com/kastieloficial/RE-Code-Veronica-PS3-HD-Recomp-PC/releases/download/v1.1.12/CodeVeronica-PC-v1.1.12.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-resident-evil-code-veronica",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Resident Evil Code: Veronica",
+          "Ports"
+        ],
+        "upstreamSha256": "ce2106841fea272a42163f9f13bca2ac813c18363f04485d3dd5c7a199f09329"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "crash-team-racing-nitro-fueled",
+      "requestedTitle": "Crash Team Racing Nitro-Fueled",
+      "title": "Crash Team Racing Nitro-Fueled",
+      "platform": "PS4",
+      "kind": "PC port",
+      "source": "https://github.com/GetLostIn/CTR-NitroFueled-PC/releases",
+      "repository": "https://github.com/GetLostIn/CTR-NitroFueled-PC",
+      "availability": "release",
+      "requirements": "PS4 CUSA13795 with update 1.21. Use your own base game and matching update.",
+      "summary": "Crash Team Racing Nitro-Fueled on PC through the linked pc port project.",
+      "aliases": [
+        "crash team racing nitro fuelled fueled ctr",
+        "Crash Team Racing Nitro-Fueled pc port",
+        "crash team racing nitro fueled",
+        "CTR-NitroFueled-PC"
+      ],
+      "tags": [
+        "Crash Team Racing Nitro-Fueled PC port",
+        "PS4",
+        "PC port"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/crash-team-racing-nitro-fueled.webp",
+        "sourceUrl": "https://tfvdqopyl00d3udi.public.blob.vercel-storage.com/index/crash-team-racing-nitro-fueled/cover-264.a4486a0fc0.webp",
+        "page": "https://recomp.gg/p/ctr-nitrofueled-pc",
+        "width": 264,
+        "height": 352,
+        "bytes": 26594,
+        "sha256": "a4486a0fc021063b864bb3088fa75123fd09037102c35a6c73e0829efdc904ec"
+      },
+      "release": {
+        "tag": "v0.4",
+        "url": "https://github.com/GetLostIn/CTR-NitroFueled-PC/releases/tag/v0.4",
+        "prerelease": false
+      },
+      "download": {
+        "name": "CTR-NitroFueled-PC-portable-windows.zip",
+        "version": "v0.4",
+        "bytes": 140293286,
+        "sha256": "3f20aa19094cb11d4d86c798a21f117ae9013e9c5d061c422c08b5bbe5560fe5",
+        "sourceUrl": "https://github.com/GetLostIn/CTR-NitroFueled-PC/releases/download/v0.4/CTR-NitroFueled-PC-portable-windows.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-crash-team-racing-nitro-fueled",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Crash Team Racing Nitro-Fueled",
+          "Ports"
+        ],
+        "upstreamSha256": "3f20aa19094cb11d4d86c798a21f117ae9013e9c5d061c422c08b5bbe5560fe5"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "driveclub",
+      "requestedTitle": "Driveclub",
+      "title": "Driveclub",
+      "platform": "PS4",
+      "kind": "Compatibility wrapper",
+      "source": "https://github.com/ondrejeder/Driveclub-pc-wrapper/releases/tag/0.2.5",
+      "repository": "https://github.com/ondrejeder/Driveclub-pc-wrapper",
+      "availability": "release",
+      "requirements": "PS4 CUSA00093 with update 1.28 is the tested configuration. Other regions are described as experimental.",
+      "summary": "Driveclub on PC through the linked compatibility wrapper project.",
+      "aliases": [
+        "drive club driveclub pc wrapper",
+        "Driveclub pc port",
+        "driveclub",
+        "Driveclub-pc-wrapper"
+      ],
+      "tags": [
+        "Driveclub PC port",
+        "PS4",
+        "Compatibility wrapper"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/driveclub.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/6f/Driveclub_box_art.jpg",
+        "page": "https://en.wikipedia.org/wiki/Driveclub",
+        "width": 299,
+        "height": 333,
+        "bytes": 78859,
+        "sha256": "f38720513ddab64182c9ff810873e6fa3bf4fad7d5f4db14c70b5732fee816a8"
+      },
+      "release": {
+        "tag": "0.2.5",
+        "url": "https://github.com/ondrejeder/Driveclub-pc-wrapper/releases/tag/0.2.5",
+        "prerelease": false
+      },
+      "download": {
+        "name": "Driveclub-PC-v0.2.5.zip",
+        "version": "0.2.5",
+        "bytes": 32240539,
+        "sha256": "71aee3d44b87286d889693b5d81f83dbadba28096a3d3ee5c25e5d582cd8cc8e",
+        "sourceUrl": "https://github.com/ondrejeder/Driveclub-pc-wrapper/releases/download/0.2.5/Driveclub-PC-v0.2.5.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-driveclub",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Driveclub",
+          "Ports"
+        ],
+        "upstreamSha256": "71aee3d44b87286d889693b5d81f83dbadba28096a3d3ee5c25e5d582cd8cc8e"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "gravity-rush-2",
+      "requestedTitle": "Gravity Rush 2",
+      "title": "Gravity Rush 2",
+      "platform": "PS4",
+      "kind": "PC port",
+      "source": "https://github.com/HayatoG/gr2_pc/releases/tag/v2026.10.24-a2e69a1",
+      "repository": "https://github.com/HayatoG/gr2_pc",
+      "availability": "release",
+      "requirements": "PS4 US CUSA03694 with update 01.11. Preserve the exact v2026.10.24-a2e69a1 package requested.",
+      "summary": "Gravity Rush 2 on PC through the linked pc port project.",
+      "aliases": [
+        "gravity rush 2 gr2",
+        "Gravity Rush 2 pc port",
+        "gravity rush 2",
+        "gr2_pc"
+      ],
+      "tags": [
+        "Gravity Rush 2 PC port",
+        "PS4",
+        "PC port"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/gravity-rush-2.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/94/Gravity_Rush_2.jpg",
+        "page": "https://en.wikipedia.org/wiki/Gravity_Rush_2",
+        "width": 250,
+        "height": 250,
+        "bytes": 95541,
+        "sha256": "7055c56e48479ac4efb1748b5b034317464356335c97bbf78aeb0bb5d47e7483"
+      },
+      "release": {
+        "tag": "v2026.10.24-a2e69a1",
+        "url": "https://github.com/HayatoG/gr2_pc/releases/tag/v2026.10.24-a2e69a1",
+        "prerelease": false
+      },
+      "download": {
+        "name": "gr2-windows-x86_64.zip",
+        "version": "v2026.10.24-a2e69a1",
+        "bytes": 113543088,
+        "sha256": "4fe3d0e2da7e1fa0a9dfaa231b2b35b62ce08e9ebf31c5cea75584c41dd253c6",
+        "sourceUrl": "https://github.com/HayatoG/gr2_pc/releases/download/v2026.10.24-a2e69a1/gr2-windows-x86_64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-gravity-rush-2",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Gravity Rush 2",
+          "Ports"
+        ],
+        "upstreamSha256": "4fe3d0e2da7e1fa0a9dfaa231b2b35b62ce08e9ebf31c5cea75584c41dd253c6"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "the-last-guardian",
+      "requestedTitle": "The Last Guardian",
+      "title": "The Last Guardian",
+      "platform": "PS4",
+      "kind": "PC port",
+      "source": "https://github.com/HayatoG/tlg_pc/releases/tag/v2026.10.24-1a130dd",
+      "repository": "https://github.com/HayatoG/tlg_pc",
+      "availability": "release",
+      "requirements": "PS4 US CUSA03627 or EU CUSA03745 with update 01.03. Preserve the exact v2026.10.24-1a130dd package requested.",
+      "summary": "The Last Guardian on PC through the linked pc port project.",
+      "aliases": [
+        "the last guardian tlg",
+        "The Last Guardian pc port",
+        "the last guardian",
+        "tlg_pc"
+      ],
+      "tags": [
+        "The Last Guardian PC port",
+        "PS4",
+        "PC port"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/the-last-guardian.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/25/The_Last_Guardian_cover_art.jpg",
+        "page": "https://en.wikipedia.org/wiki/The%20Last%20Guardian",
+        "width": 300,
+        "height": 330,
+        "bytes": 38671,
+        "sha256": "644fd5508856dfff219b71996479a4ddc93fb06cb11a183c0fd1356da2b01eb7"
+      },
+      "release": {
+        "tag": "v2026.10.24-1a130dd",
+        "url": "https://github.com/HayatoG/tlg_pc/releases/tag/v2026.10.24-1a130dd",
+        "prerelease": false
+      },
+      "download": {
+        "name": "tlg-windows-x86_64.zip",
+        "version": "v2026.10.24-1a130dd",
+        "bytes": 113660578,
+        "sha256": "4c05012aac3f80751acb6821d6deaafd4266e6188d480517a1c5907d0c7ded5b",
+        "sourceUrl": "https://github.com/HayatoG/tlg_pc/releases/download/v2026.10.24-1a130dd/tlg-windows-x86_64.zip",
+        "archiveRole": [
+          "Builds",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-the-last-guardian",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "The Last Guardian",
+          "Ports"
+        ],
+        "upstreamSha256": "4c05012aac3f80751acb6821d6deaafd4266e6188d480517a1c5907d0c7ded5b"
+      },
+      "archiveStatus": "downloaded"
+    },
+    {
+      "id": "prince-of-persia-mod-manager-openjade",
+      "requestedTitle": "Prince of Persia Mod Manager / OpenJade",
+      "title": "Prince of Persia Mod Manager / OpenJade",
+      "platform": "PC helper",
+      "kind": "Mod manager",
+      "source": "https://github.com/kaminoer/PoP-Mod-Manager",
+      "repository": "https://github.com/kaminoer/PoP-Mod-Manager",
+      "availability": "release",
+      "requirements": "Companion mod manager for the Prince of Persia Sands trilogy and Jade Toolkit mods, including the requested OpenJade workflow. This is a manager, not a standalone game port.",
+      "summary": "Manage Sands trilogy mods and the OpenJade workflow from one desktop helper.",
+      "aliases": [
+        "prince of persia manager openjade pop mod manager",
+        "Prince of Persia Mod Manager / OpenJade pc port",
+        "prince of persia mod manager openjade",
+        "PoP-Mod-Manager"
+      ],
+      "tags": [
+        "PC companion tool",
+        "PC helper",
+        "Mod manager"
+      ],
+      "cover": {
+        "path": "/assets/images/ports/prince-of-persia-mod-manager-openjade.jpg",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/8/86/Sands_of_time_cover.jpg",
+        "page": "https://en.wikipedia.org/wiki/Prince_of_Persia%3A_The_Sands_of_Time",
+        "width": 279,
+        "height": 358,
+        "bytes": 28408,
+        "sha256": "19760b83d9be7a6e0e3e290c8f3e6ac9d43f5360187119f8896d2e4467249829"
+      },
+      "release": {
+        "tag": "v2.1.2",
+        "url": "https://github.com/kaminoer/PoP-Mod-Manager/releases/tag/v2.1.2",
+        "prerelease": false
+      },
+      "download": {
+        "name": "PoP.Mod.Manager.v2.1.2.zip",
+        "version": "v2.1.2",
+        "bytes": 30137203,
+        "sha256": "6be71d48f180f6ee5c5089b3cf0259d2f4862c570dc1fd1c00ef7835538414e8",
+        "sourceUrl": "https://github.com/kaminoer/PoP-Mod-Manager/releases/download/v2.1.2/PoP.Mod.Manager.v2.1.2.zip",
+        "archiveRole": [
+          "Helpers",
+          "Windows"
+        ],
+        "itemId": "pc-console-ports-prince-of-persia-mod-manager-openjade",
+        "platform": "PC",
+        "category": [
+          "Games",
+          "Prince of Persia Mod Manager / OpenJade",
+          "Tools"
+        ],
+        "upstreamSha256": "6be71d48f180f6ee5c5089b3cf0259d2f4862c570dc1fd1c00ef7835538414e8"
+      },
+      "archiveStatus": "downloaded"
+    }
+  ]
+}

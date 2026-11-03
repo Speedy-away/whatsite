@@ -1,0 +1,24 @@
+{
+  "reviewed": "2026-11-03",
+  "scope": "PC Ports catalogue",
+  "page": "pc/ports.html",
+  "requestedSources": 49,
+  "listedProjects": 49,
+  "pinnedWindowsAssets": 45,
+  "uniqueArchivedBytes": 5242318271,
+  "projectOnlyEntries": ["Serious Sam: Next Encounter", "Splinter Cell: Double Agent V2", "Crackdown"],
+  "unavailableSource": {"title": "Super Mario Sunshine", "source": "https://github.com/TekRantGaming/sms-pc-port", "releaseHTTP": 404, "readmeHTTP": 404, "replacementAssumed": false},
+  "sourceCorrections": [
+    "Wind Waker's supplied repository documents Windows delivery through BlueWake; original link retained alongside pinned BlueWake v0.10.0.",
+    "Soulcalibur's supplied recomp.gg page resolves to enrique363/voldorium v1.1.3.",
+    "God of War III's linked SpartanPort uses the PS4 Remastered game, with CUSA/version requirements visible.",
+    "Resident Evil Code: Veronica's linked project uses the PS3 Code: Veronica X release.",
+    "Crash Team Racing Nitro-Fueled's linked project uses PS4 CUSA13795 update 1.21.",
+    "inFAMOUS Reborn is a PC-hosted PS3 UGC companion for inFAMOUS 2 and Festival of Blood, not a port of inFAMOUS 1.",
+    "Prince of Persia Mod Manager is labelled as a companion manager rather than a standalone game port."
+  ],
+  "presentation": {"covers": 49, "fit": "Full image with object-fit: contain, no artwork cropping, no title line clamp", "coverProvenance": "Per-entry source URL, source page, dimensions, bytes and SHA-256 in docs/pc-ports.json", "search": "Accent-insensitive AND search; game aliases, PC port phrases, console and availability filters; live result count and reset", "navigation": "PC hub card and guide navigation; static generated PC submenu plus runtime link for existing sidebars", "browserRenderingVerified": false},
+  "archiveVerification": {"fileRecords": 47, "uniqueReleaseAssets": 45, "preservedDuplicateCopies": 2, "zipCRCChecks": 42, "bytesHashed": 5334084800, "upstreamHashes": "Every selected asset matched its GitHub SHA-256", "downloadedCodeExecuted": false, "privateScope": "pc-console-ports", "indexRefresh": "Pending final metadata merge"},
+  "validation": {"focusedTestsPassed": 42, "productionArtifact": "Pending committed-source check", "deployment": "Pending publication"},
+  "preservation": "Original supplied URLs, exact requested release tags, game/region/revision pins and older archive files are preserved. No new large binary mirrors in Git. Two identical copies preserved after overlapping intake; no original file overwritten or deleted. Shared host development remains untouched."
+}

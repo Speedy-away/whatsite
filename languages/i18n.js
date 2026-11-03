@@ -931,7 +931,33 @@
 
   hideWhileLoading();
 
+  function ensurePCPortsNavigation() {
+    var pc = document.querySelector('.sidebar a[href="/pc/index.html"]');
+    if (!pc || !pc.parentNode || !pc.parentNode.parentNode) return;
+    var list = pc.parentNode.parentNode;
+    if (list.tagName !== 'UL') return;
+    var ports = list.querySelector('a[href="/pc/ports.html"]');
+    if (!ports) {
+      var item = pc.parentNode.cloneNode(true);
+      ports = item.querySelector('a');
+      ports.setAttribute('href', '/pc/ports.html');
+      ports.setAttribute('data-tooltip', 'Ports');
+      ports.setAttribute('aria-label', 'Ports');
+      ports.classList.remove('active');
+      ports.removeAttribute('aria-current');
+      var label = ports.querySelector('span');
+      if (label) label.textContent = 'Ports';
+      item.setAttribute('data-pc-ports-navigation', '');
+      list.appendChild(item);
+    }
+    if (location.pathname === '/pc/ports.html') {
+      pc.classList.remove('active'); pc.removeAttribute('aria-current');
+      ports.classList.add('active'); ports.setAttribute('aria-current', 'page');
+    }
+  }
+
   function boot() {
+    ensurePCPortsNavigation();
     buildSelector();
     if (initial !== DEFAULT_LANG) setLang(initial, { silent: true });
     else { current = DEFAULT_LANG; syncUI(); startObserver(); reveal(); }
