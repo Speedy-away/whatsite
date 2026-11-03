@@ -5,9 +5,9 @@ const root=path.resolve(__dirname,'../..'),read=p=>fs.readFileSync(path.join(roo
 function fixture(hash=''){
  const panels=Object.fromEntries(['tv','phone','phone-ios','phone-android','phone-harmony'].map(id=>[id,{hidden:false,setAttribute(){}}]));
  const lists=[['device',['tv','phone']],['phone',['phone-ios','phone-android','phone-harmony']]].map(([group,ids])=>({setAttribute(){},getAttribute:()=>group,querySelectorAll:()=>ids.map(id=>tabs[id])}));
- const tabs={},doc={activeElement:null,querySelectorAll:()=>lists,getElementById:id=>panels[id]};
+ const clicks={},tabs={},doc={activeElement:null,querySelectorAll:()=>lists,getElementById:id=>panels[id],addEventListener:(key,fn)=>clicks[key]=fn};
  for(const id of Object.keys(panels)){const events={},attrs={'data-app-target':id};tabs[id]={getAttribute:k=>attrs[k],setAttribute:(k,v)=>attrs[k]=v,addEventListener:(k,f)=>events[k]=f,focus(){doc.activeElement=this;},click(){events.click({preventDefault(){}});},key(key){events.keydown({key,preventDefault(){}});}};}
- const events={},win={document:doc,location:{hash},addEventListener:(k,f)=>events[k]=f};api.init(win);return {tabs,panels,doc,win,events};
+ const events={},win={document:doc,location:{hash},addEventListener:(k,f)=>events[k]=f};api.init(win);return {tabs,panels,doc,win,events,clicks};
 }
 test('device tabs isolate TV from Phone and phone tabs open the exact requested platform',()=>{
  const f=fixture();assert.equal(f.panels.tv.hidden,false);assert.equal(f.panels.phone.hidden,true);
@@ -15,6 +15,8 @@ test('device tabs isolate TV from Phone and phone tabs open the exact requested 
  f.tabs['phone-harmony'].click();assert.equal(f.panels['phone-ios'].hidden,true);assert.equal(f.panels['phone-harmony'].hidden,false);
  const deep=fixture('#phone-android');assert.equal(deep.panels.phone.hidden,false);assert.equal(deep.panels['phone-android'].hidden,false);
  deep.win.location.hash='#apk-time';deep.events.hashchange();assert.equal(deep.panels.tv.hidden,false);
+ const app=fixture('#app-aurora-store');assert.equal(app.panels['phone-android'].hidden,false);assert.equal(app.panels.phone.hidden,false);
+ app.clicks.click({target:{closest:()=>({})},preventDefault(){}});assert.equal(app.panels.tv.hidden,false);
 });
 test('tabs support keyboard navigation and a single roving tab stop per group',()=>{
  const f=fixture('#phone-ios');f.tabs['phone-ios'].key('ArrowLeft');assert.equal(f.doc.activeElement,f.tabs['phone-harmony']);assert.equal(f.tabs['phone-harmony'].getAttribute('aria-selected'),'true');assert.equal(f.tabs['phone-ios'].tabIndex,-1);

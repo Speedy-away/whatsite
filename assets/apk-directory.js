@@ -2,6 +2,7 @@
  'use strict';
  function selection(hash){
   const value=String(hash||'').replace(/^#/,'');
+  if(value==='app-aurora-store')return {device:'phone',phone:'phone-android'};
   return {device:/^phone(?:-|$)/.test(value)?'phone':'tv',phone:['phone-ios','phone-android','phone-harmony'].includes(value)?value:'phone-ios'};
  }
  function init(win){
@@ -32,6 +33,12 @@
     });
    });
   }
+  doc.addEventListener('click',event=>{
+   const link=event.target.closest&&event.target.closest('a[href="#apk-time"]');
+   if(!link||event.button>0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+   event.preventDefault();win.location.hash='apk-time';apply();
+   const target=doc.getElementById('apk-time');if(target&&target.scrollIntoView)target.scrollIntoView({block:'start'});
+  });
   win.addEventListener('hashchange',apply);apply();
  }
  const api={selection,init};if(typeof module==='object'&&module.exports)module.exports=api;
