@@ -9685,5 +9685,52 @@
     },
     "preservation": "Unrelated host working files and shared staging preserved; original images and every older download retained. Main-site host redirects preserved.",
     "browserRenderVerified": false
+  },
+  "pcGameModsExpansion20261103": {
+    "request": "Add more game mods and tools",
+    "updated": "2026-11-03",
+    "games": [
+      "Minecraft Java",
+      "Stardew Valley",
+      "Terraria",
+      "Hollow Knight",
+      "Celeste",
+      "Elden Ring"
+    ],
+    "pages": [
+      "mods/minecraft.html",
+      "mods/stardew-valley.html",
+      "mods/terraria.html",
+      "mods/hollow-knight.html",
+      "mods/celeste.html",
+      "mods/elden-ring.html"
+    ],
+    "hub": "pages/mods.html",
+    "listings": 19,
+    "readyFilesArchived": 12,
+    "archivedBytes": 263847356,
+    "referenceListings": 7,
+    "archiveScope": "pc-game-mods-expansion",
+    "archiveIndex": {
+      "items": 4941,
+      "fileRecords": 8562,
+      "presentFileRecords": 8562,
+      "missingFileRecords": 0
+    },
+    "verification": "31 focused catalogue, social preview, category artwork and required Pages/source-link tests passed. Committed artifact has 551 pages, 51312 links and zero issues. All twelve files passed size, ZIP CRC and hash checks; no downloaded code was executed.",
+    "delivery": "Version-specific upstream release URLs on the website; ready files saved in the organized F: archive. No new repository binary mirrors.",
+    "compatibility": "Preserve Minecraft Java 1.21.1/Fabric/Java 21, Iris-to-Sodium dependency and beta.1 label; SMAPI 4.5.2 desktop game 1.6.14+; HK API v77 Windows game 1.5.78.11833 and Randomizer dependencies; Everest stable-1.6662.0 desktop exclusions; Seamless Co-op v2.0.1 game 1.17. Terraria author resources avoid substituting legacy 0.11.8.3 binaries.",
+    "preservation": "All five prior Game Mods collections and every existing download/archive version remain. Shared independent-host changes were left untouched.",
+    "sourceFiles": [
+      "docs/pc-game-mods.json",
+      "scripts/build-pc-game-mods.cjs",
+      "scripts/archive-pc-game-mods.cjs",
+      "scripts/tests/pc-game-mods.test.cjs"
+    ],
+    "qa": "docs/qa/pc-game-mods-expansion.json",
+    "codeCommit": "b4413b0e3829c7f61b80ee66fd9aef3d4a0c6897",
+    "deploymentRun": "https://github.com/Speedy-away/whatsite/actions/runs/41732401945",
+    "publication": "Published successfully through GitHub Pages run 41732401945. Live revision b4413b0e3829c7f61b80ee66fd9aef3d4a0c6897 verified at 2026-11-03T22:41:03.555Z: six game pages, 19 listings, 12 pinned file links/hashes, 11 hub cards, CSS and legacy redirect passed.",
+    "browserRenderingVerified": false
   }
 }
