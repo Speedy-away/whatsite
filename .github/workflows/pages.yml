@@ -23,12 +23,17 @@ jobs:
         with:
           node-version: '22'
       - uses: actions/configure-pages@v5
+      - name: Read archive sizes without downloading archive files
+        run: node scripts/prepare-pages-tree.cjs "$RUNNER_TEMP/pages-tree.json"
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Stage site below the Pages size limit
         run: node scripts/build-pages.cjs "$RUNNER_TEMP/pages-site"
         env:
           WHATSITE_SPARSE_PAGES: '1'
+          PAGES_TREE_MANIFEST: ${{ runner.temp }}/pages-tree.json
       - name: Check deployment and native download routing
-        run: node --test scripts/tests/pages-build.test.cjs scripts/tests/pages-sparse-checkout.test.cjs
+        run: node --test scripts/tests/pages-build.test.cjs scripts/tests/pages-sparse-checkout.test.cjs scripts/tests/pages-tree-metadata.test.cjs scripts/tests/source-link-cleanup.test.cjs
       - name: Verify deployment links and artifact size
         run: node scripts/verify-pages-build.cjs "$RUNNER_TEMP/pages-site"
       - uses: actions/upload-pages-artifact@v3

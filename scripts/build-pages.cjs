@@ -17,6 +17,13 @@ function eligible(name) {
     !/^(?:AGENTS\.md|SYNC\.md|sync\.ps1|skills-lock\.json)$/.test(name);
 }
 function treeFiles(root) {
+  if (process.env.PAGES_TREE_MANIFEST) {
+    const data=JSON.parse(fs.readFileSync(process.env.PAGES_TREE_MANIFEST,'utf8'));
+    if(process.env.GITHUB_SHA && data.revision!==process.env.GITHUB_SHA)throw Error('Pages metadata belongs to a different commit');
+    const sizes=new Map(data.files.map(file=>{if(!Number.isSafeInteger(file.bytes)||file.bytes<0)throw Error('Invalid repository file size');return [file.name,file.bytes];}));
+    return {names:[...sizes.keys()],sizes};
+  }
+
   const entries = execFileSync('git', ['ls-tree', '-r', '-l', '-z', 'HEAD'], {cwd:root,maxBuffer:64*1024*1024}).toString().split('\0').filter(Boolean);
   const sizes = new Map(entries.map(entry => {const at=entry.indexOf('\t');return [entry.slice(at+1),Number(entry.slice(0,at).trim().split(/\s+/).at(-1))];}));
   return {names:[...sizes.keys()],sizes};
