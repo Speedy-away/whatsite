@@ -16,7 +16,16 @@ function eligible(name) {
     !/^docs\/(?:qa|screenshots|host-reviews)\//.test(name) &&
     !/^(?:AGENTS\.md|SYNC\.md|sync\.ps1|skills-lock\.json)$/.test(name);
 }
-function plan(root = ROOT, names, revision = 'main') {
+function treeFiles(root) {
+  const entries = execFileSync('git', ['ls-tree', '-r', '-l', '-z', 'HEAD'], {cwd:root,maxBuffer:64*1024*1024}).toString().split('\0').filter(Boolean);
+  const sizes = new Map(entries.map(entry => {const at=entry.indexOf('\t');return [entry.slice(at+1),Number(entry.slice(0,at).trim().split(/\s+/).at(-1))];}));
+  return {names:[...sizes.keys()],sizes};
+}
+function materialize(root, result) {
+  const names = result.files.filter(file => !result.offloaded.has(file.name)).map(file => '/' + file.name.replace(/[\\*?\[\]]/g, match => '\\' + match));
+  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/',...names].join('\n')+'\n',maxBuffer:64*1024*1024});
+}
+function plan(root = ROOT, names, revision = 'main', sizes) {
   const karoBuild = path.join(root, 'docs/host-reviews/karo/build.json');
   const activeKaro = fs.existsSync(karoBuild) ? JSON.parse(fs.readFileSync(karoBuild, 'utf8')).runtime?.replace(/^\//, '').replace(/web\/$/, '') : null;
   const protectedFiles = new Set();
@@ -28,7 +37,7 @@ function plan(root = ROOT, names, revision = 'main') {
   }
   // Unpublished intermediate KARO assemblies remain in Git and their complete
   // archived ZIPs; deploy the current assembly selected by its build report.
-  const files = [...new Set(names)].filter(eligible).filter(name => !/^hosts\/runtime\/karo-/.test(name) || !activeKaro || name.startsWith(activeKaro)).map(name => ({name, bytes: fs.statSync(path.join(root, name)).size}));
+  const files = [...new Set(names)].filter(eligible).filter(name => !/^hosts\/runtime\/karo-/.test(name) || !activeKaro || name.startsWith(activeKaro)).map(name => ({name, bytes: sizes ? sizes.get(name) : fs.statSync(path.join(root, name)).size}));
   let bytes = files.reduce((sum, f) => sum + f.bytes, 0);
   const candidates = files.filter(f =>
     (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
@@ -66,9 +75,11 @@ function rewriter(offloaded) {
   };
 }
 function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revision = 'main', names} = {}) {
-  names ||= execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], {cwd: root, maxBuffer: 64 * 1024 * 1024}).toString().split('\0').filter(Boolean);
+  const sparse = process.env.WHATSITE_SPARSE_PAGES === '1', tree = sparse ? treeFiles(root) : null;
+  names ||= tree ? tree.names : execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], {cwd: root, maxBuffer: 64 * 1024 * 1024}).toString().split('\0').filter(Boolean);
   if (fs.existsSync(output)) throw Error('Use a fresh output directory; existing files are never removed');
-  const result = plan(root, names, revision), rewrite = rewriter(result.offloaded);
+  const result = plan(root, names, revision, tree?.sizes), rewrite = rewriter(result.offloaded);
+  if (sparse) materialize(root, result);
   const runtimeFiles = Object.fromEntries([...result.offloaded].filter(([name]) => name.startsWith('hosts/runtime/')).map(([name, url]) => ['/' + name, url]));
   for (const {name} of result.files) {
     if (result.offloaded.has(name)) continue;
@@ -98,4 +109,4 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   return report;
 }
 if (require.main === module) build({output: process.argv[2] && path.resolve(process.argv[2]), revision: process.env.GITHUB_SHA || 'main'});
-module.exports = {build, plan, rewriter, rawURL, eligible, LIMIT};
+module.exports = {build, plan, rewriter, rawURL, eligible, LIMIT, treeFiles, materialize};
