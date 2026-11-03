@@ -9732,5 +9732,65 @@
     "deploymentRun": "https://github.com/Speedy-away/whatsite/actions/runs/41732401945",
     "publication": "Published successfully through GitHub Pages run 41732401945. Live revision b4413b0e3829c7f61b80ee66fd9aef3d4a0c6897 verified at 2026-11-03T22:41:03.555Z: six game pages, 19 listings, 12 pinned file links/hashes, 11 hub cards, CSS and legacy redirect passed.",
     "browserRenderingVerified": false
+  },
+  "pcPortsExpansion20261103": {
+    "request": "Add Ports under PC with all supplied console-to-PC projects, keywords, tags and complete fitted game covers",
+    "updated": "2026-11-03",
+    "page": "pc/ports.html",
+    "catalogue": "docs/pc-ports.json",
+    "builder": "scripts/build-pc-ports.cjs",
+    "requestedSources": 49,
+    "listedProjects": 49,
+    "pinnedWindowsAssets": 45,
+    "uniqueArchivedBytes": 5242318271,
+    "sourceOnlyOrNoAttachedBuild": [
+      "Serious Sam: Next Encounter (update tag)",
+      "Splinter Cell: Double Agent (V2)",
+      "Crackdown"
+    ],
+    "unavailableSource": "TekRantGaming/sms-pc-port returned HTTP 404; Super Mario Sunshine remains listed and honestly labelled, with no replacement assumed.",
+    "resolvedDelivery": [
+      "Wind Waker's supplied README directs Windows builds to chrissotraidis/bluewake; pinned v0.10.0 and original link retained.",
+      "Soulcalibur's supplied recomp.gg page points to enrique363/voldorium; pinned v1.1.3."
+    ],
+    "classificationCorrections": [
+      "SpartanPort is God of War III Remastered for PS4.",
+      "Code: Veronica project uses PS3 Code: Veronica X.",
+      "CTR Nitro-Fueled project uses PS4 CUSA13795 update 1.21.",
+      "inFAMOUS Reborn is a PC-hosted UGC server for PS3 inFAMOUS 2 and Festival of Blood, not an inFAMOUS 1 port.",
+      "Prince of Persia Mod Manager is a companion helper."
+    ],
+    "compatibility": "All exact requested release tags remain. Visible game requirements retain CUSA IDs, game updates, regional discs, revision numbers and ROM checksum pins. Testing releases are labelled; launcher assets are not passed off as bundled game data.",
+    "presentation": "49 full cover images with provenance/dimensions/size/SHA-256, object-fit contain and no title truncation. Search includes game aliases and PC port phrases, console and availability filters, live counts and reset. PC hub card and guide navigation plus static/runtime PC submenu link.",
+    "archive": {
+      "scope": "pc-console-ports",
+      "uniqueReleaseAssets": 45,
+      "fileRecords": 47,
+      "preservedIdenticalCopies": 2,
+      "zipCRCChecks": 42,
+      "bytesHashed": 5334084800,
+      "globalIndexItems": 4990,
+      "globalIndexFileRecords": 8609,
+      "globalIndexPresentFileRecords": 8609,
+      "globalIndexMissingFileRecords": 0,
+      "indexRefreshed": true,
+      "executedDownloadedCode": false
+    },
+    "validation": {
+      "focusedTestsPassed": 68,
+      "artifactPages": 552,
+      "artifactLinks": 51421,
+      "artifactIssues": 0,
+      "budgetedBytes": 943124300,
+      "budget": 943718400,
+      "actualArtifactBytes": 944002776,
+      "browserRenderingVerified": false,
+      "coverContactSheetInspected": true
+    },
+    "codeCommit": "953d9138c423f15bfea1c0f1d0b7aa84966db97b",
+    "deploymentRun": "https://github.com/Speedy-away/whatsite/actions/runs/41735999631",
+    "publication": "Successful Pages deployment. Live revision 953d9138c423f15bfea1c0f1d0b7aa84966db97b verified at 2026-11-03T23:06:35.556Z: 49 cards, 45 original file links and hashes, all 49 supplied project links and served cover image hashes, PC navigation, search/CSS assets and keyword metadata passed.",
+    "qa": "docs/qa/pc-ports-expansion.json",
+    "preservation": "Older downloads, original links, compatibility pins and all archive copies remain. No large binary mirrors added to Git. Shared independent-host work and migration redirects were left untouched."
   }
 }
