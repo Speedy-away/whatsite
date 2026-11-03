@@ -10063,7 +10063,7 @@
   },
   "liveImageMobileAudit": {
     "date": "2026-11-03",
-    "status": "Repairs verified locally; publication pending",
+    "status": "Published; live HTTP, image decoding and responsive CSS checks passed. Browser rendering remains unverified.",
     "liveAuditBefore": {
       "sitemapURLs": 506,
       "urlForms": 800,
@@ -10085,22 +10085,57 @@
       "Fixed responsive handling of relative image URLs and old derivative paths.",
       "Removed crop rules from game/console cards, tool icons, category composites and hero images; kept avatar behavior.",
       "Changed inline hero crops to contain and capped their width for narrow phones.",
-      "Reduced opaque-alpha and transparent PNG delivery sizes; kept all originals and older delivery copies."
+      "Reduced opaque-alpha and transparent PNG delivery sizes; kept all originals and older delivery copies.",
+      "Added 88px and 176px animated SteamGridDB PNG delivery copies, preserving total animation timing and the original 3 MB file."
     ],
     "delivery": {
-      "images": 401,
-      "sourceBytes": 365700698,
-      "deliveryBytes960": 31783271,
-      "largest480": 83289,
-      "largest960": 236845
+      "images": 402,
+      "sourceBytes": 368700609,
+      "smallDeliveryBytes": 12369363,
+      "largeDeliveryBytes": 31998319,
+      "largestSmall": 83289,
+      "largestLarge": 236845,
+      "animatedLogoBytes": [
+        75774,
+        215048
+      ]
     },
     "tests": {
       "passed": 51,
       "failed": 0
     },
     "visualBrowserVerified": false,
-    "browserLimit": "Local browser use remains disabled in Work settings; user said they would enable it, but the browser tool still reports disabled.",
-    "published": false
+    "browserLimit": "Local browser use still reports disabled in Work settings after the user said they would enable it. No phone browser rendering or device/network speed measurement is claimed.",
+    "published": true,
+    "publishedCommit": "65e9267131b285365226cac31b72aad16f50174e",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41740126833",
+    "liveAuditAfter": {
+      "checkedAt": "2026-11-03T23:37:20.841Z",
+      "sitemapURLs": 507,
+      "pageRequests": 800,
+      "pageFailures": 0,
+      "missingViewport": 0,
+      "uniqueImages": 2090,
+      "imageFailures": 0,
+      "imagesOver500KB": 0,
+      "stylesheets": 57,
+      "cssFailures": 0,
+      "decode": {
+        "rasterURLsDecoded": 1935,
+        "svgURLs": 155,
+        "framesDecoded": 2073,
+        "failures": [],
+        "svgXMLVerified": 155
+      },
+      "transientResponses": [
+        {
+          "url": "https://whatwhatboy.com/assets/images/merged-categories/optimized/asset-ba055af1892b0bbd-480.jpg",
+          "firstStatus": 503,
+          "recheckStatus": 200
+        }
+      ],
+      "method": "iPhone Safari; HTTP audit only, no browser rendering"
+    }
   },
   "sameOriginConsoleLoads20261103": {
     "updatedAt": "2026-11-03T23:28:53.997Z",
