@@ -8865,5 +8865,20 @@
       "assets/host-karo-resource-guard.js",
       "docs/host-reviews/karo/README.md"
     ]
+  },
+  "sourceLinkCleanup20261103": {
+    "date": "2026-11-03",
+    "request": "Clean up large games, apps and homebrew: save ready copies locally and publish original GitHub/publisher links. Keep game mods mirrored.",
+    "minimumBytes": 10485760,
+    "sourceLinks": 43,
+    "verifiedArchiveCopies": 43,
+    "removedMirrors": 31,
+    "removedCurrentTreeBytes": 1091487183,
+    "retainedLegacyReceiverFiles": 11,
+    "policy": "docs/download-source-links.json",
+    "verification": "docs/qa/source-link-cleanup.json",
+    "preservation": "No working downloads, F: archives, older versions or Git history deleted. Native host Load files, eleven legacy receiver mirrors, game mods and immutable helper snapshots preserved.",
+    "futureWorkflow": "New games/apps/homebrew use source links and local archive copies; large binary mirrors do not enter the site repository. Pinned version and compatibility requirements stay intact.",
+    "validation": "Archive sizes and SHA-256 checked; upstream HEAD and byte counts checked for every converted file. Source-link and sparse-checkout policy tests passed."
   }
 }

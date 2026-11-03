@@ -11,6 +11,8 @@ function publicMirror(local, root = workspace) {
     const url = new URL(local, 'https://whatwhatboy.com');
     if (url.origin !== 'https://whatwhatboy.com' || url.search || url.hash) return null;
     const decoded = decodeURIComponent(url.pathname);
+    const deliveryFile = path.join(root, 'docs/download-source-links.json');
+    if (fs.existsSync(deliveryFile) && JSON.parse(fs.readFileSync(deliveryFile, 'utf8')).entries.some(entry => entry.local === decoded)) return null;
     const base = path.resolve(root, 'downloads');
     const file = path.resolve(root, '.' + decoded);
     const inside = (parent, child) => {

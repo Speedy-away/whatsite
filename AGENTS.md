@@ -1,5 +1,21 @@
 # Site downloads and local archive
 
+## Upstream links and large files
+
+For new games, apps and homebrew, keep the original GitHub release asset or
+publisher download link on the website and save the ready-to-use copy locally
+in the archive. Do not add another large binary mirror to the website repo.
+Game mods may remain mirrored where their existing download workflow needs it.
+Use version-specific links and preserve all firmware/game compatibility pins;
+never silently redirect an older build to a newer release or a `latest` URL.
+
+The current cleanup starts at 10 MiB for games/apps/homebrew. Its verified
+delivery mapping is `docs/download-source-links.json`; use
+`scripts/source-link-cleanup.cjs` to verify archive bytes and upstream links.
+Removing a verified mirror from Git's current tree must keep the working file,
+every F: archive version and its source/version/size/SHA-256 inventory. Never
+rewrite repository history or delete the originals as part of this cleanup.
+
 When adding a downloadable mod menu, script, payload or console tool to the site,
 also save its relevant ready-to-use file locally in
 `F:\whatsite-backup-downloads-etc`. Keep its source URL, version, size and SHA-256
@@ -46,3 +62,13 @@ expansion. It records completed work, exact final helper versions, archive
 verification, remaining checks and the latest user clarifications. Update it
 after finishing work so a later session can continue without replacing shared
 changes or losing older downloads.
+
+# Independent PS4 / PS5 host site
+
+The user moved host development and publishing to
+`C:/Users/whatw/Documents/GitHub/WWB-HOST`, published at
+`https://speedy-away.github.io/WWB-HOST/`. Make future host changes there.
+This main repository keeps navigation links and compatibility redirects;
+its historical native files and downloads remain preserved. Do not regenerate
+an active host site here or overwrite its migration redirects. Reconcile any
+host edits already in progress with the new repository before publishing them.

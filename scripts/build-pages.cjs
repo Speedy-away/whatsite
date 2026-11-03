@@ -25,6 +25,11 @@ function materialize(root, result) {
   const names = result.files.filter(file => !result.offloaded.has(file.name)).map(file => '/' + file.name.replace(/[\\*?\[\]]/g, match => '\\' + match));
   execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/',...names].join('\n')+'\n',maxBuffer:64*1024*1024});
 }
+function sourceLinks(root) {
+  const file=path.join(root,'docs/download-source-links.json');
+  if(!fs.existsSync(file))return new Map();
+  return new Map(JSON.parse(fs.readFileSync(file,'utf8')).entries.map(entry=>[entry.local.slice(1),entry.url]));
+}
 function plan(root = ROOT, names, revision = 'main', sizes) {
   const karoBuild = path.join(root, 'docs/host-reviews/karo/build.json');
   const activeKaro = fs.existsSync(karoBuild) ? JSON.parse(fs.readFileSync(karoBuild, 'utf8')).runtime?.replace(/^\//, '').replace(/web\/$/, '') : null;
@@ -44,8 +49,10 @@ function plan(root = ROOT, names, revision = 'main', sizes) {
     /^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) ||
     /^hosts\/runtime\/karo-[^/]+\/web\/.+\.(?:bin|elf|bz2|zip)$/i.test(f.name)
   ).sort((a, b) => b.bytes - a.bytes || a.name.localeCompare(b.name));
-  const offloaded = new Map();
+  const offloaded = sourceLinks(root);
+  for (const file of files) if (offloaded.has(file.name)) bytes -= file.bytes;
   for (const file of candidates) {
+    if (offloaded.has(file.name)) continue;
     if (bytes <= LIMIT) break;
     offloaded.set(file.name, rawURL(file.name, revision));
     bytes -= file.bytes;
@@ -103,10 +110,10 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const fallback = '<script>if(location.pathname.indexOf("/downloads/")===0){fetch("/pages-download-map.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(m){var u=m[decodeURIComponent(location.pathname)];if(u)location.replace(u)}).catch(function(){})}</script>';
   const errorPage = path.join(output, '404.html');
   fs.appendFileSync(errorPage, fallback);
-  const report = {revision, bytes: result.bytes, budget: LIMIT, hostedFiles: result.files.length-result.offloaded.size, repositoryFiles: result.offloaded.size, protectedNativeFiles: result.protectedFiles.size};
+  const report = {revision, bytes: result.bytes, budget: LIMIT, hostedFiles: result.files.filter(file => !result.offloaded.has(file.name)).length, repositoryFiles: result.offloaded.size, protectedNativeFiles: result.protectedFiles.size};
   fs.writeFileSync(path.join(output, 'pages-build.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));
   return report;
 }
 if (require.main === module) build({output: process.argv[2] && path.resolve(process.argv[2]), revision: process.env.GITHUB_SHA || 'main'});
-module.exports = {build, plan, rewriter, rawURL, eligible, LIMIT, treeFiles, materialize};
+module.exports = {build, plan, rewriter, rawURL, eligible, LIMIT, treeFiles, materialize, sourceLinks};

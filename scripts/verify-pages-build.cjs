@@ -6,6 +6,8 @@ const {eligible: publicPage} = require('./site-public-pages.cjs');
 const root = path.resolve(process.argv[2] || 'tmp/pages-build');
 const report = JSON.parse(fs.readFileSync(path.join(root, 'pages-build.json')));
 const mapping = JSON.parse(fs.readFileSync(path.join(root, 'pages-download-map.json')));
+const sources=path.join(root,'docs/download-source-links.json');
+const upstream=new Set(fs.existsSync(sources)?JSON.parse(fs.readFileSync(sources,'utf8')).entries.map(entry=>entry.url):[]);
 let bytes = 0, pages = 0, links = 0;
 const failures = [];
 function walk(directory) {
@@ -29,7 +31,7 @@ function walk(directory) {
 }
 walk(root);
 if (bytes >= 1_000_000_000 || report.bytes > LIMIT) failures.push('Pages artifact exceeds size budget');
-for (const url of Object.values(mapping)) if (!/^https:\/\/raw\.githubusercontent\.com\/Speedy-away\/whatsite\/(?:main|[a-f0-9]{40})\//.test(url)) failures.push('Unexpected download origin');
+for (const url of Object.values(mapping)) if (!upstream.has(url) && !/^https:\/\/raw\.githubusercontent\.com\/Speedy-away\/whatsite\/(?:main|[a-f0-9]{40})\//.test(url)) failures.push('Unexpected download origin');
 for (const failure of failures.slice(0, 30)) console.error(failure);
 console.log(JSON.stringify({bytes, pages, links, offloadedFiles:Object.keys(mapping).length, issues:failures.length}));
 if (failures.length) process.exitCode = 1;
