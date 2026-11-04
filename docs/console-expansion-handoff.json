@@ -10807,7 +10807,7 @@
   },
   "multilingualDiscovery20261104": {
     "date": "2026-11-04",
-    "status": "Validated for repository publication",
+    "status": "Pushed to origin/main; website deployment in progress",
     "pages": 494,
     "localizedSearchFields": 4262,
     "languages": 20,
@@ -10838,6 +10838,14 @@
       "issues": [],
       "stagedTestsPassed": 56,
       "repeatSearchTagChanges": 0
+    },
+    "publication": {
+      "contentCommit": "bb35d041a3a6beedfe0b3047ca0af1bca7bd9898",
+      "repository": "https://github.com/Speedy-away/whatsite",
+      "branch": "main",
+      "remoteCommitVerified": true,
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41840525245",
+      "deploymentStatus": "in_progress"
     },
     "report": "docs/qa/multilingual-discovery-20261104.json"
   }
