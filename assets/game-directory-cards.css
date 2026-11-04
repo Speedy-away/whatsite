@@ -1,0 +1,28 @@
+/* Directory listings remain compact even when there is only one provider. */
+body[data-catalog-page] .main-content .games-grid:has(> .game-directory-card) {
+ --catalog-fill: auto-fill;
+ align-items: start;
+}
+.main-content .guide-resource.game-directory-card {
+ width:100%;
+ max-width:360px;
+ padding:14px;
+ gap:8px;
+ height:auto;
+}
+.main-content .game-directory-card > img,
+.main-content .game-directory-card .directory-cover,
+.main-content .game-directory-card .directory-cover img,
+.main-content .game-directory-card .category-art,
+.main-content .game-directory-card .category-art img {
+ display:block;
+ width:100%;
+ height:140px;
+ max-height:140px;
+ aspect-ratio:auto;
+ object-fit:contain;
+}
+.main-content .game-directory-card h3 { font-size:1.05rem; margin:0; }
+.main-content .game-directory-card p { font-size:.85rem; line-height:1.5; margin:0; }
+.main-content .game-directory-card .guide-links { margin-top:4px; padding-top:4px; }
+.main-content .game-directory-card details { font-size:.8rem; }

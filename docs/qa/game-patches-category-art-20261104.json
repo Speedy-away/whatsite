@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-04",
+  "status": "Complete locally; not published",
+  "pages": [
+    "console/ps4/index.html",
+    "console/ps5/index.html"
+  ],
+  "change": "Replace the padded single Bloodborne cover with a full-width 16:9 collage of Bloodborne, Red Dead Redemption 2 and God of War through the shared category artwork system.",
+  "image": "/assets/images/category-composites/game-patches-20261104.svg",
+  "source": "Existing original game artwork; originals retained.",
+  "generator": "scripts/build-game-patch-category-art.cjs",
+  "verification": {
+    "testsPassed": 9,
+    "testsFailed": 0,
+    "PS4BrowserMedia": {
+      "width": 458.90625,
+      "height": 258.125,
+      "matchesAdjacentCards": true,
+      "loaded": true
+    },
+    "screenshot": "docs/screenshots/game-patches-card-fixed-20261104.png",
+    "idempotent": true
+  },
+  "downloadsAndCompatibilityUnchanged": true
+}

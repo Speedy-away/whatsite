@@ -10509,7 +10509,7 @@
   },
   "rkmodzCscPack20261104": {
     "date": "2026-11-04",
-    "status": "Publication prepared; deployment verification pending",
+    "status": "Published and live verified",
     "resourceId": "gta5-rkmodz-csc-pack",
     "page": "console/mods/ps4/gta5/index.html#resource-gta5-rkmodz-csc-pack",
     "sourceUrl": "https://www.mediafire.com/file/6bq67fwd1bpl623/Mod+Manager+PS4+By+RK+MODZ.rar/file",
@@ -10524,7 +10524,7 @@
     "preservation": "Existing resources, older downloads and shared changes preserved.",
     "metadataUpdate": {
       "date": "2026-11-04",
-      "status": "Complete locally; not published",
+      "status": "Published and live verified",
       "keywords": 110,
       "tags": [
         "CSC",
@@ -10536,6 +10536,13 @@
       ],
       "changes": "Pack and script-name aliases, loader search terms, card description, guide label, GTA V page keywords and search/social/structured descriptions updated. Rebuilt GTA page, installation guide, directory and resource-tag index.",
       "validation": "18 tag, metadata and preservation checks passed; pack lookup verified for RK MODZ, RKMODZ manager, Not Your Dope, FC Loader and Paradise script loader; page meta keywords verified. PS4-only scope and unknown game-update compatibility retained."
+    },
+    "publication": {
+      "commit": "4220442d17e3e05a800e98e25018101b0a0d5b84",
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41836115254",
+      "live": "https://whatwhatboy.com/console/mods/ps4/gta5/#resource-gta5-rkmodz-csc-pack",
+      "report": "docs/qa/rkmodz-publication-20261104.json",
+      "verification": "GTA V page, installation guide and menu directory HTTP 200; keywords present; actual Download button points to commit-pinned raw GitHub bytes, verified size and SHA-256. Unrelated shared work left uncommitted."
     }
   }
 }

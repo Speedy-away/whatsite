@@ -47,7 +47,7 @@ function apply(file, html, data = registry()) {
   });
   if (!hasNav) html = html.replace(/<main\b[^>]*>|<div\b(?=[^>]*\bid="main-content")[^>]*>/i, main => main + `<div class="container"><nav class="guide-nav" aria-label="${esc(platform.title)} game downloads">${item}</nav></div>`);
   const current = '/' + normalized(file), hubFile = platform.hub.endsWith('/') ? platform.hub + 'index.html' : platform.hub;
-  if (current === destination && platform.id === 'ps5') {
+  if (current === destination && platform.id === 'ps5' && !html.includes('id="free-shops"')) {
     const existing = range(html, 'article', tag => /\bid="orbit-store"/.test(tag));
     if (existing) html = html.slice(0, existing.start) + orbitStoreCard() + html.slice(existing.end);
     else {
@@ -168,6 +168,7 @@ function build() {
     if (!sitemap.includes('<loc>' + url + '</loc>')) sitemap = sitemap.replace('</urlset>', `  <url><loc>${url}</loc><lastmod>2026-11-02</lastmod></url>\n</urlset>`);
   }
   fs.writeFileSync(sitemapFile, sitemap);
+  files.push(...require('./console-free-shops.cjs').build());
   require('./build-console-topic-hubs.cjs').finalizeMetadata(files);
   files.forEach(prepare);
   const integration = updatePublicPages();

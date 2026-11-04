@@ -5,6 +5,7 @@ function finish(file, html) {
   const metadata = require('./page-search-metadata.cjs');
   const relative = metadata.normalizedFile(file);
   if (!eligible(relative) || tags.protectedFile(relative, html)) return html;
+  html = require('./console-game-patch-navigation.cjs').apply(relative, html);
   html = require('./phone-navigation.cjs').apply(relative, html);
   html = require('./profile-navigation.cjs').apply(relative, html);
   html = require('./canonical-host-links.cjs').apply(html);
@@ -12,9 +13,11 @@ function finish(file, html) {
   html = require('./catalog-layout.cjs').apply(relative, html);
   if (require('./site-ads.cjs').eligible(relative, html)) html = require('./site-ads.cjs').applyAds(relative, html);
   const navigable = require('./pc-ports-navigation.cjs').apply(relative, require('./console-game-directories.cjs').apply(relative, html));
-  const themed = require('./add-themes-sidebar.cjs').applyThemes(navigable, relative);
+  const shops = require('./console-free-shops.cjs').apply(relative, navigable);
+  const themed = require('./add-themes-sidebar.cjs').applyThemes(shops, relative);
   const illustrated = require('./category-card-art.cjs').apply(relative, themed);
-  const searchable = tags.apply(relative, require('./host-page-shell.cjs').apply(relative,illustrated));
-  return require('./responsive-category-images.cjs').apply(relative, metadata.transform(relative, searchable).html);
+  const directories = require('./game-directory-card-layout.cjs').apply(relative, illustrated);
+  const searchable = tags.apply(relative, require('./host-page-shell.cjs').apply(relative,directories));
+  return require('./internal-page-navigation.cjs').apply(relative, require('./responsive-category-images.cjs').apply(relative, metadata.transform(relative, searchable).html));
 }
 module.exports = {finish};

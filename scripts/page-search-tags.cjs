@@ -10,6 +10,10 @@ const plain = value => decode(String(value).replace(/<script\b[^>]*>[\s\S]*?<\/s
 const fold = value => String(value).normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/[’‘]/g, "'").replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim();
 const unique = values => [...new Map(values.filter(Boolean).map(value => [fold(value), String(value).trim()])).values()];
 const groups = [
+  [/\b(?:free[ -]?shops?|freeshops?)\b/i, ['free shops', 'free shop', 'freeshop', 'free shops downloads', 'console free shops', 'PlayStation free shops', 'free store downloads']],
+  [/\borbit(?:[ -]store|_store\.elf)\b/i, ['Orbit Store', 'orbit download', 'Orbit Store download', 'download Orbit Store', 'Orbit Store PS5', 'PS5 Orbit download', 'Orbit free shop', 'Orbit PS5 free shop', 'Orbit Store ELF', 'orbit_store.elf', 'Orbit Store installer', 'Orbit Store setup']],
+  [/\b(?:infinitykkj(?:\s*store)?|infinity store)\b/i, ['Infinitykkj STORE', 'infinity store', 'infinity free shop', 'infinity download', 'infinity store download', 'Infinitykkj download', 'Infinitykkj STORE download', 'Infinitykkj STORE PS4', 'Infinitykkj PS4 download', 'Infinitykkj free shop', 'Infinitykkj STORE PKG', 'Infinitykkj STORE beta', 'Infinitykkj STORE installation', 'InfinitykkjSTORE']],
+  [/\bnova store\b/i, ['Nova Store', 'Nova Store download', 'download Nova Store', 'Nova free shop', 'Nova Store free shop', 'Nova Store ZIP', 'Nova Store installer', 'Nova Store setup']],
   [/\b(?:universal[- ]updater|open shop channel)\b/i, ['free homebrew apps', 'homebrew app store', 'homebrew downloader', 'free store', 'free shop', 'freeshop']],
   [/\batmosph[eè]re\b/i, ['Atmosphere', 'Nintendo Switch custom firmware', 'Switch CFW']],
   [/\bhekate\b/i, ['Hekate', 'Switch bootloader', 'Switch boot menu', 'RCM bootloader']],
