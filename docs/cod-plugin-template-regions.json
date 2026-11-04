@@ -1,0 +1,117 @@
+{
+  "reviewed": "2026-11-04",
+  "notes": "Regional game identifiers do not establish plugin compatibility. BO1/BO2 use shared multi-region title IDs; one section per unique ID.",
+  "sources": [
+    "https://serialstation.com/games/4ff720e8-2738-427e-84d0-35d14ed8c2bc",
+    "https://gamefaqs.gamespot.com/ps4/234454-call-of-duty-black-ops-4/data",
+    "https://gamefaqs.gamespot.com/ps4/189938-call-of-duty-infinite-warfare/data",
+    "https://gamefaqs.gamespot.com/ps4/189943-call-of-duty-modern-warfare-remastered/data",
+    "https://gamefaqs.gamespot.com/ps4/286890-call-of-duty-modern-warfare-2-campaign-remastered/data",
+    "https://gamefaqs.gamespot.com/ps5/298464-call-of-duty-black-ops-cold-war/data",
+    "https://serialstation.com/titles/CUSA/00961",
+    "https://serialstation.com/games/1d638e5d-8cdb-4ccc-8af3-ccbe3d0bc2c1",
+    "https://orbispatches.com/CUSA57547",
+    "https://mp1st.com/news/black-ops-black-ops-2-added-psn-store-backend-announcement-incoming"
+  ],
+  "games": [
+    {
+      "id": "black-ops-1",
+      "name": "Call of Duty: Black Ops 1",
+      "regions": {
+        "EU": "CUSA57547",
+        "USA": "CUSA57547",
+        "JP": "CUSA57547"
+      }
+    },
+    {
+      "id": "black-ops-2",
+      "name": "Call of Duty: Black Ops 2",
+      "regions": {
+        "EU": "CUSA57548",
+        "USA": "CUSA57548",
+        "JP": "CUSA57548"
+      }
+    },
+    {
+      "id": "black-ops-3",
+      "name": "Call of Duty: Black Ops 3",
+      "regions": {
+        "EU": "CUSA02624",
+        "USA": "CUSA02290",
+        "JP": "CUSA03327"
+      }
+    },
+    {
+      "id": "black-ops-4",
+      "name": "Call of Duty: Black Ops 4",
+      "regions": {
+        "EU": "CUSA12443",
+        "USA": "CUSA11100",
+        "JP": "CUSA12479"
+      }
+    },
+    {
+      "id": "ghosts",
+      "name": "Call of Duty: Ghosts",
+      "regions": {
+        "EU": "CUSA00025",
+        "USA": "CUSA00018",
+        "JP": "CUSA00162"
+      }
+    },
+    {
+      "id": "advanced-warfare",
+      "name": "Call of Duty: Advanced Warfare",
+      "regions": {
+        "EU": "CUSA00851",
+        "USA": "CUSA00803",
+        "JP": "CUSA00961"
+      }
+    },
+    {
+      "id": "modern-warfare-remastered",
+      "name": "Call of Duty: Modern Warfare Remastered",
+      "regions": {
+        "EU": "CUSA05379",
+        "USA": "CUSA03522",
+        "JP": "CUSA05356"
+      }
+    },
+    {
+      "id": "modern-warfare-2-remastered",
+      "name": "Call of Duty: Modern Warfare 2 Campaign Remastered",
+      "regions": {
+        "EU": "CUSA07904",
+        "USA": "CUSA09249",
+        "JP": "CUSA11009"
+      }
+    },
+    {
+      "id": "cold-war",
+      "name": "Call of Duty: Black Ops Cold War",
+      "regions": {
+        "EU": "CUSA24267",
+        "USA": "CUSA15010",
+        "JP": "CUSA24268"
+      }
+    },
+    {
+      "id": "infinite-warfare",
+      "name": "Call of Duty: Infinite Warfare",
+      "regions": {
+        "EU": "CUSA05282",
+        "USA": "CUSA04762",
+        "JP": "CUSA05354"
+      }
+    },
+    {
+      "id": "wwii",
+      "name": "Call of Duty: WWII",
+      "regions": {
+        "EU": "CUSA08630",
+        "USA": "CUSA05969",
+        "JP": "CUSA08380"
+      }
+    }
+  ]
+}

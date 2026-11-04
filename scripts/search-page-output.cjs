@@ -4,6 +4,7 @@ const tags = require('./page-search-tags.cjs');
 function finish(file, html) {
   const metadata = require('./page-search-metadata.cjs');
   const relative = metadata.normalizedFile(file);
+  html = require("./console-helpful-tools.cjs").apply(relative, html);
   if (!eligible(relative) || tags.protectedFile(relative, html)) return html;
   html = require('./language-loader.cjs').apply(html);
   html = require('./console-game-patch-navigation.cjs').apply(relative, html);

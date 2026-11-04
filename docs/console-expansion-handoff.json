@@ -11054,5 +11054,31 @@
       "presentFileRecords": 9315,
       "missingFileRecords": 0
     }
+  },
+  "consoleRegionalTools20261104": {
+    "date": "2026-11-04",
+    "status": "Complete and validated; committing for requested push",
+    "codGames": 11,
+    "regionalData": "docs/cod-plugin-template-regions.json",
+    "templates": "downloads/ps4/plugin-templates/call-of-duty/manifest.json",
+    "archive": "cod-regional-templates-private-inventory.json",
+    "compactHubs": [
+      "PS4",
+      "PS5"
+    ],
+    "filezillaPages": [
+      "PS3",
+      "PS4",
+      "PS5",
+      "PS Vita",
+      "Xbox 360"
+    ],
+    "notes": "Regional configs are templates, not inferred menu compatibility; existing menu pins preserved. FileZilla uses official publisher download page. BO1/BO2 shared IDs have one section.",
+    "checks": "18 tests passed; 496 pages / 60720 local links audited with zero issues; all 11 template hashes and unique sections verified.",
+    "archiveIndex": {
+      "items": 5707,
+      "fileRecords": 9326,
+      "missingFileRecords": 0
+    }
   }
 }
