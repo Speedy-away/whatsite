@@ -70,3 +70,5 @@ test('deployment link verification follows HTML base paths and decodes quoted fi
   assert.equal(JSON.parse(result).issues,0);
  } finally {fs.rmSync(root,{recursive:true,force:true});}
 });
+
+test('translation source hashes tolerate Git line-ending normalization without hiding content changes',()=>{const {sourceHash}=require('../localized-html.cjs');assert.equal(sourceHash('<p>Menu</p>\r\n'),sourceHash('<p>Menu</p>\n'));assert.notEqual(sourceHash('<p>Old</p>\n'),sourceHash('<p>New</p>\n'));});

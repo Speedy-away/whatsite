@@ -169,7 +169,7 @@ function generate({root,output,rewrite=(value)=>value,estimate=false,context}={}
  assert(!ctx.preview||estimate,'Preview contexts cannot publish a partially translated site');
  let bytes=0,count=0;const sitemaps=new Map(html.codes.map(code=>[code,[]]));
  for(const page of ctx.pages.values()){
-  const original=fs.readFileSync(path.join(root,page.page),'utf8');assert.equal(html.hash(original),page.sha256,'Source changed without refreshed translations: '+page.page);
+  const original=fs.readFileSync(path.join(root,page.page),'utf8');assert.equal(html.sourceHash(original),page.sha256,'Source changed without refreshed translations: '+page.page);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),delivery=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   const source=require('./source-download-notes.cjs').annotate(original,page.page,delivery);
   for(const code of ['en',...html.codes]){

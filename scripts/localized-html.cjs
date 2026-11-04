@@ -58,4 +58,5 @@ function alternateLinks(source){return ['en',...codes,'x-default'].map(code=>'<l
 const schemaTextKeys=new Set(['name','description','headline','alternateName','keywords','articleSection','caption']);
 function structuredStrings(source){const result=[];function walk(value,key){if(typeof value==='string'&&schemaTextKeys.has(key)&&/[A-Za-z]/.test(value))result.push(normalize(value));else if(Array.isArray(value))value.forEach(item=>walk(item,key));else if(value&&typeof value==='object')for(const[k,item]of Object.entries(value))walk(item,k);}for(const m of source.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi))walk(JSON.parse(m[1]));return result;}
 function mapTokens(source,visit){return source.replace(tokenPattern,token=>visit(token)??token);}
-module.exports={origin,codes,native,locales,hash,normalize,decode,escape,attributes,spans,canonical,publicSource,dictionary,protection,restore,urlFor,alternateLinks,schemaTextKeys,structuredStrings,mapTokens};
+const sourceHash=value=>hash(String(value).replace(/\r\n/g,'\n'));
+module.exports={origin,codes,native,locales,hash,sourceHash,normalize,decode,escape,attributes,spans,canonical,publicSource,dictionary,protection,restore,urlFor,alternateLinks,schemaTextKeys,structuredStrings,mapTokens};
