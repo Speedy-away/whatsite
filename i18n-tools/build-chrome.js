@@ -100,6 +100,7 @@ Object.assign(T, require('./site-refresh-translations.cjs'));
 Object.assign(T, require('./public-navigation-translations.cjs'));
 Object.assign(T, require('./public-guide-translations.cjs'));
 Object.assign(T, require('./afterglow-translations.cjs'));
+Object.assign(T, require('./discovery-concepts.cjs').translations(T));
 const keys = Object.keys(T);
 let written = 0;
 

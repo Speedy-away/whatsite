@@ -260,3 +260,13 @@ test('date template captures retain their literal source when Intl is unavailabl
   f.api.set('en');
   assert.equal(footer.textContent, 'Reviewed 2 November 2026.');
 });
+
+test('keyword lists translate individual subjects, retain compatibility pins, and restore the newest source',()=>{
+ const f=fixture(),meta=f.doc.head.appendChild(f.doc.createElement('meta')),locale=f.doc.head.appendChild(f.doc.createElement('meta'));
+ meta.setAttribute('name','keywords');meta.setAttribute('content','PS4 mods, emulators, GoldHEN, CUSA00419, 5.05, menu-v1.27.bin');
+ locale.setAttribute('property','og:locale');locale.setAttribute('content','en_US');
+ f.api.register('es',{'{name} mods':'{name} mods de juegos','emulators':'emuladores'});f.api.set('es');
+ assert.equal(meta.getAttribute('content'),'PS4 mods de juegos, emuladores, GoldHEN, CUSA00419, 5.05, menu-v1.27.bin');assert.equal(locale.getAttribute('content'),'es_ES');
+ meta.setAttribute('content','PS5 mods, PPSA01000, 7.61');f.flush();assert.equal(meta.getAttribute('content'),'PS5 mods de juegos, PPSA01000, 7.61');
+ f.api.set('en');f.flush();assert.equal(meta.getAttribute('content'),'PS5 mods, PPSA01000, 7.61');assert.equal(locale.getAttribute('content'),'en_US');
+});

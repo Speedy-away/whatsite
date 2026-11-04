@@ -11,8 +11,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const VERSION = '3';
-const TAG = '<script defer src="/languages/i18n.js?v=' + VERSION + '&amp;rev=20261104"></script>';
+const TAG = require('../scripts/language-loader.cjs').tag;
 const CHECK = process.argv.includes('--check');
 const SKIP_DIRS = ['.git', '.agents', '.codex', '.claude', '.playwright', '.playwright-cli', 'backup', 'node_modules', 'assets', 'docs', 'design-references', 'downloads', 'i18n-tools', 'languages', 'api', 'css2', 'css2-1'];
 

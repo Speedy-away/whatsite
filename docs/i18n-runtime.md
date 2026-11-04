@@ -11,6 +11,28 @@ for button, submit and reset controls; user input and option values are preserve
 Page titles and description/social metadata are translated when their exact
 source strings are available.
 
+Keyword metadata is translated one comma-separated phrase at a time. Shared
+category aliases and named-subject templates cover terms such as `PS4 Mods`
+and `PS3 themes`, preserving the exact console name, game ID, filename and
+version. Keyword matching ignores phrase capitalization; normal page text
+retains its existing exact lookup behavior. Switching to English restores the
+latest authored keywords. Social image alt metadata and the active Open Graph
+locale follow language changes too.
+
+`scripts/page-search-tags.cjs` adds translated subject terms for all 20 languages
+to existing card search fields at build time. Existing page filters can search
+these without requesting 20 dictionaries. A length and checksum identify the
+generated suffix, preventing translated words from becoming new English source
+subjects on repeated builds. Original resource names, category values, downloads
+and compatibility pins stay literal. `i18n-tools/discovery-concepts.cjs` defines
+the shared category vocabulary; it does not infer supported games or platforms.
+
+This remains an English-authored site with runtime translations. Translated
+keywords and search aliases do not establish separately indexable language
+pages. Do not add `hreflang` or localized sitemap URLs until actual translated
+pages exist at those URLs. Google does not use keyword meta tags for ranking;
+localized visible content, titles and descriptions require their own coverage.
+
 Content under `code`, `pre`, `textarea`, scripts, styles, SVG and canvas is skipped.
 Use `data-i18n-skip`, `translate="no"` or `class="notranslate"` for other technical
 content that must remain literal. URLs and download destinations are never

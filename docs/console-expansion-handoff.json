@@ -10804,5 +10804,41 @@
       "deploymentStatus": "in_progress"
     },
     "report": "docs/qa/sitemap-language-refresh-20261104.json"
+  },
+  "multilingualDiscovery20261104": {
+    "date": "2026-11-04",
+    "status": "Validated for repository publication",
+    "pages": 494,
+    "localizedSearchFields": 4262,
+    "languages": 20,
+    "keysPerLanguage": 1319,
+    "concepts": 18,
+    "keywordMatching": "Per phrase, case-insensitive; original names, filenames, title IDs and firmware captures retained",
+    "socialMetadata": [
+      "og:locale",
+      "og:image:alt",
+      "twitter:image:alt"
+    ],
+    "preservation": "Only search attributes and language loader revision differ from committed HTML. All authored content, links, category values and compatibility pins preserved.",
+    "limitations": [
+      "Existing English page URLs and sitemap retained.",
+      "Full prose, title and description coverage remains incomplete.",
+      "Keyword meta tags are not a Google ranking signal.",
+      "Separate translated URLs and hreflang require full language pages."
+    ],
+    "sources": [
+      "https://developers.google.com/search/docs/crawling-indexing/special-tags",
+      "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites"
+    ],
+    "testsPassed": 56,
+    "validation": {
+      "pages": 494,
+      "canonicalURLs": 494,
+      "localLinks": 58690,
+      "issues": [],
+      "stagedTestsPassed": 56,
+      "repeatSearchTagChanges": 0
+    },
+    "report": "docs/qa/multilingual-discovery-20261104.json"
   }
 }

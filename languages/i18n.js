@@ -58,7 +58,7 @@
     }
     var version = s && s.src && s.src.match(/[?&]v=([^&#]+)/);
     if (version) DICTIONARY_QUERY = '?v=' + version[1];
-    DICTIONARY_QUERY += (DICTIONARY_QUERY ? '&' : '?') + 'rev=20261104';
+    DICTIONARY_QUERY += (DICTIONARY_QUERY ? '&' : '?') + 'rev=20261104-discovery';
     return s && s.src ? s.src.replace(/[^/]*$/, '') : '/languages/';
   })();
 
@@ -219,15 +219,18 @@
     });
   }
 
-  function lookup(source, table, values) {
+  function lookup(source, table, values, ignoreCase) {
     var key = norm(source);
     if (Object.prototype.hasOwnProperty.call(table, key) && typeof table[key] === 'string') {
       return values ? interpolate(table[key], values, key.indexOf('{date}') !== -1) : table[key];
     }
+    if (ignoreCase && typeof table[key.toLowerCase()] === 'string') return table[key.toLowerCase()];
     if (values) return interpolate(source, values);
     var patterns = templates(table);
     for (var i = 0; i < patterns.length; i++) {
-      var rule = patterns[i], match = rule.pattern.exec(key);
+      var rule = patterns[i];
+      if (ignoreCase && !rule.keywordPattern) rule.keywordPattern = new RegExp(rule.pattern.source, 'i');
+      var match = (ignoreCase ? rule.keywordPattern : rule.pattern).exec(key);
       if (!match) continue;
       var captures = {}, valid = true;
       for (var j = 0; j < rule.names.length; j++) {
@@ -264,6 +267,17 @@
     if (node.nodeValue !== next) node.nodeValue = next;
   }
 
+  function translateKeywordList(source, table) {
+    var changed = false;
+    var translated = source.split(',').map(function (part) {
+      var hit = lookup(norm(part), table, null, true);
+      if (hit === undefined) return part.trim();
+      changed = true;
+      return hit;
+    });
+    return changed ? translated.join(', ') : undefined;
+  }
+
   function translateAttrs(el, table, attrs) {
     if (skipped(el)) return;
     var saved = attrOriginals.get(el);
@@ -280,6 +294,11 @@
       var key = norm(saved[a]);
       if (!key) continue;
       var hit = lookup(key, table);
+      if (a === 'content' && el.tagName === 'META' && el.getAttribute('name') === 'keywords') hit = translateKeywordList(saved[a], table);
+      if (a === 'content' && el.tagName === 'META' && el.getAttribute('property') === 'og:locale') {
+        var locales = {es:'es_ES',pt:'pt_BR',fr:'fr_FR',de:'de_DE',ru:'ru_RU',tr:'tr_TR',pl:'pl_PL',it:'it_IT',zh:'zh_CN',ja:'ja_JP',ko:'ko_KR',th:'th_TH',vi:'vi_VN',id:'id_ID',hi:'hi_IN',sr:'sr_RS',nl:'nl_NL',ka:'ka_GE',ar:'ar_AR',he:'he_IL'};
+        hit = locales[current];
+      }
       var next = hit === undefined ? saved[a] : hit;
       rendered[a] = next;
       if (value !== next) el.setAttribute(a, next);
@@ -306,7 +325,7 @@
     titleRendered = t === undefined ? titleOriginal : t;
     if (document.title !== titleRendered) document.title = titleRendered;
 
-    var metas = document.querySelectorAll('meta[name="description"],meta[property="og:title"],meta[property="og:description"],meta[name="twitter:title"],meta[name="twitter:description"]');
+    var metas = document.querySelectorAll('meta[name="description"],meta[name="keywords"],meta[property="og:title"],meta[property="og:description"],meta[property="og:locale"],meta[property="og:image:alt"],meta[name="twitter:title"],meta[name="twitter:description"],meta[name="twitter:image:alt"]');
     for (var i = 0; i < metas.length; i++) translateAttrs(metas[i], table, ['content']);
   }
 

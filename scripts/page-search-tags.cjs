@@ -1,6 +1,7 @@
 // Search aliases for actual resource names and visible tags, never page-wide
 // platform guesses or hidden compatibility prose.
 const path = require('node:path');
+const {createHash} = require('node:crypto');
 const root = path.resolve(__dirname, '..');
 const decode = value => String(value)
   .replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
@@ -148,6 +149,10 @@ const tokenPattern = /<!--[\s\S]*?-->|<script\b[^>]*>[\s\S]*?<\/script>|<style\b
 const searchAttribute = /(?:^|\s)(data-search|data-library-search)\s*=\s*(["'])([\s\S]*?)\2/i;
 function apply(file, html) {
   if (protectedFile(file, html)) return html;
+  if (/<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*\bnoindex\b/i.test(html)) return html;
+  if (/http-equiv=["']refresh["']/i.test(html)) return html;
+  const canonical=html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)?.[1];
+  if(canonical&&new URL(canonical).origin!=='https://whatwhatboy.com')return html;
   const tokens = [...html.matchAll(tokenPattern)];
   const edits = [];
   for (let i = 0; i < tokens.length; i++) {
@@ -168,18 +173,34 @@ function apply(file, html) {
     if (end === -1) continue;
     const terms = resourceTerms(html.slice(token.index, end));
     if (!terms.length) continue;
-    const existing = found ? decode(found[3]).toLowerCase() : '';
+    let existing = found ? decode(found[3]).toLowerCase() : '';
+    // Track just the generated suffix, not a second copy of each search index.
+    // Verify it before removal so a manual edit is never silently truncated.
+    const marker = /\sdata-search-i18n="(\d+):([a-f0-9]{12})"/i;
+    const previous = start.match(marker);
+    const digest = text => createHash('sha256').update(text).digest('hex').slice(0,12);
+    if (previous) {
+      const suffix = existing.slice(-Number(previous[1]));
+      if (suffix.length === Number(previous[1]) && digest(suffix) === previous[2]) existing = existing.slice(0,-suffix.length);
+    }
     const additions = [];
-    for (const term of terms) {
+    const appendTerms = values => { for (const term of values) {
       const variants = [...new Set([term.toLowerCase(), fold(term)])];
       for (const value of variants) if (value && !(existing + ' ' + additions.join(' ')).includes(value)) additions.push(value);
-    }
+    }};
+    appendTerms(terms);
+    const englishCount = additions.length;
+    appendTerms(require('./multilingual-search-terms.cjs').localizedTerms(terms.join(' ')+' '+existing));
     const value = [existing, ...additions].filter(Boolean).join(' ').trim();
+    const translated = additions.slice(englishCount).join(' ');
+    const suffix = translated ? (existing || englishCount ? ' ' : '') + translated : '';
     const attr = found?.[1] || (/\sdata-library-card(?:\s|=|>)/.test(start) ? 'data-library-search' : 'data-search');
     const quote = found?.[2] || '"';
     const escaped = value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll(quote, quote === '"' ? '&quot;' : '&#39;');
     const prefix = found ? found[0].slice(0, found[0].indexOf(found[1])) : ' ';
-    const updated = found ? start.replace(searchAttribute, `${prefix}${attr}=${quote}${escaped}${quote}`) : start.replace(/>$/, ` ${attr}=${quote}${escaped}${quote}>`);
+    let updated = found ? start.replace(searchAttribute, `${prefix}${attr}=${quote}${escaped}${quote}`) : start.replace(/>$/, ` ${attr}=${quote}${escaped}${quote}>`);
+    updated = updated.replace(marker,'');
+    if (suffix) updated = updated.replace(/>$/,` data-search-i18n="${suffix.length}:${digest(suffix)}">`);
     if (updated !== start) edits.push({start: token.index, end: token.index + start.length, value: updated});
   }
   for (const edit of edits.reverse()) html = html.slice(0, edit.start) + edit.value + html.slice(edit.end);
