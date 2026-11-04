@@ -1,4 +1,12 @@
 {
+  "adRenderingRepair20261104": {
+    "date": "2026-11-04",
+    "status": "Ad rendering verified in normal IAB browser before patch; phone clipping and async container order repaired for publication",
+    "finding": "Headless Edge receives a 200 response with an empty provider script body. Normal IAB loads actual native ads: four links and data-ad-status=filled at desktop and 390px phone width.",
+    "fix": "Remove the 420px stage cap/internal scrolling; place the publisher container before the async script; update site-ads.css to v3 across public ad embeds and templates.",
+    "provider": "Original placement key and provider retained. No fake ads, click automation, adblock bypass or provider-code modification.",
+    "validation": "Normal-browser baseline at phone width: scrollHeight 436px vs client stage height 420px; desktop stage filled at 241px. New source tests and deployment checks pass."
+  },
   "livePageAudit20261104": {
     "date": "2026-11-04",
     "status": "Published e72dcf43; 982 browser cases passed; final 512 live pages and 73 stylesheet/host URLs pass with zero obsolete host links",

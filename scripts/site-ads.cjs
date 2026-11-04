@@ -3,7 +3,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const start = '<!-- BEGIN SITE AD -->';
 const end = '<!-- END SITE AD -->';
-const stylesheet = '<link rel="stylesheet" href="/assets/site-ads.css?v=2">';
+const stylesheet = '<link rel="stylesheet" href="/assets/site-ads.css?v=3">';
 const script = '<script defer src="/assets/site-ads.js?v=2"></script>';
 
 function eligible(file, html) {
@@ -21,12 +21,12 @@ function eligible(file, html) {
 function placement() {
   // Use the site's existing native embed pattern: the provider expects its
   // container in the top-level document. Only public content pages use this.
-  return `${start}\n<aside class="site-ad" id="page-advertisement" aria-label="Advertisement"><div class="container"><div class="site-ad-panel"><span class="site-ad-label">Advertisement</span><div class="site-ad-stage"><script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script><div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div><p class="site-ad-empty" hidden>Ad unavailable.</p></div></div></div></aside>\n${end}`;
+  return `${start}\n<aside class="site-ad" id="page-advertisement" aria-label="Advertisement"><div class="container"><div class="site-ad-panel"><span class="site-ad-label">Advertisement</span><div class="site-ad-stage"><div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div><script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script><p class="site-ad-empty" hidden>Ad unavailable.</p></div></div></div></aside>\n${end}`;
 }
 
 function applyAds(file, html) {
   if (!eligible(file, html)) return html;
-  html = html.replace('/assets/site-ads.css?v=1', '/assets/site-ads.css?v=2').replace('/assets/site-ads.js?v=1', '/assets/site-ads.js?v=2');
+  html = html.replace(/\/assets\/site-ads\.css\?v=[12](?=["'])/g, '/assets/site-ads.css?v=3').replace('/assets/site-ads.js?v=1', '/assets/site-ads.js?v=2');
   if (!html.includes('/assets/site-ads.css')) html = html.replace('</head>', stylesheet + '\n</head>');
   if (!html.includes('/assets/site-ads.js')) html = html.replace('</body>', script + '</body>');
   if (html.includes(start) && !html.includes(end, html.indexOf(start))) throw Error('Unterminated ad placement in ' + file);
