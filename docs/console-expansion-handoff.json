@@ -10418,13 +10418,20 @@
   },
   "guidesButtonsRemoval20261104": {
     "updatedAt": "2026-11-04T04:31:04.013Z",
-    "status": "Verified locally; publication pending",
+    "status": "Published and deployment verified",
     "report": "docs/remove-guides-buttons-20261104.json",
     "sourceFile": "scripts/build-host-selector.cjs",
     "removedNavigationTuples": 2,
     "activeGuideEntryLinksOutsidePreservedDocs": 0,
     "preservedGuideDocuments": 4,
     "testsPassed": 11,
-    "publicationPending": true
+    "publicationPending": false,
+    "deployment": {
+      "id": 41773906142,
+      "url": "https://github.com/Speedy-away/whatsite/actions/runs/41773906142",
+      "commit": "ddc5f89a64afd5223d178d3fad6702325dba2f7e",
+      "conclusion": "success",
+      "verifiedAt": "2026-11-04T04:38:17.015Z"
+    }
   }
 }
