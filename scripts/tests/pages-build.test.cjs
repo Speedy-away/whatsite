@@ -46,3 +46,27 @@ test('runtime data transport maps only pinned GET/HEAD data files and strips cro
   for (const [url,method] of [['payload.bin','POST'],['https://example.com/payload.bin','GET'],['original.js','GET'],['/__local__/install','POST']]) {await win.fetch(url,{method});assert.equal(calls.at(-1)[0],url);}
   const link = {tagName:'A',href:'https://whatwhatboy.com'+local};events.click({target:link});assert.equal(link.href,remote);
 });
+
+test('migrated host archives and legacy desktop DLLs can use exact repository delivery within the Pages budget', () => {
+  const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-migrated-host-'));
+  try {
+    fs.mkdirSync(path.join(root,'docs'));
+    fs.writeFileSync(path.join(root,'docs/host-actions-ps5.json'), JSON.stringify({actions:[{downloadURL:'/downloads/legacy-native.elf'}]}));
+    const names=['downloads/legacy-native.elf','scooby/FSL/WINMM.dll'];
+    const sizes=new Map([[names[0],170*1048576],[names[1],17*1048576]]);
+    const result=require('../build-pages.cjs').plan(root,names,'a'.repeat(40),sizes,890*1048576);
+    for(const name of names)assert.equal(result.offloaded.get(name),rawURL(name,'a'.repeat(40)));
+    assert.equal(result.bytes,890*1048576);
+    assert.ok(fs.existsSync(path.join(root,'docs/host-actions-ps5.json')));
+  } finally { fs.rmSync(root,{recursive:true,force:true}); }
+});
+
+test('deployment link verification follows HTML base paths and decodes quoted filenames', () => {
+ const root=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'pages-link-base-'));
+ try {
+  const files={'pages-build.json':JSON.stringify({bytes:100}),'pages-download-map.json':'{}','games/test/index.html':'<base href="/games/test/"><script src="../../script.js"></script><a href="/downloads/What&#39;s%20new.txt">Readme</a>','script.js':'// kept',"downloads/What's new.txt":'Original notes'};
+  for(const[name,value]of Object.entries(files)){const target=path.join(root,name);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,value);}
+  const result=require('node:child_process').execFileSync(process.execPath,[path.resolve(__dirname,'../verify-pages-build.cjs'),root],{encoding:'utf8'});
+  assert.equal(JSON.parse(result).issues,0);
+ } finally {fs.rmSync(root,{recursive:true,force:true});}
+});

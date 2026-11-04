@@ -19,10 +19,12 @@ function walk(directory) {
     if ((!publicPage(relative)&&!localized) || !eligible(relative)) continue;
     pages++;
     const html = fs.readFileSync(file, 'utf8');
+    const baseHref = html.match(/<base\b[^>]*href=(["'])(.*?)\1/i)?.[2];
+    const pageURL = new URL(baseHref ? require('./localized-html.cjs').decode(baseHref) : relative, 'https://whatwhatboy.com/');
     for (const match of html.matchAll(/\b(?:href|src)=(["'])(.*?)\1/g)) {
-      const value = match[2].replaceAll('&amp;', '&');
+      const value = require('./localized-html.cjs').decode(match[2]);
       if (!value || /^(?:[a-z]+:|\/\/|#)/i.test(value)) continue;
-      const url = new URL(value, 'https://whatwhatboy.com/' + relative);
+      const url = new URL(value, pageURL);
       const name = decodeURIComponent(url.pathname);
       links++;
       const target = path.join(root, name);

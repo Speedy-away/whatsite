@@ -44,18 +44,15 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0) {
   const karoBuild = path.join(root, 'docs/host-reviews/karo/build.json');
   const activeKaro = fs.existsSync(karoBuild) ? JSON.parse(fs.readFileSync(karoBuild, 'utf8')).runtime?.replace(/^\//, '').replace(/web\/$/, '') : null;
   const protectedFiles = new Set();
-  for (const file of fs.readdirSync(path.join(root, 'docs')).filter(n => /actions.*\.json$/.test(n))) {
-    const data = JSON.parse(fs.readFileSync(path.join(root, 'docs', file), 'utf8'));
-    for (const action of data.actions || []) if (action.downloadURL?.startsWith('/downloads/')) {
-      protectedFiles.add(decodeURIComponent(action.downloadURL.slice(1)));
-    }
-  }
+  // Native loaders run on the independent host. Historical main-site payloads
+  // can use exact-revision repository delivery like other archived downloads.
   // Unpublished intermediate KARO assemblies remain in Git and their complete
   // archived ZIPs; deploy the current assembly selected by its build report.
   const files = [...new Set(names)].filter(eligible).filter(name => !/^hosts\/runtime\/karo-/.test(name) || !activeKaro || name.startsWith(activeKaro)).map(name => ({name, bytes: sizes ? sizes.get(name) : fs.statSync(path.join(root, name)).size}));
   let bytes = reservedBytes + files.reduce((sum, f) => sum + f.bytes, 0);
   const candidates = files.filter(f =>
     (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
+    /^scooby\/(?:FSL\/)?WINMM\.dll$/i.test(f.name) ||
     /^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) ||
     /^hosts\/runtime\/karo-[^/]+\/web\/.+\.(?:bin|elf|bz2|zip)$/i.test(f.name)
   ).sort((a, b) => b.bytes - a.bytes || a.name.localeCompare(b.name));
@@ -132,7 +129,7 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   fs.writeFileSync(path.join(output, 'pages-runtime-map.js'), 'window.WHATSITE_RUNTIME_FILES=' + JSON.stringify(runtimeFiles).replaceAll('<', '\\u003c') + ';');
   fs.writeFileSync(path.join(output, '.nojekyll'), '');
   // Old bookmarked download paths still offer the exact repository file.
-  const fallback = '<script>if(location.pathname.indexOf("/downloads/")===0){fetch("/pages-download-map.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(m){var u=m[decodeURIComponent(location.pathname)];if(u)location.replace(u)}).catch(function(){})}</script>';
+  const fallback = '<script>if(location.pathname){fetch("/pages-download-map.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(m){var u=m[decodeURIComponent(location.pathname)];if(u)location.replace(u)}).catch(function(){})}</script>';
   const errorPage = path.join(output, '404.html');
   fs.appendFileSync(errorPage, fallback);
   const localized=localization?localization.generate({root,output,rewrite,context:localizedContext}):{pages:0,bytes:0};

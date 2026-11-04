@@ -11080,5 +11080,29 @@
       "fileRecords": 9326,
       "missingFileRecords": 0
     }
+  },
+  "liveConsoleRepair20261104": {
+    "date": "2026-11-04",
+    "status": "Repair validated locally; publishing and live checks pending",
+    "initialFinding": "f13fba95 deployment failed on missing translations; live hub cards remained 770px at 1920px and 11 new INI URLs returned 404.",
+    "repairs": [
+      "Refreshed saved translations without changing compatibility pins",
+      "Hub grid specificity and stylesheet cache version repaired",
+      "Migrated historical host files use exact-revision repository delivery; originals preserved",
+      "Deployment verifier now resolves HTML base URLs and numeric HTML entities"
+    ],
+    "validation": {
+      "tests": 13,
+      "pages": 10442,
+      "links": 1483590,
+      "issues": 0,
+      "artifactBytes": 901378298,
+      "iniFiles": 11,
+      "iniHashesMatch": true,
+      "desktopCardWidth": 300,
+      "desktopImageHeight": 160,
+      "phoneCardWidth": 173,
+      "phoneImageHeight": 110
+    }
   }
 }
