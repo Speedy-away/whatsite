@@ -66,8 +66,8 @@ changes or losing older downloads.
 # Independent PS4 / PS5 host site
 
 The user moved host development and publishing to
-`C:/Users/whatw/Documents/GitHub/WWB-HOST`, published at
-`https://speedy-away.github.io/wwb-host/`. Make future host changes there.
+`C:/Users/whatw/Documents/GitHub/speedy-away.github.io`, published at
+`https://speedy-away.github.io/`. Make future host changes there.
 This main repository keeps navigation links and compatibility redirects;
 its historical native files and downloads remain preserved. Do not regenerate
 an active host site here or overwrite its migration redirects. Reconcile any

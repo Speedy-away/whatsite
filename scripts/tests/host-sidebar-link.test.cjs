@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const {integrateWebhostLink}=require('../host-webhost-navigation.cjs');
+const {HOST,hostDestination,normalizeHostOrigin,integrateWebhostLink}=require('../host-webhost-navigation.cjs');
 test('sidebar generator keeps one named host item after Help and remains idempotent',()=>{
  const html='<ul><li data-webhost-navigation><a>Old host</a></li><li><a data-tooltip="Help &amp; FAQ">Help</a></li></ul>';
  const result=integrateWebhostLink(html);
@@ -8,6 +8,28 @@ test('sidebar generator keeps one named host item after Help and remains idempot
  assert.ok(result.indexOf('Help</a>')<result.indexOf('data-webhost-navigation'));
  assert.ok(result.includes('<span>PS4 / PS5 Host</span>'));
  assert.equal(integrateWebhostLink(result),result);
+});
+test('legacy host origins and chooser aliases resolve to root while exact deep routes, queries and fragments survive',()=>{
+ for(const prefix of ['/WWB-HOST','/wwb-host','']){
+  for(const chooser of ['/hosts/','/hosts/index.html'])assert.equal(normalizeHostOrigin(HOST+prefix+chooser+'?from=main#choose'),HOST+'/?from=main#choose');
+  const route='/hosts/ps4/?view=goldhen&build=2.3#file';assert.equal(normalizeHostOrigin(HOST+prefix+route),HOST+route);
+ }
+ assert.equal(hostDestination('/hosts/'),HOST+'/');assert.equal(hostDestination('/hosts/index.html?view=mods#game'),HOST+'/?view=mods#game');
+ assert.equal(hostDestination('/hosts/ps5/gta5/?update=1.00#exact'),HOST+'/hosts/ps5/gta5/?update=1.00#exact');
+ for(const immutable of ['https://github.com/Speedy-away/WWB-HOST/releases/download/old/file.zip','https://raw.githubusercontent.com/Speedy-away/WWB-HOST/'+'a'.repeat(40)+'/old.bin',HOST+'/WWB-HOST-extra/'])assert.equal(normalizeHostOrigin(immutable),immutable);
+});
+test('active authored navigation and host redirects use the owning root site without regenerating native documents',()=>{
+ const scope=require('../site-public-pages.cjs'),{hostRedirect}=require('./migration-contracts.cjs');
+ for(const file of scope.pages()){
+  const name=scope.relativePath(file);if(name.startsWith('downloads/'))continue;
+  const html=fs.readFileSync(file,'utf8');assert.doesNotMatch(html,/https:\/\/speedy-away\.github\.io\/(?:WWB-HOST|wwb-host)(?=\/|["'\s<>?#]|$)/,name);
+  if(name.startsWith('hosts/')&&html.includes('location.search+location.hash'))hostRedirect(name);
+ }
+ for(const file of ['hosts/index.html','hosts/ps4/index.html','hosts/ps5/gta5/index.html']){
+  const html=hostRedirect(file),script=html.match(/<script>(location\.replace\([\s\S]*?\);)<\/script>/)[1];let target;
+  vm.runInNewContext(script,{location:{search:'?view=mods&build=exact',hash:'#game',replace(value){target=value;}}});
+  assert.equal(target,hostDestination('/'+file.replace(/index\.html$/,''))+'?view=mods&build=exact#game');
+ }
 });
 test('Language initializer reuses the static host item, removes the legacy duplicate and places it below Language',()=>{
  const source=fs.readFileSync(path.resolve(__dirname,'../../languages/i18n.js'),'utf8');

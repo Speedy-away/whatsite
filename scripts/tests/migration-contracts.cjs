@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'../..');
 function hostRedirect(file){
  const html=fs.readFileSync(path.join(root,file),'utf8');
- const target='https://speedy-away.github.io/WWB-HOST/'+file.replace(/index\.html$/,'');
+ const target=require('../host-webhost-navigation.cjs').hostDestination('/'+file.replace(/index\.html$/,''));
  assert.ok(html.includes('href="'+target+'"'),file+' canonical destination');
  assert.ok(html.includes('content="0;url='+target+'"'),file+' refresh destination');
  assert.ok(html.includes('location.replace("'+target+'"+location.search+location.hash)'),file+' preserves query and fragment');
