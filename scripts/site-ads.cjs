@@ -15,8 +15,7 @@ function eligible(file, html) {
     !/^console\/ps[45]\/whatsite-ps[45]\.html$/.test(file.replaceAll('\\', '/')) &&
     !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html) &&
     !/http-equiv=["']refresh/i.test(html) &&
-    !/\bclass=["'][^"']*receiver-/.test(html) &&
-    /<section\b/i.test(html);
+    !/\bclass=["'][^"']*receiver-/.test(html);
 }
 
 function placement() {
@@ -52,6 +51,18 @@ function applyAds(file, html) {
       if (!/^<\/?section\b/i.test(token[0])) continue;
       depth += /^<\//.test(token[0]) ? -1 : 1;
       if (depth === 0) { sectionEnd = tokens.lastIndex; break; }
+    }
+  }
+  if (sectionEnd < 0 && main >= 0) {
+    // Older directories use a main-content DIV without any SECTION elements.
+    const tag = /^<(main|div)\b/i.exec(html.slice(main))[1];
+    const tokens = new RegExp('<!--[\\s\\S]*?-->|<script\\b[^>]*>[\\s\\S]*?<\\/script\\s*>|<style\\b[^>]*>[\\s\\S]*?<\\/style\\s*>|<\\/?' + tag + '\\b[^>]*>', 'gi');
+    tokens.lastIndex = main;
+    let token, level = 0;
+    while ((token = tokens.exec(html))) {
+      if (!new RegExp('^<\\/?' + tag + '\\b', 'i').test(token[0])) continue;
+      level += /^<\//.test(token[0]) ? -1 : 1;
+      if (level === 0) { sectionEnd = token.index; break; }
     }
   }
   if (sectionEnd < 0) throw Error('No content placement found in ' + file);

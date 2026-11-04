@@ -33,3 +33,9 @@ test('legacy footer banners migrate once without duplicating the native unit or 
  assert.ok(out.indexOf('id="page-advertisement"')<out.indexOf('</main>'));
  assert.ok(out.includes(other));assert.equal(ads.applyAds('games/cod/index.html',out),out);
 });
+test('older DIV-based directories receive their banner inside main content',()=>{
+ const html='<html><head></head><body><div class="main-content" id="main-content"><div class="container"><div>Cards</div></div></div><script src="/script.js"></script></body></html>';
+ const out=ads.applyAds('games/other/index.html',html);
+ assert.ok(out.includes('<!-- END SITE AD -->\n</div>'));
+ assert.equal(ads.applyAds('games/other/index.html',out),out);
+});
