@@ -10544,5 +10544,182 @@
       "report": "docs/qa/rkmodz-publication-20261104.json",
       "verification": "GTA V page, installation guide and menu directory HTTP 200; keywords present; actual Download button points to commit-pinned raw GitHub bytes, verified size and SHA-256. Unrelated shared work left uncommitted."
     }
+  },
+  "freeShops20261104": {
+    "date": "2026-11-04",
+    "status": "Published to repository; deployment verification pending",
+    "pages": [
+      "console/free-shops/index.html",
+      "console/ps4/free-shops.html",
+      "console/ps5/free-shops.html"
+    ],
+    "listings": [
+      "Infinitykkj STORE v0.0.11 Beta",
+      "Nova Store (version/platform unconfirmed)",
+      "Orbit Store 1.8.1 (PS5 only)"
+    ],
+    "gameDownloadPages": [
+      "console/ps4/game-downloads.html",
+      "console/ps5/game-downloads.html"
+    ],
+    "artwork": [
+      "/assets/images/free-shops/game-downloads-20261104.jpg",
+      "/assets/images/free-shops/free-shops-20261104.jpg"
+    ],
+    "artworkPrompts": "docs/free-shops-artwork.json",
+    "tests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "browser": {
+      "categoryCardsVerified": true,
+      "storeImagesLoaded": 3,
+      "phoneViewport": 390,
+      "phoneScrollWidth": 375,
+      "screenshot": "docs/screenshots/free-shops-categories-20261104.png"
+    },
+    "archive": {
+      "checkedAt": "2026-11-04T13:03:31.046Z",
+      "merge": {
+        "sidecars": 1050,
+        "items": 5137,
+        "files": 8863,
+        "inventory": "F:\\whatsite-backup-downloads-etc\\download-inventory.json",
+        "workspaceAudit": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\docs\\download-audit.json"
+      },
+      "unavailable": [
+        {
+          "id": "free-shops-infinitykkj",
+          "url": "https://drive.google.com/file/d/1UnS-7mR9QSObVWgHRXkjfGrWixJQ4-NW/view",
+          "error": "Google Drive - Quota exceeded"
+        },
+        {
+          "id": "free-shops-nova",
+          "url": "https://drive.google.com/file/d/1gZoNjmH6uOvQ4uvbfzeah27EWWTGVIaf/view",
+          "error": "Google Drive - Quota exceeded"
+        }
+      ],
+      "orbit": {
+        "version": "1.8.1",
+        "bytes": 59691728,
+        "sha256": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\Orbit Store 1.8.1-5a12cb950970\\orbit_store.elf",
+        "verified": true
+      },
+      "payloadsExecuted": false
+    },
+    "archiveIndex": {
+      "items": 5137,
+      "fileRecords": 8754,
+      "presentFileRecords": 8754,
+      "missingFileRecords": 0
+    },
+    "siteAudit": {
+      "pages": 496,
+      "links": 60720,
+      "issues": 2,
+      "remaining": [
+        "Existing migrated host canonical absent from main sitemap: gamerhack-505",
+        "Existing migrated host canonical absent from main sitemap: gamerhack-672goldhen"
+      ]
+    },
+    "retry": [
+      "node scripts/download-free-shops.cjs",
+      "node scripts/archive-free-shops.cjs",
+      "node scripts/refresh-local-download-index.cjs --write"
+    ],
+    "preservation": "Exact supplied Drive links and Orbit v1.8.1 retained; original images, older builds and host migration redirects preserved; no payload executed.",
+    "publishedCommit": "9e559a74d6299cbfacaafa69db3552849e22c7d3"
+  },
+  "freeShopsSearch20261104": {
+    "status": "Published to repository; deployment verification pending",
+    "keywordAliases": 48,
+    "affectedPages": [
+      "console/free-shops/index.html",
+      "console/game-downloads/index.html",
+      "console/ps4/free-shops.html",
+      "console/ps4/game-downloads.html",
+      "console/ps4/index.html",
+      "console/ps5/apps.html",
+      "console/ps5/downloads.html",
+      "console/ps5/free-shops.html",
+      "console/ps5/game-downloads.html",
+      "console/ps5/index.html",
+      "downloads/index.html",
+      "games-downloads/index.html"
+    ],
+    "report": "docs/qa/free-shops-search-keywords.json",
+    "testsPassed": 28,
+    "downloadsAndCompatibilityUnchanged": true,
+    "publishedCommit": "9e559a74d6299cbfacaafa69db3552849e22c7d3"
+  },
+  "gamePatchCategoryArtwork20261104": {
+    "date": "2026-11-04",
+    "status": "Published to repository; deployment verification pending",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps5/index.html"
+    ],
+    "change": "Replace the padded single Bloodborne cover with a full-width 16:9 collage of Bloodborne, Red Dead Redemption 2 and God of War through the shared category artwork system.",
+    "image": "/assets/images/category-composites/game-patches-20261104.svg",
+    "source": "Existing original game artwork; originals retained.",
+    "generator": "scripts/build-game-patch-category-art.cjs",
+    "verification": {
+      "testsPassed": 9,
+      "testsFailed": 0,
+      "PS4BrowserMedia": {
+        "width": 458.90625,
+        "height": 258.125,
+        "matchesAdjacentCards": true,
+        "loaded": true
+      },
+      "screenshot": "docs/screenshots/game-patches-card-fixed-20261104.png",
+      "idempotent": true
+    },
+    "downloadsAndCompatibilityUnchanged": true,
+    "publishedCommit": "9e559a74d6299cbfacaafa69db3552849e22c7d3"
+  },
+  "dlpsgameLogoOrder20261104": {
+    "date": "2026-11-04",
+    "status": "Published to repository; deployment verification pending",
+    "pages": [
+      "console/ps4/game-downloads.html",
+      "console/ps5/game-downloads.html"
+    ],
+    "logo": "/assets/images/game-directories/dlpsgame-logo.png",
+    "source": "User-supplied media-37083.png; copied unchanged",
+    "ordering": [
+      "game-directories",
+      "free-shops",
+      "more-directories"
+    ],
+    "testsPassed": 10,
+    "browserVerified": true,
+    "screenshot": "docs/screenshots/dlpsgame-directory-first-20261104.png",
+    "downloadsAndCompatibilityUnchanged": true,
+    "publishedCommit": "9e559a74d6299cbfacaafa69db3552849e22c7d3"
+  },
+  "freeShopsPublication20261104": {
+    "date": "2026-11-04",
+    "siteFilesCommit": "9e559a74d6299cbfacaafa69db3552849e22c7d3",
+    "repository": "https://github.com/Speedy-away/whatsite",
+    "branch": "main",
+    "siteFiles": 50,
+    "tests": {
+      "stagedSnapshotPassed": 28,
+      "deploymentRoutingPassed": 11
+    },
+    "localLinksChecked": 4702,
+    "missingLocalLinks": 0,
+    "largeBinaryMirrorsAdded": 0,
+    "unrelatedWorkingEditsPreserved": true,
+    "scope": [
+      "Free Shops pages and console navigation",
+      "Orbit, Infinitykkj and Nova search metadata",
+      "Game download and Free Shops cover artwork",
+      "Game patches category collage",
+      "DLPSGame logo and directories above Free Shops"
+    ],
+    "status": "Repository published; deployment verification pending"
   }
 }
