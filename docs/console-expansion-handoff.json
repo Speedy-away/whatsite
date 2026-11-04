@@ -10415,5 +10415,16 @@
       "verifiedAt": "2026-11-04T03:40:40.128Z"
     },
     "liveReport": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io/docs/qa/host-origin-live-verification.json"
+  },
+  "guidesButtonsRemoval20261104": {
+    "updatedAt": "2026-11-04T04:31:04.013Z",
+    "status": "Verified locally; publication pending",
+    "report": "docs/remove-guides-buttons-20261104.json",
+    "sourceFile": "scripts/build-host-selector.cjs",
+    "removedNavigationTuples": 2,
+    "activeGuideEntryLinksOutsidePreservedDocs": 0,
+    "preservedGuideDocuments": 4,
+    "testsPassed": 11,
+    "publicationPending": true
   }
 }

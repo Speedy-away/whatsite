@@ -1,0 +1,29 @@
+{
+  "updatedAt": "2026-11-04T04:31:04.013Z",
+  "status": "Verified locally; publication pending",
+  "scope": "Navigation template only; no page regeneration",
+  "sourceFile": "scripts/build-host-selector.cjs",
+  "removedGuideNavigationTuples": 2,
+  "activeGuideEntryLinksOutsidePreservedDocs": 0,
+  "preservedGuideDocuments": [
+    "guides/console-files/index.html",
+    "guides/console-files/ps4.html",
+    "guides/console-files/ps5.html",
+    "guides/console-files/archives.html"
+  ],
+  "preservedInternalGuideLinks": 21,
+  "nativeFilesChanged": 0,
+  "downloadFilesChanged": 0,
+  "activeHostRedirectsChanged": 0,
+  "tests": {
+    "files": [
+      "pages-build.test.cjs",
+      "pages-sparse-checkout.test.cjs",
+      "pages-tree-metadata.test.cjs",
+      "source-link-cleanup.test.cjs"
+    ],
+    "passed": 11,
+    "failed": 0
+  },
+  "publicationPending": true
+}
