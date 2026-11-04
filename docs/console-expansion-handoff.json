@@ -10506,5 +10506,36 @@
     "changes": "Installation card moved above plugin template and game-update menu sections; existing Velora 1.4 full-package download added there. Installation guide uses the verified GTA V 1.57 Velora.sprx and /data/Velora layout instead of Expulsion. Direct existing downloads added for Velora, Oxagon Full/Lite and CSC resources.",
     "checks": "10 focused catalogue/Reborn tests passed; installation ordering and all local guide-download targets verified.",
     "preservation": "No download files, older builds, source links or archive versions removed or replaced."
+  },
+  "rkmodzCscPack20261104": {
+    "date": "2026-11-04",
+    "status": "Publication prepared; deployment verification pending",
+    "resourceId": "gta5-rkmodz-csc-pack",
+    "page": "console/mods/ps4/gta5/index.html#resource-gta5-rkmodz-csc-pack",
+    "sourceUrl": "https://www.mediafire.com/file/6bq67fwd1bpl623/Mod+Manager+PS4+By+RK+MODZ.rar/file",
+    "localDownload": "/downloads/ps4/GTA5/scripts/Mod Manager PS4 By RK MODZ.rar",
+    "version": "Unversioned pack - retrieved 2026-11-04",
+    "bytes": 1624092,
+    "sha256": "364a984dad6bbcea9e4f2b8f7889896c22e4a5256ba0e9701ae68ad332c99de5",
+    "contents": "38 CSC files and Instruction.txt; no PRX/SPRX plugin; 7-Zip integrity test passed; no downloaded code executed",
+    "compatibility": "PS4; game update/title ID/firmware unspecified. Instructions name Ozark/Paradise; October 29 outage note explicitly historical.",
+    "archive": "F: copy independently size/SHA-256 verified; scoped intake merged into both global inventories; organized index refreshed without deleting payloads. Sidecar: docs/rkmodz-csc-pack-private-inventory.json",
+    "validation": "14 focused catalogue/import tests passed; new pack appears once in scripts section with download and full guide. Site audit: 496 pages, 60720 links; only two unrelated historical host canonical/sitemap issues (gamerhack-505, gamerhack-672goldhen).",
+    "preservation": "Existing resources, older downloads and shared changes preserved.",
+    "metadataUpdate": {
+      "date": "2026-11-04",
+      "status": "Complete locally; not published",
+      "keywords": 110,
+      "tags": [
+        "CSC",
+        "RK MODZ",
+        "PS4",
+        "Menu pack",
+        "Script loader",
+        "38 scripts"
+      ],
+      "changes": "Pack and script-name aliases, loader search terms, card description, guide label, GTA V page keywords and search/social/structured descriptions updated. Rebuilt GTA page, installation guide, directory and resource-tag index.",
+      "validation": "18 tag, metadata and preservation checks passed; pack lookup verified for RK MODZ, RKMODZ manager, Not Your Dope, FC Loader and Paradise script loader; page meta keywords verified. PS4-only scope and unknown game-update compatibility retained."
+    }
   }
 }

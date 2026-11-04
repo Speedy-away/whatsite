@@ -12,7 +12,7 @@ const gameCopy = {
   'cold-war': ['Cold War Console Resources & DLC References', 'View the supplied Black Ops Cold War menu demonstration and the captured CUSA15010 v1.41 DLC reference, with media and compatibility details.'],
   'infinite-warfare': ['Infinite Warfare PS4 DLC Compatibility References', 'Read the captured CUSA04762 v1.25 DLC references for Infinite Warfare, including Absolution, Sabotage, Continuum and Retribution.'],
   'wwii': ['WWII PS4 Menus: HYDRA & DLC References', 'Find HYDRA 2.2.0 PS4 WWII Multiplayer and Zombies menu notes, Windows portable download, opening controls and captured DLC title-ID references.'],
-  'gta5': ['GTA 5 PS4 Mod Menus by Game Update', 'Find GTA 5 PS4 menus by game update, including older builds, Expulsion, Cyprus, Ozark, Velora and Beach, plus scripts and setup guides.'],
+  'gta5': ['GTA 5 PS4 Mod Menus by Game Update', 'Browse GTA 5 PS4 mod menus by update, plus RK MODZ’s 38-script CSC pack, script-loader requirements, downloads and installation guides.', ['GTA V CSC menus', 'CSC script packs', 'RK MODZ', 'RKMODZ manager']],
   'rdr2': ['RDR2 PS4 Menus: Havana, North, Sheriff & Oyster', 'Get RDR2 PS4 North, Sheriff, Havana and Oyster resources, with matching builds, publisher checksums, previews and supplied installation guides.']
 };
 function metadataByPage() {
@@ -20,9 +20,9 @@ function metadataByPage() {
   const result = new Map();
   for (const game of games) {
     const matching = entries.filter(entry => entry.gameId === game.id);
-    const [title, description] = gameCopy[game.id] || [game.title + ' Resources', game.summary || 'Browse game-specific menus, tools and supplied guides.'];
+    const [title, description, discoveryTerms = []] = gameCopy[game.id] || [game.title + ' Resources', game.summary || 'Browse game-specific menus, tools and supplied guides.'];
     result.set(game.url.slice(1) + 'index.html', {title: title + ' | whatwhatboy', description,
-      keywords: unique([...(gameAliases[game.id] || []), game.title, ...matching.map(entry => entry.name),
+      keywords: unique([...(gameAliases[game.id] || []), game.title, ...discoveryTerms, ...matching.map(entry => entry.name),
         ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), type: 'CollectionPage'});
   }
   const directory = {title: 'PS4/PS5 Menu Directory: Games, Tools & Guides | whatwhatboy',
