@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-04T12:27:14.714Z",
-  "status": "Verified locally; publication pending",
+  "updatedAt": "2026-11-04T12:32:08.009Z",
+  "status": "Published and live verified",
   "scope": "23 compatibility landing heads and two PS4/PS5 console hub heads only",
   "files": [
     "hosts/index.html",
@@ -49,9 +49,18 @@
     "totalPassed": 37,
     "failed": 0
   },
-  "publicationPending": true,
+  "publicationPending": false,
   "limitations": [
     "Existing social previews reused; no new images generated.",
     "Historical global metadata baselines retain the earlier redirect indexing directives; the23 deliberate noindex changes are recorded here."
-  ]
+  ],
+  "publication": {
+    "commit": "d34319fc521ed3c4ced165743a84dfaa0b11f38b",
+    "run": 41829615213,
+    "url": "https://github.com/Speedy-away/whatsite/actions/runs/41829615213",
+    "conclusion": "success",
+    "verifiedAt": "2026-11-04T12:31:51.209Z",
+    "liveReport": "docs/qa/host-reference-metadata-live-20261104.json",
+    "livePages": 25
+  }
 }

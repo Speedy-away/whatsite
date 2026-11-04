@@ -1,4 +1,26 @@
 {
+  "gta5CatalogueCleanup20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "beforeCards": 35,
+    "afterCards": 30,
+    "previousDownloadPaths": 182,
+    "missingDownloadPaths": [],
+    "source": "https://lossantosonline.com/",
+    "sourceNotes": "Official public page advertises a premium GTA V server on PS4 and Xbox 360. No public version-pinned client asset was offered; no guessed binary download or archive entry added.",
+    "image": "/assets/images/ps4-gta5/explosive-user-preview-2026-11-04.png",
+    "preservation": "All resource/download IDs, local binaries, original images and archive versions retained.",
+    "groups": [
+      "v157",
+      "v156",
+      "older",
+      "unconfirmed",
+      "scripts",
+      "servers"
+    ],
+    "generator": "scripts/build-ps4-mods.cjs --gta5-only",
+    "checks": "18 focused catalogue, preservation, Reborn and plugin-configuration tests passed. All previous download URL paths remain present."
+  },
   "allSiteAdCoverageVerified20261104": {
     "date": "2026-11-04",
     "status": "Published and live verified on main site and independent root host",
@@ -10465,13 +10487,24 @@
   },
   "hostMetadataRefresh20261104": {
     "updatedAt": "2026-11-04T12:27:14.714Z",
-    "status": "Verified locally; publication pending",
+    "status": "Published and live verified",
     "report": "docs/host-metadata-refresh-20261104.json",
     "pages": 25,
     "redirectsNoindexFollow": 23,
     "canonicalBodyExecutableAndConfigPreserved": true,
     "structuredDataHubsUpdated": 2,
     "testsPassed": 37,
-    "publicationPending": true
+    "publicationPending": false,
+    "commit": "d34319fc521ed3c4ced165743a84dfaa0b11f38b",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41829615213",
+    "liveReport": "docs/qa/host-reference-metadata-live-20261104.json",
+    "livePages": 25
+  },
+  "gta5InstallationGuide20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "changes": "Installation card moved above plugin template and game-update menu sections; existing Velora 1.4 full-package download added there. Installation guide uses the verified GTA V 1.57 Velora.sprx and /data/Velora layout instead of Expulsion. Direct existing downloads added for Velora, Oxagon Full/Lite and CSC resources.",
+    "checks": "10 focused catalogue/Reborn tests passed; installation ordering and all local guide-download targets verified.",
+    "preservation": "No download files, older builds, source links or archive versions removed or replaced."
   }
 }
