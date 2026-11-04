@@ -35,6 +35,11 @@ function materialize(root, result) {
   const names = result.files.filter(file => !result.offloaded.has(file.name)).map(file => '/' + file.name.replace(/[\\*?\[\]]/g, match => '\\' + match));
   execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/pages/',...names].join('\n')+'\n',maxBuffer:64*1024*1024});
 }
+function materializeLocaleSources(root) {
+  const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/i18n/page-translations.json'), 'utf8'));
+  const sources = manifest.pages.map(page => '/' + page.page.replace(/[\\*?\[\]]/g, match => '\\' + match));
+  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/',...sources].join('\n')+'\n',maxBuffer:64*1024*1024});
+}
 function sourceLinks(root) {
   const file=path.join(root,'docs/download-source-links.json');
   if(!fs.existsSync(file))return new Map();
@@ -98,7 +103,7 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   if (fs.existsSync(output)) throw Error('Use a fresh output directory; existing files are never removed');
   const hasLocales=fs.existsSync(path.join(root,'docs/i18n/page-translations.json'));
   // Sparse source catalogues are materialized only for build-time rendering.
-  if(sparse&&hasLocales)execFileSync('git',['sparse-checkout','add','languages'],{cwd:root,maxBuffer:64*1024*1024});
+  if(sparse&&hasLocales)materializeLocaleSources(root);
   const localization=hasLocales?require('./build-localized-pages.cjs'):null;
   const localizedContext=localization?localization.load(root):null;
   const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true}):{bytes:0};
@@ -139,4 +144,4 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   return report;
 }
 if (require.main === module) build({output: process.argv[2] && path.resolve(process.argv[2]), revision: process.env.GITHUB_SHA || 'main'});
-module.exports = {build, plan, rewriter, rawURL, eligible, LIMIT, treeFiles, materialize, sourceLinks};
+module.exports = {build, plan, rewriter, rawURL, eligible, LIMIT, treeFiles, materialize, materializeLocaleSources, sourceLinks};

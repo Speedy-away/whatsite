@@ -6,9 +6,12 @@ test('sparse deployment reads unfetched file sizes and materializes exact filena
   const git=(...args)=>cp.execFileSync('git',args,{cwd:root,encoding:'utf8',stdio:['pipe','pipe','pipe']});
   try{
     git('init','-b','main');git('config','user.name','Pages Test');git('config','user.email','pages-test@localhost');
-    const files={'index.html':'<html>Home</html>','docs/host-actions-ps4.json':'{"actions":[]}','scripts/keep.cjs':'// source','downloads/archive.bin':'retained only in repository','downloads/Old [1] & test.bin':'exact bytes'};
+    const files={'index.html':'<html>Home</html>','console/ps4/index.html':'<html>PS4 source</html>','docs/i18n/page-translations.json':JSON.stringify({pages:[{page:'console/ps4/index.html'}]}),'docs/host-actions-ps4.json':'{"actions":[]}','scripts/keep.cjs':'// source','downloads/archive.bin':'retained only in repository','downloads/Old [1] & test.bin':'exact bytes'};
     for(const [name,bytes]of Object.entries(files)){fs.mkdirSync(path.dirname(path.join(root,name)),{recursive:true});fs.writeFileSync(path.join(root,name),bytes);}
     git('add','.');git('commit','-m','fixture');git('sparse-checkout','set','docs','scripts');
+    assert.equal(fs.existsSync(path.join(root,'downloads/archive.bin')),false);
+    builder.materializeLocaleSources(root);
+    assert.equal(fs.readFileSync(path.join(root,'console/ps4/index.html'),'utf8'),'<html>PS4 source</html>');
     assert.equal(fs.existsSync(path.join(root,'downloads/archive.bin')),false);
     const tree=builder.treeFiles(root),result=builder.plan(root,tree.names,'a'.repeat(40),tree.sizes);
     assert.equal(tree.sizes.get('downloads/archive.bin'),Buffer.byteLength(files['downloads/archive.bin']));
