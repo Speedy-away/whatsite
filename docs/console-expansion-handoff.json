@@ -1,4 +1,22 @@
 {
+  "allSiteAdCoverageVerified20261104": {
+    "date": "2026-11-04",
+    "status": "Published and live verified on main site and independent root host",
+    "mainCommit": "e0be495886d9365d87edf2b94c064ca2f2ca682d",
+    "hostCommit": "2c7180b797e19fe2327e37dd93f90d5587f97a6f",
+    "mainAdPages": 489,
+    "hostAdPages": 60,
+    "newMainAdPages": 35,
+    "legacyBannersMigrated": 52,
+    "liveHTTPPages": 572,
+    "liveHTTPFailures": 0,
+    "normalBrowserCases": 82,
+    "tests": {
+      "main": 21,
+      "host": 5
+    },
+    "report": "docs/qa/all-sites-ad-coverage-20261104.json"
+  },
   "allPagesAds20261104": {
     "date": "2026-11-04",
     "status": "Expanded all public page families; publication and final live checks pending",
