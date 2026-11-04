@@ -105,6 +105,7 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
     // Immutable downloads and receiver snapshots keep their exact archived bytes.
     if ((!name.startsWith('downloads/') || name === 'downloads/index.html') && !/^console\/ps[45]\/whatsite-ps[45]\.html$/.test(name) && /\.(?:html|js|css|json|xml|md|txt)$/i.test(name)) {
       let source=fs.readFileSync(path.join(root, name), 'utf8');
+      if(name.endsWith('.html')&&!name.startsWith('hosts/runtime/'))source=require('./canonical-host-links.cjs').apply(source);
       if(name.endsWith('.html'))source=require('./source-download-notes.cjs').annotate(source,name,deliveryEntries);
       let content = rewrite(source, name);
       if (/^hosts\/runtime\/karo-[^/]+\/web\/.+\.html$/i.test(name) && Object.keys(runtimeFiles).length) {

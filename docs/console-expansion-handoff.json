@@ -1,4 +1,16 @@
 {
+  "livePageAudit20261104": {
+    "date": "2026-11-04",
+    "status": "982 live desktop/phone-width browser cases passed; canonical host repair prepared for publication",
+    "report": "docs/qa/live-pages-20261104.json",
+    "pages": 512,
+    "contentPages": 491,
+    "redirects": 21,
+    "brokenHostDestinationsRepaired": 22,
+    "adSlots": 402,
+    "adProvider": "Script returns HTTP 200; isolated desktop and phone tests returned no ad fill. Placement/fallback verified; no ad-delivery guarantee.",
+    "preservation": "Shared uncommitted changes preserved. Only audit repairs staged from the published baseline."
+  },
   "sitePublication20261104Responsive": {
     "date": "2026-11-04",
     "status": "Pushed and deployed successfully",

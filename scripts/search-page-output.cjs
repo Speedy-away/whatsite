@@ -7,6 +7,7 @@ function finish(file, html) {
   if (!eligible(relative) || tags.protectedFile(relative, html)) return html;
   html = require('./phone-navigation.cjs').apply(relative, html);
   html = require('./profile-navigation.cjs').apply(relative, html);
+  html = require('./canonical-host-links.cjs').apply(html);
   html = require('./console-guide-host-links.cjs').apply(relative, html);
   html = require('./catalog-layout.cjs').apply(relative, html);
   if (require('./site-ads.cjs').eligible(relative, html)) html = require('./site-ads.cjs').applyAds(relative, html);
