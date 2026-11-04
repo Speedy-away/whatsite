@@ -15,6 +15,7 @@ function build() {
   const footer = template.slice(template.indexOf('    <footer class="footer">'));
   const output = [];
   for (const game of data.games) {
+    if (game.directoryVisible === false) continue;
     const file = `mods/${game.id}.html`, title = `${game.title} Mods & Tools`;
     const entries = data.entries.filter(row => row.game === game.id);
     const content = section('requirements', 'Choose a compatible setup', note(`<p>${esc(game.requirements)}</p>`)) +
@@ -26,10 +27,23 @@ function build() {
   }
   const hubPath = path.join(root, 'pages/mods.html');
   let hub = fs.readFileSync(hubPath, 'utf8');
-  const cards = data.games.map(game => `<div class="game-card" data-mod="${esc(game.title.toLowerCase())}" data-search="${esc([game.title, ...data.entries.filter(e=>e.game===game.id).map(e=>e.title)].join(' ').toLowerCase())}"><div class="game-image"><img src="${game.image}" alt="${esc(game.title)} artwork" loading="lazy"></div><div class="game-info"><h3 class="game-title">${esc(game.title)}</h3><p class="game-description">${esc(game.description)}</p><a href="/mods/${game.id}.html" class="game-link"><i class="fas fa-arrow-right" aria-hidden="true"></i> View Mods</a></div></div>`).join('\n');
+  const cards = data.games.filter(game => game.directoryVisible !== false).map(game => `<div class="game-card" data-mod="${esc(game.title.toLowerCase())}" data-search="${esc([game.title, ...data.entries.filter(e=>e.game===game.id).map(e=>e.title)].join(' ').toLowerCase())}"><div class="game-image"><img src="${game.image}" alt="${esc(game.title)} artwork" loading="lazy"></div><div class="game-info"><h3 class="game-title">${esc(game.title)}</h3><p class="game-description">${esc(game.description)}</p><a href="/mods/${game.id}.html" class="game-link"><i class="fas fa-arrow-right" aria-hidden="true"></i> View Mods</a></div></div>`).join('\n');
   const block = `<!-- PC MOD EXPANSION START -->\n${cards}\n<!-- PC MOD EXPANSION END -->`;
   if (hub.includes('<!-- PC MOD EXPANSION START -->')) hub = hub.replace(/<!-- PC MOD EXPANSION START -->[\s\S]*?<!-- PC MOD EXPANSION END -->/, block);
   else hub = hub.replace('<div class="games-grid">', '<div class="games-grid">\n' + block);
+  // Keep the four requested collections first, preserving every existing card's content.
+  const art = require('./category-card-art.cjs');
+  const opening = /<div class="games-grid">/.exec(hub);
+  const area = art.range(hub, opening.index, opening[0]);
+  const allCards = art.cards(hub.slice(area.start, area.end));
+  const priority = ['/mods/gta5.html', '/mods/gta4.html', '/mods/rdr2.html', '/games-downloads/plants-vs-zombies.html'];
+  const cardRoute = card => art.route(card.html.match(/<a\b[^>]*href="([^"]+)"/)?.[1] || '', 'pages/mods.html');
+  const ordered = priority.map(route => allCards.find(card => cardRoute(card) === route));
+  if (ordered.some(card => !card)) throw Error('A priority Game Mods collection is missing');
+  const expansion = allCards.filter(card => /\bdata-mod=/.test(card.html) && /href="\/mods\//.test(card.html) && !priority.includes(cardRoute(card)));
+  const remaining = allCards.filter(card => !ordered.includes(card) && !expansion.includes(card));
+  const body = ordered.map(card => card.html).join('\n') + '\n<!-- PC MOD EXPANSION START -->\n' + expansion.map(card => card.html).join('\n') + '\n<!-- PC MOD EXPANSION END -->\n' + remaining.map(card => card.html).join('\n');
+  hub = hub.slice(0, area.start) + '<div class="games-grid">\n' + body + '\n</div>' + hub.slice(area.end);
   fs.writeFileSync(hubPath, finish('pages/mods.html', hub));
   return output;
 }

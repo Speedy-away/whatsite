@@ -1,7 +1,14 @@
 {
   "reviewed": "2026-11-03",
   "scope": "PC Game Mods expansion",
-  "gamesAdded": ["Minecraft Java", "Stardew Valley", "Terraria", "Hollow Knight", "Celeste", "Elden Ring"],
+  "gamesAdded": [
+    "Minecraft Java",
+    "Stardew Valley",
+    "Terraria",
+    "Hollow Knight",
+    "Celeste",
+    "Elden Ring"
+  ],
   "listingsAdded": 19,
   "pinnedReadyFiles": 12,
   "authorResourcesOrDirectories": 7,
@@ -27,5 +34,50 @@
     "browserRendering": "Not verified; browser automation disabled in Work settings",
     "downloadExecution": "No downloaded executable, installer, JAR or payload was executed"
   },
-  "archiveIndex": {"items": 4941, "fileRecords": 8562, "presentFileRecords": 8562, "missingFileRecords": 0, "refreshed": "2026-11-03"}
+  "archiveIndex": {
+    "items": 4941,
+    "fileRecords": 8562,
+    "presentFileRecords": 8562,
+    "missingFileRecords": 0,
+    "refreshed": "2026-11-03"
+  },
+  "directoryRevision20261104": {
+    "status": "Local changes; not published",
+    "priority": [
+      "GTA 5",
+      "GTA 4",
+      "RDR2",
+      "Plants vs Zombies"
+    ],
+    "removedFromDirectory": [
+      "Terraria",
+      "Stardew Valley",
+      "Hollow Knight",
+      "Celeste"
+    ],
+    "preserved": "Existing pages, source URLs, archived files and version/hash inventory retained. Hidden entries are not regenerated.",
+    "addedGames": [
+      "Cyberpunk 2077",
+      "Fallout 4",
+      "The Witcher 3",
+      "Baldur’s Gate 3"
+    ],
+    "addedResources": 9,
+    "delivery": "Verified author pages and mod directories. Browser-selected downloads, not new pinned binaries; no local ready-file archive copies claimed.",
+    "artwork": "Official Mojang landscape artwork replaces the isolated Minecraft block. Official Steam artwork added for Baldur’s Gate 3. Original assets retained; new image source, size and SHA-256 recorded.",
+    "checks": {
+      "focusedTests": 6,
+      "repeatGenerationUnchanged": true,
+      "siteAudit": {
+        "pages": 493,
+        "localLinks": 58268,
+        "brokenLocalLinks": 0,
+        "unrelatedIssues": [
+          "Existing host PS4 gamerhack-505 canonical absent from sitemap",
+          "Existing host PS4 gamerhack-672goldhen canonical absent from sitemap"
+        ]
+      },
+      "browserRenderingVerified": false
+    }
+  }
 }

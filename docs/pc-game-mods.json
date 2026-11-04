@@ -1,15 +1,21 @@
 {
   "version": 1,
-  "reviewed": "2026-11-03",
+  "reviewed": "2026-11-04",
   "games": [
     {
       "id": "minecraft",
       "title": "Minecraft Java",
-      "image": "/assets/images/minecraft1.png",
+      "image": "/assets/images/pc-mod-expansion/minecraft-java.jpg",
       "description": "Fabric performance mods, shaders and shared APIs, pinned to Minecraft Java 1.21.1.",
       "requirements": "These files target Minecraft Java 1.21.1 with Java 21 and Fabric Loader 0.16.0 or later, not Bedrock. Include Fabric API for Sodium’s required API modules. Iris below requires the exact Sodium build listed alongside it; its upstream filename is labelled beta.1.",
       "setup": "Install Fabric for Minecraft Java 1.21.1, then place the chosen JARs in that profile’s mods folder. Iris needs Sodium; shader packs are separate downloads.",
-      "help": "https://fabricmc.net/use/installer/"
+      "help": "https://fabricmc.net/use/installer/",
+      "imageSource": {
+        "url": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Global-Header_Image-Tile_MC-Java-Bedrock_570x321.jpg",
+        "page": "https://www.minecraft.net/en-us/about-minecraft",
+        "bytes": 145526,
+        "sha256": "c130f5e41905d2ac94a193188530346a428bb5dce2d63b73da56af1a4fad12a5"
+      }
     },
     {
       "id": "stardew-valley",
@@ -25,7 +31,8 @@
         "page": "https://store.steampowered.com/app/413150/",
         "sha256": "6f173dfb051a350dffdc1668b466b30b884ee2d080725c995fdbc89bcfd4565b",
         "bytes": 58853
-      }
+      },
+      "directoryVisible": false
     },
     {
       "id": "terraria",
@@ -41,7 +48,8 @@
         "page": "https://store.steampowered.com/app/105600/",
         "sha256": "866a45d030cf6af1fe06fd311a57cb472cb12411b2cdfe78391fd8b8ce4ab4bd",
         "bytes": 62177
-      }
+      },
+      "directoryVisible": false
     },
     {
       "id": "hollow-knight",
@@ -57,7 +65,8 @@
         "page": "https://store.steampowered.com/app/367520/",
         "sha256": "8886d642286de5411b216173b078d9d95f97cb5343e8d8042970ca4ba40d5d7d",
         "bytes": 57481
-      }
+      },
+      "directoryVisible": false
     },
     {
       "id": "celeste",
@@ -73,7 +82,8 @@
         "page": "https://store.steampowered.com/app/504230/",
         "sha256": "a0469dca08cbdc24fc10bd27ce6fe95350cde85b8441e37175356e6021365a64",
         "bytes": 44591
-      }
+      },
+      "directoryVisible": false
     },
     {
       "id": "elden-ring",
@@ -89,6 +99,48 @@
         "page": "https://store.steampowered.com/app/1245620/",
         "sha256": "d46402528e357350bdb31a00be57a7896238515e6dc8afc0669aa54573307c02",
         "bytes": 32689
+      }
+    },
+    {
+      "id": "cyberpunk-2077",
+      "title": "Cyberpunk 2077",
+      "image": "/assets/images/game-patches/cyberpunk-2077-official.jpg",
+      "description": "Physics changes and community mods for Night City.",
+      "requirements": "PC editions only. Match every mod and dependency to your installed game patch; REDmod and non-REDmod packages use different installation steps.",
+      "setup": "Use the author’s installation instructions for each package, then test one change at a time. Do not mix installation methods for the same mod.",
+      "help": "https://www.cyberpunk.net/en/modding-support"
+    },
+    {
+      "id": "fallout-4",
+      "title": "Fallout 4",
+      "image": "/assets/images/game-patches/fallout-4-official.jpg",
+      "description": "Settlement building and community bug fixes for the Commonwealth.",
+      "requirements": "PC Fallout 4. Game updates, DLC and Creation content requirements differ between mod files; Fallout VR is a separate game. Check the exact file requirements before installing.",
+      "setup": "Keep a separate save backup and mod profile. Install required frameworks first, then the chosen mods and their patches according to the author’s load-order instructions.",
+      "help": "https://www.nexusmods.com/fallout4/mods/47976"
+    },
+    {
+      "id": "witcher-3",
+      "title": "The Witcher 3",
+      "image": "/assets/images/game-patches/the-witcher-3-official.jpg",
+      "description": "Texture upgrades, bug fixes and restored content, with edition-specific links.",
+      "requirements": "PC only. Classic, Next-Gen and Remastered builds are separate compatibility targets. The HD Reworked OldGen listing is for the older game; the linked Brothers in Arms resource is the Next-Gen edition.",
+      "setup": "Choose files for your exact installed edition. Follow each author’s dependency and conflict-resolution instructions before combining script mods.",
+      "help": "https://www.nexusmods.com/witcher3/mods/7329"
+    },
+    {
+      "id": "baldurs-gate-3",
+      "title": "Baldur’s Gate 3",
+      "image": "/assets/images/pc-mod-expansion/baldurs-gate-3.jpg",
+      "description": "Party-size changes, interface support and the official mod browser.",
+      "requirements": "These author resources target PC. Match mods to your game patch and mod manager; Script Extender and non-Script Extender variants are separate builds. Console availability must be checked in the official browser.",
+      "setup": "Use the official mod browser for supported in-game packages. For external mods, follow the author’s installation method and dependency list; keep multiplayer groups on matching versions.",
+      "help": "https://baldursgate3.game/mods",
+      "imageSource": {
+        "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg",
+        "page": "https://store.steampowered.com/app/1086940/",
+        "bytes": 56973,
+        "sha256": "21f284ffed18a97faecae5345ba7b1c75ce70c9bc9b0de4cdbf0af85a5865c06"
       }
     }
   ],
@@ -514,6 +566,114 @@
         ],
         "upstreamSha256": "848ae27e1c77217590dac401c012a17d9b4f05b9b9a24aa33af54d8d7b8ba2a1"
       }
+    },
+    {
+      "id": "cp-ragdoll",
+      "game": "cyberpunk-2077",
+      "title": "Ragdoll Physics Overhaul",
+      "kind": "Gameplay mod",
+      "description": "Changes ragdoll behaviour for character physics.",
+      "source": "https://www.nexusmods.com/cyberpunk2077/mods/3858",
+      "compatibility": "PC Cyberpunk 2077. Check the selected file’s game-patch support and installation notes.",
+      "checkedAt": "2026-11-04",
+      "availability": "Author-page resource. Choose a compatible file in your browser; no ready-to-use local copy is claimed.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "cp-mod-directory",
+      "game": "cyberpunk-2077",
+      "title": "Cyberpunk 2077 mod collection",
+      "kind": "Mod directory",
+      "description": "Browse gameplay changes, visuals, vehicles and customisation from their authors.",
+      "source": "https://www.nexusmods.com/games/cyberpunk2077/mods",
+      "compatibility": "PC. Each mod has its own game-version and framework requirements.",
+      "checkedAt": "2026-11-04",
+      "availability": "Browse the collection and choose compatible files on the source site.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "fo4-sim-settlements-2",
+      "game": "fallout-4",
+      "title": "Sim Settlements 2",
+      "kind": "Settlement overhaul",
+      "description": "Adds a settlement-building campaign and city development systems.",
+      "source": "https://www.nexusmods.com/fallout4/mods/47976",
+      "compatibility": "Requires Workshop Framework. HUDFramework enables additional UI features. Check chapter, game-build and optional-content requirements on the author page.",
+      "checkedAt": "2026-11-04",
+      "availability": "Author-page resource. Choose a compatible file in your browser; no ready-to-use local copy is claimed.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "fo4-unofficial-patch",
+      "game": "fallout-4",
+      "title": "Unofficial Fallout 4 Patch",
+      "kind": "Bug-fix mod",
+      "description": "Community fixes for issues left unresolved in the base game.",
+      "source": "https://www.nexusmods.com/fallout4/mods/4598",
+      "compatibility": "The author currently lists Fallout 4 1.11.221+ and all six DLCs plus specified Creation content. Read the full requirements before selecting a file; not Fallout VR.",
+      "checkedAt": "2026-11-04",
+      "availability": "Author-page resource. Choose a compatible file in your browser; no ready-to-use local copy is claimed.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "tw3-hd-reworked-oldgen",
+      "game": "witcher-3",
+      "title": "HD Reworked Project — OldGen",
+      "kind": "Texture overhaul",
+      "description": "Reworks textures and models for the classic game edition.",
+      "source": "https://www.nexusmods.com/witcher3/mods/1021",
+      "compatibility": "OldGen edition. Do not use this listing as a Next-Gen or Remastered build; choose the matching author release for your game.",
+      "checkedAt": "2026-11-04",
+      "availability": "Author-page resource. Choose a compatible file in your browser; no ready-to-use local copy is claimed.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "tw3-brothers-in-arms-nextgen",
+      "game": "witcher-3",
+      "title": "Brothers in Arms — Next-Gen",
+      "kind": "Bug fixes & restored content",
+      "description": "Restores missing content and collects community bug fixes.",
+      "source": "https://www.nexusmods.com/witcher3/mods/7329",
+      "compatibility": "Next-Gen resource, separate from the classic release. Check DLC, patch and script-conflict requirements on the author page; Remastered compatibility is not assumed.",
+      "checkedAt": "2026-11-04",
+      "availability": "Author-page resource. Choose a compatible file in your browser; no ready-to-use local copy is claimed.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "bg3-party-limit",
+      "game": "baldurs-gate-3",
+      "title": "Party Limit Begone",
+      "kind": "Gameplay mod",
+      "description": "Expands party-size options for larger adventuring groups.",
+      "source": "https://www.nexusmods.com/baldursgate3/mods/327",
+      "compatibility": "PC. Select the variant matching your game patch and Script Extender setup. Follow the author’s multiplayer and scene restrictions.",
+      "checkedAt": "2026-11-04",
+      "availability": "Author-page resource. Choose a compatible file in your browser; no ready-to-use local copy is claimed.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "bg3-improved-ui",
+      "game": "baldurs-gate-3",
+      "title": "ImpUI (ImprovedUI)",
+      "kind": "Interface mod",
+      "description": "Interface support used by other UI and character customisation mods.",
+      "source": "https://www.nexusmods.com/baldursgate3/mods/366",
+      "compatibility": "Match the ImpUI build to your game patch and dependent mods; remove incompatible older UI files as directed by the author.",
+      "checkedAt": "2026-11-04",
+      "availability": "Author-page resource. Choose a compatible file in your browser; no ready-to-use local copy is claimed.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
+    },
+    {
+      "id": "bg3-official-mods",
+      "game": "baldurs-gate-3",
+      "title": "Official mod browser",
+      "kind": "Mod directory",
+      "description": "Browse community weapons, classes, spells and cosmetic additions through the official mod collection.",
+      "source": "https://baldursgate3.game/mods",
+      "compatibility": "Use the platform and patch filters in the official browser. External PC mods are not automatically supported on consoles.",
+      "checkedAt": "2026-11-04",
+      "availability": "Browse the collection and choose compatible files on the source site.",
+      "archiveStatus": "source-page-only; no direct release asset verified"
     }
   ]
 }

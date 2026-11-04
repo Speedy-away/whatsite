@@ -25,9 +25,9 @@ test('tabs support keyboard navigation and a single roving tab stop per group',(
 test('directory removes the old Downloader instruction, preserves APK Time and exposes only archived APK downloads',()=>{
  const catalog=JSON.parse(read('docs/apk-app-catalog.json')),html=builder.render(read('scripts/templates/apk-page.html'),catalog);
  assert.doesNotMatch(html,/On Home Page of Downloader, type:/);
- for(const id of ['tv','phone','phone-ios','phone-android','phone-harmony','apk-time','installation'])assert.ok(html.includes('id="'+id+'"'),id);
+ for(const id of ['tv','apk-time','installation'])assert.ok(html.includes('id="'+id+'"'),id);
  assert.ok(html.includes('/downloads/archive/ca9af15933d9/APKTime-v2.2-Original.apk'));
- assert.ok(html.includes('https://appgallery.huawei.com/'));assert.ok(html.includes('https://apps.apple.com/'));assert.ok(html.includes('https://play.google.com/'));
+ assert.doesNotMatch(html, /data-app-tablist|id="phone(?:-ios|-android|-harmony)?"/);
  assert.ok(!html.includes(' hidden'),'No-script users can read every section');
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
  for(const app of catalog.apps){const card=builder.appCard(app);if(app.status==='archived'){assert.ok(card.includes(app.downloadURL.replaceAll('&','&amp;')));assert.ok(app.file.bytes>0);assert.match(app.file.sha256,/^[a-f0-9]{64}$/);}else if(app.delivery){assert.ok(card.includes(app.delivery.url.replaceAll('&','&amp;')));assert.ok(!card.includes('>Download APK</a>'));}else {assert.ok(!card.includes('>Download APK</a>'));assert.ok(card.includes('unavailable'));}}
@@ -43,8 +43,18 @@ test('all eight repaired entries keep their old source and use accurately labell
  assert.match(c.apps.find(a=>a.id==='tv-launcher').delivery.url,/tvlauncher-3-1-1/);
  assert.match(c.apps.find(a=>a.id==='atv-launcher').delivery.description,/paid Pro/);
 });
-test('Phone expands each platform with verified store or publisher identities and direct app anchors',()=>{
- const p=JSON.parse(read('docs/phone-app-catalog.json')),html=builder.render(read('scripts/templates/apk-page.html'),JSON.parse(read('docs/apk-app-catalog.json')),p);
- assert.equal(p.apps.filter(a=>a.platform==='ios').length,12);assert.equal(p.apps.filter(a=>a.platform==='android').length,12);assert.equal(p.apps.filter(a=>a.platform==='harmony').length,7);
- for(const app of p.apps){assert.ok(app.checkedAt&&app.storeTitle&&app.source);assert.ok(html.includes('id="app-'+app.id+'"'));assert.ok(html.includes(app.url.replaceAll('&','&amp;')));const f=fixture('#app-'+app.id);assert.equal(f.panels.phone.hidden,false);assert.equal(f.panels['phone-'+app.platform].hidden,false);}
+test('Phone has its own empty page and top-level sidebar destination',()=>{
+ const phone=read('pages/phone.html'),apk=read('pages/apk.html');
+ const main=phone.slice(phone.indexOf('<div class="main-content"'),phone.indexOf('<!-- Footer -->'));
+ assert.match(main,/<h1 class="page-title">Phone<\/h1>/);
+ assert.doesNotMatch(main,/app-card|app-tabs|<article|<a\b/);
+ assert.match(phone,/href="\/pages\/phone.html" class="nav-link active" aria-current="page"/);
+ assert.doesNotMatch(apk,/data-app-tablist|id="phone(?:-ios|-android|-harmony)?"/);
+ const navigation=require('../phone-navigation.cjs');
+ for(const file of require('../site-public-pages.cjs').pages()){
+  const html=fs.readFileSync(file,'utf8');
+  if(!html.includes('class="sidebar-nav"')||!html.includes('data-tooltip="PC"'))continue;
+  assert.equal((html.match(/data-phone-navigation/g)||[]).length,1,file);
+  assert.equal(navigation.apply(path.relative(root,file),html),html,file);
+ }
 });

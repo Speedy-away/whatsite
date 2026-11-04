@@ -1,4 +1,38 @@
 {
+  "catalogResponsiveLayout20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "request": "Five catalogue cards on wide screens, three on smaller desktops, responsive resolution support and ads on Ports/Emulators",
+    "pages": 445,
+    "implementation": "assets/catalog-layout.css + scripts/catalog-layout.cjs via scripts/search-page-output.cjs. Existing card markup/classes and all download/version data retained.",
+    "ads": "Ports now has the existing async native ad after its introduction. All 15 eligible emulator pages have ad placements. Shared generation preserves ads without downgrading unrelated asset versions.",
+    "tests": 36,
+    "browserCases": 58,
+    "report": "docs/qa/catalog-responsive-layout.json",
+    "screenshots": [
+      "tmp/catalog-responsive-qa/ports-2560.png",
+      "tmp/catalog-responsive-qa/ports-1648.png",
+      "tmp/catalog-responsive-qa/ports-390.png"
+    ],
+    "audit": "No missing local assets in 58008 audited links. Three existing/concurrent sitemap omissions are recorded in the QA report; host/phone files were not altered to resolve them."
+  },
+  "consolePopupWidthAndHost20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "popupWidth": "Both setup and guide dialogs use a 1120px maximum with existing phone sizing and viewport height limits retained",
+    "hostLink": "PS4/PS5 guide launches, hub host cards and legacy own-host links on download pages use https://speedy-away.github.io/hosts/ps4/ and /hosts/ps5/. Documentation references, store installation links, ready downloads and local Save services remain intact.",
+    "preservation": "No firmware lists, compatibility exclusions, archive versions, download files or host runtimes changed. Select exact installed firmware on the host; no new compatibility is inferred.",
+    "generator": "scripts/console-guide-host-links.cjs, integrated into scripts/search-page-output.cjs; original launch URLs retained as data-original-host-url, including the PS4 14.00 query pin",
+    "validation": {
+      "focusedTests": 24,
+      "changedPages": 8,
+      "ownHostLinks": 105,
+      "downloadActionsUnchanged": true,
+      "repeatable": true,
+      "liveDestinations": "PS4 and PS5 HTTP 200",
+      "browserRenderingVerified": false
+    }
+  },
   "publication20261102": {
     "firstPublishedCommit": "61ef2a139ccba62c81aea4afe8f4a7423026dfd5",
     "followUpPublishedCommit": "6850fb24930ff5097e139ea15265639d6479bb1e",

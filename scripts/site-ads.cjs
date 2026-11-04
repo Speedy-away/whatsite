@@ -14,6 +14,7 @@ function eligible(file, html) {
     !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html) &&
     !/http-equiv=["']refresh/i.test(html) &&
     !/\bclass=["'][^"']*receiver-/.test(html) &&
+    /<section\b/i.test(html) &&
     !/aloudalimonyexplosion\.com\//i.test(html);
 }
 
@@ -26,8 +27,6 @@ function placement() {
 function applyAds(file, html) {
   if (!eligible(file, html)) return html;
   html = html.replace('/assets/site-ads.css?v=1', '/assets/site-ads.css?v=2').replace('/assets/site-ads.js?v=1', '/assets/site-ads.js?v=2');
-  html = html.replace(/\/assets\/console-guides\.css\?v=\d+/g, '/assets/console-guides.css?v=9');
-  html = html.replace(/\/assets\/console-guide-dialog\.js\?v=\d+/g, '/assets/console-guide-dialog.js?v=4');
   if (!html.includes('/assets/site-ads.css')) html = html.replace('</head>', stylesheet + '\n</head>');
   if (!html.includes('/assets/site-ads.js')) html = html.replace('</body>', script + '</body>');
   if (html.includes(start) && !html.includes(end, html.indexOf(start))) throw Error('Unterminated ad placement in ' + file);
@@ -49,7 +48,10 @@ function applyAds(file, html) {
     }
   }
   if (sectionEnd < 0) throw Error('No content placement found in ' + file);
-  const insert = sectionEnd;
+  // Ports has one long catalogue section. Put its ad after the intro rather
+  // than below all 49 cards, keeping the provider outside the searchable grid.
+  const heroEnd = file.replaceAll('\\', '/') === 'pc/ports.html' ? html.indexOf('</header>', main) : -1;
+  const insert = heroEnd >= 0 ? heroEnd + '</header>'.length : sectionEnd;
   return html.slice(0, insert) + '\n' + placement() + '\n' + html.slice(insert);
 }
 

@@ -8,8 +8,15 @@ const data = require('../../docs/pc-game-mods.json');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 test('new game destinations retain the five established mod collections', () => {
   const hub = read('pages/mods.html');
-  for (const route of ['mods/gta5.html', 'mods/gta4.html', 'mods/rdr2.html', 'mods/skyrim.html', 'games-downloads/plants-vs-zombies.html', ...data.games.map(g => `mods/${g.id}.html`)]) assert.ok(hub.includes(route), route);
+  for (const route of ['mods/gta5.html', 'mods/gta4.html', 'mods/rdr2.html', 'mods/skyrim.html', 'games-downloads/plants-vs-zombies.html', ...data.games.filter(g => g.directoryVisible !== false).map(g => `mods/${g.id}.html`)]) assert.ok(hub.includes(route), route);
   assert.equal(new Set(data.entries.map(e => e.id)).size, data.entries.length);
+  const cards=require('../category-card-art.cjs').cards(hub);
+  const routes=cards.map(card=>require('../category-card-art.cjs').route(card.html.match(/<a\b[^>]*href="([^"]+)"/)?.[1]||'', 'pages/mods.html'));
+  assert.deepEqual(routes.slice(0,4),['/mods/gta5.html','/mods/gta4.html','/mods/rdr2.html','/games-downloads/plants-vs-zombies.html']);
+  for(const game of data.games.filter(g=>g.directoryVisible===false))assert.ok(!routes.includes('/mods/'+game.id+'.html'));
+  assert.ok(hub.includes('/assets/images/pc-mod-expansion/minecraft-java.jpg'));
+  assert.ok(!hub.includes('/assets/images/minecraft1.png'));
+
 });
 test('download pins, upstream hashes and public archive records are explicit', () => {
   const downloads = data.entries.filter(e => e.download);

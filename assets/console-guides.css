@@ -61,10 +61,11 @@
 .guide-host:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
 .guide-host-note { margin-top: 20px; max-width: 74ch; color: var(--text-secondary); font-size: .875rem; }
 .guide-host-source { font-size: .875rem; }
+.guide-host-destination { font-size: .75rem; line-height: 1.5; color: var(--accent-light, #91baff); }
 .guide-footer { padding: 36px 0 60px; color: var(--text-secondary); font-size: .875rem; }
 .guide-dialog-open { overflow: hidden; }
 .guide-dialog {
-  width: min(920px, calc(100vw - 40px));
+  width: min(1120px, calc(100vw - 40px));
   max-width: none;
   max-height: min(860px, calc(100vh - 48px));
   max-height: min(860px, calc(100dvh - 48px));
