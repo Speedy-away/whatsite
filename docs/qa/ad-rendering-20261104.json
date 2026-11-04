@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-04T04:17:45.959Z",
+  "status": "Published, real ads visible on desktop and phone browser widths",
+  "commit": "bd4b079101e0f87dfc2f7f20e4558a26ed1dafc6",
+  "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41771954490",
+  "testsPassed": 18,
+  "method": "Normal in-app browser, provider scripts unmodified, no ad clicks. Phone viewport emulation; not a physical phone.",
+  "finding": "Headless Edge receives an empty HTTP 200 ad-script body while the normal in-app browser receives and renders real native ads. Earlier no-fill results were specific to the automated environment.",
+  "fixes": [
+    "Existing native publisher container now precedes its async script",
+    "Removed 420px height cap and nested scroll area",
+    "Updated public ad stylesheet URLs to v3"
+  ],
+  "cases": [
+    {
+      "height": 460.90625,
+      "links": 4,
+      "overflow": "visible",
+      "scrollHeight": 461,
+      "status": "filled",
+      "url": "https://whatwhatboy.com/pc/ports.html",
+      "width": 390
+    },
+    {
+      "height": 370.1875,
+      "links": 4,
+      "overflow": "visible",
+      "scrollHeight": 370,
+      "status": "filled",
+      "url": "https://whatwhatboy.com/pc/ports.html",
+      "width": 1920
+    },
+    {
+      "height": 329.40625,
+      "links": 4,
+      "overflow": "visible",
+      "scrollHeight": 329,
+      "status": "filled",
+      "url": "https://whatwhatboy.com/pc/emulators.html",
+      "width": 1920
+    },
+    {
+      "height": 422.34375,
+      "links": 4,
+      "overflow": "visible",
+      "scrollHeight": 422,
+      "status": "filled",
+      "url": "https://whatwhatboy.com/pc/emulators.html",
+      "width": 390
+    }
+  ],
+  "screenshots": [
+    "docs/screenshots/ad-rendering/ports-phone.png",
+    "docs/screenshots/ad-rendering/ports-desktop.png"
+  ]
+}

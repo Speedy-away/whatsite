@@ -1,4 +1,13 @@
 {
+  "adRenderingLiveVerification20261104": {
+    "date": "2026-11-04",
+    "status": "Published and live verified: four real native ads on Ports and Emulators at 1920px desktop and 390px phone widths; clipping removed",
+    "commit": "bd4b079101e0f87dfc2f7f20e4558a26ed1dafc6",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41771954490",
+    "tests": 18,
+    "report": "docs/qa/ad-rendering-20261104.json",
+    "provider": "Original provider and placement retained; no ad clicks, fake ads or modified provider code. Prior empty response was headless-browser-specific."
+  },
   "adRenderingRepair20261104": {
     "date": "2026-11-04",
     "status": "Ad rendering verified in normal IAB browser before patch; phone clipping and async container order repaired for publication",
