@@ -10721,5 +10721,28 @@
       "DLPSGame logo and directories above Free Shops"
     ],
     "status": "Repository published; deployment verification pending"
+  },
+  "consoleHubGroups20261104": {
+    "date": "2026-11-04",
+    "status": "Complete locally; not published",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps5/index.html"
+    ],
+    "groups": [
+      "Game mods / Mod Menus",
+      "Game downloads & free shops",
+      "Homebrew, emulators & tools",
+      "Set up your console"
+    ],
+    "source": "scripts/console-hub-groups.cjs through scripts/search-page-output.cjs",
+    "verification": {
+      "testsPassed": 6,
+      "allCardsPreserved": true,
+      "allLinksPreserved": true,
+      "regenerationStable": true,
+      "browserVerified": true,
+      "screenshot": "docs/screenshots/console-hub-groups-20261104.png"
+    }
   }
 }

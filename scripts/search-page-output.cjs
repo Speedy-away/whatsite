@@ -14,7 +14,8 @@ function finish(file, html) {
   if (require('./site-ads.cjs').eligible(relative, html)) html = require('./site-ads.cjs').applyAds(relative, html);
   const navigable = require('./pc-ports-navigation.cjs').apply(relative, require('./console-game-directories.cjs').apply(relative, html));
   const shops = require('./console-free-shops.cjs').apply(relative, navigable);
-  const themed = require('./add-themes-sidebar.cjs').applyThemes(shops, relative);
+  const grouped = require('./console-hub-groups.cjs').apply(relative, shops);
+  const themed = require('./add-themes-sidebar.cjs').applyThemes(grouped, relative);
   const illustrated = require('./category-card-art.cjs').apply(relative, themed);
   const directories = require('./game-directory-card-layout.cjs').apply(relative, illustrated);
   const searchable = tags.apply(relative, require('./host-page-shell.cjs').apply(relative,directories));
