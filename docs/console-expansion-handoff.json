@@ -10747,7 +10747,7 @@
   },
   "sitemapAndLanguages20261104": {
     "date": "2026-11-04",
-    "status": "Validated for repository publication",
+    "status": "Pushed to origin/main; website deployment in progress",
     "sitemap": {
       "canonicalURLs": 494,
       "previousEntries": 515,
@@ -10794,6 +10794,14 @@
       "translatedLanguageCount": 20,
       "scope": "Shared public controls and repeated GoldHEN, patch and installation guidance",
       "unrelatedWorkingChangesExcluded": true
+    },
+    "publication": {
+      "contentCommit": "b26158ab492e67c97acbd2dca22c9acfe45e6981",
+      "repository": "https://github.com/Speedy-away/whatsite",
+      "branch": "main",
+      "remoteCommitVerified": true,
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41838675049",
+      "deploymentStatus": "in_progress"
     },
     "report": "docs/qa/sitemap-language-refresh-20261104.json"
   }
