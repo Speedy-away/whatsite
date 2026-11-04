@@ -11017,5 +11017,34 @@
       "Static generation refuses incomplete translation caches. No partially translated language pages have been published.",
       "Outstanding: finish and review translations; full build size/link/hreflang validation; browser QA; isolated commit and push/deployment verification."
     ]
+  },
+  "synapsePS420261104": {
+    "date": "2026-11-04",
+    "status": "Validated; queued for requested commit and push",
+    "gameVersion": "1.57",
+    "images": [],
+    "zip": "/downloads/ps4/GTA5/157/synapse/Synapse-PS4-GTA-V-1.57.zip",
+    "originalsPreserved": true,
+    "archiveVerified": true,
+    "files": [
+      {
+        "name": "synapse.rar",
+        "bytes": 12276,
+        "sha256": "c70555aece672995537e2a647813a84039e6b0eea19fc4eec581001bd68a0172"
+      },
+      {
+        "name": "synapse.sprx",
+        "bytes": 552832,
+        "sha256": "4afb30014b26d2802eb050a459a759c68d11dfcab2df2f4122e7581170fc26cd"
+      },
+      {
+        "name": "Synapse-PS4-GTA-V-1.57.zip",
+        "bytes": 314093,
+        "sha256": "b647b811525afeb9c87eda9c2d856239786a03f610a227dd508dfd0e9f98bcd0"
+      }
+    ],
+    "notes": "User requested one combined ZIP, no menu image. No firmware/title-ID compatibility inferred. No downloaded code executed.",
+    "removedIntroBox": true,
+    "validation": "ZIP integrity passed; 31 targeted tests passed; site audit 496 pages / 60693 links, zero issues; Git file-size check passed."
   }
 }
