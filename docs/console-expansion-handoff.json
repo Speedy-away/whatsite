@@ -10280,15 +10280,29 @@
     ]
   },
   "hostRedesignMigration20261104": {
-    "status": "User requested a new chat for full host redesign and migration to speedy-away.github.io.",
-    "source": "C:\\Users\\whatw\\Documents\\GitHub\\WWB-HOST",
+    "status": "Completed: root-domain host published, history and older versions preserved; main-site metadata/navigation live with red theme retained.",
+    "source": "C:/Users/whatw/Documents/GitHub/WWB-HOST",
     "destination": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
-    "handoff": "C:\\Users\\whatw\\Documents\\GitHub\\WWB-HOST\\docs\\migration\\redesign-migration-handoff.json",
-    "mainSiteRule": "Preserve the red whatwhatboy.com design; update relevant metadata/links only.",
-    "threadId": "01a1a409-1cd8-79f1-8dbd-96918ee4e7e1",
-    "title": "PlayStation host redesign and root-site migration",
-    "sourceCheckpoint": "22b518676fe15b99331c6395c57f809257003fc7",
-    "newChatStarted": true
+    "site": "https://speedy-away.github.io/",
+    "rootCommit": "6f5b64fa942bb547a2c8b40d381b3e478454f236",
+    "rootDeployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/41755985410",
+    "mainCommit": "483b6393cac0b3a7615e2ffc0dadc9774f073eb6",
+    "mainDeployment": "https://github.com/Speedy-away/whatsite/actions/runs/41753458318",
+    "hostReview": "speedy-away.github.io/docs/migration/root-redesign-review.json",
+    "tests": 490,
+    "livePublicURLsVerified": 1553,
+    "liveFailures": 0,
+    "archive": {
+      "items": 5007,
+      "fileRecords": 8626,
+      "missing": 0
+    },
+    "sender": "2.1.0+25d5c9f0d403",
+    "receiver": "2026.11.02.21",
+    "newPS4OnPS5Definitions": 6,
+    "redMainSitePreserved": true,
+    "hostRedirectsRegenerated": false,
+    "nativeHardwareTested": false
   },
   "repositoryPush20261104": {
     "request": "Push all pending whatsite repository changes",

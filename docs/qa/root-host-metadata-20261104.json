@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-11-04T01:17:07.178Z",
-  "status": "Prepared and locally validated; push after the root host deployment succeeds",
+  "status": "Published and live verified",
   "rootHost": "https://speedy-away.github.io/",
   "pages": [
     "console/ps4/index.html",
@@ -36,5 +36,10 @@
       "path": "scripts/tests/host-sidebar-link.test.cjs",
       "sha256": "7dbcd0a540468ca8545b7373671cc7400d4bf4624fe530776693dc4120d62b0b"
     }
-  ]
+  ],
+  "verifiedAt": "2026-11-04T01:53:14.914Z",
+  "mainCodeCommit": "483b6393cac0b3a7615e2ffc0dadc9774f073eb6",
+  "mainDeployment": "https://github.com/Speedy-away/whatsite/actions/runs/41753458318",
+  "rootHostCodeCommit": "6f5b64fa942bb547a2c8b40d381b3e478454f236",
+  "rootHostDeployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/41755985410"
 }
