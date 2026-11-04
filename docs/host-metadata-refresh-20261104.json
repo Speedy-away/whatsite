@@ -1,0 +1,57 @@
+{
+  "updatedAt": "2026-11-04T12:27:14.714Z",
+  "status": "Verified locally; publication pending",
+  "scope": "23 compatibility landing heads and two PS4/PS5 console hub heads only",
+  "files": [
+    "hosts/index.html",
+    "hosts/karo/index.html",
+    "hosts/ps4/index.html",
+    "hosts/ps4/files/index.html",
+    "hosts/ps4/payload-manager/index.html",
+    "hosts/ps4/lua/index.html",
+    "hosts/ps4/packages/index.html",
+    "hosts/ps4/gta5/index.html",
+    "hosts/ps4/rdr2/index.html",
+    "hosts/ps4/other-games/index.html",
+    "console/ps4/index.html",
+    "hosts/ps5/index.html",
+    "hosts/ps5/files/index.html",
+    "hosts/ps5/payload-manager/index.html",
+    "hosts/ps5/lua/index.html",
+    "hosts/ps5/packages/index.html",
+    "hosts/ps5/gta5/index.html",
+    "hosts/ps5/rdr2/index.html",
+    "hosts/ps5/other-games/index.html",
+    "console/ps5/index.html",
+    "hosts/ps4/afterglow/index.html",
+    "hosts/ps4/cheats/index.html",
+    "hosts/ps4/firmware/index.html",
+    "hosts/tools/ps4-trainer/index.html",
+    "hosts/tools/esp-flasher/index.html"
+  ],
+  "implementation": [
+    "scripts/host-reference-metadata.cjs",
+    "scripts/page-search-metadata.cjs",
+    "scripts/tests/host-reference-metadata.test.cjs"
+  ],
+  "robots": "23 redirects use noindex, follow; console hub indexing preserved",
+  "structuredData": "Two console hub WebPage/WebSite records synchronized; redirect pages have no indexable page schema",
+  "canonicalBodyExecutableAndConfigPreserved": 25,
+  "existingPreviewAssetsOnly": true,
+  "maxDescriptionCharacters": 146,
+  "keywordRange": [
+    5,
+    11
+  ],
+  "tests": {
+    "metadataAndSearch": 26,
+    "mainPagesWorkflow": 11,
+    "totalPassed": 37,
+    "failed": 0
+  },
+  "publicationPending": true,
+  "limitations": [
+    "Existing social previews reused; no new images generated.",
+    "Historical global metadata baselines retain the earlier redirect indexing directives; the23 deliberate noindex changes are recorded here."
+  ]
+}

@@ -326,6 +326,8 @@ function pageSchema({canonical, title, description, keywords, image, imageInfo, 
 function transform(file, before, options = {}) {
   const relative = normalizedFile(file);
   if (protectedFile(relative, before)) return {html: before, metadata: null, skipped: true};
+  const hostReference = require('./host-reference-metadata.cjs').transform(relative, before);
+  if (hostReference) return hostReference;
   let head = before.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1];
   assert(head !== undefined, `${relative}: missing head`);
   const newline = before.includes('\r\n') ? '\r\n' : '\n';
