@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const VERSION = '3';
-const TAG = '<script defer src="/languages/i18n.js?v=' + VERSION + '"></script>';
+const TAG = '<script defer src="/languages/i18n.js?v=' + VERSION + '&amp;rev=20261104"></script>';
 const CHECK = process.argv.includes('--check');
 const SKIP_DIRS = ['.git', '.agents', '.codex', '.claude', '.playwright', '.playwright-cli', 'backup', 'node_modules', 'assets', 'docs', 'design-references', 'downloads', 'i18n-tools', 'languages', 'api', 'css2', 'css2-1'];
 
@@ -34,6 +34,8 @@ for (const file of publicFiles) {
   let html = fs.readFileSync(file, 'utf8');
 
   if (/whatsite-ps[45]\.html$/.test(rel) || /<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html) || /http-equiv="refresh"/i.test(html)) continue;
+  const canonical = html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/i)?.[1];
+  if (canonical && new URL(canonical).origin !== 'https://whatwhatboy.com') continue;
 
   const loader = /<script\b[^>]*\bsrc="[^"]*(?:^|\/)languages\/i18n\.js(?:\?[^"]*)?"[^>]*>\s*<\/script>/g;
   if (loader.test(html)) {

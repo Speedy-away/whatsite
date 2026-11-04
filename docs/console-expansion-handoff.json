@@ -10744,5 +10744,57 @@
       "browserVerified": true,
       "screenshot": "docs/screenshots/console-hub-groups-20261104.png"
     }
+  },
+  "sitemapAndLanguages20261104": {
+    "date": "2026-11-04",
+    "status": "Validated for repository publication",
+    "sitemap": {
+      "canonicalURLs": 494,
+      "previousEntries": 515,
+      "migratedRedirectURLsRemoved": 21,
+      "externallyCanonicalPagesExcluded": 2,
+      "validXML": true,
+      "repeatRefreshChanged": false,
+      "lastmod": "Committed page date, or current date for working changes"
+    },
+    "languages": {
+      "supportedTranslations": 20,
+      "englishSource": true,
+      "keysPerLanguage": 1254,
+      "newKeysPerLanguage": 72,
+      "publicPageLoaders": 494,
+      "missingLoaders": [],
+      "cacheRevision": "20261104",
+      "existingTranslationsPreserved": true,
+      "fullPageTranslationComplete": false,
+      "unmatchedCandidates": 30730,
+      "limitation": "Lookup matches are not a complete linguistic translation percentage. Unmatched candidates include proper names, technical metadata and full English prose. New content needs translated source keys. Dynamic JavaScript-only strings are validated by the source pack and runtime tests, not this HTML scan."
+    },
+    "validation": {
+      "focusedTestsPassed": 27,
+      "siteAuditPages": 496,
+      "siteAuditLocalLinks": 60688,
+      "siteAuditIssues": 0,
+      "existingHostSpecificTestFailures": [
+        "all20 labels: console observer policy missing from baseline runtime",
+        "host homepage loader: baseline is main website homepage",
+        "host homepage selector mount: host-specific mount absent from baseline runtime"
+      ],
+      "stagedSnapshot": {
+        "pages": 494,
+        "canonicalURLs": 494,
+        "localLinks": 58690,
+        "issues": [],
+        "testsPassed": 27
+      }
+    },
+    "preservation": "No downloads, firmware pins, host migration redirects or independent host files changed.",
+    "continuation": {
+      "newGuideKeys": 36,
+      "translatedLanguageCount": 20,
+      "scope": "Shared public controls and repeated GoldHEN, patch and installation guidance",
+      "unrelatedWorkingChangesExcluded": true
+    },
+    "report": "docs/qa/sitemap-language-refresh-20261104.json"
   }
 }

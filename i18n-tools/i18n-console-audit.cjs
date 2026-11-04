@@ -62,6 +62,8 @@ for(const file of publicFiles) {
   const html=fs.readFileSync(file,'utf8');
   const name=path.relative(root,file).replaceAll('\\','/');
   if (/whatsite-ps[45]\.html$/.test(name) || /<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html) || /http-equiv="refresh"/i.test(html)) continue;
+  const canonical = html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/i)?.[1];
+  if (canonical && new URL(canonical).origin !== 'https://whatwhatboy.com') continue;
   const strings=candidates(html);
   pages.push({path:name,candidates:strings,loader:/<script\b[^>]*src="[^"]*\/languages\/i18n\.js(?:\?[^" ]*)?"/.test(html)});
   for(const text of strings) {if(!all.has(text))all.set(text,[]);all.get(text).push(name);}

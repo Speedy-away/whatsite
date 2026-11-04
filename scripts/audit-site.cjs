@@ -22,7 +22,8 @@ for(const file of files(root)){
   if(url.hash&&target.endsWith('.html')){const body=fs.readFileSync(target,'utf8'),anchor=decodeURIComponent(url.hash.slice(1));if(!body.includes('id="'+anchor+'"')&&!body.includes('name="'+anchor+'"'))failures.push(relative+': missing anchor '+value);}
  }
  const canonical=html.match(/<link[^>]*rel="canonical"[^>]*href="([^"]*)"/i)?.[1];
- if(canonical&&!sitemap.includes('<loc>'+canonical+'</loc>'))failures.push(relative+': canonical absent from sitemap '+canonical);
+ // Migrated pages belong to their canonical host's sitemap.
+ if(canonical&&new URL(canonical).origin==='https://whatwhatboy.com'&&!sitemap.includes('<loc>'+canonical+'</loc>'))failures.push(relative+': canonical absent from sitemap '+canonical);
 }
 for(const failure of failures)console.error(failure);
 console.log('Audited '+pages+' public pages and '+links+' local links/assets; '+failures.length+' issue(s).');

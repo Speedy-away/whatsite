@@ -18,6 +18,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const vm = require('node:vm');
 
 const ROOT = path.resolve(__dirname, '..');
 const LANGS = ['es', 'pt', 'fr', 'de', 'ru', 'tr', 'pl', 'it', 'zh', 'ja',
@@ -88,20 +89,33 @@ const T = {
 // Keep console controls, host selectors and safe dynamic templates in a focused pack.
 Object.assign(T, require('./console-translations.cjs'));
 Object.assign(T, require('./host-repository-translations.cjs'));
+Object.assign(T, require('./host-home-translations.cjs'));
+Object.assign(T, require('./host-navigation-translations.cjs'));
 Object.assign(T, require('./host-original-tool-translations.cjs'));
 Object.assign(T, require('./host-next-batch-translations.cjs'));
 Object.assign(T, require('./host-gta505-continuation-translations.cjs'));
 Object.assign(T, require('./host-arabicguy-672-translations.cjs'));
 Object.assign(T, require('./host-package-installer-translations.cjs'));
 Object.assign(T, require('./site-refresh-translations.cjs'));
+Object.assign(T, require('./public-navigation-translations.cjs'));
+Object.assign(T, require('./public-guide-translations.cjs'));
 Object.assign(T, require('./afterglow-translations.cjs'));
 const keys = Object.keys(T);
 let written = 0;
 
 for (const code of LANGS) {
-  const entries = keys
-    .filter(k => T[k][code])
-    .map(k => '    ' + JSON.stringify(k) + ': ' + JSON.stringify(T[k][code]) + ',');
+  const file = path.join(ROOT, 'languages', code + '.js');
+  const table = Object.fromEntries(keys.filter(k => T[k][code]).map(k => [k, T[k][code]]));
+  // Retain completed translations, including entries added outside the shared packs.
+  if (fs.existsSync(file)) {
+    const sandbox = {window: {}};
+    vm.runInNewContext(fs.readFileSync(file, 'utf8'), sandbox, {timeout: 1000});
+    const registered = sandbox.window.__scoobyI18nQueue?.find(row => row[0] === code);
+    if (!registered) throw Error('Dictionary did not register: ' + code);
+    Object.assign(table, registered[1]);
+  }
+  const entries = Object.entries(table)
+    .map(([key, value]) => '    ' + JSON.stringify(key) + ': ' + JSON.stringify(value) + ',');
 
   const out =
 `/* ${code} — whatwhatboy site dictionary.
