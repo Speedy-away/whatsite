@@ -16,8 +16,7 @@ function eligible(file, html) {
     !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html) &&
     !/http-equiv=["']refresh/i.test(html) &&
     !/\bclass=["'][^"']*receiver-/.test(html) &&
-    /<section\b/i.test(html) &&
-    !/aloudalimonyexplosion\.com\//i.test(html);
+    /<section\b/i.test(html);
 }
 
 function placement() {
@@ -28,6 +27,10 @@ function placement() {
 
 function applyAds(file, html) {
   if (!eligible(file, html)) return html;
+  // Migrate the older body/footer embed into one labelled responsive placement.
+  // Other publisher units are retained; only this exact native unit is replaced.
+  html = html.replace(/<script\b[^>]*\bsrc=["']https:\/\/aloudalimonyexplosion\.com\/fd0a4dcec74a63f4d2662af5273f9d5b\/invoke\.js["'][^>]*>\s*<\/script>/gi, '')
+    .replace(/<div\b[^>]*\bid=["']container-fd0a4dcec74a63f4d2662af5273f9d5b["'][^>]*>\s*<\/div>/gi, '');
   html = html.replace(/\/assets\/site-ads\.css\?v=[12](?=["'])/g, '/assets/site-ads.css?v=3').replace('/assets/site-ads.js?v=1', '/assets/site-ads.js?v=2');
   if (!html.includes('/assets/site-ads.css')) html = html.replace('</head>', stylesheet + '\n</head>');
   if (!html.includes('/assets/site-ads.js')) html = html.replace('</body>', script + '</body>');

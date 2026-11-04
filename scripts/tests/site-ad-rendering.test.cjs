@@ -25,3 +25,11 @@ test('ad coverage includes every public page family while excluding native and p
  }
  for(const file of ['hosts/ps4/index.html','hosts/runtime/original/index.html','downloads/ready-build/index.html','console/ps4/whatsite-ps4.html'])assert.equal(ads.eligible(file,html),false,file);
 });
+test('legacy footer banners migrate once without duplicating the native unit or removing other publisher units',()=>{
+ const other='<script defer src="https://aloudalimonyexplosion.com/57/other-unit.js"></script>';
+ const html='<html><head></head><body><main class="main-content" id="main-content"><section>Cards</section></main><script async src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>\n<div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>'+other+'</body></html>';
+ const out=ads.applyAds('games/cod/index.html',html);
+ assert.equal((out.match(/fd0a4dcec74a63f4d2662af5273f9d5b\/invoke\.js/g)||[]).length,1);
+ assert.ok(out.indexOf('id="page-advertisement"')<out.indexOf('</main>'));
+ assert.ok(out.includes(other));assert.equal(ads.applyAds('games/cod/index.html',out),out);
+});
