@@ -8,8 +8,10 @@ const script = '<script defer src="/assets/site-ads.js?v=2"></script>';
 
 function eligible(file, html) {
   html = html.replace(/<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->/g, '');
-  return /^(?:console|pc|hosts)\//.test(file.replaceAll('\\', '/')) &&
-    !/^hosts\/runtime\//.test(file.replaceAll('\\', '/')) &&
+  const relative = require('./site-public-pages.cjs').relativePath(file);
+  return require('./site-public-pages.cjs').eligible(relative) &&
+    !/^hosts\//.test(relative) &&
+    /class=["'][^"']*\bmain-content\b/.test(html) &&
     !/^console\/ps[45]\/whatsite-ps[45]\.html$/.test(file.replaceAll('\\', '/')) &&
     !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html) &&
     !/http-equiv=["']refresh/i.test(html) &&
@@ -35,7 +37,9 @@ function applyAds(file, html) {
   // Keep the first content section (including exploit-host lists) at the top.
   const content = html.indexOf('<div id="content">');
   const main = html.search(/<(?:main|div)\b[^>]*\bid="main-content"/i);
-  const first = html.indexOf('<section ', content >= 0 ? content : main >= 0 ? main : 0);
+  const sectionStart = content >= 0 ? content : main >= 0 ? main : 0;
+  const firstMatch = /<section\b[^>]*>/i.exec(html.slice(sectionStart));
+  const first = firstMatch ? sectionStart + firstMatch.index : -1;
   let sectionEnd = -1, depth = 0;
   if (first >= 0) {
     const tokens = /<!--[\s\S]*?-->|<script\b[^>]*>[\s\S]*?<\/script\s*>|<style\b[^>]*>[\s\S]*?<\/style\s*>|<\/?section\b[^>]*>/gi;
@@ -56,10 +60,8 @@ function applyAds(file, html) {
 }
 
 function addExisting() {
-  const files = dir => fs.readdirSync(dir, {withFileTypes: true}).flatMap(entry => entry.isDirectory()
-    ? files(path.join(dir, entry.name)) : entry.name.endsWith('.html') ? [path.join(dir, entry.name)] : []);
   let changed = 0, total = 0;
-  for (const file of [...files(path.join(root, 'console')), ...files(path.join(root, 'pc')), ...files(path.join(root,'hosts')).filter(file=>!path.relative(root,file).replaceAll('\\','/').startsWith('hosts/runtime/'))]) {
+  for (const file of require('./site-public-pages.cjs').pages()) {
     const relative = path.relative(root, file).replaceAll('\\', '/');
     const before = fs.readFileSync(file, 'utf8');
     if (!eligible(relative, before)) continue;
@@ -67,7 +69,7 @@ function addExisting() {
     const after = applyAds(relative, before);
     if (after !== before) { fs.writeFileSync(file, after); changed++; }
   }
-  console.log(`Configured inline ads on ${total} console / PC pages; updated ${changed}.`);
+  console.log(`Configured inline ads on ${total} public content pages; updated ${changed}.`);
 }
 
 if (require.main === module) addExisting();

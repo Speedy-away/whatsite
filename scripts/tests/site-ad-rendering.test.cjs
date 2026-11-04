@@ -17,3 +17,11 @@ test('rendered ad rows remain visible when native mobile creatives exceed the ol
   assert.ok(html.indexOf('id="container-fd0a4dcec74a63f4d2662af5273f9d5b"')<html.indexOf('src="https://aloudalimonyexplosion.com/'));
  }
 });
+test('ad coverage includes every public page family while excluding native and packaged documents',()=>{
+ const html='<html><head></head><body><main class="main-content" id="main-content"><section><h1>Public page</h1></section></main></body></html>';
+ for(const file of ['index.html','games/cod/index.html','games-downloads/index.html','source-codes/index.html','tools/index.html','guides/phone-downloads/index.html','pages/profile.html','downloads/index.html']){
+  assert.equal(ads.eligible(file,html),true,file);
+  const out=ads.applyAds(file,html);assert.equal((out.match(/id="page-advertisement"/g)||[]).length,1,file);assert.equal(ads.applyAds(file,out),out,file);
+ }
+ for(const file of ['hosts/ps4/index.html','hosts/runtime/original/index.html','downloads/ready-build/index.html','console/ps4/whatsite-ps4.html'])assert.equal(ads.eligible(file,html),false,file);
+});
