@@ -1,0 +1,4656 @@
+{
+  "revision": "65914503123d4e643aa5aa0e8c720de8e99ef7e8",
+  "release": "1792785960",
+  "sources": [
+    {
+      "sourcePath": "patches/xml/AERMemoriesOfOld.xml",
+      "sourceBlob": "5750bd8fc28c31cc72dd15a9bbce3ab1f169cfa2",
+      "sourceSHA256": "af1e97228ef3c2c023fd1b0d3c3f810f946595ac0ce981b4bbe8cc752fe03a9e",
+      "gameId": "aer-memorises-of-old",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA09210"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA09210",
+          "sha256": "af1e97228ef3c2c023fd1b0d3c3f810f946595ac0ce981b4bbe8cc752fe03a9e",
+          "archiveEntry": "patches/xml/CUSA09210.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AceCombat7-Orbis.xml",
+      "sourceBlob": "bf66fffcc68f1abc92e67fb4026e9ea874282a07",
+      "sourceSHA256": "b3384f1d3061a0b84f5c2d9dee223428169b794ae7a0bf000a9887db566a45fe",
+      "gameId": "ace-combat-7-skies-unknown",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA07202"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA07202",
+          "sha256": "79de4f0ec3068e255b90215f0ae2b2e7c8799aa2b1efd84c7b4b4ba5f6e85739",
+          "archiveEntry": "patches/xml/CUSA07202.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AlienIsolation-Orbis.xml",
+      "sourceBlob": "a10c9df3ffd672ff75b95ed8719bad6baeea0a16",
+      "sourceSHA256": "09683a62dce6c83ad0f1ee7a484107d9f3f8e4f63d3d9523624f9c689f882124",
+      "gameId": "alien-isolation",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00362",
+        "CUSA00363"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00362",
+          "sha256": "bdedee4c034409c3b07e31b46a3caf790d1521b4119459bf634347804b9d15a2",
+          "archiveEntry": "patches/xml/CUSA00362.xml"
+        },
+        {
+          "titleId": "CUSA00363",
+          "sha256": "bdedee4c034409c3b07e31b46a3caf790d1521b4119459bf634347804b9d15a2",
+          "archiveEntry": "patches/xml/CUSA00363.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AmnesiaTheBunker-Orbis.xml",
+      "sourceBlob": "495337cbb0fb5c79bd620424a99255ad88042c60",
+      "sourceSHA256": "751829d8bd49195cd613c6dacc3f56b81472881b708d55fd97b187130b74263b",
+      "gameId": "amnesia-the-bunker",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA40994"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA40994",
+          "sha256": "ffe2c763804910116a4f16e0af75d71c04bcc832ab59220cd0b4a6a8bee44d23",
+          "archiveEntry": "patches/xml/CUSA40994.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ArmoredCoreVI-Orbis.xml",
+      "sourceBlob": "c8dbe37952ebf55eec1f84f26107b2996dccfb82",
+      "sourceSHA256": "c51ef1f6bf22e5891342ffcd1c7695e91bedb76e844fe7de72467d0adc29e370",
+      "gameId": "armored-core-vi-fires-of-rubicon",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA25368",
+        "CUSA32598",
+        "CUSA32599",
+        "CUSA32600"
+      ],
+      "optionCount": 6,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA25368",
+          "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+          "archiveEntry": "patches/xml/CUSA25368.xml"
+        },
+        {
+          "titleId": "CUSA32598",
+          "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+          "archiveEntry": "patches/xml/CUSA32598.xml"
+        },
+        {
+          "titleId": "CUSA32599",
+          "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+          "archiveEntry": "patches/xml/CUSA32599.xml"
+        },
+        {
+          "titleId": "CUSA32600",
+          "sha256": "9eb2f4b57cdabd7a169a0886efde061551392384fea766d2a94db6966da5ad45",
+          "archiveEntry": "patches/xml/CUSA32600.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedEzioCollection-Orbis.xml",
+      "sourceBlob": "6599a77329794465d44a4494c33c4d080394756e",
+      "sourceSHA256": "4953dd70a3dc8755be13f5ad7650be9f7e1b5c3280527dcf844f95a4f67be88f",
+      "gameId": "assassin-s-creed-the-ezio-collection",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA04893",
+        "CUSA05008",
+        "CUSA05943"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA04893",
+          "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+          "archiveEntry": "patches/xml/CUSA04893.xml"
+        },
+        {
+          "titleId": "CUSA05008",
+          "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+          "archiveEntry": "patches/xml/CUSA05008.xml"
+        },
+        {
+          "titleId": "CUSA05943",
+          "sha256": "789378c14595bb0fc9504c1fc598efebbc5e253f9297b148bc84efc11460de11",
+          "archiveEntry": "patches/xml/CUSA05943.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedIII-LiberationRemastered-Orbis.xml",
+      "sourceBlob": "d2026173ccee0903341ce50cfe5d4b6262d96b84",
+      "sourceSHA256": "b2f3c4a997b7d30854eb6a0be1268fc1443ac82e00a1e65e0634dc9141a798ac",
+      "gameId": "assassin-s-creed-iii-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA11560"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA11560",
+          "sha256": "d9ead8f6a7cc255b113b9308be6eb78216dbf4072f217e9babf409ff7a0ce030",
+          "archiveEntry": "patches/xml/CUSA11560.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedIVBlackFlag.xml",
+      "sourceBlob": "c2abcefd027772004d88378aeaafabd5bc216df8",
+      "sourceSHA256": "e5b5ef67863e01098d7095548695da94e2fa8e247a1ca15af15d3779e0efa00b",
+      "gameId": "assassin-s-creed-iv-black-flag",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00009"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00009",
+          "sha256": "8fade2be1a71083f76fb72b7cbd1424c816067783912f28831f525c8e6f4c74f",
+          "archiveEntry": "patches/xml/CUSA00009.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedMirage.xml",
+      "sourceBlob": "9303ee572a383da0c560d99ba033827a5cc6ee1c",
+      "sourceSHA256": "96307780683158f65ac7f082bde9ecf978667a4d0700965e234bb6a12ec17c4c",
+      "gameId": "assassin-s-creed-mirage",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA33151"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA33151",
+          "sha256": "96307780683158f65ac7f082bde9ecf978667a4d0700965e234bb6a12ec17c4c",
+          "archiveEntry": "patches/xml/CUSA33151.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedOrigins.xml",
+      "sourceBlob": "b276bc96db4e39b712f613ea0cb9621fbe4e420c",
+      "sourceSHA256": "5dc8c1832dc33c90e842c026d007b1a56b13874409c16e9efa624505cacf4392",
+      "gameId": "assassin-s-creed-origins",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05625"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA05625",
+          "sha256": "5dc8c1832dc33c90e842c026d007b1a56b13874409c16e9efa624505cacf4392",
+          "archiveEntry": "patches/xml/CUSA05625.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedRougeRemastered-Orbis.xml",
+      "sourceBlob": "09d11cdb66efe7c7f9b05a83d222e1b396a93fef",
+      "sourceSHA256": "3d6e58e18d09d0d60b8752ea54eddef8133304b04c00c7ee0dd66f15cce54e5d",
+      "gameId": "assassin-s-creed-rogue-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA10123"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA10123",
+          "sha256": "a65a5b5cb66ecebab2c39d6bdf3a4e0cbd73f10df169106b6270559fc8382226",
+          "archiveEntry": "patches/xml/CUSA10123.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedSyndicate.xml",
+      "sourceBlob": "b50c5710894c7761f3569b0081f10d6e83532593",
+      "sourceSHA256": "dd0f667dffa87b7395b45e2ec429535129c855824c5a4913f09acd92ad2cc6fb",
+      "gameId": "assassin-s-creed-syndicate",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02376"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA02376",
+          "sha256": "8cb91f467f1f3db042d9c7e9edeef98521a0e5237895f6fbf0e6727be330f1b7",
+          "archiveEntry": "patches/xml/CUSA02376.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedUnity-Orbis.xml",
+      "sourceBlob": "de673968602dd37ab523ec4152bd462c6ead8013",
+      "sourceSHA256": "177876b335ae88b986f9270fab61dbb08c4a2c38913c24fc4fc27755ea5947fe",
+      "gameId": "assassin-s-creed-unity",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00663"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00663",
+          "sha256": "2fb93cf2e0ffb5be08086595e26e9ad20827cb2ac8989cac838cd77ddc4b8f4b",
+          "archiveEntry": "patches/xml/CUSA00663.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssassinsCreedValhalla.xml",
+      "sourceBlob": "739978318f06cd482c1c64df05aecb9e67827368",
+      "sourceSHA256": "396a2ce88ca0f62d0201e21b5a46a1c6cd97c99f4f3df7c92dcf29b0d8d580d5",
+      "gameId": "assassin-s-creed-valhalla",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA18522"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA18522",
+          "sha256": "396a2ce88ca0f62d0201e21b5a46a1c6cd97c99f4f3df7c92dcf29b0d8d580d5",
+          "archiveEntry": "patches/xml/CUSA18522.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AssettoCorsaCompetizione-Orbis.xml",
+      "sourceBlob": "16c59392d73c51deedac9c777b16feca97fe41e1",
+      "sourceSHA256": "b737551f1b593a3f31bc910903ecf1f1f11a880a9fd59b60b61606c40527f3fe",
+      "gameId": "assetto-corsa-competizione",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA17301"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA17301",
+          "sha256": "e28b97d2671192afbd8e9ed90925db1e002c24b058aa714cacce4e7a93df767e",
+          "archiveEntry": "patches/xml/CUSA17301.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/AtomicHeart-Orbis.xml",
+      "sourceBlob": "3cfeb44a8a45bd0c7acf3045efd94e937ef0ab9a",
+      "sourceSHA256": "1a8418ca9a91bed1ac8cabb4b81b8d55e1d2a5a34739eb157f2bb01153e8610b",
+      "gameId": "atomic-heart",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA37321"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA37321",
+          "sha256": "549777a667a31e6a0dc8fa6a4fc035c6c91e0e04f650f26b08dfa07e499d7cf1",
+          "archiveEntry": "patches/xml/CUSA37321.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Back4Blood.xml",
+      "sourceBlob": "ee200edc011c0097749994a861b7935212a0825c",
+      "sourceSHA256": "5cfd68e00fa7c4740cd472701f6f18635e662db38c60b0ff50eeea5f0d26fec6",
+      "gameId": "back-4-blood",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA14253"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA14253",
+          "sha256": "801caeb8d2842c10b493e09daecb84daf1137f0c897e886dd0e9d544f661d3b2",
+          "archiveEntry": "patches/xml/CUSA14253.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/BatmanArkhamKnight-Orbis.xml",
+      "sourceBlob": "3b576caf7b8835f9db45c8bbd47482636b41cacb",
+      "sourceSHA256": "1dd4bd0e43f1da9e2e18fac0e4fd4f092257daae20a59ca4fbba26eff85f5378",
+      "gameId": "batman-arkham-knight",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00133",
+        "CUSA00135",
+        "CUSA01009"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00133",
+          "sha256": "b009a9eb9332e1e0092bc29be66932fd426f9eeb2e71b9c441fc51066f5214a3",
+          "archiveEntry": "patches/xml/CUSA00133.xml"
+        },
+        {
+          "titleId": "CUSA00135",
+          "sha256": "b009a9eb9332e1e0092bc29be66932fd426f9eeb2e71b9c441fc51066f5214a3",
+          "archiveEntry": "patches/xml/CUSA00135.xml"
+        },
+        {
+          "titleId": "CUSA01009",
+          "sha256": "b009a9eb9332e1e0092bc29be66932fd426f9eeb2e71b9c441fc51066f5214a3",
+          "archiveEntry": "patches/xml/CUSA01009.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/BioshockInfinite-Orbis.xml",
+      "sourceBlob": "8a854d9605426bba25fc85c41e70ac3feb2e497d",
+      "sourceSHA256": "ecf50994e1861dee216d3f550aa9d2b6a82f3e6552882bb9926a4f5dab33efeb",
+      "gameId": "bioshock-infinite-the-complete-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03980"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA03980",
+          "sha256": "0fa81e64f5f5d8af6f186991cdee80c4a60a57160bf4e8897ef9f568b64f7606",
+          "archiveEntry": "patches/xml/CUSA03980.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Bloodborne-Orbis.xml",
+      "sourceBlob": "e73c5de5cb00e9e59cf38646368a86319f37a5ac",
+      "sourceSHA256": "476be7e940b202992f904debe18ec720f7e740f628e54577a652bebdd020a6fb",
+      "gameId": "bloodborne",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00900",
+        "CUSA00207",
+        "CUSA03173",
+        "CUSA00208",
+        "CUSA01363",
+        "CUSA03014",
+        "CUSA03023"
+      ],
+      "optionCount": 10,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00900",
+          "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+          "archiveEntry": "patches/xml/CUSA00900.xml"
+        },
+        {
+          "titleId": "CUSA00207",
+          "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+          "archiveEntry": "patches/xml/CUSA00207.xml"
+        },
+        {
+          "titleId": "CUSA03173",
+          "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+          "archiveEntry": "patches/xml/CUSA03173.xml"
+        },
+        {
+          "titleId": "CUSA00208",
+          "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+          "archiveEntry": "patches/xml/CUSA00208.xml"
+        },
+        {
+          "titleId": "CUSA01363",
+          "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+          "archiveEntry": "patches/xml/CUSA01363.xml"
+        },
+        {
+          "titleId": "CUSA03014",
+          "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+          "archiveEntry": "patches/xml/CUSA03014.xml"
+        },
+        {
+          "titleId": "CUSA03023",
+          "sha256": "13976127aabbe7ebd67c1d6b0d269a657a7bffac1462bc89c01550ec2e15ea3b",
+          "archiveEntry": "patches/xml/CUSA03023.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/BloodborneNetworkTest-Orbis.xml",
+      "sourceBlob": "792b379d810766635eb8953ab57acca1f03ecade",
+      "sourceSHA256": "9c803adac1b3281d5c60f920212dec9b198c337bd668ff2273ee95c54e019797",
+      "gameId": "bloodborne-network-test",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01318",
+        "CUSA01322",
+        "CUSA01333",
+        "CUSA01335"
+      ],
+      "optionCount": 7,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA01318",
+          "sha256": "66ff94e1e6d1067152d557dec8b8e1a9c64921fe1f273f5a2ddb893556409385",
+          "archiveEntry": "patches/xml/CUSA01318.xml"
+        },
+        {
+          "titleId": "CUSA01322",
+          "sha256": "66ff94e1e6d1067152d557dec8b8e1a9c64921fe1f273f5a2ddb893556409385",
+          "archiveEntry": "patches/xml/CUSA01322.xml"
+        },
+        {
+          "titleId": "CUSA01333",
+          "sha256": "66ff94e1e6d1067152d557dec8b8e1a9c64921fe1f273f5a2ddb893556409385",
+          "archiveEntry": "patches/xml/CUSA01333.xml"
+        },
+        {
+          "titleId": "CUSA01335",
+          "sha256": "66ff94e1e6d1067152d557dec8b8e1a9c64921fe1f273f5a2ddb893556409385",
+          "archiveEntry": "patches/xml/CUSA01335.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/BlueRider.xml",
+      "sourceBlob": "bc875edd5f19bb1a4b1fab092edfd055bfb76631",
+      "sourceSHA256": "a8af32e2408fb8f424d3eaa81408fa8c0d6f339a780fa13ad498f8939f0c55a8",
+      "gameId": "blue-rider",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05653"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA05653",
+          "sha256": "a8af32e2408fb8f424d3eaa81408fa8c0d6f339a780fa13ad498f8939f0c55a8",
+          "archiveEntry": "patches/xml/CUSA05653.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/BurnoutParadiseRemastered.xml",
+      "sourceBlob": "917818ebcb1dc85254435e453560aac57f3b92b3",
+      "sourceSHA256": "4d0e8025465a7b5547d239836ff8f8e752f3ef63f377ed24f378d3871e54c86e",
+      "gameId": "burnout-paradise-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA10851",
+        "CUSA10866"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA10851",
+          "sha256": "4d0e8025465a7b5547d239836ff8f8e752f3ef63f377ed24f378d3871e54c86e",
+          "archiveEntry": "patches/xml/CUSA10851.xml"
+        },
+        {
+          "titleId": "CUSA10866",
+          "sha256": "4d0e8025465a7b5547d239836ff8f8e752f3ef63f377ed24f378d3871e54c86e",
+          "archiveEntry": "patches/xml/CUSA10866.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CallOfDuty-BlackOps4-Orbis.xml",
+      "sourceBlob": "c402f2046f70a2dab5828adc730f3da878417839",
+      "sourceSHA256": "0d46701644bef773c0ff024f3b7603e49ad06f47fafa7ced5365d5b74b53f481",
+      "gameId": "call-of-duty-black-ops-4-iiii",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA11100"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA11100",
+          "sha256": "6fad3bdf75fb4aeaee4ec3066c7c0e35654358c993699292a2bfaa8a30403558",
+          "archiveEntry": "patches/xml/CUSA11100.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CallOfDutyBlackOps-Orbis.xml",
+      "sourceBlob": "4e4f115ae35e370c10c8a6d6d02ab3ed694ca329",
+      "sourceSHA256": "43b6b3bdc0cbd85ceb06abc405ca3ad4d45a9e3258f6b9f687d524f5ac2c00a5",
+      "gameId": "call-of-duty-black-ops",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA57547"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA57547",
+          "sha256": "e69e09427a78f4d96d7a93b46d709986254d40d88c22abe522882661a05a11f3",
+          "archiveEntry": "patches/xml/CUSA57547.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CallOfDutyBlackOpsII-Orbis.xml",
+      "sourceBlob": "873fa33ca35b02a167ecb352acf6dd84756b3f69",
+      "sourceSHA256": "08535c9af3db25cc09338b9bf44827a5868c069a08bab7c461ebd0f3075df189",
+      "gameId": "call-of-duty-black-ops-ii",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA57548"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA57548",
+          "sha256": "7cac4d4a0a893f45c93868a7c82f707f6f1d90b7e7010c942daa10b9c3dd0204",
+          "archiveEntry": "patches/xml/CUSA57548.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CallofDuty-BlackOps4-PublicBeta.xml",
+      "sourceBlob": "ceffe4b5a42d09b153b746a8c768851de08c5b18",
+      "sourceSHA256": "caa798392a20f3f0ce42b35b8c8b49a02dca51982ff37c686a7084629328e970",
+      "gameId": "call-of-duty-black-ops-4-public-beta",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA13233"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA13233",
+          "sha256": "219fafc656a91841cf292aab303d1755598d555b822971aefc1536ec1a5cb678",
+          "archiveEntry": "patches/xml/CUSA13233.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Cocoon.xml",
+      "sourceBlob": "ae41ce96c00b8bc3f1896d11a8c0e192938b91cb",
+      "sourceSHA256": "b17d45110684cb95f5fb65435a96df647560474160dc33be6bcc2983e073bbae",
+      "gameId": "cocoon",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA34963"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA34963",
+          "sha256": "b17d45110684cb95f5fb65435a96df647560474160dc33be6bcc2983e073bbae",
+          "archiveEntry": "patches/xml/CUSA34963.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ConcreteGenie-Orbis.xml",
+      "sourceBlob": "d6e99b854b39704fefff80fdac327c7e0f8d89f2",
+      "sourceSHA256": "be2aa62e5501385aa958b808f94f39458a2f3925a46ee664478a51100a245466",
+      "gameId": "concrete-genie",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA11834",
+        "CUSA11875",
+        "CUSA11851"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA11834",
+          "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+          "archiveEntry": "patches/xml/CUSA11834.xml"
+        },
+        {
+          "titleId": "CUSA11875",
+          "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+          "archiveEntry": "patches/xml/CUSA11875.xml"
+        },
+        {
+          "titleId": "CUSA11851",
+          "sha256": "47ff1baab97b006bdbc0ede7aa60b7166f9611f88e1fc9382fdbb7d630c7f3fc",
+          "archiveEntry": "patches/xml/CUSA11851.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Control-Orbis.xml",
+      "sourceBlob": "2b0527340b37edea6d4d17ffc6d2e9802629ad81",
+      "sourceSHA256": "56eac495f345a06fb4ff4cd27e19301410af8620f0e7d6c4b935b5daab0bd728",
+      "gameId": "control",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA11454"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA11454",
+          "sha256": "cc00497165154c3c69d603dd10f9756af843124744b61b60b3c5eb99cbc66e0a",
+          "archiveEntry": "patches/xml/CUSA11454.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CrashBandicootNSaneTrilogy-Orbis.xml",
+      "sourceBlob": "5f6333d73ce3162b54f6adeb032003b88e7f22ff",
+      "sourceSHA256": "ae2ee2c672c49276a56883d927b70d4aa8ca1eb3d945277bf54a7a569c817b48",
+      "gameId": "crash-bandicoot-n-sane-trilogy",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA07399",
+        "CUSA07402"
+      ],
+      "optionCount": 7,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA07399",
+          "sha256": "8955ef655e0f0b88680eb0101d522e73b295961ad439cd763df09acac9aff019",
+          "archiveEntry": "patches/xml/CUSA07399.xml"
+        },
+        {
+          "titleId": "CUSA07402",
+          "sha256": "8955ef655e0f0b88680eb0101d522e73b295961ad439cd763df09acac9aff019",
+          "archiveEntry": "patches/xml/CUSA07402.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CrashTeamRacingEU-Orbis.xml",
+      "sourceBlob": "6e03fc20d3f01bb8c6fc9acb662f2ad2acebd011",
+      "sourceSHA256": "648afff6f0f18cbf35b5031a726e8e58f170ade23d821aeb30520f3c639f3619",
+      "gameId": "crash-team-racing-nitro-fueled-crashteamracingeu-orbis",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA14876"
+      ],
+      "optionCount": 5,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA14876",
+          "sha256": "fa1dcf93578b0e7e16e0d8ca26f164b960caef5284ab89118d9633dd32cbd93b",
+          "archiveEntry": "patches/xml/CUSA14876.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CrashTeamRacingUS-Orbis.xml",
+      "sourceBlob": "d90c2f3ec1b2de1f6cb6c8fe346e721a6eb591fe",
+      "sourceSHA256": "34a655cefc246482cb07190da5f202f50b3337a86c6f956ee098ac56de443d1d",
+      "gameId": "crash-team-racing-nitro-fueled",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA13795"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA13795",
+          "sha256": "9305656dff1efe68fa9a6a143b77b6b3eaca01b2cb731c1212c98f0237b54b96",
+          "archiveEntry": "patches/xml/CUSA13795.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/CrisisCoreFinalFantasyVIIReunion-Orbis.xml",
+      "sourceBlob": "b03e40fbe6b38317ee05cd936048c797435b5fa0",
+      "sourceSHA256": "9f1b615c0028e63862ea7b0b8c74a5c1fe44a59aafce56cdc97f89845d0262f4",
+      "gameId": "crisis-core-final-fantasy-vii-reunion",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA31348",
+        "CUSA31349",
+        "CUSA31350",
+        "CUSA31351"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA31348",
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+          "archiveEntry": "patches/xml/CUSA31348.xml"
+        },
+        {
+          "titleId": "CUSA31349",
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+          "archiveEntry": "patches/xml/CUSA31349.xml"
+        },
+        {
+          "titleId": "CUSA31350",
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+          "archiveEntry": "patches/xml/CUSA31350.xml"
+        },
+        {
+          "titleId": "CUSA31351",
+          "sha256": "56ae2ac7484411bda6955e3d44697094722a0d57d01e212187690a52cfd16beb",
+          "archiveEntry": "patches/xml/CUSA31351.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Crysis2Remastered.xml",
+      "sourceBlob": "1926f2596bf19fb3f6edbcc7f48e49bdb2c2429a",
+      "sourceSHA256": "14e7aa55887dadedad7da85fc2f42147def3964a1cce68deeba61ee6d5937089",
+      "gameId": "crysis-2-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA18672"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA18672",
+          "sha256": "14e7aa55887dadedad7da85fc2f42147def3964a1cce68deeba61ee6d5937089",
+          "archiveEntry": "patches/xml/CUSA18672.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Crysis3Remastered.xml",
+      "sourceBlob": "e6317e9b4036fef93f3aa36409a1eb5b01d16d4a",
+      "sourceSHA256": "bf69d3e91a25e40897c40d40e13e4f96793df0009dfe9ad6ddf59b0d5e7afb80",
+      "gameId": "crysis-3-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA18673"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA18673",
+          "sha256": "bf69d3e91a25e40897c40d40e13e4f96793df0009dfe9ad6ddf59b0d5e7afb80",
+          "archiveEntry": "patches/xml/CUSA18673.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Cyberpunk2077.xml",
+      "sourceBlob": "6576d5ef7803df57f82c872709125a74082c67c2",
+      "sourceSHA256": "fe14db37c42e9395d4c074666235d9ad7a9ed7b92409db315e749d4bec0adfb6",
+      "gameId": "cyberpunk-2077",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA16579"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA16579",
+          "sha256": "fe14db37c42e9395d4c074666235d9ad7a9ed7b92409db315e749d4bec0adfb6",
+          "archiveEntry": "patches/xml/CUSA16579.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DarkSoulsIII-Orbis.xml",
+      "sourceBlob": "53a8892f93fcd0814abb651a78137db43ee21ca0",
+      "sourceSHA256": "4ac0fac518badc9dbb6698fcbed654fe3a54d79d3ad65af2f1e107ef014df737",
+      "gameId": "dark-souls-iii",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03365",
+        "CUSA03388",
+        "CUSA07339"
+      ],
+      "optionCount": 8,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA03365",
+          "sha256": "972d03d2f7f7db482b02fd447821e8205142688d705874bfa4c74a1f5be47dfc",
+          "archiveEntry": "patches/xml/CUSA03365.xml"
+        },
+        {
+          "titleId": "CUSA03388",
+          "sha256": "972d03d2f7f7db482b02fd447821e8205142688d705874bfa4c74a1f5be47dfc",
+          "archiveEntry": "patches/xml/CUSA03388.xml"
+        },
+        {
+          "titleId": "CUSA07339",
+          "sha256": "972d03d2f7f7db482b02fd447821e8205142688d705874bfa4c74a1f5be47dfc",
+          "archiveEntry": "patches/xml/CUSA07339.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DarkSoulsIIINetworkStressTest-Orbis.xml",
+      "sourceBlob": "268bf553e874bae4390f87dfb668cab9eb57b365",
+      "sourceSHA256": "6528381a4c6b948d54ad67dd95cd8526598bab0e29820b65838a30799de2391b",
+      "gameId": "dark-souls-iii-network-stress-test",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03500"
+      ],
+      "optionCount": 10,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA03500",
+          "sha256": "e7405c70c872963f251f2f98a9860690a236427735976ddd97e6b84107e276e5",
+          "archiveEntry": "patches/xml/CUSA03500.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DarkSoulsIIITheFireFadesEdition-Orbis.xml",
+      "sourceBlob": "c20ee0166a2f24a8e1ea85d07a85f2de735eb1e0",
+      "sourceSHA256": "056e75f270eea1e00a493758d34f8047f274d98a8b2a375ac4ee00fa8cd82ba2",
+      "gameId": "dark-souls-iii-the-fire-fades-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08155",
+        "CUSA07439"
+      ],
+      "optionCount": 3,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA08155",
+          "sha256": "725c522ce817e42877ead6139132b486db29126851e9b9368802456b40f83651",
+          "archiveEntry": "patches/xml/CUSA08155.xml"
+        },
+        {
+          "titleId": "CUSA07439",
+          "sha256": "725c522ce817e42877ead6139132b486db29126851e9b9368802456b40f83651",
+          "archiveEntry": "patches/xml/CUSA07439.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DarkSoulsRemastered-Orbis.xml",
+      "sourceBlob": "08120e16152451afad13b416e3c3dbe882396633",
+      "sourceSHA256": "f72d99f72b5c0c177df18a4dbfcf54936fb726488d11f5841c55fa7a6cc525aa",
+      "gameId": "dark-souls-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08432",
+        "CUSA08495",
+        "CUSA08526",
+        "CUSA08692"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA08432",
+          "sha256": "e69057597cc7e6c77c9b1ed5ec74f4bfca7aebd0b453dee3cc9b883545ab4ddb",
+          "archiveEntry": "patches/xml/CUSA08432.xml"
+        },
+        {
+          "titleId": "CUSA08495",
+          "sha256": "e69057597cc7e6c77c9b1ed5ec74f4bfca7aebd0b453dee3cc9b883545ab4ddb",
+          "archiveEntry": "patches/xml/CUSA08495.xml"
+        },
+        {
+          "titleId": "CUSA08526",
+          "sha256": "e69057597cc7e6c77c9b1ed5ec74f4bfca7aebd0b453dee3cc9b883545ab4ddb",
+          "archiveEntry": "patches/xml/CUSA08526.xml"
+        },
+        {
+          "titleId": "CUSA08692",
+          "sha256": "e69057597cc7e6c77c9b1ed5ec74f4bfca7aebd0b453dee3cc9b883545ab4ddb",
+          "archiveEntry": "patches/xml/CUSA08692.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Daymare1998-Orbis.xml",
+      "sourceBlob": "8f682e01915d580e63c9ba433a04e0ffbcab9c23",
+      "sourceSHA256": "e6805e2e04f0a290aff4414c50c5ae7892af2bad6dbf97beef16f7f53175f515",
+      "gameId": "daymare-1998",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA17157"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA17157",
+          "sha256": "20f60281495a4556a95124477e982b6b97fffbf996216a3529dc0ca049098f8f",
+          "archiveEntry": "patches/xml/CUSA17157.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DaysGone-Orbis.xml",
+      "sourceBlob": "2c6a58b44f6b6fcba24711fda1c2c00df6cebca2",
+      "sourceSHA256": "30036b7926e79df2a72e8f194edf06a377f4078ef4c569b7af19d90bbe28e60b",
+      "gameId": "days-gone",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08966",
+        "CUSA09115",
+        "CUSA09175",
+        "CUSA09176"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA08966",
+          "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+          "archiveEntry": "patches/xml/CUSA08966.xml"
+        },
+        {
+          "titleId": "CUSA09115",
+          "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+          "archiveEntry": "patches/xml/CUSA09115.xml"
+        },
+        {
+          "titleId": "CUSA09175",
+          "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+          "archiveEntry": "patches/xml/CUSA09175.xml"
+        },
+        {
+          "titleId": "CUSA09176",
+          "sha256": "b970f272102825d6e97bd0010b67d369757c5f287db91adcb561068b4d075943",
+          "archiveEntry": "patches/xml/CUSA09176.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DeadIsland2-Orbis.xml",
+      "sourceBlob": "54c740b4b315e57ffa1b46144406358f3dcc11a6",
+      "sourceSHA256": "713679703629bf097b4d752cfc4011af6feedab39280784cecc4853df4598f0b",
+      "gameId": "dead-island-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01014",
+        "CUSA27043"
+      ],
+      "optionCount": 7,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01014",
+          "sha256": "2662288f48d633f386acbcba27d6dd6fe260071498c4bae17ac867519ef85ac9",
+          "archiveEntry": "patches/xml/CUSA01014.xml"
+        },
+        {
+          "titleId": "CUSA27043",
+          "sha256": "2662288f48d633f386acbcba27d6dd6fe260071498c4bae17ac867519ef85ac9",
+          "archiveEntry": "patches/xml/CUSA27043.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Deadpool-Orbis.xml",
+      "sourceBlob": "303b4bae693932b243d75320ad278a396c64494b",
+      "sourceSHA256": "1e47dba5489196a8f312c82ed1a0837d330d4029b52fc73753c05ab9268f37b6",
+      "gameId": "deadpool",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03528",
+        "CUSA03245"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA03528",
+          "sha256": "0f1b4f5246d9445f52237bf39a7e7a2934450baca05a573742c93c85262cb692",
+          "archiveEntry": "patches/xml/CUSA03528.xml"
+        },
+        {
+          "titleId": "CUSA03245",
+          "sha256": "0f1b4f5246d9445f52237bf39a7e7a2934450baca05a573742c93c85262cb692",
+          "archiveEntry": "patches/xml/CUSA03245.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DetroitBecomeHuman.xml",
+      "sourceBlob": "7936f6e42d8f9f8aa94af35933dffcff32d8af3c",
+      "sourceSHA256": "3bf0fe35b81e94e6d74053a21c202e3f4dbe4628d854259a2955fdfe9003140d",
+      "gameId": "detroit-become-human",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00717"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00717",
+          "sha256": "886b0f67f6909a096702a8f71c86380c24eb6aa3b91e5a2c8b959ecb4fdeeb16",
+          "archiveEntry": "patches/xml/CUSA00717.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DeusExMankindDivided-Orbis.xml",
+      "sourceBlob": "4f56d8cba3a5d8c62bef54ef52cda08295b706d2",
+      "sourceSHA256": "7cc23090c8582a8e41bf8041e97c59105e38d6d056a78e17b71d72a9989f7c70",
+      "gameId": "deus-ex-mankind-divided",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01836"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01836",
+          "sha256": "abae8486f65189018daf791a031ee4c654c904afea62bac1321e2b1746823f18",
+          "archiveEntry": "patches/xml/CUSA01836.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DevilMayCry5-Orbis.xml",
+      "sourceBlob": "d71a02c7abde991a189192ba15057c632350b5e4",
+      "sourceSHA256": "4cf1a63805069f9385961d16dbc60c0f49d8ff9be99c83f3c59fb134743d2980",
+      "gameId": "devil-may-cry-5",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08161",
+        "CUSA08216",
+        "CUSA08222"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA08161",
+          "sha256": "4100ab1727352c92eb02eceafad8901e6b5feb0c560739c6e3e5f96c15c4dc1e",
+          "archiveEntry": "patches/xml/CUSA08161.xml"
+        },
+        {
+          "titleId": "CUSA08216",
+          "sha256": "4100ab1727352c92eb02eceafad8901e6b5feb0c560739c6e3e5f96c15c4dc1e",
+          "archiveEntry": "patches/xml/CUSA08216.xml"
+        },
+        {
+          "titleId": "CUSA08222",
+          "sha256": "4100ab1727352c92eb02eceafad8901e6b5feb0c560739c6e3e5f96c15c4dc1e",
+          "archiveEntry": "patches/xml/CUSA08222.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Dishonored-Orbis.xml",
+      "sourceBlob": "a511134e6f20f0b6a7d2d649079a8cd432bc63ec",
+      "sourceSHA256": "6241d3551f7f1f69658daf7cbf0ac10684ec4325995fa250c0e96102d93c442b",
+      "gameId": "dishonored-definitive-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02218",
+        "CUSA02230",
+        "CUSA02231",
+        "CUSA02441"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA02218",
+          "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+          "archiveEntry": "patches/xml/CUSA02218.xml"
+        },
+        {
+          "titleId": "CUSA02230",
+          "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+          "archiveEntry": "patches/xml/CUSA02230.xml"
+        },
+        {
+          "titleId": "CUSA02231",
+          "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+          "archiveEntry": "patches/xml/CUSA02231.xml"
+        },
+        {
+          "titleId": "CUSA02441",
+          "sha256": "f61b842316c8340b92bbf0b454351b8a0ed3c2d35533048b6496f2f25fbc6341",
+          "archiveEntry": "patches/xml/CUSA02441.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DoomEternal-Orbis.xml",
+      "sourceBlob": "e1cac472c537ad6288eae9730151de7724cdf978",
+      "sourceSHA256": "878e488bc402f536741918ea3a84646875f5c7301f8a4d8b5e844a7ff86ee62e",
+      "gameId": "doom-eternal",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA13338",
+        "CUSA13275"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA13338",
+          "sha256": "7d7112ddae20e96b86122d7e3c03e407af67a44279684337e3ac018ad080def8",
+          "archiveEntry": "patches/xml/CUSA13338.xml"
+        },
+        {
+          "titleId": "CUSA13275",
+          "sha256": "7d7112ddae20e96b86122d7e3c03e407af67a44279684337e3ac018ad080def8",
+          "archiveEntry": "patches/xml/CUSA13275.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DragonAgeInquisition-Orbis.xml",
+      "sourceBlob": "59c63578314c2dddaad82f09889173ec6ea12f2b",
+      "sourceSHA256": "2c035bfa5a0cb008977a5414e47dccdbf09135acf353fb7490594a12879d4719",
+      "gameId": "dragon-age-inquisition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00220",
+        "CUSA00503",
+        "CUSA00728",
+        "CUSA01425"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00220",
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+          "archiveEntry": "patches/xml/CUSA00220.xml"
+        },
+        {
+          "titleId": "CUSA00503",
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+          "archiveEntry": "patches/xml/CUSA00503.xml"
+        },
+        {
+          "titleId": "CUSA00728",
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+          "archiveEntry": "patches/xml/CUSA00728.xml"
+        },
+        {
+          "titleId": "CUSA01425",
+          "sha256": "f0cdb461b55d04d0c43127387de5ab05e0c1e76bc11f5214607673f26b1a4024",
+          "archiveEntry": "patches/xml/CUSA01425.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DragonsDogmaDarkArisen-Orbis.xml",
+      "sourceBlob": "7f284c52e04ece11803cc68efc2467e3af7ca38d",
+      "sourceSHA256": "0fecfc2b1cd781006ff5a7674cc6e9a75e44d159090806bfe6e0766a95fa9b72",
+      "gameId": "dragon-s-dogma-dark-arisen",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA07316",
+        "CUSA07340",
+        "CUSA09431"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA07316",
+          "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+          "archiveEntry": "patches/xml/CUSA07316.xml"
+        },
+        {
+          "titleId": "CUSA07340",
+          "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+          "archiveEntry": "patches/xml/CUSA07340.xml"
+        },
+        {
+          "titleId": "CUSA09431",
+          "sha256": "0861ab54b5c1ff61ed7866189b7aaf9a13e3fe4c634ed756c8c9d2dd62e873a5",
+          "archiveEntry": "patches/xml/CUSA09431.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Dreams.xml",
+      "sourceBlob": "fca6865c08adbf56564dd5ad17a7075ac314372a",
+      "sourceSHA256": "91016c24788abfaaaad9378e3df2e35bc5a837ef939adbf089911db2df22da6a",
+      "gameId": "dreams",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08010",
+        "CUSA04301"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA08010",
+          "sha256": "91016c24788abfaaaad9378e3df2e35bc5a837ef939adbf089911db2df22da6a",
+          "archiveEntry": "patches/xml/CUSA08010.xml"
+        },
+        {
+          "titleId": "CUSA04301",
+          "sha256": "91016c24788abfaaaad9378e3df2e35bc5a837ef939adbf089911db2df22da6a",
+          "archiveEntry": "patches/xml/CUSA04301.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Driveclub-Orbis.xml",
+      "sourceBlob": "fbe512920d682cc29a61c9502d17162e03c0331a",
+      "sourceSHA256": "cd6fe73ccfaea5df240f5e297755f083374e56c24cb1e77f1584ec6e08f98f57",
+      "gameId": "driveclub",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00003",
+        "CUSA00064",
+        "CUSA00066",
+        "CUSA00093",
+        "CUSA00879"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00003",
+          "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+          "archiveEntry": "patches/xml/CUSA00003.xml"
+        },
+        {
+          "titleId": "CUSA00064",
+          "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+          "archiveEntry": "patches/xml/CUSA00064.xml"
+        },
+        {
+          "titleId": "CUSA00066",
+          "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+          "archiveEntry": "patches/xml/CUSA00066.xml"
+        },
+        {
+          "titleId": "CUSA00093",
+          "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+          "archiveEntry": "patches/xml/CUSA00093.xml"
+        },
+        {
+          "titleId": "CUSA00879",
+          "sha256": "19a3c563f99a8fc036c81aadfe8e2daeae2dd64e7e0d395a890f9fd9a694cd80",
+          "archiveEntry": "patches/xml/CUSA00879.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DyingLight.xml",
+      "sourceBlob": "bba1094f5ac5ecf499f276b326af74d2b3872b1d",
+      "sourceSHA256": "46e6108f07181bdd9c94589335e58e6a27c19559b2683840bc6359e0f58d9d05",
+      "gameId": "dying-light",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02010"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA02010",
+          "sha256": "46e6108f07181bdd9c94589335e58e6a27c19559b2683840bc6359e0f58d9d05",
+          "archiveEntry": "patches/xml/CUSA02010.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/DyingLight2StayHuman.xml",
+      "sourceBlob": "7b0d655b464a653c948fa68aa7796d723d9aa808",
+      "sourceSHA256": "4bad4c8ebcda38118ec860f30d3c7ee283cce238a07eb7e343e8927e9671f049",
+      "gameId": "dying-light-2-stay-human",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12555"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA12555",
+          "sha256": "4bad4c8ebcda38118ec860f30d3c7ee283cce238a07eb7e343e8927e9671f049",
+          "archiveEntry": "patches/xml/CUSA12555.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/EldenRing-Orbis.xml",
+      "sourceBlob": "8bf791f15aa2e3c825cdfed5a08ce55a79c10ae4",
+      "sourceSHA256": "bb405aa76b16efaef0241ee5e2de3ccc8d58951e3ac30c3f06d740076c050ff7",
+      "gameId": "elden-ring",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "optionCount": 59,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA28863",
+          "sha256": "511c1e99a332d2b7ead340e91ddfe20b60bb47d05ac481f69a244f569f6ef0ba",
+          "archiveEntry": "patches/xml/CUSA28863.xml"
+        },
+        {
+          "titleId": "CUSA18723",
+          "sha256": "511c1e99a332d2b7ead340e91ddfe20b60bb47d05ac481f69a244f569f6ef0ba",
+          "archiveEntry": "patches/xml/CUSA18723.xml"
+        },
+        {
+          "titleId": "CUSA28527",
+          "sha256": "511c1e99a332d2b7ead340e91ddfe20b60bb47d05ac481f69a244f569f6ef0ba",
+          "archiveEntry": "patches/xml/CUSA28527.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/EldenRingNetworkTest-Orbis.xml",
+      "sourceBlob": "cfb7b2de79f944d8e2b11f2a3364fac7e3a083bd",
+      "sourceSHA256": "3cb979599adf0df2497708cd67df9f3b9cc3f734c4429504506124809ac7211d",
+      "gameId": "elden-ring-network-test",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA18880"
+      ],
+      "optionCount": 10,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA18880",
+          "sha256": "791fa5633e171131097795ff4134f745915327f3dbef0e67e4761785ca516440",
+          "archiveEntry": "patches/xml/CUSA18880.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/EldenRingNightreign.xml",
+      "sourceBlob": "f6fb10736e51cd68386dd32eff003b84300f1863",
+      "sourceSHA256": "e78cd4a0641496783fac88b44e5a1da1b9493a32311b2f14f47e9951c6cbd191",
+      "gameId": "elden-ring-nightreign",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA50617"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA50617",
+          "sha256": "e78cd4a0641496783fac88b44e5a1da1b9493a32311b2f14f47e9951c6cbd191",
+          "archiveEntry": "patches/xml/CUSA50617.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Expeditions-AMudrunnerGame.xml",
+      "sourceBlob": "15e9cb41ddc20ad60dc390e4decb2086cf132cd0",
+      "sourceSHA256": "8f525ec0cd29ba48d734082a61e260ff17e50f1f73055328a49173f188a56f5d",
+      "gameId": "expeditions-a-mudrunner-game",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA44233"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA44233",
+          "sha256": "8f525ec0cd29ba48d734082a61e260ff17e50f1f73055328a49173f188a56f5d",
+          "archiveEntry": "patches/xml/CUSA44233.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Fallout4-Orbis.xml",
+      "sourceBlob": "c824ca4693d41c3f7c65ff4b86e350236b9eea62",
+      "sourceSHA256": "1c710c16f4c9b03df23ae06020d32f505d332ea5e26cc105e099703ea4777f44",
+      "gameId": "fallout-4",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02557",
+        "CUSA02962",
+        "CUSA03450"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA02557",
+          "sha256": "c17b95c228075d89f531d323662bece04e9e8df836ab97715cd1dac9d7b6dd89",
+          "archiveEntry": "patches/xml/CUSA02557.xml"
+        },
+        {
+          "titleId": "CUSA02962",
+          "sha256": "c17b95c228075d89f531d323662bece04e9e8df836ab97715cd1dac9d7b6dd89",
+          "archiveEntry": "patches/xml/CUSA02962.xml"
+        },
+        {
+          "titleId": "CUSA03450",
+          "sha256": "c17b95c228075d89f531d323662bece04e9e8df836ab97715cd1dac9d7b6dd89",
+          "archiveEntry": "patches/xml/CUSA03450.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FarCry3BloodDragonClassicEdition.xml",
+      "sourceBlob": "26dc350aaf63e402ea5bfa5eb57df2edc4ae48e6",
+      "sourceSHA256": "b1e6a3c162c5e8d7c766155e3138ddaac6122d5c501e05dabab55d7e9f984f82",
+      "gameId": "far-cry-3-blood-dragon-classic-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA29007"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA29007",
+          "sha256": "8e75a38cfd09c42b5f51291ea8fff3a3586a6f19fb3ce62421025bc1b4f72c10",
+          "archiveEntry": "patches/xml/CUSA29007.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FarCry6-Orbis.xml",
+      "sourceBlob": "451cc6739ed16adfb99d201fe9159eeb402e921b",
+      "sourceSHA256": "85f3fd5fb03f1efc3dd3f62183f6a54c262dd90ecfbbb3f6823b36cd538d50fd",
+      "gameId": "far-cry-6",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA15778"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA15778",
+          "sha256": "5b919e1d4b9c8d5d41708b9902f293169dd3dc598a460026c7d75621cc4635df",
+          "archiveEntry": "patches/xml/CUSA15778.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FarCryPrimal.xml",
+      "sourceBlob": "f9217f2c791bae84253a079b1c380829c156780a",
+      "sourceSHA256": "7da6fba27aca0cb2b5ad1e2c0ff68e2d76810b69268e5dc7f6833cf4e6adc803",
+      "gameId": "far-cry-primal",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03309"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA03309",
+          "sha256": "7da6fba27aca0cb2b5ad1e2c0ff68e2d76810b69268e5dc7f6833cf4e6adc803",
+          "archiveEntry": "patches/xml/CUSA03309.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FatalFrame_MaidenofBlackWater-Orbis.xml",
+      "sourceBlob": "18d8583f136530c6d8ee460ed184c46967320ac3",
+      "sourceSHA256": "10045cc7078c14737e36da4cedf6eafe4dde0e114bdccfd1d0447e3632b4e543",
+      "gameId": "fatal-frame-maiden-of-black-water",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA28987"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA28987",
+          "sha256": "9b74575cf2ca60dd5d8cd3bc526e883c238e120eea760982e8a3d29d4dcb67f2",
+          "archiveEntry": "patches/xml/CUSA28987.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FatalFrame_MaskoftheLunarEclipse-Orbis.xml",
+      "sourceBlob": "2ad809973160fa0d49e9a455600e49ccfb94ce38",
+      "sourceSHA256": "881120b82d622444cf7275c5bb118bb4f73ca7924cc3eb9f470de142530ef581",
+      "gameId": "fatal-frame-mask-of-the-lunar-eclipse",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA36876"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA36876",
+          "sha256": "42401c8b443e2992071373495d017648cf7c2755ad2525165b8ed9633298a3d3",
+          "archiveEntry": "patches/xml/CUSA36876.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FinalFantasyVIIRemake-Orbis.xml",
+      "sourceBlob": "97aa17463db838bcae780d1f16b8d80ab423b0b7",
+      "sourceSHA256": "b58b486f36d0ea8f9bbbbfe115d02c7bebde7fbaa47afabb0c44d09d6d5cbac7",
+      "gameId": "final-fantasy-vii-remake",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA07211",
+        "CUSA07187",
+        "CUSA07052",
+        "CUSA16170"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA07211",
+          "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+          "archiveEntry": "patches/xml/CUSA07211.xml"
+        },
+        {
+          "titleId": "CUSA07187",
+          "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+          "archiveEntry": "patches/xml/CUSA07187.xml"
+        },
+        {
+          "titleId": "CUSA07052",
+          "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+          "archiveEntry": "patches/xml/CUSA07052.xml"
+        },
+        {
+          "titleId": "CUSA16170",
+          "sha256": "795f1d7e728755d3d740397671e89642c645b3943dfd01cf661996fc8bf0c53f",
+          "archiveEntry": "patches/xml/CUSA16170.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FinalFantasyXV-orbis.xml",
+      "sourceBlob": "39fc4dc8f8e25bc3a9d1f1598d6447ab521dd37c",
+      "sourceSHA256": "efc3fad1077cd7593e9a54db09d5c01c246f314c1ce6cb916ba10ee8c571f2df",
+      "gameId": "final-fantasy-xv",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01633",
+        "CUSA01615",
+        "CUSA01706",
+        "CUSA01570"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01633",
+          "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+          "archiveEntry": "patches/xml/CUSA01633.xml"
+        },
+        {
+          "titleId": "CUSA01615",
+          "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+          "archiveEntry": "patches/xml/CUSA01615.xml"
+        },
+        {
+          "titleId": "CUSA01706",
+          "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+          "archiveEntry": "patches/xml/CUSA01706.xml"
+        },
+        {
+          "titleId": "CUSA01570",
+          "sha256": "2d232d5330ea456e133110b6ab0007f957dbc736457af13ca5a3a1fd0ce6e864",
+          "archiveEntry": "patches/xml/CUSA01570.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/FormulaLegends.xml",
+      "sourceBlob": "a67d2a4d8df049d59c6b2f9aa513f84ef4ddc4dc",
+      "sourceSHA256": "878682fc856fd9b4e0b87f8a19baf781ec79423d7c07d051c4e5ccf6a7b72659",
+      "gameId": "formula-legends",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA51536"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA51536",
+          "sha256": "878682fc856fd9b4e0b87f8a19baf781ec79423d7c07d051c4e5ccf6a7b72659",
+          "archiveEntry": "patches/xml/CUSA51536.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GTSport-Orbis.xml",
+      "sourceBlob": "5cc64eefb61d31fa0774dffd4b7f486b64771d5a",
+      "sourceSHA256": "6715ce3ae3506430c50988679908cab09e6335382bdcc1ea791258b32495c298",
+      "gameId": "gran-turismo-sport",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03220",
+        "CUSA03667",
+        "CUSA02168"
+      ],
+      "optionCount": 5,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA03220",
+          "sha256": "edc33bbf2acee802beb7d46692f01afb879449a781430d4f954fc9483230182c",
+          "archiveEntry": "patches/xml/CUSA03220.xml"
+        },
+        {
+          "titleId": "CUSA03667",
+          "sha256": "edc33bbf2acee802beb7d46692f01afb879449a781430d4f954fc9483230182c",
+          "archiveEntry": "patches/xml/CUSA03667.xml"
+        },
+        {
+          "titleId": "CUSA02168",
+          "sha256": "edc33bbf2acee802beb7d46692f01afb879449a781430d4f954fc9483230182c",
+          "archiveEntry": "patches/xml/CUSA02168.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GhostOfTsushimaDC-Orbis.xml",
+      "sourceBlob": "c65d0c41eadbc638ea80468fe036ede09e19a710",
+      "sourceSHA256": "4792719f5a449e214ceb88f28693c8542947af800d3edfbca74d952d27a89e58",
+      "gameId": "ghost-of-tsushima-director-s-cut",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA11456",
+        "CUSA13323"
+      ],
+      "optionCount": 6,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA11456",
+          "sha256": "c09eb41cf0c68491894efc55ed4b7c92e07bece16f6a72e85197fdbee547f890",
+          "archiveEntry": "patches/xml/CUSA11456.xml"
+        },
+        {
+          "titleId": "CUSA13323",
+          "sha256": "c09eb41cf0c68491894efc55ed4b7c92e07bece16f6a72e85197fdbee547f890",
+          "archiveEntry": "patches/xml/CUSA13323.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GhostOfYotei.xml",
+      "sourceBlob": "bf6fb4bc9dd8b92cf7688f4e15290da9bf0039df",
+      "sourceSHA256": "259cc4c5db0cb12724483901daafaa4cc49ee198d3525350f44fad77572a2f26",
+      "gameId": "ghost-of-yotei",
+      "arch": "prospero",
+      "titleIds": [
+        "PPSA26344"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "PPSA26344",
+          "sha256": "62e24a495fd7f98dd9f88af653087dd82ce598a026adf4a3a2587e2513dd99c5",
+          "archiveEntry": "patches/xml/PPSA26344.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GodOfWar-Orbis.xml",
+      "sourceBlob": "76db50465ba870f4c4aea642a1cb1839131bd683",
+      "sourceSHA256": "ed17c7714302855104907a81d54d680ab1dea5620e97efdd1fa62ec8e9919873",
+      "gameId": "god-of-war",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA07408",
+        "CUSA07410",
+        "CUSA07411",
+        "CUSA07412",
+        "CUSA07435"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA07408",
+          "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+          "archiveEntry": "patches/xml/CUSA07408.xml"
+        },
+        {
+          "titleId": "CUSA07410",
+          "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+          "archiveEntry": "patches/xml/CUSA07410.xml"
+        },
+        {
+          "titleId": "CUSA07411",
+          "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+          "archiveEntry": "patches/xml/CUSA07411.xml"
+        },
+        {
+          "titleId": "CUSA07412",
+          "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+          "archiveEntry": "patches/xml/CUSA07412.xml"
+        },
+        {
+          "titleId": "CUSA07435",
+          "sha256": "e012b821ab72fd7f132fd667246ab4df9ec1b50d61fedfb87f258b1e9a73f90a",
+          "archiveEntry": "patches/xml/CUSA07435.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GodofWarRagnarok-Orbis.xml",
+      "sourceBlob": "d480f9e4ef36dcfd3814e9fcde37597f6263d6d7",
+      "sourceSHA256": "14ac30273efebe10e94cc44d04a628fe3ea6d47060da7c736a73ce772781ce4f",
+      "gameId": "god-of-war-ragnarok",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA25468",
+        "CUSA25469",
+        "CUSA25470",
+        "CUSA25471",
+        "CUSA31678",
+        "CUSA31679",
+        "CUSA31680",
+        "CUSA31681",
+        "CUSA34256",
+        "CUSA34257",
+        "CUSA34258",
+        "CUSA34259",
+        "CUSA34357",
+        "CUSA34384",
+        "CUSA34385",
+        "CUSA34386",
+        "CUSA34387",
+        "CUSA34388",
+        "CUSA34389",
+        "CUSA34390",
+        "CUSA34391",
+        "CUSA34392",
+        "CUSA34393",
+        "CUSA34394",
+        "CUSA34395"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA25468",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA25468.xml"
+        },
+        {
+          "titleId": "CUSA25469",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA25469.xml"
+        },
+        {
+          "titleId": "CUSA25470",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA25470.xml"
+        },
+        {
+          "titleId": "CUSA25471",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA25471.xml"
+        },
+        {
+          "titleId": "CUSA31678",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA31678.xml"
+        },
+        {
+          "titleId": "CUSA31679",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA31679.xml"
+        },
+        {
+          "titleId": "CUSA31680",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA31680.xml"
+        },
+        {
+          "titleId": "CUSA31681",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA31681.xml"
+        },
+        {
+          "titleId": "CUSA34256",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34256.xml"
+        },
+        {
+          "titleId": "CUSA34257",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34257.xml"
+        },
+        {
+          "titleId": "CUSA34258",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34258.xml"
+        },
+        {
+          "titleId": "CUSA34259",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34259.xml"
+        },
+        {
+          "titleId": "CUSA34357",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34357.xml"
+        },
+        {
+          "titleId": "CUSA34384",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34384.xml"
+        },
+        {
+          "titleId": "CUSA34385",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34385.xml"
+        },
+        {
+          "titleId": "CUSA34386",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34386.xml"
+        },
+        {
+          "titleId": "CUSA34387",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34387.xml"
+        },
+        {
+          "titleId": "CUSA34388",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34388.xml"
+        },
+        {
+          "titleId": "CUSA34389",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34389.xml"
+        },
+        {
+          "titleId": "CUSA34390",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34390.xml"
+        },
+        {
+          "titleId": "CUSA34391",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34391.xml"
+        },
+        {
+          "titleId": "CUSA34392",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34392.xml"
+        },
+        {
+          "titleId": "CUSA34393",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34393.xml"
+        },
+        {
+          "titleId": "CUSA34394",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34394.xml"
+        },
+        {
+          "titleId": "CUSA34395",
+          "sha256": "cd0dc8274b916498a284d74d10bb290c3d1286847a9c87f503dc03a4c176c4f5",
+          "archiveEntry": "patches/xml/CUSA34395.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GrandTheftAutoV-Orbis.xml",
+      "sourceBlob": "059781e3ff3ce9129545515282aae19bc8dc2c7a",
+      "sourceSHA256": "3d4f165a0e909a72ae71de7b32ce6f0f1d65bf67f509c59cef60bcb0280d36b3",
+      "gameId": "grand-theft-auto-v",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00411",
+        "CUSA00419",
+        "CUSA00880"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00411",
+          "sha256": "df1b37ae2fdac0f07b6f0e7d35d6486323f718791b1258ddd34fbee4ea582a76",
+          "archiveEntry": "patches/xml/CUSA00411.xml"
+        },
+        {
+          "titleId": "CUSA00419",
+          "sha256": "df1b37ae2fdac0f07b6f0e7d35d6486323f718791b1258ddd34fbee4ea582a76",
+          "archiveEntry": "patches/xml/CUSA00419.xml"
+        },
+        {
+          "titleId": "CUSA00880",
+          "sha256": "df1b37ae2fdac0f07b6f0e7d35d6486323f718791b1258ddd34fbee4ea582a76",
+          "archiveEntry": "patches/xml/CUSA00880.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GrandTheftAutoViceCityDefinitive-Orbis.xml",
+      "sourceBlob": "9401420505a0c3cc3ea2e7cf8acd440f5c768f4c",
+      "sourceSHA256": "c56ffbcc616daf55b53313a1612a5f0d2480d5f8af263c4d47e92f5f2f3e69c0",
+      "gameId": "grand-theft-auto-vice-city-the-definitive-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA26615",
+        "CUSA26616",
+        "CUSA26617",
+        "CUSA40382"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA26615",
+          "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+          "archiveEntry": "patches/xml/CUSA26615.xml"
+        },
+        {
+          "titleId": "CUSA26616",
+          "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+          "archiveEntry": "patches/xml/CUSA26616.xml"
+        },
+        {
+          "titleId": "CUSA26617",
+          "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+          "archiveEntry": "patches/xml/CUSA26617.xml"
+        },
+        {
+          "titleId": "CUSA40382",
+          "sha256": "86702e19cba61ac582e921c732745cd54e8acb44d3c1359dc749155ad95768d5",
+          "archiveEntry": "patches/xml/CUSA40382.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GravityDaze2-Orbis.xml",
+      "sourceBlob": "150b2836ac8d5c61418cc897eb118a4eb0cd6be7",
+      "sourceSHA256": "7cc37e8cc7270f66346ad2d57fc45ed1f90fb04d283928559c4a2e79333f7879",
+      "gameId": "gravity-rush-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00547",
+        "CUSA03694",
+        "CUSA04934",
+        "CUSA04943"
+      ],
+      "optionCount": 25,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00547",
+          "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+          "archiveEntry": "patches/xml/CUSA00547.xml"
+        },
+        {
+          "titleId": "CUSA03694",
+          "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+          "archiveEntry": "patches/xml/CUSA03694.xml"
+        },
+        {
+          "titleId": "CUSA04934",
+          "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+          "archiveEntry": "patches/xml/CUSA04934.xml"
+        },
+        {
+          "titleId": "CUSA04943",
+          "sha256": "511e510c0028f08cfccc92326b9ef91c381743ef7a73d64b742521117ce0f86e",
+          "archiveEntry": "patches/xml/CUSA04943.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/GravityDaze2Demo-Orbis.xml",
+      "sourceBlob": "c89a695c22db39de595fef5ff9817f7001854ff9",
+      "sourceSHA256": "05ce671874cf9ca7a4f0d909bd146471664619db92082f62ccb4dbe4d7ed4fbe",
+      "gameId": "gravity-rush-2-gravity-daze-2-demo",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA06596",
+        "CUSA06760",
+        "CUSA07241"
+      ],
+      "optionCount": 3,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA06596",
+          "sha256": "f5686ccae573a688dfd1646bec10ff4a6a3a29c0466bde278aa5c38437e24359",
+          "archiveEntry": "patches/xml/CUSA06596.xml"
+        },
+        {
+          "titleId": "CUSA06760",
+          "sha256": "f5686ccae573a688dfd1646bec10ff4a6a3a29c0466bde278aa5c38437e24359",
+          "archiveEntry": "patches/xml/CUSA06760.xml"
+        },
+        {
+          "titleId": "CUSA07241",
+          "sha256": "f5686ccae573a688dfd1646bec10ff4a6a3a29c0466bde278aa5c38437e24359",
+          "archiveEntry": "patches/xml/CUSA07241.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/HatsuneMiku_ProjectDIVAFutureTone-Orbis.xml",
+      "sourceBlob": "4c926a62f6b207c127b2745992ba4390b9f7f3ba",
+      "sourceSHA256": "e8ebd799b01605701fb61210bb9b446022c543f75f95a99915a6d257344cf1b8",
+      "gameId": "hatsune-miku-project-diva-future-tone",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08026",
+        "CUSA08053",
+        "CUSA06093",
+        "CUSA06211",
+        "CUSA05030",
+        "CUSA03828"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA08026",
+          "sha256": "e8b073df51ee73138fc13aeeabd994680b3a3b38237e6900b646f666002ead87",
+          "archiveEntry": "patches/xml/CUSA08026.xml"
+        },
+        {
+          "titleId": "CUSA08053",
+          "sha256": "e8b073df51ee73138fc13aeeabd994680b3a3b38237e6900b646f666002ead87",
+          "archiveEntry": "patches/xml/CUSA08053.xml"
+        },
+        {
+          "titleId": "CUSA06093",
+          "sha256": "e8b073df51ee73138fc13aeeabd994680b3a3b38237e6900b646f666002ead87",
+          "archiveEntry": "patches/xml/CUSA06093.xml"
+        },
+        {
+          "titleId": "CUSA06211",
+          "sha256": "e8b073df51ee73138fc13aeeabd994680b3a3b38237e6900b646f666002ead87",
+          "archiveEntry": "patches/xml/CUSA06211.xml"
+        },
+        {
+          "titleId": "CUSA05030",
+          "sha256": "e8b073df51ee73138fc13aeeabd994680b3a3b38237e6900b646f666002ead87",
+          "archiveEntry": "patches/xml/CUSA05030.xml"
+        },
+        {
+          "titleId": "CUSA03828",
+          "sha256": "e8b073df51ee73138fc13aeeabd994680b3a3b38237e6900b646f666002ead87",
+          "archiveEntry": "patches/xml/CUSA03828.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/HellbladeGame-Orbis.xml",
+      "sourceBlob": "4a0ed98c1b6754b74167ecd13caa6fdeaba46592",
+      "sourceSHA256": "dd1105d3a071d2be557ea520457312985148715f6366032977af3f11ad1a52ef",
+      "gameId": "hellblade-senua-s-sacrifice",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA07511"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA07511",
+          "sha256": "9d9b6643443182f9d34a326c08d78c82ffeb8acc7579f96ecd7c09802472351c",
+          "archiveEntry": "patches/xml/CUSA07511.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/HogwartsLegacy-Orbis.xml",
+      "sourceBlob": "e07922304a1a5fc4d294903e8c1ac5af5f2ac9f3",
+      "sourceSHA256": "184b7bb539ef5100d346e7b0c58aa95328e5ab1a41ca8e2e094285d79eddc14c",
+      "gameId": "hogwarts-legacy",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12771",
+        "CUSA12824"
+      ],
+      "optionCount": 7,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA12771",
+          "sha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+          "archiveEntry": "patches/xml/CUSA12771.xml"
+        },
+        {
+          "titleId": "CUSA12824",
+          "sha256": "630d6588bf72d5b75d6c78c5d28a33569db9f72bca1f0be9bc1fdaf987256f46",
+          "archiveEntry": "patches/xml/CUSA12824.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Homefront2-Orbis.xml",
+      "sourceBlob": "cbf0eeb26755b667c86887b797656a41e22992ca",
+      "sourceSHA256": "10a9442f788ea76771cf533f49488d10575ec46219594e9892fc4699c989c690",
+      "gameId": "homefront-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00938"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00938",
+          "sha256": "bdcd36ef2dfca788ff1fedc9a82877466735e41c8b1e5528a63586bf66310f59",
+          "archiveEntry": "patches/xml/CUSA00938.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/HorizonForbiddenWest-Orbis.xml",
+      "sourceBlob": "0d3e10a7cd6d284cc8f50263063650bce745a718",
+      "sourceSHA256": "7528f427b4b1cbbbb7dba390adf3a32cc1aaed4a0ee8fe4555f8acc5344bef40",
+      "gameId": "horizon-forbidden-west",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA28561",
+        "CUSA24705",
+        "CUSA28563"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA28561",
+          "sha256": "07fb0148a2e8b2a6c7081ace774b04a55ceaa477e69fb422f289ca0f6f9ba46f",
+          "archiveEntry": "patches/xml/CUSA28561.xml"
+        },
+        {
+          "titleId": "CUSA24705",
+          "sha256": "07fb0148a2e8b2a6c7081ace774b04a55ceaa477e69fb422f289ca0f6f9ba46f",
+          "archiveEntry": "patches/xml/CUSA24705.xml"
+        },
+        {
+          "titleId": "CUSA28563",
+          "sha256": "07fb0148a2e8b2a6c7081ace774b04a55ceaa477e69fb422f289ca0f6f9ba46f",
+          "archiveEntry": "patches/xml/CUSA28563.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/HorizonZeroDawn-Orbis.xml",
+      "sourceBlob": "03a7d4ff60b64b3b17e062d49fffe86cf990de1d",
+      "sourceSHA256": "190a9c9de5d5097ec941acdd57433929dda1ca0de4f2a260a62a5b04a9224500",
+      "gameId": "horizon-zero-dawn",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01021",
+        "CUSA01967",
+        "CUSA05661",
+        "CUSA05682",
+        "CUSA07319",
+        "CUSA07320",
+        "CUSA07326",
+        "CUSA07350",
+        "CUSA07762",
+        "CUSA07798",
+        "CUSA10211",
+        "CUSA10212",
+        "CUSA10213",
+        "CUSA10218",
+        "CUSA10234",
+        "CUSA10237"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01021",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA01021.xml"
+        },
+        {
+          "titleId": "CUSA01967",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA01967.xml"
+        },
+        {
+          "titleId": "CUSA05661",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA05661.xml"
+        },
+        {
+          "titleId": "CUSA05682",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA05682.xml"
+        },
+        {
+          "titleId": "CUSA07319",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA07319.xml"
+        },
+        {
+          "titleId": "CUSA07320",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA07320.xml"
+        },
+        {
+          "titleId": "CUSA07326",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA07326.xml"
+        },
+        {
+          "titleId": "CUSA07350",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA07350.xml"
+        },
+        {
+          "titleId": "CUSA07762",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA07762.xml"
+        },
+        {
+          "titleId": "CUSA07798",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA07798.xml"
+        },
+        {
+          "titleId": "CUSA10211",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA10211.xml"
+        },
+        {
+          "titleId": "CUSA10212",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA10212.xml"
+        },
+        {
+          "titleId": "CUSA10213",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA10213.xml"
+        },
+        {
+          "titleId": "CUSA10218",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA10218.xml"
+        },
+        {
+          "titleId": "CUSA10234",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA10234.xml"
+        },
+        {
+          "titleId": "CUSA10237",
+          "sha256": "f04c2e0a174eb1e77ae5558135b99473edf5f5f0045d51bcffd36163ffb9d7dc",
+          "archiveEntry": "patches/xml/CUSA10237.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/JudgmentEU-orbis.xml",
+      "sourceBlob": "71976e8f8d53187e351199702cd11da146074e64",
+      "sourceSHA256": "9dac39daf3c11a303b1ed5b38d78b107e4377d4bf70362d0207560971e61c2f2",
+      "gameId": "judgment",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA13197"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA13197",
+          "sha256": "00d65ebf63a581c387314469e754f1a64c987314aa644475432217575a78f452",
+          "archiveEntry": "patches/xml/CUSA13197.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/JustCause3-Orbis.xml",
+      "sourceBlob": "920f9a0012a285f0d0b3d1ab72cc8aff6a1c4c37",
+      "sourceSHA256": "93d026a7232a2d108d3ddc97270b16b640517b6ddd923b88931bcc191835b6d7",
+      "gameId": "just-cause-3",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01493",
+        "CUSA02747",
+        "CUSA02748"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01493",
+          "sha256": "29b2eb135580a4feb2cf44dd98bfb62e67105fe9ce397f4807c88642d3f8e777",
+          "archiveEntry": "patches/xml/CUSA01493.xml"
+        },
+        {
+          "titleId": "CUSA02747",
+          "sha256": "29b2eb135580a4feb2cf44dd98bfb62e67105fe9ce397f4807c88642d3f8e777",
+          "archiveEntry": "patches/xml/CUSA02747.xml"
+        },
+        {
+          "titleId": "CUSA02748",
+          "sha256": "29b2eb135580a4feb2cf44dd98bfb62e67105fe9ce397f4807c88642d3f8e777",
+          "archiveEntry": "patches/xml/CUSA02748.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/JustCause4-Orbis.xml",
+      "sourceBlob": "67f2d1225ce1bd1a01b9d0df870c3b4803a14e47",
+      "sourceSHA256": "4de23f728ba265bd50c36f55b899ed8e8fa4999118133347282bebdfbc9f1bfb",
+      "gameId": "just-cause-4",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA09254",
+        "CUSA09264",
+        "CUSA12635",
+        "CUSA13217",
+        "CUSA13318"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA09254",
+          "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+          "archiveEntry": "patches/xml/CUSA09254.xml"
+        },
+        {
+          "titleId": "CUSA09264",
+          "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+          "archiveEntry": "patches/xml/CUSA09264.xml"
+        },
+        {
+          "titleId": "CUSA12635",
+          "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+          "archiveEntry": "patches/xml/CUSA12635.xml"
+        },
+        {
+          "titleId": "CUSA13217",
+          "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+          "archiveEntry": "patches/xml/CUSA13217.xml"
+        },
+        {
+          "titleId": "CUSA13318",
+          "sha256": "e43c3d3a1bcffe5e676954ba2bf84a196072f4c3968c0e4cdeadd2a5242d9ae0",
+          "archiveEntry": "patches/xml/CUSA13318.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/KenaBridgeofSpirits-Orbis.xml",
+      "sourceBlob": "ad8e7ad7a9e93f00da37d6736f70a58b52024bc4",
+      "sourceSHA256": "f4b26c4aa2d1b1ca7bcb0f72a1b0ddc3fef643d0da75facea3971cf7d9305b5e",
+      "gameId": "kena-bridge-of-spirits",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA24853"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA24853",
+          "sha256": "a08ac4bb2e0b79aa02ba81476cb961f882f6b41c771c7d4528472c1d5f7c19bf",
+          "archiveEntry": "patches/xml/CUSA24853.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/KingdomCome-DeliveranceRoyalEdition.xml",
+      "sourceBlob": "e42588f60541a115027c6283f9cd68e41bbb60bd",
+      "sourceSHA256": "aedaea074d605c76d7357fdcc3c6d19f86d0dff66b68231944a9a0a6ab8d44ad",
+      "gameId": "kingdom-come-deliverance-royal-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA15436"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA15436",
+          "sha256": "aedaea074d605c76d7357fdcc3c6d19f86d0dff66b68231944a9a0a6ab8d44ad",
+          "archiveEntry": "patches/xml/CUSA15436.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/LiesOfP-Orbis.xml",
+      "sourceBlob": "af7b8eef19f5c5f05c045013ba31ae3a1c82293d",
+      "sourceSHA256": "832e63086319638f52d8bfea8416ed1d07bf76291e0b67ea17401d5bcaa32165",
+      "gameId": "lies-of-p",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA36847",
+        "CUSA36848",
+        "CUSA36849",
+        "CUSA36850"
+      ],
+      "optionCount": 6,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA36847",
+          "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+          "archiveEntry": "patches/xml/CUSA36847.xml"
+        },
+        {
+          "titleId": "CUSA36848",
+          "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+          "archiveEntry": "patches/xml/CUSA36848.xml"
+        },
+        {
+          "titleId": "CUSA36849",
+          "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+          "archiveEntry": "patches/xml/CUSA36849.xml"
+        },
+        {
+          "titleId": "CUSA36850",
+          "sha256": "375108d8a98b68e55715b2ef522a4e62660a7cc1bdcc384458d9ea73cd8b51d7",
+          "archiveEntry": "patches/xml/CUSA36850.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/LifeIsStrange-BeforeTheStorm-Orbis.xml",
+      "sourceBlob": "d739017175e45c865bb27b6ebee50731ba590aa0",
+      "sourceSHA256": "9c04377612f6f17c5ff70f12953dd121598d7d136293b4113e6b021520ca72e0",
+      "gameId": "life-is-strange-before-the-storm",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08479",
+        "CUSA08487"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA08479",
+          "sha256": "0f6ca4a7421634dc35bddddc0ae5ca0585ec187922c9b3afb11555b6433ad9c4",
+          "archiveEntry": "patches/xml/CUSA08479.xml"
+        },
+        {
+          "titleId": "CUSA08487",
+          "sha256": "0f6ca4a7421634dc35bddddc0ae5ca0585ec187922c9b3afb11555b6433ad9c4",
+          "archiveEntry": "patches/xml/CUSA08487.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/LifeisStrange3-TrueColors-Orbis.xml",
+      "sourceBlob": "8eb36320e0a4a69dda65971061999c6df2479e89",
+      "sourceSHA256": "ed98c7f61e4baacfa8ce1ff9d201f55d4c518de62deb97a6cb169216970a6c99",
+      "gameId": "life-is-strange-true-colors",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA17941",
+        "CUSA24801"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA17941",
+          "sha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+          "archiveEntry": "patches/xml/CUSA17941.xml"
+        },
+        {
+          "titleId": "CUSA24801",
+          "sha256": "5468a17b0485b5f8839e33dd14f3ca08aecb95cfb2de37dc6bac74815479ed68",
+          "archiveEntry": "patches/xml/CUSA24801.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/LostJudgmentJP-orbis.xml",
+      "sourceBlob": "981cec90c57bbcfdafd2ade3b6ca0540fa988653",
+      "sourceSHA256": "a523f90757ea066e6146d08f5797b56ad2c619f9915df08517880231d0c66e0f",
+      "gameId": "lost-judgment",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA28183"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA28183",
+          "sha256": "df828ae316e7a09f76c3693ed626670295aca4ef462f1b14c708d7a78bd05b9e",
+          "archiveEntry": "patches/xml/CUSA28183.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MadMax-Orbis.xml",
+      "sourceBlob": "56a01cbaaa730f5a0b79aaf9002dde2ffb5fa6e0",
+      "sourceSHA256": "ac7dcfa7daff6713bff140b2a3f83d2bbd6083034f2d848dcdd4e52949c6ad8d",
+      "gameId": "mad-max",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00103",
+        "CUSA00054"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00103",
+          "sha256": "3ae729a83b72398f4f5faafe50eb80ff2fc99104faaa440dffa3826ac9a4e0e8",
+          "archiveEntry": "patches/xml/CUSA00103.xml"
+        },
+        {
+          "titleId": "CUSA00054",
+          "sha256": "3ae729a83b72398f4f5faafe50eb80ff2fc99104faaa440dffa3826ac9a4e0e8",
+          "archiveEntry": "patches/xml/CUSA00054.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Mafia1Remake-Orbis.xml",
+      "sourceBlob": "57dc87e429fc54b7ffab17c40a099c2cd690a722",
+      "sourceSHA256": "b51435546ea1d6c3a3580e13d15ca314d7e6307c5d67a4fe9aed8fd952cec9e5",
+      "gameId": "mafia-definitive-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA18097",
+        "CUSA18100",
+        "CUSA19278"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA18097",
+          "sha256": "a3c1c0d2965f60e1e31f7565c25ed88dcd5668ea79a1ab219e531bbdd7d66ebc",
+          "archiveEntry": "patches/xml/CUSA18097.xml"
+        },
+        {
+          "titleId": "CUSA18100",
+          "sha256": "a3c1c0d2965f60e1e31f7565c25ed88dcd5668ea79a1ab219e531bbdd7d66ebc",
+          "archiveEntry": "patches/xml/CUSA18100.xml"
+        },
+        {
+          "titleId": "CUSA19278",
+          "sha256": "a3c1c0d2965f60e1e31f7565c25ed88dcd5668ea79a1ab219e531bbdd7d66ebc",
+          "archiveEntry": "patches/xml/CUSA19278.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Mafia2-Orbis.xml",
+      "sourceBlob": "57310ce55962cdc01a1f0cdad313a776346bf3f3",
+      "sourceSHA256": "0ebe0a11b4815aff814375d54d41548280e9b5442d8eec34367c5ff8b1c02c2b",
+      "gameId": "mafia-2-definitive-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA16990"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA16990",
+          "sha256": "d47d741968263481cd7c3d04d4d07c58810772a11e961ed3a4d650d6e01fad96",
+          "archiveEntry": "patches/xml/CUSA16990.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MarvelsGuardiansoftheGalaxy.xml",
+      "sourceBlob": "6c259e046d77107c2f9f740662cbe37540063de8",
+      "sourceSHA256": "5e84cbb2d249ec5417854162c06f77ced784807ea7b9620ec4fe9b7631f35e7d",
+      "gameId": "marvel-s-guardians-of-the-galaxy",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA24103"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA24103",
+          "sha256": "5e84cbb2d249ec5417854162c06f77ced784807ea7b9620ec4fe9b7631f35e7d",
+          "archiveEntry": "patches/xml/CUSA24103.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MarvelsSpider-Man-Orbis.xml",
+      "sourceBlob": "450c4b194ac966eb0baf8f54d8e2f895b71ccb2a",
+      "sourceSHA256": "51e156d4ae870df9577a9dd2b8bbe243960dfb97d7d9d76f10cf3da67470ac62",
+      "gameId": "marvel-s-spider-man",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02299",
+        "CUSA11993",
+        "CUSA11994",
+        "CUSA11995",
+        "CUSA09751",
+        "CUSA09893"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA02299",
+          "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+          "archiveEntry": "patches/xml/CUSA02299.xml"
+        },
+        {
+          "titleId": "CUSA11993",
+          "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+          "archiveEntry": "patches/xml/CUSA11993.xml"
+        },
+        {
+          "titleId": "CUSA11994",
+          "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+          "archiveEntry": "patches/xml/CUSA11994.xml"
+        },
+        {
+          "titleId": "CUSA11995",
+          "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+          "archiveEntry": "patches/xml/CUSA11995.xml"
+        },
+        {
+          "titleId": "CUSA09751",
+          "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+          "archiveEntry": "patches/xml/CUSA09751.xml"
+        },
+        {
+          "titleId": "CUSA09893",
+          "sha256": "7de3849709fe546b8d5258a23c3970558a23581957a7a05bddbb1334803c9be2",
+          "archiveEntry": "patches/xml/CUSA09893.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MarvelsSpider-ManMilesMorales-Orbis.xml",
+      "sourceBlob": "604ea829907004d782eaf70aafa274f9837f485b",
+      "sourceSHA256": "70d3fb1fe78125b2723153340318f587f3479e6e89311b4a0e140a95dfc34796",
+      "gameId": "marvel-s-spider-man-miles-morales",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA17722",
+        "CUSA17776",
+        "CUSA20177",
+        "CUSA17839",
+        "CUSA18748"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA17722",
+          "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+          "archiveEntry": "patches/xml/CUSA17722.xml"
+        },
+        {
+          "titleId": "CUSA17776",
+          "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+          "archiveEntry": "patches/xml/CUSA17776.xml"
+        },
+        {
+          "titleId": "CUSA20177",
+          "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+          "archiveEntry": "patches/xml/CUSA20177.xml"
+        },
+        {
+          "titleId": "CUSA17839",
+          "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+          "archiveEntry": "patches/xml/CUSA17839.xml"
+        },
+        {
+          "titleId": "CUSA18748",
+          "sha256": "06f8a606246af88f04f66b00028198c68ef4b721b982546a6e787310b74965bd",
+          "archiveEntry": "patches/xml/CUSA18748.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MediEvil-Orbis.xml",
+      "sourceBlob": "5c0fcfcf2aba90dce865237cc251fdac8c79707c",
+      "sourceSHA256": "97864ab229b9f2629b5815801376265f9effc948ff8719be19468f121f6abee2",
+      "gameId": "medievil",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA11227",
+        "CUSA12982"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA11227",
+          "sha256": "fbd01bbfd5bb909a8e0f0d916c2f7ef03fd284fe13bf0b53c65d6d3f1291222f",
+          "archiveEntry": "patches/xml/CUSA11227.xml"
+        },
+        {
+          "titleId": "CUSA12982",
+          "sha256": "fbd01bbfd5bb909a8e0f0d916c2f7ef03fd284fe13bf0b53c65d6d3f1291222f",
+          "archiveEntry": "patches/xml/CUSA12982.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Middle-earth-ShadowofWar-DefinitiveEdition.xml",
+      "sourceBlob": "9770f83cc74928d16c63101976c08de53a95ea99",
+      "sourceSHA256": "9343306c1b1f8774181b80907de8d78c2885eb42fcea1ae736126df0fdd57dc9",
+      "gameId": "middle-earth-shadow-of-war-definitive-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA04402"
+      ],
+      "optionCount": 3,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA04402",
+          "sha256": "9343306c1b1f8774181b80907de8d78c2885eb42fcea1ae736126df0fdd57dc9",
+          "archiveEntry": "patches/xml/CUSA04402.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MiddleEarthShadowofMordor-GameoftheYearEdition.xml",
+      "sourceBlob": "84320ab8c253d2c6655e945f770d384a7d5548a2",
+      "sourceSHA256": "d6fb02321df8f53c1ac00f966cb0a3714f7a05413140718c521793586576422a",
+      "gameId": "middle-earth-shadow-of-mordor-game-of-the-year-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02152"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA02152",
+          "sha256": "d6fb02321df8f53c1ac00f966cb0a3714f7a05413140718c521793586576422a",
+          "archiveEntry": "patches/xml/CUSA02152.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MinecraftDungeons.xml",
+      "sourceBlob": "d9ff045175304f3978643b6ecde06467faa0c7e7",
+      "sourceSHA256": "87df118a3f3105de2e4b6a3910cda5bcbbd3cfde6c25656c598c067c0c5a76f3",
+      "gameId": "minecraft-dungeons",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA18779"
+      ],
+      "optionCount": 3,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA18779",
+          "sha256": "8c28016034176275a4f28d0c363f1ec3e97aff5e6294d54bc255114acf2d3b01",
+          "archiveEntry": "patches/xml/CUSA18779.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/MirrorsEdgeCatalyst-Orbis.xml",
+      "sourceBlob": "15879ca622ffeb87eb6f363b4e0d49f7ee1d6f19",
+      "sourceSHA256": "96e2a437083846cf07cc1a0b18ffebbf0e93613bc815864adfad050f7513a7ae",
+      "gameId": "mirror-s-edge-catalyst",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01499",
+        "CUSA01542",
+        "CUSA01566"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01499",
+          "sha256": "a04dbd123d86152fec9e5b2acf9c9908817d4a006be5a980762fd8114d62de8d",
+          "archiveEntry": "patches/xml/CUSA01499.xml"
+        },
+        {
+          "titleId": "CUSA01542",
+          "sha256": "a04dbd123d86152fec9e5b2acf9c9908817d4a006be5a980762fd8114d62de8d",
+          "archiveEntry": "patches/xml/CUSA01542.xml"
+        },
+        {
+          "titleId": "CUSA01566",
+          "sha256": "a04dbd123d86152fec9e5b2acf9c9908817d4a006be5a980762fd8114d62de8d",
+          "archiveEntry": "patches/xml/CUSA01566.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/NeedforSpeedHeat-Orbis.xml",
+      "sourceBlob": "6e2a8a3dd828719761f676ddd032ccdbe9f894fd",
+      "sourceSHA256": "fb9f81f7312782cc469e87c9770c6e537a20496f4d779ab2643965ad274b73d3",
+      "gameId": "need-for-speed-heat",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA15081",
+        "CUSA15090"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA15081",
+          "sha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+          "archiveEntry": "patches/xml/CUSA15081.xml"
+        },
+        {
+          "titleId": "CUSA15090",
+          "sha256": "b457f06eb2b61973fb258081bdc9b2dc52349f9b439c26797fc333b8dad2f8b6",
+          "archiveEntry": "patches/xml/CUSA15090.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/NeedforSpeedPayback-Orbis.xml",
+      "sourceBlob": "5b39add533df842786516952a390e198a3fdc503",
+      "sourceSHA256": "c916081c99ab24c3e4d4d8ba54fff3ae1ab548863128553589fb50ab3509c470",
+      "gameId": "need-for-speed-payback",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05986",
+        "CUSA05999"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA05986",
+          "sha256": "40611309baac6527c064046890f713886d78a55d7f148a50be3fbc0d3b00a6a6",
+          "archiveEntry": "patches/xml/CUSA05986.xml"
+        },
+        {
+          "titleId": "CUSA05999",
+          "sha256": "40611309baac6527c064046890f713886d78a55d7f148a50be3fbc0d3b00a6a6",
+          "archiveEntry": "patches/xml/CUSA05999.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/NeedforSpeedRivals-Orbis.xml",
+      "sourceBlob": "32d3019426dd72b40af0814e69fa7ad1d8558c36",
+      "sourceSHA256": "c8d9067bf908b1cb1a674a1d0d2644c4f37e7ba3a54118eeb6fecef408b662b7",
+      "gameId": "need-for-speed-rivals",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00113"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA00113",
+          "sha256": "056586ec5e133694759d1d739c1cbdb812365f1c24c750815ad6c006783e5926",
+          "archiveEntry": "patches/xml/CUSA00113.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/NierAutomata-Orbis.xml",
+      "sourceBlob": "8247d76acd80511aa1211fbfca89300d0795be36",
+      "sourceSHA256": "0b2c373e57ccc24e2088094b820abea4a5ea857609fcf6d11bde4b8ab70da561",
+      "gameId": "nier-automata",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA04480",
+        "CUSA04551",
+        "CUSA02517",
+        "CUSA06592"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA04480",
+          "sha256": "3bb9c5e123ed3dd378d7207d30629bd2b4d3679b876fe4cd6733907fe2ba3476",
+          "archiveEntry": "patches/xml/CUSA04480.xml"
+        },
+        {
+          "titleId": "CUSA04551",
+          "sha256": "3bb9c5e123ed3dd378d7207d30629bd2b4d3679b876fe4cd6733907fe2ba3476",
+          "archiveEntry": "patches/xml/CUSA04551.xml"
+        },
+        {
+          "titleId": "CUSA02517",
+          "sha256": "3bb9c5e123ed3dd378d7207d30629bd2b4d3679b876fe4cd6733907fe2ba3476",
+          "archiveEntry": "patches/xml/CUSA02517.xml"
+        },
+        {
+          "titleId": "CUSA06592",
+          "sha256": "3bb9c5e123ed3dd378d7207d30629bd2b4d3679b876fe4cd6733907fe2ba3476",
+          "archiveEntry": "patches/xml/CUSA06592.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Persona3Dancing-Orbis.xml",
+      "sourceBlob": "7e962f5c25cec8dfe401a2f6d2dfe59d770c4388",
+      "sourceSHA256": "537d3e07fbc8ffbec578521449e5e376e126e61a84350dc8bf68c2709b1c243f",
+      "gameId": "persona-3-dancing-in-moonlight",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12636"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA12636",
+          "sha256": "537d3e07fbc8ffbec578521449e5e376e126e61a84350dc8bf68c2709b1c243f",
+          "archiveEntry": "patches/xml/CUSA12636.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Persona3Reload.xml",
+      "sourceBlob": "6cdf77a426a8dc381461f12836116a597d0da77d",
+      "sourceSHA256": "9efa22d6efbbac3dca5196a3df55a65e09b24f58a98fe89aa0c53930eaa75137",
+      "gameId": "persona-3-reload",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA37522"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA37522",
+          "sha256": "c60085e206257ef16ec987937959b811a786d80accf8b47cd86bfbf3a6d0b1c4",
+          "archiveEntry": "patches/xml/CUSA37522.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Persona4Dancing-Orbis.xml",
+      "sourceBlob": "23b7296ecda467275a45813cb61c3057080b974f",
+      "sourceSHA256": "aa9e15fcc4f71b99d461e51c1c1d10a63b42da939f708c0fa8b0d824a2009721",
+      "gameId": "persona-4-dancing-all-night",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12811"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA12811",
+          "sha256": "aa9e15fcc4f71b99d461e51c1c1d10a63b42da939f708c0fa8b0d824a2009721",
+          "archiveEntry": "patches/xml/CUSA12811.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Persona5Dancing-Orbis.xml",
+      "sourceBlob": "0cd59502b7ddf35c4cb4ac24c89e8ac5339ceaeb",
+      "sourceSHA256": "c808f6219392d7688ef01c8e8699c6f9d770cca3ddae9da5504e47ac05f35981",
+      "gameId": "persona-5-dancing-in-starlight",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12380"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA12380",
+          "sha256": "c808f6219392d7688ef01c8e8699c6f9d770cca3ddae9da5504e47ac05f35981",
+          "archiveEntry": "patches/xml/CUSA12380.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Persona5Royal-Orbis.xml",
+      "sourceBlob": "d62b0f63d189beec0a1062066fd2573efa966f55",
+      "sourceSHA256": "192da2d5b1f04ae557e25bfac955dc4c15f560b4104d756593f96405ba44f63f",
+      "gameId": "persona-5-royal",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA17416",
+        "CUSA17419",
+        "CUSA08644"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA17416",
+          "sha256": "dc9819ddea6fa700cca4756fa4c1d42760e9a2f78271a297e0cc0666373d66df",
+          "archiveEntry": "patches/xml/CUSA17416.xml"
+        },
+        {
+          "titleId": "CUSA17419",
+          "sha256": "dc9819ddea6fa700cca4756fa4c1d42760e9a2f78271a297e0cc0666373d66df",
+          "archiveEntry": "patches/xml/CUSA17419.xml"
+        },
+        {
+          "titleId": "CUSA08644",
+          "sha256": "dc9819ddea6fa700cca4756fa4c1d42760e9a2f78271a297e0cc0666373d66df",
+          "archiveEntry": "patches/xml/CUSA08644.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/PhantomDoctrine-Orbis.xml",
+      "sourceBlob": "c407ea31d5ff7157edb7b7481b2b0df0695b1121",
+      "sourceSHA256": "84036d5a90e55fe20855c10a24bdaf30327f57a1d84422fce17eca41c373e6f5",
+      "gameId": "phantom-doctrine",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA11649"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA11649",
+          "sha256": "b11f53144cd8bbb6a310e9e77563cf8dbf90dc8439ff33313e5fca6c073c5aea",
+          "archiveEntry": "patches/xml/CUSA11649.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/PoppyPlaytimeChapter2.xml",
+      "sourceBlob": "108ba86df1caa5ec08f54117fc0c1c6e0c56efea",
+      "sourceSHA256": "131e769977af2133616f5d2456482ef87817a4604d898d8b9592ebbfe465f53d",
+      "gameId": "poppy-playtime-chapter-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA47693"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA47693",
+          "sha256": "131e769977af2133616f5d2456482ef87817a4604d898d8b9592ebbfe465f53d",
+          "archiveEntry": "patches/xml/CUSA47693.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Prototype2.xml",
+      "sourceBlob": "7659d4e1df2c3c0342ffc0b3a3a4647389b194ed",
+      "sourceSHA256": "7736e7afdbada53ab6457c6269577ed0aed57a477ab05b27db29f72814a0a375",
+      "gameId": "prototype-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01765"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA01765",
+          "sha256": "ab36544b1639aa605363e2273d744d712dc13918e762ee54014bcfc946c34790",
+          "archiveEntry": "patches/xml/CUSA01765.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/PrototypeBiohazard.xml",
+      "sourceBlob": "2e1afc46464de3f615706d7ee99e1ef303c35d75",
+      "sourceSHA256": "a726bc97f6e2d1b74f8c455833f5f83481f61b24fbbf4964fa0aaeae8eebd47d",
+      "gameId": "prototype",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA06545"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA06545",
+          "sha256": "d1a9a6d178a112facfcd9c2220b8c496a66478be1a6aa207cd9b7ab571c71b59",
+          "archiveEntry": "patches/xml/CUSA06545.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/RatchetandClankRemakeOrbis.xml",
+      "sourceBlob": "d286dc62f5a8aa48bb6e01b97ce2529b6c2f9960",
+      "sourceSHA256": "57f43b2bab89d5882a25bc74e93f846b13f8ca7d2dbbfbd62e78bd7e0cacae07",
+      "gameId": "ratchet-and-clank",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01073",
+        "CUSA01928"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01073",
+          "sha256": "21b9c862a9d1ecc893cc5757a8571c52f53889d83859d86675c1870a157bd5bb",
+          "archiveEntry": "patches/xml/CUSA01073.xml"
+        },
+        {
+          "titleId": "CUSA01928",
+          "sha256": "21b9c862a9d1ecc893cc5757a8571c52f53889d83859d86675c1870a157bd5bb",
+          "archiveEntry": "patches/xml/CUSA01928.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/RedDeadRedemption-Orbis.xml",
+      "sourceBlob": "0748ac17e35da19307ba3ca37281f1e663e65c0e",
+      "sourceSHA256": "c5ac6d5de692611354e3eacc426b7c56241f774658dbe74cd7a5957663728f19",
+      "gameId": "red-dead-redemption",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA36842",
+        "CUSA36843",
+        "CUSA36844",
+        "CUSA36845"
+      ],
+      "optionCount": 8,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA36842",
+          "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+          "archiveEntry": "patches/xml/CUSA36842.xml"
+        },
+        {
+          "titleId": "CUSA36843",
+          "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+          "archiveEntry": "patches/xml/CUSA36843.xml"
+        },
+        {
+          "titleId": "CUSA36844",
+          "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+          "archiveEntry": "patches/xml/CUSA36844.xml"
+        },
+        {
+          "titleId": "CUSA36845",
+          "sha256": "52e06f3790e8cbf9783d81aefc1578126e1116c0cbb735776d5cf47a4a5ac951",
+          "archiveEntry": "patches/xml/CUSA36845.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/RedDeadRedemption2-Orbis.xml",
+      "sourceBlob": "8fd32695336423ac83d378da7054f95b4b8b9366",
+      "sourceSHA256": "be73725a87c168c36d4e7697aade0bbb23aa752aa223aa40f8926accb146fcb7",
+      "gameId": "red-dead-redemption-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03041",
+        "CUSA08519",
+        "CUSA08568"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA03041",
+          "sha256": "567dc63c9d72dad78d5e2ebd8870445d5bcd175a658982d35b3e7ce3a9cf3f1d",
+          "archiveEntry": "patches/xml/CUSA03041.xml"
+        },
+        {
+          "titleId": "CUSA08519",
+          "sha256": "567dc63c9d72dad78d5e2ebd8870445d5bcd175a658982d35b3e7ce3a9cf3f1d",
+          "archiveEntry": "patches/xml/CUSA08519.xml"
+        },
+        {
+          "titleId": "CUSA08568",
+          "sha256": "567dc63c9d72dad78d5e2ebd8870445d5bcd175a658982d35b3e7ce3a9cf3f1d",
+          "archiveEntry": "patches/xml/CUSA08568.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ResidentEvil2-Orbis.xml",
+      "sourceBlob": "b95dd2847e34145c4fc3c5d66c8785a97919b446",
+      "sourceSHA256": "c34b8298a61868c35ba739d24cd4072781a837db1ebca407b148c4e685bec542",
+      "gameId": "resident-evil-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA09171",
+        "CUSA09193"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA09171",
+          "sha256": "c425cda77d7d0607f511fc4a54e8f10e68221c397d8e5d4d48f7c5e6e9be6144",
+          "archiveEntry": "patches/xml/CUSA09171.xml"
+        },
+        {
+          "titleId": "CUSA09193",
+          "sha256": "c425cda77d7d0607f511fc4a54e8f10e68221c397d8e5d4d48f7c5e6e9be6144",
+          "archiveEntry": "patches/xml/CUSA09193.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ResidentEvil3-Orbis.xml",
+      "sourceBlob": "a645437bdd3daca719b80255ebbf66fb0cd13a36",
+      "sourceSHA256": "4ecde154373a54c02d2d4b188df6ec72bdda35296240b386a121e33d904c66f7",
+      "gameId": "resident-evil-3",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA14168"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA14168",
+          "sha256": "e59dd1a701b573e548e6f2598a48ae6b25abdc86d604e4b788d9f34ffa3e3d43",
+          "archiveEntry": "patches/xml/CUSA14168.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ResidentEvil4Remake-Orbis.xml",
+      "sourceBlob": "b8e55f09723fe846ed6a9704aa2afa474861812c",
+      "sourceSHA256": "94fbb9810281d107304abb52aef69d0333d9442eb63f3016e53c160cc923d4a7",
+      "gameId": "resident-evil-4-remake",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA33387",
+        "CUSA33388",
+        "CUSA35714"
+      ],
+      "optionCount": 6,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA33387",
+          "sha256": "2f053e0512c79938af60ad98a96595d3ac4a4480c42ac7d57bf62bb2a40f8498",
+          "archiveEntry": "patches/xml/CUSA33387.xml"
+        },
+        {
+          "titleId": "CUSA33388",
+          "sha256": "2f053e0512c79938af60ad98a96595d3ac4a4480c42ac7d57bf62bb2a40f8498",
+          "archiveEntry": "patches/xml/CUSA33388.xml"
+        },
+        {
+          "titleId": "CUSA35714",
+          "sha256": "2f053e0512c79938af60ad98a96595d3ac4a4480c42ac7d57bf62bb2a40f8498",
+          "archiveEntry": "patches/xml/CUSA35714.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ResidentEvilHD-Orbis.xml",
+      "sourceBlob": "c066519fa7d395543468229aecf14d44810a9dc9",
+      "sourceSHA256": "af60a81435ec327ba7ed10b5251061742108e74229520637f831dd578173e7e9",
+      "gameId": "resident-evil-hd",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01067"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01067",
+          "sha256": "71a20a192d72b61142bc5e965138ece1711cfaf5efc7c7b6369902a11cca3ef4",
+          "archiveEntry": "patches/xml/CUSA01067.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ResidentEvilOrigins-Orbis.xml",
+      "sourceBlob": "fdaf89826a955df3767409590c3a763f7526096f",
+      "sourceSHA256": "a5b55789996a27294109e66f2b5e6acd0462d477dc22d08d17b1d3cbfe35dce9",
+      "gameId": "resident-evil-zero",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02882"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA02882",
+          "sha256": "6df715ff05f30e5fcd35ee155d31638b9d0a94ca6c0edd0c7cb867844511eecc",
+          "archiveEntry": "patches/xml/CUSA02882.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/RiseoftheTombRaider-Orbis.xml",
+      "sourceBlob": "9060574322c7d27efd554862b1158aec9bcea045",
+      "sourceSHA256": "b46f17540e87efa4226dd413e5c74cdd93ad3ea031d6bc046569cb6259b06f06",
+      "gameId": "rise-of-the-tomb-raider",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05794"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA05794",
+          "sha256": "768e183acbbb7acf475e43e28ca107eec7ece74d8a055e41cc1eba663a74eca0",
+          "archiveEntry": "patches/xml/CUSA05794.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SekiroShadowsDieTwice-Orbis.xml",
+      "sourceBlob": "99c68a445ad308ab81031ac63203af5a5b271a12",
+      "sourceSHA256": "6c6ac61c69df3db082a03c599629a86b40619b573cac4260839c27135b406135",
+      "gameId": "sekiro-shadows-die-twice",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12047",
+        "CUSA13801",
+        "CUSA13910"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA12047",
+          "sha256": "162c05a4599ba82d8b890f1c84dae8fb8749c886a31fba957f4d083dc97bce96",
+          "archiveEntry": "patches/xml/CUSA12047.xml"
+        },
+        {
+          "titleId": "CUSA13801",
+          "sha256": "162c05a4599ba82d8b890f1c84dae8fb8749c886a31fba957f4d083dc97bce96",
+          "archiveEntry": "patches/xml/CUSA13801.xml"
+        },
+        {
+          "titleId": "CUSA13910",
+          "sha256": "162c05a4599ba82d8b890f1c84dae8fb8749c886a31fba957f4d083dc97bce96",
+          "archiveEntry": "patches/xml/CUSA13910.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ShadowoftheColossus-Orbis.xml",
+      "sourceBlob": "8a0ebff0a5160208a096fe593fcdda3721da7076",
+      "sourceSHA256": "f4c17118b4417460ae6646ef01717a3115ada735fa88a20f2dae7773b3b4c846",
+      "gameId": "shadow-of-the-colossus",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08804",
+        "CUSA08809",
+        "CUSA08034"
+      ],
+      "optionCount": 6,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA08804",
+          "sha256": "0275336fc830f405ec717b883be9936346b8b5b953751ba6feb332e782d2be12",
+          "archiveEntry": "patches/xml/CUSA08804.xml"
+        },
+        {
+          "titleId": "CUSA08809",
+          "sha256": "0275336fc830f405ec717b883be9936346b8b5b953751ba6feb332e782d2be12",
+          "archiveEntry": "patches/xml/CUSA08809.xml"
+        },
+        {
+          "titleId": "CUSA08034",
+          "sha256": "0275336fc830f405ec717b883be9936346b8b5b953751ba6feb332e782d2be12",
+          "archiveEntry": "patches/xml/CUSA08034.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SilentHillsPT.xml",
+      "sourceBlob": "54e111a88c0dcf254013c33f5257380a1233f762",
+      "sourceSHA256": "eb98f1b79944c458b561fe032760c0d673e4223915339c3ac56eb38b119b9854",
+      "gameId": "p-t",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01127",
+        "CUSA01114",
+        "CUSA01098"
+      ],
+      "optionCount": 5,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA01127",
+          "sha256": "cbe6175de742c329cc5f75d3b08998d928fcf6a0c6dc2053dfe7eaf5491b67e1",
+          "archiveEntry": "patches/xml/CUSA01127.xml"
+        },
+        {
+          "titleId": "CUSA01114",
+          "sha256": "cbe6175de742c329cc5f75d3b08998d928fcf6a0c6dc2053dfe7eaf5491b67e1",
+          "archiveEntry": "patches/xml/CUSA01114.xml"
+        },
+        {
+          "titleId": "CUSA01098",
+          "sha256": "cbe6175de742c329cc5f75d3b08998d928fcf6a0c6dc2053dfe7eaf5491b67e1",
+          "archiveEntry": "patches/xml/CUSA01098.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Skyrim-Orbis.xml",
+      "sourceBlob": "df814026f5306719620f37d23ccf12e00328f713",
+      "sourceSHA256": "eb8541f9ecffa7b4bf99fecd3ee85582331f159bba167110f3fcd249cbbe364c",
+      "gameId": "skyrim",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05333"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA05333",
+          "sha256": "b50644f6733b1c49a25b9aeebea5e8131ae7d6453fab045fe22ac1d8f890914f",
+          "archiveEntry": "patches/xml/CUSA05333.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SleepingDogs-Orbis.xml",
+      "sourceBlob": "c436032636afee1f25f618d21e3a498c39aeec12",
+      "sourceSHA256": "a16361e60de056e6b8e74c9117fe70f4dab657ab519dfe21f3570718bc7126e2",
+      "gameId": "sleeping-dogs-definitive-edition",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01111"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA01111",
+          "sha256": "c83c35791ca305da37a2817c6a277a8ccf2796bb3fc42d751f51339e61c87b86",
+          "archiveEntry": "patches/xml/CUSA01111.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SniperElite5.xml",
+      "sourceBlob": "78ba57b6dae7717a561b8a41a111a78b2a9ed18f",
+      "sourceSHA256": "633b407ea1eaa252edddea2f695f6e23f9a279da821760987598b061ed747676",
+      "gameId": "sniper-elite-5",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA16075",
+        "CUSA16164"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA16075",
+          "sha256": "633b407ea1eaa252edddea2f695f6e23f9a279da821760987598b061ed747676",
+          "archiveEntry": "patches/xml/CUSA16075.xml"
+        },
+        {
+          "titleId": "CUSA16164",
+          "sha256": "633b407ea1eaa252edddea2f695f6e23f9a279da821760987598b061ed747676",
+          "archiveEntry": "patches/xml/CUSA16164.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SnowRunner.xml",
+      "sourceBlob": "e26449d7fcb8072927e5806f5620c753fbde8743",
+      "sourceSHA256": "34be5ccb7a7a0057359248e3042bc56dfa2d44403b129e8e3f35f88de0c50a7d",
+      "gameId": "snow-runner",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA17425"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA17425",
+          "sha256": "34be5ccb7a7a0057359248e3042bc56dfa2d44403b129e8e3f35f88de0c50a7d",
+          "archiveEntry": "patches/xml/CUSA17425.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SongOfTheDeep.xml",
+      "sourceBlob": "b8ddc3bc320e7963910e5182a7cf0ae2f42bc3dd",
+      "sourceSHA256": "97148eac380ef9c508d62480a1c3c1acd74d1360db176e0b7a2ce1d784a8dd13",
+      "gameId": "song-of-the-deep",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05049"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA05049",
+          "sha256": "97148eac380ef9c508d62480a1c3c1acd74d1360db176e0b7a2ce1d784a8dd13",
+          "archiveEntry": "patches/xml/CUSA05049.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SonicFrontiers-Orbis.xml",
+      "sourceBlob": "7ebba8bc8703a78fc572508cf9742441c9a66a8c",
+      "sourceSHA256": "f2156f045f70329fdfba2279cb432c504e86f6519c4d2b525556362ff3c2bbac",
+      "gameId": "sonic-frontiers",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA28193",
+        "CUSA28194",
+        "CUSA32054"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA28193",
+          "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+          "archiveEntry": "patches/xml/CUSA28193.xml"
+        },
+        {
+          "titleId": "CUSA28194",
+          "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+          "archiveEntry": "patches/xml/CUSA28194.xml"
+        },
+        {
+          "titleId": "CUSA32054",
+          "sha256": "8362982786fae3b21974feb5d6fb206a493ac350830bcce8a026170d381bafe9",
+          "archiveEntry": "patches/xml/CUSA32054.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SonicXShadowGenerations-Orbis.xml",
+      "sourceBlob": "0cf86609e574add12016a59d05f5b4c71fc0e80b",
+      "sourceSHA256": "1c065ec3fe70af6bf541ef02e37b5480217fedc94ce04e14cc59884bc63dca77",
+      "gameId": "sonic-x-shadow-generations",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA44422"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA44422",
+          "sha256": "a0342ee2b8aa72bf56fff5aa60af296a8c1a161fd5e725488a2ca7ba8645450b",
+          "archiveEntry": "patches/xml/CUSA44422.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SoulHacker2-Orbis.xml",
+      "sourceBlob": "e9af95d3117b2ade58545ce44410ffcba1d3de68",
+      "sourceSHA256": "fe38e59b7478ca469057a72fe751fdaf415cbfe3359095097897abe2ef0b88dd",
+      "gameId": "soul-hackers-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA27729",
+        "CUSA27730"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA27729",
+          "sha256": "cb238bee7f0c1867eae87fdb19e6921d3dd6e2ce950424159e80d1215b339d66",
+          "archiveEntry": "patches/xml/CUSA27729.xml"
+        },
+        {
+          "titleId": "CUSA27730",
+          "sha256": "cb238bee7f0c1867eae87fdb19e6921d3dd6e2ce950424159e80d1215b339d66",
+          "archiveEntry": "patches/xml/CUSA27730.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SpyroReignitedTrilogyEU-Orbis.xml",
+      "sourceBlob": "e0569f38479e43bf04cb4c82a547b9fe9d2b40dd",
+      "sourceSHA256": "73b6f30fa62ec9e007d91f280c787621ae08d47248489b320853c6022632189b",
+      "gameId": "spyro-reignited-trilogy",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12085"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA12085",
+          "sha256": "6ec8c2467c5140d254fc804f4e6b98b523caa37717e87e5b7b12c6a2739d26ce",
+          "archiveEntry": "patches/xml/CUSA12085.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/StarWarsJediFallenOrder.xml",
+      "sourceBlob": "7523e94431c8cb71bbba5abfa87514d06e30bf1b",
+      "sourceSHA256": "0a20dd6c7113aa162cdd68a37ae67394e9f9bd95c7eb2d19bd576c81de3a814b",
+      "gameId": "star-wars-jedi-fallen-order",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA12529"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA12529",
+          "sha256": "0a20dd6c7113aa162cdd68a37ae67394e9f9bd95c7eb2d19bd576c81de3a814b",
+          "archiveEntry": "patches/xml/CUSA12529.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/StarWarsJediSurvivor.xml",
+      "sourceBlob": "fe69b873c41ac1fa25108b18b9f5a04ce996cddd",
+      "sourceSHA256": "2cca546862916391bc80922b9181e0d3fd6edc9407e785b8a30445d8e2228195",
+      "gameId": "star-wars-jedi-survivor",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA33778"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA33778",
+          "sha256": "2cca546862916391bc80922b9181e0d3fd6edc9407e785b8a30445d8e2228195",
+          "archiveEntry": "patches/xml/CUSA33778.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Stray-Orbis.xml",
+      "sourceBlob": "a22061a5916ae89f27ed2b5d8f6e5d8762d3edd8",
+      "sourceSHA256": "6a422fbb985e1dfc0051eb0151bcdf8c07312c829e401e5825825c9fc4dc68ad",
+      "gameId": "stray",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA24899"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA24899",
+          "sha256": "708bd1d942e0b8282f933ee5a4996c408bad7bfebf4c81b56da233b92ac91cd1",
+          "archiveEntry": "patches/xml/CUSA24899.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/StreetFighter6-Orbis.xml",
+      "sourceBlob": "fd842943288d59b6536d761f4bd5995602fae097",
+      "sourceSHA256": "1f8ac9da5797ec14f1a9562d6c3ec7f24d6fd9e169e3c2ba70bb99f074d67e00",
+      "gameId": "street-fighter-6",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA31497",
+        "CUSA31498",
+        "CUSA31499",
+        "CUSA31500"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA31497",
+          "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+          "archiveEntry": "patches/xml/CUSA31497.xml"
+        },
+        {
+          "titleId": "CUSA31498",
+          "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+          "archiveEntry": "patches/xml/CUSA31498.xml"
+        },
+        {
+          "titleId": "CUSA31499",
+          "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+          "archiveEntry": "patches/xml/CUSA31499.xml"
+        },
+        {
+          "titleId": "CUSA31500",
+          "sha256": "e88888f7e6aff1de5d5d854abdd9461150c2a826f747c5d454bf9527e9d69818",
+          "archiveEntry": "patches/xml/CUSA31500.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Subnautica.xml",
+      "sourceBlob": "1f8cdf25cbb595b7a7cbe5457a9e0f9e91379ea9",
+      "sourceSHA256": "e255d069834e34bf16578431b02172640d553ad14d8ed1d94a7f9878522fa644",
+      "gameId": "subnautica",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA13529",
+        "CUSA13893",
+        "CUSA17587"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA13529",
+          "sha256": "e255d069834e34bf16578431b02172640d553ad14d8ed1d94a7f9878522fa644",
+          "archiveEntry": "patches/xml/CUSA13529.xml"
+        },
+        {
+          "titleId": "CUSA13893",
+          "sha256": "e255d069834e34bf16578431b02172640d553ad14d8ed1d94a7f9878522fa644",
+          "archiveEntry": "patches/xml/CUSA13893.xml"
+        },
+        {
+          "titleId": "CUSA17587",
+          "sha256": "e255d069834e34bf16578431b02172640d553ad14d8ed1d94a7f9878522fa644",
+          "archiveEntry": "patches/xml/CUSA17587.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/SubnauticaBelowZero.xml",
+      "sourceBlob": "8b5ebd8f8a69f449dad42b42c3d06d74a05b07a1",
+      "sourceSHA256": "7c239fd355aa4f9b14f0ae634efc8bba0098ada95700d15feaf4cdc81c2fd918",
+      "gameId": "subnautica-below-zero",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA18065",
+        "CUSA18068"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA18065",
+          "sha256": "7c239fd355aa4f9b14f0ae634efc8bba0098ada95700d15feaf4cdc81c2fd918",
+          "archiveEntry": "patches/xml/CUSA18065.xml"
+        },
+        {
+          "titleId": "CUSA18068",
+          "sha256": "7c239fd355aa4f9b14f0ae634efc8bba0098ada95700d15feaf4cdc81c2fd918",
+          "archiveEntry": "patches/xml/CUSA18068.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Superliminal.xml",
+      "sourceBlob": "e5b440b5d26ab175689bc278795983c6efe8ea48",
+      "sourceSHA256": "c397a213935e3e2190cf85b98835a5b6cc7d5b331e37ed8504815bec99f5d567",
+      "gameId": "superliminal",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA20096",
+        "CUSA19488"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA20096",
+          "sha256": "c397a213935e3e2190cf85b98835a5b6cc7d5b331e37ed8504815bec99f5d567",
+          "archiveEntry": "patches/xml/CUSA20096.xml"
+        },
+        {
+          "titleId": "CUSA19488",
+          "sha256": "c397a213935e3e2190cf85b98835a5b6cc7d5b331e37ed8504815bec99f5d567",
+          "archiveEntry": "patches/xml/CUSA19488.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Tekken7-Orbis.xml",
+      "sourceBlob": "c8f7e03d17b5e9d0e859488855415a05f2c1284a",
+      "sourceSHA256": "50e8d6662a7c0465dd619c24cc9cd1e307411f316d53a88d8497fd176374775c",
+      "gameId": "tekken-7",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05972"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA05972",
+          "sha256": "b318af857c3475389487c9f97516f189d85922eb67bfe944848edd38da4b6c5b",
+          "archiveEntry": "patches/xml/CUSA05972.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheEscapists2.xml",
+      "sourceBlob": "d1ae93e6ce80c316b78f8cd8857f76d2dd2473f9",
+      "sourceSHA256": "e0b02168be10db6f87dbf05bdc1c6540334627a3c8fdbcfefcf2cc894b642679",
+      "gameId": "the-escapists-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA06267",
+        "CUSA06244"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA06267",
+          "sha256": "e0b02168be10db6f87dbf05bdc1c6540334627a3c8fdbcfefcf2cc894b642679",
+          "archiveEntry": "patches/xml/CUSA06267.xml"
+        },
+        {
+          "titleId": "CUSA06244",
+          "sha256": "e0b02168be10db6f87dbf05bdc1c6540334627a3c8fdbcfefcf2cc894b642679",
+          "archiveEntry": "patches/xml/CUSA06244.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheEvilWithin-Orbis.xml",
+      "sourceBlob": "f8cbdbd5d3eabdba109d691af68b9dc83851f0ea",
+      "sourceSHA256": "43904191a7fca4105e2cdc835428931333e401ca5942cc60161706640bf31aba",
+      "gameId": "the-evil-within",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00203"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00203",
+          "sha256": "5379a14ac088ef5e40f2ac2f2f8f0fab886437e7da171887873268c091fb2a72",
+          "archiveEntry": "patches/xml/CUSA00203.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheEvilWithin.xml",
+      "sourceBlob": "dd5fca5948c1755f42b6651c39ec269cf38ea6b3",
+      "sourceSHA256": "839e75d349975e7d07a4dc2749a11252de03a6ee734a7a6d83ad80c5fda84331",
+      "gameId": "the-evil-within-theevilwithin",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00375"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA00375",
+          "sha256": "dccf484bd070e1798012304bc0f97d85ce9eadf194724cadc982fbe4013398fc",
+          "archiveEntry": "patches/xml/CUSA00375.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheLastGuardian-Orbis.xml",
+      "sourceBlob": "0ffb0466493cb813c3f25edd5c8240c0f80bacc2",
+      "sourceSHA256": "85ad89b82685c5d1468cbd254181392156d726f9b2c562b5a27bf8e877fd69db",
+      "gameId": "the-last-guardian",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03627",
+        "CUSA03745",
+        "CUSA04936",
+        "CUSA05152"
+      ],
+      "optionCount": 5,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA03627",
+          "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+          "archiveEntry": "patches/xml/CUSA03627.xml"
+        },
+        {
+          "titleId": "CUSA03745",
+          "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+          "archiveEntry": "patches/xml/CUSA03745.xml"
+        },
+        {
+          "titleId": "CUSA04936",
+          "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+          "archiveEntry": "patches/xml/CUSA04936.xml"
+        },
+        {
+          "titleId": "CUSA05152",
+          "sha256": "fe8acfe160f0651d4106fc30d96971a869f4e755e4d3bb07941615081b70861e",
+          "archiveEntry": "patches/xml/CUSA05152.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheLastOfUs1-Orbis.xml",
+      "sourceBlob": "6994ce4809c8fdbed5d6bc0d5bfd9a1ccc9c6df1",
+      "sourceSHA256": "58659b662553cd49855590f7186779b5d0c52186d7f6e77273a7f603483087ce",
+      "gameId": "the-last-of-us-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "optionCount": 16,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00552",
+          "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+          "archiveEntry": "patches/xml/CUSA00552.xml"
+        },
+        {
+          "titleId": "CUSA00556",
+          "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+          "archiveEntry": "patches/xml/CUSA00556.xml"
+        },
+        {
+          "titleId": "CUSA00557",
+          "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+          "archiveEntry": "patches/xml/CUSA00557.xml"
+        },
+        {
+          "titleId": "CUSA00559",
+          "sha256": "0d738bbdee3df7f745131a7d45eab99af85ce15e8bad41b860216bcd125089e5",
+          "archiveEntry": "patches/xml/CUSA00559.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheLastOfUs2-Orbis.xml",
+      "sourceBlob": "64917ca07427eac6abc47e9de4dffdeaf143c65e",
+      "sourceSHA256": "6d672132d11405d25ea875c100173596e3e21a5059016a90ca3211349a981bd0",
+      "gameId": "the-last-of-us-part-ii",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "optionCount": 14,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA07820",
+          "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+          "archiveEntry": "patches/xml/CUSA07820.xml"
+        },
+        {
+          "titleId": "CUSA10249",
+          "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+          "archiveEntry": "patches/xml/CUSA10249.xml"
+        },
+        {
+          "titleId": "CUSA13986",
+          "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+          "archiveEntry": "patches/xml/CUSA13986.xml"
+        },
+        {
+          "titleId": "CUSA14006",
+          "sha256": "fc60ec4211a4adeee919ff1435095b358a8a0b5748cb4f4c3ed2453a662fd914",
+          "archiveEntry": "patches/xml/CUSA14006.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheOrder1886-Orbis.xml",
+      "sourceBlob": "b4073d0370e59db69a03e2c64a47c9c6da2249a9",
+      "sourceSHA256": "ff7411479fc32d0075be7e9ad19ef7a68f108e988ec39332227913eb38c2cfb3",
+      "gameId": "the-order-1886",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00035",
+        "CUSA00070",
+        "CUSA00076",
+        "CUSA00100",
+        "CUSA00670",
+        "CUSA00785"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA00035",
+          "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+          "archiveEntry": "patches/xml/CUSA00035.xml"
+        },
+        {
+          "titleId": "CUSA00070",
+          "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+          "archiveEntry": "patches/xml/CUSA00070.xml"
+        },
+        {
+          "titleId": "CUSA00076",
+          "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+          "archiveEntry": "patches/xml/CUSA00076.xml"
+        },
+        {
+          "titleId": "CUSA00100",
+          "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+          "archiveEntry": "patches/xml/CUSA00100.xml"
+        },
+        {
+          "titleId": "CUSA00670",
+          "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+          "archiveEntry": "patches/xml/CUSA00670.xml"
+        },
+        {
+          "titleId": "CUSA00785",
+          "sha256": "1749833fd9c85bc9ef30520d07d49fa50c175b96f6163b4352c817791f27817b",
+          "archiveEntry": "patches/xml/CUSA00785.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheOuterWorlds-Orbis.xml",
+      "sourceBlob": "ba8d6d3bf29b389398963048f4a39651b77ae9b1",
+      "sourceSHA256": "66046e78210661d2935bad0d5b33aa9457bd5e5bdc0743e64c5330e13b20d146",
+      "gameId": "the-outer-worlds",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA16285",
+        "CUSA13689"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA16285",
+          "sha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+          "archiveEntry": "patches/xml/CUSA16285.xml"
+        },
+        {
+          "titleId": "CUSA13689",
+          "sha256": "32dc7cfff9fa3888f5ef858f2c82b8bea80a9a737ebbaee3bfa1ca2c98d70512",
+          "archiveEntry": "patches/xml/CUSA13689.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheSinkingCity-Orbis.xml",
+      "sourceBlob": "15d56255eb36ba0b59cc0d72fdc7dd3958975606",
+      "sourceSHA256": "b3cbef488dbfcfb59fd697302d2676521c35b642beadb1c6f3302219467c62a8",
+      "gameId": "the-sinking-city",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA13152"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA13152",
+          "sha256": "6d79c0280a1662ded5b5fe0b73487f38e746e44975c09e0f15668880fa1251a1",
+          "archiveEntry": "patches/xml/CUSA13152.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheTechnomancer-Orbis.xml",
+      "sourceBlob": "2ac644ef3bf21cf53c079ff944e5cf422e4c749a",
+      "sourceSHA256": "44e30c56ad0131c8a81819848a3b679ce7f850c2f9015fd82151771d0d961bd0",
+      "gameId": "the-technomancer",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03803",
+        "CUSA03824"
+      ],
+      "optionCount": 1,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA03803",
+          "sha256": "93b939848c47946c9edd9aeadab0de4c6b1f16302c3177d030515168d6666b76",
+          "archiveEntry": "patches/xml/CUSA03803.xml"
+        },
+        {
+          "titleId": "CUSA03824",
+          "sha256": "93b939848c47946c9edd9aeadab0de4c6b1f16302c3177d030515168d6666b76",
+          "archiveEntry": "patches/xml/CUSA03824.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TheWitcher3-Orbis.xml",
+      "sourceBlob": "8fad24ea50bf88af2c829bd565a43dcd5832e37a",
+      "sourceSHA256": "dacf296946d6429498366598bdcd3ea4d8b200991908fc7674a42a06319ebb39",
+      "gameId": "the-witcher-3",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA05725",
+        "CUSA05574",
+        "CUSA05571",
+        "CUSA05644",
+        "CUSA05572",
+        "CUSA05573"
+      ],
+      "optionCount": 4,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA05725",
+          "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+          "archiveEntry": "patches/xml/CUSA05725.xml"
+        },
+        {
+          "titleId": "CUSA05574",
+          "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+          "archiveEntry": "patches/xml/CUSA05574.xml"
+        },
+        {
+          "titleId": "CUSA05571",
+          "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+          "archiveEntry": "patches/xml/CUSA05571.xml"
+        },
+        {
+          "titleId": "CUSA05644",
+          "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+          "archiveEntry": "patches/xml/CUSA05644.xml"
+        },
+        {
+          "titleId": "CUSA05572",
+          "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+          "archiveEntry": "patches/xml/CUSA05572.xml"
+        },
+        {
+          "titleId": "CUSA05573",
+          "sha256": "32fc94f1674ccef07d21b94b011e22b31afd5f110b68ea0e7eb8d3660dda5c48",
+          "archiveEntry": "patches/xml/CUSA05573.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/TomClancysGhostReconWildlands.xml",
+      "sourceBlob": "992eddef69e53a0ae84c74f75a6c3da5e882161c",
+      "sourceSHA256": "f921a4a7e05c2e3e50a961a5de65cfcfae54e2062a4b8aa3db529c5d8dca6f57",
+      "gameId": "tom-clancy-s-ghost-recon-wildlands",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02819",
+        "CUSA02902"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA02819",
+          "sha256": "f921a4a7e05c2e3e50a961a5de65cfcfae54e2062a4b8aa3db529c5d8dca6f57",
+          "archiveEntry": "patches/xml/CUSA02819.xml"
+        },
+        {
+          "titleId": "CUSA02902",
+          "sha256": "f921a4a7e05c2e3e50a961a5de65cfcfae54e2062a4b8aa3db529c5d8dca6f57",
+          "archiveEntry": "patches/xml/CUSA02902.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Uncharted4AThiefsEnd-Orbis.xml",
+      "sourceBlob": "5f08e43e416f0f3650957f74131ac23b41e5a9c8",
+      "sourceSHA256": "99d484a1da3d1a34391fc65cdf4b9f2e7b8cbb0f1b3fc0ac34dd7142397e9464",
+      "gameId": "uncharted-4-a-thief-s-end",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA00341",
+        "CUSA00917",
+        "CUSA00918",
+        "CUSA04529"
+      ],
+      "optionCount": 4,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA00341",
+          "sha256": "7ab06a780ee01c0118a21dc3b4d4c0673a0c8c866dce97b4f4ae476291d7a6ad",
+          "archiveEntry": "patches/xml/CUSA00341.xml"
+        },
+        {
+          "titleId": "CUSA00917",
+          "sha256": "7ab06a780ee01c0118a21dc3b4d4c0673a0c8c866dce97b4f4ae476291d7a6ad",
+          "archiveEntry": "patches/xml/CUSA00917.xml"
+        },
+        {
+          "titleId": "CUSA00918",
+          "sha256": "7ab06a780ee01c0118a21dc3b4d4c0673a0c8c866dce97b4f4ae476291d7a6ad",
+          "archiveEntry": "patches/xml/CUSA00918.xml"
+        },
+        {
+          "titleId": "CUSA04529",
+          "sha256": "7ab06a780ee01c0118a21dc3b4d4c0673a0c8c866dce97b4f4ae476291d7a6ad",
+          "archiveEntry": "patches/xml/CUSA04529.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/UnchartedTheLostLegacy-Orbis.xml",
+      "sourceBlob": "8bba4e4359d51f04c6981658e5cbef78c79dde92",
+      "sourceSHA256": "906003dff7ee9645f8e42ae5a1724ed86a691fb6ad218cc58b05718472158a5a",
+      "gameId": "uncharted-the-lost-legacy",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA09564",
+        "CUSA07737",
+        "CUSA07875"
+      ],
+      "optionCount": 4,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA09564",
+          "sha256": "74d2209fd2704ecaa4deb0829b6c99e379d6c7ee27a7c7c35091060075c7391a",
+          "archiveEntry": "patches/xml/CUSA09564.xml"
+        },
+        {
+          "titleId": "CUSA07737",
+          "sha256": "74d2209fd2704ecaa4deb0829b6c99e379d6c7ee27a7c7c35091060075c7391a",
+          "archiveEntry": "patches/xml/CUSA07737.xml"
+        },
+        {
+          "titleId": "CUSA07875",
+          "sha256": "74d2209fd2704ecaa4deb0829b6c99e379d6c7ee27a7c7c35091060075c7391a",
+          "archiveEntry": "patches/xml/CUSA07875.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/UnchartedTheNathanDrakeCollection-Orbis.xml",
+      "sourceBlob": "e4bea0cb3a831f0520854561214a06bef32aaefd",
+      "sourceSHA256": "3081dc959c41596e84f3e9684fe343631d1d5ed988eee79f8d4748cfad7d5924",
+      "gameId": "uncharted-drake-s-fortune-remastered",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "optionCount": 20,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA02343",
+          "sha256": "9c288d54d5649ea459ef90fe1044c55b474e45ea2891ce9705c3ca8dc55c58ae",
+          "archiveEntry": "patches/xml/CUSA02343.xml"
+        },
+        {
+          "titleId": "CUSA02344",
+          "sha256": "9c288d54d5649ea459ef90fe1044c55b474e45ea2891ce9705c3ca8dc55c58ae",
+          "archiveEntry": "patches/xml/CUSA02344.xml"
+        },
+        {
+          "titleId": "CUSA02826",
+          "sha256": "9c288d54d5649ea459ef90fe1044c55b474e45ea2891ce9705c3ca8dc55c58ae",
+          "archiveEntry": "patches/xml/CUSA02826.xml"
+        },
+        {
+          "titleId": "CUSA02320",
+          "sha256": "9c288d54d5649ea459ef90fe1044c55b474e45ea2891ce9705c3ca8dc55c58ae",
+          "archiveEntry": "patches/xml/CUSA02320.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Vampyr-Orbis.xml",
+      "sourceBlob": "fc903e20e031988ebb1e4f62f001d4030f6228e5",
+      "sourceSHA256": "a2eb8b70f828d9d6e24f8a4003fd356ba2bfdf89e553e4e9772eb502d10ad2ca",
+      "gameId": "vampyr",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03293"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA03293",
+          "sha256": "4f038b5a2db645d54e479a5d89ec8c444f36b6f4d4c5ba968c079918d1897ce9",
+          "archiveEntry": "patches/xml/CUSA03293.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/WatchDogs2.xml",
+      "sourceBlob": "4b7431a20135d8c2a5d0abc2bccafc7078a11901",
+      "sourceSHA256": "57fd7c35c7b7ddc14a2ab75b335804b314bfc6b27d031a82f8ec47cec44e2da9",
+      "gameId": "watch-dogs-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA04294"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA04294",
+          "sha256": "57fd7c35c7b7ddc14a2ab75b335804b314bfc6b27d031a82f8ec47cec44e2da9",
+          "archiveEntry": "patches/xml/CUSA04294.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/WatchDogsGameofTheYear.xml",
+      "sourceBlob": "b552f30c4ddf4be1876a2be0ad25e5ef889583d4",
+      "sourceSHA256": "34b6725ed067f45e58aabdb584c1b1fd28330e38d1d01367c47d1d4e718f0e3c",
+      "gameId": "watch-dogs-game-of-the-year",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA01395"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA01395",
+          "sha256": "34b6725ed067f45e58aabdb584c1b1fd28330e38d1d01367c47d1d4e718f0e3c",
+          "archiveEntry": "patches/xml/CUSA01395.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/WatchDogsLegion.xml",
+      "sourceBlob": "9cd7a0df332b366a5ce79c1cc0e7e38c1ab7c0c9",
+      "sourceSHA256": "4ca4d154c8a6800668343a1070312917c41d4014c054ede86f47b913bda477ce",
+      "gameId": "watch-dogs-legion",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA13034"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA13034",
+          "sha256": "4ca4d154c8a6800668343a1070312917c41d4014c054ede86f47b913bda477ce",
+          "archiveEntry": "patches/xml/CUSA13034.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/WoLong-Orbis.xml",
+      "sourceBlob": "47fcd15bfabe1d8d80cae9cc61e3866688f4d2c8",
+      "sourceSHA256": "fa673329a1957fb39261502e531c2fe62248155e0b58c14f9a58b4689c8e85f2",
+      "gameId": "wo-long-fallen-dynasty",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA36986",
+        "CUSA36846"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA36986",
+          "sha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+          "archiveEntry": "patches/xml/CUSA36986.xml"
+        },
+        {
+          "titleId": "CUSA36846",
+          "sha256": "5ad799924ea290791e1d605de9bc8536dc3b91e60e4052dfaf3720347bc18b9b",
+          "archiveEntry": "patches/xml/CUSA36846.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/Wreckfest-Orbis.xml",
+      "sourceBlob": "c21274a6d1132ea026a1bf68353a3c4f939364a7",
+      "sourceSHA256": "8c32eb906b9f20fde8ee60f820ac7c63e6eb66f46e5b41d1e0ce2b70bb710f39",
+      "gameId": "wreckfest",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA08548",
+        "CUSA08652",
+        "CUSA17033"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "CUSA08548",
+          "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+          "archiveEntry": "patches/xml/CUSA08548.xml"
+        },
+        {
+          "titleId": "CUSA08652",
+          "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+          "archiveEntry": "patches/xml/CUSA08652.xml"
+        },
+        {
+          "titleId": "CUSA17033",
+          "sha256": "fc95b41205ef7a48f5f65be47e9c094c3c0e2006eccca2d4c74d7ad7b073b4e2",
+          "archiveEntry": "patches/xml/CUSA17033.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/XCOM2.xml",
+      "sourceBlob": "4028e65784b65d14af013d3646c181a55769f50b",
+      "sourceSHA256": "928d1ef3621bb7b421b4fb64e3ffd6efb135062c462bdee6b44d0b71c68df4c3",
+      "gameId": "xcom-2",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA04530"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA04530",
+          "sha256": "928d1ef3621bb7b421b4fb64e3ffd6efb135062c462bdee6b44d0b71c68df4c3",
+          "archiveEntry": "patches/xml/CUSA04530.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml/ZOMBI.xml",
+      "sourceBlob": "55d83b3a8a799deb0cf67a373dfb1f7fd5596bc2",
+      "sourceSHA256": "0c80ee53430325b15b8dbdbe0eccd05110ee8c4ecb41ddf508aae259f004d282",
+      "gameId": "zombi",
+      "arch": "orbis",
+      "titleIds": [
+        "CUSA03535"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "CUSA03535",
+          "sha256": "0c80ee53430325b15b8dbdbe0eccd05110ee8c4ecb41ddf508aae259f004d282",
+          "archiveEntry": "patches/xml/CUSA03535.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml_prospero/DemonSouls.xml",
+      "sourceBlob": "868f40e339e0753c47b1f4bd13cc36a0194240db",
+      "sourceSHA256": "936b2c38d694831388aa21addf5de774dee90997d3ddf6156f903942cd5d3bd0",
+      "gameId": "demons-souls",
+      "arch": "prospero",
+      "titleIds": [
+        "PPSA01339",
+        "PPSA01340",
+        "PPSA01341",
+        "PPSA01342"
+      ],
+      "optionCount": 3,
+      "added": false,
+      "files": [
+        {
+          "titleId": "PPSA01339",
+          "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+          "archiveEntry": "patches/xml_prospero/PPSA01339.xml"
+        },
+        {
+          "titleId": "PPSA01340",
+          "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+          "archiveEntry": "patches/xml_prospero/PPSA01340.xml"
+        },
+        {
+          "titleId": "PPSA01341",
+          "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+          "archiveEntry": "patches/xml_prospero/PPSA01341.xml"
+        },
+        {
+          "titleId": "PPSA01342",
+          "sha256": "1589faef8fecf751688bb5a1e7e3cdb4d7b3a476721520687898159799849924",
+          "archiveEntry": "patches/xml_prospero/PPSA01342.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml_prospero/MGS_SnakeEater.xml",
+      "sourceBlob": "f3d9449a76c530ccf0477044aedab9f41edc39a7",
+      "sourceSHA256": "6e0eacf69ea7dc5508976392cc3970772f46c137929b65a716180cf5bab1d85f",
+      "gameId": "metal-gear-solid-snake-eater-digital-deluxe-edition",
+      "arch": "prospero",
+      "titleIds": [
+        "PPSA15304"
+      ],
+      "optionCount": 2,
+      "added": false,
+      "files": [
+        {
+          "titleId": "PPSA15304",
+          "sha256": "3d3fe487f0f89574f2e9026e8e2884ef75a80eb179c5246462c556f018d5edfe",
+          "archiveEntry": "patches/xml_prospero/PPSA15304.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml_prospero/PPSA34015.xml",
+      "sourceBlob": "a88e605584a1dc7ac2b57ef06e17c34ea291181d",
+      "sourceSHA256": "1aa6f9a3484997c2debdb987ce739a031e77f2082a1046de72c9fde84ae35925",
+      "gameId": "ea-sports-fc-27",
+      "arch": "prospero",
+      "titleIds": [
+        "PPSA34015"
+      ],
+      "optionCount": 1,
+      "added": true,
+      "files": [
+        {
+          "titleId": "PPSA34015",
+          "sha256": "1aa6f9a3484997c2debdb987ce739a031e77f2082a1046de72c9fde84ae35925",
+          "archiveEntry": "patches/xml_prospero/PPSA34015.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml_prospero/RedDeadRedemption.xml",
+      "sourceBlob": "b633b2aa3f3b1698ab1fad519abe944898028c79",
+      "sourceSHA256": "ac209b8addceed35eb1a6e68df55ca1621036fc6e3505443509797e8374541ab",
+      "gameId": "red-dead-redemption-reddeadredemption",
+      "arch": "prospero",
+      "titleIds": [
+        "PPSA30523"
+      ],
+      "optionCount": 8,
+      "added": true,
+      "files": [
+        {
+          "titleId": "PPSA30523",
+          "sha256": "ac209b8addceed35eb1a6e68df55ca1621036fc6e3505443509797e8374541ab",
+          "archiveEntry": "patches/xml_prospero/PPSA30523.xml"
+        }
+      ]
+    },
+    {
+      "sourcePath": "patches/xml_prospero/Uncharted_LegacyThievesCollection.xml",
+      "sourceBlob": "265c20dcd319abde3c1d07814ca03792ecd9d423",
+      "sourceSHA256": "49b98cf8155138d364e5fb8b956ff942018df2a6f66758e6059fe51db181eb59",
+      "gameId": "uncharted-4-a-thief-s-end-uncharted-legacythievescollection",
+      "arch": "prospero",
+      "titleIds": [
+        "PPSA05684",
+        "PPSA05389",
+        "PPSA05686",
+        "PPSA05685"
+      ],
+      "optionCount": 2,
+      "added": true,
+      "files": [
+        {
+          "titleId": "PPSA05684",
+          "sha256": "7b17f34a2f356a0ab23056998ab7d466c89033077ac9480526fa1bd623e6c3b0",
+          "archiveEntry": "patches/xml_prospero/PPSA05684.xml"
+        },
+        {
+          "titleId": "PPSA05389",
+          "sha256": "7b17f34a2f356a0ab23056998ab7d466c89033077ac9480526fa1bd623e6c3b0",
+          "archiveEntry": "patches/xml_prospero/PPSA05389.xml"
+        },
+        {
+          "titleId": "PPSA05686",
+          "sha256": "7b17f34a2f356a0ab23056998ab7d466c89033077ac9480526fa1bd623e6c3b0",
+          "archiveEntry": "patches/xml_prospero/PPSA05686.xml"
+        },
+        {
+          "titleId": "PPSA05685",
+          "sha256": "7b17f34a2f356a0ab23056998ab7d466c89033077ac9480526fa1bd623e6c3b0",
+          "archiveEntry": "patches/xml_prospero/PPSA05685.xml"
+        }
+      ]
+    }
+  ]
+}

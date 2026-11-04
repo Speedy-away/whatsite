@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-04",
+  "status": "Local changes; not published",
+  "changedPages": 492,
+  "change": "Internal website page links navigate in the current tab. Removed console-selection new-tab copy/aria labels and misleading external-link icons on internal links.",
+  "preservation": "External source links, download actions, guide popup triggers and independent host documents retained.",
+  "tests": 17,
+  "browser": "Console chooser tested at 390, 1366 and 2254px; clicking PS4/PS5 changed the existing tab URL without increasing browser page-target count.",
+  "generators": [
+    "scripts/internal-page-navigation.cjs",
+    "scripts/search-page-output.cjs",
+    "scripts/guide-popup-policy.cjs",
+    "scripts/build-mods-hub.cjs",
+    "scripts/console-multicod.cjs",
+    "scripts/xbox360-mod-resources.cjs"
+  ]
+}

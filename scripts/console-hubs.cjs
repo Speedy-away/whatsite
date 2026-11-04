@@ -6,6 +6,7 @@ const root = path.resolve(__dirname, '..');
 // Presentation only: keep the hub's current cards, downloads and source links.
 function improveHub(file, html) {
   const match = /^console\/(ps[45])\/index\.html$/.exec(file);
+  if (match) html = html.replace(/<article\b[\s\S]*?<\/article>/g, card => /href="\/console\/(?:mods\/ps4\/|ps5\/mods\.html)"/.test(card) ? card.replace(/<h3>(?:Game mods|Mods \/ Mod Menus)<\/h3>/, '<h3>Game mods / Mod Menus</h3>') : card);
   if (!match || html.includes('data-console-hub-layout="3"')) return html;
   const platform = match[1], name = platform.toUpperCase();
   const existingLayout = html.includes('data-console-hub-layout="2"');

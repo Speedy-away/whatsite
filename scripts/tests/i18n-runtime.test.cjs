@@ -98,6 +98,7 @@ function fixture(options = {}) {
   doc.documentElement = new Element('html');
   doc.head = doc.documentElement.appendChild(new Element('head'));
   doc.body = doc.documentElement.appendChild(new Element('body'));
+  if (options.pageLanguage) doc.documentElement.setAttribute('data-site-language', options.pageLanguage);
   const title = doc.head.appendChild(new Element('title'));
   title.textContent = 'Console downloads';
   Object.defineProperty(doc, 'title', {get: () => title.textContent, set: value => { title.textContent = value; }});
@@ -108,6 +109,7 @@ function fixture(options = {}) {
     dispatchEvent() {}
   };
   context.window = context;
+  if (options.location) context.location = options.location;
   vm.runInNewContext(source, context, {filename: 'languages/i18n.js'});
   const api = context.__scoobyI18n;
   return {doc, api, storage,
@@ -269,4 +271,10 @@ test('keyword lists translate individual subjects, retain compatibility pins, an
  assert.equal(meta.getAttribute('content'),'PS4 mods de juegos, emuladores, GoldHEN, CUSA00419, 5.05, menu-v1.27.bin');assert.equal(locale.getAttribute('content'),'es_ES');
  meta.setAttribute('content','PS5 mods, PPSA01000, 7.61');f.flush();assert.equal(meta.getAttribute('content'),'PS5 mods de juegos, PPSA01000, 7.61');
  f.api.set('en');f.flush();assert.equal(meta.getAttribute('content'),'PS5 mods, PPSA01000, 7.61');assert.equal(locale.getAttribute('content'),'en_US');
+});
+
+test('static language URLs override browser preferences and switch through real alternate routes',()=>{
+ const location={href:'https://whatwhatboy.com/es/console/ps4/',search:'?view=files',hash:'#setup'},f=fixture({pageLanguage:'es',location});
+ const fr=f.doc.head.appendChild(f.doc.createElement('link'));fr.setAttribute('rel','alternate');fr.setAttribute('hreflang','fr');fr.setAttribute('href','https://whatwhatboy.com/fr/console/ps4/');
+ f.api.set('fr');assert.equal(location.href,'https://whatwhatboy.com/fr/console/ps4/?view=files#setup');assert.equal(f.storage.get('scooby.lang'),'fr');
 });

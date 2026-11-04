@@ -12,3 +12,21 @@
   .patch-hardware th, .patch-hardware td { min-width: 0; overflow-wrap: anywhere; }
   .patch-hardware th { width: 30%; }
 }
+
+/* Compact browsing at every card count; detailed compatibility remains expandable. */
+body[data-catalog-page] .main-content .patch-card-grid { --catalog-fill:auto-fill; align-items:start; }
+.patch-card > img { height:160px; max-height:160px; object-fit:contain; }
+.patch-card-body { padding:16px; }
+.patch-card h3 { font-size:1.15rem; margin:8px 0 10px; }
+.patch-card p { font-size:.86rem; line-height:1.5; }
+.patch-file-picker { margin:14px 0; }
+@media(max-width:850px){ .patch-card>img { height:160px; max-height:160px; } }
+
+.console-guide .guide-hero { padding-block:30px 24px; }
+.console-guide .guide-hero-grid { grid-template-columns:minmax(0,1fr) 240px; gap:24px; }
+.console-guide .guide-hero img { height:135px; max-height:135px; object-fit:contain; }
+.console-guide .guide-hero h1 { font-size:clamp(2rem,3vw,2.75rem); }
+.console-guide .section { padding-block:24px; }
+.patch-back { display:inline-block; margin-bottom:8px; font-size:.875rem; }
+.patch-breadcrumb { font-size:.8rem; line-height:1.6; }
+@media(max-width:760px){ .console-guide .guide-hero-grid { grid-template-columns:1fr; } .console-guide .guide-hero img { max-width:220px; height:124px; } }

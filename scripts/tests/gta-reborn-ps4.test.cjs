@@ -9,13 +9,13 @@ test('Original Reborn ZIP and distinct client modules match the saved archive wi
  assert.equal(saved.find(f=>f.name==='GTA_RBN.zip').sha256,'83bcf17b3f76bf6be8fbac9dc31728d72581b96abec033939cbf4f2cfaf1792e');
  for(const version of Object.keys(hashes)){const f=saved.find(x=>x.gameVersion===version),b=fs.readFileSync(f.backupPath);assert.equal(sha(b),hashes[version]);assert.equal(b.readUInt32LE(0),0x1d3d154f);assert.equal(b.readUInt16LE(352+18),62);assert.ok(b.includes(Buffer.from('/data/Reborn.txt')));assert.ok(b.includes(Buffer.from('Error are you in '+version+'?')));}
 });
-test('Each client is in its correct update group and the guide preserves the 1.57-only live notice',()=>{
+test('Each client is in the private-server group and the guide preserves the 1.57-only live notice',()=>{
  const html=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8'),data=read('docs/ps4-ps5-game-resources.json');
- for(const version of Object.keys(hashes)){const id='gta5-reborn-'+version.replace('.','-'),resource=data.resources.find(x=>x.id===id);assert.deepEqual(resource.gameVersions,[version]);assert.equal(resource.category,'client');assert.equal(resource.catalogueSection,'v'+version.replace('.',''));assert.deepEqual(resource.titleIds,[]);
+ for(const version of Object.keys(hashes)){const id='gta5-reborn-'+version.replace('.','-'),resource=data.resources.find(x=>x.id===id);assert.deepEqual(resource.gameVersions,[version]);assert.equal(resource.category,'client');assert.equal(resource.catalogueSection,'servers');assert.deepEqual(resource.titleIds,[]);
   const section=html.match(new RegExp('<section\\b[^>]*\\bid="'+resource.catalogueSection+'"[^>]*>([\\s\\S]*?)<\\/section>'))[1];assert.ok(section.includes('id="resource-'+id+'"'));assert.equal(html.split('id="resource-'+id+'"').length-1,1);
   const guide=JSON.stringify(resource.guideBlocks);assert.ok(guide.includes('FOR 1.57 ONLY'));assert.ok(guide.includes('/link username:YOUR_GAMERTAG'));assert.ok(guide.includes('/data/Reborn.txt'));assert.ok(guide.includes('privately')||guide.includes('private'));assert.ok(!resource.downloads.some(f=>f.filename==='Reborn.txt'));
  }
- assert.match(html,/Read Reborn setup guide/);
+ assert.match(html,/Registration &amp; setup guide/);
 });
 test('Both Ozark builds require the exactly matching Reborn client and retain their original menus',()=>{
  const data=read('docs/ps4-ps5-game-resources.json'),catalog=read('downloads/ps4/GTA5/plugin-configs/manifest.json');

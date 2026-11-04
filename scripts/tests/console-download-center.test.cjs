@@ -68,7 +68,7 @@ test('console catalogues contain only reviewed PS4/PS5 builds and keep platform 
 });
 
 test('expanded catalogue retains bounded capacity and refuses missing platforms or duplicate identities', () => {
-  const ps4 = Array.from({length:512}, (_,index) => ({id:'ps4-'+index, platforms:['ps4']}));
+  const ps4 = Array.from({length:MAX_PLATFORM_ITEMS}, (_,index) => ({id:'ps4-'+index, platforms:['ps4']}));
   const ps5 = {id:'ps5', platforms:['ps5']};
   assert.doesNotThrow(() => assertCatalogueBounds([...ps4, ps5]));
   assert.throws(() => assertCatalogueBounds([...ps4, ps5, {id:'overflow', platforms:['ps4']}]), /curated limit/);

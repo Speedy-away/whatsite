@@ -11,15 +11,8 @@ function applyGuidePopupPolicy(file, html) {
     return tag.replace(/\sdata-guide-open(?:="[^"]*")?/g, '')
       .replace(/\saria-haspopup="dialog"/g, '').replace(/\saria-controls="console-guide-dialog[^"]*"/g, '');
   });
-  // Catalogue and console selection links open full pages; guide triggers keep their dialogs.
-  html = html.replace(/<a\b[^>]*\bhref="([^"]*)"[^>]*>/g, (tag, href) => {
-    if (/\b(?:data-guide-open|download)\b/.test(tag)) return tag;
-    let url;
-    try { url = new URL(href.replaceAll('&amp;', '&'), base); } catch { return tag; }
-    if (url.origin !== 'https://whatwhatboy.com' || url.hash ||
-        !(/^\/console\/mods\//.test(url.pathname) || /^\/console\/(?:ps[345]|xbox360)\/mods\.html$/.test(url.pathname))) return tag;
-    return tag.replace(/\s(?:target|rel)="[^"]*"/g, '').replace(/>$/, ' target="_blank" rel="noopener noreferrer">');
-  });
+  // Internal catalogue links navigate in the current tab; guide triggers retain dialogs.
+  html = require('./internal-page-navigation.cjs').apply(file,html);
   html = html.replace(/(<nav\b(?=[^>]*\bclass="guide-nav")[^>]*>)([\s\S]*?)(<\/nav>)/g, (all, open, content, close) =>
     open + content.replace(/(<a\b[^>]*href="[^"]*console\/(?:mods\/(?:index\.html)?|(?:ps[345]|xbox360)\/mods\.html)"[^>]*>)(?:Console Mods|Game Mods)(<\/a>)/g, '$1Mods / Mod Menus$2') + close);
   return require('./apply-console-setup-popups.cjs').apply(file, html.replace(/\/assets\/console-guide-dialog\.js\?v=\d+/g, '/assets/console-guide-dialog.js?v=5'));

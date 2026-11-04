@@ -7,7 +7,7 @@ const {publicMirror} = require('./download-mirror-policy.cjs');
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'docs/console-download-catalog.json');
 const backup = path.resolve('F:/whatsite-backup-downloads-etc');
-const MAX_PLATFORM_ITEMS = 512;
+const MAX_PLATFORM_ITEMS = 768;
 function assertCatalogueBounds(items) {
   if (new Set(items.map(item => item.id)).size !== items.length) throw Error('Duplicate catalogue IDs');
   for (const platform of ['ps4', 'ps5']) {

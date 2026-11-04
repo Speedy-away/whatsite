@@ -40,7 +40,10 @@ function applyAds(file, html) {
   const content = html.indexOf('<div id="content">');
   const main = html.search(/<(?:main|div)\b[^>]*\bid="main-content"/i);
   const sectionStart = content >= 0 ? content : main >= 0 ? main : 0;
-  const firstMatch = /<section\b[^>]*>/i.exec(html.slice(sectionStart));
+  // The PS4/PS5 games hub places its ad after the game choices.
+  const sectionPattern = file.replaceAll('\\', '/') === 'console/mods/ps4/index.html'
+    ? /<section\b[^>]*\bid="games"[^>]*>/i : /<section\b[^>]*>/i;
+  const firstMatch = sectionPattern.exec(html.slice(sectionStart));
   const first = firstMatch ? sectionStart + firstMatch.index : -1;
   let sectionEnd = -1, depth = 0;
   if (first >= 0) {
@@ -69,8 +72,10 @@ function applyAds(file, html) {
   // Ports has one long catalogue section. Put its ad after the intro rather
   // than below all 49 cards, keeping the provider outside the searchable grid.
   const heroEnd = file.replaceAll('\\', '/') === 'pc/ports.html' ? html.indexOf('</header>', main) : -1;
-  const insert = heroEnd >= 0 ? heroEnd + '</header>'.length : sectionEnd;
-  return html.slice(0, insert) + '\n' + placement() + '\n' + html.slice(insert);
+  // The homepage keeps discovery, tools and help ahead of the ad, above its footer.
+  const homeEnd = file.replaceAll('\\', '/') === 'index.html' ? html.indexOf('</main>', main) : -1;
+  const insert = homeEnd >= 0 ? html.slice(0, homeEnd).trimEnd().length : heroEnd >= 0 ? heroEnd + '</header>'.length : sectionEnd;
+  return html.slice(0, insert) + '\n' + placement() + '\n' + html.slice(homeEnd >= 0 ? homeEnd : insert);
 }
 
 function addExisting() {

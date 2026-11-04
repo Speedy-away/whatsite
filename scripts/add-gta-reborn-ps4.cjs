@@ -32,7 +32,7 @@ async function archive(){const p=prepare(),intake=require('./console-expansion-a
  await intake.mergeInventory({inventory:intake.inventoryPath(scope),verifyFiles:false});return {files:records.length};
 }
 function resource(version,p){const suffix=version.replace('.','-'),id='gta5-reborn-'+suffix;return {
- id,gameIds:['gta5'],category:'client',publication:'include',catalogueSection:'v'+version.replace('.',''),name:'GTA Reborn',version:'PS4 client · GTA V '+version,menuVersion:null,gameVersions:[version],platforms:['ps4'],titleIds:[],guideLabel:'Registration & setup guide',
+ id,gameIds:['gta5'],category:'client',publication:'include',catalogueSection:'servers',name:'GTA Reborn · GTA V '+version,version:'PS4 client · GTA V '+version,menuVersion:null,gameVersions:[version],platforms:['ps4'],titleIds:[],guideLabel:'Registration & setup guide',
  description:version==='1.57'?'Private-server client required for Ozark’s Reborn setup. Discord registration and your personal Reborn.txt are required.':'Preserved 1.56 client from the supplied package. The supplied live-server announcement is for 1.57 only.',
  compatibilityText:version==='1.57'?'The supplied announcement names GTA V 1.57 for live-server access.':'Package contains a 1.56 module; current live-server access for 1.56 is not established.',
  source:{forumTitle:'User-supplied GTA Reborn files and setup screenshots',postTitle:'GTA Reborn PS4 1.56 / 1.57',postUrl:p.info.sourceUrl,capturedAt:'2026-11-02',captureFile:'docs/qa/gta-reborn-inspection.json',originalDownloadUrls:[p.info.sourceUrl]},

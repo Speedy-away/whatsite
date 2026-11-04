@@ -11,11 +11,11 @@ function apply(file, html) {
       !/class="[^"]*\bmain-content\b/.test(html)) return html;
   const found = [...html.matchAll(/<(?:div|section|ul)\b[^>]*\bclass="([^"]*)"[^>]*>/g)]
     .some(match => match[1].split(/\s+/).some(name => grids.has(name)));
-  if (!found) return html;
+  if (!found) return require('./mod-catalog-layout.cjs').apply(file, html);
   // A body attribute leaves existing class-based generator substitutions intact.
   html = html.replace(/<body\b[^>]*>/, tag => tag.includes('data-catalog-page') ? tag : tag.replace(/>$/, ' data-catalog-page>'));
   if (!html.includes('/assets/catalog-layout.css')) html = html.replace('</head>', stylesheet + '\n</head>');
-  return html;
+  return require('./mod-catalog-layout.cjs').apply(file, html);
 }
 
 function run() {

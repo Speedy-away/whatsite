@@ -15,6 +15,7 @@ function eligible(name) {
   // Main-site /hosts pages are small compatibility redirects only.
   if (name.startsWith('hosts/runtime/')) return false;
   return (/^(?:downloads|hosts\/runtime)\//.test(name) || !name.split('/').some(p => p.startsWith('.'))) &&
+    !/^(?:docs\/i18n|languages\/pages)(?:\/|$)/.test(name) &&
     !/^(?:scripts|i18n-tools|design-references)\//.test(name) &&
     !/^docs\/(?:qa|screenshots|host-reviews)\//.test(name) &&
     !/^(?:AGENTS\.md|SYNC\.md|sync\.ps1|skills-lock\.json)$/.test(name);
@@ -32,14 +33,14 @@ function treeFiles(root) {
 }
 function materialize(root, result) {
   const names = result.files.filter(file => !result.offloaded.has(file.name)).map(file => '/' + file.name.replace(/[\\*?\[\]]/g, match => '\\' + match));
-  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/',...names].join('\n')+'\n',maxBuffer:64*1024*1024});
+  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/pages/',...names].join('\n')+'\n',maxBuffer:64*1024*1024});
 }
 function sourceLinks(root) {
   const file=path.join(root,'docs/download-source-links.json');
   if(!fs.existsSync(file))return new Map();
   return new Map(JSON.parse(fs.readFileSync(file,'utf8')).entries.map(entry=>[entry.local.slice(1),entry.url]));
 }
-function plan(root = ROOT, names, revision = 'main', sizes) {
+function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0) {
   const karoBuild = path.join(root, 'docs/host-reviews/karo/build.json');
   const activeKaro = fs.existsSync(karoBuild) ? JSON.parse(fs.readFileSync(karoBuild, 'utf8')).runtime?.replace(/^\//, '').replace(/web\/$/, '') : null;
   const protectedFiles = new Set();
@@ -52,7 +53,7 @@ function plan(root = ROOT, names, revision = 'main', sizes) {
   // Unpublished intermediate KARO assemblies remain in Git and their complete
   // archived ZIPs; deploy the current assembly selected by its build report.
   const files = [...new Set(names)].filter(eligible).filter(name => !/^hosts\/runtime\/karo-/.test(name) || !activeKaro || name.startsWith(activeKaro)).map(name => ({name, bytes: sizes ? sizes.get(name) : fs.statSync(path.join(root, name)).size}));
-  let bytes = files.reduce((sum, f) => sum + f.bytes, 0);
+  let bytes = reservedBytes + files.reduce((sum, f) => sum + f.bytes, 0);
   const candidates = files.filter(f =>
     (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
     /^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) ||
@@ -87,6 +88,10 @@ function rewriter(offloaded) {
       } catch { return whole; }
     };
     return source.replace(/((?:href|src)=)(["'])(.*?)\2/g, (whole, prefix, quote, value) => replaceRelative(whole, prefix + quote, value, quote))
+      .replace(/(srcset=)(["'])(.*?)\2/g,(whole,prefix,quote,value)=>{
+        if(value.trim().startsWith('data:'))return whole;
+        return prefix+quote+value.split(',').map(candidate=>candidate.replace(/^(\s*)(\S+)([\s\S]*)$/,(_,lead,url,descriptor)=>replaceRelative(lead+url+descriptor,lead,url,descriptor))).join(',')+quote;
+      })
       .replace(/(url\(["']?)([^"'<>\s)]+)(["']?\))/g, replaceRelative);
   };
 }
@@ -94,7 +99,14 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const sparse = process.env.WHATSITE_SPARSE_PAGES === '1', tree = sparse ? treeFiles(root) : null;
   names ||= tree ? tree.names : execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], {cwd: root, maxBuffer: 64 * 1024 * 1024}).toString().split('\0').filter(Boolean);
   if (fs.existsSync(output)) throw Error('Use a fresh output directory; existing files are never removed');
-  const result = plan(root, names, revision, tree?.sizes || sizes), rewrite = rewriter(result.offloaded);
+  const hasLocales=fs.existsSync(path.join(root,'docs/i18n/page-translations.json'));
+  // Sparse source catalogues are materialized only for build-time rendering.
+  if(sparse&&hasLocales)execFileSync('git',['sparse-checkout','add','languages'],{cwd:root,maxBuffer:64*1024*1024});
+  const localization=hasLocales?require('./build-localized-pages.cjs'):null;
+  const localizedContext=localization?localization.load(root):null;
+  const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true}):{bytes:0};
+  const reservedBytes=localization?Math.max(0,estimatedLocales.bytes)+64*1024*1024:0;
+  const result = plan(root, names, revision, tree?.sizes || sizes,reservedBytes), rewrite = rewriter(result.offloaded);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const runtimeFiles = Object.fromEntries([...result.offloaded].filter(([name]) => name.startsWith('hosts/runtime/')).map(([name, url]) => ['/' + name, url]));
@@ -123,7 +135,8 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const fallback = '<script>if(location.pathname.indexOf("/downloads/")===0){fetch("/pages-download-map.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(m){var u=m[decodeURIComponent(location.pathname)];if(u)location.replace(u)}).catch(function(){})}</script>';
   const errorPage = path.join(output, '404.html');
   fs.appendFileSync(errorPage, fallback);
-  const report = {revision, bytes: result.bytes, budget: LIMIT, hostedFiles: result.files.filter(file => !result.offloaded.has(file.name)).length, repositoryFiles: result.offloaded.size, protectedNativeFiles: result.protectedFiles.size};
+  const localized=localization?localization.generate({root,output,rewrite,context:localizedContext}):{pages:0,bytes:0};
+  const report = {revision, bytes: result.bytes-reservedBytes+localized.bytes, budget: LIMIT, hostedFiles: result.files.filter(file => !result.offloaded.has(file.name)).length+localized.pages, repositoryFiles: result.offloaded.size, protectedNativeFiles: result.protectedFiles.size,localized};
   fs.writeFileSync(path.join(output, 'pages-build.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));
   return report;

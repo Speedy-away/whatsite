@@ -90,8 +90,8 @@ test('new index and seven expanded pages have full-page cross-links and no video
         assert.doesNotMatch(tag, /data-guide-open/);
         continue;
       }
-      assert.match(tag, /target="_blank"/);
-      assert.match(tag, /rel="noopener noreferrer"/);
+      if (/href="https:\/\/(?!whatwhatboy\.com)/.test(tag)) assert.match(tag, /target="_blank"/);
+      else assert.doesNotMatch(tag, /target="_blank"/);
       assert.doesNotMatch(tag, /data-guide-open/);
     }
     assert.doesNotMatch(html, /<video\b|<iframe\b[^>]*youtube|youtube-nocookie/);

@@ -1,0 +1,47 @@
+/* Mod browsing: reserve empty grid slots rather than enlarging lone cards. */
+body[data-catalog-page][data-mod-catalog] .main-content :is(.games-grid,.mods-console-grid,.menu-resource-grid,.menu-game-grid,.ps3-game-grid,.switch-mod-grid,.wii-more-grid,.wiiu-grid,.tools-grid,.console-grid) {
+ --catalog-fill: auto-fill;
+ align-items: start;
+}
+body[data-mod-catalog] .main-content .guide-resource {
+ padding: 16px;
+ gap: 10px;
+ height: auto;
+ overflow-wrap: anywhere;
+}
+body[data-mod-catalog] .main-content :is(.guide-resource,.game-card,.switch-mod-card,.wiiu-app) > :is(img,picture),
+body[data-mod-catalog] .main-content :is(.guide-resource,.game-card,.switch-mod-card,.wiiu-app) > a > :is(img,picture),
+body[data-mod-catalog] .main-content .guide-card-media {
+ display: block;
+ width: 100%;
+ height: 180px;
+ max-height: 180px;
+ object-fit: contain;
+}
+body[data-mod-catalog] .main-content .guide-card-media { display: grid; }
+body[data-mod-catalog] .main-content .guide-resource > a:has(>img) { display: block; width: 100%; }
+body[data-mod-catalog] .main-content .guide-resource .guide-links { margin-top: 4px; padding-top: 4px; }
+body[data-mod-catalog] .main-content .guide-resource :is(h3,p) { margin-block: 0; }
+body[data-mod-catalog] .main-content .guide-resource p { line-height: 1.55; }
+body[data-mod-catalog] .main-content .guide-hero { padding-block: 32px 24px; }
+body[data-mod-catalog] .main-content .guide-hero-grid { grid-template-columns: minmax(0,1fr) minmax(160px,260px); gap: 24px; }
+body[data-mod-catalog] .main-content .guide-hero-grid.guide-hero-text { grid-template-columns: 1fr; }
+body[data-mod-catalog] .main-content .guide-hero img { max-height: 150px; object-fit: contain; }
+body[data-mod-catalog] .main-content .section { padding-block: 24px; }
+body[data-mod-catalog] .main-content .section-header { margin-bottom: 18px; }
+@media(max-width:760px) {
+ body[data-mod-catalog] .main-content .guide-hero-grid { grid-template-columns: 1fr; }
+ body[data-mod-catalog] .main-content .guide-hero img { max-width: 220px; max-height: 124px; }
+ body[data-mod-catalog] .main-content .guide-resource { padding: 14px; }
+}
+/* Full-size media remains available inside the existing setup/media dialogs. */
+
+body[data-mod-catalog] .main-content .menu-preview img { height: 180px; max-height: 180px; object-fit: contain; }
+
+body[data-mod-catalog] .mod-back-link { display:inline-flex; align-items:center; gap:8px; font-size:.875rem; margin-bottom:10px; color:var(--accent-light); text-decoration:none; }
+body[data-mod-catalog] .mod-breadcrumb { margin:0 0 12px; font-size:.8rem; line-height:1.6; }
+body[data-mod-catalog] .mod-breadcrumb ol { display:flex; flex-wrap:wrap; align-items:baseline; gap:3px 0; list-style:none; padding:0; margin:0; }
+body[data-mod-catalog] .mod-breadcrumb li { display:inline; min-width:0; overflow-wrap:anywhere; }
+body[data-mod-catalog] .mod-breadcrumb li + li::before { content:'/'; margin-inline:8px; color:var(--text-secondary); }
+body[data-mod-catalog] .mod-breadcrumb [aria-current] { color:var(--text-secondary); }
+body[data-mod-catalog] :is(.mod-back-link,.mod-breadcrumb a):focus-visible { outline:2px solid var(--accent-light); outline-offset:4px; }

@@ -6,7 +6,7 @@ const root = path.resolve(__dirname, '..');
 const base = '/console/mods/ps4/call-of-duty/';
 const indexUrl = base + 'multicod/';
 const h = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-const fullLink = (url, label) => `<a href="${h(url)}" target="_blank" rel="noopener noreferrer">${h(label)} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>`;
+const fullLink = (url, label) => require('./internal-page-navigation.cjs').apply('console/mods/index.html',`<a href="${h(url)}" target="_blank" rel="noopener noreferrer">${h(label)} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>`);
 const labels = {'menu-pack': 'Console menu packs', 'desktop-menu': 'Windows menu tools', 'desktop-helper': 'Shared Windows functions', historical: 'Historical entries'};
 
 function load() {

@@ -18,6 +18,8 @@
       const current = new URL(location.href);
       const target = new URL(entry, current);
       if (target.origin !== current.origin || target.search || target.hash || !hubs.has(target.pathname)) return null;
+      const language=current.pathname.match(/^\/(es|pt|fr|de|ru|tr|pl|it|zh|ja|ko|th|vi|id|hi|sr|nl|ka|ar|he)(?=\/)/)?.[1];
+      if(language)target.pathname='/'+language+target.pathname;
       if (target.href === current.href) return null;
       return target.pathname;
     } catch { return null; }

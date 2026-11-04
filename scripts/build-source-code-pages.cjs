@@ -12,6 +12,7 @@ const inventory = JSON.parse(fs.readFileSync(path.join(root, 'docs/download-audi
 const imported = require('./build-ps4-ps5-game-imports.cjs').createGameImports();
 const catalog = require('../docs/source-code-catalog.json');
 const built = [];
+const gtaPS4Only = process.argv.includes('--gta5-ps4-only');
 const consoleTrail = [[base + 'console/', 'Console']];
 const ps4Trail = [...consoleTrail, [base + 'console/ps4/', 'PS4']];
 const pcTrail = [[base + 'pc/', 'PC']];
@@ -21,6 +22,7 @@ function directoryCard(title, description, url, label, symbol, trail) {
 }
 
 function sourcePage(file, title, description, trail, content, primary, primaryLabel, options = {}) {
+  if (gtaPS4Only && !['source-codes/console/ps4/gta5/index.html','source-codes/games/gta5/ps4.html'].includes(file)) return;
   page(file, title, description, options.image || image, nav, content, primary, primaryLabel);
   const target = path.join(root, file);
   let html = fs.readFileSync(target, 'utf8');
@@ -126,10 +128,12 @@ sourcePage('source-codes/console/ps4/index.html', 'PS4 Source Codes', 'Choose a 
 const gtaTrail = [...ps4Trail, [base + 'console/ps4/gta5/', 'GTA 5']];
 const sourceExtra = imported.legacyEnhancement('gta5', 'https://gofile.io/d/aENwykPu', 'sources');
 sourceExtra.guide = sourceExtra.guide.replace(/Guide &amp; media|Guide & media/g, 'Source notes');
-const gtaContent = section('downloads', 'PS4 source codes & modding files', grid(`<article class="guide-resource"><h3>GTA 5 PS4 modding files</h3><p>GTA V 1.57</p><p>The source folder returned HTTP 401 during the 2 November 2026 archive check. Its contents have not been verified or archived.</p><div class="guide-links"><a href="https://gofile.io/d/aENwykPu" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Open source folder</a>${sourceExtra.guide}</div></article>`)) + imported.supplement('gta5', ['https://gofile.io/d/aENwykPu'], 'sources');
-sourcePage('source-codes/console/ps4/gta5/index.html', 'GTA 5 PS4 Source Codes & Modding Files', 'Browse supplied GTA 5 PS4 modding files for game update 1.57, with the original source link and access notes.', gtaTrail, gtaContent, '#downloads', 'View source codes', {image});
+const suppliedGtaSources = require('../docs/gta5-ps4-supplied-sources.json').entries;
+const suppliedGtaCards = suppliedGtaSources.map(item => resource(esc(item.name)+' · GTA V '+esc(item.gameVersion),esc(item.description),'<a class="btn btn-primary" href="'+esc(item.sourceUrl)+'" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download '+esc(item.name)+' '+esc(item.gameVersion)+' source</a>',item.image));
+const gtaContent = section('gods-blessing','God’s Blessing source code',grid(...suppliedGtaCards))+section('downloads', 'PS4 source codes & modding files', grid(`<article class="guide-resource"><h3>GTA 5 PS4 modding files</h3><p>GTA V 1.57</p><p>The source folder returned HTTP 401 during the 2 November 2026 archive check. Its contents have not been verified or archived.</p><div class="guide-links"><a href="https://gofile.io/d/aENwykPu" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Open source folder</a>${sourceExtra.guide}</div></article>`)) + imported.supplement('gta5', ['https://gofile.io/d/aENwykPu'], 'sources');
+sourcePage('source-codes/console/ps4/gta5/index.html', 'GTA 5 PS4 Source Codes & Modding Files', 'God’s Blessing source and development bundles for GTA V 1.56 and 1.53, plus supplied 1.57 modding-file links and access notes.', gtaTrail, gtaContent, '#downloads', 'View source codes', {image});
 // Keep the original URL and every imported guide anchor functional.
-sourcePage('source-codes/games/gta5/ps4.html', 'GTA 5 PS4 Source Codes & Modding Files', 'Browse supplied GTA 5 PS4 modding files for game update 1.57, with the original source link and access notes.', gtaTrail, gtaContent, '#downloads', 'View source codes', {image, canonical: base + 'console/ps4/gta5/'});
+sourcePage('source-codes/games/gta5/ps4.html', 'GTA 5 PS4 Source Codes & Modding Files', 'God’s Blessing source and development bundles for GTA V 1.56 and 1.53, plus supplied 1.57 modding-file links and access notes.', gtaTrail, gtaContent, '#downloads', 'View source codes', {image, canonical: base + 'console/ps4/gta5/'});
 
 for (const collection of catalog.collections) {
   sourcePage(collection.page, collection.title, collection.description, collection.trail,

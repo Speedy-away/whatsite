@@ -10507,43 +10507,131 @@
     "checks": "10 focused catalogue/Reborn tests passed; installation ordering and all local guide-download targets verified.",
     "preservation": "No download files, older builds, source links or archive versions removed or replaced."
   },
-  "rkmodzCscPack20261104": {
+  "gta5InventorySectionRemoved20261104": {
     "date": "2026-11-04",
-    "status": "Published and live verified",
-    "resourceId": "gta5-rkmodz-csc-pack",
-    "page": "console/mods/ps4/gta5/index.html#resource-gta5-rkmodz-csc-pack",
-    "sourceUrl": "https://www.mediafire.com/file/6bq67fwd1bpl623/Mod+Manager+PS4+By+RK+MODZ.rar/file",
-    "localDownload": "/downloads/ps4/GTA5/scripts/Mod Manager PS4 By RK MODZ.rar",
-    "version": "Unversioned pack - retrieved 2026-11-04",
-    "bytes": 1624092,
-    "sha256": "364a984dad6bbcea9e4f2b8f7889896c22e4a5256ba0e9701ae68ad332c99de5",
-    "contents": "38 CSC files and Instruction.txt; no PRX/SPRX plugin; 7-Zip integrity test passed; no downloaded code executed",
-    "compatibility": "PS4; game update/title ID/firmware unspecified. Instructions name Ozark/Paradise; October 29 outage note explicitly historical.",
-    "archive": "F: copy independently size/SHA-256 verified; scoped intake merged into both global inventories; organized index refreshed without deleting payloads. Sidecar: docs/rkmodz-csc-pack-private-inventory.json",
-    "validation": "14 focused catalogue/import tests passed; new pack appears once in scripts section with download and full guide. Site audit: 496 pages, 60720 links; only two unrelated historical host canonical/sitemap issues (gamerhack-505, gamerhack-672goldhen).",
-    "preservation": "Existing resources, older downloads and shared changes preserved.",
-    "metadataUpdate": {
-      "date": "2026-11-04",
-      "status": "Published and live verified",
-      "keywords": 110,
-      "tags": [
-        "CSC",
-        "RK MODZ",
-        "PS4",
-        "Menu pack",
-        "Script loader",
-        "38 scripts"
-      ],
-      "changes": "Pack and script-name aliases, loader search terms, card description, guide label, GTA V page keywords and search/social/structured descriptions updated. Rebuilt GTA page, installation guide, directory and resource-tag index.",
-      "validation": "18 tag, metadata and preservation checks passed; pack lookup verified for RK MODZ, RKMODZ manager, Not Your Dope, FC Loader and Paradise script loader; page meta keywords verified. PS4-only scope and unknown game-update compatibility retained."
+    "status": "Local changes; not published",
+    "change": "Removed the visible Download inventory section from the GTA V PS4 page and its generator. Inventory manifests, hashes and all downloads remain intact."
+  },
+  "godsBlessingSources20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "pages": [
+      "source-codes/console/ps4/gta5/index.html",
+      "source-codes/games/gta5/ps4.html"
+    ],
+    "sourceButton": "console/mods/ps4/gta5/index.html",
+    "files": [
+      {
+        "gameVersion": "1.56",
+        "sourceUrl": "https://www.mediafire.com/file_premium/6xr14trz5mzso44/gtav_modmenu_156.zip/file",
+        "bytes": 47878354,
+        "sha256": "a45dee554888d703f9bb5db68d1d672170d73426fa06b90ccaa981dede1259dc",
+        "archiveVerified": true
+      },
+      {
+        "gameVersion": "1.53",
+        "sourceUrl": "https://mega.nz/file/3NdEzZia#SAt1LknW9ZRmLnMwxKeZe3VbDLwBWEGNALib81KkQSI",
+        "bytes": 292331194,
+        "sha256": "ebb9d46f203eb5f9e842e4b1aa72e7231d0c6a8988f14894743eab835e222a3d",
+        "archiveVerified": true
+      }
+    ],
+    "image": "/assets/images/ps4-gta5/gods-blessing-user-2026-11-04.webp",
+    "imageSHA256": "8d03004548ee5ada6c14a085cbe83eb6f4513a109e1b7c96ad1d46ad22b0e356",
+    "megaKeyCorrection": "Submitted 1.53 key omits final I; used complete source URL recorded with verified existing archive. Submitted URL retained in source data.",
+    "preservation": "Existing source archives verified by size and SHA-256. Original source hosts used for download actions; no large mirror or ready-build compatibility inferred."
+  },
+  "rdr2OysterLayout20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "change": "Oyster follows North in the Red Dead Redemption 2 mod menus grid; no separate More downloads & source guides section.",
+    "generator": "node scripts/build-ps4-mods.cjs --rdr2-only",
+    "verification": "Order North, Oyster, Sheriff, Havana verified. Oyster rendered once; its guide and all previous download URL paths preserved."
+  },
+  "modCatalogueCompactNavigation20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "auditedPages": 189,
+    "updatedPages": 187,
+    "tests": 16,
+    "browserCases": 561,
+    "browserFailures": 0,
+    "report": "docs/qa/mod-catalog-layout-20261104.json",
+    "changes": [
+      "Compact catalogue cards retain empty grid slots rather than stretching a lone card across the row.",
+      "Catalogue previews capped at 180px; hero images capped at 150px. Full media remains available in existing guides.",
+      "Reduced padding and removed forced bottom spacing on cards.",
+      "Added parent back links and full platform/game breadcrumb trails.",
+      "Removed unrelated PC/Console hero shortcuts."
+    ],
+    "preservation": "Exact page contents outside the scoped stylesheet/body marker, breadcrumb/back navigation and unrelated hero shortcut remain unchanged. Download actions, old releases, title IDs and compatibility pins preserved.",
+    "generator": "scripts/catalog-layout.cjs applies scripts/mod-catalog-layout.cjs and scripts/mod-breadcrumbs.cjs during the shared page finishing pass."
+  },
+  "sameTabNavigation20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "changedPages": 492,
+    "change": "Internal website page links navigate in the current tab. Removed console-selection new-tab copy/aria labels and misleading external-link icons on internal links.",
+    "preservation": "External source links, download actions, guide popup triggers and independent host documents retained.",
+    "tests": 17,
+    "browser": "Console chooser tested at 390, 1366 and 2254px; clicking PS4/PS5 changed the existing tab URL without increasing browser page-target count.",
+    "generators": [
+      "scripts/internal-page-navigation.cjs",
+      "scripts/search-page-output.cjs",
+      "scripts/guide-popup-policy.cjs",
+      "scripts/build-mods-hub.cjs",
+      "scripts/console-multicod.cjs",
+      "scripts/xbox360-mod-resources.cjs"
+    ]
+  },
+  "completeGamePatches20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "repository": "https://github.com/illusionyy/PS-Game-Patch",
+    "revision": "65914503123d4e643aa5aa0e8c720de8e99ef7e8",
+    "release": "1792785960",
+    "linkedFolderDefinitions": 169,
+    "otherNativeSourceDefinitions": 5,
+    "totalDefinitions": 174,
+    "previousDefinitions": 101,
+    "addedDefinitions": 73,
+    "platformCards": {
+      "ps4": 167,
+      "ps5": 174,
+      "nativePs5": 6
     },
-    "publication": {
-      "commit": "4220442d17e3e05a800e98e25018101b0a0d5b84",
-      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41836115254",
-      "live": "https://whatwhatboy.com/console/mods/ps4/gta5/#resource-gta5-rkmodz-csc-pack",
-      "report": "docs/qa/rkmodz-publication-20261104.json",
-      "verification": "GTA V page, installation guide and menu directory HTTP 200; keywords present; actual Download button points to commit-pinned raw GitHub bytes, verified size and SHA-256. Unrelated shared work left uncommitted."
-    }
+    "readyXmlFiles": 398,
+    "newReadyXmlFiles": 118,
+    "archiveBytesVerified": 2273839,
+    "allArtworkPresent": true,
+    "tests": 32,
+    "browser": {
+      "cases": 18,
+      "failures": 0
+    },
+    "artworkContactSheets": 5,
+    "archiveIndex": {
+      "present": 8754,
+      "missing": 0,
+      "mode": "Metadata-only refresh; previous index snapshots preserved"
+    },
+    "pages": [
+      "console/ps4/game-patches.html",
+      "console/ps5/game-patches.html"
+    ],
+    "hubEntries": [
+      "console/ps4/index.html",
+      "console/ps5/index.html"
+    ],
+    "preservation": "All prior patch files, resource IDs, ready XML bytes, versions, source links, engine firmware pins and F: archive copies retained. Added complete catalogueOptions alongside existing curated options. No downloaded patch/payload was executed. Independent host repository and migration redirects untouched.",
+    "report": "docs/qa/complete-game-patches-20261104.json"
+  },
+  "removeGenericModMediaLinks20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "changedPages": 9,
+    "removedLinks": 48,
+    "change": "Removed generic Guide & media links from mod catalogue cards. Download anchors and named installation/setup actions retained. Shared finishing helper keeps this choice on rebuild."
   },
   "freeShops20261104": {
     "date": "2026-11-04",
@@ -10630,6 +10718,55 @@
     ],
     "preservation": "Exact supplied Drive links and Orbit v1.8.1 retained; original images, older builds and host migration redirects preserved; no payload executed.",
     "publishedCommit": "9e559a74d6299cbfacaafa69db3552849e22c7d3"
+  },
+  "rkmodzCscPack20261104": {
+    "date": "2026-11-04",
+    "status": "Published and live verified",
+    "resourceId": "gta5-rkmodz-csc-pack",
+    "page": "console/mods/ps4/gta5/index.html#resource-gta5-rkmodz-csc-pack",
+    "sourceUrl": "https://www.mediafire.com/file/6bq67fwd1bpl623/Mod+Manager+PS4+By+RK+MODZ.rar/file",
+    "localDownload": "/downloads/ps4/GTA5/scripts/Mod Manager PS4 By RK MODZ.rar",
+    "version": "Unversioned pack - retrieved 2026-11-04",
+    "bytes": 1624092,
+    "sha256": "364a984dad6bbcea9e4f2b8f7889896c22e4a5256ba0e9701ae68ad332c99de5",
+    "contents": "38 CSC files and Instruction.txt; no PRX/SPRX plugin; 7-Zip integrity test passed; no downloaded code executed",
+    "compatibility": "PS4; game update/title ID/firmware unspecified. Instructions name Ozark/Paradise; October 29 outage note explicitly historical.",
+    "archive": "F: copy independently size/SHA-256 verified; scoped intake merged into both global inventories; organized index refreshed without deleting payloads. Sidecar: docs/rkmodz-csc-pack-private-inventory.json",
+    "validation": "14 focused catalogue/import tests passed; new pack appears once in scripts section with download and full guide. Site audit: 496 pages, 60720 links; only two unrelated historical host canonical/sitemap issues (gamerhack-505, gamerhack-672goldhen).",
+    "preservation": "Existing resources, older downloads and shared changes preserved.",
+    "metadataUpdate": {
+      "date": "2026-11-04",
+      "status": "Published and live verified",
+      "keywords": 110,
+      "tags": [
+        "CSC",
+        "RK MODZ",
+        "PS4",
+        "Menu pack",
+        "Script loader",
+        "38 scripts"
+      ],
+      "changes": "Pack and script-name aliases, loader search terms, card description, guide label, GTA V page keywords and search/social/structured descriptions updated. Rebuilt GTA page, installation guide, directory and resource-tag index.",
+      "validation": "18 tag, metadata and preservation checks passed; pack lookup verified for RK MODZ, RKMODZ manager, Not Your Dope, FC Loader and Paradise script loader; page meta keywords verified. PS4-only scope and unknown game-update compatibility retained."
+    },
+    "publication": {
+      "commit": "4220442d17e3e05a800e98e25018101b0a0d5b84",
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41836115254",
+      "live": "https://whatwhatboy.com/console/mods/ps4/gta5/#resource-gta5-rkmodz-csc-pack",
+      "report": "docs/qa/rkmodz-publication-20261104.json",
+      "verification": "GTA V page, installation guide and menu directory HTTP 200; keywords present; actual Download button points to commit-pinned raw GitHub bytes, verified size and SHA-256. Unrelated shared work left uncommitted."
+    }
+  },
+  "compactGameDirectoryCards20261104": {
+    "date": "2026-11-04",
+    "status": "Local changes; not published",
+    "change": "Game-directory cards limited to 360px wide with 140px previews; sparse grids retain compact columns.",
+    "pages": 16,
+    "cards": 28,
+    "browserCases": 9,
+    "browserFailures": 0,
+    "preservation": "All existing link targets and download actions preserved.",
+    "generator": "scripts/game-directory-card-layout.cjs in shared page finishing pass"
   },
   "freeShopsSearch20261104": {
     "status": "Published to repository; deployment verification pending",
@@ -10722,29 +10859,6 @@
     ],
     "status": "Repository published; deployment verification pending"
   },
-  "consoleHubGroups20261104": {
-    "date": "2026-11-04",
-    "status": "Complete locally; not published",
-    "pages": [
-      "console/ps4/index.html",
-      "console/ps5/index.html"
-    ],
-    "groups": [
-      "Game mods / Mod Menus",
-      "Game downloads & free shops",
-      "Homebrew, emulators & tools",
-      "Set up your console"
-    ],
-    "source": "scripts/console-hub-groups.cjs through scripts/search-page-output.cjs",
-    "verification": {
-      "testsPassed": 6,
-      "allCardsPreserved": true,
-      "allLinksPreserved": true,
-      "regenerationStable": true,
-      "browserVerified": true,
-      "screenshot": "docs/screenshots/console-hub-groups-20261104.png"
-    }
-  },
   "sitemapAndLanguages20261104": {
     "date": "2026-11-04",
     "status": "Pushed to origin/main; website deployment in progress",
@@ -10805,6 +10919,29 @@
     },
     "report": "docs/qa/sitemap-language-refresh-20261104.json"
   },
+  "consoleHubGroups20261104": {
+    "date": "2026-11-04",
+    "status": "Complete locally; not published",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps5/index.html"
+    ],
+    "groups": [
+      "Game mods / Mod Menus",
+      "Game downloads & free shops",
+      "Homebrew, emulators & tools",
+      "Set up your console"
+    ],
+    "source": "scripts/console-hub-groups.cjs through scripts/search-page-output.cjs",
+    "verification": {
+      "testsPassed": 6,
+      "allCardsPreserved": true,
+      "allLinksPreserved": true,
+      "regenerationStable": true,
+      "browserVerified": true,
+      "screenshot": "docs/screenshots/console-hub-groups-20261104.png"
+    }
+  },
   "multilingualDiscovery20261104": {
     "date": "2026-11-04",
     "status": "Pushed to origin/main; website deployment in progress",
@@ -10848,5 +10985,37 @@
       "deploymentStatus": "in_progress"
     },
     "report": "docs/qa/multilingual-discovery-20261104.json"
+  },
+  "multilingualSeoInProgress20261104": {
+    "date": "2026-11-04",
+    "status": "Implementation and full translation generation in progress; not committed or pushed",
+    "request": "Full translated static pages at separate URLs in all 20 languages, then push",
+    "sourceRevision": "98e605f1",
+    "englishPages": 494,
+    "plannedTranslatedPages": 9880,
+    "manifest": "docs/i18n/page-translations.json",
+    "translationCache": "languages/pages/<code>.json",
+    "builder": "scripts/build-localized-pages.cjs",
+    "offlineTranslator": "scripts/translate-localized-pages-local.py",
+    "models": [
+      {
+        "path": "tmp/local-m2m100",
+        "source": "jncraton/m2m100_418M-ct2-int8",
+        "revision": "7c1b2620a4e58dacecbd8bf89cfd6da7eb9eb7b0"
+      },
+      {
+        "path": "tmp/local-madlad",
+        "source": "Nextcloud-AI/madlad400-3b-mt-ct2-int8",
+        "revision": "aa32bbdeba7880eff2096ec044cb155a340a9400"
+      }
+    ],
+    "notes": [
+      "Public Google Translate endpoint was rate limited (HTTP 429); that job was stopped.",
+      "GPU libraries and model weights are isolated in ignored tmp directories and must never be committed.",
+      "19 languages use local M2M100; Georgian uses MADLAD after the first model failed its quality test.",
+      "All unfinished user catalogue changes must remain unstaged. Compile from the committed English source snapshot, refreshing hashes if HEAD changes.",
+      "Static generation refuses incomplete translation caches. No partially translated language pages have been published.",
+      "Outstanding: finish and review translations; full build size/link/hreflang validation; browser QA; isolated commit and push/deployment verification."
+    ]
   }
 }

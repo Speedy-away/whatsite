@@ -5,7 +5,7 @@ const start = '<!-- BEGIN XBOX360 GAME RESOURCES -->';
 const end = '<!-- END XBOX360 GAME RESOURCES -->';
 const read = () => JSON.parse(fs.readFileSync(path.join(root, 'docs/xbox360-mod-resources.json'), 'utf8'));
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
-const fullLink = (url, label, download = '') => `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer"${download ? ` download="${escape(download)}"` : ''}>${escape(label)}</a>`;
+const fullLink = (url, label, download = '') => require('./internal-page-navigation.cjs').apply('console/mods/index.html',`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer"${download ? ` download="${escape(download)}"` : ''}>${escape(label)}</a>`);
 
 function resourcesForGame(gameId, data = read()) {
   return data.resources.filter(item => item.platforms.includes('xbox360') && item.gameIds.includes(gameId));

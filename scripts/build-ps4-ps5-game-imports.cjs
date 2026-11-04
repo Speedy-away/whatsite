@@ -69,7 +69,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
       image: image ? {src: localImage(image.display) || localImage(image.original), alt: image.caption || item.name} : null
     };
   }
-  function supplement(gameId, legacy = [], mode = 'mods') {
+  function supplement(gameId, legacy = [], mode = 'mods', rendered = false) {
     const items = forGame(gameId, mode);
     const legacyKeys = new Set(legacy.map(file => sourceKey(typeof file === 'string' ? file : file.source || file.url)));
     const legacyHashes = new Set(legacy.map(file => file.sha256).filter(Boolean));
@@ -77,7 +77,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
     for (const item of items) {
       // The GTA V builder renders these cards in the requested update group.
       // Their guide sections are still appended below with the other details.
-      if (mode === 'mods' && gameId === 'gta5' && ['v156','v157'].includes(item.catalogueSection)) continue;
+      if (mode === 'mods' && gameId === 'gta5' && (rendered || ['v156','v157','servers'].includes(item.catalogueSection))) continue;
       const represented = legacy.some(file => matches(item, file));
       if (legacy.some(file => file.downloadsRendered && matches(item, file))) continue;
       const downloads = (item.downloads || []).filter(file => file.distribution === 'include');
@@ -109,13 +109,13 @@ function createGameImports({root = ROOT, data, files} = {}) {
   function extraGameCards() {
     return data.games.filter(game => !game.legacy && !game.parent && (forGame(game.id).length || data.games.some(child => child.parent === game.id && forGame(child.id).length))).map(game => resource(h(game.title), h(game.summary || 'Game-specific downloads, screenshots and supplied guides.'), link('/console/mods/ps4/' + game.slug + '/', 'Open resources'), game.cover)).join('\n');
   }
-  function buildMods({gtaFiles = [], rdrMenus = [], gameIds: selectedGames} = {}) {
+  function buildMods({gtaFiles = [], rdrMenus = [], gameIds: selectedGames, gtaRendered = false} = {}) {
     for (const game of data.games) {
       if (selectedGames && !selectedGames.includes(game.id)) continue;
       const items = forGame(game.id);
       if (game.legacy) {
         const legacy = game.id === 'gta5' ? gtaFiles : rdrMenus;
-        append('console/mods/ps4/' + game.slug + '/index.html', supplement(game.id, legacy), 'game-imports');
+        append('console/mods/ps4/' + game.slug + '/index.html', supplement(game.id, legacy, 'mods', game.id === 'gta5' && gtaRendered), 'game-imports');
       } else if (items.length || data.games.some(child => child.parent === game.id && forGame(child.id).length)) {
         const children = data.games.filter(child => child.parent === game.id && forGame(child.id).length).sort((a, b) => a.title.localeCompare(b.title, 'en'));
         const filter = children.length >= 6 ? '<div class="extra-game-filter"><label for="extraGameSearch">Search games or exact CUSA title ID</label><input id="extraGameSearch" type="search" placeholder="Find a game, title ID or update…" autocomplete="off"><p id="extraGameCount" role="status" aria-live="polite">' + children.length + ' game collections</p></div>' : '';

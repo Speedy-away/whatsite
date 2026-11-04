@@ -52,3 +52,20 @@ test('Generated GTA V page has unique anchors, working per-menu guides and no ac
  assert.match(fs.readFileSync(path.join(root,'scripts/build-ps4-mods.cjs'),'utf8'),/--gta5-only/);
  assert.match(fs.readFileSync(path.join(root,'console/mods/ps4/gta5/install.html'),'utf8'),/does not contain that file/);
 });
+
+test('GTA V catalogue groups each resource once and reserves older versions for older-only menus',()=>{
+ const html=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');
+ const section=id=>html.match(new RegExp('<section class="section" id="'+id+'">([\\s\\S]*?)<\\/section>'))?.[1]||'';
+ const resources=data().resources.filter(r=>r.publication==='include'&&r.gameIds.includes('gta5')&&r.category!=='source');
+ for(const r of resources){
+  const marker='id="resource-'+r.id+'"';assert.equal(html.split(marker).length-1,1,r.id);
+  if(r.category==='client'){assert.ok(section('servers').includes(marker),r.id);continue;}
+  if(['script','cfg'].includes(r.category))continue;
+  const group=r.gameVersions?.includes('1.57')?'v157':r.gameVersions?.includes('1.56')?'v156':r.gameVersions?.length?'older':'unconfirmed';
+  assert.ok(section(group).includes(marker),r.id+' in '+group);
+ }
+ assert.match(section('older'),/Older GTA 5 versions/);
+ assert.ok(!html.includes('More downloads &amp; source guides'));
+ assert.ok(section('servers').includes('https://lossantosonline.com/'));
+ for(const id of ['gta5-explosive-1-57','gta5-explosive-1-52-1-53'])assert.equal(item(id).images[0].original,'/assets/images/ps4-gta5/explosive-user-preview-2026-11-04.png');
+});

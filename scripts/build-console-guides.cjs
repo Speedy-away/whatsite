@@ -67,7 +67,7 @@ const ps5Resources = () => grid(
   resource('Transfer tools', 'Move files with PS5upload, ezRemote, FTP and web services. Check each tool’s console setup before connecting.', link('/console/ps5/transfer-tools.html', 'Browse transfer tools'), require('./console-card-media.cjs').ps5Media.transfers),
   resource('Apps & homebrew stores', 'PlaydenPS5, Orbit, ProsperoStore, payload managers, media players and save tools for PS5.', link('/console/ps5/apps.html', 'Browse apps'), require('./console-card-media.cjs').ps5Media.apps),
   resource('Emulators on PS5', 'PS2, GameCube, Wii, Wii U, Xbox, Xbox 360 and multi-system projects that run on a homebrew-enabled PS5.', link('/console/ps5/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png'),
-  resource('Mods / Mod Menus', 'Call of Duty, GTA V and Red Dead Redemption 2 mod menus, screenshots and game-specific setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), require('./console-card-media.cjs').ps5Media.mods)
+  resource('Game mods / Mod Menus', 'Call of Duty, GTA V and Red Dead Redemption 2 mod menus, screenshots and game-specific setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), require('./console-card-media.cjs').ps5Media.mods)
 );
 const ps4Resources = () => grid(
   resource('Jailbreak', 'Choose a firmware-specific guide: the experimental 14.00 route or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
@@ -76,7 +76,7 @@ const ps4Resources = () => grid(
   resource('Payloads & transfer tools', 'FTP servers, debugging payloads, kernel logs and firmware-specific loader resources.', link('/console/ps4/payloads.html', 'Browse payloads'), '/assets/images/expansion-ps4-ps5/payload-guest.png'),
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
   resource('Emulators on PS4', 'PS2, PS3, Wii, GameCube, Wii U and Dreamcast projects, plus installation requirements and source links.', link('/console/ps4/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png'),
-  resource('Mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png')
+  resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png')
 );
 function page(file, title, description, image, nav, content, primary = '#content', primaryLabel = 'Explore') {
   const reviewed = new Date().toLocaleDateString('en-GB', { timeZone: 'Europe/London', day: 'numeric', month: 'long', year: 'numeric' });
@@ -112,7 +112,7 @@ function page(file, title, description, image, nav, content, primary = '#content
 <main class="main-content" id="main-content">
 <header class="guide-hero"><div class="container guide-hero-grid${textOnlyHero ? ' guide-hero-text' : ''}"><div>
 <div class="guide-breadcrumb"><a href="/">Home</a> / <a href="${isPhoneHelp ? '/pages/help.html' : isDownloads ? '/tools/' : isSource ? '/source-codes/' : file.startsWith('pc/') ? '/pc/' : '/console/'}">${isPhoneHelp ? 'Help' : isDownloads ? 'Tools' : isSource ? 'Source Codes' : file.startsWith('pc/') ? 'PC' : 'Console'}</a></div>
-<h1>${title}</h1><p>${description}</p><div class="hero-buttons"><a class="btn btn-primary" href="${primary}">${primaryLabel}</a>${isSource || isDownloads || isPhoneHelp ? '' : `<a class="btn btn-outline" href="${file.startsWith('pc/') ? '/console/' : '/pc/'}">${file.startsWith('pc/') ? 'Console' : 'PC'}</a>`}</div>
+<h1>${title}</h1><p>${description}</p><div class="hero-buttons"><a class="btn btn-primary" href="${primary}">${primaryLabel}</a>${isSource || isDownloads || isPhoneHelp || file === 'console/mods/ps4/rdr2/index.html' ? '' : `<a class="btn btn-outline" href="${file.startsWith('pc/') ? '/console/' : '/pc/'}">${file.startsWith('pc/') ? 'Console' : 'PC'}</a>`}</div>
 </div>${textOnlyHero ? '' : `<img src="${image}" alt="${esc(title)}" width="1280" height="720">`}</div></header>
 <div class="container"><nav class="guide-nav" aria-label="${isPhoneHelp ? 'Phone download help' : isDownloads ? 'Download library' : isSource ? 'Source code' : file.startsWith('pc/') ? 'PC' : 'Console'} pages">${hasHosts ? '<a href="#exploit-hosts">Exploit &amp; Redirect Hosts</a>' : ''}${nav.map(([u, t]) => `<a href="${u}"${u === '/' + file || u === '/' + file.replace(/index\.html$/, '') ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav></div>
 <div id="content">${content}</div>

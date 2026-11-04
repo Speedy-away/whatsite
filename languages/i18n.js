@@ -16,6 +16,7 @@
 
   var DEFAULT_LANG = 'en';
   var STORAGE_KEY = 'scooby.lang';
+  var pageLanguage = document.documentElement.getAttribute('data-site-language');
   // Which corner the floating selector pins to when there is no navbar to sit in.
   var FLOAT_SIDE = 'right';
 
@@ -101,9 +102,10 @@
   // Only hide content when we already know a non-English language is coming,
   // so English visitors never pay for this.
 
-  var initial = detect();
+  var initial = pageLanguage || detect();
 
   function hideWhileLoading() {
+    if (pageLanguage) return;
     if (initial === DEFAULT_LANG) return;
     var st = document.createElement('style');
     st.id = 'i18n-cloak';
@@ -320,6 +322,7 @@
   }
 
   function applyMeta(table) {
+    if (pageLanguage && pageLanguage !== DEFAULT_LANG) return;
     if (titleOriginal === null || document.title !== titleRendered && document.title !== titleOriginal) titleOriginal = document.title;
     var t = lookup(titleOriginal, table);
     titleRendered = t === undefined ? titleOriginal : t;
@@ -387,6 +390,14 @@
   function setLang(code, opts) {
     opts = opts || {};
     if (CODES.indexOf(code) === -1) code = DEFAULT_LANG;
+    if (pageLanguage && code !== pageLanguage) {
+      var alternate = document.querySelector('link[rel="alternate"][hreflang="' + code + '"]');
+      if (alternate && window.location) {
+        store(code);
+        window.location.href = alternate.getAttribute('href') + (window.location.search || '') + (window.location.hash || '');
+        return;
+      }
+    }
 
     // Dictionaries load over the network, so a slow one must never overwrite a
     // newer choice made while it was still in flight.
@@ -414,7 +425,11 @@
       var table = dicts[code] || {};
       applying = true;
       try {
-        apply(document.body || document.documentElement, table);
+        if (!pageLanguage || pageLanguage === DEFAULT_LANG) apply(document.body || document.documentElement, table);
+        else {
+          var live = document.querySelectorAll('[role="status"],[aria-live]');
+          for (var li = 0; li < live.length; li++) apply(live[li], table);
+        }
         applyMeta(table);
       } finally { finishApplying(); }
 
@@ -981,7 +996,7 @@
     buildSelector();
     if (initial !== DEFAULT_LANG) setLang(initial, { silent: true });
     else { current = DEFAULT_LANG; syncUI(); startObserver(); reveal(); }
-    showPicker();                       // no-ops unless this is a first visit
+    if (!pageLanguage) showPicker();
   }
 
   // Exported before boot() so a dictionary that lands early can always register.

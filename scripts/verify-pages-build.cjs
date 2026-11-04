@@ -15,7 +15,8 @@ function walk(directory) {
     const file = path.join(directory, entry.name), relative = path.relative(root, file).replaceAll('\\', '/');
     if (entry.isDirectory()) { walk(file); continue; }
     bytes += fs.statSync(file).size;
-    if (!publicPage(relative) || !eligible(relative)) continue;
+    const localized=/^(?:es|pt|fr|de|ru|tr|pl|it|zh|ja|ko|th|vi|id|hi|sr|nl|ka|ar|he)\/.+\.html$/.test(relative);
+    if ((!publicPage(relative)&&!localized) || !eligible(relative)) continue;
     pages++;
     const html = fs.readFileSync(file, 'utf8');
     for (const match of html.matchAll(/\b(?:href|src)=(["'])(.*?)\1/g)) {

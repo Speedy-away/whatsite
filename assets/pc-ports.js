@@ -4,7 +4,8 @@
   else { root.PCPorts = api; api.mount(root.document); }
 })(typeof window !== 'undefined' ? window : this, function () {
   'use strict';
-  function normalize(value) { return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+  var marks,nonletters;try{marks=new RegExp('\\p{M}','gu');nonletters=new RegExp('[^\\p{L}\\p{N}]+','gu');}catch(error){marks=/[\u0300-\u036f]/g;nonletters=/[^a-z0-9\u00c0-\uffff]+/g;}
+  function normalize(value) { return String(value || '').normalize('NFKD').replace(marks, '').toLowerCase().replace(nonletters, ' ').trim(); }
   function matches(entry, query, platform, availability) {
     var text = normalize(entry.search), tokens = normalize(query).split(' ').filter(Boolean);
     return tokens.every(function (token) { return text.indexOf(token) !== -1; }) && (!platform || entry.platform === platform) && (!availability || entry.availability === availability);

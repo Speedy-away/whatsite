@@ -36,9 +36,9 @@ test('Xbox entries retain existing archive identities, source pins and platform-
   }
 });
 
-test('the Xbox game chooser opens the specific game page in a full tab and creates no unverified game entries', () => {
+test('the Xbox game chooser opens the specific game page in the current tab and creates no unverified game entries', () => {
   const html=gamesSection();
-  assert.match(html,/href="\/console\/xbox360\/mods\/call-of-duty\/cod4\/index\.html" target="_blank"/);
+  assert.match(html,/href="\/console\/xbox360\/mods\/call-of-duty\/cod4\/index\.html"/);
   assert.doesNotMatch(html,/data-guide-open|black-ops|modern-warfare-2|ghosts|DEX|HEN/);
   assert.match(html,/COD4 multiplayer patch archives/);
 });

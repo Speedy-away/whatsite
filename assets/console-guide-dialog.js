@@ -19,6 +19,7 @@
     } catch { return null; }
   }
   function isModGuidePath(pathname) {
+    pathname = pathname.replace(/^\/(?:es|pt|fr|de|ru|tr|pl|it|zh|ja|ko|th|vi|id|hi|sr|nl|ka|ar|he)(?=\/)/, '');
     if (/^\/source-codes\/console\/ps4\/gta5\/(?:index\.html)?$/.test(pathname)) return true;
     return /^\/(?:console\/mods(?:\/|\.html$)|mods(?:\/|\.html$)|games\/|source-codes\/games\/)/.test(pathname) ||
       /^\/console\/(?:ps[345]|xbox360|psvita)\/mods\.html$/.test(pathname) ||
