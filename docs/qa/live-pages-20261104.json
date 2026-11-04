@@ -1,7 +1,7 @@
 {
   "date": "2026-11-04T03:22:50.133Z",
   "sourceRevision": "9eb828e8e88326cf81c89bb434640751b25131c8",
-  "status": "Audited live; canonical host-link repair prepared",
+  "status": "Pushed, deployed successfully and all live page/host/style checks passed",
   "pages": 512,
   "contentPages": 491,
   "compatibilityRedirects": 21,
@@ -25259,5 +25259,16 @@
         "oldHostLinks": 0
       }
     ]
+  },
+  "publication": {
+    "commit": "e72dcf43f87606e53adccbbc28878025c3d644fa",
+    "workflow": "https://github.com/Speedy-away/whatsite/actions/runs/41766789399",
+    "after": {
+      "pages": 512,
+      "pageFailures": 0,
+      "checkedStylesAndHostURLs": 73,
+      "failures": 0,
+      "obsoleteHostLinks": 0
+    }
   }
 }
