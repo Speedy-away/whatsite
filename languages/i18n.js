@@ -800,7 +800,7 @@
     var webLink = webItem.querySelector('.nav-link');
     webLink.classList.remove('active');
     webLink.classList.add('webhost-nav-link');
-    webLink.setAttribute('href', 'https://speedy-away.github.io/WWB-HOST/');
+    webLink.setAttribute('href', 'https://speedy-away.github.io/');
     webLink.setAttribute('data-tooltip', 'PS4 / PS5 Host');
     webLink.setAttribute('aria-label', 'PS4 / PS5 Host');
     webLink.removeAttribute('aria-current');

@@ -1,0 +1,40 @@
+{
+  "updatedAt": "2026-11-04T01:17:07.178Z",
+  "status": "Prepared and locally validated; push after the root host deployment succeeds",
+  "rootHost": "https://speedy-away.github.io/",
+  "pages": [
+    "console/ps4/index.html",
+    "console/ps5/index.html"
+  ],
+  "metadata": "Titles, descriptions, OG fields and relevant keywords; two hub host links and language/sidebar target now use root domain.",
+  "redThemeCSSChanged": false,
+  "hostRedirectsRegenerated": false,
+  "hostRedirectsEdited": false,
+  "tests": {
+    "hostSidebar": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "files": [
+    {
+      "path": "console/ps4/index.html",
+      "sha256": "4f57060cca71e5a9ff47c63c89fe8e81f7e1ffd6ea263b2b9914bc5ef39478f1"
+    },
+    {
+      "path": "console/ps5/index.html",
+      "sha256": "6f255b2db849a7f4ed0f6cdcd2a176399c185647c13d73543eab501f0d24944b"
+    },
+    {
+      "path": "languages/i18n.js",
+      "sha256": "e01391269804ee240de8aa15c0411f1d6ce428f4f483dd6c9cc1c5c1913296be"
+    },
+    {
+      "path": "scripts/host-webhost-navigation.cjs",
+      "sha256": "a01b95c75789744ea9d90a83353d174dc1f83d8e689ec3fad42b5acf6afbde77"
+    },
+    {
+      "path": "scripts/tests/host-sidebar-link.test.cjs",
+      "sha256": "7dbcd0a540468ca8545b7373671cc7400d4bf4624fe530776693dc4120d62b0b"
+    }
+  ]
+}

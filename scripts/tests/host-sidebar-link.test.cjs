@@ -24,6 +24,6 @@ test('Language initializer reuses the static host item, removes the legacy dupli
  vm.runInNewContext(source.slice(start,end),context);context.mountSidebarLink();
  assert.deepEqual(list.children.map(x=>x.span.textContent),['Home','Language','PS4 / PS5 Host']);
  assert.equal(list.children.at(-1),canonical);
- assert.equal(canonical.attrs.href,'https://speedy-away.github.io/WWB-HOST/');
+ assert.equal(canonical.attrs.href,'https://speedy-away.github.io/');
  assert.equal(canonical.attrs['aria-label'],'PS4 / PS5 Host');
 });
