@@ -10379,8 +10379,24 @@
     "browserRenderingVerified": false
   },
   "hostChooserRootRepair20261104": {
-    "status": "Verified; publication pending",
+    "status": "Published and live browser verified",
     "report": "docs/host-origin-fix-20261104.json",
-    "canonicalHost": "https://speedy-away.github.io/"
+    "canonicalHost": "https://speedy-away.github.io/",
+    "publicationPending": false,
+    "deployment": {
+      "id": 41767692778,
+      "url": "https://github.com/Speedy-away/whatsite/actions/runs/41767692778",
+      "conclusion": "success",
+      "commit": "90af7951d1d8daf6ac8939a100840d29db839604",
+      "verifiedAt": "2026-11-04T03:40:40.128Z"
+    },
+    "hostDeployment": {
+      "id": 41767690926,
+      "url": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/41767690926",
+      "conclusion": "success",
+      "commit": "b42991bfd9816a52ce044a1a139085583dea8127",
+      "verifiedAt": "2026-11-04T03:40:40.128Z"
+    },
+    "liveReport": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io/docs/qa/host-origin-live-verification.json"
   }
 }

@@ -1,10 +1,8 @@
 {
-  "updatedAt": "2026-11-04T03:29:44.147Z",
-  "status": "Verified; publication pending",
+  "updatedAt": "2026-11-04T03:40:40.128Z",
+  "status": "Published and live browser verified",
   "canonicalHost": "https://speedy-away.github.io/",
   "mainChooser": "https://whatwhatboy.com/hosts/",
-  "authoredPagesUpdated": 514,
-  "templatesUpdated": 2,
   "redirectLandings": 23,
   "deepPathsQueryAndHashPreserved": true,
   "requiredWorkflowTestsPassed": 11,
@@ -16,5 +14,29 @@
     "issues": 0
   },
   "nativeDownloadReceiverBytesChanged": 0,
-  "activeHostOwner": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io"
+  "activeHostOwner": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+  "authoredPagesAudited": 514,
+  "templatesAudited": 2,
+  "deployment": {
+    "id": 41767692778,
+    "url": "https://github.com/Speedy-away/whatsite/actions/runs/41767692778",
+    "conclusion": "success",
+    "commit": "90af7951d1d8daf6ac8939a100840d29db839604",
+    "verifiedAt": "2026-11-04T03:40:40.128Z"
+  },
+  "hostDeployment": {
+    "id": 41767690926,
+    "url": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/41767690926",
+    "conclusion": "success",
+    "commit": "b42991bfd9816a52ce044a1a139085583dea8127",
+    "verifiedAt": "2026-11-04T03:40:40.128Z"
+  },
+  "live": {
+    "mainChooserFinalURL": "https://speedy-away.github.io/",
+    "legacyChooserFinalURL": "https://speedy-away.github.io/",
+    "deepLinkQueryAndHashVerified": true,
+    "report": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io/docs/qa/host-origin-live-verification.json",
+    "browserCases": 5
+  },
+  "scopeNote": "Includes the concurrent e72dcf43/69e467f2 authored-link audit repairs; 90af7951 adds the remaining chooser, fallback, generator and owner fixes."
 }
