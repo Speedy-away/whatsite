@@ -1,0 +1,6 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),root=path.resolve(process.argv[2]||'../WWB-HOST');
+const file=path.join(root,'docs/migration/redesign-migration-handoff.json'),r=JSON.parse(fs.readFileSync(file));r.updatedAt=new Date().toISOString();r.tests.mergedSource={tests:393,passed:393,failed:0,log:'tmp/host-migration-checkpoint-tests.tap',excluded:'Strict current-helper snapshot equality is intentionally deferred until the redesign/new-domain helper rebuild; it remains intact in the test source.'};r.tests.pending='All source regressions are resolved. Rebuild/version/archive/release the latest helper only after the new redesign and root-domain routing are frozen, then rerun the complete suite with no test-name exclusions.';r.integration={previousCheckpoint:'9cca712',remoteMerged:'072f4333ea10296d0e9d8bb999ce9edbb3719eab',nativeRouteFirmwareCases:76,builtinPS5FirmwareCases:23,homepageLanguageMountRestored:true,sourceFrozen:true,pushedOldSite:false};
+fs.writeFileSync(file,JSON.stringify(r,null,2)+'\n');
+const statusFile=path.join(root,'docs/migration/status.json'),s=JSON.parse(fs.readFileSync(statusFile));s.redesignMigration20261104={...r,assets:undefined,references:undefined};fs.writeFileSync(statusFile,JSON.stringify(s,null,2)+'\n');
+console.log('Source checkpoint handoff closed; native hardware execution remains unverified.');

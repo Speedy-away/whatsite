@@ -1,0 +1,5 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
+const root=path.resolve(process.argv[2]||'../WWB-HOST'),folder=path.join(root,'scripts/tests');
+const files=fs.readdirSync(folder).filter(f=>/\.test\.cjs$/.test(f)&&/^(?:host-|afterglow|gamerhack|ps5-(?:browser|original|webkit)|i18n-|language-picker)/.test(f)).sort().map(f=>path.join(folder,f));
+const log=path.join(root,'tmp/host-prepush-tests.tap');fs.mkdirSync(path.dirname(log),{recursive:true});const fd=fs.openSync(log,'w'),result=cp.spawnSync(process.execPath,['--test','--test-reporter=tap',...files],{cwd:root,stdio:['ignore',fd,fd],timeout:180000,windowsHide:true});fs.closeSync(fd);const text=fs.readFileSync(log,'utf8'),summary=text.split(/\r?\n/).filter(l=>/^# (?:tests|suites|pass|fail|cancelled|skipped|duration_ms)/.test(l));console.log(JSON.stringify({files:files.length,status:result.status,summary,log,failures:text.split(/\r?\n/).filter(l=>/^not ok /.test(l))}));if(result.error)console.log(result.error.message);process.exitCode=result.status||0;

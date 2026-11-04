@@ -10223,5 +10223,89 @@
     "deploymentRun": "https://github.com/Speedy-away/whatsite/actions/runs/41738722371",
     "publication": "Successful integrated Pages deployment containing the repair commit. Live revision b68a3c7ea06f9f03a660799d5e93b5a97fe4572a verified at 2026-11-03T23:26:17.803Z: 49 cards/download links/source links/cover image hashes, 344 clickable tags, search assets, keyword metadata and PC navigation passed.",
     "qa": "docs/qa/pc-ports-link-repairs.json"
+  },
+  "consoleLoadAudit20261103": {
+    "status": "Published and live verified",
+    "hostCommit": "d37a2b00d588aa19a2fb4f51651b36341c6dd39a",
+    "site": "https://speedy-away.github.io/wwb-host/",
+    "report": "WWB-HOST docs/qa/console-load-audit.json",
+    "tests": 137,
+    "firmwareRouteCases": 99,
+    "activeRuntimeFilesKeptOnPages": 259,
+    "fixes": [
+      "Single visible Loading handoff, duplicate-click and storage-refusal protection",
+      "PS5 OnionHEN file retained on Pages instead of raw GitHub",
+      "Canonical lowercase /wwb-host/ Pages prefix and matching Load validators after repository rename"
+    ],
+    "workflow": "https://github.com/Speedy-away/wwb-host/actions/runs/41741965896",
+    "nativeExecutionTested": false,
+    "live": {
+      "status": "passed",
+      "verifiedAt": "2026-11-03T23:51:04.304Z",
+      "site": "https://speedy-away.github.io/wwb-host/",
+      "commit": "d37a2b00d588aa19a2fb4f51651b36341c6dd39a",
+      "activeBrowserLoadActions": 8,
+      "firmwareRouteCases": 99,
+      "runtimeFilesFetchedAndMatched": 259,
+      "physicalConsoleExecution": false
+    }
+  },
+  "restInteractionPerformance20261103": {
+    "status": "Pushed, deployed successfully and live verified",
+    "commit": "d37a2b00d588aa19a2fb4f51651b36341c6dd39a",
+    "run": 41741965896,
+    "canonicalSite": "https://speedy-away.github.io/wwb-host/",
+    "focusedTests": 342,
+    "changes": "Console patch tiles use no artwork, search is debounced and pagination appends. Unchanged catalogue calculations and version lists are reused; active Load guards always refresh. Workspace boot accepts optional controls.",
+    "baselineLegacyAudit": {
+      "before": 9,
+      "after": 8,
+      "preExisting": true
+    },
+    "report": "docs/migration/rest-interaction-performance.json",
+    "worktree": "C:/Users/whatw/Documents/GitHub/whatsite/tmp/remaining-host-performance",
+    "liveVerifier": "tmp/verify-rest-interaction-live.cjs",
+    "preservation": "No downloads, ready packages or original native files changed. All older versions retained. Ads preserved.",
+    "integration": "Includes upstream lowercase Pages rename, active runtime files on origin, and browserHandoff lock in cache key. Uppercase Pages path now 404; use lowercase canonical site.",
+    "metadataCommit": "072f4333ea10296d0e9d8bb999ce9edbb3719eab",
+    "workflow": "https://github.com/Speedy-away/WWB-HOST/actions/runs/41741965896",
+    "liveCheckedAt": "2026-11-03T23:51:43.761Z",
+    "livePages": 1149,
+    "patchDownloadXMLsVerified": 280,
+    "aliasesVerified": 6905,
+    "reportAbsolute": "C:/Users/whatw/Documents/GitHub/whatsite/tmp/remaining-host-performance/docs/migration/rest-interaction-performance.json",
+    "legacyAudit": "Eight existing private-fixture/old-expectation audit failures remain. These were reproduced on previous source; the workspace startup failure was fixed. Focused current suite passes 342/342.",
+    "limits": [
+      "Static HTTP and authored adapter verification only; no browser or native console execution"
+    ]
+  },
+  "hostRedesignMigration20261104": {
+    "status": "User requested a new chat for full host redesign and migration to speedy-away.github.io.",
+    "source": "C:\\Users\\whatw\\Documents\\GitHub\\WWB-HOST",
+    "destination": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+    "handoff": "C:\\Users\\whatw\\Documents\\GitHub\\WWB-HOST\\docs\\migration\\redesign-migration-handoff.json",
+    "mainSiteRule": "Preserve the red whatwhatboy.com design; update relevant metadata/links only.",
+    "threadId": "01a1a409-1cd8-79f1-8dbd-96918ee4e7e1",
+    "title": "PlayStation host redesign and root-site migration",
+    "sourceCheckpoint": "22b518676fe15b99331c6395c57f809257003fc7",
+    "newChatStarted": true
+  },
+  "repositoryPush20261104": {
+    "request": "Push all pending whatsite repository changes",
+    "status": "Validated for commit and push",
+    "files": 182,
+    "tests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "build": {
+      "pages": 554,
+      "links": 51451,
+      "issues": 0,
+      "bytes": 944819098,
+      "plannedBytes": 942989321
+    },
+    "preservation": "All existing files and native runtime bytes preserved. Main host pages remain compatibility redirects; no active host site regenerated. Existing upstream whitespace retained.",
+    "browserRenderingVerified": false
   }
 }

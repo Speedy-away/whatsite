@@ -23,7 +23,7 @@
   }
   function policy(userAgent,pathname,language){
     var target=platform(userAgent),enabled=!!target&&eligiblePath(pathname);
-    var state={enabled:enabled,platform:target,initialLanguage:language||'en',imageBatch:enabled?21:70};
+    var state={enabled:enabled,platform:target,initialLanguage:language||'en',imageBatch:enabled?18:70};
     state.shouldRun=function(feature,currentLanguage){
       if(!enabled)return true;
       if(feature==='background'||feature==='decorative-motion'||feature==='global-search'||feature==='smooth-scroll')return false;

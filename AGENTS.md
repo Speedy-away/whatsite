@@ -67,7 +67,7 @@ changes or losing older downloads.
 
 The user moved host development and publishing to
 `C:/Users/whatw/Documents/GitHub/WWB-HOST`, published at
-`https://speedy-away.github.io/WWB-HOST/`. Make future host changes there.
+`https://speedy-away.github.io/wwb-host/`. Make future host changes there.
 This main repository keeps navigation links and compatibility redirects;
 its historical native files and downloads remain preserved. Do not regenerate
 an active host site here or overwrite its migration redirects. Reconcile any
