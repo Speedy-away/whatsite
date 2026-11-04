@@ -11020,7 +11020,7 @@
   },
   "synapsePS420261104": {
     "date": "2026-11-04",
-    "status": "Validated; queued for requested commit and push",
+    "status": "Committed and pushed to origin/main; GitHub Pages deployment queued",
     "gameVersion": "1.57",
     "images": [],
     "zip": "/downloads/ps4/GTA5/157/synapse/Synapse-PS4-GTA-V-1.57.zip",
@@ -11045,6 +11045,14 @@
     ],
     "notes": "User requested one combined ZIP, no menu image. No firmware/title-ID compatibility inferred. No downloaded code executed.",
     "removedIntroBox": true,
-    "validation": "ZIP integrity passed; 31 targeted tests passed; site audit 496 pages / 60693 links, zero issues; Git file-size check passed."
+    "validation": "ZIP integrity passed; 31 targeted tests passed; site audit 496 pages / 60693 links, zero issues; Git file-size check passed.",
+    "commit": "c0044acd7d0a072cfcb7e4fe74b41d7aef0c64d0",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/41863874397",
+    "archiveIndex": {
+      "items": 5696,
+      "fileRecords": 9315,
+      "presentFileRecords": 9315,
+      "missingFileRecords": 0
+    }
   }
 }
