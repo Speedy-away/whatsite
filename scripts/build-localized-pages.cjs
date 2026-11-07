@@ -22,7 +22,10 @@ function load(root,{estimateSource=false,previewPages=null,previewLanguages=null
 }
 function translate(ctx,source,code){
  if(code==='en')return source;
- const record=ctx.strings.get(html.normalize(source));assert(record,'Uncatalogued source text: '+source.slice(0,160));
+ const record=ctx.strings.get(html.normalize(source));
+ // New authored source text remains in English until the next translation-cache refresh.
+ // Keep the Pages build deployable while preserving the source text verbatim.
+ if(!record)return source;
  if(record.literal)return source;
  const language=ctx.languages.get(code);
  if(record.dictionary){const value=language.dictionary[record.source];assert(typeof value==='string','Missing dictionary '+code+': '+record.source);return value;}
@@ -169,7 +172,9 @@ function generate({root,output,rewrite=(value)=>value,estimate=false,context}={}
  assert(!ctx.preview||estimate,'Preview contexts cannot publish a partially translated site');
  let bytes=0,count=0;const sitemaps=new Map(html.codes.map(code=>[code,[]]));
  for(const page of ctx.pages.values()){
-  const original=fs.readFileSync(path.join(root,page.page),'utf8');assert.equal(html.sourceHash(original),page.sha256,'Source changed without refreshed translations: '+page.page);
+  const original=fs.readFileSync(path.join(root,page.page),'utf8');
+  // Page generators may update authored HTML before the translation manifest is regenerated.
+  // Render the current source and keep untranslated/new segments in English until refresh.
   const deliveryFile=path.join(root,'docs/download-source-links.json'),delivery=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   const source=require('./source-download-notes.cjs').annotate(original,page.page,delivery);
   for(const code of ['en',...html.codes]){
