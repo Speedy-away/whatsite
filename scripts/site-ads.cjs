@@ -41,8 +41,12 @@ function applyAds(file, html) {
   const main = html.search(/<(?:main|div)\b[^>]*\bid="main-content"/i);
   const sectionStart = content >= 0 ? content : main >= 0 ? main : 0;
   // The PS4/PS5 games hub places its ad after the game choices.
-  const sectionPattern = file.replaceAll('\\', '/') === 'console/mods/ps4/index.html'
-    ? /<section\b[^>]*\bid="games"[^>]*>/i : /<section\b[^>]*>/i;
+  const normalizedFile=file.replaceAll('\\', '/');
+  const sectionPattern = normalizedFile === 'console/mods/ps4/index.html'
+    ? /<section\b[^>]*\bid="games"[^>]*>/i
+    : normalizedFile === 'console/ps4/index.html'
+      ? /<section\b[^>]*\bid="start"[^>]*>/i
+      : /<section\b[^>]*>/i;
   const firstMatch = sectionPattern.exec(html.slice(sectionStart));
   const first = firstMatch ? sectionStart + firstMatch.index : -1;
   let sectionEnd = -1, depth = 0;
