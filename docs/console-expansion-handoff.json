@@ -198,7 +198,8 @@
     "Move Themes from the top-level sidebar onto matching console pages.",
     "Expose existing verified PS5 native payloads with explicit Payload Manager naming.",
     "Check all pages for descriptions, keywords, search tags and embedded URL images.",
-    "Remove Archive details from GTA 5 PC source cards; keep downloads."
+    "Remove Archive details from GTA 5 PC source cards; keep downloads.",
+    "Use supplied Expulsion, LTS, Beach, Crystalis and Cyprus screenshots selectively; merge God’s Blessing source cards; move FileZilla above Homebrew; remove GTA V Installation card; move Script Loader and Random Scripts into Script resources & CSC menus; update PS4 14.00 page from MODDED WARFARE video evdNQ1Vl2Bo."
   ],
   "constraints": [
     "Do not commit, publish or deploy unless separately requested.",
@@ -11123,6 +11124,11 @@
       "horizontalOverflow": false
     },
     "preservation": "No payloads executed, download files changed, archive files removed or history rewritten. Existing F: copies verified by focused checks.",
-    "screenshot": "docs/screenshots/gta5-download-card-cleanup-20261107.png"
+    "screenshot": "docs/screenshots/gta5-download-card-cleanup-20261107.png",
+    "latestFollowup": "Plain-text supported game versions and regions; combined downloads now bundle all builds and both regional configs.",
+    "images": "Supplied five GTA V menu screenshots installed selectively.",
+    "sourceMerge": "God’s Blessing is one merged source card with separate 1.56 and 1.53 links.",
+    "hub": "FileZilla moved above Homebrew; GTA V Installation card removed; Script Loader and Random Scripts grouped under Script resources & CSC menus.",
+    "firmware14": "Updated from MODDED WARFARE video evdNQ1Vl2Bo: Afterglow browser route, GoldHEN 2.4b18.13, DNS 45.56.67.85 / 62.210.38.117, chapter links and preserved disc references."
   }
 }
