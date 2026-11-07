@@ -3,6 +3,74 @@
   "policy": "Only ready PS4 packages are selected. No console payload is executed. Publisher-only entries retain official URLs and private local archival instead of website redistribution.",
   "resources": [
     {
+      "id": "ps4-store-xplorer-2-07",
+      "title": "PS4-Xplorer 2.0 · 2.07",
+      "version": "2.07",
+      "filename": "PS4-Xplorer-2.07.pkg",
+      "url": "https://pkg-zone.com/download/ps4/LAPY20009/2.07",
+      "source": "https://lapygames.wordpress.com/apps/",
+      "storePage": "https://pkg-zone.com/details/LAPY20009",
+      "description": "Lapy’s PS4 file manager with copy, move, rename and other on-console file operations. This version comes from the author-endorsed PKG-Zone distribution.",
+      "compatibility": "PS4 v2.07 package. Store label 4.55+; privileged filesystem support remains firmware-specific. This entry does not establish 13.52 support.",
+      "preparation": "Install the publisher PS4 package with your supported package installer and launch PS4-Xplorer from the console home menu. Use the app’s actual mounted paths and firmware-supported access mode. No browser app-launch protocol is provided.",
+      "documentation": "https://lapygames.wordpress.com/apps/",
+      "mirror": false,
+      "distribution": "Use the author-endorsed store download; no general redistribution grant was established for this ready package.",
+      "image": "/assets/images/console-software/ps4xplorer.png",
+      "packageMetadata": {
+        "APP_VER": "02.07",
+        "SYSTEM_VER": "0x05008000",
+        "TITLE": "PS4-Xplorer 2.0",
+        "TITLE_ID": "LAPY20009",
+        "VERSION": "01.00"
+      },
+      "bytes": 63766528,
+      "sha256": "e7a9296c15c30ee70a4ceac468b4f6952a3c658419b460247f3f80efc9aff5a0",
+      "platforms": [
+        "ps4"
+      ],
+      "category": "apps",
+      "format": "PS4 PKG",
+      "page": "/console/ps4/apps.html#ps4-store-xplorer-2-07"
+    },
+    {
+      "id": "ps4-store-itemzflow-1-08",
+      "title": "Itemzflow Game Manager · PS4",
+      "version": "1.08",
+      "filename": "Itemzflow-PS4-1.08.pkg",
+      "url": "https://pkg-zone.com/download/ps4/ITEM00001/1.08",
+      "source": "https://github.com/LightningMods/Itemzflow/releases/tag/1.08",
+      "storePage": "https://pkg-zone.com/details/ITEM00001",
+      "description": "Open-source PS4 home-menu alternative and installed-game manager. The publisher’s GitHub release directs downloads to this PKG-Zone package.",
+      "compatibility": "PS4 package 1.08; store label 5.05+ excluding 6.72. Release notes add FUSE support for 12.50, 12.52, 13.00 and 13.02; this is not a guarantee for every function or firmware.",
+      "preparation": "Install the PS4 1.08 package with your existing compatible package installer and launch Itemzflow from the home screen. Use the PS4 package and follow its storage and game-management documentation. The project installs its cooperating daemon on first launch.",
+      "documentation": "https://github.com/LightningMods/Itemzflow",
+      "imageFile": "itemzflow.png",
+      "packageMetadata": {
+        "APP_VER": "01.08",
+        "SYSTEM_VER": "0x00000000",
+        "TITLE": "Itemzflow Game Manager",
+        "TITLE_ID": "ITEM00001",
+        "VERSION": "01.08"
+      },
+      "bytes": 27131904,
+      "sha256": "acd4f37aad8d686a433e73f1b44a3e87b513c10ee7303ff965cb3dc54048e60e",
+      "image": "/assets/images/ps4-store-apps/itemzflow.png",
+      "imageProvenance": {
+        "source": "https://pkg-zone.com/download/ps4/ITEM00001/1.08",
+        "embeddedEntry": "icon0.png",
+        "bytes": 353746,
+        "sha256": "130c089007cca84c862ec088834b7eb7ec47021c4987be42670ae982eb58d9c9"
+      },
+      "platforms": [
+        "ps4"
+      ],
+      "category": "apps",
+      "format": "PS4 PKG",
+      "page": "/console/ps4/apps.html#ps4-store-itemzflow-1-08",
+      "local": "/downloads/ps4-ps5/ps4-store-itemzflow-1-08/Itemzflow-PS4-1.08.pkg"
+    },
+    {
       "id": "ps4-store-scratch-everywhere-1-3",
       "title": "Scratch Everywhere! · PS4",
       "version": "1.3",
@@ -184,74 +252,6 @@
       "format": "PS4 PKG",
       "page": "/console/ps4/apps.html#ps4-store-sponsorblock-installer-1-0-0",
       "local": "/downloads/ps4-ps5/ps4-store-sponsorblock-installer-1-0-0/IV0000-YTSB42069_00-SPONSORBLK000000.pkg"
-    },
-    {
-      "id": "ps4-store-itemzflow-1-08",
-      "title": "Itemzflow Game Manager · PS4",
-      "version": "1.08",
-      "filename": "Itemzflow-PS4-1.08.pkg",
-      "url": "https://pkg-zone.com/download/ps4/ITEM00001/1.08",
-      "source": "https://github.com/LightningMods/Itemzflow/releases/tag/1.08",
-      "storePage": "https://pkg-zone.com/details/ITEM00001",
-      "description": "Open-source PS4 home-menu alternative and installed-game manager. The publisher’s GitHub release directs downloads to this PKG-Zone package.",
-      "compatibility": "PS4 package 1.08; store label 5.05+ excluding 6.72. Release notes add FUSE support for 12.50, 12.52, 13.00 and 13.02; this is not a guarantee for every function or firmware.",
-      "preparation": "Install the PS4 1.08 package with your existing compatible package installer and launch Itemzflow from the home screen. Use the PS4 package and follow its storage and game-management documentation. The project installs its cooperating daemon on first launch.",
-      "documentation": "https://github.com/LightningMods/Itemzflow",
-      "imageFile": "itemzflow.png",
-      "packageMetadata": {
-        "APP_VER": "01.08",
-        "SYSTEM_VER": "0x00000000",
-        "TITLE": "Itemzflow Game Manager",
-        "TITLE_ID": "ITEM00001",
-        "VERSION": "01.08"
-      },
-      "bytes": 27131904,
-      "sha256": "acd4f37aad8d686a433e73f1b44a3e87b513c10ee7303ff965cb3dc54048e60e",
-      "image": "/assets/images/ps4-store-apps/itemzflow.png",
-      "imageProvenance": {
-        "source": "https://pkg-zone.com/download/ps4/ITEM00001/1.08",
-        "embeddedEntry": "icon0.png",
-        "bytes": 353746,
-        "sha256": "130c089007cca84c862ec088834b7eb7ec47021c4987be42670ae982eb58d9c9"
-      },
-      "platforms": [
-        "ps4"
-      ],
-      "category": "apps",
-      "format": "PS4 PKG",
-      "page": "/console/ps4/apps.html#ps4-store-itemzflow-1-08",
-      "local": "/downloads/ps4-ps5/ps4-store-itemzflow-1-08/Itemzflow-PS4-1.08.pkg"
-    },
-    {
-      "id": "ps4-store-xplorer-2-07",
-      "title": "PS4-Xplorer 2.0 · 2.07",
-      "version": "2.07",
-      "filename": "PS4-Xplorer-2.07.pkg",
-      "url": "https://pkg-zone.com/download/ps4/LAPY20009/2.07",
-      "source": "https://lapygames.wordpress.com/apps/",
-      "storePage": "https://pkg-zone.com/details/LAPY20009",
-      "description": "Lapy’s PS4 file manager with copy, move, rename and other on-console file operations. This version comes from the author-endorsed PKG-Zone distribution.",
-      "compatibility": "PS4 v2.07 package. Store label 4.55+; privileged filesystem support remains firmware-specific. This entry does not establish 13.52 support.",
-      "preparation": "Install the publisher PS4 package with your supported package installer and launch PS4-Xplorer from the console home menu. Use the app’s actual mounted paths and firmware-supported access mode. No browser app-launch protocol is provided.",
-      "documentation": "https://lapygames.wordpress.com/apps/",
-      "mirror": false,
-      "distribution": "Use the author-endorsed store download; no general redistribution grant was established for this ready package.",
-      "image": "/assets/images/console-software/ps4xplorer.png",
-      "packageMetadata": {
-        "APP_VER": "02.07",
-        "SYSTEM_VER": "0x05008000",
-        "TITLE": "PS4-Xplorer 2.0",
-        "TITLE_ID": "LAPY20009",
-        "VERSION": "01.00"
-      },
-      "bytes": 63766528,
-      "sha256": "e7a9296c15c30ee70a4ceac468b4f6952a3c658419b460247f3f80efc9aff5a0",
-      "platforms": [
-        "ps4"
-      ],
-      "category": "apps",
-      "format": "PS4 PKG",
-      "page": "/console/ps4/apps.html#ps4-store-xplorer-2-07"
     },
     {
       "id": "ps4-store-orbisshelf-0-2-0",
