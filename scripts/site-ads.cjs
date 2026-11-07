@@ -46,6 +46,11 @@ function applyAds(file, html) {
     const end=start>=0?html.indexOf('</section>',start):-1;
     if(end>=0)return html.slice(0,end+10)+'\n'+placement()+html.slice(end+10);
   }
+  if(normalizedFile === 'console/mods/ps4/rdr2/index.html'){
+    const downloads=html.search(/<section\b[^>]*\bid="downloads"[^>]*>/i);
+    const end=downloads>=0?html.indexOf('</section>',downloads):-1;
+    if(end>=0)return html.slice(0,end+10)+'\n'+placement()+html.slice(end+10);
+  }
   // Keep the first content section (including exploit-host lists) at the top.
   const content = html.indexOf('<div id="content">');
   const main = html.search(/<(?:main|div)\b[^>]*\bid="main-content"/i);
