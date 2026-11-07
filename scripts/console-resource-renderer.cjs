@@ -104,7 +104,7 @@ function card(item) {
   const detailLink = !cleanGta && hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
-  const tagMarkup = tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
+  const tagMarkup = cleanGta ? '' : tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
   return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${!cleanGta && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${requirementsMarkup(item)}${tagMarkup}${buttons || detailLink ? `<div class="guide-links">${buttons}${detailLink}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
