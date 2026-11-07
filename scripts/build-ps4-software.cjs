@@ -59,7 +59,7 @@ function buildPs4Software() {
       resource(
         'trophy_unlockers',
         'PS4 trophy unlocker collection with game-specific PKG files, a guide, TrophyUnlocker for Windows and PS4PKGViewer. Match each package to its game title ID and region.',
-        ext('https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers', 'Open trophy_unlockers'),
+        ext('https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers', 'Download trophy_unlockers'),
         ps4Image
       ).replace('<article ', '<article id="trophy-unlockers" ').replace('<div class="guide-links">', '<ul class="guide-resource-tags" aria-label="Tags"><li class="feature-tag">PS4</li><li class="feature-tag">Trophy unlocker</li><li class="feature-tag">PKG</li><li class="feature-tag">Windows tools</li></ul><div class="guide-links">'),
       resource(
@@ -71,7 +71,7 @@ function buildPs4Software() {
       resource(
         'PS4-Xplorer',
         'PS4 file-manager project with documentation and setup information.',
-        ext('https://github.com/Lapy055/PS4-Xplorer', 'Project & setup'),
+        '<a class="btn btn-primary" href="https://pkg-zone.com/download/ps4/LAPY20009/2.07" download="PS4-Xplorer-2.07.pkg">Download PKG <i class="fas fa-download" aria-hidden="true"></i></a>' + ext('https://github.com/Lapy055/PS4-Xplorer', 'Project & setup'),
         image('ps4xplorer', ps4Image)
       ),
       resource(
