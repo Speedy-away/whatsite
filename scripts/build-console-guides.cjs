@@ -75,6 +75,7 @@ const ps4Resources = () => grid(
   resource('GoldHEN', 'Official GoldHEN release resources and the separately supplied 14.00 HEN ISO, with firmware and download notes.', link('/console/ps4/goldhen.html', 'Open GoldHEN page'), softwareImage('goldhen', '/assets/images/consoles/playstation.jpg')),
   resource('Payloads & transfer tools', 'FTP servers, debugging payloads, kernel logs and firmware-specific loader resources.', link('/console/ps4/payloads.html', 'Browse payloads'), '/assets/images/expansion-ps4-ps5/payload-guest.png'),
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
+  resource('Save tools', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/apps.html#apollo-save-tool-ps4', 'Browse save tools'), '/assets/images/consoles/apollo-save-tool.png'),
   resource('Emulators on PS4', 'PS2, PS3, Wii, GameCube, Wii U and Dreamcast projects, plus installation requirements and source links.', link('/console/ps4/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png'),
   resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png')
 );

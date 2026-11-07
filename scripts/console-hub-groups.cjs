@@ -18,7 +18,8 @@ function apply(file,html){
  const cards=[...content.matchAll(/<article\b[\s\S]*?<\/article>/g)].map(m=>m[0]);
  const groups={mods:[],games:[],homebrew:[],setup:[]};
  for(const card of cards){
-  const key=/href="\/console\/ps[45]\/(?:jailbreaks|goldhen|y2jb)\.html/.test(card)?'setup':
+  const key=/href="\/console\/ps[45]\/(?:jailbreaks|y2jb)\.html/.test(card)?'setup':
+   /href="\/console\/ps4\/goldhen\.html/.test(card)?'homebrew':
    /href="\/console\/(?:mods\/ps4\/|ps5\/mods\.html|ps[45]\/game-patches\.html)/.test(card)?'mods':
    /href="\/console\/ps[45]\/(?:game-downloads|free-shops)\.html/.test(card)?'games':'homebrew';
   groups[key].push(card);
