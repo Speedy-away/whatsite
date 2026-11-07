@@ -36,12 +36,16 @@ function applyAds(file, html) {
   if (html.includes(start) && !html.includes(end, html.indexOf(start))) throw Error('Unterminated ad placement in ' + file);
   // Reposition existing placements too, so older ads inside cards are repaired.
   html = html.replace(/\s*<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->\s*/g, '');
+  const normalizedFile=file.replaceAll('\\', '/');
+  if(normalizedFile === 'console/ps5/index.html'){
+    const setup=html.search(/<div\b[^>]*\bid="console-hub-setup"[^>]*>/i);
+    if(setup>=0)return html.slice(0,setup)+placement()+'\n'+html.slice(setup);
+  }
   // Keep the first content section (including exploit-host lists) at the top.
   const content = html.indexOf('<div id="content">');
   const main = html.search(/<(?:main|div)\b[^>]*\bid="main-content"/i);
   const sectionStart = content >= 0 ? content : main >= 0 ? main : 0;
   // The PS4/PS5 games hub places its ad after the game choices.
-  const normalizedFile=file.replaceAll('\\', '/');
   const sectionPattern = normalizedFile === 'console/mods/ps4/index.html'
     ? /<section\b[^>]*\bid="games"[^>]*>/i
     : normalizedFile === 'console/ps4/index.html'
