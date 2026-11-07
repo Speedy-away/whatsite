@@ -41,6 +41,11 @@ function applyAds(file, html) {
     const setup=html.search(/<div\b[^>]*\bid="console-hub-setup"[^>]*>/i);
     if(setup>=0)return html.slice(0,setup)+placement()+'\n'+html.slice(setup);
   }
+  if(normalizedFile === 'console/ps3/index.html'){
+    const start=html.search(/<section\b[^>]*\bid="start"[^>]*>/i);
+    const end=start>=0?html.indexOf('</section>',start):-1;
+    if(end>=0)return html.slice(0,end+10)+'\n'+placement()+html.slice(end+10);
+  }
   // Keep the first content section (including exploit-host lists) at the top.
   const content = html.indexOf('<div id="content">');
   const main = html.search(/<(?:main|div)\b[^>]*\bid="main-content"/i);
