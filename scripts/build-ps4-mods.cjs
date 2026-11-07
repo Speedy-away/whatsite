@@ -13,7 +13,7 @@ const files=JSON.parse(fs.readFileSync('downloads/ps4/GTA5/manifest.json','utf8'
 const gtaItems=imported.forGame('gta5');
 function gtaSection(item){
  if(item.category==='client')return 'servers';
- if(['script','cfg'].includes(item.category))return 'scripts';
+ if(['script','cfg'].includes(item.category)||['gta5-script-loader-pack','gta5-random-scripts-pack'].includes(item.id))return 'scripts';
  if(item.gameVersions?.includes('1.57'))return 'v157';
  if(item.gameVersions?.includes('1.56'))return 'v156';
  return item.gameVersions?.length ? 'older' : 'unconfirmed';
@@ -65,7 +65,6 @@ page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse North, Sheri
 require('./ps4-user-plugin-templates.cjs').sectionFor('rdr2')+
 section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card))), '#downloads','Browse downloads');
 page('console/mods/ps4/gta5/index.html','GTA V Mods for PS4','Browse menus by GTA V game update, CSC scripts, screenshots and supplied setup guides.',image,nav,
-section('guides','Installation',grid(resource('Install PS4 GTA V menus','GoldHEN plugin paths, per-game configuration, archive-specific steps and troubleshooting.',link(base+'install.html','Read installation guide')+'<a class="btn btn-outline" href="/source-codes/console/ps4/gta5/">GTA V source codes <i class="fas fa-code" aria-hidden="true"></i></a>'+guideDownloads(['gta5-velora-1-57'],false),'/assets/images/gta52.png')))+
 require('./ps4-user-plugin-templates.cjs').sectionFor('gta5')+
 section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
 section('v157','GTA V 1.57',grid(...unmatchedFiles.filter(f=>f.group==='157').map(downloadCard),...gtaCards('v157')))+
@@ -117,7 +116,7 @@ section('setup','Private-server setup checklist',steps([
 section('video','Private-server video companion',video('P9SAjhA-lNU','How To Play GTA Online On A Jailbroken PS4 (Private server)')+note('<p>No transcript was available for this video. The steps above are a preparation checklist, not a verified reproduction of its server-specific installation sequence. Visit the Los Santos Online website for the current client package and setup instructions.</p>')),'#setup','Read server checklist');
 if(!scoped)require('./build-ps4-ps5-cod.cjs');
 imported.buildMods({gtaRendered:true,gtaFiles:files,rdrMenus:rdr2menus,...(gtaOnly?{gameIds:['gta5']}:rdr2Only?{gameIds:['rdr2']}:{})});
-if(!rdr2Only){const file='console/mods/ps4/gta5/index.html';let html=fs.readFileSync(file,'utf8');html=html.replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=1"></head>').replace('</body>','<script defer src="/assets/gta5-plugin-downloads.js?v=2"></script></body>');fs.writeFileSync(file,html);}
+if(!rdr2Only){const file='console/mods/ps4/gta5/index.html';let html=fs.readFileSync(file,'utf8');html=html.replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=3"></head>').replace('</body>','<script defer src="/assets/gta5-plugin-downloads.js?v=4"></script></body>');fs.writeFileSync(file,html);}
 if(scoped)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));
 if(!rdr2Only)catalog.build();
 console.log(rdr2Only?'Built RDR2 catalogue with Oyster next to North.':gtaOnly?'Built GTA V catalogue, installation guide and menu directory.':'Built Console Mods, PS4/PS5 Games, three GTA V pages and RDR2 with North, Sheriff and Havana downloads.');

@@ -1,11 +1,16 @@
 .gta-plugin-download{flex:1 1 100%;width:100%;min-width:0;margin:12px 0 0;padding:16px 0 0;border:0;border-top:1px solid var(--border,#303034)}
 .gta-plugin-download legend{padding:0 8px 0 0;font-size:.9rem;font-weight:600;color:var(--text-primary,#eee)}
-.gta-plugin-download label{display:block;margin:0 0 12px;font-size:.83rem;color:var(--text-secondary,#aaa)}
-.gta-plugin-download select{display:block;width:100%;max-width:100%;min-width:0;margin-top:6px;padding:10px 8px;border:1px solid var(--border,#303034);border-radius:6px;background:var(--bg-secondary,#18181b);color:var(--text-primary,#eee);font:inherit}
-.gta-plugin-download .gta-plugin-build-label,.gta-plugin-download .gta-plugin-region-note{font-size:.8rem;line-height:1.5;overflow-wrap:anywhere;margin:0 0 10px}
-.gta-plugin-download code{display:block;font-size:.75rem;overflow-wrap:anywhere;margin:0 0 14px;line-height:1.5}
 .gta-plugin-download .btn{display:flex;width:100%;justify-content:center;gap:6px;white-space:normal;line-height:1.4;min-height:44px;padding:11px 8px;font:inherit;font-size:.83rem;cursor:pointer}
 .gta-plugin-download .btn:disabled{opacity:.6;cursor:wait}
 .gta-plugin-separate{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:.8rem}
 .gta-plugin-download [data-plugin-status]{font-size:.8rem;line-height:1.5;margin:10px 0 0;overflow-wrap:anywhere}
 .gta-plugin-download [data-plugin-status]:empty{display:none}
+
+.gta-plugin-facts{margin:0 0 16px;font-size:.8rem;line-height:1.6;overflow-wrap:anywhere}
+.gta-plugin-facts dt{color:var(--text-secondary,#aaa);margin-top:10px;font-weight:400}
+.gta-plugin-facts dd{margin:3px 0 0;color:var(--text-primary,#eee)}
+.gta-plugin-separate button{padding:0;background:none;border:0;color:var(--accent,#50ffc0);font:inherit;cursor:pointer;text-align:left}
+.gta-plugin-separate button:disabled{opacity:.6;cursor:wait}
+.gta-plugin-separate summary{cursor:pointer;color:var(--accent,#50ffc0)}
+.gta-plugin-originals{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.gta-plugin-separate button:focus-visible,.gta-plugin-separate summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}

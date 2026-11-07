@@ -30,31 +30,61 @@
   const digest=Array.from(new Uint8Array(await env.crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
   if(digest!==file.sha256)throw Error('Download verification failed.');return bytes;
  }
- async function bundle(choice,region,env){
+ async function bundleEntries(choice,region,env,configsOnly=false){
   if(!['CUSA00411','CUSA00419'].includes(region)||!choice.configs[region])throw Error('Select a game region.');
   const config=choice.configs[region],source=choice.source;
   const dependencies=choice.dependencies||[];
   if(dependencies.some(d=>d.gameVersion!==choice.gameVersion||d.installPath!=='data/GoldHEN/plugins/'+safeName(d.name)))throw Error('Dependency does not match the chosen game update.');
-  const [menu,ini,...extraFiles]=await Promise.all([fetchVerified(source,env),fetchVerified(config,env),...dependencies.map(d=>fetchVerified(d,env))]);
+  const [menu,ini,...extraFiles]=await Promise.all([configsOnly?null:fetchVerified(source,env),fetchVerified(config,env),...dependencies.map(d=>configsOnly?null:fetchVerified(d,env))]);
   const member=source.kind==='plugin'?'data/GoldHEN/plugins/'+safeName(config.module):'menu/'+safeName(source.name);
   const note='PS4 GTA V menu + plugins.ini\r\n\r\nSelected title ID: '+region+'\r\nSelected module: '+config.module+'\r\nGame update: '+(choice.gameVersion||'not specified by source')+'\r\n'+(config.sourceExample?'A source title-ID example exists; physical console behavior is untested.':'This is a configuration template. The source does not confirm this regional menu build.')+'\r\n\r\n'+(source.kind==='package'?'The original menu archive is inside menu/. Extract it and follow its included setup guide; retain its required data folders. Use the selected module named above. The original archive and any original INI inside it are unchanged.\r\n':'Copy the included data/GoldHEN/plugins/ module to the corresponding PS4 directory. Standalone modules omit support data; follow the menu guide.\r\n')+'Merge the root plugins.ini section into /data/GoldHEN/plugins.ini. Back up your configuration and preserve unrelated entries. Do not replace a populated plugins.ini without merging it. Enable one menu at a time.\r\n\r\nThe title-ID switch changes configuration; it does not convert the binary or game update.\r\n';
   const requiredNote=(dependencies.length||/^GTARBN\.sprx$/i.test(config.module))?'\r\nREQUIRED GTA REBORN CLIENT\r\nUse the GTARBN.sprx for GTA V '+choice.gameVersion+'. If using the original ZIP, select its matching game-update folder. Keep the required client path in the generated plugins.ini alongside Ozark when applicable. Register yourself in the GTA Reborn Discord bot with /link username:YOUR_GAMERTAG and copy the private Reborn.txt to /data/Reborn.txt. That personal file is not included. The supplied live-server announcement is for 1.57 only; 1.56 server access is not established.\r\n':'';
-  return zip([{name:member,bytes:menu},...dependencies.map((d,i)=>({name:d.installPath,bytes:extraFiles[i]})),{name:'plugins.ini',bytes:ini},{name:'INSTALL.txt',bytes:encode(note+requiredNote)}]);
+  return [...(configsOnly?[]:[{name:member,bytes:menu},...dependencies.map((d,i)=>({name:d.installPath,bytes:extraFiles[i]}))]),{name:'plugins.ini',bytes:ini},{name:'INSTALL.txt',bytes:encode(note+requiredNote)}];
+ }
+ async function bundle(choice,region,env){return zip(await bundleEntries(choice,region,env));}
+ async function bundleAll(rows,env,configsOnly=false){
+  if(!Array.isArray(rows)||!rows.length)throw Error('No menu builds available.');
+  const entries=new Map(),cache=new Map();
+  const cachedEnv={crypto:env.crypto,fetch:env.fetch.bind(env)};
+  const verifiedEnv={crypto:env.crypto,fetch:async(url,options)=>{
+   if(!cache.has(url))cache.set(url,cachedEnv.fetch(url,options).then(async response=>{if(!response.ok)throw Error('File unavailable ('+response.status+').');return new Uint8Array(await response.arrayBuffer());}));
+   const bytes=await cache.get(url);return {ok:true,arrayBuffer:async()=>bytes};
+  }};
+  const folders=[];
+  for(let i=0;i<rows.length;i++){
+   const row=rows[i],prefix=rows.length>1?'builds/'+String(i+1).padStart(2,'0')+'-GTA-V-'+safeName(row.gameVersion||'unspecified')+'/':'';
+   folders.push(prefix+' — '+row.label);
+   for(const region of ['CUSA00411','CUSA00419']){
+    for(const entry of await bundleEntries(row,region,verifiedEnv,configsOnly)){
+     const regional=['plugins.ini','INSTALL.txt'].includes(entry.name);
+     const name=prefix+(regional?'regions/'+region+'/':'')+entry.name;
+     const bytes=entry.name==='INSTALL.txt'?encode(new TextDecoder().decode(entry.bytes).replace('Merge the root plugins.ini section','Merge the plugins.ini section from this region folder').replace('The title-ID switch changes configuration','The regional configuration changes title-ID sections')):entry.bytes;
+     const old=entries.get(name);if(old&&(old.length!==bytes.length||old.some((byte,index)=>byte!==bytes[index])))throw Error('Conflicting files in menu bundle.');
+     if(!old)entries.set(name,bytes);
+    }
+   }
+  }
+  const readme='PS4 GTA V menu files and regional configurations\r\n\r\n'+(rows.length>1?'Build folders keep each game update and package separate. Use only the build matching your installed game update.\r\n':'')+'Use regions/CUSA00411/plugins.ini for Europe or regions/CUSA00419/plugins.ini for USA inside the matching build folder. Read that folder’s INSTALL.txt before installing. Regional templates do not establish binary compatibility. Back up and merge your existing plugins.ini; enable one menu at a time.\r\n'+(configsOnly?'This ZIP contains configurations and instructions only. Download the original menu files separately.\r\n':'Original menu archives remain unchanged inside menu/. Extract their required support files using the original instructions.\r\n')+'\r\n'+folders.join('\r\n')+'\r\n';
+  entries.set('READ-ME.txt',encode(readme));
+  return zip([...entries].map(([name,bytes])=>({name,bytes})));
  }
  function install(doc,env){
-  const widgets=[];let preferred='CUSA00419';try{const saved=env.localStorage.getItem('gta5-plugin-region');if(['CUSA00411','CUSA00419'].includes(saved))preferred=saved;}catch{}
+  const widgets=[];
   for(const node of doc.querySelectorAll('[data-gta-plugin-download]')){
    if(node.dataset.pluginReady)continue;
    let rows;try{rows=JSON.parse(node.dataset.pluginChoices);if(!rows.length)continue;}catch{continue;}
-   const build=node.querySelector('[data-plugin-build]'),region=node.querySelector('[data-plugin-region]'),button=node.querySelector('[data-plugin-bundle]'),status=node.querySelector('[data-plugin-status]');
-   const current=()=>rows[Number(build?.value||0)];
-   const refresh=()=>{const row=current(),config=row.configs[region.value];node.querySelector('[data-plugin-module]').textContent=(config.modules||[config.module]).join(' + ');node.querySelector('[data-plugin-region-note]').textContent=config.sourceExample?'Source includes this title-ID example.':'Configuration template: regional menu compatibility is unconfirmed.';node.querySelector('[data-plugin-ini]').href=localAsset(config.url);node.querySelector('[data-plugin-original]').href=localAsset(row.source.url);status.textContent='';};
-   region.value=preferred;region.addEventListener('change',()=>{preferred=region.value;try{env.localStorage.setItem('gta5-plugin-region',preferred);}catch{}for(const w of widgets){w.region.value=preferred;w.refresh();}});
-   build?.addEventListener('change',refresh);
-   button.addEventListener('click',async()=>{button.disabled=true;status.textContent='Preparing menu + plugins.ini…';try{const row=current(),selectedRegion=region.value,bytes=await bundle(row,selectedRegion,env),url=env.URL.createObjectURL(new env.Blob([bytes],{type:'application/zip'})),anchor=doc.createElement('a');anchor.href=url;anchor.download=safeName(row.source.name.replace(/\.[^.]+$/,'')+'-'+(row.gameVersion||'update-unspecified')+'-'+selectedRegion+'-menu-and-plugins.zip');anchor.setAttribute('data-no-file-options','');anchor.hidden=true;doc.body.appendChild(anchor);anchor.click();anchor.remove();env.setTimeout(()=>env.URL.revokeObjectURL(url),60000);status.textContent='ZIP ready: menu and '+selectedRegion+' plugins.ini included.';}catch(error){status.textContent='Could not prepare ZIP: '+error.message+' Original files remain available above.';}finally{button.disabled=false;}});
-   widgets.push({region,refresh});node.dataset.pluginReady='true';button.disabled=false;refresh();
+   const buttons=[node.querySelector('[data-plugin-bundle]'),node.querySelector('[data-plugin-configs]')],status=node.querySelector('[data-plugin-status]');
+   for(const [index,button] of buttons.entries())button.addEventListener('click',async()=>{
+    buttons.forEach(b=>b.disabled=true);status.textContent='Preparing download…';
+    try{
+     const bytes=await bundleAll(rows,env,index===1),url=env.URL.createObjectURL(new env.Blob([bytes],{type:'application/zip'})),anchor=doc.createElement('a');
+     anchor.href=url;anchor.download=safeName(node.dataset.pluginName+(index===1?'-regional-plugins-ini.zip':'-menu-and-plugins.zip'));anchor.setAttribute('data-no-file-options','');anchor.hidden=true;doc.body.appendChild(anchor);anchor.click();anchor.remove();env.setTimeout(()=>env.URL.revokeObjectURL(url),60000);
+     status.textContent=index===1?'ZIP ready: EU and USA configurations included.':'ZIP ready: all listed builds with EU and USA configurations included.';
+    }catch(error){status.textContent='Could not prepare ZIP: '+error.message+' Original files remain available below.';}finally{buttons.forEach(b=>b.disabled=false);}
+   });
+   widgets.push(node);node.dataset.pluginReady='true';buttons.forEach(b=>b.disabled=false);
   }
   return widgets;
  }
- return {zip,crc32,safeName,bundle,fetchVerified,install};
+ return {zip,crc32,safeName,bundle,bundleAll,fetchVerified,install};
 });

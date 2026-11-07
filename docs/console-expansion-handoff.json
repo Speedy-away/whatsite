@@ -11104,5 +11104,25 @@
       "phoneCardWidth": 173,
       "phoneImageHeight": 110
     }
+  },
+  "gta5DownloadCardCleanup20261107": {
+    "date": "2026-11-07",
+    "status": "Complete locally; not published",
+    "request": "Remove arrow-marked card descriptions, regional configuration notes, module labels, guide links and duplicate download buttons; replace game-update/package and region dropdowns with visible choices; finish combined menu + plugins.ini downloads.",
+    "implementation": "Visible radio choices retain every exact build and EU/USA title ID. Single builds show plain package text. Notes stay in INSTALL.txt, guides and original metadata. Required Reborn links and private-server registration guides remain. Duplicate LTS button removed by matching original SHA-256; separate settings/icon files retain text links. Versioned JS/CSS refreshed to prevent stale controls.",
+    "validation": {
+      "focusedTests": 19,
+      "verifiedZipCombinations": 122,
+      "browserDownloads": [
+        "Cyprus 1.53 USA",
+        "Cyprus 1.57 EU",
+        "Beach 1.57 EU"
+      ],
+      "regionSynchronization": true,
+      "mobileWidth": 390,
+      "horizontalOverflow": false
+    },
+    "preservation": "No payloads executed, download files changed, archive files removed or history rewritten. Existing F: copies verified by focused checks.",
+    "screenshot": "docs/screenshots/gta5-download-card-cleanup-20261107.png"
   }
 }

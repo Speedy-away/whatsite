@@ -98,12 +98,14 @@ function card(item) {
   const image = (item.images || []).find(image => image.role !== 'guide' && (localImage(image.display) || localImage(image.original)));
   const includedDownloads=(item.downloads || []).filter(file => file.distribution === 'include');
   const pairedDownloads=pluginDownloads(item,includedDownloads);
-  const buttons = pairedDownloads + includedDownloads.filter(file=>!pairedDownloads||!pluginBundles.has(file.id)).map(file => downloadButton(file, item)).join('');
-  const detailLink = hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
+  const extras=includedDownloads.filter(file=>!pluginBundles.has(file.id)).filter(file=>{const stored=storedFiles.find(entry=>entry.downloadId===file.id);return !pluginBundles.choices(item,includedDownloads).some(row=>stored?.sha256===row.source.sha256);});
+  const buttons = pairedDownloads ? pairedDownloads+(extras.length?'<div class="gta-plugin-separate">'+extras.map(file=>downloadButton(file,item).replace('class="btn btn-primary"','class="gta-plugin-extra"')).join('')+'</div>':'') : includedDownloads.map(file => downloadButton(file, item)).join('');
+  const cleanGta=item.gameIds?.includes('gta5') && item.category!=='client';
+  const detailLink = !cleanGta && hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
   const tagMarkup = tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
-  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${item.description ? `<p>${lines(item.description)}</p>` : ''}${item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${requirementsMarkup(item)}${tagMarkup}${buttons || detailLink ? `<div class="guide-links">${buttons}${detailLink}</div>` : ''}</article>`;
+  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${!cleanGta && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${requirementsMarkup(item)}${tagMarkup}${buttons || detailLink ? `<div class="guide-links">${buttons}${detailLink}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
   const title = block.title ? `<h3>${h(block.title)}</h3>` : '';
