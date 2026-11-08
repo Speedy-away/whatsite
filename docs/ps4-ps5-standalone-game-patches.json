@@ -58,7 +58,14 @@
       "source": "https://gist.githubusercontent.com/Electry/7506de4deffbf1a28e3b314183a5ed35/raw/cd92559c7483d733094070cce30bf195218f4cd3/PPSA28209.xml",
       "local": "/downloads/ps4-ps5/standalone-game-patches/mindseye/01.017.000/PPSA28209.xml",
       "bytes": 3389,
-      "sha256": "b877c9f8c13fedaa7e768a903d358c9d3af0eed53a8efaab96f48eaffc8cfe3c"
+      "sha256": "b877c9f8c13fedaa7e768a903d358c9d3af0eed53a8efaab96f48eaffc8cfe3c",
+      "summary": "FPS unlock with up to 120 FPS target and graphics profile switches",
+      "kinds": [
+        "fps",
+        "120fps",
+        "graphics"
+      ],
+      "setup": "Use PS Patch System with /data/user/patches/xml_prospero/. The 120 FPS target requires a compatible display, enabled 120 Hz output and the game’s HFR flag or a compatible SceShellCore override. Actual FPS varies. Select at most one graphics profile option."
     },
     {
       "game": "green-hell",
@@ -120,6 +127,81 @@
       "local": "/downloads/ps4-ps5/standalone-game-patches/the-matrix-awakens/01.000.002/PPSA05754.xml",
       "bytes": 462,
       "sha256": "ddc13701de1add37b5da669e2f20d7cf492e0a21bcc01f0aeb3298b58a092ddc"
+    },
+    {
+      "game": "007-first-light",
+      "title": "007 First Light",
+      "platform": "ps5",
+      "id": "PPSA11386",
+      "update": "01.018.001",
+      "filename": "PPSA11386_01.018.001.json",
+      "source": "https://raw.githubusercontent.com/zerodaysofficial/zer0game/547b23e146ca4f9771792274a7e4a16a67663f25/cheats/PPSA11386/01.018/PPSA11386_01.018.001.json",
+      "local": "/downloads/ps4-ps5/standalone-game-patches/007-first-light/01.018.001/PPSA11386_01.018.001.json",
+      "bytes": 592,
+      "sha256": "c7367325c40aaf88475cd32b4c5e37bdb90e706bb1a34b9bd6f856c9849195ee",
+      "author": "zer0day",
+      "summary": "Quality-mode 60 FPS patch",
+      "setup": "Use a compatible native PS5 JSON trainer such as CheatRunner. Place the file in /data/cheatrunner/cheats/json/, rescan the list, then enable the 60fps option for this exact game update.",
+      "kinds": [
+        "fps",
+        "60fps"
+      ]
+    },
+    {
+      "game": "assassins-creed-shadows",
+      "title": "Assassin's Creed Shadows",
+      "platform": "ps5",
+      "id": "PPSA20397",
+      "update": "01.019.076",
+      "filename": "PPSA20397_01.019.076.json",
+      "source": "https://raw.githubusercontent.com/zerodaysofficial/zer0game/547b23e146ca4f9771792274a7e4a16a67663f25/cheats/PPSA20397/01.019.076/PPSA20397_01.019.076.json",
+      "local": "/downloads/ps4-ps5/standalone-game-patches/assassins-creed-shadows/01.019.076/PPSA20397_01.019.076.json",
+      "bytes": 505,
+      "sha256": "7a6b2f9d6756e521847e44c6bd876c1e97a853382021ad4b10a537e854806b9d",
+      "author": "zer0day",
+      "summary": "Quality FPS option",
+      "setup": "Use a compatible native PS5 JSON trainer such as CheatRunner. Place the file in /data/cheatrunner/cheats/json/, rescan the list, then enable the Quality FPS option for this exact game update.",
+      "kinds": [
+        "fps"
+      ]
+    },
+    {
+      "game": "assassins-creed-black-flag-resynced",
+      "title": "Assassin's Creed Black Flag Resynced",
+      "platform": "ps5",
+      "id": "PPSA28183",
+      "update": "01.006.038",
+      "filename": "PPSA28183_01.006.038.json",
+      "source": "https://raw.githubusercontent.com/zerodaysofficial/zer0game/547b23e146ca4f9771792274a7e4a16a67663f25/cheats/PPSA28183/01.006.038/PPSA28183_01.006.038.json",
+      "local": "/downloads/ps4-ps5/standalone-game-patches/assassins-creed-black-flag-resynced/01.006.038/PPSA28183_01.006.038.json",
+      "bytes": 12700,
+      "sha256": "e7047e3ac44b92a05bf804cf224ad97806d375ff6715014cff5568c082ba75ae",
+      "author": "zer0day",
+      "summary": "Fidelity-mode 60 FPS target",
+      "setup": "Use a compatible native PS5 JSON trainer such as CheatRunner. Place the file in /data/cheatrunner/cheats/json/, rescan the list, then enable the Fidelity 60 FPS Target option for this exact game update. The original file also includes separate gameplay cheats.",
+      "kinds": [
+        "fps",
+        "60fps"
+      ]
+    },
+    {
+      "game": "marvels-wolverine",
+      "title": "Marvel's Wolverine",
+      "platform": "ps5",
+      "id": "PPSA03671",
+      "update": "01.001.005",
+      "filename": "PPSA03671_01.001.005.json",
+      "source": "https://raw.githubusercontent.com/zerodaysofficial/zer0game/547b23e146ca4f9771792274a7e4a16a67663f25/cheats/PPSA03671/01.001.005/PPSA03671_01.001.005.json",
+      "local": "/downloads/ps4-ps5/standalone-game-patches/marvels-wolverine/01.001.005/PPSA03671_01.001.005.json",
+      "bytes": 7925,
+      "sha256": "24e781b97eb7aa179098a4a1d8c506f487d97f06b0028b2b1152d3189d884b78",
+      "author": "zer0day",
+      "summary": "60 FPS option for 60 Hz output",
+      "setup": "Use a compatible native PS5 JSON trainer such as CheatRunner. Place the file in /data/cheatrunner/cheats/json/, rescan the list, then enable the 60 FPS (60 Hz) option for this exact game update. The original file also includes separate gameplay cheats.",
+      "kinds": [
+        "fps",
+        "60fps"
+      ]
     }
   ]
 }

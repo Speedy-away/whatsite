@@ -11192,6 +11192,20 @@
     "hub": "FileZilla moved above Homebrew; GTA V Installation card removed; Script Loader and Random Scripts grouped under Script resources & CSC menus.",
     "firmware14": "Updated from MODDED WARFARE video evdNQ1Vl2Bo: Afterglow browser route, GoldHEN 2.4b18.13, DNS 45.56.67.85 / 62.210.38.117, chapter links and preserved disc references."
   },
+  "nativePs5HighRefreshDiscovery20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for Pages publication and live download verification",
+    "page": "console/ps5/game-patches.html#native-ps5-patches",
+    "entries": [
+      "007 First Light PPSA11386 01.018.001, Quality-mode 60 FPS.",
+      "Assassin's Creed Shadows PPSA20397 01.019.076, author-labelled Quality FPS option.",
+      "Assassin's Creed Black Flag Resynced PPSA28183 01.006.038, Fidelity-mode 60 FPS target.",
+      "Marvel's Wolverine PPSA03671 01.001.005, 60 FPS at 60 Hz."
+    ],
+    "discovery": "Added native-only 120 FPS target and 4K graphics filters. MindsEye PPSA28209 01.017.000 is a conditional 120 FPS target. Red Dead Redemption PPSA30523 has 2160p graphics and 120 Hz output with upstream AppVer mask, so no fixed game-update number is claimed. No additional exact 120 FPS or 4K files were verified.",
+    "archive": "Four version-pinned zer0day JSONs in the standalone-game-patches inventory; source URLs, SHA-256 and exact installed game updates are tracked.",
+    "checks": "All 23 focused patch and directory tests passed. Verified both native-only filters, title-ID and update queries, and the four local JSON checksums."
+  },
   "nativePs5PerformancePatches20261108": {
     "date": "2026-11-08",
     "status": "Prepared for Pages publication and live download verification",
