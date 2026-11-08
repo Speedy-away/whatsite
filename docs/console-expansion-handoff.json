@@ -4,6 +4,7 @@
     "page": "console/ps4/avatars.html",
     "status": "Included in the scoped PS4 Avatars publication commit. The main branch push triggers GitHub Pages.",
     "changes": "Added visible card tags, resource search aliases, clearer page and social metadata, and a sitemap entry. Old avatars is a discovery term; individual pack contents are not verified.",
+    "artwork": "Used the supplied PS4 avatar menu JPG for the page and social preview and the supplied AVIF for the Anime download card. Both original image files are preserved in assets/images/console-software under descriptive names.",
     "generator": "scripts/build-ps4-software.cjs#buildPs4Avatars",
     "checks": "All four original download URLs matched, search and metadata transforms were stable, and 18 focused tests passed."
   },

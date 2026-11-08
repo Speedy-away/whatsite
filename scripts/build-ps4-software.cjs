@@ -3,16 +3,16 @@ const path = require('node:path');
 
 function buildPs4Avatars() {
   const {page, section, grid, resource, note, ext, esc, ps4nav} = require('./build-console-guides.cjs');
-  const card = (title, description, url, label, tags, keywords = []) => {
+  const card = (title, description, url, label, tags, keywords, image) => {
     const tagList = `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${esc(tag)}</li>`).join('')}</ul>`;
-    return resource(title, description, ext(url, label))
+    return resource(title, description, ext(url, label), image)
       .replace(/data-search="([^"]*)"/, (_, terms) => `data-search="${terms} ${esc([...tags, ...keywords].join(' ').toLowerCase())}"`)
       .replace('<div class="guide-links">', tagList + '<div class="guide-links">');
   };
 
   page('console/ps4/avatars.html', 'PS4 Avatars: Packs and Avatar Changer',
     'Download the 500+ PS4 avatars pack, Anime and PSN avatar PKGs, and use Avatar Changer to set custom avatars on your PlayStation 4.',
-    '/assets/images/console-software/ps4-avatars.png', ps4nav,
+    '/assets/images/console-software/ps4-avatar-menu.jpg', ps4nav,
     section('downloads', 'PS4 avatar downloads', grid(
       card('Avatar Changer', 'Install the PS4 Avatar Changer package, then follow its on-console instructions and firmware requirements.',
         'https://pkg-zone.com/download/ps4/LAPY20015/latest', 'Download Avatar Changer',
@@ -22,7 +22,8 @@ function buildPs4Avatars() {
         ['PS4 avatars pack', '500+ images', 'Profile avatars'], ['PS4 avatar pack download', 'PlayStation 4 avatar collection', 'PS4 profile pictures']),
       card('Extra Avatars - Anime', 'Additional anime-themed PS4 avatars in a PKG file.',
         'https://dn721301.ca.archive.org/0/items/ps4-jb-avatars/Extra%20Avatars%20-%20Anime.pkg', 'Download Anime avatars',
-        ['Anime avatars', 'Avatar pack', 'PKG'], ['PS4 anime avatar pack', 'PS4 anime avatar PKG']),
+        ['Anime avatars', 'Avatar pack', 'PKG'], ['PS4 anime avatar pack', 'PS4 anime avatar PKG'],
+        '/assets/images/console-software/ps4-anime-avatars.avif'),
       card('Extra Avatars - PSN', 'Additional PlayStation Network avatars for PS4 in a PKG file.',
         'https://ia800402.us.archive.org/2/items/ps4-jb-avatars/Extra%20Avatars%20-%20PSN.pkg', 'Download PSN avatars',
         ['PSN avatars', 'Avatar pack', 'PKG'], ['PS4 PSN avatar pack', 'PlayStation Network avatar PKG'])
