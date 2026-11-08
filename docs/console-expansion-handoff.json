@@ -1,4 +1,29 @@
 {
+  "ps4GameSaves20261108": {
+    "date": "2026-11-08",
+    "status": "Published and verified live on GitHub Pages.",
+    "commit": "956d3d72948378026e3f0d21b464a867c0dd2ba3",
+    "deploymentFix": "ecd5fe0fad7878b4bb368a482b1ecb53855dda98",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/42525341670",
+    "page": "console/ps4/save-tools.html",
+    "catalog": "docs/ps4-game-saves.json",
+    "changes": "Expanded the Apollo catalogue to 24 downloadable saves, including eight new modded saves and a dedicated Modded PS4 game saves section. Retained exact CUSA title IDs, revision-pinned ZIPs, source-reported game versions, visible tags, search, metadata and Apollo import instructions.",
+    "archive": "Saved all 24 ZIPs in the F: archive under PS4/Games/<game>/Game Saves/<title ID>/Builds/<revision>. Verified byte counts and SHA-256 against the fetched copies and recorded them in docs/download-audit.json and the F: download inventory.",
+    "checks": "Verified ZIP readability and embedded PS4 title IDs. On the live page, Edge verified tag search, aliases, distinct CUSA variants, empty results and clearing search. All 24 live save links and the Apollo 2.4.0 PKG returned matching sizes and SHA-256 hashes. The Pages build and deployment passed. Console import was not tested.",
+    "regenerate": "node -e \"require('./scripts/build-ps4-software.cjs').buildPs4GameSaves()\""
+  },
+  "ps4ModdedSavesMoreTitles20261108": {
+    "date": "2026-11-08",
+    "status": "Published and verified live on GitHub Pages.",
+    "commit": "fb2adc779e93bb8c90a6a99c0e050cfeb2086284",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/42526832889",
+    "page": "console/ps4/save-tools.html",
+    "catalog": "docs/ps4-game-saves.json",
+    "changes": "Added eight modded saves for eight previously unlisted PS4 games. The catalogue now has 32 saves, including 19 modded entries. The Tiny Tina card warns that the ZIP overwrites character slot 2, and the Kingdoms of Amalur card records the Fatesworn DLC requirement.",
+    "sourceNotes": "Used the San Andreas ZIP whose embedded label identifies the starter save because the numbered Apollo descriptions disagree with the embedded labels. Used the alternate Kingdoms of Amalur ZIP with the correct embedded CUSA17245 ID.",
+    "archive": "The eight selected ZIPs were saved to F: and recorded in both download inventories. All 32 published archive files were checked against their recorded sizes and SHA-256 hashes.",
+    "checks": "Verified each new ZIP's actual PARAM.SFO TITLE_ID and exercised title aliases, tags and CUSA searches in Edge on the live page. All 32 live ZIPs and the Apollo PKG matched their expected sizes and SHA-256 hashes. Console import was not tested."
+  },
   "jobeesLairFreeShops20261108": {
     "date": "2026-11-08",
     "status": "Included in the site publication commit.",
