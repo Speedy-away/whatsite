@@ -72,7 +72,7 @@ const ps5Resources = () => grid(
 );
 const ps4Resources = () => grid(
   resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png'),
-  resource('Game downloads', 'Browse PS4 game download directories and title-specific sources.', link('/console/ps4/game-downloads.html', 'Browse game downloads'), '/assets/images/consoles/playstation.jpg'),
+  resource('Game downloads &amp; fixes', 'Browse PS4 game download directories, title-specific sources and game fixes.', link('/console/ps4/game-downloads.html', 'Browse game downloads &amp; fixes'), '/assets/images/consoles/playstation.jpg'),
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
   resource('Avatars', 'Change your PS4 avatar or browse a pack of more than 500 avatar images.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
   resource('Game saves', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/save-tools.html', 'Browse game saves'), '/assets/images/consoles/apollo-save-tool.png'),
@@ -201,7 +201,7 @@ resource('KB-RPCS3 · PlayStation 3', 'Unofficial native PS5 RPCS3 port. The alp
 page('console/ps4/index.html', 'PlayStation 4', 'Firmware-specific jailbreak resources, manual DNS, GoldHEN and native emulator ports for PlayStation 4 and PS4 Pro.', '/assets/images/consoles/playstation.jpg', ps4nav,
 hostSection('ps4') + require('./build-console-downloads.cjs').intro('ps4') +
 section('start', 'PS4 downloads', ps4Resources(), 'Game downloads, mods, apps, avatars, game saves and emulators for PS4.') +
-section('firmware-jailbreak', 'Firmware & jailbreak', grid(
+section('console-hub-setup', 'Firmware & jailbreak', grid(
   resource('Jailbreak', 'Choose a firmware-specific guide: the experimental 14.00 route or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
   resource('Firmware downloads', 'Browse PS4 system-software update and recovery files by version in Darthsternie’s firmware archive.', link('/console/ps4/jailbreaks.html#firmware-downloads', 'Browse PS4 firmware'), '/assets/images/consoles/playstation.jpg')
 ), 'Select your firmware route before choosing a jailbreak.'), '#start', 'Choose a guide');

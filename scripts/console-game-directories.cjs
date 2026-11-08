@@ -34,7 +34,9 @@ function range(html, tag, predicate) {
 }
 function hubCard(platform) {
   const detail = platform.providers.length ? `Find ${platform.title} game directories, with direct links to the matching console categories.` : 'Browse game directories by console and choose the system listed by the provider.';
-  return `<article class="guide-resource" data-console-game-card="${platform.id}"><img src="${esc(platform.image)}" alt="${esc(platform.title)} game downloads" loading="lazy"><h3>Game downloads</h3><p>${esc(detail)}</p><div class="guide-links"><a href="${directoryPath(platform)}">Browse game downloads <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
+  const title = platform.id === 'ps4' ? 'Game downloads & fixes' : 'Game downloads';
+  const description = platform.id === 'ps4' ? 'Browse PS4 game download directories, title-specific sources and game fixes.' : detail;
+  return `<article class="guide-resource" data-console-game-card="${platform.id}"><img src="${esc(platform.image)}" alt="${esc(platform.title)} game downloads" loading="lazy"><h3>${esc(title)}</h3><p>${esc(description)}</p><div class="guide-links"><a href="${directoryPath(platform)}">Browse ${esc(title.toLowerCase())} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
 }
 function apply(file, html, data = registry()) {
   if (protectedFile(file, html) || !/<main\b|<div\b[^>]*\bid="main-content"/i.test(html)) return html;

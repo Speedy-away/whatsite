@@ -91,3 +91,24 @@ body.console-hub[data-catalog-page] .main-content .console-hub-group .console-hu
 .console-hub .console-hub-library .category-art img { height: 100%; object-fit: contain; }
 @media(max-width:600px) { body.console-hub[data-catalog-page] .main-content .console-hub-group .console-hub-library { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 12px; } .console-hub .console-hub-library .guide-resource > img, .console-hub .console-hub-library .guide-card-media, .console-hub .console-hub-library .category-art { height: 110px; max-height:110px; } }
 @media(max-width:360px) { body.console-hub[data-catalog-page] .main-content .console-hub-group .console-hub-library { grid-template-columns:1fr !important; } }
+
+.console-hub--ps4 #console-hub-setup :is(.section-header, .console-hub-group-heading) { text-align: center; }
+.console-hub--ps4 #console-hub-setup .console-hub-group-heading { display: block; }
+.console-hub--ps4 #console-hub-setup .section-subtitle { margin-inline: auto; }
+.console-hub--ps4 #console-hub-setup .games-grid {
+  width: min(100%, 630px);
+  margin-inline: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch;
+}
+.console-hub--ps4 #console-hub-setup .guide-resource { padding: 18px; }
+.console-hub--ps4 #console-hub-setup .guide-resource > :is(img, .guide-card-media, .category-art) {
+  position: static;
+  width: min(100%, 180px) !important;
+  height: 100px !important;
+  margin-inline: auto;
+  object-fit: contain;
+}
+@media (max-width: 620px) {
+  .console-hub--ps4 #console-hub-setup .games-grid { max-width: 360px; grid-template-columns: minmax(0, 1fr) !important; }
+}
