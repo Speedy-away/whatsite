@@ -11130,5 +11130,33 @@
     "sourceMerge": "God’s Blessing is one merged source card with separate 1.56 and 1.53 links.",
     "hub": "FileZilla moved above Homebrew; GTA V Installation card removed; Script Loader and Random Scripts grouped under Script resources & CSC menus.",
     "firmware14": "Updated from MODDED WARFARE video evdNQ1Vl2Bo: Afterglow browser route, GoldHEN 2.4b18.13, DNS 45.56.67.85 / 62.210.38.117, chapter links and preserved disc references."
+  },
+  "ps4CodMediafire20261108": {
+    "date": "2026-11-08",
+    "pages": [
+      "console/ps4/index.html",
+      "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+      "console/mods/ps4/call-of-duty/black-ops-4/index.html"
+    ],
+    "changes": [
+      "Corrected the missing PS4 Game downloads artwork in the generated hub used by Pages.",
+      "Updated the BO2 Infarcted button to the supplied MediaFire archive.",
+      "Added Mags ZM/MP + GSC Injector for PS4 Black Ops 4 game update 1.26 with the supplied screenshot."
+    ],
+    "archive": {
+      "scope": "ps4-cod-mediafire",
+      "files": [
+        {
+          "name": "PS4_BO4_Mags_GSC_Menus.rar",
+          "bytes": 79917,
+          "sha256": "90f6721506ef364cf5646e292970e9b105a21d19bb39c34aca3c2a8a57b647d9"
+        },
+        {
+          "name": "PS4_INFARCTED_BO2_SPRX_V1.rar",
+          "bytes": 1567844,
+          "sha256": "7f7edc6bc852fbc125c9aa42fc3c4434ffcd18911e624d1a39ec032b32a33fe7"
+        }
+      ]
+    }
   }
 }
