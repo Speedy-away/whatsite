@@ -11271,6 +11271,14 @@
     "hub": "FileZilla moved above Homebrew; GTA V Installation card removed; Script Loader and Random Scripts grouped under Script resources & CSC menus.",
     "firmware14": "Updated from MODDED WARFARE video evdNQ1Vl2Bo: Afterglow browser route, GoldHEN 2.4b18.13, DNS 45.56.67.85 / 62.210.38.117, chapter links and preserved disc references."
   },
+  "nativePs5HighRefreshSourceReview20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for Pages publication",
+    "page": "console/ps5/game-patches.html#native-ps5-patches",
+    "sourceReview": "Rechecked PS-Game-Patch, CheatRunner Patches, zer0day, libhijacker, NeoEnabler and Common FPS. No additional downloadable native PS5 120 FPS or 4K patch with a verified PPSA and fixed update was identified.",
+    "discovery": "Moved native PS5 cards above PS4 backward compatibility. Added a separate native 120 Hz output filter and direct MindsEye and Red Dead Redemption jumps. Added pattern-scan, 2160p internal-rendering and 120 Hz search terms. The existing 120 FPS target and 4K rendering filters remain separate.",
+    "downloads": "No patch files added or changed. MindsEye is PPSA28209, game 01.017.000. Red Dead Redemption PPSA30523 retains source AppVer mask."
+  },
   "nativePs5HighRefreshDiscovery20261108": {
     "date": "2026-11-08",
     "status": "Prepared for Pages publication and live download verification",
