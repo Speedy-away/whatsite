@@ -107,7 +107,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
     fs.writeFileSync(target, html);
   }
   function extraGameCards() {
-    return data.games.filter(game => !game.legacy && !game.parent && (forGame(game.id).length || data.games.some(child => child.parent === game.id && forGame(child.id).length))).map(game => resource(h(game.title), h(game.summary || 'Game-specific downloads, screenshots and supplied guides.'), link('/console/mods/ps4/' + game.slug + '/', 'Open resources'), game.cover)).join('\n');
+    return data.games.filter(game => !game.legacy && !game.parent && (forGame(game.id).length || data.games.some(child => child.parent === game.id && forGame(child.id).length))).map(game => resource(h(game.title), h(game.summary ?? 'Game-specific downloads, screenshots and supplied guides.'), link('/console/mods/ps4/' + game.slug + '/', 'Open resources'), game.cover)).join('\n');
   }
   function buildMods({gtaFiles = [], rdrMenus = [], gameIds: selectedGames, gtaRendered = false} = {}) {
     for (const game of data.games) {

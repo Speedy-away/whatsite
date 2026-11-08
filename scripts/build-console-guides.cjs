@@ -18,7 +18,8 @@ function resource(title, description, links, image = '') {
   const artwork = !image ? '' : typeof image === 'string'
     ? `<img src="${image}" alt="${esc(title)} artwork" loading="lazy">`
     : require('./console-card-media.cjs').cardMedia(image);
-  return `<article class="guide-resource" data-search="${esc(title.toLowerCase() + ' ' + description.toLowerCase())}">${artwork}<h3>${title}</h3><p>${description}</p><div class="guide-links">${links}</div></article>`;
+  const search = description ? `${title} ${description}` : title;
+  return `<article class="guide-resource" data-search="${esc(search.toLowerCase())}">${artwork}<h3>${title}</h3>${description ? `<p>${description}</p>` : ''}<div class="guide-links">${links}</div></article>`;
 }
 const grid = (...cards) => `<div class="games-grid">${cards.join('\n')}</div>`;
 const section = (id, title, content, subtitle = '') => `<section class="section" id="${id}"><div class="container"><div class="section-header"><h2 class="section-title">${title}</h2>${subtitle ? `<p class="section-subtitle">${subtitle}</p>` : ''}</div>${content}</div></section>`;

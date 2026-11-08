@@ -40,7 +40,7 @@ function gameCards(codOnly = false) {
   const {games, entries} = catalog();
   return games.filter(game => game.url.includes('/call-of-duty/') === codOnly).map(game => {
     const count = entries.filter(entry => entry.gameId === game.id).length;
-    return resource(esc(game.title), game.summary || count + ' menu, tool and guide entries. Check each resource’s game update and console requirements.', link(game.url, 'Browse resources'), game.cover);
+    return resource(esc(game.title), game.summary ?? count + ' menu, tool and guide entries. Check each resource’s game update and console requirements.', link(game.url, 'Browse resources'), game.cover);
   }).join('\n');
 }
 function build() {
