@@ -42,7 +42,7 @@ const hostSection = platform => {
   return section('exploit-hosts', 'Exploit &amp; Redirect Hosts', `<div class="guide-host-grid">${cards}</div>${source}`, esc(catalog.seo[platform].intro));
 };
 const ps5nav = [['/console/ps5/', 'PS5 Hub'], ['/console/ps5/jailbreaks.html', 'Jailbreak'], ['/console/ps5/y2jb.html', 'Y2JB Setup'], ['/console/ps5/downloads.html', 'Console Downloads'], ['/console/ps5/payloads.html', 'Payloads'], ['/console/ps5/transfer-tools.html', 'Transfer Tools'], ['/console/ps5/apps.html', 'Apps'], ['/console/ps5/emulators.html', 'PS5 Emulators'], ['/console/ps5/mods.html', 'Mods / Mod Menus']];
-const ps4nav = [['/console/ps4/', 'PS4 Hub'], ['/console/ps4/jailbreaks.html', 'Jailbreak'], ['/console/ps4/goldhen.html', 'GoldHEN'], ['/console/ps4/downloads.html', 'Console Downloads'], ['/console/ps4/payloads.html', 'Payloads'], ['/console/ps4/apps.html', 'Apps'], ['/console/ps4/emulators.html', 'PS4 Emulators'], ['/console/ps4/#save-tools', 'Save Tools'], ['/console/mods/ps4/', 'Mods / Mod Menus']];
+const ps4nav = [['/console/ps4/', 'PS4 Hub'], ['/console/ps4/jailbreaks.html', 'Jailbreak'], ['/console/ps4/goldhen.html', 'GoldHEN'], ['/console/ps4/downloads.html', 'Console Downloads'], ['/console/ps4/payloads.html', 'Payloads'], ['/console/ps4/apps.html', 'Apps'], ['/console/ps4/emulators.html', 'PS4 Emulators'], ['/console/ps4/save-tools.html', 'Game saves'], ['/console/mods/ps4/', 'Mods / Mod Menus']];
 for (const [platform, nav] of [['ps4', ps4nav], ['ps5', ps5nav]]) {
   if (platform === 'ps4') nav.splice(nav.findIndex(([url]) => url.endsWith('/apps.html')), 0, ['/console/ps4/transfer-tools.html', 'Transfer Tools']);
   nav.push([`/console/${platform}/game-patches.html`, 'Game patches'], [`/console/${platform}/themes.html`, 'Themes'], [`/console/${platform}/site-launcher.html`, 'Site launcher']);
@@ -71,12 +71,11 @@ const ps5Resources = () => grid(
   resource('Game mods / Mod Menus', 'Call of Duty, GTA V and Red Dead Redemption 2 mod menus, screenshots and game-specific setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), require('./console-card-media.cjs').ps5Media.mods)
 );
 const ps4Resources = () => grid(
-  resource('Payloads & transfer tools', 'FTP servers, debugging payloads, kernel logs and firmware-specific loader resources.', link('/console/ps4/payloads.html', 'Browse payloads'), '/assets/images/expansion-ps4-ps5/payload-guest.png'),
+  resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png'),
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
-  resource('Save tools', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/apps.html#apollo-save-tool-ps4', 'Browse save tools'), '/assets/images/consoles/apollo-save-tool.png'),
+  resource('Game saves', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/save-tools.html', 'Browse game saves'), '/assets/images/consoles/apollo-save-tool.png'),
   resource('Avatars', 'Change your PS4 avatar or browse a pack of more than 500 avatar images.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
-  resource('Emulators on PS4', 'PS2, PS3, Wii, GameCube, Wii U and Dreamcast projects, plus installation requirements and source links.', link('/console/ps4/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png'),
-  resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png')
+  resource('Emulators', 'PS2, PS3, Wii, GameCube, Wii U and Dreamcast projects, plus installation requirements and source links.', link('/console/ps4/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png')
 );
 function page(file, title, description, image, nav, content, primary = '#content', primaryLabel = 'Explore') {
   const reviewed = new Date().toLocaleDateString('en-GB', { timeZone: 'Europe/London', day: 'numeric', month: 'long', year: 'numeric' });
@@ -199,7 +198,7 @@ resource('KB-RPCS3 · PlayStation 3', 'Unofficial native PS5 RPCS3 port. The alp
 
 page('console/ps4/index.html', 'PlayStation 4 Homebrew', 'Firmware-specific jailbreak resources, manual DNS, GoldHEN and native emulator ports for PlayStation 4 and PS4 Pro.', '/assets/images/consoles/playstation.jpg', ps4nav,
 hostSection('ps4') + require('./build-console-downloads.cjs').intro('ps4') +
-section('start', 'PS4 guides & downloads', ps4Resources(), 'Start with Jailbreak to choose your firmware. GoldHEN downloads, payloads, apps and emulators have their own pages.') + require('./apollo-tools.cjs').section('ps4'), '#start', 'Choose a guide');
+section('start', 'PS4 downloads', ps4Resources(), 'Start with Jailbreak to choose your firmware. GoldHEN downloads, payloads, apps and emulators have their own pages.') + require('./apollo-tools.cjs').section('ps4'), '#start', 'Choose a guide');
 
 page('console/ps4/jailbreak.html', 'PS4 14.00 Jailbreak & DNS', 'An experimental 14.00 resource guide with manual DNS, browser-host links and the Blu-ray disc requirements for the supplied video.', ps4image, ps4nav,
 section('requirements', '14.00 is an unstable route', note('<p><strong>For the disc method you need a blank recordable Blu-ray disc and a Blu-ray burner.</strong> A DVD, CD or USB drive is not a substitute. Your PS4 must have a working Blu-ray drive.</p><p>The 14.00 steps and HEN ISO are supplied with the linked video. Firmware support and the archive contents could not be independently confirmed. Read the video’s current notes before burning. Do not update a console just to match this guide.</p>')) +

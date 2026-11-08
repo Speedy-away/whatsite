@@ -63,12 +63,6 @@ function buildPs4Software() {
         ps4Image
       ).replace('<article ', '<article id="trophy-unlockers" ').replace('<div class="guide-links">', '<ul class="guide-resource-tags" aria-label="Tags"><li class="feature-tag">PS4</li><li class="feature-tag">Trophy unlocker</li><li class="feature-tag">PKG</li><li class="feature-tag">Windows tools</li></ul><div class="guide-links">'),
       resource(
-        'Apollo Save Tool · PS4',
-        'Manage, export, import, patch and resign PS4 saves directly on your homebrew-enabled console.',
-        '<a href="/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg" data-original-href="https://github.com/bucanero/apollo-ps4/releases" download>Download for PS4 <i class="fas fa-download" aria-hidden="true"></i></a>' + ext('https://github.com/bucanero/apollo-ps4', 'Project & setup'),
-        apolloImage
-      ),
-      resource(
         'PS4-Xplorer',
         'PS4 file-manager project with documentation and setup information.',
         '<a class="btn btn-primary" href="https://pkg-zone.com/download/ps4/LAPY20009/2.07" download="PS4-Xplorer-2.07.pkg">Download PKG <i class="fas fa-download" aria-hidden="true"></i></a>' + ext('https://github.com/Lapy055/PS4-Xplorer', 'Project & setup'),
@@ -94,6 +88,11 @@ function buildPs4Software() {
       resource('Extra Avatars - Anime','Additional anime-themed PS4 avatar package.',ext('https://dn721301.ca.archive.org/0/items/ps4-jb-avatars/Extra%20Avatars%20-%20Anime.pkg','Download Anime avatars')),
       resource('Extra Avatars - PSN','Additional PSN avatar package for PS4.',ext('https://ia800402.us.archive.org/2/items/ps4-jb-avatars/Extra%20Avatars%20-%20PSN.pkg','Download PSN avatars'))
     )+note('<p>These links are publisher or user-supplied downloads. Match the package and installation method to your existing PS4 homebrew environment. The avatar pack is separate from the Avatar Changer application.</p>')),'#downloads','Download avatars');
+
+  page('console/ps4/save-tools.html','PS4 Game saves','Apollo Save Tool and related PS4 save-management resources for backup, import, export and repair workflows.',apolloImage,nav,
+    section('saves','PS4 Game saves',grid(
+      resource('Apollo Save Tool · PS4','Manage, export, import, patch and resign PS4 saves directly on your homebrew-enabled console.','<a href="/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg" data-original-href="https://github.com/bucanero/apollo-ps4/releases" download>Download for PS4 <i class="fas fa-download" aria-hidden="true"></i></a>'+ext('https://github.com/bucanero/apollo-ps4','Project & setup'),apolloImage)
+    )+note('<p>Back up your saves before editing. Match the tool and save format to your installed game and console environment.</p>')),'#saves','Browse game saves');
 
   require('./playstation-nonmod-card-images.cjs').repairFiles(['console/ps4/emulators.html']);
   console.log('Built separate PS4 Payloads and Apps pages.');
