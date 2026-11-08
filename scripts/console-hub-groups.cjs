@@ -28,7 +28,7 @@ function apply(file,html){
  groups.games.sort((a,b)=>Number(a.includes('data-free-shops-card'))-Number(b.includes('data-free-shops-card')));
  const group=(id,title,cards)=>cards.length?`<div class="console-hub-group" id="${id}"><p class="console-hub-group-label">${title}</p><div class="games-grid console-hub-library">${cards.join('\n')}</div></div>`:'';
  const grouped=group('console-hub-mods','Game mods / Mod Menus',groups.mods)+group('console-hub-games','Game downloads &amp; free shops',groups.games)+desktopTools+group('console-hub-homebrew','Homebrew, emulators &amp; tools',groups.homebrew)+
-  (groups.setup.length?`<div class="console-hub-group console-hub-setup" id="console-hub-setup"><div class="console-hub-group-heading"><p class="console-hub-group-label">Set up your ${platform.toUpperCase()}</p><span>Check your installed firmware before choosing a route.</span></div><div class="games-grid console-hub-setup-grid">${groups.setup.join('\n')}</div></div>`:'');
+  (groups.setup.length?`<div class="console-hub-group console-hub-setup" id="console-hub-setup"><div class="console-hub-group-heading"><p class="console-hub-group-label">${platform==='ps4'?'Firmware &amp; jailbreak':'Set up your '+platform.toUpperCase()}</p><span>Check your installed firmware before choosing a route.</span></div><div class="games-grid console-hub-setup-grid">${groups.setup.join('\n')}</div></div>`:'');
  const updated=content.slice(0,firstGroup.index)+grouped+tail[0];
  return html.slice(0,section.start)+updated+html.slice(section.end);
 }

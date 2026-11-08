@@ -71,9 +71,6 @@ const ps5Resources = () => grid(
   resource('Game mods / Mod Menus', 'Call of Duty, GTA V and Red Dead Redemption 2 mod menus, screenshots and game-specific setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), require('./console-card-media.cjs').ps5Media.mods)
 );
 const ps4Resources = () => grid(
-  resource('Jailbreak', 'Choose a firmware-specific guide: the experimental 14.00 route or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
-  resource('Firmware downloads', 'Browse PS4 system-software update and recovery files by version in Darthsternie’s firmware archive.', link('/console/ps4/jailbreaks.html#firmware-downloads', 'Browse PS4 firmware'), '/assets/images/consoles/playstation.jpg'),
-  resource('GoldHEN', 'Official GoldHEN release resources and the separately supplied 14.00 HEN ISO, with firmware and download notes.', link('/console/ps4/goldhen.html', 'Open GoldHEN page'), softwareImage('goldhen', '/assets/images/consoles/playstation.jpg')),
   resource('Payloads & transfer tools', 'FTP servers, debugging payloads, kernel logs and firmware-specific loader resources.', link('/console/ps4/payloads.html', 'Browse payloads'), '/assets/images/expansion-ps4-ps5/payload-guest.png'),
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
   resource('Save tools', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/apps.html#apollo-save-tool-ps4', 'Browse save tools'), '/assets/images/consoles/apollo-save-tool.png'),
