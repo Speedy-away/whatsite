@@ -127,13 +127,16 @@ function buildPs4Software() {
     'Browse payloads'
   );
 
+  const {storeIntro,storeCard,storeCards}=require('./console-store-cards.cjs');
+  const itemzflowId='ps4-store-itemzflow-1-08';
   page(
     'console/ps4/apps.html',
     'PS4 Apps & Homebrew Tools',
     'Browse PS4 save tools, file managers, Homebrew Store, package installers, Payload Guest and emulator resources with downloads and setup links.',
     apolloImage,
     nav,
-    require('./console-store-cards.cjs').storeIntro('ps4') + intro('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
+    storeIntro('ps4') + intro('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
+      storeCard('ps4',itemzflowId),
       resource(
         'trophy_unlockers',
         'PS4 trophy unlocker collection with game-specific PKG files, a guide, TrophyUnlocker for Windows and PS4PKGViewer. Match each package to its game title ID and region.',
@@ -153,9 +156,9 @@ function buildPs4Software() {
         '/assets/images/emulators/retroarch.png'
       ),
       ...extraCards(expansion.apps)
-    )) + require('./console-store-cards.cjs').storeCards('ps4') +
+    )) + storeCards('ps4',{exclude:[itemzflowId]}) +
     section('more-tools', 'More PS4 resources', `<div class="guide-links">${link('/console/ps4/payloads.html', 'PS4 payloads')}${link('/console/ps4/site-launcher.html', 'Open site from PS4 Home')}${link('/console/mods/ps4/', 'Browse game mods')}${link('/console/ps4/', 'Back to PS4 Hub')}</div>`),
-    '#selected-apps',
+    '#apps',
     'Browse apps'
   );
 

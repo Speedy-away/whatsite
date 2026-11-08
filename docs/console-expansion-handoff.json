@@ -1,4 +1,18 @@
 {
+  "ps4HubFileZilla20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for GitHub Pages publication.",
+    "page": "console/ps4/index.html",
+    "changes": "Renamed the PS4 hub heading to PlayStation 4 and placed the FileZilla Client card immediately above Firmware & jailbreak using the official download page.",
+    "checks": "Verified the heading, card placement, single publisher link and repeat generation. Six existing hub and expansion integration tests passed."
+  },
+  "ps4ItemzflowMainApps20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for GitHub Pages publication.",
+    "page": "console/ps4/apps.html#ps4-store-itemzflow-1-08",
+    "changes": "Moved the existing Itemzflow 1.08 PS4 card from More PS4 apps & utilities into the main PS4 apps & homebrew tools grid and pointed Browse apps to that grid.",
+    "checks": "Generated and tracked HTML each show one card in the main grid with matching links. Existing PS4 store package checks passed. Download and firmware details were preserved."
+  },
   "consoleHubHostLinks20261108": {
     "date": "2026-11-08",
     "status": "Published in 5bf55a666542a45b2c9f671acf6fce5d61e902fe and verified on the live site.",

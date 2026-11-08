@@ -198,7 +198,7 @@ resource('KB-RPCS3 · PlayStation 3', 'Unofficial native PS5 RPCS3 port. The alp
 ['Test one title', 'Check controller input, audio and saves before expanding your library. Report problems to the console-port project.']
 ]) + sourceList([['https://github.com/Swordpdf/PS5SX2', 'PS5SX2 requirements'], ['https://github.com/BrinooTk/PS5X360', 'PS5X360 installation and compatibility']])), '#emulators', 'Browse emulators');
 
-page('console/ps4/index.html', 'PlayStation 4 Homebrew', 'Firmware-specific jailbreak resources, manual DNS, GoldHEN and native emulator ports for PlayStation 4 and PS4 Pro.', '/assets/images/consoles/playstation.jpg', ps4nav,
+page('console/ps4/index.html', 'PlayStation 4', 'Firmware-specific jailbreak resources, manual DNS, GoldHEN and native emulator ports for PlayStation 4 and PS4 Pro.', '/assets/images/consoles/playstation.jpg', ps4nav,
 hostSection('ps4') + require('./build-console-downloads.cjs').intro('ps4') +
 section('start', 'PS4 downloads', ps4Resources(), 'Game downloads, mods, apps, avatars, game saves and emulators for PS4.') +
 section('firmware-jailbreak', 'Firmware & jailbreak', grid(
