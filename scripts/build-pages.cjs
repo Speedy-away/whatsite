@@ -45,7 +45,7 @@ function sourceLinks(root) {
   if(!fs.existsSync(file))return new Map();
   return new Map(JSON.parse(fs.readFileSync(file,'utf8')).entries.map(entry=>[entry.local.slice(1),entry.url]));
 }
-function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0) {
+function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, preferredHeadroom = 0) {
   const karoBuild = path.join(root, 'docs/host-reviews/karo/build.json');
   const activeKaro = fs.existsSync(karoBuild) ? JSON.parse(fs.readFileSync(karoBuild, 'utf8')).runtime?.replace(/^\//, '').replace(/web\/$/, '') : null;
   const protectedFiles = new Set();
@@ -65,7 +65,7 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0) {
   for (const file of files) if (offloaded.has(file.name)) bytes -= file.bytes;
   for (const file of candidates) {
     if (offloaded.has(file.name)) continue;
-    if (bytes <= LIMIT) break;
+    if (bytes <= LIMIT - preferredHeadroom) break;
     offloaded.set(file.name, rawURL(file.name, revision));
     bytes -= file.bytes;
   }
@@ -107,8 +107,11 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const localization=hasLocales?require('./build-localized-pages.cjs'):null;
   const localizedContext=localization?localization.load(root):null;
   const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true}):{bytes:0};
-  const reservedBytes=localization?Math.max(0,estimatedLocales.bytes)+64*1024*1024:0;
-  const result = plan(root, names, revision, tree?.sizes || sizes,reservedBytes), rewrite = rewriter(result.offloaded);
+  const reservedBytes = Math.max(0, estimatedLocales.bytes);
+  // Keep space for URL rewrites when possible. The final artifact check
+  // enforces the size limit using the rendered pages and rewritten links.
+  const preferredHeadroom = localization ? 64 * 1024 * 1024 : 0;
+  const result = plan(root, names, revision, tree?.sizes || sizes, reservedBytes, preferredHeadroom), rewrite = rewriter(result.offloaded);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const runtimeFiles = Object.fromEntries([...result.offloaded].filter(([name]) => name.startsWith('hosts/runtime/')).map(([name, url]) => ['/' + name, url]));
