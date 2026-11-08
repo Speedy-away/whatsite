@@ -13,6 +13,11 @@
 .guide-note { border-left: 3px solid var(--accent-light); padding: 18px 22px; background: var(--bg-secondary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 24px 0; }
 .guide-note p + p { margin-top: 12px; }
 .guide-note strong { color: var(--text-primary); }
+.cod-regional-template .cod-regions { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; font-size: 1.08rem; font-weight: 600; }
+.cod-regional-template .cod-region { white-space: nowrap; }
+.cod-regional-template .cod-region button { padding: 2px 6px; color: var(--accent-light); font: inherit; font-size: .96em; background: transparent; border: 1px solid transparent; border-radius: 5px; cursor: pointer; }
+.cod-regional-template .cod-region button:hover, .cod-regional-template .cod-region button:focus-visible { color: var(--text-primary); background: rgb(255 255 255 / .06); border-color: var(--accent-light); outline: none; }
+.cod-regional-template .cod-region button[data-copy-state="copied"] { color: var(--text-primary); border-color: var(--accent-light); }
 .guide-steps { list-style: decimal; padding-left: 26px; max-width: 82ch; }
 .guide-steps li { padding: 0 0 18px 8px; color: var(--text-secondary); }
 .guide-steps strong { color: var(--text-primary); }

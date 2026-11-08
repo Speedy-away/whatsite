@@ -31,7 +31,8 @@ page('console/mods/ps4/call-of-duty/index.html','Call of Duty Mods for PS4','Bro
  section('games','Call of Duty games',grid(resource('Call of Duty: Black Ops 3','GSC Injector setup, MuzzMan’s menu pack, Zombies menus and Multiplayer downloads.',link(bo3,'Open Black Ops 3 mods'),cover))), '#games','Browse games');
 page('console/mods/ps4/call-of-duty/black-ops-3/index.html','Black Ops 3 Mods for PS4','PS4 Black Ops 3 GSC Injector setup and menu downloads: DayBreak, EnCoRe, Purple Lake, Frostbite, WhiteShadow8500, Synergy and MatrixMods.',cover,nav,
  section('browse','Choose a mode',`<nav class="guide-nav" aria-label="Black Ops 3 sections"><a href="#injector">GSC Injector</a><a href="#setup">Injector setup</a><a href="#zombies">Zombies</a><a href="#multiplayer">Multiplayer</a><a href="#both">MP &amp; ZM</a>${resources.some(menu=>menu.group==='other')?'<a href="#other">Other resources</a>':''}</nav>`)+
- section('injector','GSC Injector & menu pack',grid(...resources.filter(m=>['injector','packs'].includes(m.group)).map(card),...nextResources.map(item=>nextRenderer.card(item))))+
+ (resources.some(m=>m.offHost)?section('off-host','Off host',grid(...resources.filter(m=>m.offHost).map(card))):'')+
+ section('injector','GSC Injector & menu pack',grid(...resources.filter(m=>['injector','packs'].includes(m.group)&&!m.offHost).map(card),...nextResources.map(item=>nextRenderer.card(item))))+
  section('setup','GSC Injector setup · no PC injector needed',steps([
   ['Enable GoldHEN plugin loading','Use a compatible GoldHEN release with plugin support and enable loading in the Plugins Menu. Back up your existing <code>/data/GoldHEN/plugins.ini</code> before editing it.'],
   ['Copy the injector plugin','Put <code>T7_GSC_Injector.prx</code> in <code>/data/GoldHEN/plugins/</code> using your console file manager or file-transfer method.'],

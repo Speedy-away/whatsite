@@ -74,6 +74,12 @@ const itemsFor = game => included.filter(item => item.gameIds.includes(game.id))
 const visibleGames = data.games.filter(game => itemsFor(game).length || game.id === 'black-ops-3' && legacy.length);
 const nav = [['/console/mods/', 'Console Mods'], ['/console/mods/ps4/', 'PS4/PS5 Games'], [base, 'Call of Duty']];
 const multiNav = [...nav, [multiCod.indexUrl, 'MultiCOD · supported games']];
+const contentWithOffHost = items => {
+  const offHost = items.filter(item => item.offHost);
+  const regular = items.filter(item => !item.offHost);
+  const body = offHost.length ? grid(...offHost.map(card)) : '<p>No off-host resources are listed for this game yet.</p>';
+  return section('off-host', 'Off host', body) + gameContent(regular);
+};
 
 for (const game of visibleGames) {
   if (multiGameOnly && !multiGamePages.has(game.id)) continue;
@@ -83,7 +89,7 @@ for (const game of visibleGames) {
     const html = fs.readFileSync(target, 'utf8');
     const marker = '</div>\n<footer class="guide-footer">';
     assert(html.includes(marker), 'legacy BO3 content marker is missing');
-    const imported = items.length ? gameContent(items.map(item => ({...item, videos: []})), 'imported-') : '';
+    const imported = items.length ? gameContent(items.map(item => ({...item, videos: []}))) : '';
     fs.writeFileSync(target, html.replace(marker, imported + multiCod.gameContent(game.id) + marker));
     continue;
   }
@@ -91,7 +97,7 @@ for (const game of visibleGames) {
   page('console/mods/ps4/call-of-duty/' + game.slug + '/index.html', game.title + ' · PS4/PS5 Resources',
     game.resourceDescription || 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.',
     game.cover, [...multiNav, [base + game.slug + '/', game.title.replace(/^Call of Duty: /, '')]],
-    gameContent(items.map(item => ({...item, videos: []}))) + multiCod.gameContent(game.id),
+    contentWithOffHost(items.map(item => ({...item, videos: []}))) + multiCod.gameContent(game.id),
     '#content', 'Browse resources');
 }
 
