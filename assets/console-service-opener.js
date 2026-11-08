@@ -23,8 +23,10 @@
     return address;
   }
   function bind(doc) {
-    var form = doc.querySelector('[data-console-service-opener]');
-    if (!form) return;
+    var forms = doc.querySelectorAll('[data-console-service-opener]');
+    for (var i = 0; i < forms.length; i++) bindForm(forms[i]);
+  }
+  function bindForm(form) {
     var input = form.querySelector('input'), status = form.querySelector('[role="status"]');
     var platform = form.getAttribute('data-platform') === 'ps4' ? 'ps4' : 'ps5';
     var storageKey = 'whatsite.' + platform + '.service-address';

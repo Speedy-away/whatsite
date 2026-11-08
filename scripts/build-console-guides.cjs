@@ -46,7 +46,7 @@ const ps5nav = [['/console/ps5/', 'PS5 Hub'], ['/console/ps5/jailbreaks.html', '
 const ps4nav = [['/console/ps4/', 'PS4 Hub'], ['/console/ps4/jailbreaks.html', 'Jailbreak'], ['/console/ps4/goldhen.html', 'GoldHEN'], ['/console/ps4/downloads.html', 'Console Downloads'], ['/console/ps4/payloads.html', 'Payloads'], ['/console/ps4/apps.html', 'Apps'], ['/console/ps4/emulators.html', 'PS4 Emulators'], ['/console/ps4/save-tools.html', 'Game saves'], ['/console/mods/ps4/', 'Mods / Mod Menus']];
 for (const [platform, nav] of [['ps4', ps4nav], ['ps5', ps5nav]]) {
   if (platform === 'ps4') nav.splice(nav.findIndex(([url]) => url.endsWith('/apps.html')), 0, ['/console/ps4/transfer-tools.html', 'Transfer Tools']);
-  nav.push([`/console/${platform}/game-patches.html`, 'Game patches'], [`/console/${platform}/themes.html`, 'Themes'], [`/console/${platform}/site-launcher.html`, 'Site launcher']);
+  nav.push(['/console/ps4/game-patches.html'+(platform==='ps5'?'#native-ps5-patches':''), 'Game patches'], [`/console/${platform}/themes.html`, 'Themes'], [`/console/${platform}/site-launcher.html`, 'Site launcher']);
   nav.splice(2, 0, [`/console/${platform}/jailbreaks.html#firmware-downloads`, 'Firmware']);
 }
 const softwareImage = (id, fallback) => {

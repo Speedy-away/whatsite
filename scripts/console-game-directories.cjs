@@ -62,7 +62,7 @@ function apply(file, html, data = registry()) {
   if (current === destination && platform.id === 'ps5' && !html.includes('id="ps5-game-patches"')) {
     const {section, grid, resource, link} = require('./build-console-guides.cjs');
     const card = resource('Game Patches', 'Browse native PPSA patches and PS4 CUSA patches for backward compatibility. Search by title ID, update or patch type.',
-      link('/console/ps5/game-patches.html', 'Browse PS5 Game Patches'), '/assets/images/game-patches/bloodborne-official.jpg');
+      link('/console/ps4/game-patches.html#native-ps5-patches', 'Browse native PS5 patches'), '/assets/images/game-patches/bloodborne-official.jpg');
     html = html.replace(/<section\b[^>]*\bid="game-directories"[^>]*>/, opening => section('ps5-game-patches', 'PS5 game patches', grid(card)) + opening);
   }
   if (current === destination && platform.id === 'ps5' && !html.includes('id="free-shops"')) {

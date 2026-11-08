@@ -21,14 +21,31 @@ test('expansion retains all previous game, resource and download identities and 
 test('PPSA title IDs take precedence over source folder names for native PS5 placement',()=>{
  const game=data.games.find(game=>game.sourceFile==='GhostOfYotei.xml');assert.equal(game.sourcePath,'patches/xml/GhostOfYotei.xml');assert.equal(game.arch,'prospero');assert.deepEqual(game.platforms,['ps5']);
  for(const game of data.games.filter(game=>game.arch==='prospero'))assert.ok(game.titleIds.every(id=>id.startsWith('PPSA')));
- assert.ok(!fs.readFileSync('console/ps4/game-patches.html','utf8').includes('id="ghost-of-yotei"'));
- assert.ok(fs.readFileSync('console/ps5/game-patches.html','utf8').includes('id="ghost-of-yotei"'));
+ const html=fs.readFileSync('console/ps4/game-patches.html','utf8');
+ assert.match(html,/<article[^>]+id="ghost-of-yotei"[^>]+data-platforms="native"/);
 });
 test('all patch entries have real game artwork with recorded hashes and no SVG placeholders',()=>{
  const images=require('../../docs/ps4-ps5-game-patch-images.json').images;
  for(const game of data.games){assert.ok(game.image&&!game.image.endsWith('.svg'),game.title);const image=images[game.id];assert.ok(image,game.title);assert.equal(image.image,game.image);const bytes=fs.readFileSync('.'+game.image);assert.equal(bytes.length,image.bytes);assert.equal(hash(bytes),image.sha256);}
 });
-test('both platform hubs have a persistent game-patch entry and their catalogues expose every applicable game',()=>{
+test('both platform hubs point to one catalogue with every game exactly once',()=>{
  const apply=require('../console-game-patch-navigation.cjs').apply;
- for(const platform of ['ps4','ps5']){const file='console/'+platform+'/index.html',hub=fs.readFileSync(file,'utf8'),html=fs.readFileSync('console/'+platform+'/game-patches.html','utf8');assert.ok(hub.includes('data-game-patches-entry'));assert.ok(hub.includes('href="/console/'+platform+'/game-patches.html"'));assert.equal(apply(file,hub),hub);for(const game of data.games.filter(game=>game.platforms.includes(platform)))assert.ok(html.includes('id="'+game.id+'"'),game.id);assert.ok(html.includes('value="gameplay"'));assert.ok(html.indexOf('id="catalogue"')<html.indexOf('id="setup"'));}
+ const canonical='/console/ps4/game-patches.html';
+ for(const platform of ['ps4','ps5']){
+  const file='console/'+platform+'/index.html',hub=fs.readFileSync(file,'utf8');
+  assert.ok(hub.includes('data-game-patches-entry'));
+  assert.ok(hub.includes('href="'+canonical+(platform==='ps5'?'#native-ps5-patches':'')+'"'));
+  assert.equal(apply(file,hub),hub);
+ }
+ const html=fs.readFileSync('.'+canonical,'utf8');
+ const ids=[...html.matchAll(/<article class="patch-card" id="([^"]+)"/g)].map(match=>match[1]);
+ assert.equal(new Set(ids).size,ids.length);
+ for(const game of data.games)assert.ok(ids.includes(game.id),game.id);
+ assert.match(html,/data-patch-platform/);
+ assert.match(html,/value="gameplay"/);
+ assert.ok(html.indexOf('id="catalogue"')<html.indexOf('id="setup"'));
+ const redirect=fs.readFileSync('console/ps5/game-patches.html','utf8');
+ assert.match(redirect,/name="robots" content="noindex,follow"/);
+ assert.ok(redirect.includes('href="https://whatwhatboy.com'+canonical+'"'));
+ assert.doesNotMatch(redirect,/data-patch-card/);
 });
