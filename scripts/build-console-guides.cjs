@@ -76,7 +76,7 @@ const ps4Resources = () => grid(
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
   resource('Avatars', 'Change your PS4 avatar or browse a pack of more than 500 avatar images.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
   resource('Game saves', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/save-tools.html', 'Browse game saves'), '/assets/images/consoles/apollo-save-tool.png'),
-  resource('Themes', 'Browse PS4 themes, previews and installation instructions for console customization.', link('/console/ps4/themes.html', 'Browse themes'), '/assets/images/console-software/themes.png'),
+  resource('PS4 Themes', 'Search dynamic and static PS4 themes, browse theme archive links and learn how to set a USB wallpaper.', link('/console/ps4/themes.html', 'Browse PS4 themes'), '/assets/images/ps4-ps5/customization.svg'),
   resource('Emulators', 'PS2, PS3, Wii, GameCube, Wii U and Dreamcast projects, plus installation requirements and source links.', link('/console/ps4/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png')
 );
 function page(file, title, description, image, nav, content, primary = '#content', primaryLabel = 'Explore') {
