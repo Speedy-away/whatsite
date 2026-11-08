@@ -1,5 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),html=require('./localized-html.cjs');
+const {revision:languageRevision}=require('./language-loader.cjs');
 const configName='docs/i18n/page-translations.json';
 function load(root,{estimateSource=false,previewPages=null,previewLanguages=null}={}){
  const file=path.join(root,configName);if(!fs.existsSync(file))return null;
@@ -159,7 +160,7 @@ function render(ctx,page,source,code){
   return token.replace(/\bsrc=(["'])([^"']+)\1/i,(whole,quote,value)=>{
    const url=new URL(html.decode(value),page.canonical);
    if(url.origin!==html.origin||!/^\/(?:languages\/i18n\.js|assets\/(?:pc-ports|console-guide-dialog|console-setup-popups|console-topic-entry)\.js)$/.test(url.pathname))return whole;
-   url.searchParams.set('rev','20261104-static-seo');return 'src='+quote+html.escape(url.pathname+url.search)+quote;
+   url.searchParams.set('rev',url.pathname==='/languages/i18n.js'?languageRevision:'20261104-static-seo');return 'src='+quote+html.escape(url.pathname+url.search)+quote;
   });
  });
  output=html.mapTokens(output,token=>/^<\/head>/i.test(token)?html.alternateLinks(page.canonical)+'\n'+token:token);
