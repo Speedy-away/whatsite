@@ -1,4 +1,15 @@
 {
+  "consoleHubHostLinks20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the scoped PS4 and PS5 host card publication commit.",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps5/index.html"
+    ],
+    "changes": "Restored the catalog URLs for 11 PS4 and 8 PS5 third-party host cards. The first-party cards open their respective WWB Host selectors, and the PS5 DNS redirect card retains its PlayStation Store destination.",
+    "generator": "scripts/console-guide-host-links.cjs preserves third-party card destinations during generation and repairs cards previously rewritten to WWB Host.",
+    "checks": "Compared all 22 rendered cards with the catalog and tested repeat generation. The existing PS4 14.00 guide assertion still expects a WWB Host link where the current guide uses Afterglow. Some external hosts returned access errors during the live check, so their catalog URLs were retained without a live availability claim."
+  },
   "ps4ThemeLibrary20261108": {
     "date": "2026-11-08",
     "catalog": "docs/ps4-theme-link-catalog.json",

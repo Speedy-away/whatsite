@@ -37,15 +37,33 @@ function apply(file, html) {
       const url = href.replaceAll('&amp;', '&');
       if (/\sdownload(?:\s|=|$)/.test(attrs)) return all;
       const ownEntry = /^(?:https:\/\/(?:whatwhatboy\.com|speedy-away\.github\.io)(?:\/(?:WWB-HOST|wwb-host))?)?\/hosts\/(?:ps[45]\/)?$/.test(url);
+      const hostCard = /\sclass="(?:[^"]*\s)?guide-host(?:\s|")/.test(attrs);
+      if (hostCard) {
+        // Previously generated cards kept their real destination in this attribute.
+        const previous = attrs.match(/\sdata-original-host-url="([^"]+)"/);
+        const cardURL = (ownEntry && previous ? previous[1] : href).replaceAll('&amp;', '&');
+        const external = catalogue.platforms[platform].some(host => !host.firstParty && !host.requiresSourceDns && host.url === cardURL);
+        if (external) {
+          attrs = attrs.replace(/\shref="[^"]*"/, ' href="' + escape(cardURL) + '"');
+          if (ownEntry && previous) {
+            attrs = attrs.replace(previous[0], '').replace(/\saria-label="[^"]*"/, '');
+            content = content.replace('<span class="guide-host-destination">Open WWB Host →</span>', '');
+          }
+          if (!content.includes('class="guide-host-destination"')) {
+            content += '<span class="guide-host-destination">Open host →</span>';
+          }
+          return '<a' + attrs + '>' + content + '</a>';
+        }
+        if (!ownEntry) return all;
+      }
       if (!ownEntry && !launchURLs[platform].has(url)) return all;
       const target = ownEntry ? destinations[url.match(/\/hosts\/(ps[45])\//)?.[1] || platform] : destination;
       if (url === target) return all;
       attrs = attrs.replace(/\shref="[^"]*"/, ' href="' + target + '"');
       if (!ownEntry && !attrs.includes('data-original-host-url=')) attrs += ' data-original-host-url="' + escape(url) + '"';
       const label = 'whatwhatboy’s ' + platform.toUpperCase() + ' host';
-      if (/\bguide-host\b/.test(attrs)) {
+      if (hostCard) {
         attrs = attrs.replace(/\saria-label="[^"]*"/g, '') + ' aria-label="Open ' + label + ' and choose your exact firmware"';
-        if (!ownEntry) content += '<span class="guide-host-destination">Open WWB Host →</span>';
       } else if (!ownEntry) {
         // Keep the external-link icon, but do not display the old launch address.
         const visible = content.replace(/<[^>]*>/g, '').trim().replaceAll('&amp;', '&');
