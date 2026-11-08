@@ -1,4 +1,12 @@
 {
+  "ps4AvatarDiscovery20261108": {
+    "date": "2026-11-08",
+    "page": "console/ps4/avatars.html",
+    "status": "Included in the scoped PS4 Avatars publication commit. The main branch push triggers GitHub Pages.",
+    "changes": "Added visible card tags, resource search aliases, clearer page and social metadata, and a sitemap entry. Old avatars is a discovery term; individual pack contents are not verified.",
+    "generator": "scripts/build-ps4-software.cjs#buildPs4Avatars",
+    "checks": "All four original download URLs matched, search and metadata transforms were stable, and 18 focused tests passed."
+  },
   "gta5CatalogueCleanup20261104": {
     "date": "2026-11-04",
     "status": "Local changes; not published",
