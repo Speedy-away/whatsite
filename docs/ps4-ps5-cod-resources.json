@@ -2037,6 +2037,58 @@
         }
       ],
       "videos": []
+    },
+    {
+      "id": "bo2-infarcted-sprx",
+      "gameIds": [
+        "black-ops-2"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "Infarcted SPRX",
+      "version": "V1.0 · Game version 01.11",
+      "description": "Off host / Host recovery tool with HvH features, aimbot and ESP.",
+      "compatibilityText": "PS4 Black Ops 2 game version 01.11. Requires GoldHEN plugin loading and the supplied INFARCTEDBO2 data folder.",
+      "source": {
+        "postTitle": "User-supplied Infarcted SPRX",
+        "capturedAt": "2026-11-08"
+      },
+      "images": [
+        {
+          "original": "/assets/images/ps4-ps5/originals/bo2-infarcted-sprx.png",
+          "caption": "Infarcted SPRX gameplay screenshot supplied by the user."
+        }
+      ],
+      "downloads": [
+        {
+          "id": "bo2-infarcted-sprx",
+          "label": "Download Infarcted SPRX",
+          "url": "https://cdn.discordapp.com/attachments/1536285497155002440/1568989381048541254/INFARCTED_BO2_SPRX_V1.0_-_GAME_VERSION_V01.11.rar?ex=6af1d2ba&is=6af0813a&hm=dca8a37c18f3a61521d8f02077228e3d26d65090cfaa1df41b859c043b529553&",
+          "distribution": "include"
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "steps",
+          "title": "Installation",
+          "items": [
+            {
+              "title": "Enable the plugin",
+              "text": "Enable plugin loading with GoldHEN."
+            },
+            {
+              "title": "Install plugins.ini",
+              "text": "Put plugins.ini in /data/GoldHEN/plugins.ini."
+            },
+            {
+              "title": "Install the data folder",
+              "text": "Put the INFARCTEDBO2 folder in /data/."
+            }
+          ]
+        }
+      ],
+      "controls": [],
+      "videos": []
     }
   ]
 }
