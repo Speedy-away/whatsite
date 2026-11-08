@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "메뉴와 plugins.ini 다운로드",
     "Original menu file": "원본 메뉴 파일",
     "plugins.ini only": "plugins.ini만",
+    "Outfit editor": "의상 편집기",
+    "RTM Tools": "RTM 도구",
+    "Watch video guide": "동영상 가이드 보기",
+    "Setup & screenshot": "설정 및 스크린샷",
     "Phone": "휴대전화",
     "PS4 / PS5 Host": "PS4 / PS5 호스트",
     "Breadcrumb": "탐색 경로",
@@ -1322,7 +1326,9 @@
     "jailbreak": "탈옥",
     "{name} jailbreak": "{name} 탈옥",
     "multiplayer": "멀티플레이",
-    "{name} multiplayer": "{name} 멀티플레이"
+    "{name} multiplayer": "{name} 멀티플레이",
+    "outfit editor": "의상 편집기",
+    "{name} outfit editor": "{name} 의상 편집기"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ko", t);

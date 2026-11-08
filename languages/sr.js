@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "Преузми мени + plugins.ini",
     "Original menu file": "Оригинална датотека менија",
     "plugins.ini only": "Само plugins.ini",
+    "Outfit editor": "Уређивач одеће",
+    "RTM Tools": "RTM алати",
+    "Watch video guide": "Погледај видео водич",
+    "Setup & screenshot": "Подешавање и снимак екрана",
     "Phone": "Телефон",
     "PS4 / PS5 Host": "PS4 / PS5 хост",
     "Breadcrumb": "Путања навигације",
@@ -1322,7 +1326,9 @@
     "jailbreak": "Џејлбрејк",
     "{name} jailbreak": "{name} Џејлбрејк",
     "multiplayer": "Више играча",
-    "{name} multiplayer": "{name} Више играча"
+    "{name} multiplayer": "{name} Више играча",
+    "outfit editor": "Уређивач одеће",
+    "{name} outfit editor": "{name} Уређивач одеће"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("sr", t);

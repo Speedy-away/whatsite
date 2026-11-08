@@ -25,7 +25,7 @@ function improveHub(file, html) {
   });
   }
   const shortcuts = [
-    ['#console-hub-setup', 'Set up your console', 'Firmware & jailbreak'],
+    [platform === 'ps5' ? '/console/ps5/jailbreaks.html' : '#console-hub-setup', 'Set up your console', 'Firmware & jailbreak'],
     [platform === 'ps4' ? '/console/mods/ps4/' : '/console/ps5/mods.html', 'Find game mods', 'Menus, cheats & patches'],
     ['/console/' + platform + '/apps.html', 'Explore apps', 'Stores & homebrew'],
     ['/console/' + platform + '/downloads.html', 'Download files', 'Console, computer or phone']

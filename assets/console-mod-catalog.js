@@ -7,7 +7,15 @@
   const type = document.getElementById('modCatalogType');
   if (!search || !game || !count || !empty) return;
   const rows = [...document.querySelectorAll('.mod-catalog-entry')];
-  const normalize = value => value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9.]+/g, ' ').trim();
+  let marks, separators;
+  try {
+    marks = new RegExp('\\p{M}', 'gu');
+    separators = new RegExp('[^\\p{L}\\p{N}.]+', 'gu');
+  } catch {
+    marks = /[\u0300-\u036f]/g;
+    separators = /[^a-z0-9.\u00c0-\uffff]+/g;
+  }
+  const normalize = value => value.toLowerCase().normalize('NFKD').replace(marks, '').replace(separators, ' ').trim();
   const searchable = new Map(rows.map(row => [row, normalize(row.dataset.catalogSearch)]));
   function update() {
     const words = normalize(search.value).split(/\s+/).filter(Boolean);

@@ -2,12 +2,24 @@
 const fs=require('node:fs'),path=require('node:path'),scope=require('./site-public-pages.cjs');
 const {execFileSync}=require('node:child_process');
 function pageDates(date){
- const git=args=>execFileSync('git',['-c','core.safecrlf=false',...args],{cwd:scope.root,encoding:'utf8',maxBuffer:64*1024*1024,stdio:['ignore','pipe','pipe']});
+ const git=args=>execFileSync('git',['-c','core.safecrlf=false','-c','core.quotepath=false',...args],{cwd:scope.root,encoding:'utf8',maxBuffer:64*1024*1024,stdio:['ignore','pipe','pipe']});
  const dates=new Map();let current;
  for(const line of git(['log','--format=@@%cs','--name-only','--','*.html']).split(/\r?\n/)){
   if(line.startsWith('@@'))current=line.slice(2);else if(line&&!dates.has(line))dates.set(line,current);
  }
- for(const line of git(['diff','--name-only','HEAD','--','*.html']).split(/\r?\n/))if(line)dates.set(line,date);
+ // A cache revision alone does not change the page content described by lastmod.
+ const {apply:normalizeLoader}=require('./language-loader.cjs');
+ for(const patch of git(['diff','--no-color','--unified=0','HEAD','--','*.html']).split(/^diff --git /m)){
+  const file=patch.match(/^\+\+\+ b\/(.+)$/m)?.[1].trimEnd();
+  if(!file)continue;
+  const hunks=patch.split(/^@@ .*@@.*$/m).slice(1);
+  const changed=hunks.some(hunk=>{
+   const lines=hunk.split(/\r?\n/);
+   const content=marker=>normalizeLoader(lines.filter(line=>line.startsWith(marker)).map(line=>line.slice(1)).join('\n'));
+   return content('-')!==content('+');
+  });
+  if(changed)dates.set(file,date);
+ }
  return dates;
 }
 function refresh(write=false,{date=new Date().toISOString().slice(0,10),pageScope=scope,dates=pageDates(date)}={}){

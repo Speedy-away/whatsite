@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "הורדת תפריט + plugins.ini",
     "Original menu file": "קובץ התפריט המקורי",
     "plugins.ini only": "plugins.ini בלבד",
+    "Outfit editor": "עורך תלבושות",
+    "RTM Tools": "כלי RTM",
+    "Watch video guide": "צפייה במדריך הווידאו",
+    "Setup & screenshot": "הגדרה וצילום מסך",
     "Phone": "טלפון",
     "PS4 / PS5 Host": "מארח PS4 / PS5",
     "Breadcrumb": "נתיב ניווט",
@@ -1322,7 +1326,9 @@
     "jailbreak": "פריצת מערכת",
     "{name} jailbreak": "{name} פריצת מערכת",
     "multiplayer": "רב-משתתפים",
-    "{name} multiplayer": "{name} רב-משתתפים"
+    "{name} multiplayer": "{name} רב-משתתפים",
+    "outfit editor": "עורך תלבושות",
+    "{name} outfit editor": "{name} עורך תלבושות"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("he", t);

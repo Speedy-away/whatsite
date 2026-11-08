@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "メニューと plugins.ini をダウンロード",
     "Original menu file": "元のメニューファイル",
     "plugins.ini only": "plugins.ini のみ",
+    "Outfit editor": "衣装エディター",
+    "RTM Tools": "RTM ツール",
+    "Watch video guide": "動画ガイドを見る",
+    "Setup & screenshot": "設定とスクリーンショット",
     "Phone": "スマートフォン",
     "PS4 / PS5 Host": "PS4 / PS5 ホスト",
     "Breadcrumb": "パンくずリスト",
@@ -1322,7 +1326,9 @@
     "jailbreak": "脱獄",
     "{name} jailbreak": "{name} 脱獄",
     "multiplayer": "マルチプレイ",
-    "{name} multiplayer": "{name} マルチプレイ"
+    "{name} multiplayer": "{name} マルチプレイ",
+    "outfit editor": "衣装エディター",
+    "{name} outfit editor": "{name} 衣装エディター"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ja", t);

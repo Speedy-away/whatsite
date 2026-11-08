@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "Scarica menu + plugins.ini",
     "Original menu file": "File originale del menu",
     "plugins.ini only": "Solo plugins.ini",
+    "Outfit editor": "Editor degli abiti",
+    "RTM Tools": "Strumenti RTM",
+    "Watch video guide": "Guarda la guida video",
+    "Setup & screenshot": "Configurazione e schermata",
     "Phone": "Telefono",
     "PS4 / PS5 Host": "Host PS4 / PS5",
     "Breadcrumb": "Percorso di navigazione",
@@ -1322,7 +1326,9 @@
     "jailbreak": "Jailbreak",
     "{name} jailbreak": "{name} Jailbreak",
     "multiplayer": "Multigiocatore",
-    "{name} multiplayer": "{name} Multigiocatore"
+    "{name} multiplayer": "{name} Multigiocatore",
+    "outfit editor": "Editor degli abiti",
+    "{name} outfit editor": "{name} Editor degli abiti"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("it", t);

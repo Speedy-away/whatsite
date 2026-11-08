@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {root, pages, relativePath} = require('./site-public-pages.cjs');
 const tags = require('./page-search-tags.cjs');
-const searchCount = html => [...html.matchAll(/\sdata-(?:library-)?search\s*=\s*(["'])[\s\S]*?\1/gi)].length;
+const searchCount = html => [...html.matchAll(/\sdata-(?:(?:library|catalog)-)?search\s*=\s*(["'])[\s\S]*?\1/gi)].length;
 
 function main({check = false} = {}) {
   const report = {checkedAt: new Date().toISOString(), mode: check ? 'check' : 'write', visited: 0, skippedProtected: 0, changed: 0, searchAttributesBefore: 0, searchAttributesAfter: 0, pages: []};

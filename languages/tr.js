@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "Menü + plugins.ini indir",
     "Original menu file": "Orijinal menü dosyası",
     "plugins.ini only": "Yalnızca plugins.ini",
+    "Outfit editor": "Kıyafet düzenleyici",
+    "RTM Tools": "RTM araçları",
+    "Watch video guide": "Video rehberini izle",
+    "Setup & screenshot": "Kurulum ve ekran görüntüsü",
     "Phone": "Telefon",
     "PS4 / PS5 Host": "PS4 / PS5 sunucusu",
     "Breadcrumb": "Gezinti yolu",
@@ -1322,7 +1326,9 @@
     "jailbreak": "Jailbreak",
     "{name} jailbreak": "{name} Jailbreak",
     "multiplayer": "Çok oyunculu",
-    "{name} multiplayer": "{name} Çok oyunculu"
+    "{name} multiplayer": "{name} Çok oyunculu",
+    "outfit editor": "Kıyafet düzenleyici",
+    "{name} outfit editor": "{name} Kıyafet düzenleyici"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("tr", t);

@@ -17,7 +17,8 @@ const concepts=[
  ['Setup instructions',['setup instructions','setup'],/\bsetup(?: instructions)?\b/i],
  ['Firmware',['firmware'],/\bfirmware\b/i],
  ['Jailbreak',['jailbreak'],/\bjailbreak\b/i],
- ['Multiplayer',['multiplayer'],/\bmultiplayer\b/i]
+ ['Multiplayer',['multiplayer'],/\bmultiplayer\b/i],
+ ['Outfit editor',['outfit editor'],/\boutfit editors?\b/i]
 ].map(([key,aliases,pattern])=>({key,aliases,pattern}));
 function translations(table){
  const result={};

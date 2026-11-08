@@ -11388,5 +11388,15 @@
     "changes": "Grouped Game mods / Mod Menus, Game saves, Game downloads and Game patches under Games. More starts with Apps & utilities, followed by Avatars, PS4 Themes and Emulators. The Firmware & jailbreak heading and card pair are centered, with one column on narrow screens.",
     "downloads": "Renamed the hub card to Game downloads & fixes and reduced the height and width of the FPKG fixes and game patches cards on the PS4 Game Downloads page.",
     "status": "Prepared for publication through GitHub Pages."
+  },
+  "siteDiscoveryRefresh20261108": {
+    "date": "2026-11-08",
+    "scope": "Sitewide search tags, keywords, sitemap and existing languages",
+    "changes": [
+      "Refreshed 6487 search fields across 566 eligible HTML pages and hid card tags in CSS.",
+      "Added localized Arise RTM and RDR2 search terms and refreshed page keywords and structured data.",
+      "Updated the 497 canonical URLs and translation caches for 20 languages against the current main branch."
+    ],
+    "checks": "All 497 source hashes and sitemap routes match. The 20 translation caches validate. The focused metadata, search and language suites passed. The GitHub Pages workflow performs packaging and live deployment."
   }
 }

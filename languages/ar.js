@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "تنزيل القائمة + plugins.ini",
     "Original menu file": "ملف القائمة الأصلي",
     "plugins.ini only": "plugins.ini فقط",
+    "Outfit editor": "محرر الأزياء",
+    "RTM Tools": "أدوات RTM",
+    "Watch video guide": "شاهد دليل الفيديو",
+    "Setup & screenshot": "الإعداد ولقطة الشاشة",
     "Phone": "الهاتف",
     "PS4 / PS5 Host": "مضيف PS4 / PS5",
     "Breadcrumb": "مسار التنقل",
@@ -1322,7 +1326,9 @@
     "jailbreak": "جيلبريك",
     "{name} jailbreak": "{name} جيلبريك",
     "multiplayer": "متعدد اللاعبين",
-    "{name} multiplayer": "{name} متعدد اللاعبين"
+    "{name} multiplayer": "{name} متعدد اللاعبين",
+    "outfit editor": "محرر الأزياء",
+    "{name} outfit editor": "{name} محرر الأزياء"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ar", t);

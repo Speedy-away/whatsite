@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "Скачать меню + plugins.ini",
     "Original menu file": "Исходный файл меню",
     "plugins.ini only": "Только plugins.ini",
+    "Outfit editor": "Редактор нарядов",
+    "RTM Tools": "Инструменты RTM",
+    "Watch video guide": "Смотреть видеоруководство",
+    "Setup & screenshot": "Настройка и снимок экрана",
     "Phone": "Телефон",
     "PS4 / PS5 Host": "Хост PS4 / PS5",
     "Breadcrumb": "Навигационная цепочка",
@@ -1322,7 +1326,9 @@
     "jailbreak": "Джейлбрейк",
     "{name} jailbreak": "{name} Джейлбрейк",
     "multiplayer": "Мультиплеер",
-    "{name} multiplayer": "{name} Мультиплеер"
+    "{name} multiplayer": "{name} Мультиплеер",
+    "outfit editor": "Редактор нарядов",
+    "{name} outfit editor": "{name} Редактор нарядов"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ru", t);

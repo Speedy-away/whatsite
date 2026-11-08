@@ -9,7 +9,7 @@ for(const file of files(root)){
  const html=fs.readFileSync(file,'utf8');
  if(/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html)||/http-equiv="refresh"/i.test(html))continue;
  const relative=path.relative(root,file).replaceAll('\\','/');pages++;
- const ids=[...html.matchAll(/\bid="([^"]*)"/g)].map(m=>m[1]);
+ const ids=[...html.matchAll(/\sid="([^"]*)"/g)].map(m=>m[1]);
  if(new Set(ids).size!==ids.length)failures.push(relative+': duplicate IDs');
  if(/alert\(['"][^'"]*would be here/i.test(html))failures.push(relative+': placeholder action');
  for(const match of html.matchAll(/\b(?:href|src)="([^"]*)"/g)){

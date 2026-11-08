@@ -8,7 +8,7 @@ const scoped=gtaOnly||rdr2Only||fortniteOnly;
 const page=(file,...args)=>{if((!scoped)||(gtaOnly&&['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'].includes(file))||(rdr2Only&&file==='console/mods/ps4/rdr2/index.html')||(fortniteOnly&&file==='console/mods/ps4/index.html'))renderPage(file,...args);};
 const imported=require('./build-ps4-ps5-game-imports.cjs').createGameImports();
 const catalog=require('./console-mod-catalog.cjs');
-const {resourceTags}=require('./console-resource-tags.cjs');
+const {resourceTags,resourceTerms}=require('./console-resource-tags.cjs');
 const files=JSON.parse(fs.readFileSync('downloads/ps4/GTA5/manifest.json','utf8')).files;
 // Render each catalogue resource once; older download lists only fill missing entries.
 const gtaItems=imported.forGame('gta5');
@@ -56,7 +56,9 @@ function rdr2Card(menu){
  if(menu.resourceId)return imported.renderer.card(imported.forGame('rdr2').find(item=>item.id===menu.resourceId));
  const extra=imported.legacyEnhancement('rdr2',menu);
  const preview=extra.image||{src:'/assets/images/ps4-rdr2/'+menu.image,alt:menu.name+' mod menu in Red Dead Redemption 2 on PS4'};
- return `<article class="guide-resource" data-search="${esc(menu.name.toLowerCase()+' rdr2 red dead redemption 2 ps4')}"><a href="${esc(preview.src)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(menu.name)} screenshot"><img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy"></a><h3>${menu.name}</h3>${extra.resource?.compatibilityText ? `<p>${esc(extra.resource.compatibilityText)}</p>` : ''}${catalog.tagMarkup(resourceTags(extra.resource||{name:menu.name,gameIds:['rdr2'],category:'menu'}).slice(0,6))}<div class="guide-links">${extra.downloads || `<a href="${esc(menu.url)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
+ const item=extra.resource||{name:menu.name,gameIds:['rdr2'],category:'menu',tags:['PS4']};
+ const search=resourceTerms(item,menu.name).join(' ').toLowerCase();
+ return `<article class="guide-resource" data-search="${esc(search)}"><a href="${esc(preview.src)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(menu.name)} screenshot"><img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy"></a><h3>${menu.name}</h3>${extra.resource?.compatibilityText ? `<p>${esc(extra.resource.compatibilityText)}</p>` : ''}${catalog.tagMarkup(resourceTags(item).slice(0,6))}<div class="guide-links">${extra.downloads || `<a href="${esc(menu.url)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
 }
 if(!scoped)require('./build-mods-hub.cjs').buildModsHub();
 page('console/mods/ps4/index.html','PS4/PS5 Mods / Mod Menus','Browse the PS4/PS5 collection of GTA V, Red Dead Redemption 2, Call of Duty and Fortnite resources, with menu downloads, screenshots and setup guides.',image,nav,

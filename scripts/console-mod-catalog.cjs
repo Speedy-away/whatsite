@@ -22,9 +22,11 @@ function catalog() {
       url, search: resourceTerms(item, game.title).join(' ').toLowerCase()});
   }
   for (const item of [...cod.resources, ...other.data.resources].filter(item => item.publication === 'include' && item.category !== 'source')) {
+    const renderedItem = cod.resources.includes(item) ? {...item, videos: []} : item;
     for (const gameId of item.gameIds) {
       const game = games.find(game => game.id === gameId);
-      add(item, gameId, game.url + '#' + (renderer.hasDetails(item) ? 'guide-' : 'resource-') + item.id);
+      const anchor = !item.offHost && renderer.hasDetails(renderedItem) ? 'guide-' : 'resource-';
+      add(item, gameId, game.url + '#' + anchor + item.id);
     }
   }
   for (const item of bo3) add({...item, category: item.group === 'injector' ? 'injector' : item.group === 'packs' ? 'pack' : 'menu'}, 'black-ops-3', base + 'call-of-duty/black-ops-3/#guide-bo3-' + item.id);
@@ -49,7 +51,7 @@ function build() {
   const types = [...new Set(entries.map(entry => entry.category))];
   const typeFilter = `<label for="modCatalogType" style="display:block;margin-top:16px">Resource type</label><select id="modCatalogType" style="max-width:100%;padding:10px;margin-top:8px;color:inherit;background:var(--bg-primary);border:1px solid var(--border)"><option value="">All types</option>${types.map(type => `<option value="${esc(type)}">${esc(categoryLabels[type] || type)}</option>`).join('')}</select>`;
   const rows = entries.map(entry => `<article class="guide-resource mod-catalog-entry" data-catalog-search="${esc(entry.search)}" data-catalog-game="${entry.gameId}" data-catalog-category="${entry.category}">${require('./ps4-ps5-card-images.cjs').markup(entry.image)}<p>${esc(entry.game)}</p><h3>${esc(entry.name)}</h3>${entry.versions ? `<p>${esc(entry.versions)}</p>` : ''}${tagMarkup(entry.tags.slice(0, 6))}<div class="guide-links">${entryLink(entry)}</div></article>`);
-  page('console/mods/ps4/menus.html', 'PS4/PS5 Menu Directory', 'Search the imported PS4/PS5 game mod menus, scripts, injectors and tools by name, game and update.', '/assets/images/covers/cod-black-ops-3.jpg', [[base, 'PS4/PS5 Games'], [base + 'menus.html', 'Menu Directory']], section('menus', 'Find a menu or tool', controls.replace('<p id="modCatalogCount"', typeFilter + '<p id="modCatalogCount"') + grid(...rows) + '<p id="modCatalogEmpty" hidden>No entries match. Try a menu name or choose another game or resource type.</p>') + '<script defer src="/assets/console-mod-catalog.js?v=2"></script>', '#menus', 'Search menus');
+  page('console/mods/ps4/menus.html', 'PS4/PS5 Menu Directory', 'Search the imported PS4/PS5 game mod menus, scripts, injectors and tools by name, game and update.', '/assets/images/covers/cod-black-ops-3.jpg', [[base, 'PS4/PS5 Games'], [base + 'menus.html', 'Menu Directory']], section('menus', 'Find a menu or tool', controls.replace('<p id="modCatalogCount"', typeFilter + '<p id="modCatalogCount"') + grid(...rows) + '<p id="modCatalogEmpty" hidden>No entries match. Try a menu name or choose another game or resource type.</p>') + '<script defer src="/assets/console-mod-catalog.js?v=3"></script>', '#menus', 'Search menus');
   fs.mkdirSync(path.join(root, 'docs/seo'), {recursive: true});
   fs.writeFileSync(path.join(root, 'docs/seo/resource-tags.json'), JSON.stringify({schemaVersion: 1,
     games: games.map(game => ({id: game.id, title: game.title, aliases: gameAliases[game.id] || [], url: game.url})),

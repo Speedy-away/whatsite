@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "Unduh menu + plugins.ini",
     "Original menu file": "File menu asli",
     "plugins.ini only": "Hanya plugins.ini",
+    "Outfit editor": "Editor pakaian",
+    "RTM Tools": "Alat RTM",
+    "Watch video guide": "Tonton panduan video",
+    "Setup & screenshot": "Pengaturan dan tangkapan layar",
     "Phone": "Ponsel",
     "PS4 / PS5 Host": "Host PS4 / PS5",
     "Breadcrumb": "Jalur navigasi",
@@ -1322,7 +1326,9 @@
     "jailbreak": "Jailbreak",
     "{name} jailbreak": "{name} Jailbreak",
     "multiplayer": "Multipemain",
-    "{name} multiplayer": "{name} Multipemain"
+    "{name} multiplayer": "{name} Multipemain",
+    "outfit editor": "Editor pakaian",
+    "{name} outfit editor": "{name} Editor pakaian"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("id", t);
