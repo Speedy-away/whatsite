@@ -441,7 +441,7 @@
       "downloads": [
         {
           "id": "ps4-bo2-baguette-volt-111",
-          "label": "Download Baguette 1.11 by volt",
+          "label": "Download Baguette 1.11",
           "url": "https://cdn.discordapp.com/attachments/1559402129926651904/1567999240465027373/Baguette_1.11_by_volt.zip?ex=6af22d16&is=6af0db96&hm=5b28f7a42f626ea540a83255504896616ed607c8fc5b3bc1e5bd69d2fb3674e3&",
           "distribution": "include"
         },
@@ -449,18 +449,18 @@
           "id": "ps4-bo2-baguette-aimbot",
           "label": "Download Baguette Aimbot edition",
           "url": "https://cdn.discordapp.com/attachments/1559402129926651904/1567999240846971012/BAGUETTE_aimbot.zip?ex=6af22d17&is=6af0db97&hm=564858b4b28f7de73b9b9bd950e818dccd35815a1301f974e8d796b78ea84d87&",
-          "distribution": "include"
+          "distribution": "excluded"
         },
         {
           "id": "bo2-baguette",
           "label": "Download original Zeem port",
           "url": "https://cdn.discordapp.com/attachments/1559402129926651904/1559402130979164231/Baguette_SPRX_PS4_By_Zeem.zip",
-          "distribution": "include"
+          "distribution": "excluded"
         }
       ],
       "guideBlocks": [],
       "controls": [],
-      "compatibilityText": "Both new ZIPs include a CUSA57548 plugins.ini for Black Ops II. The older Zeem port is listed separately. Its source screenshot shows Black Ops III, so its game compatibility remains unconfirmed."
+      "compatibilityText": "The ZIP includes a CUSA57548 plugins.ini for Black Ops II."
     },
     {
       "id": "bo2-royal-injector",
