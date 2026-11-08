@@ -16949,6 +16949,66 @@
       "catalogueSection": "v157"
     },
     {
+      "id": "gta5-arise-rtm-1-57",
+      "name": "Arise-RTM-GTAV-PS4",
+      "category": "rtm",
+      "gameIds": [
+        "gta5"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "publication": "include",
+      "version": "v1.0.0 · GTA V Online 1.57",
+      "gameVersions": [
+        "1.57"
+      ],
+      "description": "Windows RTM tool by yAmethxst with an outfit editor, fast-run unlock, clothing-shop teleport and K/D editing.",
+      "compatibilityText": "PS4 firmware 14.00 with GoldHEN · GTA V 1.57 · EU CUSA00411 or US CUSA00419. The author tested EU. Requires a Windows PC on the same network with .NET Framework 4.8.1.",
+      "tags": [
+        "PS4",
+        "Outfit editor",
+        "Fast-run unlock"
+      ],
+      "keywords": [
+        "Arise RTM",
+        "GTA 5 Online 1.57",
+        "PS4 RTM tools",
+        "GTA 5 outfit editor",
+        "GTA V unlocks",
+        "clothing shop teleport",
+        "custom K/D",
+        "GoldHEN"
+      ],
+      "guideLabel": "Setup & screenshot",
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Setup",
+          "text": "The release uses a Windows PC and a PS4 on the same network. Enable FTP and Payload Loader in GoldHEN, start GTA V, then connect the desktop app to the PS4 and to the game. The ZIP includes the desktop app and the ps4debug payload. See the linked source repository for the full instructions."
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/arise-rtm.png",
+          "caption": "Arise RTM outfit editor and unlock tools for GTA V Online 1.57"
+        }
+      ],
+      "source": {
+        "repositoryUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4",
+        "releaseUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v1.0.0"
+      },
+      "downloads": [
+        {
+          "id": "gta5-arise-rtm-v1-0-0-zip",
+          "label": "Download v1.0.0 ZIP",
+          "filename": "Arise-RTM-GTAV-PS4.zip",
+          "url": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/download/v1.0.0/Arise-RTM-GTAV-PS4.zip",
+          "distribution": "include"
+        }
+      ]
+    },
+    {
       "id": "fortnite-fn-menu",
       "name": "FN Menu",
       "category": "menu",

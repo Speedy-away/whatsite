@@ -1,4 +1,14 @@
 {
+  "gta5AriseRtm20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the scoped Arise RTM publication commit.",
+    "page": "console/mods/ps4/gta5/index.html#rtm-tools",
+    "changes": "Added Arise-RTM-GTAV-PS4 under RTM Tools above GTA V 1.57, with the supplied screenshot, pinned v1.0.0 ZIP, source repository and menu-directory entry.",
+    "release": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v1.0.0",
+    "compatibility": "Publisher lists PS4 firmware 14.00 with GoldHEN, GTA V 1.57 EU CUSA00411 or US CUSA00419, and a Windows PC on the same network with .NET Framework 4.8.1. Publisher tested EU.",
+    "archive": "Verified the 909614-byte original v1.0.0 ZIP against the publisher SHA-256 fd7ffcc5bd12642730917dbd9ac35516e3a260cfc7280207250d02da3167bcbb and copied it under PS4/Games/GTA5/1.57/RTM Tools as a Windows helper. Its source, version, size and checksum are in the merged download inventory. The website links directly to the publisher ZIP.",
+    "checks": "Verified section order, source and ZIP links, exact screenshot bytes, menu-directory entry and prior GTA page links. Twenty-one focused tests passed. The working-copy legacy preservation check encountered an unrelated pending change to the BO1/BO2 ps4debug manifest entry."
+  },
   "ps4HubFileZilla20261108": {
     "date": "2026-11-08",
     "status": "Prepared for GitHub Pages publication.",

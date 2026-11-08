@@ -14,6 +14,7 @@ const files=JSON.parse(fs.readFileSync('downloads/ps4/GTA5/manifest.json','utf8'
 const gtaItems=imported.forGame('gta5');
 function gtaSection(item){
  if(item.category==='client')return 'servers';
+ if(item.category==='rtm')return 'rtm-tools';
  if(['script','cfg'].includes(item.category)||['gta5-script-loader-pack','gta5-random-scripts-pack'].includes(item.id))return 'scripts';
  if(item.gameVersions?.includes('1.57'))return 'v157';
  if(item.gameVersions?.includes('1.56'))return 'v156';
@@ -66,7 +67,8 @@ page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse North, Sheri
 section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card))), '#downloads','Browse downloads');
 page('console/mods/ps4/gta5/index.html','GTA V Mods for PS4','Browse menus by GTA V game update, CSC scripts, screenshots and supplied setup guides.',image,nav,
 require('./ps4-user-plugin-templates.cjs').sectionFor('gta5')+
-section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
+section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#rtm-tools">RTM Tools</a><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
+section('rtm-tools','RTM Tools',grid(...gtaCards('rtm-tools')))+
 section('v157','GTA V 1.57',grid(...unmatchedFiles.filter(f=>f.group==='157').map(downloadCard),...gtaCards('v157')))+
 section('v156','GTA V 1.56',grid(...unmatchedFiles.filter(f=>f.group==='156').map(downloadCard),...gtaCards('v156')))+
 section('older','Older GTA 5 versions',note('<p>Menus with confirmed older GTA V update requirements and no listed support for 1.56 or 1.57. Keep each download’s exact update pin.</p>')+grid(...gtaCards('older')))+
