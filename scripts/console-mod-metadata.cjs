@@ -1,6 +1,8 @@
 const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
+  'fortnite': ['Fortnite PS4 Mod Menu: FN Menu & GoldHEN Setup', 'Get BlueQ’s Fortnite FN Menu for PS4 (CUSA07669), with a bot aimbot and container ESP preview, plus a regional GoldHEN plugins.ini.',
+    ['Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite PS4 hack', 'BlueQ FN Menu', 'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference']],
   'black-ops-1': ['Black Ops 1 Console Menus, CFG & RTM Tools', 'Browse EnCoReV8, Discarded, Purple Kush, the BO1/BO2 GSC injector, CFG resources and RTM tools, with supplied previews and guide popups.'],
   'black-ops-2': ['Black Ops 2 Menus, Injectors & PS4 FPKG Fix', 'Browse BO2 mod menus, GSC injectors and RTM tools, plus the PS4 FPKG 1.11 patch for Multiplayer and Zombies loading crashes on CUSA57548.',
     ['PS4 FPKG fixes', 'BO2 1.11 crash fix', 'BO2 01.11 PKG', 'CUSA57548', 'Black Ops 2 Multiplayer crash fix', 'Black Ops 2 Zombies crash fix', 'BO2_ZMMP_CrashFix.pkg']],
@@ -32,7 +34,7 @@ function metadataByPage() {
     type: 'CollectionPage', items: entries.map(entry => ({name: entry.game + ' · ' + entry.name, url: entry.url}))};
   result.set('console/mods/ps4/menus.html', directory);
   result.set('console/mods/ps4/index.html', {title: 'PS4/PS5 Mods / Mod Menus | whatwhatboy',
-    description: `Browse ${games.length} game collections, including GTA V, RDR2 and Call of Duty. Find menus, injectors, tools and supplied guides with game-specific requirements.`,
+    description: `Browse ${games.length} game collections, including GTA V, RDR2, Call of Duty and Fortnite. Find menus, injectors, tools and guides with game-specific requirements.`,
     keywords: directory.keywords, type: 'CollectionPage'});
   const codGames = games.filter(game => game.url.includes('/call-of-duty/'));
   result.set('console/mods/ps4/call-of-duty/index.html', {title: 'Call of Duty Console Menus, Injectors & Guides | whatwhatboy',

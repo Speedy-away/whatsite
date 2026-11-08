@@ -26,13 +26,15 @@ function prepare() {
       local, sourceUrl: 'https://whatwhatboy.com' + local, provenance: 'User-supplied desktop file; original bytes preserved.',
       bytes: bytes.length, sha256, template: true};
   });
-  fs.writeFileSync(manifestPath, JSON.stringify({schemaVersion: 1, files}, null, 2) + '\n');
+  const existing = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')).files : [];
+  fs.writeFileSync(manifestPath, JSON.stringify({schemaVersion: 1, files: [...files, ...existing.filter(file => !definitions.some(game => game.id === file.id))]}, null, 2) + '\n');
   return files;
 }
 function sectionFor(id) {
   const file = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).files.find(file => file.id === id);
   if (!file) throw Error('Unknown game: ' + id);
-  const section = `<section class="section" id="goldhen-plugin-template"><div class="container"><div class="section-header"><h2 class="section-title">GoldHEN plugins.ini · ${esc(file.game)}</h2><p class="section-subtitle">EU / USA / JP title IDs</p></div><aside class="guide-note" data-search="goldhen plugins.ini ${esc(file.game.toLowerCase())} eu usa jp ${file.titleIds.join(' ').toLowerCase()}"><div class="guide-links"><a class="btn btn-primary" href="${esc(file.local)}" download="plugins.ini"><i class="fas fa-download" aria-hidden="true"></i> Download ${esc(file.game)} plugins.ini</a></div><p>${file.titleIds.map((titleId, index) => `<strong>${file.regions[index]}</strong>: <code>${titleId}</code>`).join(' · ')}</p><p>Template with all three regional sections. Add the exact plugin filenames after <code>/data/GoldHEN/plugins/</code> and match the section to your installed game’s title ID. Merge into <code>/data/GoldHEN/plugins.ini</code>, keeping your existing entries. Plugin files are downloaded separately.</p></aside></div></section>`;
+  const instructions = file.plugin ? `<p>Place <code>${esc(file.plugin)}</code> in <code>/data/GoldHEN/plugins/</code>. Back up <code>/data/GoldHEN/plugins.ini</code> and merge the entry for your installed title ID into it, keeping your existing entries.</p><p>${esc(file.compatibility)}</p>` : '<p>Template with all three regional sections. Add the exact plugin filenames after <code>/data/GoldHEN/plugins/</code> and match the section to your installed game’s title ID. Merge into <code>/data/GoldHEN/plugins.ini</code>, keeping your existing entries. Plugin files are downloaded separately.</p>';
+  const section = `<section class="section" id="goldhen-plugin-template"><div class="container"><div class="section-header"><h2 class="section-title">GoldHEN plugins.ini · ${esc(file.game)}</h2><p class="section-subtitle">${esc(file.regions.join(' / '))} title IDs</p></div><aside class="guide-note" data-search="goldhen plugins.ini ${esc(file.game.toLowerCase())} ${esc(file.regions.join(' ').toLowerCase())} ${file.titleIds.join(' ').toLowerCase()}"><div class="guide-links"><a class="btn btn-primary" href="${esc(file.local)}" download="plugins.ini"><i class="fas fa-download" aria-hidden="true"></i> Download ${esc(file.game)} plugins.ini</a></div><p>${file.titleIds.map((titleId, index) => `<strong>${file.regions[index]}</strong>: <code>${titleId}</code>`).join(' · ')}</p>${instructions}</aside></div></section>`;
   if (id !== 'gta5') return section;
   const button = section.match(/<div class="guide-links">[\s\S]*?<\/div>/)[0];
   return section.replace(button, '').replace('</aside>', '</aside>' + button);
@@ -49,7 +51,7 @@ function apply() {
 }
 async function archive() {
   const intake = require('./console-expansion-archive.cjs').createArchive();
-  const files = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).files;
+  const files = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).files.filter(file => definitions.some(game => game.id === file.id));
   const results = [];
   for (const file of files) {
     const bytes = fs.readFileSync(path.join(root, '.' + file.local));

@@ -22,6 +22,14 @@
       "url": "/console/mods/ps4/rdr2/"
     },
     {
+      "id": "fortnite",
+      "title": "Fortnite",
+      "aliases": [
+        "Fortnite"
+      ],
+      "url": "/console/mods/ps4/fortnite/"
+    },
+    {
       "id": "dying-light",
       "title": "Dying Light",
       "aliases": [
@@ -718,6 +726,7 @@
     "script": "Script",
     "cheat": "Cheat file",
     "reference": "DLC reference",
+    "fpkg": "FPKG fix",
     "source": "Source code"
   },
   "resources": [
@@ -796,14 +805,14 @@
       "url": "/console/mods/ps4/call-of-duty/black-ops-2/#guide-bo2-volt"
     },
     {
-      "name": "Baguette off host ported for ps4",
+      "name": "Baguette",
       "gameId": "black-ops-2",
       "category": "menu",
       "tags": [
         "Mod menu",
         "BO2"
       ],
-      "searchTerms": "baguette off host ported for ps4 call of duty: black ops 2 bo2 black ops 2 black ops ii bo 2 mod menu the source post is filed under bo2, but its screenshot shows black ops iii. game compatibility is unconfirmed.",
+      "searchTerms": "baguette call of duty: black ops 2 bo2 black ops 2 black ops ii bo 2 mod menu the source post is filed under bo2, but its screenshot shows black ops iii. game compatibility is unconfirmed.",
       "url": "/console/mods/ps4/call-of-duty/black-ops-2/#guide-bo2-baguette"
     },
     {
@@ -851,6 +860,20 @@
       ],
       "searchTerms": "jiggy menu v4.5 call of duty: black ops 2 bo2 black ops 2 black ops ii bo 2 mod menu",
       "url": "/console/mods/ps4/call-of-duty/black-ops-2/#guide-bo2-jiggy-v4-5"
+    },
+    {
+      "name": "Mags ZM/MP + GSC Injector",
+      "gameId": "black-ops-4",
+      "category": "menu",
+      "tags": [
+        "Mod menu",
+        "BO4",
+        "Zombies",
+        "Multiplayer",
+        "GSC"
+      ],
+      "searchTerms": "mags zm/mp + gsc injector call of duty: black ops 4 bo4 black ops 4 black ops iv bo 4 mod menu zombies multiplayer gsc ps4 · game update 1.26 zm mp",
+      "url": "/console/mods/ps4/call-of-duty/black-ops-4/#guide-bo4-mags-gsc"
     },
     {
       "name": "B33",
@@ -1236,6 +1259,33 @@
       ],
       "searchTerms": "hydra 2.2.0 · windows portable call of duty: ghosts ghosts cod ghosts call of duty ghosts rtm tool gsc windows guide pinned v2.2.0 · separate from the captured v1.0.0 entry publisher notes: wwii on ps4, multiplayer and zombies; ghosts multiplayer and extinction. no exact game update or cusa range is specified in these release notes.",
       "url": "/console/mods/ps4/call-of-duty/ghosts/#guide-hydra-wwii-v2-2-0"
+    },
+    {
+      "name": "Infarcted SPRX",
+      "gameId": "black-ops-2",
+      "category": "menu",
+      "tags": [
+        "Mod menu",
+        "BO2",
+        "Guide"
+      ],
+      "searchTerms": "infarcted sprx call of duty: black ops 2 bo2 black ops 2 black ops ii bo 2 mod menu guide v1.0 · game version 01.11 ps4 black ops 2 game version 01.11. requires goldhen plugin loading and the supplied infarctedbo2 data folder.",
+      "url": "/console/mods/ps4/call-of-duty/black-ops-2/#guide-bo2-infarcted-sprx"
+    },
+    {
+      "name": "Black Ops II FPKG 1.11 crash fix",
+      "gameId": "black-ops-2",
+      "category": "fpkg",
+      "tags": [
+        "FPKG fix",
+        "BO2",
+        "Zombies",
+        "Multiplayer",
+        "PS4",
+        "CUSA57548"
+      ],
+      "searchTerms": "black ops ii fpkg 1.11 crash fix call of duty: black ops 2 bo2 black ops 2 black ops ii bo 2 fpkg fix zombies multiplayer ps4 cusa57548 ps4 · game update 1.11 · cusa57548 the 28.9 mib package lists update 01.11 and title id cusa57548. the discord download link is time-limited. zm mp call of duty black ops ii ps4 fpkg fixes ps4 fake package patch bo2 1.11 crash fix bo2 01.11 pkg black ops 2 multiplayer crash fix black ops 2 zombies crash fix bo2 mp zm loading crash bo2_zmmp_crashfix.pkg",
+      "url": "/console/mods/ps4/call-of-duty/black-ops-2/#resource-bo2-fpkg-111-crash-fix"
     },
     {
       "name": "2TAKE1 PS4 beta test",
@@ -3570,6 +3620,24 @@
       "url": "/console/mods/ps4/gta5/#guide-gta5-synapse-1-57"
     },
     {
+      "name": "FN Menu",
+      "gameId": "fortnite",
+      "category": "menu",
+      "tags": [
+        "Mod menu",
+        "Fortnite",
+        "SPRX",
+        "Guide",
+        "Bot aimbot",
+        "Container ESP",
+        "PS4",
+        "GoldHEN",
+        "CUSA07669"
+      ],
+      "searchTerms": "fn menu fortnite mod menu sprx guide bot aimbot container esp ps4 goldhen cusa07669 discord snapshot 2026-11-08 ps4 · cusa07669 (eu / au) · game update and firmware unspecified blueq fn menu fortnite ps4 mod menu fortnite aimbot fortnite esp fortnite ps4 hack ps4 hack bot aimbot while aiming teleport to marker no recoil playstation 4 fn.sprx plugins.ini goldhen plugin setup regional plugin template cusa-07669 cusa07022 title id reference cusa-07022",
+      "url": "/console/mods/ps4/fortnite/#guide-fortnite-fn-menu"
+    },
+    {
       "name": "GSC Injector · no PC needed",
       "gameId": "black-ops-3",
       "category": "injector",
@@ -3749,6 +3817,18 @@
       ],
       "searchTerms": "luna call of duty: black ops 3 bo3 black ops 3 black ops iii bo 3 mod menu zombies multiplayer zm mp",
       "url": "/console/mods/ps4/call-of-duty/black-ops-3/#guide-bo3-luna"
+    },
+    {
+      "name": "Infarcted BO3 v1.1 SPRX",
+      "gameId": "black-ops-3",
+      "category": "menu",
+      "tags": [
+        "Mod menu",
+        "BO3",
+        "Guide"
+      ],
+      "searchTerms": "infarcted bo3 v1.1 sprx call of duty: black ops 3 bo3 black ops 3 black ops iii bo 3 mod menu guide",
+      "url": "/console/mods/ps4/call-of-duty/black-ops-3/#guide-bo3-infarcted-sprx"
     },
     {
       "name": "VirusMike BO3 AIO Pack V2",

@@ -46,6 +46,32 @@
       "bytes": 247,
       "sha256": "3cb62d566948f42dd4098af9c873aab8649f9fd43d888889f77473a7a352122e",
       "template": true
+    },
+    {
+      "id": "fortnite",
+      "game": "Fortnite",
+      "name": "plugins.ini",
+      "titleIds": [
+        "CUSA07669",
+        "CUSA07669",
+        "CUSA07022",
+        "CUSA07022"
+      ],
+      "regions": [
+        "EU",
+        "AU",
+        "USA",
+        "JP"
+      ],
+      "plugin": "fn.sprx",
+      "compatibility": "EU and Australia share CUSA07669, the title ID checked by this build. USA and Japan share CUSA07022, which is included for reference with the plugin disabled.",
+      "version": "Regional template 2026-11-08",
+      "local": "/downloads/ps4/plugin-templates/fortnite/19522833be01/plugins.ini",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/plugin-templates/fortnite/19522833be01/plugins.ini",
+      "provenance": "Site-authored template based on the supplied Discord configuration and the plugin title-ID check.",
+      "bytes": 325,
+      "sha256": "19522833be01c8291a60e1353a242053536fca37fc1c935133f566289ba8da4e",
+      "template": true
     }
   ]
 }
