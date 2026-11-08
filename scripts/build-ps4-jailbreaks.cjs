@@ -8,7 +8,7 @@ const jailbreakNav = [
   ['/console/ps4/', 'PS4 Hub'], [selector, 'Jailbreak'],
   [selector + '#firmware-downloads', 'Firmware'],
   [fourteen, '14.00'], [thirteen, '13.52 or lower'],
-  ['/console/ps4/goldhen.html', 'GoldHEN'], ['/console/ps4/downloads.html', 'Console Downloads']
+  ['/console/ps4/downloads.html', 'Console Downloads']
 ];
 
 function firmwareCard(url, title, description, image, tag, action) {
