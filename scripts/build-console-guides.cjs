@@ -66,6 +66,7 @@ const ps5Resources = () => grid(
   resource('Payloads', 'etaHEN, ShadowMountPlus, ELF loaders and kernel-log payloads for PS5.', link('/console/ps5/payloads.html', 'Browse payloads'), require('./console-card-media.cjs').ps5Media.payloads),
   resource('Transfer tools', 'Move files with PS5upload, ezRemote, FTP and web services. Check each tool’s console setup before connecting.', link('/console/ps5/transfer-tools.html', 'Browse transfer tools'), require('./console-card-media.cjs').ps5Media.transfers),
   resource('Apps & homebrew stores', 'PlaydenPS5, Orbit, ProsperoStore, payload managers, media players and save tools for PS5.', link('/console/ps5/apps.html', 'Browse apps'), require('./console-card-media.cjs').ps5Media.apps),
+  resource('Avatars', 'Browse the shared PS4/PS5 avatar tools and avatar packs.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
   resource('Emulators on PS5', 'PS2, GameCube, Wii, Wii U, Xbox, Xbox 360 and multi-system projects that run on a homebrew-enabled PS5.', link('/console/ps5/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png'),
   resource('Game mods / Mod Menus', 'Call of Duty, GTA V and Red Dead Redemption 2 mod menus, screenshots and game-specific setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), require('./console-card-media.cjs').ps5Media.mods)
 );
