@@ -59,6 +59,67 @@
       "local": "/downloads/ps4-ps5/standalone-game-patches/mindseye/01.017.000/PPSA28209.xml",
       "bytes": 3389,
       "sha256": "b877c9f8c13fedaa7e768a903d358c9d3af0eed53a8efaab96f48eaffc8cfe3c"
+    },
+    {
+      "game": "green-hell",
+      "title": "Green Hell",
+      "id": "PPSA21629",
+      "update": "01.004.000",
+      "source": "https://raw.githubusercontent.com/adnmix/playstation-game-patches/a20414dd31e79aff18f80d92eb3b414ec93e49af/patches/ps5/green-hell/PPSA21629_60FPS_1080p_1.0.xml",
+      "filename": "PPSA21629_60FPS_1080p_1.0.xml",
+      "summary": "60 FPS target and 1920×1080 internal resolution",
+      "setup": "Use CheatRunner. Copy the XML to /data/cheatrunner/patches/xml_prospero/, rescan, and apply the patch. Disable older or overlapping options first. The author's short performance samples do not establish a locked frame rate.",
+      "kinds": [
+        "fps",
+        "60fps",
+        "graphics"
+      ],
+      "platform": "ps5",
+      "author": "adnmix",
+      "patchVersion": "1.0",
+      "local": "/downloads/ps4-ps5/standalone-game-patches/green-hell/01.004.000/PPSA21629_60FPS_1080p_1.0.xml",
+      "bytes": 1658,
+      "sha256": "fa4bd1760b8f7bbaba1a4fbf57132399ad6d5e7c5bd3967f014bd65821e05b58"
+    },
+    {
+      "game": "the-medium",
+      "title": "The Medium",
+      "id": "PPSA03717",
+      "update": "01.003.000",
+      "source": "https://raw.githubusercontent.com/notmaj0r/CheatRunner_Patches/b4a99ec5da55acef7c9d942f901fb410fd12b21d/xml_prospero/PPSA03717.xml",
+      "filename": "PPSA03717.xml",
+      "summary": "60 FPS",
+      "setup": "Use CheatRunner. Copy the XML to /data/cheatrunner/patches/xml_prospero/, rescan, and configure the patch to apply at game boot.",
+      "kinds": [
+        "fps",
+        "60fps"
+      ],
+      "platform": "ps5",
+      "author": "maj0r",
+      "patchVersion": "1.0",
+      "local": "/downloads/ps4-ps5/standalone-game-patches/the-medium/01.003.000/PPSA03717.xml",
+      "bytes": 554,
+      "sha256": "dc9f02d0d9ec520c1366ec3b8d08b4f2af21d969e2126c02a97aab2ea38797f3"
+    },
+    {
+      "game": "the-matrix-awakens",
+      "title": "The Matrix Awakens",
+      "id": "PPSA05754",
+      "update": "01.000.002",
+      "source": "https://raw.githubusercontent.com/illusionyy/PS-Game-Patch/65914503123d4e643aa5aa0e8c720de8e99ef7e8/patches/xml_prospero/The_Matrix_Awakens_An_UnrealEngine5_Experience",
+      "filename": "PPSA05754.xml",
+      "summary": "60 FPS",
+      "setup": "Use PS Patch System and place the XML in /data/user/patches/xml_prospero/. The upstream definition has no file extension. This download adds the title-ID filename with .xml so the loader can find it.",
+      "kinds": [
+        "fps",
+        "60fps"
+      ],
+      "platform": "ps5",
+      "author": "Joey85",
+      "patchVersion": "1.0",
+      "local": "/downloads/ps4-ps5/standalone-game-patches/the-matrix-awakens/01.000.002/PPSA05754.xml",
+      "bytes": 462,
+      "sha256": "ddc13701de1add37b5da669e2f20d7cf492e0a21bcc01f0aeb3298b58a092ddc"
     }
   ]
 }

@@ -11154,6 +11154,18 @@
     "hub": "FileZilla moved above Homebrew; GTA V Installation card removed; Script Loader and Random Scripts grouped under Script resources & CSC menus.",
     "firmware14": "Updated from MODDED WARFARE video evdNQ1Vl2Bo: Afterglow browser route, GoldHEN 2.4b18.13, DNS 45.56.67.85 / 62.210.38.117, chapter links and preserved disc references."
   },
+  "nativePs5PerformancePatches20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for Pages publication and live download verification",
+    "page": "console/ps5/game-patches.html#native-ps5-patches",
+    "entries": [
+      "Green Hell PPSA21629 01.004.000: 60 FPS target and 1080p, by adnmix for CheatRunner.",
+      "The Medium PPSA03717 01.003.000: 60 FPS, by maj0r for CheatRunner. Apply at boot.",
+      "The Matrix Awakens PPSA05754 01.000.002: 60 FPS, by Joey85. Pinned upstream XML bytes served with a title-ID .xml filename."
+    ],
+    "archive": "Three byte-identical native PS5 XMLs saved to F: and verified against the tracked standalone-game-patches inventory.",
+    "checks": "Verified PPSA, AppVer, patch author and SHA-256 from each source file. All 23 focused catalogue and compatibility tests passed."
+  },
   "ps4GamePatchDiscovery20261108": {
     "date": "2026-11-08",
     "status": "Prepared for Pages publication and live download verification",
