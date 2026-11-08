@@ -24,21 +24,7 @@
       "pluginTemplate": true,
       "summary": "BlueQ’s FN Menu for PS4 (CUSA07669), with the SPRX download, GoldHEN setup and a regional plugins.ini template.",
       "description": "Download BlueQ’s FN Menu for Fortnite on PS4, view the supplied screenshot and follow the regional GoldHEN setup steps.",
-      "intro": "This FN Menu build checks for PS4 title ID CUSA07669, shared by Europe and Australia. The release post does not specify the Fortnite game update or PS4 firmware.",
-      "sourceLinks": [
-        [
-          "https://canary.discord.com/channels/1323163917928890388/1569043359895654582/1569043472713912371",
-          "BlueQ Discord release post"
-        ],
-        [
-          "https://gamefaqs.gamespot.com/ps4/211139-fortnite/data",
-          "Fortnite PS4 regional title IDs"
-        ],
-        [
-          "https://github.com/GoldHEN/GoldHEN_Plugins_Repository",
-          "GoldHEN plugin setup reference"
-        ]
-      ]
+      "intro": "This FN Menu build checks for PS4 title ID CUSA07669, shared by Europe and Australia. The release post does not specify the Fortnite game update or PS4 firmware."
     },
     {
       "id": "other-games",
@@ -16973,7 +16959,13 @@
       "version": "Discord snapshot 2026-11-08",
       "description": "BlueQ’s Discord release includes the Fortnite SPRX and a separate plugin configuration.",
       "compatibilityText": "PS4 · CUSA07669 (EU / AU) · Game update and firmware unspecified",
-      "tags": ["Bot aimbot", "Container ESP", "PS4", "GoldHEN", "CUSA07669"],
+      "tags": [
+        "Bot aimbot",
+        "Container ESP",
+        "PS4",
+        "GoldHEN",
+        "CUSA07669"
+      ],
       "keywords": [
         "BlueQ FN Menu",
         "Fortnite PS4 mod menu",
@@ -17000,9 +16992,18 @@
           "type": "steps",
           "title": "GoldHEN setup",
           "items": [
-            {"title": "Check the installed title ID", "text": "Use the active entry only for CUSA07669. The USA and Japan title ID, CUSA07022, is listed for reference with the plugin disabled."},
-            {"title": "Copy the plugin", "text": "Close Fortnite, then put fn.sprx in /data/GoldHEN/plugins/."},
-            {"title": "Merge the INI and restart", "text": "Back up /data/GoldHEN/plugins.ini. Copy the plugin path into your existing [CUSA07669] section, or add that section if it is missing. Enable plugin loading in the GoldHEN Plugins Menu and relaunch Fortnite."}
+            {
+              "title": "Check the installed title ID",
+              "text": "Use the active entry only for CUSA07669. The USA and Japan title ID, CUSA07022, is listed for reference with the plugin disabled."
+            },
+            {
+              "title": "Copy the plugin",
+              "text": "Close Fortnite, then put fn.sprx in /data/GoldHEN/plugins/."
+            },
+            {
+              "title": "Merge the INI and restart",
+              "text": "Back up /data/GoldHEN/plugins.ini. Copy the plugin path into your existing [CUSA07669] section, or add that section if it is missing. Enable plugin loading in the GoldHEN Plugins Menu and relaunch Fortnite."
+            }
           ]
         },
         {

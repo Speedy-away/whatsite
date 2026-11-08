@@ -124,8 +124,9 @@ function createGameImports({root = ROOT, data, files} = {}) {
         page(file, game.title + (game.platformLabel ? ' · ' + game.platformLabel : ' · PS4/PS5 Resources'), game.description || 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.', game.cover,
           [['/console/mods/', 'Console Mods'], ['/console/mods/ps4/', 'PS4/PS5 Games'], ...(game.parent ? [['/console/mods/ps4/other-games/', 'Other Games']] : []),
             ...(game.pluginTemplate ? [['#goldhen-plugin-template', 'GoldHEN plugins.ini']] : [])],
-          (game.intro ? section('compatibility', 'Compatibility first', note('<p>' + h(game.intro) + '</p>')) : '') + childCards + renderer.gameContent(items) +
+          (game.intro ? section('compatibility', 'Compatibility first', note('<p>' + h(game.intro) + '</p>')) : '') +
           (game.pluginTemplate ? require('./ps4-user-plugin-templates.cjs').sectionFor(game.id) : '') +
+          childCards + renderer.gameContent(items) +
           (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), '#content', 'Browse resources');
         if (game.keywords?.length || filter) {
           const target = path.join(root, file);
