@@ -25,31 +25,30 @@ function metadata(file, keywords, script = '') {
 }
 function ps4ThemeLibrary() {
   const themes = ps4Themes;
-  const themeKind = title => /\bDynamic\b/i.test(title) ? 'Dynamic' : /\bStatic\b/i.test(title) ? 'Static' : 'Unspecified';
-  const titleTags = [
-    [/\b4K\b/i, '4K'], [/\bAnime\b/i, 'Anime'], [/\bAbstract\b/i, 'Abstract'],
-    [/\bJapanese\b/i, 'Japanese'], [/\bAnniversary\b/i, 'Anniversary'], [/\b(?:Christmas|Halloween)\b/i, 'Holiday']
-  ];
-  const cards = themes.map(({title, url, thumbnail, preview}) => {
-    const kind = themeKind(title);
-    const tags = ['PS4', 'RAR', ...(kind === 'Unspecified' ? [] : [kind]), ...titleTags.filter(([pattern]) => pattern.test(title)).map(([, tag]) => tag)];
-    const imageLink = `<a class="themes-preview" href="${esc(preview)}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size preview of ${esc(title)}"><img src="${esc(thumbnail)}" alt="${esc(title)} theme preview" width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>`;
-    const download = `<a class="btn btn-primary" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="Download ${esc(title)}">Download <i class="fas fa-download" aria-hidden="true"></i></a>`;
-    return `<article class="themes-card" data-theme-card data-platform="ps4" data-kind="${kind}" data-search="${esc([title, 'PS4 PlayStation 4 theme download preview archive', ...tags].join(' '))}">${imageLink}<div class="themes-card-content"><div class="themes-badges">${tags.map(tag => `<span>${tag}</span>`).join('')}</div><h3 translate="no" data-page-keyword-exclude>${esc(title)}</h3><div class="themes-actions">${download}</div></div></article>`;
-  });
+  const gallery = `<div class="themes-gallery" data-theme-catalog="/docs/ps4-theme-link-catalog.json"></div>
+    <template data-theme-card-template><article class="themes-card" data-theme-card data-platform="ps4">
+      <a class="themes-preview" target="_blank" rel="noopener noreferrer"><img width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+      <div class="themes-card-content"><div class="themes-badges"></div><h3 translate="no"></h3><div class="themes-actions"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download <i class="fas fa-download" aria-hidden="true"></i></a></div></div>
+    </article></template>
+    <p class="themes-empty" data-theme-error role="status" hidden>Could not load the PS4 theme library. Reload the page to try again.</p>
+    <noscript><p>Enable JavaScript to browse the PS4 theme library.</p></noscript>`;
   return section('theme-library', 'PS4 theme library',
     note('<p>These entries link to external RAR archives. Check each source for the archive contents, license and console requirements before downloading or installing. The Dynamic and Static filters use labels from the published titles.</p>') +
-    `<form class="themes-filter" role="search" data-themes-filter hidden><label class="themes-search">Search PS4 themes<input type="search" name="q" placeholder="Title, game or style" data-theme-search autocomplete="off"></label><select name="console" data-theme-platform hidden><option value="">PS4</option></select><label>Type<select name="kind" data-theme-kind><option value="">All types</option><option>Dynamic</option><option>Static</option><option>Unspecified</option></select></label><button type="reset" class="themes-reset">Clear filters</button></form><p class="themes-count" data-theme-count role="status" aria-live="polite">${themes.length} themes</p><div class="themes-gallery">${cards.join('\n')}</div><p class="themes-empty" data-theme-empty hidden>No PS4 themes match these filters.</p><div class="guide-links"><button type="button" class="btn btn-outline" data-theme-more hidden>Show more themes</button></div>`,
+    `<form class="themes-filter" role="search" data-themes-filter hidden><label class="themes-search">Search PS4 themes<input type="search" name="q" placeholder="Title, game or style" data-theme-search autocomplete="off"></label><select name="console" data-theme-platform hidden><option value="">PS4</option></select><label>Category<select name="category" data-theme-category><option value="">All categories</option></select></label><label>Type<select name="kind" data-theme-kind><option value="">All types</option><option>Dynamic</option><option>Static</option><option>Unspecified</option></select></label><button type="reset" class="themes-reset">Clear filters</button></form><p class="themes-count" data-theme-count role="status" aria-live="polite">${themes.length} themes</p>${gallery}<p class="themes-empty" data-theme-empty hidden>No PS4 themes match these filters.</p><nav class="themes-pagination" aria-label="Theme library pages" data-theme-pagination hidden></nav>`,
     `Browse ${themes.length} PlayStation 4 theme listings by title, game or type.`);
 }
 
 function buildPs4Themes() {
   const file = 'console/ps4/themes.html';
+  const packageCard = (title, url, label) => {
+    const button = ext(url, label).replace('<a ', '<a class="btn btn-primary" ');
+    return resource(title, '', button).replace('<p></p>', '');
+  };
   page(file, 'PS4 Themes & Customization', `Search ${ps4Themes.length} PS4 theme listings, including dynamic and static themes, and learn how to set a custom USB wallpaper on PlayStation 4.`, image,
     [['/console/ps4/', 'PS4 Hub'], ['/console/ps4/downloads.html', 'PS4 Downloads'], ['/console/ps4/apps.html', 'Apps'], ['/console/ps4/themes.html', 'Themes'], ['/console/ps5/themes.html', 'PS5 Customization']],
     section('choose', 'Choose your customization route', grid(
-      resource('Custom wallpaper · stock PS4', 'An image from your USB drive becomes the background through the console’s own Themes settings. PS4 system software 5.50 introduced USB image import.', link('#wallpaper', 'Set a USB wallpaper'), image),
-      resource('PS4 theme library', 'Find dynamic, static and other PS4 theme listings by title. Check the source requirements for each archive.', link('#theme-library', 'Browse PS4 themes'), image))) +
+      resource('Custom wallpaper · stock PS4', 'An image from your USB drive becomes the background through the console’s own Themes settings. PS4 system software 5.50 introduced USB image import.', link('#wallpaper', 'Set a USB wallpaper')),
+      resource('PS4 theme library', 'Find dynamic, static and other PS4 theme listings by title. Check the source requirements for each archive.', link('#theme-library', 'Browse PS4 themes')))) +
     ps4ThemeLibrary() +
     section('wallpaper', 'Use your own USB wallpaper', steps([
       ['Prepare the image', 'Use a JPG or PNG. The official guide supports up to 1920 × 1080 on PS4 or 3840 × 2160 on PS4 Pro. Place it inside an <code>IMAGES</code> folder at the root of a FAT32 or exFAT USB drive.'],
@@ -57,15 +56,16 @@ function buildPs4Themes() {
       ['Apply the background', 'Preview the result and select Apply. The wallpaper route uses an image; a RAR archive or a theme PKG is a different file type.']
     ]) + sourceList([['https://blog.playstation.com/archive/2018/03/08/how-to-create-your-own-ps4-custom-wallpapers-via-usb-in-8-easy-steps', 'PlayStation: official USB wallpaper instructions']])) +
     section('pkg-themes', 'Supplied PS4 PKG theme sources', grid(
-      resource('PS4 PKG Themes folder', 'The user-supplied MEGA folder is preserved exactly. Its file list, package licenses and firmware requirements have not been verified, so no package in this folder is presented as a tested download.', ext('https://mega.nz/folder/aUwkma5Y#__-GrZjHvMnRzqmKEZgITQ', 'Open supplied MEGA folder'), image),
-      resource('PS2 Legacy Dynamic Theme reference', 'The supplied source links EP9000-CUSA07875_00-PSLEGACYTHEME001.pkg. MediaFire lists 12.88 MB. Distribution rights and activation requirements are unverified; use the source to check provenance before obtaining the package.', ext('https://sites.google.com/view/im-virusmike-exe/ps4-all-you-need/ps4-theme', 'Open supplied theme source'), image)) +
+      packageCard('PS4 PKG Themes folder', 'https://mega.nz/folder/aUwkma5Y#__-GrZjHvMnRzqmKEZgITQ', 'Open folder'),
+      packageCard('PS2 Legacy Dynamic Theme', 'https://www.mediafire.com/file/yckqpfsklap7bn1/EP9000-CUSA07875_00-PSLEGACYTHEME001.pkg/file', 'Download')) +
     note('<p>PS4 extended storage cannot store themes according to PlayStation’s storage documentation. Use an ordinary supported USB drive for importing an image or staging a package, and apply or install it through the relevant console feature.</p>')) +
     section('related', 'Files, installation and storage', `<div class="guide-links">${link('/console/ps4/downloads.html', 'Choose a download destination')}${link('/console/ps4/archive-files.html', 'Extract and install supported files')}</div>` + sourceList([['https://www.playstation.com/en-us/support/hardware/ps4-external-hdd-support/', 'PlayStation: PS4 extended-storage limitations']])), '#theme-library', 'Browse PS4 themes');
   const target = path.join(root, file);
   const html = fs.readFileSync(target, 'utf8')
     .replace('<body class="console-guide', '<body class="console-guide console-themes')
+    .replace(/<img src="\/assets\/images\/ps4-ps5\/customization\.svg"[^>]*>/, '')
     .replace('<a class="btn btn-outline" href="/pc/">PC</a>', '')
-    .replace('</head>', '<link rel="stylesheet" href="/assets/console-themes.css?v=2"><script defer src="/assets/console-themes.js?v=2"></script></head>');
+    .replace('</head>', '<link rel="stylesheet" href="/assets/console-themes.css?v=3"><script defer src="/assets/console-themes.js?v=4"></script></head>');
   fs.writeFileSync(target, html);
 }
 

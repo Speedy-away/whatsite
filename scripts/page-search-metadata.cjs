@@ -395,7 +395,7 @@ function transform(file, before, options = {}) {
   }
   const aliasModule = path.join(__dirname, 'page-search-tags.cjs');
   if (!noindex && !redirect && fs.existsSync(aliasModule)) {
-    const subjectHeadings = subject + ' ' + [...content.matchAll(/<h[123]\b(?![^>]*\bdata-page-keyword-exclude\b)[^>]*>([\s\S]*?)<\/h[123]>/gi)].map(m => plain(m[1])).join(' ');
+    const subjectHeadings = subject + ' ' + [...content.matchAll(/<h[123]\b[^>]*>([\s\S]*?)<\/h[123]>/gi)].map(m => plain(m[1])).join(' ');
     const discovery = require(aliasModule).aliasesFor(subjectHeadings);
     // Reserve a bounded share for functional search terms even on curated pages.
     const names = new Set(['freeshop', 'free shop', 'free store', 'free homebrew store', 'homebrew app store', 'source code downloads', 'source archives', 'save backups', 'save restore', 'file transfer tools', 'emulator cores', 'Lua script downloads']);
