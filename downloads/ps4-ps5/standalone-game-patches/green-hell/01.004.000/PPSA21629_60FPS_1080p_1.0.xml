@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <TitleID>
+    <ID>PPSA21629</ID>
+  </TitleID>
+  <Metadata Title="Green Hell" Name="60 FPS + 1080p - 1.0" Author="adnmix" PatchVer="1.0" AppVer="01.004.000" AppElf="eboot.bin" ImageBase="0x00400000" Note="PPSA21629 1.004.000 only. Target 60 FPS. Automatically requests real 1920x1080 from the native per-frame screen update and blocks 4K restoration. Close game before changing patches. Do not combine with previous versions. Maintained/tested by adnmix with OpenAI Codex assistance. Use at your own risk; no warranty. See repository testing limits.">
+    <PatchList>
+      <Line Type="bytes" Address="0x86a030" Value="c705ae3a8a013c000000c3" />
+      <Line Type="bytes" Address="0x210dae8" Value="3c000000" />
+      <Line Type="bytes" Address="0x89e1fc" Value="31ffffc7" />
+      <Line Type="bytes" Address="0x945177" Value="6a01415e90" />
+      <Line Type="bytes" Address="0x21fe630" Value="01000000" />
+      <Line Type="bytes" Address="0x17a1500" Value="c70526d1a50001000000c3" />
+      <Line Type="bytes" Address="0x1794b4f" Value="b801000000" />
+      <Line Type="bytes" Address="0x179f3ec" Value="41be0100000090" />
+      <Line Type="bytes" Address="0x1c6f000" Value="be80070000ba3804000039b7c000000075093997c40000007501c389770889570c44894714894f10c3" />
+      <Line Type="bytes" Address="0xd24400" Value="e9fbabf40090" />
+      <Line Type="bytes" Address="0x1c6f080" Value="81bfc000000080070000750c81bfc400000038040000741648b880070000380400004889470848c7471000000000554889e54157e94d5eb5ff" />
+      <Line Type="bytes" Address="0x17c4f00" Value="e97ba14a0090" />
+    </PatchList>
+  </Metadata>
+</Patch>

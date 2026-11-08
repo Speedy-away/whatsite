@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>PPSA05754</ID>
+    </TitleID>
+    <Metadata Title="The Matrix Awakens An Unreal Engine 5 Experience"
+              Name="60 fps"
+              Author="Joey85"
+              PatchVer="1.0"
+              AppVer="01.000.002"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0691b7f8" Value="31F6"/>
+        </PatchList>
+    </Metadata>
+</Patch>

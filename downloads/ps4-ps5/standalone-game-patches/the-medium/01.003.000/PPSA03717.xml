@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>PPSA03717</ID>
+    </TitleID>
+    <Metadata Title="The Medium"
+              Name="60 FPS"
+			  Note="Enable at game boot."
+              Author="maj0r"
+              PatchVer="1.0"
+              AppVer="01.003.000"
+              ImageBase="0x400000"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x57720b6" Value="0x36"/>
+            <Line Type="byte" Address="0x5882168" Value="0x31"/>
+        </PatchList>
+    </Metadata>
+</Patch>
