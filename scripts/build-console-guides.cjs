@@ -72,7 +72,7 @@ const ps5Resources = () => grid(
 );
 const ps4Resources = () => grid(
   resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png'),
-  resource('Game downloads', 'Browse PS4 game download directories and title-specific sources.', link('/console/ps4/game-downloads.html', 'Browse game downloads'), '/assets/images/console-software/ps4-games.png'),
+  resource('Game downloads', 'Browse PS4 game download directories and title-specific sources.', link('/console/ps4/game-downloads.html', 'Browse game downloads'), '/assets/images/consoles/playstation.jpg'),
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
   resource('Avatars', 'Change your PS4 avatar or browse a pack of more than 500 avatar images.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
   resource('Game saves', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/save-tools.html', 'Browse game saves'), '/assets/images/consoles/apollo-save-tool.png'),
@@ -266,4 +266,5 @@ if (require.main === module) {
   require('./build-xbox360-pages.cjs').buildXbox360Pages();
   require('./console-platform-routes.cjs').refreshConsoleRoutes();
 }
+
 
