@@ -20,6 +20,8 @@ body[data-catalog-page] .main-content .patch-card-grid { --catalog-fill:auto-fil
 .patch-card h3 { font-size:1.15rem; margin:8px 0 10px; }
 .patch-card p { font-size:.86rem; line-height:1.5; }
 .patch-file-picker { margin:14px 0; }
+.patch-quick-links { margin-bottom:20px; }
+.patch-tags { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 10px; padding:0; list-style:none; }
 @media(max-width:850px){ .patch-card>img { height:160px; max-height:160px; } }
 
 .console-guide .guide-hero { padding-block:30px 24px; }

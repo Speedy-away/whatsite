@@ -53,7 +53,15 @@ function apply(file, html, data = registry()) {
     const {section, grid, resource, link} = require('./build-console-guides.cjs');
     const card = resource("FPKG's Fixes", 'Browse PS4 FPKG patches, including the Black Ops II (BO2) 1.11 Multiplayer and Zombies crash fix for CUSA57548.',
       link('/' + fpkgFixesFile + '#resource-bo2-fpkg-111-crash-fix', "Browse FPKG's Fixes"), '/assets/images/covers/cod-black-ops-2.jpg');
-    html = html.replace(/<section\b[^>]*\bid="game-directories"[^>]*>/, opening => section('fpkg-fixes', 'PS4 game fixes', grid(card)) + opening);
+    const patches = resource('Game Patches', 'Browse PS4 patch XMLs, including Bloodborne’s 60 FPS patch, RDR2 FPS unlocks and other graphics and gameplay options.',
+      link('/console/ps4/game-patches.html', 'Browse Game Patches'), '/assets/images/game-patches/bloodborne-official.jpg');
+    html = html.replace(/<section\b[^>]*\bid="game-directories"[^>]*>/, opening => section('fpkg-fixes', 'PS4 game fixes and patches', grid(card, patches)) + opening);
+  }
+  if (current === destination && platform.id === 'ps5' && !html.includes('id="ps5-game-patches"')) {
+    const {section, grid, resource, link} = require('./build-console-guides.cjs');
+    const card = resource('Game Patches', 'Browse native PPSA patches and PS4 CUSA patches for backward compatibility. Search by title ID, update or patch type.',
+      link('/console/ps5/game-patches.html', 'Browse PS5 Game Patches'), '/assets/images/game-patches/bloodborne-official.jpg');
+    html = html.replace(/<section\b[^>]*\bid="game-directories"[^>]*>/, opening => section('ps5-game-patches', 'PS5 game patches', grid(card)) + opening);
   }
   if (current === destination && platform.id === 'ps5' && !html.includes('id="free-shops"')) {
     const existing = range(html, 'article', tag => /\bid="orbit-store"/.test(tag));
@@ -145,7 +153,7 @@ function buildFpkgFixes() {
   const fix = resources.find(item => item.id === 'bo2-fpkg-111-crash-fix');
   page(fpkgFixesFile, "FPKG's Fixes", 'Browse PS4 FPKG patches by game, update and title ID. The Black Ops II 1.11 fix targets crashes when loading Multiplayer or Zombies.',
     '/assets/images/covers/cod-black-ops-2.jpg',
-    [['/console/ps4/', 'PS4'], ['/console/ps4/game-downloads.html', 'Game downloads'],
+    [['/console/ps4/', 'PS4'], ['/console/ps4/game-downloads.html', 'Game downloads'], ['/console/ps4/game-patches.html', 'Game Patches'],
       ['#call-of-duty', 'Call of Duty'], ['#other-games', 'Other Games'], [blackOps2Mods, 'Black Ops II mods']],
     section('call-of-duty', 'Call of Duty', grid(card(fix))) +
     section('other-games', 'Other Games', '<p>No fixes are listed for other games yet.</p>'), '#call-of-duty', 'Browse fixes');

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>PPSA28209</ID>
+    </TitleID>
+    <Metadata Title="MindsEye"
+              Name="FPS Unlock"
+              Note="Targets up to 120 FPS on supported displays, otherwise up to 60 FPS. For 120 Hz, enable the HFR bit (0x40) in attribute3 of the game's sce_sys/param.json, preserving existing flags (e.g. change 4456448 to 4456512), or use ps-patch-system's SceShellCore attribute3 override. System/display settings must allow 120 Hz. Actual FPS depends on performance, typically 30-60 FPS on PS5 Pro. On the Pro you can also set the High-CPU BAPM mode bit (0x8000000) in attribute3 for up to 10% performance boost (e.g. 138674240)."
+              Author="Electry"
+              PatchVer="1.0"
+              AppVer="01.017.000"
+              ImageBase="0x00000000"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Use effective-refresh pacing: mov edi,0; nop.
+                 Original: 8bbb4c020000. ELF file offset: 0x055F50C4. -->
+            <Line Type="bytes" Address="0x055F10D4" Value="bf0000000090"/>
+            <!-- Bypass main-loop GetMaxTickRate: vxorps xmm0,xmm0,xmm0; nop; nop.
+                 Original: ff9028030000. ELF file offset: 0x02EB76AD. -->
+            <Line Type="bytes" Address="0x02EB36BD" Value="c5f857c09090"/>
+            <!-- NOP bEnableHFR gate; retain sceVideoOutIsOutputSupported check.
+                 Original: 0f8442ffffff. ELF file offset: 0x06F62E15. -->
+            <Line Type="bytes" Address="0x06F5EE25" Value="909090909090"/>
+            <!-- NOP rhi.EnableConsole120Fps selector; use detected refresh.
+                 Original: 7406. ELF file offset: 0x00014F4F. -->
+            <Line Type="bytes" Address="0x00010F5F" Value="9090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="MindsEye"
+              Name="Force PS5 Graphics Profile"
+              Note="Forces PS5 instead of PS5_Trinity on Pro. Mutually exclusive with Force PS5 Pro Graphics Profile (Experimental), select at most one profile patch."
+              Author="Electry"
+              PatchVer="1.0"
+              AppVer="01.017.000"
+              ImageBase="0x00000000"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- PS5DeviceProfileSelector: jz -> jmp after the Trinity-mode check.
+                 Default PS5 profile remains selected, even if UseTrinityDeviceProfiles is enabled.
+                 Original: 7460. ELF file offset: 0x077CEA65. -->
+            <Line Type="bytes" Address="0x077CAA75" Value="eb60"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="MindsEye"
+              Name="Force PS5 Pro Graphics Profile (Experimental)"
+              Note="Forces PS5_Trinity as the default device profile, including on base PS5. Mutually exclusive with Force PS5 Graphics Profile, select at most one profile patch. FPS/performance may worsen."
+              Author="Electry"
+              PatchVer="1.0"
+              AppVer="01.017.000"
+              ImageBase="0x00000000"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- PS5DeviceProfileSelector: point default-profile LEA at PS5_Trinity instead of PS5.
+                 Original: 488d351e39f700 (PS5). ELF file offset: 0x077CEA21. -->
+            <Line Type="bytes" Address="0x077CAA31" Value="488d35d795de00"/>
+        </PatchList>
+    </Metadata>
+</Patch>

@@ -2,7 +2,17 @@
   'use strict';
   var root=document.querySelector('[data-patch-catalogue]');if(!root)return;
   var search=root.querySelector('[data-patch-search]'),filter=root.querySelector('[data-patch-filter]'),count=root.querySelector('[data-patch-count]'),cards=root.querySelectorAll('[data-patch-card]');
-  function update(){var text=search.value.toLowerCase().trim(),kind=filter.value,visible=0;for(var i=0;i<cards.length;i++){var card=cards[i],matches=card.getAttribute('data-search').indexOf(text)!==-1&&(!kind||card.getAttribute('data-kinds').split(' ').indexOf(kind)!==-1);card.hidden=!matches;if(matches)visible++;}count.textContent=visible+' of '+cards.length+' games shown';}
+  function searchText(value){return value.toLowerCase().replace(/(\d)\s*fps\b/g,'$1fps').trim();}
+  function update(){
+    var terms=searchText(search.value).split(/\s+/),kind=filter.value,visible=0;
+    for(var i=0;i<cards.length;i++){
+      var card=cards[i],text=searchText(card.getAttribute('data-search'));
+      var matches=terms.every(function(term){return text.indexOf(term)!==-1;})&&(!kind||card.getAttribute('data-kinds').split(' ').indexOf(kind)!==-1);
+      card.hidden=!matches;
+      if(matches)visible++;
+    }
+    count.textContent=visible+' of '+cards.length+' patch entries shown';
+  }
   search.addEventListener('input',update);filter.addEventListener('change',update);update();
   var pickers=root.querySelectorAll('[data-patch-file-picker]');
   for(var j=0;j<pickers.length;j++)(function(picker){

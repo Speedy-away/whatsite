@@ -11154,6 +11154,21 @@
     "hub": "FileZilla moved above Homebrew; GTA V Installation card removed; Script Loader and Random Scripts grouped under Script resources & CSC menus.",
     "firmware14": "Updated from MODDED WARFARE video evdNQ1Vl2Bo: Afterglow browser route, GoldHEN 2.4b18.13, DNS 45.56.67.85 / 62.210.38.117, chapter links and preserved disc references."
   },
+  "ps4GamePatchDiscovery20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for Pages publication and live download verification",
+    "pages": [
+      "console/ps4/game-patches.html",
+      "console/ps4/game-downloads.html",
+      "console/ps4/fpkg-fixes.html",
+      "console/ps5/game-patches.html",
+      "console/ps5/game-downloads.html"
+    ],
+    "catalogue": "Reused all 167 PS4 entries and the pinned XML archive. Added adjacent Game Patches and FPKG's Fixes navigation, an archive download near search, featured patch links, visible patch type tags, a named 60 FPS filter, and game, title ID and update search aliases.",
+    "compatibility": "Bloodborne has a named 60 FPS option at update 01.09. Red Dead Redemption 2 has FPS unlocks for updates 01.29 and 01.32. Existing CUSA mappings, performance notes and archive SHA-256 were verified.",
+    "standalone": "Added Persona 3 Reload 60 FPS and motion-blur options as GoldHEN SHN on PS4 and an etaHEN/Itemzflow XML for CUSA37521 on PS5 backward compatibility. Added native MindsEye PPSA28209 update 01.017.000 with an FPS unlock and graphics profiles. Five exact files saved and SHA-256 verified on F: under the standalone-game-patches inventory. The CUSA36157 PS5 XMLs remain excluded because their internal update differs from their source-folder version.",
+    "checks": "All 23 focused patch, archive and directory tests passed. The two console hubs now have persistent Game Patches cards."
+  },
   "ps4Bo2FpkgCrashFix20261108": {
     "date": "2026-11-08",
     "status": "Prepared for GitHub Pages publication; live download verification follows deployment",

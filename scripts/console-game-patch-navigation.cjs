@@ -7,10 +7,13 @@ function apply(file,html){
   const crumbs='<a class="patch-back" href="/console/'+platform+'/">← Back to '+name+'</a><nav class="guide-breadcrumb patch-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/console/">Console</a> / <a href="/console/'+platform+'/">'+name+'</a> / <span aria-current="page">Game patches</span></nav>';
   html=html.replace(/<div class="guide-breadcrumb">[\s\S]*?<\/div>/,crumbs);
   html=html.replace(/<div class="hero-buttons">[\s\S]*?<\/div>/,hero=>hero.replace(/<a\b[^>]*href="\/pc\/"[^>]*>PC<\/a>/,''));
+  if(platform==='ps4') html=html.replace(/<nav\b[^>]*class="[^"]*\bguide-nav\b[^>]*>[\s\S]*?<\/nav>/,nav=>
+   nav.includes('href="/console/ps4/fpkg-fixes.html"')?nav:nav.replace('</nav>','<a href="/console/ps4/fpkg-fixes.html">FPKG\'s Fixes</a></nav>'));
  }
  html=html.replace(/<nav\b[^>]*class="[^"]*\bguide-nav\b[^>]*>[\s\S]*?<\/nav>/,nav=>nav.includes('href="'+href+'"')?nav:nav.replace('</nav>','<a href="'+href+'">Game patches</a></nav>'));
  if(!file.endsWith('/index.html')||html.includes('data-game-patches-entry'))return html;
  const card='<article class="guide-resource" data-game-patches-entry><img src="/assets/images/game-patches/bloodborne-official.jpg" alt="Bloodborne game artwork" loading="lazy"><h3>Game patches</h3><p>Browse every upstream game patch: FPS, graphics, gameplay and fixes. Check each title ID, game update and hardware requirement.</p><div class="guide-links"><a href="'+href+'">Browse '+platform.toUpperCase()+' game patches <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>';
- return html.replace(/<div class="games-grid console-hub-library">/,grid=>grid+card);
+ if(html.includes('<div class="games-grid console-hub-library">')) return html.replace('<div class="games-grid console-hub-library">',grid=>grid+card);
+ return html.replace(/<section\b[^>]*\bid="start"[^>]*>(?:(?!<\/section>)[\s\S])*?<div class="games-grid">/,start=>start+card);
 }
 module.exports={apply};
