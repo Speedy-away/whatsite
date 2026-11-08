@@ -482,6 +482,44 @@
           "caption": "Luna screenshot supplied with the post"
         }
       ]
+    },
+    {
+      "id": "infarcted-sprx",
+      "group": "menu",
+      "name": "Infarcted SPRX · BO3",
+      "description": "Off host / Host recovery tool with HvH features, aimbot and ESP for Black Ops 3 PS4 game version 1.33.",
+      "downloads": [
+        {
+          "label": "Download Infarcted SPRX",
+          "filename": "INFARCTED_V1.1_SPRX_BO3_PS4_Game_Version_v1.33.rar",
+          "url": "https://cdn.discordapp.com/attachments/1536285497155002440/1537770386278584360/INFARCTED_V1.1_SPRX_BO3_PS4_Game_Version_v1.33.rar?ex=6af1a0c6&is=6af04f46&hm=793f27ef772e6a2cc01517845206c1e5dd3c3ebe7a74e1af2c5997446b98e642&"
+        }
+      ],
+      "source": {
+        "postTitle": "User-supplied Infarcted SPRX BO3",
+        "capturedAt": "2026-11-08"
+      },
+      "image": "/assets/images/ps4-ps5/originals/bo3-infarcted-sprx.png",
+      "guideBlocks": [
+        {
+          "type": "steps",
+          "title": "Installation",
+          "items": [
+            [
+              "Enable the plugin",
+              "Enable plugin loading with GoldHEN."
+            ],
+            [
+              "Install plugins.ini",
+              "Put plugins.ini in /data/GoldHEN/plugins.ini."
+            ],
+            [
+              "Install the data folder",
+              "Put the INFARCTED folder in /data/."
+            ]
+          ]
+        }
+      ]
     }
   ],
   "schemaVersion": 1,
