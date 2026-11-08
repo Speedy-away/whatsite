@@ -18,7 +18,7 @@ const gameAliases = {
 };
 const categoryLabels = {
   menu: 'Mod menu', client: 'Server client', injector: 'Injector', pack: 'Menu pack', cfg: 'CFG',
-  rtm: 'RTM tool', script: 'Script', cheat: 'Cheat file', reference: 'DLC reference', source: 'Source code'
+  rtm: 'RTM tool', script: 'Script', cheat: 'Cheat file', reference: 'DLC reference', fpkg: 'FPKG fix', source: 'Source code'
 };
 const unique = values => [...new Map(values.filter(Boolean).map(value => [String(value).toLowerCase(), String(value)])).values()];
 function resourceTags(item) {

@@ -11131,6 +11131,28 @@
     "hub": "FileZilla moved above Homebrew; GTA V Installation card removed; Script Loader and Random Scripts grouped under Script resources & CSC menus.",
     "firmware14": "Updated from MODDED WARFARE video evdNQ1Vl2Bo: Afterglow browser route, GoldHEN 2.4b18.13, DNS 45.56.67.85 / 62.210.38.117, chapter links and preserved disc references."
   },
+  "ps4Bo2FpkgCrashFix20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for GitHub Pages publication; live download verification follows deployment",
+    "pages": [
+      "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+      "console/ps4/game-downloads.html",
+      "console/ps4/fpkg-fixes.html"
+    ],
+    "compatibility": "PS4 Black Ops II game update 1.11, title ID CUSA57548. The supplied fix targets Multiplayer and Zombies loading crashes. The package header and PARAM.SFO confirm the title ID and update.",
+    "sourceLinkExpiresAt": "2026-11-09T20:14:57Z",
+    "archive": {
+      "scope": "ps4-fpkg-fixes",
+      "name": "BO2_ZMMP_CrashFix.pkg",
+      "version": "1.11",
+      "bytes": 30343168,
+      "sha256": "27fbbf391f8ff2bfe33a46b9ac18c7a65d524f2d07b3192c2c91ad7c87914b0a",
+      "inventory": "docs/ps4-fpkg-fixes-private-inventory.json",
+      "indexStatus": "Scoped inventory saved and archived bytes verified. The combined archive index refresh is pending."
+    },
+    "discovery": "Added visible PS4, BO2, FPKG fix, CUSA57548, Multiplayer and Zombies tags on both cards. Added version, symptom and filename search aliases, page and social metadata, and a direct jump from PS4 Game Downloads. FPKG's Fixes groups this package under Call of Duty and has an empty Other Games section.",
+    "checks": "Verified both download cards, the PS4 Game Downloads link, sitemap entry and archive SHA-256. All 26 focused catalogue and deployment tests passed. The discovery update passed 25 focused metadata and catalogue tests."
+  },
   "ps4CodMediafire20261108": {
     "date": "2026-11-08",
     "pages": [

@@ -2,7 +2,8 @@ const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
   'black-ops-1': ['Black Ops 1 Console Menus, CFG & RTM Tools', 'Browse EnCoReV8, Discarded, Purple Kush, the BO1/BO2 GSC injector, CFG resources and RTM tools, with supplied previews and guide popups.'],
-  'black-ops-2': ['Black Ops 2 Console Menus & Injector Guides', 'Find BO2 menus including Jiggy, Vengeance, Baguette and BlazeD, plus shared GSC injectors, RTM tools and the supplied PC relay tutorial.'],
+  'black-ops-2': ['Black Ops 2 Menus, Injectors & PS4 FPKG Fix', 'Browse BO2 mod menus, GSC injectors and RTM tools, plus the PS4 FPKG 1.11 patch for Multiplayer and Zombies loading crashes on CUSA57548.',
+    ['PS4 FPKG fixes', 'BO2 1.11 crash fix', 'BO2 01.11 PKG', 'CUSA57548', 'Black Ops 2 Multiplayer crash fix', 'Black Ops 2 Zombies crash fix', 'BO2_ZMMP_CrashFix.pkg']],
   'black-ops-3': ['BO3 PS4 Menus: GSC Injector, Zombies & Multiplayer', 'Browse BO3 PS4 GSC Injector setup, DayBreak, EnCoRe, MuzzMan, Purple Lake, Frostbite, Luna and more, with downloads, previews and guide popups.'],
   'black-ops-4': ['Black Ops 4 PS4 Menus: B33, Atian & Lucy', 'Browse B33, Atian and Lucy resources for Black Ops 4, with supplied screenshots and downloads, plus captured DLC title-ID references.'],
   'ghosts': ['Ghosts PS4 Menus: MatrixMods, SilentShadow & HYDRA', 'Find Ghosts MatrixMods, SilentShadow v2/v3 and the separate HYDRA 2.2.0 resource, with previews, release details and DLC title-ID references.'],

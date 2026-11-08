@@ -6,6 +6,8 @@ const registry = () => JSON.parse(fs.readFileSync(path.join(root, 'docs/console-
 const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const normalized = file => (/^\/(?:console|downloads|pc|source-codes)\//.test(file) ? file : path.isAbsolute(file) ? path.relative(root, file) : file).replaceAll('\\', '/').replace(/^\/+/, '').split(/[?#]/)[0];
 const directoryPath = platform => platform.base + 'game-downloads.html';
+const fpkgFixesFile = 'console/ps4/fpkg-fixes.html';
+const blackOps2Mods = '/console/mods/ps4/call-of-duty/black-ops-2/';
 function orbitStoreCard() {
   const image = JSON.parse(fs.readFileSync(path.join(root, 'docs/console-software-images.json'), 'utf8')).orbit.image;
   return `<article class="guide-resource" id="orbit-store" data-search="orbit store 1.8.1 ps5 playstation 5 download manager game downloads homebrew store orbit_store.elf"><img src="${esc(image)}" alt="Orbit Store 1.8.1 interface on PS5" loading="lazy"><h3>Orbit Store 1.8.1</h3><p>PS5 download manager and store interface. Download the pinned ELF and launch it through Payload Manager or your compatible ELF loader.</p><div class="guide-links"><a href="https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf" download="orbit_store.elf">Download orbit_store.elf <i class="fas fa-download" aria-hidden="true"></i></a>${external('https://github.com/saawant12/orbit-store-ps5/releases/tag/v1.8.1', '1.8.1 release')}<a href="/console/ps5/apps.html#install">Setup guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
@@ -47,6 +49,12 @@ function apply(file, html, data = registry()) {
   });
   if (!hasNav) html = html.replace(/<main\b[^>]*>|<div\b(?=[^>]*\bid="main-content")[^>]*>/i, main => main + `<div class="container"><nav class="guide-nav" aria-label="${esc(platform.title)} game downloads">${item}</nav></div>`);
   const current = '/' + normalized(file), hubFile = platform.hub.endsWith('/') ? platform.hub + 'index.html' : platform.hub;
+  if (current === destination && platform.id === 'ps4' && !html.includes('id="fpkg-fixes"')) {
+    const {section, grid, resource, link} = require('./build-console-guides.cjs');
+    const card = resource("FPKG's Fixes", 'Browse PS4 FPKG patches, including the Black Ops II (BO2) 1.11 Multiplayer and Zombies crash fix for CUSA57548.',
+      link('/' + fpkgFixesFile + '#resource-bo2-fpkg-111-crash-fix', "Browse FPKG's Fixes"), '/assets/images/covers/cod-black-ops-2.jpg');
+    html = html.replace(/<section\b[^>]*\bid="game-directories"[^>]*>/, opening => section('fpkg-fixes', 'PS4 game fixes', grid(card)) + opening);
+  }
   if (current === destination && platform.id === 'ps5' && !html.includes('id="free-shops"')) {
     const existing = range(html, 'article', tag => /\bid="orbit-store"/.test(tag));
     if (existing) html = html.slice(0, existing.start) + orbitStoreCard() + html.slice(existing.end);
@@ -130,10 +138,23 @@ function updatePublicPages({check = false} = {}) {
   }
   return {checked, changed, mode: check ? 'check' : 'write'};
 }
+function buildFpkgFixes() {
+  const {page, section, grid} = require('./build-console-guides.cjs');
+  const {card} = require('./console-resource-renderer.cjs').createResourceRenderer();
+  const {resources} = require('../docs/ps4-ps5-cod-resources.json');
+  const fix = resources.find(item => item.id === 'bo2-fpkg-111-crash-fix');
+  page(fpkgFixesFile, "FPKG's Fixes", 'Browse PS4 FPKG patches by game, update and title ID. The Black Ops II 1.11 fix targets crashes when loading Multiplayer or Zombies.',
+    '/assets/images/covers/cod-black-ops-2.jpg',
+    [['/console/ps4/', 'PS4'], ['/console/ps4/game-downloads.html', 'Game downloads'],
+      ['#call-of-duty', 'Call of Duty'], ['#other-games', 'Other Games'], [blackOps2Mods, 'Black Ops II mods']],
+    section('call-of-duty', 'Call of Duty', grid(card(fix))) +
+    section('other-games', 'Other Games', '<p>No fixes are listed for other games yet.</p>'), '#call-of-duty', 'Browse fixes');
+  return fpkgFixesFile;
+}
 function build() {
   const data = registry();
   const guides = require('./build-console-guides.cjs');
-  const files = [];
+  const files = [buildFpkgFixes()];
   for (const platform of data.platforms) {
     // This route has its own ready-file library builder. Preserve that page;
     // generic provider rendering must not replace its games and setup details.
@@ -174,5 +195,5 @@ function build() {
   const integration = updatePublicPages();
   return {platforms: data.platforms.length, platformLinks: data.platforms.reduce((n, p) => n + p.providers.length, 0), files, integration};
 }
-module.exports = {registry, directoryPath, platformFor, protectedFile, apply, updatePublicPages, build, orbitStoreCard};
+module.exports = {registry, directoryPath, platformFor, protectedFile, apply, updatePublicPages, build, buildFpkgFixes, orbitStoreCard};
 if (require.main === module) console.log(JSON.stringify(process.argv.includes('--check') ? updatePublicPages({check: true}) : build(), null, 2));
