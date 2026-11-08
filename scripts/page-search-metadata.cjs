@@ -287,6 +287,12 @@ function contextualTerms(relative, content) {
   if (relative === 'console/ps4/apps.html') {
     terms.push('PS4 apps', 'PS4 homebrew utilities', 'Apollo Save Tool', 'PS4-Xplorer', 'PS4 save manager', 'PS4 file manager');
   }
+  if (relative === 'console/ps4/save-tools.html') {
+    const {saves} = require('../docs/ps4-game-saves.json');
+    terms.push('PS4 save downloads', 'PS4 savedata', 'PlayStation 4 game saves', 'Apollo Save Tool',
+      'CUSA title ID', '100% completion saves', 'New Game Plus saves', 'starter saves', 'modded PS4 saves',
+      ...saves.map(save => save.game), 'GTA 5', 'RDR2');
+  }
   if (/^console\/mods\//.test(relative)) {
     terms.push('console game resources');
   }
