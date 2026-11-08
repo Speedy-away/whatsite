@@ -90,7 +90,9 @@ function buildPs4Software() {
   page('console/ps4/avatars.html','PS4 Avatars','PS4 avatar tools and a pack of more than 500 avatar images.','/assets/images/console-software/ps4-avatars.png',nav,
     section('downloads','PS4 avatars',grid(
       resource('Avatar Changer','Install the PS4 Avatar Changer package, then follow its on-console instructions and firmware requirements.',ext('https://pkg-zone.com/download/ps4/LAPY20015/latest','Download Avatar Changer')),
-      resource('Avatars pack 500+','A collection of more than 500 avatar images. Download the pack and review its included instructions before transferring files to your console.',ext('https://mega.nz/file/vYUizRzb#DwjEMLJIjuWGSGb2UVcn_Wa6kNcOxROK9oCxfE_ciaQ','Download avatars pack 500+'))
+      resource('Avatars pack 500+','A collection of more than 500 avatar images. Download the pack and review its included instructions before transferring files to your console.',ext('https://mega.nz/file/vYUizRzb#DwjEMLJIjuWGSGb2UVcn_Wa6kNcOxROK9oCxfE_ciaQ','Download avatars pack 500+')),
+      resource('Extra Avatars - Anime','Additional anime-themed PS4 avatar package.',ext('https://dn721301.ca.archive.org/0/items/ps4-jb-avatars/Extra%20Avatars%20-%20Anime.pkg','Download Anime avatars')),
+      resource('Extra Avatars - PSN','Additional PSN avatar package for PS4.',ext('https://ia800402.us.archive.org/2/items/ps4-jb-avatars/Extra%20Avatars%20-%20PSN.pkg','Download PSN avatars'))
     )+note('<p>These links are publisher or user-supplied downloads. Match the package and installation method to your existing PS4 homebrew environment. The avatar pack is separate from the Avatar Changer application.</p>')),'#downloads','Download avatars');
 
   require('./playstation-nonmod-card-images.cjs').repairFiles(['console/ps4/emulators.html']);
