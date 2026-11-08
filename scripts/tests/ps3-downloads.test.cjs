@@ -83,7 +83,10 @@ test('large PS3 originals use their source while smaller extracted builds stay d
     const originals = entries.flatMap(entry=>entry.files||[]).filter(file=>file.bytes>=MAX_MIRROR_BYTES);
     assert.ok(originals.length, id+' keeps the original archive metadata');
     const html = source.card(item);
-    assert.match(html,/Original large download via Discord/);
+    assert.doesNotMatch(html,/Original large download via Discord/);
+    const publisherFiles = item.downloads.filter(download=>/^https:\/\/(?:www\.mediafire\.com|mega\.nz)\//.test(download.url));
+    assert.ok(publisherFiles.length, id+' has a non-Discord download');
+    for (const download of publisherFiles) assert.ok(html.includes('href="'+download.url+'"'));
     assert.ok(html.includes(item.source));
     for (const file of originals) {
       assert.equal(source.localFile(file), false);

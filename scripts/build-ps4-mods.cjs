@@ -64,6 +64,7 @@ require('./build-console-downloads.cjs').intro('ps4')+section('games','Available
 section('menu-directory','Find a specific menu',`<p>Search every imported game, menu, script and tool, including older GTA V builds.</p><div class="guide-links">${link('/console/mods/ps4/menus.html','Search the menu directory')}</div>`)+
 section('requirements','Before choosing a mod',note('<p>Match the console firmware, homebrew enabler, game title ID and game update separately. A menu built for GTA V 1.57 is not automatically compatible with 1.56, and the PS4 14.00 jailbreak does not establish GoldHEN plugin support.</p>')), '#games','Browse games');
 page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse North, Sheriff, Havana and Oyster resources for Red Dead Redemption 2, with supplied screenshots and videos.',rdr2image,nav.slice(0,5),
+require('./ps4-user-plugin-templates.cjs').sectionFor('rdr2')+
 section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card))), '#downloads','Browse downloads');
 page('console/mods/ps4/gta5/index.html','GTA V Mods for PS4','Browse menus by GTA V game update, CSC scripts, screenshots and supplied setup guides.',image,nav,
 require('./ps4-user-plugin-templates.cjs').sectionFor('gta5')+

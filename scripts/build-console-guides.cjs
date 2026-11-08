@@ -202,30 +202,9 @@ page('console/ps4/index.html', 'PlayStation 4', 'Firmware-specific jailbreak res
 hostSection('ps4') + require('./build-console-downloads.cjs').intro('ps4') +
 section('start', 'PS4 downloads', ps4Resources(), 'Game downloads, mods, apps, avatars, game saves and emulators for PS4.') +
 section('console-hub-setup', 'Firmware & jailbreak', grid(
-  resource('Jailbreak', 'Choose a firmware-specific guide: the experimental 14.00 route or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
+  resource('Jailbreak', 'Choose the 14.00 WebKit guide or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
   resource('Firmware downloads', 'Browse PS4 system-software update and recovery files by version in Darthsternie’s firmware archive.', link('/console/ps4/jailbreaks.html#firmware-downloads', 'Browse PS4 firmware'), '/assets/images/consoles/playstation.jpg')
 ), 'Select your firmware route before choosing a jailbreak.'), '#start', 'Choose a guide');
-
-page('console/ps4/jailbreak.html', 'PS4 14.00 Jailbreak & DNS', 'An experimental 14.00 resource guide with manual DNS, browser-host links and the Blu-ray disc requirements for the supplied video.', ps4image, ps4nav,
-section('requirements', '14.00 is an unstable route', note('<p><strong>For the disc method you need a blank recordable Blu-ray disc and a Blu-ray burner.</strong> A DVD, CD or USB drive is not a substitute. Your PS4 must have a working Blu-ray drive.</p><p>The 14.00 steps and HEN ISO are supplied with the linked video. Firmware support and the archive contents could not be independently confirmed. Read the video’s current notes before burning. Do not update a console just to match this guide.</p>')) +
-section('dns', 'Set manual DNS on PS4', dns() + steps([
-['Open the network wizard', 'Go to Settings &gt; Network &gt; Set Up Internet Connection. Choose Use Wi-Fi or Use a LAN Cable, then Custom.'],
-['Keep your normal IP settings', 'Use your existing IP and DHCP configuration. For a typical home network these are Automatic and Do Not Specify.'],
-['Set DNS to Manual', 'Primary DNS: <code>45.56.67.85</code>. Secondary DNS: <code>62.210.38.117</code>.'],
-['Finish setup', 'Keep the normal MTU and proxy settings; a typical network uses Automatic and Do Not Use. Save and test the connection. You can restore DNS to Automatic later.']
-]) + sourceList([['https://www.playstation.com/en-gb/support/connectivity/internet-connect-playstation/', 'PlayStation network setup reference']])) +
-section('disc', 'Blu-ray method: preparation & flow', require('./ps4-disc-links.cjs').discSteps([
-['Check your firmware and equipment', 'Read Settings &gt; System &gt; System Information. Confirm the video applies to that exact firmware. Prepare a computer, Blu-ray writer and blank supported BD-R/BD-RE media.'],
-['Get the supplied HEN ISO', 'Download the ISO using the links here. If the supplied file is an archive, extract it first. Check the video’s current notes and any published checksum before using the ISO.'],
-['Burn the image to Blu-ray', 'In ImgBurn choose Write image file to disc, select the ISO and the Blu-ray writer, and burn to the blank disc. Enable verification and let it complete. Copying the ISO as a normal data file does not create the same disc.'],
-['Start the disc on PS4', 'Insert the finished disc and open its disc/Blu-ray tile. The documented 14.00 disc waits for one Cross (X) press after validation. Follow the instructions shown by the actual image you burned.'],
-['Confirm HEN success', 'Check that the HEN features actually work before installing homebrew. After a failure, shut down completely and cold-boot before another attempt; do not repeatedly trigger it in the same session.']
-]) + `<div class="guide-links">${goldhen14Download()}${ext('https://gofile.io/d/kg4BSziZ', 'Supplied HEN ISO')}${ext('https://www.imgburn.com/index.php?act=download', 'ImgBurn downloads')}${ext('https://github.com/OptiTronOffical/PS4-14.00-BD-JB', '14.00 disc workflow reference')}</div>`) +
-section('browser', 'Browser-host alternative', note('<p>The supplied SilverPS4HEN link requests a 14.00 route. Its availability and payload support must be checked on the exact firmware. It is a separate alternative to the disc method; entering DNS does not by itself run the exploit.</p>') + `<p>PS4 browser address:<br><a href="https://aminegold0.github.io/silverps4hen/" target="_blank" rel="noopener noreferrer">https://aminegold0.github.io/silverps4hen/</a></p><div class="guide-links">${ext('https://aminegold0.github.io/silverps4hen/raw13/jb.html?log=1&hx1400=1&v=6', 'Open supplied 14.00 host')}${ext('https://github.com/aminegold0/silverps4hen', 'Host source')}${link('/console/ps4/goldhen.html', 'GoldHEN page')}</div>` + steps([
-['Open the host on the PS4', 'Use the console Internet Browser after configuring the connection. Read the host’s displayed firmware and payload options.'],
-['Match the payload', 'Use only a HEN build whose release notes list your firmware and entry point. GoldHEN is linked as a separate project, not as verified 14.00 support.'],
-['Wait for the result', 'Confirm success before using Package Installer or other homebrew services. If it fails, follow the host’s recovery notes instead of assuming the console is enabled.']
-])) + section('video', 'PS4 14.00 video companion', videoEmbed('F7y-hk5qpxM', 'PS4 14.00 Jailbreak (unstable)') + note(provenance)), '#requirements', 'Read requirements');
 
 page('console/ps4/emulators.html', 'Emulators on PlayStation 4', 'PS2, PS3, GameCube, Wii, Wii U and Dreamcast emulator ports for an already homebrew-enabled PS4.', ps4image, ps4nav,
 section('emulators', 'Choose a console emulator', note('<p>A PS4 port needs a compatible jailbreak and homebrew enabler. An experimental 14.00 entry point does not establish compatibility with every app below.</p>') + grid(

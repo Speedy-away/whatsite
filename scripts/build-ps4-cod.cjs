@@ -18,7 +18,7 @@ const archivedFiles=fs.existsSync(auditFile)?JSON.parse(fs.readFileSync(auditFil
 const canonical=value=>{try{const url=new URL(value);if(url.hostname==='cdn.discordapp.com')url.search='';return url.href;}catch{return null;}};
 const normalized=resources.map(menu=>({...menu,id:'bo3-'+menu.id,gameIds:['black-ops-3'],category:menu.group==='injector'?'injector':menu.group==='packs'?'pack':'menu',publication:'include',videos:[],
  images:menu.images||(menu.image?[{original:'/assets/images/ps4-bo3/'+menu.image,caption:menu.name+' supplied preview'}]:[]),
- downloads:menu.downloads.map((file,index)=>({...file,id:'bo3-'+menu.id+'-'+(index+1),distribution:'include'}))}));
+ downloads:menu.downloads.map((file,index)=>({...file,id:'bo3-'+menu.id+'-'+(index+1),distribution:file.distribution||'include'}))}));
 // Match exact sources after dropping expiring Discord signatures, retaining the
 // established BO3 mirrors and newer imports without replacing older files.
 const mirrors=normalized.flatMap(menu=>menu.downloads.map(file=>{

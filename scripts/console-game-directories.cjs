@@ -150,7 +150,8 @@ function updatePublicPages({check = false} = {}) {
 }
 function buildFpkgFixes() {
   const {page, section, grid} = require('./build-console-guides.cjs');
-  const {card} = require('./console-resource-renderer.cjs').createResourceRenderer();
+  const {files} = require('../downloads/ps4-ps5/manifest.json');
+  const {card} = require('./console-resource-renderer.cjs').createResourceRenderer({files});
   const {resources} = require('../docs/ps4-ps5-cod-resources.json');
   const fix = resources.find(item => item.id === 'bo2-fpkg-111-crash-fix');
   page(fpkgFixesFile, "FPKG's Fixes", 'Browse PS4 FPKG patches by game, update and title ID. The Black Ops II 1.11 fix targets crashes when loading Multiplayer or Zombies.',

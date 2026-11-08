@@ -30,14 +30,30 @@ function prepare() {
   fs.writeFileSync(manifestPath, JSON.stringify({schemaVersion: 1, files: [...files, ...existing.filter(file => !definitions.some(game => game.id === file.id))]}, null, 2) + '\n');
   return files;
 }
+function renderSection({game, local, regions, instructions, id = 'goldhen-plugin-template'}) {
+  const {section, esc} = require('./build-console-guides.cjs');
+  const labels = regions.map(([region]) => region);
+  const titleIds = regions.map(([, titleId]) => titleId);
+  const search = ['goldhen plugins.ini', game, ...labels, ...titleIds].join(' ').toLowerCase();
+  const regionButtons = regions.map(([region, titleId]) =>
+    `<span class="cod-region"><strong>${esc(region)}</strong>: <button type="button" data-copy-title-id="${esc(titleId)}" title="Copy ${esc(titleId)}" translate="no">${esc(titleId)}</button></span>`).join(' · ');
+  const note = `<aside class="guide-note cod-regional-template" data-search="${esc(search)}"><p class="cod-regions">${regionButtons}</p>${instructions}</aside>`;
+  const download = `<div class="guide-links"><a class="btn btn-primary" href="${esc(local)}" download="plugins.ini"><i class="fas fa-download" aria-hidden="true"></i> Download ${esc(game)} plugins.ini</a></div>`;
+  return section(id, `GoldHEN plugins.ini · ${esc(game)}`, note + download, `${esc(labels.join(' / '))} title IDs`);
+}
+
+function addTitleIdCopy(html) {
+  return html.includes('data-copy-title-id=') && !html.includes('/assets/cod-regional-copy.js')
+    ? html.replace('</body>', '<script defer src="/assets/cod-regional-copy.js?v=1"></script></body>')
+    : html;
+}
+
 function sectionFor(id) {
   const file = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).files.find(file => file.id === id);
   if (!file) throw Error('Unknown game: ' + id);
   const instructions = file.plugin ? `<p>Place <code>${esc(file.plugin)}</code> in <code>/data/GoldHEN/plugins/</code>. Back up <code>/data/GoldHEN/plugins.ini</code> and merge the entry for your installed title ID into it, keeping your existing entries.</p><p>${esc(file.compatibility)}</p>` : '<p>Template with all three regional sections. Add the exact plugin filenames after <code>/data/GoldHEN/plugins/</code> and match the section to your installed game’s title ID. Merge into <code>/data/GoldHEN/plugins.ini</code>, keeping your existing entries. Plugin files are downloaded separately.</p>';
-  const section = `<section class="section" id="goldhen-plugin-template"><div class="container"><div class="section-header"><h2 class="section-title">GoldHEN plugins.ini · ${esc(file.game)}</h2><p class="section-subtitle">${esc(file.regions.join(' / '))} title IDs</p></div><aside class="guide-note" data-search="goldhen plugins.ini ${esc(file.game.toLowerCase())} ${esc(file.regions.join(' ').toLowerCase())} ${file.titleIds.join(' ').toLowerCase()}"><div class="guide-links"><a class="btn btn-primary" href="${esc(file.local)}" download="plugins.ini"><i class="fas fa-download" aria-hidden="true"></i> Download ${esc(file.game)} plugins.ini</a></div><p>${file.titleIds.map((titleId, index) => `<strong>${file.regions[index]}</strong>: <code>${titleId}</code>`).join(' · ')}</p>${instructions}</aside></div></section>`;
-  if (id !== 'gta5') return section;
-  const button = section.match(/<div class="guide-links">[\s\S]*?<\/div>/)[0];
-  return section.replace(button, '').replace('</aside>', '</aside>' + button);
+  const regions = file.regions.map((region, index) => [region, file.titleIds[index]]);
+  return renderSection({game: file.game, local: file.local, regions, instructions});
 }
 function apply() {
   for (const {id} of definitions) {
@@ -46,7 +62,7 @@ function apply() {
     html = html.replace(/<section class="section" id="goldhen-plugin-template">[\s\S]*?<\/section>/, '');
     if (!html.includes('<div id="content">')) throw Error('Missing content container: ' + destination);
     html = html.replace('<div id="content">', () => '<div id="content">' + sectionFor(id));
-    fs.writeFileSync(destination, html);
+    fs.writeFileSync(destination, addTitleIdCopy(html));
   }
 }
 async function archive() {
@@ -72,4 +88,4 @@ if (require.main === module) (async () => {
   else if (process.argv.includes('--archive')) console.log(JSON.stringify(await archive()));
   else throw Error('Use --prepare or --archive');
 })().catch(error => { console.error(error); process.exitCode = 1; });
-module.exports = {sectionFor, apply, prepare, archive};
+module.exports = {renderSection, addTitleIdCopy, sectionFor, apply, prepare, archive};

@@ -1,12 +1,22 @@
 // Additive console helpers, shared by every page generator.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),data=require('../docs/cod-plugin-template-regions.json');
-const h=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+const {renderSection,addTitleIdCopy}=require('./ps4-user-plugin-templates.cjs');
 function prepare(){const files=data.games.map(game=>{const unique=[...new Set(Object.values(game.regions))];const text='; '+game.name+' - regional GoldHEN template\r\n; Merge into /data/GoldHEN/plugins.ini; retain existing entries.\r\n; Add only the exact compatible plugin filename. Regional IDs do not confirm menu support.\r\n\r\n'+unique.map(id=>'; '+Object.keys(game.regions).filter(r=>game.regions[r]===id).join(' / ')+'\r\n['+id+']\r\n; /data/GoldHEN/plugins/YOUR_PLUGIN_FILENAME.prx\r\n').join('\r\n');const bytes=Buffer.from(text),sha256=crypto.createHash('sha256').update(bytes).digest('hex'),local='/downloads/ps4/plugin-templates/call-of-duty/'+game.id+'/'+sha256.slice(0,12)+'/plugins.ini';const dest=path.join(root,'.'+local);fs.mkdirSync(path.dirname(dest),{recursive:true});if(fs.existsSync(dest)&&!fs.readFileSync(dest).equals(bytes))throw Error('Refusing overwrite');if(!fs.existsSync(dest))fs.writeFileSync(dest,bytes,{flag:'wx'});return {...game,local,name:'plugins.ini',bytes:bytes.length,sha256,version:'Regional template 2026-11-04',sourceUrl:'https://whatwhatboy.com'+local};});fs.writeFileSync(path.join(root,'downloads/ps4/plugin-templates/call-of-duty/manifest.json'),JSON.stringify({files},null,2)+'\n');return files;}
 function apply(file,html){
-const match=/^console\/mods\/ps4\/call-of-duty\/([^/]+)\/index.html$/.exec(file);
-if(match){const manifest=path.join(root,'downloads/ps4/plugin-templates/call-of-duty/manifest.json');const game=fs.existsSync(manifest)?JSON.parse(fs.readFileSync(manifest)).files.find(g=>g.id===match[1]):null;if(game){html=html.replace(/<section id="cod-regional-plugin-template"[\s\S]*?<\/section>/,'');const regions=Object.entries(game.regions).map(([r,id])=>`<span class="cod-region"><strong>${r}</strong>: <button type="button" data-copy-title-id="${id}" title="Copy ${id}">${id}</button></span>`).join(' · ');const section=`<section id="cod-regional-plugin-template" class="section"><div class="container"><aside class="guide-note cod-regional-template"><p class="cod-regions">${regions}</p><p>Regional template. Add the exact compatible plugin filename under your installed title ID. Merge into <code>/data/GoldHEN/plugins.ini</code>, keeping existing entries. Plugin files are downloaded separately; each menu’s game-update and region requirements still apply.</p><div class="guide-links"><a class="btn btn-primary" href="${game.local}" download="plugins.ini">Download ${h(game.name)} plugins.ini</a></div></aside></div></section>`;html=html.replace('<div id="content">','<div id="content">'+section);}}
-if(match&&!html.includes('/assets/cod-regional-copy.js'))html=html.replace('</body>','<script defer src="/assets/cod-regional-copy.js?v=1"></script></body>');
+  const match=/^console\/mods\/ps4\/call-of-duty\/([^/]+)\/index.html$/.exec(file);
+  if (match) {
+    const manifest=path.join(root,'downloads/ps4/plugin-templates/call-of-duty/manifest.json');
+    const game=fs.existsSync(manifest)?JSON.parse(fs.readFileSync(manifest)).files.find(g=>g.id===match[1]):null;
+    if (game) {
+      const section=renderSection({id:'cod-regional-plugin-template', game:game.name, local:game.local,
+        regions:Object.entries(game.regions),
+        instructions:'<p>Add the exact compatible plugin filename under your installed title ID. Merge into <code>/data/GoldHEN/plugins.ini</code>, keeping existing entries. Plugin files are downloaded separately. Check the game update and region required by your menu.</p>'});
+      html=html.replace(/<section\b[^>]*\bid="cod-regional-plugin-template"[^>]*>[\s\S]*?<\/section>/,'');
+      html=html.replace('<div id="content">',()=>'<div id="content">'+section);
+    }
+  }
+
   if (/^console\/(ps3|ps4|ps5|psvita|xbox360)\/(index|transfer-tools)\.html$/.test(file)) {
     html = html.replace(/<section\b[^>]*\bid="helpful-desktop-tools"[^>]*>[\s\S]*?<\/section>/g, '');
     const card = '<section id="helpful-desktop-tools" class="section"><div class="container"><h2 class="section-title">Helpful computer tools</h2><article class="guide-resource"><h3>FileZilla Client · FTP transfers</h3><p>Transfer files between your computer and a console running an FTP server. Enable the console’s FTP service, then enter its local IP address and the port shown by that service in FileZilla. Use the credentials shown by the console tool. FileZilla runs on your computer.</p><div class="guide-links"><a class="btn btn-primary" href="https://filezilla-project.org/download.php?show_all=1" target="_blank" rel="noopener noreferrer">Download FileZilla Client · official site</a></div></article></div></section>';
@@ -15,5 +25,5 @@ if(match&&!html.includes('/assets/cod-regional-copy.js'))html=html.replace('</bo
     const before = file === 'console/ps4/index.html' && (html.match(firmware) || html.match(setup));
     html = before ? html.replace(before[0], card + before[0]) : html.replace('<div id="content">', '<div id="content">' + card);
   }
-return html;}
+return addTitleIdCopy(html);}
 module.exports={apply,prepare};if(require.main===module)console.log('Prepared '+prepare().length+' regional templates');

@@ -104,13 +104,16 @@ function card(item) {
   const remote = item.files.filter(file => !file.local);
   // Verified equivalent HTTPS roots. Keep the original provenance in catalog.json;
   // do not upgrade other publishers whose HTTPS service may be unavailable.
-  const sourceUrl = new Map([
+  const upstream = new Map([
     ['http://openiv.com/', 'https://openiv.com/'],
     ['http://dege.freeweb.hu/', 'https://dege.freeweb.hu/']
   ]).get(item.url) || item.url;
+  // Attachment URLs expire. The hosted downloads are already listed on this card.
+  const sourceUrl = /^https?:\/\/(?:cdn\.discordapp\.com|media\.discordapp\.net)\/attachments\//i.test(upstream) ? '' : upstream;
+  const remoteNote = sourceUrl ? 'Use the original page for files not hosted here.' : 'Only the downloads above are hosted here.';
   const search = [item.title, item.kind, item.url, ...files.map(file => file.name)].join(' ').toLowerCase();
   const downloads = files.map(file => `<li style="min-width:0"><a href="${esc(file.local)}" class="btn btn-primary" download="${esc(file.name)}" style="white-space:normal;max-width:100%;text-align:left"><i class="fas fa-download" aria-hidden="true"></i><span style="min-width:0;overflow-wrap:anywhere">${esc(file.name)}</span></a><p style="margin-top:6px">${size(file.bytes)}</p></li>`).join('');
-  return `<article class="guide-resource game-card" id="resource-${item.id}" data-search="${esc(search)}" style="scroll-margin-top:24px"><h3 style="overflow-wrap:anywhere">${esc(item.title)}</h3><ul style="list-style:none;padding:0;margin:0;display:grid;gap:16px;width:100%">${downloads}</ul>${remote.length?`<details style="max-width:100%;overflow-wrap:anywhere"><summary>Other release files (${remote.length})</summary><p>Use the original page for files not hosted here.</p><ul>${remote.map(f=>`<li>${esc(f.name)} · ${size(f.bytes)}</li>`).join('')}</ul></details>`:''}${sourceUrl ? `<div class="guide-links"><a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">Original page <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></div>` : ''}</article>`;
+  return `<article class="guide-resource game-card" id="resource-${item.id}" data-search="${esc(search)}" style="scroll-margin-top:24px"><h3 style="overflow-wrap:anywhere">${esc(item.title)}</h3><ul style="list-style:none;padding:0;margin:0;display:grid;gap:16px;width:100%">${downloads}</ul>${remote.length?`<details style="max-width:100%;overflow-wrap:anywhere"><summary>Other release files (${remote.length})</summary><p>${remoteNote}</p><ul>${remote.map(f=>`<li>${esc(f.name)} · ${size(f.bytes)}</li>`).join('')}</ul></details>`:''}${sourceUrl ? `<div class="guide-links"><a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">Original page <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></div>` : ''}</article>`;
 }
 const search = `<div class="search-container"><div class="search-box"><i class="fas fa-search search-icon" aria-hidden="true"></i><input type="search" class="search-input" id="gameSearch" placeholder="Search menus, scripts and tools..." aria-label="Search download library"></div></div>`;
 const inventory = `<p>${available.length} resources · ${hostedFiles.length} files · ${size(catalog.summary.mirroredBytes)} hosted here.</p><p><a href="/downloads/catalog.json" download="catalog.json">Download file inventory &amp; SHA-256 hashes</a></p>`;

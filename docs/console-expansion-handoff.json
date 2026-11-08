@@ -1,4 +1,48 @@
 {
+  "jobeesLairFreeShops20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the site publication commit.",
+    "pages": [
+      "console/ps4/game-downloads.html",
+      "console/ps5/game-downloads.html",
+      "console/ps4/free-shops.html",
+      "console/ps5/free-shops.html",
+      "console/free-shops/index.html"
+    ],
+    "changes": "Added JobeesLair PS4 0.1.5 Beta 5 and PS5 0.5.6 under Free shops, with separate install formats, setup requirements, release notes and pinned publisher downloads. Console pages show their own build. The shared index shows both.",
+    "archive": "The exact PS4 PKG and PS5 exFAT image are saved under their console's Apps/Free Shops archive. Both sizes and SHA-256 hashes matched GitHub release metadata and were verified again on F:. The jobeeslair scoped inventory records the versions and source URLs. Both entries are recorded in the shared F: download inventory.",
+    "checks": "Verified the exact download link and console assignment on all five pages. All seven Pages tests passed. The existing Free Shops suite still reports directory regeneration drift and a missing hub-card marker."
+  },
+  "ps4RegionalPluginTemplateLayout20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the site publication commit.",
+    "changes": "GTA V, RDR2, Fortnite and 11 Call of Duty pages share one GoldHEN plugins.ini layout. The download button follows the setup note, and each regional title ID is a copy button. The RDR2 builder now includes its existing template section.",
+    "checks": "All 14 linked INI files matched the recorded hashes. Rebuilt RDR2 and Fortnite in memory and checked that both retained the layout. Verified button position and title-ID copy values in Edge at desktop and mobile widths. All 35 focused tests passed."
+  },
+  "ps4FirmwareGuideLayout20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the site publication commit.",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps4/jailbreaks.html",
+      "console/ps4/jailbreak.html"
+    ],
+    "changes": "Aligned the compact Jailbreak and Firmware downloads cards on desktop and stacked them on narrow screens. The PS4 14.00 route bypasses setup popups, including on localized URLs. The guide starts with Afterglow WebKit and offline caching, then covers the Blu-ray disc method with the existing ISO download.",
+    "sources": [
+      "https://www.youtube.com/watch?v=evdNQ1Vl2Bo",
+      "https://github.com/well0nez/afterglow-web",
+      "https://ko-fi.com/s/e694c36022"
+    ],
+    "checks": "Headless Edge verified equal-size cards at 1440 pixels, stacked cards at 390 pixels, click-through to the standalone guide, visible steps and correct WebKit and Blu-ray order. All 37 focused tests passed."
+  },
+  "discordAttachmentDownloads20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the site publication commit.",
+    "changes": "Added Baguette 1.11 by volt and Baguette Aimbot under Off host on PS4 Black Ops 2. Kept the original Zeem port as a separate download. Both new ZIPs include a CUSA57548 GoldHEN configuration.",
+    "delivery": "Replaced Discord download buttons with verified site files for Black Ops 3 Infarcted SPRX, the Black Ops II 1.11 FPKG crash fix and ps4debug.bin. Removed redundant Discord attachment links in the Download Library and retained the existing MediaFire or Mega sources for four PS3 archives. Original source URLs remain in the inventory.",
+    "archive": "Verified SHA-256 and byte counts for all five site files against the F: archive. Intake records are in the ps4-bo2-baguette and ps4-cod-discord-mirrors scoped inventories. The 361 MiB IronManArsenal core_mod.zip is verified in the local archive and exceeds the 95 MiB public mirror limit.",
+    "checks": "Scanned 566 public pages and found no remaining Discord download buttons or attachment links. All 118 affected Download Library cards retained local files. All 14 Pages workflow tests passed. One unrelated GTA V screenshot guide assertion also fails with the renderer from HEAD."
+  },
   "gta5AriseRtm20261108": {
     "date": "2026-11-08",
     "status": "Included in the scoped Arise RTM publication commit.",
