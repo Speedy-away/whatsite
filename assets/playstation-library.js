@@ -13,7 +13,21 @@ const featuredCovers = new Map([
   ['https://www.superpsx.com/wp-content/uploads/2024/09/God-of-War-III-Remastered-PS4-PKG.webp', '/assets/images/playstation-library/god-of-war-iii.webp'],
   ['https://image.api.playstation.com/vulcan/ap/rnd/202406/0500/8f15268257b878597757fcc5f2c9545840867bc71fc863b1.png?w=260', '/assets/images/playstation-library/astro-bot.png']
 ]);
-const normalize = value => String(value || '').normalize('NFKD').toLowerCase().replace(/\p{M}/gu, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const normalize = value => String(value || '').normalize('NFKD').toLowerCase().replace(/\p{M}/gu, '')
+  .replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/\b(cusa|ppsa)\s+(\d{5})\b/g, '$1$2').trim();
+const romanNumerals = ['', 'i', 'ii', 'iii', 'iv', 'v', 'vi'];
+
+function searchText(game) {
+  const title = normalize(game.name);
+  const numbered = title.replace(/\b(i|ii|iii|iv|v|vi)\b/g, numeral => romanNumerals.indexOf(numeral));
+  const roman = title.replace(/\b[1-6]\b/g, number => romanNumerals[Number(number)]);
+  const blackOps = numbered.match(/\bblack ops ([1-4])\b/)?.[1];
+  const gta = numbered.match(/\bgrand theft auto ([456])\b/)?.[1];
+  const platform = game.platform === 'PS4' ? 'PlayStation 4 PS 4' : 'PlayStation 5 PS 5';
+  return normalize([title, numbered, roman, blackOps && `BO${blackOps} BO ${blackOps}`,
+    gta && `GTA${gta} GTA ${gta} GTA ${romanNumerals[gta]}`, game.platform, platform,
+    ...(game.titleIds || []), game.source].filter(Boolean).join(' '));
+}
 const regionKey = value => ({US: 'USA', EU: 'EUR'}[value] || value || 'Unspecified');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const plural = (n, word) => `${fmt.format(n)} ${word}${n === 1 ? '' : 's'}`;
@@ -305,8 +319,7 @@ async function library() {
   }
   try {
     data = await index();
-    titles = data.titles.map(g => ({...g, timestamp: listedDate(g.date) || 0,
-      search: normalize([g.name, g.platform, ...(g.titleIds || []), g.source].join(' '))}));
+    titles = data.titles.map(g => ({...g, timestamp: listedDate(g.date) || 0, search: searchText(g)}));
     region.append(...[...new Set(titles.flatMap(g => g.regions || []))].sort().map(r => option(r)));
     $('library-totals').textContent = plural(data.stats.titles, 'listing') + ' · ' + plural(data.stats.links, 'package link');
     loadFilters();

@@ -5,13 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#f5f5f5">
-  <title>PlayStation Game Library | WhatWhatBoy</title>
-  <meta name="description" content="Browse PS4 and PS5 games, DLC, updates and fixes. Search by game or title ID and compare regions and package versions.">
+  <title>WWB’s PS4 and PS5 Game Library | whatwhatboy</title>
+  <meta name="description" content="Find PS4 and PS5 games, DLC, updates and fixes in WWB’s library. Search by title or CUSA and PPSA ID, then compare regions and package versions.">
   <link rel="canonical" href="https://whatwhatboy.com/console/ps4/game-library/">
   <link rel="icon" href="/assets/images/logo.png">
   <link rel="stylesheet" href="/assets/playstation-library.css?v=2">
-  <script type="module" src="/assets/playstation-library.js"></script>
+  <script type="module" src="/assets/playstation-library.js?v=2"></script>
 <link rel="stylesheet" href="/assets/site-ads.css?v=3">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="WWB’s PS4 and PS5 Game Library, WWB Game Library, WhatWhatBoy Game Library, PlayStation game catalog, PS4 game library, PS5 game library, PS4 game downloads, PS5 game downloads, PS4 PKG library, PS5 package links, PlayStation DLC, PlayStation title updates, PS4 FPKG fixes, CUSA title ID lookup, PPSA title ID lookup, PlayStation game regions, PS4 package firmware requirements, OnlyGames catalog, God of War III Remastered PS4, Bloodborne PS4, Astro Bot PS5, Black Ops 2 1.11 crash fix, CUSA title ID, PPSA title ID, PS4 PKG, DLC, title updates, FPKG fixes, OnlyGames, PlayStation 4, PS4, PS 4, PlayStation 5, PS5, PS 5, whatwhatboy">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="whatwhatboy">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://whatwhatboy.com/console/ps4/game-library/">
+    <meta property="og:title" content="WWB’s PS4 and PS5 Game Library | whatwhatboy">
+    <meta property="og:description" content="Find PS4 and PS5 games, DLC, updates and fixes in WWB’s library. Search by title or CUSA and PPSA ID, then compare regions and package versions.">
+    <meta property="og:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta property="og:image:alt" content="whatwhatboy logo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WWB’s PS4 and PS5 Game Library | whatwhatboy">
+    <meta name="twitter:description" content="Find PS4 and PS5 games, DLC, updates and fixes in WWB’s library. Search by title or CUSA and PPSA ID, then compare regions and package versions.">
+    <meta name="twitter:image" content="https://whatwhatboy.com/assets/images/logo.png">
+    <meta name="twitter:image:alt" content="whatwhatboy logo">
+    <script id="site-page-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://whatwhatboy.com/#website","url":"https://whatwhatboy.com/","name":"whatwhatboy"},{"@type":"WebPage","@id":"https://whatwhatboy.com/console/ps4/game-library/#webpage","url":"https://whatwhatboy.com/console/ps4/game-library/","name":"WWB’s PS4 and PS5 Game Library | whatwhatboy","description":"Find PS4 and PS5 games, DLC, updates and fixes in WWB’s library. Search by title or CUSA and PPSA ID, then compare regions and package versions.","inLanguage":"en","isPartOf":{"@id":"https://whatwhatboy.com/#website"},"keywords":"WWB’s PS4 and PS5 Game Library, WWB Game Library, WhatWhatBoy Game Library, PlayStation game catalog, PS4 game library, PS5 game library, PS4 game downloads, PS5 game downloads, PS4 PKG library, PS5 package links, PlayStation DLC, PlayStation title updates, PS4 FPKG fixes, CUSA title ID lookup, PPSA title ID lookup, PlayStation game regions, PS4 package firmware requirements, OnlyGames catalog, God of War III Remastered PS4, Bloodborne PS4, Astro Bot PS5, Black Ops 2 1.11 crash fix, CUSA title ID, PPSA title ID, PS4 PKG, DLC, title updates, FPKG fixes, OnlyGames, PlayStation 4, PS4, PS 4, PlayStation 5, PS5, PS 5, whatwhatboy","image":"https://whatwhatboy.com/assets/images/logo.png"}]}</script>
 </head>
 <body class="ps-library">
   <a class="skip" href="#catalog">Skip to the catalog</a>
@@ -27,7 +43,7 @@
   <main id="main-content" class="main-content wrap">
     <section class="library-hero" aria-labelledby="library-title">
       <div class="hero-copy">
-        <p class="kicker"><span aria-hidden="true"></span> PS4 &amp; PS5 collection</p>
+        <p class="kicker"><span aria-hidden="true"></span> WWB’s PS4 &amp; PS5 collection</p>
         <h1 id="library-title">PlayStation<br><em>Game Library</em></h1>
         <p class="hero-note">Find games, updates, DLC and fixes. Check the title ID, region and firmware before you download.</p>
         <a class="action primary" href="#catalog">Browse the library <span aria-hidden="true">↓</span></a>
@@ -44,7 +60,7 @@
         <button type="button" class="text-button" id="open-help">Download help <span aria-hidden="true">↗</span></button>
       </div>
       <form class="catalog-controls" id="catalog-controls" role="search" aria-label="Filter the game library">
-        <label class="search-control"><span>Search games</span><input id="query" name="q" type="search" placeholder="Game title or CUSA / PPSA ID" autocomplete="off"></label>
+        <label class="search-control"><span>Search games</span><input id="query" name="q" type="search" placeholder="Title, alias or CUSA / PPSA ID" autocomplete="off"></label>
         <label>Platform<select id="platform" name="platform"><option value="">All platforms</option><option>PS4</option><option>PS5</option></select></label>
         <label>Region<select id="region" name="region"><option value="">All regions</option></select></label>
         <label>Package<select id="kind" name="kind"><option value="">All packages</option><option value="base">Base game</option><option value="update">Update</option><option value="dlc">DLC</option><option value="bundle">Bundle</option><option value="fix">Fix</option><option value="patch">Patch</option><option value="other">Other</option></select></label>
@@ -68,7 +84,7 @@
   <footer class="library-footer wrap">
     <div><strong>WhatWhatBoy</strong><p>Package metadata from <a href="https://onlygames.pages.dev/" rel="noreferrer">OnlyGames</a> and the existing PS4 guides. Files are served by their listed sources.</p></div>
     <nav aria-label="Download guides">
-      <a href="/console/ps4/dlcs.html">DLC</a><a href="/console/ps4/updates.html">Updates</a><a href="/console/ps4/fpkg-fixes.html">FPKG fixes</a><a href="https://discord.gg/6hsV2fva8Z" rel="noreferrer">Community</a>
+      <a href="/console/ps4/game-downloads.html">PS4 downloads</a><a href="/console/ps5/game-downloads.html">PS5 downloads</a><a href="/console/ps4/dlcs.html">DLC</a><a href="/console/ps4/updates.html">Updates</a><a href="/console/ps4/fpkg-fixes.html">FPKG fixes</a><a href="https://discord.gg/6hsV2fva8Z" rel="noreferrer">Community</a>
     </nav>
   </footer>
   <dialog id="game-dialog" class="library-dialog" aria-labelledby="game-title">

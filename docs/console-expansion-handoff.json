@@ -11498,11 +11498,13 @@
     "date": "2026-11-09",
     "page": "console/ps4/game-library/index.html",
     "downloadPage": "console/ps4/game-library/download.html",
-    "navigation": "The PS4 Game downloads & DLCs & Updates & FPKG's fixes page links to the library from its console navigation and a dedicated card.",
+    "navigation": "The PlayStation 4 and PlayStation 5 game downloads sections both link to WWB’s PS4 and PS5 Game Library through a compact card without artwork. The PS4 downloads page also links to PS5 game downloads in its console navigation. The PS4 DLC and Updates cards use the same compact treatment.",
     "catalog": "The OnlyGames HTML snapshot provided all 4,465 PS4/PS5 listings and 51,107 package links. An additional two existing Black Ops listings contribute seven links. scripts/import-playstation-library.cjs regenerates the public metadata files from a saved copy of the source HTML. The importer does not download package files.",
     "delivery": "The existing CUSA57548 1.11 crash fix is a direct file link and follows the Pages artifact's exact-revision delivery rewrite when offloaded. Other imports use their original host routes. Mocha's stable share URLs are retained; expiring signed transfer URLs and third-party verification tokens are not imported. No files were added to the archive.",
     "ads": "The catalog uses the site's existing labelled ad placement below the results.",
-    "checks": "Validated complete metadata import, generation of the PS4 directory link, Pages budget and package rewrite, and the desktop and mobile routes in Edge."
+    "checks": "Validated complete metadata import, generation of the PS4 directory link, Pages budget and package rewrite, and the desktop and mobile routes in Edge.",
+    "visualTheme": "Both library routes use a white and gray palette and a silver wave inspired by the PS3 XMB. Edge verified the desktop and 390 px mobile layouts, package dialog, Mocha package route and static wave under reduced motion.",
+    "discovery": "Refreshed card search tags, descriptions, keywords and sharing metadata for the library, both console game download pages, DLC, updates and FPKG fixes. Library search accepts game aliases, Roman numerals and formatted CUSA or PPSA IDs. The sitemap contains all six canonical routes and excludes the noindex package page. Verified against the real catalog and passed 37 focused tests."
   },
   "ps5HubParity20261109": {
     "date": "2026-11-09",
