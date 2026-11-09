@@ -58,7 +58,9 @@ function applyAds(file, html) {
   // The PS4/PS5 games hub places its ad after the game choices.
   const sectionPattern = normalizedFile === 'console/mods/ps4/index.html'
     ? /<section\b[^>]*\bid="games"[^>]*>/i
-    : normalizedFile === 'console/ps4/index.html'
+    : normalizedFile === 'console/ps5/index.html' && html.includes('id="console-hub-tools"')
+      ? /<section\b[^>]*\bid="console-hub-tools"[^>]*>/i
+      : normalizedFile === 'console/ps4/index.html'
       ? /<section\b[^>]*\bid="start"[^>]*>/i
       : normalizedFile === 'console/ps4/game-library/index.html'
         ? /<section\b[^>]*\bid="catalog"[^>]*>/i

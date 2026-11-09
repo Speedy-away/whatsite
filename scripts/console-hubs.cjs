@@ -5,8 +5,9 @@ const root = path.resolve(__dirname, '..');
 
 // Presentation only: keep the hub's current cards, downloads and source links.
 function improveHub(file, html) {
-  html = html.replace(/console-hubs\.css\?v=[^"\s]+/g, 'console-hubs.css?v=20261109-merge');
   const match = /^console\/(ps[45])\/index\.html$/.exec(file);
+  const styleVersion = match?.[1] === 'ps5' ? '20261109-ps5-hub-art' : '20261109-merge';
+  html = html.replace(/console-hubs\.css\?v=[^"\s]+/g, 'console-hubs.css?v=' + styleVersion);
   if (match) html = html.replace(/<article\b[\s\S]*?<\/article>/g, card => /href="\/console\/(?:mods\/ps4\/|ps5\/mods\.html)"/.test(card) ? card.replace(/<h3>(?:Game mods|Mods \/ Mod Menus)<\/h3>/, '<h3>Game mods / Mod Menus</h3>') : card);
   if (!match || html.includes('data-console-hub-layout="3"')) return html;
   const platform = match[1], name = platform.toUpperCase();
@@ -14,7 +15,7 @@ function improveHub(file, html) {
   if (existingLayout) html = html.replace('data-console-hub-layout="2"', 'data-console-hub-layout="3"');
   else html = html.replace(/<body\b([^>]*?)class="([^"]*)"/, '<body$1class="$2 console-hub console-hub--' + platform + '" data-console-hub-layout="3"');
   html = html.replace(/<link\b[^>]*href="\/assets\/console-hubs\.css[^"\s]*"[^>]*>\s*/g, '');
-  html = html.replace('</head>', '<link rel="stylesheet" href="/assets/console-hubs.css?v=20261109-merge">\n</head>');
+  html = html.replace('</head>', '<link rel="stylesheet" href="/assets/console-hubs.css?v=' + styleVersion + '">\n</head>');
   if (!existingLayout) {
   html = html.replace(/<header class="guide-hero">[\s\S]*?<\/header>/, hero => {
     hero = hero.replace(/guide-hero-grid(?: guide-hero-text)?/, 'guide-hero-grid console-hub-hero-grid');
@@ -43,14 +44,9 @@ function improveHub(file, html) {
   if (start && !existingLayout) {
     const cards = [...start.matchAll(/<article\b[\s\S]*?<\/article>/g)].map(value => value[0]);
     const setup = [], library = [];
-    for (let card of cards) {
+    for (const card of cards) {
       if (/href="\/console\/ps[45]\/(?:jailbreaks|goldhen|y2jb)\.html/.test(card)) setup.push(card);
-      else {
-        if (platform === 'ps4' && /href="\/console\/mods\/ps4\//.test(card)) {
-          card = card.replace(/<img\b[^>]*>/, require('./console-card-media.cjs').cardMedia(require('./console-card-media.cjs').ps5Media.mods));
-        }
-        library.push(card);
-      }
+      else library.push(card);
     }
     // Put game collections first without dropping or changing any resource.
     library.sort((a, b) => Number(/href="\/console\/(?:mods\/ps4\/|ps5\/mods\.html)/.test(b)) - Number(/href="\/console\/(?:mods\/ps4\/|ps5\/mods\.html)/.test(a)));

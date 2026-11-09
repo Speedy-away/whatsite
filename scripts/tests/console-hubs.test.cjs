@@ -42,3 +42,30 @@ test('earlier hub layout migrates its sidebar shortcut into main without regroup
 test('hub presentation does not modify other console pages or immutable helpers', () => {
   for (const file of ['console/ps5/apps.html', 'console/ps4/whatsite-ps4.html', 'console/ps5/whatsite-ps5.html', 'console/ps3/index.html', 'hosts/ps4/index.html']) assert.equal(improveHub(file, fixture('ps4')), fixture('ps4'));
 });
+
+test('PS5 hub rebuilds keep the chosen covers when the category artwork changes', () => {
+  const art = require('../category-card-art.cjs');
+  const {ps5HubSections} = require('../build-console-guides.cjs');
+  const file = 'console/ps5/index.html';
+  const covers = {
+    '/console/ps4/game-downloads.html': ['god-of-war-iii.webp', 'astro-bot.png'],
+    '/console/ps5/apps.html': ['prosperostore.png', 'playden.jpg', 'orbit.jpg'],
+    '/console/ps5/save-tools.html': ['ps5-saved-data-official.jpg']
+  };
+  const destinations = Object.fromEntries(Object.keys(covers).map(route => [route, {
+    title: 'Game saves',
+    kind: 'tools',
+    images: [{src: '/assets/images/logo.png', alt: 'Automatic cover'}]
+  }]));
+  const updated = ps5HubSections().replace('Check your installed firmware', 'Check the installed firmware');
+  const processed = art.apply(file, updated, {destinations});
+  for (const [route, expected] of Object.entries(covers)) {
+    const card = art.cards(processed).find(({html}) => html.includes(`href="${route}"`));
+    assert.ok(card, route);
+    const images = [...card.html.matchAll(/<img\b[^>]*>/g)]
+      .map(([tag]) => art.attribute(tag, 'src').split('/').at(-1));
+    assert.deepEqual(images, expected, route);
+  }
+  const unpinned = updated.replaceAll('data-card-art="fixed" ', '');
+  assert.notEqual(art.apply(file, unpinned, {destinations}), unpinned);
+});

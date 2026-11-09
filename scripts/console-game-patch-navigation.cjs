@@ -13,7 +13,6 @@ function apply(file,html){
  html=html.replace(/<nav\b[^>]*class="[^"]*\bguide-nav\b[^>]*>[\s\S]*?<\/nav>/,nav=>nav.includes('href="'+href+'"')?nav:nav.replace('</nav>','<a href="'+href+'">Game patches</a></nav>'));
  if(!file.endsWith('/index.html')||html.includes('data-game-patches-entry'))return html;
  const card='<article class="guide-resource" data-game-patches-entry><img src="/assets/images/game-patches/bloodborne-official.jpg" alt="Bloodborne game artwork" loading="lazy"><h3>Game patches</h3><p>Browse PS4, PS4 Pro and native PS5 patches for FPS, graphics and gameplay. Check the title ID and game update.</p><div class="guide-links"><a href="'+href+'">Browse game patches <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>';
- if(html.includes('<div class="games-grid console-hub-library">')) return html.replace('<div class="games-grid console-hub-library">',grid=>grid+card);
- return html.replace(/<section\b[^>]*\bid="start"[^>]*>(?:(?!<\/section>)[\s\S])*?<div class="games-grid">/,start=>start+card);
+ return html.replace(/<section\b[^>]*\bid="start"[^>]*>(?:(?!<\/section>)[\s\S])*?<div class="games-grid(?: console-hub-library)?">/,start=>start+card);
 }
 module.exports={apply};

@@ -5,8 +5,8 @@ function finish(file, html) {
   const metadata = require('./page-search-metadata.cjs');
   const relative = metadata.normalizedFile(file);
   const helpfulTools = require('./console-helpful-tools.cjs');
-  const ps4Hub = relative === 'console/ps4/index.html';
-  if (!ps4Hub) html = helpfulTools.apply(relative, html);
+  const playStationHub = /^console\/ps[45]\/index\.html$/.test(relative);
+  if (!playStationHub) html = helpfulTools.apply(relative, html);
   if (!eligible(relative) || tags.protectedFile(relative, html)) return html;
   html = require('./language-loader.cjs').apply(html);
   html = require('./console-game-patch-navigation.cjs').apply(relative, html);
@@ -19,7 +19,7 @@ function finish(file, html) {
   const navigable = require('./pc-ports-navigation.cjs').apply(relative, require('./console-game-directories.cjs').apply(relative, html));
   const shops = require('./console-free-shops.cjs').apply(relative, navigable);
   const grouped = require('./console-hub-groups.cjs').apply(relative, shops);
-  const withTools = ps4Hub ? helpfulTools.apply(relative, grouped) : grouped;
+  const withTools = playStationHub ? helpfulTools.apply(relative, grouped) : grouped;
   const themed = require('./add-themes-sidebar.cjs').applyThemes(withTools, relative);
   const illustrated = require('./category-card-art.cjs').apply(relative, themed);
   const directories = require('./game-directory-card-layout.cjs').apply(relative, illustrated);

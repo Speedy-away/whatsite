@@ -9,14 +9,14 @@ const sidebar = require('./sidebar-icons.cjs').decorateNavLinks(template.slice(t
   if (resolved.pathname === '/console/ps3.html') resolved.pathname = '/console/ps3/';
   if (resolved.pathname === '/console/xbox360.html') resolved.pathname = '/console/xbox360/';
   return prefix + resolved.pathname + resolved.search + resolved.hash + '"';
-}));
+})).replace(/^[ \t]+(?=\r?$)/gm, '');
 const ext = (url, label) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label} <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>`;
 const link = (url, label) => `<a href="${esc(url)}"${/^\/(?!\/)/.test(url) && require('../assets/console-guide-dialog.js').isModGuidePath(url.split(/[?#]/)[0]) && /\b(?:guide|setup|checklist)\b/i.test(label) ? ' data-guide-open' : ''}>${label} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>`;
 const guideLink = (url, label = 'View guide') => `<a href="${esc(url)}" data-guide-open>${label} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>`;
 const github = (repo, label = 'Releases') => ext(`https://github.com/${repo}/releases`, label);
-function resource(title, description, links, image = '') {
+function resource(title, description, links, image = '', imageAlt = `${title} artwork`) {
   const artwork = !image ? '' : typeof image === 'string'
-    ? `<img src="${image}" alt="${esc(title)} artwork" loading="lazy">`
+    ? `<img src="${image}" alt="${esc(imageAlt)}" loading="lazy">`
     : require('./console-card-media.cjs').cardMedia(image);
   const search = description ? `${title} ${description}` : title;
   return `<article class="guide-resource" data-search="${esc(search.toLowerCase())}">${artwork}<h3>${title}</h3>${description ? `<p>${description}</p>` : ''}<div class="guide-links">${links}</div></article>`;
@@ -49,6 +49,9 @@ for (const [platform, nav] of [['ps4', ps4nav], ['ps5', ps5nav]]) {
   nav.push(['/console/ps4/game-patches.html'+(platform==='ps5'?'#native-ps5-patches':''), 'Game patches'], [`/console/${platform}/themes.html`, 'Themes'], [`/console/${platform}/site-launcher.html`, 'Site launcher']);
   nav.splice(2, 0, [`/console/${platform}/jailbreaks.html#firmware-downloads`, 'Firmware']);
 }
+ps5nav.splice(ps5nav.findIndex(([url]) => url.endsWith('/mods.html')) + 1, 0, ['/console/ps5/save-tools.html', 'Game saves']);
+const ps4AddOns = require('./ps4-game-add-ons.cjs');
+const ps5HubNav = [...ps5nav, [ps4AddOns.hub, 'Game downloads']];
 const softwareImage = (id, fallback) => {
   const file = path.join(root, 'docs/console-software-images.json');
   return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8'))[id]?.image || fallback : fallback;
@@ -60,18 +63,32 @@ const goldhen14Download = () => {
   return `<a href="${esc(file.local)}" data-original-href="${esc(data.jobs[0].url)}" download>Download GOLDHEN14.iso (${size}) <i class="fas fa-download" aria-hidden="true"></i></a>`;
 };
 const goldhen14Card = () => resource('GoldHEN 14.00 · supplied ISO', 'Supplied GOLDHEN14.iso disc image for the PS4 14.00 resources. Publisher identity and firmware compatibility have not been independently verified.', goldhen14Download() + link('/console/ps4/jailbreak.html#disc', 'Disc setup guide'), '/assets/images/consoles/ps4-jailbreak.jpg');
-const ps5Resources = () => grid(
+const ps5SetupResources = () => grid(
   resource('Jailbreak', 'Choose your firmware: UMTX2 on listed 1.00–5.50 versions, the 6.00–7.61 Blu-ray route, or Relapse on supported 7.00–13.60 versions.', link('/console/ps5/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/ps5-featured-image.avif'),
   resource('Firmware downloads', 'Browse PS5 system-software update and recovery files by version in Darthsternie’s firmware archive.', link('/console/ps5/jailbreaks.html#firmware-downloads', 'Browse PS5 firmware'), '/assets/images/consoles/ps5-featured-image.avif'),
-  resource('Y2JB setup & autoloader', 'After initial jailbreak access, prepare YouTube with the installer and configure a firmware-compatible autoloader.', link('/console/ps5/y2jb.html', 'Open Y2JB page'), '/assets/images/consoles/ps5-y2jb.jpg'),
-  resource('Payloads', 'etaHEN, ShadowMountPlus, ELF loaders and kernel-log payloads for PS5.', link('/console/ps5/payloads.html', 'Browse payloads'), require('./console-card-media.cjs').ps5Media.payloads),
-  resource('Transfer tools', 'Move files with PS5upload, ezRemote, FTP and web services. Check each tool’s console setup before connecting.', link('/console/ps5/transfer-tools.html', 'Browse transfer tools'), require('./console-card-media.cjs').ps5Media.transfers),
-  resource('Apps & homebrew stores', 'PlaydenPS5, Orbit, ProsperoStore, payload managers, media players and save tools for PS5.', link('/console/ps5/apps.html', 'Browse apps'), require('./console-card-media.cjs').ps5Media.apps),
-  resource('Avatars', 'Browse the shared PS4/PS5 avatar tools and avatar packs.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
-  resource('Emulators on PS5', 'PS2, GameCube, Wii, Wii U, Xbox, Xbox 360 and multi-system projects that run on a homebrew-enabled PS5.', link('/console/ps5/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png'),
-  resource('Game mods / Mod Menus', 'Call of Duty, GTA V and Red Dead Redemption 2 mod menus, screenshots and game-specific setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), require('./console-card-media.cjs').ps5Media.mods)
+  resource('Y2JB setup & autoloader', 'After initial jailbreak access, prepare YouTube with the installer and configure a firmware-compatible autoloader.', link('/console/ps5/y2jb.html', 'Open Y2JB page'), '/assets/images/consoles/ps5-y2jb.jpg')
+).replace('class="games-grid"', 'class="games-grid console-hub-setup-grid"');
+const ps5ModPreview = '/assets/images/ps4-gta5/oxagon.png';
+const ps5SaveImage = '/assets/images/consoles/ps5-saved-data-official.jpg';
+const ps5SaveImageAlt = 'PlayStation 5 Saved Data and Game/App Settings screen';
+const {ps5Media} = require('./console-card-media.cjs');
+const hubCardWithFixedArt = (...args) => resource(...args).replace('<article ', '<article data-card-art="fixed" ');
+const ps5Resources = () => grid(
+  hubCardWithFixedArt('Game mods / Mod Menus', 'Native PS5 cheats, plus GTA V, Red Dead Redemption 2 and Call of Duty menu previews and setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), ps5ModPreview, 'Oxagon mod menu open in the PS4 version of GTA V'),
+  hubCardWithFixedArt('Game saves', 'Find community saves and use Garlic SaveMgr to back up and import saves on a homebrew-enabled PS5.', link('/console/ps5/save-tools.html', 'Browse game saves'), ps5SaveImage, ps5SaveImageAlt),
+  hubCardWithFixedArt(esc(ps4AddOns.title), 'Open the shared PS4 and PS5 game library, plus PS4 DLCs, versioned updates and FPKG fixes.', link(ps4AddOns.hub, 'Browse game downloads'), ps5Media.games),
+  hubCardWithFixedArt('Apps & homebrew stores', 'PlaydenPS5, Orbit, ProsperoStore, payload managers, media players and save tools for PS5.', link('/console/ps5/apps.html', 'Browse apps'), ps5Media.apps),
+  hubCardWithFixedArt('Avatars', 'Browse the shared PS4/PS5 avatar tools and avatar packs.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
+  hubCardWithFixedArt('PS5 Themes', 'Browse the PS5 theme manager and its separate etaHEN plugin and standalone ELF setups.', link('/console/ps5/themes.html', 'Browse PS5 themes'), '/assets/images/console-software/ps5-themes-official.png'),
+  hubCardWithFixedArt('Emulators on PS5', 'PS2, GameCube, Wii, Wii U, Xbox, Xbox 360 and multi-system projects that run on a homebrew-enabled PS5.', link('/console/ps5/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png', 'RetroArch logo')
 );
-const ps4AddOns = require('./ps4-game-add-ons.cjs');
+const ps5HubSections = () =>
+  section('start', 'PS5 guides &amp; downloads', ps5Resources(), 'Game downloads, mods, apps, avatars, game saves, themes and emulators for PS5.') +
+  section('console-hub-setup', 'Firmware &amp; jailbreak', ps5SetupResources(), 'Check your installed firmware before choosing a route.') +
+  section('console-hub-tools', 'Console tools', '<div class="console-hub-group">' + grid(
+  resource('Payloads', 'etaHEN, ShadowMountPlus, ELF loaders and kernel-log payloads for PS5.', link('/console/ps5/payloads.html', 'Browse payloads'), ps5Media.payloads),
+  resource('Transfer tools', 'Move files with PS5upload, ezRemote, FTP and web services. Check each tool’s console setup before connecting.', link('/console/ps5/transfer-tools.html', 'Browse transfer tools'), ps5Media.transfers)
+  ).replace('class="games-grid"', 'class="games-grid console-hub-library"') + '</div>');
 const ps4Resources = () => grid(
   resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png'),
   resource(esc(ps4AddOns.title), ps4AddOns.description, link(ps4AddOns.hub, 'Browse PS4 downloads'), '/assets/images/consoles/playstation.jpg'),
@@ -127,16 +144,16 @@ function page(file, title, description, image, nav, content, primary = '#content
   fs.writeFileSync(path.join(root, file), require('./search-page-output.cjs').finish(file, output));
 }
 // Catalogue metadata can reference these helpers while this CLI is building.
-module.exports = {page, section, guideSection, grid, resource, note, steps, video, videoEmbed, ext, link, guideLink, sourceList, esc, hostSection, ps5Resources, ps4Resources, ps5nav, ps4nav, goldhen14Card, goldhen14Download};
+module.exports = {page, section, guideSection, grid, resource, note, steps, video, videoEmbed, ext, link, guideLink, sourceList, esc, hostSection, ps5Resources, ps5HubSections, ps5ModPreview, ps5SaveImage, ps5SaveImageAlt, ps4Resources, ps5nav, ps5HubNav, ps4nav, goldhen14Card, goldhen14Download};
 if (require.main === module) {
 const ps5image = '/assets/images/consoles/ps5-relapse.jpg';
 const ps4image = '/assets/images/consoles/ps4-jailbreak.jpg';
 const dns = () => `<dl class="guide-dns"><div><dt>Primary DNS</dt><dd><code>45.56.67.85</code></dd></div><div><dt>Secondary DNS</dt><dd><code>62.210.38.117</code></dd></div></dl>` + require('./console-dns-notice.cjs').notice();
 const provenance = '<p>The videos are linked as viewing companions. The written steps below use the project documentation; a video transcript was not available for verification.</p>';
 
-page('console/ps5/index.html', 'PlayStation 5 Homebrew', 'Relapse, Y2JB, payloads, apps and native console emulators. Start with your firmware, then choose a guide.', ps5image, ps5nav,
-hostSection('ps5') + require('./build-console-downloads.cjs').intro('ps5') +
-section('start', 'PS5 guides & downloads', ps5Resources(), 'Start with Jailbreak to choose your firmware. Each route has its own requirements; Y2JB installer setup follows initial homebrew access.') + section('sources', 'Compatibility sources', sourceList([['https://github.com/idlesauce/umtx2', 'UMTX2 browser route'], ['https://github.com/hammer-83/ps5-jar-loader', 'Blu-ray / BD-J requirements'], ['https://github.com/soniciso1/relapse', 'Relapse firmware list and payload loader']])), '#start', 'Choose a guide');
+page('console/ps5/index.html', 'PlayStation 5 Homebrew', 'Relapse, Y2JB, payloads, apps and native console emulators. Start with your firmware, then choose a guide.', ps5image, ps5HubNav,
+ps5HubSections() + hostSection('ps5') + require('./build-console-downloads.cjs').intro('ps5') +
+section('sources', 'Compatibility sources', sourceList([['https://github.com/idlesauce/umtx2', 'UMTX2 browser route'], ['https://github.com/hammer-83/ps5-jar-loader', 'Blu-ray / BD-J requirements'], ['https://github.com/soniciso1/relapse', 'Relapse firmware list and payload loader']])), '#start', 'Choose a guide');
 
 page('console/ps5/relapse.html', 'PS5 Jailbreak · 7.00–13.60', 'Use Relapse on its listed PS5 firmware versions, with manual DNS, browser access and payload-loader instructions. Excludes 9.05, 10.60 and 11.40.', ps5image, ps5nav,
 section('compatibility', 'Before you start', note('<p><strong>Firmware support is specific.</strong> The linked Relapse build supports listed versions from 7.00 to 13.60. It does not list 9.05, 10.60 or 11.40. Firmware below 7.00 needs a different compatible entry point.</p><p>Find your version under Settings &gt; System &gt; System Software &gt; Console Information. Keep it unchanged while checking compatibility. DNS changes alone do not jailbreak the console.</p>') + sourceList([['https://github.com/soniciso1/relapse', 'Check the exact supported firmware list']] )) +

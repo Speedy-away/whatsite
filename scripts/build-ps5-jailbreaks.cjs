@@ -79,20 +79,30 @@ function refreshExistingGuides() {
   fs.writeFileSync(y2jbFile, require('./playstation-nonmod-card-images.cjs').decorate('console/ps5/y2jb.html',y2jb));
 }
 
-function refreshPs5NavigationAndHub() {
-  const {section, ps5Resources, ps5nav, esc} = require('./build-console-guides.cjs');
-  const hubFile = path.join(root, 'console/ps5/index.html');
+function refreshPs5Hub() {
+  const {ps5HubSections, ps5HubNav, esc} = require('./build-console-guides.cjs');
+  const file = 'console/ps5/index.html', hubFile = path.join(root, file);
   let hub = fs.readFileSync(hubFile, 'utf8');
   if (!/<section\b[^>]*id="start"/.test(hub)) throw Error('PS5 hub guide section is missing.');
+  hub = hub.replace(/<section\b(?=[^>]*id="console-hub-(?:setup|tools)")[^>]*>[\s\S]*?<\/section>/g, '');
   hub = hub.replace(/<section\b(?=[^>]*id="start")[^>]*>[\s\S]*?<\/section>/,
-    section('start', 'PS5 guides & downloads', ps5Resources(), 'Start with Jailbreak to choose your firmware. Each route has its own requirements; Y2JB installer setup follows initial homebrew access.'));
-  fs.writeFileSync(hubFile, hub);
+    ps5HubSections());
+  const markup = '<a href="#exploit-hosts">Exploit &amp; Redirect Hosts</a>' +
+    ps5HubNav.map(([url, title]) => `<a href="${url}"${url === '/console/ps5/' ? ' aria-current="page"' : ''}>${esc(title)}</a>`).join('');
+  hub = hub.replace(/(<nav class="guide-nav" aria-label="Console pages">)[\s\S]*?(<\/nav>)/, (_, open, close) => open + markup + close);
+  hub = require('./console-hubs.cjs').improveHub(file, hub);
+  fs.writeFileSync(hubFile, require('./search-page-output.cjs').finish(file, hub));
+}
+
+function refreshPs5NavigationAndHub() {
+  const {ps5nav, esc} = require('./build-console-guides.cjs');
+  refreshPs5Hub();
   for (const entry of fs.readdirSync(path.join(root, 'console/ps5'))) {
-    if (!entry.endsWith('.html') || entry === 'whatsite-ps5.html') continue;
+    if (!entry.endsWith('.html') || ['index.html', 'whatsite-ps5.html'].includes(entry)) continue;
     const file = path.join(root, 'console/ps5', entry);
     let body = fs.readFileSync(file, 'utf8');
     const nav = ['umtx2.html', 'bdj.html', 'relapse.html'].includes(entry) ? jailbreakNav : ps5nav;
-    const markup = (entry === 'index.html' ? '<a href="#exploit-hosts">Exploit &amp; Redirect Hosts</a>' : '') + nav.map(([url, title]) => `<a href="${url}"${url === '/console/ps5/' + entry || entry === 'index.html' && url === '/console/ps5/' ? ' aria-current="page"' : ''}>${esc(title)}</a>`).join('');
+    const markup = nav.map(([url, title]) => `<a href="${url}"${url === '/console/ps5/' + entry ? ' aria-current="page"' : ''}>${esc(title)}</a>`).join('');
     body = body.replace(/(<nav class="guide-nav" aria-label="Console pages">)[\s\S]*?(<\/nav>)/, '$1' + markup + '$2');
     body = body.replace(/\/assets\/console-guides\.css\?v=\d+/g, '/assets/console-guides.css?v=9');
     body = require('./guide-popup-policy.cjs').applyGuidePopupPolicy('console/ps5/' + entry, body);
@@ -109,4 +119,4 @@ function buildPs5Jailbreaks() {
 }
 
 if (require.main === module) buildPs5Jailbreaks();
-module.exports = {buildPs5Jailbreaks, buildSelector, refreshExistingGuides, refreshPs5NavigationAndHub, jailbreakNav};
+module.exports = {buildPs5Jailbreaks, buildSelector, refreshExistingGuides, refreshPs5Hub, refreshPs5NavigationAndHub, jailbreakNav};

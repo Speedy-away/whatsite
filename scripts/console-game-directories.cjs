@@ -41,6 +41,8 @@ function hubCard(platform) {
   return `<article class="guide-resource" data-console-game-card="${platform.id}"><img src="${esc(platform.image)}" alt="${esc(platform.title)} game downloads" loading="lazy"><h3>${esc(title)}</h3><p>${esc(description)}</p><div class="guide-links"><a href="${directoryPath(platform)}">Browse ${platform.id === 'ps4' ? 'PS4 downloads' : 'game downloads'} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
 }
 function apply(file, html, data = registry()) {
+  // The PS5 hub explicitly links to the shared PS4/PS5 game download page.
+  if (normalized(file) === 'console/ps5/index.html') return html;
   if (protectedFile(file, html) || !/<main\b|<div\b[^>]*\bid="main-content"/i.test(html)) return html;
   const platform = platformFor(file, data);
   if (!platform) return html;

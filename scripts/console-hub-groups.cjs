@@ -3,42 +3,28 @@ const {range}=require('./category-card-art.cjs');
 function apply(file,html){
  const platform=/^console\/(ps[45])\/index\.html$/.exec(file)?.[1];
  if(!platform)return html;
- let desktopTools='';
- if(platform==='ps4'){
-  const toolsOpening=/<section\b[^>]*\bid="helpful-desktop-tools"[^>]*>/.exec(html);
-  const tools=toolsOpening&&range(html,toolsOpening.index,toolsOpening[0]);
-  if(tools){desktopTools=html.slice(tools.start,tools.end);html=html.slice(0,tools.start)+html.slice(tools.end);}
- }
+ // The helper pass reinserts this after the library, including when an old
+ // grouped hub put it inside #start.
+ html=html.replace(/<section\b[^>]*\bid="helpful-desktop-tools"[^>]*>[\s\S]*?<\/section>/, '');
  const opening=/<section\b[^>]*\bid="start"[^>]*>/.exec(html);
  if(!opening)return html;
  const section=range(html,opening.index,opening[0]);if(!section)return html;
  const content=html.slice(section.start,section.end);
  const firstGroup=/<div\b[^>]*class="[^"]*\bconsole-hub-group\b[^>]*>/.exec(content) ||
-  (platform==='ps4' && /<div class="games-grid">/.exec(content));
+  /<div class="games-grid">/.exec(content);
  const tail=content.match(/<\/div>\s*<\/section>$/);if(!firstGroup||!tail)return html;
  const cards=[...content.matchAll(/<article\b[\s\S]*?<\/article>/g)].map(m=>m[0]);
- const groups={mods:[],games:[],homebrew:[],setup:[]};
- for(const card of cards){
-  const key=/href="\/console\/ps[45]\/(?:jailbreaks|y2jb)\.html/.test(card)?'setup':
-   /href="\/console\/ps4\/goldhen\.html/.test(card)?'homebrew':
-   /href="\/console\/(?:mods\/ps4\/|ps5\/mods\.html|ps[45]\/game-patches\.html)/.test(card)?'mods':
-   /href="\/console\/ps[45]\/(?:game-downloads|free-shops)\.html/.test(card)?'games':'homebrew';
-  groups[key].push(card);
- }
- groups.mods.sort((a,b)=>Number(a.includes('data-game-patches-entry'))-Number(b.includes('data-game-patches-entry')));
- groups.games.sort((a,b)=>Number(a.includes('data-free-shops-card'))-Number(b.includes('data-free-shops-card')));
+ const setup=cards.filter(card=>/href="\/console\/ps[45]\/(?:jailbreaks|y2jb)\.html/.test(card));
  const group=(id,title,cards)=>cards.length?`<div class="console-hub-group" id="${id}"><p class="console-hub-group-label">${title}</p><div class="games-grid console-hub-library">${cards.join('\n')}</div></div>`:'';
- const gameRoutes = [/href="\/console\/mods\/ps4\/"/, /href="\/console\/ps4\/save-tools\.html"/, /href="\/console\/ps4\/game-downloads\.html"/, /href="\/console\/ps4\/game-patches\.html"/];
- const gameOrder = card => gameRoutes.findIndex(route => route.test(card));
- const resources = cards.filter(card => !groups.setup.includes(card));
- const isApps = card => card.includes('href="/console/ps4/apps.html"');
- const library = platform === 'ps4'
-  ? group('console-hub-games', 'Games', resources.filter(card => gameOrder(card) >= 0).sort((a,b) => gameOrder(a)-gameOrder(b))) +
-    group('console-hub-more', 'More', resources.filter(card => gameOrder(card) < 0).sort((a,b) => Number(isApps(b))-Number(isApps(a))))
-  : group('console-hub-mods','Game mods / Mod Menus',groups.mods)+group('console-hub-games','Game downloads &amp; free shops',groups.games);
- const grouped=library+desktopTools+
-  (groups.setup.length?`<div class="console-hub-group console-hub-setup" id="console-hub-setup"><div class="console-hub-group-heading"><p class="console-hub-group-label">${platform==='ps4'?'Firmware &amp; jailbreak':'Set up your '+platform.toUpperCase()}</p><span>Check your installed firmware before choosing a route.</span></div><div class="games-grid console-hub-setup-grid">${groups.setup.join('\n')}</div></div>`:'');
- const updated=content.slice(0,firstGroup.index)+grouped+tail[0];
+ const gameRoutes = [platform === 'ps4' ? '/console/mods/ps4/' : '/console/ps5/mods.html',
+  `/console/${platform}/save-tools.html`, '/console/ps4/game-downloads.html', '/console/ps4/game-patches.html'];
+ const gameOrder = card => gameRoutes.findIndex(route => card.includes(`href="${route}"`) || card.includes(`href="${route}#`));
+ const resources = cards.filter(card => !setup.includes(card));
+ const isApps = card => card.includes(`href="/console/${platform}/apps.html"`);
+ const library = group('console-hub-games', 'Games', resources.filter(card => gameOrder(card) >= 0).sort((a,b) => gameOrder(a)-gameOrder(b))) +
+  group('console-hub-more', 'More', resources.filter(card => gameOrder(card) < 0).sort((a,b) => Number(isApps(b))-Number(isApps(a))));
+ const setupSection=setup.length?`<section class="section" id="console-hub-setup"><div class="container"><div class="section-header"><h2 class="section-title">Firmware &amp; jailbreak</h2><p class="section-subtitle">Check your installed firmware before choosing a route.</p></div><div class="games-grid console-hub-setup-grid">${setup.join('\n')}</div></div></section>`:'';
+ const updated=content.slice(0,firstGroup.index)+library+tail[0]+setupSection;
  return html.slice(0,section.start)+updated+html.slice(section.end);
 }
 module.exports={apply};

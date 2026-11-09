@@ -11503,5 +11503,26 @@
     "delivery": "The existing CUSA57548 1.11 crash fix is a direct file link and follows the Pages artifact's exact-revision delivery rewrite when offloaded. Other imports use their original host routes. Mocha's stable share URLs are retained; expiring signed transfer URLs and third-party verification tokens are not imported. No files were added to the archive.",
     "ads": "The catalog uses the site's existing labelled ad placement below the results.",
     "checks": "Validated complete metadata import, generation of the PS4 directory link, Pages budget and package rewrite, and the desktop and mobile routes in Edge."
+  },
+  "ps5HubParity20261109": {
+    "date": "2026-11-09",
+    "status": "Implemented and verified in the main site checkout.",
+    "pages": [
+      "console/ps5/index.html",
+      "console/ps5/mods.html",
+      "console/ps5/save-tools.html"
+    ],
+    "changes": "Matched the PS4 hub's Games and More grids. Kept firmware, Y2JB, payloads and transfer tools in separate sections. The game downloads card opens the existing PS4 downloads page, which links to the shared PS4/PS5 Game Library. Updated the PS5 mods page with actual Encore Zombies, Oxagon and Sheriff menu screenshots and kept native PS5 cheats separately labelled.",
+    "saves": "Added the GarlicSaves community sample directory, the existing PS4 save catalogue for PS4 editions, pinned Garlic SaveMgr v1.14 and official PlayStation backup guidance. Community sample files are labelled as potentially incomplete; no new save files are mirrored.",
+    "archive": "Reused the existing v1.14 ELF. Verified 1721560 bytes and SHA-256 aaec2cb0a39e94217665652fd84fa7706f09c9f8640c07785b6a68b1711f18fc on F: and recorded the additional page in the audit. No payloads were executed.",
+    "checks": "Edge verified the matching desktop card dimensions and order, two-column mobile layout, image loading, save page and shared downloads destination. All 29 focused tests passed; two broader category-art manifest checks also failed on the unchanged checkout. Save import was not tested on a console.",
+    "artworkUpdate": {
+      "changes": "The PS5 hub uses God of War III Remastered and Astro Bot for Game downloads, plus ProsperoStore, PlaydenPS5 and Orbit for Apps. The original images render together at their full aspect ratios. The hub and save guide now use the official PS5 Saved Data settings screenshot.",
+      "savedDataSource": "https://www.playstation.com/en-gb/support/subscriptions/ps5-ps-plus-cloud-storage/",
+      "savedDataImage": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-console-storage18oct20%24en?wid=960&fmt=jpeg",
+      "savedDataSha256": "b2e63ddcbf07286530361e084b973eec04d2cfc7debd16b21a15151b5a848e7a",
+      "persistence": "The hub generator selects the sources in build-console-guides.cjs and console-card-media.cjs. Fixed cards bypass the automatic category artwork pass. Edge verified the covers and their aspect ratios on desktop and mobile, and repeating both generators preserved the HTML exactly. The new regression test passed. An existing broader test still expects SVG for five unrelated category covers delivered as JPEG."
+    },
+    "regenerate": "node -e \"require('./scripts/build-ps5-game-saves.cjs').buildPs5GameSaves(); require('./scripts/build-ps5-mods.cjs').buildPs5Mods(); require('./scripts/build-ps5-jailbreaks.cjs').refreshPs5Hub();\""
   }
 }

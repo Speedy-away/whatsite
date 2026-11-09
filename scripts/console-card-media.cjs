@@ -5,7 +5,7 @@ function cardMedia(config) {
   const images = Array.isArray(config) ? config : config.images;
   const names = (images || []).map(item=>item.src).join(' ');
   const key = /etahen|shadowmount/i.test(names) ? 'ps5-payloads' : /ps5upload|ezremote/i.test(names) ? 'ps5-transfer-tools' : /playden|orbit|prosperostore/i.test(names) ? 'ps5-apps' : /gta52|cod-black|rdr2/i.test(names) ? 'category-mods' : 'category-apps';
-  const cover = require('./merged-category-covers.cjs').get(key);
+  const cover = config.useSourceImages ? null : require('./merged-category-covers.cjs').get(key);
   if (cover) return `<div class="guide-card-media guide-card-media--merged">${require('./merged-category-covers.cjs').image(cover,'Merged '+key.replaceAll('-',' ')+' cover')}</div>`;
   const layout = !Array.isArray(config) && config.layout === 'mosaic' && images?.length === 3 ? 'mosaic' : 'strip';
   if (!Array.isArray(images) || images.length < 2 || images.length > 3) throw Error('Card mixes require two or three images');
@@ -16,14 +16,18 @@ function cardMedia(config) {
 }
 
 const ps5Media = {
+  games: {useSourceImages: true, images: [
+    {src: '/assets/images/playstation-library/god-of-war-iii.webp', alt: 'God of War III Remastered on PS4'},
+    {src: '/assets/images/playstation-library/astro-bot.png', alt: 'Astro Bot on PS5'}
+  ]},
   payloads: [
     {src: '/assets/images/console-software/etahen.jpg', alt: 'etaHEN'},
     {src: '/assets/images/console-software/shadowmountplus.png', alt: 'ShadowMountPlus'}
   ],
-  apps: {layout: 'mosaic', images: [
-    {src: '/assets/images/console-software/playden.jpg', alt: 'PlaydenPS5 library', fit: 'cover'},
-    {src: '/assets/images/console-software/orbit.jpg', alt: 'Orbit Store', fit: 'cover'},
-    {src: '/assets/images/console-software/prosperostore.png', alt: 'ProsperoStore'}
+  apps: {useSourceImages: true, layout: 'mosaic', images: [
+    {src: '/assets/images/console-software/prosperostore.png', alt: 'ProsperoStore icon'},
+    {src: '/assets/images/console-software/playden.jpg', alt: 'PlaydenPS5 library'},
+    {src: '/assets/images/console-software/orbit.jpg', alt: 'Orbit Store preview'}
   ]},
   transfers: [
     {src: '/assets/images/expansion-ps4-ps5/ps5-ezremote.jpg', alt: 'ezRemote file browser', fit: 'cover'},

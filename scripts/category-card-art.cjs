@@ -71,6 +71,7 @@ function apply(file, html, data = manifest()) {
     });
   }
   for (const card of cards(html).reverse()) {
+    if (attribute(card.html.match(/^<[^>]*>/)[0], 'data-card-art') === 'fixed') continue;
     const heading = card.html.match(/<h[23]\b[^>]*>[\s\S]*?<\/h[23]>/i);
     if (!heading) continue;
     let chosen;
