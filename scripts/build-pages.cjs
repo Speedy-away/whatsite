@@ -46,6 +46,14 @@ function sourceLinks(root) {
   if(!fs.existsSync(file))return new Map();
   return new Map(JSON.parse(fs.readFileSync(file,'utf8')).entries.map(entry=>[entry.local.slice(1),entry.url]));
 }
+function isBuildRecord(name) {
+  // Keep linked documentation and browser data in Pages. Build inputs and
+  // research records can use the same pinned repository fallback as archives.
+  return /^docs\/(?:seo|update-checks|chat-handoffs|[^/]+-(?:research|staging))\//i.test(name) ||
+    /^docs\/(?:console-download-catalog|ps4-ps5-game-(?:patches|resources)|discord-[^/]+)\.json$/i.test(name) ||
+    (name !== 'docs/host-gamerhack-local-build.json' &&
+      /^docs\/[^/]+-(?:audit|handoff|research|review|snapshot|build|jobs|migration-plan)\.(?:json|md)$/i.test(name));
+}
 function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, preferredHeadroom = 0) {
   const karoBuild = path.join(root, 'docs/host-reviews/karo/build.json');
   const activeKaro = fs.existsSync(karoBuild) ? JSON.parse(fs.readFileSync(karoBuild, 'utf8')).runtime?.replace(/^\//, '').replace(/web\/$/, '') : null;
@@ -58,6 +66,7 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, p
   let bytes = reservedBytes + files.reduce((sum, f) => sum + f.bytes, 0);
   const candidates = files.filter(f =>
     (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
+    isBuildRecord(f.name) ||
     /^scooby\/(?:FSL\/)?WINMM\.dll$/i.test(f.name) ||
     /^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) ||
     /^hosts\/runtime\/karo-[^/]+\/web\/.+\.(?:bin|elf|bz2|zip)$/i.test(f.name)

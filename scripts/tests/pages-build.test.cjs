@@ -106,6 +106,21 @@ test('Pages may use rewrite headroom but still enforces the planned size limit',
   } finally { fs.rmdirSync(root); }
 });
 
+test('Pages can offload build records while retaining linked docs and delivery data', () => {
+  const mib = 1024 * 1024;
+  const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-records-'));
+  const record = 'docs/host-repository-migration-plan.json';
+  const publicDocs = ['docs/host-gamerhack-local-build.json', 'docs/download-source-links.json',
+    'docs/guides/console-files-and-archives.md', 'docs/switch-game-mods-downloads.json'];
+  const sizes = new Map([[record, 20 * mib], ...publicDocs.map(name => [name, mib])]);
+  const revision = 'a'.repeat(40);
+  try {
+    const result = plan(root, [...sizes.keys()], revision, sizes, 890 * mib);
+    assert.deepEqual([...result.offloaded], [[record, rawURL(record, revision)]]);
+    assert.equal(result.bytes, 894 * mib);
+  } finally { fs.rmdirSync(root); }
+});
+
 test('deployment link verification follows HTML base paths and decodes quoted filenames', () => {
  const root=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'pages-link-base-'));
  try {
