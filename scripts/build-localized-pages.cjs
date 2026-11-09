@@ -1,11 +1,13 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),html=require('./localized-html.cjs');
 const {revision:languageRevision}=require('./language-loader.cjs');
+const libraryRoutes=require('./playstation-library-routes.cjs');
 const configName='docs/i18n/page-translations.json';
 function load(root,{estimateSource=false,previewPages=null,previewLanguages=null}={}){
  const file=path.join(root,configName);if(!fs.existsSync(file))return null;
  const manifest=JSON.parse(fs.readFileSync(file,'utf8')),strings=new Map(manifest.strings.map(row=>[row.source,row])),languages=new Map();
- const previewRequired=previewPages?new Set(manifest.pages.filter(page=>previewPages.includes(page.page)).flatMap(page=>page.strings).map(source=>strings.get(source)?.id).filter(Boolean)):null;
+ const translatedPages=manifest.pages.map(libraryRoutes.moveTranslation);
+ const previewRequired=previewPages?new Set(translatedPages.filter(page=>previewPages.includes(page.page)).flatMap(page=>page.strings).map(source=>strings.get(source)?.id).filter(Boolean)):null;
  for(const code of manifest.languages.filter(code=>!previewLanguages||previewLanguages.includes(code))){
   assert(html.codes.includes(code),'Unknown locale '+code);
   const cached=JSON.parse(fs.readFileSync(path.join(root,'languages/pages',code+'.json'),'utf8')),dictionary=html.dictionary(root,code);
@@ -17,7 +19,7 @@ function load(root,{estimateSource=false,previewPages=null,previewLanguages=null
   }
   languages.set(code,{dictionary,translations:cached.translations});
  }
- const pages=new Map(manifest.pages.map(page=>[page.page,page])),routes=new Map();
+ const pages=new Map(translatedPages.map(page=>[page.page,page])),routes=new Map();
  for(const page of pages.values()){routes.set(new URL(page.canonical).pathname,page.canonical);routes.set('/'+page.page,page.canonical);}
  return {root,manifest,strings,languages,pages,routes,shared:new Map(),preview:Boolean(previewPages||previewLanguages)};
 }
@@ -190,6 +192,16 @@ function generate({root,output,rewrite=(value)=>value,estimate=false,context}={}
    const rendered=rewrite(render(ctx,page,source,code),page.page),name=code==='en'?page.page:code+'/'+page.page;
    if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;if(!page.noindex)sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(source);
    if(!estimate){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,rendered);}
+  }
+ }
+ // Keep bookmarked library and package links working in every published locale.
+ for(const [legacy,destination] of libraryRoutes.redirects){
+  if(!ctx.pages.has(destination))continue;
+  for(const code of html.codes){
+   const source=libraryRoutes.redirectPage(destination,code);
+   const name=code+"/"+legacy;
+   bytes+=Buffer.byteLength(source);count++;
+   if(!estimate){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,source);}
   }
  }
  const sitemapFiles=[];

@@ -11501,8 +11501,8 @@
   },
   "playstationGameLibrary20261109": {
     "date": "2026-11-09",
-    "page": "console/ps4/game-library/index.html",
-    "downloadPage": "console/ps4/game-library/download.html",
+    "page": "console/playstation-library/index.html",
+    "downloadPage": "console/playstation-library/download.html",
     "navigation": "The PlayStation 4 and PlayStation 5 game downloads sections both link to WWB’s PS4 and PS5 Game Library through a compact card without artwork. The PS4 downloads page also links to PS5 game downloads in its console navigation. The PS4 DLC and Updates cards use the same compact treatment.",
     "catalog": "The OnlyGames HTML snapshot provided all 4,465 PS4/PS5 listings and 51,107 package links. An additional two existing Black Ops listings contribute seven links. scripts/import-playstation-library.cjs regenerates the public metadata files from a saved copy of the source HTML. The importer does not download package files.",
     "delivery": "The existing CUSA57548 1.11 crash fix is a direct file link and follows the Pages artifact's exact-revision delivery rewrite when offloaded. Other imports use their original host routes. Mocha's stable share URLs are retained; expiring signed transfer URLs and third-party verification tokens are not imported. No files were added to the archive.",
@@ -11512,6 +11512,14 @@
     "keywordExpansion": "Added PS4 and PS5 game download search variants, package links, regions, DLC and title update phrases. Verified that all existing keywords remained and that the three public HTML sources contain 81, 81 and 49 unique keywords. Both library cards carry the new download aliases.",
     "localizedDiscovery": "Refreshed localized keywords and page text for the library, PS4 and PS5 game downloads, DLC, updates and FPKG fixes in all 20 languages. Each language sitemap gains the library, DLC and Updates routes. Package pages stay noindex and preserve the selected language when visitors open a package or return to the library. Reviewed the core PS4 and PS5 download phrases in all languages and verified 140 generated routes, 31 focused tests, and the English, French and Arabic package flow in Edge.",
     "checks": "Validated complete metadata import, generation of the PS4 directory link, Pages budget and package rewrite, and the desktop and mobile routes in Edge.",
+    "routeAndTheme": {
+      "canonical": "/console/playstation-library/",
+      "legacy": "The old PS4 library and package URLs redirect while preserving game/file query parameters, hashes and all 20 locale prefixes.",
+      "visual": "Black with white XMB waves by default. A persistent light mode works across the library and package pages. Edge checks covered 320, 390, 768 and 1440 CSS pixels.",
+      "sharing": "Added a dedicated 1200 × 630 social PNG and large Open Graph and Twitter previews on the new canonical.",
+      "sources": "Restored original listings for 7,861 DLPSGame entries and 12,512 published archive download destinations. Eight hundred previously empty entries gained package destinations, with three retaining an original-listing fallback. Existing download URLs and pins were verified unchanged. External package actions go directly to their published host or download page. Game cards omit link counts and source labels.",
+      "ads": "The existing catalog ad stays below the results. Added the same labelled placement below package details on the noindex package page."
+    },
     "dlpsgameImport": {
       "date": "2026-11-09",
       "coverage": "Imported all 6,547 PS4 and 1,314 PS5 posts from the two public WordPress category snapshots. All 7,861 listings have artwork, stored as 7,860 distinct local JPEG thumbnails. The existing 4,467 listings and their details were verified unchanged.",

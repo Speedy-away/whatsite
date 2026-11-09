@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#000"/>
+      <stop offset=".58" stop-color="#07080a"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <radialGradient id="light" cx=".76" cy=".38" r=".66">
+      <stop stop-color="#353945" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="silver" x1=".07" y1=".08" x2=".94" y2=".94">
+      <stop stop-color="#fff" stop-opacity=".11"/>
+      <stop offset=".43" stop-color="#fff" stop-opacity=".20"/>
+      <stop offset=".75" stop-color="#fff" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".24"/>
+    </linearGradient>
+    <linearGradient id="fold" x2="0" y2="1">
+      <stop stop-color="#fff" stop-opacity=".10"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".13"/>
+    </linearGradient>
+    <linearGradient id="thread">
+      <stop stop-color="#fff" stop-opacity=".15"/>
+      <stop offset=".24" stop-color="#fff" stop-opacity=".96"/>
+      <stop offset=".58" stop-color="#fff" stop-opacity=".54"/>
+      <stop offset=".86" stop-color="#fff" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".26"/>
+    </linearGradient>
+    <path id="sweep" d="M-90 425C168 443 316 216 530 217c209 2 307 194 506 178 186-15 317-170 497-184" fill="none"/>
+    <path id="return" d="M-60 496c234-39 404-173 582-166 186 8 307 155 513 111 182-39 291-124 493-126" fill="none"/>
+  </defs>
+
+  <path fill="url(#sky)" d="M0 0h1440v720H0z"/>
+  <path fill="url(#light)" d="M0 0h1440v660H0z"/>
+  <path fill="url(#fold)" d="M-80 386c236 27 396-207 610-182 214 25 323 194 506 178 186-17 310-178 497-171v91c-210-12-303 148-498 172-217 27-345-151-528-158-198-8-366 174-587 168z"/>
+  <path fill="url(#silver)" d="M-90 425c245 13 406-210 620-208 209 2 307 194 506 178 186-15 317-170 497-184v68c-198 14-316 191-497 200-218 11-353-187-517-184-181 3-374 179-609 184z"/>
+  <path fill="#fff" opacity=".14" d="M-60 496c234-39 404-173 582-166 186 8 307 155 513 111 182-39 291-124 493-126v31c-189 1-320 113-501 143-212 34-363-123-510-124-168-1-356 127-577 166z"/>
+
+  <g stroke="url(#thread)" stroke-width="1.5">
+    <use href="#sweep" opacity=".88"/>
+    <use href="#sweep" transform="matrix(1 .004 0 1 0 6)" opacity=".77"/>
+    <use href="#sweep" transform="matrix(1 .006 0 .995 0 13)" opacity=".7"/>
+    <use href="#sweep" transform="matrix(1 .008 0 .99 0 21)" opacity=".64"/>
+    <use href="#sweep" transform="matrix(1 .011 0 .98 0 32)" opacity=".57"/>
+    <use href="#sweep" transform="matrix(1 .015 0 .965 0 45)" opacity=".48"/>
+    <use href="#sweep" transform="matrix(1 .018 0 .945 0 60)" opacity=".39"/>
+    <use href="#sweep" transform="matrix(1 .023 0 .92 0 79)" opacity=".3"/>
+    <use href="#return" opacity=".85"/>
+    <use href="#return" transform="matrix(1 -.004 0 1 0 8)" opacity=".66"/>
+    <use href="#return" transform="matrix(1 -.008 0 1 0 18)" opacity=".53"/>
+    <use href="#return" transform="matrix(1 -.013 0 1 0 31)" opacity=".36"/>
+  </g>
+
+  <g fill="#fff">
+    <circle cx="90" cy="356" r="1.8" opacity=".9"/>
+    <circle cx="156" cy="295" r="1.1" opacity=".7"/>
+    <circle cx="237" cy="424" r="2.3" opacity=".8"/>
+    <circle cx="328" cy="308" r="1.2" opacity=".85"/>
+    <circle cx="441" cy="195" r="2.4" opacity=".84"/>
+    <circle cx="539" cy="344" r="1.4" opacity=".8"/>
+    <circle cx="619" cy="271" r="2" opacity=".96"/>
+    <circle cx="743" cy="395" r="1.7" opacity=".75"/>
+    <circle cx="804" cy="317" r="1.3" opacity=".86"/>
+    <circle cx="945" cy="474" r="2.1" opacity=".82"/>
+    <circle cx="1075" cy="362" r="1.4" opacity=".88"/>
+    <circle cx="1197" cy="276" r="2.2" opacity=".8"/>
+    <circle cx="1331" cy="375" r="1.8" opacity=".88"/>
+    <circle cx="1386" cy="215" r="2.5" opacity=".82"/>
+  </g>
+</svg>

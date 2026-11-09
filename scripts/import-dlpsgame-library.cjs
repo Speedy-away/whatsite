@@ -1,7 +1,7 @@
 'use strict';
 
 // Import factual metadata and public file-host links from saved WordPress
-// category snapshots. The source pages and cover URLs stay off the public site.
+// category snapshots. Preserve original listing and published download pages.
 const fs = require('node:fs');
 const path = require('node:path');
 const {createHash} = require('node:crypto');
@@ -45,9 +45,18 @@ function coverSource(post) {
   return url.href;
 }
 
+function downloadPage(url) {
+  return url.hostname.replace(/^www\./, '') === 'downloadgameps3.net' && /^\/archives\/\d+\/?$/.test(url.pathname);
+}
+
+function listingPage(value) {
+  const url = webUrl(value);
+  return url && /^(?:www\.)?dlpsgame\.com$/i.test(url.hostname) && url.pathname !== '/' && !url.search && !url.hash ? url.href : '';
+}
+
 function fileHost(value) {
   const url = webUrl(value);
-  if (!url || !hosts.has(url.hostname.toLowerCase().replace(/^www\./, ''))) return '';
+  if (!url || (!hosts.has(url.hostname.toLowerCase().replace(/^www\./, '')) && !downloadPage(url))) return '';
   if (url.pathname === '/' && !url.search && !url.hash) return '';
   if ([...url.searchParams.keys()].some(key => signedQuery.test(key))) return '';
   if (/\/(?:login|register|terms|privacy|contact|support|help|premium|upload)\/?$/i.test(url.pathname)) return '';
@@ -116,7 +125,7 @@ function parseLinks(post) {
       const firmware = /\b(?:fix|backport|firmware|fw)\s+(\d[\dx.+/]*(?:\s*\/\s*\d[\dx.+/]*)*)/i.exec(label)?.[1] ||
         /\((\d+(?:\.[\dx]+)+\+)\)/i.exec(label)?.[1];
       const pkg = compact({url, label:label.slice(0,180), kind:kind(label), titleId,
-        region:region(label) || currentRegion, version, firmware});
+        region:region(label) || currentRegion, version, firmware, landing:downloadPage(new URL(url)) || undefined});
       if (pkg.region) regions.add(pkg.region);
       const key = digest(JSON.stringify(pkg)).slice(0,16);
       if (!files.has(key)) files.set(key,{id:key,...pkg});
@@ -152,13 +161,14 @@ function mergeSnapshots(snapshots,{index,details},hasCover) {
       const title = compact({id,name,platform,cover,titleIds,count:files.length,facets,
         regions:distinct([...regions,...facets.map(facet=>facet.split(':')[0])]),date,source:provider});
       const bucket = details[parseInt(shard(id),16)];
-      const detail = {...compact({name,platform,cover,titleIds,date,source:provider,notes}),files};
+      const detail = {...compact({name,platform,cover,titleIds,date,source:provider,notes,page:listingPage(post.link)}),files};
       if (existing.has(id)) {
         if (bucket[id]?.source !== provider) throw Error('Conflicting catalog ID '+id);
         const position = existing.get(id);
         // Keep older mirrors when a later snapshot omits them.
         const retained = new Map([...bucket[id].files,...files].map(file=>[file.id,file]));
         detail.files = [...retained.values()];
+        if (!detail.page && bucket[id].page) detail.page = bucket[id].page;
         const old = index.titles[position];
         if (!title.cover && old.cover) detail.cover = title.cover = old.cover;
         title.titleIds = detail.titleIds = distinct([...(old.titleIds||[]),...titleIds]);

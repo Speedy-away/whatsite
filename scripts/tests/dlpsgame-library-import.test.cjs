@@ -10,7 +10,7 @@ const publicLinks = Buffer.from(`
   <p>Update 1.04 (Fix 5.05/6.72): <a href="https://mocha.my/share/example">Mocha</a></p>
   <p><a href="https://downloadgameps3.net/archives/123">Mirror</a></p>
 `).toString('base64');
-const post = {id:123, title:{rendered:'Example &amp; Friends'}, content:{rendered:`
+const post = {id:123, link:'https://dlpsgame.com/example-ps5/', title:{rendered:'Example &amp; Friends'}, content:{rendered:`
   <img src="https://dlpsgame.com/wp-content/uploads/cover.jpg">
   <div data-payload="${publicLinks}"></div>
 `}};
@@ -18,8 +18,11 @@ const post = {id:123, title:{rendered:'Example &amp; Friends'}, content:{rendere
 test('imports public host links and preserves exact update and firmware pins', () => {
   const result = parseLinks(post);
   assert.deepEqual(result.titleIds, ['PPSA12345']);
-  assert.equal(result.files.length, 2);
-  const [game, update] = result.files;
+  assert.equal(result.files.length, 3);
+  const [game, update, landing] = result.files;
+  assert.equal(landing.url, 'https://downloadgameps3.net/archives/123');
+  assert.equal(landing.landing, true);
+  assert.equal(fileHost('https://downloadgameps3.net/guide-download-game/'), '');
   assert.equal(game.url, 'https://gofile.io/d/example');
   assert.equal(game.kind, 'base');
   assert.equal(game.version, undefined);
@@ -39,12 +42,15 @@ test('keeps cover-only listings and preserves earlier package links on repeat im
   const coverOnly = {...post,id:124,content:{rendered:'<img src="https://i.imgur.com/cover.jpg">'}};
   const snapshot = {PS5:[post,coverOnly]};
   mergeSnapshots(snapshot,state,()=>true);
-  assert.deepEqual(state.index.titles.map(row=>row.count),[2,0]);
+  assert.deepEqual(state.index.titles.map(row=>row.count),[3,0]);
   assert.match(state.index.titles[1].cover,/^\/assets\/images\/playstation-library\/dlpsgame\/[a-f0-9]+\.jpg$/);
   const saved = structuredClone(state);
+  const game = state.index.titles[0];
+  const shard = parseInt(game.id.slice(0,2),16)%32;
+  assert.equal(state.details[shard][game.id].page, post.link);
   mergeSnapshots(snapshot,state,()=>true);
   assert.deepEqual(state,saved);
   mergeSnapshots({PS5:[{...post,content:{rendered:''}},coverOnly]},state,()=>false);
-  assert.deepEqual(state.index.titles.map(row=>row.count),[2,0]);
+  assert.deepEqual(state.index.titles.map(row=>row.count),[3,0]);
   assert.deepEqual(state.index.titles.map(row=>row.cover),saved.index.titles.map(row=>row.cover));
 });

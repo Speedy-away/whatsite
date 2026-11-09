@@ -63,7 +63,7 @@ const json = async url => {
   return response.json();
 };
 let indexPromise;
-const index = () => indexPromise ||= json(dataRoot + 'index.json?v=dlpsgame-1');
+const index = () => indexPromise ||= json(dataRoot + 'index.json?v=dlpsgame-2');
 const shards = new Map();
 async function getGame(id, revision) {
   if (!gameId.test(id || '')) return null;
@@ -122,24 +122,28 @@ document.addEventListener('click', event => {
   if (button) copy(button.dataset.copy, msg(button.dataset.copy === 'SuperPSX' ? 'password-copied' : 'link-copied'));
 });
 
-function sourceLink(url, label) {
+function sourceLink(url, label, {button = false} = {}) {
   const href = safeUrl(url);
-  return href ? `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(label)} <span aria-hidden="true">↗</span></a>` : '';
+  return href ? `<a${button ? ' class="action secondary"' : ''} href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(label)} <span aria-hidden="true">↗</span></a>` : '';
 }
 
 function renderGame(id, game, initialRegion, initialKind, related) {
   const detail = $('game-detail');
   const regionOptions = [...new Set(game.files.map(file => regionKey(file.region)))].sort();
   const kinds = order.filter(kind => game.files.some(file => file.kind === kind));
-  const sources = [sourceLink(game.page, msg('source-listing')), ...(game.sourcePages || []).map((url, i, items) =>
-    sourceLink(url, msg('source-download') + (items.length > 1 ? ' ' + fmt.format(i + 1) : '')))].filter(Boolean);
+  const sourcePage = safeUrl(game.page);
+  const sourceUrls = [...new Set((game.sourcePages || []).map(safeUrl).filter(url => url && url !== sourcePage))];
+  const sources = [sourceLink(sourcePage, msg('source-listing'), {button: true}), ...sourceUrls.map((url, i) =>
+    sourceLink(url, msg('source-download') + (sourceUrls.length > 1 ? ' ' + fmt.format(i + 1) : ''), {button: true}))].filter(Boolean);
+  const otherListings = related.length ? `<div class="source-notes"><h3>${label('related-title-ids')}</h3><ul>${related.map(listing =>
+    `<li><a href="${gameUrl(listing.id)}" data-game="${listing.id}">${esc(listing.name)}</a></li>`).join('')}</ul></div>` : '';
   detail.innerHTML = `
     <div class="detail-header">
       ${cover(game)}
-      <div><p class="label-line">${esc(game.platform)} / ${esc(countLabel('link-count', game.files.length))}</p>
+      <div><p class="label-line">${esc(game.platform)}</p>
         <h2 id="game-title">${esc(game.name)}</h2>
-        <p class="meta-line">${[game.source, ...(game.titleIds || [])].filter(Boolean).map(esc).join(' · ')}</p>
-        ${sources.length ? `<p class="meta-line library-source">${sources.join(' · ')}</p>` : ''}
+        <p class="meta-line">${(game.titleIds || []).map(esc).join(' · ')}</p>
+        ${sources.length ? `<div class="library-source">${sources.join('')}</div>` : ''}
         ${game.files.length ? `<button type="button" class="action secondary" id="copy-all">${label('copy-all')} <span aria-hidden="true">⧉</span></button>` : ''}
       </div>
     </div>
@@ -155,10 +159,9 @@ function renderGame(id, game, initialRegion, initialKind, related) {
       </div>
     </div>
     <p id="file-count" class="meta-line" role="status"></p>
-    <div class="file-list" id="file-list"></div>` : `
-    <p class="detail-note">${label('source-unavailable')}</p>
-    ${related.length ? `<div class="source-notes"><h3>${label('related-title-ids')}</h3><ul>${related.map(listing =>
-      `<li><a href="${gameUrl(listing.id)}" data-game="${listing.id}">${esc(listing.name)} · ${esc(listing.source)}</a></li>`).join('')}</ul></div>` : ''}`}`;
+    <div class="file-list" id="file-list"></div>` : sources.length ? '' : `
+    <p class="detail-note">${label('source-unavailable')}</p>`}
+    ${otherListings}`;
   if (!game.files.length) return;
   const regionSelect = $('file-region'), kindSelect = $('file-kind');
   regionSelect.append(...regionOptions.map(regionOption));
@@ -172,10 +175,14 @@ function renderGame(id, game, initialRegion, initialKind, related) {
     $('file-count').textContent = countLabel('link-count', filtered.length);
     $('file-list').innerHTML = filtered.length ? filtered.map(file => {
       const meta = [labels[file.kind], file.titleId, file.region, file.version && 'v' + file.version,
-        file.firmware && 'FW ' + file.firmware, file.size, host(file.url)].filter(Boolean).map(esc).join(' · ');
+        file.firmware && 'FW ' + file.firmware, file.size].filter(Boolean).map(esc).join(' · ');
+      const url = safeUrl(file.url);
+      const action = file.direct
+        ? `<a class="action secondary" href="${transferUrl(id, file.id)}">${label('download-options')} <span aria-hidden="true">→</span></a>`
+        : url ? sourceLink(url, msg(file.landing ? 'source-download' : 'open-host'), {button: true}) : '';
       return `<article class="package-row">
         <div><h3>${esc(file.label || labels[file.kind] || msg('package'))}</h3><p class="meta-line">${meta}</p></div>
-        <a class="action secondary" href="${transferUrl(id, file.id)}">${label('download-options')} <span aria-hidden="true">→</span></a>
+        ${action}
       </article>`;
     }).join('') : `<p class="empty-state">${label('no-packages')}</p>`;
   }
@@ -252,7 +259,7 @@ async function library() {
     const cards = filtered.slice(start, visible).map(g => `
       <a href="${gameUrl(g.id)}" class="game-card" data-game="${g.id}">
         ${cover(g, true)}
-        <div><p class="card-meta"><strong>${esc(g.platform)}</strong><span>${esc(countLabel('link-count', g.count))}</span><span>${esc(g.source)}</span></p><h3>${esc(g.name)}</h3></div>
+        <div><p class="card-meta"><strong>${esc(g.platform)}</strong></p><h3>${esc(g.name)}</h3></div>
       </a>`).join('');
     if (reset) results.innerHTML = cards; else results.insertAdjacentHTML('beforeend', cards);
     if (!reset) results.children[start]?.focus();
@@ -270,7 +277,7 @@ async function library() {
       if (serial !== request || !dialog.open) return;
       if (!game) throw Error('Listing not found');
       const titleIds = new Set(game.titleIds || []);
-      const related = game.files.length || !titleIds.size ? [] : (titles || []).filter(listing =>
+      const related = game.files.some(file => !file.landing) || !titleIds.size ? [] : (titles || []).filter(listing =>
         listing.id !== id && listing.platform === game.platform && listing.count > 0 &&
         listing.titleIds?.some(titleId => titleIds.has(titleId))).slice(0, 8);
       renderGame(id, game, region.value, kind.value, related);

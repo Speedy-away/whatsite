@@ -2,6 +2,7 @@
 // Offset-based HTML processing preserves scripts, download attributes and technical opt-outs.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),vm=require('node:vm');
 const origin='https://whatwhatboy.com';
+const libraryRoutes=require('./playstation-library-routes.cjs');
 const codes=['es','pt','fr','de','ru','tr','pl','it','zh','ja','ko','th','vi','id','hi','sr','nl','ka','ar','he'];
 const native={en:'English',es:'Español',pt:'Português',fr:'Français',de:'Deutsch',ru:'Русский',tr:'Türkçe',pl:'Polski',it:'Italiano',zh:'简体中文',ja:'日本語',ko:'한국어',th:'ไทย',vi:'Tiếng Việt',id:'Indonesia',hi:'हिन्दी',sr:'Српски',nl:'Nederlands',ka:'ქართული',ar:'العربية',he:'עברית'};
 const locales={en:'en_US',es:'es_ES',pt:'pt_BR',fr:'fr_FR',de:'de_DE',ru:'ru_RU',tr:'tr_TR',pl:'pl_PL',it:'it_IT',zh:'zh_CN',ja:'ja_JP',ko:'ko_KR',th:'th_TH',vi:'vi_VN',id:'id_ID',hi:'hi_IN',sr:'sr_RS',nl:'nl_NL',ka:'ka_GE',ar:'ar_AR',he:'he_IL'};
@@ -40,12 +41,12 @@ function spans(html){
 function canonical(html){return [...html.matchAll(/<link\b[^>]*>/gi)].map(m=>attributes(m[0])).find(a=>a.rel==='canonical')?.href;}
 function publicSource(name,html){return !codes.includes(name.split('/')[0])&&!/^(?:hosts\/|downloads\/(?!index\.html$))/.test(name)&&!/<meta\b[^>]*http-equiv=["']refresh["']/i.test(html)&&!/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)&&canonical(html)?.startsWith(origin+'/');}
 function localizedUtility(name,source){
- return name==='console/ps4/game-library/download.html'&&canonical(source)===origin+'/'+name&&
+ return name===libraryRoutes.download&&canonical(source)===origin+'/'+name&&
   /<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(source);
 }
 function localizeKeywordTerms(page){
  return /^console\/ps[45]\/game-downloads\.html$/.test(page)||
-  /^console\/ps4\/(?:game-library\/index|dlcs|updates|fpkg-fixes)\.html$/.test(page);
+  page===libraryRoutes.index||/^console\/ps4\/(?:dlcs|updates|fpkg-fixes)\.html$/.test(page);
 }
 const keywordTerms=value=>value.split(',').map(normalize).filter(Boolean);
 function dictionary(root,code){const box={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'languages',code+'.js'),'utf8'),box,{timeout:1000});const table=box.window.__scoobyI18nQueue?.find(row=>row[0]===code)?.[1];if(!table)throw Error('Missing dictionary '+code);return table;}

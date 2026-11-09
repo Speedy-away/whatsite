@@ -38,7 +38,7 @@ function materialize(root, result) {
 }
 function materializeLocaleSources(root) {
   const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/i18n/page-translations.json'), 'utf8'));
-  const sources = manifest.pages.map(page => '/' + page.page.replace(/[\\*?\[\]]/g, match => '\\' + match));
+  const sources = manifest.pages.map(require('./playstation-library-routes.cjs').moveTranslation).map(page => '/' + page.page.replace(/[\\*?\[\]]/g, match => '\\' + match));
   execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/',...sources].join('\n')+'\n',maxBuffer:64*1024*1024});
 }
 function sourceLinks(root) {

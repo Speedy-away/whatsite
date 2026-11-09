@@ -7,6 +7,7 @@ const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&qu
 const normalized = file => (/^\/(?:console|downloads|pc|source-codes)\//.test(file) ? file : path.isAbsolute(file) ? path.relative(root, file) : file).replaceAll('\\', '/').replace(/^\/+/, '').split(/[?#]/)[0];
 const directoryPath = platform => platform.base + 'game-downloads.html';
 const ps4AddOns = require('./ps4-game-add-ons.cjs');
+const libraryRoutes = require('./playstation-library-routes.cjs');
 const fpkgFixesFile = 'console/ps4/fpkg-fixes.html';
 const blackOps2Mods = '/console/mods/ps4/call-of-duty/black-ops-2/';
 function orbitStoreCard() {
@@ -19,7 +20,7 @@ function platformFor(file, data = registry()) {
 }
 function protectedFile(file, html) {
   const current = normalized(file);
-  return current.startsWith('downloads/') || current.startsWith('console/ps4/game-library/') ||
+  return current.startsWith('downloads/') || (current.startsWith(libraryRoutes.legacy) || current.startsWith(libraryRoutes.directory)) ||
     /(?:^|\/)whatsite-ps[45]\.html$/.test(current) || /\bid=["']receiver-catalog["']/.test(html);
 }
 function range(html, tag, predicate) {
@@ -41,7 +42,7 @@ function applyLibraryCard(html, platform) {
   const directory = range(html, 'section', opening => opening.includes('id="game-directories"'));
   if (!directory) return html;
 
-  const library = '/console/ps4/game-library/';
+  const library = '/' + libraryRoutes.directory;
   const name = "WWB’s PS4 and PS5 Game Library";
   const ps5Downloads = '/console/ps5/game-downloads.html';
   const block = html.slice(directory.start, directory.end);

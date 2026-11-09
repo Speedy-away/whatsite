@@ -15,11 +15,12 @@ const sponsoredLink = '<a class="site-ad-sponsored" href="https://araplhn.org/4/
 function eligible(file, html) {
   html = html.replace(/<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->/g, '');
   const relative = require('./site-public-pages.cjs').relativePath(file);
+  const packagePage = relative === 'console/playstation-library/download.html';
   return require('./site-public-pages.cjs').eligible(relative) &&
     !/^hosts\//.test(relative) &&
     /class=["'][^"']*\bmain-content\b/.test(html) &&
     !/^console\/ps[45]\/whatsite-ps[45]\.html$/.test(file.replaceAll('\\', '/')) &&
-    !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html) &&
+    (packagePage || !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) &&
     !/http-equiv=["']refresh/i.test(html) &&
     !/\bclass=["'][^"']*receiver-/.test(html);
 }
@@ -90,7 +91,7 @@ function applyAds(file, html) {
       ? /<section\b[^>]*\bid="console-hub-tools"[^>]*>/i
       : normalizedFile === 'console/ps4/index.html'
       ? /<section\b[^>]*\bid="start"[^>]*>/i
-      : normalizedFile === 'console/ps4/game-library/index.html'
+      : normalizedFile === 'console/playstation-library/index.html'
         ? /<section\b[^>]*\bid="catalog"[^>]*>/i
         : normalizedFile === 'console/ps4/themes.html' && html.includes('id="theme-library"')
           ? /<section\b[^>]*\bid="theme-library"[^>]*>/i

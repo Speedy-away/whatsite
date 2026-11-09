@@ -51,7 +51,7 @@ test('localized PlayStation packages stay in the selected language without enter
  const {ctx}=fixture();
  const folder=fs.mkdtempSync(path.join(os.tmpdir(),'multilingual-playstation-'));
  t.after(()=>fs.rmSync(folder,{recursive:true,force:true}));
- const base='/console/ps4/game-library/';
+ const base='/console/playstation-library/';
  const utility={page:base.slice(1)+'download.html',canonical:html.origin+base+'download.html',noindex:true};
  const library={page:base.slice(1)+'index.html',canonical:html.origin+base};
  const makePage=(page,body)=>`<!doctype html><html lang="en"><head><link rel="canonical" href="${page.canonical}">${page.noindex?'<meta name="robots" content="noindex, follow">':''}</head><body>${body}</body></html>`;
@@ -79,12 +79,22 @@ test('localized PlayStation packages stay in the selected language without enter
   assert.doesNotMatch(download,/rel="alternate"/);
   assert.ok(sitemap.includes('<loc>'+html.origin+localeBase+'</loc>'));
   assert.ok(!sitemap.includes('download.html'));
+  const legacyBase='console/ps4/game-library/';
+  for(const [file,destination] of [['index.html',localeBase],['download.html',localeBase+'download.html']]){
+   const redirect=fs.readFileSync(path.join(out,code,legacyBase,file),'utf8');
+   assert.ok(redirect.includes('content="noindex, follow"'));
+   let redirected;
+   const location={search:'?game=abcdef&file=42',hash:'#catalog',replace:value=>{redirected=value;}};
+   require('node:vm').runInNewContext(redirect.match(/<script>([^<]+)<\/script>/)[1],{location});
+   assert.equal(redirected,destination+location.search+location.hash);
+  }
+  assert.ok(!sitemap.includes(legacyBase));
  }
 });
 
 test('PlayStation keyword phrases translate individually and deduplicate in metadata and schema',()=>{
  const {ctx}=fixture();
- const page={page:'console/ps4/game-library/index.html',canonical:html.origin+'/console/ps4/game-library/'};
+ const page={page:'console/playstation-library/index.html',canonical:html.origin+'/console/playstation-library/'};
  const original='PS4 game downloads, download PS4 games, CUSA01715, PS5 game updates';
  const terms={'PS4 game downloads':'Descargas de juegos PS4','download PS4 games':'Descargas de juegos PS4','PS5 game updates':'Actualizaciones de juegos PS5'};
  for(const [source,value] of Object.entries(terms)){

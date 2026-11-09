@@ -406,7 +406,7 @@ function transform(file, before, options = {}) {
   const keywordLimit = relative === 'pc/ports.html' ? 120
     : /^console\/ps[45]\/game-downloads\.html$/.test(relative) ? 80
     : relative === 'console/ps4/game-patches.html' ? 70
-    : /^(?:console\/ps[45]\/(?:index|free-shops)\.html|console\/ps4\/(?:save-tools\.html|game-library\/index\.html)|console\/free-shops\/index\.html)$/.test(relative) ? 60
+    : /^(?:console\/ps[45]\/(?:index|free-shops)\.html|console\/ps4\/save-tools\.html|console\/playstation-library\/index\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60
     : 35;
   const keywords = [...new Map(terms.filter(t => t && t.toLowerCase() !== 'whatwhatboy').map(t => [t.toLowerCase(), t])).values()].slice(0, keywordLimit).concat('whatwhatboy').join(', ');
   const bodyHero = before.match(/class="hero-image"[^>]*>[\s\S]*?<img\b[^>]*src="([^"]*)"/i)?.[1];
