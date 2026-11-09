@@ -9,24 +9,34 @@ const dlcs = '/console/ps4/dlcs.html';
 const updates = '/console/ps4/updates.html';
 const cover = game => `/assets/images/covers/cod-${game.id}.jpg`;
 
+function taggedResource(title, description, links, image, labels) {
+  const {resource, esc} = require('./build-console-guides.cjs');
+  const tags = labels.map(label => `<li class="feature-tag">${esc(label)}</li>`).join('');
+  return resource(title, description, links, image).replace('<div class="guide-links">',
+    `<ul class="guide-resource-tags" aria-label="Tags">${tags}</ul><div class="guide-links">`);
+}
+
 function build() {
-  const {page, section, grid, resource, ext} = require('./build-console-guides.cjs');
+  const {page, section, grid, ext} = require('./build-console-guides.cjs');
   const nav = [['/console/ps4/', 'PS4 Hub'], [hub, 'Game downloads'], [dlcs, "DLC's"], [updates, 'Updates'],
     ['/console/ps4/fpkg-fixes.html', "FPKG's Fixes"]];
   const artwork = '/assets/images/free-shops/game-downloads-20261104.jpg';
-  const cards = (label, detail, url, button) => grid(...games.map(game =>
-    resource(label(game), detail(game), ext(url(game), button), cover(game))
+  const cards = (label, detail, url, button, tags) => grid(...games.map(game =>
+    taggedResource(label(game), detail(game), ext(url(game), button), cover(game),
+      ['PS4', 'Call of Duty', game.titleId, ...tags(game)])
       .replace('<article ', `<article id="${game.id}" `)));
 
   page(dlcs.slice(1), "DLC's", 'Season Pass packages for Black Ops 1 and Black Ops 2 on PlayStation 4.', artwork, nav,
     section('games-dlcs', 'Games - DLCs', cards(game => game.title + ' DLC / Season Pass',
-      game => `PS4 · ${game.titleId}`, game => game.dlc, 'Download Season Pass PKG') +
+      game => `PS4 · ${game.titleId}`, game => game.dlc, 'Download Season Pass PKG',
+      () => ['DLC', 'Season Pass', 'PKG', 'Discord']) +
       `<div class="guide-note"><p>Discord download links expire. If a link stops working, open the original post in Discord to get a fresh link.</p><div class="guide-links">${ext(dlcPost, 'Open original Discord post')}</div></div>`),
     '#games-dlcs', 'Browse DLCs');
   page(updates.slice(1), 'Updates', 'Versioned PlayStation 4 game updates for Black Ops 1 and Black Ops 2.', artwork, nav,
     section('game-updates', 'PS4 game updates', cards(game => `${game.title} [${game.update}]`,
       game => `PS4 · ${game.titleId}. The folder lists the base game and update ${game.update} together in one PKG, labelled [5.05].`,
-      game => game.updateFolder, 'Open VikingFile download folder')),
+      game => game.updateFolder, 'Open VikingFile download folder',
+      game => ['Game update', game.update, 'Game + update PKG', 'VikingFile'])),
     '#game-updates', 'Browse updates');
   const files = [dlcs.slice(1), updates.slice(1)];
   for (const file of files) {
@@ -54,10 +64,10 @@ function applyToDirectory(html) {
   }
   if (html.includes('id="games-dlcs"')) return html;
   const links = games.map(game => link(`${dlcs}#${game.id}`, `${game.title} Season Pass`)).join('');
-  const dlcCard = resource("DLC's", 'Find Season Pass packages by game and PS4 title ID.',
-    link(dlcs, 'Browse DLCs') + links, cover(games[0]));
-  const updatesCard = resource('Updates', 'Find Black Ops 1 [1.09] and Black Ops 2 [1.11].',
-    link(updates, 'Browse updates'), cover(games[1]));
+  const dlcCard = taggedResource("DLC's", 'Find Season Pass packages by game and PS4 title ID.',
+    link(dlcs, 'Browse DLCs') + links, cover(games[0]), ['PS4', 'Call of Duty', 'DLC', 'Season Pass', 'PKG']);
+  const updatesCard = taggedResource('Updates', 'Find Black Ops 1 [1.09] and Black Ops 2 [1.11].',
+    link(updates, 'Browse updates'), cover(games[1]), ['PS4', 'Call of Duty', 'Game updates', '1.09', '1.11', 'VikingFile']);
   const block = section('games-dlcs', 'Games - DLCs', grid(dlcCard, updatesCard));
   return html.replace(/<section\b[^>]*\bid="game-directories"[^>]*>/, opening => block + opening);
 }
