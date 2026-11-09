@@ -39,13 +39,22 @@ function spans(html){
 }
 function canonical(html){return [...html.matchAll(/<link\b[^>]*>/gi)].map(m=>attributes(m[0])).find(a=>a.rel==='canonical')?.href;}
 function publicSource(name,html){return !codes.includes(name.split('/')[0])&&!/^(?:hosts\/|downloads\/(?!index\.html$))/.test(name)&&!/<meta\b[^>]*http-equiv=["']refresh["']/i.test(html)&&!/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)&&canonical(html)?.startsWith(origin+'/');}
+function localizedUtility(name,source){
+ return name==='console/ps4/game-library/download.html'&&canonical(source)===origin+'/'+name&&
+  /<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(source);
+}
+function localizeKeywordTerms(page){
+ return /^console\/ps[45]\/game-downloads\.html$/.test(page)||
+  /^console\/ps4\/(?:game-library\/index|dlcs|updates|fpkg-fixes)\.html$/.test(page);
+}
+const keywordTerms=value=>value.split(',').map(normalize).filter(Boolean);
 function dictionary(root,code){const box={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'languages',code+'.js'),'utf8'),box,{timeout:1000});const table=box.window.__scoobyI18nQueue?.find(row=>row[0]===code)?.[1];if(!table)throw Error('Missing dictionary '+code);return table;}
 function protection(names=[]){
- const literals=[...new Set(['whatwhatboy','GoldHEN','etaHEN','webMAN','multiMAN','PSNinja','CCAPI','RPCS3','PCSX2','Dolphin','Cemu','Xenia','PPSSPP','RetroArch','Atmosphère','Atmosphere','Hekate','Windows','Linux','macOS','Android','iOS','YouTube','Discord','Telegram','Instagram','Twitter','TikTok','GitHub','Call of Duty','Grand Theft Auto','PlayStation','Nintendo Switch','Steam Deck','Xbox','PS Vita','GameCube','Wii U','PS4','PS5','PS3','PS2','PSP','DEX','CEX','HEN','CFW','HFW','JSON','PKG','FPKG','SPRX','PRX','ELF','FTP','USB','SD','SHA-256','EBOOT','PARAM.SFO','Share','L1','R1','L2','R2','L3','R3','HDD','SSD','SMB','PC',...names])].filter(n=>n.length>1).sort((a,b)=>b.length-a.length);
+ const literals=[...new Set(['whatwhatboy','WhatWhatBoy','WWB','OnlyGames','Astro Bot','DLC','CUSA','PPSA','GoldHEN','etaHEN','webMAN','multiMAN','PSNinja','CCAPI','RPCS3','PCSX2','Dolphin','Cemu','Xenia','PPSSPP','RetroArch','Atmosphère','Atmosphere','Hekate','Windows','Linux','macOS','Android','iOS','YouTube','Discord','Telegram','Instagram','Twitter','TikTok','GitHub','Call of Duty','Grand Theft Auto','PlayStation','Nintendo Switch','Steam Deck','Xbox','PS Vita','GameCube','Wii U','PS4','PS5','PS3','PS2','PSP','DEX','CEX','HEN','CFW','HFW','JSON','PKG','FPKG','SPRX','PRX','ELF','FTP','USB','SD','SHA-256','EBOOT','PARAM.SFO','Share','L1','R1','L2','R2','L3','R3','HDD','SSD','SMB','PC',...names])].filter(n=>n.length>1).sort((a,b)=>b.length-a.length);
  const escaped=literals.map(n=>n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|');
  const pattern=new RegExp('https?:\\/\\/[^\\s<>"\']+|(?:[A-Z]:[\\\\/]|(?:\\.\\.?/|/))[\\w./\\\\-]+|\\b[a-fA-F0-9]{12,64}\\b|\\b(?:CUSA|PPSA|BLES|BLUS|NPUB|NPEB|SCUS|SLUS)[A-Z0-9-]+\\b|\\b[^\\s<>"\']+\\.(?:zip|rar|7z|pkg|fpkg|bin|elf|sprx|prx|self|vpk|pup|nro|rpx|wuhb|exe|dll|ini|json|xml|gsc|csc|lua|iso|txt|cfg|conf|cmd|bat)\\b|\\bv?\\d+(?:\\.\\d+)+(?:[a-z][\\w.-]*)?\\b|\\b\\d+(?:[.,]\\d+)?\\s*(?:MiB|GiB|KiB|MB|GB|KB|FPS|Hz)\\b|\\b(?:'+escaped+')\\b','g');
  const files=/\b[^\s<>"']+\.(?:zip|rar|7z|pkg|fpkg|bin|elf|sprx|prx|self|vpk|pup|nro|rpx|wuhb|exe|dll|ini|json|xml|gsc|csc|lua|iso|txt|cfg|conf|cmd|bat|3dsx|p3t|pbp|xbe|png|jpg|jpeg|webp|bmp|ttf|woff2?)\b/;
- const complete=new RegExp(files.source+'|\\b(?:CUSA|PPSA|BLES|BLUS|NPUB|NPEB|SCUS|SLUS)[A-Z0-9_-]+\\b|'+pattern.source,'g');
+ const complete=new RegExp('\\{[a-z]+\\}|'+files.source+'|\\b(?:CUSA|PPSA|BLES|BLUS|NPUB|NPEB|SCUS|SLUS)[A-Z0-9_-]+\\b|'+pattern.source,'g');
  return source=>{const values=[];const template=source.replace(complete,value=>{const i=values.push(value)-1;return 'ZXQ'+String(i).padStart(4,'0')+'QXZ';});return {template,values,id:hash(template).slice(0,20)};};
 }
 function restore(translated,values){
@@ -56,7 +65,18 @@ function restore(translated,values){
 function urlFor(source,code){return code==='en'?source:origin+'/'+code+new URL(source).pathname;}
 function alternateLinks(source){return ['en',...codes,'x-default'].map(code=>'<link rel="alternate" hreflang="'+code+'" href="'+urlFor(source,code==='x-default'?'en':code)+'">').join('\n');}
 const schemaTextKeys=new Set(['name','description','headline','alternateName','keywords','articleSection','caption']);
-function structuredStrings(source){const result=[];function walk(value,key){if(typeof value==='string'&&schemaTextKeys.has(key)&&/[A-Za-z]/.test(value))result.push(normalize(value));else if(Array.isArray(value))value.forEach(item=>walk(item,key));else if(value&&typeof value==='object')for(const[k,item]of Object.entries(value))walk(item,k);}for(const m of source.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi))walk(JSON.parse(m[1]));return result;}
+function structuredStrings(source,{splitKeywords=false}={}){
+ const result=[];
+ function walk(value,key){
+  if(typeof value==='string'&&schemaTextKeys.has(key)&&/[A-Za-z]/.test(value)){
+   if(splitKeywords&&key==='keywords')result.push(...keywordTerms(value));
+   else result.push(normalize(value));
+  }else if(Array.isArray(value))value.forEach(item=>walk(item,key));
+  else if(value&&typeof value==='object')for(const[k,item]of Object.entries(value))walk(item,k);
+ }
+ for(const m of source.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi))walk(JSON.parse(m[1]));
+ return result;
+}
 function mapTokens(source,visit){return source.replace(tokenPattern,token=>visit(token)??token);}
 const sourceHash=value=>hash(String(value).replace(/\r\n/g,'\n'));
-module.exports={origin,codes,native,locales,hash,sourceHash,normalize,decode,escape,attributes,spans,canonical,publicSource,dictionary,protection,restore,urlFor,alternateLinks,schemaTextKeys,structuredStrings,mapTokens};
+module.exports={origin,codes,native,locales,hash,sourceHash,normalize,decode,escape,attributes,spans,canonical,publicSource,localizedUtility,localizeKeywordTerms,keywordTerms,dictionary,protection,restore,urlFor,alternateLinks,schemaTextKeys,structuredStrings,mapTokens};

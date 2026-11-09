@@ -1,12 +1,16 @@
 const $ = id => document.getElementById(id);
-const root = '/console/ps4/game-library/';
+const root = new URL('./', document.querySelector('link[rel="canonical"]').href).pathname;
+const locale = document.documentElement.lang;
 const dataRoot = '/assets/playstation-library/';
 const pageSize = 24;
-const labels = {base: 'Base game', update: 'Update', dlc: 'DLC', bundle: 'Bundle', fix: 'Fix', patch: 'Patch', other: 'Other'};
 const order = ['base', 'bundle', 'update', 'dlc', 'fix', 'patch', 'other'];
+const messages = Object.fromEntries([...$('library-copy').content.querySelectorAll('[data-message]')]
+  .map(node => [node.dataset.message, node.textContent]));
+const msg = (key, values = {}) => messages[key].replace(/\{([a-z]+)\}/g, (token, name) => values[name] ?? token);
+const labels = Object.fromEntries(order.map(kind => [kind, msg('kind-' + kind)]));
 const gameId = /^[a-f0-9]{16}$/;
-const fmt = new Intl.NumberFormat();
-const dateFmt = new Intl.DateTimeFormat(undefined, {dateStyle: 'medium', timeZone: 'UTC'});
+const fmt = new Intl.NumberFormat(locale);
+const dateFmt = new Intl.DateTimeFormat(locale, {dateStyle: 'medium', timeZone: 'UTC'});
 const listedDate = value => Date.parse(/^[a-z]+ \d{1,2}, \d{4}$/i.test(value || '') ? value + ' UTC' : value);
 const featuredCovers = new Map([
   ['https://www.superpsx.com/wp-content/uploads/2024/09/Bloodborne_-PS4-PKG.webp', '/assets/images/playstation-library/bloodborne.webp'],
@@ -30,8 +34,10 @@ function searchText(game) {
 }
 const regionKey = value => ({US: 'USA', EU: 'EUR'}[value] || value || 'Unspecified');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-const plural = (n, word) => `${fmt.format(n)} ${word}${n === 1 ? '' : 's'}`;
+const label = (key, values) => esc(msg(key, values));
+const countLabel = (key, count) => msg(key, {count: fmt.format(count)});
 const option = (value, text = value) => new Option(text, value);
+const regionOption = value => option(value, value === 'Unspecified' ? msg('unspecified') : value);
 const query = () => new URLSearchParams(location.search);
 const gameUrl = id => root + '?game=' + encodeURIComponent(id);
 const transferUrl = (id, file) => root + 'download.html?game=' + encodeURIComponent(id) + '&file=' + encodeURIComponent(file);
@@ -48,7 +54,7 @@ function safeUrl(value) {
 
 function host(value) {
   const href = safeUrl(value);
-  return href ? new URL(href).hostname.replace(/^www\./, '') : 'Source unavailable';
+  return href ? new URL(href).hostname.replace(/^www\./, '') : msg('source-unavailable');
 }
 
 const json = async url => {
@@ -98,7 +104,7 @@ async function copy(text, success) {
   } catch {
     const area = document.createElement('textarea');
     area.value = text;
-    area.setAttribute('aria-label', 'Text to copy');
+    area.setAttribute('aria-label', msg('copy-field'));
     area.className = 'copy-fallback';
     const button = document.activeElement;
     (document.querySelector('dialog[open]') || document.body).append(area);
@@ -106,14 +112,14 @@ async function copy(text, success) {
     try {
       if (document.execCommand('copy')) { area.remove(); button?.focus(); toast(success); return; }
     } catch {}
-    toast('Copy the selected text.');
+    toast(msg('copy-selected'));
     area.addEventListener('blur', () => area.remove(), {once: true});
   }
 }
 
 document.addEventListener('click', event => {
   const button = event.target.closest('[data-copy]');
-  if (button) copy(button.dataset.copy, button.dataset.copy === 'SuperPSX' ? 'Password copied' : 'Link copied');
+  if (button) copy(button.dataset.copy, msg(button.dataset.copy === 'SuperPSX' ? 'password-copied' : 'link-copied'));
 });
 
 function sourceLink(url, label) {
@@ -125,32 +131,32 @@ function renderGame(id, game, initialRegion, initialKind) {
   const detail = $('game-detail');
   const regionOptions = [...new Set(game.files.map(file => regionKey(file.region)))].sort();
   const kinds = order.filter(kind => game.files.some(file => file.kind === kind));
-  const sources = [sourceLink(game.page, 'Source listing'), ...(game.sourcePages || []).map((url, i, items) =>
-    sourceLink(url, items.length > 1 ? 'Source download page ' + (i + 1) : 'Source download page'))].filter(Boolean);
+  const sources = [sourceLink(game.page, msg('source-listing')), ...(game.sourcePages || []).map((url, i, items) =>
+    sourceLink(url, msg('source-download') + (items.length > 1 ? ' ' + fmt.format(i + 1) : '')))].filter(Boolean);
   detail.innerHTML = `
     <div class="detail-header">
       ${cover(game)}
-      <div><p class="label-line">${esc(game.platform)} / ${plural(game.files.length, 'link')}</p>
+      <div><p class="label-line">${esc(game.platform)} / ${esc(countLabel('link-count', game.files.length))}</p>
         <h2 id="game-title">${esc(game.name)}</h2>
         <p class="meta-line">${[game.source, ...(game.titleIds || [])].filter(Boolean).map(esc).join(' · ')}</p>
         ${sources.length ? `<p class="meta-line library-source">${sources.join(' · ')}</p>` : ''}
-        <button type="button" class="action secondary" id="copy-all">Copy all links <span aria-hidden="true">⧉</span></button>
+        <button type="button" class="action secondary" id="copy-all">${label('copy-all')} <span aria-hidden="true">⧉</span></button>
       </div>
     </div>
-    <p class="detail-note">Match the title ID and region. Install the base game first, then the matching update and DLC.</p>
-    ${isSuperPSX(game) ? '<p class="detail-note">If an archive asks for a password, try <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button>.</p>' : ''}
-    ${game.notes ? `<details class="source-notes"><summary>Source notes</summary><p>${esc(game.notes)}</p></details>` : ''}
+    <p class="detail-note">${label('install-note')}</p>
+    ${isSuperPSX(game) ? `<p class="detail-note">${label('password-note')} <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button></p>` : ''}
+    ${game.notes ? `<details class="source-notes"><summary>${label('source-notes')}</summary><p>${esc(game.notes)}</p></details>` : ''}
     <div class="file-filter">
-      <h3>Package links</h3>
+      <h3>${label('package-links')}</h3>
       <div>
-        <label>Region<select id="file-region"><option value="">All regions</option></select></label>
-        <label>Type<select id="file-kind"><option value="">All types</option></select></label>
+        <label>${label('region')}<select id="file-region"><option value="">${label('all-regions')}</option></select></label>
+        <label>${label('type')}<select id="file-kind"><option value="">${label('all-types')}</option></select></label>
       </div>
     </div>
     <p id="file-count" class="meta-line" role="status"></p>
     <div class="file-list" id="file-list"></div>`;
   const regionSelect = $('file-region'), kindSelect = $('file-kind');
-  regionSelect.append(...regionOptions.map(r => option(r)));
+  regionSelect.append(...regionOptions.map(regionOption));
   kindSelect.append(...kinds.map(k => option(k, labels[k])));
   if (regionOptions.includes(initialRegion)) regionSelect.value = initialRegion;
   if (kinds.includes(initialKind)) kindSelect.value = initialKind;
@@ -158,21 +164,21 @@ function renderGame(id, game, initialRegion, initialKind) {
   function renderFiles() {
     const filtered = files.filter(file => (!regionSelect.value || regionKey(file.region) === regionSelect.value) &&
       (!kindSelect.value || file.kind === kindSelect.value));
-    $('file-count').textContent = plural(filtered.length, 'link');
+    $('file-count').textContent = countLabel('link-count', filtered.length);
     $('file-list').innerHTML = filtered.length ? filtered.map(file => {
       const meta = [labels[file.kind], file.titleId, file.region, file.version && 'v' + file.version,
         file.firmware && 'FW ' + file.firmware, file.size, host(file.url)].filter(Boolean).map(esc).join(' · ');
       return `<article class="package-row">
-        <div><h3>${esc(file.label || labels[file.kind] || 'Package')}</h3><p class="meta-line">${meta}</p></div>
-        <a class="action secondary" href="${transferUrl(id, file.id)}">Download options <span aria-hidden="true">→</span></a>
+        <div><h3>${esc(file.label || labels[file.kind] || msg('package'))}</h3><p class="meta-line">${meta}</p></div>
+        <a class="action secondary" href="${transferUrl(id, file.id)}">${label('download-options')} <span aria-hidden="true">→</span></a>
       </article>`;
-    }).join('') : '<p class="empty-state">No packages match those filters.</p>';
+    }).join('') : `<p class="empty-state">${label('no-packages')}</p>`;
   }
   regionSelect.addEventListener('change', renderFiles);
   kindSelect.addEventListener('change', renderFiles);
   $('copy-all').addEventListener('click', () => {
     const links = files.map(f => f.direct ? new URL(transferUrl(id, f.id), location.origin).href : safeUrl(f.url));
-    copy([...new Set(links.filter(Boolean))].join('\n'), 'Package links copied');
+    copy([...new Set(links.filter(Boolean))].join('\n'), msg('links-copied'));
   });
   renderFiles();
 }
@@ -189,7 +195,7 @@ async function library() {
   const currentView = () => {
     results.classList.toggle('is-list', list);
     view.setAttribute('aria-pressed', String(list));
-    view.textContent = list ? 'Grid view' : 'List view';
+    view.textContent = msg(list ? 'grid-view' : 'list-view');
   };
   currentView();
 
@@ -211,7 +217,7 @@ async function library() {
   }
   function sortTitles(key) {
     if (!sorted.has(key)) {
-      const byName = (a, b) => a.name.localeCompare(b.name, undefined, {sensitivity: 'base'});
+      const byName = (a, b) => a.name.localeCompare(b.name, locale, {sensitivity: 'base'});
       const knownSize = (a, b) => Number(!a.size) - Number(!b.size);
       const compare = {recent: (a,b) => b.timestamp - a.timestamp, az: byName, za: (a,b) => byName(b,a),
         count: (a,b) => b.count - a.count, largest: (a,b) => knownSize(a,b) || (b.size || 0) - (a.size || 0),
@@ -230,18 +236,18 @@ async function library() {
         const [r, k] = facet.split(':');
         return k === kind.value && (!region.value || r === region.value);
       })));
-    $('results-count').textContent = filtered.length === titles.length ? plural(titles.length, 'listing') :
-      fmt.format(filtered.length) + ' of ' + plural(titles.length, 'listing');
+    $('results-count').textContent = filtered.length === titles.length ? countLabel('listing-count', titles.length) :
+      msg('filtered-count', {count: fmt.format(filtered.length), total: fmt.format(titles.length)});
     clear.hidden = ![search, platform, region, kind].some(f => f.value) && sort.value === 'recent';
     state.hidden = filtered.length > 0;
-    state.textContent = 'No games match. Try a different title or clear the filters.';
+    state.textContent = msg('no-games');
     more.hidden = visible >= filtered.length;
     // Append the next page so previously loaded images and focus remain intact.
     const start = reset ? 0 : results.childElementCount;
     const cards = filtered.slice(start, visible).map(g => `
       <a href="${gameUrl(g.id)}" class="game-card" data-game="${g.id}">
         ${cover(g, true)}
-        <div><p class="card-meta"><strong>${esc(g.platform)}</strong><span>${plural(g.count, 'link')}</span></p><h3>${esc(g.name)}</h3></div>
+        <div><p class="card-meta"><strong>${esc(g.platform)}</strong><span>${esc(countLabel('link-count', g.count))}</span></p><h3>${esc(g.name)}</h3></div>
       </a>`).join('');
     if (reset) results.innerHTML = cards; else results.insertAdjacentHTML('beforeend', cards);
     if (!reset) results.children[start]?.focus();
@@ -251,7 +257,7 @@ async function library() {
     if (!gameId.test(id || '')) return;
     const serial = ++request;
     activeGame = id;
-    $('game-detail').innerHTML = '<h2 id="game-title">Game details</h2><p class="meta-line">Loading package links…</p>';
+    $('game-detail').innerHTML = `<h2 id="game-title">${label('game-details')}</h2><p class="meta-line">${label('loading-links')}</p>`;
     if (!dialog.open) dialog.showModal();
     dialog.scrollTop = 0;
     try {
@@ -260,7 +266,7 @@ async function library() {
       if (!game) throw Error('Listing not found');
       renderGame(id, game, region.value, kind.value);
     } catch {
-      if (serial === request) $('game-detail').innerHTML = '<h2 id="game-title">Game details</h2><p class="empty-state">This listing could not be loaded. Close this panel and try again.</p>';
+      if (serial === request) $('game-detail').innerHTML = `<h2 id="game-title">${label('game-details')}</h2><p class="empty-state">${label('listing-error')}</p>`;
     }
   }
 
@@ -320,15 +326,15 @@ async function library() {
   try {
     data = await index();
     titles = data.titles.map(g => ({...g, timestamp: listedDate(g.date) || 0, search: searchText(g)}));
-    region.append(...[...new Set(titles.flatMap(g => g.regions || []))].sort().map(r => option(r)));
-    $('library-totals').textContent = plural(data.stats.titles, 'listing') + ' · ' + plural(data.stats.links, 'package link');
+    region.append(...[...new Set(titles.flatMap(g => g.regions || []))].sort().map(regionOption));
+    $('library-totals').textContent = countLabel('listing-count', data.stats.titles) + ' · ' + countLabel('package-count', data.stats.links);
     loadFilters();
     render();
     if (query().has('game')) open(query().get('game'));
   } catch {
-    $('results-count').textContent = 'Catalog unavailable';
+    $('results-count').textContent = msg('catalog-unavailable');
     state.hidden = false;
-    state.innerHTML = 'The library could not be loaded. <a href="">Reload the page</a> or <a href="https://onlygames.pages.dev/">open the source catalog</a>.';
+    state.innerHTML = `${label('catalog-error')} <a href="${esc(location.pathname + location.search)}">${label('reload')}</a> · <a href="https://onlygames.pages.dev/">${label('source-catalog')}</a>`;
   }
 }
 
@@ -340,7 +346,7 @@ async function download() {
   if (gameId.test(id || '')) {
     gameLink.searchParams.set('game', id);
     back.href = gameLink;
-    back.textContent = '← Back to the package list';
+    back.textContent = '← ' + msg('back-to-list');
   }
   try {
     if (!gameId.test(id || '') || !/^[a-f0-9]{16}(?:-\d+)?$/.test(fileId || '')) throw Error('Invalid package link');
@@ -353,33 +359,32 @@ async function download() {
     const direct = Boolean(directLink);
     const url = safeUrl(directLink?.getAttribute('href') || file.url);
     if (!url) throw Error('Invalid source URL');
-    const title = file.label || labels[file.kind] || 'Package';
+    const title = file.label || labels[file.kind] || msg('package');
     const date = listedDate(game.date);
-    const sourceDetails = [sourceLink(file.source || game.page, 'Source listing'),
-      Number.isFinite(date) ? 'Listed date ' + esc(dateFmt.format(date)) : ''].filter(Boolean);
-    const metadata = [['Host', host(url)], ['Package', labels[file.kind]], ['Title ID', file.titleId],
-      ['Region', file.region], ['Version', file.version], ['Firmware', file.firmware], ['Listed size', file.size],
-      ['Variant', file.variant], ['Edition', file.edition]];
-    document.title = game.name + ' | Package Download | WhatWhatBoy';
+    const sourceDetails = [sourceLink(file.source || game.page, msg('source-listing')),
+      Number.isFinite(date) ? label('listed-date', {date: dateFmt.format(date)}) : ''].filter(Boolean);
+    const metadata = [['host', host(url)], ['package', labels[file.kind]], ['title-id', file.titleId],
+      ['region', file.region], ['version', file.version], ['firmware', file.firmware], ['size', file.size],
+      ['variant', file.variant], ['edition', file.edition]];
+    document.title = game.name + ' | ' + document.title;
     card.innerHTML = `
       <div class="transfer-title">${cover(game)}
-        <div><p class="label-line">${esc(game.platform)} / ${direct ? 'Direct file' : 'External host'}</p>
+        <div><p class="label-line">${esc(game.platform)} / ${label(direct ? 'direct' : 'external')}</p>
         <p class="meta-line">${esc(game.name)}</p></div>
       </div>
       <h1>${esc(title)}</h1>
-      <dl class="transfer-meta">${metadata.filter(([, value]) => value).map(([key,value]) => `<div><dt>${key}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>
-      ${file.section ? `<p class="meta-line">Source label: ${esc(file.section)}</p>` : ''}
-      <p>${direct ? 'The file will download in your browser. You can stay on this page.' :
-        'The host opens in a new tab. Complete any verification there to start the download.'}</p>
+      <dl class="transfer-meta">${metadata.filter(([, value]) => value).map(([key,value]) => `<div><dt>${label(key)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>
+      ${file.section ? `<p class="meta-line">${label('source-label')} ${esc(file.section)}</p>` : ''}
+      <p>${label(direct ? 'direct-note' : 'host-note')}</p>
       <div class="transfer-actions">
-        <a id="download-action" class="action primary" href="${esc(url)}" ${direct ? 'download rel="noreferrer"' : 'target="_blank" rel="noopener noreferrer"'}>${direct ? 'Download file ↓' : 'Continue to ' + esc(host(url)) + ' ↗'}</a>
-        <button type="button" class="action secondary" data-copy="${esc(url)}">Copy link <span aria-hidden="true">⧉</span></button>
+        <a id="download-action" class="action primary" href="${esc(url)}" ${direct ? 'download rel="noreferrer"' : 'target="_blank" rel="noopener noreferrer"'}>${direct ? label('download-file') + ' ↓' : label('continue', {host: host(url)}) + ' ↗'}</a>
+        <button type="button" class="action secondary" data-copy="${esc(url)}">${label('copy-link')} <span aria-hidden="true">⧉</span></button>
       </div>
-      ${isSuperPSX(game) ? '<p class="detail-note">Archive password, if requested: <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button></p>' : ''}
-      ${game.notes ? `<details class="source-notes"><summary>Source notes</summary><p>${esc(game.notes)}</p></details>` : ''}
+      ${isSuperPSX(game) ? `<p class="detail-note">${label('password-note')} <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button></p>` : ''}
+      ${game.notes ? `<details class="source-notes"><summary>${label('source-notes')}</summary><p>${esc(game.notes)}</p></details>` : ''}
       ${sourceDetails.length ? `<p class="library-source">${sourceDetails.join(' · ')}</p>` : ''}`;
   } catch {
-    card.innerHTML = '<h1>Package unavailable</h1><p>This package link is missing, invalid, or the catalog could not be reached.</p><a class="action secondary" href="./">Browse the game library →</a>';
+    card.innerHTML = `<h1>${label('package-unavailable')}</h1><p>${label('package-error')}</p><a class="action secondary" href="${esc(root)}">${label('browse-library')} →</a>`;
   }
 }
 

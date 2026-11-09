@@ -47,6 +47,57 @@ test('runtime-independent language links and sitemap generation cover all langua
  assert.ok(fs.readFileSync(path.join(out,'robots.txt'),'utf8').includes('Sitemap: '+html.origin+'/sitemap-index.xml'));assert.equal((fs.readFileSync(path.join(out,'sitemap-index.xml'),'utf8').match(/<sitemap>/g)||[]).length,21);
 });
 
+test('localized PlayStation packages stay in the selected language without entering its sitemap',t=>{
+ const {ctx}=fixture();
+ const folder=fs.mkdtempSync(path.join(os.tmpdir(),'multilingual-playstation-'));
+ t.after(()=>fs.rmSync(folder,{recursive:true,force:true}));
+ const base='/console/ps4/game-library/';
+ const utility={page:base.slice(1)+'download.html',canonical:html.origin+base+'download.html',noindex:true};
+ const library={page:base.slice(1)+'index.html',canonical:html.origin+base};
+ const makePage=(page,body)=>`<!doctype html><html lang="en"><head><link rel="canonical" href="${page.canonical}">${page.noindex?'<meta name="robots" content="noindex, follow">':''}</head><body>${body}</body></html>`;
+ const source=makePage(library,'<a href="?game=abcdef">View game</a><a href="./download.html?game=abcdef&amp;file=42">Download options</a>');
+ const packagePage=makePage(utility,'<a href="./">Game library</a><a href="/downloads/example-v1.pkg" download>Download</a>');
+ assert.equal(html.publicSource(utility.page,packagePage),false);
+ assert.equal(html.localizedUtility(utility.page,packagePage),true);
+ for(const [page,content] of [[library,source],[utility,packagePage]]){
+  const file=path.join(folder,page.page);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,content);
+ }
+ ctx.pages=new Map([library,utility].map(page=>[page.page,page]));
+ ctx.routes=new Map([library,utility].map(page=>[new URL(page.canonical).pathname,page.canonical]));
+ const out=path.join(folder,'site');
+ builder.generate({root:folder,output:out,context:ctx});
+ for(const code of html.codes){
+  const localeBase='/'+code+base;
+  const rendered=fs.readFileSync(path.join(out,code,library.page),'utf8');
+  const download=fs.readFileSync(path.join(out,code,utility.page),'utf8');
+  const sitemap=fs.readFileSync(path.join(out,'sitemaps',code+'.xml'),'utf8');
+  assert.ok(rendered.includes(`href="${localeBase}?game=abcdef"`));
+  assert.ok(rendered.includes(`href="${localeBase}download.html?game=abcdef&amp;file=42"`));
+  assert.ok(download.includes(`href="${localeBase}"`));
+  assert.ok(download.includes('href="/downloads/example-v1.pkg" download'));
+  assert.ok(download.includes('content="noindex, follow"'));
+  assert.doesNotMatch(download,/rel="alternate"/);
+  assert.ok(sitemap.includes('<loc>'+html.origin+localeBase+'</loc>'));
+  assert.ok(!sitemap.includes('download.html'));
+ }
+});
+
+test('PlayStation keyword phrases translate individually and deduplicate in metadata and schema',()=>{
+ const {ctx}=fixture();
+ const page={page:'console/ps4/game-library/index.html',canonical:html.origin+'/console/ps4/game-library/'};
+ const original='PS4 game downloads, download PS4 games, CUSA01715, PS5 game updates';
+ const terms={'PS4 game downloads':'Descargas de juegos PS4','download PS4 games':'Descargas de juegos PS4','PS5 game updates':'Actualizaciones de juegos PS5'};
+ for(const [source,value] of Object.entries(terms)){
+  ctx.strings.set(source,{source,id:source,values:[]});
+  ctx.languages.get('es').translations[source]=value;
+ }
+ const expected='Descargas de juegos PS4, CUSA01715, Actualizaciones de juegos PS5';
+ const source=`<html><head><link rel="canonical" href="${page.canonical}"><meta name="keywords" content="${original}"><script type="application/ld+json">{"keywords":"${original}"}</script></head><body></body></html>`;
+ const output=builder.render(ctx,page,source,'es');
+ assert.ok(output.includes('name="keywords" content="'+expected+'"'));
+ assert.equal(JSON.parse(output.match(/application\/ld\+json">([^<]+)<\/script>/)[1]).keywords,expected);
+});
+
 test('shared search data restores original search fields and includes translated card text before filters run',()=>{
  const {source,page,ctx}=fixture(),card='<article data-search="pinned original 5.05 CUSA00419"><h3>Game patches</h3></article>',input=source.replace('</body>',card+'<script>window.searchReady=true;</script></body>');
  const output=builder.render(ctx,page,input,'es'),id=output.match(/data-localized-search="([^"]+)"/)[1],script=[...ctx.shared].find(([name])=>/search-.*\.js$/.test(name))[1],attrs=new Map([['data-localized-search',id]]),node={textContent:'Parches de juegos',getAttribute:key=>attrs.get(key),setAttribute:(key,value)=>attrs.set(key,value),removeAttribute:key=>attrs.delete(key)};

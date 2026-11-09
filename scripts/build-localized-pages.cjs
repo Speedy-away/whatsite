@@ -32,6 +32,11 @@ function translate(ctx,source,code){
  if(record.dictionary){const value=language.dictionary[record.source];assert(typeof value==='string','Missing dictionary '+code+': '+record.source);return value;}
  return html.restore(language.translations[record.id],record.values);
 }
+function translateKeywords(ctx,page,source,code){
+ if(code==='en'||!html.localizeKeywordTerms(page.page))return translate(ctx,source,code);
+ const translated=html.keywordTerms(source).map(term=>translate(ctx,term,code));
+ return [...new Map(translated.map(term=>[term.toLocaleLowerCase(code),term])).values()].join(', ');
+}
 function replaceEdits(source,edits){const parts=[];let cursor=0;for(const edit of edits.sort((a,b)=>a.start-b.start)){assert(edit.start>=cursor,'Overlapping localized HTML edits');parts.push(source.slice(cursor,edit.start),edit.value);cursor=edit.end;}parts.push(source.slice(cursor));return parts.join('');}
 function localURL(ctx,value,page,code,{download=false}={}){
  if(!value||/^(?:data:|javascript:|mailto:|tel:|blob:)/i.test(value))return value;
@@ -100,6 +105,7 @@ function schema(ctx,source,page,code){
  return source.replace(/(<script\b[^>]*type=["']application\/ld\+json["'][^>]*>)([\s\S]*?)(<\/script>)/gi,(_,open,json,close)=>{
   function walk(value,key){
    if(typeof value==='string'){
+    if(key==='keywords')return translateKeywords(ctx,page,value,code);
     if(html.schemaTextKeys.has(key)&&/[A-Za-z]/.test(value))return translate(ctx,value,code);
     if(key==='url'||key==='@id'||key==='item'){const url=localURL(ctx,value,page,code);return url.startsWith('/')?html.origin+url:url;}
     return value;
@@ -120,7 +126,8 @@ function render(ctx,page,source,code){
  let output=source;
  if(code!=='en'){
   const edits=html.spans(source).map(span=>{
-   const text=translate(ctx,span.source,code),lead=span.kind==='text'?(span.raw.match(/^\s*/)?.[0]||''):'',trail=span.kind==='text'?(span.raw.match(/\s*$/)?.[0]||''):'';
+   const text=span.context==='keywords'?translateKeywords(ctx,page,span.source,code):translate(ctx,span.source,code);
+   const lead=span.kind==='text'?(span.raw.match(/^\s*/)?.[0]||''):'',trail=span.kind==='text'?(span.raw.match(/\s*$/)?.[0]||''):'';
    let value=lead+html.escape(text)+trail;if(span.quote==="'")value=value.replaceAll("'",'&#39;');
    return {start:span.start,end:span.end,value};
   });
@@ -163,6 +170,7 @@ function render(ctx,page,source,code){
    url.searchParams.set('rev',url.pathname==='/languages/i18n.js'?languageRevision:'20261104-static-seo');return 'src='+quote+html.escape(url.pathname+url.search)+quote;
   });
  });
+ if(page.noindex)return output;
  output=html.mapTokens(output,token=>/^<\/head>/i.test(token)?html.alternateLinks(page.canonical)+'\n'+token:token);
  const links=['en',...html.codes].map(lang=>'<a lang="'+lang+'" hreflang="'+lang+'" href="'+new URL(html.urlFor(page.canonical,lang)).pathname+'"'+(lang===code?' aria-current="page"':'')+'>'+html.native[lang]+'</a>').join(' · ');
  output=html.mapTokens(output,token=>/^<\/body>/i.test(token)?'<nav class="site-language-links" aria-label="'+html.escape(code==='en'?'Language':ctx.languages.get(code).dictionary.Language||html.native[code])+'" style="padding:16px;text-align:center;font-size:13px;line-height:2;overflow-wrap:anywhere">'+links+'</nav>\n'+token:token);
@@ -180,7 +188,7 @@ function generate({root,output,rewrite=(value)=>value,estimate=false,context}={}
   const source=require('./source-download-notes.cjs').annotate(original,page.page,delivery);
   for(const code of ['en',...html.codes]){
    const rendered=rewrite(render(ctx,page,source,code),page.page),name=code==='en'?page.page:code+'/'+page.page;
-   if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(source);
+   if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;if(!page.noindex)sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(source);
    if(!estimate){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,rendered);}
   }
  }

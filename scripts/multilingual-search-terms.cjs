@@ -12,8 +12,14 @@ function tables(){
 }
 function localizedTerms(value){
  const selected=concepts.filter(concept=>concept.pattern.test(value));if(!selected.length)return [];
- return [...new Set(selected.flatMap(concept=>tables().map(({code,table})=>{
+ const translated=selected.flatMap(concept=>tables().map(({code,table})=>{
   const translated=table[concept.key];if(!translated)throw Error('Missing '+code+' search concept: '+concept.key);return translated;
- })))];
+ }));
+ if(/\bwwb['’]s ps4 and ps5 game library\b/i.test(value)){
+  for(const {table} of tables()) for(const platform of ['PS4','PS5']){
+   translated.push(platform+' '+table['Game Downloads'],table['Game Downloads']+' '+platform);
+  }
+ }
+ return [...new Set(translated)];
 }
 module.exports={localizedTerms,codes};
