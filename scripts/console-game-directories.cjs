@@ -34,6 +34,35 @@ function range(html, tag, predicate) {
   }
   return null;
 }
+function applyLibraryCard(html, platform) {
+  const id = 'id="playstation-game-library"';
+  const legacy = range(html, 'section', opening => opening.includes(id));
+  if (legacy) html = html.slice(0, legacy.start) + html.slice(legacy.end);
+  const directory = range(html, 'section', opening => opening.includes('id="game-directories"'));
+  if (!directory) return html;
+
+  const library = '/console/ps4/game-library/';
+  const name = "WWB’s PS4 and PS5 Game Library";
+  const ps5Downloads = '/console/ps5/game-downloads.html';
+  const block = html.slice(directory.start, directory.end);
+  if (!block.includes(id)) {
+    const {resource, link} = require('./build-console-guides.cjs');
+    const card = resource(name, 'Search by title or title ID and compare package links, regions and versions.', link(library, 'Open the game library'))
+      .replace('<article class="guide-resource"', `<article ${id} class="guide-resource game-directory-card" data-card-art="fixed"`);
+    const updated = block.replace('<div class="games-grid">', opening => opening + card + '\n')
+      .replace(/<p class="section-subtitle">[^<]*<\/p>/,
+        '<p class="section-subtitle">Browse WWB’s library or choose an external download source.</p>');
+    html = html.slice(0, directory.start) + updated + html.slice(directory.end);
+  }
+  return html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/, nav => {
+    nav = nav.replace('<a href="' + library + '">PlayStation Game Library</a>', '<a href="' + library + '">' + name + '</a>');
+    if (!nav.includes('href="' + library + '"')) nav = nav.replace('</nav>', `<a href="${library}">${name}</a></nav>`);
+    if (platform === 'ps4' && !nav.includes('href="' + ps5Downloads + '"')) {
+      nav = nav.replace('</nav>', `<a href="${ps5Downloads}">PS5 game downloads</a></nav>`);
+    }
+    return nav;
+  });
+}
 function hubCard(platform) {
   const detail = platform.providers.length ? `Find ${platform.title} game directories, with direct links to the matching console categories.` : 'Browse game directories by console and choose the system listed by the provider.';
   const title = platform.id === 'ps4' ? ps4AddOns.title : 'Game downloads';
@@ -81,6 +110,7 @@ function apply(file, html, data = registry()) {
       }
     }
   }
+  if (current === destination && ['ps4', 'ps5'].includes(platform.id)) html = applyLibraryCard(html, platform.id);
   if (current === destination && platform.directoryMode === 'curated-library') {
     const block = directorySection(platform);
     const existing = range(html, 'section', tag => /\bid="game-directories"/.test(tag));
