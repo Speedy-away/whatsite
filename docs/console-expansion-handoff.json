@@ -1,77 +1,4 @@
 {
-  "ps4BaguetteCard20261108": {
-    "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
-    "changes": "Renamed the remaining PS4 Black Ops II button to Download Baguette 1.11 and hid the Aimbot edition and original Zeem port buttons. The 1.11 download target and all three source records were verified."
-  },
-  "downloadCardTags20261108": {
-    "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
-    "changes": "Hid card tag badges through the shared site stylesheet and added search tags for North, Oyster, Sheriff and Havana to the PS4 RDR2 catalogue and menu directory. PS3 download variant labels remain visible.",
-    "checks": "Verified all 226 public pages with these tag classes load the shared stylesheet. Confirmed the four RDR2 cards and directory entries contain their added search terms and preserve their existing links. All 14 focused search and tag tests passed."
-  },
-  "ps4CodRdr2VideoGuides20261108": {
-    "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
-    "pages": ["console/mods/ps4/call-of-duty/black-ops-1/index.html", "console/mods/ps4/call-of-duty/black-ops-2/index.html", "console/ps4/fpkg-fixes.html", "console/mods/ps4/rdr2/index.html"],
-    "changes": "Added the Black Ops 1 and 2 crash fix video to both PS4 game pages and a Watch video guide button to the Black Ops II FPKG fix. Added the RDR2 Online PS4 setup video to the RDR2 mods page and removed the Oyster free-edition sentence.",
-    "rdr2CardLabels": "Simplified the Oyster and Havana cards to game-update numbers and removed the duplicate explanation from Sheriff 1.32. Havana’s detailed guide retains the GoldHEN requirement and its 1.00 download is labelled experimental.",
-    "checks": "YouTube returned public metadata for both supplied videos. Verified the embeds, buttons, removed text and prior links in the generated pages. All 21 focused tests passed."
-  },
-  "ps4ModdedSavesMoreTitles20261108": {
-    "date": "2026-11-08",
-    "status": "Published and verified live on GitHub Pages.",
-    "commit": "fb2adc779e93bb8c90a6a99c0e050cfeb2086284",
-    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/42526832889",
-    "page": "console/ps4/save-tools.html",
-    "catalog": "docs/ps4-game-saves.json",
-    "changes": "Added eight modded saves for eight previously unlisted PS4 games. The catalogue now has 32 saves, including 19 modded entries. The Tiny Tina card warns that the ZIP overwrites character slot 2, and the Kingdoms of Amalur card records the Fatesworn DLC requirement.",
-    "sourceNotes": "Used the San Andreas ZIP whose embedded label identifies the starter save because the numbered Apollo descriptions disagree with the embedded labels. Used the alternate Kingdoms of Amalur ZIP with the correct embedded CUSA17245 ID.",
-    "archive": "The eight selected ZIPs were saved to F: and recorded in both download inventories. All 32 published archive files were checked against their recorded sizes and SHA-256 hashes.",
-    "checks": "Verified each new ZIP's actual PARAM.SFO TITLE_ID and exercised title aliases, tags and CUSA searches in Edge on the live page. All 32 live ZIPs and the Apollo PKG matched their expected sizes and SHA-256 hashes. Console import was not tested."
-  },
-  "ps4HubFileZilla20261108": {
-    "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
-    "page": "console/ps4/index.html",
-    "changes": "Renamed the PS4 hub heading to PlayStation 4 and placed the FileZilla Client card immediately above Firmware & jailbreak using the official download page.",
-    "checks": "Verified the heading, card placement, single publisher link and repeat generation. Six existing hub and expansion integration tests passed."
-  },
-  "gta5AriseRtm20261108": {
-    "date": "2026-11-08",
-    "status": "Original card published and ZIP verified live. Region-only card update verified locally.",
-    "page": "console/mods/ps4/gta5/index.html#rtm-tools",
-    "changes": "Added Arise-RTM-GTAV-PS4 under RTM Tools above GTA V 1.57, with the supplied screenshot, pinned v1.0.0 ZIP, source repository and menu-directory entry.",
-    "cardCopy": "The GTA V card and menu directory list EU CUSA00411 and US CUSA00419. Firmware and Windows requirements are in Setup & screenshot.",
-    "outfitEditorSearch": "Added PS4 outfit editor tags and search terms to the Arise card, menu directory and GTA V page metadata. The shared stylesheet hides the card badges.",
-    "release": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v1.0.0",
-    "compatibility": "Publisher lists PS4 firmware 14.00 with GoldHEN, GTA V 1.57 EU CUSA00411 or US CUSA00419, and a Windows PC on the same network with .NET Framework 4.8.1. Publisher tested EU.",
-    "archive": "Verified the 909614-byte original v1.0.0 ZIP against the publisher SHA-256 fd7ffcc5bd12642730917dbd9ac35516e3a260cfc7280207250d02da3167bcbb and copied it under PS4/Games/GTA5/1.57/RTM Tools as a Windows helper. Its source, version, size and checksum are in the merged download inventory. The website links directly to the publisher ZIP.",
-    "checks": "Verified section order, source and ZIP links, exact screenshot bytes, menu-directory entry and prior GTA page links. Twenty-one focused tests passed. The working-copy legacy preservation check encountered an unrelated pending change to the BO1/BO2 ps4debug manifest entry."
-  },
-  "ps4ItemzflowMainApps20261108": {
-    "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
-    "page": "console/ps4/apps.html#ps4-store-itemzflow-1-08",
-    "changes": "Moved the existing Itemzflow 1.08 PS4 card from More PS4 apps & utilities into the main PS4 apps & homebrew tools grid and pointed Browse apps to that grid.",
-    "checks": "Generated and tracked HTML each show one card in the main grid with matching links. Existing PS4 store package checks passed. Download and firmware details were preserved."
-  },
-  "jobeesLairFreeShops20261108": {
-    "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
-    "pages": ["console/ps4/game-downloads.html", "console/ps5/game-downloads.html", "console/ps4/free-shops.html", "console/ps5/free-shops.html", "console/free-shops/index.html"],
-    "changes": "Added JobeesLair PS4 0.1.5 Beta 5 and PS5 0.5.6 under Free shops, with separate install formats, setup requirements, release notes and pinned publisher downloads. Console pages show their own build. The shared index shows both.",
-    "archive": "The exact PS4 PKG and PS5 exFAT image are saved under their console's Apps/Free Shops archive. Both sizes and SHA-256 hashes matched GitHub release metadata and were verified again on F:. The jobeeslair scoped inventory records the versions and source URLs.",
-    "checks": "Verified the exact download link and console assignment on all five pages. All seven Pages tests passed. The existing Free Shops suite still reports directory regeneration drift and a missing hub-card marker."
-  },
-  "consoleHubHostLinks20261108": {
-    "date": "2026-11-08",
-    "status": "Published in 5bf55a666542a45b2c9f671acf6fce5d61e902fe and verified on the live site.",
-    "pages": ["console/ps4/index.html", "console/ps5/index.html"],
-    "changes": "Restored the catalog URLs for 11 PS4 and 8 PS5 third-party host cards. The first-party cards open their respective WWB Host selectors, and the PS5 DNS redirect card retains its PlayStation Store destination.",
-    "generator": "scripts/console-guide-host-links.cjs preserves third-party card destinations during generation and repairs cards previously rewritten to WWB Host.",
-    "checks": "Verified all 22 links on the live hubs. All 20 non-WWB URLs match the source directory. Twenty-one destinations returned HTTP 200, including both WWB selectors. Wolf's documented domain returned a DNS error. The host-card regression tests passed. The existing PS4 14.00 guide assertion still expects a WWB Host link where the current guide uses Afterglow."
-  },
   "ps4GameSaves20261108": {
     "date": "2026-11-08",
     "status": "Published and verified live on GitHub Pages.",
@@ -85,27 +12,116 @@
     "checks": "Verified ZIP readability and embedded PS4 title IDs. On the live page, Edge verified tag search, aliases, distinct CUSA variants, empty results and clearing search. All 24 live save links and the Apollo 2.4.0 PKG returned matching sizes and SHA-256 hashes. The Pages build and deployment passed. Console import was not tested.",
     "regenerate": "node -e \"require('./scripts/build-ps4-software.cjs').buildPs4GameSaves()\""
   },
+  "ps4ModdedSavesMoreTitles20261108": {
+    "date": "2026-11-08",
+    "status": "Published and verified live on GitHub Pages.",
+    "commit": "fb2adc779e93bb8c90a6a99c0e050cfeb2086284",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/42526832889",
+    "page": "console/ps4/save-tools.html",
+    "catalog": "docs/ps4-game-saves.json",
+    "changes": "Added eight modded saves for eight previously unlisted PS4 games. The catalogue now has 32 saves, including 19 modded entries. The Tiny Tina card warns that the ZIP overwrites character slot 2, and the Kingdoms of Amalur card records the Fatesworn DLC requirement.",
+    "sourceNotes": "Used the San Andreas ZIP whose embedded label identifies the starter save because the numbered Apollo descriptions disagree with the embedded labels. Used the alternate Kingdoms of Amalur ZIP with the correct embedded CUSA17245 ID.",
+    "archive": "The eight selected ZIPs were saved to F: and recorded in both download inventories. All 32 published archive files were checked against their recorded sizes and SHA-256 hashes.",
+    "checks": "Verified each new ZIP's actual PARAM.SFO TITLE_ID and exercised title aliases, tags and CUSA searches in Edge on the live page. All 32 live ZIPs and the Apollo PKG matched their expected sizes and SHA-256 hashes. Console import was not tested."
+  },
+  "jobeesLairFreeShops20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the site publication commit.",
+    "pages": [
+      "console/ps4/game-downloads.html",
+      "console/ps5/game-downloads.html",
+      "console/ps4/free-shops.html",
+      "console/ps5/free-shops.html",
+      "console/free-shops/index.html"
+    ],
+    "changes": "Added JobeesLair PS4 0.1.5 Beta 5 and PS5 0.5.6 under Free shops, with separate install formats, setup requirements, release notes and pinned publisher downloads. Console pages show their own build. The shared index shows both.",
+    "archive": "The exact PS4 PKG and PS5 exFAT image are saved under their console's Apps/Free Shops archive. Both sizes and SHA-256 hashes matched GitHub release metadata and were verified again on F:. The jobeeslair scoped inventory records the versions and source URLs. Both entries are recorded in the shared F: download inventory.",
+    "checks": "Verified the exact download link and console assignment on all five pages. All seven Pages tests passed. The existing Free Shops suite still reports directory regeneration drift and a missing hub-card marker."
+  },
   "ps4RegionalPluginTemplateLayout20261108": {
     "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
+    "status": "Included in the site publication commit.",
     "changes": "GTA V, RDR2, Fortnite and 11 Call of Duty pages share one GoldHEN plugins.ini layout. The download button follows the setup note, and each regional title ID is a copy button. The RDR2 builder now includes its existing template section.",
     "checks": "All 14 linked INI files matched the recorded hashes. Rebuilt RDR2 and Fortnite in memory and checked that both retained the layout. Verified button position and title-ID copy values in Edge at desktop and mobile widths. All 35 focused tests passed."
   },
   "ps4FirmwareGuideLayout20261108": {
     "date": "2026-11-08",
-    "status": "Verified locally. Pending publication.",
-    "pages": ["console/ps4/index.html", "console/ps4/jailbreaks.html", "console/ps4/jailbreak.html"],
+    "status": "Included in the site publication commit.",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps4/jailbreaks.html",
+      "console/ps4/jailbreak.html"
+    ],
     "changes": "Aligned the compact Jailbreak and Firmware downloads cards on desktop and stacked them on narrow screens. The PS4 14.00 route bypasses setup popups, including on localized URLs. The guide starts with Afterglow WebKit and offline caching, then covers the Blu-ray disc method with the existing ISO download.",
-    "sources": ["https://www.youtube.com/watch?v=evdNQ1Vl2Bo", "https://github.com/well0nez/afterglow-web", "https://ko-fi.com/s/e694c36022"],
+    "sources": [
+      "https://www.youtube.com/watch?v=evdNQ1Vl2Bo",
+      "https://github.com/well0nez/afterglow-web",
+      "https://ko-fi.com/s/e694c36022"
+    ],
     "checks": "Headless Edge verified equal-size cards at 1440 pixels, stacked cards at 390 pixels, click-through to the standalone guide, visible steps and correct WebKit and Blu-ray order. All 37 focused tests passed."
+  },
+  "bo3InfarctedArtwork20261108": {
+    "resource": "infarcted-sprx",
+    "image": "assets/images/ps4-bo3/infarcted-sprx-v1-1.png",
+    "changes": "Used the supplied gameplay screenshot on the Black Ops 3 Off host card and in the PS4/PS5 Menu Directory."
   },
   "discordAttachmentDownloads20261108": {
     "date": "2026-11-08",
-    "status": "Verified in the local workspace. Pending publication.",
+    "status": "Included in the site publication commit.",
     "changes": "Added Baguette 1.11 by volt and Baguette Aimbot under Off host on PS4 Black Ops 2. Kept the original Zeem port as a separate download. Both new ZIPs include a CUSA57548 GoldHEN configuration.",
     "delivery": "Replaced Discord download buttons with verified site files for Black Ops 3 Infarcted SPRX, the Black Ops II 1.11 FPKG crash fix and ps4debug.bin. Removed redundant Discord attachment links in the Download Library and retained the existing MediaFire or Mega sources for four PS3 archives. Original source URLs remain in the inventory.",
     "archive": "Verified SHA-256 and byte counts for all five site files against the F: archive. Intake records are in the ps4-bo2-baguette and ps4-cod-discord-mirrors scoped inventories. The 361 MiB IronManArsenal core_mod.zip is verified in the local archive and exceeds the 95 MiB public mirror limit.",
     "checks": "Scanned 566 public pages and found no remaining Discord download buttons or attachment links. All 118 affected Download Library cards retained local files. All 14 Pages workflow tests passed. One unrelated GTA V screenshot guide assertion also fails with the renderer from HEAD."
+  },
+  "gta5AriseRtm20261108": {
+    "date": "2026-11-08",
+    "status": "Included in the scoped Arise RTM publication commit.",
+    "page": "console/mods/ps4/gta5/index.html#rtm-tools",
+    "changes": "Added Arise-RTM-GTAV-PS4 under RTM Tools above GTA V 1.57, with the supplied screenshot, pinned v1.0.0 ZIP, source repository and menu-directory entry.",
+    "release": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v1.0.0",
+    "compatibility": "Publisher lists PS4 firmware 14.00 with GoldHEN, GTA V 1.57 EU CUSA00411 or US CUSA00419, and a Windows PC on the same network with .NET Framework 4.8.1. Publisher tested EU.",
+    "archive": "Verified the 909614-byte original v1.0.0 ZIP against the publisher SHA-256 fd7ffcc5bd12642730917dbd9ac35516e3a260cfc7280207250d02da3167bcbb and copied it under PS4/Games/GTA5/1.57/RTM Tools as a Windows helper. Its source, version, size and checksum are in the merged download inventory. The website links directly to the publisher ZIP.",
+    "checks": "Verified section order, source and ZIP links, exact screenshot bytes, menu-directory entry and prior GTA page links. Twenty-one focused tests passed. The working-copy legacy preservation check encountered an unrelated pending change to the BO1/BO2 ps4debug manifest entry.",
+    "cardCopy": "The GTA V card and menu directory list EU CUSA00411 and US CUSA00419. Firmware and Windows requirements are in Setup & screenshot.",
+    "outfitEditorSearch": "Added PS4 outfit editor tags and search terms to the Arise card, menu directory and GTA V page metadata. The shared stylesheet hides the card badges."
+  },
+  "ps4HubFileZilla20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for GitHub Pages publication.",
+    "page": "console/ps4/index.html",
+    "changes": "Renamed the PS4 hub heading to PlayStation 4 and placed the FileZilla Client card immediately above Firmware & jailbreak using the official download page.",
+    "checks": "Verified the heading, card placement, single publisher link and repeat generation. Six existing hub and expansion integration tests passed."
+  },
+  "ps4ItemzflowMainApps20261108": {
+    "date": "2026-11-08",
+    "status": "Prepared for GitHub Pages publication.",
+    "page": "console/ps4/apps.html#ps4-store-itemzflow-1-08",
+    "changes": "Moved the existing Itemzflow 1.08 PS4 card from More PS4 apps & utilities into the main PS4 apps & homebrew tools grid and pointed Browse apps to that grid.",
+    "checks": "Generated and tracked HTML each show one card in the main grid with matching links. Existing PS4 store package checks passed. Download and firmware details were preserved."
+  },
+  "consoleHubHostLinks20261108": {
+    "date": "2026-11-08",
+    "status": "Published in 5bf55a666542a45b2c9f671acf6fce5d61e902fe and verified on the live site.",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps5/index.html"
+    ],
+    "changes": "Restored the catalog URLs for 11 PS4 and 8 PS5 third-party host cards. The first-party cards open their respective WWB Host selectors, and the PS5 DNS redirect card retains its PlayStation Store destination.",
+    "generator": "scripts/console-guide-host-links.cjs preserves third-party card destinations during generation and repairs cards previously rewritten to WWB Host.",
+    "checks": "Verified all 22 links on the live hubs. All 20 non-WWB URLs match the source directory. Twenty-one destinations returned HTTP 200, including both WWB selectors. Wolf's documented domain returned a DNS error. The host-card regression tests passed. The existing PS4 14.00 guide assertion still expects a WWB Host link where the current guide uses Afterglow."
+  },
+  "ps4ThemeLibrary20261108": {
+    "date": "2026-11-08",
+    "catalog": "docs/ps4-theme-link-catalog.json",
+    "previews": "All 887 cards link to the pinned upstream WebP thumbnails and full-size JPG previews. The visible labels omit the source handle. Files are served by the upstream host and were not mirrored.",
+    "downloadButtons": "All 887 cards use a Download button. Added title-based tags for 4K, anime, abstract, Japanese, anniversary and holiday themes, plus corresponding search keywords.",
+    "delivery": "The first Pages build exceeded the 900 MiB staging budget because each locale repeated the 887 card elements. All locales now load the same JSON catalog and render cards from a shared template.",
+    "categoryFilter": "Removed the decorative customization illustration from the PS4 Themes page. Category filtering works alongside title search and the type filter.",
+    "pkgButtons": "Simplified the two package source cards to buttons. PS2 Legacy Dynamic Theme uses the user-supplied MediaFire link for EP9000-CUSA07875_00-PSLEGACYTHEME001.pkg.",
+    "pagination": "The library shows 36 themes per page, with 25 numbered pages in the unfiltered view. The existing advertisement appears beneath the library on every results page.",
+    "changes": "Added 887 distinct PS4 theme titles and original MediaFire source links to the PS4 Themes page, a hub card next to Avatars, search, type filters, tags and keywords. The existing global Themes directory links to the updated page.",
+    "sourcePolicy": "The pinned upstream index is recorded in the catalog. No redistribution license was found in the source repository. No packages, third-party previews or source code were copied or archived. Individual external links were preserved from the source index and were not availability-tested.",
+    "checks": "Verified all 887 preview pairs and download links, browser search, type filtering, Show more, and standard Download buttons. This scoped publication commit triggers GitHub Pages."
   },
   "ps4FortniteFnMenu20261108": {
     "date": "2026-11-08",
@@ -117,7 +133,7 @@
     "discovery": "Added visible FN Menu tags, search aliases for BlueQ, both CUSA forms and both filenames, search and social metadata, a quick link to the regional INI, and a GoldHEN setup and screenshot guide. Verified the rendered directory filter and both download hashes. All 25 focused search and metadata tests passed.",
     "featureSearch": "Added Fortnite aimbot, Fortnite ESP and Fortnite PS4 hack to page metadata and directory search. The visible tags distinguish bot aimbot and container ESP as shown in the supplied screenshot.",
     "layout": "Moved the GoldHEN plugins.ini block above the menu downloads and removed the public sources and related guides block. The release source remains recorded in the download inventory.",
-    "hubCardCopy": "Removed the description paragraph from the Fortnite card on the PS4/PS5 mods hub. Verified the existing card and its generator locally. Pending publication.",
+    "hubCardCopy": "Removed the description paragraph from the Fortnite card on the PS4/PS5 mods hub. Verified the existing card and its generator. Included in the scoped publication commit.",
     "compatibility": "Static inspection found a CUSA07669 title-ID check. EU and AU share CUSA07669. USA and JP share CUSA07022, which is listed with the plugin disabled. The Fortnite game update and PS4 firmware remain unspecified.",
     "archive": "Both ready files were saved under PS4/Games/Fortnite and verified byte for byte against their website copies. Their source URLs, versions, sizes and SHA-256 are in the merged download inventory. The F: archive index was refreshed.",
     "checks": "Verified hub card order, menu directory anchor, exact screenshot bytes, the two INI sections and both download hashes. Existing test suite: 19 passed, with one existing catalogue assertion rejecting the Black Ops II FPKG crash fix entry."
@@ -131,27 +147,6 @@
     "artworkFollowup": "Added the supplied PS4 avatar menu screenshot to the Avatars pack 500+ card and reused the existing PS4 avatar artwork for the Avatar Changer card.",
     "generator": "scripts/build-ps4-software.cjs#buildPs4Avatars",
     "checks": "All four original download URLs matched, search and metadata transforms were stable, and 18 focused tests passed."
-  },
-  "defaultPcHeroButtonRemoval20261108": {
-    "date": "2026-11-08",
-    "changes": "Removed the default PC hero button from 187 public pages and the shared guide generator. Page-specific hero actions are passed directly to the generator."
-  },
-  "playstationHubSetupRow20261108": {
-    "date": "2026-11-08",
-    "changes": "The PS4 and PS5 hub setup grids use two columns on wider screens and one at 760 px or narrower. Verified that the PS4 Jailbreak and Firmware downloads cards share the same row in the local browser preview."
-  },
-  "ps4ThemeLibrary20261108": {
-    "date": "2026-11-08",
-    "catalog": "docs/ps4-theme-link-catalog.json",
-    "previews": "All 887 cards link to the pinned upstream WebP thumbnails and full-size JPG previews. The visible labels omit the source handle. Files are served by the upstream host and were not mirrored.",
-    "downloadButtons": "All 887 cards use a Download button. Added title-based tags for 4K, anime, abstract, Japanese, anniversary and holiday themes, plus corresponding search keywords.",
-    "delivery": "The first Pages build exceeded the 900 MiB staging budget because each locale repeated the 887 card elements. All locales now load the same JSON catalog and render cards from a shared template.",
-    "categoryFilter": "Removed the decorative customization illustration from the PS4 Themes page. Category filtering works alongside title search and the type filter.",
-    "pkgButtons": "Simplified the two package source cards to buttons. PS2 Legacy Dynamic Theme uses the user-supplied MediaFire link for EP9000-CUSA07875_00-PSLEGACYTHEME001.pkg.",
-    "pagination": "The library shows 36 themes per page, with 25 numbered pages in the unfiltered view. The existing advertisement appears beneath the library on every results page.",
-    "changes": "Added 887 distinct PS4 theme titles and original MediaFire source links to the PS4 Themes page, a hub card next to Avatars, search, type filters, tags and keywords. The existing global Themes directory links to the updated page.",
-    "sourcePolicy": "The pinned upstream index is recorded in the catalog. No redistribution license was found in the source repository. No packages, third-party previews or source code were copied or archived. Individual external links were preserved from the source index and were not availability-tested.",
-    "checks": "Verified catalog coverage, matching source URLs, browser search, type filtering, empty results, reset and Show more. Local changes are pending publication."
   },
   "gta5CatalogueCleanup20261104": {
     "date": "2026-11-04",
@@ -11288,24 +11283,24 @@
   "sharedPlayStationPatchCatalogue20261108": {
     "page": "console/ps4/game-patches.html",
     "nativePs5Section": "console/ps4/game-patches.html#native-ps5-patches",
-    "status": "Published and verified live",
-    "deployment": "42538e7c1dd3619db4e47674263b970d65f8829d, https://github.com/Speedy-away/whatsite/actions/runs/42530683410",
-    "liveVerification": "Verified both console hub links and the legacy PS5 redirect. All eleven Bloodborne, Red Dead Redemption 2 and MindsEye XMLs returned HTTP 200 and matched the release checkout SHA-256 hashes.",
+    "status": "Built and verified locally",
     "navigation": "Both console hubs link to the shared catalogue. The former PS5 route redirects to the native section and preserves game anchors, with explicit mappings for the PS5 engine setup and Persona 3 Reload.",
-    "compatibility": "PS4 and PS4-on-PS5 CUSA cards share one listing. Native PS5 PPSA cards have a separate section. The platform filter, patch tags and PS4/PS5 storage links use each game's recorded compatibility."
+    "compatibility": "PS4 and PS4-on-PS5 CUSA cards share one listing. Native PS5 PPSA cards have a separate section. The platform filter, patch tags and PS4/PS5 storage links use each game's recorded compatibility.",
+    "deployment": "42538e7c1dd3619db4e47674263b970d65f8829d, https://github.com/Speedy-away/whatsite/actions/runs/42530683410",
+    "liveVerification": "Verified both console hub links and the legacy PS5 redirect. All eleven Bloodborne, Red Dead Redemption 2 and MindsEye XMLs returned HTTP 200 and matched the release checkout SHA-256 hashes."
   },
   "nativePs5HighRefreshSourceReview20261108": {
     "date": "2026-11-08",
-    "status": "Published and live verified",
+    "status": "Prepared for Pages publication",
+    "page": "console/ps5/game-patches.html#native-ps5-patches",
+    "sourceReview": "Rechecked PS-Game-Patch, CheatRunner Patches, zer0day, libhijacker, NeoEnabler and Common FPS. No additional downloadable native PS5 120 FPS or 4K patch with a verified PPSA and fixed update was identified.",
+    "discovery": "Moved native PS5 cards above PS4 backward compatibility. Added a separate native 120 Hz output filter and direct MindsEye and Red Dead Redemption jumps. Added pattern-scan, 2160p internal-rendering and 120 Hz search terms. The existing 120 FPS target and 4K rendering filters remain separate.",
+    "downloads": "No patch files added or changed. MindsEye is PPSA28209, game 01.017.000. Red Dead Redemption PPSA30523 retains source AppVer mask.",
     "publication": {
       "commit": "3f545a1640e39ab59976ad1d3b14edb075cca964",
       "deploymentRun": "https://github.com/Speedy-away/whatsite/actions/runs/42527453937",
       "verification": "Verified new filters, native section placement and search metadata on the public page. The MindsEye and Red Dead Redemption XMLs and four recent JSONs returned HTTP 200 and matched all recorded SHA-256 hashes."
     },
-    "page": "console/ps5/game-patches.html#native-ps5-patches",
-    "sourceReview": "Rechecked PS-Game-Patch, CheatRunner Patches, zer0day, libhijacker, NeoEnabler and Common FPS. No additional downloadable native PS5 120 FPS or 4K patch with a verified PPSA and fixed update was identified.",
-    "discovery": "Moved native PS5 cards above PS4 backward compatibility. Added a separate native 120 Hz output filter and direct MindsEye and Red Dead Redemption jumps. Added pattern-scan, 2160p internal-rendering and 120 Hz search terms. The existing 120 FPS target and 4K rendering filters remain separate.",
-    "downloads": "No patch files added or changed. MindsEye is PPSA28209, game 01.017.000. Red Dead Redemption PPSA30523 retains source AppVer mask.",
     "forkGistAndForumFollowup": {
       "forks": "Compared 24 active PS-Game-Patch forks, representing 11 distinct default-branch revisions, with upstream. Checked 37 candidate native PS5 XML files across those revisions. The sole differing file was an older Demon's Souls debug-menu patch.",
       "gistsAndForums": "Checked public GitHub Gists and PS5 modding discussions on GBAtemp and PSX-Place. No additional downloadable native PS5 120 FPS or 4K patch with a confirmed PPSA ID and fixed game update was found.",
@@ -11314,11 +11309,7 @@
   },
   "nativePs5HighRefreshDiscovery20261108": {
     "date": "2026-11-08",
-    "status": "Published and live verified",
-    "publication": {
-      "commit": "84272984885c30074b8664115a5bec77335f1a12",
-      "verification": "Verified native-only filters and exact title/update labels on the public page. Four new JSONs and the MindsEye and Red Dead Redemption XMLs returned HTTP 200 and matched their recorded byte counts and SHA-256."
-    },
+    "status": "Prepared for Pages publication and live download verification",
     "page": "console/ps5/game-patches.html#native-ps5-patches",
     "entries": [
       "007 First Light PPSA11386 01.018.001, Quality-mode 60 FPS.",
@@ -11328,7 +11319,11 @@
     ],
     "discovery": "Added native-only 120 FPS target and 4K graphics filters. MindsEye PPSA28209 01.017.000 is a conditional 120 FPS target. Red Dead Redemption PPSA30523 has 2160p graphics and 120 Hz output with upstream AppVer mask, so no fixed game-update number is claimed. No additional exact 120 FPS or 4K files were verified.",
     "archive": "Four version-pinned zer0day JSONs in the standalone-game-patches inventory; source URLs, SHA-256 and exact installed game updates are tracked.",
-    "checks": "All 23 focused patch and directory tests passed. Verified both native-only filters, title-ID and update queries, and the four local JSON checksums."
+    "checks": "All 23 focused patch and directory tests passed. Verified both native-only filters, title-ID and update queries, and the four local JSON checksums.",
+    "publication": {
+      "commit": "84272984885c30074b8664115a5bec77335f1a12",
+      "verification": "Verified native-only filters and exact title/update labels on the public page. Four new JSONs and the MindsEye and Red Dead Redemption XMLs returned HTTP 200 and matched their recorded byte counts and SHA-256."
+    }
   },
   "nativePs5PerformancePatches20261108": {
     "date": "2026-11-08",
@@ -11355,7 +11350,13 @@
       "deploymentRun": "https://github.com/Speedy-away/whatsite/actions/runs/42522877595",
       "verification": "Verified Game Patches beside FPKG's Fixes in PS4 Game Downloads and links from the PS5 hub and PS5 Game Downloads. All seven Bloodborne XMLs, three RDR2 XMLs, five standalone files and the catalogue ZIP returned HTTP 200 and matched their recorded SHA-256."
     },
-    "pages": ["console/ps4/game-patches.html", "console/ps4/game-downloads.html", "console/ps4/fpkg-fixes.html", "console/ps5/game-patches.html", "console/ps5/game-downloads.html"],
+    "pages": [
+      "console/ps4/game-patches.html",
+      "console/ps4/game-downloads.html",
+      "console/ps4/fpkg-fixes.html",
+      "console/ps5/game-patches.html",
+      "console/ps5/game-downloads.html"
+    ],
     "catalogue": "Reused all 167 PS4 entries and the pinned XML archive. Added adjacent Game Patches and FPKG's Fixes navigation, an archive download near search, featured patch links, visible patch type tags, a named 60 FPS filter, and game, title ID and update search aliases.",
     "compatibility": "Bloodborne has a named 60 FPS option at update 01.09. Red Dead Redemption 2 has FPS unlocks for updates 01.29 and 01.32. Existing CUSA mappings, performance notes and archive SHA-256 were verified.",
     "standalone": "Added Persona 3 Reload 60 FPS and motion-blur options as GoldHEN SHN on PS4 and an etaHEN/Itemzflow XML for CUSA37521 on PS5 backward compatibility. Added native MindsEye PPSA28209 update 01.017.000 with an FPS unlock and graphics profiles. Five exact files saved and SHA-256 verified on F: under the standalone-game-patches inventory. The CUSA36157 PS5 XMLs remain excluded because their internal update differs from their source-folder version.",
@@ -11388,17 +11389,6 @@
     "discovery": "Added visible PS4, BO2, FPKG fix, CUSA57548, Multiplayer and Zombies tags on both cards. Added version, symptom and filename search aliases, page and social metadata, and a direct jump from PS4 Game Downloads. FPKG's Fixes groups this package under Call of Duty and has an empty Other Games section.",
     "checks": "Verified both download cards, the PS4 Game Downloads link, sitemap entry and archive SHA-256. All 26 focused catalogue and deployment tests passed. The discovery update passed 25 focused metadata and catalogue tests."
   },
-  "siteDiscoveryRefresh20261108": {
-    "date": "2026-11-08",
-    "status": "Updated in the working checkout. Pending publication.",
-    "changes": [
-      "Refreshed search tags, page keywords and structured metadata across 566 eligible HTML files. Kept download tags hidden and added localized PS4 outfit editor search terms.",
-      "Refreshed the English sitemap for 497 canonical URLs, including PS4 Save Tools, and the source manifest for 20 localized sitemaps.",
-      "Added 9037 translation cache entries across 20 languages, with 51 entries reviewed or repaired outside the model output.",
-      "Repaired six stale links in the PS4 menu directory and PS5/Vita hubs."
-    ],
-    "checks": "The authored site audit passed across 499 public pages and 60196 local links and assets. The sitemap and search tag checks found no drift. All 497 translation source hashes match the authored pages and all 20 caches validate. The full Pages build verified 9940 localized routes, 21 sitemap index entries and 1486374 packaged links with zero issues. Of 65 relevant tests, 63 passed. Two catalog publication assertions also fail when the original generator is loaded against the existing catalog data."
-  },
   "ps4CodMediafire20261108": {
     "date": "2026-11-08",
     "pages": [
@@ -11427,5 +11417,65 @@
         }
       ]
     }
+  },
+  "ps4HubGroups20261108": {
+    "date": "2026-11-08",
+    "changes": "Grouped Game mods / Mod Menus, Game saves, Game downloads and Game patches under Games. More starts with Apps & utilities, followed by Avatars, PS4 Themes and Emulators. The Firmware & jailbreak heading and card pair are centered, with one column on narrow screens.",
+    "downloads": "Renamed the hub card to Game downloads & fixes and reduced the height and width of the FPKG fixes and game patches cards on the PS4 Game Downloads page.",
+    "status": "Prepared for publication through GitHub Pages."
+  },
+  "siteDiscoveryRefresh20261108": {
+    "date": "2026-11-08",
+    "scope": "Sitewide search tags, keywords, sitemap and existing languages",
+    "changes": [
+      "Refreshed 6487 search fields across 566 eligible HTML pages and hid card tags in CSS.",
+      "Added localized Arise RTM and RDR2 search terms and refreshed page keywords and structured data.",
+      "Updated the 497 canonical URLs and translation caches for 20 languages against the current main branch."
+    ],
+    "checks": "All 497 source hashes and sitemap routes match. The 20 translation caches validate. The focused metadata, search and language suites passed. The GitHub Pages workflow performs packaging and live deployment.",
+    "status": "Updated in the working checkout. Pending publication."
+  },
+  "baguetteDownloadButtons20261108": {
+    "date": "2026-11-08",
+    "page": "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+    "change": "The card shows only Download Baguette 1.11. The alternate Aimbot and Zeem downloads remain in the source inventory as excluded.",
+    "checks": "The English card and all 20 localized routes render exactly one Baguette button."
+  },
+  "ps4BaguetteCard20261108": {
+    "date": "2026-11-08",
+    "status": "Verified locally. Pending publication.",
+    "changes": "Renamed the remaining PS4 Black Ops II button to Download Baguette 1.11 and hid the Aimbot edition and original Zeem port buttons. The 1.11 download target and all three source records were verified."
+  },
+  "downloadCardTags20261108": {
+    "date": "2026-11-08",
+    "status": "Verified locally. Pending publication.",
+    "changes": "Hid card tag badges through the shared site stylesheet and added search tags for North, Oyster, Sheriff and Havana to the PS4 RDR2 catalogue and menu directory. PS3 download variant labels remain visible.",
+    "checks": "Verified all 226 public pages with these tag classes load the shared stylesheet. Confirmed the four RDR2 cards and directory entries contain their added search terms and preserve their existing links. All 14 focused search and tag tests passed."
+  },
+  "ps4CodRdr2VideoGuides20261108": {
+    "date": "2026-11-08",
+    "status": "Verified locally. Pending publication.",
+    "pages": [
+      "console/mods/ps4/call-of-duty/black-ops-1/index.html",
+      "console/mods/ps4/call-of-duty/black-ops-2/index.html",
+      "console/ps4/fpkg-fixes.html",
+      "console/mods/ps4/rdr2/index.html"
+    ],
+    "changes": "Added the Black Ops 1 and 2 crash fix video to both PS4 game pages and a Watch video guide button to the Black Ops II FPKG fix. Added the RDR2 Online PS4 setup video to the RDR2 mods page and removed the Oyster free-edition sentence.",
+    "rdr2CardLabels": "Simplified the Oyster and Havana cards to game-update numbers and removed the duplicate explanation from Sheriff 1.32. Havana’s detailed guide retains the GoldHEN requirement and its 1.00 download is labelled experimental.",
+    "checks": "YouTube returned public metadata for both supplied videos. Verified the embeds, buttons, removed text and prior links in the generated pages. All 21 focused tests passed."
+  },
+  "defaultPcHeroButtonRemoval20261108": {
+    "date": "2026-11-08",
+    "changes": "Removed the default PC hero button from 187 public pages and the shared guide generator. Page-specific hero actions are passed directly to the generator."
+  },
+  "playstationHubSetupRow20261108": {
+    "date": "2026-11-08",
+    "changes": "The PS4 and PS5 hub setup grids use two columns on wider screens and one at 760 px or narrower. Verified that the PS4 Jailbreak and Firmware downloads cards share the same row in the local browser preview."
+  },
+  "repositoryMerge20261109": {
+    "localCommit": "c3bfa4193",
+    "upstreamCommit": "a255f3830",
+    "changes": "Reconciled the local site changes with upstream console resources and the discovery refresh."
   }
 }

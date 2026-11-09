@@ -61,7 +61,8 @@ test('authored pages retain compatibility and are ready for repeat generation', 
   for (const file of ['ps4/index.html', 'ps4/jailbreak.html', 'ps4/jailbreak-13-52.html', 'ps5/index.html', 'ps5/relapse.html', 'ps5/umtx2.html']) {
     const html = fs.readFileSync('console/' + file, 'utf8');
     assert.equal(apply('console/' + file, html), html, file);
-    assert.ok(html.includes(destinations[file.split('/')[0]]), file);
+    const host = file === 'ps4/jailbreak.html' ? 'https://well0nez.github.io/afterglow-web/' : destinations[file.split('/')[0]];
+    assert.ok(html.includes(host), file);
   }
   const umtx = fs.readFileSync('console/ps5/umtx2.html', 'utf8');
   assert.ok(umtx.includes('1.00–5.50'));

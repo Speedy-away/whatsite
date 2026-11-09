@@ -62,7 +62,9 @@ function build(){
   const all=platform==='all',file=all?'console/free-shops/index.html':`console/${platform}/free-shops.html`,title=all?'Free Shops':`${platform.toUpperCase()} Free Shops`;
   const nav=[['/console/free-shops/','All free shops'],['/console/ps4/free-shops.html','PS4 free shops'],['/console/ps5/free-shops.html','PS5 free shops'],['/console/ps4/game-downloads.html','PS4 game downloads'],['/console/ps5/game-downloads.html','PS5 game downloads']];
   const intro=g.section('compatibility','Choose the right store','<p>Infinitykkj’s publisher documents PS4 installation. Orbit is a PS5 application. Nova Store’s platform and firmware requirements remain unconfirmed. Listings here do not establish cross-console support.</p><p>The supplied Google Drive files currently report a download quota limit. Their original links remain available for retrying later.</p>');
-  g.page(file,title,'Browse Infinitykkj STORE, Nova Store, Orbit and JobeesLair downloads with platform requirements and installation links.',artwork,nav,storeSection(platform)+intro,'#free-shops','Browse free shops','<a class="btn btn-outline" href="/console/">Console hub</a>');
+  g.page(file,title,'Browse Infinitykkj STORE, Nova Store, Orbit and JobeesLair downloads with platform requirements and installation links.',artwork,nav,storeSection(platform)+intro,'#free-shops','Browse free shops');
+  const target=path.join(root,file);
+  fs.writeFileSync(target,fs.readFileSync(target,'utf8').replace('<a class="btn btn-outline" href="/pc/">PC</a>','<a class="btn btn-outline" href="/console/">Console hub</a>'));
   pages.push(file);
  }
  let sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');

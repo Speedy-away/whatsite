@@ -16,14 +16,14 @@ function apply(file,html){
       html=html.replace('<div id="content">',()=>'<div id="content">'+section);
     }
   }
+
   if (/^console\/(ps3|ps4|ps5|psvita|xbox360)\/(index|transfer-tools)\.html$/.test(file)) {
     html = html.replace(/<section\b[^>]*\bid="helpful-desktop-tools"[^>]*>[\s\S]*?<\/section>/g, '');
     const card = '<section id="helpful-desktop-tools" class="section"><div class="container"><h2 class="section-title">Helpful computer tools</h2><article class="guide-resource"><h3>FileZilla Client · FTP transfers</h3><p>Transfer files between your computer and a console running an FTP server. Enable the console’s FTP service, then enter its local IP address and the port shown by that service in FileZilla. Use the credentials shown by the console tool. FileZilla runs on your computer.</p><div class="guide-links"><a class="btn btn-primary" href="https://filezilla-project.org/download.php?show_all=1" target="_blank" rel="noopener noreferrer">Download FileZilla Client · official site</a></div></article></div></section>';
-    const firmware = /<section\b[^>]*\bid="firmware-jailbreak"[^>]*>/;
+    const firmware = /<section\b[^>]*\bid="(?:firmware-jailbreak|console-hub-setup)"[^>]*>/;
     const setup = /<div\b[^>]*\bid="console-hub-setup"[^>]*>/;
     const before = file === 'console/ps4/index.html' && (html.match(firmware) || html.match(setup));
     html = before ? html.replace(before[0], card + before[0]) : html.replace('<div id="content">', '<div id="content">' + card);
   }
-  return addTitleIdCopy(html);
-}
+return addTitleIdCopy(html);}
 module.exports={apply,prepare};if(require.main===module)console.log('Prepared '+prepare().length+' regional templates');

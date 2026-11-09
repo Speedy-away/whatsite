@@ -13,7 +13,9 @@ function apply(file,html){
   }
   return card;
  });
- if(html.includes('game-directory-card')&&!html.includes('/assets/game-directory-cards.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/game-directory-cards.css?v=1">\n</head>');
+ const compactFixes = file === 'console/ps4/game-downloads.html' && html.includes('id="fpkg-fixes"');
+ if((html.includes('game-directory-card') || compactFixes)&&!html.includes('/assets/game-directory-cards.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/game-directory-cards.css?v=1">\n</head>');
+ if(compactFixes)html=html.replace('/assets/game-directory-cards.css?v=1','/assets/game-directory-cards.css?v=2');
  return html;
 }
 module.exports={apply};

@@ -1,6 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const html=require('../localized-html.cjs'),builder=require('../build-localized-pages.cjs');
+const {tag:languageLoader}=require('../language-loader.cjs');
 const root=path.resolve(__dirname,'../..');
 function fixture(){
  const dictionary=html.dictionary(root,'es'),source='<!doctype html><html lang="en"><head><title>Home</title><meta name="description" content="Tools"><meta property="og:title" content="Home"><meta property="og:description" content="Tools"><meta property="og:locale" content="en_US"><meta property="og:url" content="https://whatwhatboy.com/"><link rel="canonical" href="https://whatwhatboy.com/"><style>.card{background:url(assets/cover.png)}</style><script defer src="/languages/i18n.js?v=3"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Home","description":"Tools","url":"https://whatwhatboy.com/"}</script></head><body><h1>Home</h1><p>Tools</p><code>PS4 5.05 / CUSA00419 / old-v1.27.bin</code><a href="console/ps4/?view=files#guide">Guides</a><a href="downloads/old-v1.27.bin" download>Download</a><img src="assets/cover.png" alt="Game patches"><script>window.exact="../docs/catalog.json";</script></body></html>';
@@ -12,6 +13,7 @@ function fixture(){
 test('every locale has translated HTML before JavaScript, self canonicals, reciprocal alternate URLs and correct writing direction',()=>{
  const {source,page,ctx}=fixture();
  for(const code of html.codes){const result=builder.render(ctx,page,source,code),d=ctx.languages.get(code).dictionary;
+  assert.ok(result.includes(languageLoader));
   assert.ok(result.includes('<title>'+html.escape(d.Home)+'</title>'));assert.ok(result.includes('<h1>'+html.escape(d.Home)+'</h1>'));
   assert.ok(result.includes('<meta name="description" content="'+html.escape(d.Tools)+'">'));
   assert.ok(result.includes('lang="'+code+'" dir="'+(['ar','he'].includes(code)?'rtl':'ltr')+'"'));
@@ -22,7 +24,7 @@ test('every locale has translated HTML before JavaScript, self canonicals, recip
   assert.ok(result.includes('<script>window.exact="../docs/catalog.json";</script>'));assert.ok(result.includes('<base href="/">'));
   const schema=JSON.parse(result.match(/application\/ld\+json">([^<]+)<\/script>/)[1]);assert.equal(schema.inLanguage,code);assert.equal(schema.url,html.origin+'/'+code+'/');assert.equal(schema.name,d.Home);
  }
- const english=builder.render(ctx,page,source,'en');assert.ok(english.includes('<title>Home</title>'));assert.ok(english.includes(html.alternateLinks(page.canonical)));assert.equal(ctx.shared.size,1);
+ const english=builder.render(ctx,page,source,'en');assert.ok(english.includes(languageLoader));assert.ok(english.includes('<title>Home</title>'));assert.ok(english.includes(html.alternateLinks(page.canonical)));assert.equal(ctx.shared.size,1);
 });
 test('HTML tokenization respects technical opt-outs, quoted angle brackets, metadata and immutable code',()=>{
  const source='<html><head><title>Search tools</title><meta name="description" content="Choose PS4 &amp; PS5"></head><body><p title="A > B">Choose files</p><p translate="no">Keep literal</p><section data-i18n-skip><span>Keep nested</span></section><pre>Unchanged source</pre><script>const value="<p>inert</p>";</script></body></html>';
