@@ -106,6 +106,18 @@ test('Pages may use rewrite headroom but still enforces the planned size limit',
   } finally { fs.rmdirSync(root); }
 });
 
+test('Pages retains the library waves and share image when artwork is offloaded', () => {
+  const mib = 1024 * 1024;
+  const base = 'assets/images/playstation-library/';
+  const essentials = ['xmb-wave-dark.svg', 'share-black-wave-v1.png'].map(name => base + name);
+  const thumbnail = base + 'dlpsgame/example.jpg';
+  const sizes = new Map([[thumbnail, 3 * mib], ...essentials.map(name => [name, mib / 2])]);
+  const result = plan(path.resolve(__dirname, '../..'), [...sizes.keys()], 'b'.repeat(40), sizes, 899 * mib);
+  assert.ok(result.offloaded.has(thumbnail));
+  for (const file of essentials) assert.ok(!result.offloaded.has(file));
+  assert.equal(result.bytes, LIMIT);
+});
+
 test('Pages can offload build records while retaining linked docs and delivery data', () => {
   const mib = 1024 * 1024;
   const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-records-'));

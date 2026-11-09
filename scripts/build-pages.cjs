@@ -6,6 +6,11 @@ const {execFileSync} = require('node:child_process');
 const {publishAds} = require('./site-ads.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const LIMIT = 900 * 1024 * 1024;
+// The library’s theme and share preview should load from the published site.
+const libraryArtwork = new Set([
+  'xmb-wave.svg', 'xmb-wave-dark.svg', 'share-black-wave-v1.png',
+  'bloodborne.webp', 'god-of-war-iii.webp', 'astro-bot.png'
+].map(name => 'assets/images/playstation-library/' + name));
 const encodePath = name => name.split('/').map(encodeURIComponent).join('/');
 function rawURL(name, revision = 'main') {
   if (!/^(?:main|[a-f0-9]{40})$/.test(revision)) throw Error('Invalid repository revision');
@@ -68,7 +73,7 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, p
     (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
     isBuildRecord(f.name) ||
     /^scooby\/(?:FSL\/)?WINMM\.dll$/i.test(f.name) ||
-    /^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) ||
+    (/^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) && !libraryArtwork.has(f.name)) ||
     /^hosts\/runtime\/karo-[^/]+\/web\/.+\.(?:bin|elf|bz2|zip)$/i.test(f.name)
   ).sort((a, b) => b.bytes - a.bytes || a.name.localeCompare(b.name));
   const offloaded = sourceLinks(root);
