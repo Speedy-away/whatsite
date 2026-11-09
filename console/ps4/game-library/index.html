@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#131513">
+  <title>PlayStation Game Library | WhatWhatBoy</title>
+  <meta name="description" content="Browse PS4 and PS5 games, DLC, updates and fixes. Search by game or title ID and compare regions and package versions.">
+  <link rel="canonical" href="https://whatwhatboy.com/console/ps4/game-library/">
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/playstation-library.css">
+  <script type="module" src="/assets/playstation-library.js"></script>
+<link rel="stylesheet" href="/assets/site-ads.css?v=3">
+</head>
+<body class="ps-library">
+  <a class="skip" href="#catalog">Skip to the catalog</a>
+  <header class="library-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/"><img src="/assets/images/logo.png" alt="" width="32" height="32"> WhatWhatBoy</a>
+      <nav aria-label="PlayStation">
+        <a href="/console/ps4/">PS4</a><a href="/console/ps5/">PS5</a>
+        <a class="back-link" href="/console/ps4/game-downloads.html">Downloads <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="main-content wrap">
+    <section class="library-hero" aria-labelledby="library-title">
+      <div class="hero-copy">
+        <p class="kicker"><span aria-hidden="true"></span> PS4 &amp; PS5 collection</p>
+        <h1 id="library-title">PlayStation<br><em>Game Library</em></h1>
+        <p class="hero-note">Find games, updates, DLC and fixes. Check the title ID, region and firmware before you download.</p>
+        <a class="action primary" href="#catalog">Browse the library <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-label="Featured games">
+        <a href="?game=e976cc73314ef2f9" class="art-tile art-left" data-game="e976cc73314ef2f9" aria-label="Browse Bloodborne packages"><img src="/assets/images/playstation-library/bloodborne.webp" alt="" width="220" height="290"></a>
+        <a href="?game=d06a91f493c8561a" class="art-tile art-main" data-game="d06a91f493c8561a" aria-label="Browse God of War III Remastered packages"><img src="/assets/images/playstation-library/god-of-war-iii.webp" alt="" width="260" height="344" fetchpriority="high"></a>
+        <a href="?game=4c3996451f8ce0fa" class="art-tile art-right" data-game="4c3996451f8ce0fa" aria-label="Browse Astro Bot packages"><img src="/assets/images/playstation-library/astro-bot.png" alt="" width="220" height="290"></a>
+      </div>
+    </section>
+    <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+      <div class="catalog-heading">
+        <div><h2 id="catalog-title">Browse games</h2><p id="library-totals">PS4 and PS5 titles in one place.</p></div>
+        <button type="button" class="text-button" id="open-help">Download help <span aria-hidden="true">↗</span></button>
+      </div>
+      <form class="catalog-controls" id="catalog-controls" role="search" aria-label="Filter the game library">
+        <label class="search-control"><span>Search games</span><input id="query" name="q" type="search" placeholder="Game title or CUSA / PPSA ID" autocomplete="off"></label>
+        <label>Platform<select id="platform" name="platform"><option value="">All platforms</option><option>PS4</option><option>PS5</option></select></label>
+        <label>Region<select id="region" name="region"><option value="">All regions</option></select></label>
+        <label>Package<select id="kind" name="kind"><option value="">All packages</option><option value="base">Base game</option><option value="update">Update</option><option value="dlc">DLC</option><option value="bundle">Bundle</option><option value="fix">Fix</option><option value="patch">Patch</option><option value="other">Other</option></select></label>
+        <label>Sort<select id="sort" name="sort"><option value="recent">Latest listed dates</option><option value="az">Title: A to Z</option><option value="za">Title: Z to A</option><option value="count">Most links</option><option value="largest">Largest listed size</option><option value="smallest">Smallest listed size</option></select></label>
+      </form>
+      <div class="results-bar">
+        <p id="results-count" role="status" aria-atomic="true">Loading the catalog…</p>
+        <div><button type="button" class="text-button" id="clear-filters" hidden>Clear filters</button>
+          <button type="button" class="text-button view-toggle" id="view-toggle" aria-pressed="false">List view</button></div>
+      </div>
+      <div id="results" class="cover-grid"></div>
+      <div id="catalog-state" class="empty-state" hidden></div>
+      <div class="more-row"><button type="button" class="action secondary" id="more-results" hidden>Show more games <span aria-hidden="true">↓</span></button></div>
+      <noscript><p>Enable JavaScript to search this library, or <a href="https://onlygames.pages.dev/">browse the original catalog</a>.</p></noscript>
+    </section>
+<!-- BEGIN SITE AD -->
+<aside class="site-ad" id="page-advertisement" aria-label="Advertisement"><div class="container"><div class="site-ad-panel"><span class="site-ad-label">Advertisement</span><div class="site-ad-stage"><div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div><script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script><p class="site-ad-empty" hidden>Ad unavailable.</p></div></div></div></aside>
+<!-- END SITE AD -->
+
+  </main>
+  <footer class="library-footer wrap">
+    <div><strong>WhatWhatBoy</strong><p>Package metadata from <a href="https://onlygames.pages.dev/" rel="noreferrer">OnlyGames</a> and the existing PS4 guides. Files are served by their listed sources.</p></div>
+    <nav aria-label="Download guides">
+      <a href="/console/ps4/dlcs.html">DLC</a><a href="/console/ps4/updates.html">Updates</a><a href="/console/ps4/fpkg-fixes.html">FPKG fixes</a><a href="https://discord.gg/6hsV2fva8Z" rel="noreferrer">Community</a>
+    </nav>
+  </footer>
+  <dialog id="game-dialog" class="library-dialog" aria-labelledby="game-title">
+    <form method="dialog" class="close-dialog"><button type="submit" aria-label="Close game details" autofocus>×</button></form>
+    <div id="game-detail"></div>
+  </dialog>
+  <dialog id="help-dialog" class="library-dialog help-dialog" aria-labelledby="help-title">
+    <form method="dialog" class="close-dialog"><button type="submit" aria-label="Close download help" autofocus>×</button></form>
+    <h2 id="help-title">Download help</h2>
+    <ul>
+      <li>Match the title ID and region before combining a base game, update and DLC. Install the base game first.</li>
+      <li>Check the listed firmware and version for your exact package. Missing details are unknown.</li>
+      <li>Direct files start from the download page. Other links open the host, which may ask for verification or sign-in.</li>
+      <li>If a SuperPSX archive asks for a password, try <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button>.</li>
+      <li>For sending a compatible direct PKG to your PS4, see the <a href="/console/ps4/transfer-tools.html">PS4 transfer tools guide</a>.</li>
+    </ul>
+    <a href="https://discord.gg/6hsV2fva8Z" class="action secondary" rel="noreferrer">Ask the community <span aria-hidden="true">↗</span></a>
+  </dialog>
+  <p class="toast" id="library-toast" role="status" hidden></p>
+<script defer src="/assets/site-ads.js?v=2"></script></body>
+</html>

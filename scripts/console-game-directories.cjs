@@ -19,7 +19,8 @@ function platformFor(file, data = registry()) {
 }
 function protectedFile(file, html) {
   const current = normalized(file);
-  return current.startsWith('downloads/') || /(?:^|\/)whatsite-ps[45]\.html$/.test(current) || /\bid=["']receiver-catalog["']/.test(html);
+  return current.startsWith('downloads/') || current.startsWith('console/ps4/game-library/') ||
+    /(?:^|\/)whatsite-ps[45]\.html$/.test(current) || /\bid=["']receiver-catalog["']/.test(html);
 }
 function range(html, tag, predicate) {
   const tags = new RegExp(`<${tag}\\b[^>]*>`, 'gi');

@@ -4,6 +4,7 @@ const {games, dlcPost} = require('../docs/ps4-game-add-ons.json');
 const title = "Game downloads & DLCs & Updates & FPKG's fixes";
 const description = 'Browse PS4 game downloads, DLCs, versioned updates, FPKG fixes and game patches.';
 const hub = '/console/ps4/game-downloads.html';
+const library = '/console/ps4/game-library/';
 const dlcs = '/console/ps4/dlcs.html';
 const updates = '/console/ps4/updates.html';
 const cover = game => `/assets/images/covers/cod-${game.id}.jpg`;
@@ -43,6 +44,14 @@ function applyToDirectory(html) {
   html = html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/,
     nav => nav.includes(`href="${dlcs}"`) ? nav : nav.replace('</nav>',
       `<a href="${dlcs}">DLC's</a><a href="${updates}">Updates</a></nav>`));
+  html = html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/,
+    nav => nav.includes(`href="${library}"`) ? nav : nav.replace('</nav>', `<a href="${library}">PlayStation Game Library</a></nav>`));
+  if (!html.includes('id="playstation-game-library"')) {
+    const libraryCard = resource('PlayStation Game Library', 'Search the PS4 and PS5 catalog by title or title ID. Compare package links, regions, firmware and versions.',
+      link(library, 'Open the game library'), '/assets/images/merged-categories/optimized/library-ps4-v1-480.jpg');
+    html = html.replace(/<section\b[^>]*\bid="(?:fpkg-fixes|games-dlcs|game-directories)"[^>]*>/,
+      opening => section('playstation-game-library', 'PS4 and PS5 Game Library', grid(libraryCard)) + opening);
+  }
   if (html.includes('id="games-dlcs"')) return html;
   const links = games.map(game => link(`${dlcs}#${game.id}`, `${game.title} Season Pass`)).join('');
   const dlcCard = resource("DLC's", 'Find Season Pass packages by game and PS4 title ID.',
