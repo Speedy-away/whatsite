@@ -1,4 +1,19 @@
 {
+  "ps4BlackOpsAddOns20261109": {
+    "date": "2026-11-09",
+    "status": "Implemented in the main site checkout for GitHub Pages.",
+    "pages": [
+      "console/ps4/index.html",
+      "console/ps4/game-downloads.html",
+      "console/ps4/dlcs.html",
+      "console/ps4/updates.html"
+    ],
+    "catalog": "docs/ps4-game-add-ons.json",
+    "changes": "Renamed the PS4 game download hub and added a Games - DLCs section with dedicated DLC's and Updates pages above the external PS4 game directories. Kept all four user-supplied URLs and existing FPKG fixes.",
+    "archive": "Downloaded both 131072-byte Season Pass PKGs, verified the PS4 package headers (CUSA57547 and CUSA57548) and verified the saved files on F: by SHA-256. No public binary mirror was added.",
+    "linkChecks": "Both signed Discord links and both VikingFile folders returned HTTP 200. The Discord CDN signatures expire on 2026-11-10 at 09:16 UTC; the DLC page links to the original Discord post for fresh attachments. The VikingFile folders list 1.09 and 1.11 as combined game/update PKGs (22.90 GB and 30.24 GB); individual downloads require a CAPTCHA, so package bytes were not verified or archived. No packages were executed.",
+    "regenerate": "node scripts/ps4-game-add-ons.cjs"
+  },
   "ps4GameSaves20261108": {
     "date": "2026-11-08",
     "status": "Published and verified live on GitHub Pages.",

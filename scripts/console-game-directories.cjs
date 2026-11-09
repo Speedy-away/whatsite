@@ -6,6 +6,7 @@ const registry = () => JSON.parse(fs.readFileSync(path.join(root, 'docs/console-
 const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const normalized = file => (/^\/(?:console|downloads|pc|source-codes)\//.test(file) ? file : path.isAbsolute(file) ? path.relative(root, file) : file).replaceAll('\\', '/').replace(/^\/+/, '').split(/[?#]/)[0];
 const directoryPath = platform => platform.base + 'game-downloads.html';
+const ps4AddOns = require('./ps4-game-add-ons.cjs');
 const fpkgFixesFile = 'console/ps4/fpkg-fixes.html';
 const blackOps2Mods = '/console/mods/ps4/call-of-duty/black-ops-2/';
 function orbitStoreCard() {
@@ -34,9 +35,9 @@ function range(html, tag, predicate) {
 }
 function hubCard(platform) {
   const detail = platform.providers.length ? `Find ${platform.title} game directories, with direct links to the matching console categories.` : 'Browse game directories by console and choose the system listed by the provider.';
-  const title = platform.id === 'ps4' ? 'Game downloads & fixes' : 'Game downloads';
-  const description = platform.id === 'ps4' ? 'Browse PS4 game download directories, title-specific sources and game fixes.' : detail;
-  return `<article class="guide-resource" data-console-game-card="${platform.id}"><img src="${esc(platform.image)}" alt="${esc(platform.title)} game downloads" loading="lazy"><h3>${esc(title)}</h3><p>${esc(description)}</p><div class="guide-links"><a href="${directoryPath(platform)}">Browse ${esc(title.toLowerCase())} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
+  const title = platform.id === 'ps4' ? ps4AddOns.title : 'Game downloads';
+  const description = platform.id === 'ps4' ? ps4AddOns.description : detail;
+  return `<article class="guide-resource" data-console-game-card="${platform.id}"><img src="${esc(platform.image)}" alt="${esc(platform.title)} game downloads" loading="lazy"><h3>${esc(title)}</h3><p>${esc(description)}</p><div class="guide-links"><a href="${directoryPath(platform)}">Browse ${platform.id === 'ps4' ? 'PS4 downloads' : 'game downloads'} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
 }
 function apply(file, html, data = registry()) {
   if (protectedFile(file, html) || !/<main\b|<div\b[^>]*\bid="main-content"/i.test(html)) return html;
@@ -59,6 +60,7 @@ function apply(file, html, data = registry()) {
       link('/console/ps4/game-patches.html', 'Browse Game Patches'), '/assets/images/game-patches/bloodborne-official.jpg');
     html = html.replace(/<section\b[^>]*\bid="game-directories"[^>]*>/, opening => section('fpkg-fixes', 'PS4 game fixes and patches', grid(card, patches)) + opening);
   }
+  if (current === ps4AddOns.hub) html = ps4AddOns.applyToDirectory(html);
   if (current === destination && platform.id === 'ps5' && !html.includes('id="ps5-game-patches"')) {
     const {section, grid, resource, link} = require('./build-console-guides.cjs');
     const card = resource('Game Patches', 'Browse native PPSA patches and PS4 CUSA patches for backward compatibility. Search by title ID, update or patch type.',
@@ -86,6 +88,16 @@ function apply(file, html, data = registry()) {
       const position = footer?.start ?? main?.close;
       if (position !== undefined) html = html.slice(0, position) + block + html.slice(position);
     }
+  }
+  if (current === hubFile && platform.id === 'ps4') {
+    const existingCard = /<article\b[\s\S]*?<\/article>/g;
+    let found = false;
+    html = html.replace(existingCard, card => {
+      if (!card.includes('href="' + destination + '"')) return card;
+      found = true;
+      return ps4AddOns.applyToHubCard(card);
+    });
+    if (found) return require('./category-card-art.cjs').apply(normalized(file), html);
   }
   if (current === hubFile) {
     const existing = range(html, 'article', tag => tag.includes(`data-console-game-card="${platform.id}"`));
@@ -165,7 +177,7 @@ function buildFpkgFixes() {
 function build() {
   const data = registry();
   const guides = require('./build-console-guides.cjs');
-  const files = [buildFpkgFixes()];
+  const files = [buildFpkgFixes(), ...ps4AddOns.build()];
   for (const platform of data.platforms) {
     // This route has its own ready-file library builder. Preserve that page;
     // generic provider rendering must not replace its games and setup details.

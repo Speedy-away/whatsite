@@ -71,9 +71,10 @@ const ps5Resources = () => grid(
   resource('Emulators on PS5', 'PS2, GameCube, Wii, Wii U, Xbox, Xbox 360 and multi-system projects that run on a homebrew-enabled PS5.', link('/console/ps5/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png'),
   resource('Game mods / Mod Menus', 'Call of Duty, GTA V and Red Dead Redemption 2 mod menus, screenshots and game-specific setup guides.', link('/console/ps5/mods.html', 'Browse game mods'), require('./console-card-media.cjs').ps5Media.mods)
 );
+const ps4AddOns = require('./ps4-game-add-ons.cjs');
 const ps4Resources = () => grid(
   resource('Game mods / Mod Menus', 'GTA V, Red Dead Redemption 2 and Call of Duty collections with menu previews and setup guides.', link('/console/mods/ps4/', 'Browse game mods'), '/assets/images/ps4-gta5/oxagon.png'),
-  resource('Game downloads &amp; fixes', 'Browse PS4 game download directories, title-specific sources and game fixes.', link('/console/ps4/game-downloads.html', 'Browse game downloads &amp; fixes'), '/assets/images/consoles/playstation.jpg'),
+  resource(esc(ps4AddOns.title), ps4AddOns.description, link(ps4AddOns.hub, 'Browse PS4 downloads'), '/assets/images/consoles/playstation.jpg'),
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
   resource('Avatars', 'Change your PS4 avatar or browse a pack of more than 500 avatar images.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
   resource('Game saves', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/save-tools.html', 'Browse game saves'), '/assets/images/consoles/apollo-save-tool.png'),
