@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {resourceTags, resourceTerms} = require('./console-resource-tags.cjs');
-const {section, guideSection, grid, steps, videoEmbed, link, guideLink, esc} = require('./build-console-guides.cjs');
+const {section, guideSection, grid, steps, videoEmbed, link, guideLink, ext, esc} = require('./build-console-guides.cjs');
 
 const categories = {
   menu: 'Mod menus', client: 'Server clients', injector: 'Injectors', pack: 'Menu packs', script: 'Scripts', cfg: 'CFG resources',
@@ -109,7 +109,11 @@ function card(item) {
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
   const tagMarkup = cleanGta ? '' : tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
-  const actions = buttons + sourceLink + videoLink + detailLink;
+  const relatedLinks = (item.relatedLinks || []).flatMap(({url, label}) => {
+    const href = httpsUrl(url);
+    return href && label ? [ext(href, h(label))] : [];
+  }).join('');
+  const actions = buttons + sourceLink + videoLink + detailLink + relatedLinks;
   return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${!cleanGta && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
 }
 function guideBlock(block) {

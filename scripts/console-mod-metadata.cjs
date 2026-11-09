@@ -1,8 +1,8 @@
 const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
-  'fortnite': ['Fortnite PS4 Mod Menu: FN Menu & GoldHEN Setup', 'Get BlueQ’s Fortnite FN Menu for PS4 (CUSA07669), with a bot aimbot and container ESP preview, plus a regional GoldHEN plugins.ini.',
-    ['Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite PS4 hack', 'BlueQ FN Menu', 'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference']],
+  'fortnite': ['Fortnite PS4 Mod Menu: FN Menu & GoldHEN Setup', 'Download BlueQ’s FN Menu for Fortnite on PS4 (CUSA07669) with aimbot, container ESP, skin changer, no recoil, vehicle flying, and GoldHEN setup.',
+    ['Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite skin changer', 'Unlock all skins', 'Free skins', 'Fortnite PS4 hack', 'BlueQ FN Menu', 'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference']],
   'black-ops-1': ['Black Ops 1 Console Menus, CFG & RTM Tools', 'Browse EnCoReV8, Discarded, Purple Kush, the BO1/BO2 GSC injector, CFG resources and RTM tools, with supplied previews and guide popups.'],
   'black-ops-2': ['Black Ops 2 Menus, Injectors & PS4 FPKG Fix', 'Browse BO2 mod menus, GSC injectors and RTM tools, plus the PS4 FPKG 1.11 patch for Multiplayer and Zombies loading crashes on CUSA57548.',
     ['PS4 FPKG fixes', 'BO2 1.11 crash fix', 'BO2 01.11 PKG', 'CUSA57548', 'Black Ops 2 Multiplayer crash fix', 'Black Ops 2 Zombies crash fix', 'BO2_ZMMP_CrashFix.pkg']],

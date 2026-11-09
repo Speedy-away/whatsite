@@ -39,7 +39,7 @@ function resourceTags(item) {
   }
   for (const version of item.gameVersions || []) tags.push('Game ' + version);
   if ((item.guideBlocks || []).length || (item.controls || []).length) tags.push('Guide');
-  return unique([...tags, ...(item.tags || [])]);
+  return unique([...(item.featureTags || []), ...tags, ...(item.tags || [])]);
 }
 function resourceTerms(item, gameTitle = '') {
   const aliases = (item.gameIds || []).flatMap(id => gameAliases[id] || []);
