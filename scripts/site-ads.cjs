@@ -60,7 +60,9 @@ function applyAds(file, html) {
     ? /<section\b[^>]*\bid="games"[^>]*>/i
     : normalizedFile === 'console/ps4/index.html'
       ? /<section\b[^>]*\bid="start"[^>]*>/i
-      : /<section\b[^>]*>/i;
+      : normalizedFile === 'console/ps4/themes.html' && html.includes('id="theme-library"')
+        ? /<section\b[^>]*\bid="theme-library"[^>]*>/i
+        : /<section\b[^>]*>/i;
   const firstMatch = sectionPattern.exec(html.slice(sectionStart));
   const first = firstMatch ? sectionStart + firstMatch.index : -1;
   let sectionEnd = -1, depth = 0;

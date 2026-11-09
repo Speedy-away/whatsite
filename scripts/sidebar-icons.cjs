@@ -9,6 +9,7 @@ const shapes = {
   puzzle: '<path d="M3 3h6v3a2 2 0 1 0 4 0V3h8v6h-3a2 2 0 1 0 0 4h3v8h-6v-3a2 2 0 1 0-4 0v3H3v-6h3a2 2 0 1 0 0-4H3Z"/>',
   download: '<path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5"/>',
   android: '<path d="m7 6-2-3m12 3 2-3M5 11a7 7 0 0 1 14 0v7H5Zm-3 0v5m20-5v5M8 18v3m8-3v3"/><circle cx="9" cy="11" r=".75" fill="currentColor" stroke="none"/><circle cx="15" cy="11" r=".75" fill="currentColor" stroke="none"/>',
+  phone: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/>',
   console: '<rect x="3" y="3" width="8" height="18" rx="2"/><path d="M6 6h2m-2 3h2m7 3h4a2 2 0 0 1 2 1.6l1 4.5a1.7 1.7 0 0 1-2.8 1.7L17 18h-2"/><circle cx="7" cy="17" r=".75" fill="currentColor" stroke="none"/><path d="M16 14v2m-1-1h2"/>',
   retro: '<path d="M3 12a9 9 0 1 0 2.6-6.3L3 8m0-5v5h5m4-1v5l3 2"/>',
   workstation: '<rect x="2" y="4" width="14" height="11" rx="1.5"/><path d="M9 15v5m-4 0h8"/><rect x="19" y="4" width="3" height="16" rx="1"/><path d="M20 8h1m-1 8h1"/>',
@@ -25,7 +26,7 @@ const shapes = {
 };
 const labels = {
   Home: 'home', 'Cheats & Mods': 'controller', 'Free Cheats': 'crosshair',
-  'Game Mods': 'puzzle', 'Game Downloads': 'download', 'APK Downloads': 'android',
+  'Game Mods': 'puzzle', 'Game Downloads': 'download', 'APK Downloads': 'android', 'Tv/Movies apps': 'android', Phone: 'phone',
   Console: 'console', Retro: 'retro', 'Console Mods': 'puzzle', Mods: 'puzzle', 'Mods / Mod Menus': 'puzzle',
   Emulators: 'emulator', 'Source Codes': 'code', 'Game Source Codes': 'gameSource',
   Tools: 'toolbox', Community: 'community', Profile: 'profile', 'Help & FAQ': 'help', Language: 'language', 'PS4 / PS5 webhost': 'console'

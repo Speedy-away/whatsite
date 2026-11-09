@@ -71,7 +71,7 @@ function buildVitaGuides() {
       ['Download the Vita package', 'Choose the Apollo Vita VPK. The PS3 and PS4 PKG files are separate console builds.'],
       ['Transfer and install', 'Transfer the VPK to your Vita and install it using VitaShell. Open Apollo after installation; its setup documentation says user settings are detected on first launch.'],
       ['Back up your saves', 'Keep an original backup before applying save patches, resigning or restoring data. Check the project documentation for each game and save format.']
-    ]) + `<div class="guide-links">${ext('https://github.com/bucanero/apollo-vita', 'Apollo setup documentation')}${link('/console/psvita/jailbreak.html', 'Vita jailbreak guide')}${link('/console/ps3/save-tools.html#save-tools', 'Apollo for PS3')}${link('/console/ps4/#save-tools', 'Apollo for PS4')}</div>`) +
+    ]) + `<div class="guide-links">${ext('https://github.com/bucanero/apollo-vita', 'Apollo setup documentation')}${link('/console/psvita/jailbreak.html', 'Vita jailbreak guide')}${link('/console/ps3/save-tools.html#save-tools', 'Apollo for PS3')}${link('/console/ps4/save-tools.html', 'Apollo for PS4')}</div>`) +
     section('sources', 'PS Vita documentation', sourceList([
       [hacksGuide, 'Vita Hacks Guide · choose the route for your firmware and model'],
       ['https://github.com/SKGleba/VitaDeploy', 'VitaDeploy project and setup features']

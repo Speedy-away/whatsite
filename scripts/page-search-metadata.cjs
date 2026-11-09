@@ -287,6 +287,12 @@ function contextualTerms(relative, content) {
   if (relative === 'console/ps4/apps.html') {
     terms.push('PS4 apps', 'PS4 homebrew utilities', 'Apollo Save Tool', 'PS4-Xplorer', 'PS4 save manager', 'PS4 file manager');
   }
+  if (relative === 'console/ps4/save-tools.html') {
+    const {saves} = require('../docs/ps4-game-saves.json');
+    terms.push('PS4 save downloads', 'PS4 savedata', 'PlayStation 4 game saves', 'Apollo Save Tool',
+      'CUSA title ID', '100% completion saves', 'New Game Plus saves', 'starter saves', 'modded PS4 saves',
+      ...saves.map(save => save.game), 'GTA 5', 'RDR2');
+  }
   if (/^console\/mods\//.test(relative)) {
     terms.push('console game resources');
   }
@@ -397,7 +403,7 @@ function transform(file, before, options = {}) {
     terms.push(...discovery);
   }
   terms.push('whatwhatboy');
-  const keywordLimit = relative === 'pc/ports.html' ? 120 : /^(?:console\/ps[45]\/(?:index|free-shops|game-downloads)\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60 : 35;
+  const keywordLimit = relative === 'pc/ports.html' ? 120 : relative === 'console/ps4/game-patches.html' ? 70 : /^(?:console\/ps[45]\/(?:index|free-shops|game-downloads)\.html|console\/ps4\/save-tools\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60 : 35;
   const keywords = [...new Map(terms.filter(t => t && t.toLowerCase() !== 'whatwhatboy').map(t => [t.toLowerCase(), t])).values()].slice(0, keywordLimit).concat('whatwhatboy').join(', ');
   const bodyHero = before.match(/class="hero-image"[^>]*>[\s\S]*?<img\b[^>]*src="([^"]*)"/i)?.[1];
   let image = get('property', 'og:image') || get('name', 'twitter:image');

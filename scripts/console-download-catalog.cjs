@@ -50,10 +50,17 @@ const image = (candidate, fallback = '/assets/images/consoles/playstation.jpg') 
 function availablePage(value, platform, category) {
   if (!value || !value.startsWith('/')) return value;
   const url = new URL(value,'https://whatwhatboy.com');
+  if (url.pathname === '/console/ps5/game-patches.html') {
+    url.pathname = '/console/ps4/game-patches.html';
+    if (!url.hash) url.hash = '#native-ps5-patches';
+    else if (url.hash === '#setup') url.hash = '#ps5-setup';
+    else if (url.hash === '#persona-3-reload-standalone') url.hash = '#persona-3-reload-standalone-ps5';
+    value = url.pathname + url.search + url.hash;
+  }
   let file = path.join(root,decodeURIComponent(url.pathname));
   if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file,'index.html');
   if (!fs.existsSync(file)) {
-    const fallback = category === 'patches' ? `/console/${platform}/game-patches.html` : platform === 'ps4' ? '/console/mods/ps4/index.html' : '/console/ps5/mods.html';
+    const fallback = category === 'patches' ? '/console/ps4/game-patches.html' : platform === 'ps4' ? '/console/mods/ps4/index.html' : '/console/ps5/mods.html';
     return fs.existsSync(path.join(root,fallback)) ? fallback : `/console/${platform}/`;
   }
   if (url.hash && file.endsWith('.html') && !fs.readFileSync(file,'utf8').includes('id="'+decodeURIComponent(url.hash.slice(1))+'"')) return url.pathname;
@@ -248,7 +255,7 @@ function collect() {
     description:'Complete original XML distribution, preserved alongside the selected ready title-specific files.',
     preparation:'Extract to a new folder, then install only the exact matching title-ID XML using the platform guide.',
     image:'/assets/images/game-patches/bloodborne.svg', page:'/console/ps4/game-patches.html#archive',
-    pages:{ps4:'/console/ps4/game-patches.html#archive',ps5:'/console/ps5/game-patches.html#archive'},
+    pages:{ps4:'/console/ps4/game-patches.html#archive',ps5:'/console/ps4/game-patches.html#archive'},
     source:patchBundle.archive.url
   });
   audited('ps4-ps5-gta5-expulsion-v5-1-57-prepared-zip', 'Expulsion-V5.0-PS4-1.57.zip', {

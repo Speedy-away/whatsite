@@ -4,6 +4,7 @@ const {page, section, grid, resource, note, steps, link, ext, sourceList, esc} =
 const {sourceKey} = require('./console-archived-mirrors.cjs');
 const root = path.resolve(__dirname, '..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'docs/ps4-ps5-customization.json'), 'utf8'));
+const {themes: ps4Themes} = require('../docs/ps4-theme-link-catalog.json');
 const image = '/assets/images/ps4-ps5/customization.svg';
 const release = data.themeRelease;
 const repo = 'https://github.com/Blaze414/ps5-theme';
@@ -22,24 +23,54 @@ function metadata(file, keywords, script = '') {
   if (script) html = html.replace('</body>', `<script defer src="${script}"></script></body>`);
   fs.writeFileSync(target, html);
 }
-function build() {
-  page('console/ps4/themes.html', 'PS4 Themes & Customization', 'Choose a custom USB wallpaper, check the supplied PKG theme sources, and keep PS4 themes separate from PS5 customization.', image,
+function ps4ThemeLibrary() {
+  const themes = ps4Themes;
+  const gallery = `<div class="themes-gallery" data-theme-catalog="/docs/ps4-theme-link-catalog.json"></div>
+    <template data-theme-card-template><article class="themes-card" data-theme-card data-platform="ps4">
+      <a class="themes-preview" target="_blank" rel="noopener noreferrer"><img width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+      <div class="themes-card-content"><div class="themes-badges"></div><h3 translate="no"></h3><div class="themes-actions"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download <i class="fas fa-download" aria-hidden="true"></i></a></div></div>
+    </article></template>
+    <p class="themes-empty" data-theme-error role="status" hidden>Could not load the PS4 theme library. Reload the page to try again.</p>
+    <noscript><p>Enable JavaScript to browse the PS4 theme library.</p></noscript>`;
+  return section('theme-library', 'PS4 theme library',
+    note('<p>These entries link to external RAR archives. Check each source for the archive contents, license and console requirements before downloading or installing. The Dynamic and Static filters use labels from the published titles.</p>') +
+    `<form class="themes-filter" role="search" data-themes-filter hidden><label class="themes-search">Search PS4 themes<input type="search" name="q" placeholder="Title, game or style" data-theme-search autocomplete="off"></label><select name="console" data-theme-platform hidden><option value="">PS4</option></select><label>Category<select name="category" data-theme-category><option value="">All categories</option></select></label><label>Type<select name="kind" data-theme-kind><option value="">All types</option><option>Dynamic</option><option>Static</option><option>Unspecified</option></select></label><button type="reset" class="themes-reset">Clear filters</button></form><p class="themes-count" data-theme-count role="status" aria-live="polite">${themes.length} themes</p>${gallery}<p class="themes-empty" data-theme-empty hidden>No PS4 themes match these filters.</p><nav class="themes-pagination" aria-label="Theme library pages" data-theme-pagination hidden></nav>`,
+    `Browse ${themes.length} PlayStation 4 theme listings by title, game or type.`);
+}
+
+function buildPs4Themes() {
+  const file = 'console/ps4/themes.html';
+  const packageCard = (title, url, label) => {
+    const button = ext(url, label).replace('<a ', '<a class="btn btn-primary" ');
+    return resource(title, '', button).replace('<p></p>', '');
+  };
+  page(file, 'PS4 Themes & Customization', `Search ${ps4Themes.length} PS4 theme listings, including dynamic and static themes, and learn how to set a custom USB wallpaper on PlayStation 4.`, image,
     [['/console/ps4/', 'PS4 Hub'], ['/console/ps4/downloads.html', 'PS4 Downloads'], ['/console/ps4/apps.html', 'Apps'], ['/console/ps4/themes.html', 'Themes'], ['/console/ps5/themes.html', 'PS5 Customization']],
     section('choose', 'Choose your customization route', grid(
-      resource('Custom wallpaper · stock PS4', 'An image from your USB drive becomes the background through the console’s own Themes settings. PS4 system software 5.50 introduced USB image import.', link('#wallpaper', 'Set a USB wallpaper'), image),
-      resource('PKG themes · check requirements', 'Theme packages need the appropriate package-install support and license or homebrew environment. Saving a PKG does not install or activate it.', link('#pkg-themes', 'Review theme sources'), image))) +
+      resource('Custom wallpaper · stock PS4', 'An image from your USB drive becomes the background through the console’s own Themes settings. PS4 system software 5.50 introduced USB image import.', link('#wallpaper', 'Set a USB wallpaper')),
+      resource('PS4 theme library', 'Find dynamic, static and other PS4 theme listings by title. Check the source requirements for each archive.', link('#theme-library', 'Browse PS4 themes')))) +
+    ps4ThemeLibrary() +
     section('wallpaper', 'Use your own USB wallpaper', steps([
       ['Prepare the image', 'Use a JPG or PNG. The official guide supports up to 1920 × 1080 on PS4 or 3840 × 2160 on PS4 Pro. Place it inside an <code>IMAGES</code> folder at the root of a FAT32 or exFAT USB drive.'],
       ['Open the console’s image picker', 'Insert the drive, then open <strong>Settings &gt; Themes &gt; Select Theme &gt; Custom &gt; Select Image &gt; USB Storage Device</strong>. Select and crop the picture.'],
       ['Apply the background', 'Preview the result and select Apply. The wallpaper route uses an image; a RAR archive or a theme PKG is a different file type.']
     ]) + sourceList([['https://blog.playstation.com/archive/2018/03/08/how-to-create-your-own-ps4-custom-wallpapers-via-usb-in-8-easy-steps', 'PlayStation: official USB wallpaper instructions']])) +
     section('pkg-themes', 'Supplied PS4 PKG theme sources', grid(
-      resource('PS4 PKG Themes folder', 'The user-supplied MEGA folder is preserved exactly. Its file list, package licenses and firmware requirements have not been verified, so no package in this folder is presented as a tested download.', ext('https://mega.nz/folder/aUwkma5Y#__-GrZjHvMnRzqmKEZgITQ', 'Open supplied MEGA folder'), image),
-      resource('PS2 Legacy Dynamic Theme reference', 'The supplied source links EP9000-CUSA07875_00-PSLEGACYTHEME001.pkg. MediaFire lists 12.88 MB. Distribution rights and activation requirements are unverified; use the source to check provenance before obtaining the package.', ext('https://sites.google.com/view/im-virusmike-exe/ps4-all-you-need/ps4-theme', 'Open supplied theme source'), image)) +
+      packageCard('PS4 PKG Themes folder', 'https://mega.nz/folder/aUwkma5Y#__-GrZjHvMnRzqmKEZgITQ', 'Open folder'),
+      packageCard('PS2 Legacy Dynamic Theme', 'https://www.mediafire.com/file/yckqpfsklap7bn1/EP9000-CUSA07875_00-PSLEGACYTHEME001.pkg/file', 'Download')) +
     note('<p>PS4 extended storage cannot store themes according to PlayStation’s storage documentation. Use an ordinary supported USB drive for importing an image or staging a package, and apply or install it through the relevant console feature.</p>')) +
-    section('related', 'Files, installation and storage', `<div class="guide-links">${link('/console/ps4/downloads.html', 'Choose a download destination')}${link('/console/ps4/archive-files.html', 'Extract and install supported files')}</div>` + sourceList([['https://www.playstation.com/en-us/support/hardware/ps4-external-hdd-support/', 'PlayStation: PS4 extended-storage limitations']])), '#choose', 'Choose a route');
-  metadata('console/ps4/themes.html', ['PS4 themes', 'PS4 PKG themes', 'USB wallpaper', 'custom background', 'PS2 Legacy Dynamic Theme', 'FAT32', 'exFAT', 'homebrew', 'theme compatibility']);
+    section('related', 'Files, installation and storage', `<div class="guide-links">${link('/console/ps4/downloads.html', 'Choose a download destination')}${link('/console/ps4/archive-files.html', 'Extract and install supported files')}</div>` + sourceList([['https://www.playstation.com/en-us/support/hardware/ps4-external-hdd-support/', 'PlayStation: PS4 extended-storage limitations']])), '#theme-library', 'Browse PS4 themes');
+  const target = path.join(root, file);
+  const html = fs.readFileSync(target, 'utf8')
+    .replace('<body class="console-guide', '<body class="console-guide console-themes')
+    .replace(/<img src="\/assets\/images\/ps4-ps5\/customization\.svg"[^>]*>/, '')
+    .replace('<a class="btn btn-outline" href="/pc/">PC</a>', '')
+    .replace('</head>', '<link rel="stylesheet" href="/assets/console-themes.css?v=3"><script defer src="/assets/console-themes.js?v=4"></script></head>');
+  fs.writeFileSync(target, html);
+}
 
+function build() {
+  buildPs4Themes();
   const managerForm = `<form data-theme-manager class="guide-note"><label for="theme-console-ip"><strong>PS5 local IP address</strong></label><p>Start PS5 Themes first. Use the address shown in its notification, or enter the PS5’s local IPv4 address below. On the PS5 itself, <code>127.0.0.1</code> opens its own running service.</p><div class="guide-links"><input id="theme-console-ip" name="console-ip" inputmode="decimal" autocomplete="off" placeholder="192.168.1.50" required style="min-height:44px;padding:10px 14px;background:#101713;color:#fff;border:1px solid #466356;border-radius:8px"><button type="submit" class="btn btn-primary">Open theme manager</button></div><p role="status" aria-live="polite">The documented manager runs on HTTP port 8095. Opening it does not start a payload.</p></form>`;
   page('console/ps5/themes.html', 'PS5 Themes & Customization', 'Supported system appearance options and the PS5 Themes 1.80 homebrew plugin, with explicit firmware requirements and a working manager shortcut.', image,
     [['/console/ps5/', 'PS5 Hub'], ['/console/ps5/downloads.html', 'PS5 Downloads'], ['/console/ps5/apps.html', 'Apps'], ['/console/ps5/payloads.html', 'Payloads'], ['/console/ps5/themes.html', 'Customization'], ['/console/ps4/themes.html', 'PS4 Themes']],
@@ -65,5 +96,5 @@ function build() {
   require('./playstation-nonmod-card-images.cjs').repairFiles(['console/ps5/themes.html']);
   metadata('console/ps5/themes.html', ['PS5 themes', 'PS5 customization', 'PS5 Themes 1.80', 'etaHEN plugin', 'PS5 ELF', 'Payload Manager', '13.42', '13.60', 'Welcome hub', 'Appearance', '8095'], '/assets/console-theme-manager.js');
 }
-module.exports = {build};
+module.exports = {build, buildPs4Themes};
 if (require.main === module) build();

@@ -18,7 +18,8 @@ function resource(title, description, links, image = '') {
   const artwork = !image ? '' : typeof image === 'string'
     ? `<img src="${image}" alt="${esc(title)} artwork" loading="lazy">`
     : require('./console-card-media.cjs').cardMedia(image);
-  return `<article class="guide-resource" data-search="${esc(title.toLowerCase() + ' ' + description.toLowerCase())}">${artwork}<h3>${title}</h3><p>${description}</p><div class="guide-links">${links}</div></article>`;
+  const search = description ? `${title} ${description}` : title;
+  return `<article class="guide-resource" data-search="${esc(search.toLowerCase())}">${artwork}<h3>${title}</h3>${description ? `<p>${description}</p>` : ''}<div class="guide-links">${links}</div></article>`;
 }
 const grid = (...cards) => `<div class="games-grid">${cards.join('\n')}</div>`;
 const section = (id, title, content, subtitle = '') => `<section class="section" id="${id}"><div class="container"><div class="section-header"><h2 class="section-title">${title}</h2>${subtitle ? `<p class="section-subtitle">${subtitle}</p>` : ''}</div>${content}</div></section>`;
@@ -45,7 +46,7 @@ const ps5nav = [['/console/ps5/', 'PS5 Hub'], ['/console/ps5/jailbreaks.html', '
 const ps4nav = [['/console/ps4/', 'PS4 Hub'], ['/console/ps4/jailbreaks.html', 'Jailbreak'], ['/console/ps4/goldhen.html', 'GoldHEN'], ['/console/ps4/downloads.html', 'Console Downloads'], ['/console/ps4/payloads.html', 'Payloads'], ['/console/ps4/apps.html', 'Apps'], ['/console/ps4/emulators.html', 'PS4 Emulators'], ['/console/ps4/save-tools.html', 'Game saves'], ['/console/mods/ps4/', 'Mods / Mod Menus']];
 for (const [platform, nav] of [['ps4', ps4nav], ['ps5', ps5nav]]) {
   if (platform === 'ps4') nav.splice(nav.findIndex(([url]) => url.endsWith('/apps.html')), 0, ['/console/ps4/transfer-tools.html', 'Transfer Tools']);
-  nav.push([`/console/${platform}/game-patches.html`, 'Game patches'], [`/console/${platform}/themes.html`, 'Themes'], [`/console/${platform}/site-launcher.html`, 'Site launcher']);
+  nav.push(['/console/ps4/game-patches.html'+(platform==='ps5'?'#native-ps5-patches':''), 'Game patches'], [`/console/${platform}/themes.html`, 'Themes'], [`/console/${platform}/site-launcher.html`, 'Site launcher']);
   nav.splice(2, 0, [`/console/${platform}/jailbreaks.html#firmware-downloads`, 'Firmware']);
 }
 const softwareImage = (id, fallback) => {
@@ -76,10 +77,10 @@ const ps4Resources = () => grid(
   resource('Apps & utilities', 'Homebrew stores, file managers, package installers and save tools for PS4.', link('/console/ps4/apps.html', 'Browse apps'), '/assets/images/expansion-ps4-ps5/homebrew-store.png'),
   resource('Avatars', 'Change your PS4 avatar or browse a pack of more than 500 avatar images.', link('/console/ps4/avatars.html', 'Browse avatars'), '/assets/images/console-software/ps4-avatars.png'),
   resource('Game saves', 'Apollo Save Tool and other PS4 save-management utilities for backup, import, export and repair workflows.', link('/console/ps4/save-tools.html', 'Browse game saves'), '/assets/images/consoles/apollo-save-tool.png'),
-  resource('Themes', 'Browse PS4 themes, previews and installation instructions for console customization.', link('/console/ps4/themes.html', 'Browse themes'), '/assets/images/console-software/themes.png'),
+  resource('PS4 Themes', 'Search dynamic and static PS4 themes, browse theme archive links and learn how to set a USB wallpaper.', link('/console/ps4/themes.html', 'Browse PS4 themes'), '/assets/images/ps4-ps5/customization.svg'),
   resource('Emulators', 'PS2, PS3, Wii, GameCube, Wii U and Dreamcast projects, plus installation requirements and source links.', link('/console/ps4/emulators.html', 'Browse emulators'), '/assets/images/emulators/retroarch.png')
 );
-function page(file, title, description, image, nav, content, primary = '#content', primaryLabel = 'Explore') {
+function page(file, title, description, image, nav, content, primary = '#content', primaryLabel = 'Explore', secondary = file.startsWith('pc/') ? '<a class="btn btn-outline" href="/console/">Console</a>' : '') {
   const reviewed = new Date().toLocaleDateString('en-GB', { timeZone: 'Europe/London', day: 'numeric', month: 'long', year: 'numeric' });
   const isSource = file.startsWith('source-codes/');
   const isDownloads = file.startsWith('downloads/');
@@ -113,7 +114,7 @@ function page(file, title, description, image, nav, content, primary = '#content
 <main class="main-content" id="main-content">
 <header class="guide-hero"><div class="container guide-hero-grid${textOnlyHero ? ' guide-hero-text' : ''}"><div>
 <div class="guide-breadcrumb"><a href="/">Home</a> / <a href="${isPhoneHelp ? '/pages/help.html' : isDownloads ? '/tools/' : isSource ? '/source-codes/' : file.startsWith('pc/') ? '/pc/' : '/console/'}">${isPhoneHelp ? 'Help' : isDownloads ? 'Tools' : isSource ? 'Source Codes' : file.startsWith('pc/') ? 'PC' : 'Console'}</a></div>
-<h1>${title}</h1><p>${description}</p><div class="hero-buttons"><a class="btn btn-primary" href="${primary}">${primaryLabel}</a>${isSource || isDownloads || isPhoneHelp || file === 'console/mods/ps4/rdr2/index.html' ? '' : `<a class="btn btn-outline" href="${file.startsWith('pc/') ? '/console/' : '/pc/'}">${file.startsWith('pc/') ? 'Console' : 'PC'}</a>`}</div>
+<h1>${title}</h1><p>${description}</p><div class="hero-buttons"><a class="btn btn-primary" href="${primary}">${primaryLabel}</a>${secondary}</div>
 </div>${textOnlyHero ? '' : `<img src="${image}" alt="${esc(title)}" width="1280" height="720">`}</div></header>
 <div class="container"><nav class="guide-nav" aria-label="${isPhoneHelp ? 'Phone download help' : isDownloads ? 'Download library' : isSource ? 'Source code' : file.startsWith('pc/') ? 'PC' : 'Console'} pages">${hasHosts ? '<a href="#exploit-hosts">Exploit &amp; Redirect Hosts</a>' : ''}${nav.map(([u, t]) => `<a href="${u}"${u === '/' + file || u === '/' + file.replace(/index\.html$/, '') ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav></div>
 <div id="content">${content}</div>
@@ -198,34 +199,13 @@ resource('KB-RPCS3 · PlayStation 3', 'Unofficial native PS5 RPCS3 port. The alp
 ['Test one title', 'Check controller input, audio and saves before expanding your library. Report problems to the console-port project.']
 ]) + sourceList([['https://github.com/Swordpdf/PS5SX2', 'PS5SX2 requirements'], ['https://github.com/BrinooTk/PS5X360', 'PS5X360 installation and compatibility']])), '#emulators', 'Browse emulators');
 
-page('console/ps4/index.html', 'PlayStation 4 Homebrew', 'Firmware-specific jailbreak resources, manual DNS, GoldHEN and native emulator ports for PlayStation 4 and PS4 Pro.', '/assets/images/consoles/playstation.jpg', ps4nav,
+page('console/ps4/index.html', 'PlayStation 4', 'Firmware-specific jailbreak resources, manual DNS, GoldHEN and native emulator ports for PlayStation 4 and PS4 Pro.', '/assets/images/consoles/playstation.jpg', ps4nav,
 hostSection('ps4') + require('./build-console-downloads.cjs').intro('ps4') +
 section('start', 'PS4 downloads', ps4Resources(), 'Game downloads, mods, apps, avatars, game saves and emulators for PS4.') +
-section('firmware-jailbreak', 'Firmware & jailbreak', grid(
-  resource('Jailbreak', 'Choose a firmware-specific guide: the experimental 14.00 route or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
+section('firmware-jailbreak', 'Firmware &amp; jailbreak', '<div id="console-hub-setup" class="console-hub-setup">' + grid(
+  resource('Jailbreak', 'Choose the 14.00 WebKit guide or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
   resource('Firmware downloads', 'Browse PS4 system-software update and recovery files by version in Darthsternie’s firmware archive.', link('/console/ps4/jailbreaks.html#firmware-downloads', 'Browse PS4 firmware'), '/assets/images/consoles/playstation.jpg')
-), 'Select your firmware route before choosing a jailbreak.'), '#start', 'Choose a guide');
-
-page('console/ps4/jailbreak.html', 'PS4 14.00 Jailbreak & DNS', 'An experimental 14.00 resource guide with manual DNS, browser-host links and the Blu-ray disc requirements for the supplied video.', ps4image, ps4nav,
-section('requirements', '14.00 is an unstable route', note('<p><strong>For the disc method you need a blank recordable Blu-ray disc and a Blu-ray burner.</strong> A DVD, CD or USB drive is not a substitute. Your PS4 must have a working Blu-ray drive.</p><p>The 14.00 steps and HEN ISO are supplied with the linked video. Firmware support and the archive contents could not be independently confirmed. Read the video’s current notes before burning. Do not update a console just to match this guide.</p>')) +
-section('dns', 'Set manual DNS on PS4', dns() + steps([
-['Open the network wizard', 'Go to Settings &gt; Network &gt; Set Up Internet Connection. Choose Use Wi-Fi or Use a LAN Cable, then Custom.'],
-['Keep your normal IP settings', 'Use your existing IP and DHCP configuration. For a typical home network these are Automatic and Do Not Specify.'],
-['Set DNS to Manual', 'Primary DNS: <code>45.56.67.85</code>. Secondary DNS: <code>62.210.38.117</code>.'],
-['Finish setup', 'Keep the normal MTU and proxy settings; a typical network uses Automatic and Do Not Use. Save and test the connection. You can restore DNS to Automatic later.']
-]) + sourceList([['https://www.playstation.com/en-gb/support/connectivity/internet-connect-playstation/', 'PlayStation network setup reference']])) +
-section('disc', 'Blu-ray method: preparation & flow', require('./ps4-disc-links.cjs').discSteps([
-['Check your firmware and equipment', 'Read Settings &gt; System &gt; System Information. Confirm the video applies to that exact firmware. Prepare a computer, Blu-ray writer and blank supported BD-R/BD-RE media.'],
-['Get the supplied HEN ISO', 'Download the ISO using the links here. If the supplied file is an archive, extract it first. Check the video’s current notes and any published checksum before using the ISO.'],
-['Burn the image to Blu-ray', 'In ImgBurn choose Write image file to disc, select the ISO and the Blu-ray writer, and burn to the blank disc. Enable verification and let it complete. Copying the ISO as a normal data file does not create the same disc.'],
-['Start the disc on PS4', 'Insert the finished disc and open its disc/Blu-ray tile. The documented 14.00 disc waits for one Cross (X) press after validation. Follow the instructions shown by the actual image you burned.'],
-['Confirm HEN success', 'Check that the HEN features actually work before installing homebrew. After a failure, shut down completely and cold-boot before another attempt; do not repeatedly trigger it in the same session.']
-]) + `<div class="guide-links">${goldhen14Download()}${ext('https://gofile.io/d/kg4BSziZ', 'Supplied HEN ISO')}${ext('https://www.imgburn.com/index.php?act=download', 'ImgBurn downloads')}${ext('https://github.com/OptiTronOffical/PS4-14.00-BD-JB', '14.00 disc workflow reference')}</div>`) +
-section('browser', 'Browser-host alternative', note('<p>The supplied SilverPS4HEN link requests a 14.00 route. Its availability and payload support must be checked on the exact firmware. It is a separate alternative to the disc method; entering DNS does not by itself run the exploit.</p>') + `<p>PS4 browser address:<br><a href="https://aminegold0.github.io/silverps4hen/" target="_blank" rel="noopener noreferrer">https://aminegold0.github.io/silverps4hen/</a></p><div class="guide-links">${ext('https://aminegold0.github.io/silverps4hen/raw13/jb.html?log=1&hx1400=1&v=6', 'Open supplied 14.00 host')}${ext('https://github.com/aminegold0/silverps4hen', 'Host source')}${link('/console/ps4/goldhen.html', 'GoldHEN page')}</div>` + steps([
-['Open the host on the PS4', 'Use the console Internet Browser after configuring the connection. Read the host’s displayed firmware and payload options.'],
-['Match the payload', 'Use only a HEN build whose release notes list your firmware and entry point. GoldHEN is linked as a separate project, not as verified 14.00 support.'],
-['Wait for the result', 'Confirm success before using Package Installer or other homebrew services. If it fails, follow the host’s recovery notes instead of assuming the console is enabled.']
-])) + section('video', 'PS4 14.00 video companion', videoEmbed('F7y-hk5qpxM', 'PS4 14.00 Jailbreak (unstable)') + note(provenance)), '#requirements', 'Read requirements');
+).replace('<div class="games-grid">', '<div class="console-hub-setup-grid">') + '</div>', 'Select your firmware route before choosing a jailbreak.'), '#start', 'Choose a guide');
 
 page('console/ps4/emulators.html', 'Emulators on PlayStation 4', 'PS2, PS3, GameCube, Wii, Wii U and Dreamcast emulator ports for an already homebrew-enabled PS4.', ps4image, ps4nav,
 section('emulators', 'Choose a console emulator', note('<p>A PS4 port needs a compatible jailbreak and homebrew enabler. An experimental 14.00 entry point does not establish compatibility with every app below.</p>') + grid(

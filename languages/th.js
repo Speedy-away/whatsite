@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "ดาวน์โหลดเมนูและ plugins.ini",
     "Original menu file": "ไฟล์เมนูต้นฉบับ",
     "plugins.ini only": "เฉพาะ plugins.ini",
+    "Outfit editor": "เครื่องมือแก้ไขชุด",
+    "RTM Tools": "เครื่องมือ RTM",
+    "Watch video guide": "ดูวิดีโอแนะนำ",
+    "Setup & screenshot": "การตั้งค่าและภาพหน้าจอ",
     "Phone": "โทรศัพท์",
     "PS4 / PS5 Host": "โฮสต์ PS4 / PS5",
     "Breadcrumb": "เส้นทางนำทาง",
@@ -1322,7 +1326,9 @@
     "jailbreak": "เจลเบรก",
     "{name} jailbreak": "{name} เจลเบรก",
     "multiplayer": "ผู้เล่นหลายคน",
-    "{name} multiplayer": "{name} ผู้เล่นหลายคน"
+    "{name} multiplayer": "{name} ผู้เล่นหลายคน",
+    "outfit editor": "เครื่องมือแก้ไขชุด",
+    "{name} outfit editor": "{name} เครื่องมือแก้ไขชุด"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("th", t);

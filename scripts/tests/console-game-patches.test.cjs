@@ -41,7 +41,8 @@ test('each catalogue requires explicit title selection and provides platform-spe
   assert.match(html,/<option value="">Choose title ID/);
   assert.match(html,/data-download-page="\/console\/ps5\/downloads.html"/);
   assert.match(html,/data-patch-download aria-disabled="true"/);
-  assert.match(html,/data-patch-storage aria-disabled="true"/);
+  assert.match(html,/data-patch-storage="\/console\/ps4\/downloads.html" aria-disabled="true"/);
+  assert.match(html,/data-patch-storage="\/console\/ps5\/downloads.html" aria-disabled="true"/);
   assert.match(html,/CUSA00900\.xml/);
   assert.doesNotMatch(html,/<(?:video|iframe)\b/);
 });
@@ -59,7 +60,7 @@ test('fifteen additional title families contain genuine performance options and 
     for(const file of game.files){
       assert.match(file.titleId,/^CUSA\d+$/);assert.equal(file.downloadId,'fps-'+file.titleId.toLowerCase()+'-'+d.release);
       const resource=d.resources.find(item=>item.id===file.downloadId);assert.ok(resource);assert.match(resource.compatibility,/PS5 use is backward compatibility only/);
-      assert.equal(resource.pages.ps4,'/console/ps4/game-patches.html#'+game.id);assert.equal(resource.pages.ps5,'/console/ps5/game-patches.html#'+game.id);
+      assert.equal(resource.pages.ps4,'/console/ps4/game-patches.html#'+game.id);assert.equal(resource.pages.ps5,resource.pages.ps4);
     }
   }
 });

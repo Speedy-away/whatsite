@@ -26,11 +26,13 @@ test('directory removes the old Downloader instruction, preserves APK Time and e
  const catalog=JSON.parse(read('docs/apk-app-catalog.json')),html=builder.render(read('scripts/templates/apk-page.html'),catalog);
  assert.doesNotMatch(html,/On Home Page of Downloader, type:/);
  for(const id of ['tv','apk-time','installation'])assert.ok(html.includes('id="'+id+'"'),id);
+ assert.ok(html.indexOf('id="apk-time"') < html.indexOf('id="tv"'));
+ assert.match(html,/<h1 class="page-title">Tv\/Movies apps<\/h1>/);
  assert.ok(html.includes('/downloads/archive/ca9af15933d9/APKTime-v2.2-Original.apk'));
  assert.doesNotMatch(html, /data-app-tablist|id="phone(?:-ios|-android|-harmony)?"/);
  assert.ok(!html.includes(' hidden'),'No-script users can read every section');
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
- for(const app of catalog.apps){const card=builder.appCard(app);if(app.status==='archived'){assert.ok(card.includes(app.downloadURL.replaceAll('&','&amp;')));assert.ok(app.file.bytes>0);assert.match(app.file.sha256,/^[a-f0-9]{64}$/);}else if(app.delivery){assert.ok(card.includes(app.delivery.url.replaceAll('&','&amp;')));assert.ok(!card.includes('>Download APK</a>'));}else {assert.ok(!card.includes('>Download APK</a>'));assert.ok(card.includes('unavailable'));}}
+ for(const app of catalog.apps){const card=builder.appCard(app);assert.doesNotMatch(card,/<details\b|>Source page</i);if(app.status==='archived'){assert.ok(card.includes(app.downloadURL.replaceAll('&','&amp;')));assert.ok(app.file.bytes>0);assert.match(app.file.sha256,/^[a-f0-9]{64}$/);}else if(app.delivery){assert.ok(card.includes(app.delivery.url.replaceAll('&','&amp;')));assert.ok(!card.includes('>Download APK</a>'));}else {assert.ok(!card.includes('>Download APK</a>'));assert.ok(card.includes('unavailable'));}}
 });
 
 test('all eight repaired entries keep their old source and use accurately labelled APK, store or exact-version actions',()=>{
@@ -43,18 +45,22 @@ test('all eight repaired entries keep their old source and use accurately labell
  assert.match(c.apps.find(a=>a.id==='tv-launcher').delivery.url,/tvlauncher-3-1-1/);
  assert.match(c.apps.find(a=>a.id==='atv-launcher').delivery.description,/paid Pro/);
 });
-test('Phone has its own empty page and top-level sidebar destination',()=>{
+test('Phone groups its landing page and the Tv/Movies apps link',()=>{
  const phone=read('pages/phone.html'),apk=read('pages/apk.html');
  const main=phone.slice(phone.indexOf('<div class="main-content"'),phone.indexOf('<!-- Footer -->'));
  assert.match(main,/<h1 class="page-title">Phone<\/h1>/);
  assert.doesNotMatch(main,/app-card|app-tabs|<article|<a\b/);
- assert.match(phone,/href="\/pages\/phone.html" class="nav-link active" aria-current="page"/);
+ assert.match(phone,/href="\/pages\/phone\.html" class="nav-link nav-sublink active" aria-current="page"/);
+ assert.match(apk,/href="\/pages\/apk\.html" class="nav-link nav-sublink active" aria-current="page" data-tooltip="Tv\/Movies apps"/);
  assert.doesNotMatch(apk,/data-app-tablist|id="phone(?:-ios|-android|-harmony)?"/);
  const navigation=require('../phone-navigation.cjs');
  for(const file of require('../site-public-pages.cjs').pages()){
   const html=fs.readFileSync(file,'utf8');
-  if(!html.includes('class="sidebar-nav"')||!html.includes('data-tooltip="PC"'))continue;
-  assert.equal((html.match(/data-phone-navigation/g)||[]).length,1,file);
+  const sidebar=html.match(/<nav\b[^>]*class="sidebar-nav"[^>]*>[\s\S]*?<\/nav>/)?.[0];
+  if(!sidebar?.includes('data-tooltip="PC"'))continue;
+  assert.equal((sidebar.match(/data-phone-navigation/g)||[]).length,1,file);
+  assert.match(sidebar, /data-phone-navigation><button[^>]+data-tooltip="Phone"[\s\S]*?<ul class="nav-sublist">[\s\S]*?href="\/pages\/apk\.html"[^>]+data-tooltip="Tv\/Movies apps"/,file);
+  assert.doesNotMatch(sidebar,/data-tooltip="APK Downloads"/,file);
   assert.equal(navigation.apply(path.relative(root,file),html),html,file);
  }
 });

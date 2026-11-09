@@ -8,12 +8,13 @@ const scoped=gtaOnly||rdr2Only||fortniteOnly;
 const page=(file,...args)=>{if((!scoped)||(gtaOnly&&['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'].includes(file))||(rdr2Only&&file==='console/mods/ps4/rdr2/index.html')||(fortniteOnly&&file==='console/mods/ps4/index.html'))renderPage(file,...args);};
 const imported=require('./build-ps4-ps5-game-imports.cjs').createGameImports();
 const catalog=require('./console-mod-catalog.cjs');
-const {resourceTags}=require('./console-resource-tags.cjs');
+const {resourceTags,resourceTerms}=require('./console-resource-tags.cjs');
 const files=JSON.parse(fs.readFileSync('downloads/ps4/GTA5/manifest.json','utf8')).files;
 // Render each catalogue resource once; older download lists only fill missing entries.
 const gtaItems=imported.forGame('gta5');
 function gtaSection(item){
  if(item.category==='client')return 'servers';
+ if(item.category==='rtm')return 'rtm-tools';
  if(['script','cfg'].includes(item.category)||['gta5-script-loader-pack','gta5-random-scripts-pack'].includes(item.id))return 'scripts';
  if(item.gameVersions?.includes('1.57'))return 'v157';
  if(item.gameVersions?.includes('1.56'))return 'v156';
@@ -52,10 +53,15 @@ function downloadCard(f){
  return `<article class="guide-resource"${extra.resource?` id="resource-${esc(extra.resource.id)}-legacy"`:''} data-search="${esc([f.name,version,...(extra.resource?.keywords||[])].join(' ').toLowerCase())}">${preview?`<img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy">`:''}<h3>${esc(f.name)}</h3><p>${esc(version)}</p>${extra.resource?.description?`<p>${esc(extra.resource.description)}</p>`:f.group==='scripts'?`<p>${description}</p>`:''}${imported.renderer.requirementsMarkup(extra.resource)}${catalog.tagMarkup(tags.slice(0,6))}<div class="guide-links">${paired||`<a href="${esc(f.local || f.source)}" class="btn btn-primary" download><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
 }
 function rdr2Card(menu){
- if(menu.resourceId)return imported.renderer.card(imported.forGame('rdr2').find(item=>item.id===menu.resourceId));
+ if(menu.resourceId){
+  const item=imported.forGame('rdr2').find(item=>item.id===menu.resourceId);
+  return imported.renderer.card({...item,version:undefined});
+ }
  const extra=imported.legacyEnhancement('rdr2',menu);
  const preview=extra.image||{src:'/assets/images/ps4-rdr2/'+menu.image,alt:menu.name+' mod menu in Red Dead Redemption 2 on PS4'};
- return `<article class="guide-resource" data-search="${esc(menu.name.toLowerCase()+' rdr2 red dead redemption 2 ps4')}"><a href="${esc(preview.src)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(menu.name)} screenshot"><img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy"></a><h3>${menu.name}</h3>${extra.resource?.compatibilityText ? `<p>${esc(extra.resource.compatibilityText)}</p>` : ''}${catalog.tagMarkup(resourceTags(extra.resource||{name:menu.name,gameIds:['rdr2'],category:'menu'}).slice(0,6))}<div class="guide-links">${extra.downloads || `<a href="${esc(menu.url)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
+ const item=extra.resource||{name:menu.name,gameIds:['rdr2'],category:'menu',tags:['PS4']};
+ const search=resourceTerms(item,menu.name).join(' ').toLowerCase();
+ return `<article class="guide-resource" data-search="${esc(search)}"><a href="${esc(preview.src)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(menu.name)} screenshot"><img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy"></a><h3>${menu.name}</h3>${extra.resource?.compatibilityText ? `<p>${esc(extra.resource.compatibilityText)}</p>` : ''}${catalog.tagMarkup(resourceTags(item).slice(0,6))}<div class="guide-links">${extra.downloads || `<a href="${esc(menu.url)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
 }
 if(!scoped)require('./build-mods-hub.cjs').buildModsHub();
 page('console/mods/ps4/index.html','PS4/PS5 Mods / Mod Menus','Browse the PS4/PS5 collection of GTA V, Red Dead Redemption 2, Call of Duty and Fortnite resources, with menu downloads, screenshots and setup guides.',image,nav,
@@ -63,10 +69,13 @@ require('./build-console-downloads.cjs').intro('ps4')+section('games','Available
 section('menu-directory','Find a specific menu',`<p>Search every imported game, menu, script and tool, including older GTA V builds.</p><div class="guide-links">${link('/console/mods/ps4/menus.html','Search the menu directory')}</div>`)+
 section('requirements','Before choosing a mod',note('<p>Match the console firmware, homebrew enabler, game title ID and game update separately. A menu built for GTA V 1.57 is not automatically compatible with 1.56, and the PS4 14.00 jailbreak does not establish GoldHEN plugin support.</p>')), '#games','Browse games');
 page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse North, Sheriff, Havana and Oyster resources for Red Dead Redemption 2, with supplied screenshots and videos.',rdr2image,nav.slice(0,5),
-section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card))), '#downloads','Browse downloads');
+require('./ps4-user-plugin-templates.cjs').sectionFor('rdr2')+
+section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card)))+
+section('rdr2-video-guide','RDR2 Online PS4 mod menu video guide',video('d8h6O_okVMc','RDR2 Online PS4 mod menu download and setup')), '#downloads','Browse downloads');
 page('console/mods/ps4/gta5/index.html','GTA V Mods for PS4','Browse menus by GTA V game update, CSC scripts, screenshots and supplied setup guides.',image,nav,
 require('./ps4-user-plugin-templates.cjs').sectionFor('gta5')+
-section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
+section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#rtm-tools">RTM Tools</a><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
+section('rtm-tools','RTM Tools',grid(...gtaCards('rtm-tools')))+
 section('v157','GTA V 1.57',grid(...unmatchedFiles.filter(f=>f.group==='157').map(downloadCard),...gtaCards('v157')))+
 section('v156','GTA V 1.56',grid(...unmatchedFiles.filter(f=>f.group==='156').map(downloadCard),...gtaCards('v156')))+
 section('older','Older GTA 5 versions',note('<p>Menus with confirmed older GTA V update requirements and no listed support for 1.56 or 1.57. Keep each download’s exact update pin.</p>')+grid(...gtaCards('older')))+

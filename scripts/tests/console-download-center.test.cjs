@@ -270,7 +270,7 @@ test('XML catalogue deduplication retains regional filenames and resolves each c
   assert.equal(ps4.length,2);assert.equal(ps5.length,3);
   assert.equal(ps4[0].sha256,ps4[1].sha256);assert.notEqual(ps4[0].filename,ps4[1].filename);
   for(const item of ps4){assert.equal(item.page,'/console/ps4/game-patches.html#game');assert.match(item.filename,/^CUSA/);assert.match(item.compatibility,/01\.09 only/);}
-  for(const item of ps5)assert.equal(item.page,'/console/ps5/game-patches.html#game');
+  for(const item of ps5)assert.equal(item.page,'/console/ps4/game-patches.html#game');
   assert.equal(ps4.some(item=>item.filename==='PPSA00001.xml'),false);
 });
 

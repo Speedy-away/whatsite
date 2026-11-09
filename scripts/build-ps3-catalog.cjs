@@ -118,7 +118,7 @@ function card(item) {
   const originals = (item.downloads || []).filter(download => /^https?:\/\//.test(download.url) && !expiresOnDiscord(download,item) && attempts.some(entry=>entry.url===download.url)).map(download => ext(download.url, h(multiGame.downloadLabel(item,download)))).join('');
   const references=(item.references || []).filter(reference=>{try{const url=new URL(reference.url);return url.protocol==='https:'&&!url.username&&!url.password;}catch{return false;}}).map(reference=>ext(reference.url,h(reference.label || 'Source reference'))).join('');
   const backupOnly = attempts.flatMap(entry=>(entry.files||[]).filter(file=>!localFile(file) && file.backupPath && fs.existsSync(file.backupPath) && fs.statSync(file.backupPath).size===file.bytes));
-  const largeSource = attempts.some(entry=>(entry.files||[]).some(file=>file.bytes>=MAX_MIRROR_BYTES)) && item.source
+  const largeSource = attempts.some(entry=>(entry.files||[]).some(file=>file.bytes>=MAX_MIRROR_BYTES)) && item.source && !(discordPost(item.source) && originals)
     ? `<div class="guide-links">${ext(item.source, discordPost(item.source) ? 'Original large download via Discord (sign-in may be needed)' : 'Original large download & requirements')}</div>` : '';
   const siteBuilds = stored.filter(file=>file.owner.readiness!=='incomplete'&&file.readiness!=='invalid-console-header'&&!/(?:Metadata|Source Code)/.test(JSON.stringify(file.archiveRole || [])));
   const skippedForSize = attempts.some(entry=>/size.bound|size limit|size-bound|import bound/i.test(entry.status+' '+entry.error));

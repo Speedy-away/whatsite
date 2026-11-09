@@ -538,6 +538,26 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .feature-tag.extreme { background: rgba(239,68,68,0.2); color: var(--danger); }
 .feature-tag.maximum { background: rgba(239,68,68,0.25); color: var(--danger); }
 
+/* Keep card tags in the markup for search without displaying them as badges. */
+.feature-tag,
+.game-features,
+.guide-resource-tags,
+.guide-host-tags,
+.patch-tags,
+.port-tags,
+.three-ds-tags,
+.ds-tags,
+.wiiu-tags,
+.xbox-tags,
+.psp-tags,
+.ps2-tags,
+.vita-tags,
+.switch-app-tags,
+.switch-mod-tags,
+.switch-theme-tags {
+    display: none !important;
+}
+
 /* Cheat Actions */
 .cheat-actions { display: flex; gap: 8px; flex-wrap: wrap; padding: 16px 20px; margin-top: auto; border-top: 1px solid var(--border); }
 

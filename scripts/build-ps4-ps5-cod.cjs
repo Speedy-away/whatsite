@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const {page, section, grid, resource, link} = require('./build-console-guides.cjs');
+const {page, section, grid, resource, link, videoEmbed} = require('./build-console-guides.cjs');
 
 const multiGameOnly = typeof process !== 'undefined' && Array.isArray(process.argv) && process.argv.includes('--multi-game-only');
 const multiGamePages = new Set(['black-ops-1', 'black-ops-2', 'wwii', 'ghosts', 'black-ops-3', 'advanced-warfare', 'modern-warfare-remastered']);
@@ -74,6 +74,9 @@ const itemsFor = game => included.filter(item => item.gameIds.includes(game.id))
 const visibleGames = data.games.filter(game => itemsFor(game).length || game.id === 'black-ops-3' && legacy.length);
 const nav = [['/console/mods/', 'Console Mods'], ['/console/mods/ps4/', 'PS4/PS5 Games'], [base, 'Call of Duty']];
 const multiNav = [...nav, [multiCod.indexUrl, 'MultiCOD · supported games']];
+const crashGuide = included.find(item => item.id === 'bo2-fpkg-111-crash-fix')?.videoButton;
+const crashVideo = videoSource(crashGuide);
+const crashSection = crashVideo ? section('crash-fix-video', 'PS4 crash fix video guide', videoEmbed(crashVideo.id, crashGuide.title, crashVideo.startSeconds)) : '';
 const contentWithOffHost = items => {
   const offHost = items.filter(item => item.offHost);
   const regular = items.filter(item => !item.offHost);
@@ -97,7 +100,7 @@ for (const game of visibleGames) {
   page('console/mods/ps4/call-of-duty/' + game.slug + '/index.html', game.title + ' · PS4/PS5 Resources',
     game.resourceDescription || 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.',
     game.cover, [...multiNav, [base + game.slug + '/', game.title.replace(/^Call of Duty: /, '')]],
-    contentWithOffHost(items.map(item => ({...item, videos: []}))) + multiCod.gameContent(game.id),
+    (['black-ops-1', 'black-ops-2'].includes(game.id) ? crashSection : '') + contentWithOffHost(items.map(item => ({...item, videos: []}))) + multiCod.gameContent(game.id),
     '#content', 'Browse resources');
 }
 

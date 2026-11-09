@@ -146,7 +146,7 @@ function protectedFile(file, html = '') {
     || /\bid=["']receiver-catalog["']/.test(html);
 }
 const tokenPattern = /<!--[\s\S]*?-->|<script\b[^>]*>[\s\S]*?<\/script>|<style\b[^>]*>[\s\S]*?<\/style>|<\/?[a-z][\w:-]*\b(?:"[^"]*"|'[^']*'|[^'">])*>/gi;
-const searchAttribute = /(?:^|\s)(data-search|data-library-search)\s*=\s*(["'])([\s\S]*?)\2/i;
+const searchAttribute = /(?:^|\s)(data-search|data-library-search|data-catalog-search)\s*=\s*(["'])([\s\S]*?)\2/i;
 function apply(file, html) {
   if (protectedFile(file, html)) return html;
   if (/<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*\bnoindex\b/i.test(html)) return html;

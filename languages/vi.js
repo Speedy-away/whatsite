@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "Tải menu + plugins.ini",
     "Original menu file": "Tệp menu gốc",
     "plugins.ini only": "Chỉ plugins.ini",
+    "Outfit editor": "Trình chỉnh sửa trang phục",
+    "RTM Tools": "Công cụ RTM",
+    "Watch video guide": "Xem video hướng dẫn",
+    "Setup & screenshot": "Thiết lập và ảnh chụp màn hình",
     "Phone": "Điện thoại",
     "PS4 / PS5 Host": "Host PS4 / PS5",
     "Breadcrumb": "Đường dẫn điều hướng",
@@ -1322,7 +1326,9 @@
     "jailbreak": "Jailbreak",
     "{name} jailbreak": "{name} Jailbreak",
     "multiplayer": "Nhiều người chơi",
-    "{name} multiplayer": "{name} Nhiều người chơi"
+    "{name} multiplayer": "{name} Nhiều người chơi",
+    "outfit editor": "Trình chỉnh sửa trang phục",
+    "{name} outfit editor": "{name} Trình chỉnh sửa trang phục"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("vi", t);

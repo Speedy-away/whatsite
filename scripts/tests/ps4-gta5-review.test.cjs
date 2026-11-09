@@ -60,11 +60,16 @@ test('GTA V catalogue groups each resource once and reserves older versions for 
  for(const r of resources){
   const marker='id="resource-'+r.id+'"';assert.equal(html.split(marker).length-1,1,r.id);
   if(r.category==='client'){assert.ok(section('servers').includes(marker),r.id);continue;}
+  if(r.category==='rtm'){assert.ok(section('rtm-tools').includes(marker),r.id);continue;}
   if(['script','cfg'].includes(r.category)||['gta5-script-loader-pack','gta5-random-scripts-pack'].includes(r.id)){assert.ok(section('scripts').includes(marker),r.id);continue;}
   const group=r.gameVersions?.includes('1.57')?'v157':r.gameVersions?.includes('1.56')?'v156':r.gameVersions?.length?'older':'unconfirmed';
   assert.ok(section(group).includes(marker),r.id+' in '+group);
  }
  assert.match(section('older'),/Older GTA 5 versions/);
+ assert.ok(html.indexOf('id="rtm-tools"') < html.indexOf('id="v157"'));
+ const arise=item('gta5-arise-rtm-1-57');
+ assert.ok(section('rtm-tools').includes(arise.downloads[0].url));
+ assert.ok(section('rtm-tools').includes(arise.source.repositoryUrl+'"'));
  assert.ok(!html.includes('More downloads &amp; source guides'));
  assert.ok(section('servers').includes('https://lossantosonline.com/'));
  for(const id of ['gta5-explosive-1-57','gta5-explosive-1-52-1-53'])assert.equal(item(id).images[0].original,'/assets/images/ps4-gta5/explosive-user-preview-2026-11-04.png');

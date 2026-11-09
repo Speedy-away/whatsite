@@ -13,6 +13,26 @@
 .app-card .app-version{font-size:.82rem;color:#aab8b0;overflow-wrap:anywhere}.app-card .app-links{margin-top:auto;padding-top:10px;display:flex;align-items:center;flex-wrap:wrap;gap:12px}
 .app-card a{color:var(--app-accent);font-size:.94rem;text-underline-offset:4px}.app-card .app-download{display:inline-flex;padding:9px 14px;border:1px solid var(--app-border);border-radius:8px;text-decoration:none;color:#e9f2ed;min-height:42px;align-items:center;white-space:nowrap}
 .app-source{padding-top:22px;border-top:1px solid var(--app-border);font-size:.9rem;line-height:1.6;color:#b8c3be}.app-source a{color:var(--app-accent)}
+.apk-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  max-width: 680px;
+  margin: 20px auto 0;
+  padding: 14px 18px;
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  background: #111615;
+  text-align: left;
+  scroll-margin-top: 84px;
+}
+.apk-time h2 { margin: 0 0 4px; font-size: 1.125rem; }
+.apk-time p { margin: 0; font-size: .9rem; color: #b8c3be; }
+.apk-time .btn { min-height: 44px; }
+.apk-time-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.apk-time-actions > .mobile-file-options { margin: 0; }
 .apk-directory .section{padding-top:34px;padding-bottom:34px}.apk-directory .page-header{padding-bottom:20px}.apk-directory .page-subtitle{max-width:60ch;margin-inline:auto}
 .apk-directory .phone-tabs{margin-top:24px}.apk-directory .app-section-heading{margin-bottom:24px}
 @media(max-width:1100px){.app-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

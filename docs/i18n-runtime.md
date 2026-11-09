@@ -1,6 +1,8 @@
 # Runtime language behavior
 
-Pages remain authored in English. `languages/i18n.js` translates complete text
+The source pages are authored in English. The Pages build renders translated HTML
+for the 20 supported languages from the translation manifest and local caches.
+`languages/i18n.js` translates complete text
 nodes and supported UI attributes using the selected language dictionary. Source
 strings are remembered separately from the last rendered translation so live
 download statuses can change without restoring stale text on a language switch.
@@ -27,11 +29,10 @@ subjects on repeated builds. Original resource names, category values, downloads
 and compatibility pins stay literal. `i18n-tools/discovery-concepts.cjs` defines
 the shared category vocabulary; it does not infer supported games or platforms.
 
-This remains an English-authored site with runtime translations. Translated
-keywords and search aliases do not establish separately indexable language
-pages. Do not add `hreflang` or localized sitemap URLs until actual translated
-pages exist at those URLs. Google does not use keyword meta tags for ranking;
-localized visible content, titles and descriptions require their own coverage.
+The Pages build generates each localized route with a self-canonical URL and
+reciprocal `hreflang` links. It also generates one sitemap per language and a
+sitemap index. Refresh `sitemap.xml` for the English routes and refresh the
+translation manifest and caches together to update the localized routes.
 
 Content under `code`, `pre`, `textarea`, scripts, styles, SVG and canvas is skipped.
 Use `data-i18n-skip`, `translate="no"` or `class="notranslate"` for other technical

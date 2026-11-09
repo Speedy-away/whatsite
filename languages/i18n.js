@@ -59,7 +59,7 @@
     }
     var version = s && s.src && s.src.match(/[?&]v=([^&#]+)/);
     if (version) DICTIONARY_QUERY = '?v=' + version[1];
-    DICTIONARY_QUERY += (DICTIONARY_QUERY ? '&' : '?') + 'rev=20261104-discovery';
+    DICTIONARY_QUERY += (DICTIONARY_QUERY ? '&' : '?') + 'rev=20261108-discovery';
     return s && s.src ? s.src.replace(/[^/]*$/, '') : '/languages/';
   })();
 

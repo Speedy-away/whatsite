@@ -75,7 +75,6 @@ function savePage(file, title, description, artwork, nav, content, primary, acti
   html=html.replace(/<nav\b[^>]*class=["'][^"']*\bhost-taskbar\b[^"']*["'][^>]*>[\s\S]*?<\/nav>/gi,'');
   html=html.replace(/(<body\b[^>]*>)/,'$1<nav class="host-taskbar" aria-label="Webhost taskbar"><a href="'+parent+'">← Back</a><a class="host-taskbar-brand" href="/hosts/">whatwhatboy webhost</a><a href="/hosts/ps4/">PS4</a><a href="/hosts/ps5/">PS5</a><a href="/">Site home</a></nav>');
   if(!html.includes('/assets/host-webhost.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/host-webhost.css?v=2"></head>');
-  html = html.replace('<a class="btn btn-outline" href="/pc/">PC</a>', '');
   html = html.replace(/(<meta name="keywords" content=")[^"]*(")/, '$1whatwhatboy hosts, PS4 exploit hosts, PS5 exploit hosts, firmware selector, console IP, GTA V mod menus, RDR2 mods, ELF loader, BIN loader, offline trainer, file explorer, console downloads, payloads$2');
   if (chooser) {
     html = html.replace('class="container guide-hero-grid"', 'class="container guide-hero-grid guide-hero-text"');

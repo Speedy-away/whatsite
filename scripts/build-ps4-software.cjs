@@ -16,10 +16,12 @@ function buildPs4Avatars() {
     section('downloads', 'PS4 avatar downloads', grid(
       card('Avatar Changer', 'Install the PS4 Avatar Changer package, then follow its on-console instructions and firmware requirements.',
         'https://pkg-zone.com/download/ps4/LAPY20015/latest', 'Download Avatar Changer',
-        ['Custom avatars', 'PS4 homebrew', 'PKG'], ['PS4 avatar changer download', 'change PS4 avatar', 'PlayStation 4 profile picture']),
+        ['Custom avatars', 'PS4 homebrew', 'PKG'], ['PS4 avatar changer download', 'change PS4 avatar', 'PlayStation 4 profile picture'],
+        '/assets/images/console-software/ps4-avatars.png'),
       card('Avatars pack 500+', 'A collection of more than 500 avatar images. Review the included instructions before transferring the files to your PS4.',
         'https://mega.nz/file/vYUizRzb#DwjEMLJIjuWGSGb2UVcn_Wa6kNcOxROK9oCxfE_ciaQ', 'Download avatars pack 500+',
-        ['PS4 avatars pack', '500+ images', 'Profile avatars'], ['PS4 avatar pack download', 'PlayStation 4 avatar collection', 'PS4 profile pictures']),
+        ['PS4 avatars pack', '500+ images', 'Profile avatars'], ['PS4 avatar pack download', 'PlayStation 4 avatar collection', 'PS4 profile pictures'],
+        '/assets/images/console-software/ps4-avatar-menu.jpg'),
       card('Extra Avatars - Anime', 'Additional anime-themed PS4 avatars in a PKG file.',
         'https://dn721301.ca.archive.org/0/items/ps4-jb-avatars/Extra%20Avatars%20-%20Anime.pkg', 'Download Anime avatars',
         ['Anime avatars', 'Avatar pack', 'PKG'], ['PS4 anime avatar pack', 'PS4 anime avatar PKG'],
@@ -29,6 +31,54 @@ function buildPs4Avatars() {
         ['PSN avatars', 'Avatar pack', 'PKG'], ['PS4 PSN avatar pack', 'PlayStation Network avatar PKG'])
     ) + note('<p>Looking for a specific old PS4 avatar? Check the pack contents before installing; the downloads are not indexed by individual avatar.</p><p>Match each package and installation method to your PS4 homebrew setup. The 500+ image pack is separate from the Avatar Changer app.</p>')),
     '#downloads', 'Download avatars');
+}
+
+function buildPs4GameSaves() {
+  const {page, section, grid, resource, note, steps, ext, link, esc, ps4nav} = require('./build-console-guides.cjs');
+  const {revision, saves} = require('../docs/ps4-game-saves.json');
+  const apolloImage = '/assets/images/consoles/apollo-save-tool.png';
+  const database = 'https://github.com/bucanero/apollo-saves';
+  const usage = 'https://github.com/bucanero/apollo-ps4/blob/main/docs/usage.md';
+  const card = ({game, titleId, file, description, gameVersion, tags, keywords = []}) => {
+    const sourcePath = `${revision}/PS4/${titleId}`;
+    const version = gameVersion ? ` · Source game v${gameVersion}` : '';
+    const tagList = `<ul class="guide-resource-tags" aria-label="Save tags">${tags.map(tag => `<li class="feature-tag">${esc(tag)}</li>`).join('')}</ul>`;
+    const terms = [game, titleId, description, ...tags, ...keywords];
+    if (gameVersion) terms.push('v' + gameVersion);
+    if (tags.includes('New Game Plus')) terms.push('NG+', 'NG Plus', 'New Game+');
+    return resource(esc(game), `<strong>${titleId}</strong>${esc(version)} · ${esc(description)}`,
+      ext(`https://raw.githubusercontent.com/bucanero/apollo-saves/${sourcePath}/${file}`, `Download ZIP · ${titleId}`) +
+      ext(`${database}/blob/${sourcePath}/saves.txt`, 'Source details'))
+      .replace('class="guide-resource"', 'class="guide-resource game-card"')
+      .replace(/data-search="[^"]*"/, () => `data-search="${esc(terms.join(' ').toLowerCase())}"`)
+      .replace('<div class="guide-links">', tagList + '<div class="guide-links">');
+  };
+  const sorted = saves.slice().sort((a, b) => a.game.localeCompare(b.game, 'en'));
+  const isModded = save => save.tags.includes('Modded save');
+  const saveGroup = (id, title, entries) => `<div id="${id}" data-search-group><div class="section-header"><h3 class="section-title">${title}</h3></div>${grid(...entries.map(card))}</div>`;
+  const search = '<div class="search-container"><div class="search-box"><i class="fas fa-search search-icon" aria-hidden="true"></i><input type="search" class="search-input" id="gameSearch" aria-label="Search PS4 game saves" placeholder="Search by game, CUSA ID or tag"></div><p id="gameSearchStatus" data-result-noun="save"></p></div>';
+
+  page('console/ps4/save-tools.html', 'PS4 Game saves',
+    'Search PS4 game saves by game, CUSA title ID or tag. Download modded saves, completed saves and New Game Plus files for Apollo Save Tool.',
+    apolloImage, ps4nav,
+    section('saves', 'Download PS4 game saves',
+      note('<p>Match the CUSA title ID to your installed copy before importing. Editions and regions can use different IDs. Progress and unlocks are described by the Apollo contributors.</p>') +
+      search + '<div class="game-categories">' +
+      saveGroup('modded-saves', 'Modded PS4 game saves', sorted.filter(isModded)) +
+      saveGroup('progress-saves', 'Progress and completion saves', sorted.filter(save => !isModded(save))) + '</div>' +
+      '<p class="no-results">No saves match your search.</p>' +
+      `<div class="guide-links">${ext(`${database}/blob/${revision}/PS4/README.md`, 'Browse the Apollo PS4 save catalogue')}${link('#import-saves', 'How to import saves')}</div>`) +
+    section('import-saves', 'Import a save with Apollo', steps([
+      ['Back up your current save. ', 'Keep a separate copy of your own save before importing community data.'],
+      ['Find the matching save in Apollo. ', 'On a homebrew-enabled PS4, open Apollo Save Tool, choose Online Database and select the matching game and save. Download to the internal drive or a USB drive.'],
+      ['Check the imported save. ', 'For an internal download, check HDD Saves. For a USB download, open USB Saves and use Copy save game to transfer it to the internal drive.']
+    ]) + note('<p>If you downloaded a ZIP from this page, extract it first. Keep each save folder and its <code>sce_sys</code> contents together, then follow Apollo’s guide for importing decrypted saves from USB.</p>') +
+    `<div class="guide-links">${ext(`${usage}#online-database`, 'Apollo Online Database guide')}${ext(`${usage}#managing-decrypted-savedata-acquired-online`, 'Import decrypted saves via USB')}</div>`) +
+    section('save-tools', 'PS4 save tools', grid(
+      resource('Apollo Save Tool · PS4', 'Manage, export, import, patch and resign PS4 saves directly on your homebrew-enabled console.',
+        '<a href="/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg" data-original-href="https://github.com/bucanero/apollo-ps4/releases" download>Download for PS4 <i class="fas fa-download" aria-hidden="true"></i></a>' +
+        ext('https://github.com/bucanero/apollo-ps4', 'Project &amp; setup'), apolloImage)
+    )), '#saves', 'Browse game saves');
 }
 
 function buildPs4Software() {
@@ -79,13 +129,16 @@ function buildPs4Software() {
     'Browse payloads'
   );
 
+  const {storeIntro,storeCard,storeCards}=require('./console-store-cards.cjs');
+  const itemzflowId='ps4-store-itemzflow-1-08';
   page(
     'console/ps4/apps.html',
     'PS4 Apps & Homebrew Tools',
     'Browse PS4 save tools, file managers, Homebrew Store, package installers, Payload Guest and emulator resources with downloads and setup links.',
     apolloImage,
     nav,
-    require('./console-store-cards.cjs').storeIntro('ps4') + intro('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
+    storeIntro('ps4') + intro('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
+      storeCard('ps4',itemzflowId),
       resource(
         'trophy_unlockers',
         'PS4 trophy unlocker collection with game-specific PKG files, a guide, TrophyUnlocker for Windows and PS4PKGViewer. Match each package to its game title ID and region.',
@@ -105,22 +158,19 @@ function buildPs4Software() {
         '/assets/images/emulators/retroarch.png'
       ),
       ...extraCards(expansion.apps)
-    )) + require('./console-store-cards.cjs').storeCards('ps4') +
+    )) + storeCards('ps4',{exclude:[itemzflowId]}) +
     section('more-tools', 'More PS4 resources', `<div class="guide-links">${link('/console/ps4/payloads.html', 'PS4 payloads')}${link('/console/ps4/site-launcher.html', 'Open site from PS4 Home')}${link('/console/mods/ps4/', 'Browse game mods')}${link('/console/ps4/', 'Back to PS4 Hub')}</div>`),
-    '#selected-apps',
+    '#apps',
     'Browse apps'
   );
 
   buildPs4Avatars();
 
-  page('console/ps4/save-tools.html','PS4 Game saves','Apollo Save Tool and related PS4 save-management resources for backup, import, export and repair workflows.',apolloImage,nav,
-    section('saves','PS4 Game saves',grid(
-      resource('Apollo Save Tool · PS4','Manage, export, import, patch and resign PS4 saves directly on your homebrew-enabled console.','<a href="/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg" data-original-href="https://github.com/bucanero/apollo-ps4/releases" download>Download for PS4 <i class="fas fa-download" aria-hidden="true"></i></a>'+ext('https://github.com/bucanero/apollo-ps4','Project & setup'),apolloImage)
-    )+note('<p>Back up your saves before editing. Match the tool and save format to your installed game and console environment.</p>')),'#saves','Browse game saves');
+  buildPs4GameSaves();
 
   require('./playstation-nonmod-card-images.cjs').repairFiles(['console/ps4/emulators.html']);
   console.log('Built separate PS4 Payloads and Apps pages.');
 }
 
 if (require.main === module) buildPs4Software();
-module.exports = {buildPs4Software, buildPs4Avatars};
+module.exports = {buildPs4Software, buildPs4Avatars, buildPs4GameSaves};

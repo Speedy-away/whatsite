@@ -33,8 +33,8 @@ test('protected game IDs, firmware versions, hashes, filenames and source URLs s
  const record=protect(source),tokens=record.template.match(/ZXQ\d{4}QXZ/g);assert.ok(record.values.includes('Newer Super Mario Bros. Wii'));assert.ok(record.values.includes('5.05'));assert.ok(record.values.includes('CUSA00419'));assert.equal(html.restore(record.template,record.values),source);
  assert.throws(()=>html.restore(tokens.slice(1).join(' '),record.values),/protected literal/);
 });
-test('missing translations prevent publication rather than silently copying English content',()=>{
- const {ctx}=fixture();assert.throws(()=>builder.translate(ctx,'Missing English prose','es'),/Uncatalogued/);
+test('new authored text falls back to English while missing catalogued translations fail',()=>{
+ const {ctx}=fixture();assert.equal(builder.translate(ctx,'Missing English prose','es'),'Missing English prose');
  ctx.strings.set('New prose',{source:'New prose',id:'missing',values:[]});assert.throws(()=>builder.translate(ctx,'New prose','es'));
 });
 test('runtime-independent language links and sitemap generation cover all language routes',t=>{

@@ -1,7 +1,7 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {rewriter, rawURL, eligible} = require('../build-pages.cjs');
+const {rewriter, rawURL, eligible, plan, LIMIT} = require('../build-pages.cjs');
 const {renderCompanion} = require('../console-download-companion.cjs');
 const fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
 test('Pages references resolve to exact encoded repository files without modifying compatibility or hashes', () => {
@@ -59,6 +59,20 @@ test('migrated host archives and legacy desktop DLLs can use exact repository de
     assert.equal(result.bytes,890*1048576);
     assert.ok(fs.existsSync(path.join(root,'docs/host-actions-ps5.json')));
   } finally { fs.rmSync(root,{recursive:true,force:true}); }
+});
+
+test('Pages may use rewrite headroom but still enforces the planned size limit', () => {
+  const mib = 1024 * 1024;
+  const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-headroom-'));
+  const names = ['index.html', 'downloads/archive.zip'];
+  const sizes = new Map([[names[0], 25 * mib], [names[1], 50 * mib]]);
+  const revision = 'a'.repeat(40);
+  try {
+    const result = plan(root, names, revision, sizes, 860 * mib, 64 * mib);
+    assert.equal(result.bytes, 885 * mib);
+    assert.equal(result.offloaded.get(names[1]), rawURL(names[1], revision));
+    assert.throws(() => plan(root, names, revision, sizes, LIMIT, 64 * mib), /exceed the 900 MiB/);
+  } finally { fs.rmdirSync(root); }
 });
 
 test('deployment link verification follows HTML base paths and decodes quoted filenames', () => {

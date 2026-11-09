@@ -20,7 +20,7 @@ for(const [platform,file,anchor] of [
  else if(platform==='ps3'&&file.endsWith('/save-tools.html')){if(!/<section\b[^>]*id="save-tools"/.test(html))throw Error('Missing PS3 save-tool section');html=html.replace(/<section\b(?=[^>]*id="save-tools")[^>]*>[\s\S]*?<\/section>/,apollo.section(platform));}
  else{if(!html.includes(anchor))throw Error('Missing Apollo insertion point: '+file);html=html.replace(anchor,apollo.section(platform)+'\n'+anchor);}
  if(!html.includes('/assets/console-guides.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/console-guides.css?v=1">\n</head>');
- if(platform==='ps4'&&!html.includes('href="/console/ps4/#save-tools"'))html=html.replace(/(<nav class="guide-nav"[^>]*>[\s\S]*?)(<\/nav>)/,'$1<a href="/console/ps4/#save-tools">Save Tools</a>$2');
+ if(platform==='ps4'&&!html.includes('href="/console/ps4/save-tools.html"'))html=html.replace(/(<nav class="guide-nav"[^>]*>[\s\S]*?)(<\/nav>)/,'$1<a href="/console/ps4/save-tools.html">Save Tools</a>$2');
  if(platform==='ps3'&&file.endsWith('ps3.html')&&!html.includes('aria-label="Apollo Save Tool"'))html=html.replace(/(<div class="hero-buttons">[\s\S]*?)(<\/div>)/,'$1<a href="#save-tools" class="btn btn-outline" aria-label="Apollo Save Tool"><i class="fas fa-save"></i> Apollo Save Tool</a>$2');
  fs.writeFileSync(path.join(root,file),require('./search-page-output.cjs').finish(file,html));
 }

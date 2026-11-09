@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "मेन्यू + plugins.ini डाउनलोड करें",
     "Original menu file": "मूल मेन्यू फ़ाइल",
     "plugins.ini only": "केवल plugins.ini",
+    "Outfit editor": "पोशाक संपादक",
+    "RTM Tools": "RTM टूल",
+    "Watch video guide": "वीडियो गाइड देखें",
+    "Setup & screenshot": "सेटअप और स्क्रीनशॉट",
     "Phone": "फ़ोन",
     "PS4 / PS5 Host": "PS4 / PS5 होस्ट",
     "Breadcrumb": "नेविगेशन पथ",
@@ -1322,7 +1326,9 @@
     "jailbreak": "जेलब्रेक",
     "{name} jailbreak": "{name} जेलब्रेक",
     "multiplayer": "मल्टीप्लेयर",
-    "{name} multiplayer": "{name} मल्टीप्लेयर"
+    "{name} multiplayer": "{name} मल्टीप्लेयर",
+    "outfit editor": "पोशाक संपादक",
+    "{name} outfit editor": "{name} पोशाक संपादक"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("hi", t);

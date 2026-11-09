@@ -57,7 +57,7 @@ function build() {
   }
   page('console/ps5/game-cheats.html','Native PS5 Game Cheats','Choose a game, then match its PPSA title ID and exact update before downloading.',fallback,nav,
     section('games','Choose a game',cards(games))+
-    section('compatibility','PS5 game builds','<p>These files target native PS5 games. PS4 game patches running through backward compatibility are listed separately.</p><div class="guide-links">'+link('/console/ps5/game-patches.html','FPS & graphics patches')+'</div>'),'#games','Browse games');
+    section('compatibility','PS5 game builds','<p>These files target native PS5 games. PS4 game patches running through backward compatibility are listed separately.</p><div class="guide-links">'+link('/console/ps4/game-patches.html#native-ps5-patches','FPS & graphics patches')+'</div>'),'#games','Browse games');
   const sitemapPath = path.join(root,'sitemap.xml'); let sitemap = fs.readFileSync(sitemapPath,'utf8');
   const urls = pages.map(file=>'https://whatwhatboy.com/'+file.replace(/index\.html$/,''));
   const added = urls.filter(url=>!sitemap.includes('<loc>'+url+'</loc>'));

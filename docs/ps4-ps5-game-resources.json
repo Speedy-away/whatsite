@@ -22,7 +22,7 @@
       "cover": "/assets/images/ps4-fortnite/fn-menu.png",
       "platformLabel": "PS4 Mod Menu",
       "pluginTemplate": true,
-      "summary": "BlueQ’s FN Menu for PS4 (CUSA07669), with the SPRX download, GoldHEN setup and a regional plugins.ini template.",
+      "summary": "",
       "description": "Download BlueQ’s FN Menu for Fortnite on PS4, view the supplied screenshot and follow the regional GoldHEN setup steps.",
       "intro": "This FN Menu build checks for PS4 title ID CUSA07669, shared by Europe and Australia. The release post does not specify the Fortnite game update or PS4 firmware."
     },
@@ -4911,6 +4911,7 @@
       "category": "menu",
       "publication": "include",
       "name": "Sheriff 1.32",
+      "tags": ["PS4", "RDR2 1.32", "Sheriff mod menu", "RAR"],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "Sheriff 1.32",
@@ -4937,8 +4938,7 @@
       ],
       "guideBlocks": [],
       "controls": [],
-      "videos": [],
-      "compatibilityText": "The source post title labels this 1.32."
+      "videos": []
     },
     {
       "id": "rdr2-north-beta",
@@ -4948,6 +4948,7 @@
       "category": "menu",
       "publication": "include",
       "name": "North Beta",
+      "tags": ["PS4", "North Beta mod menu", "NorthBeta011", "RDR2 1.29 demo", "RAR"],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "North Beta",
@@ -4994,6 +4995,7 @@
       "category": "menu",
       "publication": "include",
       "name": "Oyster",
+      "tags": ["PS4", "Oyster free edition", "Oysters Menu", "Oyster 1.3.9 beta", "RDR2 1.00", "RDR2 1.13", "RDR2 1.19", "RDR2 1.24", "RDR2 1.29", "7Z"],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "Oyster",
@@ -5033,9 +5035,8 @@
           "title": "Video supplied with the forum post"
         }
       ],
-      "description": "The free edition is separate from Oyster’s paid product.",
       "version": "v1.3.9 beta · free edition",
-      "compatibilityText": "The official free-edition product page lists RDR2 updates 1.00, 1.13, 1.19, 1.24 and 1.29."
+      "compatibilityText": "1.00, 1.13, 1.19, 1.24, 1.29"
     },
     {
       "id": "rdr2-havana",
@@ -5045,6 +5046,7 @@
       "category": "menu",
       "publication": "include",
       "name": "Havana",
+      "tags": ["PS4", "Havana mod menu", "GoldHEN", "Plugin Loader", "RDR2 1.00 experimental", "RDR2 1.29", "RDR2 1.32", "Havana v1.20"],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "Havana",
@@ -5145,7 +5147,7 @@
         }
       ],
       "version": "Menu 1.2 · release tag v1.20",
-      "compatibilityText": "PS4 GoldHEN 2.3+ with Plugin Loader; RDR2 1.29 or 1.32. The 1.00 build is experimental."
+      "compatibilityText": "1.00, 1.29, 1.32"
     },
     {
       "id": "source-gta5-ai-files",
@@ -16949,6 +16951,50 @@
       "catalogueSection": "v157"
     },
     {
+      "id": "gta5-arise-rtm-1-57",
+      "name": "Arise-RTM-GTAV-PS4",
+      "category": "rtm",
+      "gameIds": ["gta5"],
+      "platforms": ["ps4"],
+      "publication": "include",
+      "gameVersions": ["1.57"],
+      "compatibilityText": "EU CUSA00411 · US CUSA00419",
+      "tags": ["PS4", "Outfit editor", "PS4 outfit editor", "GTA Online outfit editor", "Fast-run unlock"],
+      "keywords": ["Arise RTM", "GTA 5 Online 1.57", "PS4 RTM tools", "GTA 5 outfit editor", "outfit editor PS4", "GTA 5 outfit editor PS4", "GTA Online PS4 outfit editor", "GTA V unlocks", "clothing shop teleport", "custom K/D", "GoldHEN"],
+      "guideLabel": "Setup & screenshot",
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Compatibility",
+          "text": "Arise v1.0.0 targets GTA V Online 1.57 on PS4 firmware 14.00 with GoldHEN. The author tested the EU build. The tool requires a Windows PC on the same network with .NET Framework 4.8.1."
+        },
+        {
+          "type": "paragraph",
+          "title": "Setup",
+          "text": "Enable FTP and Payload Loader in GoldHEN, start GTA V, then connect the desktop app to the PS4 and to the game. The ZIP includes the desktop app and the ps4debug payload. See the linked source repository for the full instructions."
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/arise-rtm.png",
+          "caption": "Arise RTM outfit editor and unlock tools for GTA V Online 1.57"
+        }
+      ],
+      "source": {
+        "repositoryUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4",
+        "releaseUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v1.0.0"
+      },
+      "downloads": [
+        {
+          "id": "gta5-arise-rtm-v1-0-0-zip",
+          "label": "Download v1.0.0 ZIP",
+          "filename": "Arise-RTM-GTAV-PS4.zip",
+          "url": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/download/v1.0.0/Arise-RTM-GTAV-PS4.zip",
+          "distribution": "include"
+        }
+      ]
+    },
+    {
       "id": "fortnite-fn-menu",
       "name": "FN Menu",
       "category": "menu",
@@ -16959,13 +17005,7 @@
       "version": "Discord snapshot 2026-11-08",
       "description": "BlueQ’s Discord release includes the Fortnite SPRX and a separate plugin configuration.",
       "compatibilityText": "PS4 · CUSA07669 (EU / AU) · Game update and firmware unspecified",
-      "tags": [
-        "Bot aimbot",
-        "Container ESP",
-        "PS4",
-        "GoldHEN",
-        "CUSA07669"
-      ],
+      "tags": ["Bot aimbot", "Container ESP", "PS4", "GoldHEN", "CUSA07669"],
       "keywords": [
         "BlueQ FN Menu",
         "Fortnite PS4 mod menu",
@@ -16992,18 +17032,9 @@
           "type": "steps",
           "title": "GoldHEN setup",
           "items": [
-            {
-              "title": "Check the installed title ID",
-              "text": "Use the active entry only for CUSA07669. The USA and Japan title ID, CUSA07022, is listed for reference with the plugin disabled."
-            },
-            {
-              "title": "Copy the plugin",
-              "text": "Close Fortnite, then put fn.sprx in /data/GoldHEN/plugins/."
-            },
-            {
-              "title": "Merge the INI and restart",
-              "text": "Back up /data/GoldHEN/plugins.ini. Copy the plugin path into your existing [CUSA07669] section, or add that section if it is missing. Enable plugin loading in the GoldHEN Plugins Menu and relaunch Fortnite."
-            }
+            {"title": "Check the installed title ID", "text": "Use the active entry only for CUSA07669. The USA and Japan title ID, CUSA07022, is listed for reference with the plugin disabled."},
+            {"title": "Copy the plugin", "text": "Close Fortnite, then put fn.sprx in /data/GoldHEN/plugins/."},
+            {"title": "Merge the INI and restart", "text": "Back up /data/GoldHEN/plugins.ini. Copy the plugin path into your existing [CUSA07669] section, or add that section if it is missing. Enable plugin loading in the GoldHEN Plugins Menu and relaunch Fortnite."}
           ]
         },
         {

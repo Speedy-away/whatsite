@@ -123,7 +123,6 @@ function finalize(file) {
   let html = fs.readFileSync(filename, 'utf8');
   html = html.replace('class="container guide-hero-grid"', 'class="container guide-hero-grid guide-hero-text"')
     .replace(/(<header class="guide-hero">[\s\S]*?<\/div>)<img[^>]*>/, '$1')
-    .replace('<a class="btn btn-outline" href="/pc/">PC</a>', '')
     .replace(/class="nav-link nav-sublink active" aria-current="page"/g, 'class="nav-link nav-sublink"')
     .replace('</head>', '<link rel="stylesheet" href="/guides/console-files/guides.css?v=1">\n</head>');
   fs.writeFileSync(filename, html);

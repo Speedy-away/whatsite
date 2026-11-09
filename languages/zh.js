@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "下载菜单和 plugins.ini",
     "Original menu file": "原始菜单文件",
     "plugins.ini only": "仅 plugins.ini",
+    "Outfit editor": "服装编辑器",
+    "RTM Tools": "RTM 工具",
+    "Watch video guide": "观看视频指南",
+    "Setup & screenshot": "设置与截图",
     "Phone": "手机",
     "PS4 / PS5 Host": "PS4 / PS5 主机站点",
     "Breadcrumb": "面包屑导航",
@@ -1322,7 +1326,9 @@
     "jailbreak": "越狱",
     "{name} jailbreak": "{name} 越狱",
     "multiplayer": "多人游戏",
-    "{name} multiplayer": "{name} 多人游戏"
+    "{name} multiplayer": "{name} 多人游戏",
+    "outfit editor": "服装编辑器",
+    "{name} outfit editor": "{name} 服装编辑器"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("zh", t);

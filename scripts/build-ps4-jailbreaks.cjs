@@ -18,12 +18,13 @@ function firmwareCard(url, title, description, image, tag, action) {
 
 function buildSelector() {
   const {page, section, grid, note, resource, ext, link, ps4nav} = require('./build-console-guides.cjs');
+  const {data: webkit} = require('./ps4-1400-guide.cjs');
   page('console/ps4/jailbreaks.html', 'PS4 Jailbreak',
     'Choose the PS4 14.00 guide or the 13.52-or-lower browser tutorial, then follow the requirements for your exact firmware.',
     '/assets/images/consoles/playstation.jpg', ps4nav,
     section('firmware', 'Choose your PS4 firmware',
       grid(
-        firmwareCard(fourteen, '14.00', 'The supplied experimental 14.00 guide, with Blu-ray preparation, DNS, browser-host alternatives and its video companion.', '/assets/images/consoles/ps4-jailbreak.jpg', 'Experimental · disc / browser resources', 'Open 14.00 page'),
+        firmwareCard(fourteen, '14.00', 'Follow the Afterglow WebKit tutorial, cache it for offline use, or use the Blu-ray disc method.', webkit.image, 'WebKit · offline caching', 'Open 14.00 guide'),
         firmwareCard(thirteen, '13.52 or lower', 'MODDED WARFARE’s browser tutorial. The demonstrated route covers 7.00–13.52; use the host’s exact firmware options for older systems.', '/assets/images/consoles/ps4-1352.jpg', 'Browser tutorial · firmware-specific', 'Open 13.52-or-lower page')
       ) + note('<p>Check <strong>Settings → System → System Information</strong> before choosing. Keep your existing firmware while checking compatibility. Older firmware does not automatically use the same exploit chain as a newer version.</p>')) +
     section('firmware-downloads', 'PS4 firmware downloads', grid(
@@ -68,15 +69,7 @@ function buildBrowserGuide() {
 }
 
 function refreshPs4NavigationAndHub() {
-  const {section, ps4Resources, ps4nav, esc} = require('./build-console-guides.cjs');
-  const hub = path.join(root, 'console/ps4/index.html');
-  let html = fs.readFileSync(hub, 'utf8');
-  const replacement = section('start', 'PS4 guides & downloads', ps4Resources(), 'Start with Jailbreak to choose your firmware. GoldHEN downloads, payloads, apps and emulators have their own pages.');
-  if (!/<section\b[^>]*id="start"/.test(html)) throw Error('PS4 hub guide section is missing.');
-  html = html.replace(/<section\b(?=[^>]*id="start")[^>]*>[\s\S]*?<\/section>/, replacement);
-  html = html.replace(/(<header class="guide-hero">[\s\S]*?<img src=")[^"]+("[^>]*>)/, '$1/assets/images/consoles/playstation.jpg$2');
-  html = html.replace(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]+("[^>]*>)/g, '$1https://whatwhatboy.com/assets/images/consoles/playstation.jpg$2');
-  fs.writeFileSync(hub, html);
+  const {ps4nav, esc} = require('./build-console-guides.cjs');
   for (const entry of fs.readdirSync(path.join(root, 'console/ps4'))) {
     if (!entry.endsWith('.html') || entry === 'whatsite-ps4.html') continue;
     const file = path.join(root, 'console/ps4', entry);
@@ -92,6 +85,7 @@ function refreshPs4NavigationAndHub() {
 function buildPs4Jailbreaks() {
   buildSelector();
   buildBrowserGuide();
+  require('./ps4-1400-guide.cjs').buildFourteenGuide();
   refreshPs4NavigationAndHub();
 }
 

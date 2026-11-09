@@ -1175,6 +1175,10 @@
     "Download menu + plugins.ini": "მენიუს და plugins.ini-ის ჩამოტვირთვა",
     "Original menu file": "მენიუს ორიგინალი ფაილი",
     "plugins.ini only": "მხოლოდ plugins.ini",
+    "Outfit editor": "სამოსის რედაქტორი",
+    "RTM Tools": "RTM ხელსაწყოები",
+    "Watch video guide": "ვიდეოგზამკვლევის ნახვა",
+    "Setup & screenshot": "გამართვა და ეკრანის სურათი",
     "Phone": "ტელეფონი",
     "PS4 / PS5 Host": "PS4 / PS5 ჰოსტი",
     "Breadcrumb": "ნავიგაციის გზა",
@@ -1322,7 +1326,9 @@
     "jailbreak": "ჯეილბრეიკი",
     "{name} jailbreak": "{name} ჯეილბრეიკი",
     "multiplayer": "მრავალმოთამაშიანი",
-    "{name} multiplayer": "{name} მრავალმოთამაშიანი"
+    "{name} multiplayer": "{name} მრავალმოთამაშიანი",
+    "outfit editor": "სამოსის რედაქტორი",
+    "{name} outfit editor": "{name} სამოსის რედაქტორი"
   };
 
   if (window.__scoobyI18n) window.__scoobyI18n.register("ka", t);

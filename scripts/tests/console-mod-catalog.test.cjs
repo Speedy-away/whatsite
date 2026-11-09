@@ -52,7 +52,7 @@ test('menu search combines words and game selection, and clearing restores resul
   const input = {value: '', addEventListener(type, fn) {this[type] = fn;}};
   const game = {...input}; const count = {}; const empty = {};
   const type = {...input};
-  const rows = ['jiggy 1.57', 'jiggy bo2', 'cyprus 1.53'].map((name, index) => ({dataset: {catalogSearch: name, catalogGame: index === 1 ? 'bo2' : 'gta5', catalogCategory: index === 1 ? 'rtm' : 'menu'}, style: {}}));
+  const rows = ['jiggy 1.57', 'jiggy bo2', 'cyprus 1.53 衣装エディター'].map((name, index) => ({dataset: {catalogSearch: name, catalogGame: index === 1 ? 'bo2' : 'gta5', catalogCategory: index === 1 ? 'rtm' : 'menu'}, style: {}}));
   const nodes = {modCatalogSearch: input, modCatalogGame: game, modCatalogType: type, modCatalogCount: count, modCatalogEmpty: empty};
   vm.runInNewContext(fs.readFileSync('assets/console-mod-catalog.js', 'utf8'), {document: {getElementById: id => nodes[id], querySelectorAll: () => rows}});
   input.value = ' JIGGY '; input.input(); assert.equal(count.textContent, '2 entries');
@@ -65,4 +65,6 @@ test('menu search combines words and game selection, and clearing restores resul
   game.value = 'gta5'; game.change(); assert.equal(empty.hidden, false);
   type.value = ''; game.change(); assert.equal(count.textContent, '2 entries');
   input.value = 'JÍGGY'; input.input(); assert.equal(count.textContent, '1 entry');
+  input.value = '衣装エディター'; input.input(); assert.equal(count.textContent, '1 entry');
+  assert.ok(!rows[2].hidden);
 });

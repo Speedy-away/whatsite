@@ -7,7 +7,7 @@ const gameCopy = {
   'black-ops-2': ['Black Ops 2 Menus, Injectors & PS4 FPKG Fix', 'Browse BO2 mod menus, GSC injectors and RTM tools, plus the PS4 FPKG 1.11 patch for Multiplayer and Zombies loading crashes on CUSA57548.',
     ['PS4 FPKG fixes', 'BO2 1.11 crash fix', 'BO2 01.11 PKG', 'CUSA57548', 'Black Ops 2 Multiplayer crash fix', 'Black Ops 2 Zombies crash fix', 'BO2_ZMMP_CrashFix.pkg']],
   'black-ops-3': ['BO3 PS4 Menus: GSC Injector, Zombies & Multiplayer', 'Browse BO3 PS4 GSC Injector setup, DayBreak, EnCoRe, MuzzMan, Purple Lake, Frostbite, Luna and more, with downloads, previews and guide popups.'],
-  'black-ops-4': ['Black Ops 4 PS4 Menus: B33, Atian & Lucy', 'Browse B33, Atian and Lucy resources for Black Ops 4, with supplied screenshots and downloads, plus captured DLC title-ID references.'],
+  'black-ops-4': ['Black Ops 4 PS4 Menus: B33, Atian & Lucy', 'Browse Mags, B33, Atian and Lucy menus for Black Ops 4 on PS4, with screenshots and downloads.'],
   'ghosts': ['Ghosts PS4 Menus: MatrixMods, SilentShadow & HYDRA', 'Find Ghosts MatrixMods, SilentShadow v2/v3 and the separate HYDRA 2.2.0 resource, with previews, release details and DLC title-ID references.'],
   'advanced-warfare': ['Advanced Warfare PS4 Menus: MatrixMods & Appendum', 'Browse Advanced Warfare MatrixMods and Appendum PS4 resources, supplied previews, downloads and the captured CUSA00851 DLC reference.'],
   'modern-warfare-remastered': ['MWR PS4 Menus: MatrixMods & MAG Injector', 'Browse Modern Warfare Remastered PS4 MatrixMods and MAG Menu resources, injector details, previews and the CUSA05379 v1.15 DLC reference.'],

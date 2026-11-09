@@ -2,6 +2,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const {platforms} = require('../../docs/console-exploit-hosts.json');
 const {apply, destinations} = require('../console-guide-host-links.cjs');
 
 test('guide launch links use the correct host while retaining the original pinned URL', () => {
@@ -31,10 +32,29 @@ test('legacy own-host addresses retain labels and explicit platform destinations
   const html = '<a href="https://speedy-away.github.io/WWB-HOST/hosts/ps4/">Open PS4 loader</a>';
   const result = apply('console/ps5/downloads.html', html);
   assert.equal(result, '<a href="' + destinations.ps4 + '">Open PS4 loader</a>');
+});
+
+test('external host cards keep their destinations on generation and recover previously rewritten links', () => {
+  const file = 'console/ps4/index.html';
   const card = '<a class="guide-host" href="http://karo218.ir/"><h3>Karo</h3><span>PS4</span></a>';
-  const routed = apply('console/ps4/index.html', card);
-  assert.ok(routed.includes('Open WWB Host →'));
-  assert.equal(apply('console/ps4/index.html', routed), routed);
+  const updated = card.replace('</a>', '<span class="guide-host-destination">Open host →</span></a>');
+  const oldCard = card.replace('href="http://karo218.ir/"', 'href="' + destinations.ps4 + '" data-original-host-url="http://karo218.ir/" aria-label="Open WWB Host"')
+    .replace('</a>', '<span class="guide-host-destination">Open WWB Host →</span></a>');
+  assert.equal(apply(file, card), updated);
+  assert.equal(apply(file, oldCard), updated);
+  assert.equal(apply(file, updated), updated);
+});
+
+test('each hub card links to its catalog entry or the matching first-party host', () => {
+  for (const [platform, hosts] of Object.entries(platforms)) {
+    const html = fs.readFileSync(`console/${platform}/index.html`, 'utf8');
+    const cards = [...html.matchAll(/<a class="guide-host"[^>]*\shref="([^"]+)"[^>]*>[\s\S]*?<h3 class="guide-host-label">([^<]+)<\/h3>[\s\S]*?<\/a>/g)];
+    assert.deepEqual(cards.map(([, href, label]) => [label.replaceAll('&#39;', "'"), href]),
+      hosts.map(host => [host.label, host.firstParty ? destinations[platform] : host.url]));
+    for (const [card] of cards) {
+      assert.doesNotMatch(card, /Open WWB Host →|data-original-host-url=/);
+    }
+  }
 });
 
 test('authored pages retain compatibility and are ready for repeat generation', () => {

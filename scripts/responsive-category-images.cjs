@@ -5,7 +5,7 @@ function manifest(){if(!fs.existsSync(manifestPath))return {images:{}};const sta
 function apply(file,html){
  if(!require('./site-public-pages.cjs').eligible(file)||require('./page-search-tags.cjs').protectedFile(file,html))return html;
  const images=manifest().images,reverse=new Map(Object.entries(images).flatMap(([original,item])=>item.variants.map(v=>[v.path,original])));
- return html.replace(/((?:(?:\.\.\/|\/)*)(?:(?:assets|free-keys)\/)?(?:console-guides|console-menu-catalog|ps3-catalog|mobile|home|console-directory|steamdeck|console-hubs|console-game-patches|switch-game-mods|console-themes|xbox360-library|key-page|style)\.css)(?:\?[^"']*)?(?=["'])/g,'$1?v=20261103-mobile-images-2').replace(/<img\b[^>]*>/gi,tag=>{
+ return html.replace(/((?:(?:\.\.\/|\/)*)(?:(?:assets|free-keys)\/)?(?:console-guides|console-menu-catalog|ps3-catalog|mobile|home|console-directory|steamdeck|console-game-patches|switch-game-mods|console-themes|xbox360-library|key-page|style)\.css)(?:\?[^"']*)?(?=["'])/g,'$1?v=20261103-mobile-images-2').replace(/<img\b[^>]*>/gi,tag=>{
   if(!/\b(?:profile-avatar|avatar)\b/.test(tag))tag=tag.replace(/\bstyle=(["'])(.*?)\1/gi,(_,quote,value)=>'style='+quote+value.replace(/object-fit\s*:\s*cover/gi,'object-fit:contain').replace(/max-width\s*:\s*(\d+)px/gi,'max-width:min($1px,100%)')+quote);
   const src=tag.match(/\bsrc=["']([^"']*)["']/)?.[1];let original=tag.match(/\bdata-original-image=["']([^"']*)["']/)?.[1]||reverse.get(src)||src;
   if(!images[original])try{const url=new URL(src,'https://whatwhatboy.com/'+file);if(url.origin==='https://whatwhatboy.com')original=reverse.get(url.pathname)||decodeURIComponent(url.pathname);}catch{}
