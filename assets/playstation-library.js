@@ -284,7 +284,13 @@ async function library() {
     }
   });
   window.addEventListener('popstate', () => {
-    if (data) { loadFilters(); render(); }
+    if (data) {
+      const previous = fields.map(field => field.value);
+      loadFilters();
+      // Opening and closing a listing changes only the game parameter.
+      // Keep the loaded results and the dialog's focus return target in place.
+      if (fields.some((field, i) => field.value !== previous[i])) render();
+    }
     const id = query().get('game');
     if (id && id !== activeGame) open(id);
     else if (!id && dialog.open) dialog.close();
