@@ -63,7 +63,7 @@ const json = async url => {
   return response.json();
 };
 let indexPromise;
-const index = () => indexPromise ||= json(dataRoot + 'index.json');
+const index = () => indexPromise ||= json(dataRoot + 'index.json?v=dlpsgame-1');
 const shards = new Map();
 async function getGame(id, revision) {
   if (!gameId.test(id || '')) return null;
@@ -127,7 +127,7 @@ function sourceLink(url, label) {
   return href ? `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(label)} <span aria-hidden="true">↗</span></a>` : '';
 }
 
-function renderGame(id, game, initialRegion, initialKind) {
+function renderGame(id, game, initialRegion, initialKind, related) {
   const detail = $('game-detail');
   const regionOptions = [...new Set(game.files.map(file => regionKey(file.region)))].sort();
   const kinds = order.filter(kind => game.files.some(file => file.kind === kind));
@@ -140,12 +140,13 @@ function renderGame(id, game, initialRegion, initialKind) {
         <h2 id="game-title">${esc(game.name)}</h2>
         <p class="meta-line">${[game.source, ...(game.titleIds || [])].filter(Boolean).map(esc).join(' · ')}</p>
         ${sources.length ? `<p class="meta-line library-source">${sources.join(' · ')}</p>` : ''}
-        <button type="button" class="action secondary" id="copy-all">${label('copy-all')} <span aria-hidden="true">⧉</span></button>
+        ${game.files.length ? `<button type="button" class="action secondary" id="copy-all">${label('copy-all')} <span aria-hidden="true">⧉</span></button>` : ''}
       </div>
     </div>
     <p class="detail-note">${label('install-note')}</p>
     ${isSuperPSX(game) ? `<p class="detail-note">${label('password-note')} <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button></p>` : ''}
     ${game.notes ? `<details class="source-notes"><summary>${label('source-notes')}</summary><p>${esc(game.notes)}</p></details>` : ''}
+    ${game.files.length ? `
     <div class="file-filter">
       <h3>${label('package-links')}</h3>
       <div>
@@ -154,7 +155,11 @@ function renderGame(id, game, initialRegion, initialKind) {
       </div>
     </div>
     <p id="file-count" class="meta-line" role="status"></p>
-    <div class="file-list" id="file-list"></div>`;
+    <div class="file-list" id="file-list"></div>` : `
+    <p class="detail-note">${label('source-unavailable')}</p>
+    ${related.length ? `<div class="source-notes"><h3>${label('related-title-ids')}</h3><ul>${related.map(listing =>
+      `<li><a href="${gameUrl(listing.id)}" data-game="${listing.id}">${esc(listing.name)} · ${esc(listing.source)}</a></li>`).join('')}</ul></div>` : ''}`}`;
+  if (!game.files.length) return;
   const regionSelect = $('file-region'), kindSelect = $('file-kind');
   regionSelect.append(...regionOptions.map(regionOption));
   kindSelect.append(...kinds.map(k => option(k, labels[k])));
@@ -247,7 +252,7 @@ async function library() {
     const cards = filtered.slice(start, visible).map(g => `
       <a href="${gameUrl(g.id)}" class="game-card" data-game="${g.id}">
         ${cover(g, true)}
-        <div><p class="card-meta"><strong>${esc(g.platform)}</strong><span>${esc(countLabel('link-count', g.count))}</span></p><h3>${esc(g.name)}</h3></div>
+        <div><p class="card-meta"><strong>${esc(g.platform)}</strong><span>${esc(countLabel('link-count', g.count))}</span><span>${esc(g.source)}</span></p><h3>${esc(g.name)}</h3></div>
       </a>`).join('');
     if (reset) results.innerHTML = cards; else results.insertAdjacentHTML('beforeend', cards);
     if (!reset) results.children[start]?.focus();
@@ -264,7 +269,11 @@ async function library() {
       const game = await getGame(id, (await index()).revision);
       if (serial !== request || !dialog.open) return;
       if (!game) throw Error('Listing not found');
-      renderGame(id, game, region.value, kind.value);
+      const titleIds = new Set(game.titleIds || []);
+      const related = game.files.length || !titleIds.size ? [] : (titles || []).filter(listing =>
+        listing.id !== id && listing.platform === game.platform && listing.count > 0 &&
+        listing.titleIds?.some(titleId => titleIds.has(titleId))).slice(0, 8);
+      renderGame(id, game, region.value, kind.value, related);
     } catch {
       if (serial === request) $('game-detail').innerHTML = `<h2 id="game-title">${label('game-details')}</h2><p class="empty-state">${label('listing-error')}</p>`;
     }
