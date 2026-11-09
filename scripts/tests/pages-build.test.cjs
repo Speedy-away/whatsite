@@ -1,7 +1,7 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {rewriter, rawURL, eligible, plan, LIMIT} = require('../build-pages.cjs');
+const {build, rewriter, rawURL, eligible, plan, LIMIT} = require('../build-pages.cjs');
 const {renderCompanion} = require('../console-download-companion.cjs');
 const fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
 test('Pages references resolve to exact encoded repository files without modifying compatibility or hashes', () => {
@@ -22,6 +22,37 @@ test('Pages references resolve to exact encoded repository files without modifyi
 test('main Pages excludes migrated native hosts and internals but retains compatibility redirects and download helpers', () => {
   for (const name of ['.git/config','.agents/skills/a','scripts/test.cjs','docs/qa/a.txt','docs/screenshots/a.png','hosts/runtime/ps4/index.html']) assert.equal(eligible(name), false, name);
   for (const name of ['hosts/index.html','docs/host-actions-ps4.json','downloads/helpers/old/helper.html','CNAME']) assert.equal(eligible(name), true, name);
+});
+test('Pages stages the new ads in the existing public banner layout', () => {
+  const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-ads-'));
+  try {
+    const {applyAds, publishAds} = require('../site-ads.cjs');
+    const html = '<html><head></head><body><main class="main-content" id="main-content"><section>Content</section></main></body></html>';
+    const withBanner = applyAds('index.html', html)
+      .replace('<head>', '<head><script>const head = "</head>";</script><script async data-cfasync="false" src="https://abscloud.org/1/366a2e3edafab888009b3076fcd47b82"></script>')
+      .replace('<body>', '<body><script defer src="https://aloudalimonyexplosion.com/57/23/ae/5723aef0781af6b27fc0113e359a1d7c.js"></script>');
+    const files = {'index.html': withBanner, '404.html': html, 'hosts/index.html': withBanner, 'downloads/helper/index.html': withBanner};
+    for (const [name, content] of Object.entries(files)) {
+      const file = path.join(root, name);
+      fs.mkdirSync(path.dirname(file), {recursive: true});
+      fs.writeFileSync(file, content);
+    }
+    const output = path.join(root, 'stage');
+    build({root, output, names: Object.keys(files)});
+    const staged = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
+    assert.match(staged, /<script data-cfasync="false" src="https:\/\/abscloud\.org\/1\/366a2e3edafab888009b3076fcd47b82"><\/script>\s*<\/head>/);
+    assert.match(staged, /<script data-cfasync="false" src="https:\/\/bauval\.org\/14\/5723aef0781af6b27fc0113e359a1d7c"><\/script>\s*<\/body>/);
+    assert.equal(staged.match(/366a2e3edafab888009b3076fcd47b82/g).length, 1);
+    assert.equal(staged.match(/5723aef0781af6b27fc0113e359a1d7c/g).length, 1);
+    assert.match(staged, /<a [^>]*href="https:\/\/araplhn\.org\/4\/ac85b864baf2e2322b99cd2ad051fbc2"[^>]*rel="sponsored noopener noreferrer">Sponsored link<\/a>/);
+    assert.match(staged, /<div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"><\/div><script async="async" data-cfasync="false" src="https:\/\/bauval\.org\/21\/fd0a4dcec74a63f4d2662af5273f9d5b"><\/script>/);
+    assert.equal(staged.match(/id="container-fd0a4dcec74a63f4d2662af5273f9d5b"/g).length, 1);
+    assert.doesNotMatch(staged, /aloudalimonyexplosion\.com/);
+    assert.match(staged, /<script>const head = "<\/head>";<\/script>/);
+    assert.equal(publishAds('index.html', staged), staged);
+    assert.equal(fs.readFileSync(path.join(output, 'hosts/index.html'), 'utf8'), withBanner);
+    assert.equal(fs.readFileSync(path.join(output, 'downloads/helper/index.html'), 'utf8'), withBanner);
+  } finally { fs.rmSync(root, {recursive: true, force: true}); }
 });
 test('new native receiver snapshots fetch repository bytes directly while preserving source pins and foreign URLs', () => {
   const items = [{id:'one',url:'https://whatwhatboy.com/downloads/ps4/menu.bin',filename:'menu.bin',sha256:'a'.repeat(64),bytes:123,firmwares:['9.00']},{id:'two',url:'https://example.com/build.pkg'}];

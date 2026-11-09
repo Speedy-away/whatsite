@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {execFileSync} = require('node:child_process');
+const {publishAds} = require('./site-ads.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const LIMIT = 900 * 1024 * 1024;
 const encodePath = name => name.split('/').map(encodeURIComponent).join('/');
@@ -106,12 +107,14 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   if(sparse&&hasLocales)materializeLocaleSources(root);
   const localization=hasLocales?require('./build-localized-pages.cjs'):null;
   const localizedContext=localization?localization.load(root):null;
-  const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true}):{bytes:0};
+  const addAds = (source, name) => publishAds(name, source);
+  const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true,rewrite:addAds}):{bytes:0};
   const reservedBytes = Math.max(0, estimatedLocales.bytes);
   // Keep space for URL rewrites when possible. The final artifact check
   // enforces the size limit using the rendered pages and rewritten links.
   const preferredHeadroom = localization ? 64 * 1024 * 1024 : 0;
-  const result = plan(root, names, revision, tree?.sizes || sizes, reservedBytes, preferredHeadroom), rewrite = rewriter(result.offloaded);
+  const result = plan(root, names, revision, tree?.sizes || sizes, reservedBytes, preferredHeadroom), rewriteLinks = rewriter(result.offloaded);
+  const rewrite = (source, name) => addAds(rewriteLinks(source, name), name);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const runtimeFiles = Object.fromEntries([...result.offloaded].filter(([name]) => name.startsWith('hosts/runtime/')).map(([name, url]) => ['/' + name, url]));

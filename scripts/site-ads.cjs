@@ -5,6 +5,12 @@ const start = '<!-- BEGIN SITE AD -->';
 const end = '<!-- END SITE AD -->';
 const stylesheet = '<link rel="stylesheet" href="/assets/site-ads.css?v=3">';
 const script = '<script defer src="/assets/site-ads.js?v=2"></script>';
+const legacyNative = 'https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js';
+const native = 'https://bauval.org/21/fd0a4dcec74a63f4d2662af5273f9d5b';
+const headAd = 'https://abscloud.org/1/366a2e3edafab888009b3076fcd47b82';
+const bodyAd = 'https://bauval.org/14/5723aef0781af6b27fc0113e359a1d7c';
+const replacedScripts = [headAd, bodyAd, 'https://aloudalimonyexplosion.com/57/23/ae/5723aef0781af6b27fc0113e359a1d7c.js'];
+const sponsoredLink = '<a class="site-ad-sponsored" href="https://araplhn.org/4/ac85b864baf2e2322b99cd2ad051fbc2" target="_blank" rel="sponsored noopener noreferrer">Sponsored link</a>';
 
 function eligible(file, html) {
   html = html.replace(/<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->/g, '');
@@ -21,7 +27,29 @@ function eligible(file, html) {
 function placement() {
   // Use the site's existing native embed pattern: the provider expects its
   // container in the top-level document. Only public content pages use this.
-  return `${start}\n<aside class="site-ad" id="page-advertisement" aria-label="Advertisement"><div class="container"><div class="site-ad-panel"><span class="site-ad-label">Advertisement</span><div class="site-ad-stage"><div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div><script async="async" data-cfasync="false" src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script><p class="site-ad-empty" hidden>Ad unavailable.</p></div></div></div></aside>\n${end}`;
+  return `${start}\n<aside class="site-ad" id="page-advertisement" aria-label="Advertisement"><div class="container"><div class="site-ad-panel"><span class="site-ad-label">Advertisement</span><div class="site-ad-stage"><div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div><script async="async" data-cfasync="false" src="${legacyNative}"></script><p class="site-ad-empty" hidden>Ad unavailable.</p></div></div></div></aside>\n${end}`;
+}
+
+function publishAds(file, html) {
+  if (!html.includes(legacyNative) || !eligible(file, html)) return html;
+  // The new native URL uses the same container. Keep its existing position and fallback.
+  const updated = html.replace(/<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->/, banner => {
+    if (!banner.includes(legacyNative)) return banner;
+    return banner.replace(legacyNative, native)
+      .replace('<div class="site-ad-stage">', sponsoredLink + '<div class="site-ad-stage">');
+  });
+  if (updated === html) return html;
+  const {attributes, mapTokens} = require('./localized-html.cjs');
+  return mapTokens(updated, token => {
+    if (/^<script\b/i.test(token) && replacedScripts.some(src => token.includes(src))) {
+      const src = attributes(token.slice(0, token.indexOf('>') + 1)).src;
+      if (replacedScripts.includes(src)) return '';
+    }
+    if (/^<\/head\s*>$/i.test(token)) return `<script data-cfasync="false" src="${headAd}"></script>\n${token}`;
+    if (/^<\/body\s*>$/i.test(token)) return `<script data-cfasync="false" src="${bodyAd}"></script>\n${token}`;
+    if (/^<link\b/i.test(token)) return token.replace(/\/assets\/site-ads\.css\?v=\d+(?=["'])/, '/assets/site-ads.css?v=4');
+    return token;
+  });
 }
 
 function applyAds(file, html) {
@@ -116,4 +144,4 @@ function addExisting() {
 }
 
 if (require.main === module) addExisting();
-module.exports = {eligible, placement, applyAds, addExisting};
+module.exports = {eligible, placement, applyAds, addExisting, publishAds};
