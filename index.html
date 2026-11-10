@@ -75,7 +75,7 @@
 <script defer src="/assets/mobile-downloads.js?v=3.3.8"></script>
 <link rel="stylesheet" href="/assets/catalog-layout.css?v=1">
 <link rel="stylesheet" href="/assets/site-ads.css?v=3">
-    <link rel="stylesheet" href="/assets/home.css?v=20261110-trim">
+    <link rel="stylesheet" href="/assets/home.css?v=20261110-rows">
 </head>
 <body class="home-page" data-catalog-page data-home-taskbar>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -163,20 +163,8 @@
     <!-- Main Content -->
     <main class="main-content" id="main-content" tabindex="-1">
 
-    <section class="home-hero" id="home" aria-labelledby="home-title">
-        <div class="container">
-            <p class="home-eyebrow">PC, console &amp; beyond</p>
-            <h1 class="hero-title" id="home-title">Find games.<br><span>Make them yours.</span></h1>
-            <p class="hero-subtitle">Browse game downloads, console setup guides, mods, and tools for PlayStation, Xbox, Nintendo, and PC.</p>
-            <div class="hero-buttons">
-                <a href="/games-downloads/" class="btn btn-primary">Browse downloads <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                <a href="#console" class="home-text-link">Explore consoles <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-directory container" aria-labelledby="home-directory-title">
-        <h2 id="home-directory-title">Explore the site</h2>
+    <section class="home-directory container" id="home" aria-labelledby="home-directory-title">
+        <h1 class="section-title" id="home-directory-title">Explore the site</h1>
         <div class="home-directory-grid">
             <a href="/games-downloads/">
                 <i class="fas fa-download" aria-hidden="true"></i>
@@ -291,114 +279,54 @@
             </div>
             <p class="home-search-status" id="gameSearchStatus" role="status" aria-live="polite" aria-atomic="true">8 games shown</p>
 
-            <div class="games-grid fade-in" id="pc-games">
-                <div class="game-card" data-search="gta gta5 gta 5 gta v grand theft auto 5 grand theft auto v scooby nenyoo yimmenu mod menus lua scripts mods de juegos mods de jogos mods de jeux spiel-mods моды для игр oyun modları mody do gier mod per giochi 游戏模组 ゲームmod ケームmod 게임 모드 게임 모드 ม็อดเกม มอดเกม mod game गेम मॉड गम मड модови за игре game-mods თამაშის მოდები مودات الألعاب مودات الالعاب מודים למשחקים mods / menús de mods mods / menus de mods mods / mod-menüs mods / mod-menus моды / мод-меню modlar / mod menüleri modlar / mod menuleri mody / menu modów mody / menu modow mod / menu mod 模组 / 模组菜单 mod / modメニュー 모드 / 모드 메뉴 모드 / 모드 메뉴 ม็อด / เมนูม็อด มอด / เมนมอด मॉड / मॉड मेन्यू मड / मड मनय модови / мод менији mods / modmenu’s mods / modmenu's მოდები / მოდების მენიუები مودات / قوائم المودات مودات / قوايم المودات מודים / תפריטי מודים" data-category="pc open-world">
-                    <div class="game-image">
-                        <img src="assets/images/gta1.png" alt="GTA V" loading="lazy">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Grand Theft Auto V</h3>
-                        <p class="game-description">Free mod menus, trainers, and scripts</p>
-                        <a href="games/gta/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="home-platform-grid" id="pc-games">
+                <a class="home-platform game-card" href="games/gta/index.html" data-search="gta gta5 gta 5 gta v grand theft auto 5 grand theft auto v scooby nenyoo yimmenu mod menus lua scripts mods de juegos mods de jogos mods de jeux spiel-mods моды для игр oyun modları mody do gier mod per giochi 游戏模组 ゲームmod ケームmod 게임 모드 게임 모드 ม็อดเกม มอดเกม mod game गेम मॉड गम मड модови за игре game-mods თამაშის მოდები مودات الألعاب مودات الالعاب מודים למשחקים mods / menús de mods mods / menus de mods mods / mod-menüs mods / mod-menus моды / мод-меню modlar / mod menüleri modlar / mod menuleri mody / menu modów mody / menu modow mod / menu mod 模组 / 模组菜单 mod / modメニュー 모드 / 모드 메뉴 모드 / 모드 메뉴 ม็อด / เมนูม็อด มอด / เมนมอด मॉड / मॉड मेन्यू मड / मड मनय модови / мод менији mods / modmenu’s mods / modmenu's მოდები / მოდების მენიუები مودات / قوائم المودات مودات / قوايم المودات מודים / תפריטי מודים" data-category="pc open-world">
+                    <span class="home-platform-mark home-game-mark"><img src="assets/images/gta1.png" alt="" loading="lazy"></span>
+                    <div class="home-platform-copy"><h3>Grand Theft Auto V</h3><span>Free mod menus, trainers, and scripts</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
 
-                <div class="game-card" data-search="counter strike 2 counter-strike 2 cs2 cs 2 counter strike global offensive csgo cs go cs:go cs 1.6 cs16 counter strike source css" data-category="pc shooters">
-                    <div class="game-image">
-                        <img src="/assets/images/merged-categories/optimized/asset-0a1fefa407fd13ee-960.jpg" alt="Counter-Strike 2" loading="lazy" width="960" height="540" decoding="async" srcset="/assets/images/merged-categories/optimized/asset-0a1fefa407fd13ee-480.jpg 480w, /assets/images/merged-categories/optimized/asset-0a1fefa407fd13ee-960.jpg 960w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1000px) 45vw, 480px" data-original-image="/assets/images/cs2.png">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Counter-Strike 2</h3>
-                        <p class="game-description">Aimbot, wallhack, and ESP tools</p>
-                        <a href="games/cs2/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                <a class="home-platform game-card" href="games/cs2/index.html" data-search="counter strike 2 counter-strike 2 cs2 cs 2 counter strike global offensive csgo cs go cs:go cs 1.6 cs16 counter strike source css" data-category="pc shooters">
+                    <span class="home-platform-mark home-game-mark"><img src="/assets/images/merged-categories/optimized/asset-0a1fefa407fd13ee-960.jpg" alt="" loading="lazy" width="960" height="540" decoding="async" srcset="/assets/images/merged-categories/optimized/asset-0a1fefa407fd13ee-480.jpg 480w, /assets/images/merged-categories/optimized/asset-0a1fefa407fd13ee-960.jpg 960w" sizes="76px" data-original-image="/assets/images/cs2.png"></span>
+                    <div class="home-platform-copy"><h3>Counter-Strike 2</h3><span>Aimbot, wallhack, and ESP tools</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
 
-                <div class="game-card" data-search="garry garrys mod garry's mod gmod scooby 64 bit rage legit lua scripts mods de juegos mods de jogos mods de jeux spiel-mods моды для игр oyun modları mody do gier mod per giochi 游戏模组 ゲームmod ケームmod 게임 모드 게임 모드 ม็อดเกม มอดเกม mod game गेम मॉड गम मड модови за игре game-mods თამაშის მოდები مودات الألعاب مودات الالعاب מודים למשחקים" data-category="pc sandbox">
-                    <div class="game-image">
-                        <img src="assets/images/gmod.png" alt="Garry's Mod" loading="lazy">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Garry's Mod</h3>
-                        <p class="game-description">Enhanced gameplay tools and cheats</p>
-                        <a href="games/gmod/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                <a class="home-platform game-card" href="games/gmod/index.html" data-search="garry garrys mod garry's mod gmod scooby 64 bit rage legit lua scripts mods de juegos mods de jogos mods de jeux spiel-mods моды для игр oyun modları mody do gier mod per giochi 游戏模组 ゲームmod ケームmod 게임 모드 게임 모드 ม็อดเกม มอดเกม mod game गेम मॉड गम मड модови за игре game-mods თამაშის მოდები مودات الألعاب مودات الالعاب מודים למשחקים" data-category="pc sandbox">
+                    <span class="home-platform-mark home-game-mark"><img src="assets/images/gmod.png" alt="" loading="lazy"></span>
+                    <div class="home-platform-copy"><h3>Garry's Mod</h3><span>Enhanced gameplay tools and cheats</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
 
-                <div class="game-card" data-search="red dead redemption 2 rdr2 rdr 2 red dead online rdo scooby horse yim mod menus red dead redemption ii mods de juegos mods de jogos mods de jeux spiel-mods моды для игр oyun modları mody do gier mod per giochi 游戏模组 ゲームmod ケームmod 게임 모드 게임 모드 ม็อดเกม มอดเกม mod game गेम मॉड गम मड модови за игре game-mods თამაშის მოდები مودات الألعاب مودات الالعاب מודים למשחקים mods / menús de mods mods / menus de mods mods / mod-menüs mods / mod-menus моды / мод-меню modlar / mod menüleri modlar / mod menuleri mody / menu modów mody / menu modow mod / menu mod 模组 / 模组菜单 mod / modメニュー 모드 / 모드 메뉴 모드 / 모드 메뉴 ม็อด / เมนูม็อด มอด / เมนมอด मॉड / मॉड मेन्यू मड / मड मनय модови / мод менији mods / modmenu’s mods / modmenu's მოდები / მოდების მენიუები مودات / قوائم المودات مودات / قوايم المودات מודים / תפריטי מודים" data-category="pc open-world">
-                    <div class="game-image">
-                        <img src="assets/images/rdr2.png" alt="Red Dead Redemption 2" loading="lazy">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Red Dead Redemption 2</h3>
-                        <p class="game-description">Trainers and mod menus</p>
-                        <a href="games/rdr2/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                <a class="home-platform game-card" href="games/rdr2/index.html" data-search="red dead redemption 2 rdr2 rdr 2 red dead online rdo scooby horse yim mod menus red dead redemption ii mods de juegos mods de jogos mods de jeux spiel-mods моды для игр oyun modları mody do gier mod per giochi 游戏模组 ゲームmod ケームmod 게임 모드 게임 모드 ม็อดเกม มอดเกม mod game गेम मॉड गम मड модови за игре game-mods თამაშის მოდები مودات الألعاب مودات الالعاب מודים למשחקים mods / menús de mods mods / menus de mods mods / mod-menüs mods / mod-menus моды / мод-меню modlar / mod menüleri modlar / mod menuleri mody / menu modów mody / menu modow mod / menu mod 模组 / 模组菜单 mod / modメニュー 모드 / 모드 메뉴 모드 / 모드 메뉴 ม็อด / เมนูม็อด มอด / เมนมอด मॉड / मॉड मेन्यू मड / मड मनय модови / мод менији mods / modmenu’s mods / modmenu's მოდები / მოდების მენიუები مودات / قوائم المودات مودات / قوايم المودات מודים / תפריטי מודים" data-category="pc open-world">
+                    <span class="home-platform-mark home-game-mark"><img src="assets/images/rdr2.png" alt="" loading="lazy"></span>
+                    <div class="home-platform-copy"><h3>Red Dead Redemption 2</h3><span>Trainers and mod menus</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
 
-                <div class="game-card" data-search="call of duty cod black ops bo1 bo2 bo3 bo4 bo6 classic modern warfare mw2 mw3 plutonium h2m gsc menus" data-category="pc shooters">
-                    <div class="game-image">
-                        <img src="assets/images/covers/cod-mw2-2022.jpg" alt="Call of Duty" loading="lazy">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Call of Duty</h3>
-                        <p class="game-description">Cheats for Black Ops, classic COD, and clients</p>
-                        <a href="games/cod/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                <a class="home-platform game-card" href="games/cod/index.html" data-search="call of duty cod black ops bo1 bo2 bo3 bo4 bo6 classic modern warfare mw2 mw3 plutonium h2m gsc menus" data-category="pc shooters">
+                    <span class="home-platform-mark home-game-mark"><img src="assets/images/covers/cod-mw2-2022.jpg" alt="" loading="lazy"></span>
+                    <div class="home-platform-copy"><h3>Call of Duty</h3><span>Cheats for Black Ops, classic COD, and clients</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
 
+                <a class="home-platform game-card" href="games/tf2/index.html" data-search="team fortress 2 team fortress classic tf2 tf 2 tf2 classic seowned definitive edition 64 bit" data-category="pc shooters">
+                    <span class="home-platform-mark home-game-mark"><img src="assets/images/tf2.png" alt="" loading="lazy"></span>
+                    <div class="home-platform-copy"><h3>Team Fortress 2</h3><span>64-bit TF2 and TF2 Classic cheats</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
 
+                <a class="home-platform game-card" href="games/left4dead/index.html" data-search="left 4 dead left 4 dead 2 left dead l4d l4d1 l4d2 l4d 2 l4d 1" data-category="pc shooters">
+                    <span class="home-platform-mark home-game-mark"><img src="/assets/images/merged-categories/optimized/asset-bb57f4612c2fbfdd-960.jpg" alt="" loading="lazy" width="960" height="540" decoding="async" srcset="/assets/images/merged-categories/optimized/asset-bb57f4612c2fbfdd-480.jpg 480w, /assets/images/merged-categories/optimized/asset-bb57f4612c2fbfdd-960.jpg 960w" sizes="76px" data-original-image="/assets/images/l4d.png"></span>
+                    <div class="home-platform-copy"><h3>Left 4 Dead</h3><span>L4D1 & L4D2 cheats and visual mods</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
 
-                <div class="game-card" data-search="team fortress 2 team fortress classic tf2 tf 2 tf2 classic seowned definitive edition 64 bit" data-category="pc shooters">
-                    <div class="game-image">
-                        <img src="assets/images/tf2.png" alt="Team Fortress 2" loading="lazy">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Team Fortress 2</h3>
-                        <p class="game-description">64-bit TF2 and TF2 Classic cheats</p>
-                        <a href="games/tf2/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="game-card" data-search="left 4 dead left 4 dead 2 left dead l4d l4d1 l4d2 l4d 2 l4d 1" data-category="pc shooters">
-                    <div class="game-image">
-                        <img src="/assets/images/merged-categories/optimized/asset-bb57f4612c2fbfdd-960.jpg" alt="Left 4 Dead" loading="lazy" width="960" height="540" decoding="async" srcset="/assets/images/merged-categories/optimized/asset-bb57f4612c2fbfdd-480.jpg 480w, /assets/images/merged-categories/optimized/asset-bb57f4612c2fbfdd-960.jpg 960w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1000px) 45vw, 480px" data-original-image="/assets/images/l4d.png">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Left 4 Dead</h3>
-                        <p class="game-description">L4D1 & L4D2 cheats and visual mods</p>
-                        <a href="games/left4dead/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="game-card" data-search="fivem five m simplem scooby gta rp gta roleplay esp aimbot" data-category="pc open-world sandbox">
-                    <div class="game-image">
-                        <img src="assets/images/five.png" alt="FiveM" loading="lazy">
-                    </div>
-                    <div class="game-info">
-                        <h3 class="game-title">FiveM</h3>
-                        <p class="game-description">SimpleM - External ESP, aimbot and more</p>
-                        <a href="games/fivem/index.html" class="game-link">
-                            View Cheats <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                <a class="home-platform game-card" href="games/fivem/index.html" data-search="fivem five m simplem scooby gta rp gta roleplay esp aimbot" data-category="pc open-world sandbox">
+                    <span class="home-platform-mark home-game-mark"><img src="assets/images/five.png" alt="" loading="lazy"></span>
+                    <div class="home-platform-copy"><h3>FiveM</h3><span>SimpleM - External ESP, aimbot and more</span></div>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
             </div>
 
             <div class="no-results" id="noResults" style="display: none;">
