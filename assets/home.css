@@ -1,186 +1,13 @@
-/* The homepage owns its theme and navigation while sharing the site catalog. */
-.home-page {
-    --sw: 0px;
-    --font: "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-    --bg-primary: #000;
-    --bg-secondary: #151515;
-    --bg-tertiary: #242424;
-    --text-primary: #f5f5f5;
-    --text-secondary: #c2c2c2;
-    --text-muted: #aaa;
-    --accent: #fff;
-    --accent-light: #f5f5f5;
-    --accent-glow: #ffffff14;
-    --border: #ffffff28;
-    --border-hover: #ffffff60;
-    --btn-light: #f5f5f5;
-    --btn-light-text: #111;
-    --home-muted: var(--text-secondary);
-    --home-panel: #101010ef;
-    --home-wave: url("/assets/images/playstation-library/xmb-wave-dark.svg");
-    --home-wave-opacity: .58;
-    background: var(--bg-primary);
-    overflow-x: clip;
-    isolation: isolate;
-}
-[data-theme="light"] .home-page {
-    --bg-primary: #f5f5f5;
-    --bg-secondary: #fff;
-    --bg-tertiary: #e6e6e6;
-    --text-primary: #151515;
-    --text-secondary: #494949;
-    --text-muted: #565656;
-    --accent: #111;
-    --accent-light: #252525;
-    --accent-glow: #0000000d;
-    --border: #00000029;
-    --border-hover: #00000061;
-    --btn-light: #151515;
-    --btn-light-text: #fff;
-    --home-panel: #f8f8f8f2;
-    --home-wave: url("/assets/images/playstation-library/xmb-wave.svg");
-    --home-wave-opacity: .75;
-}
-.home-page::before {
-    content: "";
-    position: fixed;
-    inset: -4vh -6vw;
-    z-index: -1;
-    pointer-events: none;
-    background: var(--home-wave) center 62% / max(1024px, 116vw) auto no-repeat;
-    opacity: var(--home-wave-opacity);
-    filter: grayscale(1);
-    animation: home-wave-drift 26s ease-in-out infinite alternate;
-}
-.home-page::after { display: none; }
-@keyframes home-wave-drift {
-    from { transform: translate3d(-2vw, -3vh, 0); }
-    to { transform: translate3d(2vw, 6vh, 0); }
-}
-.home-page ::selection { color: var(--btn-light-text); background: var(--btn-light); }
+/* Homepage directory, console and game lists. */
 .home-page .container, body.home-page .main-content .container {
     max-width: 1280px;
     padding-inline: max(clamp(16px, 4vw, 48px), env(safe-area-inset-left)) max(clamp(16px, 4vw, 48px), env(safe-area-inset-right));
 }
 .home-page .section { padding-block: 62px; }
-html:has(.home-page) { --home-header-height: 66px; scroll-padding-top: calc(var(--home-header-height) + 16px); }
 .home-page .section-header { text-align: start; margin-bottom: 26px; }
 .home-page .section-title { font-size: clamp(1.65rem, 2.8vw, 2.3rem); line-height: 1.15; letter-spacing: -.045em; margin-bottom: 10px; }
 .home-page .section-subtitle { margin: 0; max-width: 65ch; color: var(--home-muted); font-size: .95rem; }
 .home-page .btn { min-height: 46px; line-height: 1.3; }
-
-.home-taskbar {
-    position: sticky;
-    inset-block-start: 0;
-    z-index: 1010;
-    background: var(--home-panel);
-    padding-block-start: env(safe-area-inset-top);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(14px);
-}
-.home-page .home-taskbar-inner {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 8px 20px;
-    min-height: 66px;
-}
-.home-brand { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: var(--text-primary); font-weight: 750; letter-spacing: -.035em; }
-.home-brand img { flex: none; object-fit: contain; }
-.home-task-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px; }
-.home-task-links > a, .home-menu > summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    min-height: 44px;
-    padding: 6px 10px;
-    border-radius: 7px;
-    color: var(--text-primary);
-    font-size: .84rem;
-    font-weight: 650;
-    line-height: 1.25;
-    text-align: center;
-    cursor: pointer;
-}
-.home-task-links > a:hover, .home-menu > summary:hover, .home-menu[open] > summary { background: var(--bg-tertiary); color: var(--text-primary); }
-.home-menu { position: relative; }
-.home-menu > summary { list-style: none; }
-.home-menu > summary::-webkit-details-marker { display: none; }
-.home-caret { width: 6px; height: 6px; margin-block-start: -3px; border: solid var(--home-muted); border-width: 0 1px 1px 0; transform: rotate(45deg); transition: transform .2s; }
-.home-menu[open] .home-caret { transform: rotate(225deg); }
-.home-menu-panel {
-    position: absolute;
-    inset-block-start: calc(100% + 5px);
-    inset-inline-start: 0;
-    z-index: 2;
-    width: max-content;
-    min-width: 176px;
-    max-width: min(calc(100vw - 32px), 525px);
-    max-height: min(580px, 70dvh);
-    overflow: auto;
-    overscroll-behavior: contain;
-    padding: 8px;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    box-shadow: 0 14px 36px #0003;
-}
-.home-pc-menu .home-menu-panel, .home-more-menu .home-menu-panel { inset-inline: auto 0; }
-.home-menu-panel :is(a, button) {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 44px;
-    padding: 7px 10px;
-    border-radius: 6px;
-    color: var(--text-primary);
-    font-size: .84rem;
-    font-weight: 600;
-    line-height: 1.3;
-    text-align: start;
-    overflow-wrap: anywhere;
-}
-.home-menu-panel [hidden] { display: none; }
-.home-menu-panel :is(a, button):hover { background: var(--bg-tertiary); }
-.home-menu-panel i { font-size: .65rem; }
-.home-console-panel { width: min(525px, calc(100vw - 32px)); }
-.home-menu-panel .home-menu-feature { justify-content: space-between; background: var(--bg-tertiary); font-weight: 750; }
-.home-menu-panel .home-menu-feature:hover { box-shadow: inset 0 0 0 1px var(--border-hover); }
-.home-menu-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding-block: 10px; }
-.home-menu-columns p { padding: 6px 10px; color: var(--home-muted); font-size: .72rem; font-weight: 700; }
-.home-menu-tail { display: flex; flex-wrap: wrap; gap: 0 3px; border-top: 1px solid var(--border); padding-top: 3px; }
-.home-menu-panel .home-compact-tools { display: none; }
-.home-controls { display: flex; align-items: center; gap: 6px; justify-self: end; }
-.home-controls [data-language-switcher]:empty { display: none; }
-.home-theme, .home-page .home-controls .i18n-toggle {
-    min-height: 44px;
-    padding-inline: 10px;
-    color: var(--text-primary);
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    box-shadow: none;
-    font-size: .78rem;
-    font-weight: 650;
-    white-space: nowrap;
-}
-.home-theme:hover, .home-page .home-controls .i18n-toggle:hover { border-color: var(--border-hover); background: var(--bg-tertiary); }
-.home-page .home-controls .i18n-caret { color: var(--home-muted); }
-.home-page .home-controls .i18n-toggle:focus-visible { outline-color: var(--text-primary); }
-.home-theme svg { vertical-align: -.18em; margin-inline-end: 2px; }
-.home-theme-dark, [data-theme="light"] .home-theme-light { display: none; }
-[data-theme="light"] .home-theme-dark { display: inline; }
-.home-page .home-controls .i18n-menu { inset-inline: auto 0; min-width: 0; width: min(235px, calc(100vw - 32px)); }
-.home-page :is(.i18n-menu, .i18n-modal) { color: var(--text-primary); background: var(--bg-secondary); border-color: var(--border); }
-.home-page :is(.i18n-menu, .i18n-modal)::before, .home-page .i18n-modal::after { display: none; }
-.home-page :is(.i18n-modal h2, .i18n-option, .i18n-pick) { color: var(--text-primary); }
-.home-page :is(.i18n-modal-sub, .i18n-option-meta, .i18n-pick-meta) { color: var(--home-muted); }
-.home-page :is(.i18n-option:hover, .i18n-option[aria-selected="true"], .i18n-pick, .i18n-badge, .i18n-dismiss) {
-    color: var(--text-primary);
-    background: var(--bg-tertiary);
-    border-color: var(--border);
-}
 
 .home-page .home-directory { padding-block: clamp(28px, 4vw, 56px); }
 .home-directory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; }
@@ -252,11 +79,6 @@ html:has(.home-page) { --home-header-height: 66px; scroll-padding-top: calc(var(
 .home-page .footer, .home-page .main-content { margin-inline: 0; }
 
 @media (max-width: 960px) {
-    .home-page .home-taskbar-inner { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; padding-block: 6px 0; }
-    .home-task-links { position: relative; grid-row: 2; grid-column: 1/-1; justify-content: flex-start; }
-    .home-menu { position: static; }
-    .home-menu-panel, .home-pc-menu .home-menu-panel, .home-more-menu .home-menu-panel { inset-inline: 0 auto; }
-    html:has(.home-page) { --home-header-height: 96px; }
     .home-game-controls { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
     .home-page .home-game-controls .search-container { max-width: none; }
     .home-emulators, .home-page .home-help { align-items: flex-start; flex-direction: column; gap: 16px; }
@@ -278,41 +100,9 @@ html:has(.home-page) { --home-header-height: 66px; scroll-padding-top: calc(var(
     .home-help-links { gap: 8px 20px; }
 }
 @media (max-width: 580px) {
-    .home-task-links > a, .home-menu > summary { padding-inline: 7px; gap: 4px; font-size: .79rem; }
-    .home-task-links > .home-desktop-tools { display: none; }
-    .home-menu-panel .home-compact-tools { display: flex; }
-    .home-menu-panel, .home-pc-menu .home-menu-panel, .home-more-menu .home-menu-panel {
-        inset-inline: 0;
-        width: auto;
-        max-width: none;
-        max-height: min(540px, calc(100dvh - var(--home-header-height) - 12px));
-    }
-    .home-menu-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .home-brand { gap: 5px; font-size: .92rem; }
-    .home-brand img { width: 27px; height: 27px; }
-    .home-theme { padding-inline: 7px; }
-    .home-theme :is(.home-theme-light, .home-theme-dark) > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-    .home-theme svg { margin: 0; }
-    .home-theme { min-width: 44px; }
-    .home-page .home-controls .i18n-toggle { padding-inline: 7px; }
-    .home-page .home-controls .i18n-switcher { position: static; }
-    .home-controls { position: relative; }
     .home-directory-grid small { line-height: 1.35; }
 }
 @media (max-width: 380px) {
-    .home-task-links > a, .home-menu > summary { padding-inline: 4px; }
     .home-directory-grid { grid-template-columns: 1fr; }
     .home-page .filter-buttons .filter-btn { padding-inline: 10px; }
-}
-@media (max-width: 348px) {
-    .home-cheats-menu > summary { max-inline-size: 56px; font-size: .75rem; }
-    .home-cheats-menu > summary > span:first-child { overflow-wrap: anywhere; }
-    .home-cheats-menu .home-caret { flex-shrink: 0; }
-}
-@media (max-height: 420px) {
-    .home-taskbar { position: relative; }
-    .home-menu-panel { max-height: 60dvh; }
-}
-@media (prefers-reduced-motion: reduce) {
-    .home-page *, .home-page *::before, .home-page *::after, .home-page::before { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

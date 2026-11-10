@@ -1,7 +1,7 @@
 'use strict';
 
 const taskbar = document.querySelector('.home-taskbar');
-if (typeof ResizeObserver === 'function') {
+if (taskbar && typeof ResizeObserver === 'function') {
     new ResizeObserver(() => {
         document.documentElement.style.setProperty('--home-header-height', taskbar.offsetHeight + 'px');
     }).observe(taskbar);
@@ -15,7 +15,7 @@ function closeHomeMenus(activeMenu) {
     }
 }
 
-document.querySelector('[data-language-picker]')?.addEventListener('click', event => {
+taskbar?.querySelector('[data-language-picker]')?.addEventListener('click', event => {
     event.currentTarget.closest('details').querySelector('summary').focus();
 }, { capture: true });
 

@@ -125,13 +125,15 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const localizedContext=localization?localization.load(root):null;
   const addAds = (source, name) => publishAds(name, source);
   const {apply: addConsoleDownloadNav} = require('./console-download-navigation.cjs');
-  const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true,rewrite:addAds}):{bytes:0};
+  const siteShell = require('./site-shell.cjs').create(root);
+  const prepare = (source, name) => addConsoleDownloadNav(name, siteShell(name, source));
+  const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true,prepare,rewrite:addAds}):{bytes:0};
   const reservedBytes = Math.max(0, estimatedLocales.bytes);
   // Keep space for URL rewrites when possible. The final artifact check
   // enforces the size limit using the rendered pages and rewritten links.
   const preferredHeadroom = localization ? 64 * 1024 * 1024 : 0;
   const result = plan(root, names, revision, tree?.sizes || sizes, reservedBytes, preferredHeadroom), rewriteLinks = rewriter(result.offloaded);
-  const rewrite = (source, name) => addAds(rewriteLinks(addConsoleDownloadNav(name, source), name), name);
+  const rewrite = (source, name) => addAds(rewriteLinks(prepare(source, name), name), name);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const legacyDetails = Object.fromEntries([...result.offloaded].flatMap(([name, url]) => {
@@ -167,7 +169,7 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const fallback = '<script>if(location.pathname){fetch("/pages-download-map.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(m){var u=m[decodeURIComponent(location.pathname)];if(u)location.replace(u)}).catch(function(){})}</script>';
   const errorPage = path.join(output, '404.html');
   fs.appendFileSync(errorPage, fallback);
-  const localized=localization?localization.generate({root,output,rewrite,context:localizedContext}):{pages:0,bytes:0};
+  const localized=localization?localization.generate({root,output,rewrite,prepare,context:localizedContext}):{pages:0,bytes:0};
   const report = {revision, bytes: result.bytes-reservedBytes+localized.bytes, budget: LIMIT, hostedFiles: result.files.filter(file => !result.offloaded.has(file.name)).length+localized.pages, repositoryFiles: result.offloaded.size, protectedNativeFiles: result.protectedFiles.size,localized};
   fs.writeFileSync(path.join(output, 'pages-build.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));

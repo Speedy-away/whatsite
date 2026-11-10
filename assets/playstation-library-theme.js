@@ -6,8 +6,8 @@
   const colorScheme = document.querySelector('meta[name="color-scheme"]');
   function apply(theme) {
     root.dataset.theme = theme;
-    themeColor.content = theme === 'light' ? '#f5f5f5' : '#000000';
-    colorScheme.content = theme;
+    if (themeColor) themeColor.content = theme === 'light' ? '#f5f5f5' : '#000000';
+    if (colorScheme) colorScheme.content = theme;
   }
   let saved;
   try { saved = localStorage.getItem(key); } catch {}

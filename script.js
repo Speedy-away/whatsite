@@ -87,7 +87,20 @@ function initResponsiveShell() {
     const sidebar = document.getElementById('sidebar');
     const main = document.getElementById('main-content');
     const button = document.getElementById('mobile-sidebar-btn');
-    if (!sidebar || !main || !button) return;
+    const hasTaskbar = document.body.hasAttribute("data-home-taskbar");
+    if (!main || (!hasTaskbar && (!sidebar || !button))) return;
+
+    if (main.tagName !== 'MAIN' && !main.hasAttribute('role')) main.setAttribute('role', 'main');
+    if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
+
+    document.querySelectorAll('input').forEach((input) => {
+        const placeholder = input.getAttribute('placeholder') || '';
+        const search = input.getAttribute('type') === 'search' || /search/i.test(input.id + ' ' + input.className + ' ' + placeholder);
+        if (search && !input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby') && !input.labels?.length) {
+            input.setAttribute('aria-label', placeholder || 'Search this page');
+        }
+    });
+    if (!sidebar || !button) return;
 
     const hasMobileStyles = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
         .some((link) => (link.getAttribute('href') || '').split('?')[0].endsWith('assets/mobile.css'));
@@ -138,16 +151,6 @@ function initResponsiveShell() {
         skip.textContent = 'Skip to content';
         document.body.insertBefore(skip, document.body.firstChild);
     }
-    if (main.tagName !== 'MAIN' && !main.hasAttribute('role')) main.setAttribute('role', 'main');
-    if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
-
-    document.querySelectorAll('input').forEach((input) => {
-        const placeholder = input.getAttribute('placeholder') || '';
-        const search = input.getAttribute('type') === 'search' || /search/i.test(input.id + ' ' + input.className + ' ' + placeholder);
-        if (search && !input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby') && !input.labels?.length) {
-            input.setAttribute('aria-label', placeholder || 'Search this page');
-        }
-    });
 }
 
 /* ==========================================================================

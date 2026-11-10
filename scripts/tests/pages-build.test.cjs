@@ -109,6 +109,22 @@ test('Pages may use rewrite headroom but still enforces the planned size limit',
   } finally { fs.rmdirSync(root); }
 });
 
+test('the shared site shell replaces legacy navigation without changing the page content', () => {
+  const shell = require('../site-shell.cjs').create(path.resolve(__dirname, '../..'));
+  const main = '<main class="main-content" id="main-content"><a href="/downloads/v1.zip" download>Version 1</a><dialog id="guide">Guide</dialog></main>';
+  const original = '<html><head><link rel="stylesheet" href="/assets/site-background.css?v=2"></head><body class="site-atmosphere"><div class="sidebar" id="sidebar"><div>Legacy navigation</div></div><header class="mobile-site-header"><button id="mobile-sidebar-btn">Menu</button></header>' + main + '</body></html>';
+  const published = shell('console/ps4/index.html', original);
+  assert.match(published, /class="home-taskbar"/);
+  assert.match(published, /href="\/console\/ps4\/" aria-current="page"/);
+  assert.match(published, /href="\/#games"/);
+  assert.match(published, /\/assets\/site-shell\.css/);
+  assert.doesNotMatch(published, /mobile-sidebar-btn|site-background\.css|Legacy navigation/);
+  assert.ok(published.includes(main));
+  assert.equal(shell('console/ps4/index.html', published), published);
+  for (const route of ['hosts/index.html', 'console/ps4/whatsite-ps4.html', 'free-keys/scooby/index.html', 'downloads/tools/index.html']) {
+    assert.equal(shell(route, original), original);
+  }
+});
 test('the console sidebar links to the console picker immediately after mod menus', () => {
   const {apply} = require('../console-download-navigation.cjs');
   const html = '<nav><ul class="nav-sublist nav-console-list"><li><a href="../mods/index.html">Mods / Mod Menus</a></li></ul></nav>';

@@ -178,7 +178,7 @@ function render(ctx,page,source,code){
  output=html.mapTokens(output,token=>/^<\/body>/i.test(token)?'<nav class="site-language-links" aria-label="'+html.escape(code==='en'?'Language':ctx.languages.get(code).dictionary.Language||html.native[code])+'" style="padding:16px;text-align:center;font-size:13px;line-height:2;overflow-wrap:anywhere">'+links+'</nav>\n'+token:token);
  return output;
 }
-function generate({root,output,rewrite=(value)=>value,estimate=false,context}={}){
+function generate({root,output,rewrite=(value)=>value,prepare=(source,name)=>require('./console-download-navigation.cjs').apply(name,source),estimate=false,context}={}){
  const ctx=context||load(root);if(!ctx)return {pages:0,bytes:0,sharedFiles:0};
  assert(!ctx.preview||estimate,'Preview contexts cannot publish a partially translated site');
  let bytes=0,count=0;const sitemaps=new Map(html.codes.map(code=>[code,[]]));
@@ -187,10 +187,10 @@ function generate({root,output,rewrite=(value)=>value,estimate=false,context}={}
   // Page generators may update authored HTML before the translation manifest is regenerated.
   // Render the current source and keep untranslated/new segments in English until refresh.
   const deliveryFile=path.join(root,'docs/download-source-links.json'),delivery=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
-  const source=require('./console-download-navigation.cjs').apply(page.page,require('./source-download-notes.cjs').annotate(original,page.page,delivery));
+  const source=prepare(require('./source-download-notes.cjs').annotate(original,page.page,delivery),page.page);
   for(const code of ['en',...html.codes]){
    const rendered=rewrite(render(ctx,page,source,code),page.page),name=code==='en'?page.page:code+'/'+page.page;
-   if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;if(!page.noindex)sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(source);
+   if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;if(!page.noindex)sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(original);
    if(!estimate){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,rendered);}
   }
  }
