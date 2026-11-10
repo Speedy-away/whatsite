@@ -135,7 +135,11 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .home-menu-panel [hidden] { display: none; }
 .home-menu-panel :is(a, button):hover { background: var(--bg-tertiary); }
 .home-menu-panel i { font-size: .65rem; }
-.home-console-panel { width: min(525px, calc(100vw - 32px)); }
+.home-console-panel, .home-cheats-panel { width: min(525px, calc(100vw - 32px)); }
+@media (min-width: 961px) {
+    .home-cheats-panel { inset-inline-start: 50%; transform: translateX(-50%); }
+    [dir="rtl"] .home-cheats-panel { transform: translateX(50%); }
+}
 .home-menu-panel .home-menu-feature { justify-content: space-between; background: var(--bg-tertiary); font-weight: 750; }
 .home-menu-panel .home-menu-feature:hover { box-shadow: inset 0 0 0 1px var(--border-hover); }
 .home-menu-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding-block: 10px; }

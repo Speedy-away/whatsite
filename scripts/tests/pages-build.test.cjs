@@ -116,11 +116,17 @@ test('the shared site shell replaces legacy navigation without changing the page
   const published = shell('console/ps4/index.html', original);
   assert.match(published, /class="home-taskbar"/);
   assert.match(published, /href="\/console\/ps4\/" aria-current="page"/);
-  assert.match(published, /href="\/#games"/);
+  assert.match(published, /href="\/cheats\/">Cheats/);
   assert.match(published, /\/assets\/site-shell\.css/);
   assert.doesNotMatch(published, /mobile-sidebar-btn|site-background\.css|Legacy navigation/);
   assert.ok(published.includes(main));
   assert.equal(shell('console/ps4/index.html', published), published);
+  const cheats = fs.readFileSync(path.resolve(__dirname, "../../cheats/index.html"), "utf8");
+  const directory = shell("cheats/index.html", cheats);
+  assert.match(directory, /href="\/cheats\/" aria-current="page">Cheats/);
+  const menu = directory.match(/<details data-current class="home-menu home-cheats-menu"[^>]*>([\s\S]*?)<\/details>/)[1];
+  const gameLinks = html => [...html.matchAll(/href="(\/games\/[^"]+)"/g)].map(match => match[1]).sort();
+  assert.deepEqual(gameLinks(menu), gameLinks(cheats));
   for (const route of ['hosts/index.html', 'console/ps4/whatsite-ps4.html', 'free-keys/scooby/index.html', 'downloads/tools/index.html']) {
     assert.equal(shell(route, original), original);
   }

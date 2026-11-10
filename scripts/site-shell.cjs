@@ -6,7 +6,7 @@ const {eligible, relativePath} = require('./site-public-pages.cjs');
 const {attributes, canonical, mapTokens, origin} = require('./localized-html.cjs');
 const {tag: languageScript, apply: refreshLanguageScript} = require('./language-loader.cjs');
 
-const stylesheet = '<link rel="stylesheet" href="/assets/site-shell.css?v=2">';
+const stylesheet = '<link rel="stylesheet" href="/assets/site-shell.css?v=3">';
 const themeScript = '<script src="/assets/playstation-library-theme.js?v=3"></script>';
 const navigationScript = '<script defer src="/assets/home-navigation.js?v=20261110-phone"></script>';
 const critical = '<style data-critical-bg>html,body{background:#000;color-scheme:dark}html[data-theme="light"],html[data-theme="light"] body{background:#f5f5f5;color-scheme:light}</style>';
@@ -18,7 +18,7 @@ function mode(file, html) {
       /\bid=["']receiver-catalog["']/.test(html)) return '';
   if (html.includes('id="sidebar"')) return 'sidebar';
   if (/\bclass=["'][^"']*\bps-library\b/.test(html)) return 'library';
-  if (file === '404.html' || (file.startsWith('games/') && /<main\b/i.test(html))) return 'standalone';
+  if (file === '404.html' || file === 'cheats/index.html' || (file.startsWith('games/') && /<main\b/i.test(html))) return 'standalone';
   return '';
 }
 
@@ -36,9 +36,8 @@ function currentHeader(header, file, html) {
 function create(root) {
   const index = path.join(root, 'index.html');
   const home = fs.existsSync(index) ? fs.readFileSync(index, 'utf8') : '';
-  const template = home.match(/<header class="home-taskbar">[\s\S]*?<\/header>/)?.[0];
-  if (!template) return (_file, html) => html;
-  const header = template.replace('href="#games"', 'href="/#games"');
+  const header = home.match(/<header class="home-taskbar">[\s\S]*?<\/header>/)?.[0];
+  if (!header) return (_file, html) => html;
   return (file, html) => {
     file = relativePath(file);
     if (html.includes('class="home-taskbar"')) return html;

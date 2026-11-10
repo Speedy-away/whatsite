@@ -36,7 +36,7 @@
 .home-page .search-input::placeholder { color: var(--text-muted); }
 .home-search-status { color: var(--home-muted); font-size: 12px; margin: 16px 0; }
 .home-page .no-results { padding: 48px 16px; border-radius: 12px; background: var(--bg-secondary); }
-.home-page .no-results h3 { font-size: 20px; margin: 12px 0 8px; }
+.home-page .no-results h2 { font-size: 20px; margin: 12px 0 8px; }
 .home-page .no-results p { color: var(--home-muted); margin-bottom: 20px; }
 .home-platform-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 36px; }
 .home-platform { display: flex; align-items: center; gap: 18px; min-height: 88px; padding: 12px 8px; border-radius: 8px; color: var(--text-primary); }
@@ -47,7 +47,7 @@
 .home-game-mark img { height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 5px; filter: none; opacity: 1; }
 .home-platform-mark i { font-size: 30px; color: var(--text-secondary); }
 .home-platform-copy { min-width: 0; flex: 1; }
-.home-platform h3 { font-size: 15px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 5px; }
+.home-platform :is(h2, h3) { font-size: 15px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 5px; }
 .home-platform-copy > span { display: block; color: var(--home-muted); font-size: 12px; line-height: 1.5; }
 .home-platform > i { color: var(--home-muted); font-size: 12px; transition: transform .18s; }
 .home-platform:hover, .home-platform.game-card:hover { color: var(--accent-light); background: var(--accent-glow); }
