@@ -35,31 +35,51 @@ function range(html, tag, predicate) {
   }
   return null;
 }
+const gameLibraries = {
+  ps4: 'PlayStation',
+  ps5: 'PlayStation',
+  xbox: 'Xbox',
+  xbox360: 'Xbox',
+  wii: 'Nintendo',
+  wiiu: 'Nintendo',
+  'nintendo-switch': 'Nintendo',
+  ds: 'Nintendo',
+  '3ds': 'Nintendo'
+};
+
 function applyLibraryCard(html, platform) {
-  const id = 'id="playstation-game-library"';
+  const family = gameLibraries[platform];
+  const playStation = family === 'PlayStation';
+  const route = playStation ? libraryRoutes.directory : 'console/' + family.toLowerCase() + '-game-library/';
+  const library = '/' + route + (playStation ? '' : '?platform=' + platform);
+  const id = 'id="' + family.toLowerCase() + '-game-library"';
   const legacy = range(html, 'section', opening => opening.includes(id));
   if (legacy) html = html.slice(0, legacy.start) + html.slice(legacy.end);
   const directory = range(html, 'section', opening => opening.includes('id="game-directories"'));
   if (!directory) return html;
 
-  const library = '/' + libraryRoutes.directory;
-  const name = "WWB’s PS4 and PS5 Game Library";
+  const name = family + ' Game Library';
+  const {resource, link} = require('./build-console-guides.cjs');
+  const detail = playStation
+    ? 'Filter by genre or title ID and compare package links, regions and versions.'
+    : 'Search game titles, browse genre labels where available and open the original source listings.';
+  const card = resource(name, detail, link(library, 'Open the game library'))
+    .replace('<article class="guide-resource"', '<article ' + id + ' class="guide-resource game-directory-card" data-card-art="fixed"')
+    .replace('<h3>', '<span class="library-card-brand"><img src="/assets/images/wwbsgames.svg" alt="WWBsgames" width="152" height="36" loading="lazy"></span><h3>');
+  let block = html.slice(directory.start, directory.end);
+  const existing = range(block, 'article', opening => opening.includes(id));
+  block = existing
+    ? block.slice(0, existing.start) + card + block.slice(existing.end)
+    : block.replace('<div class="games-grid">', opening => opening + card + '\n');
+  block = block.replace(/<p class="section-subtitle">[^<]*<\/p>/,
+    '<p class="section-subtitle">Browse WWBsgames or choose an external download source.</p>');
+  html = html.slice(0, directory.start) + block + html.slice(directory.end);
   const ps5Downloads = '/console/ps5/game-downloads.html';
-  const block = html.slice(directory.start, directory.end);
-  if (!block.includes(id)) {
-    const {resource, link} = require('./build-console-guides.cjs');
-    const card = resource(name, 'Search by title or title ID and compare package links, regions and versions.', link(library, 'Open the game library'))
-      .replace('<article class="guide-resource"', `<article ${id} class="guide-resource game-directory-card" data-card-art="fixed"`);
-    const updated = block.replace('<div class="games-grid">', opening => opening + card + '\n')
-      .replace(/<p class="section-subtitle">[^<]*<\/p>/,
-        '<p class="section-subtitle">Browse WWB’s library or choose an external download source.</p>');
-    html = html.slice(0, directory.start) + updated + html.slice(directory.end);
-  }
   return html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/, nav => {
-    nav = nav.replace('<a href="' + library + '">PlayStation Game Library</a>', '<a href="' + library + '">' + name + '</a>');
-    if (!nav.includes('href="' + library + '"')) nav = nav.replace('</nav>', `<a href="${library}">${name}</a></nav>`);
+    nav = nav.replace(/WWB’s PS4 and PS5 Game Library/g, 'PlayStation Game Library');
+    if (!nav.includes('href="' + library + '"')) nav = nav.replace('</nav>', '<a href="' + library + '">' + name + '</a></nav>');
     if (platform === 'ps4' && !nav.includes('href="' + ps5Downloads + '"')) {
-      nav = nav.replace('</nav>', `<a href="${ps5Downloads}">PS5 game downloads</a></nav>`);
+      nav = nav.replace('</nav>', '<a href="' + ps5Downloads + '">PS5 game downloads</a></nav>');
     }
     return nav;
   });
@@ -115,7 +135,6 @@ function apply(file, html, data = registry()) {
       }
     }
   }
-  if (current === destination && ['ps4', 'ps5'].includes(platform.id)) html = applyLibraryCard(html, platform.id);
   if (current === destination && platform.directoryMode === 'curated-library') {
     const block = directorySection(platform);
     const existing = range(html, 'section', tag => /\bid="game-directories"/.test(tag));
@@ -127,6 +146,7 @@ function apply(file, html, data = registry()) {
       if (position !== undefined) html = html.slice(0, position) + block + html.slice(position);
     }
   }
+  if (current === destination && gameLibraries[platform.id]) html = applyLibraryCard(html, platform.id);
   if (current === hubFile && platform.id === 'ps4') {
     const existingCard = /<article\b[\s\S]*?<\/article>/g;
     let found = false;

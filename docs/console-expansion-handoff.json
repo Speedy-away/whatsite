@@ -1,4 +1,68 @@
 {
+  "wwbsgamesCatalogs20261110": {
+    "date": "2026-11-10",
+    "status": "Verified locally and included in the main branch release. GitHub Pages deployment runs separately.",
+    "pages": [
+      "console/xbox-game-library/index.html",
+      "console/nintendo-game-library/index.html",
+      "console/playstation-library/index.html"
+    ],
+    "navigation": "Added WWBsgames cards to the seven matching Xbox and Nintendo game download pages. Each opens the relevant platform filter. Updated the PS4 and PS5 library cards and reused the site logo in the new WWBsgames wordmark across all three libraries.",
+    "sources": {
+      "xbox": {
+        "url": "https://vimm.net/vault/Xbox",
+        "listings": 2287,
+        "genres": 1641,
+        "versionSpecificLinks": 33
+      },
+      "xbox360": {
+        "url": "https://dlxbgame.com/",
+        "listings": 7893
+      },
+      "wii": {
+        "url": "https://nswgf.com/category/game-wii/",
+        "listings": 1073,
+        "category": 5751
+      },
+      "wiiu": {
+        "url": "https://nswgf.com/category/game-wii-u/",
+        "listings": 78,
+        "category": 5872
+      },
+      "nintendo-switch": {
+        "url": "https://nswgf.com/category/switch/",
+        "listings": 15869,
+        "category": 6829
+      },
+      "ds": {
+        "url": "https://nswgf.com/category/ds/",
+        "listings": 357,
+        "category": 7896
+      },
+      "3ds": {
+        "url": "https://nswgf.com/category/3ds/",
+        "listings": 733,
+        "category": 5884
+      }
+    },
+    "xboxMetadata": "Vimm snapshots cover A–Z and the number group with all regions, versions and discs selected. M and S have second pages. Region, version, language and original listing query parameters are retained. Vimm game pages can require a human-verification step. Original Xbox genres use exact normalized title matches against Xbox Games Synopsis.zip from jazzycian/XBMC4Gamers-Synopsis-Information at 8a3504984ebb0534dc667276b0bbbb6b89ebc9b4. Original Xbox defaults to list view because the Vault browse tables omit cover URLs.",
+    "playStation": "Added a genre filter and labels to 21,059 of 22,191 PlayStation listings using source categories from DLPSGame and DownloadGamePSP. Labels carry to other PlayStation listings only when same-platform title or title-ID matches agree. The existing index and detail shards retain their exact contents.",
+    "delivery": "Xbox and Nintendo rows open the original title listing. Artwork URLs stay at the source. No game packages were transferred and the download archive was not involved.",
+    "checks": "Verified source totals, per-platform routes, genre and title filtering, list and grid views, pagination, mobile widths, dark and light mode, PlayStation package dialogs and the WWBsgames logo in Edge. All 24 focused tests passed. Full Pages staging passed the artifact verifier with zero link issues.",
+    "search": "The sitemap contains 504 verified canonical URLs. The three libraries have CollectionPage metadata and matching search and social descriptions. Xbox, Nintendo and the Free Cheats directory also appear in the 20 localized sitemaps.",
+    "localSnapshots": "tmp/wwbsgames-20261110/wwb-catalogs",
+    "regenerate": {
+      "command": "node scripts/import-wwb-game-catalogs.cjs <snapshot-folder> [platform ...]",
+      "wordpress": "For each platform save <platform>-<page>.json with {total,pages,rows} from the WP API response. Read total and pages from X-WP-Total and X-WP-TotalPages. Use per_page=100, orderby=id and order=asc. DLXBGame uses all posts, NSWGF uses the platform category IDs above, and PlayStation uses the category IDs in playstationLibraryLegacyPlatforms20261110 and playstationGameLibrary20261109. WordPress rows use id, link, title, categories and yoast_head_json. Save category records in <host>-categories.json as {rows}. Optional <platform>-covers.json maps post ID to the first content image URL when the preview image is absent.",
+      "xbox": "Save each Vimm letter group and number group as a JSON-encoded HTML string in xbox-full-<group>.json. Fetch page 1 with action=filters, countries_all=1, version=all and discs=all, then follow the pagination with the same session. Save additional pages as xbox-full-<group>-<page>.json. Save the title and genre tags from the Folderized synopsis default.xml entries as [{title,genre}] in xbox-synopsis.json."
+    }
+  },
+  "responsiveCatalogueRows20261110": {
+    "date": "2026-11-10",
+    "status": "Implemented in the main site checkout.",
+    "changes": "Catalogue grids fit up to four cards per row from the available content width. This includes the PS4 and PS5 hub categories, Switch homebrew apps, and the PlayStation library cover view. GTA V and other compact game thumbnails retain their aspect ratio as cards resize. Switch download labels wrap within their cards.",
+    "checks": "Verified 15 browser layouts from 390px to 1920px, including the GTA V menus, tools and Lua sections, both PlayStation hubs, Switch apps, PC Ports, the Xbox library and PlayStation covers. No horizontal overflow was observed. The GTA V full-size image preview opened successfully."
+  },
   "playstationLibraryLegacyPlatforms20261110": {
     "date": "2026-11-10",
     "page": "console/playstation-library/index.html",

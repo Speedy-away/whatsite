@@ -10,7 +10,7 @@ const LIMIT = 900 * 1024 * 1024;
 const libraryArtwork = new Set([
   'xmb-wave.svg', 'xmb-wave-dark.svg', 'share-black-wave-v1.png',
   'bloodborne.webp', 'god-of-war-iii.webp', 'astro-bot.png'
-].map(name => 'assets/images/playstation-library/' + name));
+].map(name => 'assets/images/playstation-library/' + name).concat('assets/images/wwbsgames.svg'));
 const legacyLibraryShard = /^assets\/playstation-library\/legacy\/([a-f0-9]{2})\.json$/;
 const encodePath = name => name.split('/').map(encodeURIComponent).join('/');
 function rawURL(name, revision = 'main') {
@@ -126,7 +126,8 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const addAds = (source, name) => publishAds(name, source);
   const {apply: addConsoleDownloadNav} = require('./console-download-navigation.cjs');
   const siteShell = require('./site-shell.cjs').create(root);
-  const prepare = (source, name) => addConsoleDownloadNav(name, siteShell(name, source));
+  const prepare = (source, name) => addConsoleDownloadNav(name, siteShell(name, source))
+    .replaceAll('href="/assets/catalog-layout.css?v=1"', 'href="/assets/catalog-layout.css?v=2"');
   const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true,prepare,rewrite:addAds}):{bytes:0};
   const reservedBytes = Math.max(0, estimatedLocales.bytes);
   // Keep space for URL rewrites when possible. The final artifact check

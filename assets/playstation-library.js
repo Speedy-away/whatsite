@@ -31,7 +31,7 @@ function searchText(game) {
     game.platform === 'PSP' ? 'PlayStation Portable PPSSPP' : 'PlayStation Vita PSVita';
   return normalize([title, numbered, roman, blackOps && `BO${blackOps} BO ${blackOps}`,
     gta && `GTA${gta} GTA ${gta} GTA ${romanNumerals[gta]}`, game.platform, platform,
-    ...(game.titleIds || []), game.source].filter(Boolean).join(' '));
+    ...(game.titleIds || []), ...(game.genres || []), game.source].filter(Boolean).join(' '));
 }
 const regionKey = value => ({US: 'USA', EU: 'EUR'}[value] || value || 'Unspecified');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
@@ -204,8 +204,8 @@ function renderGame(id, game, initialRegion, initialKind, related) {
 
 async function library() {
   const controls = $('catalog-controls');
-  const fields = ['query', 'platform', 'region', 'kind', 'sort'].map($);
-  const [search, platform, region, kind, sort] = fields;
+  const fields = ['query', 'platform', 'genre', 'region', 'kind', 'sort'].map($);
+  const [search, platform, genre, region, kind, sort] = fields;
   const results = $('results'), state = $('catalog-state'), dialog = $('game-dialog');
   const more = $('more-results'), clear = $('clear-filters'), view = $('view-toggle');
   let visible = pageSize, list = false, data, titles, activeGame, request = 0;
@@ -251,13 +251,14 @@ async function library() {
     const terms = normalize(search.value).split(/\s+/).filter(Boolean);
     const filtered = sortTitles(sort.value).filter(g =>
       (!platform.value || g.platform === platform.value) && terms.every(term => g.search.includes(term)) &&
+      (!genre.value || g.genres.includes(genre.value)) &&
       (!region.value || g.regions?.includes(region.value)) && (!kind.value || g.facets?.some(facet => {
         const [r, k] = facet.split(':');
         return k === kind.value && (!region.value || r === region.value);
       })));
     $('results-count').textContent = filtered.length === titles.length ? countLabel('listing-count', titles.length) :
       msg('filtered-count', {count: fmt.format(filtered.length), total: fmt.format(titles.length)});
-    clear.hidden = ![search, platform, region, kind].some(f => f.value) && sort.value === 'recent';
+    clear.hidden = ![search, platform, genre, region, kind].some(f => f.value) && sort.value === 'recent';
     state.hidden = filtered.length > 0;
     state.textContent = msg('no-games');
     more.hidden = visible >= filtered.length;
@@ -266,7 +267,7 @@ async function library() {
     const cards = filtered.slice(start, visible).map(g => `
       <a href="${gameUrl(g.id)}" class="game-card" data-game="${g.id}">
         ${cover(g, true)}
-        <div><p class="card-meta"><strong>${esc(g.platform)}</strong></p><h3>${esc(g.name)}</h3></div>
+        <div><p class="card-meta"><strong>${esc(g.platform)}</strong></p><h3>${esc(g.name)}</h3>${g.genres.length ? `<p class="genre-labels">${g.genres.map(name => `<span>${esc(name)}</span>`).join('')}</p>` : ''}</div>
       </a>`).join('');
     if (reset) results.innerHTML = cards; else results.insertAdjacentHTML('beforeend', cards);
     if (!reset) results.children[start]?.focus();
@@ -347,8 +348,15 @@ async function library() {
     });
   }
   try {
-    data = await index();
-    titles = data.titles.map(g => ({...g, timestamp: listedDate(g.date) || 0, search: searchText(g)}));
+    const [catalog, genres] = await Promise.all([index(), json(dataRoot + 'genres.json?v=1').catch(() => ({}))]);
+    data = catalog;
+    titles = data.titles.map(g => {
+      const game = {...g, genres: genres[g.id] || []};
+      return {...game, timestamp: listedDate(g.date) || 0, search: searchText(game)};
+    });
+    const genreOptions = [...new Set(titles.flatMap(game => game.genres))].sort();
+    genre.append(...genreOptions.map(name => option(name)));
+    genre.disabled = !genreOptions.length;
     region.append(...[...new Set(titles.flatMap(g => g.regions || []))].sort().map(regionOption));
     $('library-totals').textContent = countLabel('listing-count', data.stats.titles) + ' · ' + countLabel('package-count', data.stats.links);
     loadFilters();

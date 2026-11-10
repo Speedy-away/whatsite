@@ -16,6 +16,7 @@ function apply(file,html){
  const compactFixes = file === 'console/ps4/game-downloads.html' && html.includes('id="fpkg-fixes"');
  if((html.includes('game-directory-card') || compactFixes)&&!html.includes('/assets/game-directory-cards.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/game-directory-cards.css?v=1">\n</head>');
  if(compactFixes)html=html.replace('/assets/game-directory-cards.css?v=1','/assets/game-directory-cards.css?v=2');
+ if(html.includes('class="library-card-brand"'))html=html.replace(/\/assets\/game-directory-cards\.css\?v=\d+/,'/assets/game-directory-cards.css?v=3');
  return html;
 }
 module.exports={apply};

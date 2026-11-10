@@ -22,6 +22,8 @@ body[data-catalog-page] .main-content .games-grid:has(> .game-directory-card) {
  aspect-ratio:auto;
  object-fit:contain;
 }
+.library-card-brand { display: block; width: 134px; }
+.library-card-brand img { display: block; width: 100%; height: auto; }
 .main-content .game-directory-card h3 { font-size:1.05rem; margin:0; }
 .main-content .game-directory-card p { font-size:.85rem; line-height:1.5; margin:0; }
 .main-content .game-directory-card .guide-links { margin-top:4px; padding-top:4px; }

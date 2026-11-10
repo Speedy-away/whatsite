@@ -1,8 +1,8 @@
 'use strict';
 const fs = require('node:fs');
 const {pages, relativePath, eligible} = require('./site-public-pages.cjs');
-const grids = new Set(('games-grid cheats-grid tools-grid console-grid app-grid pc-emu-grid ports-grid mods-console-grid core-download-grid switch-mod-grid switch-theme-grid ps2-grid menu-resource-grid menu-game-grid ps3-game-grid ps3-theme-grid patch-card-grid psp-grid vita-grid wii-more-grid wiiu-grid wiiu-theme-grid themes-console-grid xbox-app-grid console-download-grid').split(' '));
-const stylesheet = '<link rel="stylesheet" href="/assets/catalog-layout.css?v=1">';
+const grids = new Set(('games-grid cheats-grid tools-grid console-grid app-grid pc-emu-grid ports-grid mods-console-grid core-download-grid switch-mod-grid switch-theme-grid ps2-grid menu-resource-grid menu-game-grid ps3-game-grid ps3-theme-grid patch-card-grid psp-grid vita-grid wii-more-grid wiiu-grid wiiu-theme-grid themes-console-grid xbox-app-grid console-download-grid switch-app-grid themes-gallery guide-grid home-platform-grid').split(' '));
+const stylesheet = '<link rel="stylesheet" href="/assets/catalog-layout.css?v=2">';
 
 function apply(file, html) {
   file = relativePath(file);

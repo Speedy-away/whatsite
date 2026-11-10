@@ -1,32 +1,28 @@
-/* Adapt to the available content width, including sidebar state and browser zoom.
-   Keep prose, galleries, setup panels and the independent host layouts separate. */
+/* Size catalogue rows from the grid's available width, including side rails and zoom. */
 body[data-catalog-page] .main-content .container {
   max-width: 2000px;
   padding-inline: max(clamp(16px, 2.5vw, 48px), env(safe-area-inset-left)) max(clamp(16px, 2.5vw, 48px), env(safe-area-inset-right));
-  container: catalogue / inline-size;
 }
-body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) {
-  --catalog-columns: 1;
+body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid, .switch-app-grid, .themes-gallery, .guide-grid, .home-platform-grid) {
   --catalog-fill: auto-fit;
   --catalog-gap: clamp(16px, 1.5vw, 24px);
   display: grid;
-  /* auto-fit also fills the row when search leaves fewer than five cards. */
-  grid-template-columns: repeat(var(--catalog-fill), minmax(min(100%, calc((100% + var(--catalog-gap)) / var(--catalog-columns) - var(--catalog-gap) - 1px)), 1fr)) !important;
+  /* Reserve at least 245px per track when space permits, with a maximum of four tracks. */
+  grid-template-columns: repeat(var(--catalog-fill), minmax(min(100%, max(245px, calc((100% + var(--catalog-gap)) / 4 - var(--catalog-gap) - 1px))), 1fr)) !important;
   gap: var(--catalog-gap);
   min-width: 0;
 }
-body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) > * { min-width: 0; max-width: 100%; }
-body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) > [hidden] { display: none !important; }
-body.ports-page .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-fill: auto-fill; }
-@container catalogue (min-width: 600px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 2; } }
-@container catalogue (min-width: 960px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 3; } }
-@container catalogue (min-width: 1320px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 4; } }
-@container catalogue (min-width: 1480px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 5; } }
-/* Media-query fallback for older browsers without container queries. */
+body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid, .switch-app-grid, .themes-gallery, .guide-grid, .home-platform-grid) > * { min-width: 0; max-width: 100%; }
+body.ports-page .main-content .ports-grid { --catalog-fill: auto-fill; }
 body[data-catalog-page] .main-content [hidden] { display: none !important; }
-@supports not (container-type: inline-size) {
-  @media (min-width: 648px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 2; } }
-  @media (min-width: 1320px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 3; } }
-  @media (min-width: 1740px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 4; } }
-  @media (min-width: 1920px) { body[data-catalog-page] .main-content :is(.games-grid, .cheats-grid, .tools-grid, .console-grid, .app-grid, .pc-emu-grid, .ports-grid, .mods-console-grid, .core-download-grid, .switch-mod-grid, .switch-theme-grid, .ps2-grid, .menu-resource-grid, .menu-game-grid, .ps3-game-grid, .ps3-theme-grid, .patch-card-grid, .psp-grid, .vita-grid, .wii-more-grid, .wiiu-grid, .wiiu-theme-grid, .themes-console-grid, .xbox-app-grid, .console-download-grid) { --catalog-columns: 5; } }
+
+/* Keep the media frame at its intended aspect ratio as the card width changes. */
+body.compact-game-page[data-catalog-page] .main-content :is(.cheat-image, .game-image) {
+  max-height: none;
+}
+
+/* Release notes can make the Switch download label span multiple lines. */
+body[data-catalog-page] .switch-app-actions .btn {
+  flex-wrap: wrap;
+  white-space: normal;
 }

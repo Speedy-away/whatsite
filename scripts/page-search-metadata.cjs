@@ -460,7 +460,8 @@ function transform(file, before, options = {}) {
   meta('name', 'twitter:description', description);
   meta('name', 'twitter:image', image);
   meta('name', 'twitter:image:alt', imageAlt);
-  const schema = !noindex && !redirect ? pageSchema({canonical, title, description, keywords, image, imageInfo, metadata: editorial}) : null;
+  const schemaMetadata = {...editorial, ...override};
+  const schema = !noindex && !redirect ? pageSchema({canonical, title, description, keywords, image, imageInfo, metadata: schemaMetadata}) : null;
   const schemaTag = schema ? `<script id="site-page-schema" type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>` : '';
   let foundSchema = false;
   head = head.replace(/(<script\b(?:"[^"]*"|'[^']*'|[^'">])*>)[\s\S]*?<\/script>/gi, (block, opening) => {
@@ -473,6 +474,6 @@ function transform(file, before, options = {}) {
   const after = before.replace(/(<head\b[^>]*>)[\s\S]*?(<\/head>)/i, (_, open, close) => open + head + close);
   assert.equal(before.split(/<body\b/i)[1], after.split(/<body\b/i)[1], `${relative}: body modified`);
   assert.equal(/noindex/i.test(before.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)[1]), /noindex/i.test(head), `${relative}: indexing changed`);
-  return {html: after, metadata: {page: relative, title, description, keywords, canonical, noindex, redirect, image, structuredData: !noindex && !redirect ? editorial?.type || 'WebPage' : null}, skipped: false};
+  return {html: after, metadata: {page: relative, title, description, keywords, canonical, noindex, redirect, image, structuredData: schema ? schemaMetadata.type || 'WebPage' : null}, skipped: false};
 }
 module.exports = {transform, protectedFile, normalizedFile, getModMetadata};

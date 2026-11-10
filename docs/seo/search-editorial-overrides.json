@@ -1,4 +1,85 @@
 {
+  "index.html": {
+    "title": "Game Downloads, Console Guides & Free Cheats | whatwhatboy",
+    "description": "Browse PlayStation, Xbox and Nintendo game libraries, free cheats and trainers by game, console homebrew guides, emulators, mods and PC tools.",
+    "keywords": [
+      "game downloads",
+      "WWBsgames",
+      "PlayStation Game Library",
+      "Xbox Game Library",
+      "Nintendo Game Library",
+      "free game cheats",
+      "mod menus",
+      "PC game trainers",
+      "console homebrew",
+      "PlayStation setup guides",
+      "Xbox 360 homebrew",
+      "Nintendo Switch homebrew",
+      "Steam Deck tools",
+      "PC emulators",
+      "Lua scripts"
+    ]
+  },
+  "cheats/index.html": {
+    "title": "Free Game Cheats, Mod Menus & Trainers | whatwhatboy",
+    "description": "Find free cheats, mod menus, scripts and trainers by game. Browse GTA V, Counter-Strike 2, Call of Duty, Red Dead Redemption 2 and more.",
+    "type": "CollectionPage",
+    "keywords": [
+      "free PC game cheats",
+      "game cheats directory",
+      "mod menus by game",
+      "PC game trainers",
+      "GTA 5 cheats",
+      "Counter-Strike 2 cheats",
+      "CS2 cheats",
+      "Call of Duty cheats",
+      "Black Ops mod menus",
+      "RDR2 trainers",
+      "Garry's Mod Lua scripts",
+      "Team Fortress 2 cheats",
+      "FiveM cheats",
+      "Left 4 Dead 2 cheats",
+      "Battlefield tools",
+      "Counter-Strike 1.6 cheats"
+    ]
+  },
+  "console/xbox-game-library/index.html": {
+    "title": "Xbox & Xbox 360 Game Library | WWBsgames by whatwhatboy",
+    "description": "Browse Original Xbox and Xbox 360 game listings on WWBsgames. Search by title, filter by platform or genre, and open the original source listing.",
+    "type": "CollectionPage",
+    "keywords": [
+      "WWBsgames Xbox library",
+      "Xbox game library",
+      "Original Xbox games",
+      "Xbox 360 games",
+      "Xbox game downloads",
+      "Xbox 360 game downloads",
+      "Xbox game list by genre",
+      "Vimm's Lair Xbox",
+      "DLXBGame Xbox 360"
+    ]
+  },
+  "console/nintendo-game-library/index.html": {
+    "title": "Nintendo Game Library | WWBsgames by whatwhatboy",
+    "description": "Browse Nintendo Switch, Wii, Wii U, DS and 3DS game listings on WWBsgames. Search by title or genre and open the original source listing.",
+    "type": "CollectionPage",
+    "keywords": [
+      "WWBsgames Nintendo library",
+      "Nintendo game library",
+      "Nintendo Switch games",
+      "Nintendo Wii games",
+      "Nintendo Wii U games",
+      "Nintendo DS games",
+      "Nintendo 3DS games",
+      "Switch game downloads",
+      "Wii game downloads",
+      "Wii U game downloads",
+      "Nintendo DS game downloads",
+      "3DS game downloads",
+      "Nintendo games by genre",
+      "NSWGF"
+    ]
+  },
   "console/ps4/themes.html": {
     "keywords": [
       "PS4 themes",
@@ -1969,9 +2050,13 @@
     ]
   },
   "console/playstation-library/index.html": {
-    "title": "PlayStation Game Library • PS2, PS3, PS4, PS5, PSP & PS Vita | whatwhatboy",
-    "description": "Browse PS2, PS3, PS4, PS5, PSP and PS Vita games, plus DLC and updates where available. Search by game name or title ID and open the download host.",
+    "title": "PlayStation Game Library: PS2 to PS5, PSP & Vita | whatwhatboy",
+    "description": "Browse PS2, PS3, PS4, PS5, PSP and PS Vita games, DLC and updates. Search by title or CUSA and PPSA ID, or filter by platform, genre and region.",
+    "type": "CollectionPage",
     "keywords": [
+      "WWBsgames PlayStation library",
+      "PlayStation game genre filter",
+      "PlayStation game title ID search",
       "PS2 game library",
       "PS3 game library",
       "PSP game library",
@@ -2230,11 +2315,16 @@
     ]
   },
   "console/game-downloads/index.html": {
-    "title": "Console Game Downloads: Vimm, DLPSGame & More | whatwhatboy",
-    "description": "Find console game directories by platform, including Vimm’s Lair, DLPSGame, PSP and Vita sources, Nintendo Switch, Wii, GameCube and 3DS listings.",
+    "title": "Console Game Downloads by Platform | whatwhatboy",
+    "description": "Choose a console to find PlayStation, Xbox and Nintendo game libraries and original download directories, including Vimm’s Lair, DLPSGame and DownloadGamePSP.",
+    "type": "CollectionPage",
     "keywords": [
       "console game downloads",
       "console game directories",
+      "PlayStation Game Library",
+      "Xbox Game Library",
+      "Nintendo Game Library",
+      "WWBsgames",
       "Vimm’s Lair",
       "DLPSGame",
       "DownloadGamePSP",
@@ -2279,14 +2369,20 @@
     ]
   },
   "games-downloads/index.html": {
-    "title": "Game Downloads: Launchers, Fan Projects & Console Links | whatwhatboy",
-    "description": "Browse game launchers, Minecraft Legacy and console game directories, with links to the matching download pages.",
+    "title": "PC & Console Game Downloads | whatwhatboy",
+    "description": "Find PC game downloads and launchers including Minecraft Legacy, or choose a console to browse PlayStation, Xbox, Nintendo and retro game listings.",
+    "type": "CollectionPage",
     "keywords": [
       "game downloads",
       "game launchers",
       "Minecraft Legacy",
       "LCE Emerald Launcher",
-      "console game directories"
+      "console game directories",
+      "PC game downloads",
+      "PlayStation games",
+      "Xbox games",
+      "Nintendo games",
+      "retro game directories"
     ]
   },
   "console/index.html": {

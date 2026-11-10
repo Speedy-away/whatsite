@@ -12,7 +12,7 @@ test('responsive integration preserves card markup, generator class hooks and do
   assert.ok(result.includes('<div class="ports-grid"><article>'));
   assert.ok(result.includes('https://publisher.example/v1/package.zip'));
   assert.equal(layout.apply('pc/ports.html', result), result);
-  assert.equal(result.replace(' data-catalog-page', '').replace('<link rel="stylesheet" href="/assets/catalog-layout.css?v=1">\n', ''), fixture);
+  assert.equal(result.replace(' data-catalog-page', '').replace('<link rel="stylesheet" href="/assets/catalog-layout.css?v=2">\n', ''), fixture);
 });
 
 test('packaged helpers, migration redirects and independent host pages remain byte identical', () => {

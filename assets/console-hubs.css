@@ -98,7 +98,7 @@ body.console-hub .main-content #console-hub-setup .console-hub-setup-grid {
 @media (prefers-reduced-motion: reduce) { .console-hub .guide-resource, .console-hub-shortcuts > a { transition: none; } .console-hub .console-hub-library .guide-resource:hover { transform: none; } }
 
 /* Compact hub categories on both consoles, including two-card groups. */
-body.console-hub[data-catalog-page] .main-content .console-hub-group .console-hub-library { grid-template-columns: repeat(auto-fill, minmax(240px, 300px)) !important; gap: 18px; }
+body.console-hub[data-catalog-page] .main-content .console-hub-group .console-hub-library { --catalog-fill: auto-fill; --catalog-gap: 18px; max-width: 1254px; }
 .console-hub .console-hub-library .guide-resource > img, .console-hub .console-hub-library .guide-card-media, .console-hub .console-hub-library .category-art { height: 160px; max-height: 160px; aspect-ratio: auto; }
 .console-hub .console-hub-library .category-art img { height: 100%; object-fit: contain; }
 @media(max-width:600px) { body.console-hub[data-catalog-page] .main-content .console-hub-group .console-hub-library { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 12px; } .console-hub .console-hub-library .guide-resource > img, .console-hub .console-hub-library .guide-card-media, .console-hub .console-hub-library .category-art { height: 110px; max-height:110px; } }

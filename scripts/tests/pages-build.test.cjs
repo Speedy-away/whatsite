@@ -166,13 +166,13 @@ test('Pages publishes exact-revision routes for offloaded legacy library details
     fs.rmSync(root, {recursive: true, force: true});
   }
 });
-test('Pages retains the library waves and share image when artwork is offloaded', () => {
+test('Pages retains the library waves, share image and logo when artwork is offloaded', () => {
   const mib = 1024 * 1024;
   const base = 'assets/images/playstation-library/';
-  const essentials = ['xmb-wave-dark.svg', 'share-black-wave-v1.png'].map(name => base + name);
+  const essentials = [base + 'xmb-wave-dark.svg', base + 'share-black-wave-v1.png', 'assets/images/wwbsgames.svg'];
   const thumbnail = base + 'dlpsgame/example.jpg';
-  const sizes = new Map([[thumbnail, 3 * mib], ...essentials.map(name => [name, mib / 2])]);
-  const result = plan(path.resolve(__dirname, '../..'), [...sizes.keys()], 'b'.repeat(40), sizes, 899 * mib);
+  const sizes = new Map([[thumbnail, 3 * mib], ...essentials.map(name => [name, mib / 4])]);
+  const result = plan(path.resolve(__dirname, '../..'), [...sizes.keys()], 'b'.repeat(40), sizes, 899.25 * mib);
   assert.ok(result.offloaded.has(thumbnail));
   for (const file of essentials) assert.ok(!result.offloaded.has(file));
   assert.equal(result.bytes, LIMIT);
