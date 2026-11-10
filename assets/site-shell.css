@@ -79,7 +79,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .home-brand { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: var(--text-primary); font-weight: 750; letter-spacing: -.035em; }
 .home-brand img { flex: none; object-fit: contain; }
 .home-task-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px; }
-.home-task-links > a, .home-menu > summary {
+.home-menu > summary {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,7 +94,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     text-align: center;
     cursor: pointer;
 }
-.home-task-links > a:hover, .home-menu > summary:hover, .home-menu[open] > summary { background: var(--bg-tertiary); color: var(--text-primary); }
+.home-menu > summary:hover, .home-menu[open] > summary { background: var(--bg-tertiary); color: var(--text-primary); }
 .home-menu { position: relative; }
 .home-menu > summary { list-style: none; }
 .home-menu > summary::-webkit-details-marker { display: none; }
@@ -141,7 +141,6 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .home-menu-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding-block: 10px; }
 .home-menu-columns p { padding: 6px 10px; color: var(--home-muted); font-size: .72rem; font-weight: 700; }
 .home-menu-tail { display: flex; flex-wrap: wrap; gap: 0 3px; border-top: 1px solid var(--border); padding-top: 3px; }
-.home-menu-panel .home-compact-tools { display: none; }
 .home-controls { display: flex; align-items: center; gap: 6px; justify-self: end; }
 .home-controls [data-language-switcher]:empty { display: none; }
 .home-theme, .site-shell .home-controls .i18n-toggle {
@@ -181,9 +180,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     html:has(.site-shell) { --home-header-height: 96px; }
 }
 @media (max-width: 580px) {
-    .home-task-links > a, .home-menu > summary { padding-inline: 7px; gap: 4px; font-size: .79rem; }
-    .home-task-links > .home-desktop-tools { display: none; }
-    .home-menu-panel .home-compact-tools { display: flex; }
+    .home-menu > summary { padding-inline: 7px; gap: 4px; font-size: .79rem; }
     .home-menu-panel, .home-pc-menu .home-menu-panel, .home-more-menu .home-menu-panel {
         inset-inline: 0;
         width: auto;
@@ -202,7 +199,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     .home-controls { position: relative; }
 }
 @media (max-width: 380px) {
-    .home-task-links > a, .home-menu > summary { padding-inline: 4px; }
+    .home-menu > summary { padding-inline: 4px; }
 }
 @media (max-width: 348px) {
     .home-cheats-menu > summary { max-inline-size: 56px; font-size: .75rem; }
