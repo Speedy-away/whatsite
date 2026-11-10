@@ -187,76 +187,24 @@ html:has(.home-page) { --home-header-height: 66px; scroll-padding-top: calc(var(
     border-color: var(--border);
 }
 
-.home-page .home-hero-layout {
-    display: grid;
-    grid-template-columns: 1.05fr 1fr;
-    align-items: center;
-    gap: clamp(24px, 5vw, 72px);
+.home-page .home-hero .container {
+    text-align: center;
     padding-block: clamp(42px, 6.5vw, 96px) clamp(42px, 5.4vw, 76px);
 }
-.home-hero-copy { min-width: 0; }
 .home-eyebrow { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--home-muted); margin-bottom: 18px; }
 .home-page .home-hero .hero-title {
     font-size: clamp(2.5rem, 5.1vw, 4.4rem);
     letter-spacing: -.068em;
     line-height: 1;
     margin-bottom: 22px;
-    text-align: start;
+    text-align: center;
     color: var(--text-primary);
     background: none;
     -webkit-text-fill-color: currentColor;
 }
 .home-hero .hero-title span { color: var(--text-secondary); -webkit-text-fill-color: currentColor; }
-.home-page .home-hero .hero-subtitle { max-width: 43ch; text-align: start; margin: 0 0 24px; font-size: 1rem; line-height: 1.65; color: var(--home-muted); }
-.home-page .home-hero .hero-buttons { justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 8px 22px; margin: 0; }
-.home-feature {
-    display: block;
-    min-width: 0;
-    overflow: hidden;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    color: var(--text-primary);
-    transition: border-color .2s;
-}
-.home-feature:hover { color: var(--text-primary); border-color: var(--border-hover); }
-.home-feature-art {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: end;
-    justify-items: center;
-    padding: clamp(38px, 4vw, 57px) 14% 22px;
-    overflow: hidden;
-    background: radial-gradient(ellipse at 50% 85%, #535353, #131313 75%);
-}
-.home-feature-tag {
-    position: absolute;
-    inset-block-start: 13px;
-    inset-inline-start: 14px;
-    color: #eee;
-    font-size: .7rem;
-    font-weight: 650;
-    letter-spacing: .11em;
-}
-.home-cover {
-    width: 112%;
-    max-width: none;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    border: 1px solid #ffffff50;
-    border-radius: 6px;
-    box-shadow: 0 8px 22px #0007;
-    transition: transform .25s;
-}
-.home-cover-left { transform: translate(6%, 3%) rotate(-10deg); }
-.home-cover-center { transform: translateY(-4%); z-index: 1; }
-.home-cover-right { transform: translate(-6%, 3%) rotate(10deg); }
-.home-feature:hover .home-cover-center { transform: translateY(-8%); }
-.home-feature-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 19px; border-top: 1px solid var(--border); }
-.home-feature-caption h2 { font-size: clamp(1rem, 1.65vw, 1.3rem); line-height: 1.2; letter-spacing: -.035em; }
-.home-feature-caption p { font-size: .8rem; color: var(--home-muted); margin-top: 5px; }
-.home-feature-caption > i { font-size: .82rem; }
+.home-page .home-hero .hero-subtitle { max-width: 58ch; text-align: center; margin: 0 auto 24px; font-size: 1rem; line-height: 1.65; color: var(--home-muted); }
+.home-page .home-hero .hero-buttons { justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 22px; margin: 0; }
 
 .home-page .home-directory { padding-block-end: clamp(40px, 5vw, 68px); }
 .home-directory h2 { font-size: clamp(1.4rem, 2.6vw, 2rem); letter-spacing: -.04em; margin-bottom: 10px; }
@@ -368,13 +316,11 @@ html:has(.home-page) { --home-header-height: 66px; scroll-padding-top: calc(var(
     .home-emulators, .home-page .home-help { align-items: flex-start; flex-direction: column; gap: 16px; }
 }
 @media (max-width: 767px) {
-    .home-page .home-hero-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 38px 34px; }
+    .home-page .home-hero .container { padding-block: 38px 34px; }
     .home-page .home-hero .hero-title { font-size: clamp(2.3rem, 9vw, 4rem); margin-bottom: 16px; }
     .home-page .home-hero .hero-subtitle { font-size: .94rem; margin-bottom: 16px; }
     .home-page .home-hero .hero-buttons :is(.btn, .home-text-link) { flex: 0 1 auto; font-size: .82rem; }
     .home-page .home-hero .hero-buttons { gap: 4px 16px; }
-    .home-feature { max-width: 550px; }
-    .home-feature-art { padding-inline: 20%; }
     .home-directory-grid { column-gap: 14px; }
     .home-directory-grid a { grid-template-columns: 22px minmax(0, 1fr) auto; gap: 6px; padding-inline: 3px; }
     .home-page .section { padding-block: 44px; }
