@@ -48,10 +48,11 @@ const gameLibraries = {
 };
 
 function applyLibraryCard(html, platform) {
-  const family = gameLibraries[platform];
+  const {id: platformId, title: platformTitle} = platform;
+  const family = gameLibraries[platformId];
   const playStation = family === 'PlayStation';
   const route = playStation ? libraryRoutes.directory : 'console/' + family.toLowerCase() + '-game-library/';
-  const library = '/' + route + (playStation ? '' : '?platform=' + platform);
+  const library = '/' + route + (playStation ? '' : '?platform=' + platformId);
   const id = 'id="' + family.toLowerCase() + '-game-library"';
   const legacy = range(html, 'section', opening => opening.includes(id));
   if (legacy) html = html.slice(0, legacy.start) + html.slice(legacy.end);
@@ -63,8 +64,17 @@ function applyLibraryCard(html, platform) {
   const detail = playStation
     ? 'Filter by genre or title ID and compare package links, regions and versions.'
     : 'Search game titles, browse genre labels where available and open the original source listings.';
+  const keywords = [
+    'WWBsgames', name, platformTitle + ' game library', platformTitle + ' game downloads',
+    platformTitle + ' game list', 'search by game title', 'game genre filters', platformTitle + ' game catalog', platformTitle + ' games by genre',
+    ...(platformId === 'xbox' ? ['OG Xbox', 'Xbox Classic', 'regional editions', 'disc versions', 'game language search', 'disc revision lookup'] : []),
+    ...(platformId === 'xbox360' ? ['Xbox360', 'X360', 'Xbox 360 JTAG', 'Xbox 360 RGH', 'Xbox 360 ISO', 'Xbox Live Arcade', 'XBLA', 'Xbox 360 Indie Games', 'XBLIG'] : []),
+    ...(platformId === 'ds' ? ['Nintendo DS', 'NDS game library'] : []),
+    ...(platformId === '3ds' ? ['Nintendo 3DS', 'Nintendo 2DS game library'] : []),
+    ...(playStation ? ['PlayStation game catalog', 'CUSA title ID', 'PPSA title ID', 'PKG games', 'DLC', 'title updates', 'package version lookup', 'game region filter'] : [])
+  ];
   const card = resource(name, detail, link(library, 'Open the game library'))
-    .replace('<article class="guide-resource"', '<article ' + id + ' class="guide-resource game-directory-card" data-card-art="fixed"')
+    .replace('<article class="guide-resource"', '<article ' + id + ' class="guide-resource game-directory-card" data-card-art="fixed" data-search="' + esc(keywords.join(' ').toLowerCase()) + '"')
     .replace('<h3>', '<span class="library-card-brand"><img src="/assets/images/wwbsgames.svg" alt="WWBsgames" width="152" height="36" loading="lazy"></span><h3>');
   let block = html.slice(directory.start, directory.end);
   const existing = range(block, 'article', opening => opening.includes(id));
@@ -72,20 +82,22 @@ function applyLibraryCard(html, platform) {
     ? block.slice(0, existing.start) + card + block.slice(existing.end)
     : block.replace('<div class="games-grid">', opening => opening + card + '\n');
   block = block.replace(/<p class="section-subtitle">[^<]*<\/p>/,
-    '<p class="section-subtitle">Browse WWBsgames or choose an external download source.</p>');
+    family === 'Xbox' ? '<p class="section-subtitle">Browse WWBsgames by console, title or genre.</p>'
+      : '<p class="section-subtitle">Browse WWBsgames or choose an external download source.</p>');
   html = html.slice(0, directory.start) + block + html.slice(directory.end);
   const ps5Downloads = '/console/ps5/game-downloads.html';
   return html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/, nav => {
     nav = nav.replace(/WWB’s PS4 and PS5 Game Library/g, 'PlayStation Game Library');
     if (!nav.includes('href="' + library + '"')) nav = nav.replace('</nav>', '<a href="' + library + '">' + name + '</a></nav>');
-    if (platform === 'ps4' && !nav.includes('href="' + ps5Downloads + '"')) {
+    if (platformId === 'ps4' && !nav.includes('href="' + ps5Downloads + '"')) {
       nav = nav.replace('</nav>', '<a href="' + ps5Downloads + '">PS5 game downloads</a></nav>');
     }
     return nav;
   });
 }
 function hubCard(platform) {
-  const detail = platform.providers.length ? `Find ${platform.title} game directories, with direct links to the matching console categories.` : 'Browse game directories by console and choose the system listed by the provider.';
+  const detail = gameLibraries[platform.id] === 'Xbox' ? 'Browse the Xbox Game Library by title and genre.'
+    : platform.providers.length ? `Find ${platform.title} game directories, with direct links to the matching console categories.` : 'Browse game directories by console and choose the system listed by the provider.';
   const title = platform.id === 'ps4' ? ps4AddOns.title : 'Game downloads';
   const description = platform.id === 'ps4' ? ps4AddOns.description : detail;
   return `<article class="guide-resource" data-console-game-card="${platform.id}"><img src="${esc(platform.image)}" alt="${esc(platform.title)} game downloads" loading="lazy"><h3>${esc(title)}</h3><p>${esc(description)}</p><div class="guide-links"><a href="${directoryPath(platform)}">Browse ${platform.id === 'ps4' ? 'PS4 downloads' : 'game downloads'} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
@@ -146,7 +158,7 @@ function apply(file, html, data = registry()) {
       if (position !== undefined) html = html.slice(0, position) + block + html.slice(position);
     }
   }
-  if (current === destination && gameLibraries[platform.id]) html = applyLibraryCard(html, platform.id);
+  if (current === destination && gameLibraries[platform.id]) html = applyLibraryCard(html, platform);
   if (current === hubFile && platform.id === 'ps4') {
     const existingCard = /<article\b[\s\S]*?<\/article>/g;
     let found = false;
@@ -272,10 +284,11 @@ function build() {
     // generic provider rendering must not replace its games and setup details.
     if (platform.directoryMode === 'curated-library') continue;
     const destination = directoryPath(platform), file = destination.slice(1);
-    const content = platform.providers.length
-      ? guides.section('game-directories', `${esc(platform.title)} game downloads`, guides.grid(...platform.providers.map(provider => providerCard(provider, platform))), platform.id === 'ps5' ? 'Download Orbit Store or choose an external game directory for this console.' : 'Choose an external directory for this console.')
+    const xboxLibrary = gameLibraries[platform.id] === 'Xbox';
+    const content = platform.providers.length || xboxLibrary
+      ? guides.section('game-directories', `${esc(platform.title)} game downloads`, guides.grid(...platform.providers.map(provider => providerCard(provider, platform))), platform.id === 'ps5' ? 'Download Orbit Store or choose an external game directory for this console.' : xboxLibrary ? 'Browse the Xbox Game Library.' : 'Choose an external directory for this console.')
       : guides.section('game-directories', 'Browse games by console', `<p>Browse the all-console index and choose the exact platform named by the source website.</p><div class="guide-links"><a href="/console/game-downloads/">Browse all console directories <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>`);
-    guides.page(file, `${platform.title} Game Downloads`, `External game directories for ${platform.title}. Open a source website and check its console, region and file-format details.`, platform.image, [[platform.hub, platform.title], [destination, 'Game downloads'], ['/console/game-downloads/', 'All consoles']], content + guides.section('more-directories', 'More game directories', `<div class="guide-links"><a href="/console/game-downloads/">All console game directories <i class="fas fa-arrow-right" aria-hidden="true"></i></a>${external('https://vimm.net/vault', 'Vimm’s Vault · all systems')}${external('https://dlpsgame.com/', 'DLPSGame · all games')}</div>`), '#game-directories', 'Browse game directories');
+    guides.page(file, `${platform.title} Game Downloads`, xboxLibrary ? 'Browse game listings by title and genre on WWBsgames.' : `External game directories for ${platform.title}. Open a source website and check its console, region and file-format details.`, platform.image, [[platform.hub, platform.title], [destination, 'Game downloads'], ['/console/game-downloads/', 'All consoles']], content + guides.section('more-directories', 'More game directories', `<div class="guide-links"><a href="/console/game-downloads/">All console game directories <i class="fas fa-arrow-right" aria-hidden="true"></i></a>${xboxLibrary ? '' : external('https://vimm.net/vault', 'Vimm’s Vault · all systems') + external('https://dlpsgame.com/', 'DLPSGame · all games')}</div>`), '#game-directories', xboxLibrary ? 'Browse the game library' : 'Browse game directories');
     prepare(file);
     files.push(file);
   }

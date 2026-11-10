@@ -1,4 +1,13 @@
 {
+  "wwbsgamesDiscovery20261110": {
+    "date": "2026-11-10",
+    "status": "Included in the scoped WWBsgames search update for main.",
+    "scope": "Added platform-specific keywords and search tags across the Xbox, Nintendo and PlayStation libraries and their nine download pages. Refreshed matching search and social metadata and structured page data.",
+    "xbox": "Removed the requested provider directory links, redirect aliases, display names and search terms from the Xbox library and Xbox download pages. Individual game listings retain their original destinations. The provider history remains in the source inventory.",
+    "sitemap": "Reconciled 504 unique canonical URLs and refreshed the Xbox hub dates. Verified the three libraries appear in the main sitemap and have localized canonical routes in all 20 languages.",
+    "localization": "Updated the scoped source records and reused existing translations. New phrases with no cached translation use the existing English fallback.",
+    "expandedSearch": "Expanded metadata on 13 pages with game catalog, platform, region, revision, format and title-ID terms. Xbox and Nintendo searches recognize common game abbreviations and alternate numeral forms. Kept the scoped provider directory removals."
+  },
   "wwbsgamesCatalogs20261110": {
     "date": "2026-11-10",
     "status": "Verified locally and included in the main branch release. GitHub Pages deployment runs separately.",

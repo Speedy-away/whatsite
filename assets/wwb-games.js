@@ -37,6 +37,54 @@ view.addEventListener('click', () => {
   try { localStorage.setItem('wwb-games-view', savedView); } catch {}
 });
 
+
+const platformAliases = {
+  xbox: 'ogxbox xbox classic first generation xbox',
+  xbox360: 'xbox360 x360',
+  wii: 'nintendo wii',
+  wiiu: 'nintendo wii u wiiu',
+  'nintendo-switch': 'nintendo switch nswitch',
+  ds: 'nintendo ds nds',
+  '3ds': 'nintendo 3ds n3ds'
+};
+const numberedTitles = ['', 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix'];
+const titleAliases = [
+  [/^halo combat evolved\b/, 'haloce'],
+  [/^grand theft auto 3\b/, 'gta gta3'],
+  [/^grand theft auto 4\b/, 'gta gta4'],
+  [/^grand theft auto 5\b/, 'gta gta5'],
+  [/^grand theft auto san andreas\b/, 'gta gtasa'],
+  [/^grand theft auto vice city\b/, 'gta gtavc'],
+  [/^call of duty\b/, 'cod'],
+  [/^call of duty modern warfare 2\b/, 'mw2'],
+  [/^call of duty modern warfare 3\b/, 'mw3'],
+  [/^call of duty world at war\b/, 'waw'],
+  [/^(?:the )?legend of zelda\b/, 'loz'],
+  [/^(?:the )?legend of zelda breath of the wild\b/, 'botw'],
+  [/^(?:the )?legend of zelda tears of the kingdom\b/, 'totk'],
+  [/^(?:the )?legend of zelda twilight princess\b/, 'zeldatp'],
+  [/^mario kart 7\b/, 'mk7'],
+  [/^mario kart 8\b/, 'mk8'],
+  [/^mario kart wii\b/, 'mkwii'],
+  [/^new super mario bros\b/, 'nsmb'],
+  [/^super smash bros\b/, 'ssb']
+];
+const exactAliases = new Set([...titleAliases.flatMap(([, names]) => names.split(' ')), 'bo1', 'bo2', 'bo3', 'bo4', 'ogxbox']);
+
+function searchText(game, system) {
+  const title = normalize(game.title);
+  const numbered = title.replace(/\b(i|ii|iii|iv|v|vi|vii|viii|ix)\b/g, numeral => numberedTitles.indexOf(numeral));
+  const roman = title.replace(/\b[1-9]\b/g, number => numberedTitles[number]);
+  const blackOps = numbered.match(/^call of duty black ops(?: ([1-4])\b|\b(?! \d))/);
+  const aliases = titleAliases.filter(([pattern]) => pattern.test(numbered)).map(([, names]) => names);
+  if (blackOps) {
+    const number = blackOps[1] || '1';
+    aliases.push('bo' + number);
+  }
+  const metadata = normalize([system.textContent, ...(game.genres || []), ...(game.regions || []), game.version, game.languages].join(' '));
+  return ' ' + [...new Set([title, numbered, roman, ...aliases, metadata, platformAliases[system.value]])].join(' ') + ' ';
+}
+
 function load(system) {
   if (!catalogs.has(system.value)) {
     const request = fetch('/assets/wwb-games/' + system.value + '.json?v=1')
@@ -46,7 +94,7 @@ function load(system) {
       })
       .then(rows => rows.map(row => ({
         ...row, platform: system.textContent,
-        search: normalize([row.title, system.textContent, ...(row.genres || []), ...(row.regions || []), row.version, row.languages].join(' '))
+        search: searchText(row, system)
       })));
     catalogs.set(system.value, request);
     request.catch(() => catalogs.delete(system.value));
@@ -80,7 +128,11 @@ function render(reset = true) {
     limit = pageSize;
     updateUrl();
   }
-  const terms = normalize(search.value).split(' ').filter(Boolean);
+  const terms = normalize(search.value)
+    .replace(/\b(halo ce|zelda tp|og xbox|gta (?:sa|vc|[345])|bo [1-4])\b/g, alias => alias.replaceAll(' ', ''))
+    .replace(/\bgta (iii|iv|v)\b/g, (_, numeral) => 'gta' + numberedTitles.indexOf(numeral))
+    .split(' ').filter(Boolean)
+    .map(term => exactAliases.has(term) ? ' ' + term + ' ' : term);
   const matches = titles.filter(game => terms.every(term => game.search.includes(term)) &&
     (!genre.value || game.genres?.includes(genre.value)));
   if (sort.value === 'za') matches.reverse();
@@ -131,7 +183,7 @@ async function selectPlatform(preferredGenre = genre.value) {
   if (failed.length) {
     $('catalog-warning').hidden = false;
     $('catalog-warning').textContent = 'The ' + failed.map(option => option.textContent).join(', ') +
-      ' listings could not be loaded. You can still browse the original catalogs below.';
+      ' listings could not be loaded. Reload the page to try again.';
   }
 }
 

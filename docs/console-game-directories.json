@@ -318,32 +318,7 @@
       "hub": "/console/xbox360/",
       "source": "console/xbox360.html",
       "image": "/assets/images/custom-console-art/xbox360-game-library.jpg",
-      "providers": [
-        {
-          "label": "Vimm’s Lair · Xbox 360",
-          "url": "https://vimm.net/vault/Xbox360",
-          "description": "Open the Xbox 360 game directory in Vimm’s Vault.",
-          "status": "existing-link-unverified",
-          "origin": "existing-site-link",
-          "checkedAt": "2026-11-02T09:32:06.041Z"
-        },
-        {
-          "label": "Vimm’s Lair · Xbox 360 Digital",
-          "url": "https://vimm.net/vault/X360-D",
-          "description": "Open the Xbox 360 Digital game directory in Vimm’s Vault.",
-          "status": "indexed-route-unverified",
-          "origin": "indexed-reference",
-          "checkedAt": "2026-11-02T09:32:06.041Z"
-        },
-        {
-          "label": "Xbox 360 · JTAG / RGH",
-          "url": "https://downloadgamexbox.com/list-all-game-xbox-jtag-rgh/",
-          "description": "A JTAG / RGH game directory. Check the listed console and installation requirements.",
-          "status": "retrieved-after-redirect",
-          "origin": "observed-navigation",
-          "checkedAt": "2026-11-02T09:32:06.041Z"
-        }
-      ]
+      "providers": []
     },
     {
       "id": "xbox",
@@ -352,16 +327,7 @@
       "hub": "/console/retro/xbox.html",
       "source": "console/retro/xbox.html",
       "image": "/assets/images/consoles/xbox.jpg",
-      "providers": [
-        {
-          "label": "Vimm’s Lair · Original Xbox",
-          "url": "https://vimm.net/vault/Xbox",
-          "description": "Open the Original Xbox game directory in Vimm’s Vault.",
-          "status": "unretrievable",
-          "origin": "user-supplied",
-          "checkedAt": "2026-11-02T09:32:06.041Z"
-        }
-      ]
+      "providers": []
     }
   ],
   "general": [

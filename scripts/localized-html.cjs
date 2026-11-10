@@ -45,7 +45,8 @@ function localizedUtility(name,source){
   /<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(source);
 }
 function localizeKeywordTerms(page){
- return /^console\/ps[45]\/game-downloads\.html$/.test(page)||
+ return /^console\/(?:ps[45]|xbox(?:360)?|wiiu?|nintendo-switch|ds|3ds)\/game-downloads\.html$/.test(page)||
+  /^console\/(?:xbox|nintendo)-game-library\/index\.html$/.test(page)||
   page===libraryRoutes.index||/^console\/ps4\/(?:dlcs|updates|fpkg-fixes)\.html$/.test(page);
 }
 const keywordTerms=value=>value.split(',').map(normalize).filter(Boolean);

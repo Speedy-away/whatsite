@@ -36,8 +36,13 @@ test('the exact user-supplied category links stay assigned to their matching sys
     ['3ds', 'https://nswgf.com/category/3ds/']
   ];
   for (const [id, url] of expected) assert.ok(sourceContains(byId(id), url), id + ': ' + url);
-  const originalXbox = directories.platformFor('console/retro/xbox.html');
-  assert.ok(sourceContains(originalXbox, 'https://vimm.net/vault/Xbox'));
+  for (const id of ['xbox', 'xbox360']) {
+    const platform = byId(id);
+    assert.equal(platform.providers.length, 0);
+    const html = fs.readFileSync(path.join(root, directories.directoryPath(platform).slice(1)), 'utf8');
+    assert.doesNotMatch(html, /vimm|dlxbgame|downloadgamexbox/i);
+    assert.ok(hrefs(html).includes('/console/xbox-game-library/?platform=' + id));
+  }
   const allProviders = [...catalogue().general, ...catalogue().platforms.flatMap(platform => platform.providers)];
   for (const url of ['https://vimm.net/vault', 'https://dlpsgame.com/']) assert.ok(allProviders.some(provider => provider.url === url), url);
   for (const id of ['nintendo-switch-2', 'xbox-one-series', 'steamdeck']) {
