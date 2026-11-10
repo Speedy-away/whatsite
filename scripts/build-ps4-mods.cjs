@@ -125,7 +125,17 @@ section('setup','Private-server setup checklist',steps([
 section('video','Private-server video companion',video('P9SAjhA-lNU','How To Play GTA Online On A Jailbroken PS4 (Private server)')+note('<p>No transcript was available for this video. The steps above are a preparation checklist, not a verified reproduction of its server-specific installation sequence. Visit the Los Santos Online website for the current client package and setup instructions.</p>')),'#setup','Read server checklist');
 if(!scoped)require('./build-ps4-ps5-cod.cjs');
 imported.buildMods({gtaRendered:true,gtaFiles:files,rdrMenus:rdr2menus,...(gtaOnly?{gameIds:['gta5']}:rdr2Only?{gameIds:['rdr2']}:fortniteOnly?{gameIds:['fortnite']}:{})});
-if(!rdr2Only&&!fortniteOnly){const file='console/mods/ps4/gta5/index.html';let html=fs.readFileSync(file,'utf8');html=html.replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=4"></head>').replace('</body>','<script defer src="/assets/gta5-plugin-downloads.js?v=4"></script></body>');fs.writeFileSync(file,html);}
+if(!rdr2Only&&!fortniteOnly){
+ const file='console/mods/ps4/gta5/index.html';
+ const preview=`<dialog id="gta-screenshot-preview" class="gta-screenshot-preview" aria-labelledby="gta-screenshot-title">
+<form method="dialog" class="guide-dialog__header"><h2 id="gta-screenshot-title">Screenshot preview</h2><button type="submit" class="guide-dialog__close" aria-label="Close" autofocus><span aria-hidden="true">✕</span></button></form>
+<img alt="">
+</dialog>`;
+ const html=fs.readFileSync(file,'utf8')
+   .replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=5"></head>')
+   .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script><script defer src="/assets/gta5-plugin-downloads.js?v=4"></script></body>');
+ fs.writeFileSync(file,html);
+}
 if(gtaOnly||rdr2Only)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));
 if(!rdr2Only)catalog.build();
 console.log(fortniteOnly?'Built Fortnite, PS4/PS5 Games and the menu directory.':rdr2Only?'Built RDR2 catalogue with Oyster next to North.':gtaOnly?'Built GTA V catalogue, installation guide and menu directory.':'Built Console Mods, PS4/PS5 Games, three GTA V pages and RDR2 with North, Sheriff and Havana downloads.');

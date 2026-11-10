@@ -13,3 +13,29 @@
 .gta-plugin-separate summary{cursor:pointer;color:var(--accent,#50ffc0)}
 .gta-plugin-originals{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .gta-plugin-separate button:focus-visible,.gta-plugin-separate summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+
+html:has(.gta-screenshot-preview[open]) { overflow: hidden; }
+.gta-screenshot-preview {
+  width: min(1100px, calc(100% - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--bg-secondary, #151518);
+  color: var(--text-primary, #f3f3f5);
+  border: 1px solid var(--border, #303036);
+  border-radius: 12px;
+}
+.gta-screenshot-preview::backdrop { background: rgb(0 0 0 / .8); }
+.gta-screenshot-preview .guide-dialog__header { align-items: center; padding: 12px 18px; }
+.gta-screenshot-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 100px);
+  margin: auto;
+  object-fit: contain;
+}
+.guide-resource > a[aria-controls="gta-screenshot-preview"] { cursor: zoom-in; }
+.guide-resource > a[aria-controls="gta-screenshot-preview"]:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }

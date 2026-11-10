@@ -68,6 +68,6 @@ test('Bundle creation rejects changed bytes, wrong region and ZIP traversal befo
  await assert.rejects(()=>api.bundle({configs:{}},'CUSA12345',{}),/Select a game region/);
 });
 test('The rendered page includes regional controls, combined actions and the moved 1.57 cards',()=>{
- const s=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');assert.ok(s.includes('/assets/gta5-plugin-downloads.js?v=4'));assert.ok(s.includes('/assets/gta5-plugin-downloads.css?v=4'));assert.ok(s.includes('Download menu + plugins.ini'));assert.ok(s.includes('Europe / EU · CUSA00411'));assert.ok(s.includes('USA · CUSA00419'));assert.ok(!s.includes('id="gallery"'));
+ const s=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');assert.ok(s.includes('/assets/gta5-plugin-downloads.js?v=4'));assert.ok(s.includes('/assets/gta5-plugin-downloads.css?v=5'));assert.ok(s.includes('Download menu + plugins.ini'));assert.ok(s.includes('Europe / EU · CUSA00411'));assert.ok(s.includes('USA · CUSA00419'));assert.ok(!s.includes('id="gallery"'));
  const section=s.match(/<section\b[^>]*\bid="v157"[^>]*>([\s\S]*?)<\/section>/)[1];for(const id of ['gta5-crystalis-1-57','gta5-velora-1-57'])assert.ok(section.includes('id="resource-'+id+'"'));
 });
