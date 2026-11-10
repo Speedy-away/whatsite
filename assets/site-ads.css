@@ -61,9 +61,16 @@
     .site-ad-layout:has(> .site-ad[hidden]) { display: block; padding-left: 0; }
     .site-ad-layout > .site-ad-content { display: block; grid-area: content; min-width: 0; }
     .site-ad-layout > .site-ad {
+        --site-ad-top: calc(var(--home-header-height, 0px) + 16px);
         grid-area: advertisement;
+        position: sticky;
+        top: var(--site-ad-top);
         width: 100%;
+        max-height: calc(100vh - var(--site-ad-top) - 16px);
+        max-height: calc(100dvh - var(--site-ad-top) - 16px);
         margin: clamp(24px, 3vw, 44px) 0 20px;
+        overflow-y: auto;
+        scrollbar-width: thin;
     }
     .ps-library .main-content:has(> .site-ad-layout) { width: min(1472px, calc(100% - 64px)); }
     .ps-library .site-ad-layout { padding-left: 0; }
