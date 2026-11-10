@@ -124,13 +124,14 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const localization=hasLocales?require('./build-localized-pages.cjs'):null;
   const localizedContext=localization?localization.load(root):null;
   const addAds = (source, name) => publishAds(name, source);
+  const {apply: addConsoleDownloadNav} = require('./console-download-navigation.cjs');
   const estimatedLocales=localization?localization.generate({root,context:localizedContext,estimate:true,rewrite:addAds}):{bytes:0};
   const reservedBytes = Math.max(0, estimatedLocales.bytes);
   // Keep space for URL rewrites when possible. The final artifact check
   // enforces the size limit using the rendered pages and rewritten links.
   const preferredHeadroom = localization ? 64 * 1024 * 1024 : 0;
   const result = plan(root, names, revision, tree?.sizes || sizes, reservedBytes, preferredHeadroom), rewriteLinks = rewriter(result.offloaded);
-  const rewrite = (source, name) => addAds(rewriteLinks(source, name), name);
+  const rewrite = (source, name) => addAds(rewriteLinks(addConsoleDownloadNav(name, source), name), name);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const legacyDetails = Object.fromEntries([...result.offloaded].flatMap(([name, url]) => {

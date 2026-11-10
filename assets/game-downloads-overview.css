@@ -1,0 +1,52 @@
+.downloads-overview[data-catalog-page] .main-content .container { max-width: 1100px; }
+.downloads-overview .downloads-intro,
+.downloads-overview .guide-hero { padding-block: 32px 12px; }
+.downloads-overview :is(.downloads-intro, .guide-hero) h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+.downloads-overview .downloads-intro p { color: var(--text-secondary); }
+.downloads-overview .section { padding-block: 22px; }
+.downloads-overview .section-header { margin-bottom: 14px; text-align: start; }
+.downloads-overview .section-title { margin-bottom: 6px; font-size: 1.35rem; }
+.downloads-overview .section-subtitle { margin-inline: 0; }
+
+.download-directory { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.download-directory a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: .85rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.download-directory a:hover { background: var(--bg-tertiary); border-color: var(--border-hover); }
+.download-directory a i { flex: none; font-size: .68rem; color: var(--text-secondary); }
+
+.downloads-overview #downloads .search-container { margin: 0 0 14px; max-width: 380px; }
+.downloads-overview #downloads .games-grid { grid-template-columns: minmax(0, 1fr) !important; max-width: 650px; }
+.downloads-overview #downloads .game-card { display: flex; align-items: center; gap: 14px; padding: 12px; }
+.downloads-overview #downloads .game-card:hover { transform: none; }
+.downloads-overview #downloads .game-image { flex: 0 0 clamp(76px, 18vw, 136px); aspect-ratio: 16 / 9; border-radius: 6px; }
+.downloads-overview #downloads .game-image img { object-fit: cover; }
+.downloads-overview #downloads .game-info { min-width: 0; padding: 0; }
+.downloads-overview #downloads .game-description { margin-bottom: 4px; }
+.downloads-overview #downloads .game-link { min-height: 44px; }
+
+@media (max-width: 950px) {
+  .download-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .download-directory { grid-template-columns: minmax(0, 1fr); }
+  .downloads-overview .downloads-intro,
+  .downloads-overview .guide-hero { padding-block-start: 24px; }
+}

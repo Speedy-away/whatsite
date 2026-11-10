@@ -71,6 +71,10 @@ function hubCard(platform) {
   return `<article class="guide-resource" data-console-game-card="${platform.id}"><img src="${esc(platform.image)}" alt="${esc(platform.title)} game downloads" loading="lazy"><h3>${esc(title)}</h3><p>${esc(description)}</p><div class="guide-links"><a href="${directoryPath(platform)}">Browse ${platform.id === 'ps4' ? 'PS4 downloads' : 'game downloads'} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></article>`;
 }
 function apply(file, html, data = registry()) {
+  const currentFile = normalized(file);
+  if (currentFile === 'console/game-downloads/index.html' || currentFile === 'games-downloads/index.html') {
+    return compactOverview(currentFile, html, data);
+  }
   // The PS5 hub explicitly links to the shared PS4/PS5 game download page.
   if (normalized(file) === 'console/ps5/index.html') return html;
   if (protectedFile(file, html) || !/<main\b|<div\b[^>]*\bid="main-content"/i.test(html)) return html;
@@ -161,6 +165,37 @@ function external(url, label) {
   if (parsed.protocol !== 'https:' || parsed.username || parsed.password) throw Error('Invalid game-directory URL');
   return `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>`;
 }
+function consolePicker(data) {
+  const choices = data.platforms.map(platform =>
+    `<li><a href="${esc(directoryPath(platform))}">${esc(platform.title)} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></li>`);
+  return require('./build-console-guides.cjs').section('consoles', 'Choose your console',
+    `<ul class="download-directory">${choices.join('\n')}</ul>`);
+}
+function providerOverview(data) {
+  const links = data.general.map(provider => '<li>' + external(provider.url, provider.label) + '</li>');
+  return require('./build-console-guides.cjs').section('all-websites', 'All game websites',
+    `<ul class="download-directory">${links.join('\n')}</ul>`);
+}
+function compactOverview(file, html, data) {
+  const general = file === 'games-downloads/index.html';
+  const stylesheet = '<link rel="stylesheet" href="/assets/game-downloads-overview.css?v=1">';
+  if (!html.includes(stylesheet)) html = html.replace('</head>', stylesheet + '\n</head>');
+  html = html.replace(/<body\b[^>]*>/i, tag => tag.includes('downloads-overview') ? tag :
+    tag.replace(/class="([^"]*)"/, 'class="$1 downloads-overview"'));
+  const picker = range(html, 'section', tag => /\bid="(?:consoles|console-game-downloads)"/.test(tag));
+  if (picker) html = html.slice(0, picker.start) + consolePicker(data) + html.slice(picker.end);
+  if (general) {
+    const hero = range(html, 'section', tag => /\bclass="hero"/.test(tag));
+    if (hero) html = html.slice(0, hero.start) +
+      '<header class="downloads-intro container"><h1>Game Downloads</h1><p>Choose a console or browse PC game downloads.</p></header>' +
+      html.slice(hero.end);
+    return html.replace('<h2 class="section-title">Available Downloads</h2>', '<h2 class="section-title">PC game downloads</h2>')
+      .replace('href="../index.html#tools"', 'href="/tools/"');
+  }
+  const providers = range(html, 'section', tag => tag.includes('id="all-websites"'));
+  if (providers) html = html.slice(0, providers.start) + providerOverview(data) + html.slice(providers.end);
+  return html.replace(/<div class="hero-buttons"><a class="btn btn-primary" href="#consoles">Choose your console<\/a><\/div>/, '');
+}
 function providerCard(provider, platform = null) {
   const accessed = ['retrieved', 'retrieved-after-redirect'].includes(provider.status);
   const check = accessed ? 'The directory page was retrieved. Individual game downloads were not checked.' : 'Automated access to this directory could not be confirmed. The original link is retained; individual game availability has not been checked.';
@@ -224,21 +259,20 @@ function build() {
     prepare(file);
     files.push(file);
   }
-  const cards = data.platforms.filter(p => p.providers.length).map(p => guides.resource(esc(p.title), `${p.providers.length} external game ${p.providers.length === 1 ? 'directory' : 'directories'} for this console.`, `<a href="${directoryPath(p)}">Browse game downloads <i class="fas fa-arrow-right" aria-hidden="true"></i></a>`, p.image));
   const more = data.vaultSystems.map(item => `<li>${external(item.url, item.label)}</li>`).join('');
   const file = 'console/game-downloads/index.html';
-  guides.page(file, 'Console Game Downloads', 'Find console-specific game directories, including Vimm’s Lair, DLPSGame, DownloadGamePSP, NSWGame and NSWGF.', '/assets/images/custom-console-art/xbox360-game-library.jpg', [['/console/', 'Consoles'], ['/console/game-downloads/', 'Game downloads'], ['/console/vault.html', 'The Vault']], guides.section('consoles', 'Choose your console', guides.grid(...cards)) + guides.section('all-websites', 'All game websites', guides.grid(...data.general.map(provider=>providerCard(provider)))) + guides.section('more-systems', 'More systems in Vimm’s Vault', `<ul class="guide-source-list">${more}</ul><p>For the other consoles, WiiWare and earlier systems shown in The Vault, open the full system index.</p><div class="guide-links">${external('https://vimm.net/vault', 'Browse every system in The Vault')}</div>`), '#consoles', 'Choose your console');
+  guides.page(file, 'Console Game Downloads', 'Find console-specific game directories, including Vimm’s Lair, DLPSGame, DownloadGamePSP, NSWGame and NSWGF.', '/assets/images/custom-console-art/xbox360-game-library.jpg', [['/console/', 'Consoles'], ['/console/game-downloads/', 'Game downloads'], ['/console/vault.html', 'The Vault']], consolePicker(data) + providerOverview(data) + guides.section('more-systems', 'More systems in Vimm’s Vault', `<ul class="guide-source-list">${more}</ul><p>For the other consoles, WiiWare and earlier systems shown in The Vault, open the full system index.</p><div class="guide-links">${external('https://vimm.net/vault', 'Browse every system in The Vault')}</div>`), '#consoles', 'Choose your console');
   prepare(file);
   files.push(file);
   // Add an entry to the existing general download page without replacing its cards.
   const general = path.join(root, 'games-downloads/index.html');
   let html = fs.readFileSync(general, 'utf8');
-  if (!html.includes('id="console-game-downloads"')) {
-    const block = guides.section('console-game-downloads', 'Console game downloads', `<p>Choose a console to find the matching Vimm’s Lair, DLPSGame, PSP / Vita or Nintendo game directories.</p><div class="guide-links"><a href="/console/game-downloads/">Browse console game downloads <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>`);
-    html = html.replace(/<section\b[^>]*\bid="downloads"[^>]*>/i, opening => block + opening);
+  if (!html.includes('id="consoles"') && !html.includes('id="console-game-downloads"')) {
+    html = html.replace(/<section\b[^>]*\bid="downloads"[^>]*>/i, opening => consolePicker(data) + opening);
   }
   html = html.replace('Launchers, modpacks, and legacy editions. Everything here is free and links straight to the official source.', 'Game launchers, fan projects and console game directories. Choose a section to browse its sources.');
-  fs.writeFileSync(general, html);
+  fs.writeFileSync(general, require('./console-free-shops.cjs').apply('games-downloads/index.html',
+    compactOverview('games-downloads/index.html', html, data)));
   const sitemapFile = path.join(root, 'sitemap.xml');
   let sitemap = fs.readFileSync(sitemapFile, 'utf8');
   for (const item of files) {

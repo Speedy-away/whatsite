@@ -187,7 +187,7 @@ function generate({root,output,rewrite=(value)=>value,estimate=false,context}={}
   // Page generators may update authored HTML before the translation manifest is regenerated.
   // Render the current source and keep untranslated/new segments in English until refresh.
   const deliveryFile=path.join(root,'docs/download-source-links.json'),delivery=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
-  const source=require('./source-download-notes.cjs').annotate(original,page.page,delivery);
+  const source=require('./console-download-navigation.cjs').apply(page.page,require('./source-download-notes.cjs').annotate(original,page.page,delivery));
   for(const code of ['en',...html.codes]){
    const rendered=rewrite(render(ctx,page,source,code),page.page),name=code==='en'?page.page:code+'/'+page.page;
    if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;if(!page.noindex)sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(source);

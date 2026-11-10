@@ -31,10 +31,7 @@ function apply(file,html){
  file=file.replaceAll('\\','/').replace(/^\//,'');
  if(require('./console-game-directories.cjs').protectedFile(file,html))return html;
  if(['console/game-downloads/index.html','games-downloads/index.html'].includes(file)){
-  html=html.replace(/<section\b[^>]*\bid="free-shops-directory"[^>]*>[\s\S]*?<\/section>/g,'');
-  const g=require('./build-console-guides.cjs');
-  const block=g.section('free-shops-directory','Free shops',g.grid(g.resource('Free shops','Browse Infinitykkj STORE, Nova Store and Orbit with platform requirements and original download links.','<a href="/console/free-shops/">Browse free shops <i class="fas fa-arrow-right" aria-hidden="true"></i></a>',artwork)));
-  return html.replace(/<footer\b[^>]*class="[^"]*\bguide-footer\b[^>]*>|<section\b[^>]*\bid="downloads"[^>]*>/,opening=>block+opening);
+  return html.replace(/<section\b[^>]*\bid="free-shops-directory"[^>]*>[\s\S]*?<\/section>/g,'');
  }
  const platform=file.match(/^console\/(ps[45])\//)?.[1];
  if(!platform)return html;

@@ -109,6 +109,15 @@ test('Pages may use rewrite headroom but still enforces the planned size limit',
   } finally { fs.rmdirSync(root); }
 });
 
+test('the console sidebar links to the console picker immediately after mod menus', () => {
+  const {apply} = require('../console-download-navigation.cjs');
+  const html = '<nav><ul class="nav-sublist nav-console-list"><li><a href="../mods/index.html">Mods / Mod Menus</a></li></ul></nav>';
+  const file = 'console/ps4/index.html';
+  const result = apply(file, html);
+  assert.match(result, /Mods \/ Mod Menus<\/a><\/li><li><a [^>]*href="\/console\/game-downloads\/">/);
+  assert.equal(apply(file, result), result);
+  assert.equal(apply('hosts/ps4/index.html', html), html);
+});
 test('Pages publishes exact-revision routes for offloaded legacy library details', () => {
   const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-library-'));
   try {

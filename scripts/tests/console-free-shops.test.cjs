@@ -21,7 +21,14 @@ test('console hubs expose separate categories with the new game-cover artwork',(
   assert.ok(html.includes(`/console/${p}/free-shops.html`));assert.ok(html.includes(shops.artwork));assert.ok(html.includes(shops.gameArtwork));
   const refreshed=finish(file,html);assert.equal(finish(file,refreshed),refreshed);
  }
- for(const file of ['console/game-downloads/index.html','games-downloads/index.html'])assert.ok(read(file).includes('href="/console/free-shops/"'),file);
+});
+test('game download overviews use a compact console picker without a free shops promo',()=>{
+ for(const file of ['console/game-downloads/index.html','games-downloads/index.html']){
+  const html=read(file);
+  assert.ok(!html.includes('id="free-shops-directory"'),file);
+  assert.ok(html.includes('class="download-directory"'),file);
+  assert.ok(!shops.apply(file,html).includes('href="/console/free-shops/"'),file);
+ }
 });
 test('Free Shops integration preserves pinned downloads and excludes packaged tools',()=>{
  const fixture='<main><nav class="guide-nav"><a href="/console/ps4/">Hub</a></nav><a href="/downloads/build-v1.pkg" download>Exact original</a></main>';
