@@ -58,7 +58,7 @@ const titles = {
   'mods/skyrim.html': 'Skyrim Mods: ENB & SkyUI | whatwhatboy',
   'console/nintendo-emulators.html': 'Nintendo Emulators: Dolphin, Cemu & Switch | whatwhatboy',
   'console/playstation-emulators.html': 'PlayStation Emulators: PS1, PS2, PS3 & PSP | whatwhatboy',
-  'games/cs2/index.html': 'Free CS2 Cheats & Tools | whatwhatboy',
+  'games/cs2/index.html': 'CS2 Cheats & Tools: PassatHook, Undetek & Scooby | whatwhatboy',
   'games/cod/index.html': 'Call of Duty Cheats, GSC Menus & Clients | whatwhatboy',
   'games/cod/plutonium.html': 'Plutonium Tools: Black Ops 1, BO2 & MW3 | whatwhatboy',
   'pages/profile.html': 'whatwhatboy Profile & Social Links',
