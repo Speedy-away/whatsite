@@ -1,8 +1,12 @@
 const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
-  'fortnite': ['Fortnite PS4 Mod Menus: Spectrum FN & FN Menu', 'Download Spectrum FN v32 for Fortnite on PS4 with silent aim, player ESP, loot ESP and a skin changer. Find BlueQ’s FN Menu and its GoldHEN setup.',
-    ['Spectrum FN v32', 'Spectrum FN PS4', 'Spectrum FN download', 'Spectrum FN mod menu', 'Spectrum_FN.sprx', 'Dev-Phobia Spectrum FN',
+  'fortnite': ['Fortnite PS4 Cheats & Mod Menus', 'Browse Fortnite PS4 cheats and SPRX mod menus with aimbot, ESP and skin changers. Download Spectrum FN or BlueQ’s FN Menu and find the GoldHEN setup.',
+    ['Fortnite PS4 cheat', 'Fortnite PS4 hacks', 'Fortnite PS4 cheat menu', 'Fortnite cheats PS4', 'Fortnite hacks PS4', 'PlayStation 4 Fortnite cheats',
+      'Fortnite PS4 mods', 'Fortnite PS4 mod menus', 'Fortnite PS4 mod menu download', 'Fortnite PS4 SPRX download', 'Fortnite PS4 GoldHEN plugin',
+      'Fortnite PS4 aimbot', 'Fortnite PS4 silent aim', 'Fortnite PS4 ESP', 'Fortnite PS4 player ESP', 'Fortnite PS4 loot ESP', 'Fortnite PS4 container ESP',
+      'Fortnite PS4 skin changer', 'Fortnite PS4 no recoil', 'Fortnite PS4 vehicle flying', 'Fortnite skins database', 'Fortnite outfit catalogue',
+      'Spectrum FN v32', 'Spectrum FN PS4', 'Spectrum FN download', 'Spectrum FN mod menu', 'Spectrum_FN.sprx', 'Dev-Phobia Spectrum FN',
       'Fortnite PS4 SPRX', 'Fortnite PS4 cheats', 'Fortnite silent aim', 'Fortnite player ESP', 'Fortnite loot ESP', 'Fortnite client-side skin changer',
       'Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite skin changer', 'Unlock all skins', 'Free skins', 'Fortnite PS4 hack',
       'BlueQ FN Menu', 'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference']],
@@ -27,9 +31,10 @@ function metadataByPage() {
   for (const game of games) {
     const matching = entries.filter(entry => entry.gameId === game.id);
     const [title, description, discoveryTerms = []] = gameCopy[game.id] || [game.title + ' Resources', game.summary || 'Browse game-specific menus, tools and supplied guides.'];
+    const items = game.id === 'fortnite' ? matching.map(({name, url}) => ({name, url})) : undefined;
     result.set(game.url.slice(1) + 'index.html', {title: title + ' | whatwhatboy', description,
       keywords: unique([...(gameAliases[game.id] || []), game.title, ...discoveryTerms, ...matching.map(entry => entry.name),
-        ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), type: 'CollectionPage'});
+        ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), type: 'CollectionPage', items});
   }
   const directory = {title: 'PS4/PS5 Menu Directory: Games, Tools & Guides | whatwhatboy',
     description: `Search ${entries.length} PS4/PS5 game-resource entries across ${games.length} games by menu name, game alias, update or type. Open downloads, previews and guide popups.`,

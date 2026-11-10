@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const {page, section, grid, resource, link, guideLink, sourceList, note} = require('./build-console-guides.cjs');
+const {page, section, grid, resource, link, guideLink, sourceList, note, ext} = require('./build-console-guides.cjs');
 const {createResourceRenderer, categories} = require('./console-resource-renderer.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const {sourceKey, archivedMirrors} = require('./console-archived-mirrors.cjs');
@@ -121,12 +121,17 @@ function createGameImports({root = ROOT, data, files} = {}) {
         const filter = children.length >= 6 ? '<div class="extra-game-filter"><label for="extraGameSearch">Search games or exact CUSA title ID</label><input id="extraGameSearch" type="search" placeholder="Find a game, title ID or update…" autocomplete="off"><p id="extraGameCount" role="status" aria-live="polite">' + children.length + ' game collections</p></div>' : '';
         const childCards = children.length ? section('games', 'Choose a game', filter + grid(...children.map(child => resource(h(child.title), h(child.summary || 'Game-specific files and exact compatibility.'), link('/console/mods/ps4/' + child.slug + '/', 'Open resources'), child.cover))).replace('<div class="games-grid">', '<div class="games-grid" data-extra-game-grid>') + (filter ? '<p id="extraGameEmpty" hidden>No matching game. Try the game name or a listed title ID.</p>' : '')) : '';
         const file = 'console/mods/ps4/' + game.slug + '/index.html';
+        const relatedCards = (game.relatedCards || []).flatMap(card => {
+          const url = httpsUrl(card.url);
+          return url ? [resource(h(card.title), h(card.description), ext(url, h(card.linkLabel)))] : [];
+        });
         page(file, game.title + (game.platformLabel ? ' · ' + game.platformLabel : ' · PS4/PS5 Resources'), game.description || 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.', game.cover,
           [['/console/mods/', 'Console Mods'], ['/console/mods/ps4/', 'PS4/PS5 Games'], ...(game.parent ? [['/console/mods/ps4/other-games/', 'Other Games']] : []),
             ...(game.pluginTemplate ? [['#goldhen-plugin-template', 'GoldHEN plugins.ini']] : [])],
           (game.intro ? section('compatibility', 'Compatibility first', note('<p>' + h(game.intro) + '</p>')) : '') +
           (game.pluginTemplate ? require('./ps4-user-plugin-templates.cjs').sectionFor(game.id) : '') +
-          childCards + renderer.gameContent(items) +
+          childCards + renderer.gameContent(items, '', game.categoryHeadings) +
+          (relatedCards.length ? section('related-resources', 'Related resources', grid(...relatedCards)) : '') +
           (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), '#content', 'Browse resources');
         if (game.keywords?.length || filter) {
           const target = path.join(root, file);

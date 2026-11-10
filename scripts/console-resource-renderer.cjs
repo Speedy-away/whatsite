@@ -148,10 +148,10 @@ function details(item) {
   const clips = (item.videos || []).length ? '<h3>Videos</h3>' + item.videos.map(clip => videoMarkup(clip, item.name)).join('\n') : '';
   return guideSection('guide-' + item.id, item.name, guide + controls + gallery + guideImages + clips);
 }
-function gameContent(items, prefix = '') {
+function gameContent(items, prefix = '', categoryHeadings = {}) {
   const collections = Object.entries(categories).map(([id, title]) => {
     const matching = items.filter(item => item.category === id);
-    return matching.length ? section(prefix + id, title, grid(...matching.map(card))) : '';
+    return matching.length ? section(prefix + id, h(categoryHeadings[id] ?? title), grid(...matching.map(card))) : '';
   }).join('\n');
   return collections + items.map(details).join('\n');
 }

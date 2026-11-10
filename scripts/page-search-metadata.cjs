@@ -408,7 +408,7 @@ function transform(file, before, options = {}) {
     : relative === 'console/ps4/game-patches.html' ? 70
     : /^console\/(?:xbox-game-library|nintendo-game-library|playstation-library)\/index\.html$/.test(relative) ? 80
     : /^(?:console\/ps[45]\/(?:index|free-shops)\.html|console\/ps4\/save-tools\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60
-    : relative === 'console/mods/ps4/fortnite/index.html' ? 50
+    : relative === 'console/mods/ps4/fortnite/index.html' ? 80
     : 35;
   const keywords = [...new Map(terms.filter(t => t && t.toLowerCase() !== 'whatwhatboy').map(t => [t.toLowerCase(), t])).values()].slice(0, keywordLimit).concat('whatwhatboy').join(', ');
   const bodyHero = before.match(/class="hero-image"[^>]*>[\s\S]*?<img\b[^>]*src="([^"]*)"/i)?.[1];
