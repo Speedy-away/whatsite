@@ -20,7 +20,7 @@ function fixture() {
   const document = new Element();
   document.body = new Element(); document.body.style.overflow = 'auto'; document.createElement = () => new Element();
   const choices = [], timers = [];
-  const context = {document, LANGS:[{code:'en',native:'English'}], DEFAULT_LANG:'en', current:'en', GLOBE:'', stored:()=>null, detect:()=>'en', flagHTML:()=>'', setLang:code=>choices.push(code), setTimeout:fn=>timers.push(fn)};
+  const context = {document, switcherSlot: null, LANGS:[{code:'en',native:'English'}], DEFAULT_LANG:'en', current:'en', GLOBE:'', stored:()=>null, detect:()=>'en', flagHTML:()=>'', setLang:code=>choices.push(code), setTimeout:fn=>timers.push(fn)};
   const start = source.indexOf('  var picker = null;');
   const end = source.indexOf('  // ------------------------------------------------------------------ boot', start);
   vm.runInNewContext(source.slice(start, end), context);

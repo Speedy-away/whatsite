@@ -17,6 +17,7 @@
   var DEFAULT_LANG = 'en';
   var STORAGE_KEY = 'scooby.lang';
   var pageLanguage = document.documentElement.getAttribute('data-site-language');
+  var switcherSlot = document.querySelector('[data-language-switcher]');
   // Which corner the floating selector pins to when there is no navbar to sit in.
   var FLOAT_SIDE = 'right';
 
@@ -391,6 +392,12 @@
     opts = opts || {};
     if (CODES.indexOf(code) === -1) code = DEFAULT_LANG;
     if (pageLanguage && code !== pageLanguage) {
+      var sourcePath = switcherSlot && document.documentElement.getAttribute('data-site-source');
+      if (sourcePath && /^\/(?!\/)/.test(sourcePath)) {
+        store(code);
+        window.location.href = (code === DEFAULT_LANG ? '' : '/' + code) + sourcePath + window.location.search + window.location.hash;
+        return;
+      }
       var alternate = document.querySelector('link[rel="alternate"][hreflang="' + code + '"]');
       if (alternate && window.location) {
         store(code);
@@ -780,7 +787,9 @@
       open();
     });
     window.addEventListener('resize', function () { if (root.classList.contains('open')) positionMenu(); });
-    window.addEventListener('scroll', function () { if (root.classList.contains('open')) close(); }, true);
+    if (!switcherSlot) window.addEventListener('scroll', function (event) {
+      if (root.classList.contains('open') && event.target !== menu) close();
+    }, true);
     document.addEventListener('click', function (e) {
       if (!root.contains(e.target)) close();
     });
@@ -846,6 +855,7 @@
   }
 
   function mount(el) {
+    if (switcherSlot) { switcherSlot.appendChild(el); return; }
     var host = null;
     for (var i = 0; i < MOUNTS.length; i++) {
       host = document.querySelector(MOUNTS[i]);
@@ -907,7 +917,8 @@
 
     var head = '<div class="i18n-modal-head">' + GLOBE + '<h2>Choose your language</h2></div>' +
                '<p class="i18n-modal-sub">Select the language you would like to browse the site in. ' +
-               'You can change it any time from Language in the sidebar, or the pill in the top-right corner.</p>';
+               (switcherSlot ? 'You can change it any time from the language dropdown.' :
+                'You can change it any time from Language in the sidebar, or the pill in the top-right corner.') + '</p>';
 
     var grid = '<div class="i18n-grid">';
     LANGS.forEach(function (l) {
@@ -921,13 +932,14 @@
     grid += '</div>';
 
     var foot = '<div class="i18n-modal-foot">' +
-               '<button type="button" class="i18n-dismiss">Continue in English</button></div>';
+               '<button type="button" class="i18n-dismiss">' + (switcherSlot ? 'Keep current language' : 'Continue in English') + '</button></div>';
 
     box.innerHTML = head + grid + foot;
     picker.appendChild(box);
     document.body.appendChild(picker);
 
     var prevOverflow = document.body.style.overflow;
+    var previousFocus = document.activeElement;
     document.body.style.overflow = 'hidden';
 
     function close(code) {
@@ -939,6 +951,10 @@
       document.body.style.overflow = prevOverflow;
       overlay.classList.remove('show');
       setTimeout(function () { if (overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 260);
+      if (switcherSlot) {
+        var returnFocus = previousFocus === document.body ? root.querySelector('.i18n-toggle') : previousFocus;
+        if (returnFocus) returnFocus.focus();
+      }
       // Storing the choice is what stops this reappearing on the next visit.
       setLang(code, {});
     }
@@ -946,13 +962,21 @@
     box.addEventListener('click', function (e) {
       var pick = e.target.closest ? e.target.closest('.i18n-pick') : null;
       if (pick) { close(pick.getAttribute('data-lang')); return; }
-      if (e.target.closest && e.target.closest('.i18n-dismiss')) close(DEFAULT_LANG);
+      if (e.target.closest && e.target.closest('.i18n-dismiss')) close(switcherSlot ? current : DEFAULT_LANG);
     });
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) close(current);          // click outside = keep as-is
     });
     function onKey(e) {
-      if (e.key === 'Escape') close(current);
+      if (e.key === 'Escape') { close(current); return; }
+      if (!switcherSlot || e.key !== 'Tab') return;
+      var buttons = box.querySelectorAll('button');
+      var firstButton = buttons[0], lastButton = buttons[buttons.length - 1];
+      if ((e.shiftKey && document.activeElement === firstButton) ||
+          (!e.shiftKey && document.activeElement === lastButton)) {
+        e.preventDefault();
+        (e.shiftKey ? lastButton : firstButton).focus();
+      }
     }
     document.addEventListener('keydown', onKey);
 
@@ -996,7 +1020,19 @@
     buildSelector();
     if (initial !== DEFAULT_LANG) setLang(initial, { silent: true });
     else { current = DEFAULT_LANG; syncUI(); startObserver(); reveal(); }
-    if (!pageLanguage) showPicker();
+    if (switcherSlot) {
+      var reopen = document.querySelector('[data-language-picker]');
+      if (reopen) {
+        reopen.addEventListener('click', function () { showPicker(true); });
+        reopen.hidden = false;
+      }
+      if (switcherSlot.hasAttribute('data-language-first-visit') &&
+          (!pageLanguage || pageLanguage === DEFAULT_LANG) && !location.search && !location.hash) {
+        var preference = stored();
+        if (pageLanguage && preference && preference !== pageLanguage && CODES.indexOf(preference) !== -1) setLang(preference);
+        else showPicker();
+      }
+    } else if (!pageLanguage) showPicker();
   }
 
   // Exported before boot() so a dictionary that lands early can always register.

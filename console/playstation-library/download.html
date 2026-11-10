@@ -10,7 +10,8 @@
   <link rel="canonical" href="https://whatwhatboy.com/console/playstation-library/download.html">
   <link rel="icon" href="/assets/images/logo.png">
   <script src="/assets/playstation-library-theme.js?v=1"></script>
-  <link rel="stylesheet" href="/assets/playstation-library.css?v=3">
+  <link rel="stylesheet" href="/assets/playstation-library.css?v=6">
+  <script defer src="/languages/i18n.js?v=4"></script>
   <script type="module" src="/assets/playstation-library.js?v=5"></script>
 <link rel="stylesheet" href="/assets/site-ads.css?v=3">
 </head>
@@ -20,10 +21,13 @@
     <div class="wrap header-inner">
       <a class="wordmark" href="/"><img src="/assets/images/logo.png" alt="" width="32" height="32"> WhatWhatBoy</a>
       <nav aria-label="PlayStation"><a class="back-link" href="./">Game library <span aria-hidden="true">↗</span></a></nav>
-      <button type="button" class="theme-toggle" id="library-theme-toggle" hidden>
-        <span class="theme-light"><span aria-hidden="true">☀</span> Light mode</span>
-        <span class="theme-dark"><span aria-hidden="true">☾</span> Dark mode</span>
-      </button>
+      <div class="library-controls">
+        <span data-language-switcher></span>
+        <button type="button" class="theme-toggle" id="library-theme-toggle" hidden>
+          <span class="theme-light"><span aria-hidden="true">☀</span> Light mode</span>
+          <span class="theme-dark"><span aria-hidden="true">☾</span> Dark mode</span>
+        </button>
+      </div>
     </div>
   </header>
   <main class="wrap main-content transfer-main" id="main-content">
@@ -41,6 +45,7 @@
   <footer class="library-footer wrap">
     <div><strong>WhatWhatBoy</strong><p>Package files are served by their listed sources.</p></div>
     <nav aria-label="PlayStation downloads"><a href="./">Game library</a><a href="/console/ps4/game-downloads.html">PS4 downloads</a><a href="/console/ps5/game-downloads.html">PS5 downloads</a></nav>
+    <button type="button" class="text-button" data-language-picker hidden>Choose your language</button>
   </footer>
   <template id="direct-files">
     <a data-file="bo2-fpkg-111" href="/downloads/ps4-ps5/bo2-fpkg-111-crash-fix/BO2_ZMMP_CrashFix.pkg" download>Black Ops II 1.11 crash fix</a>
