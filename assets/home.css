@@ -38,7 +38,6 @@
 .home-page .no-results { padding: 48px 16px; border-radius: 12px; background: var(--bg-secondary); }
 .home-page .no-results h3 { font-size: 20px; margin: 12px 0 8px; }
 .home-page .no-results p { color: var(--home-muted); margin-bottom: 20px; }
-.home-page .home-consoles { background: var(--home-panel); }
 .home-platform-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 36px; }
 .home-platform { display: flex; align-items: center; gap: 18px; min-height: 88px; padding: 12px 8px; border-radius: 8px; color: var(--text-primary); }
 .home-platform.game-card { border: 0; background: transparent; }
@@ -54,17 +53,9 @@
 .home-platform:hover, .home-platform.game-card:hover { color: var(--accent-light); background: var(--accent-glow); }
 .home-platform:hover .home-platform-mark img { opacity: 1; }
 .home-platform:hover > i { transform: translateX(3px); color: var(--accent-light); }
-.home-console-links { display: flex; flex-wrap: wrap; gap: 24px; margin: 24px 0 32px; }
+.home-console-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
 .home-console-links a { min-height: 36px; display: inline-flex; align-items: center; gap: 12px; font-size: 13px; color: var(--accent-light); }
 .home-console-links i { font-size: 10px; }
-.home-emulators { background: var(--bg-tertiary); border-radius: 12px; padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.home-emulators h3 { font-size: 17px; letter-spacing: -.02em; margin-bottom: 4px; }
-.home-emulators p { font-size: 12px; color: var(--home-muted); }
-.home-emulators nav { display: flex; gap: 8px 18px; flex-wrap: wrap; align-items: center; }
-.home-emulators a { display: inline-flex; gap: 8px; align-items: center; min-height: 36px; font-size: 12px; color: var(--text-secondary); }
-.home-emulators a:first-child { color: var(--accent-light); }
-.home-emulators a:hover { color: var(--text-primary); }
-.home-emulators a i { font-size: 10px; }
 .home-page .home-help { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-block: 0 64px; }
 .home-help h2 { font-size: 22px; line-height: 1.3; letter-spacing: -.03em; margin-bottom: 8px; }
 .home-help p { color: var(--home-muted); font-size: 13px; }
@@ -81,7 +72,7 @@
 @media (max-width: 960px) {
     .home-game-controls { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
     .home-page .home-game-controls .search-container { max-width: none; }
-    .home-emulators, .home-page .home-help { align-items: flex-start; flex-direction: column; gap: 16px; }
+    .home-page .home-help { align-items: flex-start; flex-direction: column; gap: 16px; }
 }
 @media (max-width: 767px) {
     .home-directory-grid { column-gap: 14px; }
@@ -93,9 +84,7 @@
     .home-page .filter-buttons .filter-btn { font-size: 12px; padding-inline: 12px; }
     .home-platform-grid { grid-template-columns: minmax(0,1fr); }
     .home-platform { min-height: 76px; gap: 12px; }
-    .home-console-links { gap: 8px 18px; margin-bottom: 24px; }
-    .home-emulators { padding: 20px; }
-    .home-emulators nav { gap: 4px 20px; }
+    .home-console-links { gap: 8px 18px; }
     .home-help h2 { font-size: 20px; }
     .home-help-links { gap: 8px 20px; }
 }
