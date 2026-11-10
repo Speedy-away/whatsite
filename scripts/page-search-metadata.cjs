@@ -58,7 +58,7 @@ const titles = {
   'mods/skyrim.html': 'Skyrim Mods: ENB & SkyUI | whatwhatboy',
   'console/nintendo-emulators.html': 'Nintendo Emulators: Dolphin, Cemu & Switch | whatwhatboy',
   'console/playstation-emulators.html': 'PlayStation Emulators: PS1, PS2, PS3 & PSP | whatwhatboy',
-  'games/cs2/index.html': 'CS2 Cheats & Tools: PassatHook, Undetek & Scooby | whatwhatboy',
+  'games/cs2/index.html': 'Free CS2 Cheats & Tools | whatwhatboy',
   'games/cod/index.html': 'Call of Duty Cheats, GSC Menus & Clients | whatwhatboy',
   'games/cod/plutonium.html': 'Plutonium Tools: Black Ops 1, BO2 & MW3 | whatwhatboy',
   'pages/profile.html': 'whatwhatboy Profile & Social Links',
@@ -408,6 +408,7 @@ function transform(file, before, options = {}) {
     : relative === 'console/ps4/game-patches.html' ? 70
     : /^console\/(?:xbox-game-library|nintendo-game-library|playstation-library)\/index\.html$/.test(relative) ? 80
     : /^(?:console\/ps[45]\/(?:index|free-shops)\.html|console\/ps4\/save-tools\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60
+    : relative === 'console/mods/ps4/fortnite/index.html' ? 50
     : 35;
   const keywords = [...new Map(terms.filter(t => t && t.toLowerCase() !== 'whatwhatboy').map(t => [t.toLowerCase(), t])).values()].slice(0, keywordLimit).concat('whatwhatboy').join(', ');
   const bodyHero = before.match(/class="hero-image"[^>]*>[\s\S]*?<img\b[^>]*src="([^"]*)"/i)?.[1];
