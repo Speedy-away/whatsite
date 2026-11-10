@@ -18,6 +18,7 @@ function closeHomeMenus(activeMenu) {
 taskbar?.querySelector('[data-language-picker]')?.addEventListener('click', event => {
     event.currentTarget.closest('details').querySelector('summary').focus();
 }, { capture: true });
+taskbar?.querySelector('[data-language-switcher]')?.addEventListener('click', () => closeHomeMenus(null), { capture: true });
 
 document.addEventListener('click', event => {
     const menu = event.target.closest('.home-menu');

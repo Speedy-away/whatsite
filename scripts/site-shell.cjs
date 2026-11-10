@@ -6,9 +6,9 @@ const {eligible, relativePath} = require('./site-public-pages.cjs');
 const {attributes, canonical, mapTokens, origin} = require('./localized-html.cjs');
 const {tag: languageScript, apply: refreshLanguageScript} = require('./language-loader.cjs');
 
-const stylesheet = '<link rel="stylesheet" href="/assets/site-shell.css?v=1">';
+const stylesheet = '<link rel="stylesheet" href="/assets/site-shell.css?v=2">';
 const themeScript = '<script src="/assets/playstation-library-theme.js?v=3"></script>';
-const navigationScript = '<script defer src="/assets/home-navigation.js?v=20261110-shared"></script>';
+const navigationScript = '<script defer src="/assets/home-navigation.js?v=20261110-phone"></script>';
 const critical = '<style data-critical-bg>html,body{background:#000;color-scheme:dark}html[data-theme="light"],html[data-theme="light"] body{background:#f5f5f5;color-scheme:light}</style>';
 const skipLink = '<a class="skip-link" href="#main-content">Skip to content</a>';
 

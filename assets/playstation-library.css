@@ -227,9 +227,9 @@
   .hero-note { margin-bottom: 14px; }
   .hero-art { height: min(51vw,223px); margin-inline: 8px; }
   .catalog { padding-top: 20px; }
-  .catalog-heading { align-items: start; }
+  .catalog-heading { align-items: center; flex-wrap: wrap; gap: 4px 12px; }
   .catalog-heading .text-button, .results-bar .text-button { min-height: 44px; white-space: nowrap; }
-  .catalog-controls input { font-size: 16px; }
+  .catalog-controls :is(input,select), .file-filter select { font-size: 16px; }
   .results-bar { flex-wrap: wrap; gap: 4px 10px; }
   .results-bar > div { margin-inline-start: auto; }
   .catalog-controls { grid-template-columns: repeat(2,minmax(0,1fr)); }
@@ -247,6 +247,10 @@
   .package-row { display: grid; gap: 8px; }
   .package-actions { justify-content: start; }
   .package-password .inline-copy, .package-row .action { min-height: 44px; }
+  .transfer-main { min-height: 0; padding-block: 16px 32px; }
+  .transfer-main .back-link { display: inline-flex; align-items: center; min-height: 44px; }
+  .transfer-card { margin-top: 12px; }
+  .transfer-actions .action { flex: 1 1 140px; width: auto; text-align: center; }
   .transfer-meta { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 480px) {

@@ -180,7 +180,11 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     html:has(.site-shell) { --home-header-height: 96px; }
 }
 @media (max-width: 580px) {
+    .home-task-links { flex-wrap: nowrap; }
+    .home-task-links > .home-menu { flex: 1 1 auto; min-width: 0; }
     .home-menu > summary { padding-inline: 7px; gap: 4px; font-size: .79rem; }
+    .home-menu > summary > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+    .home-caret { flex-shrink: 0; }
     .home-menu-panel, .home-pc-menu .home-menu-panel, .home-more-menu .home-menu-panel {
         inset-inline: 0;
         width: auto;
@@ -196,15 +200,17 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     .home-theme { min-width: 44px; }
     .site-shell .home-controls .i18n-toggle { padding-inline: 7px; }
     .site-shell .home-controls .i18n-switcher { position: static; }
-    .home-controls { position: relative; }
+    .site-shell .home-controls .i18n-menu {
+        inset-block-start: calc(100% + 5px);
+        inset-inline-end: 16px;
+        z-index: 3;
+        max-height: min(520px, calc(100dvh - var(--home-header-height) - 12px));
+    }
+    .site-shell.downloads-overview .guide-nav { flex-wrap: wrap; gap: 4px 8px; }
+    .site-shell.downloads-overview .guide-nav > a { padding-inline: 7px; font-size: .83rem; }
 }
 @media (max-width: 380px) {
     .home-menu > summary { padding-inline: 4px; }
-}
-@media (max-width: 348px) {
-    .home-cheats-menu > summary { max-inline-size: 56px; font-size: .75rem; }
-    .home-cheats-menu > summary > span:first-child { overflow-wrap: anywhere; }
-    .home-cheats-menu .home-caret { flex-shrink: 0; }
 }
 @media (max-height: 420px) {
     .home-taskbar { position: relative; }
@@ -236,7 +242,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     background: var(--bg-tertiary);
     color: var(--text-primary);
 }
-.site-shell :is(.main-content, .footer, .guide-footer) { margin-inline-start: 0; }
+.site-shell :is(.main-content:not(.wrap), .footer, .guide-footer) { margin-inline-start: 0; }
 .site-shell .footer, .site-shell .guide-footer { background: var(--home-panel); }
 body.site-shell .main-content .container { max-width: 1280px; }
 .site-shell:not(.home-page,.ps-library) .hero {

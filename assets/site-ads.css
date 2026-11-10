@@ -46,6 +46,16 @@
 }
 .site-ad-stage #container-fd0a4dcec74a63f4d2662af5273f9d5b [class$="__title"] { overflow-wrap: anywhere; }
 
+@media (max-width: 580px) {
+    .ps-library .site-ad-layout > .site-ad { width: min(420px, 100%); }
+    .site-ad-stage #container-fd0a4dcec74a63f4d2662af5273f9d5b > [class$="__stand"] {
+        /* The provider can set its own display value inline. */
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+}
+
 @media (min-width: 1280px) {
     .site-ad-layout {
         --site-ad-width: clamp(180px, 14vw, 224px);

@@ -15,7 +15,7 @@ test('wide pages stack native cards while narrow pages keep the ad after the con
  assert.match(css,/\[class\$="__stand"\]\s*\{\s*flex-direction: column/);
  for(const file of ['pc/ports.html','pc/emulators.html','console/playstation-library/download.html']){
   const html=ads.publishAds(file,fs.readFileSync(file,'utf8'));
-  assert.ok(html.includes('/assets/site-ads.css?v=6'));
+  assert.ok(html.includes('/assets/site-ads.css?v=7'));
   assert.match(html, /class="site-ad-layout"/);
   assert.equal((html.match(/id="container-fd0a4dcec74a63f4d2662af5273f9d5b"/g)||[]).length,1);
   assert.doesNotMatch(html, /fd0a4dcec74a63f4d2662af5273f9d5b\/invoke\.js/);

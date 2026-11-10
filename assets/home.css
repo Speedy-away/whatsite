@@ -77,7 +77,8 @@
 @media (max-width: 767px) {
     .home-directory-grid { column-gap: 14px; }
     .home-directory-grid a { grid-template-columns: 22px minmax(0, 1fr) auto; gap: 6px; padding-inline: 3px; }
-    .home-page .section { padding-block: 44px; }
+    .home-page .section { padding-block: 32px; }
+    .home-page .section-header { margin-bottom: 18px; }
     .home-page .home-help { padding-bottom: 44px; }
     .home-page .search-input { font-size: 16px; }
     .home-page .home-game-controls .filter-buttons { gap: 2px; flex-wrap: wrap; }
@@ -89,7 +90,10 @@
     .home-help-links { gap: 8px 20px; }
 }
 @media (max-width: 580px) {
+    .home-page .home-directory { padding-block-end: 16px; }
     .home-directory-grid small { line-height: 1.35; }
+    .home-page .home-game-controls .filter-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+    .home-page .home-game-controls .filter-btn { white-space: normal; }
 }
 @media (max-width: 380px) {
     .home-directory-grid { grid-template-columns: 1fr; }
