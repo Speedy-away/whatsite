@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {eligible, relativePath} = require('./site-public-pages.cjs');
 const {attributes, canonical, mapTokens, origin} = require('./localized-html.cjs');
-const {tag: languageScript} = require('./language-loader.cjs');
+const {tag: languageScript, apply: refreshLanguageScript} = require('./language-loader.cjs');
 
 const stylesheet = '<link rel="stylesheet" href="/assets/site-shell.css?v=1">';
 const themeScript = '<script src="/assets/playstation-library-theme.js?v=3"></script>';
@@ -52,7 +52,7 @@ function create(root) {
     });
     const markup = currentHeader(firstVisit ? header.replace('data-language-switcher', 'data-language-switcher data-language-first-visit') : header, file, html);
     let hiddenTag = '', depth = 0;
-    return mapTokens(html, token => {
+    return mapTokens(refreshLanguageScript(html), token => {
       const element = /^<(\/?)([\w-]+)\b/i.exec(token);
       const name = element?.[2].toLowerCase();
       if (hiddenTag) {

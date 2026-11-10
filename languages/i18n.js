@@ -22,28 +22,28 @@
   var FLOAT_SIDE = 'right';
 
   var LANGS = [
-    { code: 'en', label: 'EN', native: 'English'    },
-    { code: 'es', label: 'ES', native: 'Español'    },
-    { code: 'pt', label: 'PT', native: 'Português'  },
-    { code: 'fr', label: 'FR', native: 'Français'   },
-    { code: 'de', label: 'DE', native: 'Deutsch'    },
-    { code: 'ru', label: 'RU', native: 'Русский'    },
-    { code: 'tr', label: 'TR', native: 'Türkçe'     },
-    { code: 'pl', label: 'PL', native: 'Polski'     },
-    { code: 'it', label: 'IT', native: 'Italiano'   },
-    { code: 'zh', label: 'ZH', native: '简体中文'    },
-    { code: 'ja', label: 'JA', native: '日本語'      },
-    { code: 'ko', label: 'KO', native: '한국어'      },
-    { code: 'th', label: 'TH', native: 'ไทย'        },
-    { code: 'vi', label: 'VI', native: 'Tiếng Việt' },
-    { code: 'id', label: 'ID', native: 'Indonesia'  },
-    { code: 'hi', label: 'HI', native: 'हिन्दी'       },
-    { code: 'sr', label: 'SR', native: 'Српски'     },
-    { code: 'nl', label: 'NL', native: 'Nederlands' },
-    { code: 'ka', label: 'KA', native: 'ქართული'    },
+    { code: 'en', native: 'English' },
+    { code: 'es', native: 'Español' },
+    { code: 'pt', native: 'Português' },
+    { code: 'fr', native: 'Français' },
+    { code: 'de', native: 'Deutsch' },
+    { code: 'ru', native: 'Русский' },
+    { code: 'tr', native: 'Türkçe' },
+    { code: 'pl', native: 'Polski' },
+    { code: 'it', native: 'Italiano' },
+    { code: 'zh', native: '简体中文' },
+    { code: 'ja', native: '日本語' },
+    { code: 'ko', native: '한국어' },
+    { code: 'th', native: 'ไทย' },
+    { code: 'vi', native: 'Tiếng Việt' },
+    { code: 'id', native: 'Indonesia' },
+    { code: 'hi', native: 'हिन्दी' },
+    { code: 'sr', native: 'Српски' },
+    { code: 'nl', native: 'Nederlands' },
+    { code: 'ka', native: 'ქართული' },
     // Right-to-left: these also flip <html dir> and mirror the selector.
-    { code: 'ar', label: 'AR', native: 'العربية', rtl: true },
-    { code: 'he', label: 'HE', native: 'עברית',  rtl: true }
+    { code: 'ar', native: 'العربية', rtl: true },
+    { code: 'he', native: 'עברית', rtl: true }
   ];
   var CODES = LANGS.map(function (l) { return l.code; });
 
@@ -484,15 +484,11 @@
     'font-weight:500;text-align:left;cursor:pointer;transition:background .15s,color .15s}',
     '.i18n-option:hover{background:rgba(255,255,255,.06);color:#fff}',
     '.i18n-option[aria-selected="true"]{color:#fff;background:rgba(16,185,129,.14)}',
-    '.i18n-badge{display:inline-flex;align-items:center;justify-content:center;min-width:30px;padding:3px 6px;',
-    'border-radius:5px;background:rgba(255,255,255,.08);font-size:.68rem;font-weight:700;letter-spacing:.05em;',
-    'color:#d5d5e2;flex-shrink:0}',
     /* Drawn SVG flags - emoji flags do not render on Windows. */
     '.i18n-flag{display:inline-block;width:20px;height:14px;border-radius:2.5px;overflow:hidden;',
     'flex-shrink:0;line-height:0;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset}',
     '.i18n-flag svg{display:block;width:100%;height:100%}',
     '.i18n-toggle .i18n-flag{width:19px;height:13px}',
-    '.i18n-option[aria-selected="true"] .i18n-badge{background:rgba(16,185,129,.28);color:#fff}',
     '.i18n-check{margin-left:auto;width:14px;height:14px;stroke:#34d399;fill:none;stroke-width:2.5;opacity:0;flex-shrink:0}',
     '.i18n-option[aria-selected="true"] .i18n-check{opacity:1}',
     // Left group so the selector sits beside the brand without breaking space-between.
@@ -558,8 +554,6 @@
     '.i18n-option{gap:10px;padding:10px 11px;border-radius:10px;color:var(--text-secondary,#a1a1aa);font-size:.84rem;transition:background .18s,color .18s,transform .18s}',
     '.i18n-option:hover{background:rgba(16,185,129,.1);color:#fff;transform:translateX(2px)}',
     '.i18n-option[aria-selected="true"]{background:linear-gradient(90deg,rgba(16,185,129,.2),rgba(16,185,129,.06));color:#fff;box-shadow:inset 2px 0 0 var(--i18n-accent)}',
-    '.i18n-badge{min-width:31px;padding:4px 6px;border:1px solid rgba(255,255,255,.08);border-radius:6px;background:rgba(255,255,255,.06);color:#d9fced;font-size:.64rem}',
-    '.i18n-option[aria-selected="true"] .i18n-badge{background:rgba(16,185,129,.22);border-color:rgba(110,231,183,.3);color:#fff}',
     '.i18n-check{stroke:var(--i18n-accent-light)}',
     '.i18n-modal-overlay{background:radial-gradient(circle at 50% 18%,rgba(16,185,129,.12),transparent 42%),rgba(4,7,9,.9);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);padding:18px}',
     '.i18n-modal{position:relative;isolation:isolate;max-width:600px;max-height:88vh;padding:30px;background:linear-gradient(180deg,rgba(19,19,22,.99),rgba(10,10,12,.99));border:1px solid rgba(16,185,129,.28);border-radius:20px;box-shadow:0 34px 90px -22px rgba(0,0,0,.92),0 0 0 1px rgba(16,185,129,.06),0 0 48px rgba(16,185,129,.08);overflow-y:auto}',
@@ -716,8 +710,7 @@
     toggle.setAttribute('aria-haspopup', 'listbox');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Change language');
-    toggle.innerHTML = '<span class="i18n-toggle-flag">' + flagHTML(current) + '</span>' +
-                       '<span class="i18n-current">EN</span>' + CARET;
+    toggle.innerHTML = '<span class="i18n-toggle-flag">' + flagHTML(current) + '</span>' + CARET;
 
     var menu = document.createElement('ul');
     menu.className = 'i18n-menu';
@@ -732,8 +725,7 @@
       btn.setAttribute('role', 'option');
       btn.setAttribute('data-lang', l.code);
       btn.setAttribute('aria-selected', 'false');
-      btn.innerHTML = flagHTML(l.code) + '<span class="i18n-badge">' + l.label + '</span>' +
-                      '<span>' + l.native + '</span>' + CHECK;
+      btn.innerHTML = flagHTML(l.code) + '<span>' + l.native + '</span>' + CHECK;
       btn.addEventListener('click', function () {
         close();
         setLang(l.code);
@@ -882,9 +874,6 @@
 
   function syncUI() {
     if (!root) return;
-    var meta = LANGS.filter(function (l) { return l.code === current; })[0] || LANGS[0];
-    var label = root.querySelector('.i18n-current');
-    if (label) label.textContent = meta.label;
     var tf = root.querySelector('.i18n-toggle-flag');
     if (tf) tf.innerHTML = flagHTML(current);
     var opts = root.querySelectorAll('.i18n-option');

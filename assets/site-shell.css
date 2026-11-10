@@ -167,7 +167,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .site-shell :is(.i18n-menu, .i18n-modal)::before, .site-shell .i18n-modal::after { display: none; }
 .site-shell :is(.i18n-modal h2, .i18n-option, .i18n-pick) { color: var(--text-primary); }
 .site-shell :is(.i18n-modal-sub, .i18n-option-meta, .i18n-pick-meta) { color: var(--home-muted); }
-.site-shell :is(.i18n-option:hover, .i18n-option[aria-selected="true"], .i18n-pick, .i18n-badge, .i18n-dismiss) {
+.site-shell :is(.i18n-option:hover, .i18n-option[aria-selected="true"], .i18n-pick, .i18n-dismiss) {
     color: var(--text-primary);
     background: var(--bg-tertiary);
     border-color: var(--border);
