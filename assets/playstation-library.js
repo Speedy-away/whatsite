@@ -218,14 +218,16 @@ async function library() {
   };
   currentView();
 
-  function loadFilters() {
+  function loadFilters(selected = fields) {
     const params = query();
-    for (const field of fields) {
+    for (const field of selected) {
       const value = params.get(field.name);
       field.value = field === search ? (value || '') :
         [...field.options].some(o => o.value === value) ? value : field.options[0].value;
     }
   }
+  // Region and genre options are populated after the catalogue loads.
+  loadFilters(search.value ? [platform, kind, sort] : [search, platform, kind, sort]);
   function writeFilters() {
     const url = new URL(location.href);
     for (const field of fields) {
@@ -359,7 +361,7 @@ async function library() {
     genre.disabled = !genreOptions.length;
     region.append(...[...new Set(titles.flatMap(g => g.regions || []))].sort().map(regionOption));
     $('library-totals').textContent = countLabel('listing-count', data.stats.titles) + ' · ' + countLabel('package-count', data.stats.links);
-    loadFilters();
+    loadFilters([genre, region]);
     render();
     if (query().has('game')) open(query().get('game'));
   } catch {
