@@ -54,3 +54,25 @@ test('keeps cover-only listings and preserves earlier package links on repeat im
   assert.deepEqual(state.index.titles.map(row=>row.count),[3,0]);
   assert.deepEqual(state.index.titles.map(row=>row.cover),saved.index.titles.map(row=>row.cover));
 });
+
+test('imports older platforms with their source listing and formatted title IDs', () => {
+  const state = {index:{titles:[],stats:{dlpsgame:{PS5:{listings:1}}}},details:Array.from({length:32},()=>({}))};
+  const ps2 = {...post, link:'https://dlpsgame.com/example-ps2/', content:{rendered:
+    '<p>USA SLUS_202.65</p><p>Game: <a href="https://1fichier.com/?example">1File</a></p>'}};
+  const vita = {...post, link:'https://downloadgamepsp.org/example-vita/', content:{rendered:
+    '<img src="https://downloadgamepsp.org/wp-content/uploads/cover.jpg"><p>EUR PCSB-00118</p>'}};
+  const snapshot = {PS2:[ps2], 'PS Vita':[vita]};
+  mergeSnapshots(snapshot, state, () => false);
+  const [console, handheld] = state.index.titles;
+  const read = row => state.details[parseInt(row.id.slice(0,2),16)%32][row.id];
+  assert.deepEqual(console.titleIds, ['SLUS20265']);
+  assert.equal(read(console).files[0].titleId, 'SLUS20265');
+  assert.deepEqual(handheld.titleIds, ['PCSB00118']);
+  assert.equal(handheld.cover, 'https://downloadgamepsp.org/wp-content/uploads/cover.jpg');
+  assert.equal(read(handheld).page, vita.link);
+  assert.equal(handheld.count, 0);
+  assert.equal(state.index.stats.dlpsgame.PS5.listings, 1);
+  const saved = structuredClone(state);
+  mergeSnapshots(snapshot, state, () => false);
+  assert.deepEqual(state, saved);
+});

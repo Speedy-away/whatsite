@@ -18,7 +18,7 @@ const featuredCovers = new Map([
   ['https://image.api.playstation.com/vulcan/ap/rnd/202406/0500/8f15268257b878597757fcc5f2c9545840867bc71fc863b1.png?w=260', '/assets/images/playstation-library/astro-bot.png']
 ]);
 const normalize = value => String(value || '').normalize('NFKD').toLowerCase().replace(/\p{M}/gu, '')
-  .replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/\b(cusa|ppsa)\s+(\d{5})\b/g, '$1$2').trim();
+  .replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/\b(cusa|ppsa|pcs[a-i]|bl[a-z][sm]|bc[a-z][sm]|np[a-z][a-z]|[su][lc][a-z][a-z])\s+(\d{3})\s?(\d{2})\b/g, '$1$2$3').trim();
 const romanNumerals = ['', 'i', 'ii', 'iii', 'iv', 'v', 'vi'];
 
 function searchText(game) {
@@ -27,7 +27,8 @@ function searchText(game) {
   const roman = title.replace(/\b[1-6]\b/g, number => romanNumerals[Number(number)]);
   const blackOps = numbered.match(/\bblack ops ([1-4])\b/)?.[1];
   const gta = numbered.match(/\bgrand theft auto ([456])\b/)?.[1];
-  const platform = game.platform === 'PS4' ? 'PlayStation 4 PS 4' : 'PlayStation 5 PS 5';
+  const platform = /^PS[2-5]$/.test(game.platform) ? 'PlayStation ' + game.platform.slice(-1) + ' PS ' + game.platform.slice(-1) :
+    game.platform === 'PSP' ? 'PlayStation Portable PPSSPP' : 'PlayStation Vita PSVita';
   return normalize([title, numbered, roman, blackOps && `BO${blackOps} BO ${blackOps}`,
     gta && `GTA${gta} GTA ${gta} GTA ${romanNumerals[gta]}`, game.platform, platform,
     ...(game.titleIds || []), game.source].filter(Boolean).join(' '));
@@ -63,7 +64,7 @@ const json = async url => {
   return response.json();
 };
 let indexPromise;
-const index = () => indexPromise ||= json(dataRoot + 'index.json?v=dlpsgame-2');
+const index = () => indexPromise ||= json(dataRoot + 'index.json?v=legacy-platforms-1');
 const shards = new Map();
 async function getGame(id, revision) {
   if (!gameId.test(id || '')) return null;
@@ -135,8 +136,10 @@ function renderGame(id, game, initialRegion, initialKind, related) {
   const sourceUrls = [...new Set((game.sourcePages || []).map(safeUrl).filter(url => url && url !== sourcePage))];
   const sourceDownloads = sourceUrls.map((url, i) =>
     sourceLink(url, msg('source-download') + (sourceUrls.length > 1 ? ' ' + fmt.format(i + 1) : ''), {button: true}));
+  const legacy = game.platform !== 'PS4' && game.platform !== 'PS5';
   const fallbackDownload = !game.files.length && !sourceDownloads.length
-    ? sourceLink(sourcePage, msg('source-download'), {button: true}) : '';
+    ? sourceLink(sourcePage, msg(legacy ? 'original-game-page' : 'source-download'), {button: true}) : '';
+  const legacySource = legacy && game.files.length ? sourceLink(sourcePage, msg('original-game-page')) : '';
   const password = isSuperPSX(game) ? `<p class="meta-line package-password">${label('password-note')}
     <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button></p>` : '';
   const otherListings = related.length ? `<div class="source-notes"><h3>${label('related-title-ids')}</h3><ul>${related.map(listing =>
@@ -150,8 +153,9 @@ function renderGame(id, game, initialRegion, initialKind, related) {
         ${sourceDownloads.length ? `<div class="library-source">${sourceDownloads.join('')}</div>` : ''}
       </div>
     </div>
-    <p class="detail-note">${label('install-note')}</p>
-    ${game.notes ? `<details class="source-notes"><summary>${label('source-notes')}</summary><p>${esc(game.notes)}</p></details>` : ''}
+    <p class="detail-note">${label(legacy ? 'legacy-install-note' : 'install-note')}</p>
+    ${game.notes || legacySource ? `<details class="source-notes"><summary>${label('source-notes')}</summary>
+      ${game.notes ? `<p>${esc(game.notes)}</p>` : ''}${legacySource}</details>` : ''}
     ${game.files.length ? `
     <div class="file-filter">
       <h3>${label('package-links')}</h3>

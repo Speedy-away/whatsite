@@ -16,7 +16,19 @@ const plain = value => decode(String(value || '').replace(/<[^>]*>/g, ' ')).repl
 const distinct = items => [...new Set(items.filter(Boolean))];
 const compact = row => Object.fromEntries(Object.entries(row).filter(([,v]) => v !== undefined && v !== '' && (!Array.isArray(v) || v.length)));
 const signedQuery = /^(?:token|expires|signature|sig|hm|x-amz-.+|auth|key-pair-id)$/i;
-const titleIdPattern = /\b(?:CUSA|PPSA)\d{5}\b/gi;
+const legacyPlatforms = new Set(['PS2', 'PS3', 'PSP', 'PS Vita']);
+const handheld = platform => platform === 'PSP' || platform === 'PS Vita';
+const titleIdsByPlatform = {
+  PS2: /\b(?:SLUS|SCUS|SLES|SCES|SLPS|SLPM|SCPS|SLAJ|SCAJ)[ _-]?\d{3}\.?\d{2}\b/gi,
+  PS3: /\b(?:BL[AEJKU][SM]|BC[AEJKU][SM]|NP[AEJU][ABD])[\s-]?\d{5}\b/gi,
+  PSP: /\b(?:UL[AEJUK][MS]|UC[AEJUK][MS]|NP[AEJU][GH])[\s-]?\d{5}\b/gi,
+  'PS Vita': /\bPCS[A-I][\s-]?\d{5}\b/gi
+};
+const modernTitleIds = /\b(?:CUSA|PPSA)\d{5}\b/gi;
+const extractTitleIds = (text, platform) => distinct(
+  (text.match(titleIdsByPlatform[platform] || modernTitleIds) || [])
+    .map(id => id.toUpperCase().replace(/[ ._-]/g, ''))
+);
 const regionPattern = /\b(USA|EUR|JPN|JAPAN|ASIA|UK|EU|US)\b/;
 const hosts = new Set([
   '1fichier.com', 'akirabox.com', 'akirabox.to', 'archive.org', 'buzzheavier.com',
@@ -39,7 +51,7 @@ function coverSource(post) {
   const img = /<img\b[^>]*\bsrc=["']([^"']+)["']/i.exec(body)?.[1];
   if (!img) return '';
   const url = webUrl(img, post.link);
-  if (!url || !/(?:^|\.)(?:dlpsgame\.com|googleusercontent\.com|blogspot\.com|imgur\.com|postimg\.cc|ibb\.co)$/i.test(url.hostname)) return '';
+  if (!url || !/(?:^|\.)(?:dlpsgame\.com|downloadgamepsp\.org|googleusercontent\.com|blogspot\.com|imgur\.com|postimg\.cc|ibb\.co)$/i.test(url.hostname)) return '';
   url.protocol = 'https:';
   url.hash = '';
   return url.href;
@@ -49,9 +61,11 @@ function downloadPage(url) {
   return url.hostname.replace(/^www\./, '') === 'downloadgameps3.net' && /^\/archives\/\d+\/?$/.test(url.pathname);
 }
 
-function listingPage(value) {
+function listingPage(value, platform) {
   const url = webUrl(value);
-  return url && /^(?:www\.)?dlpsgame\.com$/i.test(url.hostname) && url.pathname !== '/' && !url.search && !url.hash ? url.href : '';
+  const expectedHost = handheld(platform) ? 'downloadgamepsp.org' : 'dlpsgame.com';
+  return url && url.hostname.replace(/^www\./, '') === expectedHost && url.pathname !== '/' &&
+    !url.search && !url.hash ? url.href : '';
 }
 
 function fileHost(value) {
@@ -80,7 +94,7 @@ function kind(text) {
   return 'other';
 }
 
-function parseLinks(post) {
+function parseLinks(post, platform) {
   // This attribute is the plaintext content encoded for the public site's
   // spoiler widget. Parse the data only and never execute its markup or scripts.
   const body = post.content.rendered
@@ -99,7 +113,7 @@ function parseLinks(post) {
     if (line === '@release-section@') { currentId = ''; currentRegion = ''; continue; }
     const references = [...line.matchAll(/@link(\d+)@/g)];
     const context = line.replace(/@link\d+@/g, '').trim();
-    const idsHere = distinct((context.match(titleIdPattern) || []).map(value => value.toUpperCase()));
+    const idsHere = extractTitleIds(context, platform);
     idsHere.forEach(value => ids.add(value));
     if (idsHere.length) {
       currentId = idsHere.length === 1 ? idsHere[0] : '';
@@ -115,7 +129,8 @@ function parseLinks(post) {
       const anchor = anchors[Number(ref[1])];
       const url = fileHost(anchor.url);
       if (!url || !anchor.text || /^(?:guide|how to|download tool|trailer|tutorial)\b/i.test(anchor.text)) continue;
-      const titleId = anchor.text.match(titleIdPattern)?.[0]?.toUpperCase() || currentId;
+      const [anchorId] = extractTitleIds(anchor.text, platform);
+      const titleId = anchorId || currentId;
       if (titleId) ids.add(titleId);
       const label = /\b(?:game|base|update|patch|dlc|fix|backport|part\s*\d+)\b/i.test(release)
         ? release : anchor.text;
@@ -142,26 +157,29 @@ function readCatalog(directory) {
 }
 
 function mergeSnapshots(snapshots,{index,details},hasCover) {
-  const provider = 'DLPSGame';
   const existing = new Map(index.titles.map((game,i)=>[game.id,i]));
   const totals = {};
   for (const [platform,posts] of Object.entries(snapshots)) {
-    if (!['PS4','PS5'].includes(platform) || !Array.isArray(posts) || !posts.length) throw Error('Invalid platform snapshot');
+    const legacy = legacyPlatforms.has(platform);
+    if ((!legacy && !['PS4','PS5'].includes(platform)) || !Array.isArray(posts) || !posts.length) throw Error('Invalid platform snapshot');
+    const provider = handheld(platform) ? 'DownloadGamePSP' : 'DLPSGame';
     const counts = {listings:0,covers:0,withLinks:0,links:0};
     totals[platform] = counts;
     for (const post of posts) {
       const name = plain(post.title?.rendered);
       if (!Number.isSafeInteger(post.id) || !name || typeof post.content?.rendered !== 'string') throw Error('Invalid catalog entry');
-      const id = digest('dlpsgame:' + platform + ':' + post.id).slice(0,16);
-      const {files,titleIds,regions,notes} = parseLinks(post);
+      const page = listingPage(post.link, platform);
+      if (legacy && !page) throw Error('Unexpected listing page: ' + post.link);
+      const id = digest(provider.toLowerCase() + ':' + platform + ':' + post.id).slice(0,16);
+      const {files,titleIds,regions,notes} = parseLinks(post, platform);
       const image = coverSource(post);
-      const cover = image && hasCover(coverKey(image)) ? imagePath + coverKey(image) + '.jpg' : '';
+      const cover = image && hasCover(coverKey(image)) ? imagePath + coverKey(image) + '.jpg' : legacy ? image : '';
       const date = /^\d{4}-\d{2}-\d{2}T/.test(post.modified_gmt || '') ? post.modified_gmt + 'Z' : '';
       const facets = distinct(files.map(file=>(file.region || 'Unspecified')+':'+file.kind));
       const title = compact({id,name,platform,cover,titleIds,count:files.length,facets,
         regions:distinct([...regions,...facets.map(facet=>facet.split(':')[0])]),date,source:provider});
       const bucket = details[parseInt(shard(id),16)];
-      const detail = {...compact({name,platform,cover,titleIds,date,source:provider,notes,page:listingPage(post.link)}),files};
+      const detail = {...compact({name,platform,cover,titleIds,date,source:provider,notes,page}),files};
       if (existing.has(id)) {
         if (bucket[id]?.source !== provider) throw Error('Conflicting catalog ID '+id);
         const position = existing.get(id);
@@ -188,7 +206,10 @@ function mergeSnapshots(snapshots,{index,details},hasCover) {
     }
   }
   index.revision = digest(JSON.stringify(details)).slice(0,16);
-  index.stats = {...index.stats,titles:index.titles.length,links:index.titles.reduce((count,game)=>count+game.count,0),dlpsgame:totals};
+  const {PSP, 'PS Vita': vita, ...dlpsgame} = totals;
+  index.stats = {...index.stats,titles:index.titles.length,links:index.titles.reduce((count,game)=>count+game.count,0),
+    dlpsgame:{...index.stats?.dlpsgame,...dlpsgame}};
+  if (PSP || vita) index.stats.downloadgamepsp = {...index.stats.downloadgamepsp, ...(PSP && {PSP}), ...(vita && {'PS Vita':vita})};
   return {index,details,totals};
 }
 
@@ -204,9 +225,10 @@ function writeCatalog(directory,{index,details}) {
 
 module.exports = {coverSource,coverKey,fileHost,parseLinks,readCatalog,mergeSnapshots,writeCatalog};
 if (require.main === module) {
-  const [ps4,ps5] = process.argv.slice(2);
-  if (!ps4 || !ps5) throw Error('Usage: node scripts/import-dlpsgame-library.cjs <PS4.json> <PS5.json>');
-  const input = {PS4:JSON.parse(fs.readFileSync(ps4,'utf8')),PS5:JSON.parse(fs.readFileSync(ps5,'utf8'))};
+  const args = process.argv.slice(2);
+  const platforms = args[0] === '--legacy' ? (args.shift(), [...legacyPlatforms]) : ['PS4', 'PS5'];
+  if (args.length !== platforms.length) throw Error('Usage: node scripts/import-dlpsgame-library.cjs <PS4.json> <PS5.json> or --legacy <PS2.json> <PS3.json> <PSP.json> <PSVita.json>');
+  const input = Object.fromEntries(platforms.map((platform, i) => [platform, JSON.parse(fs.readFileSync(args[i],'utf8'))]));
   const directory = path.join(root,'assets/playstation-library');
   const merged = mergeSnapshots(input,readCatalog(directory),key=>fs.existsSync(path.join(root,imagePath.slice(1),key+'.jpg')));
   writeCatalog(directory,merged);
