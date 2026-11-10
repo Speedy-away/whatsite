@@ -269,6 +269,7 @@
       "checks": "Static inspection found the skin changer and vehicle fly labels in the pinned SPRX. Verified the rendered cards, metadata and directory filter for Aimbot and Vehicle flying and removal of Teleport to marker. Both pinned files matched their recorded sizes and SHA-256 hashes in the earlier feature refresh. The metadata check and all 22 focused tests passed."
     },
     "layout": "Moved the GoldHEN plugins.ini block above the menu downloads and removed the public sources and related guides block. The release source remains recorded in the download inventory.",
+    "cardVideo20261110": "Removed the visible snapshot and compatibility lines from BlueQ’s FN Menu card and added a Watch video guide button for YouTube video tudTLts4OMw. YouTube returned public video metadata. Verified the card, pinned download and GoldHEN setup, plus all 30 focused tests.",
     "hubCardCopy": "Removed the description paragraph from the Fortnite card on the PS4/PS5 mods hub. Verified the existing card and its generator. Included in the scoped publication commit.",
     "compatibility": "Static inspection found a CUSA07669 title-ID check. EU and AU share CUSA07669. USA and JP share CUSA07022, which is listed with the plugin disabled. The Fortnite game update and PS4 firmware remain unspecified.",
     "archive": "Both ready files were saved under PS4/Games/Fortnite and verified byte for byte against their website copies. Their source URLs, versions, sizes and SHA-256 are in the merged download inventory. The F: archive index was refreshed.",

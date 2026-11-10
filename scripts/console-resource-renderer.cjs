@@ -114,7 +114,9 @@ function card(item) {
     return href && label ? [ext(href, h(label))] : [];
   }).join('');
   const actions = buttons + sourceLink + videoLink + detailLink + relatedLinks;
-  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${item.version ? `<p>${h(item.version)}</p>` : ''}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${!cleanGta && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : ''}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
+  const version = !item.hideCardBuildDetails && item.version ? `<p>${h(item.version)}</p>` : '';
+  const compatibility = !cleanGta && !item.hideCardBuildDetails && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
+  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
   const title = block.title ? `<h3>${h(block.title)}</h3>` : '';
