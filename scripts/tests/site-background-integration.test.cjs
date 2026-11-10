@@ -66,7 +66,8 @@ test('site pages include current background assets or the generator-safe shared 
     const files = pages();
     const relative = file => path.relative(path.resolve(__dirname, '../..'), file).replaceAll('\\', '/');
     const routes = files.map(relative);
-    for (const route of ['index.html', '404.html', 'free-keys/scooby/index.html', 'downloads/index.html', 'console/ps5/index.html', 'pages/help.html']) assert.ok(routes.includes(route), route);
+    for (const route of ['404.html', 'free-keys/scooby/index.html', 'downloads/index.html', 'console/ps5/index.html', 'pages/help.html']) assert.ok(routes.includes(route), route);
+    assert.ok(!routes.includes('index.html'), 'the homepage owns its theme and background');
     assert.ok(!routes.some(route => route.split('/').some(part => part.startsWith('.')) || route.startsWith('api/') || route === 'free-keys/sponsor-frame.html' || /^downloads\/(?!index\.html$)/.test(route)));
     for (const file of files) {
         const html = fs.readFileSync(file, 'utf8');

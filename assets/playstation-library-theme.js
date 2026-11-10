@@ -13,7 +13,8 @@
   try { saved = localStorage.getItem(key); } catch {}
   apply(saved === 'light' ? 'light' : 'dark');
   document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('library-theme-toggle');
+    const button = document.querySelector('[data-theme-toggle], #library-theme-toggle');
+    if (!button) return;
     button.addEventListener('click', () => {
       const theme = root.dataset.theme === 'light' ? 'dark' : 'light';
       apply(theme);

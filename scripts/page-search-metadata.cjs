@@ -66,7 +66,7 @@ const titles = {
 const descriptions = {
   'console/mods/ps4/rdr2/index.html': 'Browse North Beta, Sheriff 1.32, Havana and Oyster Free for RDR2 on PS4, with menu previews, version details and supplied setup guides.',
   'console/mods/ps4/gta5/index.html': 'Find GTA 5 PS4 menus by game update, including older builds, Expulsion, Cyprus, Ozark, Velora and Beach, plus scripts and setup guides.',
-  'index.html': 'Browse game cheats, mod menus, Lua scripts, console homebrew, emulators and setup guides for GTA V, CS2, Call of Duty, FiveM, TF2 and more.',
+  'index.html': 'Browse game downloads, console homebrew and setup guides, mods, emulators, and tools for PlayStation, Xbox, Nintendo, and PC.',
   'console/emulators.html': 'Browse PC console emulators including PCSX2, RPCS3, Dolphin, Cemu, Xenia, Project64 and PPSSPP, with feature summaries, setup tips and official links.',
   'console/index.html': 'Browse consoles by family: PlayStation, Xbox, Nintendo, Sega and handheld PCs. Find console guides, homebrew, themes and clearly labelled PC emulation resources.',
   'console/nintendo-emulators.html': 'Explore Nintendo emulators including Dolphin, Cemu, Ryujinx, yuzu and Project64, with setup notes for GameCube, Wii, Wii U, Switch and handhelds.',

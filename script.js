@@ -64,6 +64,7 @@ function initResponsiveTables() {
 
 // Keep regenerated pages connected to the shared appearance layer as well.
 function initSiteBackground() {
+    if (document.body.hasAttribute("data-home-taskbar")) return;
     const hasAsset = (selector, asset) => Array.from(document.querySelectorAll(selector))
         .some((element) => ((element.getAttribute('src') || element.getAttribute('href') || '').split('?')[0]).endsWith(asset));
     if (!hasAsset('link[rel="stylesheet"]', '/assets/site-background.css')) {

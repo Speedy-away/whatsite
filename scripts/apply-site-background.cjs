@@ -18,6 +18,7 @@ function eligible(html, file) {
     const route = routeFor(file);
     if (route.split('/').some(part => part.startsWith('.'))) return false;
     if (/^hosts\/runtime(?:\/|$)/.test(route)) return false;
+    if (/<body\b[^>]*\bdata-home-taskbar\b/i.test(html)) return false;
     if (!/<head\b/i.test(html) || !/<body\b/i.test(html)) return false;
     if (/<meta\b[^>]*http-equiv\s*=\s*["']refresh["']/i.test(html)) return false;
     if (route === 'free-keys/sponsor-frame.html') return false;
