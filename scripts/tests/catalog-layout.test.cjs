@@ -37,7 +37,7 @@ test('Ports ad sits outside its search grid and keeps newer shared asset version
   const result = ads.applyAds('pc/ports.html', html);
   assert.equal((result.match(/id="page-advertisement"/g) || []).length, 1);
   assert.ok(result.indexOf('<!-- BEGIN SITE AD -->') > result.indexOf('</header>'));
-  assert.ok(result.indexOf('<!-- END SITE AD -->') < result.indexOf('<section'));
+  assert.ok(result.indexOf('<!-- BEGIN SITE AD -->') > result.indexOf('</section>'));
   assert.ok(result.includes('console-guide-dialog.js?v=5'));
   assert.ok(result.includes('console-guides.css?v=20261103-mobile-images-2'));
   assert.ok(result.includes('script async="async" data-cfasync="false"'));
@@ -48,7 +48,7 @@ test('emulator ads follow the introductory filter section and are never inserted
   const html = fixture.replace('ports-grid', 'pc-emu-grid').replace('<section class="section">', '<section class="section emu-filters"><form>Filters</form></section><section class="section">');
   const result = ads.applyAds('pc/emulators.html', html);
   assert.ok(result.indexOf('<!-- BEGIN SITE AD -->') > result.indexOf('</form></section>'));
-  assert.ok(result.indexOf('<!-- END SITE AD -->') < result.indexOf('<div class="pc-emu-grid">'));
+  assert.ok(result.indexOf('<!-- BEGIN SITE AD -->') > result.indexOf('<div class="pc-emu-grid">'));
   assert.equal(ads.applyAds('pc/emulators.html', result), result);
   assert.equal(ads.eligible('console/ps3/browser-downloads.html', '<html><body>Lightweight console list</body></html>'), false);
 });

@@ -23,7 +23,7 @@ test('main Pages excludes migrated native hosts and internals but retains compat
   for (const name of ['.git/config','.agents/skills/a','scripts/test.cjs','docs/qa/a.txt','docs/screenshots/a.png','hosts/runtime/ps4/index.html']) assert.equal(eligible(name), false, name);
   for (const name of ['hosts/index.html','docs/host-actions-ps4.json','downloads/helpers/old/helper.html','CNAME']) assert.equal(eligible(name), true, name);
 });
-test('Pages stages the new ads in the existing public banner layout', () => {
+test('Pages stages one native ad rail and preserves excluded documents', () => {
   const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-ads-'));
   try {
     const {applyAds, publishAds} = require('../site-ads.cjs');
@@ -31,7 +31,7 @@ test('Pages stages the new ads in the existing public banner layout', () => {
     const withBanner = applyAds('index.html', html)
       .replace('<head>', '<head><script>const head = "</head>";</script><script async data-cfasync="false" src="https://abscloud.org/1/366a2e3edafab888009b3076fcd47b82"></script>')
       .replace('<body>', '<body><script defer src="https://aloudalimonyexplosion.com/57/23/ae/5723aef0781af6b27fc0113e359a1d7c.js"></script>');
-    const files = {'index.html': withBanner, '404.html': html, 'hosts/index.html': withBanner, 'downloads/helper/index.html': withBanner};
+    const files = {'index.html': withBanner, '404.html': '<html><body>Missing</body></html>', 'pages/new.html': html, 'hosts/index.html': withBanner, 'downloads/helper/index.html': withBanner};
     for (const [name, content] of Object.entries(files)) {
       const file = path.join(root, name);
       fs.mkdirSync(path.dirname(file), {recursive: true});
@@ -45,7 +45,10 @@ test('Pages stages the new ads in the existing public banner layout', () => {
     assert.equal(staged.match(/366a2e3edafab888009b3076fcd47b82/g).length, 1);
     assert.equal(staged.match(/5723aef0781af6b27fc0113e359a1d7c/g).length, 1);
     assert.match(staged, /<a [^>]*href="https:\/\/araplhn\.org\/4\/ac85b864baf2e2322b99cd2ad051fbc2"[^>]*rel="sponsored noopener noreferrer">Sponsored link<\/a>/);
-    assert.match(staged, /<div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"><\/div><script async="async" data-cfasync="false" src="https:\/\/bauval\.org\/21\/fd0a4dcec74a63f4d2662af5273f9d5b"><\/script>/);
+    assert.match(staged, /<div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"><\/div>\s*<script async="async" data-cfasync="false" src="https:\/\/bauval\.org\/21\/fd0a4dcec74a63f4d2662af5273f9d5b"><\/script>/);
+    assert.match(staged, /class="site-ad-layout"/);
+    assert.match(fs.readFileSync(path.join(output, 'pages/new.html'), 'utf8'), /id="page-advertisement"/);
+    assert.doesNotMatch(fs.readFileSync(path.join(output, '404.html'), 'utf8'), /id="page-advertisement"/);
     assert.equal(staged.match(/id="container-fd0a4dcec74a63f4d2662af5273f9d5b"/g).length, 1);
     assert.doesNotMatch(staged, /aloudalimonyexplosion\.com/);
     assert.match(staged, /<script>const head = "<\/head>";<\/script>/);

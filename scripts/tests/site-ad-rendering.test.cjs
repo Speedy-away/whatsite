@@ -4,17 +4,21 @@ const ads=require('../site-ads.cjs');
 test('the real publisher container exists before its asynchronous script can execute',()=>{
  const html=ads.placement();
  assert.ok(html.indexOf('id="container-fd0a4dcec74a63f4d2662af5273f9d5b"')<html.indexOf('<script'));
- assert.equal((html.match(/invoke\.js/g)||[]).length,1);
+ assert.equal((html.match(/bauval\.org\/21\//g)||[]).length,1);
  assert.match(html,/<script async="async" data-cfasync="false"/);
  assert.doesNotMatch(html,/<iframe/);
 });
-test('rendered ad rows remain visible when native mobile creatives exceed the old height cap',()=>{
+test('wide pages stack native cards while narrow pages keep the ad after the content',()=>{
  const css=fs.readFileSync('assets/site-ads.css','utf8');
- assert.match(css,/\.site-ad-stage\s*\{[^}]*max-height:\s*none;[^}]*overflow:\s*visible/);
- for(const file of ['pc/ports.html','pc/emulators.html']){
-  const html=fs.readFileSync(file,'utf8');
-  assert.ok(html.includes('/assets/site-ads.css?v=3'));
-  assert.ok(html.indexOf('id="container-fd0a4dcec74a63f4d2662af5273f9d5b"')<html.indexOf('src="https://aloudalimonyexplosion.com/'));
+ assert.match(css,/\.site-ad-layout, \.site-ad-content \{ display: contents; \}/);
+ assert.match(css,/@media \(min-width: 1280px\) \{[\s\S]*grid-template: "advertisement content"/);
+ assert.match(css,/\[class\$="__stand"\]\s*\{\s*flex-direction: column/);
+ for(const file of ['pc/ports.html','pc/emulators.html','console/playstation-library/download.html']){
+  const html=ads.publishAds(file,fs.readFileSync(file,'utf8'));
+  assert.ok(html.includes('/assets/site-ads.css?v=5'));
+  assert.match(html, /class="site-ad-layout"/);
+  assert.equal((html.match(/id="container-fd0a4dcec74a63f4d2662af5273f9d5b"/g)||[]).length,1);
+  assert.doesNotMatch(html, /fd0a4dcec74a63f4d2662af5273f9d5b\/invoke\.js/);
  }
 });
 test('ad coverage includes every public page family while excluding native and packaged documents',()=>{
@@ -29,13 +33,14 @@ test('legacy footer banners migrate once without duplicating the native unit or 
  const other='<script defer src="https://aloudalimonyexplosion.com/57/other-unit.js"></script>';
  const html='<html><head></head><body><main class="main-content" id="main-content"><section>Cards</section></main><script async src="https://aloudalimonyexplosion.com/fd0a4dcec74a63f4d2662af5273f9d5b/invoke.js"></script>\n<div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"></div>'+other+'</body></html>';
  const out=ads.applyAds('games/cod/index.html',html);
- assert.equal((out.match(/fd0a4dcec74a63f4d2662af5273f9d5b\/invoke\.js/g)||[]).length,1);
+ assert.equal((out.match(/bauval\.org\/21\//g)||[]).length,1);
+ assert.doesNotMatch(out, /fd0a4dcec74a63f4d2662af5273f9d5b\/invoke\.js/);
  assert.ok(out.indexOf('id="page-advertisement"')<out.indexOf('</main>'));
  assert.ok(out.includes(other));assert.equal(ads.applyAds('games/cod/index.html',out),out);
 });
 test('older DIV-based directories receive their banner inside main content',()=>{
  const html='<html><head></head><body><div class="main-content" id="main-content"><div class="container"><div>Cards</div></div></div><script src="/script.js"></script></body></html>';
  const out=ads.applyAds('games/other/index.html',html);
- assert.ok(out.includes('<!-- END SITE AD -->\n</div>'));
+ assert.ok(out.includes('<!-- END SITE AD -->\n</div>\n</div>'));
  assert.equal(ads.applyAds('games/other/index.html',out),out);
 });

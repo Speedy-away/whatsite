@@ -1,11 +1,12 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {applyAds,placement}=require('../site-ads.cjs');
-test('advertisement follows the complete resource section, outside nested card guides',()=>{
+test('advertisement forms a separate column outside every nested guide',()=>{
  const html='<html><head></head><body><main id="main-content"><section id="resources"><div class="games-grid"><article><section id="guide"><script>const text="</section>";</script>Guide</section><a href="/downloads/pinned.pkg" download>Download</a></article></div></section><section id="compatibility">Requirements</section></main></body></html>';
  const fixed=applyAds('console/ps3/mods/example/index.html',html);
  assert.ok(fixed.indexOf('id="page-advertisement"')>fixed.indexOf('</article></div></section>'));
- assert.ok(fixed.indexOf('<!-- END SITE AD -->')<fixed.indexOf('<section id="compatibility">'));
+ assert.ok(fixed.indexOf('id="page-advertisement"')>fixed.indexOf('<section id="compatibility">'));
+ assert.ok(fixed.includes('<div class="site-ad-layout"><div class="site-ad-content">'));
  assert.ok(fixed.includes('<a href="/downloads/pinned.pkg" download>Download</a>'));
  assert.equal(applyAds('console/ps3/mods/example/index.html',fixed),fixed);
  const old=html.replace('Guide</section>','Guide</section>'+placement());

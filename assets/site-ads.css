@@ -1,9 +1,71 @@
-.site-ad { position: relative; clear: both; margin: 28px 0; }
-.site-ad-panel { min-width: 0; padding: 14px; border: 1px solid var(--border, #303036); border-radius: 12px; background: var(--bg-secondary, #121214); }
-.site-ad-label { display: block; margin-bottom: 10px; color: var(--text-secondary, #b1b1ba); font: 500 10px/1.4 Arial, sans-serif; text-align: center; text-transform: uppercase; letter-spacing: 1.5px; }
-.site-ad-sponsored { display: block; width: fit-content; margin: 0 auto 12px; color: var(--text-secondary, #b1b1ba); font: 14px/1.5 Arial, sans-serif; text-decoration: underline; }
-.site-ad-stage { min-height: 230px; max-height: none; overflow: visible; }
-.site-ad-stage > div { width: 100%; max-width: 100%; }
-.site-ad-empty { margin: 0; padding: 18px 10px; color: var(--text-secondary, #b1b1ba); font: 12px/1.5 Arial, sans-serif; text-align: center; }
-.site-ad-stage [hidden] { display: none !important; }
-@media (max-width: 600px) { .site-ad { margin: 22px 0; } .site-ad-panel { padding: 12px 8px; } }
+.site-ad-layout, .site-ad-content { display: contents; }
+.site-ad-layout > .site-ad {
+    width: min(420px, calc(100% - 32px));
+    min-width: 0;
+    margin: 24px auto;
+    clear: both;
+}
+.site-ad-panel {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--border, #303036);
+    border-radius: 10px;
+    background: var(--surface, var(--bg-secondary, #121214));
+    color: var(--muted, var(--text-secondary, #b1b1ba));
+}
+.site-ad-label {
+    display: block;
+    text-align: center;
+    font: 600 10px/1.4 Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+.site-ad-sponsored {
+    display: block;
+    width: fit-content;
+    margin: 6px auto 0;
+    color: inherit;
+    font: 13px/1.5 Arial, sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.site-ad-stage { min-width: 0; margin-top: 8px; overflow: clip; }
+.site-ad-stage [hidden], .site-ad[hidden], .site-ad-stage[hidden] { display: none !important; }
+.site-ad-stage :where(div, a, img, iframe) { min-width: 0; max-width: 100%; }
+.site-ad-stage img { height: auto; }
+
+/* The native provider normally arranges the cards according to viewport width.
+   These units live in a narrow column even on a wide screen. */
+.site-ad-stage #container-fd0a4dcec74a63f4d2662af5273f9d5b > [class$="__stand"] {
+    flex-direction: column;
+    align-items: stretch;
+}
+.site-ad-stage #container-fd0a4dcec74a63f4d2662af5273f9d5b [class$="__bn-container"] {
+    width: 100%;
+    flex: 0 0 auto;
+}
+.site-ad-stage #container-fd0a4dcec74a63f4d2662af5273f9d5b [class$="__title"] { overflow-wrap: anywhere; }
+
+@media (min-width: 1280px) {
+    .site-ad-layout {
+        --site-ad-width: clamp(180px, 14vw, 224px);
+        display: grid;
+        grid-template: "advertisement content" auto / var(--site-ad-width) minmax(0, 1fr);
+        align-items: start;
+        gap: clamp(16px, 1.6vw, 28px);
+        padding-left: clamp(16px, 2vw, 32px);
+    }
+    .site-ad-layout:dir(rtl) {
+        grid-template: "content advertisement" auto / minmax(0, 1fr) var(--site-ad-width);
+    }
+    .site-ad-layout:has(> .site-ad[hidden]) { display: block; padding-left: 0; }
+    .site-ad-layout > .site-ad-content { display: block; grid-area: content; min-width: 0; }
+    .site-ad-layout > .site-ad {
+        grid-area: advertisement;
+        width: 100%;
+        margin: clamp(24px, 3vw, 44px) 0 20px;
+    }
+    .ps-library .main-content:has(> .site-ad-layout) { width: min(1472px, calc(100% - 64px)); }
+    .ps-library .site-ad-layout { padding-left: 0; }
+    .ps-library .transfer-main .site-ad-layout > .site-ad { margin-top: 0; }
+}
