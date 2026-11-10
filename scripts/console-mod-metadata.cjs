@@ -1,7 +1,7 @@
 const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
-  'fortnite': ['Fortnite PS4 Cheats & Mod Menus', 'Browse Fortnite PS4 cheats and SPRX mod menus with aimbot, ESP and skin changers. Download Spectrum FN or BlueQ’s FN Menu and find the GoldHEN setup.',
+  'fortnite': ['Fortnite PS4 Cheats & Mod Menus', 'Browse Fortnite PS4 cheats and SPRX mod menus with aimbot, ESP and skin changers. Download Spectrum FN or FN Menu and find the GoldHEN setup.',
     ['Fortnite PS4 cheat', 'Fortnite PS4 hacks', 'Fortnite PS4 cheat menu', 'Fortnite cheats PS4', 'Fortnite hacks PS4', 'PlayStation 4 Fortnite cheats',
       'Fortnite PS4 mods', 'Fortnite PS4 mod menus', 'Fortnite PS4 mod menu download', 'Fortnite PS4 SPRX download', 'Fortnite PS4 GoldHEN plugin',
       'Fortnite PS4 aimbot', 'Fortnite PS4 silent aim', 'Fortnite PS4 ESP', 'Fortnite PS4 player ESP', 'Fortnite PS4 loot ESP', 'Fortnite PS4 container ESP',
@@ -9,7 +9,7 @@ const gameCopy = {
       'Spectrum FN v32', 'Spectrum FN PS4', 'Spectrum FN download', 'Spectrum FN mod menu', 'Spectrum_FN.sprx', 'Dev-Phobia Spectrum FN',
       'Fortnite PS4 SPRX', 'Fortnite PS4 cheats', 'Fortnite silent aim', 'Fortnite player ESP', 'Fortnite loot ESP', 'Fortnite client-side skin changer',
       'Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite skin changer', 'Unlock all skins', 'Free skins', 'Fortnite PS4 hack',
-      'BlueQ FN Menu', 'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference']],
+      'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference']],
   'black-ops-1': ['Black Ops 1 Console Menus, CFG & RTM Tools', 'Browse EnCoReV8, Discarded, Purple Kush, the BO1/BO2 GSC injector, CFG resources and RTM tools, with supplied previews and guide popups.'],
   'black-ops-2': ['Black Ops 2 Menus, Injectors & PS4 FPKG Fix', 'Browse BO2 mod menus, GSC injectors and RTM tools, plus the PS4 FPKG 1.11 patch for Multiplayer and Zombies loading crashes on CUSA57548.',
     ['PS4 FPKG fixes', 'BO2 1.11 crash fix', 'BO2 01.11 PKG', 'CUSA57548', 'Black Ops 2 Multiplayer crash fix', 'Black Ops 2 Zombies crash fix', 'BO2_ZMMP_CrashFix.pkg']],

@@ -125,7 +125,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
           const url = httpsUrl(card.url);
           return url ? [resource(h(card.title), h(card.description), ext(url, h(card.linkLabel)))] : [];
         });
-        page(file, game.title + (game.platformLabel ? ' · ' + game.platformLabel : ' · PS4/PS5 Resources'), game.description || 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.', game.cover,
+        page(file, game.title + (game.platformLabel ? ' · ' + game.platformLabel : ' · PS4/PS5 Resources'), game.description ?? 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.', game.cover,
           [['/console/mods/', 'Console Mods'], ['/console/mods/ps4/', 'PS4/PS5 Games'], ...(game.parent ? [['/console/mods/ps4/other-games/', 'Other Games']] : []),
             ...(game.pluginTemplate ? [['#goldhen-plugin-template', 'GoldHEN plugins.ini']] : [])],
           (game.intro ? section('compatibility', 'Compatibility first', note('<p>' + h(game.intro) + '</p>')) : '') +

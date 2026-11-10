@@ -132,7 +132,7 @@ function page(file, title, description, image, nav, content, primary = '#content
 <main class="main-content" id="main-content">
 <header class="guide-hero"><div class="container guide-hero-grid${textOnlyHero ? ' guide-hero-text' : ''}"><div>
 <div class="guide-breadcrumb"><a href="/">Home</a> / <a href="${isPhoneHelp ? '/pages/help.html' : isDownloads ? '/tools/' : isSource ? '/source-codes/' : file.startsWith('pc/') ? '/pc/' : '/console/'}">${isPhoneHelp ? 'Help' : isDownloads ? 'Tools' : isSource ? 'Source Codes' : file.startsWith('pc/') ? 'PC' : 'Console'}</a></div>
-<h1>${title}</h1><p>${description}</p><div class="hero-buttons"><a class="btn btn-primary" href="${primary}">${primaryLabel}</a>${secondary}</div>
+<h1>${title}</h1>${description ? `<p>${description}</p>` : ''}<div class="hero-buttons"><a class="btn btn-primary" href="${primary}">${primaryLabel}</a>${secondary}</div>
 </div>${textOnlyHero ? '' : `<img src="${image}" alt="${esc(title)}" width="1280" height="720">`}</div></header>
 <div class="container"><nav class="guide-nav" aria-label="${isPhoneHelp ? 'Phone download help' : isDownloads ? 'Download library' : isSource ? 'Source code' : file.startsWith('pc/') ? 'PC' : 'Console'} pages">${hasHosts ? '<a href="#exploit-hosts">Exploit &amp; Redirect Hosts</a>' : ''}${nav.map(([u, t]) => `<a href="${u}"${u === '/' + file || u === '/' + file.replace(/index\.html$/, '') ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav></div>
 <div id="content">${content}</div>
