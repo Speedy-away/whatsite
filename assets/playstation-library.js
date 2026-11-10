@@ -133,8 +133,12 @@ function renderGame(id, game, initialRegion, initialKind, related) {
   const kinds = order.filter(kind => game.files.some(file => file.kind === kind));
   const sourcePage = safeUrl(game.page);
   const sourceUrls = [...new Set((game.sourcePages || []).map(safeUrl).filter(url => url && url !== sourcePage))];
-  const sources = [sourceLink(sourcePage, msg('source-listing'), {button: true}), ...sourceUrls.map((url, i) =>
-    sourceLink(url, msg('source-download') + (sourceUrls.length > 1 ? ' ' + fmt.format(i + 1) : ''), {button: true}))].filter(Boolean);
+  const sourceDownloads = sourceUrls.map((url, i) =>
+    sourceLink(url, msg('source-download') + (sourceUrls.length > 1 ? ' ' + fmt.format(i + 1) : ''), {button: true}));
+  const fallbackDownload = !game.files.length && !sourceDownloads.length
+    ? sourceLink(sourcePage, msg('source-download'), {button: true}) : '';
+  const password = isSuperPSX(game) ? `<p class="meta-line package-password">${label('password-note')}
+    <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button></p>` : '';
   const otherListings = related.length ? `<div class="source-notes"><h3>${label('related-title-ids')}</h3><ul>${related.map(listing =>
     `<li><a href="${gameUrl(listing.id)}" data-game="${listing.id}">${esc(listing.name)}</a></li>`).join('')}</ul></div>` : '';
   detail.innerHTML = `
@@ -143,12 +147,10 @@ function renderGame(id, game, initialRegion, initialKind, related) {
       <div><p class="label-line">${esc(game.platform)}</p>
         <h2 id="game-title">${esc(game.name)}</h2>
         <p class="meta-line">${(game.titleIds || []).map(esc).join(' · ')}</p>
-        ${sources.length ? `<div class="library-source">${sources.join('')}</div>` : ''}
-        ${game.files.length ? `<button type="button" class="action secondary" id="copy-all">${label('copy-all')} <span aria-hidden="true">⧉</span></button>` : ''}
+        ${sourceDownloads.length ? `<div class="library-source">${sourceDownloads.join('')}</div>` : ''}
       </div>
     </div>
     <p class="detail-note">${label('install-note')}</p>
-    ${isSuperPSX(game) ? `<p class="detail-note">${label('password-note')} <button type="button" class="inline-copy" data-copy="SuperPSX">SuperPSX <span aria-hidden="true">⧉</span></button></p>` : ''}
     ${game.notes ? `<details class="source-notes"><summary>${label('source-notes')}</summary><p>${esc(game.notes)}</p></details>` : ''}
     ${game.files.length ? `
     <div class="file-filter">
@@ -159,7 +161,7 @@ function renderGame(id, game, initialRegion, initialKind, related) {
       </div>
     </div>
     <p id="file-count" class="meta-line" role="status"></p>
-    <div class="file-list" id="file-list"></div>` : sources.length ? '' : `
+    <div class="file-list" id="file-list"></div>` : fallbackDownload ? `<div class="file-list">${fallbackDownload}</div>` : sourceDownloads.length ? '' : `
     <p class="detail-note">${label('source-unavailable')}</p>`}
     ${otherListings}`;
   if (!game.files.length) return;
@@ -182,16 +184,12 @@ function renderGame(id, game, initialRegion, initialKind, related) {
         : url ? sourceLink(url, msg(file.landing ? 'source-download' : 'open-host'), {button: true}) : '';
       return `<article class="package-row">
         <div><h3>${esc(file.label || labels[file.kind] || msg('package'))}</h3><p class="meta-line">${meta}</p></div>
-        ${action}
+        <div class="package-actions">${password}${action}</div>
       </article>`;
     }).join('') : `<p class="empty-state">${label('no-packages')}</p>`;
   }
   regionSelect.addEventListener('change', renderFiles);
   kindSelect.addEventListener('change', renderFiles);
-  $('copy-all').addEventListener('click', () => {
-    const links = files.map(f => f.direct ? new URL(transferUrl(id, f.id), location.origin).href : safeUrl(f.url));
-    copy([...new Set(links.filter(Boolean))].join('\n'), msg('links-copied'));
-  });
   renderFiles();
 }
 
