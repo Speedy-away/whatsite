@@ -304,6 +304,11 @@ html:has(.home-page) { --home-header-height: 66px; scroll-padding-top: calc(var(
     .home-directory-grid { grid-template-columns: 1fr; }
     .home-page .filter-buttons .filter-btn { padding-inline: 10px; }
 }
+@media (max-width: 348px) {
+    .home-cheats-menu > summary { max-inline-size: 56px; font-size: .75rem; }
+    .home-cheats-menu > summary > span:first-child { overflow-wrap: anywhere; }
+    .home-cheats-menu .home-caret { flex-shrink: 0; }
+}
 @media (max-height: 420px) {
     .home-taskbar { position: relative; }
     .home-menu-panel { max-height: 60dvh; }
