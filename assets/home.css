@@ -289,11 +289,11 @@ html:has(.home-page) { --home-header-height: 66px; scroll-padding-top: calc(var(
 .home-page .games-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px 16px; }
 .home-page .game-card { display: flex; flex-direction: column; border: 0; background: transparent; border-radius: 0; overflow: visible; }
 .home-page .game-card:hover { transform: none; }
-.home-page .game-image { aspect-ratio: 16/10; border-radius: 12px; }
-.home-page .game-image img { object-position: center; }
-.home-page .game-info { padding: 16px 0 8px; display: flex; flex-direction: column; height: auto; flex: 1; }
+.home-page .game-image { aspect-ratio: 16/9; border-radius: 12px; }
+.home-page .game-image img { object-fit: cover; object-position: center; }
+.home-page .game-info { padding: 12px 0 0; display: flex; flex-direction: column; height: auto; flex: 1; }
 .home-page .game-title { font-size: 15px; line-height: 1.35; letter-spacing: -.02em; font-weight: 650; margin-bottom: 7px; }
-.home-page .game-description { color: var(--home-muted); font-size: 12px; line-height: 1.65; min-height: 3.3em; margin-bottom: 12px; }
+.home-page .game-description { color: var(--home-muted); font-size: 12px; line-height: 1.65; margin-bottom: 5px; }
 .home-page .game-link { color: var(--text-secondary); font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; align-self: start; min-height: 36px; margin-top: auto; }
 .home-page .game-link::after { content: ""; position: absolute; inset: 0; border-radius: 12px; }
 .home-page .game-link:focus-visible { outline: 0; }
