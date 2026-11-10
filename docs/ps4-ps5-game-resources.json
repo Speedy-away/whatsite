@@ -20,11 +20,11 @@
       "title": "Fortnite",
       "slug": "fortnite",
       "cover": "/assets/images/ps4-fortnite/fn-menu.png",
-      "platformLabel": "PS4 Mod Menu",
+      "platformLabel": "PS4 Mod Menus",
       "pluginTemplate": true,
       "summary": "",
-      "description": "Download BlueQ’s FN Menu for Fortnite on PS4, view the supplied screenshot and follow the regional GoldHEN setup steps.",
-      "intro": "This FN Menu build checks for PS4 title ID CUSA07669, shared by Europe and Australia. The release post does not specify the Fortnite game update or PS4 firmware."
+      "description": "Download Spectrum FN and BlueQ’s FN Menu for Fortnite on PS4, view screenshots and find the GoldHEN setup for FN Menu.",
+      "intro": "BlueQ’s FN Menu checks for PS4 title ID CUSA07669, shared by Europe and Australia. The GoldHEN template below is for BlueQ’s menu. Its release post does not specify the Fortnite game update or PS4 firmware."
     },
     {
       "id": "other-games",
@@ -17088,6 +17088,52 @@
           "label": "Download fn.sprx",
           "filename": "fn.sprx",
           "url": "https://cdn.discordapp.com/attachments/1569043359895654582/1569043472353075312/fn.sprx?ex=6af2051b&is=6af0b39b&hm=daad02ba7f9ec9117e884a924cc803a423d9ac56ad346d0b6932986cc91eff22&",
+          "distribution": "include"
+        }
+      ]
+    },
+    {
+      "id": "fortnite-spectrum-fn",
+      "name": "Spectrum FN",
+      "category": "menu",
+      "gameIds": [
+        "fortnite"
+      ],
+      "publication": "include",
+      "version": "v32",
+      "description": "Silent aim, player ESP, loot ESP, client-side skin changer, and more.",
+      "compatibilityText": "PS4 · Game update and firmware unspecified",
+      "featureTags": [
+        "Silent aim",
+        "Player ESP",
+        "Loot ESP",
+        "Skin changer"
+      ],
+      "tags": [
+        "PS4"
+      ],
+      "keywords": [
+        "Spectrum FN v32",
+        "Dev-Phobia",
+        "Spectrum_FN.sprx",
+        "Fortnite PS4 mod menu",
+        "Fortnite aimbot",
+        "Fortnite ESP",
+        "Fortnite skin changer"
+      ],
+      "guideLabel": "View screenshot",
+      "images": [
+        {
+          "original": "/assets/images/ps4-fortnite/spectrum-fn.png",
+          "caption": "Dev-Phobia’s Spectrum FN v32 menu showing Silent aim settings in Fortnite"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "fortnite-spectrum-fn-sprx",
+          "label": "Download Spectrum_FN.sprx",
+          "filename": "Spectrum_FN.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1569043359895654582/1569649351322636409/Spectrum_FN.sprx?ex=6af43960&is=6af2e7e0&hm=a6071f17c875e33f410a07fc020b16090d87aeaaededeed3623191c13c939b8c&",
           "distribution": "include"
         }
       ]

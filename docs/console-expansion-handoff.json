@@ -1,4 +1,14 @@
 {
+  "ps4FortniteSpectrumFn20261110": {
+    "date": "2026-11-10",
+    "status": "Verified locally and included in the scoped Spectrum FN update for main. GitHub Pages deploys separately.",
+    "page": "console/mods/ps4/fortnite/index.html#resource-fortnite-spectrum-fn",
+    "generator": "node scripts/build-ps4-mods.cjs --fortnite-only",
+    "changes": "Added Spectrum FN v32 with the supplied screenshot, silent aim, player ESP, loot ESP and client-side skin changer. Added a searchable entry in the PS4/PS5 Menu Directory. The page identifies the existing GoldHEN template as BlueQ’s FN Menu setup. Spectrum FN game update and firmware compatibility are unspecified.",
+    "delivery": "The download button uses a hash-pinned copy because the supplied Discord attachment expires. The original URL, v32, 545392 bytes and SHA-256 577edbc6c928277f5062cd9ed8fd340f1406b519327c4a800e35520312b410b4 are recorded in downloads/ps4-ps5/manifest.json.",
+    "archive": "Verified the same bytes under PS4/Games/Fortnite/Mod Menus/Spectrum FN/Builds/v32 on F:. Merged the scoped record into both inventories and refreshed the archive index.",
+    "checks": "Verified the screenshot bytes, local download and archive hashes, directory search terms, guide link and existing FN Menu links. Both edited pages passed the metadata check and had no link audit issues. Of 45 focused tests, 43 passed and two catalogue assertions also failed on the original checkout."
+  },
   "wwbsgamesDiscovery20261110": {
     "date": "2026-11-10",
     "status": "Included in the scoped WWBsgames search update for main.",
