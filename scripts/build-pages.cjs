@@ -11,6 +11,7 @@ const libraryArtwork = new Set([
   'xmb-wave.svg', 'xmb-wave-dark.svg', 'share-black-wave-v1.png',
   'bloodborne.webp', 'god-of-war-iii.webp', 'astro-bot.png'
 ].map(name => 'assets/images/playstation-library/' + name));
+const legacyLibraryShard = /^assets\/playstation-library\/legacy\/([a-f0-9]{2})\.json$/;
 const encodePath = name => name.split('/').map(encodeURIComponent).join('/');
 function rawURL(name, revision = 'main') {
   if (!/^(?:main|[a-f0-9]{40})$/.test(revision)) throw Error('Invalid repository revision');
@@ -71,6 +72,7 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, p
   let bytes = reservedBytes + files.reduce((sum, f) => sum + f.bytes, 0);
   const candidates = files.filter(f =>
     (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
+    legacyLibraryShard.test(f.name) ||
     isBuildRecord(f.name) ||
     /^scooby\/(?:FSL\/)?WINMM\.dll$/i.test(f.name) ||
     (/^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) && !libraryArtwork.has(f.name)) ||
@@ -131,6 +133,10 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   const rewrite = (source, name) => addAds(rewriteLinks(source, name), name);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
+  const legacyDetails = Object.fromEntries([...result.offloaded].flatMap(([name, url]) => {
+    const shard = legacyLibraryShard.exec(name);
+    return shard ? [[shard[1], url]] : [];
+  }));
   const runtimeFiles = Object.fromEntries([...result.offloaded].filter(([name]) => name.startsWith('hosts/runtime/')).map(([name, url]) => ['/' + name, url]));
   for (const {name} of result.files) {
     if (result.offloaded.has(name)) continue;
@@ -142,6 +148,9 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
       if(name.endsWith('.html')&&!name.startsWith('hosts/runtime/'))source=require('./canonical-host-links.cjs').apply(source);
       if(name.endsWith('.html'))source=require('./source-download-notes.cjs').annotate(source,name,deliveryEntries);
       let content = rewrite(source, name);
+      if (name === 'assets/playstation-library/index.json' && Object.keys(legacyDetails).length) {
+        content = JSON.stringify({...JSON.parse(content), legacyDetails});
+      }
       if (/^hosts\/runtime\/karo-[^/]+\/web\/.+\.html$/i.test(name) && Object.keys(runtimeFiles).length) {
         const adapter = '<script src="/pages-runtime-map.js"></script><script src="/assets/pages-runtime-files.js"></script>';
         content = /<head\b[^>]*>/i.test(content) ? content.replace(/<head\b[^>]*>/i, head => head + adapter) : adapter + content;

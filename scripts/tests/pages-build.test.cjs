@@ -109,6 +109,32 @@ test('Pages may use rewrite headroom but still enforces the planned size limit',
   } finally { fs.rmdirSync(root); }
 });
 
+test('Pages publishes exact-revision routes for offloaded legacy library details', () => {
+  const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-library-'));
+  try {
+    const index = 'assets/playstation-library/index.json';
+    const modern = 'assets/playstation-library/00.json';
+    const legacy = 'assets/playstation-library/legacy/00.json';
+    const files = {'404.html': '<html></html>', [index]: '{"titles":[]}', [modern]: '{}', [legacy]: '{"test":{}}'};
+    const names = Object.keys(files);
+    for (const [name, body] of Object.entries(files)) {
+      const file = path.join(root, name);
+      fs.mkdirSync(path.dirname(file), {recursive: true});
+      fs.writeFileSync(file, body);
+    }
+    const sizes = new Map(names.map(name => [name, Buffer.byteLength(files[name])]));
+    sizes.set(modern, LIMIT - 100);
+    sizes.set(legacy, 200);
+    const output = path.join(root, 'stage');
+    const revision = 'a'.repeat(40);
+    build({root, output, names, sizes, revision});
+    assert.equal(JSON.parse(fs.readFileSync(path.join(output, index), 'utf8')).legacyDetails['00'], rawURL(legacy, revision));
+    assert.ok(fs.existsSync(path.join(output, modern)));
+    assert.ok(!fs.existsSync(path.join(output, legacy)));
+  } finally {
+    fs.rmSync(root, {recursive: true, force: true});
+  }
+});
 test('Pages retains the library waves and share image when artwork is offloaded', () => {
   const mib = 1024 * 1024;
   const base = 'assets/images/playstation-library/';

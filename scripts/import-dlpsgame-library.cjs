@@ -151,8 +151,12 @@ function parseLinks(post, platform) {
 
 function readCatalog(directory) {
   const index = JSON.parse(fs.readFileSync(path.join(directory,'index.json'),'utf8'));
-  const details = Array.from({length:32},(_,i)=>JSON.parse(fs.readFileSync(
-    path.join(directory,i.toString(16).padStart(2,'0')+'.json'),'utf8')));
+  const details = Array.from({length:32}, (_, i) => {
+    const name = i.toString(16).padStart(2, '0') + '.json';
+    const modern = JSON.parse(fs.readFileSync(path.join(directory, name), 'utf8'));
+    const legacy = path.join(directory, 'legacy', name);
+    return fs.existsSync(legacy) ? {...modern, ...JSON.parse(fs.readFileSync(legacy, 'utf8'))} : modern;
+  });
   return {index,details};
 }
 
@@ -214,9 +218,19 @@ function mergeSnapshots(snapshots,{index,details},hasCover) {
 }
 
 function writeCatalog(directory,{index,details}) {
-  for (const [i,bucket] of details.entries()) {
-    const rows = Object.entries(bucket).map(([id,record])=>JSON.stringify(id)+':'+JSON.stringify(record));
-    fs.writeFileSync(path.join(directory,i.toString(16).padStart(2,'0')+'.json'),'{\n'+rows.join(',\n')+'\n}\n');
+  const legacyDirectory = path.join(directory, 'legacy');
+  for (const [i, bucket] of details.entries()) {
+    const name = i.toString(16).padStart(2, '0') + '.json';
+    const modern = [], legacy = [];
+    for (const [id, record] of Object.entries(bucket)) {
+      const rows = legacyPlatforms.has(record.platform) ? legacy : modern;
+      rows.push(JSON.stringify(id) + ':' + JSON.stringify(record));
+    }
+    fs.writeFileSync(path.join(directory, name), '{\n' + modern.join(',\n') + '\n}\n');
+    if (legacy.length) {
+      fs.mkdirSync(legacyDirectory, {recursive:true});
+      fs.writeFileSync(path.join(legacyDirectory, name), '{\n' + legacy.join(',\n') + '\n}\n');
+    }
   }
   const {titles,...metadata} = index;
   fs.writeFileSync(path.join(directory,'index.json'),JSON.stringify(metadata).slice(0,-1)+

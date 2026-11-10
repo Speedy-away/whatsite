@@ -64,17 +64,22 @@ const json = async url => {
   return response.json();
 };
 let indexPromise;
-const index = () => indexPromise ||= json(dataRoot + 'index.json?v=legacy-platforms-1');
+const index = () => indexPromise ||= json(dataRoot + 'index.json?v=legacy-platforms-2');
 const shards = new Map();
-async function getGame(id, revision) {
+async function getGame(id, catalog) {
   if (!gameId.test(id || '')) return null;
+  const listing = catalog.titles.find(game => game.id === id);
+  if (!listing) return null;
+  const legacy = listing.platform !== 'PS4' && listing.platform !== 'PS5';
   const key = (parseInt(id.slice(0, 2), 16) % 32).toString(16).padStart(2, '0');
-  if (!shards.has(key)) {
-    const request = json(dataRoot + key + '.json?v=' + encodeURIComponent(revision));
-    shards.set(key, request);
-    request.catch(() => shards.delete(key));
+  const name = (legacy ? 'legacy/' : '') + key + '.json';
+  const url = (legacy && catalog.legacyDetails?.[key]) || dataRoot + name + '?v=' + encodeURIComponent(catalog.revision);
+  if (!shards.has(url)) {
+    const request = json(url);
+    shards.set(url, request);
+    request.catch(() => shards.delete(url));
   }
-  return (await shards.get(key))[id] || null;
+  return (await shards.get(url))[id] || null;
 }
 
 function cover(g, lazy = false) {
@@ -275,7 +280,7 @@ async function library() {
     if (!dialog.open) dialog.showModal();
     dialog.scrollTop = 0;
     try {
-      const game = await getGame(id, (await index()).revision);
+      const game = await getGame(id, await index());
       if (serial !== request || !dialog.open) return;
       if (!game) throw Error('Listing not found');
       const titleIds = new Set(game.titleIds || []);
@@ -368,7 +373,7 @@ async function download() {
   }
   try {
     if (!gameId.test(id || '') || !/^[a-f0-9]{16}(?:-\d+)?$/.test(fileId || '')) throw Error('Invalid package link');
-    const game = await getGame(id, (await index()).revision);
+    const game = await getGame(id, await index());
     const file = game?.files.find(candidate => candidate.id === fileId);
     if (!file) throw Error('Unknown package');
     // The static link lets the Pages builder substitute its pinned raw URL

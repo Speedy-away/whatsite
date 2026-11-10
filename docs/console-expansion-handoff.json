@@ -27,7 +27,7 @@
       }
     ],
     "changes": "Merged all 9,863 category listings and 31,116 stable source links. Added platform filters, legacy title-ID search, original listing fallback and updated sharing metadata. The 429 new listings without extracted host links open their original game pages.",
-    "preservation": "All 12,328 existing catalogue rows and game details were compared with the previous commit and matched exactly. No game package files were downloaded or mirrored. Individual host file availability was not verified. New covers use the upstream image URLs.",
+    "preservation": "All 12,328 existing catalogue rows and game details were compared with the previous commit and matched exactly. No game package files were downloaded or mirrored. Individual host file availability was not verified. New covers use the upstream image URLs. Pages can serve the legacy detail shards from the exact Git revision to stay under its artifact budget. The existing PS4 and PS5 detail shards stay on the main site.",
     "regenerate": "Fetch the listed WordPress categories with wp-json/wp/v2/posts?categories=<id>&per_page=100&orderby=id&order=asc&page=<page>&_fields=id,link,title,content,date_gmt,modified_gmt,categories. Save each full post array and run node scripts/import-dlpsgame-library.cjs --legacy <PS2.json> <PS3.json> <PSP.json> <PSVita.json>."
   },
   "ps4BlackOpsAddOns20261109": {
