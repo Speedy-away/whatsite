@@ -145,6 +145,8 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .home-menu-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding-block: 10px; }
 .home-menu-columns p { padding: 6px 10px; color: var(--home-muted); font-size: .72rem; font-weight: 700; }
 .home-menu-tail { display: flex; flex-wrap: wrap; gap: 0 3px; border-top: 1px solid var(--border); padding-top: 3px; }
+.home-console-panel .home-menu-tail { flex-wrap: nowrap; }
+.home-console-panel .home-menu-tail a { min-width: 0; padding-inline: 6px; gap: 4px; }
 .home-controls { display: flex; align-items: center; gap: 6px; justify-self: end; }
 .home-controls [data-language-switcher]:empty { display: none; }
 .home-theme, .site-shell .home-controls .i18n-toggle {
