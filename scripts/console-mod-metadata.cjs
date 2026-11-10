@@ -31,9 +31,11 @@ function metadataByPage() {
   for (const game of games) {
     const matching = entries.filter(entry => entry.gameId === game.id);
     const [title, description, discoveryTerms = []] = gameCopy[game.id] || [game.title + ' Resources', game.summary || 'Browse game-specific menus, tools and supplied guides.'];
+    const matchHeading = game.id === 'fortnite';
+    const pageTitle = matchHeading ? `${game.title} · ${game.platformLabel}` : `${title} | whatwhatboy`;
     const items = game.id === 'fortnite' ? matching.map(({name, url}) => ({name, url})) : undefined;
-    result.set(game.url.slice(1) + 'index.html', {title: title + ' | whatwhatboy', description,
-      keywords: unique([...(gameAliases[game.id] || []), game.title, ...discoveryTerms, ...matching.map(entry => entry.name),
+    result.set(game.url.slice(1) + 'index.html', {title: pageTitle, brandTitle: !matchHeading, description,
+      keywords: unique([...(gameAliases[game.id] || []), game.title, ...(matchHeading ? [title] : []), ...discoveryTerms, ...matching.map(entry => entry.name),
         ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), type: 'CollectionPage', items});
   }
   const directory = {title: 'PS4/PS5 Menu Directory: Games, Tools & Guides | whatwhatboy',

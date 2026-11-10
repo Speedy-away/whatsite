@@ -366,7 +366,7 @@ function transform(file, before, options = {}) {
   let content = metadataContent.mainContent(before);
   let title = override?.title || editorial?.title || titles[relative] || oldTitle || plain(content.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || relative.replace(/(?:\/index)?\.html$/, '').split('/').at(-1).replaceAll('-', ' '));
   if (redirect) title = `${(titles[target] || targetTitle || 'Page').split(' | ')[0]} - Page Moved | whatwhatboy`;
-  if (!title.includes('whatwhatboy')) title += ' | whatwhatboy';
+  if (editorial?.brandTitle !== false && !title.includes('whatwhatboy')) title += ' | whatwhatboy';
   let description = override?.description || editorial?.description || descriptions[relative] || get('name', 'description');
   if (redirect) description = `This page has moved. Visit ${targetTitle.split(' | ')[0] || 'the updated page'} on whatwhatboy for the current page and links.`;
   const subject = title.split(' | ')[0];
