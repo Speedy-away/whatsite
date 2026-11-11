@@ -4716,7 +4716,7 @@
       ],
       "category": "menu",
       "publication": "include",
-      "name": "Velora 1.4 · GTA V 1.57",
+      "name": "VOID + Velora",
       "gameVersions": [
         "1.57"
       ],
@@ -4727,28 +4727,45 @@
         "capturedAt": "2026-11-02",
         "captureFile": "docs/discord-ps4-ps5-raw/gta5-velora-1-57.json",
         "originalDownloadUrls": [
-          "https://cdn.discordapp.com/attachments/1552385082717642872/1552385083938312294/Velora_1.4.zip"
+          "https://cdn.discordapp.com/attachments/1552385082717642872/1552385083938312294/Velora_1.4.zip",
+          "https://cdn.discordapp.com/attachments/1569461533317009529/1569461536060084315/VOID_FIXED_DOWNLOAD.zip?ex=6af4dbf5&is=6af38a75&hm=fd82895cb2066ff5cd1e8e19f6de30e841d61dc6f1ea2c85014129443cf73e88&",
+          "https://cdn.discordapp.com/attachments/1569461533317009529/1569461535695310869/Velora.sprx?ex=6af4dbf5&is=6af38a75&hm=93f49d8fe4dbbfc50651a2251decc53cc88d1803a346c42d941dafaa39a52247&"
         ]
       },
       "downloads": [
         {
-          "id": "gta5-velora-1-57",
-          "label": "Full package · GTA V 1.57",
-          "url": "https://cdn.discordapp.com/attachments/1552385082717642872/1552385083938312294/Velora_1.4.zip",
+          "id": "gta5-void-lua-fixed",
+          "label": "VOID Lua menu · ZIP",
+          "filename": "VOID_FIXED_DOWNLOAD.zip",
+          "url": "https://cdn.discordapp.com/attachments/1569461533317009529/1569461536060084315/VOID_FIXED_DOWNLOAD.zip?ex=6af4dbf5&is=6af38a75&hm=fd82895cb2066ff5cd1e8e19f6de30e841d61dc6f1ea2c85014129443cf73e88&",
           "distribution": "include"
+        },
+        {
+          "id": "gta5-velora-1-57",
+          "label": "Velora 1.4 · full ZIP",
+          "url": "https://cdn.discordapp.com/attachments/1552385082717642872/1552385083938312294/Velora_1.4.zip",
+          "distribution": "include",
+          "filename": "Velora_1.4.zip"
         }
       ],
       "images": [
         {
+          "original": "/assets/images/ps4-gta5/void-velora-user-preview.png",
+          "display": "/assets/images/ps4-gta5/void-velora-user-preview.png",
+          "caption": "VOID Lua Menu on the left and Velora on the right in GTA V on PS4."
+        },
+        {
           "original": "/assets/images/ps4-ps5/originals/gta5-velora-1-57-image.png",
           "display": "/assets/images/ps4-ps5/originals/gta5-velora-1-57-image.png",
-          "caption": "Velora source menu preview shared with the1.56 post; menu1.4 and game1.57 come from the archived source labels."
+          "caption": "Velora source menu preview shared with the1.56 post; menu1.4 and game1.57 come from the archived source labels.",
+          "role": "guide"
         }
       ],
       "guideBlocks": [
         {
           "type": "paragraph",
-          "text": "This post supplies the Velora 1.4 archive for its GTA V 1.57 entry. The separately preserved older download list also includes Velora 1.5; both archives remain available."
+          "title": "VOID Lua menu for Velora",
+          "text": "The supplied VOID ZIP contains only VOID(1).lua. The script references GTA V 1.57 on PS4. The Velora.sprx supplied alongside it matches the standalone Velora 1.5 download. VOID support with the separate Velora 1.4 build was not confirmed."
         },
         {
           "type": "paragraph",
@@ -4757,13 +4774,18 @@
         },
         {
           "type": "paragraph",
-          "title": "Velora 1.4 package",
-          "text": "The full ZIP contains Velora.sprx and its Velora data folder. Preserve /data/Velora, including Lua compatibility files and speedometer DDS resources, with /data/GoldHEN/plugins/Velora.sprx. Menu release 1.4 and GTA V update 1.57 are separate labels. The older list’s distinct 1.5 module remains available. No title-ID mapping or fixed opening shortcut was supplied."
+          "title": "Velora 1.4 · full ZIP",
+          "text": "The full package contains Velora.sprx and the matching Velora data folder, including Lua compatibility files and speedometer assets. Keep the data folder with the 1.4 plugin. 1.4 is the menu release; 1.57 is the GTA V game update."
+        },
+        {
+          "type": "paragraph",
+          "title": "Standalone 1.5-labelled build",
+          "text": "The earlier list labels this GTA V 1.57 module Velora 1.5. Its strings also contain Version: 1.5, while the captured forum package is separately labelled 1.4. Preserve both originals. Place this module at /data/GoldHEN/plugins/Velora.sprx only with a matching game configuration. It references /data/Velora, Lua compatibility files and speedometer assets that are not bundled here; do not assume the 1.4 data folder is interchangeable. No title-ID mapping or resolved opening chord was supplied."
         }
       ],
       "controls": [],
       "videos": [],
-      "compatibilityText": "Source lists GTA V game update 1.57.",
+      "compatibilityText": "PS4 · GTA V 1.57 · Velora 1.4 package and 1.5 SPRX",
       "platforms": [
         "ps4"
       ],
@@ -4775,10 +4797,17 @@
         "Velora 1.4 · GTA V 1.57",
         "PS4 GTA 5",
         "Grand Theft Auto V",
-        "1.57"
+        "1.57",
+        "VOID Lua Menu",
+        "VOID + Velora",
+        "VOID_FIXED_DOWNLOAD.zip",
+        "Velora 1.4",
+        "Velora 1.5"
       ],
-      "menuVersion": "1.4",
-      "catalogueSection": "v157"
+      "menuVersion": "1.4 / 1.5",
+      "catalogueSection": "v157",
+      "version": "PS4 · GTA V 1.57",
+      "description": "VOID Lua menu for Velora, with separate Velora 1.4 and 1.5 downloads."
     },
     {
       "id": "gta5-wildemodz-1-27",
@@ -15969,7 +15998,7 @@
       "downloads": [
         {
           "id": "gta5-velora-v1-5-1-57-legacy-file",
-          "label": "Velora.sprx · menu 1.5 label",
+          "label": "Velora 1.5 · standalone SPRX",
           "filename": "Velora.sprx",
           "url": "https://cdn.discordapp.com/attachments/1551562290258518167/1561212081712136232/Velora.sprx?ex=6ae8a54e&is=6ae753ce&hm=6e211c1eff62ace1d7ee06de406a5c19e84dacc7888261a718dccf3024ecf2de&",
           "distribution": "include"
@@ -16009,7 +16038,8 @@
       "menuVersion": "1.5 (legacy label)",
       "description": "Standalone Velora module from the earlier GTA V 1.57 collection; supporting data is not bundled.",
       "compatibilityText": "PS4 · GTA V 1.57",
-      "guideLabel": "Guide & requirements"
+      "guideLabel": "Guide & requirements",
+      "mergeInto": "gta5-velora-1-57"
     },
     {
       "id": "gta5-oxagon-lite-v1-4",

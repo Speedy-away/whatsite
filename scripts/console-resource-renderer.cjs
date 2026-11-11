@@ -62,6 +62,7 @@ function videoSource(clip) {
 }
 
 const hasDetails = item => (item.guideBlocks || []).length || (item.controls || []).length || (item.images || []).some(image => localImage(image.display) || localImage(image.original)) || (item.videos || []).length;
+const legacyAnchors = (item, prefix) => (item.mergedResourceIds || []).map(id => `<span id="${prefix}-${h(id)}"${prefix === 'guide' ? ` data-guide-alias="guide-${h(item.id)}"` : ''}></span>`).join('');
 
 function imageMarkup(image, name, naturalSize = false) {
   const source = localImage(image.display) || localImage(image.original);
@@ -99,13 +100,14 @@ function card(item) {
   const includedDownloads=(item.downloads || []).filter(file => file.distribution === 'include');
   const pairedDownloads=pluginDownloads(item,includedDownloads);
   const extras=includedDownloads.filter(file=>!pluginBundles.has(file.id)).filter(file=>{const stored=storedFiles.find(entry=>entry.downloadId===file.id);return !pluginBundles.choices(item,includedDownloads).some(row=>stored?.sha256===row.source.sha256);});
-  const buttons = pairedDownloads ? pairedDownloads+(extras.length?'<div class="gta-plugin-separate">'+extras.map(file=>downloadButton(file,item).replace('class="btn btn-primary"','class="gta-plugin-extra"')).join('')+'</div>':'') : includedDownloads.map(file => downloadButton(file, item)).join('');
+  const directDownloads = () => includedDownloads.map(file => downloadButton(file, item)).join('');
+  const buttons = item.mergedResourceIds?.length ? directDownloads() + pairedDownloads : pairedDownloads ? pairedDownloads+(extras.length?'<div class="gta-plugin-separate">'+extras.map(file=>downloadButton(file,item).replace('class="btn btn-primary"','class="gta-plugin-extra"')).join('')+'</div>':'') : directDownloads();
   const cleanGta=item.gameIds?.includes('gta5') && !['client', 'rtm'].includes(item.category);
   const repository = httpsUrl(item.source?.repositoryUrl);
   const sourceLink = repository ? `<a href="${h(repository)}" target="_blank" rel="noopener noreferrer">Source code <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>` : '';
   const videoGuide = youtubeVideo(item.videoButton?.url);
   const videoLink = videoGuide ? `<a class="btn btn-outline" href="${h(videoGuide.url)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> Watch video guide</a>` : '';
-  const detailLink = !cleanGta && hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
+  const detailLink = (!cleanGta || item.mergedResourceIds?.length) && hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
   const tagMarkup = cleanGta ? '' : tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
@@ -116,7 +118,7 @@ function card(item) {
   const actions = buttons + sourceLink + videoLink + detailLink + relatedLinks;
   const version = !item.hideCardBuildDetails && item.version ? `<p>${h(item.version)}</p>` : '';
   const compatibility = !cleanGta && !item.hideCardBuildDetails && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
-  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
+  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${legacyAnchors(item,'resource')}${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
   const title = block.title ? `<h3>${h(block.title)}</h3>` : '';
@@ -146,7 +148,8 @@ function details(item) {
     return markup ? `<figure class="guide-resource" style="margin-top:24px">${markup}<figcaption>${h(image.caption || item.name)}</figcaption></figure>` : '';
   }).join('\n');
   const clips = (item.videos || []).length ? '<h3>Videos</h3>' + item.videos.map(clip => videoMarkup(clip, item.name)).join('\n') : '';
-  return guideSection('guide-' + item.id, item.name, guide + controls + gallery + guideImages + clips);
+  const downloads = item.mergedResourceIds?.length ? '<div class="guide-links">' + (item.downloads || []).filter(file => file.distribution === 'include').map(file => downloadButton(file, item)).join('') + '</div>' : '';
+  return legacyAnchors(item,'guide') + guideSection('guide-' + item.id, item.name, downloads + guide + controls + gallery + guideImages + clips);
 }
 function gameContent(items, prefix = '', categoryHeadings = {}) {
   const collections = Object.entries(categories).map(([id, title]) => {

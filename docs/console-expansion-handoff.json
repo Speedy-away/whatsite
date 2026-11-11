@@ -259,6 +259,16 @@
     "image": "assets/images/ps4-bo3/infarcted-sprx-v1-1.png",
     "changes": "Used the supplied gameplay screenshot on the Black Ops 3 Off host card and in the PS4/PS5 Menu Directory."
   },
+  "voidVeloraPs4Gta5_20261111": {
+    "date": "2026-11-11",
+    "status": "Included in the scoped GitHub Pages publication.",
+    "page": "console/mods/ps4/gta5/index.html#resource-gta5-velora-1-57",
+    "changes": "Added VOID + Velora to GTA V 1.57 and the PS4/PS5 Menu Directory with the supplied screenshot. The merged card retains three separate downloads: VOID Lua ZIP, Velora 1.4 full ZIP and Velora 1.5 SPRX. The previous 1.5 guide URL opens the merged guide; the separate GTA V 1.56 Velora listing and both 1.57 plugin configuration choices remain available.",
+    "compatibility": "The VOID archive contains only VOID(1).lua, which references PS4 GTA V 1.57. The accompanying Velora.sprx matches the existing 1.5 file byte for byte. VOID support with the Velora 1.4 package was not verified.",
+    "archive": "Archived both exact Discord attachments on F: using the organized PS4/Games/GTA5/1.57/VOID + Velora layout. Source URLs, version or dated snapshot, size and SHA-256 are recorded in the merged download inventory and scoped intake. No downloaded code was executed.",
+    "checks": "Edge checked the screenshot, all three original links and the legacy guide at 390 px and 1366 px. Verified both copies by hash and all 183 prior GTA V download paths. The unrelated BO1/BO2 ps4debug legacy baseline assertion also fails on HEAD.",
+    "regenerate": "node scripts/build-ps4-mods.cjs --gta5-only"
+  },
   "discordAttachmentDownloads20261108": {
     "date": "2026-11-08",
     "status": "Included in the site publication commit.",

@@ -42,7 +42,26 @@ function createGameImports({root = ROOT, data, files} = {}) {
       if (block.type === 'steps' && !block.items.every(step => typeof step.title === 'string' && typeof step.text === 'string')) throw Error('Invalid game guide step: ' + item.id);
     }
   }
-  const included = data.resources.filter(item => item.publication === 'include');
+  // Keep the source records and download IDs separate when they share one card.
+  const publishable = data.resources.filter(item => item.publication === 'include');
+  const mergedByTarget = new Map();
+  for (const item of publishable.filter(item => item.mergeInto)) {
+    const target = publishable.find(candidate => candidate.id === item.mergeInto);
+    if (!target || target.mergeInto || ['category', 'gameIds', 'gameVersions', 'platforms'].some(key => JSON.stringify(target[key]) !== JSON.stringify(item[key]))) {
+      throw Error('Incompatible catalogue merge: ' + item.id);
+    }
+    if (!mergedByTarget.has(target.id)) mergedByTarget.set(target.id, []);
+    mergedByTarget.get(target.id).push(item);
+  }
+  const included = publishable.filter(item => !item.mergeInto).map(item => {
+    const merged = mergedByTarget.get(item.id);
+    if (!merged) return item;
+    return {...item,
+      mergedResourceIds: merged.map(record => record.id),
+      downloads: [...(item.downloads || []), ...merged.flatMap(record => record.downloads || [])],
+      keywords: [...new Set([...(item.keywords || []), ...merged.flatMap(record => record.keywords || [])])]
+    };
+  });
   const forGame = (id, mode = 'mods') => included.filter(item => item.gameIds.includes(id) && (mode === 'sources' ? item.category === 'source' : item.category !== 'source'));
   function keysFor(item) {
     return new Set([...(item.downloads || []).map(file => file.url), ...(item.source?.originalDownloadUrls || []), item.source?.releaseUrl].filter(Boolean).map(sourceKey));
@@ -161,7 +180,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
     }
     append('source-codes/index.html', gameCards.length ? section('imported-source-games', 'More games', grid(...gameCards)) : '', 'source-games');
   }
-  return {data, renderer, forGame, matches, legacyEnhancement, supplement, extraGameCards, buildMods, buildSources};
+  return {data, included, renderer, forGame, matches, legacyEnhancement, supplement, extraGameCards, buildMods, buildSources};
 }
 module.exports = {createGameImports, sourceKey};
 if (require.main === module) throw Error('Run build-ps4-mods.cjs or build-source-code-pages.cjs so legacy content is regenerated before imports.');

@@ -22,13 +22,13 @@ function gtaSection(item){
 }
 const gtaCards=group=>gtaItems.filter(item=>gtaSection(item)===group).map(item=>imported.renderer.card(item));
 const unmatchedFiles=files.filter(file=>!gtaItems.some(item=>imported.matches(item,file)));
-function guideDownloads(ids,wrap=true){
+function guideDownloads(ids,onlyDownload){
  const buttons=ids.map(id=>{
   const item=gtaItems.find(item=>item.id===id);
   if(!item)throw Error('Missing guide download: '+id);
-  return item.downloads.filter(file=>file.distribution==='include').map(file=>imported.renderer.downloadButton({...file,label:'Download '+item.name+' · '+file.label},item)).join('');
+  return item.downloads.filter(file=>file.distribution==='include'&&(!onlyDownload||file.id===onlyDownload)).map(file=>imported.renderer.downloadButton({...file,label:onlyDownload?'Download '+file.label:'Download '+item.name+' · '+file.label},item)).join('');
  }).join('');
- return wrap?'<div class="guide-links">'+buttons+'</div>':buttons;
+ return '<div class="guide-links">'+buttons+'</div>';
 }
 
 const base='/console/mods/ps4/gta5/';
@@ -93,7 +93,7 @@ section('plugin','General GoldHEN plugin setup',steps([
 ['Register the plugin for the game','Add its exact file path under the matching GTA V CUSA section in <code>/data/GoldHEN/plugins.ini</code>. Use the menu’s regional configuration; avoid a default entry that loads it into every game.'],
 ['Test one menu','Fully close and restart GTA V, enter story mode and use the menu’s documented opening controls. If it crashes, remove that entry and restart the game before trying a different menu.']
 ])+sourceList([['https://github.com/GoldHEN/GoldHEN_Plugins_Repository','GoldHEN plugin setup reference']]))+
-section('velora','Velora 1.4: GTA V 1.57 installation',guideDownloads(['gta5-velora-1-57'])+steps([
+section('velora','Velora 1.4: GTA V 1.57 installation',guideDownloads(['gta5-velora-1-57'],'gta5-velora-1-57')+steps([
 ['Extract the full package','Download and extract <code>Velora_1.4.zip</code>. This full GTA V 1.57 package includes <code>Velora.sprx</code> and the <code>Velora</code> data folder; the separate older Velora 1.5 module is a different download.'],
 ['Transfer the supporting data','Keep the complete Velora folder at <code>/data/Velora</code>, including its Lua compatibility files and speedometer DDS resources. Back up existing settings before merging folders.'],
 ['Install the plugin','With GTA V closed, copy <code>Velora.sprx</code> to <code>/data/GoldHEN/plugins/Velora.sprx</code>. Keep the SPRX filename and extension.'],
@@ -132,6 +132,7 @@ if(!rdr2Only&&!fortniteOnly){
 <img alt="">
 </dialog>`;
  const html=fs.readFileSync(file,'utf8')
+   .replace('/assets/console-guide-dialog.js?v=5','/assets/console-guide-dialog.js?v=6')
    .replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=5"></head>')
    .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script><script defer src="/assets/gta5-plugin-downloads.js?v=4"></script></body>');
  fs.writeFileSync(file,html);

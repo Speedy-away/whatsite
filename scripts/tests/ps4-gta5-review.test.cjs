@@ -74,3 +74,23 @@ test('GTA V catalogue groups each resource once and reserves older versions for 
  assert.ok(section('servers').includes('https://lossantosonline.com/'));
  for(const id of ['gta5-explosive-1-57','gta5-explosive-1-52-1-53'])assert.equal(item(id).images[0].original,'/assets/images/ps4-gta5/explosive-user-preview-2026-11-04.png');
 });
+
+test('VOID and both Velora 1.57 builds share one card with separate original downloads',()=>{
+ const id='gta5-velora-1-57',legacy='gta5-velora-v1-5-1-57';
+ const {forGame,renderer}=require('../build-ps4-ps5-game-imports.cjs').createGameImports();
+ const velora=forGame('gta5').filter(row=>/velora/i.test(row.name));
+ assert.deepEqual(velora.map(row=>row.gameVersions),[['1.56'],['1.57']]);
+ const merged=velora.find(row=>row.id===id);
+ assert.deepEqual(merged.mergedResourceIds,[legacy]);
+ const html=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');
+ const card=html.match(new RegExp('<article class="guide-resource" id="resource-'+id+'"[^>]*>([\\s\\S]*?)</article>'))[1];
+ for(const local of ['/downloads/ps4/GTA5/157/void-velora/VOID_FIXED_DOWNLOAD.zip','/downloads/ps4-ps5/gta5-velora-1-57/Velora_1.4.zip','/downloads/ps4/GTA5/157/Velora.sprx']) assert.ok(card.includes('href="'+local+'"'),local);
+ assert.match(card,/void-velora-user-preview\.png/);
+ assert.doesNotMatch(html,new RegExp('<article[^>]+id="resource-'+legacy+'"'));
+ assert.ok(html.includes('id="guide-'+legacy+'" data-guide-alias="guide-'+id+'"'));
+ const bundles=renderer.pluginDownloads(merged);
+ assert.match(bundles,/Velora 1\.4 · full ZIP/);
+ assert.match(bundles,/Velora 1\.5 · standalone SPRX/);
+ const {entries}=require('../console-mod-catalog.cjs').catalog();
+ assert.deepEqual(entries.filter(row=>row.gameId==='gta5'&&row.search.includes('velora 1.5')).map(row=>row.name),['VOID + Velora']);
+});

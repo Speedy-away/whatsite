@@ -21,7 +21,7 @@ function catalog() {
       image:require('./ps4-ps5-card-images.cjs').resourceImage(item), gameId, versions: item.compatibilityText || item.version || item.gameVersions?.map(v => 'GTA V ' + v).join(', ') || '',
       url, search: resourceTerms(item, game.title).join(' ').toLowerCase()});
   }
-  for (const item of [...cod.resources, ...other.data.resources].filter(item => item.publication === 'include' && item.category !== 'source')) {
+  for (const item of [...cod.resources, ...other.included].filter(item => item.publication === 'include' && item.category !== 'source')) {
     const renderedItem = cod.resources.includes(item) ? {...item, videos: []} : item;
     for (const gameId of item.gameIds) {
       const game = games.find(game => game.id === gameId);

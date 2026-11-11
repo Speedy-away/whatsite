@@ -99,10 +99,17 @@
 
     const panels = new Set();
     const titleFor = panel => panel.getAttribute('data-guide-title') || panel.querySelector('h2, h1')?.textContent.trim() || 'Guide';
+    function hashTarget(doc, hash) {
+      try {
+        const target = doc.getElementById(decodeURIComponent(hash.slice(1)));
+        const alias = target?.getAttribute('data-guide-alias');
+        return alias ? doc.getElementById(alias) : target;
+      } catch { return null; }
+    }
     function localTarget(url) {
       const current = new URL(window.location.href);
       if (url.pathname !== current.pathname || url.search !== current.search || !url.hash) return null;
-      try { return document.getElementById(decodeURIComponent(url.hash.slice(1))); } catch { return null; }
+      return hashTarget(document, url.hash);
     }
     function register(panel) {
       panel.setAttribute('data-guide-panel', '');
@@ -217,10 +224,7 @@
         const html = await response.text();
         if (!dialog.open || current !== sequence) return;
         const parsed = new window.DOMParser().parseFromString(html, 'text/html');
-        let content = null;
-        if (url.hash) {
-          try { content = parsed.getElementById(decodeURIComponent(url.hash.slice(1))); } catch { /* Fall back to the guide body. */ }
-        }
+        let content = url.hash ? hashTarget(parsed, url.hash) : null;
         content ||= parsed.getElementById('content') || parsed.querySelector('main');
         if (!content) throw new Error('Guide content missing');
         if (!dialog.open || current !== sequence) return;
