@@ -856,4 +856,5 @@ Object.assign(table, require('./host-reset-translations.cjs'));
 Object.assign(table, require('./host-tool-translations.cjs'));
 Object.assign(table, require('./host-trainer-errors-translations.cjs'));
 Object.assign(table, require('./host-trainer-gallery-translations.cjs'));
+Object.assign(table, require('./transfer-guide-translations.cjs'));
 module.exports = table;

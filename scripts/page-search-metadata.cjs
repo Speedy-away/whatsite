@@ -10,6 +10,7 @@ const metadataContent = require('./page-metadata-content.cjs');
 const {isGenericKeyword} = require('./search-keyword-quality.cjs');
 const overridesPath = path.join(root, 'docs/seo/search-editorial-overrides.json');
 const searchOverrides = fs.existsSync(overridesPath) ? JSON.parse(fs.readFileSync(overridesPath, 'utf8')) : {};
+Object.assign(searchOverrides, require('./transfer-guide-seo.cjs').overrides);
 const socialImagesPath = path.join(root, 'docs/seo/social-images.json');
 let socialImagesCache, socialImagesStamp;
 function socialImageFor(relative, options) {
@@ -326,7 +327,18 @@ function pageSchema({canonical, title, description, keywords, image, imageInfo, 
     width: imageInfo.width, height: imageInfo.height};
   if (metadata?.items) page.mainEntity = {'@type': 'ItemList', numberOfItems: metadata.items.length,
     itemListElement: metadata.items.map((item, i) => ({'@type': 'ListItem', position: i + 1, name: item.name, url: new URL(item.url, origin).href}))};
-  return {'@context': 'https://schema.org', '@graph': [website, page]};
+  const graph=[website,page];
+  if(metadata?.breadcrumbs){
+    const breadcrumb={'@type':'BreadcrumbList','@id':canonical+'#breadcrumbs',itemListElement:metadata.breadcrumbs.map((item,i)=>({'@type':'ListItem',position:i+1,name:item.name,item:new URL(item.url,origin).href}))};
+    page.breadcrumb={'@id':breadcrumb['@id']};graph.push(breadcrumb);
+  }
+  if(metadata?.article){
+    const article={'@type':'TechArticle','@id':canonical+'#article',mainEntityOfPage:{'@id':page['@id']},headline:title,description,inLanguage:'en',keywords};
+    if(metadata.article.dateModified)article.dateModified=metadata.article.dateModified;
+    if(image)article.image=image;
+    page.mainEntity={'@id':article['@id']};graph.push(article);
+  }
+  return {'@context': 'https://schema.org', '@graph': graph};
 }
 
 function transform(file, before, options = {}) {

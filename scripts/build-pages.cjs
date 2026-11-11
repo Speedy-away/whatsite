@@ -40,12 +40,12 @@ function treeFiles(root) {
 }
 function materialize(root, result) {
   const names = result.files.filter(file => !result.offloaded.has(file.name)).map(file => '/' + file.name.replace(/[\\*?\[\]]/g, match => '\\' + match));
-  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/pages/',...names].join('\n')+'\n',maxBuffer:64*1024*1024});
+  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/pages/','/i18n-tools/transfer-guide-source.json',...names].join('\n')+'\n',maxBuffer:64*1024*1024});
 }
 function materializeLocaleSources(root) {
   const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/i18n/page-translations.json'), 'utf8'));
   const sources = manifest.pages.map(require('./playstation-library-routes.cjs').moveTranslation).map(page => '/' + page.page.replace(/[\\*?\[\]]/g, match => '\\' + match));
-  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/',...sources].join('\n')+'\n',maxBuffer:64*1024*1024});
+  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/','/i18n-tools/transfer-guide-source.json',...sources].join('\n')+'\n',maxBuffer:64*1024*1024});
 }
 function sourceLinks(root) {
   const file=path.join(root,'docs/download-source-links.json');
@@ -75,7 +75,7 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, p
     legacyLibraryShard.test(f.name) ||
     isBuildRecord(f.name) ||
     /^scooby\/(?:FSL\/)?WINMM\.dll$/i.test(f.name) ||
-    (/^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) && !libraryArtwork.has(f.name)) ||
+    (/^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) && !libraryArtwork.has(f.name) && !f.name.startsWith('assets/images/transfer-guides/')) ||
     /^hosts\/runtime\/karo-[^/]+\/web\/.+\.(?:bin|elf|bz2|zip)$/i.test(f.name)
   ).sort((a, b) => b.bytes - a.bytes || a.name.localeCompare(b.name));
   const offloaded = sourceLinks(root);

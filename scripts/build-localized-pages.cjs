@@ -60,6 +60,7 @@ function localURL(ctx,value,page,code,{download=false}={}){
  if(!value||/^(?:data:|javascript:|mailto:|tel:|blob:)/i.test(value))return value;
  let parsed;try{parsed=new URL(value,page.canonical);}catch{return value;}
  if(parsed.origin!==html.origin)return value;
+ if(code!=='en'&&/^\/assets\/images\/transfer-guides\/(?:ps[45]-(?:ip-address|file-manager)|ps4-goldhen-ftp)\.svg$/.test(parsed.pathname))return parsed.pathname.replace('/transfer-guides/','/transfer-guides/'+code+'/')+parsed.search+parsed.hash;
  const destination=ctx.routes.get(parsed.pathname);
  if(destination&&!download)return new URL(html.urlFor(destination,code)).pathname+parsed.search+parsed.hash;
  return parsed.pathname+parsed.search+parsed.hash;

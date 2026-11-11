@@ -11696,5 +11696,96 @@
       "persistence": "The hub generator selects the sources in build-console-guides.cjs and console-card-media.cjs. Fixed cards bypass the automatic category artwork pass. Edge verified the covers and their aspect ratios on desktop and mobile, and repeating both generators preserved the HTML exactly. The new regression test passed. An existing broader test still expects SVG for five unrelated category covers delivered as JPEG."
     },
     "regenerate": "node -e \"require('./scripts/build-ps5-game-saves.cjs').buildPs5GameSaves(); require('./scripts/build-ps5-mods.cjs').buildPs5Mods(); require('./scripts/build-ps5-jailbreaks.cjs').refreshPs5Hub();\""
+  },
+  "ps4Ps5TransferGuides20261111": {
+    "date": "2026-11-11",
+    "status": "Verified locally and prepared for release on main.",
+    "pages": [
+      "console/ps4/file-transfer-guide.html",
+      "console/ps5/file-transfer-guide.html",
+      "console/download-center/index.html"
+    ],
+    "changes": "Replaced the former FileZilla-only card on PS4/PS5 hubs and Transfer Tools pages with dedicated guide links. Each guide asks FTP or USB and shows the selected route. Download Center is visibly marked Not finished; download/app buttons are centered. FTP additionally asks computer or phone, then iOS/Android/HarmonyOS. Browser history and shared deep links restore these choices.",
+    "consoleDistinction": "PS5 uses ezRemote Client 2.18 with loader 1.01 and a compatible elfldr setup; this loader does not require websrv. The separate website downloader still has its own websrv checks. Package installation follows release-specific requirements; the outdated PS4-only installer statement was removed.",
+    "discovery": {
+      "keywords": "Curated exact-route PS4/PS5 and Download Center subjects, preserving app/service/version distinctions.",
+      "tags": "Visible topic badges and multilingual data-search seeds on method, phone, center and hub cards.",
+      "schema": "Linked WebPage / TechArticle and BreadcrumbList for guides; CollectionPage with five real destinations for Download Center.",
+      "sitemap": {
+        "canonicalURLs": 505,
+        "localeSitemaps": 20,
+        "ownCanonicalRoutes": 3,
+        "queryChoiceURLsIndexed": false,
+        "redirectURLsRemoved": [
+          "https://whatwhatboy.com/console/ps4/jailbreak.html",
+          "https://whatwhatboy.com/console/ps4/jailbreak-13-52.html"
+        ],
+        "redirectPagesRetained": true
+      }
+    },
+    "localization": {
+      "languages": 20,
+      "sourceKeys": 134,
+      "allGuideProseTranslated": true,
+      "menuIllustrationsLocalized": true,
+      "staticRoutesRegistered": 3,
+      "renderedGuideAndCenterPages": 63,
+      "keywordTopicsLocalized": true,
+      "searchAliases": "Technical aliases retain their original searchable forms."
+    },
+    "images": {
+      "total": 109,
+      "neutralDiagrams": 4,
+      "localizedDiagramsPerLanguage": 5,
+      "includingEnglish": 21,
+      "type": "Numbered SVG illustrations with outlines; not represented as exact app screenshots.",
+      "preview": "docs/qa/ps4-transfer-guide-20261111.jpg"
+    },
+    "verification": {
+      "testsPassed": 59,
+      "testScope": "Guide selector, localization, platform metadata, schema, ad-layer behavior, shell, Pages, and existing focused integration tests.",
+      "metadataPagesPassed": 3,
+      "xmlImagesPassed": 109,
+      "generationIdempotent": true,
+      "artifact": "tmp/transfer-guide-pages-20261111-v2",
+      "artifactGuideAudit": {
+        "pagesChecked": 63,
+        "links": 6990,
+        "canonicalURLs": 507,
+        "localeSitemaps": 20,
+        "issues": 0,
+        "changedBytes": 900,
+        "failures": []
+      },
+      "fullArtifact": {
+        "bytes": 900785556,
+        "pages": 10801,
+        "links": 1252965,
+        "offloadedFiles": 9194,
+        "issues": 0
+      },
+      "browser": [
+        "Direct pointer clicks: FTP > phone > Android only shows Android instructions",
+        "PS5 USB uses ezRemote Client 2.18 and correct loader instructions",
+        "390px mobile view without horizontal overflow",
+        "Light theme dark-teal links and brown unfinished status",
+        "Arabic static route preserves method/hash, translates metadata/schema and manager image",
+        "English desktop visible tags and FTP/USB choices",
+        "Initial deep links scroll below the sticky header",
+        "Native guide tags visibly rendered",
+        "Localized diagrams have server-rendered URLs without requiring JavaScript"
+      ]
+    },
+    "adBehavior": "These three interactive routes keep native ads and the sponsored link. Publisher click-interception layers are omitted so guide choices receive pointer input. Other pages keep their existing ad behavior.",
+    "limits": "No physical-console transfer, console execution or phone-app installation was performed. No console binaries were downloaded and the F: archive was not changed.",
+    "regenerate": [
+      "node scripts/build-transfer-illustrations.cjs",
+      "node scripts/build-transfer-menu-images.cjs",
+      "node scripts/build-transfer-manager-images.cjs",
+      "node i18n-tools/build-chrome.js",
+      "node scripts/build-transfer-guides.cjs",
+      "node scripts/prepare-transfer-guide-locales.cjs"
+    ],
+    "report": "docs/qa/ps4-ps5-transfer-guides-20261111.json"
   }
 }

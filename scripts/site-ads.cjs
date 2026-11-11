@@ -76,6 +76,10 @@ function addRail(html, file, options) {
 
 function configureAds(file, html, {sponsored = false} = {}) {
   if (!eligible(file, html)) return html;
+  const route=relativePath(file).replace(/^(?:es|pt|fr|de|ru|tr|pl|it|zh|ja|ko|th|vi|id|hi|sr|nl|ka|ar|he)\//,'');
+  const interactiveGuide=/^console\/(?:ps[45]\/file-transfer-guide\.html|download-center\/index\.html)$/.test(route);
+  // Transfer choices need direct pointer input; the native ad panel remains enabled.
+  const publisherLayers=sponsored&&!interactiveGuide;
   // Delete unwrapped legacy embeds before inserting exactly one native unit.
   // Marked banners are replaced separately by addRail.
   const nativeUnit = /<div\b[^>]*\bid=["']container-fd0a4dcec74a63f4d2662af5273f9d5b["'][^>]*>\s*<\/div>/gi;
@@ -96,11 +100,11 @@ function configureAds(file, html, {sponsored = false} = {}) {
       return stylesheet;
     }
     if (/^<\/head\s*>$/i.test(token)) {
-      const publisherHead = sponsored ? '<script data-cfasync="false" src="' + headAd + '"></script>' : '';
+      const publisherHead = publisherLayers ? '<script data-cfasync="false" src="' + headAd + '"></script>' : '';
       return (hasStylesheet ? '' : stylesheet) + publisherHead + token;
     }
     if (/^<\/body\s*>$/i.test(token)) {
-      const publisherBody = sponsored ? '<script data-cfasync="false" src="' + bodyAd + '"></script>' : '';
+      const publisherBody = publisherLayers ? '<script data-cfasync="false" src="' + bodyAd + '"></script>' : '';
       return (hasRuntime ? '' : script) + publisherBody + token;
     }
   });
