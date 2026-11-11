@@ -1,3 +1,4 @@
+import {extraSearchTerms, matchesSearchTerm} from './game-library-search.mjs?v=1';
 const $ = id => document.getElementById(id);
 const form = $('catalog-controls');
 const search = $('query');
@@ -82,7 +83,7 @@ function searchText(game, system) {
     aliases.push('bo' + number);
   }
   const metadata = normalize([system.textContent, ...(game.genres || []), ...(game.regions || []), game.version, game.languages].join(' '));
-  return ' ' + [...new Set([title, numbered, roman, ...aliases, metadata, platformAliases[system.value]])].join(' ') + ' ';
+  return ' ' + [...new Set([title, numbered, roman, ...aliases, metadata, platformAliases[system.value], extraSearchTerms(game.title, game.genres)])].join(' ') + ' ';
 }
 
 function load(system) {
@@ -133,7 +134,7 @@ function render(reset = true) {
     .replace(/\bgta (iii|iv|v)\b/g, (_, numeral) => 'gta' + numberedTitles.indexOf(numeral))
     .split(' ').filter(Boolean)
     .map(term => exactAliases.has(term) ? ' ' + term + ' ' : term);
-  const matches = titles.filter(game => terms.every(term => game.search.includes(term)) &&
+  const matches = titles.filter(game => terms.every(term => matchesSearchTerm(game.search, term)) &&
     (!genre.value || game.genres?.includes(genre.value)));
   if (sort.value === 'za') matches.reverse();
   $('results-count').textContent = fmt.format(matches.length) + ' of ' + fmt.format(titles.length) + ' listings';

@@ -1,4 +1,12 @@
 {
+  "gameLibrarySearch20261111": {
+    "date": "2026-11-11",
+    "status": "Verified and included in the scoped library search publication.",
+    "changes": "Added shared title aliases across Xbox, Nintendo and PlayStation for Need for Speed, Resident Evil, Final Fantasy, Metal Gear Solid, Kingdom Hearts, God of War, Gears of War, Assassin’s Creed, Pokémon, Animal Crossing, Fire Emblem, Monster Hunter and Super Mario Odyssey.",
+    "genres": "Added roleplaying, platforming, simulator, sport and related genre search terms from the existing labels. FPS requires both Shooter and First-Person labels. Short aliases match complete tokens.",
+    "checks": "All 24 focused tests passed. Eighteen browser queries passed across all three libraries, including genre checks.",
+    "delivery": "Library entry scripts import assets/game-library-search.mjs. Only search and metadata changes are included in this commit."
+  },
   "ps4FortniteSpectrumFn20261110": {
     "date": "2026-11-10",
     "status": "Verified locally and included in the scoped Spectrum FN update for main. GitHub Pages deploys separately.",

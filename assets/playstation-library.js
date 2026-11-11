@@ -1,3 +1,4 @@
+import {extraSearchTerms, matchesSearchTerm} from './game-library-search.mjs?v=1';
 const $ = id => document.getElementById(id);
 const root = new URL('./', document.querySelector('link[rel="canonical"]').href).pathname;
 const locale = document.documentElement.lang;
@@ -31,7 +32,7 @@ function searchText(game) {
     game.platform === 'PSP' ? 'PlayStation Portable PPSSPP' : 'PlayStation Vita PSVita';
   return normalize([title, numbered, roman, blackOps && `BO${blackOps} BO ${blackOps}`,
     gta && `GTA${gta} GTA ${gta} GTA ${romanNumerals[gta]}`, game.platform, platform,
-    ...(game.titleIds || []), ...(game.genres || []), game.source].filter(Boolean).join(' '));
+    ...(game.titleIds || []), ...(game.genres || []), extraSearchTerms(game.name, game.genres), game.source].filter(Boolean).join(' '));
 }
 const regionKey = value => ({US: 'USA', EU: 'EUR'}[value] || value || 'Unspecified');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
@@ -252,7 +253,7 @@ async function library() {
     if (reset) { visible = pageSize; writeFilters(); }
     const terms = normalize(search.value).split(/\s+/).filter(Boolean);
     const filtered = sortTitles(sort.value).filter(g =>
-      (!platform.value || g.platform === platform.value) && terms.every(term => g.search.includes(term)) &&
+      (!platform.value || g.platform === platform.value) && terms.every(term => matchesSearchTerm(g.search, term)) &&
       (!genre.value || g.genres.includes(genre.value)) &&
       (!region.value || g.regions?.includes(region.value)) && (!kind.value || g.facets?.some(facet => {
         const [r, k] = facet.split(':');
