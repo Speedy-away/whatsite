@@ -36,7 +36,14 @@ function apply(file,html){
  const platform=file.match(/^console\/(ps[45])\//)?.[1];
  if(!platform)return html;
  const destination=`/console/${platform}/free-shops.html`;
- html=html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/g,nav=>nav.includes(`href="${destination}"`)?nav:nav.replace('</nav>',`<a data-free-shops-nav href="${destination}">Free shops</a><a data-free-shops-index-nav href="/console/free-shops/">All free shops</a></nav>`));
+ html=html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/g,nav=>{
+  if(file==='console/ps4/jailbreaks.html') {
+   // Game downloads already leads to the PS4 page that lists the shops.
+   return nav.replace(/<a\b[^>]*\bdata-free-shops-(?:index-)?nav(?=\s|=|>)[^>]*>[\s\S]*?<\/a>/g,'');
+  }
+  if(nav.includes(`href="${destination}"`))return nav;
+  return nav.replace('</nav>',`<a data-free-shops-nav href="${destination}">Free shops</a><a data-free-shops-index-nav href="/console/free-shops/">All free shops</a></nav>`);
+ });
  if(file===`console/${platform}/index.html`){
   html=html.replace(/<article\b[^>]*\bdata-free-shops-card="[^"]*"[^>]*>[\s\S]*?<\/article>/g,'');
   html=html.replace(/<article\b[^>]*\bdata-console-game-card="[^"]*"[^>]*>[\s\S]*?<\/article>/,card=>card+hubCard(platform));

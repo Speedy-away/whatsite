@@ -11,7 +11,8 @@
 .ps4-jb-outline a span{font-size:.75rem;color:var(--primary-color,#7ca9e8);font-variant-numeric:tabular-nums}
 .ps4-jb-outline a:hover,.ps4-jb-outline a:focus-visible{text-decoration:underline;text-underline-offset:5px}
 .ps4-jb-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2rem;align-items:start}
-.ps4-jb-figure{margin:1.3rem 0 0;min-width:0}
+.ps4-jb-figure{margin:1.3rem 0 0;min-width:0;max-width:640px}
+.ps4-jb-split .ps4-jb-figure{max-width:420px}
 .ps4-jb-figure img{display:block;width:100%;height:auto;border:1px solid #353c47;border-radius:10px}
 .ps4-jb-figure figcaption{font-size:.85rem;line-height:1.65;color:var(--text-secondary,#aaa);padding-top:.7rem}
 .ps4-jb-checklist{padding-inline-start:1.25rem;max-width:76ch}
@@ -29,7 +30,7 @@
 .ps4-jb-chapters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem 1.5rem;margin-top:1.2rem}
 .ps4-jb-chapters a{line-height:1.6;overflow-wrap:anywhere}
 .ps4-jb-reading [id]{scroll-margin-top:5rem}
-@media(max-width:900px){.ps4-jb-outline{grid-template-columns:repeat(2,minmax(0,1fr))}.ps4-jb-split{grid-template-columns:1fr;gap:.75rem}.ps4-jb-split .ps4-jb-figure{max-width:660px}.ps4-jb-reading .section{padding-block:1.8rem}}
+@media(max-width:900px){.ps4-jb-outline{grid-template-columns:repeat(2,minmax(0,1fr))}.ps4-jb-split{grid-template-columns:1fr;gap:.75rem}.ps4-jb-reading .section{padding-block:1.8rem}}
 @media(max-width:600px){.ps4-jailbreak-guide .guide-hero-grid{grid-template-columns:1fr}.ps4-jailbreak-guide .guide-hero-grid>img{display:none}.ps4-jb-chapters{grid-template-columns:1fr}.ps4-jb-intro{padding-inline:16px}.ps4-jb-outline{gap:.1rem .7rem}.ps4-jb-outline a{font-size:.9rem}.ps4-jb-reading .guide-steps{padding-inline-start:1.2rem}}
 
 .ps4-jb-reading #walkthrough .guide-steps{list-style:none;padding-inline-start:0}

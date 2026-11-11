@@ -1,4 +1,30 @@
 {
+  "ps4GuideScreenshots20261111": {
+    "date": "2026-11-11",
+    "page": "console/ps4/jailbreaks.html",
+    "changes": "Use compact full-size-link screenshots and one Game downloads navigation entry on the PS4 guide. The WWB Host instructions match the published cache and restart sequence.",
+    "screenshots": [
+      {
+        "file": "wwb-host-screen.jpg",
+        "source": "https://speedy-away.github.io/hosts/ps4/exploit/gamerhack-g2all/",
+        "width": 1280,
+        "height": 530
+      },
+      {
+        "file": "ps4-system-information.jpg",
+        "source": "https://www.playstation.com/en-us/support/hardware/playstation-system-software-application-version/",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "ps4-system-software-update.jpg",
+        "source": "https://www.playstation.com/en-gb/support/hardware/ps4/system-software/",
+        "width": 1600,
+        "height": 900
+      }
+    ],
+    "verification": "Verified screenshot dimensions, 640px desktop width, 390px phone layout, download navigation and destination, stable metadata, 28 focused tests, and all 20 localized renders."
+  },
   "ps4GuideWwbHostFollowup20261111": {
     "date": "2026-11-11",
     "page": "console/ps4/jailbreaks.html",
