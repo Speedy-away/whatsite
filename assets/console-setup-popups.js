@@ -1,6 +1,6 @@
 (function(global,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;if(!global.document)return;const start=()=>api.install(global.document,global);if(global.document.readyState==='loading')global.document.addEventListener('DOMContentLoaded',start,{once:true});else start();})(typeof globalThis==='object'?globalThis:this,function(){
   'use strict';
-  const skipPath=path=>{path=path.replace(/^\/(?:es|pt|fr|de|ru|tr|pl|it|zh|ja|ko|th|vi|id|hi|sr|nl|ka|ar|he)(?=\/)/,'');return !path.startsWith('/console/')||path==='/console/retro/ps2.html'||path==='/console/ps4/jailbreak.html'||/^\/console\/ps[45]\/jailbreaks\.html$/.test(path)||/\/mods\//.test(path)||/whatsite-ps[45]\.html$/.test(path);};
+  const skipPath=path=>{path=path.replace(/^\/(?:es|pt|fr|de|ru|tr|pl|it|zh|ja|ko|th|vi|id|hi|sr|nl|ka|ar|he)(?=\/)/,'');return !path.startsWith('/console/')||path==='/console/retro/ps2.html'||path==='/console/ps4/jailbreak.html'||/^\/console\/ps[45]\/jailbreaks\.html$/.test(path)||/^\/console\/ps[45]\/file-transfer-guide\.html$/.test(path)||/\/mods\//.test(path)||/whatsite-ps[45]\.html$/.test(path);};
   function setupPage(path){return !skipPath(path)&&/\/(?:setup|install|storage|dev-mode|device-portal|cfw|jailbreak|hen|enso|bdj|umtx2|relapse|y2jb|atmosphere|hekate|app-store)\.html$/.test(path);}
   function candidates(doc){
     const chosen=[];

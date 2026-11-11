@@ -303,6 +303,13 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .profile-bio { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
 .social-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.profile-section .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 960px; margin-inline: auto; }
+@media (max-width: 767px) {
+    .profile-section .social-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+    .profile-section .social-grid { grid-template-columns: minmax(0, 1fr); }
+}
 .social-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-card); padding: 28px 20px; transition: border-color var(--tf), transform var(--tf), box-shadow var(--tf); }
 .social-card:hover { border-color: var(--border-hover); transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .social-card-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; background: var(--bg-tertiary); color: var(--text-secondary); }
@@ -442,6 +449,12 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .warning-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
 .warning-footer { padding-top: 16px; margin-top: 16px; border-top: 1px solid var(--border); }
 .warning-footer p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+.more-games-notice { margin-block-start: 24px; }
+.more-games-notice :is(.warning-header, .warning-grid, .warning-footer) { padding-inline: clamp(16px, 4vw, 24px); }
+.more-games-notice .warning-grid { padding-block: 20px; }
+.more-games-notice .warning-footer { margin-block-start: 0; padding-block: 16px; }
+
 .content-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .content-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-card); padding: 24px; }
 .content-card h3 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }

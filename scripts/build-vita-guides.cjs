@@ -35,7 +35,7 @@ function buildVitaGuides() {
     ? `<a href="${esc(app.download)}" data-original-href="${esc(app.original)}" download>Download VPK · ${esc(app.version)} <i class="fas fa-download" aria-hidden="true"></i></a>`
     : ext(byJob[app.job].url, `Download VPK · ${esc(app.version)}`);
   const appCard = app => resource(app.title, esc(app.description),
-    download(app) + ext(app.project, 'Project & requirements') + (app.guide ? ext(app.guide, app.guideLabel) : ''), app.image
+    (app.id === 'apollo' ? apollo.guideLink('vita') : '') + download(app) + ext(app.project, 'Project & requirements') + (app.guide ? ext(app.guide, app.guideLabel) : ''), app.image
   ).replace('<article ', `<article id="${app.id}" `)
     .replace('data-search="', `data-search="${esc(app.tags.join(' ').toLowerCase())} `)
     .replace('</h3>', `</h3><div class="game-features" aria-label="App tags">${app.tags.map(tag => `<span class="feature">${esc(tag)}</span>`).join('')}</div>`);

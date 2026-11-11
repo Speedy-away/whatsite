@@ -153,6 +153,8 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .home-menu-panel .home-menu-feature { justify-content: space-between; background: var(--bg-tertiary); font-weight: 750; }
 .home-menu-panel .home-menu-feature:hover { box-shadow: inset 0 0 0 1px var(--border-hover); }
 .home-menu-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding-block: 10px; }
+.home-cheats-panel .home-menu-columns { grid-template-columns: repeat(3, 1fr); }
+.home-cheats-panel a[href="/games/rdr2/index.html"] { white-space: nowrap; }
 .home-menu-columns p { padding: 6px 10px; color: var(--home-muted); font-size: .72rem; font-weight: 700; }
 .home-menu-tail { display: flex; flex-wrap: wrap; gap: 0 3px; border-top: 1px solid var(--border); padding-top: 3px; }
 .home-console-panel .home-menu-tail { flex-wrap: nowrap; }
@@ -207,9 +209,10 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
         min-width: 0;
         max-width: none;
     }
-    .home-menu-columns, .home-console-panel .home-menu-tail {
+    .home-menu-columns, .home-cheats-panel .home-menu-columns, .home-console-panel .home-menu-tail {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    .home-cheats-panel a[href="/games/rdr2/index.html"] { white-space: normal; }
     .home-console-panel .home-menu-tail { display: grid; }
     .home-brand { gap: 5px; font-size: .92rem; }
     .home-brand img { width: 27px; height: 27px; }

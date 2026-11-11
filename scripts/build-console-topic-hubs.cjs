@@ -100,7 +100,11 @@ function postprocess(file, platform, {source, extras, topic = false} = {}) {
   // The original console theme and shared mobile behavior are kept on every page.
   html = require('./apply-site-background.cjs').improve(html, file);
   html = require('./apply-mobile-layout.cjs').improve(html);
-  fs.writeFileSync(target, html);
+  if (file === 'console/psvita/save-tools.html') {
+    require('./apollo-tools.cjs').writeWithSiteShell(file, html);
+  } else {
+    fs.writeFileSync(target, html);
+  }
 }
 function buildPlatform(platform) {
   const guides = require('./build-console-guides.cjs');

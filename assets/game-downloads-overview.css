@@ -15,8 +15,8 @@
 
 .download-directory { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .download-directory a {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
   align-items: center;
   gap: 10px;
   min-height: 44px;
@@ -31,6 +31,34 @@
 }
 .download-directory a:hover { background: var(--bg-tertiary); border-color: var(--border-hover); }
 .download-directory a i { flex: none; font-size: .68rem; color: var(--text-secondary); }
+.download-directory-logo { width: 58px; height: 24px; object-fit: contain; }
+.download-directory-logo[src$="/vimm.png"] { width: 24px; justify-self: center; }
+.download-directory-logo[src$="/wwbsgames.svg"] { border-radius: 4px; }
+:is(#consoles, #more-systems) .download-directory-logo:not([data-logo-color]) { filter: brightness(0) invert(1); }
+[data-theme="light"] :is(#consoles, #more-systems) .download-directory-logo:not([data-logo-color]) { filter: brightness(0); }
+#more-systems [data-logo-color] { border-radius: 4px; }
+.retro-directory-heading { margin-block: 20px 8px; font-size: .95rem; }
+
+.downloads-overview .guide-footer.directory-footer {
+  padding-block: 0 16px;
+  background: transparent;
+}
+.directory-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 16px;
+  padding-block-start: 6px;
+  border-block-start: 1px solid var(--border);
+}
+.directory-footer-row a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
 
 .downloads-overview #downloads .search-container { margin: 0 0 14px; max-width: 380px; }
 .downloads-overview #downloads .games-grid { grid-template-columns: minmax(0, 1fr) !important; max-width: 650px; }

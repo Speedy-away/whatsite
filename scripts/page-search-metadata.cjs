@@ -62,9 +62,10 @@ const titles = {
   'games/cs2/index.html': 'Free CS2 Cheats & Tools | whatwhatboy',
   'games/cod/index.html': 'Call of Duty Cheats, GSC Menus & Clients | whatwhatboy',
   'games/cod/plutonium.html': 'Plutonium Tools: Black Ops 1, BO2 & MW3 | whatwhatboy',
-  'pages/profile.html': 'whatwhatboy Profile & Social Links',
+  'pages/profile.html': 'Contact Me & Social Links | whatwhatboy',
 };
 const descriptions = {
+  'pages/profile.html': 'Contact whatwhatboy on Discord or Telegram, or follow on YouTube, TikTok, Instagram and X.',
   'console/mods/ps4/rdr2/index.html': 'Browse North Beta, Sheriff 1.32, Havana and Oyster Free for RDR2 on PS4, with menu previews, version details and supplied setup guides.',
   'console/mods/ps4/gta5/index.html': 'Find GTA 5 PS4 menus by game update, including older builds, Expulsion, Cyprus, Ozark, Velora and Beach, plus scripts and setup guides.',
   'index.html': 'Browse game downloads, console homebrew and setup guides, mods, emulators, and tools for PlayStation, Xbox, Nintendo, and PC.',
@@ -417,9 +418,10 @@ function transform(file, before, options = {}) {
   terms.push('whatwhatboy');
   const keywordLimit = relative === 'pc/ports.html' ? 120
     : /^console\/ps[45]\/game-downloads\.html$/.test(relative) ? 83
+    : relative === 'console/ps4/save-tools.html' ? 80
     : relative === 'console/ps4/game-patches.html' ? 70
     : /^console\/(?:xbox-game-library|nintendo-game-library|playstation-library)\/index\.html$/.test(relative) ? 80
-    : /^(?:console\/ps[45]\/(?:index|free-shops)\.html|console\/ps4\/save-tools\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60
+    : /^(?:console\/ps[45]\/(?:index|free-shops)\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60
     : relative === 'console/mods/ps4/fortnite/index.html' ? 80
     : 35;
   const keywords = [...new Map(terms.filter(t => t && t.toLowerCase() !== 'whatwhatboy').map(t => [t.toLowerCase(), t])).values()].slice(0, keywordLimit).concat('whatwhatboy').join(', ');

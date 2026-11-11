@@ -37,19 +37,11 @@
                     <h1 class="section-title" id="cheats-title">Free Cheats</h1>
                 </div>
 
-                <div class="home-game-controls">
-                    <div class="filter-buttons" role="group" aria-label="Filter games by genre">
-                        <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All games</button>
-                        <button type="button" class="filter-btn" data-filter="open-world" aria-pressed="false">Open world</button>
-                        <button type="button" class="filter-btn" data-filter="shooters" aria-pressed="false">Shooters</button>
-                        <button type="button" class="filter-btn" data-filter="sandbox" aria-pressed="false">Sandbox</button>
-                    </div>
-                    <div class="search-container">
-                        <label for="gameSearch" class="home-search-label">Search games</label>
-                        <div class="search-box">
-                            <i class="fas fa-search search-icon" aria-hidden="true"></i>
-                            <input type="search" class="search-input" placeholder="Try GTA, Call of Duty, TF2..." id="gameSearch" aria-describedby="gameSearchStatus" autocomplete="off">
-                        </div>
+                <div class="search-container home-game-search">
+                    <label for="gameSearch" class="home-search-label">Search games</label>
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="search" class="search-input" placeholder="Try GTA, Call of Duty, TF2..." id="gameSearch" aria-describedby="gameSearchStatus" autocomplete="off">
                     </div>
                 </div>
                 <p class="home-search-status" id="gameSearchStatus" role="status" aria-live="polite" aria-atomic="true" data-result-noun="result">9 results shown</p>
@@ -113,7 +105,7 @@
                 <div class="no-results" id="noResults" style="display: none;">
                     <i class="fas fa-search" aria-hidden="true"></i>
                     <h2>No matching games</h2>
-                    <p>Try another game name or clear your search and filters.</p>
+                    <p>Try another game name or clear your search.</p>
                     <button type="button" class="btn btn-outline" id="resetGameSearch">Reset search</button>
                 </div>
             </div>

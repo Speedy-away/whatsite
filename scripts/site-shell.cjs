@@ -11,6 +11,7 @@ const themeScript = '<script src="/assets/playstation-library-theme.js?v=3"></sc
 const navigationScript = '<script defer src="/assets/home-navigation.js?v=20261110-phone"></script>';
 const critical = '<style data-critical-bg>html,body{background:#000;color-scheme:dark}html[data-theme="light"],html[data-theme="light"] body{background:#f5f5f5;color-scheme:light}</style>';
 const skipLink = '<a class="skip-link" href="#main-content">Skip to content</a>';
+const generatedHeader = /<header class="home-taskbar" data-generated-site-shell>[\s\S]*?<\/header>/;
 
 function mode(file, html) {
   if (!eligible(file) || /^(?:hosts|api|free-keys)\//.test(file) || /^(?:scooby|nenyoo)ontop2?\.html$/.test(file) ||
@@ -38,18 +39,24 @@ function create(root) {
   const home = fs.existsSync(index) ? fs.readFileSync(index, 'utf8') : '';
   const header = home.match(/<header class="home-taskbar">[\s\S]*?<\/header>/)?.[0];
   if (!header) return (_file, html) => html;
-  return (file, html) => {
+  return (file, html, {materialize = false} = {}) => {
     file = relativePath(file);
-    if (html.includes('class="home-taskbar"')) return html;
-    const layout = mode(file, html);
-    if (!layout) return html;
-    const language = html.includes('languages/i18n.js') ? '' : languageScript;
+    const hasGeneratedHeader = generatedHeader.test(html);
+    if (!hasGeneratedHeader && html.includes('class="home-taskbar"')) return html;
+    const layout = hasGeneratedHeader ? '' : mode(file, html);
+    if (!hasGeneratedHeader && !layout) return html;
     const firstVisit = html.includes('data-language-first-visit');
+    const current = currentHeader(firstVisit ? header.replace('data-language-switcher', 'data-language-switcher data-language-first-visit') : header, file, html);
+    // Source previews carry a refreshable copy. The Pages build consumes the
+    // marker before localization so a later pass keeps the translated header.
+    const markup = materialize ? current.replace('<header class="home-taskbar">', '<header class="home-taskbar" data-generated-site-shell>') : current;
+    if (hasGeneratedHeader) return refreshLanguageScript(html.replace(generatedHeader, () => markup)
+      .replace(/<link\b[^>]*href="\/assets\/site-shell\.css[^"]*"[^>]*>/, stylesheet));
+    const language = html.includes('languages/i18n.js') ? '' : languageScript;
     const hasSkip = [...html.matchAll(/<a\b[^>]*>/gi)].some(([tag]) => {
       const {href, class: classes} = attributes(tag);
       return href?.startsWith('#') && /\b(?:skip-link|skip)\b/.test(classes || '');
     });
-    const markup = currentHeader(firstVisit ? header.replace('data-language-switcher', 'data-language-switcher data-language-first-visit') : header, file, html);
     let hiddenTag = '', depth = 0;
     return mapTokens(refreshLanguageScript(html), token => {
       const element = /^<(\/?)([\w-]+)\b/i.exec(token);

@@ -121,12 +121,22 @@ test('the shared site shell replaces legacy navigation without changing the page
   assert.doesNotMatch(published, /mobile-sidebar-btn|site-background\.css|Legacy navigation/);
   assert.ok(published.includes(main));
   assert.equal(shell('console/ps4/index.html', published), published);
+  const preview = shell('console/ps4/index.html', original, {materialize: true});
+  assert.match(preview, /data-generated-site-shell/);
+  assert.equal(shell('console/ps4/index.html', preview.replace('Browse Free Cheats', 'Old menu label')), published);
   const cheats = fs.readFileSync(path.resolve(__dirname, "../../cheats/index.html"), "utf8");
   const directory = shell("cheats/index.html", cheats);
   assert.match(directory, /href="\/cheats\/" aria-current="page">Browse Free Cheats/);
   const menu = directory.match(/<details data-current class="home-menu home-cheats-menu"[^>]*>([\s\S]*?)<\/details>/)[1];
   const gameLinks = html => [...html.matchAll(/href="(\/games\/[^"]+)"/g)].map(match => match[1]).sort();
   assert.deepEqual(gameLinks(menu), gameLinks(cheats));
+  const profile = fs.readFileSync(path.resolve(__dirname, '../../pages/profile.html'), 'utf8');
+  const contactNav = shell('pages/profile.html', profile).match(/<nav class="home-task-links"[^>]*>[\s\S]*?<\/nav>/)[0];
+  const pcMenu = contactNav.match(/<details class="home-menu home-pc-menu"[^>]*>[\s\S]*?<\/details>/)[0];
+  const moreMenu = contactNav.match(/<details class="home-menu home-more-menu"[^>]*>[\s\S]*?<\/details>/)[0];
+  assert.match(pcMenu, /href="\/tools\/">Tools<\/a>/);
+  assert.doesNotMatch(moreMenu, /profile\.html/);
+  assert.match(contactNav, /<\/details>\s*<a class="home-task-link" href="\/pages\/profile\.html" aria-current="page"><span>Contact Me<\/span><\/a>/);
   for (const route of ['hosts/index.html', 'console/ps4/whatsite-ps4.html', 'free-keys/scooby/index.html', 'downloads/tools/index.html']) {
     assert.equal(shell(route, original), original);
   }

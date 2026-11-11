@@ -4,6 +4,11 @@ const {root, pages} = require('./site-public-pages.cjs');
 const {icon} = require('./sidebar-icons.cjs');
 function apply(file, html) {
   return html.replace(/<nav\b[^>]*class="sidebar-nav"[^>]*>[\s\S]*?<\/nav>/, nav => {
+    const active = String(file).replaceAll('\\', '/') === 'pages/profile.html';
+    const entry = `<li data-profile-navigation><a href="/pages/profile.html" class="nav-link${active ? ' active' : ''}"${active ? ' aria-current="page"' : ''} data-tooltip="Contact Me" aria-label="Contact Me">${icon('profile')}<span>Contact Me</span></a></li>`;
+    if (nav.includes('data-profile-navigation')) {
+      return nav.replace(/<li\b[^>]*\bdata-profile-navigation[^>]*>[\s\S]*?<\/li>/, entry);
+    }
     const group = /<li\b[^>]*>\s*<button\b(?=[^>]*data-tooltip="Community")[^>]*>/.exec(nav);
     if (!group) return nav;
     const tags = /<(\/?)li\b[^>]*>/g;
@@ -11,8 +16,6 @@ function apply(file, html) {
     let depth = 1, tag;
     while (depth && (tag = tags.exec(nav))) depth += tag[1] ? -1 : 1;
     if (depth) throw Error('Unclosed Community navigation: ' + file);
-    const active = String(file).replaceAll('\\', '/') === 'pages/profile.html';
-    const entry = `<li data-profile-navigation><a href="/pages/profile.html" class="nav-link${active ? ' active' : ''}"${active ? ' aria-current="page"' : ''} data-tooltip="Profile" aria-label="Profile">${icon('profile')}<span>Profile</span></a></li>`;
     return nav.slice(0, group.index) + entry + nav.slice(tags.lastIndex);
   });
 }

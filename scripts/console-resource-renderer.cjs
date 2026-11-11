@@ -61,13 +61,18 @@ function videoSource(clip) {
   return youtube ? {kind: 'youtube', ...youtube} : null;
 }
 
-const hasDetails = item => (item.guideBlocks || []).length || (item.controls || []).length || (item.images || []).some(image => localImage(image.display) || localImage(image.original)) || (item.videos || []).length;
+const hasDetails = (item, excludedImage) => (item.guideBlocks || []).length || (item.controls || []).length || (item.images || []).some(image => image !== excludedImage && (localImage(image.display) || localImage(image.original))) || (item.videos || []).length;
+const primaryImage = item => (item.images || []).find(image => image.role !== 'guide' && (localImage(image.display) || localImage(image.original)));
+const screenshotId = (item, image) => 'guide-' + item.id + (hasDetails(item, image) ? '-screenshot' : '');
 const legacyAnchors = (item, prefix) => (item.mergedResourceIds || []).map(id => `<span id="${prefix}-${h(id)}"${prefix === 'guide' ? ` data-guide-alias="guide-${h(item.id)}"` : ''}></span>`).join('');
 
-function imageMarkup(image, name, naturalSize = false) {
+function imageMarkup(image, name, naturalSize = false, popupId = '') {
   const source = localImage(image.display) || localImage(image.original);
   if (!source) return '';
   const caption = image.caption || name;
+  if (popupId) {
+    return `<a href="#${h(popupId)}" class="guide-screenshot-trigger" data-guide-open aria-label="Enlarge ${h(caption)}"><img src="${h(source)}" alt="${h(caption)}" loading="lazy"><i class="fas fa-expand" aria-hidden="true"></i></a>`;
+  }
   const fullSize = naturalSize || image.role === 'guide';
   return `<a href="${h(source)}" target="_blank" rel="noopener noreferrer" aria-label="View ${h(caption)}"${fullSize ? ' style="display:block;width:100%;max-width:100%"' : ''}><img src="${h(source)}" alt="${h(caption)}" loading="lazy"${fullSize ? ' style="aspect-ratio:auto;height:auto;max-width:100%"' : ''}></a>`;
 }
@@ -96,7 +101,8 @@ function card(item) {
     }).join('');
     return `<article class="guide-resource multicod-card" id="resource-${h(item.id)}" data-search="${h(resourceTerms(item).join(' ').toLowerCase())}">${cardMedia}<h3>${h(item.name)}</h3><p>${h(item.version)}</p>${actions}<details class="multicod-details"><summary>Setup &amp; source</summary><p>${lines(item.compatibilityText)}</p>${guideLink('#guide-'+item.id,'Full setup & cheat conditions')}<p><a href="${h(httpsUrl(item.source?.postUrl))}" target="_blank" rel="noopener noreferrer">Publisher source</a></p></details></article>`;
   }
-  const image = (item.images || []).find(image => image.role !== 'guide' && (localImage(image.display) || localImage(image.original)));
+  const image = primaryImage(item);
+  const screenshot = item.screenshotPopup ? image : undefined;
   const includedDownloads=(item.downloads || []).filter(file => file.distribution === 'include');
   const pairedDownloads=pluginDownloads(item,includedDownloads);
   const extras=includedDownloads.filter(file=>!pluginBundles.has(file.id)).filter(file=>{const stored=storedFiles.find(entry=>entry.downloadId===file.id);return !pluginBundles.choices(item,includedDownloads).some(row=>stored?.sha256===row.source.sha256);});
@@ -107,7 +113,7 @@ function card(item) {
   const sourceLink = repository ? `<a href="${h(repository)}" target="_blank" rel="noopener noreferrer">Source code <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>` : '';
   const videoGuide = youtubeVideo(item.videoButton?.url);
   const videoLink = videoGuide ? `<a class="btn btn-outline" href="${h(videoGuide.url)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> Watch video guide</a>` : '';
-  const detailLink = (!cleanGta || item.mergedResourceIds?.length) && hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
+  const detailLink = (!cleanGta || item.mergedResourceIds?.length) && hasDetails(item, screenshot) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
   const tagMarkup = cleanGta ? '' : tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
@@ -118,7 +124,7 @@ function card(item) {
   const actions = buttons + sourceLink + videoLink + detailLink + relatedLinks;
   const version = !item.hideCardBuildDetails && item.version ? `<p>${h(item.version)}</p>` : '';
   const compatibility = !cleanGta && !item.hideCardBuildDetails && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
-  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${legacyAnchors(item,'resource')}${image ? imageMarkup(image, item.name) : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
+  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${legacyAnchors(item,'resource')}${image ? imageMarkup(image, item.name, false, screenshot ? screenshotId(item, screenshot) : '') : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
   const title = block.title ? `<h3>${h(block.title)}</h3>` : '';
@@ -138,9 +144,15 @@ function videoMarkup(clip, name) {
 }
 function details(item) {
   if (!hasDetails(item)) return '';
+  const screenshot = item.screenshotPopup ? primaryImage(item) : undefined;
+  const screenshotPanel = screenshot ? guideSection(screenshotId(item, screenshot), item.name,
+    `<img class="guide-screenshot-image" src="${h(localImage(screenshot.original) || localImage(screenshot.display))}" alt="${h(screenshot.caption || item.name)}" loading="lazy">`
+  ).replace('<section ', '<section data-guide-screenshot ') : '';
+  const anchors = legacyAnchors(item, 'guide');
+  if (!hasDetails(item, screenshot)) return anchors + screenshotPanel;
   const guide = (item.guideBlocks || []).map(guideBlock).join('\n');
   const controls = (item.controls || []).length ? `<h3>Controls</h3><dl>${item.controls.map(control => `<dt><strong>${lines(control.input)}</strong></dt><dd>${lines(control.action)}</dd>`).join('')}</dl>` : '';
-  const images = (item.images || []).filter(image => image.role !== 'guide').map(image => imageMarkup(image, item.name, true)).filter(Boolean);
+  const images = (item.images || []).filter(image => image !== screenshot && image.role !== 'guide').map(image => imageMarkup(image, item.name, true)).filter(Boolean);
   const figures = images.map(markup => `<figure class="guide-resource">${markup}</figure>`);
   const gallery = images.length === 1 ? figures[0] : images.length ? grid(...figures) : '';
   const guideImages = (item.images || []).filter(image => image.role === 'guide').map(image => {
@@ -149,7 +161,7 @@ function details(item) {
   }).join('\n');
   const clips = (item.videos || []).length ? '<h3>Videos</h3>' + item.videos.map(clip => videoMarkup(clip, item.name)).join('\n') : '';
   const downloads = item.mergedResourceIds?.length ? '<div class="guide-links">' + (item.downloads || []).filter(file => file.distribution === 'include').map(file => downloadButton(file, item)).join('') + '</div>' : '';
-  return legacyAnchors(item,'guide') + guideSection('guide-' + item.id, item.name, downloads + guide + controls + gallery + guideImages + clips);
+  return anchors + guideSection('guide-' + item.id, item.name, downloads + guide + controls + gallery + guideImages + clips) + screenshotPanel;
 }
 function gameContent(items, prefix = '', categoryHeadings = {}) {
   const collections = Object.entries(categories).map(([id, title]) => {

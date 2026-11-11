@@ -77,8 +77,10 @@ function buildPs4GameSaves() {
     section('save-tools', 'PS4 save tools', grid(
       resource('Apollo Save Tool · PS4', 'Manage, export, import, patch and resign PS4 saves directly on your homebrew-enabled console.',
         '<a href="/downloads/archive/86923843b6f3/IV0000-APOL00004_00-APOLLO0000000PS4.pkg" data-original-href="https://github.com/bucanero/apollo-ps4/releases" download>Download for PS4 <i class="fas fa-download" aria-hidden="true"></i></a>' +
+        link('/console/ps4/apollo-guide.html', 'Read illustrated guide') +
         ext('https://github.com/bucanero/apollo-ps4', 'Project &amp; setup'), apolloImage)
     )), '#saves', 'Browse game saves');
+  require('./apollo-tools.cjs').writeWithSiteShell('console/ps4/save-tools.html');
 }
 
 function buildPs4Software() {

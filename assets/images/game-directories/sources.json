@@ -1,0 +1,51 @@
+{
+  "providers": {
+    "../ps3-resources/vimm.png": "https://vimm.net/images/vimmbutton-100.png",
+    "dlpsgame-logo.png": "User-supplied DLPSGame header logo",
+    "downloadgamepsp-logo.png": "https://downloadgamepsp.org/wp-content/uploads/2015/06/media-43608.png",
+    "nswgame-logo.png": "https://nswgf.com/wp-content/uploads/2015/06/media-74472.png"
+  },
+  "platforms": {
+    "../platform-logos/ps2.svg": "https://commons.wikimedia.org/wiki/File:PlayStation_2_logo.svg",
+    "../platform-logos/psp.svg": "https://commons.wikimedia.org/wiki/File:PSP_Logo.svg",
+    "../platform-logos/gamecube.svg": "https://commons.wikimedia.org/wiki/File:Nintendo_GameCube_Official_Logo.svg",
+    "../platform-logos/wii.svg": "https://commons.wikimedia.org/wiki/File:Wii.svg",
+    "../platform-logos/wiiu.svg": "https://commons.wikimedia.org/wiki/File:WiiU.svg",
+    "../platform-logos/3ds.png": "https://commons.wikimedia.org/wiki/File:Nintendo_3DS_logo.svg",
+    "../platform-logos/ds.svg": "https://commons.wikimedia.org/wiki/File:Nintendo_DS_Logo.svg",
+    "../platform-logos/xbox.png": "https://commons.wikimedia.org/wiki/File:Xbox_Logo_2001.svg"
+  },
+  "retro": {
+    "categories": "https://vimm.net/vault",
+    "artwork": {
+      "../platform-logos/retro/atari2600.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Atari%20-%202600.png",
+      "../platform-logos/retro/atari5200.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Atari%20-%205200.png",
+      "../platform-logos/retro/nes.png": "https://vimm.net/images/nes.png",
+      "../platform-logos/retro/mastersystem.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Sega%20-%20Master%20System%20-%20Mark%20III.png",
+      "../platform-logos/retro/atari7800.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Atari%20-%207800.png",
+      "../platform-logos/retro/tg16.png": "https://vimm.net/images/tg16.png",
+      "../platform-logos/retro/genesis.png": "https://vimm.net/images/genesis.png",
+      "../platform-logos/retro/tg-cd.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/NEC%20-%20PC%20Engine%20CD%20-%20TurboGrafx-CD.png",
+      "../platform-logos/retro/snes.png": "https://vimm.net/images/snes.png",
+      "../platform-logos/retro/cdi.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Philips%20-%20CD-i.png",
+      "../platform-logos/retro/segacd.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Sega%20-%20Mega-CD%20-%20Sega%20CD.png",
+      "../platform-logos/retro/atarijaguar.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Atari%20-%20Jaguar.png",
+      "../platform-logos/retro/sega32x.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Sega%20-%2032X.png",
+      "../platform-logos/retro/saturn.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Sega%20-%20Saturn.png",
+      "../platform-logos/retro/ps1.png": "https://vimm.net/images/ps1.png",
+      "../platform-logos/retro/atarijaguarcd.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Atari%20-%20Jaguar%20CD.png",
+      "../platform-logos/retro/n64.png": "https://vimm.net/images/n64.png",
+      "../platform-logos/retro/dreamcast.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Sega%20-%20Dreamcast.png",
+      "../platform-logos/retro/wiiware.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Nintendo%20-%20Wii%20(Digital).png",
+      "../platform-logos/retro/gb.png": "https://vimm.net/images/gb.png",
+      "../platform-logos/retro/atarilynx.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Atari%20-%20Lynx.png",
+      "../platform-logos/retro/gamegear.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Sega%20-%20Game%20Gear.png",
+      "../platform-logos/retro/virtualboy.png": "https://raw.githubusercontent.com/libretro/retroarch-assets/8c918e2872482139273374ef4cc6c7aff34d7585/xmb/monochrome/png/Nintendo%20-%20Virtual%20Boy.png",
+      "../platform-logos/retro/gbc.png": "https://vimm.net/images/gbc.png",
+      "../platform-logos/retro/gba.png": "https://vimm.net/images/gba.png"
+    },
+    "iconCredit": "RetroArch contributors",
+    "iconLicense": "https://creativecommons.org/licenses/by/4.0/",
+    "display": "RetroArch system icons adapt to the site theme. Vimm category images use their original colors."
+  }
+}

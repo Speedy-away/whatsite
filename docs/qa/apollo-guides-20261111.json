@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-11",
+  "status": "Verified locally; not committed or published.",
+  "pages": [
+    "console/ps3/apollo-guide.html",
+    "console/ps4/apollo-guide.html",
+    "console/ps3/save-tools.html",
+    "console/ps4/save-tools.html"
+  ],
+  "guideGenerator": "node scripts/build-apollo-guides.cjs",
+  "content": {
+    "consoles": [
+      "PS3",
+      "PS4"
+    ],
+    "sectionsPerGuide": 10,
+    "officialScreenshots": 8,
+    "topics": [
+      "PSN Online ID versus Account ID",
+      "Backups and restore",
+      "PS4 offline account activation and reboot",
+      "Current-user resigning",
+      "PS3 owners.xml and Change Account ID",
+      "Encrypted PS4 imports versus decrypted Apollo folders",
+      "USB folder outlines",
+      "Supported patches and compatibility limits",
+      "Troubleshooting"
+    ],
+    "sourceReview": "Official bucanero README, usage guide and current save/settings/copy-command source. Historical screenshots labelled where their menus differ."
+  },
+  "verification": {
+    "localPages": 4,
+    "localLinksAndAssets": 370,
+    "localIssues": [],
+    "metadataPages": 4,
+    "generationIdempotent": true,
+    "imageHashes": [
+      {
+        "file": "ps4-main.jpg",
+        "verified": true,
+        "bytes": 816374
+      },
+      {
+        "file": "ps4-saves.jpg",
+        "verified": true,
+        "bytes": 664305
+      },
+      {
+        "file": "ps4-savegame.jpg",
+        "verified": true,
+        "bytes": 625312
+      },
+      {
+        "file": "ps4-settings.jpg",
+        "verified": true,
+        "bytes": 621368
+      },
+      {
+        "file": "ps3-main.png",
+        "verified": true,
+        "bytes": 1470230
+      },
+      {
+        "file": "ps3-patches.png",
+        "verified": true,
+        "bytes": 1348449
+      },
+      {
+        "file": "ps3-details.png",
+        "verified": true,
+        "bytes": 1459391
+      },
+      {
+        "file": "ps3-savelist.png",
+        "verified": true,
+        "bytes": 1382204
+      }
+    ],
+    "regressionTests": {
+      "passed": 34,
+      "failed": 0,
+      "suites": [
+        "page-search-metadata",
+        "console-guide-dialog",
+        "ps3-downloads",
+        "console-store-apps"
+      ]
+    },
+    "localizedRenders": 40,
+    "localization": "Shared text reuses translations; newly authored guide prose follows the supported English fallback.",
+    "browser": {
+      "widths": [
+        390,
+        1024,
+        "default desktop"
+      ],
+      "horizontalOverflow": false,
+      "verified": [
+        "Guide link from PS4 saves page",
+        "PS3 and PS4 page switching",
+        "Outline anchor navigation",
+        "Troubleshooting disclosure",
+        "Original screenshot enlargement",
+        "Escape closes dialog and restores opener focus",
+        "All four PS3 lazy screenshot assets loaded"
+      ]
+    },
+    "preview": "docs/qa/apollo-guide-desktop-20261111.png",
+    "whitespace": "Passed for scoped files."
+  },
+  "preservation": "Existing save and tool download URLs, version pins and catalogue content retained. No console binaries downloaded; no F: archive mutation; independent host repository unchanged.",
+  "limits": "No physical-console save transfer, activation or resigning was performed."
+}

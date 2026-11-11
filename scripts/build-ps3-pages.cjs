@@ -151,7 +151,10 @@ function buildPs3Pages(options = {}) {
     catalog.transferWorkflow() + section('transfer-tools', 'File management & network services', list(appCards.filter(item => transferTitles.has(item.title)))) + catalog.extraApps({includeCustomization:false}) + related(), '#browser-files', 'Open transfer workflow', ['PS3 browser','webMAN MOD','FTP','HTTP','PKG','SPRX','RAR','ZIP','ezRemote','file manager','HEN','CFW']);
   page('console/ps3/save-tools.html', 'PS3 Save Tools',
     'Manage PS3 saves with Apollo Save Tool and browse legacy save-editing tools.', apolloImage, ps3nav,
-    normalize(sectionHtml('save-tools')) + section('legacy-save-tools', 'Legacy save tools', list([byTitle('Bruteforce Save Data')])) + related(), '#save-tools', 'Browse save tools');
+    require('./apollo-tools.cjs').withGuide(normalize(sectionHtml('save-tools')), 'ps3') + section('legacy-save-tools', 'Legacy save tools', list([byTitle('Bruteforce Save Data')])) + related(), '#save-tools', 'Browse save tools');
+  if (!selected || selected.has('console/ps3/save-tools.html')) {
+    require('./apollo-tools.cjs').writeWithSiteShell('console/ps3/save-tools.html');
+  }
   page('console/ps3/emulators.html', 'Emulators on PS3',
     'RetroArch for PS3, with its platform information and project link.', '/assets/images/emulators/retroarch.png', ps3nav,
     section('emulators', 'Emulators on PS3', list([byTitle('RetroArch · PS3')])) + related(), '#emulators', 'Browse emulators');

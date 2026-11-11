@@ -8,6 +8,7 @@ const normalized = file => (/^\/(?:console|downloads|pc|source-codes)\//.test(fi
 const directoryPath = platform => platform.base + 'game-downloads.html';
 const ps4AddOns = require('./ps4-game-add-ons.cjs');
 const libraryRoutes = require('./playstation-library-routes.cjs');
+const {providerLogo} = require('./game-directory-card-layout.cjs');
 const fpkgFixesFile = 'console/ps4/fpkg-fixes.html';
 const blackOps2Mods = '/console/mods/ps4/call-of-duty/black-ops-2/';
 function orbitStoreCard() {
@@ -36,8 +37,12 @@ function range(html, tag, predicate) {
   return null;
 }
 const gameLibraries = {
+  ps2: 'PlayStation',
+  ps3: 'PlayStation',
   ps4: 'PlayStation',
   ps5: 'PlayStation',
+  psp: 'PlayStation',
+  psvita: 'PlayStation',
   xbox: 'Xbox',
   xbox360: 'Xbox',
   wii: 'Nintendo',
@@ -46,13 +51,21 @@ const gameLibraries = {
   ds: 'Nintendo',
   '3ds': 'Nintendo'
 };
+const libraryPaths = {
+  PlayStation: '/' + libraryRoutes.directory,
+  Xbox: '/console/xbox-game-library/',
+  Nintendo: '/console/nintendo-game-library/'
+};
+const libraryLogo = '/assets/images/wwbsgames.svg';
+const overviewSummary = 'Browse WWBsgames libraries for PlayStation, Xbox and Nintendo, or choose a console to see game directories such as Vimm’s Lair, DLPSGame, DownloadGamePSP, NSWGame and NSWGF.';
 
 function applyLibraryCard(html, platform) {
   const {id: platformId, title: platformTitle} = platform;
   const family = gameLibraries[platformId];
   const playStation = family === 'PlayStation';
-  const route = playStation ? libraryRoutes.directory : 'console/' + family.toLowerCase() + '-game-library/';
-  const library = '/' + route + (playStation ? '' : '?platform=' + platformId);
+  const route = libraryPaths[family];
+  const platformFilter = playStation ? (platformId === 'psvita' ? 'PS Vita' : platformId.toUpperCase()) : platformId;
+  const library = route + '?platform=' + encodeURIComponent(platformFilter);
   const id = 'id="' + family.toLowerCase() + '-game-library"';
   const legacy = range(html, 'section', opening => opening.includes(id));
   if (legacy) html = html.slice(0, legacy.start) + html.slice(legacy.end);
@@ -62,7 +75,7 @@ function applyLibraryCard(html, platform) {
   const name = family + ' Game Library';
   const {resource, link} = require('./build-console-guides.cjs');
   const detail = playStation
-    ? 'Filter by genre or title ID and compare package links, regions and versions.'
+    ? `Search ${platformFilter} games by title or genre. Compare listings and see the available regions, versions and download links.`
     : 'Search game titles, browse genre labels where available and open the original source listings.';
   const keywords = [
     'WWBsgames', name, platformTitle + ' game library', platformTitle + ' game downloads',
@@ -71,11 +84,13 @@ function applyLibraryCard(html, platform) {
     ...(platformId === 'xbox360' ? ['Xbox360', 'X360', 'Xbox 360 JTAG', 'Xbox 360 RGH', 'Xbox 360 ISO', 'Xbox Live Arcade', 'XBLA', 'Xbox 360 Indie Games', 'XBLIG'] : []),
     ...(platformId === 'ds' ? ['Nintendo DS', 'NDS game library'] : []),
     ...(platformId === '3ds' ? ['Nintendo 3DS', 'Nintendo 2DS game library'] : []),
-    ...(playStation ? ['PlayStation game catalog', 'CUSA title ID', 'PPSA title ID', 'PKG games', 'DLC', 'title updates', 'package version lookup', 'game region filter'] : [])
+    ...(playStation ? [platformFilter + ' games', platformFilter + ' game catalog', platformFilter + ' game region filter', 'PlayStation game catalog'] : []),
+    ...(platformId === 'ps4' ? ['CUSA title ID', 'PS4 PKG games', 'DLC', 'title updates', 'package version lookup'] : []),
+    ...(platformId === 'ps5' ? ['PPSA title ID', 'PS5 game packages', 'DLC', 'title updates', 'package version lookup'] : [])
   ];
   const card = resource(name, detail, link(library, 'Open the game library'))
     .replace('<article class="guide-resource"', '<article ' + id + ' class="guide-resource game-directory-card" data-card-art="fixed" data-search="' + esc(keywords.join(' ').toLowerCase()) + '"')
-    .replace('<h3>', '<span class="library-card-brand"><img src="/assets/images/wwbsgames.svg" alt="WWBsgames" width="152" height="36" loading="lazy"></span><h3>');
+    .replace('<h3>', '<span class="library-card-brand"><img src="' + libraryLogo + '" alt="WWBsgames" width="152" height="36" loading="lazy"></span><h3>');
   let block = html.slice(directory.start, directory.end);
   const existing = range(block, 'article', opening => opening.includes(id));
   block = existing
@@ -88,6 +103,7 @@ function applyLibraryCard(html, platform) {
   const ps5Downloads = '/console/ps5/game-downloads.html';
   return html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/, nav => {
     nav = nav.replace(/WWB’s PS4 and PS5 Game Library/g, 'PlayStation Game Library');
+    if (playStation) nav = nav.replace('href="' + route + '"', 'href="' + library + '"');
     if (!nav.includes('href="' + library + '"')) nav = nav.replace('</nav>', '<a href="' + library + '">' + name + '</a></nav>');
     if (platformId === 'ps4' && !nav.includes('href="' + ps5Downloads + '"')) {
       nav = nav.replace('</nav>', '<a href="' + ps5Downloads + '">PS5 game downloads</a></nav>');
@@ -197,36 +213,81 @@ function external(url, label) {
   if (parsed.protocol !== 'https:' || parsed.username || parsed.password) throw Error('Invalid game-directory URL');
   return `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>`;
 }
+function directoryChoice(url, label, logo, {externalSite = false, preserveColor = false} = {}) {
+  const attributes = externalSite ? ' target="_blank" rel="noopener noreferrer"' : '';
+  const icon = externalSite ? 'fa-external-link-alt' : 'fa-arrow-right';
+  const image = logo
+    ? `<img class="download-directory-logo" src="${esc(logo)}" alt="" width="58" height="24" loading="lazy" decoding="async"${preserveColor ? ' data-logo-color' : ''}>`
+    : '<span aria-hidden="true"></span>';
+  return `<li><a href="${esc(url)}"${attributes}>${image}<span>${esc(label)}</span><i class="fas ${icon}" aria-hidden="true"></i></a></li>`;
+}
 function consolePicker(data) {
-  const choices = data.platforms.map(platform =>
-    `<li><a href="${esc(directoryPath(platform))}">${esc(platform.title)} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></li>`);
+  const specialLogos = {'3ds': '3ds.png', xbox: 'xbox.png', 'nintendo-switch-2': 'nintendo-switch-2-symbol.svg'};
+  const choices = data.platforms.map(platform => directoryChoice(directoryPath(platform), platform.title,
+    '/assets/images/platform-logos/' + (specialLogos[platform.id] || platform.id + '.svg')));
   return require('./build-console-guides.cjs').section('consoles', 'Choose your console',
     `<ul class="download-directory">${choices.join('\n')}</ul>`);
 }
+function libraryChoices() {
+  return Object.entries(libraryPaths).map(([family, url]) => directoryChoice(url, 'WWBsgames · ' + family, libraryLogo));
+}
 function providerOverview(data) {
-  const links = data.general.map(provider => '<li>' + external(provider.url, provider.label) + '</li>');
-  return require('./build-console-guides.cjs').section('all-websites', 'All game websites',
+  const links = [...libraryChoices(), ...data.general.map(provider =>
+    directoryChoice(provider.url, provider.label, providerLogo(provider.url), {externalSite: true}))];
+  return require('./build-console-guides.cjs').section('all-websites', 'Game libraries and websites',
     `<ul class="download-directory">${links.join('\n')}</ul>`);
+}
+function retroOverview(data) {
+  const group = (type, title) => {
+    const links = data.vaultSystems.filter(system => system.group === type)
+      .map(system => directoryChoice(system.url, system.label, system.logo, {
+        externalSite: true, preserveColor: system.preserveLogoColor
+      }));
+    return `<h3 class="retro-directory-heading">${title}</h3><ul class="download-directory">${links.join('\n')}</ul>`;
+  };
+  const links = group('console', 'Home consoles and WiiWare') + group('handheld', 'Handhelds and tabletop');
+  const vault = `<div class="guide-links">${external('https://vimm.net/vault', 'Browse every system in The Vault')}</div>`;
+  return require('./build-console-guides.cjs').section('more-systems', 'Retro consoles',
+    links + vault, 'Browse classic systems in Vimm’s Vault.');
 }
 function compactOverview(file, html, data) {
   const general = file === 'games-downloads/index.html';
-  const stylesheet = '<link rel="stylesheet" href="/assets/game-downloads-overview.css?v=1">';
-  if (!html.includes(stylesheet)) html = html.replace('</head>', stylesheet + '\n</head>');
+  const stylesheet = `<link rel="stylesheet" href="/assets/game-downloads-overview.css?v=${general ? 2 : 4}">`;
+  html = html.includes('/assets/game-downloads-overview.css')
+    ? html.replace(/<link\b[^>]*href="\/assets\/game-downloads-overview\.css[^"]*"[^>]*>/, stylesheet)
+    : html.replace('</head>', stylesheet + '\n</head>');
   html = html.replace(/<body\b[^>]*>/i, tag => tag.includes('downloads-overview') ? tag :
     tag.replace(/class="([^"]*)"/, 'class="$1 downloads-overview"'));
   const picker = range(html, 'section', tag => /\bid="(?:consoles|console-game-downloads)"/.test(tag));
   if (picker) html = html.slice(0, picker.start) + consolePicker(data) + html.slice(picker.end);
   if (general) {
     const hero = range(html, 'section', tag => /\bclass="hero"/.test(tag));
-    if (hero) html = html.slice(0, hero.start) +
-      '<header class="downloads-intro container"><h1>Game Downloads</h1><p>Choose a console or browse PC game downloads.</p></header>' +
-      html.slice(hero.end);
+    const intro = '<header class="downloads-intro container"><h1>Game Downloads</h1><p>Choose a console, browse WWBsgames libraries, or find PC game downloads.</p></header>';
+    if (hero) html = html.slice(0, hero.start) + intro + html.slice(hero.end);
+    else html = html.replace(/<header class="downloads-intro container">[\s\S]*?<\/header>/, intro);
+    const libraries = require('./build-console-guides.cjs').section('wwbsgames-libraries', 'WWBsgames libraries',
+      `<ul class="download-directory">${libraryChoices().join('\n')}</ul>`);
+    const existing = range(html, 'section', tag => tag.includes('id="wwbsgames-libraries"'));
+    if (existing) html = html.slice(0, existing.start) + libraries + html.slice(existing.end);
+    else html = html.replace(/<section\b[^>]*\bid="downloads"[^>]*>/, opening => libraries + '\n' + opening);
     return html.replace('<h2 class="section-title">Available Downloads</h2>', '<h2 class="section-title">PC game downloads</h2>')
       .replace('href="../index.html#tools"', 'href="/tools/"');
   }
   const providers = range(html, 'section', tag => tag.includes('id="all-websites"'));
   if (providers) html = html.slice(0, providers.start) + providerOverview(data) + html.slice(providers.end);
-  return html.replace(/<div class="hero-buttons"><a class="btn btn-primary" href="#consoles">Choose your console<\/a><\/div>/, '');
+  const retro = range(html, 'section', tag => tag.includes('id="more-systems"'));
+  if (retro) html = html.slice(0, retro.start) + retroOverview(data) + html.slice(retro.end);
+  const footer = range(html, 'footer', tag => /\bclass="[^"]*\bguide-footer\b/.test(tag));
+  if (footer) {
+    const updated = new Date(data.updatedAt);
+    const date = updated.toLocaleDateString('en-GB', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric'});
+    const markup = `<footer class="guide-footer directory-footer"><div class="container"><div class="directory-footer-row"><p>Directory updated <time datetime="${updated.toISOString().slice(0, 10)}">${esc(date)}</time></p><a href="/pages/contact.html">Report a broken link</a></div></div></footer>`;
+    html = html.slice(0, footer.start) + markup + html.slice(footer.end);
+  }
+  html = html.replace(/<nav\b(?=[^>]*class="[^"]*\bguide-nav\b)[^>]*>[\s\S]*?<\/nav>/, nav =>
+    nav.includes('href="#more-systems"') ? nav : nav.replace('</nav>', '<a href="#more-systems">Retro consoles</a></nav>'));
+  return html.replace(/(<h1>Console Game Downloads<\/h1><p>)[^<]*(<\/p>)/, '$1' + overviewSummary + '$2')
+    .replace(/<div class="hero-buttons"><a class="btn btn-primary" href="#consoles">Choose your console<\/a><\/div>/, '');
 }
 function providerCard(provider, platform = null) {
   const accessed = ['retrieved', 'retrieved-after-redirect'].includes(provider.status);
@@ -292,9 +353,8 @@ function build() {
     prepare(file);
     files.push(file);
   }
-  const more = data.vaultSystems.map(item => `<li>${external(item.url, item.label)}</li>`).join('');
   const file = 'console/game-downloads/index.html';
-  guides.page(file, 'Console Game Downloads', 'Find console-specific game directories, including Vimm’s Lair, DLPSGame, DownloadGamePSP, NSWGame and NSWGF.', '/assets/images/custom-console-art/xbox360-game-library.jpg', [['/console/', 'Consoles'], ['/console/game-downloads/', 'Game downloads'], ['/console/vault.html', 'The Vault']], consolePicker(data) + providerOverview(data) + guides.section('more-systems', 'More systems in Vimm’s Vault', `<ul class="guide-source-list">${more}</ul><p>For the other consoles, WiiWare and earlier systems shown in The Vault, open the full system index.</p><div class="guide-links">${external('https://vimm.net/vault', 'Browse every system in The Vault')}</div>`), '#consoles', 'Choose your console');
+  guides.page(file, 'Console Game Downloads', overviewSummary, '/assets/images/custom-console-art/xbox360-game-library.jpg', [['/console/', 'Consoles'], ['/console/game-downloads/', 'Game downloads'], ['/console/vault.html', 'The Vault']], consolePicker(data) + providerOverview(data) + retroOverview(data), '#consoles', 'Choose your console');
   prepare(file);
   files.push(file);
   // Add an entry to the existing general download page without replacing its cards.

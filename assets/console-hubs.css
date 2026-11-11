@@ -6,6 +6,7 @@
 .console-hub .guide-hero .hero-buttons { margin-top: 20px; }
 .console-hub .console-hub-art { position: relative; margin: 0; min-width: 0; border-radius: 12px; overflow: hidden; background: var(--bg-secondary); }
 .console-hub .console-hub-art img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit:contain; border-radius: 0; }
+.console-hub--ps4 .console-hub-art img[src*="/images/consoles/playstation.jpg"] { object-fit: cover; object-position: center; }
 .console-hub .console-hub-art figcaption { padding: 10px 14px; font-size: .72rem; letter-spacing: .035em; color: var(--text-secondary); }
 .console-hub .console-hub-shortcuts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-bottom: 22px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-secondary); overflow: hidden; }
 .console-hub-shortcuts > a { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 18px 15px; color: var(--text-primary); text-decoration: none; border-right: 1px solid var(--border); transition: background 180ms ease; }

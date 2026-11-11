@@ -129,7 +129,7 @@ function aliasesFor(value) {
   const text = plain(value);
   return unique(groups.flatMap(([pattern, aliases]) => pattern.test(text) ? aliases : []));
 }
-function resourceTerms(card) {
+function resourceTerms(card, file = '') {
   const heading = card.match(/<h[234]\b[^>]*>([\s\S]*?)<\/h[234]>/i)?.[1]
     || card.match(/<(?:span|strong)\b[^>]*class=["'][^"']*\b(?:game-title|resource-title|source-title)\b[^"']*["'][^>]*>([\s\S]*?)<\/(?:span|strong)>/i)?.[1] || '';
   const labels = [...card.matchAll(/<(?:span|li)\b[^>]*class=["'][^"']*\b(?:feature|feature-tag|tag|badge)\b[^"']*["'][^>]*>([\s\S]*?)<\/(?:span|li)>/gi)].map(match => plain(match[1]));
@@ -140,7 +140,17 @@ function resourceTerms(card) {
   const positiveLabels=labels.filter(label=>!/\b(?:not (?:compatible|supported|tested|verified|available)|unsupported|unconfirmed|unverified|untested|no (?:native |verified |confirmed )?(?:support|ps[1-5]|xbox))\b/i.test(label));
   const host = /class=["'](?:[^"']*\s)?guide-host(?:\s|["'])/.test(card.slice(0, card.indexOf('>') + 1));
   const hostTerms = host ? positiveLabels.filter(label => /^PS[45]$/i.test(label)).flatMap(platform => [`${platform} host`, `${platform} exploit host`, `${platform} browser host`, `${platform} online host`, `${platform} jailbreak host`, `${platform} ${title} host`]) : [];
-  return unique([title, ...labels, ...[title, ...positiveLabels].flatMap(aliasesFor), ...hostTerms]);
+  const apolloPlatform = /^console\/(ps3|ps4|psvita)\/save-tools\.html$/.exec(file)?.[1]
+    || (/^console\/psvita\/(?:index|apps)\.html$/.test(file) ? 'psvita' : '');
+  const apolloTerms = apolloPlatform && /^Apollo Save Tool\b/i.test(title) ? [
+    'Apollo save guide', 'change save owner', 'PSN Account ID', 'resign saves', 'restore save backup',
+    ...{
+      ps3: ['PS3 save resigning', 'PS3 SAVEDATA', 'owners.xml', 'Change Account ID'],
+      ps4: ['PS4 save resigning', 'CUSA save import', 'decrypted PS4 saves', 'PS4 APOLLO'],
+      psvita: ['PS Vita save resigning', 'Apollo Vita VPK', 'VitaShell save backup', 'Adrenaline PSP saves', 'PS1 virtual memory cards']
+    }[apolloPlatform]
+  ] : [];
+  return unique([title, ...labels, ...[title, ...positiveLabels].flatMap(aliasesFor), ...hostTerms, ...apolloTerms]);
 }
 function protectedFile(file, html = '') {
   const relative = (path.isAbsolute(file) && !/^\/(?:console|downloads)\//.test(file) ? path.relative(root, file) : file).replaceAll('\\', '/').replace(/^\/+/, '').split(/[?#]/)[0];
@@ -157,6 +167,7 @@ function apply(file, html) {
   if (/http-equiv=["']refresh["']/i.test(html)) return html;
   const canonical=html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)?.[1];
   if(canonical&&new URL(canonical).origin!=='https://whatwhatboy.com')return html;
+  const relative = (path.isAbsolute(file) ? path.relative(root, file) : file).replaceAll('\\', '/');
   const tokens = [...html.matchAll(tokenPattern)];
   const edits = [];
   for (let i = 0; i < tokens.length; i++) {
@@ -175,7 +186,7 @@ function apply(file, html) {
       if (!depth) { end = next.index + next[0].length; break; }
     }
     if (end === -1) continue;
-    const terms = resourceTerms(html.slice(token.index, end));
+    const terms = resourceTerms(html.slice(token.index, end), relative);
     if (!terms.length) continue;
     let existing = found ? decode(found[3]).toLowerCase() : '';
     // Track just the generated suffix, not a second copy of each search index.

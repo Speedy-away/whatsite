@@ -22,6 +22,17 @@ body[data-catalog-page] .main-content .games-grid:has(> .game-directory-card) {
  aspect-ratio:auto;
  object-fit:contain;
 }
+.main-content .game-directory-card .directory-cover--provider {
+ display:grid;
+ place-items:center;
+ height:96px;
+ padding:12px;
+ background:#111418;
+}
+.main-content .game-directory-card .directory-cover--provider img {
+ width:min(100%,220px);
+ height:72px;
+}
 .library-card-brand { display: block; width: 134px; }
 .library-card-brand img { display: block; width: 100%; height: auto; }
 .main-content .game-directory-card h3 { font-size:1.05rem; margin:0; }

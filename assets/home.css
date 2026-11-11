@@ -36,12 +36,7 @@
 .home-directory-grid small { display: block; font-size: .8rem; color: var(--home-muted); }
 .home-directory-grid i:last-child { color: var(--home-muted); font-size: .75rem; }
 
-.home-game-controls { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
-.home-page .home-game-controls .filter-buttons { justify-content: flex-start; margin: 0; gap: 6px; flex-wrap: nowrap; }
-.home-page .filter-buttons .filter-btn { border-radius: 8px; min-height: 44px; padding: 9px 13px; background: transparent; border-color: transparent; color: var(--text-secondary); font-size: 13px; white-space: nowrap; }
-.home-page .filter-buttons .filter-btn.active { background: var(--bg-tertiary); border-color: var(--border); color: var(--text-primary); }
-.home-page .filter-buttons .filter-btn:hover { background: var(--bg-tertiary); color: var(--text-primary); }
-.home-page .home-game-controls .search-container { margin: 0; max-width: 320px; width: 100%; }
+.home-page .home-game-search { margin: 0; max-width: 320px; width: 100%; }
 .home-search-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .home-page .search-input { min-height: 44px; border-radius: 8px; background: var(--bg-secondary); border-color: var(--border); font-size: 13px; }
 .home-page .search-input::placeholder { color: var(--text-muted); }
@@ -81,8 +76,7 @@
 .home-page .footer, .home-page .main-content { margin-inline: 0; }
 
 @media (max-width: 960px) {
-    .home-game-controls { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
-    .home-page .home-game-controls .search-container { max-width: none; }
+    .home-page .home-game-search { max-width: none; }
     .home-page .home-help { align-items: flex-start; flex-direction: column; gap: 16px; }
 }
 @media (max-width: 767px) {
@@ -92,8 +86,6 @@
     .home-page .section-header { margin-bottom: 18px; }
     .home-page .home-help { padding-bottom: 44px; }
     .home-page .search-input { font-size: 16px; }
-    .home-page .home-game-controls .filter-buttons { gap: 2px; flex-wrap: wrap; }
-    .home-page .filter-buttons .filter-btn { font-size: 12px; padding-inline: 12px; }
     .home-platform-grid { grid-template-columns: minmax(0,1fr); }
     .home-platform { min-height: 76px; gap: 12px; }
     .home-console-links { gap: 8px 18px; }
@@ -103,10 +95,7 @@
 @media (max-width: 580px) {
     .home-page .home-directory { padding-block-end: 16px; }
     .home-directory-grid small { line-height: 1.35; }
-    .home-page .home-game-controls .filter-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
-    .home-page .home-game-controls .filter-btn { white-space: normal; }
 }
 @media (max-width: 380px) {
     .home-directory-grid { grid-template-columns: 1fr; }
-    .home-page .filter-buttons .filter-btn { padding-inline: 10px; }
 }

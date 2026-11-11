@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T09:32:54.036Z",
+  "updatedAt": "2026-11-11T07:24:35.734Z",
   "platforms": [
     {
       "id": "ps2",
@@ -374,27 +374,218 @@
   ],
   "vaultSystems": [
     {
-      "label": "PS1",
-      "url": "https://vimm.net/vault/PS1",
-      "status": "indexed-route-unverified",
-      "origin": "indexed-reference"
+      "label": "Atari 2600",
+      "url": "https://vimm.net/vault/Atari2600",
+      "logo": "/assets/images/platform-logos/retro/atari2600.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
     },
     {
-      "label": "Game Boy Advance",
-      "url": "https://vimm.net/vault/GBA",
-      "status": "indexed-route-unverified",
-      "origin": "indexed-reference"
+      "label": "Atari 5200",
+      "url": "https://vimm.net/vault/Atari5200",
+      "logo": "/assets/images/platform-logos/retro/atari5200.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Nintendo NES",
+      "url": "https://vimm.net/vault/NES",
+      "logo": "/assets/images/platform-logos/retro/nes.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "Sega Master System",
+      "url": "https://vimm.net/vault/SMS",
+      "logo": "/assets/images/platform-logos/retro/mastersystem.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Atari 7800",
+      "url": "https://vimm.net/vault/Atari7800",
+      "logo": "/assets/images/platform-logos/retro/atari7800.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "TurboGrafx-16",
+      "url": "https://vimm.net/vault/TG16",
+      "logo": "/assets/images/platform-logos/retro/tg16.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "Sega Genesis / Mega Drive",
+      "url": "https://vimm.net/vault/Genesis",
+      "logo": "/assets/images/platform-logos/retro/genesis.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "TurboGrafx-CD",
+      "url": "https://vimm.net/vault/TGCD",
+      "logo": "/assets/images/platform-logos/retro/tg-cd.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Super Nintendo (SNES)",
+      "url": "https://vimm.net/vault/SNES",
+      "logo": "/assets/images/platform-logos/retro/snes.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "Philips CD-i",
+      "url": "https://vimm.net/vault/CDi",
+      "logo": "/assets/images/platform-logos/retro/cdi.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Sega CD",
+      "url": "https://vimm.net/vault/SegaCD",
+      "logo": "/assets/images/platform-logos/retro/segacd.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Atari Jaguar",
+      "url": "https://vimm.net/vault/Jaguar",
+      "logo": "/assets/images/platform-logos/retro/atarijaguar.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Sega 32X",
+      "url": "https://vimm.net/vault/32X",
+      "logo": "/assets/images/platform-logos/retro/sega32x.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Sega Saturn",
+      "url": "https://vimm.net/vault/Saturn",
+      "logo": "/assets/images/platform-logos/retro/saturn.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "PlayStation (PS1)",
+      "url": "https://vimm.net/vault/PS1",
+      "logo": "/assets/images/platform-logos/retro/ps1.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "Atari Jaguar CD",
+      "url": "https://vimm.net/vault/JaguarCD",
+      "logo": "/assets/images/platform-logos/retro/atarijaguarcd.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
     },
     {
       "label": "Nintendo 64",
       "url": "https://vimm.net/vault/N64",
-      "status": "indexed-route-unverified",
-      "origin": "indexed-reference"
+      "logo": "/assets/images/platform-logos/retro/n64.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "Sega Dreamcast",
+      "url": "https://vimm.net/vault/Dreamcast",
+      "logo": "/assets/images/platform-logos/retro/dreamcast.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "WiiWare",
+      "url": "https://vimm.net/vault/WiiWare",
+      "logo": "/assets/images/platform-logos/retro/wiiware.png",
+      "group": "console",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Game Boy",
+      "url": "https://vimm.net/vault/GB",
+      "logo": "/assets/images/platform-logos/retro/gb.png",
+      "group": "handheld",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "Atari Lynx",
+      "url": "https://vimm.net/vault/Lynx",
+      "logo": "/assets/images/platform-logos/retro/atarilynx.png",
+      "group": "handheld",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Sega Game Gear",
+      "url": "https://vimm.net/vault/GG",
+      "logo": "/assets/images/platform-logos/retro/gamegear.png",
+      "group": "handheld",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Virtual Boy",
+      "url": "https://vimm.net/vault/VB",
+      "logo": "/assets/images/platform-logos/retro/virtualboy.png",
+      "group": "handheld",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation"
+    },
+    {
+      "label": "Game Boy Color",
+      "url": "https://vimm.net/vault/GBC",
+      "logo": "/assets/images/platform-logos/retro/gbc.png",
+      "group": "handheld",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
+    },
+    {
+      "label": "Game Boy Advance",
+      "url": "https://vimm.net/vault/GBA",
+      "logo": "/assets/images/platform-logos/retro/gba.png",
+      "group": "handheld",
+      "status": "confirmed-on-vault-index",
+      "origin": "observed-navigation",
+      "preserveLogoColor": true
     }
   ],
   "notes": [
     "Links open the external directory; no individual game file availability is asserted.",
-    "Vimm main vault includes the other systems shown in the supplied screenshot; no category path was guessed for unconfirmed routes.",
+    "The extra retro categories were confirmed on the Vimm’s Vault system index.",
     "Switch 2, Xbox One / Series and Steam Deck retain access to the all-console index without claiming that the supplied directories contain native builds for them."
   ]
 }

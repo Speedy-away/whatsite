@@ -109,3 +109,49 @@ test('generated directory pages expose provider websites and a route back to the
     assert.doesNotMatch(html, /<video\b|<iframe\b/i);
   }
 });
+
+test('PlayStation directory cards preselect the corresponding WWBsgames platform', () => {
+  const values = {ps2: 'PS2', ps3: 'PS3', ps4: 'PS4', ps5: 'PS5', psp: 'PSP', psvita: 'PS Vita'};
+  const library = fs.readFileSync(path.join(root, 'console/playstation-library/index.html'), 'utf8');
+  const options = library.match(/<select id="platform"[^>]*>([\s\S]*?)<\/select>/)[1];
+  for (const [id, value] of Object.entries(values)) {
+    const page = fs.readFileSync(path.join(root, directories.directoryPath(byId(id)).slice(1)), 'utf8');
+    const card = page.match(/<article id="playstation-game-library"[^>]*>[\s\S]*?<\/article>/)?.[0];
+    assert.ok(card, id);
+    assert.ok(card.includes('/assets/images/wwbsgames.svg'));
+    assert.ok(hrefs(card).includes('/console/playstation-library/?platform=' + encodeURIComponent(value)));
+    assert.ok(options.includes('<option>' + value + '</option>'));
+  }
+});
+
+test('both download overviews show all console logos and link to the three WWBsgames libraries', () => {
+  for (const file of ['console/game-downloads/index.html', 'games-downloads/index.html']) {
+    const page = fs.readFileSync(path.join(root, file), 'utf8');
+    const picker = page.match(/<section[^>]*id="consoles"[^>]*>[\s\S]*?<\/section>/)[0];
+    const logos = [...picker.matchAll(/class="download-directory-logo" src="([^"]+)"/g)].map(match => match[1]);
+    assert.equal(logos.length, catalogue().platforms.length);
+    assert.ok(logos.every(logo => fs.existsSync(path.join(root, logo.slice(1)))));
+    for (const library of ['/console/playstation-library/', '/console/xbox-game-library/', '/console/nintendo-game-library/']) {
+      assert.ok(hrefs(page).includes(library), file + ' ' + library);
+    }
+    assert.equal(directories.apply(file, page), page);
+  }
+});
+
+test('the retro picker renders each additional Vault category once with its own artwork', () => {
+  const data = catalogue();
+  const file = 'console/game-downloads/index.html';
+  const html = fs.readFileSync(path.join(root, file), 'utf8');
+  const retro = html.match(/<section[^>]*id="more-systems"[^>]*>[\s\S]*?<\/section>/)[0];
+  const links = hrefs(retro);
+  const existingCategories = new Set(data.platforms.flatMap(platform => platform.providers.map(provider => provider.url)));
+  assert.equal(data.vaultSystems.length, 25);
+  for (const {url, logo} of data.vaultSystems) {
+    assert.equal(links.filter(link => link === url).length, 1, url);
+    assert.ok(!existingCategories.has(url), url);
+    assert.ok(retro.includes('src="' + logo + '"') && fs.existsSync(path.join(root, logo.slice(1))), logo);
+  }
+  assert.ok(links.includes('https://vimm.net/vault'));
+  assert.ok(hrefs(html).includes('#more-systems'));
+  assert.equal(directories.apply(file, html, data), html);
+});

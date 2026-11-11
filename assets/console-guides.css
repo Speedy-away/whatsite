@@ -173,5 +173,58 @@
 .multicod-details > summary { cursor: pointer; min-height: 44px; display: list-item; padding: 10px 0; color: var(--primary-color, #69e6bf); }
 .multicod-details code { overflow-wrap: anywhere; }
 
+.guide-screenshot-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-sm, 8px);
+  cursor: zoom-in;
+}
+.guide-screenshot-trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.guide-screenshot-trigger .fa-expand {
+  position: absolute;
+  inset-inline-end: 8px;
+  inset-block-end: 8px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  background: rgb(0 0 0 / .76);
+  border: 1px solid rgb(255 255 255 / .25);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.guide-screenshot-trigger:is(:hover, :focus-visible) .fa-expand { background: #000; }
+.guide-screenshot-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+.guide-dialog:has(> .guide-dialog__body > [data-guide-screenshot]) {
+  width: max-content;
+  max-width: min(1120px, calc(100% - 24px));
+}
+.guide-dialog__header:has(+ .guide-dialog__body > [data-guide-screenshot]) {
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+}
+.guide-dialog__body:has(> [data-guide-screenshot]) {
+  padding: 0;
+  background: #08090b;
+  scrollbar-gutter: auto;
+}
+.guide-dialog > .guide-dialog__body > [data-guide-panel][data-guide-screenshot] { padding: 0; }
+.guide-dialog__body .guide-screenshot-image {
+  max-height: calc(100vh - 112px);
+  max-height: calc(100dvh - 112px);
+  object-fit: contain;
+}
+
 /* merged-cover-v1 */
 .guide-card-media--merged{display:block;padding:0;aspect-ratio:16/9;overflow:hidden}.guide-resource .guide-card-media--merged>img{width:100%;height:100%;max-height:none;object-fit:contain;padding:0}.directory-cover{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#0a1011}.directory-cover>img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:contain;object-position:center;padding:0}

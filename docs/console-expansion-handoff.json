@@ -1,4 +1,20 @@
 {
+  "apolloDiscovery20261111": {
+    "date": "2026-11-11",
+    "status": "Verified locally.",
+    "pages": [
+      "console/ps3/apollo-guide.html",
+      "console/ps3/save-tools.html",
+      "console/ps4/apollo-guide.html",
+      "console/ps4/save-tools.html",
+      "console/psvita/apollo-guide.html",
+      "console/psvita/save-tools.html",
+      "console/psvita/index.html",
+      "console/psvita/apps.html"
+    ],
+    "changes": "Curated Apollo search keywords and descriptions for PS3, PS4 and PS Vita guides and Save Tools pages. Added TechArticle markup for the guides and platform-specific aliases to Apollo cards. Preserved the PS4 catalogue game and save tags. Refreshed canonical sitemap dates and localization source records.",
+    "verification": "31 focused tests and eight metadata checks passed. Verified 508 unique sitemap URLs, 160 localized renders, stable search tags and retention of all prior PS4 save catalogue keywords. New terms use the existing English fallback where a saved translation is unavailable."
+  },
   "ps4GuideScreenshots20261111": {
     "date": "2026-11-11",
     "page": "console/ps4/jailbreaks.html",
@@ -25,6 +41,25 @@
     ],
     "verification": "Verified screenshot dimensions, 640px desktop width, 390px phone layout, download navigation and destination, stable metadata, 28 focused tests, and all 20 localized renders."
   },
+  "apolloVitaGuide20261111": {
+    "date": "2026-11-11",
+    "status": "Verified locally and ready for publication.",
+    "pages": [
+      "console/psvita/apollo-guide.html",
+      "console/psvita/index.html",
+      "console/psvita/apps.html",
+      "console/psvita/save-tools.html",
+      "console/ps3/apollo-guide.html",
+      "console/ps4/apollo-guide.html"
+    ],
+    "changes": "Added an illustrated Apollo PS Vita guide in the shared site design. Linked from the Vita hub, Apps, Save Tools and both existing Apollo guides. Covers native Vita backups, detected Account ID resigning, decrypted imports, folder layouts, PSP and PS1 in Adrenaline, and supported patches.",
+    "screenshots": "Four unmodified official Vita screenshots, pinned and hashed in assets/images/apollo-guide/sources.json.",
+    "verification": "55 focused tests, 554 local links, six metadata checks, 120 localized renders and generator idempotence passed. Browser checked the Save Tools entry link, desktop outline, keyboard image zoom and 390 px light theme.",
+    "localization": "Shared text reuses saved translations. New guide prose uses the supported English fallback.",
+    "limits": "Physical Vita save transfers were not tested. Existing VPK URLs and version pins match the previous pages.",
+    "regenerate": "node scripts/build-apollo-guides.cjs",
+    "preview": "docs/qa/apollo-vita-guide-desktop-20261111.png"
+  },
   "ps4GuideWwbHostFollowup20261111": {
     "date": "2026-11-11",
     "page": "console/ps4/jailbreaks.html",
@@ -35,7 +70,7 @@
   },
   "ps4Ps5JailbreakGuideRewrite20261111": {
     "date": "2026-11-11",
-    "status": "Complete and verified; included in the scoped guide publication. GitHub Pages deployment runs separately.",
+    "status": "Complete, pushed and verified live.",
     "pages": [
       "console/ps4/jailbreaks.html",
       "console/ps4/index.html",
@@ -50,7 +85,54 @@
     "regenerate": [
       "node scripts/build-ps4-jailbreaks.cjs",
       "node -e \"require('./scripts/build-ps5-jailbreaks.cjs').buildSelector()\""
-    ]
+    ],
+    "liveVerification": {
+      "commit": "804098d1d99b4497f46cb0fa374b5063821952fe",
+      "checkedAt": "2026-11-11T02:15:54Z",
+      "checksPassed": 78,
+      "languages": 20,
+      "liveBuildRevisionMatched": true,
+      "pages": [
+        "https://whatwhatboy.com/console/ps4/jailbreaks.html",
+        "https://whatwhatboy.com/console/ps5/jailbreaks.html"
+      ]
+    }
+  },
+  "apolloGuides20261111": {
+    "date": "2026-11-11",
+    "status": "Verified locally; not committed or published.",
+    "pages": [
+      "console/ps3/apollo-guide.html",
+      "console/ps4/apollo-guide.html",
+      "console/ps3/save-tools.html",
+      "console/ps4/save-tools.html"
+    ],
+    "changes": "Added separate illustrated PS3 and PS4 Apollo guides with linked outlines, eight original screenshots, image previews, account-ID ownership workflows, backups/restores, folder examples, patch notes and troubleshooting. Added guide links in the existing save-tools pages and their durable generators.",
+    "accuracy": "PS4 uses the current local user and Activate PS4 Accounts when needed; encrypted USB containers import to HDD before reviewing ownership. Current PS4 source has no active Change Account ID or Save Data Owner menu. PS3 Change Account ID and owners.xml are covered separately. Historical screenshot menu differences are labelled.",
+    "discovery": "Added both canonical routes to sitemap and the existing static language manifest. Shared strings reuse translations; new guide prose uses the supported English fallback in 20 languages.",
+    "verification": "Four pages and 370 local links/assets passed; four metadata checks, eight screenshot hashes, 40 localized renders, generation idempotence and 34 existing regression tests passed. Browser checked phone, tablet, desktop, outline navigation, FAQ and accessible image enlargement.",
+    "preservation": "Existing save and tool download URLs, version pins and catalogue content retained. No console binaries downloaded; no F: archive mutation; independent host repository unchanged.",
+    "limits": "No physical-console save transfer, activation or resigning was performed.",
+    "regenerate": "node scripts/build-apollo-guides.cjs",
+    "report": "docs/qa/apollo-guides-20261111.json",
+    "preview": "docs/qa/apollo-guide-desktop-20261111.png",
+    "design": "PS3 and PS4 Apollo and Save Tools pages use the main site taskbar, monochrome theme controls and shared wave in source previews. The Pages build refreshes the taskbar from the homepage before translating it. The guide outline accounts for the sticky taskbar and phone navigation wraps.",
+    "designVerification": "44 focused tests passed. Four metadata checks and 80 localized renders passed. Browser verified desktop dark and light themes, 390 px layout, sticky outline, screenshot zoom, both Save Tools pages and the PS4 CUSA search. The four pages regenerate identically and download links match the previous pages."
+  },
+  "ps4FirmwareGuideLink20261111": {
+    "date": "2026-11-11",
+    "status": "Added locally; not published.",
+    "request": "Add the Darthsternie PS4 firmware archive to the guide and a Looking to jailbreak reminder for firmware 14.00 or lower.",
+    "pages": [
+      "console/ps4/jailbreak.html",
+      "console/ps4/jailbreaks.html"
+    ],
+    "sources": [
+      "scripts/ps4-1400-guide.cjs",
+      "scripts/build-ps4-jailbreaks.cjs"
+    ],
+    "archive": "https://darthsternie.net/ps4-firmwares/",
+    "scope": "Small content additions only. Existing guides, compatibility pins, downloads and concurrent checkout changes are preserved."
   },
   "gameLibrarySearch20261111": {
     "date": "2026-11-11",
@@ -59,6 +141,122 @@
     "genres": "Added roleplaying, platforming, simulator, sport and related genre search terms from the existing labels. FPS requires both Shooter and First-Person labels. Short aliases match complete tokens.",
     "checks": "All 24 focused tests passed. Eighteen browser queries passed across all three libraries, including genre checks.",
     "delivery": "Library entry scripts import assets/game-library-search.mjs. Only search and metadata changes are included in this commit."
+  },
+  "ps4Ps5TransferGuides20261111": {
+    "photoRefresh": {
+      "date": "2026-11-11",
+      "changes": "Replaced the diagrams on the guides with credited, unmarked photographs and real screenshots. Each phone app has its own three-step walkthrough in all 20 supported site languages.",
+      "coverage": "USB flash drive, PS4 and PS5 connection status, GoldHEN, PS4-Xplorer, PS5 ezRemote Client, FileZilla, FTPManager and Solid Explorer.",
+      "harmony": "The electerm walkthrough links to AppGallery and publisher documentation. A native HarmonyOS screenshot could not be verified."
+    },
+    "date": "2026-11-11",
+    "status": "Verified locally and prepared for release on main.",
+    "pages": [
+      "console/ps4/file-transfer-guide.html",
+      "console/ps5/file-transfer-guide.html",
+      "console/download-center/index.html"
+    ],
+    "changes": "Replaced the former FileZilla-only card on PS4/PS5 hubs and Transfer Tools pages with dedicated guide links. Each guide asks FTP or USB and shows the selected route. Download Center is visibly marked Not finished; download/app buttons are centered. FTP additionally asks computer or phone, then iOS/Android/HarmonyOS. Browser history and shared deep links restore these choices.",
+    "consoleDistinction": "PS5 uses ezRemote Client 2.18 with loader 1.01 and a compatible elfldr setup; this loader does not require websrv. The separate website downloader still has its own websrv checks. Package installation follows release-specific requirements; the outdated PS4-only installer statement was removed.",
+    "discovery": {
+      "keywords": "Curated exact-route PS4/PS5 and Download Center subjects, preserving app/service/version distinctions.",
+      "tags": "Visible topic badges and multilingual data-search seeds on method, phone, center and hub cards.",
+      "schema": "Linked WebPage / TechArticle and BreadcrumbList for guides; CollectionPage with five real destinations for Download Center.",
+      "sitemap": {
+        "canonicalURLs": 505,
+        "localeSitemaps": 20,
+        "ownCanonicalRoutes": 3,
+        "queryChoiceURLsIndexed": false,
+        "redirectURLsRemoved": [
+          "https://whatwhatboy.com/console/ps4/jailbreak.html",
+          "https://whatwhatboy.com/console/ps4/jailbreak-13-52.html"
+        ],
+        "redirectPagesRetained": true
+      }
+    },
+    "localization": {
+      "languages": 20,
+      "sourceKeys": 134,
+      "allGuideProseTranslated": true,
+      "menuIllustrationsLocalized": true,
+      "staticRoutesRegistered": 3,
+      "renderedGuideAndCenterPages": 63,
+      "keywordTopicsLocalized": true,
+      "searchAliases": "Technical aliases retain their original searchable forms."
+    },
+    "images": {
+      "total": 109,
+      "neutralDiagrams": 4,
+      "localizedDiagramsPerLanguage": 5,
+      "includingEnglish": 21,
+      "type": "Numbered SVG illustrations with outlines; not represented as exact app screenshots.",
+      "preview": "docs/qa/ps4-transfer-guide-20261111.jpg"
+    },
+    "verification": {
+      "testsPassed": 59,
+      "testScope": "Guide selector, localization, platform metadata, schema, ad-layer behavior, shell, Pages, and existing focused integration tests.",
+      "metadataPagesPassed": 3,
+      "xmlImagesPassed": 109,
+      "generationIdempotent": true,
+      "artifact": "tmp/transfer-guide-pages-20261111-v2",
+      "artifactGuideAudit": {
+        "pagesChecked": 63,
+        "links": 6990,
+        "canonicalURLs": 507,
+        "localeSitemaps": 20,
+        "issues": 0,
+        "changedBytes": 900,
+        "failures": []
+      },
+      "fullArtifact": {
+        "bytes": 900785556,
+        "pages": 10801,
+        "links": 1252965,
+        "offloadedFiles": 9194,
+        "issues": 0
+      },
+      "browser": [
+        "Direct pointer clicks: FTP > phone > Android only shows Android instructions",
+        "PS5 USB uses ezRemote Client 2.18 and correct loader instructions",
+        "390px mobile view without horizontal overflow",
+        "Light theme dark-teal links and brown unfinished status",
+        "Arabic static route preserves method/hash, translates metadata/schema and manager image",
+        "English desktop visible tags and FTP/USB choices",
+        "Initial deep links scroll below the sticky header",
+        "Native guide tags visibly rendered",
+        "Localized diagrams have server-rendered URLs without requiring JavaScript"
+      ]
+    },
+    "adBehavior": "These three interactive routes keep native ads and the sponsored link. Publisher click-interception layers are omitted so guide choices receive pointer input. Other pages keep their existing ad behavior.",
+    "limits": "No physical-console transfer, console execution or phone-app installation was performed. No console binaries were downloaded and the F: archive was not changed.",
+    "regenerate": [
+      "node scripts/build-transfer-illustrations.cjs",
+      "node scripts/build-transfer-menu-images.cjs",
+      "node scripts/build-transfer-manager-images.cjs",
+      "node i18n-tools/build-chrome.js",
+      "node scripts/build-transfer-guides.cjs",
+      "node scripts/prepare-transfer-guide-locales.cjs"
+    ],
+    "report": "docs/qa/ps4-ps5-transfer-guides-20261111.json"
+  }
+,
+  "ps4HeroImageFit20261111": {
+    "date": "2026-11-11",
+    "status": "Implemented and verified locally; not published.",
+    "request": "Fit the PlayStation logo image to the PS4 hero card.",
+    "changes": "Added a source-specific PS4 hero object-fit: cover rule with centred positioning. The original image fills the 16:9 card without sidebars, while the complete logo remains visible. Other artwork keeps its existing fit behaviour.",
+    "integration": "Updated console-hubs.css revision to 20261111-hero-fit in the hub helper and both hub stylesheet links.",
+    "verification": "All four existing console-hubs tests passed. Browser verified cover sizing at desktop and 640px widths with the logo visible; desktop image measures 312.34 by 175.69 pixels and compact image 140 by 78.75 pixels. Scoped diff whitespace check passed."
+  },
+  "sharedWaveRefinement20261111": {
+    "date": "2026-11-11",
+    "status": "Implemented and verified locally; not published.",
+    "request": "Make the screenshot's background wave less thick, improve its appearance and movement.",
+    "changes": "Replaced the broad overlapping filled ribbons with a narrow 14-unit translucent seam and nine fine strands, reduced particle size and density, and softened dark/light opacity. The shared shell and game-library backdrops drift and gently change scale/angle over 20 seconds using CSS transforms. Existing reduced-motion rules remain in place.",
+    "files": ["assets/site-shell.css", "assets/playstation-library.css", "assets/images/playstation-library/xmb-wave-dark.svg", "assets/images/playstation-library/xmb-wave.svg"],
+    "integration": "Shell CSS v5 is loaded by index.html and scripts/site-shell.cjs; four library routes load library CSS v10. Both SVG URLs use revision 20261111-fine. The published shell replaces the historical canvas background, so assets/site-background.js was not changed.",
+    "verification": "All 14 existing pages-build tests passed; both SVGs parsed with valid local path references. Browser preview used the Pages shell transformation. PS4 dark/light desktop and 390px phone layouts rendered without horizontal overflow; sampled transforms changed over time. Reduced-motion selectors were preserved and reviewed. Independent diff review found no issue.",
+    "scope": "Background assets and cache versions only. Independent host repository and existing downloads remain outside this change. Other concurrent transfer-guide work in this checkout is preserved."
   },
   "ps4FortniteSpectrumFn20261110": {
     "date": "2026-11-10",
@@ -71,7 +269,8 @@
     "checks": "Verified the screenshot bytes, local download and archive hashes, directory search terms, guide link and existing FN Menu links. Both edited pages passed the metadata check and had no link audit issues. Of 45 focused tests, 43 passed and two catalogue assertions also failed on the original checkout.",
     "keywordRefresh": "Added 15 Fortnite page keywords while retaining all 36 prior terms. Spectrum FN’s version, PS4 SPRX filename, creator and features are searchable on the page and in the menu directory. Verified the scoped metadata and all 21 search and keyword tests.",
     "cheatsDiscovery": "Renamed the section to Mod menus / Cheats and moved the Fortnite.GG Skins database to its own Related resources card. Expanded the page to 76 keywords and added cheat, hack and feature aliases to both menu cards and the directory. Refreshed sharing metadata, structured links for both menus and the two canonical sitemap dates. Verified 504 unique sitemap routes, 20 localized Fortnite routes with English fallback for new copy, and all 43 focused tests.",
-    "videoGuide": "The Spectrum FN card has a Watch video guide button for YouTube video TTjuv016rsc. YouTube returned public metadata for the supplied link."
+    "videoGuide": "The Spectrum FN card has a Watch video guide button for YouTube video TTjuv016rsc. YouTube returned public metadata for the supplied link.",
+    "screenshotPreview20261111": "Both card images open their original screenshots in a compact in-page dialog. Spectrum FN retains its existing guide anchor and has no separate screenshot action. FN Menu keeps a Setup guide link and has a separate screenshot anchor. Verified both images, dismissal, and focus restoration in Edge on desktop and mobile, including landscape. The three failing catalogue/import assertions also fail with the original renderer and resource records."
   },
   "wwbsgamesDiscovery20261110": {
     "date": "2026-11-10",
@@ -81,6 +280,16 @@
     "sitemap": "Reconciled 504 unique canonical URLs and refreshed the Xbox hub dates. Verified the three libraries appear in the main sitemap and have localized canonical routes in all 20 languages.",
     "localization": "Updated the scoped source records and reused existing translations. New phrases with no cached translation use the existing English fallback.",
     "expandedSearch": "Expanded metadata on 13 pages with game catalog, platform, region, revision, format and title-ID terms. Xbox and Nintendo searches recognize common game abbreviations and alternate numeral forms. Kept the scoped provider directory removals."
+  },
+  "wwbsgamesDirectoryLogos20261111": {
+    "date": "2026-11-11",
+    "status": "Verified locally.",
+    "scope": "Added WWBsgames family links to both game-download overviews and added or updated platform-filtered links on the PS2, PS3, PS4, PS5, PSP and Vita directory pages. Existing Nintendo and Xbox library routes are retained.",
+    "branding": "All 17 console picker rows show the corresponding console logo. Provider cards use original branding for Vimm’s Lair, DLPSGame, DownloadGamePSP, NSWGame and NSWGF. NSWGame and NSWGF share the header logo served by both sites. Sources are recorded in assets/images/game-directories/sources.json.",
+    "search": "Refreshed the directory search tags, keywords, social metadata, collection schema, canonical sitemap dates and localized source records. New phrases without cached translations use the existing English fallback.",
+    "verification": "Edge checked both overviews and all six filtered PlayStation catalogs. All 56 focused tests, 16 metadata and link checks, and 320 localized renders passed. Existing external and ready-file links were compared with the baseline.",
+    "retroPicker": "Expanded #more-systems on Console Game Downloads to 25 additional categories confirmed on Vimm’s Vault. Grouped home consoles and WiiWare separately from handhelds and tabletop systems, with a jump link, original Vimm category art where published, and credited RetroArch icons for the others. Refreshed metadata and checked all 20 localized renders. Edge verified desktop and mobile layouts, the jump link, image loading and dark and light logo styles.",
+    "directoryFooter": "Replaced the generic guide footer on Console Game Downloads with the directory update date and broken-link action. The compact footer follows the card grid width, including with the published desktop ad layout. Verified desktop, mobile, light and dark modes and all 20 localized contact links."
   },
   "wwbsgamesCatalogs20261110": {
     "date": "2026-11-10",
@@ -11740,102 +11949,5 @@
       "persistence": "The hub generator selects the sources in build-console-guides.cjs and console-card-media.cjs. Fixed cards bypass the automatic category artwork pass. Edge verified the covers and their aspect ratios on desktop and mobile, and repeating both generators preserved the HTML exactly. The new regression test passed. An existing broader test still expects SVG for five unrelated category covers delivered as JPEG."
     },
     "regenerate": "node -e \"require('./scripts/build-ps5-game-saves.cjs').buildPs5GameSaves(); require('./scripts/build-ps5-mods.cjs').buildPs5Mods(); require('./scripts/build-ps5-jailbreaks.cjs').refreshPs5Hub();\""
-  },
-  "ps4Ps5TransferGuides20261111": {
-    "date": "2026-11-11",
-    "status": "Verified locally and prepared for release on main.",
-    "pages": [
-      "console/ps4/file-transfer-guide.html",
-      "console/ps5/file-transfer-guide.html",
-      "console/download-center/index.html"
-    ],
-    "changes": "Replaced the former FileZilla-only card on PS4/PS5 hubs and Transfer Tools pages with dedicated guide links. Each guide asks FTP or USB and shows the selected route. Download Center is visibly marked Not finished; download/app buttons are centered. FTP additionally asks computer or phone, then iOS/Android/HarmonyOS. Browser history and shared deep links restore these choices.",
-    "consoleDistinction": "PS5 uses ezRemote Client 2.18 with loader 1.01 and a compatible elfldr setup; this loader does not require websrv. The separate website downloader still has its own websrv checks. Package installation follows release-specific requirements; the outdated PS4-only installer statement was removed.",
-    "discovery": {
-      "keywords": "Curated exact-route PS4/PS5 and Download Center subjects, preserving app/service/version distinctions.",
-      "tags": "Visible topic badges and multilingual data-search seeds on method, phone, center and hub cards.",
-      "schema": "Linked WebPage / TechArticle and BreadcrumbList for guides; CollectionPage with five real destinations for Download Center.",
-      "sitemap": {
-        "canonicalURLs": 505,
-        "localeSitemaps": 20,
-        "ownCanonicalRoutes": 3,
-        "queryChoiceURLsIndexed": false,
-        "redirectURLsRemoved": [
-          "https://whatwhatboy.com/console/ps4/jailbreak.html",
-          "https://whatwhatboy.com/console/ps4/jailbreak-13-52.html"
-        ],
-        "redirectPagesRetained": true
-      }
-    },
-    "localization": {
-      "languages": 20,
-      "sourceKeys": 134,
-      "allGuideProseTranslated": true,
-      "menuIllustrationsLocalized": true,
-      "staticRoutesRegistered": 3,
-      "renderedGuideAndCenterPages": 63,
-      "keywordTopicsLocalized": true,
-      "searchAliases": "Technical aliases retain their original searchable forms."
-    },
-    "images": {
-      "total": 109,
-      "neutralDiagrams": 4,
-      "localizedDiagramsPerLanguage": 5,
-      "includingEnglish": 21,
-      "type": "Numbered SVG illustrations with outlines; not represented as exact app screenshots.",
-      "preview": "docs/qa/ps4-transfer-guide-20261111.jpg"
-    },
-    "verification": {
-      "testsPassed": 59,
-      "testScope": "Guide selector, localization, platform metadata, schema, ad-layer behavior, shell, Pages, and existing focused integration tests.",
-      "metadataPagesPassed": 3,
-      "xmlImagesPassed": 109,
-      "generationIdempotent": true,
-      "artifact": "tmp/transfer-guide-pages-20261111-v2",
-      "artifactGuideAudit": {
-        "pagesChecked": 63,
-        "links": 6990,
-        "canonicalURLs": 507,
-        "localeSitemaps": 20,
-        "issues": 0,
-        "changedBytes": 900,
-        "failures": []
-      },
-      "fullArtifact": {
-        "bytes": 900785556,
-        "pages": 10801,
-        "links": 1252965,
-        "offloadedFiles": 9194,
-        "issues": 0
-      },
-      "browser": [
-        "Direct pointer clicks: FTP > phone > Android only shows Android instructions",
-        "PS5 USB uses ezRemote Client 2.18 and correct loader instructions",
-        "390px mobile view without horizontal overflow",
-        "Light theme dark-teal links and brown unfinished status",
-        "Arabic static route preserves method/hash, translates metadata/schema and manager image",
-        "English desktop visible tags and FTP/USB choices",
-        "Initial deep links scroll below the sticky header",
-        "Native guide tags visibly rendered",
-        "Localized diagrams have server-rendered URLs without requiring JavaScript"
-      ]
-    },
-    "adBehavior": "These three interactive routes keep native ads and the sponsored link. Publisher click-interception layers are omitted so guide choices receive pointer input. Other pages keep their existing ad behavior.",
-    "limits": "No physical-console transfer, console execution or phone-app installation was performed. No console binaries were downloaded and the F: archive was not changed.",
-    "regenerate": [
-      "node scripts/build-transfer-illustrations.cjs",
-      "node scripts/build-transfer-menu-images.cjs",
-      "node scripts/build-transfer-manager-images.cjs",
-      "node i18n-tools/build-chrome.js",
-      "node scripts/build-transfer-guides.cjs",
-      "node scripts/prepare-transfer-guide-locales.cjs"
-    ],
-    "report": "docs/qa/ps4-ps5-transfer-guides-20261111.json",
-    "photoRefresh": {
-      "date": "2026-11-11",
-      "changes": "Replaced the diagrams on the guides with credited, unmarked photographs and real screenshots. Each phone app has its own three-step walkthrough in all 20 supported site languages.",
-      "coverage": "USB flash drive, PS4 and PS5 connection status, GoldHEN, PS4-Xplorer, PS5 ezRemote Client, FileZilla, FTPManager and Solid Explorer.",
-      "harmony": "The electerm walkthrough links to AppGallery and publisher documentation. A native HarmonyOS screenshot could not be verified."
-    }
   }
 }
