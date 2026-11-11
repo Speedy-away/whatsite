@@ -17,8 +17,11 @@
     --btn-light-text: #111;
     --home-muted: var(--text-secondary);
     --home-panel: #101010ef;
-    --home-wave: url("/assets/images/playstation-library/xmb-wave-dark.svg");
-    --home-wave-opacity: .58;
+    --site-gutter: clamp(16px, 3vw, 48px);
+    --site-gutter-left: max(var(--site-gutter), env(safe-area-inset-left, 0px));
+    --site-gutter-right: max(var(--site-gutter), env(safe-area-inset-right, 0px));
+    --home-wave: url("/assets/images/playstation-library/xmb-wave-dark.svg?v=20261111-fine");
+    --home-wave-opacity: .5;
     background: var(--bg-primary);
     overflow-x: clip;
     isolation: isolate;
@@ -38,24 +41,30 @@
     --btn-light: #151515;
     --btn-light-text: #fff;
     --home-panel: #f8f8f8f2;
-    --home-wave: url("/assets/images/playstation-library/xmb-wave.svg");
-    --home-wave-opacity: .75;
+    --home-wave: url("/assets/images/playstation-library/xmb-wave.svg?v=20261111-fine");
+    --home-wave-opacity: .65;
 }
 .site-shell::before {
     content: "";
     position: fixed;
-    inset: -4vh -6vw;
+    inset: -4vh -3vw;
     z-index: -1;
     pointer-events: none;
     background: var(--home-wave) center 62% / max(1024px, 116vw) auto no-repeat;
     opacity: var(--home-wave-opacity);
-    filter: grayscale(1);
-    animation: home-wave-drift 26s ease-in-out infinite alternate;
+    filter: none;
+    will-change: auto;
 }
 .site-shell::after { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+    .site-shell::before {
+        will-change: transform;
+        animation: home-wave-drift 20s ease-in-out infinite alternate;
+    }
+}
 @keyframes home-wave-drift {
     from { transform: translate3d(-2vw, -3vh, 0); }
-    to { transform: translate3d(2vw, 6vh, 0); }
+    to { transform: translate3d(2vw, 3vh, 0); }
 }
 .site-shell ::selection { color: var(--btn-light-text); background: var(--btn-light); }
 html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var(--home-header-height) + 16px); }
@@ -67,7 +76,6 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     background: var(--home-panel);
     padding-block-start: env(safe-area-inset-top);
     border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(14px);
 }
 .site-shell .home-taskbar-inner {
     display: grid;
@@ -79,7 +87,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .home-brand { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: var(--text-primary); font-weight: 750; letter-spacing: -.035em; }
 .home-brand img { flex: none; object-fit: contain; }
 .home-task-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px; }
-.home-menu > summary {
+.home-menu > summary, .home-task-links > .home-task-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +103,9 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     cursor: pointer;
 }
 .home-menu > summary:hover, .home-menu[open] > summary { background: var(--bg-tertiary); color: var(--text-primary); }
+.home-task-links > .home-task-link:is(:hover, [aria-current="page"]) { background: var(--bg-tertiary); }
 .home-menu { position: relative; }
+.home-menu:not([open]) > .home-menu-panel { display: none; }
 .home-menu > summary { list-style: none; }
 .home-menu > summary::-webkit-details-marker { display: none; }
 .home-caret { width: 6px; height: 6px; margin-block-start: -3px; border: solid var(--home-muted); border-width: 0 1px 1px 0; transform: rotate(45deg); transition: transform .2s; }
@@ -108,7 +118,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     width: max-content;
     min-width: 176px;
     max-width: min(calc(100vw - 32px), 525px);
-    max-height: min(580px, 70dvh);
+    max-height: min(580px, 70dvh, calc(100dvh - var(--home-header-height) - env(safe-area-inset-bottom, 0px) - 12px));
     overflow: auto;
     overscroll-behavior: contain;
     padding: 8px;
@@ -136,7 +146,7 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .home-menu-panel :is(a, button):hover { background: var(--bg-tertiary); }
 .home-menu-panel i { font-size: .65rem; }
 .home-console-panel, .home-cheats-panel { width: min(525px, calc(100vw - 32px)); }
-@media (min-width: 961px) {
+@media (min-width: 1025px) {
     .home-cheats-panel { inset-inline-start: 50%; transform: translateX(-50%); }
     [dir="rtl"] .home-cheats-panel { transform: translateX(50%); }
 }
@@ -178,26 +188,29 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     border-color: var(--border);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .site-shell .home-taskbar-inner { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; padding-block: 6px 0; }
-    .home-task-links { position: relative; grid-row: 2; grid-column: 1/-1; justify-content: flex-start; }
+    .home-task-links { position: relative; grid-row: 2; grid-column: 1/-1; flex-wrap: nowrap; }
+    .home-task-links > :is(.home-menu, .home-task-link) { flex: 1 1 0; min-width: 0; }
+    .home-menu > summary > span:first-child, .home-task-link > span { min-width: 0; overflow-wrap: anywhere; }
+    .home-caret { flex-shrink: 0; }
     .home-menu { position: static; }
     .home-menu-panel, .home-pc-menu .home-menu-panel, .home-more-menu .home-menu-panel { inset-inline: 0 auto; }
     html:has(.site-shell) { --home-header-height: 96px; }
 }
 @media (max-width: 580px) {
-    .home-task-links { flex-wrap: nowrap; }
-    .home-task-links > .home-menu { flex: 1 1 auto; min-width: 0; }
-    .home-menu > summary { padding-inline: 7px; gap: 4px; font-size: .79rem; }
-    .home-menu > summary > span:first-child { min-width: 0; overflow-wrap: anywhere; }
-    .home-caret { flex-shrink: 0; }
+    .home-task-links > :is(.home-menu, .home-task-link) { flex-basis: auto; }
+    .home-menu > summary, .home-task-links > .home-task-link { padding-inline: 7px; gap: 4px; font-size: .79rem; }
     .home-menu-panel, .home-pc-menu .home-menu-panel, .home-more-menu .home-menu-panel {
         inset-inline: 0;
         width: auto;
+        min-width: 0;
         max-width: none;
-        max-height: min(540px, calc(100dvh - var(--home-header-height) - 12px));
     }
-    .home-menu-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home-menu-columns, .home-console-panel .home-menu-tail {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .home-console-panel .home-menu-tail { display: grid; }
     .home-brand { gap: 5px; font-size: .92rem; }
     .home-brand img { width: 27px; height: 27px; }
     .home-theme { padding-inline: 7px; }
@@ -208,19 +221,19 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
     .site-shell .home-controls .i18n-switcher { position: static; }
     .site-shell .home-controls .i18n-menu {
         inset-block-start: calc(100% + 5px);
-        inset-inline-end: 16px;
+        inset-inline-end: max(var(--site-gutter-left), var(--site-gutter-right));
         z-index: 3;
-        max-height: min(520px, calc(100dvh - var(--home-header-height) - 12px));
+        max-height: min(520px, calc(100dvh - var(--home-header-height) - env(safe-area-inset-bottom, 0px) - 12px));
     }
     .site-shell.downloads-overview .guide-nav { flex-wrap: wrap; gap: 4px 8px; }
     .site-shell.downloads-overview .guide-nav > a { padding-inline: 7px; font-size: .83rem; }
 }
 @media (max-width: 380px) {
-    .home-menu > summary { padding-inline: 4px; }
+    .home-menu > summary, .home-task-links > .home-task-link { padding-inline: 4px; }
 }
-@media (max-height: 420px) {
+@media (max-width: 1024px) and (max-height: 500px) {
     .home-taskbar { position: relative; }
-    .home-menu-panel { max-height: 60dvh; }
+    html:has(.site-shell) { scroll-padding-top: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
     .site-shell *, .site-shell *::before, .site-shell *::after, .site-shell::before { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
@@ -239,7 +252,31 @@ html:has(.site-shell) { --home-header-height: 66px; scroll-padding-top: calc(var
 .site-shell .home-taskbar-inner {
     max-width: 1280px;
     margin-inline: auto;
-    padding-inline: max(clamp(16px, 4vw, 48px), env(safe-area-inset-left)) max(clamp(16px, 4vw, 48px), env(safe-area-inset-right));
+}
+body.site-shell :is(.home-taskbar-inner, .main-content .container, .footer > .container):where(:not(.guide-dialog__body .container, .site-ad .container)) {
+    padding-left: var(--site-gutter-left);
+    padding-right: var(--site-gutter-right);
+}
+@media (max-width: 1366px) {
+    .site-shell.ps-library :is(.main-content, .library-footer).wrap {
+        width: min(1220px, calc(100% - var(--site-gutter-left) - var(--site-gutter-right)));
+    }
+}
+@media (max-width: 1366px), (pointer: coarse) {
+    .site-shell :is(.footer-section li > a, .library-footer nav a) {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        white-space: normal;
+    }
+    .site-shell .footer-section ul { gap: 0; }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+    .site-shell .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        padding-block: 32px;
+    }
 }
 .home-taskbar, .home-taskbar * { box-sizing: border-box; }
 .home-taskbar a { text-decoration: none; }

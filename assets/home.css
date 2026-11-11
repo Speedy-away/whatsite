@@ -1,7 +1,8 @@
 /* Homepage directory, console and game lists. */
 .home-page .container, body.home-page .main-content .container {
     max-width: 1280px;
-    padding-inline: max(clamp(16px, 4vw, 48px), env(safe-area-inset-left)) max(clamp(16px, 4vw, 48px), env(safe-area-inset-right));
+    padding-left: var(--site-gutter-left);
+    padding-right: var(--site-gutter-right);
 }
 .home-page .section { padding-block: 62px; }
 .home-page .section-header { text-align: start; margin-bottom: 26px; }
@@ -27,6 +28,7 @@
     gap: 10px;
     min-height: 72px;
     padding: 10px 8px;
+    padding-inline-start: 20px;
     color: var(--text-primary);
 }
 .home-directory-grid a:hover { background: var(--accent-glow); }
@@ -85,7 +87,7 @@
 }
 @media (max-width: 767px) {
     .home-directory-grid { column-gap: 14px; }
-    .home-directory-grid a { grid-template-columns: 22px minmax(0, 1fr) auto; gap: 6px; padding-inline: 3px; }
+    .home-directory-grid a { grid-template-columns: 22px minmax(0, 1fr) auto; gap: 6px; padding-inline: 12px 3px; }
     .home-page .section { padding-block: 32px; }
     .home-page .section-header { margin-bottom: 18px; }
     .home-page .home-help { padding-bottom: 44px; }

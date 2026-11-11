@@ -153,7 +153,7 @@
 
             <div class="hero-buttons">
                 <a href="#esp-aimbot-tools" class="btn btn-primary">
-                    <i class="fas fa-crosshairs"></i>
+                    <i class="fas fa-crosshairs" aria-hidden="true"></i>
                     View Tools
                 </a>
             </div>
@@ -217,8 +217,8 @@
                             <span class="feature">External</span>
                             <span class="feature">Mod Menu</span>
                         </div>
-                        <a href="https://scoobymenu.cc/products/fivem/" target="_blank" rel="noopener noreferrer" class="game-link">
-                            <i class="fas fa-download"></i>
+                        <a href="https://scoobymenu.cc/products/fivem/" target="_blank" rel="noopener noreferrer" class="btn btn-outline game-link">
+                            <i class="fas fa-download" aria-hidden="true"></i>
                             Download
                         </a>
                     </div>
@@ -239,8 +239,8 @@
                             <span class="feature-tag">ESP</span>
                             <span class="feature-tag">AIMBOT</span>
                         </div>
-                        <a href="https://bstlar.com/F/SimpleM" class="game-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-download"></i>
+                        <a href="https://bstlar.com/F/SimpleM" class="btn btn-outline game-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-download" aria-hidden="true"></i>
                             Download
                         </a>
                     </div>
@@ -248,6 +248,7 @@
             </div>
         </div>
     </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -364,12 +365,8 @@
             transform: scale(1.05);
         }
 
-        .game-link:hover {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
+        .compact-game-page .btn:focus-visible {
+            outline: 2px solid var(--accent);
         }
     </style>
 
@@ -429,7 +426,6 @@
             }
         }
     </script>
-    </div>
 
     <script src="../../script.js?v=3.3.9"></script>
     <!-- Native Banner Ad -->

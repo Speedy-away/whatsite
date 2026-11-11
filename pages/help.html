@@ -45,8 +45,53 @@
 <link rel="stylesheet" href="/assets/mobile-downloads.css?v=3.3.8">
 <script defer src="/assets/mobile-downloads.js?v=3.3.8"></script>
 <link rel="stylesheet" href="/assets/site-ads.css?v=3">
+    <style>
+        #help-intro.hero { min-height: auto; padding-block: clamp(22px, 4vw, 58px) 12px; }
+        #help-intro .hero-subtitle { margin-block-end: 0; }
+        .help-page #faq { padding-block-start: clamp(16px, 2.5vw, 36px); }
+        .faq-download-notice {
+            flex-direction: row;
+            margin-block-end: 20px;
+            padding: clamp(14px, 3vw, 20px);
+        }
+        .faq-download-notice h2 { font-size: 1rem; line-height: 1.35; margin-block-end: 4px; }
+        .faq-download-notice p { margin-bottom: 0; }
+        .faq-categories .faq-item { background: var(--bg-secondary); }
+        .faq-search { max-width: none; margin-block-end: 24px; }
+        .faq-search .search-icon { left: auto; inset-inline-start: 16px; }
+        .faq-search .search-input {
+            min-height: 48px;
+            padding-inline: 44px 16px;
+            background: var(--bg-secondary);
+        }
+        .faq-no-results { color: var(--text-secondary); margin-block-end: 24px; }
+        .help-page .faq-question { min-height: 52px; }
+        .help-page .faq-question:focus-visible { outline-offset: -3px; }
+        .help-page .faq-answer { overflow-wrap: anywhere; }
+        .faq-support {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+            gap: 16px;
+        }
+        .faq-support > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: clamp(16px, 3vw, 24px);
+            text-align: start;
+        }
+        .faq-support p { margin: 0 0 16px; }
+        .faq-support .btn { margin-block-start: auto; min-height: 44px; }
+        @media (max-width: 480px) {
+            .help-page .faq-question { gap: 10px; padding-inline: 12px; }
+            .help-page .faq-item.active .faq-answer { padding-inline: 12px; }
+            .faq-download-notice { gap: 10px; }
+            .faq-download-notice .safety-icon { width: 32px; height: 32px; font-size: 15px; }
+            .faq-support .btn { width: 100%; }
+        }
+    </style>
 </head>
-<body class="site-atmosphere" data-background-theme="emerald">
+<body class="help-page site-atmosphere" data-background-theme="emerald">
 <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -115,7 +160,7 @@
 </header>
 
     <div class="main-content" id="main-content" role="main" tabindex="-1">
-        <section class="hero">
+        <section class="hero" id="help-intro">
             <div class="hero-bg"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Help & FAQ</h1>
@@ -129,14 +174,21 @@
 
         <section class="section" id="faq">
             <div class="container">
-                <div class="faq-search">
+                <div class="faq-categories">
+                <aside class="safety-card critical faq-download-notice" aria-labelledby="faq-download-warning">
+                    <div class="safety-icon" aria-hidden="true"><i class="fas fa-triangle-exclamation"></i></div>
+                    <div class="safety-content">
+                        <h2 id="faq-download-warning">Don&rsquo;t download anything from ads or pop-ups</h2>
+                        <p>Close pop-ups and ignore fake Download buttons, update prompts, and requests to allow notifications. Start from the Download link on the item&rsquo;s page and check the destination and file name.</p>
+                    </div>
+                </aside>
+                <div class="faq-search" role="search" aria-label="Frequently asked questions">
                     <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="faqSearch" placeholder="Search frequently asked questions..." aria-label="Search frequently asked questions...">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="search" class="search-input" id="faqSearch" placeholder="Search the FAQ" aria-label="Search the FAQ">
                     </div>
                 </div>
 
-                <div class="faq-categories">
                 <div class="faq-category">
                     <h3 class="faq-category-title"><i class="fas fa-play"></i> Getting Started</h3>
                     <div class="faq-items">
@@ -148,20 +200,20 @@
                             </div>
                             <div class="faq-answer">
                                 <p>Open the game you want from <a href="../index.html#games">Free Cheats</a>, or a game from <a href="mods.html">Game Mods</a>, then press the <strong>Download</strong> button on the cheat you want.</p>
-                                <p>Most downloads are hosted on our own file host and open in a new tab. Some link straight to the mod author instead, which is deliberate &mdash; you always get the original file rather than a re-upload.</p>
+                                <p>Some links open a file host and others go to the author&rsquo;s release page. Check that the destination and file match the listing before downloading.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question">
                                 <i class="fas fa-shield-virus"></i>
-                                <span>Why do I have to disable my antivirus?</span>
+                                <span>Why does my antivirus flag a cheat or mod?</span>
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="faq-answer">
-                                <p>Cheats inject code into a running game and read or write its memory. That is exactly what malware does, so antivirus software flags it. This is a <strong>false positive</strong>: the behaviour looks the same even though the intent is not.</p>
-                                <ul><li>Turn off real-time protection before you extract the file</li><li>Add the folder to your exclusion list so it is not deleted later</li><li>Turn protection back on once you are done</li></ul>
-                                <p>Only do this for files you actually trust. If a download came from somewhere other than this site, scan it first.</p>
+                                <p>Some PC cheats read or change a running game&rsquo;s memory or inject code into its process. Antivirus can flag those behaviours because malware can use the same techniques. Windows SmartScreen can also warn about an unsigned or unfamiliar file.</p>
+                                <p>I personally check, test, and use the downloads I list. If I haven&rsquo;t used a file or don&rsquo;t trust it, I leave it off the site. My checks cover the version I tested. A detection can still indicate a real threat.</p>
+                                <p>Keep antivirus protection on. If it blocks or quarantines a file, leave it blocked and <a href="contact.html">report the filename and detection name</a>. See <a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/">Microsoft&rsquo;s SmartScreen guidance</a>.</p>
                             </div>
                         </div>
 
@@ -204,7 +256,7 @@
                             </div>
                             <div class="faq-answer">
                                 <p>Tell us and it gets fixed. The fastest route is <a href="https://discord.gg/6hsV2fva8Z" target="_blank" rel="noopener noreferrer">Discord</a> or <a href="contact.html">Contact</a>.</p>
-                                <p>Before reporting, try disabling your ad blocker for the page. Blockers sometimes stop the redirect that carries you to the file host.</p>
+                                <p>Include the page, the file name, and any error you see. Close unexpected pop-ups and report the link if you can&rsquo;t reach the listed file.</p>
                             </div>
                         </div>
 
@@ -240,7 +292,7 @@
                             </div>
                             <div class="faq-answer">
                                 <p>Ads are what keep everything here free. Nothing on this site is paywalled and there is no membership.</p>
-                                <p>If an ad ever tries to install something, close it &mdash; that is not a download from us. Our files only ever come from the Download button itself.</p>
+                                <p><strong>Never download or install anything from an ad or pop-up.</strong> Close it and return to the item page. Use the listed file link and check the destination before opening the download.</p>
                             </div>
                         </div>
                     </div>
@@ -281,8 +333,7 @@
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="faq-answer">
-                                <p>No. Use a throwaway account for anything online.</p>
-                                <p>An alternate account costs far less than losing a main with years of progress and purchases on it.</p>
+                                <p>Keep cheats and mods out of online play to protect accounts with progress and purchases. For PSN, use an unmodified PlayStation. A console suspension applies to every account on that console.</p>
                             </div>
                         </div>
 
@@ -293,7 +344,7 @@
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="faq-answer">
-                                <ol><li>Check the game updated &mdash; a patch breaks most cheats until they are rebuilt</li><li>Run the injector as administrator</li><li>Confirm the Visual C++ Redistributables are installed</li><li>Make sure your antivirus has not quietly deleted a file</li><li>Re-download in case the archive was incomplete</li></ol>
+                                <ol><li>Check whether the tool supports your game version</li><li>Check the listed prerequisites, such as the Visual C++ Redistributables</li><li>If antivirus quarantined the file, leave it quarantined and report the detection</li></ol>
                                 <p>Still stuck? Ask in <a href="https://discord.gg/6hsV2fva8Z" target="_blank" rel="noopener noreferrer">Discord</a> with the game, the cheat name, and what actually happens.</p>
                             </div>
                         </div>
@@ -344,6 +395,23 @@
                 <div class="faq-category">
                     <h3 class="faq-category-title"><i class="fas fa-tv"></i> Console & Emulators</h3>
                     <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-gamepad" aria-hidden="true"></i>
+                                <span>Can I use PSN after a PS4 jailbreak?</span>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Signing into PlayStation Network (PSN) on a jailbroken PS4 puts your account and console at risk. Sony&rsquo;s PS4 software licence restricts unauthorised modifications and allows Sony to restrict PSN access.</p>
+                                <ul>
+                                    <li><strong>PSN account ban.</strong> Sony can suspend the account temporarily or permanently. That can block online multiplayer, the PlayStation Store, and access to some purchases.</li>
+                                    <li><strong>Console ban.</strong> A suspended PS4 loses access to PSN for every account on that console, including a secondary account. Online-only modes and access to Store purchases can also be affected.</li>
+                                </ul>
+                                <p>Keep a jailbroken PS4 offline and use an unmodified console for PSN, online multiplayer, and the PlayStation Store.</p>
+                                <p><a href="https://www.playstation.com/en-gb/legal/ps4-system-software-license-agreement/">PS4 system software licence</a> · <a href="https://www.playstation.com/en-gb/support/account/suspensions/">PlayStation suspension policy</a></p>
+                            </div>
+                        </div>
+
                         <div class="faq-item">
                             <div class="faq-question">
                                 <i class="fas fa-microchip"></i>
@@ -422,22 +490,21 @@
                         </div>
                     </div>
                 </div>
-                </div>
-
-                <div class="info-card" style="margin-block:24px">
-                    <h3>Downloading on iPhone or Android?</h3>
-                    <p>Save files to your phone, find your Downloads folder, and use File options to copy or share a file.</p>
-                    <a class="btn btn-primary" href="/guides/phone-downloads/">Phone download help</a>
-                </div>
-                <div class="discord-cta">
-                    <div class="cta-icon">
-                        <i class="fab fa-discord"></i>
+                <p class="faq-no-results" role="status" style="display: none">No matching questions found.</p>
+                <div class="faq-support">
+                    <div class="info-card">
+                        <h3>Downloading on iPhone or Android?</h3>
+                        <p>Save files to your phone, find your Downloads folder, and use File options to copy or share a file.</p>
+                        <a class="btn btn-primary" href="/guides/phone-downloads/">Phone download help</a>
                     </div>
-                    <h3>Need More Help?</h3>
-                    <p>Join our Discord server for live support from the community and direct assistance with any issues.</p>
-                    <a href="https://discord.gg/DsthXP9EK4" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <i class="fab fa-discord"></i> Join Discord
-                    </a>
+                    <div class="discord-cta">
+                        <h3>Need More Help?</h3>
+                        <p>Join our Discord server for live support from the community and direct assistance with any issues.</p>
+                        <a href="https://discord.gg/DsthXP9EK4" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-discord" aria-hidden="true"></i> Join Discord
+                        </a>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
