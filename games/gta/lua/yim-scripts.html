@@ -50,6 +50,7 @@
 <script defer src="/assets/mobile-downloads.js?v=3.3.8"></script>
 <link rel="stylesheet" href="/assets/catalog-layout.css?v=1">
 <link rel="stylesheet" href="/assets/site-ads.css?v=3">
+<link rel="stylesheet" href="/assets/yim-lua-guide.css?v=1">
 </head>
 <body class="compact-game-page no-cheat-icons site-atmosphere" data-background-theme="violet" data-catalog-page>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -142,93 +143,70 @@
     <!-- Main Content -->
     <div class="main-content" id="main-content" role="main" tabindex="-1">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero yim-lua-hero" aria-labelledby="yim-lua-title">
             <div class="hero-bg"></div>
             <div class="hero-content">
-                <div class="hero-image" style="margin-bottom: 2rem;">
-                    <img src="../../../assets/images/yim.png" alt="YimMenu Lua Scripts" style="max-width:min(400px,100%); border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
-                </div>
-                <h1 class="hero-title">YimMenu Lua Scripts</h1>
-                <p class="hero-subtitle">Advanced Lua scripts for YimMenu with enhanced protections, custom heist scripts, business management tools, and comprehensive anti-griefing features.</p>
-
-                <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%); border: 2px solid var(--primary-color); border-radius: 12px; padding: 2rem; margin: 2rem auto; max-width: 800px;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center;"><i class="fas fa-graduation-cap"></i> Quick Start Guide</h3>
-
-                    <div style="display: grid; gap: 1.5rem; margin-bottom: 1.5rem;">
-                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="background: var(--btn-light); color: var(--btn-light-text); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem;">1</span>
-                                Download Script Pack
-                            </h4>
-                            <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; padding-left: 2.5rem;">Choose a script pack below (Pack 1, 2, or 3) and click the download button. Each pack contains multiple scripts.</p>
-                        </div>
-
-                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="background: var(--btn-light); color: var(--btn-light-text); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem;">2</span>
-                                Extract Files
-                            </h4>
-                            <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; padding-left: 2.5rem;">Extract the downloaded .zip file. You'll find .lua script files inside.</p>
-                        </div>
-
-                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="background: var(--btn-light); color: var(--btn-light-text); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem;">3</span>
-                                Install Scripts
-                            </h4>
-                            <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; padding-left: 2.5rem;">
-                                Press <kbd style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid var(--border-color);">Win + R</kbd>, type <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">%appdata%</code> and press Enter.<br>
-                                Navigate to: <code style="background: var(--bg-tertiary); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--primary-color);">YimMenu/scripts</code><br>
-                                Copy all .lua files into this folder.
-                            </p>
-                        </div>
-
-                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
-                            <h4 style="color: #10b981; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="background: #10b981; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem;">4</span>
-                                Load in Game
-                            </h4>
-                            <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; padding-left: 2.5rem;">
-                                Launch GTA V and inject YimMenu<br>
-                                Open YimMenu → Go to <strong style="color: var(--text-primary);">Settings > Lua Scripts</strong><br>
-                                Select your installed scripts from the list and enable them!
-                            </p>
-                        </div>
+                <header class="yim-lua-intro">
+                    <img class="yim-lua-logo" src="../../../assets/images/yim.png" alt="" width="56" height="56">
+                    <div>
+                        <h1 class="hero-title" id="yim-lua-title">YimMenu Lua Scripts</h1>
+                        <p class="hero-subtitle">Advanced Lua scripts for YimMenu with enhanced protections, custom heist scripts, business management tools, and comprehensive anti-griefing features.</p>
                     </div>
+                </header>
 
-                    <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 8px; padding: 1rem; text-align: center;">
-                        <p style="color: var(--text-primary); margin: 0; line-height: 1.6;">
-                            <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
-                            <strong>That's it!</strong> Your scripts are now ready to use. Scroll down to choose your pack.
-                        </p>
+                <section class="yim-lua-guide" aria-labelledby="yim-lua-guide-title">
+                    <h2 id="yim-lua-guide-title">Quick Start Guide</h2>
+                    <ol class="yim-lua-steps" role="list">
+                        <li>
+                            <span class="yim-lua-step-number" aria-hidden="true">1</span>
+                            <div>
+                                <h3>Download Script Pack</h3>
+                                <p>Choose a script pack below (Pack 1, 2, or 3) and click the download button. Each pack contains multiple scripts.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="yim-lua-step-number" aria-hidden="true">2</span>
+                            <div>
+                                <h3>Extract Files</h3>
+                                <p>Extract the downloaded <code>.zip</code> file. You'll find <code>.lua</code> script files inside.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="yim-lua-step-number" aria-hidden="true">3</span>
+                            <div>
+                                <h3>Install Scripts</h3>
+                                <p>Press <kbd>Win + R</kbd>, type <code>%appdata%</code> and press Enter.<br>
+                                    Navigate to <code>YimMenu/scripts</code>.<br>
+                                    Copy all <code>.lua</code> files into this folder.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="yim-lua-step-number" aria-hidden="true">4</span>
+                            <div>
+                                <h3>Load in Game</h3>
+                                <p>Launch GTA V and inject YimMenu<br>
+                                    Open YimMenu → Go to <strong>Settings &gt; Lua Scripts</strong><br>
+                                    Select your installed scripts from the list and enable them!</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <div class="yim-lua-actions">
+                        <a href="#all-in-one" class="btn btn-primary">
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                            Download Script Packs
+                        </a>
+                        <button type="button" onclick="history.back()" class="btn btn-outline">
+                            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                            Go Back
+                        </button>
                     </div>
-                </div>
+                </section>
 
-                <div class="hero-buttons" style="margin-top: 2rem;">
-                    <a href="#all-in-one" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
-                        <i class="fas fa-download"></i>
-                        Download Script Packs
-                    </a>
-                    <button onclick="history.back()" class="btn btn-outline">
-                        <i class="fas fa-arrow-left"></i>
-                        Go Back
-                    </button>
-                </div>
-
-                <div class="hero-stats">
-                    <div class="stat">
-                        <h3>10</h3>
-                        <p>Premium Scripts</p>
-                    </div>
-                    <div class="stat">
-                        <h3>1.73</h3>
-                        <p>Game Version</p>
-                    </div>
-                    <div class="stat">
-                        <h3>Active</h3>
-                        <p>Working Scripts</p>
-                    </div>
-                </div>
+                <ul class="yim-lua-stats" role="list">
+                    <li><strong>10</strong> Premium Scripts</li>
+                    <li><strong>1.73</strong> Game Version</li>
+                    <li><strong>Active</strong> Working Scripts</li>
+                </ul>
             </div>
         </section>
 <!-- BEGIN SITE AD -->

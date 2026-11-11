@@ -1,0 +1,163 @@
+.compact-game-page .yim-lua-hero {
+    --guide-line: #35413e;
+    --guide-accent: #a6dbbe;
+    padding-block: clamp(1.5rem, 4vw, 3.5rem) 1.5rem;
+}
+
+.yim-lua-hero .hero-content {
+    max-width: 46rem;
+    text-align: start;
+}
+
+.yim-lua-intro {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(.75rem, 2vw, 1.125rem);
+    margin-bottom: 1.25rem;
+}
+
+.yim-lua-logo {
+    display: block;
+    width: clamp(2.5rem, 5vw, 3.5rem);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: .55rem;
+}
+
+.yim-lua-hero .yim-lua-intro .hero-title {
+    margin: 0 0 .35rem;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.12;
+}
+
+.yim-lua-hero .yim-lua-intro .hero-subtitle {
+    max-width: 62ch;
+    margin: 0;
+    font-size: .9rem;
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
+.yim-lua-guide {
+    overflow: hidden;
+    border: 1px solid var(--guide-line);
+    border-radius: .875rem;
+    background: #141917;
+}
+
+.yim-lua-guide h2 {
+    margin: 0;
+    padding: .875rem 1rem;
+    border-bottom: 1px solid var(--guide-line);
+    background: #1b2420;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.yim-lua-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: var(--guide-line);
+}
+
+.yim-lua-steps li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: .625rem;
+    padding: .8rem 1rem;
+    background: #141917;
+}
+
+.yim-lua-step-number {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 1px solid var(--guide-line);
+    border-radius: .35rem;
+    background: #202c26;
+    color: var(--guide-accent);
+    font: 600 .8rem/1 ui-monospace, monospace;
+}
+
+.yim-lua-steps h3 {
+    margin: 0 0 .25rem;
+    color: var(--text-primary);
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+
+.yim-lua-steps p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: .875rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.yim-lua-steps :is(kbd, code) {
+    padding: .1em .35em;
+    border-radius: .25rem;
+    background: #222d28;
+    color: var(--guide-accent);
+    font-size: .875em;
+}
+
+.yim-lua-steps strong {
+    color: var(--text-primary);
+}
+
+.yim-lua-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: .75rem 1rem;
+    border-top: 1px solid var(--guide-line);
+}
+
+.yim-lua-actions .btn {
+    min-height: 44px;
+    justify-content: center;
+    padding: .55rem .8rem;
+    line-height: 1.25;
+    white-space: normal;
+}
+
+.yim-lua-actions .btn:focus-visible {
+    outline: 2px solid var(--guide-accent);
+    outline-offset: 2px;
+}
+
+.yim-lua-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1rem;
+    margin: .8rem 0 0;
+    padding: 0;
+    list-style: none;
+    color: var(--text-secondary);
+    font-size: .8rem;
+}
+
+.yim-lua-stats strong {
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+    .yim-lua-steps {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #all-in-one {
+        scroll-margin-block-start: 4.5rem;
+    }
+}
