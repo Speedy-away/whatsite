@@ -3,6 +3,14 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {revision:languageRevision}=require('./language-loader.cjs');
 const libraryRoutes=require('./playstation-library-routes.cjs');
 const configName='docs/i18n/page-translations.json';
+const jailbreakRedirects=new Map([
+ ['console/ps4/jailbreak.html','console/ps4/jailbreaks.html'],
+ ['console/ps4/jailbreak-13-52.html','console/ps4/jailbreaks.html']
+]);
+function jailbreakRedirectPage(destination,code){
+ const target='/'+code+'/'+destination;
+ return '<!doctype html>\n<html lang="'+code+'" dir="'+(['ar','he'].includes(code)?'rtl':'ltr')+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, follow"><title>PS4 · 14.00</title><link rel="canonical" href="'+html.origin+target+'"><script>location.replace('+JSON.stringify(target)+'+location.search+location.hash);</script><meta http-equiv="refresh" content="0; url='+target+'"></head><body><a href="'+target+'">PS4 · 14.00 →</a></body></html>\n';
+}
 function load(root,{estimateSource=false,previewPages=null,previewLanguages=null}={}){
  const file=path.join(root,configName);if(!fs.existsSync(file))return null;
  const manifest=JSON.parse(fs.readFileSync(file,'utf8')),strings=new Map(manifest.strings.map(row=>[row.source,row])),languages=new Map();
@@ -35,7 +43,15 @@ function translate(ctx,source,code){
  return html.restore(language.translations[record.id],record.values);
 }
 function translateKeywords(ctx,page,source,code){
- if(code==='en'||!html.localizeKeywordTerms(page.page))return translate(ctx,source,code);
+ if(code==='en')return source;
+ const guide=/^console\/(ps[45])\/file-transfer-guide\.html$/.exec(page.page);
+ if(guide||page.page==='console/download-center/index.html'){
+  const authored=require('../i18n-tools/transfer-guide-source.json');
+  const keys=guide?[guide[1]+'Title','computer','phone','usb','manager','findIp',guide[1]+'ManagerTitle']:['downloads','ps4Files','ps5Files','ps4Title','ps5Title'];
+  const localized=keys.map(key=>translate(ctx,authored[key],code));
+  return [...new Map([...localized,...source.split(',').map(value=>value.trim())].map(value=>[value.toLocaleLowerCase(code),value])).values()].join(', ');
+ }
+ if(!html.localizeKeywordTerms(page.page))return translate(ctx,source,code);
  const translated=html.keywordTerms(source).map(term=>translate(ctx,term,code));
  return [...new Map(translated.map(term=>[term.toLocaleLowerCase(code),term])).values()].join(', ');
 }
@@ -200,6 +216,15 @@ function generate({root,output,rewrite=(value)=>value,prepare=(source,name)=>req
   for(const code of html.codes){
    const source=libraryRoutes.redirectPage(destination,code);
    const name=code+"/"+legacy;
+   bytes+=Buffer.byteLength(source);count++;
+   if(!estimate){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,source);}
+  }
+ }
+ // Retain old guide bookmarks in their selected language after consolidation.
+ for(const [legacy,destination] of jailbreakRedirects){
+  if(!ctx.pages.has(destination))continue;
+  for(const code of html.codes){
+   const source=jailbreakRedirectPage(destination,code),name=code+'/'+legacy;
    bytes+=Buffer.byteLength(source);count++;
    if(!estimate){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,source);}
   }

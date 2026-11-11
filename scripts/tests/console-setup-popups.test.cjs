@@ -16,3 +16,13 @@ test('integration is additive and idempotent, with no changes to standalone cons
 test('existing console builders gain integration without broad build execution',()=>{
   const policy=require('../guide-popup-policy.cjs');const out=policy.applyGuidePopupPolicy('console/ps3/hen.html','<html><head></head><body><main></main></body></html>');assert.ok(out.includes('console-setup-popups.js'));assert.equal(skipPath('/console/retro/ps2.html'),true);
 });
+
+test('complete jailbreak guides retain inline steps through repeated policy passes in every locale',()=>{
+  const body='<html><head><link rel="stylesheet" href="/assets/console-setup-popups.css?v=1"></head><body><main><section id="walkthrough"><ol><li>Read this step on the page</li></ol></section></main><script defer src="/assets/console-setup-popups.js?v=2"></script></body></html>';
+  for(const code of ['',...require('../localized-html.cjs').codes])for(const platform of ['ps4','ps5']){
+    const file=(code?code+'/':'')+'console/'+platform+'/jailbreaks.html';
+    assert.equal(skipPath('/'+file),true);
+    const clean=apply(file,body);assert.doesNotMatch(clean,/console-setup-popups/);assert.match(clean,/<ol><li>Read this step on the page<\/li><\/ol>/);
+    assert.equal(require('../guide-popup-policy.cjs').applyGuidePopupPolicy(file,clean),clean);
+  }
+});

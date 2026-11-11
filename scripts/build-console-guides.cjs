@@ -221,7 +221,7 @@ page('console/ps4/index.html', 'PlayStation 4', 'Firmware-specific jailbreak res
 hostSection('ps4') + require('./build-console-downloads.cjs').intro('ps4') +
 section('start', 'PS4 downloads', ps4Resources(), 'Game downloads, mods, apps, avatars, game saves and emulators for PS4.') +
 section('console-hub-setup', 'Firmware & jailbreak', grid(
-  resource('Jailbreak', 'Choose the 14.00 WebKit guide or the browser tutorial for 13.52 or lower.', link('/console/ps4/jailbreaks.html', 'Choose your firmware'), '/assets/images/consoles/playstation.jpg'),
+  resource('Jailbreak', 'Full browser guide for PS4 firmware 14.00 or lower, including offline use, app installation and troubleshooting.', link('/console/ps4/jailbreaks.html', 'Read the full guide'), '/assets/images/consoles/playstation.jpg'),
   resource('Firmware downloads', 'Browse PS4 system-software update and recovery files by version in Darthsternie’s firmware archive.', link('/console/ps4/jailbreaks.html#firmware-downloads', 'Browse PS4 firmware'), '/assets/images/consoles/playstation.jpg')
 ), 'Select your firmware route before choosing a jailbreak.'), '#start', 'Choose a guide');
 

@@ -96,7 +96,7 @@ const descriptions = {
   '404.html': 'This page could not be found. Return to the whatwhatboy home page to browse game tools, mods, console homebrew and help resources.',
 };
 const aliases = {
-  'console/ps4/jailbreaks.html': ['PS4 jailbreak firmware selector', 'PS4 14.00 guide', 'PS4 13.52 or lower', 'PS4 browser jailbreak', 'PS4 Blu-ray jailbreak'],
+  'console/ps4/jailbreaks.html': ['PS4 jailbreak 14.00 or lower', 'PS4 browser jailbreak guide', 'MODDED WARFARE PS4 tutorial', 'GamerHack g2all', 'PS4 offline cache', 'PS4 package installer'],
   'console/ps4/jailbreak-13-52.html': ['PS4 13.52 jailbreak', 'PS4 7.00 to 13.52 browser guide', 'MODDED WARFARE PS4 tutorial', 'GamerHack PS4 host', 'RAW GAME host', 'PS4 offline jailbreak cache'],
   'console/ps4/goldhen.html': ['GoldHEN download page', 'archived GoldHEN 2.3', 'supplied GOLDHEN14 ISO', 'PS4 HEN firmware requirements'],
   'console/ps4/downloads.html': ['PS4 console downloads', 'download PS4 homebrew to HDD', 'PS4 Games Installer catalogue', 'PS4 ezRemote downloader', 'PS4 mod file downloads', 'PS4 payload files'],
@@ -266,9 +266,9 @@ function contextualTerms(relative, content) {
     }
   }
   if (/^console\/ps4\/(?:index|jailbreak)\.html$/.test(relative)) {
-    terms.push('PS4 14.0 jailbreak', 'PS4 14.00 jailbreak', 'PS4 manual DNS', 'PS4 Blu-ray jailbreak', 'HEN firmware compatibility');
+    terms.push('PS4 14.00 or lower jailbreak', 'PS4 browser jailbreak', 'PS4 manual DNS', 'PS4 offline cache', 'GoldHEN firmware compatibility');
   }
-  if (relative === 'console/ps4/index.html') terms.push('PS4 13.52 jailbreak guide', 'PS4 Jailbreak pages', 'PS4 GoldHEN downloads');
+  if (relative === 'console/ps4/index.html') terms.push('PS4 14.00 or lower guide', 'PS4 complete jailbreak guide', 'PS4 offline browser jailbreak');
   if (relative === 'console/ps5/index.html') {
     terms.push('PS5 jailbreak firmware compatibility', 'PS5 14.0 jailbreak status', 'PS5 14.00 jailbreak status', 'PS5 14.10 jailbreak status', 'PS5 14.20 jailbreak status', 'PS5 13.60 jailbreak', 'Relapse', 'Y2JB');
   }
@@ -394,7 +394,7 @@ function transform(file, before, options = {}) {
     }
   }
   const aliasModule = path.join(__dirname, 'page-search-tags.cjs');
-  if (!noindex && !redirect && fs.existsSync(aliasModule)) {
+  if (!noindex && !redirect && fs.existsSync(aliasModule) && !override?.exactKeywords) {
     const subjectHeadings = subject + ' ' + [...content.matchAll(/<h[123]\b[^>]*>([\s\S]*?)<\/h[123]>/gi)].map(m => plain(m[1])).join(' ');
     const discovery = require(aliasModule).aliasesFor(subjectHeadings);
     // Reserve a bounded share for functional search terms even on curated pages.

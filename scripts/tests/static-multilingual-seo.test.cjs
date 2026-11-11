@@ -108,6 +108,28 @@ test('PlayStation keyword phrases translate individually and deduplicate in meta
  assert.equal(JSON.parse(output.match(/application\/ld\+json">([^<]+)<\/script>/)[1]).keywords,expected);
 });
 
+test('consolidated PS4 guide retains legacy bookmarks in all locales without duplicate sitemap entries',t=>{
+ const {ctx}=fixture(),folder=fs.mkdtempSync(path.join(os.tmpdir(),'multilingual-jailbreak-'));
+ t.after(()=>fs.rmSync(folder,{recursive:true,force:true}));
+ const page={page:'console/ps4/jailbreaks.html',canonical:html.origin+'/console/ps4/jailbreaks.html'};
+ const source='<html><head><title>Home</title><link rel="canonical" href="'+page.canonical+'"></head><body><h1>Home</h1></body></html>';
+ const file=path.join(folder,page.page);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,source);
+ ctx.pages=new Map([[page.page,page]]);ctx.routes=new Map([['/'+page.page,page.canonical]]);
+ const output=path.join(folder,'site');builder.generate({root:folder,output,context:ctx});
+ for(const code of html.codes){
+  const target='/'+code+'/'+page.page,sitemap=fs.readFileSync(path.join(output,'sitemaps',code+'.xml'),'utf8');
+  assert.ok(sitemap.includes('<loc>'+html.origin+target+'</loc>'));
+  for(const legacy of ['console/ps4/jailbreak.html','console/ps4/jailbreak-13-52.html']){
+   const redirect=fs.readFileSync(path.join(output,code,legacy),'utf8');
+   assert.ok(redirect.includes('content="noindex, follow"'));assert.ok(redirect.includes('href="'+html.origin+target+'"'));
+   let redirected;const location={search:'?from=bookmark',hash:'#firmware-downloads',replace:value=>{redirected=value;}};
+   require('node:vm').runInNewContext(redirect.match(/<script>([^<]+)<\/script>/)[1],{location});
+   assert.equal(redirected,target+location.search+location.hash);assert.ok(!sitemap.includes('/'+legacy));
+  }
+ }
+ for(const route of ['console/ps4/jailbreaks.html','console/ps4/jailbreak.html','console/ps4/jailbreak-13-52.html','console/ps5/jailbreaks.html'])assert.equal(html.localizeKeywordTerms(route),true);
+});
+
 test('shared search data restores original search fields and includes translated card text before filters run',()=>{
  const {source,page,ctx}=fixture(),card='<article data-search="pinned original 5.05 CUSA00419"><h3>Game patches</h3></article>',input=source.replace('</body>',card+'<script>window.searchReady=true;</script></body>');
  const output=builder.render(ctx,page,input,'es'),id=output.match(/data-localized-search="([^"]+)"/)[1],script=[...ctx.shared].find(([name])=>/search-.*\.js$/.test(name))[1],attrs=new Map([['data-localized-search',id]]),node={textContent:'Parches de juegos',getAttribute:key=>attrs.get(key),setAttribute:(key,value)=>attrs.set(key,value),removeAttribute:key=>attrs.delete(key)};

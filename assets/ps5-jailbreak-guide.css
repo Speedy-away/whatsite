@@ -1,0 +1,57 @@
+/* Dedicated reading layout for the complete PS5 jailbreak guide. */
+.ps5-jb-guide .guide-hero { padding-bottom: 1.8rem; }
+.ps5-jb-guide .guide-hero h1 { max-width: 18ch; text-wrap: balance; }
+.ps5-jb-guide .guide-hero p { max-width: 65ch; }
+.ps5-jb-guide #content > .section { scroll-margin-top: 6rem; }
+.ps5-jb-guide #content > .section > .container { max-width: 1050px; }
+.ps5-jb-guide #content > .section p { max-width: 74ch; line-height: 1.75; }
+.ps5-jb-guide #outline { padding-block: 1.4rem 2rem; }
+.ps5-jb-outline { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .2rem 2rem; padding-block: .8rem; border-block: 1px solid var(--border, #333); }
+.ps5-jb-outline a { display: flex; align-items: baseline; gap: .85rem; padding: .7rem .2rem; color: var(--text-primary, #eee); text-decoration: none; transition: color .2s; }
+.ps5-jb-outline a > span { color: var(--accent-light, #79d8bd); font-size: .72rem; font-variant-numeric: tabular-nums; }
+.ps5-jb-outline a:hover, .ps5-jb-outline a:focus-visible { color: var(--accent-light, #79d8bd); }
+.ps5-jb-menu-path { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin-block: 1.5rem; list-style: none; }
+.ps5-jb-menu-path li { display: flex; align-items: center; gap: .5rem; font-size: .92rem; }
+.ps5-jb-menu-path li:not(:last-child)::after { content: '›'; color: var(--accent-light, #79d8bd); font-size: 1.3rem; }
+[dir="rtl"] .ps5-jb-menu-path li:not(:last-child)::after { content: '‹'; }
+.ps5-jb-figure { margin: 1.8rem 0 2rem; overflow: hidden; background: #111719; border: 1px solid var(--border, #333); border-radius: .75rem; }
+.ps5-jb-figure img { display: block; width: 100%; height: auto; object-fit: contain; }
+.ps5-jb-figure figcaption { padding: .9rem 1.1rem; color: var(--text-secondary, #aaa); font-size: .84rem; line-height: 1.6; background: var(--bg-secondary, #161719); }
+.ps5-jb-screen { max-width: 590px; }
+.ps5-jb-routes { margin-block: 1.75rem; border-block: 1px solid var(--border, #333); }
+.ps5-jb-route { display: grid; grid-template-columns: 12rem minmax(0, 1fr) 1.2rem; align-items: center; gap: 1.5rem; padding: 1.4rem .5rem; color: var(--text-primary, #eee); text-decoration: none; transition: background .2s; }
+.ps5-jb-route + .ps5-jb-route { border-top: 1px solid var(--border, #333); }
+.ps5-jb-route > span:first-child { display: grid; gap: .2rem; }
+.ps5-jb-route > span:nth-child(2) { color: var(--text-secondary, #aaa); font-size: .92rem; line-height: 1.65; }
+.ps5-jb-route > span:last-child { color: var(--accent-light, #79d8bd); font-size: 1.3rem; }
+.ps5-jb-route:hover { background: rgba(121, 216, 189, .05); }
+.ps5-jb-range { font-size: 1.3rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ps5-jb-checklist { padding-inline-start: 1.4rem; max-width: 75ch; }
+.ps5-jb-checklist li { margin-block: .8rem; padding-inline-start: .4rem; line-height: 1.75; }
+.ps5-jb-checklist li::marker { color: var(--accent-light, #79d8bd); }
+.ps5-jb-versions { margin-block: 1.2rem 1.8rem; }
+.ps5-jb-versions p { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.ps5-jb-guide .guide-steps { max-width: 80ch; }
+.ps5-jb-guide .guide-steps li { line-height: 1.8; }
+.ps5-jb-files { margin-block: 1rem 1.8rem; }
+.ps5-jb-files a { font-size: .8rem; overflow-wrap: anywhere; }
+.ps5-jb-commands { display: grid; gap: 1rem; margin-block: 1.6rem; padding: 1.3rem; background: var(--bg-secondary, #17191b); border-inline-start: 3px solid var(--accent-light, #79d8bd); }
+.ps5-jb-commands code { display: block; font-size: .88rem; line-height: 1.65; overflow-wrap: anywhere; white-space: normal; color: var(--text-primary, #eee); }
+.ps5-jb-help { margin: 0; }
+.ps5-jb-help > div { display: grid; grid-template-columns: minmax(10rem, 1fr) minmax(0, 2.2fr); gap: 2rem; padding-block: 1.5rem; border-top: 1px solid var(--border, #333); }
+.ps5-jb-help dt { font-weight: 650; line-height: 1.65; }
+.ps5-jb-help dd { margin: 0; color: var(--text-secondary, #aaa); line-height: 1.8; }
+.ps5-jb-firmware-strip { display: flex; align-items: center; gap: 2rem; justify-content: space-between; padding: 1.1rem 1.3rem; border: 1px solid var(--border, #333); border-radius: .6rem; }
+.ps5-jb-firmware-strip p { margin: 0; font-size: .9rem; }
+.ps5-jb-firmware-strip > a { flex-shrink: 0; font-size: .9rem; color: var(--accent-light, #79d8bd); }
+.ps5-jb-guide a:focus-visible { outline: 2px solid var(--accent-light, #79d8bd); outline-offset: 4px; }
+@media (max-width: 680px) {
+  .ps5-jb-outline { grid-template-columns: 1fr; }
+  .ps5-jb-route { grid-template-columns: minmax(0, 1fr) 1.2rem; gap: .6rem 1rem; padding-block: 1.1rem; }
+  .ps5-jb-route > span:nth-child(2) { grid-row: 2; grid-column: 1 / -1; }
+  .ps5-jb-route > span:last-child { grid-column: 2; grid-row: 1; }
+  .ps5-jb-help > div { grid-template-columns: 1fr; gap: .5rem; }
+  .ps5-jb-firmware-strip { display: grid; gap: 1rem; }
+  .ps5-jb-figure figcaption { padding: .8rem; }
+  .ps5-jb-commands { padding: .9rem; }
+}

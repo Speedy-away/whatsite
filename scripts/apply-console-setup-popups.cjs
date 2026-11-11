@@ -1,7 +1,9 @@
 const fs=require('node:fs'),path=require('node:path');
 const {skipPath}=require('../assets/console-setup-popups.js');
 const root=path.resolve(__dirname,'..');
-function apply(file,html){const route='/'+file.replaceAll('\\','/');if(skipPath(route)||!/<main\b/.test(html))return html;
+function apply(file,html){const route='/'+file.replaceAll('\\','/');
+  if(/^\/(?:[a-z]{2}\/)?console\/ps[45]\/jailbreaks\.html$/.test(route))return html.replace(/<script\b[^>]*src="\/assets\/console-setup-popups\.js[^"]*"[^>]*><\/script>/g,'').replace(/<link\b[^>]*href="\/assets\/console-setup-popups\.css[^"]*"[^>]*>/g,'');
+  if(skipPath(route)||!/<main\b/.test(html))return html;
   if(!html.includes('/assets/console-setup-popups.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/console-setup-popups.css?v=1"></head>');
   if(!html.includes('/assets/console-setup-popups.js'))html=html.replace('</body>','<script defer src="/assets/console-setup-popups.js?v=2"></script></body>');
   return html.replace(/\/assets\/console-setup-popups\.js\?v=\d+/g,'/assets/console-setup-popups.js?v=2');}

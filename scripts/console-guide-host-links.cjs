@@ -35,6 +35,9 @@ function apply(file, html) {
     if (index % 2) return part;
     return part.replace(/<a\b([^>]*\shref="([^"]+)"[^>]*)>([\s\S]*?)<\/a>/g, (all, attrs, href, content) => {
       const url = href.replaceAll('&amp;', '&');
+      // A video companion's exact loader has its own cache/retry workflow.
+      // Keep explicit tutorial links alongside the independent host alternative.
+      if (/\sdata-tutorial-host(?:\s|=|$)/.test(attrs)) return all;
       if (/\sdownload(?:\s|=|$)/.test(attrs)) return all;
       const ownEntry = /^(?:https:\/\/(?:whatwhatboy\.com|speedy-away\.github\.io)(?:\/(?:WWB-HOST|wwb-host))?)?\/hosts\/(?:ps[45]\/)?$/.test(url);
       const hostCard = /\sclass="(?:[^"]*\s)?guide-host(?:\s|")/.test(attrs);

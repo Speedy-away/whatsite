@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-11",
+  "sourceVideo": {
+    "url": "https://www.youtube.com/watch?v=jkN-EJPbh1Y",
+    "creator": "MODDED WARFARE",
+    "published": "2026-11-10",
+    "platform": "PS4",
+    "review": "Description, chapters and full transcript read in browser"
+  },
+  "pages": [
+    "console/ps4/jailbreaks.html",
+    "console/ps4/index.html",
+    "console/ps5/jailbreaks.html"
+  ],
+  "aliases": [
+    "console/ps4/jailbreak.html",
+    "console/ps4/jailbreak-13-52.html"
+  ],
+  "languages": 20,
+  "localizedPages": 60,
+  "illustrations": 6,
+  "testsPassed": 48,
+  "checks": [
+    "Exact PS5 firmware allowlists preserved",
+    "PS4 tutorial host and GoldHEN 2.4b18.13 evidence retained",
+    "Full steps remain inline through repeated popup-policy passes",
+    "PS4 firmware section collapsed by default",
+    "Both phone layouts and Arabic RTL have no horizontal overflow",
+    "Local links, diagrams, canonical metadata and translation literals verified"
+  ],
+  "limits": "No physical-console jailbreak or payload execution. No new binaries or archive changes. PS5 desktop resize could not be confirmed by the preview tool."
+}

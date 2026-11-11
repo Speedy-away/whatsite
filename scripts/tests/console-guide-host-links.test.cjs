@@ -28,6 +28,12 @@ test('downloads, store installation links, source references and packaged tools 
   assert.equal(apply('console/ps3/index.html', launch), launch);
 });
 
+test('an explicitly sourced tutorial keeps the loader its instructions describe', () => {
+  const html = '<a data-tutorial-host href="https://gamerhack.github.io/g2all/">GamerHack</a>';
+  assert.equal(apply('console/ps4/jailbreaks.html', html), html);
+  assert.equal(apply('console/ps4/jailbreaks.html', '<a href="https://gamerhack.github.io/g2all/">Host</a>').includes(destinations.ps4), true);
+});
+
 test('legacy own-host addresses retain labels and explicit platform destinations', () => {
   const html = '<a href="https://speedy-away.github.io/WWB-HOST/hosts/ps4/">Open PS4 loader</a>';
   const result = apply('console/ps5/downloads.html', html);
@@ -58,10 +64,10 @@ test('each hub card links to its catalog entry or the matching first-party host'
 });
 
 test('authored pages retain compatibility and are ready for repeat generation', () => {
-  for (const file of ['ps4/index.html', 'ps4/jailbreak.html', 'ps4/jailbreak-13-52.html', 'ps5/index.html', 'ps5/relapse.html', 'ps5/umtx2.html']) {
+  for (const file of ['ps4/index.html', 'ps4/jailbreaks.html', 'ps5/index.html', 'ps5/relapse.html', 'ps5/umtx2.html']) {
     const html = fs.readFileSync('console/' + file, 'utf8');
     assert.equal(apply('console/' + file, html), html, file);
-    const host = file === 'ps4/jailbreak.html' ? 'https://well0nez.github.io/afterglow-web/' : destinations[file.split('/')[0]];
+    const host = destinations[file.split('/')[0]];
     assert.ok(html.includes(host), file);
   }
   const umtx = fs.readFileSync('console/ps5/umtx2.html', 'utf8');

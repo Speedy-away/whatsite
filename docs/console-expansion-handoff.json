@@ -1,4 +1,23 @@
 {
+  "ps4Ps5JailbreakGuideRewrite20261111": {
+    "date": "2026-11-11",
+    "status": "Complete and verified; included in the scoped guide publication. GitHub Pages deployment runs separately.",
+    "pages": [
+      "console/ps4/jailbreaks.html",
+      "console/ps4/index.html",
+      "console/ps5/jailbreaks.html"
+    ],
+    "changes": "Consolidated PS4 into a full14.00-or-lower video companion; removed split firmware cards and GoldHEN/HEN download section; compact optional firmware files;6 original diagrams; complete PS5 method walkthroughs and exact allowlists.",
+    "source": "https://www.youtube.com/watch?v=jkN-EJPbh1Y",
+    "localization": "20 saved language translations, reviewed guide titles,60 rendered pages and40 locale-preserving legacy redirects.",
+    "preservation": "Existing downloads, older versions, archive inventories and independent host repository retained. No console binaries were downloaded or executed.",
+    "verification": "48 focused tests plus scoped metadata, links, XML diagrams and browser phone/RTL checks.",
+    "report": "docs/qa/ps4-ps5-jailbreak-guides-20261111.json",
+    "regenerate": [
+      "node scripts/build-ps4-jailbreaks.cjs",
+      "node -e \"require('./scripts/build-ps5-jailbreaks.cjs').buildSelector()\""
+    ]
+  },
   "gameLibrarySearch20261111": {
     "date": "2026-11-11",
     "status": "Verified and included in the scoped library search publication.",
