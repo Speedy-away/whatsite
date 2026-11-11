@@ -1,7 +1,7 @@
 {
   "ps4Title": "Guide de transfert de fichiers PS4",
   "ps5Title": "Guide de transfert de fichiers PS5",
-  "intro": "Copiez des fichiers depuis un ordinateur, un téléphone ou une clé USB. Suivez les images numérotées, puis vérifiez le fichier complet sur votre console.",
+  "intro": "Copiez des fichiers depuis un ordinateur, un téléphone ou une clé USB.",
   "choose": "Choisissez votre méthode",
   "computer": "Ordinateur · FileZilla",
   "phone": "Téléphone · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "Téléchargements et applications",
   "reviewed": "Guide révisé le 11 novembre 2026. Les transferts sur consoles physiques n’ont pas été testés ici.",
   "pictureAlt": "Schéma de transfert numéroté avec champs de connexion, appareils et chemins de fichiers surlignés",
-  "ps4Summary": "Instructions PS4 simples pour FileZilla, FTP sur iPhone, Android et HarmonyOS et USB, avec images numérotées et gestion des fichiers avec PS4-Xplorer.",
-  "ps5Summary": "Instructions PS5 simples pour FileZilla, FTP sur iPhone, Android et HarmonyOS et USB, avec images numérotées et gestion des fichiers avec ezRemote Client.",
+  "ps4Summary": "Instructions PS4 simples pour FileZilla, FTP sur iPhone, Android et HarmonyOS et USB, avec captures d’écran et gestion des fichiers avec PS4-Xplorer.",
+  "ps5Summary": "Instructions PS5 simples pour FileZilla, FTP sur iPhone, Android et HarmonyOS et USB, avec captures d’écran et gestion des fichiers avec ezRemote Client.",
   "methodQuestion": "Comment voulez-vous transférer vos fichiers ?",
   "ftpChoice": "FTP · ordinateur ou téléphone",
   "usbChoice": "USB · copier depuis un support",
@@ -132,5 +132,14 @@
   "ps5Controls": "Dans ezRemote pour PS5, Croix ouvre un élément, Carré marque les fichiers, Triangle ouvre Actions et L2 ouvre le dossier parent. Pour copier de l’USB vers le stockage interne, restez dans la liste des fichiers locaux. Options ferme l’application.",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "Touchez + et choisissez FTP. Saisissez l’adresse IP de votre console, le port FTP et les identifiants du serveur. Enregistrez puis ouvrez la connexion. Autorisez l’accès au réseau local si iOS vous le demande.",
+  "iosFind": "Retrouvez le fichier téléchargé dans Fichiers. S’il se trouve en dehors de FTPManager, utilisez Partager pour l’ouvrir dans l’app. Dans FTPManager, ouvrez Local, sélectionnez le fichier et choisissez Copier vers.",
+  "iosUpload": "Choisissez la connexion enregistrée de votre console et ouvrez le dossier de destination. Confirmez la copie. Une fois celle-ci terminée, actualisez le dossier sur la console et comparez la taille du fichier.",
+  "androidConnect": "Ouvrez le menu latéral de Solid Explorer et accédez au gestionnaire de stockage. Touchez +, choisissez FTP et saisissez l’adresse IP de votre console, le port FTP et les identifiants du serveur. Terminez l’assistant et ouvrez la connexion.",
+  "androidFind": "Ouvrez Téléchargements dans Solid Explorer. Appuyez longuement sur le fichier téléchargé, puis touchez Copier. Ouvrez la connexion FTP enregistrée et accédez au dossier de destination.",
+  "androidUpload": "Touchez Coller. Attendez la fin de la copie, puis actualisez le dossier sur la console et comparez la taille du fichier.",
+  "harmonyConnect": "Dans electerm, ouvrez les favoris et ajoutez une connexion. Sélectionnez FTP et saisissez l’adresse IP de votre console, le port FTP et les identifiants du serveur. Enregistrez puis ouvrez la connexion.",
+  "harmonyFind": "Dans l’explorateur de fichiers de la connexion, ouvrez le dossier de la console indiqué dans les instructions du téléchargement. Choisissez Téléverser et sélectionnez le fichier téléchargé sur votre téléphone.",
+  "harmonyUpload": "Laissez electerm ouvert pendant le transfert. Une fois la copie terminée, actualisez le dossier sur la console et comparez la taille du fichier."
 }

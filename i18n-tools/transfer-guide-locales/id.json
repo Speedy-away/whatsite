@@ -1,7 +1,7 @@
 {
   "ps4Title": "Panduan transfer file PS4",
   "ps5Title": "Panduan transfer file PS5",
-  "intro": "Salin file dari komputer, ponsel, atau drive USB. Ikuti gambar bernomor, lalu periksa file yang sudah selesai di konsol.",
+  "intro": "Salin file dari komputer, ponsel, atau drive USB.",
   "choose": "Pilih metode transfer",
   "computer": "Komputer · FileZilla",
   "phone": "Ponsel · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "Unduhan dan aplikasi",
   "reviewed": "Panduan ditinjau 11 November 2026. Transfer pada konsol fisik belum diuji di sini.",
   "pictureAlt": "Diagram transfer bernomor dengan sorotan pada kolom koneksi, perangkat, dan jalur file",
-  "ps4Summary": "Petunjuk PS4 sederhana untuk FileZilla, FTP di iPhone, Android, HarmonyOS, dan USB, dengan gambar bernomor serta pengelolaan file PS4-Xplorer.",
-  "ps5Summary": "Petunjuk PS5 sederhana untuk FileZilla, FTP di iPhone, Android, HarmonyOS, dan USB, dengan gambar bernomor serta pengelolaan file ezRemote Client.",
+  "ps4Summary": "Petunjuk PS4 sederhana untuk FileZilla, FTP di iPhone, Android, HarmonyOS, dan USB, dengan tangkapan layar serta pengelolaan file PS4-Xplorer.",
+  "ps5Summary": "Petunjuk PS5 sederhana untuk FileZilla, FTP di iPhone, Android, HarmonyOS, dan USB, dengan tangkapan layar serta pengelolaan file ezRemote Client.",
   "methodQuestion": "Bagaimana Anda ingin mentransfer file?",
   "ftpChoice": "FTP · komputer atau ponsel",
   "usbChoice": "USB · salin dari drive",
@@ -132,5 +132,14 @@
   "ps5Controls": "Di ezRemote PS5, tombol × membuka item, □ menandai file, △ membuka Tindakan, dan L2 membuka folder induk. Penyalinan dari USB ke penyimpanan internal tetap dilakukan di daftar file lokal. Options keluar dari aplikasi.",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "Ketuk + dan pilih FTP. Masukkan alamat IP konsol, port FTP, dan informasi login server. Simpan lalu buka koneksinya. Izinkan akses Jaringan Lokal jika iOS memintanya.",
+  "iosFind": "Temukan file yang sudah selesai diunduh di app File. Jika file berada di luar FTPManager, gunakan Bagikan untuk membukanya di aplikasi tersebut. Di FTPManager, buka Local, pilih file, lalu pilih Copy to.",
+  "iosUpload": "Pilih koneksi konsol yang tersimpan dan buka folder tujuan. Konfirmasi penyalinan. Setelah selesai, segarkan folder di konsol dan bandingkan ukuran file.",
+  "androidConnect": "Buka menu samping di Solid Explorer dan masuk ke Storage manager. Ketuk +, pilih FTP, lalu masukkan alamat IP konsol, port FTP, dan informasi login server. Selesaikan penyiapan dan buka koneksinya.",
+  "androidFind": "Buka Unduhan di Solid Explorer. Sentuh dan tahan file yang sudah selesai diunduh, lalu ketuk Salin. Buka koneksi FTP yang tersimpan dan masuk ke folder tujuan.",
+  "androidUpload": "Ketuk Tempel. Tunggu sampai penyalinan selesai, lalu segarkan folder di konsol dan bandingkan ukuran file.",
+  "harmonyConnect": "Di electerm, buka Bookmarks dan tambahkan koneksi baru. Pilih FTP, masukkan alamat IP konsol, port FTP, dan informasi login server, lalu simpan dan buka koneksinya.",
+  "harmonyFind": "Di penjelajah file koneksi, buka folder konsol yang ditentukan dalam petunjuk unduhan. Pilih Upload, lalu pilih file yang sudah selesai diunduh di ponsel Anda.",
+  "harmonyUpload": "Biarkan electerm terbuka selama unggahan. Setelah penyalinan selesai, segarkan folder di konsol dan bandingkan ukuran file."
 }

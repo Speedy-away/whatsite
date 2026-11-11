@@ -11820,6 +11820,12 @@
       "node scripts/build-transfer-guides.cjs",
       "node scripts/prepare-transfer-guide-locales.cjs"
     ],
-    "report": "docs/qa/ps4-ps5-transfer-guides-20261111.json"
+    "report": "docs/qa/ps4-ps5-transfer-guides-20261111.json",
+    "photoRefresh": {
+      "date": "2026-11-11",
+      "changes": "Replaced the diagrams on the guides with credited, unmarked photographs and real screenshots. Each phone app has its own three-step walkthrough in all 20 supported site languages.",
+      "coverage": "USB flash drive, PS4 and PS5 connection status, GoldHEN, PS4-Xplorer, PS5 ezRemote Client, FileZilla, FTPManager and Solid Explorer.",
+      "harmony": "The electerm walkthrough links to AppGallery and publisher documentation. A native HarmonyOS screenshot could not be verified."
+    }
   }
 }

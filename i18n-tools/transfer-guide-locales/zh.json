@@ -1,7 +1,7 @@
 {
   "ps4Title": "PS4 文件传输指南",
   "ps5Title": "PS5 文件传输指南",
-  "intro": "从电脑、手机或 USB 存储设备复制文件。按照带编号的图示操作，然后在主机上检查传输完成的文件。",
+  "intro": "从电脑、手机或 USB 存储设备复制文件。",
   "choose": "选择传输方式",
   "computer": "电脑 · FileZilla",
   "phone": "手机 · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "下载和应用",
   "reviewed": "指南审阅于 2026 年 11 月 11 日。此处尚未在实体主机上测试传输。",
   "pictureAlt": "带编号的传输示意图，突出显示连接字段、设备和文件路径",
-  "ps4Summary": "简单易懂的 PS4 FileZilla、iPhone、Android、HarmonyOS FTP 和 USB 操作说明，附带编号图示及 PS4-Xplorer 文件管理指南。",
-  "ps5Summary": "简单易懂的 PS5 FileZilla、iPhone、Android、HarmonyOS FTP 和 USB 操作说明，附带编号图示及 ezRemote Client 文件管理指南。",
+  "ps4Summary": "简单易懂的 PS4 FileZilla、iPhone、Android、HarmonyOS FTP 和 USB 操作说明，附带屏幕截图及 PS4-Xplorer 文件管理指南。",
+  "ps5Summary": "简单易懂的 PS5 FileZilla、iPhone、Android、HarmonyOS FTP 和 USB 操作说明，附带屏幕截图及 ezRemote Client 文件管理指南。",
   "methodQuestion": "你想怎样传输文件？",
   "ftpChoice": "FTP · 电脑或手机",
   "usbChoice": "USB · 从存储设备复制",
@@ -132,5 +132,14 @@
   "ps5Controls": "在 PS5 ezRemote 中，× 键打开项目，□ 键标记文件，△ 键打开操作菜单，L2 打开上级文件夹。从 USB 复制到内部存储时，请保持在本地文件列表中操作。Options 键退出应用。",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "点按 +，选择 FTP。输入主机的 IP 地址、FTP 端口和服务器登录信息。保存并打开连接。如果 iOS 弹出提示，请允许访问本地网络。",
+  "iosFind": "在「文件」应用中找到已下载完成的文件。如果文件不在 FTPManager 内，请用「共享」在该应用中打开文件。在 FTPManager 中打开 Local，选中文件，然后选择 Copy to。",
+  "iosUpload": "选择已保存的主机连接，打开目标文件夹并确认复制。完成后，刷新主机上的文件夹并比较文件大小。",
+  "androidConnect": "在 Solid Explorer 中打开侧边菜单，进入 Storage manager。点按 +，选择 FTP，然后输入主机 IP 地址、FTP 端口和服务器登录信息。完成设置向导，然后打开连接。",
+  "androidFind": "在 Solid Explorer 中打开「下载」文件夹。长按已下载完成的文件，然后点按「复制」。打开已保存的 FTP 连接并进入目标文件夹。",
+  "androidUpload": "点按「粘贴」。等待复制完成，然后刷新主机上的文件夹并比较文件大小。",
+  "harmonyConnect": "在 electerm 中打开 Bookmarks 并添加新连接。选择 FTP，输入主机 IP 地址、FTP 端口和服务器登录信息，然后保存并打开连接。",
+  "harmonyFind": "在连接的文件浏览器中，打开下载说明指定的主机文件夹。选择 Upload，然后从手机中选取已下载完成的文件。",
+  "harmonyUpload": "上传期间保持 electerm 打开。复制完成后，刷新主机上的文件夹并比较文件大小。"
 }

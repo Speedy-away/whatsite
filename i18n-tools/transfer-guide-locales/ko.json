@@ -1,7 +1,7 @@
 {
   "ps4Title": "PS4 파일 전송 가이드",
   "ps5Title": "PS5 파일 전송 가이드",
-  "intro": "컴퓨터, 휴대폰 또는 USB 드라이브에서 파일을 복사하세요. 번호가 표시된 그림을 따라 진행한 뒤 콘솔에서 완성된 파일을 확인하세요.",
+  "intro": "컴퓨터, 휴대폰 또는 USB 드라이브에서 파일을 복사하세요.",
   "choose": "전송 방법 선택",
   "computer": "컴퓨터 · FileZilla",
   "phone": "휴대폰 · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "다운로드 및 앱",
   "reviewed": "가이드 검토일: 2026년 11월 11일. 실제 콘솔에서의 전송은 여기서 테스트하지 않았습니다.",
   "pictureAlt": "연결 입력란, 기기, 파일 경로가 강조된 번호 표시 전송 그림",
-  "ps4Summary": "PS4용 FileZilla, iPhone, Android, HarmonyOS FTP 및 USB 사용법을 쉽게 안내합니다. 번호가 표시된 그림과 PS4-Xplorer 파일 관리 설명을 포함합니다.",
-  "ps5Summary": "PS5용 FileZilla, iPhone, Android, HarmonyOS FTP 및 USB 사용법을 쉽게 안내합니다. 번호가 표시된 그림과 ezRemote Client 파일 관리 설명을 포함합니다.",
+  "ps4Summary": "PS4용 FileZilla, iPhone, Android, HarmonyOS FTP 및 USB 사용법을 쉽게 안내합니다. 실제 화면과 PS4-Xplorer 파일 관리 설명을 포함합니다.",
+  "ps5Summary": "PS5용 FileZilla, iPhone, Android, HarmonyOS FTP 및 USB 사용법을 쉽게 안내합니다. 실제 화면과 ezRemote Client 파일 관리 설명을 포함합니다.",
   "methodQuestion": "어떤 방법으로 파일을 전송할까요?",
   "ftpChoice": "FTP · 컴퓨터 또는 휴대폰",
   "usbChoice": "USB · 드라이브에서 복사",
@@ -132,5 +132,14 @@
   "ps5Controls": "PS5 ezRemote에서 × 버튼은 항목을 열고, □ 버튼은 파일을 표시하며, △ 버튼은 작업 메뉴를 열고, L2는 상위 폴더를 엽니다. USB에서 내부 저장소로 복사할 때는 로컬 파일 목록에서 작업하세요. Options 버튼은 앱을 종료합니다.",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "+를 누르고 FTP를 선택하세요. 콘솔의 IP 주소, FTP 포트, 서버 로그인 정보를 입력하세요. 연결을 저장하고 여세요. iOS에서 요청하면 로컬 네트워크 접근을 허용하세요.",
+  "iosFind": "파일 앱에서 다운로드가 끝난 파일을 찾으세요. 파일이 FTPManager 외부에 있다면 공유를 사용해 앱에서 여세요. FTPManager에서 Local을 열고 파일을 선택한 뒤 Copy to를 선택하세요.",
+  "iosUpload": "저장한 콘솔 연결을 선택하고 대상 폴더를 여세요. 복사를 확인하세요. 완료되면 콘솔 폴더를 새로 고쳐 파일 크기를 비교하세요.",
+  "androidConnect": "Solid Explorer의 사이드 메뉴에서 Storage manager를 여세요. +를 누르고 FTP를 선택한 뒤 콘솔의 IP 주소, FTP 포트, 서버 로그인 정보를 입력하세요. 설정을 마치고 연결을 여세요.",
+  "androidFind": "Solid Explorer에서 다운로드 폴더를 여세요. 다운로드가 끝난 파일을 길게 누른 다음 복사를 누르세요. 저장한 FTP 연결을 열고 대상 폴더로 이동하세요.",
+  "androidUpload": "붙여넣기를 누르세요. 복사가 끝나면 콘솔 폴더를 새로 고쳐 파일 크기를 비교하세요.",
+  "harmonyConnect": "electerm에서 Bookmarks를 열고 새 연결을 추가하세요. FTP를 선택하고 콘솔의 IP 주소, FTP 포트, 서버 로그인 정보를 입력한 다음 연결을 저장하고 여세요.",
+  "harmonyFind": "연결의 파일 브라우저에서 다운로드 안내에 명시된 콘솔 폴더를 여세요. Upload를 선택한 뒤 휴대폰에서 다운로드가 끝난 파일을 선택하세요.",
+  "harmonyUpload": "업로드가 진행되는 동안 electerm을 열어 두세요. 복사가 끝나면 콘솔 폴더를 새로 고쳐 파일 크기를 비교하세요."
 }

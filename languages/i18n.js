@@ -60,7 +60,7 @@
     }
     var version = s && s.src && s.src.match(/[?&]v=([^&#]+)/);
     if (version) DICTIONARY_QUERY = '?v=' + version[1];
-    DICTIONARY_QUERY += (DICTIONARY_QUERY ? '&' : '?') + 'rev=20261111-transfer-guides';
+    DICTIONARY_QUERY += (DICTIONARY_QUERY ? '&' : '?') + 'rev=20261111-transfer-photos';
     return s && s.src ? s.src.replace(/[^/]*$/, '') : '/languages/';
   })();
 

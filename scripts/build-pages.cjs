@@ -75,7 +75,7 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, p
     legacyLibraryShard.test(f.name) ||
     isBuildRecord(f.name) ||
     /^scooby\/(?:FSL\/)?WINMM\.dll$/i.test(f.name) ||
-    (/^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) && !libraryArtwork.has(f.name) && !f.name.startsWith('assets/images/transfer-guides/')) ||
+    (/^assets\/images\/.+\.(?:png|jpe?g|webp|gif|avif|svg|ico)$/i.test(f.name) && !libraryArtwork.has(f.name) && !f.name.startsWith('assets/images/transfer-guides/') && f.name !== 'assets/images/expansion-ps4-ps5/ps5-ezremote.jpg') ||
     /^hosts\/runtime\/karo-[^/]+\/web\/.+\.(?:bin|elf|bz2|zip)$/i.test(f.name)
   ).sort((a, b) => b.bytes - a.bytes || a.name.localeCompare(b.name));
   const offloaded = sourceLinks(root);

@@ -1,7 +1,7 @@
 {
   "ps4Title": "PS4 file transfer guide",
   "ps5Title": "PS5 file transfer guide",
-  "intro": "Copy files from a computer, phone or USB drive. Follow the numbered pictures, then check the finished file on your console.",
+  "intro": "Copy files from a computer, phone or USB drive.",
   "choose": "Choose your method",
   "computer": "Computer · FileZilla",
   "phone": "Phone · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "Downloads & apps",
   "reviewed": "Guide reviewed 11 November 2026. Transfers on physical consoles have not been tested here.",
   "pictureAlt": "Numbered transfer diagram with highlighted connection fields, devices and file paths",
-  "ps4Summary": "Simple PS4 FileZilla, iPhone, Android, HarmonyOS FTP and USB instructions, with numbered images and PS4-Xplorer file management.",
-  "ps5Summary": "Simple PS5 FileZilla, iPhone, Android, HarmonyOS FTP and USB instructions, with numbered images and ezRemote Client file management.",
+  "ps4Summary": "Simple PS4 FileZilla, iPhone, Android, HarmonyOS FTP and USB instructions, with screenshots and PS4-Xplorer file management.",
+  "ps5Summary": "Simple PS5 FileZilla, iPhone, Android, HarmonyOS FTP and USB instructions, with screenshots and ezRemote Client file management.",
   "methodQuestion": "How do you want to transfer files?",
   "ftpChoice": "FTP · computer or phone",
   "usbChoice": "USB · copy from a drive",
@@ -132,5 +132,14 @@
   "managerCaption": "1: select the source file. 2: choose Copy. 3: open the destination. 4: choose Paste and wait for completion.",
   "ps5ToolSummary": "Manage PS5 files with ezRemote Client 2.18. Start the included loader 1.01 through a compatible elfldr setup; this release’s loader no longer needs websrv.",
   "ps4Controls": "In PS4-Xplorer, Cross opens or confirms, Circle goes back, and Triangle opens the action menu for Copy or Paste. Follow the hints in your installed version if its controls differ.",
-  "ps5Controls": "In PS5 ezRemote, Cross opens an item, Square marks files, Triangle opens Actions, and L2 opens the parent folder. USB-to-internal copying stays in the local file list. Options exits the app."
+  "ps5Controls": "In PS5 ezRemote, Cross opens an item, Square marks files, Triangle opens Actions, and L2 opens the parent folder. USB-to-internal copying stays in the local file list. Options exits the app.",
+  "iosConnect": "Tap + and choose FTP. Enter your console’s IP address, FTP port and server login. Save and open the connection. Allow Local Network access if iOS asks.",
+  "iosFind": "Find the completed download in Files. If it is outside FTPManager, use Share to open it in the app. In FTPManager, open Local, select the file and choose Copy to.",
+  "iosUpload": "Choose your saved console connection and open the destination folder. Confirm the copy. When it finishes, refresh the console folder and compare the file size.",
+  "androidConnect": "Open the side menu in Solid Explorer and go to Storage manager. Tap +, choose FTP and enter your console’s IP address, FTP port and server login. Finish the wizard and open the connection.",
+  "androidFind": "Open Downloads in Solid Explorer. Touch and hold the completed file, then tap Copy. Open your saved FTP connection and browse to the destination folder.",
+  "androidUpload": "Tap Paste. Wait for the copy to finish, then refresh the console folder and compare the file size.",
+  "harmonyConnect": "In electerm, open Bookmarks and add a new connection. Select FTP, enter your console’s IP address, FTP port and server login, then save and open the connection.",
+  "harmonyFind": "In the connection’s file browser, open the console folder required by your download. Choose Upload and select the completed file from your phone.",
+  "harmonyUpload": "Keep electerm open while it uploads. When the copy finishes, refresh the console folder and compare the file size."
 }

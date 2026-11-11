@@ -1,7 +1,7 @@
 {
   "ps4Title": "PS4 dosya aktarım rehberi",
   "ps5Title": "PS5 dosya aktarım rehberi",
-  "intro": "Bilgisayardan, telefondan veya USB sürücüden dosya kopyalayın. Numaralı görselleri izleyin, ardından tamamlanan dosyayı konsolunuzda kontrol edin.",
+  "intro": "Bilgisayardan, telefondan veya USB sürücüden dosya kopyalayın.",
   "choose": "Yönteminizi seçin",
   "computer": "Bilgisayar · FileZilla",
   "phone": "Telefon · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "İndirmeler ve uygulamalar",
   "reviewed": "Rehber 11 Kasım 2026'da gözden geçirildi. Burada fiziksel konsollarda aktarım testi yapılmadı.",
   "pictureAlt": "Bağlantı alanları, cihazlar ve dosya yolları vurgulanmış numaralı aktarım şeması",
-  "ps4Summary": "Numaralı görseller ve PS4-Xplorer dosya yönetimiyle basit PS4 FileZilla, iPhone, Android, HarmonyOS FTP ve USB yönergeleri.",
-  "ps5Summary": "Numaralı görseller ve ezRemote Client dosya yönetimiyle basit PS5 FileZilla, iPhone, Android, HarmonyOS FTP ve USB yönergeleri.",
+  "ps4Summary": "Ekran görüntüleri ve PS4-Xplorer dosya yönetimiyle basit PS4 FileZilla, iPhone, Android, HarmonyOS FTP ve USB yönergeleri.",
+  "ps5Summary": "Ekran görüntüleri ve ezRemote Client dosya yönetimiyle basit PS5 FileZilla, iPhone, Android, HarmonyOS FTP ve USB yönergeleri.",
   "methodQuestion": "Dosyaları nasıl aktarmak istiyorsunuz?",
   "ftpChoice": "FTP · bilgisayar veya telefon",
   "usbChoice": "USB · sürücüden kopyalama",
@@ -132,5 +132,14 @@
   "ps5Controls": "PS5 ezRemote'ta Çarpı öğeyi açar, Kare dosyaları işaretler, Üçgen İşlemler'i ve L2 üst klasörü açar. USB'den dahili depolamaya kopyalarken yerel dosya listesinde kalın. Options uygulamadan çıkar.",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "+ düğmesine dokunun ve FTP’yi seçin. Konsolunuzun IP adresini, FTP bağlantı noktasını ve sunucu oturum bilgilerini girin. Bağlantıyı kaydedip açın. iOS sorarsa Yerel Ağ erişimine izin verin.",
+  "iosFind": "İndirmesi tamamlanan dosyayı Dosyalar uygulamasında bulun. Dosya FTPManager dışında kayıtlıysa Paylaş ile uygulamada açın. FTPManager’da Yerel bölümünü açın, dosyayı seçin ve Şuraya Kopyala’ya dokunun.",
+  "iosUpload": "Kayıtlı konsol bağlantınızı seçip hedef klasörü açın. Kopyalamayı onaylayın. İşlem bittiğinde konsol klasörünü yenileyip dosya boyutunu karşılaştırın.",
+  "androidConnect": "Solid Explorer’da yan menüyü açıp Depolama yöneticisine gidin. + düğmesine dokunun, FTP’yi seçin ve konsolunuzun IP adresini, FTP bağlantı noktasını ve sunucu oturum bilgilerini girin. Sihirbazı tamamlayıp bağlantıyı açın.",
+  "androidFind": "Solid Explorer’da İndirilenler’i açın. İndirmesi tamamlanan dosyaya basılı tutup Kopyala’ya dokunun. Kayıtlı FTP bağlantınızı açın ve hedef klasöre gidin.",
+  "androidUpload": "Yapıştır’a dokunun. Kopyalama bitince konsol klasörünü yenileyip dosya boyutunu karşılaştırın.",
+  "harmonyConnect": "electerm’de Yer İmleri’ni açıp yeni bir bağlantı ekleyin. FTP’yi seçin ve konsolunuzun IP adresini, FTP bağlantı noktasını ve sunucu oturum bilgilerini girin. Bağlantıyı kaydedip açın.",
+  "harmonyFind": "Bağlantının dosya tarayıcısında indirme talimatlarında belirtilen konsol klasörünü açın. Yükle’yi seçip telefonunuzdaki indirmesi tamamlanmış dosyayı seçin.",
+  "harmonyUpload": "Yükleme sırasında electerm’i açık tutun. Kopyalama bittiğinde konsol klasörünü yenileyip dosya boyutunu karşılaştırın."
 }

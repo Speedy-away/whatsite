@@ -59,14 +59,5 @@
   });
   window.addEventListener('popstate',apply);
   window.addEventListener('hashchange',function(){apply();showTarget(location.hash);});
-  function diagrams(){
-    var lang=document.documentElement.lang.split('-')[0];
-    var codes=['es','pt','fr','de','ru','tr','pl','it','zh','ja','ko','th','vi','id','hi','sr','nl','ka','ar','he'];
-    var prefix='/assets/images/transfer-guides/'+(codes.indexOf(lang)>-1?lang+'/':'');
-    document.querySelectorAll('[data-localized-diagram]').forEach(function(img){img.src=prefix+img.dataset.localizedDiagram+'.svg';});
-    document.querySelectorAll('[data-diagram-link]').forEach(function(link){link.href=prefix+link.dataset.diagramLink+'.svg';});
-  }
-  window.addEventListener('scooby:langchange',diagrams);
   if(methodChoices.length){apply();if(location.hash)showTarget(location.hash);}
-  diagrams();
 })();

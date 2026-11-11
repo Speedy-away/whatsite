@@ -1,7 +1,7 @@
 {
   "ps4Title": "Handleiding bestanden overzetten naar PS4",
   "ps5Title": "Handleiding bestanden overzetten naar PS5",
-  "intro": "Kopieer bestanden vanaf een computer, telefoon of USB-station. Volg de genummerde afbeeldingen en controleer daarna het volledige bestand op je console.",
+  "intro": "Kopieer bestanden vanaf een computer, telefoon of USB-station.",
   "choose": "Kies je methode",
   "computer": "Computer · FileZilla",
   "phone": "Telefoon · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "Downloads en apps",
   "reviewed": "Handleiding gecontroleerd op 11 november 2026. Overdrachten op fysieke consoles zijn hier niet getest.",
   "pictureAlt": "Genummerd overdrachtsschema met gemarkeerde verbindingsvelden, apparaten en bestandspaden",
-  "ps4Summary": "Eenvoudige PS4-instructies voor FileZilla, FTP op iPhone, Android en HarmonyOS en USB, met genummerde afbeeldingen en bestandsbeheer via PS4-Xplorer.",
-  "ps5Summary": "Eenvoudige PS5-instructies voor FileZilla, FTP op iPhone, Android en HarmonyOS en USB, met genummerde afbeeldingen en bestandsbeheer via ezRemote Client.",
+  "ps4Summary": "Eenvoudige PS4-instructies voor FileZilla, FTP op iPhone, Android en HarmonyOS en USB, met schermafbeeldingen en bestandsbeheer via PS4-Xplorer.",
+  "ps5Summary": "Eenvoudige PS5-instructies voor FileZilla, FTP op iPhone, Android en HarmonyOS en USB, met schermafbeeldingen en bestandsbeheer via ezRemote Client.",
   "methodQuestion": "Hoe wil je bestanden overzetten?",
   "ftpChoice": "FTP · computer of telefoon",
   "usbChoice": "USB · kopiëren vanaf een station",
@@ -132,5 +132,14 @@
   "ps5Controls": "In ezRemote voor PS5 opent Kruis een item, markeert Vierkant bestanden, opent Driehoek Acties en opent L2 de bovenliggende map. Voor kopiëren van USB naar interne opslag blijf je in de lokale bestandslijst. Options sluit de app.",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "Tik op + en kies FTP. Voer het IP-adres van je console, de FTP-poort en de inloggegevens van de server in. Sla de verbinding op en open die. Geef toegang tot het lokale netwerk als iOS erom vraagt.",
+  "iosFind": "Zoek het gedownloade bestand in Bestanden. Staat het buiten FTPManager, gebruik dan Deel om het in de app te openen. Open in FTPManager Lokaal, selecteer het bestand en kies Kopieer naar.",
+  "iosUpload": "Kies de opgeslagen verbinding met je console en open de doelmap. Bevestig het kopiëren. Vernieuw daarna de map op je console en vergelijk de bestandsgrootte.",
+  "androidConnect": "Open het zijmenu in Solid Explorer en ga naar Opslagbeheer. Tik op +, kies FTP en voer het IP-adres van je console, de FTP-poort en de inloggegevens van de server in. Rond de wizard af en open de verbinding.",
+  "androidFind": "Open Downloads in Solid Explorer. Houd het gedownloade bestand ingedrukt en tik op Kopiëren. Open je opgeslagen FTP-verbinding en ga naar de doelmap.",
+  "androidUpload": "Tik op Plakken. Wacht tot het kopiëren klaar is, vernieuw de map op je console en vergelijk de bestandsgrootte.",
+  "harmonyConnect": "Open in electerm de bladwijzers en voeg een nieuwe verbinding toe. Kies FTP en voer het IP-adres van je console, de FTP-poort en de inloggegevens van de server in. Sla de verbinding op en open die.",
+  "harmonyFind": "Open in de bestandsbrowser van de verbinding de consolemap die bij de downloadinstructies staat. Kies Uploaden en selecteer het gedownloade bestand op je telefoon.",
+  "harmonyUpload": "Laat electerm open tijdens het uploaden. Vernieuw na het kopiëren de map op je console en vergelijk de bestandsgrootte."
 }

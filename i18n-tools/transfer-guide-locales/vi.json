@@ -1,7 +1,7 @@
 {
   "ps4Title": "Hướng dẫn chuyển tệp PS4",
   "ps5Title": "Hướng dẫn chuyển tệp PS5",
-  "intro": "Sao chép tệp từ máy tính, điện thoại hoặc USB. Làm theo hình có đánh số, rồi kiểm tra tệp hoàn chỉnh trên máy chơi game.",
+  "intro": "Sao chép tệp từ máy tính, điện thoại hoặc USB.",
   "choose": "Chọn cách chuyển",
   "computer": "Máy tính · FileZilla",
   "phone": "Điện thoại · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "Tải xuống và ứng dụng",
   "reviewed": "Hướng dẫn được rà soát ngày 11 tháng 11 năm 2026. Chưa thử chuyển tệp trên máy chơi game thực tế tại đây.",
   "pictureAlt": "Sơ đồ chuyển tệp có đánh số, làm nổi bật trường kết nối, thiết bị và đường dẫn tệp",
-  "ps4Summary": "Hướng dẫn PS4 đơn giản cho FileZilla, FTP trên iPhone, Android, HarmonyOS và USB, kèm hình đánh số và cách quản lý tệp bằng PS4-Xplorer.",
-  "ps5Summary": "Hướng dẫn PS5 đơn giản cho FileZilla, FTP trên iPhone, Android, HarmonyOS và USB, kèm hình đánh số và cách quản lý tệp bằng ezRemote Client.",
+  "ps4Summary": "Hướng dẫn PS4 đơn giản cho FileZilla, FTP trên iPhone, Android, HarmonyOS và USB, kèm ảnh chụp màn hình và cách quản lý tệp bằng PS4-Xplorer.",
+  "ps5Summary": "Hướng dẫn PS5 đơn giản cho FileZilla, FTP trên iPhone, Android, HarmonyOS và USB, kèm ảnh chụp màn hình và cách quản lý tệp bằng ezRemote Client.",
   "methodQuestion": "Bạn muốn chuyển tệp bằng cách nào?",
   "ftpChoice": "FTP · máy tính hoặc điện thoại",
   "usbChoice": "USB · sao chép từ ổ",
@@ -132,5 +132,14 @@
   "ps5Controls": "Trong ezRemote cho PS5, nút × mở mục, nút □ đánh dấu tệp, nút △ mở Thao tác và L2 mở thư mục cha. Sao chép từ USB vào bộ nhớ trong được thực hiện trong danh sách tệp cục bộ. Options thoát ứng dụng.",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "Nhấn + và chọn FTP. Nhập địa chỉ IP của máy chơi game, cổng FTP và thông tin đăng nhập máy chủ. Lưu rồi mở kết nối. Cho phép truy cập Mạng cục bộ nếu iOS yêu cầu.",
+  "iosFind": "Tìm tệp đã tải xong trong ứng dụng Tệp. Nếu tệp nằm ngoài FTPManager, dùng Chia sẻ để mở tệp trong ứng dụng. Trong FTPManager, mở Local, chọn tệp rồi chọn Copy to.",
+  "iosUpload": "Chọn kết nối máy chơi game đã lưu và mở thư mục đích. Xác nhận sao chép. Khi hoàn tất, làm mới thư mục trên máy chơi game và so sánh kích thước tệp.",
+  "androidConnect": "Mở menu bên trong Solid Explorer rồi vào Storage manager. Nhấn +, chọn FTP và nhập địa chỉ IP của máy chơi game, cổng FTP và thông tin đăng nhập máy chủ. Hoàn tất các bước thiết lập rồi mở kết nối.",
+  "androidFind": "Mở thư mục Tải xuống trong Solid Explorer. Nhấn giữ tệp đã tải xong rồi chọn Sao chép. Mở kết nối FTP đã lưu và vào thư mục đích.",
+  "androidUpload": "Chọn Dán. Chờ sao chép hoàn tất, rồi làm mới thư mục trên máy chơi game và so sánh kích thước tệp.",
+  "harmonyConnect": "Trong electerm, mở Bookmarks rồi thêm kết nối mới. Chọn FTP, nhập địa chỉ IP của máy chơi game, cổng FTP và thông tin đăng nhập máy chủ, sau đó lưu rồi mở kết nối.",
+  "harmonyFind": "Trong trình duyệt tệp của kết nối, mở thư mục trên máy chơi game theo hướng dẫn của tệp tải xuống. Chọn Upload rồi chọn tệp đã tải xong trên điện thoại.",
+  "harmonyUpload": "Giữ electerm mở trong khi tải lên. Khi sao chép hoàn tất, làm mới thư mục trên máy chơi game và so sánh kích thước tệp."
 }

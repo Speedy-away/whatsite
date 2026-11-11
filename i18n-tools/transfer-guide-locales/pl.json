@@ -1,7 +1,7 @@
 {
   "ps4Title": "Poradnik przesyłania plików na PS4",
   "ps5Title": "Poradnik przesyłania plików na PS5",
-  "intro": "Kopiuj pliki z komputera, telefonu lub nośnika USB. Postępuj według ponumerowanych ilustracji, a potem sprawdź kompletny plik na konsoli.",
+  "intro": "Kopiuj pliki z komputera, telefonu lub nośnika USB.",
   "choose": "Wybierz metodę",
   "computer": "Komputer · FileZilla",
   "phone": "Telefon · FTP",
@@ -95,8 +95,8 @@
   "downloadButtons": "Pliki i aplikacje",
   "reviewed": "Poradnik sprawdzono 11 listopada 2026 r. Nie testowano tu przesyłania na fizycznych konsolach.",
   "pictureAlt": "Ponumerowany schemat przesyłania z wyróżnionymi polami połączenia, urządzeniami i ścieżkami plików",
-  "ps4Summary": "Proste instrukcje PS4 dla FileZilla, FTP na iPhone, Android i HarmonyOS oraz USB, z numerowanymi ilustracjami i zarządzaniem plikami w PS4-Xplorer.",
-  "ps5Summary": "Proste instrukcje PS5 dla FileZilla, FTP na iPhone, Android i HarmonyOS oraz USB, z numerowanymi ilustracjami i zarządzaniem plikami w ezRemote Client.",
+  "ps4Summary": "Proste instrukcje PS4 dla FileZilla, FTP na iPhone, Android i HarmonyOS oraz USB, z zrzutami ekranu i zarządzaniem plikami w PS4-Xplorer.",
+  "ps5Summary": "Proste instrukcje PS5 dla FileZilla, FTP na iPhone, Android i HarmonyOS oraz USB, z zrzutami ekranu i zarządzaniem plikami w ezRemote Client.",
   "methodQuestion": "Jak chcesz przesyłać pliki?",
   "ftpChoice": "FTP · komputer lub telefon",
   "usbChoice": "USB · kopiowanie z nośnika",
@@ -132,5 +132,14 @@
   "ps5Controls": "W ezRemote na PS5 Krzyżyk otwiera element, Kwadrat zaznacza pliki, Trójkąt otwiera Działania, a L2 folder nadrzędny. Kopiowanie z USB do pamięci wewnętrznej odbywa się na lokalnej liście plików. Options zamyka aplikację.",
   "iosChoice": "iPhone / iPad",
   "androidChoice": "Android",
-  "harmonyChoice": "HarmonyOS"
+  "harmonyChoice": "HarmonyOS",
+  "iosConnect": "Stuknij + i wybierz FTP. Wpisz adres IP konsoli, port FTP i dane logowania do serwera. Zapisz i otwórz połączenie. Jeśli iOS o to poprosi, zezwól na dostęp do sieci lokalnej.",
+  "iosFind": "Znajdź pobrany plik w aplikacji Pliki. Jeśli znajduje się poza FTPManager, użyj opcji Udostępnij, aby otworzyć go w aplikacji. W FTPManager otwórz sekcję Lokalne, wybierz plik i stuknij Kopiuj do.",
+  "iosUpload": "Wybierz zapisane połączenie z konsolą i otwórz folder docelowy. Potwierdź kopiowanie. Po zakończeniu odśwież folder na konsoli i porównaj rozmiar pliku.",
+  "androidConnect": "Otwórz menu boczne w Solid Explorer i przejdź do menedżera pamięci. Stuknij +, wybierz FTP i wpisz adres IP konsoli, port FTP i dane logowania do serwera. Zakończ konfigurację w kreatorze i otwórz połączenie.",
+  "androidFind": "Otwórz folder Pobrane w Solid Explorer. Przytrzymaj pobrany plik, a następnie stuknij Kopiuj. Otwórz zapisane połączenie FTP i przejdź do folderu docelowego.",
+  "androidUpload": "Stuknij Wklej. Poczekaj na zakończenie kopiowania, odśwież folder na konsoli i porównaj rozmiar pliku.",
+  "harmonyConnect": "W electerm otwórz zakładki i dodaj nowe połączenie. Wybierz FTP, wpisz adres IP konsoli, port FTP i dane logowania do serwera, po czym zapisz i otwórz połączenie.",
+  "harmonyFind": "W przeglądarce plików połączenia otwórz folder na konsoli wskazany w instrukcji pobierania. Wybierz Prześlij i wskaż pobrany plik na telefonie.",
+  "harmonyUpload": "Nie zamykaj electerm podczas przesyłania. Po zakończeniu kopiowania odśwież folder na konsoli i porównaj rozmiar pliku."
 }

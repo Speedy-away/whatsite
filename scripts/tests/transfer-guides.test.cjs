@@ -13,6 +13,11 @@ test('dedicated guides use their own console manager and exact FTP services',()=
   for(const host of ['apps.apple.com','play.google.com','appgallery.huawei.com'])assert.ok(html.includes(host));
   assert.match(html,/Copying a file does not install or run it/);
   assert.ok(!html.includes('console-setup-popups.js'));
+  assert.doesNotMatch(html,/data-(?:localized-diagram|diagram-link)|transfer-guides\/[\w-]+\.svg/);
+  for(const id of ['ios','android','harmony']){
+   const card=html.match(new RegExp('<article[^>]*data-phone-platform="'+id+'"[\\s\\S]*?</article>'))?.[0];
+   assert.equal((card?.match(/<li><strong>/g)||[]).length,3,id+' walkthrough');
+  }
  }
 });
 test('method selection, deep links and browser back reveal only the selected instructions',()=>{
@@ -28,12 +33,11 @@ test('method selection, deep links and browser back reveal only the selected ins
  location.hash='#phone';listeners.hashchange();assert.deepEqual(panels.map(p=>p.hidden),[false,false,true]);
  location.hash='';location.search='';listeners.popstate();assert.ok(panels.every(p=>p.hidden));
 });
-test('every supported language has complete guide prose and localized menu pictures',()=>{
+test('every supported language has complete guide prose and app instructions',()=>{
  for(const code of codes){
   const locale=JSON.parse(fs.readFileSync('i18n-tools/transfer-guide-locales/'+code+'.json','utf8'));
   assert.deepEqual(Object.keys(locale).sort(),Object.keys(source).sort(),code);
   for(const [id,value]of Object.entries(locale))assert.ok(typeof value==='string'&&value.trim(),code+'/'+id);
-  for(const name of ['ps4-ip-address','ps5-ip-address','ps4-goldhen-ftp'])assert.ok(fs.existsSync('assets/images/transfer-guides/'+code+'/'+name+'.svg'));
   // Storage limits and distinct ports survive translation.
   assert.ok(locale.ps4Setup.includes('2121'),code);assert.ok(locale.ps5Setup.includes('1337')&&locale.ps5Setup.includes('2121'),code);
   assert.ok(locale.usb3.includes('/mnt/usb0')&&locale.usb3.includes('/mnt/usb1'),code);
@@ -75,7 +79,11 @@ test('published language routes include translated guide prose and real localize
    const rendered=localize.render(ctx,page,authored,code);
    assert.ok(rendered.includes('data-site-language="'+code+'"'));
    assert.ok(rendered.includes(locale[platform+'Title']),code+'/'+platform+' title');
-   assert.ok(rendered.includes('/assets/images/transfer-guides/'+code+'/'+platform+'-file-manager.svg'),code+' server-rendered manager image');
+   const picture=platform==='ps4'?'/assets/images/transfer-guides/screenshots/ps4-xplorer.png':'/assets/images/expansion-ps4-ps5/ps5-ezremote.jpg';
+   assert.ok(rendered.includes(picture),code+' real manager screenshot');
+   for(const os of ['ios','android','harmony'])for(const step of ['Connect','Find','Upload']){
+    assert.equal(localize.translate(ctx,source[os+step],code),locale[os+step],code+' '+os+step);
+   }
    const keywords=require('../localized-html.cjs').decode(rendered.match(/<meta name="keywords" content="([^"]+)"/)[1]);
    assert.ok(keywords.includes(localize.translate(ctx,source.usb,code)),code+' localized keywords');
    assert.equal(localize.translate(ctx,source.ipStep,code),locale.ipStep,code+' IPv4 prose');
@@ -107,8 +115,10 @@ test('guide metadata names the taught protocols, correct console manager and art
  assert.equal(schema['@graph'].find(x=>x['@type']==='CollectionPage').mainEntity.numberOfItems,5);
 });
 test('runtime tutorial pictures remain hosted rather than being offloaded',()=>{
- const {plan,LIMIT}=require('../build-pages.cjs'),name='assets/images/transfer-guides/ps5-ip-address.svg';
- assert.throws(()=>plan(process.cwd(),[name],'main',new Map([[name,100]]),LIMIT-50),/exceed/);
+ const {plan,LIMIT}=require('../build-pages.cjs');
+ for(const name of ['assets/images/transfer-guides/screenshots/usb-flash-drive.jpg','assets/images/expansion-ps4-ps5/ps5-ezremote.jpg']){
+  assert.throws(()=>plan(process.cwd(),[name],'main',new Map([[name,100]]),LIMIT-50),/exceed/);
+ }
 });
 test('FTP device and phone choices restore only their own steps, including deep links',()=>{
  const listeners={},methodChoices=['ftp','usb'].map(value=>choice('chooseMethod',value)),deviceChoices=['computer','phone'].map(value=>choice('chooseDevice',value)),phoneChoices=['ios','android','harmony'].map(value=>choice('choosePhone',value));
