@@ -1,4 +1,12 @@
 {
+  "fortnitePs4FileCleanup20261112": {
+    "date": "2026-11-12",
+    "page": "console/mods/ps4/fortnite/index.html",
+    "status": "Built locally; not published.",
+    "changes": "Added the user-supplied /user/download/CUSAxxxxx/ cleanup steps for download0.dat and download0_infomation.dat, a backup reminder, visible tags, navigation and search metadata. The page explicitly says a ban removal is unverified.",
+    "regenerate": "node scripts/build-ps4-mods.cjs --fortnite-only",
+    "verification": "Scoped generator and page/JSON checks passed. The console-game-imports suite passed 7 of 8 tests; its existing screenshot-only fixture expects an inline popup but currently receives a direct image link. The PS4 download folder pattern was found in public PS4 material; the claimed Epic ban outcome and second filename were not independently verified."
+  },
   "apolloDiscovery20261111": {
     "date": "2026-11-11",
     "status": "Verified locally.",
@@ -11590,6 +11598,7 @@
     ]
   },
   "synapsePS420261104": {
+    "catalogueUpdate20261112": "Added the user-supplied Synapse screenshot at assets/images/ps4-gta5/synapse.png and moved Synapse to the first card under GTA V 1.57. The scoped GTA V build and generated card and preview checks passed locally.",
     "date": "2026-11-04",
     "status": "Committed and pushed to origin/main; GitHub Pages deployment queued",
     "gameVersion": "1.57",

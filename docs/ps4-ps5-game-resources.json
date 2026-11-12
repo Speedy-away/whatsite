@@ -25,6 +25,12 @@
       "summary": "",
       "description": "",
       "intro": "FN Menu checks for PS4 title ID CUSA07669, shared by Europe and Australia. The GoldHEN template below is for FN Menu. The release post does not specify the Fortnite game update or PS4 firmware.",
+      "fileCleanup": {
+        "title": "Fortnite PS4 HWID unban file cleanup",
+        "tags": ["PS4", "Fortnite", "HWID unban", "CUSA title ID", "Download files"],
+        "path": "/user/download/CUSAxxxxx/",
+        "files": ["download0.dat", "download0_infomation.dat"]
+      },
       "categoryHeadings": {
         "menu": "Mod menus / Cheats"
       },
@@ -16966,7 +16972,13 @@
           "distribution": "include"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/synapse.png",
+          "caption": "Synapse menu open during GTA V gameplay on PS4"
+        }
+      ],
+      "screenshotPopup": true,
       "videos": [],
       "controls": [],
       "guideBlocks": [

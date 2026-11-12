@@ -76,7 +76,11 @@ page('console/mods/ps4/gta5/index.html','GTA V Mods for PS4','Browse menus by GT
 require('./ps4-user-plugin-templates.cjs').sectionFor('gta5')+
 section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#rtm-tools">RTM Tools</a><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
 section('rtm-tools','RTM Tools',grid(...gtaCards('rtm-tools')))+
-section('v157','GTA V 1.57',grid(...unmatchedFiles.filter(f=>f.group==='157').map(downloadCard),...gtaCards('v157')))+
+section('v157','GTA V 1.57',grid(
+ imported.renderer.card(gtaItems.find(item=>item.id==='gta5-synapse-1-57')),
+ ...unmatchedFiles.filter(f=>f.group==='157').map(downloadCard),
+ ...gtaItems.filter(item=>gtaSection(item)==='v157'&&item.id!=='gta5-synapse-1-57').map(item=>imported.renderer.card(item))
+))+
 section('v156','GTA V 1.56',grid(...unmatchedFiles.filter(f=>f.group==='156').map(downloadCard),...gtaCards('v156')))+
 section('older','Older GTA 5 versions',note('<p>Menus with confirmed older GTA V update requirements and no listed support for 1.56 or 1.57. Keep each download’s exact update pin.</p>')+grid(...gtaCards('older')))+
 section('unconfirmed','Game update unspecified',note('<p>The source does not establish a game update for these entries. Confirm the requirement before choosing a build.</p>')+grid(...gtaCards('unconfirmed')))+

@@ -146,9 +146,15 @@ function createGameImports({root = ROOT, data, files} = {}) {
         });
         page(file, game.title + (game.platformLabel ? ' · ' + game.platformLabel : ' · PS4/PS5 Resources'), game.description ?? 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.', game.cover,
           [['/console/mods/', 'Console Mods'], ['/console/mods/ps4/', 'PS4/PS5 Games'], ...(game.parent ? [['/console/mods/ps4/other-games/', 'Other Games']] : []),
-            ...(game.pluginTemplate ? [['#goldhen-plugin-template', 'GoldHEN plugins.ini']] : [])],
+            ...(game.pluginTemplate ? [['#goldhen-plugin-template', 'GoldHEN plugins.ini']] : []),
+            ...(game.fileCleanup ? [['#fortnite-hwid-unban', 'HWID unban files']] : [])],
           (game.intro ? section('compatibility', 'Compatibility first', note('<p>' + h(game.intro) + '</p>')) : '') +
           (game.pluginTemplate ? require('./ps4-user-plugin-templates.cjs').sectionFor(game.id) : '') +
+          (game.fileCleanup ? section('fortnite-hwid-unban', h(game.fileCleanup.title),
+            note('<p>This is a user-supplied file cleanup tip. Removing local download files has not been verified to lift an Epic Games account or hardware ban.</p>') +
+            `<ol class="guide-steps"><li><strong>Open the Fortnite title folder</strong>In a PS4 file manager, go to <code>${h(game.fileCleanup.path)}</code>. Replace <code>CUSAxxxxx</code> with the title ID for your installed Fortnite region. Check the title ID before changing files.</li><li><strong>Back up and remove the two files</strong>Back up the files first, then delete <code>${h(game.fileCleanup.files[0])}</code> and <code>${h(game.fileCleanup.files[1])}</code> if they are present in that Fortnite folder.</li></ol>` +
+            `<ul class="guide-resource-tags" aria-label="Tags">${game.fileCleanup.tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>`
+          ) : '') +
           childCards + renderer.gameContent(items, '', game.categoryHeadings) +
           (relatedCards.length ? section('related-resources', 'Related resources', grid(...relatedCards)) : '') +
           (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), '#content', 'Browse resources');
