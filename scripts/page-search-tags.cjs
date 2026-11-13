@@ -151,7 +151,7 @@ function resourceTerms(card, file = '') {
     }[apolloPlatform]
   ] : [];
   const ps4GuideTerms = file === 'console/ps4/index.html' && /href=["']\/console\/ps4\/jailbreaks\.html["']/.test(card)
-    ? ["PS4 14.02 jailbreak","14.02 jailbreak","PS4 jailbreak 14.02","PlayStation 4 14.02 jailbreak","PS4 14.02 jailbreak guide","PS4 14.02 or lower jailbreak","PS4 jailbreak tutorial","PS4 jailbreak 2026"] : [];
+    ? ["PS4 14.02 jailbreak","14.02 jailbreak","PS4 jailbreak 14.02","PlayStation 4 14.02 jailbreak","PS4 14.02 jailbreak guide","PS4 14.02 or lower jailbreak","PS4 jailbreak tutorial","PS4 jailbreak 2026","PS4 14.02 jailbreak tutorial","how to jailbreak PS4 14.02","PS4 14.02 jailbreak requirements","PS4 14.02 host compatibility","PS4 jailbreak step by step","PS4 browser jailbreak setup","PS4 automatic DNS","PS4 disable automatic updates","PS4 offline cache setup","PS4 jailbreak cache not working","PS4 insufficient free system memory","PS4 jailbreak reboot recovery","PS4 GoldHEN reload after restart","PS4 homebrew padlock fix","PS4 PKG not showing on USB","PS4 exFAT USB homebrew","PS4 jailbreak rest mode","PS4 browser cookies and website data"] : [];
   return unique([title, ...ps4GuideTerms, ...labels, ...[title, ...positiveLabels].flatMap(aliasesFor), ...hostTerms, ...apolloTerms]);
 }
 function protectedFile(file, html = '') {
