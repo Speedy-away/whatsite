@@ -12331,5 +12331,13 @@
     "mainNavigation": "Added PS4 / PS5 Host immediately after Contact Me in the shared homepage header template. All generated site-shell pages inherit the link.",
     "preservation": "Main host migration redirects and all downloads preserved.",
     "checks": "21 main-site publication tests and 33 focused host tests passed, along with all 5 production checks. Browser confirmed navigation placement, persistent dark/light mode and responsive host pages. Five broader test failures reproduced on unchanged HEAD."
+  },
+  "ps4AdditionalVideo20261113": {
+    "date": "2026-11-13",
+    "video": "https://youtu.be/Qij0nDdtqbI",
+    "title": "How To Jailbreak your PS4 14.02 in Seconds and Play Online (Guide)",
+    "creator": "whatwhatboy - console",
+    "changes": "Added the supplied video first in the PS4 guide video section using the existing lazy-loaded youtube-nocookie embed and direct YouTube link. Kept the original MODDED WARFARE video, all chapters, prior links and compatibility details. Generator persists both videos; added two relevant video discovery terms.",
+    "checks": "Verified title and creator through YouTube oEmbed. Generator syntax and scoped metadata checks passed. Both embeds appear exactly once in the intended order; all old URLs and 76 curated guide keywords remain."
   }
 }

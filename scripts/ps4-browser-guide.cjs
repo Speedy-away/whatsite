@@ -8,6 +8,7 @@ const data = {
   reviewed: '2026-11-11', image: '/assets/images/consoles/playstation.jpg',
   host: 'https://speedy-away.github.io/hosts/ps4/exploit/gamerhack-g2all/', goldhen: '2.4b18.13',
   video: {id: 'jkN-EJPbh1Y', title: 'How to Jailbreak the PS4 in 2026 (14.00 or lower)', creator: 'MODDED WARFARE', published: '2026-11-10'},
+  additionalVideo: {"id":"Qij0nDdtqbI","title":"How To Jailbreak your PS4 14.02 in Seconds and Play Online (Guide)","creator":"whatwhatboy - console"},
   chapters: [[37, 'Disable automatic updates'], [63, 'Check your firmware'], [159, 'Optional USB firmware update'], [279, 'Set up the connection'], [393, 'Run the browser jailbreak'], [521, 'Update blocking'], [549, 'Use the cache offline'], [588, 'Install homebrew apps'], [673, 'Configure GoldHEN'], [817, 'Cheats and patches'], [920, 'Reload after a restart']]
 };
 const jailbreakNav = [['/console/ps4/', 'PS4 Hub'], [route, 'Jailbreak'], ['#walkthrough', 'Step-by-step guide'], ['#firmware-downloads', 'Firmware'], ['#help', 'Troubleshooting']];
@@ -20,7 +21,7 @@ function buildGuide() {
     return `<figure class="ps4-jb-figure"><a href="${image}" target="_blank" rel="noopener noreferrer"><img src="${image}" width="${width}" height="${height}" alt="${esc(caption)}" loading="lazy"></a><figcaption>${esc(caption)}${credit}</figcaption></figure>`;
   };
   const hostLink = `<a data-tutorial-host href="${data.host}" target="_blank" rel="noopener noreferrer" translate="no">${data.host}</a>`;
-  const outline = `<nav class="ps4-jb-outline" aria-label="Guide outline">${[['before','Before you start'],['walkthrough','Browser setup'],['offline','Offline and restarts'],['apps','Install apps'],['settings','Optional settings'],['firmware-downloads','Firmware files'],['help','Troubleshooting'],['video','Video and chapters']].map(([id,label],i)=>`<a href="#${id}"><span aria-hidden="true">${String(i+1).padStart(2,'0')}</span>${label}</a>`).join('')}</nav>`;
+  const outline = `<nav class="ps4-jb-outline" aria-label="Guide outline">${[['before','Before you start'],['walkthrough','Browser setup'],['offline','Offline and restarts'],['apps','Install apps'],['settings','Optional settings'],['firmware-downloads','Firmware files'],['help','Troubleshooting'],['video','Videos and chapters']].map(([id,label],i)=>`<a href="#${id}"><span aria-hidden="true">${String(i+1).padStart(2,'0')}</span>${label}</a>`).join('')}</nav>`;
   const before = section('before', 'Before you start',
     `<div class="ps4-jb-split"><div><p>This guide follows MODDED WARFARE’s 10 November 2026 PS4 tutorial. WWB Host provides the demonstrated GamerHack browser route for supported <strong>7.00–14.00</strong> firmware with GoldHEN <strong>${data.goldhen}</strong>.</p><ul class="ps4-jb-checklist"><li>A PS4 with a supported installed firmware and its controller.</li><li>An internet connection for the first cache installation.</li><li>A computer and USB drive only if you choose a firmware update or USB app installation.</li></ul>${note('<p><strong>Keep your installed firmware while checking support.</strong> Open Settings → System → System Information. This guide covers 14.02 or lower. Check the host’s exact firmware list before proceeding; the demonstrated route below lists support through 14.00. For older firmware, check the WWB Host firmware selector for a separate compatible route.</p>')}</div>${picture('ps4-system-information', 1600, 900, 'PS4 System menu with System Information highlighted.', 'https://www.playstation.com/en-us/support/hardware/playstation-system-software-application-version/')}</div>`);
   const walkthrough = section('walkthrough', 'Run the browser jailbreak',
@@ -63,8 +64,8 @@ function buildGuide() {
       ['A USB app package is missing', 'Check the drive format, put the PS4 .pkg in the USB root and make sure GoldHEN is running. An archive must be extracted to its ready-to-install package first.'],
       ['I used the old 14.00 or 13.52 guide link', 'Both addresses now open this complete guide. Earlier downloads and their compatibility records remain preserved; the guide no longer asks you to choose between two separate pages.']
     ].map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>`);
-  const video = section('video', 'Follow the original video',
-    videoEmbed(data.video.id, data.video.title) + `<p>MODDED WARFARE · published 10 November 2026. The written guide above is a paraphrased companion to the supplied PS4 video.</p><div class="ps4-jb-chapters">${data.chapters.map(([s,t])=>watch(s, `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')} · ${t}`)).join('')}</div>`);
+  const video = section('video', 'PS4 jailbreak video guides',
+    `<h3>PS4 14.02 video guide</h3>` + videoEmbed(data.additionalVideo.id, data.additionalVideo.title) + `<p>${esc(data.additionalVideo.creator)}</p><h3>Original walkthrough and chapters</h3>` + videoEmbed(data.video.id, data.video.title) + `<p>MODDED WARFARE · published 10 November 2026. The written guide above is a paraphrased companion to the supplied PS4 video.</p><div class="ps4-jb-chapters">${data.chapters.map(([s,t])=>watch(s, `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')} · ${t}`)).join('')}</div>`);
   const sources = section('sources', 'Sources and compatibility', sourceList([
     [`https://www.youtube.com/watch?v=${data.video.id}`, 'MODDED WARFARE: supplied video, chapters and English transcript'],
     ['https://github.com/GamerHack/GamerHack.github.io/tree/main/g2all', 'GamerHack: combined browser host and firmware routing'],
