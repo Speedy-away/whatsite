@@ -61,7 +61,8 @@ function searchTerms(record, card) {
     ...(game.aliases || []).filter(alias => !/^(?:\d|BL[EU]S|BC[EU]S|NP[EU]B|GSC$|SPRX$|debug menu$|developer menu$)/i.test(alias))]));
   const anchors = [...card.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
   const hasDownload = anchors.some(([, attributes, body]) => /\sdownload(?:\s|=|$)/.test(attributes) ||
-    /href="\/downloads\//.test(attributes) || /\b(?:download|original .+ file)\b/i.test(plain(body)));
+    /href="\/downloads\//.test(attributes) || /\b(?:download|original .+ file)\b/i.test(plain(body)) ||
+    (item.downloads || []).some(download => download.url === plain(attributes.match(/\bhref="([^"]+)"/)?.[1] || '')));
   const hasGuide = /\bdata-guide-open\b/.test(card);
   const hasSteps = hasGuide && item.guideBlocks?.some(block => block.type === 'steps');
   const hasControls = hasGuide && (item.controls?.length || item.guideBlocks?.some(block => /controls|opening/i.test(block.title || '')));

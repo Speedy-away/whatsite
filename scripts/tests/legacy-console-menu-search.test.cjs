@@ -17,6 +17,9 @@ test('Jimbo keeps source-confirmed games and separate PS3 HEN/DEX search terms',
   const unavailable = legacy.termsForCard(file, card.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g, ''), 'Jimbo');
   assert.ok(!unavailable.includes('Jimbo download'));
   assert.ok(!unavailable.includes('Jimbo guide'));
+  const sourceUrl = legacy.catalogue('ps3').byId.get('discord-ps3-jimbo').downloads[0].url;
+  const sourceCard = '<article id="discord-ps3-jimbo"><h3>Jimbo</h3><a href="' + sourceUrl + '">Full package</a></article>';
+  assert.ok(legacy.termsForCard(file, sourceCard, 'Jimbo').includes('Jimbo download'));
 });
 
 test('Xbox mismatch references never acquire positive menu keywords for the wrong game', () => {
