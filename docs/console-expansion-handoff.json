@@ -12315,5 +12315,13 @@
     "date": "2026-11-13",
     "changes": "Added 16 PS4 WebKit/jailbreak host discovery phrases including firmware 14.02, WWB Host and firmware selector variants. Guide has 74 curated keywords; hub search card includes all new phrases. Added descriptive titles to the direct /ps4/ host links and a WebKit host keyword to hub metadata. Both generators preserve the titles.",
     "checks": "24 focused tests passed. Confirmed every keyword reaches generated metadata, repeatable search tags and unchanged href/src destinations."
+  },
+  "ps3Xbox360MenuSearch20261113": {
+    "date": "2026-11-13",
+    "status": "User requested push and publication; implementation and 37 focused tests passed.",
+    "scope": "357 PS3 and 146 Xbox 360 resources across 48 updated pages. Added per-resource name, platform, source-confirmed game, download, guide, installation and controls search phrases where available. Added individual named-resource keywords to CollectionPage structured data and refreshed affected sitemap dates.",
+    "preservation": "Verified every href/src, visible body and runtime script unchanged on all 48 pages. Jimbo DEX/HEN downloads, MultiCOD mappings, Xbox mismatch references, original archives, game updates and regions remain intact. No new binaries or host-site edits.",
+    "checks": "37 tests passed, both legacy and PS4 search updaters report zero drift. Per-card searches and individual structured metadata are repeatable.",
+    "regenerate": "node scripts/update-legacy-menu-search.cjs; node scripts/update-legacy-menu-search.cjs --check"
   }
 }

@@ -368,7 +368,7 @@ function transform(file, before, options = {}) {
   };
   const oldTitle = plain(head.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1] || '');
   const configuredMetadata = Object.prototype.hasOwnProperty.call(options, 'modMetadata') ? options.modMetadata : getModMetadata(relative);
-  const editorial = configuredMetadata?.get(relative);
+  const editorial = require('./legacy-console-menu-search.cjs').metadataForPage(relative, before) || configuredMetadata?.get(relative);
   const override = (options.overrides || searchOverrides)[relative];
   const noindex = /noindex/i.test(get('name', 'robots') || '');
   const redirect = /http-equiv=["']refresh/i.test(head);
@@ -408,7 +408,7 @@ function transform(file, before, options = {}) {
     }
   }
   const aliasModule = path.join(__dirname, 'page-search-tags.cjs');
-  if (!noindex && !redirect && fs.existsSync(aliasModule) && !override?.exactKeywords) {
+  if (!noindex && !redirect && fs.existsSync(aliasModule) && !override?.exactKeywords && !editorial?.exactKeywords) {
     const subjectHeadings = subject + ' ' + [...content.matchAll(/<h[123]\b[^>]*>([\s\S]*?)<\/h[123]>/gi)].map(m => plain(m[1])).join(' ');
     const discovery = require(aliasModule).aliasesFor(subjectHeadings);
     // Reserve a bounded share for functional search terms even on curated pages.

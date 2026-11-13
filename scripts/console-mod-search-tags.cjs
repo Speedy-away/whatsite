@@ -2,6 +2,7 @@
 let cachedEntries;
 const normalized = value => String(value).normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
 function termsForCard(file, card, title) {
+  if (/^console\/(ps3|xbox360)\/mods/.test(file)) return require('./legacy-console-menu-search.cjs').termsForCard(file, card, title);
   if (!file.startsWith('console/mods/ps4/')) return [];
   cachedEntries ||= require('./console-mod-catalog.cjs').catalog().entries.filter(entry => entry.keywords.length);
   const directory = file === 'console/mods/ps4/menus.html';
