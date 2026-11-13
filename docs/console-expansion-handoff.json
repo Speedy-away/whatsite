@@ -11969,5 +11969,10 @@
       "persistence": "The hub generator selects the sources in build-console-guides.cjs and console-card-media.cjs. Fixed cards bypass the automatic category artwork pass. Edge verified the covers and their aspect ratios on desktop and mobile, and repeating both generators preserved the HTML exactly. The new regression test passed. An existing broader test still expects SVG for five unrelated category covers delivered as JPEG."
     },
     "regenerate": "node -e \"require('./scripts/build-ps5-game-saves.cjs').buildPs5GameSaves(); require('./scripts/build-ps5-mods.cjs').buildPs5Mods(); require('./scripts/build-ps5-jailbreaks.cjs').refreshPs5Hub();\""
+  },
+  "ps4GuideWording20261113": {
+    "date": "2026-11-13",
+    "changes": "Updated the combined PS4 jailbreak guide, legacy redirects, hub card, generator and search metadata to say 14.02 or lower as requested. Kept the original video title, optional 14.00 update instructions and demonstrated host 7.00–14.00 compatibility pins. The guide explicitly asks readers to check the exact host firmware list.",
+    "checks": "Script syntax and metadata JSON passed. All href/src URLs in the four edited public pages match HEAD; original video title and route compatibility preserved."
   }
 }
