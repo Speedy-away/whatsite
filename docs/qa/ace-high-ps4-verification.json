@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-13",
+  "resource": "rdr2-ace-high-v1-1",
+  "source": "https://github.com/BigmanModz420/Ace-High/releases/tag/v1.1",
+  "download": "https://github.com/BigmanModz420/Ace-High/releases/download/v1.1/Ace-High.prx",
+  "bytes": 901312,
+  "sha256": "dff4ea9825fc1a2c1a638d17d22594e10110c69136738506a5cb1badb0aa4ebf",
+  "checks": [
+    "one card in RDR2 page and directory",
+    "pinned release link and compatibility",
+    "screenshot byte-for-byte preserved",
+    "guide and screenshot targets present",
+    "all prior RDR2 links and resource downloads preserved",
+    "F: copy size and SHA-256 verified",
+    "SHA-256 matches publisher release asset digest",
+    "archive index refreshed: 9556 present, zero missing"
+  ],
+  "existingSuite": {
+    "passed": 7,
+    "failed": 1,
+    "preexistingFailureConfirmedInHead": "GTA screenshot-only guide-link expectation"
+  },
+  "payloadExecuted": false
+}

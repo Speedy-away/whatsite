@@ -1,4 +1,80 @@
 {
+  "gta5DirectDownloads20261113": {
+    "date": "2026-11-13",
+    "status": "Latest user instruction applied: removed Download menu + plugins.ini, plugins.ini-only and menu-only labels. All 21 menu groups now have normal direct Download buttons, with per-file labels for multiple versions. Combined-download JavaScript is no longer loaded on the GTA V page.",
+    "preserved": "All original menu files, version-specific URLs, regional compatibility labels, archived configurations and earlier requested card changes.",
+    "verification": "12 focused checks passed, including direct download preservation after Pages rewriting and Velora/Crystalis order. The 21 deployment checks also passed.",
+    "published": false
+  },
+  "siteEditsPublication20261113": {
+    "date": "2026-11-13",
+    "status": "User requested push. Final staged design uses only normal direct Download buttons, following the latest instruction; combined download controls are removed. Includes prior app-card cleanup, ACE-HIGH, and separate Velora/VOID cards with Velora and Crystalis first.",
+    "verification": "21 deployment checks passed; 16 download/regional-bundle checks passed; focused Velora/Crystalis ordering checks passed. All original downloads and archive versions preserved.",
+    "remaining": "Confirm push and GitHub Pages deployment for this commit."
+  },
+  "veloraCrystalisLayout20261113": {
+    "date": "2026-11-13",
+    "status": "Split VOID out of Velora into its own GTA V 1.57 card. Velora and Crystalis are the first two cards, followed by Synapse. Updated builder and searchable menu directory locally.",
+    "preserved": "Velora 1.4 ZIP, Velora 1.5 SPRX and VOID original ZIP retain their download IDs, URLs and archived bytes. VOID links to its Velora 1.5 requirement. Existing 1.56 entry and older guide alias preserved.",
+    "verification": "5 focused tests passed: card separation/order, unique anchors, original downloads, published URL bundle checks for 61 builds / 122 regional combinations, button behavior and URL validation.",
+    "published": false
+  },
+  "gta5DownloadButtons20261113": {
+    "date": "2026-11-13",
+    "status": "Replaced collapsed Original menu files with visible Download menu only buttons below the combined download; removed plugins.ini-only controls across 21 GTA V menu groups. Local edits only.",
+    "zipFix": "The publisher rewrites local binaries to commit-pinned raw.githubusercontent.com/Speedy-away/whatsite URLs. Bundle downloads now accept those exact repository URLs and retain size/SHA-256 checks, rejecting unpinned URLs, other repositories and traversal.",
+    "preserved": "Original menu bytes, every version, support files, regional configs and required Reborn dependencies. VOID + Velora standalone files remain visible without duplicate links.",
+    "verification": {
+      "testsPassed": 16,
+      "testsFailed": 0,
+      "buildChoices": 61,
+      "regionalBundles": 122,
+      "publishedUrlRewriteTested": true,
+      "singleButtonClickTested": true
+    },
+    "cacheVersions": {
+      "js": 5,
+      "css": 6
+    },
+    "published": false
+  },
+  "aceHighRdr2Ps420261113": {
+    "date": "2026-11-13",
+    "status": "Added ACE-HIGH v1.1 locally to the RDR2 PS4 menu page, builder and searchable menu directory, using the user-supplied screenshot and original direct PRX release asset.",
+    "page": "/console/mods/ps4/rdr2/#resource-rdr2-ace-high-v1-1",
+    "download": "https://github.com/BigmanModz420/Ace-High/releases/download/v1.1/Ace-High.prx",
+    "compatibility": "RDR2 1.32; PS4 EU CUSA08519 / US CUSA03041; GoldHEN Plugin Loader; single player. Publisher-tested firmware 5.05 and 9.00.",
+    "archive": {
+      "inventory": "docs/ps4-ace-high-private-inventory.json",
+      "bytes": 901312,
+      "sha256": "dff4ea9825fc1a2c1a638d17d22594e10110c69136738506a5cb1badb0aa4ebf",
+      "verified": true,
+      "indexRefresh": "Complete; 9,556 present file records, zero missing. SHA-256 matches the GitHub release asset digest."
+    },
+    "verification": "docs/qa/ace-high-ps4-verification.json; targeted checks passed. Existing game-import suite: 7 passed, 1 pre-existing GTA screenshot-link failure reproduced using HEAD renderer.",
+    "payloadExecuted": false,
+    "published": false
+  },
+  "ps4AppCompatibilityParagraphs20261113": {
+    "date": "2026-11-13",
+    "status": "Removed the four arrow-marked compatibility paragraphs from wiliwili, SponsorBlock Installer, OrbisShelf and pPlay on the PS4 Apps page locally, with matching builder options.",
+    "verification": "Verified exactly four paragraph removals and regenerated store-card output. Descriptions, installation details, download actions and source compatibility metadata preserved."
+  },
+  "itemzflowCardDescription20261113": {
+    "date": "2026-11-13",
+    "status": "Removed the pictured Itemzflow description paragraph from the PS4 Apps card locally. The page builder hides this description on the same card.",
+    "verification": "Verified the rendered card differs only by the removed paragraph; source metadata, compatibility and download actions remain preserved."
+  },
+  "trophyUnlockersButton20261113": {
+    "date": "2026-11-13",
+    "status": "Changed trophy_unlockers to the standard primary Download button with a download icon on the PS4 Apps page and in its builder. Existing MediaFire folder destination preserved. Local edit only.",
+    "verification": "Verified exact single-link replacement and matching generated-source markup; surrounding page unchanged."
+  },
+  "ariseRtmCardCleanup20261113": {
+    "date": "2026-11-13",
+    "status": "Removed the compatibility paragraph and Setup & screenshot link from the Arise RTM card on the PS4 GTA V page locally.",
+    "scope": "Card-specific renderer flags preserve the change on rebuild. Original compatibility metadata, guide details, source link, version and download remain preserved. Verification: targeted current/generated card assertions passed; existing GTA V tests passed 6/7, with the bo1-bo2-ps4debug-bin archive mismatch confirmed in unchanged HEAD inputs."
+  },
   "ps4ReleasePublished20261113": {
     "date": "2026-11-13",
     "status": "Pushed to main, deployed successfully, and verified live.",

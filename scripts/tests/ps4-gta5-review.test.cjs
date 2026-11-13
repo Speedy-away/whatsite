@@ -75,7 +75,7 @@ test('GTA V catalogue groups each resource once and reserves older versions for 
  for(const id of ['gta5-explosive-1-57','gta5-explosive-1-52-1-53'])assert.equal(item(id).images[0].original,'/assets/images/ps4-gta5/explosive-user-preview-2026-11-04.png');
 });
 
-test('VOID and both Velora 1.57 builds share one card with separate original downloads',()=>{
+test('Velora and Crystalis lead 1.57, while VOID has its own card and original download',()=>{
  const id='gta5-velora-1-57',legacy='gta5-velora-v1-5-1-57';
  const {forGame,renderer}=require('../build-ps4-ps5-game-imports.cjs').createGameImports();
  const velora=forGame('gta5').filter(row=>/velora/i.test(row.name));
@@ -84,13 +84,23 @@ test('VOID and both Velora 1.57 builds share one card with separate original dow
  assert.deepEqual(merged.mergedResourceIds,[legacy]);
  const html=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');
  const card=html.match(new RegExp('<article class="guide-resource" id="resource-'+id+'"[^>]*>([\\s\\S]*?)</article>'))[1];
- for(const local of ['/downloads/ps4/GTA5/157/void-velora/VOID_FIXED_DOWNLOAD.zip','/downloads/ps4-ps5/gta5-velora-1-57/Velora_1.4.zip','/downloads/ps4/GTA5/157/Velora.sprx']) assert.ok(card.includes('href="'+local+'"'),local);
- assert.match(card,/void-velora-user-preview\.png/);
+ for(const local of ['/downloads/ps4-ps5/gta5-velora-1-57/Velora_1.4.zip','/downloads/ps4/GTA5/157/Velora.sprx']) assert.ok(card.includes('href="'+local+'"'),local);
+ assert.doesNotMatch(card,/VOID_FIXED_DOWNLOAD|<h3>VOID/);
+ assert.match(card,/ps4-gta5\/velora\.png/);
+ const voidCard=html.match(/<article class="guide-resource" id="resource-gta5-void-lua-1-57"[^>]*>([\s\S]*?)<\/article>/)[1];
+ assert.match(voidCard,/href="\/downloads\/ps4\/GTA5\/157\/void-velora\/VOID_FIXED_DOWNLOAD\.zip"/);
+ assert.match(voidCard,/Velora 1\.5 required/);
+ assert.doesNotMatch(voidCard,/data-gta-plugin-download|Velora_1\.4\.zip/);
+ const section=html.match(/<section\b[^>]*id="v157"[^>]*>([\s\S]*?)<\/section>/)[1];
+ assert.deepEqual([...section.matchAll(/<article[^>]*id="resource-([^"]+)"/g)].slice(0,3).map(match=>match[1]),[id,'gta5-crystalis-1-57','gta5-synapse-1-57']);
+ const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);assert.equal(new Set(ids).size,ids.length);
  assert.doesNotMatch(html,new RegExp('<article[^>]+id="resource-'+legacy+'"'));
  assert.ok(html.includes('id="guide-'+legacy+'" data-guide-alias="guide-'+id+'"'));
  const bundles=renderer.pluginDownloads(merged);
  assert.match(bundles,/Velora 1\.4 · full ZIP/);
  assert.match(bundles,/Velora 1\.5 · standalone SPRX/);
  const {entries}=require('../console-mod-catalog.cjs').catalog();
- assert.deepEqual(entries.filter(row=>row.gameId==='gta5'&&row.search.includes('velora 1.5')).map(row=>row.name),['VOID + Velora']);
+ assert.deepEqual(entries.filter(row=>row.gameId==='gta5'&&row.name==='Velora').map(row=>row.url),['/console/mods/ps4/gta5/#guide-'+id]);
+ assert.equal(entries.filter(row=>row.gameId==='gta5'&&row.name==='VOID').length,1);
+ assert.ok(!entries.some(row=>row.name==='VOID + Velora'));
 });

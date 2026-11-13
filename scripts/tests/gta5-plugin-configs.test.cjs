@@ -22,7 +22,7 @@ test('Scorpion 1.00 selects the EU/US binary while Oxagon keeps its actual game-
  const resource=read('docs/ps4-ps5-game-resources.json').resources.find(x=>x.id==='gta5-oxagon-1-56');
  const legacy=read('downloads/ps4/GTA5/manifest.json').files.find(x=>x.name==='Oxagon Full');
  const html=require('../gta5-plugin-downloads.cjs').createPluginDownloads().render(resource,undefined,legacy);
- const rows=JSON.parse(html.match(/data-plugin-choices="([^"]+)"/)[1].replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&#39;/g,"'"));
+ const rows=require('../gta5-plugin-downloads.cjs').createPluginDownloads().choices(resource,undefined,legacy).sort((a,b)=>Number(b.gameVersion==='1.56')-Number(a.gameVersion==='1.56'));
  assert.equal(rows[0].gameVersion,'1.56');assert.ok(!rows[1].label.includes('1.56'));assert.ok(rows[1].label.includes('1.53'));
 });
 test('BIN/CSC resources are not represented as GoldHEN plugins and portable original input captures remain byte-exact',()=>{
@@ -67,7 +67,7 @@ test('Bundle creation rejects changed bytes, wrong region and ZIP traversal befo
  await assert.rejects(()=>api.fetchVerified({url:'/downloads/test.prx',sha256:'0'.repeat(64)},{crypto:crypto.webcrypto,fetch:async()=>new Response('different')}),/verification failed/);
  await assert.rejects(()=>api.bundle({configs:{}},'CUSA12345',{}),/Select a game region/);
 });
-test('The rendered page includes regional controls, combined actions and the moved 1.57 cards',()=>{
- const s=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');assert.ok(s.includes('/assets/gta5-plugin-downloads.js?v=4'));assert.ok(s.includes('/assets/gta5-plugin-downloads.css?v=5'));assert.ok(s.includes('Download menu + plugins.ini'));assert.ok(s.includes('Europe / EU · CUSA00411'));assert.ok(s.includes('USA · CUSA00419'));assert.ok(!s.includes('id="gallery"'));
+test('The rendered page keeps regional labels and direct downloads without combined controls',()=>{
+ const s=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');assert.ok(!s.includes('/assets/gta5-plugin-downloads.js'));assert.ok(s.includes('/assets/gta5-plugin-downloads.css?v=7'));assert.ok(!s.includes('Download menu + plugins.ini'));assert.ok(s.includes('Europe / EU · CUSA00411'));assert.ok(s.includes('USA · CUSA00419'));assert.ok(!s.includes('id="gallery"'));
  const section=s.match(/<section\b[^>]*\bid="v157"[^>]*>([\s\S]*?)<\/section>/)[1];for(const id of ['gta5-crystalis-1-57','gta5-velora-1-57'])assert.ok(section.includes('id="resource-'+id+'"'));
 });

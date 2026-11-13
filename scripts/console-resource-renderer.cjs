@@ -107,13 +107,13 @@ function card(item) {
   const pairedDownloads=pluginDownloads(item,includedDownloads);
   const extras=includedDownloads.filter(file=>!pluginBundles.has(file.id)).filter(file=>{const stored=storedFiles.find(entry=>entry.downloadId===file.id);return !pluginBundles.choices(item,includedDownloads).some(row=>stored?.sha256===row.source.sha256);});
   const directDownloads = () => includedDownloads.map(file => downloadButton(file, item)).join('');
-  const buttons = item.mergedResourceIds?.length ? directDownloads() + pairedDownloads : pairedDownloads ? pairedDownloads+(extras.length?'<div class="gta-plugin-separate">'+extras.map(file=>downloadButton(file,item).replace('class="btn btn-primary"','class="gta-plugin-extra"')).join('')+'</div>':'') : directDownloads();
+  const buttons = pairedDownloads ? pairedDownloads+(extras.length?'<div class="gta-plugin-separate">'+extras.map(file=>downloadButton(file,item).replace('class="btn btn-primary"','class="btn btn-outline gta-plugin-extra"')).join('')+'</div>':'') : directDownloads();
   const cleanGta=item.gameIds?.includes('gta5') && !['client', 'rtm'].includes(item.category);
   const repository = httpsUrl(item.source?.repositoryUrl);
   const sourceLink = repository ? `<a href="${h(repository)}" target="_blank" rel="noopener noreferrer">Source code <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>` : '';
   const videoGuide = youtubeVideo(item.videoButton?.url);
   const videoLink = videoGuide ? `<a class="btn btn-outline" href="${h(videoGuide.url)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> Watch video guide</a>` : '';
-  const detailLink = (!cleanGta || item.mergedResourceIds?.length) && hasDetails(item, screenshot) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
+  const detailLink = !item.hideCardGuideLink && (!cleanGta || item.mergedResourceIds?.length) && hasDetails(item, screenshot) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
   const search = resourceTerms(item).join(' ').toLowerCase();
   const tags = resourceTags(item).slice(0, 6);
   const tagMarkup = cleanGta ? '' : tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
@@ -123,7 +123,7 @@ function card(item) {
   }).join('');
   const actions = buttons + sourceLink + videoLink + detailLink + relatedLinks;
   const version = !item.hideCardBuildDetails && item.version ? `<p>${h(item.version)}</p>` : '';
-  const compatibility = !cleanGta && !item.hideCardBuildDetails && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
+  const compatibility = !cleanGta && !item.hideCardBuildDetails && !item.hideCardCompatibility && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
   return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${legacyAnchors(item,'resource')}${image ? imageMarkup(image, item.name, false, screenshot ? screenshotId(item, screenshot) : '') : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
 }
 function guideBlock(block) {

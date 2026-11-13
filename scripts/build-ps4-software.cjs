@@ -140,11 +140,11 @@ function buildPs4Software() {
     apolloImage,
     nav,
     storeIntro('ps4') + intro('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
-      storeCard('ps4',itemzflowId),
+      storeCard('ps4',itemzflowId,{hideDescription:true}),
       resource(
         'trophy_unlockers',
         'PS4 trophy unlocker collection with game-specific PKG files, a guide, TrophyUnlocker for Windows and PS4PKGViewer. Match each package to its game title ID and region.',
-        ext('https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers', 'Download trophy_unlockers'),
+        '<a class="btn btn-primary" href="https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers" target="_blank" rel="noopener noreferrer">Download <i class="fas fa-download" aria-hidden="true"></i></a>',
         ps4Image
       ).replace('<article ', '<article id="trophy-unlockers" ').replace('<div class="guide-links">', '<ul class="guide-resource-tags" aria-label="Tags"><li class="feature-tag">PS4</li><li class="feature-tag">Trophy unlocker</li><li class="feature-tag">PKG</li><li class="feature-tag">Windows tools</li></ul><div class="guide-links">'),
       resource(
@@ -160,7 +160,7 @@ function buildPs4Software() {
         '/assets/images/emulators/retroarch.png'
       ),
       ...extraCards(expansion.apps)
-    )) + storeCards('ps4',{exclude:[itemzflowId]}) +
+    )) + storeCards('ps4',{exclude:[itemzflowId],hideCompatibilityFor:['ps4-store-wiliwili-1-6-0','ps4-store-sponsorblock-installer-1-0-0','ps4-store-orbisshelf-0-2-0','ps4-store-pplay-3-8']}) +
     section('more-tools', 'More PS4 resources', `<div class="guide-links">${link('/console/ps4/payloads.html', 'PS4 payloads')}${link('/console/ps4/site-launcher.html', 'Open site from PS4 Home')}${link('/console/mods/ps4/', 'Browse game mods')}${link('/console/ps4/', 'Back to PS4 Hub')}</div>`),
     '#apps',
     'Browse apps'

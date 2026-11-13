@@ -20,9 +20,8 @@ function createPluginDownloads(){
   const versions=[...new Set(rows.map(r=>r.gameVersion).filter(Boolean))];
   const builds='<dl class="gta-plugin-facts"><dt>Game update / package</dt><dd>'+esc(versions.length?'GTA V '+versions.join(' / '):'Game update unspecified')+'</dd><dt>Game region</dt><dd>Europe / EU · CUSA00411<br>USA · CUSA00419</dd></dl>';
   const originals=[...new Map(rows.map(r=>[r.source.url,r])).values()];
-  const originalLinks=originals.map(r=>'<a href="'+esc(r.source.url)+'" download data-no-file-options>'+esc(originals.length===1?'Original menu file':r.label)+'</a>').join('');
-  const standalone = item.mergedResourceIds?.length ? '' : originals.length===1 ? originalLinks : '<details><summary>Original menu files</summary><div class="gta-plugin-originals">'+originalLinks+'</div></details>';
-  return '<fieldset class="gta-plugin-download" aria-label="Menu downloads" data-gta-plugin-download data-plugin-name="'+esc(item.id)+'" data-plugin-choices="'+esc(JSON.stringify(rows))+'">'+builds+'<button type="button" class="btn btn-primary" data-plugin-bundle disabled><i class="fas fa-download" aria-hidden="true"></i> Download menu + plugins.ini</button><div class="gta-plugin-separate"><button type="button" data-plugin-configs disabled>plugins.ini only</button>'+standalone+'</div><p data-plugin-status role="status" aria-live="polite"></p><noscript><p>Save the original menu and matching configuration:</p><ul>'+rows.map(r=>'<li>'+esc(r.label)+': <a href="'+esc(r.source.url)+'" download data-no-file-options>Original menu</a> · <a href="'+esc(r.configs.CUSA00411.url)+'" download="plugins.ini" data-no-file-options>EU plugins.ini</a> · <a href="'+esc(r.configs.CUSA00419.url)+'" download="plugins.ini" data-no-file-options>USA plugins.ini</a></li>').join('')+'</ul></noscript></fieldset>';
+  const originalLinks=originals.map(r=>'<a class="btn btn-primary" href="'+esc(r.source.url)+'" download data-no-file-options><i class="fas fa-download" aria-hidden="true"></i> '+esc('Download'+(originals.length>1?' · '+r.label:''))+'</a>').join('');
+  return '<fieldset class="gta-plugin-download" aria-label="Menu downloads">'+builds+'<div class="gta-plugin-originals">'+originalLinks+'</div></fieldset>';
 
  }
  return {render,choices,has:id=>catalog.downloads.some(x=>x.downloadId===id)};

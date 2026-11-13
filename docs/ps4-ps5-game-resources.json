@@ -4722,7 +4722,7 @@
       ],
       "category": "menu",
       "publication": "include",
-      "name": "VOID + Velora",
+      "name": "Velora",
       "gameVersions": [
         "1.57"
       ],
@@ -4740,13 +4740,6 @@
       },
       "downloads": [
         {
-          "id": "gta5-void-lua-fixed",
-          "label": "VOID Lua menu · ZIP",
-          "filename": "VOID_FIXED_DOWNLOAD.zip",
-          "url": "https://cdn.discordapp.com/attachments/1569461533317009529/1569461536060084315/VOID_FIXED_DOWNLOAD.zip?ex=6af4dbf5&is=6af38a75&hm=fd82895cb2066ff5cd1e8e19f6de30e841d61dc6f1ea2c85014129443cf73e88&",
-          "distribution": "include"
-        },
-        {
           "id": "gta5-velora-1-57",
           "label": "Velora 1.4 · full ZIP",
           "url": "https://cdn.discordapp.com/attachments/1552385082717642872/1552385083938312294/Velora_1.4.zip",
@@ -4756,9 +4749,15 @@
       ],
       "images": [
         {
+          "original": "/assets/images/ps4-gta5/velora.png",
+          "display": "/assets/images/ps4-gta5/velora.png",
+          "caption": "Velora menu-family preview; choose the separately labelled 1.4 package or 1.5 module."
+        },
+        {
           "original": "/assets/images/ps4-gta5/void-velora-user-preview.png",
           "display": "/assets/images/ps4-gta5/void-velora-user-preview.png",
-          "caption": "VOID Lua Menu on the left and Velora on the right in GTA V on PS4."
+          "caption": "VOID Lua Menu on the left and Velora on the right in GTA V on PS4.",
+          "role": "guide"
         },
         {
           "original": "/assets/images/ps4-ps5/originals/gta5-velora-1-57-image.png",
@@ -4768,11 +4767,6 @@
         }
       ],
       "guideBlocks": [
-        {
-          "type": "paragraph",
-          "title": "VOID Lua menu for Velora",
-          "text": "The supplied VOID ZIP contains only VOID(1).lua. The script references GTA V 1.57 on PS4. The Velora.sprx supplied alongside it matches the standalone Velora 1.5 download. VOID support with the separate Velora 1.4 build was not confirmed."
-        },
         {
           "type": "paragraph",
           "title": "PS4 plugin setup",
@@ -4804,16 +4798,81 @@
         "PS4 GTA 5",
         "Grand Theft Auto V",
         "1.57",
-        "VOID Lua Menu",
-        "VOID + Velora",
-        "VOID_FIXED_DOWNLOAD.zip",
         "Velora 1.4",
         "Velora 1.5"
       ],
       "menuVersion": "1.4 / 1.5",
       "catalogueSection": "v157",
       "version": "PS4 · GTA V 1.57",
-      "description": "VOID Lua menu for Velora, with separate Velora 1.4 and 1.5 downloads."
+      "description": "Velora menu with separate 1.4 package and 1.5 module downloads for GTA V 1.57."
+    },
+    {
+      "id": "gta5-void-lua-1-57",
+      "gameIds": [
+        "gta5"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "VOID",
+      "gameVersions": [
+        "1.57"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "version": "Lua menu · GTA V 1.57",
+      "description": "VOID Lua menu supplied with the Velora 1.5 plugin.",
+      "compatibilityText": "PS4 · GTA V 1.57 · Lua menu for Velora 1.5",
+      "source": {
+        "postUrl": "https://cdn.discordapp.com/attachments/1569461533317009529/1569461536060084315/VOID_FIXED_DOWNLOAD.zip?ex=6af4dbf5&is=6af38a75&hm=fd82895cb2066ff5cd1e8e19f6de30e841d61dc6f1ea2c85014129443cf73e88&",
+        "capturedAt": "2026-11-11",
+        "captureFile": "docs/ps4-gta5-void-velora-private-inventory.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1569461533317009529/1569461536060084315/VOID_FIXED_DOWNLOAD.zip?ex=6af4dbf5&is=6af38a75&hm=fd82895cb2066ff5cd1e8e19f6de30e841d61dc6f1ea2c85014129443cf73e88&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "gta5-void-lua-fixed",
+          "label": "VOID Lua menu · ZIP",
+          "filename": "VOID_FIXED_DOWNLOAD.zip",
+          "url": "https://cdn.discordapp.com/attachments/1569461533317009529/1569461536060084315/VOID_FIXED_DOWNLOAD.zip?ex=6af4dbf5&is=6af38a75&hm=fd82895cb2066ff5cd1e8e19f6de30e841d61dc6f1ea2c85014129443cf73e88&",
+          "distribution": "include"
+        }
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/void-velora-user-preview.png",
+          "display": "/assets/images/ps4-gta5/void-velora-user-preview.png",
+          "caption": "VOID Lua Menu on the left and Velora on the right in GTA V on PS4."
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "VOID Lua menu for Velora",
+          "text": "The supplied VOID ZIP contains only VOID(1).lua. The script references GTA V 1.57 on PS4. The Velora.sprx supplied alongside it matches the standalone Velora 1.5 download. VOID support with the separate Velora 1.4 build was not confirmed."
+        }
+      ],
+      "requiredResources": [
+        {
+          "href": "#guide-gta5-velora-1-57",
+          "label": "Velora 1.5 required"
+        }
+      ],
+      "guideLabel": "Guide & requirements",
+      "tags": [
+        "PS4",
+        "Lua",
+        "GTA V 1.57"
+      ],
+      "keywords": [
+        "VOID",
+        "VOID Lua Menu",
+        "VOID_FIXED_DOWNLOAD.zip",
+        "PS4 GTA 5"
+      ],
+      "catalogueSection": "v157"
     },
     {
       "id": "gta5-wildemodz-1-27",
@@ -17025,6 +17084,8 @@
       "tags": ["PS4","Outfit editor","PS4 outfit editor","GTA Online outfit editor","Fast-run unlock"],
       "keywords": ["Arise RTM","GTA 5 Online 1.57","PS4 RTM tools","GTA 5 outfit editor","outfit editor PS4","GTA 5 outfit editor PS4","GTA Online PS4 outfit editor","GTA V unlocks","clothing shop teleport","custom K/D","GoldHEN"],
       "guideLabel": "Setup & screenshot",
+      "hideCardCompatibility": true,
+      "hideCardGuideLink": true,
       "guideBlocks": [
         {
           "type": "paragraph",
@@ -17222,6 +17283,131 @@
           "filename": "Spectrum_FN.sprx",
           "url": "https://cdn.discordapp.com/attachments/1569043359895654582/1569649351322636409/Spectrum_FN.sprx?ex=6af43960&is=6af2e7e0&hm=a6071f17c875e33f410a07fc020b16090d87aeaaededeed3623191c13c939b8c&",
           "distribution": "include"
+        }
+      ]
+    },
+    {
+      "id": "rdr2-ace-high-v1-1",
+      "name": "ACE-HIGH",
+      "category": "menu",
+      "gameIds": [
+        "rdr2"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "publication": "include",
+      "version": "v1.1 · RDR2 1.32",
+      "gameVersions": [
+        "1.32"
+      ],
+      "titleIds": [
+        "CUSA08519",
+        "CUSA03041"
+      ],
+      "description": "Player, weapon and horse options, teleports, spawning, weather and time controls.",
+      "compatibilityText": "PS4 · RDR2 1.32 · EU CUSA08519 / US CUSA03041 · GoldHEN Plugin Loader · Single player",
+      "tags": [
+        "PS4",
+        "RDR2",
+        "Game 1.32",
+        "PRX",
+        "Single player"
+      ],
+      "keywords": [
+        "ACE-HIGH",
+        "Ace High",
+        "BigmanModz420",
+        "Red Dead Redemption 2",
+        "RDR2 PS4 mod menu"
+      ],
+      "screenshotPopup": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-rdr2/ace-high-user-preview.png",
+          "caption": "ACE-HIGH menu in Red Dead Redemption 2; screenshot supplied by the user."
+        }
+      ],
+      "downloads": [
+        {
+          "id": "rdr2-ace-high-v1-1-prx",
+          "label": "Download PRX · v1.1",
+          "filename": "Ace-High.prx",
+          "url": "https://github.com/BigmanModz420/Ace-High/releases/download/v1.1/Ace-High.prx",
+          "distribution": "include",
+          "bytes": 901312,
+          "sha256": "dff4ea9825fc1a2c1a638d17d22594e10110c69136738506a5cb1badb0aa4ebf"
+        }
+      ],
+      "source": {
+        "postUrl": "https://github.com/BigmanModz420/Ace-High",
+        "releaseUrl": "https://github.com/BigmanModz420/Ace-High/releases/tag/v1.1",
+        "capturedAt": "2026-11-13",
+        "captureFile": "docs/sources/ace-high/v1.1-release.json",
+        "readmeUrl": "https://github.com/BigmanModz420/Ace-High/blob/666cc62c95a4daa9f695bbc224c7ed8935f209a8/README.md",
+        "originalDownloadUrls": [
+          "https://github.com/BigmanModz420/Ace-High/releases/download/v1.1/Ace-High.prx"
+        ]
+      },
+      "relatedLinks": [
+        {
+          "url": "https://github.com/BigmanModz420/Ace-High",
+          "label": "Project"
+        }
+      ],
+      "guideLabel": "Setup guide",
+      "controls": [
+        {
+          "input": "R1 + Circle",
+          "action": "Open the menu (configurable in Settings)."
+        },
+        {
+          "input": "D-pad",
+          "action": "Navigate and adjust settings."
+        },
+        {
+          "input": "X / Circle",
+          "action": "Select / go back or close."
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Compatibility",
+          "text": "Requires RDR2 game update 1.32, EU CUSA08519 or US CUSA03041, and GoldHEN with Plugin Loader. The publisher reports testing both regions on firmware 5.05 and 9.00. Intended for single-player use."
+        },
+        {
+          "type": "steps",
+          "title": "Install the plugin",
+          "items": [
+            {
+              "title": "Copy the PRX",
+              "text": "Download Ace-High.prx and copy it to /data/GoldHEN/plugins/ on the PS4."
+            },
+            {
+              "title": "Register your game",
+              "text": "Add the matching EU or US entry below to /data/GoldHEN/plugins.ini, preserving your existing entries."
+            },
+            {
+              "title": "Launch",
+              "text": "Enable GoldHEN Plugin Loader, start RDR2 1.32, and press R1 + Circle."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "EU configuration",
+          "text": "[CUSA08519]\n/data/GoldHEN/plugins/Ace-High.prx=true"
+        },
+        {
+          "type": "code",
+          "title": "US configuration",
+          "text": "[CUSA03041]\n/data/GoldHEN/plugins/Ace-High.prx=true"
+        },
+        {
+          "type": "paragraph",
+          "title": "Settings and model changes",
+          "text": "The plugin creates its settings and log under /data/Ace-High/. Use Change Model from chapter 2 onwards; the publisher reports that changing models in chapter 1 kills the player. The PRX contains the logo, so no additional asset download is required."
         }
       ]
     }

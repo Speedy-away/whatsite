@@ -21,6 +21,7 @@ function gtaSection(item){
  return item.gameVersions?.length ? 'older' : 'unconfirmed';
 }
 const gtaCards=group=>gtaItems.filter(item=>gtaSection(item)===group).map(item=>imported.renderer.card(item));
+const gta157FeaturedIds=['gta5-velora-1-57','gta5-crystalis-1-57','gta5-synapse-1-57'];
 const unmatchedFiles=files.filter(file=>!gtaItems.some(item=>imported.matches(item,file)));
 function guideDownloads(ids,onlyDownload){
  const buttons=ids.map(id=>{
@@ -38,6 +39,7 @@ const nav=[['/console/mods/','Mods / Mod Menus'],['/console/mods/ps4/','PS4/PS5 
 const image='/assets/images/ps4-gta5/oxagon.png';
 const rdr2image='/assets/images/ps4-rdr2/north.png';
 const rdr2menus=[
+ {name:'ACE-HIGH',resourceId:'rdr2-ace-high-v1-1',url:imported.forGame('rdr2').find(item=>item.id==='rdr2-ace-high-v1-1').downloads[0].url,downloadsRendered:true,showVersion:true},
  {name:'North',image:'north.png',url:'https://www.mediafire.com/file/25tajv70j2bocmu/NorthBeta011.rar/file',downloadsRendered:true},
  {name:'Oyster',resourceId:'rdr2-oyster',url:imported.forGame('rdr2').find(item=>item.id==='rdr2-oyster').downloads[0].url,downloadsRendered:true},
  {name:'Sheriff 1.32',image:'sheriff.png',url:'https://www.mediafire.com/file/8gmxjkwhlofwvpi/RDR2-ModMenu.rar/file',downloadsRendered:true},
@@ -55,7 +57,7 @@ function downloadCard(f){
 function rdr2Card(menu){
  if(menu.resourceId){
   const item=imported.forGame('rdr2').find(item=>item.id===menu.resourceId);
-  return imported.renderer.card({...item,version:undefined});
+  return imported.renderer.card({...item,version:menu.showVersion?item.version:undefined});
  }
  const extra=imported.legacyEnhancement('rdr2',menu);
  const preview=extra.image||{src:'/assets/images/ps4-rdr2/'+menu.image,alt:menu.name+' mod menu in Red Dead Redemption 2 on PS4'};
@@ -68,7 +70,7 @@ page('console/mods/ps4/index.html','PS4/PS5 Mods / Mod Menus','Browse the PS4/PS
 require('./build-console-downloads.cjs').intro('ps4')+section('games','Available games',grid(resource('Grand Theft Auto V','Menus by game update, script resources, plugin setup and supplied guides.',ext(base,'Open GTA V mods'),'/assets/images/gta52.png'),resource('Red Dead Redemption 2','North, Sheriff, Havana and Oyster resources, with supplied screenshots and videos.',ext(rdr2base,'Open RDR2 mods'),'/assets/images/rdr2.png'),resource('Call of Duty','Game-specific menus, injectors, CFG and RTM tools, screenshots and supplied guides.',ext(codbase,'Browse Call of Duty mods'),'/assets/images/covers/cod-black-ops-3.jpg'),imported.extraGameCards()))+
 section('menu-directory','Find a specific menu',`<p>Search every imported game, menu, script and tool, including older GTA V builds.</p><div class="guide-links">${link('/console/mods/ps4/menus.html','Search the menu directory')}</div>`)+
 section('requirements','Before choosing a mod',note('<p>Match the console firmware, homebrew enabler, game title ID and game update separately. A menu built for GTA V 1.57 is not automatically compatible with 1.56, and the PS4 14.00 jailbreak does not establish GoldHEN plugin support.</p>')), '#games','Browse games');
-page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse North, Sheriff, Havana and Oyster resources for Red Dead Redemption 2, with supplied screenshots and videos.',rdr2image,nav.slice(0,5),
+page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse ACE-HIGH, North, Sheriff, Havana and Oyster resources for Red Dead Redemption 2, with supplied screenshots and videos.',rdr2image,nav.slice(0,5),
 require('./ps4-user-plugin-templates.cjs').sectionFor('rdr2')+
 section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card)))+
 section('rdr2-video-guide','RDR2 Online PS4 mod menu video guide',video('d8h6O_okVMc','RDR2 Online PS4 mod menu download and setup')), '#downloads','Browse downloads');
@@ -77,9 +79,9 @@ require('./ps4-user-plugin-templates.cjs').sectionFor('gta5')+
 section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#rtm-tools">RTM Tools</a><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
 section('rtm-tools','RTM Tools',grid(...gtaCards('rtm-tools')))+
 section('v157','GTA V 1.57',grid(
- imported.renderer.card(gtaItems.find(item=>item.id==='gta5-synapse-1-57')),
+ ...gta157FeaturedIds.map(id=>imported.renderer.card(gtaItems.find(item=>item.id===id))),
  ...unmatchedFiles.filter(f=>f.group==='157').map(downloadCard),
- ...gtaItems.filter(item=>gtaSection(item)==='v157'&&item.id!=='gta5-synapse-1-57').map(item=>imported.renderer.card(item))
+ ...gtaItems.filter(item=>gtaSection(item)==='v157'&&!gta157FeaturedIds.includes(item.id)).map(item=>imported.renderer.card(item))
 ))+
 section('v156','GTA V 1.56',grid(...unmatchedFiles.filter(f=>f.group==='156').map(downloadCard),...gtaCards('v156')))+
 section('older','Older GTA 5 versions',note('<p>Menus with confirmed older GTA V update requirements and no listed support for 1.56 or 1.57. Keep each download’s exact update pin.</p>')+grid(...gtaCards('older')))+
@@ -137,8 +139,8 @@ if(!rdr2Only&&!fortniteOnly){
 </dialog>`;
  const html=fs.readFileSync(file,'utf8')
    .replace('/assets/console-guide-dialog.js?v=5','/assets/console-guide-dialog.js?v=6')
-   .replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=5"></head>')
-   .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script><script defer src="/assets/gta5-plugin-downloads.js?v=4"></script></body>');
+   .replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=7"></head>')
+   .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script></body>');
  fs.writeFileSync(file,html);
 }
 if(gtaOnly||rdr2Only)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));

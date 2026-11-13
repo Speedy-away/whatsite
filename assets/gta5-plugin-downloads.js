@@ -22,11 +22,17 @@
   e.setUint32(0,0x06054b50,true);e.setUint16(8,entries.length,true);e.setUint16(10,entries.length,true);e.setUint32(12,directoryLength,true);e.setUint32(16,offset,true);
   const all=[...parts,...central,end],out=new Uint8Array(all.reduce((n,b)=>n+b.length,0));let cursor=0;for(const b of all){out.set(b,cursor);cursor+=b.length;}return out;
  }
- function localAsset(url){if(typeof url!=='string'||!url.startsWith('/downloads/')||/[?#\\]/.test(url)||url.split('/').includes('..'))throw Error('Invalid local download');return url;}
+ function localAsset(url){
+  const pinned=/^https:\/\/raw\.githubusercontent\.com\/Speedy-away\/whatsite\/[a-f0-9]{40}\/downloads\//i;
+  if(typeof url!=='string'||(!url.startsWith('/downloads/')&&!pinned.test(url))||/[?#\\]/.test(url))throw Error('Invalid local download');
+  let parts;try{parts=url.split('/').map(decodeURIComponent);}catch{throw Error('Invalid local download');}
+  if(parts.some(p=>p==='.'||p==='..'||/[\\/?#]/.test(p)))throw Error('Invalid local download');
+  return url;
+ }
  async function fetchVerified(file,env){
   const response=await env.fetch(localAsset(file.url),{credentials:'same-origin'});if(!response.ok)throw Error('File unavailable ('+response.status+').');
   const bytes=new Uint8Array(await response.arrayBuffer());if(file.bytes!=null&&bytes.length!==file.bytes)throw Error('Download size differs.');
-  if(!env.crypto?.subtle)throw Error('Use HTTPS or localhost for combined downloads, or save the two files separately.');
+  if(!env.crypto?.subtle)throw Error('Use HTTPS or localhost for combined downloads, or use a menu-only download.');
   const digest=Array.from(new Uint8Array(await env.crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
   if(digest!==file.sha256)throw Error('Download verification failed.');return bytes;
  }
@@ -73,16 +79,17 @@
   for(const node of doc.querySelectorAll('[data-gta-plugin-download]')){
    if(node.dataset.pluginReady)continue;
    let rows;try{rows=JSON.parse(node.dataset.pluginChoices);if(!rows.length)continue;}catch{continue;}
-   const buttons=[node.querySelector('[data-plugin-bundle]'),node.querySelector('[data-plugin-configs]')],status=node.querySelector('[data-plugin-status]');
-   for(const [index,button] of buttons.entries())button.addEventListener('click',async()=>{
-    buttons.forEach(b=>b.disabled=true);status.textContent='Preparing download…';
+   const button=node.querySelector('[data-plugin-bundle]'),status=node.querySelector('[data-plugin-status]');
+   if(!button||!status)continue;
+   button.addEventListener('click',async()=>{
+    button.disabled=true;status.textContent='Preparing download…';
     try{
-     const bytes=await bundleAll(rows,env,index===1),url=env.URL.createObjectURL(new env.Blob([bytes],{type:'application/zip'})),anchor=doc.createElement('a');
-     anchor.href=url;anchor.download=safeName(node.dataset.pluginName+(index===1?'-regional-plugins-ini.zip':'-menu-and-plugins.zip'));anchor.setAttribute('data-no-file-options','');anchor.hidden=true;doc.body.appendChild(anchor);anchor.click();anchor.remove();env.setTimeout(()=>env.URL.revokeObjectURL(url),60000);
-     status.textContent=index===1?'ZIP ready: EU and USA configurations included.':'ZIP ready: all listed builds with EU and USA configurations included.';
-    }catch(error){status.textContent='Could not prepare ZIP: '+error.message+' Original files remain available below.';}finally{buttons.forEach(b=>b.disabled=false);}
+     const bytes=await bundleAll(rows,env),url=env.URL.createObjectURL(new env.Blob([bytes],{type:'application/zip'})),anchor=doc.createElement('a');
+     anchor.href=url;anchor.download=safeName(node.dataset.pluginName+'-menu-and-plugins.zip');anchor.setAttribute('data-no-file-options','');anchor.hidden=true;doc.body.appendChild(anchor);anchor.click();anchor.remove();env.setTimeout(()=>env.URL.revokeObjectURL(url),60000);
+     status.textContent='ZIP ready: all listed builds with EU and USA configurations included.';
+    }catch(error){status.textContent='Could not prepare ZIP: '+error.message+' Menu-only downloads remain available below.';}finally{button.disabled=false;}
    });
-   widgets.push(node);node.dataset.pluginReady='true';buttons.forEach(b=>b.disabled=false);
+   widgets.push(node);node.dataset.pluginReady='true';button.disabled=false;
   }
   return widgets;
  }
