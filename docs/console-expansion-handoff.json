@@ -1,4 +1,15 @@
 {
+  "ps4InfiniteWarfareMag20261113": {
+    "date": "2026-11-13",
+    "status": "Built and verified locally",
+    "page": "console/mods/ps4/call-of-duty/infinite-warfare/index.html",
+    "changes": "Added Multiplayer and Zombies cards using the supplied screenshots and shared MediaFire ZIP. ZIP readme pins IW injector v1.0 to PS4 CUSA04762 update 1.25 and limits Zombies to Spaceland.",
+    "archive": "Verified the F: copy, 75266838 bytes, SHA-256 00a25f157bb05f0255e541686b9e175e00aa2f78bd798b1ddee6df4ee01ed55a. Inventory ID ps4-ps5-iw-mag-gsc-zip. No payloads executed.",
+    "regenerate": [
+      "node scripts/build-ps4-ps5-cod.cjs --infinite-warfare-only",
+      "node scripts/console-mod-catalog.cjs"
+    ]
+  },
   "fortnitePs4FileCleanup20261112": {
     "date": "2026-11-12",
     "page": "console/mods/ps4/fortnite/index.html",

@@ -78,8 +78,8 @@
       "title": "Call of Duty: Infinite Warfare",
       "slug": "infinite-warfare",
       "cover": "/assets/images/covers/cod-infinite-warfare.jpg",
-      "summary": "DLC title-ID and game-update reference from the supplied post. No mod menu was attached to this post.",
-      "resourceDescription": "Captured PS4 DLC title IDs and game-update references for Call of Duty: Infinite Warfare. Open the compatibility guide to see the supplied details."
+      "summary": "MAG Menu + GSC Injector for Multiplayer and Zombies, plus a DLC compatibility reference.",
+      "resourceDescription": "Browse PS4 MAG Menu + GSC Injector downloads and screenshots for Multiplayer and Zombies, plus the Infinite Warfare DLC compatibility reference."
     },
     {
       "id": "wwii",
@@ -2165,6 +2165,76 @@
           "distribution": "include"
         }
       ]
+    },
+    {
+      "id": "iw-mag-gsc-mp",
+      "gameIds": [
+        "infinite-warfare"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "MAG Menu + GSC Injector · Multiplayer",
+      "description": "PS4 · Multiplayer. Multiplayer and Zombies share the same ZIP.",
+      "compatibilityText": "PS4 · CUSA04762 · Game update 1.25",
+      "tags": [
+        "Multiplayer",
+        "GSC",
+        "PS4"
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-ps5/originals/iw-mag-gsc-mp.png",
+          "caption": "Infinite Warfare MAG Menu in Multiplayer"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "iw-mag-gsc-mp",
+          "label": "Download ZIP",
+          "url": "https://www.mediafire.com/file/astzju9qxo11fv1/MAG_INJECTOR_ADDED_MW2019%252BFIX_MWR_BO4_WW2-MENUS.zip/file",
+          "distribution": "include"
+        }
+      ],
+      "version": "Injector v1.0",
+      "source": {
+        "postTitle": "MAG GSC Injector V1 – Infinite Warfare",
+        "archiveReadme": "MAG INJECTOR/Tools/IW/LISEZMOI.txt"
+      }
+    },
+    {
+      "id": "iw-mag-gsc-zm",
+      "gameIds": [
+        "infinite-warfare"
+      ],
+      "category": "menu",
+      "publication": "include",
+      "name": "MAG Menu + GSC Injector · Zombies",
+      "description": "PS4 · Zombies. Multiplayer and Zombies share the same ZIP.",
+      "compatibilityText": "PS4 · CUSA04762 · Game update 1.25 · Spaceland only",
+      "tags": [
+        "Zombies",
+        "GSC",
+        "PS4"
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-ps5/originals/iw-mag-gsc-zm.png",
+          "caption": "Infinite Warfare MAG Menu in Zombies"
+        }
+      ],
+      "downloads": [
+        {
+          "id": "iw-mag-gsc-zm",
+          "label": "Download ZIP",
+          "url": "https://www.mediafire.com/file/astzju9qxo11fv1/MAG_INJECTOR_ADDED_MW2019%252BFIX_MWR_BO4_WW2-MENUS.zip/file",
+          "distribution": "include"
+        }
+      ],
+      "version": "Injector v1.0",
+      "source": {
+        "postTitle": "MAG GSC Injector V1 – Infinite Warfare",
+        "archiveReadme": "MAG INJECTOR/Tools/IW/LISEZMOI.txt"
+      }
     }
   ]
 }

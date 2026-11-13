@@ -3,11 +3,12 @@ const path = require('node:path');
 const {page, section, grid, resource, link, videoEmbed} = require('./build-console-guides.cjs');
 
 const multiGameOnly = typeof process !== 'undefined' && Array.isArray(process.argv) && process.argv.includes('--multi-game-only');
+const infiniteWarfareOnly = typeof process !== 'undefined' && process.argv?.includes('--infinite-warfare-only');
 const multiGamePages = new Set(['black-ops-1', 'black-ops-2', 'wwii', 'ghosts', 'black-ops-3', 'advanced-warfare', 'modern-warfare-remastered']);
 const multiCod = require('./console-multicod.cjs');
 // Rebuild the legacy BO3 base once so scoped additions remain idempotent.
 // Its source manifests and all retained download files remain intact.
-require('./build-ps4-cod.cjs');
+if (!infiniteWarfareOnly) require('./build-ps4-cod.cjs');
 
 const root = path.resolve(__dirname, '..');
 const base = '/console/mods/ps4/call-of-duty/';
@@ -85,6 +86,7 @@ const contentWithOffHost = items => {
 };
 
 for (const game of visibleGames) {
+  if (infiniteWarfareOnly && game.id !== 'infinite-warfare') continue;
   if (multiGameOnly && !multiGamePages.has(game.id)) continue;
   const items = itemsFor(game);
   if (game.id === 'black-ops-3') {
@@ -112,7 +114,7 @@ page('console/mods/ps4/call-of-duty/index.html', 'Call of Duty · PS4/PS5 Resour
   'Choose a Call of Duty game to browse the PS4/PS5 resource collection, including menus, tools, screenshots and supplied guides.',
   hubCover, multiNav, section('games', 'Call of Duty games', gameCards.length ? grid(...gameCards) : '<p>No imported games are available yet.</p>'),
   '#games', 'Browse games');
-page('console/mods/ps4/call-of-duty/multicod/index.html', 'MultiCOD · Supported Games',
+if (!infiniteWarfareOnly) page('console/mods/ps4/call-of-duty/multicod/index.html', 'MultiCOD · Supported Games',
   'Shared Call of Duty menu packs and tools, with a separate resource entry for every source-confirmed supported game.',
   hubCover, multiNav, multiCod.indexContent(), '#supported-games', 'Choose supported game');
 console.log(multiGameOnly ? 'Built MultiCOD index, COD hub and seven game-specific resource pages.' : `Built PS4/PS5 COD collection: ${visibleGames.length} games, ${included.length} new included resources; legacy BO3 preserved.`);
