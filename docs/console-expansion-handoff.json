@@ -1,16 +1,32 @@
 {
+  "gta5VersionDropdowns20261113": {
+    "date": "2026-11-13",
+    "status": "User requested repository push. Added Menu / game version dropdowns to all 11 multi-file GTA V menu cards; each of the 21 menu groups has one normal Download button.",
+    "behavior": "Options retain every original file, menu release, game update and package/module distinction. The selection updates the direct URL, filename and accessible button label. Shared packages list all applicable game updates. Single-file cards retain one direct link.",
+    "files": [
+      "scripts/gta5-plugin-downloads.cjs",
+      "assets/gta5-menu-downloads.js",
+      "assets/gta5-plugin-downloads.css",
+      "console/mods/ps4/gta5/index.html",
+      "scripts/build-ps4-mods.cjs"
+    ],
+    "verification": "13 focused tests passed, including every dropdown option after commit-pinned Pages URL rewriting, all original files, single-button counts, and Velora/Crystalis ordering.",
+    "published": false
+  },
   "gta5DirectDownloads20261113": {
     "date": "2026-11-13",
     "status": "Latest user instruction applied: removed Download menu + plugins.ini, plugins.ini-only and menu-only labels. All 21 menu groups now have normal direct Download buttons, with per-file labels for multiple versions. Combined-download JavaScript is no longer loaded on the GTA V page.",
     "preserved": "All original menu files, version-specific URLs, regional compatibility labels, archived configurations and earlier requested card changes.",
     "verification": "12 focused checks passed, including direct download preservation after Pages rewriting and Velora/Crystalis order. The 21 deployment checks also passed.",
-    "published": false
+    "published": false,
+    "repositoryCommit": "55fe8f8219bfbe2b2cdf8081c8a2a7c8587a98d2"
   },
   "siteEditsPublication20261113": {
     "date": "2026-11-13",
-    "status": "User requested push. Final staged design uses only normal direct Download buttons, following the latest instruction; combined download controls are removed. Includes prior app-card cleanup, ACE-HIGH, and separate Velora/VOID cards with Velora and Crystalis first.",
+    "status": "Pushed the final direct-download-only design and all requested site edits to origin/main.",
     "verification": "21 deployment checks passed; 16 download/regional-bundle checks passed; focused Velora/Crystalis ordering checks passed. All original downloads and archive versions preserved.",
-    "remaining": "Confirm push and GitHub Pages deployment for this commit."
+    "remaining": "GitHub Pages deployment not verified in this chat. Unrelated existing host handoff changes and GOLDHEN14.iso working-tree deletion remain uncommitted.",
+    "commit": "55fe8f8219bfbe2b2cdf8081c8a2a7c8587a98d2"
   },
   "veloraCrystalisLayout20261113": {
     "date": "2026-11-13",

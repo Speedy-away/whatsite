@@ -84,7 +84,7 @@ test('Velora and Crystalis lead 1.57, while VOID has its own card and original d
  assert.deepEqual(merged.mergedResourceIds,[legacy]);
  const html=fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');
  const card=html.match(new RegExp('<article class="guide-resource" id="resource-'+id+'"[^>]*>([\\s\\S]*?)</article>'))[1];
- for(const local of ['/downloads/ps4-ps5/gta5-velora-1-57/Velora_1.4.zip','/downloads/ps4/GTA5/157/Velora.sprx']) assert.ok(card.includes('href="'+local+'"'),local);
+ for(const local of ['/downloads/ps4-ps5/gta5-velora-1-57/Velora_1.4.zip','/downloads/ps4/GTA5/157/Velora.sprx']) assert.ok(card.includes('href="'+local+'"')||card.includes('value="'+local+'"'),local);
  assert.doesNotMatch(card,/VOID_FIXED_DOWNLOAD|<h3>VOID/);
  assert.match(card,/ps4-gta5\/velora\.png/);
  const voidCard=html.match(/<article class="guide-resource" id="resource-gta5-void-lua-1-57"[^>]*>([\s\S]*?)<\/article>/)[1];

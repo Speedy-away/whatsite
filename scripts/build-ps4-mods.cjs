@@ -139,8 +139,8 @@ if(!rdr2Only&&!fortniteOnly){
 </dialog>`;
  const html=fs.readFileSync(file,'utf8')
    .replace('/assets/console-guide-dialog.js?v=5','/assets/console-guide-dialog.js?v=6')
-   .replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=7"></head>')
-   .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script></body>');
+   .replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=8"></head>')
+   .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script><script defer src="/assets/gta5-menu-downloads.js?v=1"></script></body>');
  fs.writeFileSync(file,html);
 }
 if(gtaOnly||rdr2Only)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));

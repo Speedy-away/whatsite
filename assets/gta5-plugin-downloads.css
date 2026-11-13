@@ -7,6 +7,9 @@
 .gta-plugin-facts dd{margin:3px 0 0;color:var(--text-primary,#eee)}
 .gta-plugin-originals{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .gta-plugin-originals .btn:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.gta-menu-version-label{font-size:.8rem;color:var(--text-secondary,#aaa)}
+.gta-menu-version{box-sizing:border-box;width:100%;min-width:0;min-height:44px;padding:10px 12px;border:1px solid var(--border,#444);border-radius:8px;background:var(--bg-secondary,#151518);color:var(--text-primary,#eee);font:inherit;font-size:.8rem}
+.gta-menu-version:focus-visible{outline:2px solid currentColor;outline-offset:3px}
 
 html:has(.gta-screenshot-preview[open]) { overflow: hidden; }
 .gta-screenshot-preview {

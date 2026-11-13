@@ -19,9 +19,12 @@ function createPluginDownloads(){
   if(/^\d{3}$/.test(legacy?.group||'')){const update='1.'+legacy.group.slice(1);rows.sort((a,b)=>Number(b.gameVersion===update)-Number(a.gameVersion===update));}
   const versions=[...new Set(rows.map(r=>r.gameVersion).filter(Boolean))];
   const builds='<dl class="gta-plugin-facts"><dt>Game update / package</dt><dd>'+esc(versions.length?'GTA V '+versions.join(' / '):'Game update unspecified')+'</dd><dt>Game region</dt><dd>Europe / EU · CUSA00411<br>USA · CUSA00419</dd></dl>';
-  const originals=[...new Map(rows.map(r=>[r.source.url,r])).values()];
-  const originalLinks=originals.map(r=>'<a class="btn btn-primary" href="'+esc(r.source.url)+'" download data-no-file-options><i class="fas fa-download" aria-hidden="true"></i> '+esc('Download'+(originals.length>1?' · '+r.label:''))+'</a>').join('');
-  return '<fieldset class="gta-plugin-download" aria-label="Menu downloads">'+builds+'<div class="gta-plugin-originals">'+originalLinks+'</div></fieldset>';
+  const grouped=new Map();for(const row of rows){if(!grouped.has(row.source.url))grouped.set(row.source.url,[]);grouped.get(row.source.url).push(row);}
+  const originals=[...grouped.values()].map(group=>{const first=group[0],updates=[...new Set(group.map(row=>row.gameVersion).filter(Boolean))];return {...first,label:updates.length>1?first.label.replace(/ · GTA V 1\.\d{2}(?: \/ 1\.\d{2})*$/,'')+' · GTA V '+updates.join(' / '):first.label};});
+  const first=originals[0],selectId='menu-version-'+item.id;
+  const selector=originals.length>1?'<label class="gta-menu-version-label" for="'+esc(selectId)+'">Menu / game version</label><select id="'+esc(selectId)+'" class="gta-menu-version" data-menu-version disabled>'+originals.map(row=>'<option value="'+esc(row.source.url)+'" data-filename="'+esc(row.source.name)+'">'+esc(row.label)+'</option>').join('')+'</select>':'';
+  const button='<a class="btn btn-primary" href="'+esc(first.source.url)+'" download="'+esc(first.source.name)+'" data-no-file-options data-menu-download aria-label="'+esc('Download '+item.name+' · '+first.label)+'"><i class="fas fa-download" aria-hidden="true"></i> Download</a>';
+  return '<fieldset class="gta-plugin-download" aria-label="Menu downloads" data-menu-download-group data-menu-name="'+esc(item.name)+'">'+builds+'<div class="gta-plugin-originals">'+selector+button+'</div></fieldset>';
 
  }
  return {render,choices,has:id=>catalog.downloads.some(x=>x.downloadId===id)};
