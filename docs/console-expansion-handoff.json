@@ -11979,5 +11979,10 @@
     "date": "2026-11-13",
     "changes": "Expanded PS4 14.02 jailbreak discovery in the guide metadata, hub metadata and searchable hub card. Added TechArticle/dateModified and breadcrumb structured data; refreshed canonical guide and hub sitemap lastmod dates to 2026-11-13. Kept firmware pins, original video title, links and noindex aliases intact.",
     "checks": "24 focused metadata/search tests passed. Verified exact keyword output, idempotent tags, structured data, unchanged links and one canonical guide sitemap entry. Follow-up: added 18 setup and troubleshooting phrases, bringing the guide to 58 curated keywords, and expanded the hub card search tags. All phrases survived generation, links stayed unchanged and 21 focused tests passed."
+  },
+  "ps4GuideDirectHostLinks20261113": {
+    "date": "2026-11-13",
+    "changes": "Added https://speedy-away.github.io/ps4/ to the combined guide introduction as Open PS4 WebKit exploit & jailbreak host, and to the PS4 hub Jailbreak card as PS4 jailbreak host. Both page generators retain the new links. Original tutorial route and all older links remain unchanged.",
+    "checks": "Destination returned HTTP 200. Generator syntax and scoped metadata checks passed; verified exactly one added host link per page and preservation of all previous href/src values."
   }
 }
