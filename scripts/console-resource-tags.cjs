@@ -46,6 +46,31 @@ function resourceTerms(item, gameTitle = '') {
   const modes = resourceTags(item);
   return unique([item.name, gameTitle, ...aliases, ...modes, item.version, item.compatibilityText,
     ...((modes.includes('Zombies')) ? ['ZM'] : []), ...((modes.includes('Multiplayer')) ? ['MP'] : []),
-    ...(item.keywords || [])]);
+    ...(item.keywords || []), ...discoveryTerms(item, gameTitle)]);
 }
-module.exports = {gameAliases, categoryLabels, resourceTags, resourceTerms, unique};
+// Search intent follows the resource's documented category and available material.
+// A page's PS4 directory alone is not proof of platform or firmware compatibility.
+function discoveryTerms(item, gameTitle = '') {
+  if (!['menu', 'pack', 'script', 'injector', 'rtm', 'cfg', 'client'].includes(item.category)) return [];
+  const name = item.name;
+  if (!name) return [];
+  const kind = categoryLabels[item.category].toLowerCase();
+  const games = unique([gameTitle, ...(item.gameIds || []).flatMap(id => gameAliases[id] || [])]);
+  const platforms = unique([...(item.platforms || []), ...(item.tags || [])]
+    .filter(value => /^(?:ps3|ps4|ps5|xbox 360)$/i.test(value)).map(value => value.toUpperCase()));
+  const downloads = (item.downloads || []).filter(file => file.url && (!file.distribution || file.distribution === 'include'));
+  const hasGuide = Boolean(item.guideBlocks?.length || item.controls?.length);
+  return unique([
+    name, `${name} ${kind}`, ...games.map(game => `${name} ${game}`),
+    ...platforms.map(platform => `${name} ${platform}`),
+    ...games.flatMap(game => [`${game} ${kind}`, ...platforms.map(platform => `${game} ${platform} ${kind}`)]),
+    ...(downloads.length ? [`${name} download`, `download ${name}`, `${name} downloads`,
+      ...games.map(game => `${game} ${kind} downloads`)] : []),
+    ...(hasGuide ? [`${name} guide`, `${name} setup`, `${name} requirements`, ...games.map(game => `${game} ${kind} guides`)] : []),
+    ...(item.guideBlocks?.some(block => block.type === 'steps') ? [`${name} installation guide`, `how to install ${name}`] : []),
+    ...(item.controls?.length ? [`${name} controls`, `how to open ${name}`] : []),
+    ...(item.videos?.length || item.videoButton?.url ? [`${name} video`] : []),
+    ...downloads.map(file => file.filename).filter(Boolean)
+  ]);
+}
+module.exports = {gameAliases, categoryLabels, resourceTags, resourceTerms, discoveryTerms, unique};

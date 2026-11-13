@@ -11984,5 +11984,12 @@
     "date": "2026-11-13",
     "changes": "Added https://speedy-away.github.io/ps4/ to the combined guide introduction as Open PS4 WebKit exploit & jailbreak host, and to the PS4 hub Jailbreak card as PS4 jailbreak host. Both page generators retain the new links. Original tutorial route and all older links remain unchanged.",
     "checks": "Destination returned HTTP 200. Generator syntax and scoped metadata checks passed; verified exactly one added host link per page and preservation of all previous href/src values."
+  },
+  "ps4MenuSearch20261113": {
+    "date": "2026-11-13",
+    "status": "User approved publication; 25 focused tests passed and changes prepared for main.",
+    "scope": "Added per-resource name, game aliases, download, guide, setup, control and filename searches for 94 menu/script/injector/RTM/CFG/client catalogue entries across 20 updated pages, including GTA V, RDR2, Fortnite and Call of Duty. Download/guide terms follow the supplied resources. Individual named resources carry keywords in structured metadata. Shared names stay scoped to their game.",
+    "verification": "25 focused tests passed; updater is idempotent. Every HTML href/src, visible body and runtime script stayed unchanged. Preserved existing compatibility and version pins, downloads and unrelated workspace changes.",
+    "regenerate": "node scripts/update-ps4-menu-search.cjs; node scripts/update-ps4-menu-search.cjs --check"
   }
 }

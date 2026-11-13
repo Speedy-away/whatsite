@@ -327,7 +327,8 @@ function pageSchema({canonical, title, description, keywords, image, imageInfo, 
     url: image, description: imageInfo.alt, encodingFormat: imageInfo.type,
     width: imageInfo.width, height: imageInfo.height};
   if (metadata?.items) page.mainEntity = {'@type': 'ItemList', numberOfItems: metadata.items.length,
-    itemListElement: metadata.items.map((item, i) => ({'@type': 'ListItem', position: i + 1, name: item.name, url: new URL(item.url, origin).href}))};
+    itemListElement: metadata.items.map((item, i) => ({'@type': 'ListItem', position: i + 1, name: item.name, url: new URL(item.url, origin).href,
+      ...(item.keywords?.length ? {item: {'@type': 'CreativeWork', name: item.name, url: new URL(item.url, origin).href, keywords: item.keywords.join(', ')}} : {})}))};
   const graph=[website,page];
   if(metadata?.breadcrumbs){
     const breadcrumb={'@type':'BreadcrumbList','@id':canonical+'#breadcrumbs',itemListElement:metadata.breadcrumbs.map((item,i)=>({'@type':'ListItem',position:i+1,name:item.name,item:new URL(item.url,origin).href}))};
@@ -415,6 +416,7 @@ function transform(file, before, options = {}) {
     terms.splice(1, 0, ...discovery.filter(term => names.has(term)).slice(0, 6));
     terms.push(...discovery);
   }
+  if (!noindex && !redirect && editorial?.searchKeywords?.length) terms.push(...editorial.searchKeywords);
   terms.push('whatwhatboy');
   const keywordLimit = relative === 'console/ps4/jailbreaks.html' ? 60
     : relative === 'pc/ports.html' ? 120
@@ -423,6 +425,7 @@ function transform(file, before, options = {}) {
     : relative === 'console/ps4/game-patches.html' ? 70
     : /^console\/(?:xbox-game-library|nintendo-game-library|playstation-library)\/index\.html$/.test(relative) ? 80
     : /^(?:console\/ps[45]\/(?:index|free-shops)\.html|console\/free-shops\/index\.html)$/.test(relative) ? 60
+    : editorial?.searchKeywords?.length ? 100
     : relative === 'console/mods/ps4/fortnite/index.html' ? 80
     : 35;
   const keywords = [...new Map(terms.filter(t => t && t.toLowerCase() !== 'whatwhatboy').map(t => [t.toLowerCase(), t])).values()].slice(0, keywordLimit).concat('whatwhatboy').join(', ');

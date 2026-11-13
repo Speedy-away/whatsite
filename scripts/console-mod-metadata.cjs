@@ -34,15 +34,21 @@ function metadataByPage() {
     const [title, description, discoveryTerms = []] = gameCopy[game.id] || [game.title + ' Resources', game.summary || 'Browse game-specific menus, tools and supplied guides.'];
     const matchHeading = game.id === 'fortnite';
     const pageTitle = matchHeading ? `${game.title} · ${game.platformLabel}` : `${title} | whatwhatboy`;
-    const items = game.id === 'fortnite' ? matching.map(({name, url}) => ({name, url})) : undefined;
+    const searchable = matching.filter(entry => entry.keywords.length);
+    const searchKeywords = unique([
+      ...searchable.map(entry => entry.name),
+      ...searchable.flatMap(entry => entry.keywords.filter(term => term.startsWith(game.title + ' '))),
+      ...searchable.flatMap(entry => entry.keywords.filter(term => / (?:download|guide|setup|controls)$/.test(term)))
+    ]);
+    const items = searchable.length ? matching.map(({name, url, keywords}) => ({name, url, keywords})) : undefined;
     result.set(game.url.slice(1) + 'index.html', {title: pageTitle, brandTitle: !matchHeading, description,
       keywords: unique([...(gameAliases[game.id] || []), game.title, ...(matchHeading ? [title] : []), ...discoveryTerms, ...matching.map(entry => entry.name),
-        ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), type: 'CollectionPage', items});
+        ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), searchKeywords, type: 'CollectionPage', items});
   }
   const directory = {title: 'PS4/PS5 Menu Directory: Games, Tools & Guides | whatwhatboy',
     description: `Search ${entries.length} PS4/PS5 game-resource entries across ${games.length} games by menu name, game alias, update or type. Open downloads, previews and guide popups.`,
-    keywords: unique([...games.map(game => game.title), 'PS4 PS5 menu directory', 'console game resources', 'mod menu search', 'injectors', 'RTM tools', 'CFG', 'scripts', 'DLC references', ...games.flatMap(game => gameAliases[game.id] || [])]),
-    type: 'CollectionPage', items: entries.map(entry => ({name: entry.game + ' · ' + entry.name, url: entry.url}))};
+    keywords: unique(['PS4 mod menu downloads', 'PS4 mod menu guides', 'GTA 5 mod menu downloads', 'RDR2 mod menu downloads', 'Call of Duty mod menu downloads', ...games.map(game => game.title), 'PS4 PS5 menu directory', 'console game resources', 'mod menu search', 'injectors', 'RTM tools', 'CFG', 'scripts', 'DLC references', ...games.flatMap(game => gameAliases[game.id] || [])]),
+    type: 'CollectionPage', items: entries.map(entry => ({name: entry.game + ' · ' + entry.name, url: entry.url, keywords: entry.keywords}))};
   result.set('console/mods/ps4/menus.html', directory);
   result.set('console/mods/ps4/index.html', {title: 'PS4/PS5 Mods / Mod Menus | whatwhatboy',
     description: `Browse ${games.length} game collections, including GTA V, RDR2, Call of Duty and Fortnite. Find menus, injectors, tools and guides with game-specific requirements.`,
@@ -50,7 +56,7 @@ function metadataByPage() {
   const codGames = games.filter(game => game.url.includes('/call-of-duty/'));
   result.set('console/mods/ps4/call-of-duty/index.html', {title: 'Call of Duty Console Menus, Injectors & Guides | whatwhatboy',
     description: `Browse ${codGames.length} Call of Duty collections, from Black Ops to WWII, with game-specific menus, GSC injectors, RTM tools, previews and DLC references.`,
-    keywords: unique(['Call of Duty console resources', 'COD mod menus', ...codGames.map(game => game.title), 'GSC injectors', 'RTM tools', 'DLC references', ...codGames.flatMap(game => gameAliases[game.id] || [])]), type: 'CollectionPage'});
+    keywords: unique(['Call of Duty console resources', 'COD mod menus', 'Call of Duty mod menu downloads', 'Call of Duty mod menu guides', 'PS4 Call of Duty mod menus', 'Black Ops mod menus', 'GSC injector downloads', 'GSC injector guides', ...codGames.map(game => game.title), 'GSC injectors', 'RTM tools', 'DLC references', ...codGames.flatMap(game => gameAliases[game.id] || [])]), type: 'CollectionPage'});
   const vault = require('../docs/console-vault-resources.json');
   result.set('console/vault.html', {title: 'The Vault: Console Apps, Updates & Reference Sites | whatwhatboy',
     description: 'Find PKG-Zone, OrbisPatches, Garlicsaves, PlayStation firmware archives, SuperPSX and Vimm’s Lair, with usage notes and link-check status.',
@@ -65,7 +71,8 @@ function pageSchema({canonical, title, description, keywords, image, metadata}) 
     name: title, description, inLanguage: 'en', isPartOf: {'@id': website['@id']}, keywords};
   if (image) page.image = image;
   if (metadata?.items) page.mainEntity = {'@type': 'ItemList', numberOfItems: metadata.items.length,
-    itemListElement: metadata.items.map((item, i) => ({'@type': 'ListItem', position: i + 1, name: item.name, url: new URL(item.url, origin).href}))};
+    itemListElement: metadata.items.map((item, i) => ({'@type': 'ListItem', position: i + 1, name: item.name, url: new URL(item.url, origin).href,
+      ...(item.keywords?.length ? {item: {'@type': 'CreativeWork', name: item.name, url: new URL(item.url, origin).href, keywords: item.keywords.join(', ')}} : {})}))};
   return {'@context': 'https://schema.org', '@graph': [website, page]};
 }
 module.exports = {metadataByPage, pageSchema};

@@ -3,7 +3,7 @@ const path = require('node:path');
 const {page, section, grid, resource, link, guideLink, esc} = require('./build-console-guides.cjs');
 const root = path.resolve(__dirname, '..');
 const base = '/console/mods/ps4/';
-const {resourceTags, resourceTerms, categoryLabels, gameAliases} = require('./console-resource-tags.cjs');
+const {resourceTags, resourceTerms, discoveryTerms, categoryLabels, gameAliases} = require('./console-resource-tags.cjs');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 function catalog() {
   const cod = read('docs/ps4-ps5-cod-resources.json');
@@ -17,7 +17,8 @@ function catalog() {
     const game = games.find(game => game.id === gameId);
     if (!game) throw Error('Unknown catalog game: ' + gameId);
     item = {...item, gameIds: [gameId], category: item.category || 'menu'};
-    entries.push({name: item.name, category: item.category, game: game.title, tags: resourceTags(item),
+    entries.push({id: item.id, name: item.name, category: item.category, game: game.title, tags: resourceTags(item),
+      keywords: discoveryTerms(item, game.title),
       image:require('./ps4-ps5-card-images.cjs').resourceImage(item), gameId, versions: item.compatibilityText || item.version || item.gameVersions?.map(v => 'GTA V ' + v).join(', ') || '',
       url, search: resourceTerms(item, game.title).join(' ').toLowerCase()});
   }
