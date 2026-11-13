@@ -12310,5 +12310,10 @@
     "downloadPreservation": "GOLDHEN14.iso local deletion excluded from commit: Windows Defender quarantined it on 2026-11-13. Existing Git copy retained; no restoration, refetch, archive deletion or history rewrite performed.",
     "payloadsExecuted": false,
     "hardwareVerified": false
+  },
+  "ps4WebkitHostSearch20261113": {
+    "date": "2026-11-13",
+    "changes": "Added 16 PS4 WebKit/jailbreak host discovery phrases including firmware 14.02, WWB Host and firmware selector variants. Guide has 74 curated keywords; hub search card includes all new phrases. Added descriptive titles to the direct /ps4/ host links and a WebKit host keyword to hub metadata. Both generators preserve the titles.",
+    "checks": "24 focused tests passed. Confirmed every keyword reaches generated metadata, repeatable search tags and unchanged href/src destinations."
   }
 }

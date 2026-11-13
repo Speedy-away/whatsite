@@ -418,7 +418,7 @@ function transform(file, before, options = {}) {
   }
   if (!noindex && !redirect && editorial?.searchKeywords?.length) terms.push(...editorial.searchKeywords);
   terms.push('whatwhatboy');
-  const keywordLimit = relative === 'console/ps4/jailbreaks.html' ? 60
+  const keywordLimit = relative === 'console/ps4/jailbreaks.html' ? 80
     : relative === 'pc/ports.html' ? 120
     : /^console\/ps[45]\/game-downloads\.html$/.test(relative) ? 83
     : relative === 'console/ps4/save-tools.html' ? 80

@@ -25,7 +25,7 @@ for(const platform of ['ps4','ps5']){
 }
 const ps4Hub = profiles.get('console/ps4/index.html');
 ps4Hub.description = 'PS4 14.02 or lower jailbreak guide, firmware compatibility, homebrew and game mods, plus WWB HOST links for browser loaders, payloads and patches.';
-ps4Hub.keywords.unshift('PS4 14.02 jailbreak', '14.02 jailbreak', 'PS4 jailbreak 14.02', 'PS4 14.02 or lower guide', 'PS4 browser jailbreak tutorial', 'PS4 offline jailbreak');
+ps4Hub.keywords.unshift('PS4 WebKit exploit host', 'PS4 14.02 jailbreak', '14.02 jailbreak', 'PS4 jailbreak 14.02', 'PS4 14.02 or lower guide', 'PS4 browser jailbreak tutorial', 'PS4 offline jailbreak');
 add('hosts/ps4/afterglow/index.html','PS4 WebKit Host | WWB HOST','Open the preserved PS4 browser-host entry on WWB HOST. Match its exact firmware and displayed loading requirements before starting.',['PS4 WebKit host','PS4 firmware compatibility'],'ps4');
 add('hosts/ps4/cheats/index.html','PS4 GoldHEN Cheats | WWB HOST','Browse PS4 GoldHEN cheat resources on WWB HOST. Match the title ID, region and installed game update to each original file.',['GoldHEN cheats','PS4 title IDs','PS4 game updates'],'ps4');
 add('hosts/ps4/firmware/index.html','PS4 Firmware Selection | WWB HOST','Open PS4 firmware selection on WWB HOST and read the exact browser-host and payload requirements for the selected firmware.',['PS4 firmware selection','PS4 browser host'],'ps4');
