@@ -416,7 +416,8 @@ function transform(file, before, options = {}) {
     terms.push(...discovery);
   }
   terms.push('whatwhatboy');
-  const keywordLimit = relative === 'pc/ports.html' ? 120
+  const keywordLimit = relative === 'console/ps4/jailbreaks.html' ? 60
+    : relative === 'pc/ports.html' ? 120
     : /^console\/ps[45]\/game-downloads\.html$/.test(relative) ? 83
     : relative === 'console/ps4/save-tools.html' ? 80
     : relative === 'console/ps4/game-patches.html' ? 70

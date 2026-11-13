@@ -11974,5 +11974,10 @@
     "date": "2026-11-13",
     "changes": "Updated the combined PS4 jailbreak guide, legacy redirects, hub card, generator and search metadata to say 14.02 or lower as requested. Kept the original video title, optional 14.00 update instructions and demonstrated host 7.00–14.00 compatibility pins. The guide explicitly asks readers to check the exact host firmware list.",
     "checks": "Script syntax and metadata JSON passed. All href/src URLs in the four edited public pages match HEAD; original video title and route compatibility preserved."
+  },
+  "ps4GuideSearch20261113": {
+    "date": "2026-11-13",
+    "changes": "Expanded PS4 14.02 jailbreak discovery in the guide metadata, hub metadata and searchable hub card. Added TechArticle/dateModified and breadcrumb structured data; refreshed canonical guide and hub sitemap lastmod dates to 2026-11-13. Kept firmware pins, original video title, links and noindex aliases intact.",
+    "checks": "24 focused metadata/search tests passed. Verified exact keyword output, idempotent tags, structured data, unchanged links and one canonical guide sitemap entry."
   }
 }

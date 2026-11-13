@@ -72,7 +72,7 @@ function buildGuide() {
     ['https://github.com/GoldHEN/GoldHEN', 'GoldHEN: package installer, update blocker and optional features'],
     ['https://manuals.playstation.net/document/en/ps4/settings/update.html', 'PlayStation: PS4 system software update settings']
   ]));
-  page(route.slice(1), 'PS4 Jailbreak · 14.02 or Lower', 'Complete PS4 browser jailbreak guide for 14.02 or lower: firmware checks, DNS, offline cache, app installation and troubleshooting.', data.image, jailbreakNav,
+  page(route.slice(1), 'PS4 Jailbreak · 14.02 or Lower', 'PS4 14.02 or lower jailbreak guide: check firmware and host compatibility, set up the browser, use offline cache, install homebrew and troubleshoot errors.', data.image, jailbreakNav,
     `<div class="ps4-jb-reading"><div class="ps4-jb-intro">${outline}</div>${before}${walkthrough}${offline}${apps}${settings}${firmware}${help}${video}${sources}</div>`, '#before', 'Start the guide');
   const file = path.join(root, route);
   let html = fs.readFileSync(file, 'utf8');

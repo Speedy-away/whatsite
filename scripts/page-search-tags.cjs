@@ -150,7 +150,9 @@ function resourceTerms(card, file = '') {
       psvita: ['PS Vita save resigning', 'Apollo Vita VPK', 'VitaShell save backup', 'Adrenaline PSP saves', 'PS1 virtual memory cards']
     }[apolloPlatform]
   ] : [];
-  return unique([title, ...labels, ...[title, ...positiveLabels].flatMap(aliasesFor), ...hostTerms, ...apolloTerms]);
+  const ps4GuideTerms = file === 'console/ps4/index.html' && /href=["']\/console\/ps4\/jailbreaks\.html["']/.test(card)
+    ? ["PS4 14.02 jailbreak","14.02 jailbreak","PS4 jailbreak 14.02","PlayStation 4 14.02 jailbreak","PS4 14.02 jailbreak guide","PS4 14.02 or lower jailbreak","PS4 jailbreak tutorial","PS4 jailbreak 2026"] : [];
+  return unique([title, ...ps4GuideTerms, ...labels, ...[title, ...positiveLabels].flatMap(aliasesFor), ...hostTerms, ...apolloTerms]);
 }
 function protectedFile(file, html = '') {
   const relative = (path.isAbsolute(file) && !/^\/(?:console|downloads)\//.test(file) ? path.relative(root, file) : file).replaceAll('\\', '/').replace(/^\/+/, '').split(/[?#]/)[0];
