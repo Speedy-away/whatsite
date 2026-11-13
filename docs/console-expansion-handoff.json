@@ -12323,5 +12323,13 @@
     "preservation": "Verified every href/src, visible body and runtime script unchanged on all 48 pages. Jimbo DEX/HEN downloads, MultiCOD mappings, Xbox mismatch references, original archives, game updates and regions remain intact. No new binaries or host-site edits.",
     "checks": "37 tests passed, both legacy and PS4 search updaters report zero drift. Per-card searches and individual structured metadata are repeatable.",
     "regenerate": "node scripts/update-legacy-menu-search.cjs; node scripts/update-legacy-menu-search.cjs --check"
+  },
+  "hostMonochrome20261113": {
+    "date": "2026-11-13",
+    "status": "Host design validated for publication from isolated checkout.",
+    "host": "https://speedy-away.github.io/",
+    "mainNavigation": "Added PS4 / PS5 Host immediately after Contact Me in the shared homepage header template. All generated site-shell pages inherit the link.",
+    "preservation": "Main host migration redirects and all downloads preserved.",
+    "checks": "21 main-site publication tests and 33 focused host tests passed, along with all 5 production checks. Browser confirmed navigation placement, persistent dark/light mode and responsive host pages. Five broader test failures reproduced on unchanged HEAD."
   }
 }
