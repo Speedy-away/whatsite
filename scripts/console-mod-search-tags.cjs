@@ -1,10 +1,18 @@
 'use strict';
 let cachedEntries;
+let cachedGames;
 const normalized = value => String(value).normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
 function termsForCard(file, card, title) {
   if (/^console\/(ps3|xbox360)\/mods/.test(file)) return require('./legacy-console-menu-search.cjs').termsForCard(file, card, title);
   if (!file.startsWith('console/mods/ps4/')) return [];
-  cachedEntries ||= require('./console-mod-catalog.cjs').catalog().entries.filter(entry => entry.keywords.length);
+  if (!cachedEntries) {
+    const data = require('./console-mod-catalog.cjs').catalog();
+    cachedEntries = data.entries.filter(entry => entry.keywords.length);
+    cachedGames = data.games;
+  }
+  if (file === 'console/mods/ps4/index.html') {
+    return cachedGames.find(game => normalized(game.title) === normalized(title))?.keywords || [];
+  }
   const directory = file === 'console/mods/ps4/menus.html';
   const multicod = file === 'console/mods/ps4/call-of-duty/multicod/index.html';
   const pagePath = '/' + file.replace(/index\.html$/, '');

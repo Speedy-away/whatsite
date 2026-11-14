@@ -157,12 +157,14 @@ function createGameImports({root = ROOT, data, files} = {}) {
           ) : '') +
           childCards + renderer.gameContent(items, '', game.categoryHeadings) +
           (relatedCards.length ? section('related-resources', 'Related resources', grid(...relatedCards)) : '') +
-          (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), '#content', 'Browse resources');
+          (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), game.heroAnchor || '#content', 'Browse resources');
         if (game.keywords?.length || filter) {
           const target = path.join(root, file);
           let html = fs.readFileSync(target, 'utf8');
           if (game.keywords?.length) html = html.replace(/<meta name="keywords" content="[^"]*">/, '<meta name="keywords" content="' + h(game.keywords.join(', ')) + '">');
           if (filter) html = html.replace('</head>', '<link rel="stylesheet" href="/assets/console-extra-games.css"></head>').replace('</body>', '<script defer src="/assets/console-extra-games.js"></script></body>');
+          // Keep authored keyword additions aligned with social and schema metadata.
+          html = require('./page-search-metadata.cjs').transform(file, html).html;
           fs.writeFileSync(target, html);
         }
       }

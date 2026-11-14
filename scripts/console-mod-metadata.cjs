@@ -1,6 +1,11 @@
 const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
+  'apex-legends': ['Apex Legends PS4 Mod Menus: nware SPRX', 'Download the nware SPRX mod menu for Apex Legends on PS4 and view its screenshot. Game-update, region and firmware requirements are unspecified.',
+    ['Apex Legends PS4 mods', 'Apex Legends PS4 mod menu', 'Apex Legends PS4 mod menus', 'Apex Legends PS4 mod menu download',
+      'Apex PS4 mod menu', 'Apex Legends PlayStation 4 mods', 'PlayStation 4 Apex Legends mod menu', 'Apex Legends SPRX',
+      'Apex Legends PS4 SPRX', 'Apex Legends SPRX download', 'Apex Legends nware', 'Apex Legends nware download',
+      'nware PS4', 'nware Apex Legends', 'nware mod menu', 'nware PS4 mod menu', 'nware download', 'nware SPRX', 'nware screenshot']],
   'fortnite': ['Fortnite PS4 Cheats & Mod Menus', 'Browse Fortnite PS4 mod menus, GoldHEN setup and a user-submitted Fortnite download-file cleanup tip for the matching CUSA title ID.',
     ['Fortnite PS4 cheat', 'Fortnite PS4 hacks', 'Fortnite PS4 cheat menu', 'Fortnite cheats PS4', 'Fortnite hacks PS4', 'PlayStation 4 Fortnite cheats',
       'Fortnite PS4 mods', 'Fortnite PS4 mod menus', 'Fortnite PS4 mod menu download', 'Fortnite PS4 SPRX download', 'Fortnite PS4 GoldHEN plugin',
@@ -51,7 +56,7 @@ function metadataByPage() {
     type: 'CollectionPage', items: entries.map(entry => ({name: entry.game + ' · ' + entry.name, url: entry.url, keywords: entry.keywords}))};
   result.set('console/mods/ps4/menus.html', directory);
   result.set('console/mods/ps4/index.html', {title: 'PS4/PS5 Mods / Mod Menus | whatwhatboy',
-    description: `Browse ${games.length} game collections, including GTA V, RDR2, Call of Duty and Fortnite. Find menus, injectors, tools and guides with game-specific requirements.`,
+    description: `Browse ${games.length} game collections, including GTA V, RDR2, Call of Duty, Fortnite and Apex Legends. Find mod menus, downloads and game-specific requirements.`,
     keywords: directory.keywords, type: 'CollectionPage'});
   const codGames = games.filter(game => game.url.includes('/call-of-duty/'));
   result.set('console/mods/ps4/call-of-duty/index.html', {title: 'Call of Duty Console Menus, Injectors & Guides | whatwhatboy',

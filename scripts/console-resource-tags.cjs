@@ -2,6 +2,7 @@ const gameAliases = {
   'gta5': ['GTA V', 'GTA 5', 'Grand Theft Auto V'],
   'rdr2': ['RDR2', 'RDR 2', 'Red Dead Redemption 2'],
   'fortnite': ['Fortnite'],
+  'apex-legends': ['Apex Legends', 'Apex', 'ApexLegends'],
   'dying-light': ['Dying Light', 'Dying Light The Following', 'Dying Light Enhanced Edition'],
   'dying-light-2': ['Dying Light 2', 'Dying Light 2 Stay Human', 'DL2'],
   'dead-island': ['Dead Island', 'Dead Island Definitive Edition', 'Dead Island Riptide'],
@@ -70,6 +71,7 @@ function discoveryTerms(item, gameTitle = '') {
     ...(item.guideBlocks?.some(block => block.type === 'steps') ? [`${name} installation guide`, `how to install ${name}`] : []),
     ...(item.controls?.length ? [`${name} controls`, `how to open ${name}`] : []),
     ...(item.videos?.length || item.videoButton?.url ? [`${name} video`] : []),
+    ...(item.searchKeywords || []),
     ...downloads.map(file => file.filename).filter(Boolean)
   ]);
 }

@@ -12647,5 +12647,56 @@
     "published": false,
     "archive": "Scoped and global inventories merged; organized archive index refreshed: 9,562 present file records, zero missing. Both v32 and v43.10 retained with source/version/size/SHA-256.",
     "repositoryStatus": "Committed for push to origin/main; live deployment not verified."
+  },
+  "apexLegendsNwarePs420261114": {
+    "date": "2026-11-14",
+    "status": "User requested repository push and publication. Apex Legends page, nware download, supplied artwork and SEO changes verified and prepared for main.",
+    "page": "/console/mods/ps4/apex-legends/",
+    "compatibility": "PS4 as supplied by user. No game update, firmware or title ID was supplied or inferred.",
+    "delivery": "Stable original-byte SPRX site mirror; original signed Discord URL and filename retained in source records and archive inventory.",
+    "archive": {
+      "inventory": "docs/ps4-apex-nware-private-inventory.json",
+      "version": "Unversioned snapshot 2026-11-14",
+      "bytes": 242592,
+      "sha256": "0d7b61ae29bc39d89753857e31f848c5143a78f05743160879a2ef65dd8b4b60",
+      "verified": true,
+      "indexRefresh": "Complete: 9,564 present records; zero missing and zero unavailable. Prior files and metadata preserved."
+    },
+    "verification": "docs/qa/apex-legends-nware-verification.json. Browser layout, screenshot popup, hub listing and Browse resources anchor verified. Previous catalogue records/cards/files preserved. Import/search suite: 10 passed, one pre-existing GTA screenshot-only fixture failure; renderer unchanged. Git size check passed.",
+    "builder": "Game data drives future full builds. Added optional heroAnchor with existing default preserved; Apex uses #menu. Added Apex game aliases for menu search.",
+    "payloadExecuted": false,
+    "published": false,
+    "seo": {
+      "date": "2026-11-14",
+      "status": "Completed locally; not published.",
+      "keywords": 34,
+      "scope": [
+        "Apex Legends and nware page keywords, resource tags and curated search phrases",
+        "PS4 game-card and menu-directory search coverage",
+        "Search title and description plus matching Open Graph/Twitter previews",
+        "User artwork social dimensions, MIME type, checksum and accessible alt text",
+        "CollectionPage, nware ItemList and BreadcrumbList structured data",
+        "Metadata inventory and canonical sitemap refresh"
+      ],
+      "sitemap": {
+        "canonicalURLs": 509,
+        "added": 0,
+        "removed": 0,
+        "duplicates": 0,
+        "modificationDatesUpdated": 53,
+        "finalCheck": "Clean; no pending changes"
+      },
+      "verification": "docs/qa/apex-legends-seo-verification.json",
+      "tests": {
+        "passed": 24,
+        "failed": 0
+      },
+      "durability": "Actual Apex page regeneration and repeated metadata/search transforms passed. Shared generator applies final metadata after authored keyword overrides.",
+      "preservation": "Existing visible copy, download URLs, file bytes, images and compatibility pins preserved."
+    },
+    "deploymentChecks": {
+      "passed": 45,
+      "failed": 0
+    }
   }
 }

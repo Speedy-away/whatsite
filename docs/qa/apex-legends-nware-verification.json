@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-14",
+  "result": "Passed",
+  "page": "/console/mods/ps4/apex-legends/",
+  "checks": [
+    "New top-level Apex Legends page and hub card",
+    "nware card with stable original-byte SPRX download",
+    "Both supplied images preserved byte for byte",
+    "Original Discord URL and original filename retained",
+    "Game update, firmware and region not inferred",
+    "Menu directory filter, search metadata and sitemap entry",
+    "Every previous game, resource, file, hub card and directory entry preserved",
+    "Local HTTP download matches original and F: SHA-256",
+    "Browser: layout, game card, screenshot popup and Browse resources target"
+  ],
+  "download": {
+    "bytes": 242592,
+    "sha256": "0d7b61ae29bc39d89753857e31f848c5143a78f05743160879a2ef65dd8b4b60"
+  },
+  "archiveIndex": {
+    "presentFileRecords": 9564,
+    "missingFileRecords": 0,
+    "otherUnavailableRecords": 0
+  },
+  "tests": {
+    "passed": 10,
+    "failed": 1,
+    "preExistingFailure": "console-game-imports.test.cjs: GTA screenshot-only fixture expects a guide link removed by the existing clean GTA card renderer; renderer unchanged."
+  },
+  "payloadExecuted": false,
+  "published": false
+}
