@@ -102,6 +102,15 @@ function createPanel({root=ROOT,backupRoot=path.resolve('F:/whatsite-backup-down
     await fsp.writeFile(index,html);
   }
   async function save(input) {
+    await fsp.mkdir(temp,{recursive:true});
+    const lock=contained(root,path.join(temp,'save.lock'));
+    let handle;
+    try {handle=await fsp.open(lock,'wx');}
+    catch(error){if(error.code==='EEXIST')throw Error('Another panel is saving. Wait for it to finish. If a previous launcher crashed, stop all panel windows before removing .tmp/download-panel/save.lock.');throw error;}
+    try {await handle.writeFile(JSON.stringify({pid:process.pid,startedAt:new Date().toISOString()}));return await saveUnlocked(input);}
+    finally {await handle.close();await fsp.unlink(lock);}
+  }
+  async function saveUnlocked(input) {
     const row=validate(input,pages());
     if(!fs.existsSync(backupRoot))throw Error('F: archive is unavailable. Connect the archive drive before saving.');
     let image=localInput(input,'image');
