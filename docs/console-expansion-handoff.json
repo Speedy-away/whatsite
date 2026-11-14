@@ -26,7 +26,7 @@
     "liveCheckedAt": "2026-11-14T11:30:37.470Z",
     "seo": {
       "date": "2026-11-14",
-      "status": "User requested keyword/tag update and push; verified and prepared for main.",
+      "status": "Pushed to origin/main and deployed successfully. All 23 curated phrases, Lester page metadata, directory search, original download/image and sitemap dates verified live.",
       "curatedKeywordCount": 23,
       "scope": [
         "Lester SPRX, LesterSPRX, XlesterX and V2 aliases",
@@ -46,7 +46,11 @@
       },
       "verification": "docs/qa/lester-sprx-seo-verification.json",
       "preservation": "Every original link, image, download hash and compatibility pin preserved.",
-      "published": false
+      "published": true,
+      "repositoryCommit": "b25e71e33db85d20313907ddb7e653e6057d3889",
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43651320583",
+      "liveCheckedAt": "2026-11-14T23:10:05.523Z",
+      "liveVerification": "docs/qa/lester-sprx-seo-publication.json"
     }
   },
   "rdr2VersionDownloads20261114": {
