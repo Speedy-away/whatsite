@@ -12733,7 +12733,7 @@
   },
   "ps4AllMenusAndSelectors20261114": {
     "date": "2026-11-14",
-    "status": "User requested all remaining PS4 menu keywords/tags, then steered the same task to add Console/PC and PC Free Cheats/Game Mods selectors and put Game Mods / Mod Menus first on the homepage. Implemented and verified locally; publication requested.",
+    "status": "Pushed to origin/main and deployed successfully. Homepage order, Console/PC choices, PC Free Cheats/Game Mods destinations, renamed game list, selector CSS/sitemap and all 112 live PS4 metadata pages verified.",
     "search": {
       "namedEntries": 202,
       "gameCollections": 108,
@@ -12765,7 +12765,11 @@
       "passed": 48,
       "failed": 0
     },
-    "published": false,
-    "payloadExecuted": false
+    "published": true,
+    "payloadExecuted": false,
+    "repositoryCommit": "98e13817f6997d75f071306f10623c997dedfcc9",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43653525794",
+    "liveCheckedAt": "2026-11-14T23:36:27.380Z",
+    "liveVerification": "docs/qa/ps4-menu-search-selector-publication.json"
   }
 }
