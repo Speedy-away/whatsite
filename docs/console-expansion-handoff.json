@@ -12650,7 +12650,7 @@
   },
   "apexLegendsNwarePs420261114": {
     "date": "2026-11-14",
-    "status": "User requested repository push and publication. Apex Legends page, nware download, supplied artwork and SEO changes verified and prepared for main.",
+    "status": "Pushed to origin/main, GitHub Pages deployed successfully, and the public Apex page, metadata, sitemap, game directory, both images and original SPRX hash verified.",
     "page": "/console/mods/ps4/apex-legends/",
     "compatibility": "PS4 as supplied by user. No game update, firmware or title ID was supplied or inferred.",
     "delivery": "Stable original-byte SPRX site mirror; original signed Discord URL and filename retained in source records and archive inventory.",
@@ -12665,10 +12665,10 @@
     "verification": "docs/qa/apex-legends-nware-verification.json. Browser layout, screenshot popup, hub listing and Browse resources anchor verified. Previous catalogue records/cards/files preserved. Import/search suite: 10 passed, one pre-existing GTA screenshot-only fixture failure; renderer unchanged. Git size check passed.",
     "builder": "Game data drives future full builds. Added optional heroAnchor with existing default preserved; Apex uses #menu. Added Apex game aliases for menu search.",
     "payloadExecuted": false,
-    "published": false,
+    "published": true,
     "seo": {
       "date": "2026-11-14",
-      "status": "Completed locally; not published.",
+      "status": "Published; live 34-keyword metadata, social previews, collection/breadcrumb schema and sitemap entry verified.",
       "keywords": 34,
       "scope": [
         "Apex Legends and nware page keywords, resource tags and curated search phrases",
@@ -12697,6 +12697,10 @@
     "deploymentChecks": {
       "passed": 45,
       "failed": 0
-    }
+    },
+    "repositoryCommit": "88060ddd3a0dae8d3468e2ed029ac19dbce619d7",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43649544507",
+    "liveVerification": "docs/qa/apex-legends-publication.json",
+    "liveCheckedAt": "2026-11-14T22:51:13.958Z"
   }
 }

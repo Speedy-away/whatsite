@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-14T22:51:13.958Z",
+  "commit": "88060ddd3a0dae8d3468e2ed029ac19dbce619d7",
+  "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43649544507",
+  "page": "https://whatwhatboy.com/console/mods/ps4/apex-legends/",
+  "conclusion": "success",
+  "keywordCount": 34,
+  "checks": [
+    "Live Apex page and nware card",
+    "Search and social metadata plus CollectionPage and breadcrumbs",
+    "Published original SPRX and both images match local SHA-256 hashes",
+    "Repository assets use the deployed commit revision",
+    "Live PS4 game card and searchable directory/filter",
+    "Canonical sitemap entry and robots sitemap discovery"
+  ],
+  "assets": [
+    {
+      "kind": "download",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/88060ddd3a0dae8d3468e2ed029ac19dbce619d7/downloads/ps4/apex-legends/0d7b61ae29bc/niggerware.sprx",
+      "bytes": 242592,
+      "sha256": "0d7b61ae29bc39d89753857e31f848c5143a78f05743160879a2ef65dd8b4b60"
+    },
+    {
+      "kind": "screenshot",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/88060ddd3a0dae8d3468e2ed029ac19dbce619d7/assets/images/ps4-apex-legends/nware-user-preview.png",
+      "bytes": 382492,
+      "sha256": "a5005103bbb80d618833fd1c5ac2a873602fe6ed659421f8288e5333e74278ff"
+    },
+    {
+      "kind": "cover",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/88060ddd3a0dae8d3468e2ed029ac19dbce619d7/assets/images/ps4-apex-legends/apex-legends-user-cover.jpg",
+      "bytes": 96059,
+      "sha256": "c88fed2819571246ac11067a1aaca5f50e263ee4be8aabb84eb5f617d7a183ff"
+    }
+  ],
+  "payloadExecuted": false,
+  "automatedTests": {
+    "passed": 45,
+    "failed": 0
+  }
+}
