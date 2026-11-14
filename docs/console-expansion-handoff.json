@@ -12612,5 +12612,14 @@
       "workflow": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/43515458800",
       "hardwareTested": false
     }
+  },
+  "spectrumFn4310Update20261114": {
+    "date": "2026-11-14",
+    "status": "Replaced the active Spectrum FN PS4 Fortnite download with user-supplied v43.10; original v32 file and inventory retained.",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1569043359895654582/1571087383393341561/Spectrum_FN_43.10.sprx?ex=6af974a5&is=6af82325&hm=eae5130716bc3334a4c82b699c83f8408935e57f29209cf960738eb90e6cd24b&",
+    "verification": "Active rendered download and version checked; both v32 and v43.10 site files and F: archive SHA-256 verified. SELF header inspected without execution. Screenshot remains correctly captioned v32; game update and firmware remain unspecified.",
+    "published": false,
+    "archive": "Scoped and global inventories merged; organized archive index refreshed: 9,562 present file records, zero missing. Both v32 and v43.10 retained with source/version/size/SHA-256.",
+    "repositoryStatus": "Committed for push to origin/main; live deployment not verified."
   }
 }

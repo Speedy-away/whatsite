@@ -6,7 +6,7 @@ const gameCopy = {
       'Fortnite PS4 mods', 'Fortnite PS4 mod menus', 'Fortnite PS4 mod menu download', 'Fortnite PS4 SPRX download', 'Fortnite PS4 GoldHEN plugin',
       'Fortnite PS4 aimbot', 'Fortnite PS4 silent aim', 'Fortnite PS4 ESP', 'Fortnite PS4 player ESP', 'Fortnite PS4 loot ESP', 'Fortnite PS4 container ESP',
       'Fortnite PS4 skin changer', 'Fortnite PS4 no recoil', 'Fortnite PS4 vehicle flying', 'Fortnite skins database', 'Fortnite outfit catalogue',
-      'Spectrum FN v32', 'Spectrum FN PS4', 'Spectrum FN download', 'Spectrum FN mod menu', 'Spectrum_FN.sprx', 'Dev-Phobia Spectrum FN',
+      'Spectrum FN v43.10', 'Spectrum FN PS4', 'Spectrum FN download', 'Spectrum FN mod menu', 'Spectrum_FN.sprx', 'Dev-Phobia Spectrum FN',
       'Fortnite PS4 SPRX', 'Fortnite PS4 cheats', 'Fortnite silent aim', 'Fortnite player ESP', 'Fortnite loot ESP', 'Fortnite client-side skin changer',
       'Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite skin changer', 'Unlock all skins', 'Free skins', 'Fortnite PS4 hack',
       'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference',
