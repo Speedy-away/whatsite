@@ -27,9 +27,18 @@
       "intro": "FN Menu checks for PS4 title ID CUSA07669, shared by Europe and Australia. The GoldHEN template below is for FN Menu. The release post does not specify the Fortnite game update or PS4 firmware.",
       "fileCleanup": {
         "title": "Fortnite PS4 HWID unban file cleanup",
-        "tags": ["PS4", "Fortnite", "HWID unban", "CUSA title ID", "Download files"],
+        "tags": [
+          "PS4",
+          "Fortnite",
+          "HWID unban",
+          "CUSA title ID",
+          "Download files"
+        ],
         "path": "/user/download/CUSAxxxxx/",
-        "files": ["download0.dat", "download0_infomation.dat"]
+        "files": [
+          "download0.dat",
+          "download0_infomation.dat"
+        ]
       },
       "categoryHeadings": {
         "menu": "Mod menus / Cheats"
@@ -17161,8 +17170,26 @@
       ],
       "description": "Windows RTM tool by yAmethxst with an outfit editor, fast-run unlock, clothing-shop teleport and K/D editing.",
       "compatibilityText": "PS4 firmware 14.00 with GoldHEN · GTA V 1.57 · EU CUSA00411 or US CUSA00419. The author tested EU. Requires a Windows PC on the same network with .NET Framework 4.8.1.",
-      "tags": ["PS4","Outfit editor","PS4 outfit editor","GTA Online outfit editor","Fast-run unlock"],
-      "keywords": ["Arise RTM","GTA 5 Online 1.57","PS4 RTM tools","GTA 5 outfit editor","outfit editor PS4","GTA 5 outfit editor PS4","GTA Online PS4 outfit editor","GTA V unlocks","clothing shop teleport","custom K/D","GoldHEN"],
+      "tags": [
+        "PS4",
+        "Outfit editor",
+        "PS4 outfit editor",
+        "GTA Online outfit editor",
+        "Fast-run unlock"
+      ],
+      "keywords": [
+        "Arise RTM",
+        "GTA 5 Online 1.57",
+        "PS4 RTM tools",
+        "GTA 5 outfit editor",
+        "outfit editor PS4",
+        "GTA 5 outfit editor PS4",
+        "GTA Online PS4 outfit editor",
+        "GTA V unlocks",
+        "clothing shop teleport",
+        "custom K/D",
+        "GoldHEN"
+      ],
       "guideLabel": "Setup & screenshot",
       "hideCardCompatibility": true,
       "hideCardGuideLink": true,
@@ -17488,6 +17515,99 @@
         "EU": "CUSA08519",
         "USA": "CUSA03041"
       }
+    },
+    {
+      "id": "gta5-lester-sprx-v2-1-57",
+      "name": "LESTER SPRX",
+      "category": "menu",
+      "gameIds": [
+        "gta5"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "publication": "include",
+      "version": "V2 · GTA V 1.57",
+      "menuVersion": "V2",
+      "gameVersions": [
+        "1.57"
+      ],
+      "catalogueSection": "v157",
+      "titleIds": [
+        "CUSA00419"
+      ],
+      "compatibilityText": "PS4 · GTA V 1.57 · supplied plugins.ini targets CUSA00419",
+      "tags": [
+        "PS4",
+        "GTA V",
+        "Game 1.57",
+        "SPRX"
+      ],
+      "keywords": [
+        "Lester SPRX",
+        "XlesterX",
+        "Lester V2",
+        "GTA 5 PS4 mod menu",
+        "1.57"
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-gta5/lester-sprx-user-preview.png",
+          "display": "/assets/images/ps4-gta5/lester-sprx-user-preview.png",
+          "caption": "Lester SPRX menu in GTA V; screenshot supplied by the user."
+        }
+      ],
+      "downloads": [
+        {
+          "id": "gta5-lester-sprx-v2-1-57-rar",
+          "label": "Download",
+          "filename": "XlesterX sprx V2.rar",
+          "url": "https://www.mediafire.com/file/r1omzh0gcl5wx89/XlesterX+sprx+V2.rar/file",
+          "distribution": "include",
+          "bytes": 206823,
+          "sha256": "9094506c1461dd62594bfc5c5d8f0a36e6d6e03d0c9487aadbde88f9ea9a5e10"
+        }
+      ],
+      "source": {
+        "postUrl": "https://www.mediafire.com/file/r1omzh0gcl5wx89/XlesterX+sprx+V2.rar/file",
+        "capturedAt": "2026-11-14",
+        "captureFile": "docs/sources/lester-sprx/v2-source.json",
+        "originalDownloadUrls": [
+          "https://www.mediafire.com/file/r1omzh0gcl5wx89/XlesterX+sprx+V2.rar/file"
+        ]
+      },
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Version and compatibility",
+          "text": "The user supplied this Lester SPRX V2 package for GTA V 1.57 on PS4. The included plugins.ini targets CUSA00419; the package does not establish other regional title IDs or firmware compatibility."
+        },
+        {
+          "type": "steps",
+          "title": "Included installation notes",
+          "items": [
+            {
+              "title": "Copy the plugin",
+              "text": "With GTA V closed, copy the included XlesterX.sprx to /data/GoldHEN/plugins/XlesterX.sprx. The readme calls it .prx once, but the supplied file and plugins.ini both use .sprx."
+            },
+            {
+              "title": "Copy the settings folder",
+              "text": "Copy the included LesterSPRX folder to /data/GoldHEN/LesterSPRX."
+            },
+            {
+              "title": "Merge the configuration",
+              "text": "Back up /data/GoldHEN/plugins.ini, then merge the included CUSA00419 entry only if it matches your installed game. Preserve your other plugin entries and enable one menu at a time."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Included game configuration",
+          "text": "[CUSA00419]\n/data/GoldHEN/plugins/XlesterX.sprx=true"
+        }
+      ],
+      "controls": [],
+      "videos": []
     }
   ]
 }

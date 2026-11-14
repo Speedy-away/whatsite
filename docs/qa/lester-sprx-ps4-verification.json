@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-14",
+  "result": "Passed",
+  "checks": [
+    "1.57 placement, title and V2 label",
+    "Original MediaFire download link and one button",
+    "Attached image preserved byte for byte",
+    "Every existing card and link preserved",
+    "Every prior source resource preserved",
+    "Menu directory and search entry",
+    "Archived bytes, size and SHA-256 match"
+  ],
+  "bytes": 206823,
+  "sha256": "9094506c1461dd62594bfc5c5d8f0a36e6d6e03d0c9487aadbde88f9ea9a5e10",
+  "payloadExecuted": false,
+  "archiveIndex": {
+    "presentFileRecords": 9563,
+    "missingFileRecords": 0,
+    "otherUnavailableRecords": 0
+  },
+  "existingSuite": {
+    "passed": 13,
+    "failed": 1,
+    "preExistingFailure": "bo1-bo2-ps4debug-bin baseline inventory mismatch; source manifest unchanged"
+  }
+}
