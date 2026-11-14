@@ -1,0 +1,18 @@
+{
+  "page": "/console/ps4/game-downloads.html",
+  "removedShortcuts": [
+    "Black Ops 1 Season Pass",
+    "Black Ops 2 Season Pass"
+  ],
+  "kept": "Browse DLCs",
+  "exactTwoAnchorDiff": true,
+  "generatorFreshExistingAndIdempotence": true,
+  "regressionChecks": {
+    "passed": 12,
+    "failed": 2,
+    "baselinePassed": 12,
+    "baselineFailed": 2,
+    "note": "The same two free-shops assertions fail using the committed generator: stale regeneration and old hub layout assumptions."
+  },
+  "downloadEntriesPreserved": true
+}

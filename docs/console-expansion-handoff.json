@@ -12794,5 +12794,12 @@
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43654798844",
     "liveCheckedAt": "2026-11-14T23:52:15.531Z",
     "liveVerification": "docs/qa/pc-hub-retirement-publication.json"
+  },
+  "dlcCardShortcuts20261114": {
+    "date": "2026-11-14",
+    "status": "Removed the Black Ops 1 and Black Ops 2 Season Pass shortcut links from the PS4 game downloads DLC card. Browse DLCs and the DLC download page remain available.",
+    "page": "/console/ps4/game-downloads.html",
+    "verification": "Exact diff verified: only two shortcut anchors removed. Existing/fresh generator output and idempotence checked. No downloadable files or DLC entries removed.",
+    "published": false
   }
 }

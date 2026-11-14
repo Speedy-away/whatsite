@@ -58,11 +58,12 @@ function applyToDirectory(html) {
       `<a href="${dlcs}">DLC's</a><a href="${updates}">Updates</a></nav>`));
   if (html.includes('id="games-dlcs"')) {
     return html.replace(/<section\b[^>]*\bid="games-dlcs"[^>]*>[\s\S]*?<\/section>/,
-      block => block.replace(/<article\b[^>]*>[\s\S]*?<\/article>/g, compactCard));
+      block => block.replace(/<article\b[^>]*>[\s\S]*?<\/article>/g, compactCard)
+        .replace(/<a\b[^>]*href="([^"]+)"[^>]*>[\s\S]*?<\/a>/g,
+          (anchor, href) => games.some(game => href === `${dlcs}#${game.id}`) ? '' : anchor));
   }
-  const links = games.map(game => link(`${dlcs}#${game.id}`, `${game.title} Season Pass`)).join('');
   const dlcCard = taggedResource("DLC's", 'Find Season Pass packages by game and PS4 title ID.',
-    link(dlcs, 'Browse DLCs') + links, '', ['PS4', 'Call of Duty', 'DLC', 'Season Pass', 'PKG']);
+    link(dlcs, 'Browse DLCs'), '', ['PS4', 'Call of Duty', 'DLC', 'Season Pass', 'PKG']);
   const updatesCard = taggedResource('Updates', 'Find Black Ops 1 [1.09] and Black Ops 2 [1.11].',
     link(updates, 'Browse updates'), '', ['PS4', 'Call of Duty', 'Game updates', '1.09', '1.11', 'VikingFile']);
   const block = section('games-dlcs', 'Games - DLCs', grid(compactCard(dlcCard), compactCard(updatesCard)));
