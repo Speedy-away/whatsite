@@ -12771,5 +12771,24 @@
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43653525794",
     "liveCheckedAt": "2026-11-14T23:36:27.380Z",
     "liveVerification": "docs/qa/ps4-menu-search-selector-publication.json"
+  },
+  "pcHubRetirement20261114": {
+    "date": "2026-11-14",
+    "status": "Removed the PC hub menu item and retired the old page as a noindex redirect to the PC selector. Other PC destinations remain available.",
+    "destination": "/pages/pc-mods-selector.html",
+    "sitemap": {
+      "canonicalURLs": 510,
+      "removed": [
+        "https://whatwhatboy.com/pc/"
+      ],
+      "localizedHubURLsExcluded": true
+    },
+    "verification": "docs/qa/pc-hub-retirement-verification.json",
+    "tests": {
+      "passed": 51,
+      "failed": 0
+    },
+    "browser": "PC dropdown has no hub item; old /pc/ navigates to the PC selector with Free Cheats and Game Mods / Mod Menus.",
+    "published": false
   }
 }

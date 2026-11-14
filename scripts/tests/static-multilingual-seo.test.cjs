@@ -1,6 +1,9 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const html=require('../localized-html.cjs'),builder=require('../build-localized-pages.cjs');
+test('retired PC hub stays a noindex redirect in every language',()=>{
+ for(const code of ['en',...html.codes]){const result=builder.render({}, {page:'pc/index.html'},'<h1>Old PC hub</h1>',code);assert.match(result,/noindex, follow/);assert.ok(result.includes('http-equiv="refresh"'));assert.ok(result.includes('canonical" href="https://whatwhatboy.com/pages/pc-mods-selector.html"'));assert.ok(!result.includes('Old PC hub'));assert.ok(!result.includes('hreflang='));}
+});
 const {tag:languageLoader}=require('../language-loader.cjs');
 const root=path.resolve(__dirname,'../..');
 function fixture(){

@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-14",
+  "status": "Removed the PC hub menu item and retired the old page as a noindex redirect to the PC selector. Other PC destinations remain available.",
+  "destination": "/pages/pc-mods-selector.html",
+  "sitemap": {
+    "canonicalURLs": 510,
+    "removed": [
+      "https://whatwhatboy.com/pc/"
+    ],
+    "localizedHubURLsExcluded": true
+  },
+  "verification": "docs/qa/pc-hub-retirement-verification.json",
+  "tests": {
+    "passed": 51,
+    "failed": 0
+  },
+  "browser": "PC dropdown has no hub item; old /pc/ navigates to the PC selector with Free Cheats and Game Mods / Mod Menus.",
+  "published": false,
+  "portsBuilder": "Built all 49 entries successfully using the emulators sidebar; no PC hub regeneration.",
+  "localizedRedirects": 20,
+  "preservation": "No downloads, archive files, source inventories, game pages or unrelated local edits included."
+}

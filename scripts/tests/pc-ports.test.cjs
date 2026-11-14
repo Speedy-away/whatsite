@@ -70,10 +70,11 @@ test('every source cover remains intact and the layout fits instead of cropping'
   assert.match(css,/\.port-cover img\{[^}]*object-fit:contain/);assert.doesNotMatch(css,/object-fit:cover|line-clamp/);
   const schema=JSON.parse(html.match(/<script id="ports-catalog-schema" type="application\/ld\+json">([^<]+)<\/script>/)[1]);assert.equal(schema.numberOfItems,49);assert.equal(schema.itemListElement.length,49);
 });
-test('PC hub and generated sidebar keep a single Ports destination', () => {
+test('retired PC hub redirects while the main menu and Ports page remain available', () => {
   const nav=require('../pc-ports-navigation.cjs');
   const html=read('pc/index.html');
-  assert.ok(html.includes('Browse Ports'));assert.ok(html.includes('data-pc-ports-navigation'));
+  assert.ok(html.includes('noindex, follow'));assert.ok(html.includes('http-equiv="refresh"'));assert.ok(html.includes('/pages/pc-mods-selector.html'));
+  const menu=read('index.html').match(/<details class="home-menu home-pc-menu"[\s\S]*?<\/details>/)[0];assert.ok(menu.includes('/pc/ports.html'));assert.ok(!menu.includes('PC hub'));
   assert.equal(nav.apply('pc/index.html',html),html);
   const page=read('pc/ports.html');assert.ok(page.includes('href="/pc/ports.html" class="nav-link nav-sublink active" aria-current="page"'));
 });

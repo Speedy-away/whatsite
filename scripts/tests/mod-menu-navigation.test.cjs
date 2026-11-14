@@ -1,6 +1,11 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
 const nav=require('../mod-menu-navigation.cjs');
+test('PC hub is removed without losing the other PC menu destinations',()=>{
+ const source='<div><a href="/pc/">PC hub</a><a href="/pages/mods.html">Game mods</a><a href="/pc/emulators.html">Emulators</a><a href="/pc/ports.html">Ports</a><a href="/tools/">Tools</a></div>';
+ const result=nav.apply('index.html',source);assert.ok(!result.includes('PC hub'));for(const path of ['/pages/mods.html','/pc/emulators.html','/pc/ports.html','/tools/'])assert.ok(result.includes('href="'+path+'"'));
+ const moved=nav.apply('pc/index.html','<h1>PC hub</h1>');assert.match(moved,/noindex, follow/);assert.ok(moved.includes('/pages/pc-mods-selector.html'));assert.ok(!moved.includes('<h1>PC hub'));
+});
 test('homepage puts mod selector first while PC navigation still reaches the game list',()=>{
  const source='<header><a href="/pages/mods.html">Game mods</a></header><div class="home-directory-grid"><a href="/games-downloads/"><strong>Game downloads</strong></a><a href="/console/"><strong>Console guides</strong></a><a href="/pages/mods.html"><strong>Game mods</strong></a><a href="/tools/"><strong>Tools</strong></a></div>';
  const html=nav.apply('index.html',source);

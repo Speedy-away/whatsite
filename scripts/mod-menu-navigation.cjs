@@ -2,6 +2,9 @@
 const selector='/pages/mods-selector.html';
 const pcSelector='/pages/pc-mods-selector.html';
 function apply(file,html){
+ if(file==='pc/index.html')return require('./pc-hub-retirement.cjs').redirect();
+ html=html.replace(/[\t ]*<a\b[^>]*href="\/pc\/(?:index\.html)?"[^>]*>\s*PC hub\s*<\/a>/gi,'');
+ html=html.replace(/href="\/pc\/(?:index\.html)?"/g,'href="'+pcSelector+'"');
  if(file==='index.html')html=html.replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi,anchor=>/<strong>Game mods(?: \/ Mod Menus)?<\/strong>/i.test(anchor)&&/href="\/pages\/mods(?:-selector)?\.html"/.test(anchor)?anchor.replace(/href="[^"]+"/,'href="'+selector+'"').replace(/<strong>Game mods(?: \/ Mod Menus)?<\/strong>/i,'<strong>Game Mods / Mod Menus</strong>'):anchor);
  if(file==='index.html')html=html.replace(/(<div class="home-directory-grid">)([\s\S]*?)(<\/div>)/,(_all,open,body,close)=>{const cards=[...body.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/g)].map(match=>match[0]);const at=cards.findIndex(card=>card.includes('href="'+selector+'"'));if(at<=0)return open+body+close;return open+'\n'+[cards[at],...cards.filter((_card,index)=>index!==at)].join('\n')+'\n'+close;});
  html=html.replace(/<a\b[^>]*href="(?:\/pages\/)?mods\.html"[^>]*>[\s\S]*?<\/a>/gi,anchor=>anchor.replace(/Game Mods(?! \/ Mod Menus)/gi,'Game Mods / Mod Menus'));

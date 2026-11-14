@@ -140,6 +140,7 @@ function schema(ctx,source,page,code){
  });
 }
 function render(ctx,page,source,code){
+ if(page.page==='pc/index.html')return require('./pc-hub-retirement.cjs').redirect(code);
  assert(code==='en'||ctx.languages.has(code),'Unsupported locale');
  let output=source;
  if(code!=='en'){
@@ -206,7 +207,7 @@ function generate({root,output,rewrite=(value)=>value,prepare=(source,name)=>req
   const source=prepare(require('./source-download-notes.cjs').annotate(original,page.page,delivery),page.page);
   for(const code of ['en',...html.codes]){
    const rendered=rewrite(render(ctx,page,source,code),page.page),name=code==='en'?page.page:code+'/'+page.page;
-   if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;if(!page.noindex)sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(original);
+   if(code!=='en'){bytes+=Buffer.byteLength(rendered);count++;if(!page.noindex&&page.page!=='pc/index.html')sitemaps.get(code).push(html.urlFor(page.canonical,code));}else bytes+=Buffer.byteLength(rendered)-Buffer.byteLength(original);
    if(!estimate){const file=path.join(output,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,rendered);}
   }
  }
