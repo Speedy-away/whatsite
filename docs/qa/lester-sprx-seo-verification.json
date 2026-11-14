@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-14",
+  "result": "Passed",
+  "curatedKeywordCount": 23,
+  "tags": [
+    "Mod menu",
+    "GTA V",
+    "Game 1.57",
+    "Guide",
+    "PS4",
+    "SPRX",
+    "PlayStation 4",
+    "Lester V2",
+    "CUSA00419"
+  ],
+  "checks": [
+    "Lester card and directory find all 23 curated search phrases",
+    "GTA V page metadata includes version, platform, download, alias and regional Lester phrases",
+    "Structured Lester entry retains all curated keywords",
+    "Original visible content, download URLs, image, archive hash and compatibility preserved",
+    "Every other game and resource preserved",
+    "Search and metadata transforms are idempotent",
+    "GTA V and menu directory sitemap dates are current"
+  ],
+  "sitemap": {
+    "canonicalURLs": 509,
+    "duplicates": 0
+  },
+  "payloadExecuted": false,
+  "published": false,
+  "tests": {
+    "passed": 45,
+    "failed": 0
+  }
+}
