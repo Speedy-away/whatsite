@@ -1,4 +1,31 @@
 {
+  "rdr2VersionDownloads20261114": {
+    "date": "2026-11-14",
+    "status": "Added game-version dropdowns and one Download button to Havana and Oyster locally. Havana retains 1.00 experimental, 1.29 and 1.32. Oyster offers its original full package plus individual 1.00, 1.13, 1.19, 1.24 and 1.29 PRX files.",
+    "archive": "Extracted five original PRX members from the previously archived official Oyster v1.3.9 BETA 7z; verified archive SHA-256 and SELF headers without execution. Saved every PRX to the site and F: archive using the standard layout and source/version/size/SHA-256 inventory. Refreshed index: 9,561 present records, zero missing.",
+    "verification": "8 focused checks passed: both dropdowns, selected published URLs and filenames, experimental label, original package retention, archive hashes and GTA V selector regression.",
+    "evidence": "docs/qa/oyster-version-downloads.json",
+    "published": false,
+    "repositoryCommit": "b1c4a6a39422ce7bf7a3c009542bc3ce99f80e2f",
+    "repositoryStatus": "Pushed to origin/main; live deployment not verified."
+  },
+  "rdr2CardRegions20261114": {
+    "date": "2026-11-14",
+    "status": "ACE-HIGH, North, Sheriff and Havana now show only EU: CUSA08519 and USA: CUSA03041 in their card compatibility area. Updated both generic and legacy card generators locally.",
+    "scope": "These are game-region title-ID mappings, using the existing regional template and ACE-HIGH source documentation. No new per-menu compatibility claims were added; original game/firmware requirements and source metadata remain unchanged.",
+    "verification": "Four rendered cards checked; all existing download links preserved; generator output and JavaScript syntax verified.",
+    "published": false,
+    "repositoryCommit": "b1c4a6a39422ce7bf7a3c009542bc3ce99f80e2f",
+    "repositoryStatus": "Pushed to origin/main; live deployment not verified."
+  },
+  "aceHighProjectLinkRemoval20261114": {
+    "date": "2026-11-14",
+    "status": "Removed the Project link from the ACE-HIGH card and its relatedLinks source data locally.",
+    "verification": "Checked current HTML and regenerated card; direct PRX download preserved.",
+    "published": false,
+    "repositoryCommit": "b1c4a6a39422ce7bf7a3c009542bc3ce99f80e2f",
+    "repositoryStatus": "Pushed to origin/main; live deployment not verified."
+  },
   "gta5VersionDropdowns20261113": {
     "date": "2026-11-13",
     "status": "Pushed version dropdowns and one Download button per menu group to origin/main.",
@@ -12420,11 +12447,45 @@
   },
   "hostMonochrome20261113": {
     "date": "2026-11-13",
-    "status": "Host design validated for publication from isolated checkout.",
+    "status": "Published; host deployment succeeded and all seven live checks passed.",
     "host": "https://speedy-away.github.io/",
     "mainNavigation": "Added PS4 / PS5 Host immediately after Contact Me in the shared homepage header template. All generated site-shell pages inherit the link.",
     "preservation": "Main host migration redirects and all downloads preserved.",
-    "checks": "21 main-site publication tests and 33 focused host tests passed, along with all 5 production checks. Browser confirmed navigation placement, persistent dark/light mode and responsive host pages. Five broader test failures reproduced on unchanged HEAD."
+    "checks": {
+      "hostFocusedTests": 33,
+      "mainPublicationTests": 21,
+      "productionChecks": 5,
+      "broaderBaselineFailures": 5,
+      "nativeScriptsUnchangedByDesign": 1030,
+      "payloadsExecuted": false,
+      "hardwareVerified": false
+    },
+    "hostCommit": "3614a3f09dbc80a8f716c928593159832f230464",
+    "hostWorkflow": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/43509131340",
+    "mainNavigationCommit": "aa3b18d134efbeb6a41808e79be403d5ea4dbbf8",
+    "live": {
+      "checkedAt": "2026-11-13T21:19:04.500Z",
+      "checks": {
+        "hostTheme": true,
+        "hostHeading": true,
+        "exactThemeBytes": true,
+        "headerAlignment": true,
+        "PS5FileManager": true,
+        "mainNavigation": true,
+        "mainPS4Navigation": true
+      },
+      "themeSHA256": "7a49abbb045c2892a7a93354f3ec6b9cb411c4d2f71d5a78d8b6676f917577ce",
+      "urls": {
+        "host": "https://speedy-away.github.io/",
+        "theme": "https://speedy-away.github.io/assets/host-monochrome.css?v=20261113mono2",
+        "files": "https://speedy-away.github.io/ps5/files/",
+        "main": "https://whatwhatboy.com/",
+        "mainPS4": "https://whatwhatboy.com/console/ps4/index.html"
+      },
+      "allPassed": true
+    },
+    "visual": "Verified homepage, firmware selection, PS5 file manager and PS4 downloads on desktop and 390px mobile; no horizontal overflow. Dark/light mode persists across pages. Main-site link immediately follows Contact Me.",
+    "concurrentWork": "All unrelated PS4 loader edits, archive files and handoff fields preserved in shared host checkout. A newer main-site run at dcfa0f29 failed its archive-metadata step; the requested navigation is verified live on the homepage and PS4 hub."
   },
   "ps4AdditionalVideo20261113": {
     "date": "2026-11-13",
@@ -12434,25 +12495,122 @@
     "changes": "Added the supplied video first in the PS4 guide video section using the existing lazy-loaded youtube-nocookie embed and direct YouTube link. Kept the original MODDED WARFARE video, all chapters, prior links and compatibility details. Generator persists both videos; added two relevant video discovery terms.",
     "checks": "Verified title and creator through YouTube oEmbed. Generator syntax and scoped metadata checks passed. Both embeds appear exactly once in the intended order; all old URLs and 76 curated guide keywords remain."
   },
-  "rdr2VersionDownloads20261114": {
-    "date": "2026-11-14",
-    "status": "Added game-version dropdowns and one Download button to Havana and Oyster locally. Havana retains 1.00 experimental, 1.29 and 1.32. Oyster offers its original full package plus individual 1.00, 1.13, 1.19, 1.24 and 1.29 PRX files.",
-    "archive": "Extracted five original PRX members from the previously archived official Oyster v1.3.9 BETA 7z; verified archive SHA-256 and SELF headers without execution. Saved every PRX to the site and F: archive using the standard layout and source/version/size/SHA-256 inventory. Refreshed index: 9,561 present records, zero missing.",
-    "verification": "8 focused checks passed: both dropdowns, selected published URLs and filenames, experimental label, original package retention, archive hashes and GTA V selector regression.",
-    "evidence": "docs/qa/oyster-version-downloads.json",
-    "published": false
+  "consoleFilesWorkspace20261113": {
+    "date": "2026-11-13",
+    "status": "Published, deployed successfully and verified live.",
+    "page": "https://speedy-away.github.io/ps4/downloads/",
+    "features": [
+      "Desktop and phone local-file uploads through a paired LAN helper.",
+      "FTP IP/port/login, browse/download/create folders/move/rename; preserve existing destination files.",
+      "ZIP/RAR/7z/TAR/GZ/TGZ/BZ2/XZ inspection and selected-member extraction using installed 7-Zip.",
+      "GoldHEN PRX/SPRX folder preparation and uploads; plugins.ini import/export/read/edit/save with SHA conflict check and backups.",
+      "Editable game/plugin presets; disabled by default; preserve existing sections and compatibility pins."
+    ],
+    "verification": {
+      "date": "2026-11-13",
+      "status": "Published and live-verified",
+      "tests": 32,
+      "failed": 0,
+      "productionChecks": 5,
+      "ftp": "Actual basic-ftp 6.2.6 against isolated passive FTP test server: upload/list/read/config backup/rename.",
+      "archives": "Actual ZIP and RAR extraction through 7-Zip; RAR also verified in browser.",
+      "browser": "Desktop and 320px/390px phone layouts, pairing, archive selection/extraction, preset editing and public workspace tabs.",
+      "consoleHardwareTested": false,
+      "payloadsExecuted": false,
+      "helper": {
+        "url": "/downloads/helpers/console-files/console-files-1.0.0-f317af11f8ae.zip",
+        "bytes": 79452,
+        "sha256": "f317af11f8ae7f7576e752eabe773c402038763f72b6dfb375a5d98360388dcc"
+      },
+      "requirements": [
+        "Node.js 22+",
+        "7-Zip for archives",
+        "A running console FTP server"
+      ],
+      "limits": {
+        "fileBytes": 268435456,
+        "archiveMemberBytes": 67108864,
+        "archiveEntries": 5000
+      },
+      "source": "https://github.com/libarchive/libarchive/blob/master/libarchive/test/test_read_format_rar.rar.uu",
+      "live": {
+        "date": "2026-11-13T21:43:44.438Z",
+        "revision": "61194abe2bb2318cdbb34b8e9ed56cbb128a1242",
+        "page": "https://speedy-away.github.io/ps4/downloads/",
+        "helperURL": "https://raw.githubusercontent.com/Speedy-away/speedy-away.github.io/61194abe2bb2318cdbb34b8e9ed56cbb128a1242/downloads/helpers/console-files/console-files-1.0.0-f317af11f8ae.zip",
+        "helperBytes": 79452,
+        "sha256": "f317af11f8ae7f7576e752eabe773c402038763f72b6dfb375a5d98360388dcc",
+        "liveVerified": true,
+        "workflow": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/43510915988",
+        "hardwareTested": false
+      }
+    },
+    "remaining": "Physical console and real-device iOS/Android verification; no console address was supplied.",
+    "live": {
+      "date": "2026-11-13T21:43:44.438Z",
+      "revision": "61194abe2bb2318cdbb34b8e9ed56cbb128a1242",
+      "page": "https://speedy-away.github.io/ps4/downloads/",
+      "helperURL": "https://raw.githubusercontent.com/Speedy-away/speedy-away.github.io/61194abe2bb2318cdbb34b8e9ed56cbb128a1242/downloads/helpers/console-files/console-files-1.0.0-f317af11f8ae.zip",
+      "helperBytes": 79452,
+      "sha256": "f317af11f8ae7f7576e752eabe773c402038763f72b6dfb375a5d98360388dcc",
+      "liveVerified": true,
+      "workflow": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/43510915988",
+      "hardwareTested": false
+    }
   },
-  "rdr2CardRegions20261114": {
-    "date": "2026-11-14",
-    "status": "ACE-HIGH, North, Sheriff and Havana now show only EU: CUSA08519 and USA: CUSA03041 in their card compatibility area. Updated both generic and legacy card generators locally.",
-    "scope": "These are game-region title-ID mappings, using the existing regional template and ACE-HIGH source documentation. No new per-menu compatibility claims were added; original game/firmware requirements and source metadata remain unchanged.",
-    "verification": "Four rendered cards checked; all existing download links preserved; generator output and JavaScript syntax verified.",
-    "published": false
-  },
-  "aceHighProjectLinkRemoval20261114": {
-    "date": "2026-11-14",
-    "status": "Removed the Project link from the ACE-HIGH card and its relatedLinks source data locally.",
-    "verification": "Checked current HTML and regenerated card; direct PRX download preserved.",
-    "published": false
+  "consoleDirectPhone20261113": {
+    "date": "2026-11-13",
+    "tests": 20,
+    "failed": 0,
+    "productionChecks": 5,
+    "browser": "Self-contained UI, preset editor and direct setup tested; 390px viewport has no horizontal overflow.",
+    "hardwareVerified": false,
+    "installPath": "/data/wwb-console-files.html",
+    "helper": "/downloads/helpers/console-direct/937498c0f153/wwb-console-files.html",
+    "sha256": "937498c0f15334be9175ed7162caf23027737481340961674e9b308973fdee23",
+    "status": "Published, deployed successfully and verified live.",
+    "limits": "Verified uploads 8 MiB; file reads/moves 32 MiB; config 64 KiB. Native ezRemote UI handles larger files and archives.",
+    "source": "https://github.com/cy33hc/ps4-ezremote-client/blob/266d9b8fa7af1cd106688999f95960841c3e894d/source/server/http_server.cpp",
+    "verification": {
+      "date": "2026-11-13",
+      "tests": 20,
+      "failed": 0,
+      "productionChecks": 5,
+      "browser": "Self-contained UI, preset editor and direct setup tested; 390px viewport has no horizontal overflow.",
+      "hardwareVerified": false,
+      "installPath": "/data/wwb-console-files.html",
+      "helper": "/downloads/helpers/console-direct/937498c0f153/wwb-console-files.html",
+      "sha256": "937498c0f15334be9175ed7162caf23027737481340961674e9b308973fdee23",
+      "status": "Published and live-verified",
+      "limits": "Verified uploads 8 MiB; file reads/moves 32 MiB; config 64 KiB. Native ezRemote UI handles larger files and archives.",
+      "source": "https://github.com/cy33hc/ps4-ezremote-client/blob/266d9b8fa7af1cd106688999f95960841c3e894d/source/server/http_server.cpp",
+      "live": {
+        "date": "2026-11-13T22:01:29.174Z",
+        "revision": "5e78f5ec56592a6f2f11ed2dd09e974fcf130d7d",
+        "page": "https://speedy-away.github.io/ps4/downloads/",
+        "helperURL": "/downloads/helpers/console-direct/937498c0f153/wwb-console-files.html",
+        "helperBytes": 66644,
+        "sha256": "937498c0f15334be9175ed7162caf23027737481340961674e9b308973fdee23",
+        "liveVerified": true,
+        "workflow": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/43515458800",
+        "hardwareTested": false
+      },
+      "archive": {
+        "fileRecords": 9555,
+        "presentFileRecords": 9555,
+        "missingFileRecords": 0
+      }
+    },
+    "live": {
+      "date": "2026-11-13T22:01:29.174Z",
+      "revision": "5e78f5ec56592a6f2f11ed2dd09e974fcf130d7d",
+      "page": "https://speedy-away.github.io/ps4/downloads/",
+      "helperURL": "/downloads/helpers/console-direct/937498c0f153/wwb-console-files.html",
+      "helperBytes": 66644,
+      "sha256": "937498c0f15334be9175ed7162caf23027737481340961674e9b308973fdee23",
+      "liveVerified": true,
+      "workflow": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/43515458800",
+      "hardwareTested": false
+    }
   }
 }

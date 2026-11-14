@@ -25,7 +25,7 @@ function eligible(name) {
     !/^(?:docs\/i18n|languages\/pages)(?:\/|$)/.test(name) &&
     !/^(?:scripts|i18n-tools|design-references)\//.test(name) &&
     !/^docs\/(?:qa|screenshots|host-reviews)\//.test(name) &&
-    !/^(?:AGENTS\.md|SYNC\.md|sync\.ps1|skills-lock\.json)$/.test(name);
+    !/^(?:AGENTS\.md|SYNC\.md|sync\.ps1|skills-lock\.json|Add-Downloads\.bat)$/.test(name);
 }
 function treeFiles(root) {
   if (process.env.PAGES_TREE_MANIFEST) {
@@ -134,7 +134,8 @@ function build({root = ROOT, output = path.join(ROOT, 'tmp/pages-build'), revisi
   // enforces the size limit using the rendered pages and rewritten links.
   const preferredHeadroom = localization ? 64 * 1024 * 1024 : 0;
   const result = plan(root, names, revision, tree?.sizes || sizes, reservedBytes, preferredHeadroom), rewriteLinks = rewriter(result.offloaded);
-  const rewrite = (source, name) => addAds(rewriteLinks(prepare(source, name), name), name);
+  const panelDownloads = require('./download-panel-data.cjs').create(root);
+  const rewrite = (source, name) => addAds(rewriteLinks(prepare(name.endsWith('.html') ? panelDownloads(name, source) : source, name), name), name);
   const deliveryFile=path.join(root,'docs/download-source-links.json'),deliveryEntries=fs.existsSync(deliveryFile)?JSON.parse(fs.readFileSync(deliveryFile,'utf8')).entries:[];
   if (sparse) materialize(root, result);
   const legacyDetails = Object.fromEntries([...result.offloaded].flatMap(([name, url]) => {

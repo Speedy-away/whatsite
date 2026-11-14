@@ -23,7 +23,8 @@ function finish(file, html) {
   const themed = require('./add-themes-sidebar.cjs').applyThemes(withTools, relative);
   const illustrated = require('./category-card-art.cjs').apply(relative, themed);
   const directories = require('./game-directory-card-layout.cjs').apply(relative, illustrated);
-  const searchable = tags.apply(relative, require('./host-page-shell.cjs').apply(relative,directories));
+  const panel = require('./download-panel-data.cjs').create();
+  const searchable = tags.apply(relative, panel(relative, require('./host-page-shell.cjs').apply(relative,directories)));
   return require('./internal-page-navigation.cjs').apply(relative, require('./responsive-category-images.cjs').apply(relative, metadata.transform(relative, searchable).html));
 }
 module.exports = {finish};

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="panel-token" content="__PANEL_TOKEN__">
+  <title>Downloads panel · whatwhatboy</title>
+  <link rel="icon" href="/assets/images/logo.png"><link rel="stylesheet" href="/panel.css">
+  <script defer src="/panel.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a href="/" class="brand"><span class="brand-mark">w.</span><span>whatwhatboy<small>LOCAL WORKSPACE</small></span></a>
+    <p class="nav-label">CONTENT</p>
+    <button class="nav-item active" id="add-tab" type="button" aria-current="page"><span>＋</span> Add download</button>
+    <button class="nav-item" id="library-tab" type="button"><span>▤</span> Added downloads <span id="entry-count" class="count">0</span></button>
+    <div class="sidebar-bottom"><span class="connection-dot"></span> Running on your computer<p>Keep the launcher window open while using this panel.</p></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>Workspace <span class="slash">/</span> Downloads</span><span class="local-tag">LOCAL EDITS</span></header>
+    <div class="workspace" id="editor">
+      <div class="page-heading"><div><p class="eyebrow">DOWNLOAD MANAGER</p><h1>Add a download<span>.</span></h1><p>Choose its home. Add the details. Save it to your site.</p></div><span class="step-total">01 — 04</span></div>
+      <div class="editor-layout">
+        <form id="download-form">
+          <section class="form-section"><div class="section-heading"><span class="step">01</span><div><h2>Where does it go?</h2><p>Pick a platform or section, then the page.</p></div></div>
+            <div class="two-cols"><label>Site section<select id="group" required><option value="">Loading pages…</option></select></label><label>Download type<select name="type" id="type" required></select></label></div>
+            <label>Find a page<input id="page-search" type="search" placeholder="Search GTA, mod menus, apps…" autocomplete="off"></label>
+            <label>Destination page<select name="page" id="page" required></select></label><p id="destination" class="field-note">Choose a destination above.</p>
+          </section>
+          <section class="form-section"><div class="section-heading"><span class="step">02</span><div><h2>The download details</h2><p>The title and description appear on its card.</p></div></div>
+            <label>Title<input name="title" id="title" required maxlength="180" placeholder="e.g. Example Menu v1.4"></label>
+            <label>Description<textarea name="description" id="description" required maxlength="6000" rows="4" placeholder="What does it do? Include any setup requirements."></textarea></label>
+            <label>Release version<input name="version" id="version" required maxlength="120" placeholder="e.g. v1.4, or a dated snapshot"></label>
+          </section>
+          <section class="form-section"><div class="section-heading"><span class="step">03</span><div><h2>Image &amp; download</h2><p>Use a local file or an original source URL.</p></div></div>
+            <fieldset><legend>Card image <span class="optional">optional</span></legend>
+              <div class="source-switch" aria-label="Image source"><label><input type="radio" name="imageMode" value="local" checked> Local file</label><label><input type="radio" name="imageMode" value="url"> Image URL</label></div>
+              <div id="image-local"><label class="sr-only" for="imagePath">Local image path</label><input id="imagePath" name="imagePath" placeholder="C:\Pictures\menu.png"><div class="file-row"><label class="file-button">Browse image<input id="image-file" type="file" accept="image/png,image/jpeg,image/gif,image/webp,image/avif"></label><span id="image-file-name">or paste a full path above</span></div><p class="field-note">Copied into assets/images/download-panel/. Your original stays in place.</p></div>
+              <div id="image-remote" hidden><label class="sr-only" for="imageUrl">Image URL</label><input type="url" id="imageUrl" name="imageUrl" placeholder="https://example.com/menu.png"><p class="field-note">The card uses this image URL directly.</p></div>
+            </fieldset>
+            <label>Original download / source URL<input type="url" name="sourceUrl" id="sourceUrl" required placeholder="https://github.com/owner/project/releases/download/v1.4/menu.zip"><span class="field-note">Use the exact release asset or publisher download. Keep version-specific links.</span></label>
+            <details id="local-download"><summary>Have the download file on your computer?</summary><div class="details-content"><label>Local download path<input name="downloadPath" id="downloadPath" placeholder="C:\Downloads\menu.zip"></label><div class="file-row"><label class="file-button">Browse download<input id="download-file" type="file"></label><span id="download-file-name">or paste its full path</span></div><p class="field-note">Uses this file for the archive instead of fetching the URL. The source URL is still recorded.</p></div></details>
+            <label class="check-row" id="mirror-row"><input type="checkbox" name="mirror" id="mirror"><span>Also copy this game mod into the site’s downloads folder<small>Otherwise the card links to the original download.</small></span></label>
+            <p class="archive-note" id="archive-status" role="status">Checking F: archive…</p>
+          </section>
+          <section class="form-section"><div class="section-heading"><span class="step">04</span><div><h2>Compatibility</h2><p>Keep each build’s exact requirements. Leave unknowns blank.</p></div></div>
+            <div class="two-cols"><label>Game update<input name="gameVersion" id="gameVersion" maxlength="160" placeholder="e.g. GTA V 1.57"></label><label>Firmware<input name="firmware" id="firmware" maxlength="160" placeholder="e.g. PS4 9.00 / GoldHEN"></label></div>
+            <label>Region / title IDs<input name="region" id="region" maxlength="200" placeholder="e.g. EU: CUSA00411 / USA: CUSA00419"></label>
+            <label id="variant-row" hidden>PS3 build variant<select name="variant" id="variant"><option value="">Not specified</option><option>DEX</option><option>HEN</option></select><span class="field-note">Add DEX and HEN as separate entries to keep both builds visible.</span></label>
+          </section>
+          <div class="save-bar"><p>Saved to this checkout.<br><strong>Publish through your usual workflow.</strong></p><button class="primary-button" id="save-button" type="submit">Save download <span>↗</span></button></div>
+          <div id="result" role="status" aria-live="polite" hidden></div>
+        </form>
+        <aside class="preview-column"><div class="preview-sticky"><div class="preview-heading"><span>CARD PREVIEW</span><span class="preview-dot"></span></div><article class="preview-card"><div class="preview-image" id="image-preview-wrap"><img id="image-preview" alt="Download image preview" hidden><div id="image-placeholder"><span>＋</span>Add an image</div></div><div class="preview-copy"><p id="preview-type" class="eyebrow">MOD MENUS</p><h2 id="preview-title">Your download title</h2><p id="preview-description">A short description of your download will appear here.</p><p id="preview-pins"></p><span class="preview-button">Download <span>↗</span></span></div></article><p class="preview-caption">A live preview of the details you enter.<br>Cards are grouped by type on the selected page.</p><div class="process-note"><span>↳</span><div><strong>One save, everything in place.</strong><p>The file is archived on F: with its source, version, size and SHA-256. Older downloads stay available.</p></div></div></div></aside>
+      </div>
+    </div>
+    <div class="workspace" id="library" hidden><div class="page-heading"><div><p class="eyebrow">DOWNLOAD MANAGER</p><h1>Added downloads<span>.</span></h1><p>Entries created with this panel. All older site downloads stay in their existing pages.</p></div></div><div id="library-list"></div></div>
+  </main>
+</body>
+</html>
