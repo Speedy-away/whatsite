@@ -1,7 +1,7 @@
 {
   "lesterSprxPs420261114": {
     "date": "2026-11-14",
-    "status": "User requested push and publication; Lester SPRX V2 card, screenshot, original MediaFire link and archive verification prepared for main.",
+    "status": "Pushed to origin/main, GitHub Pages deployed successfully, and live card, original MediaFire link, directory entry and image SHA-256 verified.",
     "page": "/console/mods/ps4/gta5/#resource-gta5-lester-sprx-v2-1-57",
     "sourceUrl": "https://www.mediafire.com/file/r1omzh0gcl5wx89/XlesterX+sprx+V2.rar/file",
     "compatibility": "PS4 and GTA V 1.57 supplied by the user; included plugins.ini targets CUSA00419. No other regions or firmware inferred.",
@@ -15,11 +15,15 @@
     },
     "verification": "docs/qa/lester-sprx-ps4-verification.json; focused preservation checks passed. Existing dropdown/search suites: 7 passed. Broader GTA review: 13/14 passed; pre-existing bo1-bo2-ps4debug-bin inventory mismatch documented in earlier handoff remains unchanged.",
     "payloadExecuted": false,
-    "published": false,
+    "published": true,
     "deploymentChecks": {
       "passed": 21,
       "failed": 0
-    }
+    },
+    "repositoryCommit": "efc9a02c15ca53669f62f59a894ef0323ecfbb8a",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43589917204",
+    "liveVerification": "docs/qa/lester-sprx-publication.json",
+    "liveCheckedAt": "2026-11-14T11:30:37.470Z"
   },
   "rdr2VersionDownloads20261114": {
     "date": "2026-11-14",
