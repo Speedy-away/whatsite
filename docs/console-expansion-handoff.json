@@ -12774,7 +12774,7 @@
   },
   "pcHubRetirement20261114": {
     "date": "2026-11-14",
-    "status": "Removed the PC hub menu item and retired the old page as a noindex redirect to the PC selector. Other PC destinations remain available.",
+    "status": "Pushed to origin/main, deployed successfully and live-verified. PC hub removed from the menu, old English and 20 translated hub routes redirect to the PC selector, and hub URLs excluded from sitemaps.",
     "destination": "/pages/pc-mods-selector.html",
     "sitemap": {
       "canonicalURLs": 510,
@@ -12789,6 +12789,10 @@
       "failed": 0
     },
     "browser": "PC dropdown has no hub item; old /pc/ navigates to the PC selector with Free Cheats and Game Mods / Mod Menus.",
-    "published": false
+    "published": true,
+    "repositoryCommit": "3c5492d195ac19a534894e3559c98b149a803164",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43654798844",
+    "liveCheckedAt": "2026-11-14T23:52:15.531Z",
+    "liveVerification": "docs/qa/pc-hub-retirement-publication.json"
   }
 }
