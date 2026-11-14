@@ -9,6 +9,7 @@ function finish(file, html) {
   if (!playStationHub) html = helpfulTools.apply(relative, html);
   if (!eligible(relative) || tags.protectedFile(relative, html)) return html;
   html = require('./language-loader.cjs').apply(html);
+  html = require('./mod-menu-navigation.cjs').apply(relative, html);
   html = require('./console-game-patch-navigation.cjs').apply(relative, html);
   html = require('./phone-navigation.cjs').apply(relative, html);
   html = require('./profile-navigation.cjs').apply(relative, html);

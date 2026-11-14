@@ -7,6 +7,15 @@ const {catalog} = require('../console-mod-catalog.cjs');
 const {transform} = require('../page-search-metadata.cjs');
 const {metadataByPage} = require('../console-mod-metadata.cjs');
 
+test('named menu variants expose only supplied update, region, platform and format searches',()=>{
+  const menu={name:'Example · GTA V 1.57',category:'menu',gameIds:['gta5'],platforms:['ps4'],gameVersions:['1.57'],titleIds:['CUSA00419'],downloads:[{filename:'Example.sprx',url:'https://example.com/Example.sprx',distribution:'include'}]};
+  const terms=discoveryTerms(menu,'Grand Theft Auto V');
+  for(const phrase of ['Example PS4 mod menu','Example PS4 download','Example SPRX download','Example Grand Theft Auto V 1.57','Example CUSA00419'])assert.ok(terms.includes(phrase),phrase);
+  assert.doesNotMatch(terms.join(' '),/1\.56|CUSA00411|PS5|DEX|HEN|aimbot/i);
+  const unknown=discoveryTerms({...menu,platforms:[],titleIds:[],gameVersions:[],downloads:[]},'Grand Theft Auto V').join(' ');assert.doesNotMatch(unknown,/PS4|PS5|CUSA|download/);
+  const cheat=discoveryTerms({name:'Sample cheats',category:'cheat',gameIds:['gta5'],tags:['PS4','JSON','CUSA00419'],gameVersions:['1.57'],downloads:[{url:'https://example.com/cheat.json',filename:'cheat.json'}]},'Grand Theft Auto V');assert.ok(cheat.includes('Sample cheats JSON download'));assert.ok(cheat.includes('Sample cheats CUSA00419'));
+});
+
 test('resource discovery describes only supplied downloads, guides, controls and platforms', () => {
   const item = {name: 'Example', category: 'menu', gameIds: ['black-ops-3']};
   const bare = discoveryTerms(item).join(' ');

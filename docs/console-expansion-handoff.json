@@ -12730,5 +12730,42 @@
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43649544507",
     "liveVerification": "docs/qa/apex-legends-publication.json",
     "liveCheckedAt": "2026-11-14T22:51:13.958Z"
+  },
+  "ps4AllMenusAndSelectors20261114": {
+    "date": "2026-11-14",
+    "status": "User requested all remaining PS4 menu keywords/tags, then steered the same task to add Console/PC and PC Free Cheats/Game Mods selectors and put Game Mods / Mod Menus first on the homepage. Implemented and verified locally; publication requested.",
+    "search": {
+      "namedEntries": 202,
+      "gameCollections": 108,
+      "pages": 112,
+      "phrases": 7392,
+      "scope": "Named menus, scripts, packs, injectors, RTM/CFG tools, server clients and PS4 cheat files. Platforms, formats, title IDs and game updates come only from recorded fields; reference-only entries do not gain download claims.",
+      "preservation": "Existing visible PS4 bodies, every link and image, source records and download manifests preserved."
+    },
+    "navigation": {
+      "homepageFirst": "Game Mods / Mod Menus",
+      "selector": "/pages/mods-selector.html",
+      "pcSelector": "/pages/pc-mods-selector.html",
+      "pcChoices": [
+        "Free Cheats",
+        "Game Mods / Mod Menus"
+      ],
+      "pcGames": 11,
+      "browser": "Desktop selector routes, PC game list, Free Cheats, Console and 390px layout verified. No selector overflow."
+    },
+    "sitemap": {
+      "canonicalURLs": 511,
+      "newURLs": [
+        "https://whatwhatboy.com/pages/mods-selector.html",
+        "https://whatwhatboy.com/pages/pc-mods-selector.html"
+      ]
+    },
+    "verification": "docs/qa/ps4-menu-search-selector-verification.json",
+    "tests": {
+      "passed": 48,
+      "failed": 0
+    },
+    "published": false,
+    "payloadExecuted": false
   }
 }

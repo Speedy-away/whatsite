@@ -26,6 +26,7 @@ const unique = values => [...new Map(values.filter(Boolean).map(value => [String
 function resourceTags(item) {
   const tags = [categoryLabels[item.category] || 'Resource', ...(item.gameIds || []).map(id => gameAliases[id]?.[0])];
   const subject = [item.name, item.group, item.description].filter(Boolean).join(' ');
+  if ([...(item.platforms || []), ...(item.tags || [])].some(value => /^PS4$/i.test(value))) tags.push('PS4', 'PlayStation 4');
   if (/\bzombies\b|\bZM\b/i.test(subject)) tags.push('Zombies');
   if (/\bmultiplayer\b|\bMP\b/i.test(subject)) tags.push('Multiplayer');
   if (/\bextinction\b/i.test(subject)) tags.push('Extinction');
@@ -34,11 +35,12 @@ function resourceTags(item) {
   for (const download of item.downloads || []) {
     let filename = download.filename || '';
     try { filename += ' ' + decodeURIComponent(new URL(download.url).pathname); } catch {}
-    for (const extension of ['sprx', 'prx', 'gscc', 'gsc', 'csc', 'cfg']) {
+    for (const extension of ['sprx', 'prx', 'gscc', 'gsc', 'csc', 'cfg', 'lua', 'json']) {
       if (new RegExp('\\.' + extension + '(?:[ /]|$)', 'i').test(filename)) tags.push(extension.toUpperCase());
     }
   }
   for (const version of item.gameVersions || []) tags.push('Game ' + version);
+  for (const id of item.titleIds || []) if (/^(?:CUSA|PPSA)\d{5}$/.test(id)) tags.push(id);
   if ((item.guideBlocks || []).length || (item.controls || []).length) tags.push('Guide');
   return unique([...(item.featureTags || []), ...tags, ...(item.tags || [])]);
 }
@@ -52,7 +54,7 @@ function resourceTerms(item, gameTitle = '') {
 // Search intent follows the resource's documented category and available material.
 // A page's PS4 directory alone is not proof of platform or firmware compatibility.
 function discoveryTerms(item, gameTitle = '') {
-  if (!['menu', 'pack', 'script', 'injector', 'rtm', 'cfg', 'client'].includes(item.category)) return [];
+  if (!['menu', 'pack', 'script', 'injector', 'rtm', 'cfg', 'client', 'cheat'].includes(item.category)) return [];
   const name = item.name;
   if (!name) return [];
   const kind = categoryLabels[item.category].toLowerCase();
@@ -61,6 +63,23 @@ function discoveryTerms(item, gameTitle = '') {
     .filter(value => /^(?:ps3|ps4|ps5|xbox 360)$/i.test(value)).map(value => value.toUpperCase()));
   const downloads = (item.downloads || []).filter(file => file.url && (!file.distribution || file.distribution === 'include'));
   const hasGuide = Boolean(item.guideBlocks?.length || item.controls?.length);
+  const family = name.split(/\s+·\s+/)[0];
+  const names = unique([name, family]);
+  const formats = resourceTags(item).filter(tag => /^(?:SPRX|PRX|GSC|GSCC|CSC|CFG|LUA|JSON)$/i.test(tag));
+  const titleIds = unique([...(item.titleIds || []), ...(item.tags || [])].filter(tag => /^(?:CUSA|PPSA)\d{5}$/.test(tag)));
+  const contextual = names.flatMap(label => [
+    ...platforms.map(platform => `${label} ${platform} ${kind}`),
+    ...games.map(game => `${label} ${game} ${kind}`),
+    ...platforms.filter(platform => platform === 'PS4').map(() => `${label} PlayStation 4`),
+    ...(downloads.length ? platforms.map(platform => `${label} ${platform} download`) : []),
+    ...formats.map(format => `${label} ${format}`),
+    ...(downloads.length ? formats.map(format => `${label} ${format} download`) : []),
+    ...(item.gameVersions || []).flatMap(version => [`${label} ${version}`, `${label} ${gameTitle || games[0] || ''} ${version}`.trim()]),
+    ...titleIds.map(id => `${label} ${id}`),
+    ...resourceTags(item).filter(tag => /^(?:Zombies|Multiplayer|Extinction)$/i.test(tag)).map(mode => `${label} ${mode}`),
+    ...(item.menuVersion ? [`${label} ${item.menuVersion}`] : []),
+    ...(item.images?.length ? [`${label} screenshot`] : [])
+  ]);
   return unique([
     name, `${name} ${kind}`, ...games.map(game => `${name} ${game}`),
     ...platforms.map(platform => `${name} ${platform}`),
@@ -72,6 +91,7 @@ function discoveryTerms(item, gameTitle = '') {
     ...(item.controls?.length ? [`${name} controls`, `how to open ${name}`] : []),
     ...(item.videos?.length || item.videoButton?.url ? [`${name} video`] : []),
     ...(item.searchKeywords || []),
+    ...contextual,
     ...downloads.map(file => file.filename).filter(Boolean)
   ]);
 }

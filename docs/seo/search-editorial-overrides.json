@@ -2814,7 +2814,7 @@
     ]
   },
   "pages/mods.html": {
-    "title": "Game Mods, Loaders & Modding Tools | whatwhatboy",
+    "title": "PC Game Mods / Mod Menus | whatwhatboy",
     "description": "Browse GTA 5, GTA 4, RDR2, Plants vs Zombies, Minecraft, Cyberpunk 2077, Fallout 4, The Witcher 3, Baldur’s Gate 3, Skyrim and Elden Ring mods.",
     "keywords": [
       "Game Mods",
@@ -2829,7 +2829,10 @@
       "The Witcher 3 mods",
       "Baldur’s Gate 3 mods",
       "Skyrim mods",
-      "Elden Ring mods"
+      "Elden Ring mods",
+      "PC game mods",
+      "PC mod menus",
+      "Game Mods / Mod Menus"
     ]
   },
   "games-downloads/index.html": {
@@ -4586,6 +4589,51 @@
       {
         "name": "Apex Legends",
         "url": "/console/mods/ps4/apex-legends/"
+      }
+    ]
+  },
+  "pages/mods-selector.html": {
+    "title": "Game Mods / Mod Menus: Console or PC | whatwhatboy",
+    "description": "Choose Console or PC. Browse console mod menus, or select free PC cheats and game mods by game.",
+    "type": "CollectionPage",
+    "keywords": [
+      "Game Mods / Mod Menus",
+      "console mod menus",
+      "PC mod menus",
+      "PC game mods",
+      "free PC cheats",
+      "console or PC"
+    ],
+    "items": [
+      {
+        "name": "Console",
+        "url": "/console/mods/"
+      },
+      {
+        "name": "PC",
+        "url": "/pages/pc-mods-selector.html"
+      }
+    ]
+  },
+  "pages/pc-mods-selector.html": {
+    "title": "PC Free Cheats & Game Mods / Mod Menus | whatwhatboy",
+    "description": "Choose free PC cheats or browse game mods and mod menus, scripts, loaders and add-ons by game.",
+    "type": "CollectionPage",
+    "keywords": [
+      "PC Free Cheats",
+      "PC game mods",
+      "PC mod menus",
+      "free cheats by game",
+      "Game Mods / Mod Menus"
+    ],
+    "items": [
+      {
+        "name": "Free Cheats",
+        "url": "/cheats/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods.html"
       }
     ]
   }
