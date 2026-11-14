@@ -15,6 +15,7 @@ const pluginDownloads=(item,downloads,legacy)=>pluginBundles.render(item,downloa
 const requirementsMarkup=item=>(item?.requiredResources||[]).filter(r=>/^#guide-[a-z0-9-]+$/.test(r.href||'')).map(r=>`<p class="guide-required-resource">${guideLink(r.href,h(r.label))}</p>`).join('');
 const h = value => esc(String(value ?? ''));
 const lines = value => h(value).replace(/\r?\n/g, '<br>');
+const compatibilityMarkup = item => item?.cardRegionTitleIds ? '<p class="guide-region-ids" aria-label="Game region title IDs">'+Object.entries(item.cardRegionTitleIds).map(([region,id])=>h(region)+': '+h(id)).join('<br>')+'</p>' : item?.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
 
 function localFile(value, directory) {
   if (typeof value !== 'string' || !value.startsWith('/' + directory + '/') || /[?#\\]/.test(value)) return null;
@@ -90,6 +91,16 @@ function downloadButton(file, item) {
   }
   return `<a href="${h(url)}" class="btn btn-primary" ${stored ? 'download' : 'target="_blank" rel="noopener noreferrer"'}><i class="fas fa-download" aria-hidden="true"></i> ${h(label)}</a>`;
 }
+function versionDownloads(item) {
+  const choices=(item.downloads||[]).filter(file=>file.distribution==='include').map(file=>{
+    const saved=storedFiles.find(entry=>entry.downloadId===file.id&&entry.status==='downloaded'&&localFile(entry.local,'downloads'));
+    const url=saved?saved.local:httpsUrl(file.url);
+    return {url,label:file.label||'Download',filename:file.filename||saved?.name||saved?.filename||decodeURIComponent(new URL(url,'https://whatwhatboy.com').pathname.split('/').pop())};
+  });
+  if(!choices.length)return '';
+  const id='game-version-'+item.id,first=choices[0];
+  return `<fieldset class="gta-plugin-download" aria-label="Game version download" data-menu-download-group data-menu-name="${h(item.name)}"><div class="gta-plugin-originals"><label class="gta-menu-version-label" for="${h(id)}">Game version</label><select id="${h(id)}" class="gta-menu-version" data-menu-version disabled>${choices.map(choice=>`<option value="${h(choice.url)}" data-filename="${h(choice.filename)}">${h(choice.label)}</option>`).join('')}</select><a class="btn btn-primary" href="${h(first.url)}" download="${h(first.filename)}" data-no-file-options data-menu-download aria-label="${h('Download '+item.name+' · '+first.label)}"><i class="fas fa-download" aria-hidden="true"></i> Download</a></div></fieldset>`;
+}
 function card(item) {
   const cardImage=require('./ps4-ps5-card-images.cjs').resourceImage(item);
   const cardMedia=require('./ps4-ps5-card-images.cjs').markup(cardImage);
@@ -106,7 +117,7 @@ function card(item) {
   const includedDownloads=(item.downloads || []).filter(file => file.distribution === 'include');
   const pairedDownloads=pluginDownloads(item,includedDownloads);
   const extras=includedDownloads.filter(file=>!pluginBundles.has(file.id)).filter(file=>{const stored=storedFiles.find(entry=>entry.downloadId===file.id);return !pluginBundles.choices(item,includedDownloads).some(row=>stored?.sha256===row.source.sha256);});
-  const directDownloads = () => includedDownloads.map(file => downloadButton(file, item)).join('');
+  const directDownloads = () => item.gameVersionDropdown ? versionDownloads(item) : includedDownloads.map(file => downloadButton(file, item)).join('');
   const buttons = pairedDownloads ? pairedDownloads+(extras.length?'<div class="gta-plugin-separate">'+extras.map(file=>downloadButton(file,item).replace('class="btn btn-primary"','class="btn btn-outline gta-plugin-extra"')).join('')+'</div>':'') : directDownloads();
   const cleanGta=item.gameIds?.includes('gta5') && !['client', 'rtm'].includes(item.category);
   const repository = httpsUrl(item.source?.repositoryUrl);
@@ -123,7 +134,7 @@ function card(item) {
   }).join('');
   const actions = buttons + sourceLink + videoLink + detailLink + relatedLinks;
   const version = !item.hideCardBuildDetails && item.version ? `<p>${h(item.version)}</p>` : '';
-  const compatibility = !cleanGta && !item.hideCardBuildDetails && !item.hideCardCompatibility && item.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
+  const compatibility = !cleanGta && !item.hideCardBuildDetails && !item.hideCardCompatibility ? compatibilityMarkup(item) : '';
   return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${legacyAnchors(item,'resource')}${image ? imageMarkup(image, item.name, false, screenshot ? screenshotId(item, screenshot) : '') : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
@@ -171,6 +182,6 @@ function gameContent(items, prefix = '', categoryHeadings = {}) {
   return collections + items.map(details).join('\n');
 }
 
-return {categories, h, lines, localFile, localImage, httpsUrl, youtubeVideo, videoSource, hasDetails, imageMarkup, downloadButton, pluginDownloads, requirementsMarkup, card, guideBlock, videoMarkup, details, gameContent};
+return {categories, h, lines, localFile, localImage, httpsUrl, youtubeVideo, videoSource, hasDetails, imageMarkup, downloadButton, versionDownloads, pluginDownloads, requirementsMarkup, compatibilityMarkup, card, guideBlock, videoMarkup, details, gameContent};
 }
 module.exports = {createResourceRenderer, categories};

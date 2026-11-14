@@ -83,7 +83,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
     const image = (item.images || []).find(image => image.role !== 'guide' && (localImage(image.display) || localImage(image.original)));
     return {
       resource: item,
-      downloads: (item.downloads || []).filter(file => file.distribution === 'include').map(file => renderer.downloadButton(file, item)).join(''),
+      downloads: item.gameVersionDropdown ? renderer.versionDownloads(item) : (item.downloads || []).filter(file => file.distribution === 'include').map(file => renderer.downloadButton(file, item)).join(''),
       guide: hasDetails(item) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '',
       image: image ? {src: localImage(image.display) || localImage(image.original), alt: image.caption || item.name} : null
     };

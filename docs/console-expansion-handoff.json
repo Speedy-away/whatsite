@@ -1,7 +1,7 @@
 {
   "gta5VersionDropdowns20261113": {
     "date": "2026-11-13",
-    "status": "User requested repository push. Added Menu / game version dropdowns to all 11 multi-file GTA V menu cards; each of the 21 menu groups has one normal Download button.",
+    "status": "Pushed version dropdowns and one Download button per menu group to origin/main.",
     "behavior": "Options retain every original file, menu release, game update and package/module distinction. The selection updates the direct URL, filename and accessible button label. Shared packages list all applicable game updates. Single-file cards retain one direct link.",
     "files": [
       "scripts/gta5-plugin-downloads.cjs",
@@ -11,7 +11,9 @@
       "scripts/build-ps4-mods.cjs"
     ],
     "verification": "13 focused tests passed, including every dropdown option after commit-pinned Pages URL rewriting, all original files, single-button counts, and Velora/Crystalis ordering.",
-    "published": false
+    "published": false,
+    "repositoryCommit": "8844ccc9c3a61caf847b669ceb69d6f39062eba8",
+    "deployment": "GitHub Pages deployment not yet verified."
   },
   "gta5DirectDownloads20261113": {
     "date": "2026-11-13",
@@ -12431,5 +12433,26 @@
     "creator": "whatwhatboy - console",
     "changes": "Added the supplied video first in the PS4 guide video section using the existing lazy-loaded youtube-nocookie embed and direct YouTube link. Kept the original MODDED WARFARE video, all chapters, prior links and compatibility details. Generator persists both videos; added two relevant video discovery terms.",
     "checks": "Verified title and creator through YouTube oEmbed. Generator syntax and scoped metadata checks passed. Both embeds appear exactly once in the intended order; all old URLs and 76 curated guide keywords remain."
+  },
+  "rdr2VersionDownloads20261114": {
+    "date": "2026-11-14",
+    "status": "Added game-version dropdowns and one Download button to Havana and Oyster locally. Havana retains 1.00 experimental, 1.29 and 1.32. Oyster offers its original full package plus individual 1.00, 1.13, 1.19, 1.24 and 1.29 PRX files.",
+    "archive": "Extracted five original PRX members from the previously archived official Oyster v1.3.9 BETA 7z; verified archive SHA-256 and SELF headers without execution. Saved every PRX to the site and F: archive using the standard layout and source/version/size/SHA-256 inventory. Refreshed index: 9,561 present records, zero missing.",
+    "verification": "8 focused checks passed: both dropdowns, selected published URLs and filenames, experimental label, original package retention, archive hashes and GTA V selector regression.",
+    "evidence": "docs/qa/oyster-version-downloads.json",
+    "published": false
+  },
+  "rdr2CardRegions20261114": {
+    "date": "2026-11-14",
+    "status": "ACE-HIGH, North, Sheriff and Havana now show only EU: CUSA08519 and USA: CUSA03041 in their card compatibility area. Updated both generic and legacy card generators locally.",
+    "scope": "These are game-region title-ID mappings, using the existing regional template and ACE-HIGH source documentation. No new per-menu compatibility claims were added; original game/firmware requirements and source metadata remain unchanged.",
+    "verification": "Four rendered cards checked; all existing download links preserved; generator output and JavaScript syntax verified.",
+    "published": false
+  },
+  "aceHighProjectLinkRemoval20261114": {
+    "date": "2026-11-14",
+    "status": "Removed the Project link from the ACE-HIGH card and its relatedLinks source data locally.",
+    "verification": "Checked current HTML and regenerated card; direct PRX download preserved.",
+    "published": false
   }
 }

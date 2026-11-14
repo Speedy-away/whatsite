@@ -5016,7 +5016,12 @@
       "category": "menu",
       "publication": "include",
       "name": "Sheriff 1.32",
-      "tags": ["PS4","RDR2 1.32","Sheriff mod menu","RAR"],
+      "tags": [
+        "PS4",
+        "RDR2 1.32",
+        "Sheriff mod menu",
+        "RAR"
+      ],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "Sheriff 1.32",
@@ -5044,7 +5049,11 @@
       "guideBlocks": [],
       "controls": [],
       "videos": [],
-      "compatibilityText": "The source post title labels this 1.32."
+      "compatibilityText": "The source post title labels this 1.32.",
+      "cardRegionTitleIds": {
+        "EU": "CUSA08519",
+        "USA": "CUSA03041"
+      }
     },
     {
       "id": "rdr2-north-beta",
@@ -5054,7 +5063,13 @@
       "category": "menu",
       "publication": "include",
       "name": "North Beta",
-      "tags": ["PS4","North Beta mod menu","NorthBeta011","RDR2 1.29 demo","RAR"],
+      "tags": [
+        "PS4",
+        "North Beta mod menu",
+        "NorthBeta011",
+        "RDR2 1.29 demo",
+        "RAR"
+      ],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "North Beta",
@@ -5091,7 +5106,11 @@
           "url": "https://www.youtube.com/watch?v=uQFLdo-Yf98&t=8s",
           "title": "Video supplied with the forum post"
         }
-      ]
+      ],
+      "cardRegionTitleIds": {
+        "EU": "CUSA08519",
+        "USA": "CUSA03041"
+      }
     },
     {
       "id": "rdr2-oyster",
@@ -5101,7 +5120,18 @@
       "category": "menu",
       "publication": "include",
       "name": "Oyster",
-      "tags": ["PS4","Oyster free edition","Oysters Menu","Oyster 1.3.9 beta","RDR2 1.00","RDR2 1.13","RDR2 1.19","RDR2 1.24","RDR2 1.29","7Z"],
+      "tags": [
+        "PS4",
+        "Oyster free edition",
+        "Oysters Menu",
+        "Oyster 1.3.9 beta",
+        "RDR2 1.00",
+        "RDR2 1.13",
+        "RDR2 1.19",
+        "RDR2 1.24",
+        "RDR2 1.29",
+        "7Z"
+      ],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "Oyster",
@@ -5117,8 +5147,43 @@
       "downloads": [
         {
           "id": "rdr2-oyster-free-v1-3-9",
-          "label": "Download free edition",
+          "label": "All versions · full package",
           "url": "https://rdroysters.com/omm/OystersMenu_v1.3.9-BETA.7z",
+          "distribution": "include"
+        },
+        {
+          "id": "rdr2-oyster-v1-3-9-1-00",
+          "label": "RDR2 1.00",
+          "filename": "OystersMenu-RDR2-v1.3.9-v1.00.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4-ps5/rdr2-oyster-v1-3-9/OystersMenu-RDR2-v1.3.9-v1.00.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "rdr2-oyster-v1-3-9-1-13",
+          "label": "RDR2 1.13",
+          "filename": "OystersMenu-RDR2-v1.3.9-v1.13.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4-ps5/rdr2-oyster-v1-3-9/OystersMenu-RDR2-v1.3.9-v1.13.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "rdr2-oyster-v1-3-9-1-19",
+          "label": "RDR2 1.19",
+          "filename": "OystersMenu-RDR2-v1.3.9-v1.19.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4-ps5/rdr2-oyster-v1-3-9/OystersMenu-RDR2-v1.3.9-v1.19.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "rdr2-oyster-v1-3-9-1-24",
+          "label": "RDR2 1.24",
+          "filename": "OystersMenu-RDR2-v1.3.9-v1.24.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4-ps5/rdr2-oyster-v1-3-9/OystersMenu-RDR2-v1.3.9-v1.24.prx",
+          "distribution": "include"
+        },
+        {
+          "id": "rdr2-oyster-v1-3-9-1-29",
+          "label": "RDR2 1.29",
+          "filename": "OystersMenu-RDR2-v1.3.9-v1.29.prx",
+          "url": "https://whatwhatboy.com/downloads/ps4-ps5/rdr2-oyster-v1-3-9/OystersMenu-RDR2-v1.3.9-v1.29.prx",
           "distribution": "include"
         }
       ],
@@ -5143,7 +5208,8 @@
       ],
       "description": "The free edition is separate from Oyster’s paid product.",
       "version": "v1.3.9 beta · free edition",
-      "compatibilityText": "The official free-edition product page lists RDR2 updates 1.00, 1.13, 1.19, 1.24 and 1.29."
+      "compatibilityText": "The official free-edition product page lists RDR2 updates 1.00, 1.13, 1.19, 1.24 and 1.29.",
+      "gameVersionDropdown": true
     },
     {
       "id": "rdr2-havana",
@@ -5153,7 +5219,16 @@
       "category": "menu",
       "publication": "include",
       "name": "Havana",
-      "tags": ["PS4","Havana mod menu","GoldHEN","Plugin Loader","RDR2 1.00 experimental","RDR2 1.29","RDR2 1.32","Havana v1.20"],
+      "tags": [
+        "PS4",
+        "Havana mod menu",
+        "GoldHEN",
+        "Plugin Loader",
+        "RDR2 1.00 experimental",
+        "RDR2 1.29",
+        "RDR2 1.32",
+        "Havana v1.20"
+      ],
       "source": {
         "forumTitle": "🔵RDR2-Menus",
         "postTitle": "Havana",
@@ -5254,7 +5329,12 @@
         }
       ],
       "version": "Menu 1.2 · release tag v1.20",
-      "compatibilityText": "PS4 GoldHEN 2.3+ with Plugin Loader; RDR2 1.29 or 1.32. The 1.00 build is experimental."
+      "compatibilityText": "PS4 GoldHEN 2.3+ with Plugin Loader; RDR2 1.29 or 1.32. The 1.00 build is experimental.",
+      "cardRegionTitleIds": {
+        "EU": "CUSA08519",
+        "USA": "CUSA03041"
+      },
+      "gameVersionDropdown": true
     },
     {
       "id": "source-gta5-ai-files",
@@ -17349,12 +17429,6 @@
           "https://github.com/BigmanModz420/Ace-High/releases/download/v1.1/Ace-High.prx"
         ]
       },
-      "relatedLinks": [
-        {
-          "url": "https://github.com/BigmanModz420/Ace-High",
-          "label": "Project"
-        }
-      ],
       "guideLabel": "Setup guide",
       "controls": [
         {
@@ -17409,7 +17483,11 @@
           "title": "Settings and model changes",
           "text": "The plugin creates its settings and log under /data/Ace-High/. Use Change Model from chapter 2 onwards; the publisher reports that changing models in chapter 1 kills the player. The PRX contains the logo, so no additional asset download is required."
         }
-      ]
+      ],
+      "cardRegionTitleIds": {
+        "EU": "CUSA08519",
+        "USA": "CUSA03041"
+      }
     }
   ]
 }

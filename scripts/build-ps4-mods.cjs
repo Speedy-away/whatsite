@@ -63,7 +63,7 @@ function rdr2Card(menu){
  const preview=extra.image||{src:'/assets/images/ps4-rdr2/'+menu.image,alt:menu.name+' mod menu in Red Dead Redemption 2 on PS4'};
  const item=extra.resource||{name:menu.name,gameIds:['rdr2'],category:'menu',tags:['PS4']};
  const search=resourceTerms(item,menu.name).join(' ').toLowerCase();
- return `<article class="guide-resource" data-search="${esc(search)}"><a href="${esc(preview.src)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(menu.name)} screenshot"><img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy"></a><h3>${menu.name}</h3>${extra.resource?.compatibilityText ? `<p>${esc(extra.resource.compatibilityText)}</p>` : ''}${catalog.tagMarkup(resourceTags(item).slice(0,6))}<div class="guide-links">${extra.downloads || `<a href="${esc(menu.url)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
+ return `<article class="guide-resource" data-search="${esc(search)}"><a href="${esc(preview.src)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(menu.name)} screenshot"><img src="${esc(preview.src)}" alt="${esc(preview.alt)}" loading="lazy"></a><h3>${menu.name}</h3>${imported.renderer.compatibilityMarkup(extra.resource)}${catalog.tagMarkup(resourceTags(item).slice(0,6))}<div class="guide-links">${extra.downloads || `<a href="${esc(menu.url)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download</a>`}${extra.guide}</div></article>`;
 }
 if(!scoped)require('./build-mods-hub.cjs').buildModsHub();
 page('console/mods/ps4/index.html','PS4/PS5 Mods / Mod Menus','Browse the PS4/PS5 collection of GTA V, Red Dead Redemption 2, Call of Duty and Fortnite resources, with menu downloads, screenshots and setup guides.',image,nav,
@@ -142,6 +142,10 @@ if(!rdr2Only&&!fortniteOnly){
    .replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=8"></head>')
    .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script><script defer src="/assets/gta5-menu-downloads.js?v=1"></script></body>');
  fs.writeFileSync(file,html);
+}
+if(!gtaOnly&&!fortniteOnly){
+ const file='console/mods/ps4/rdr2/index.html';
+ fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=8"></head>').replace('</body>','<script defer src="/assets/gta5-menu-downloads.js?v=1"></script></body>'));
 }
 if(gtaOnly||rdr2Only)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));
 if(!rdr2Only)catalog.build();

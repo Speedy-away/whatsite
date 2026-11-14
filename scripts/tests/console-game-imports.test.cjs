@@ -93,7 +93,8 @@ test('Havana exposes three exact archived builds without a duplicate resource ca
   const imported = createGameImports({root});
   const menu = {url: 'https://github.com/illusionyy/PS4-RDR2-Havana-Mod-Menu-Releases/releases/tag/v1.20', downloadsRendered: true};
   const extra = imported.legacyEnhancement('rdr2', menu);
-  assert.equal([...extra.downloads.matchAll(/ download>/g)].length, 3);
+  assert.equal([...extra.downloads.matchAll(/<option /g)].length, 3);
+  assert.equal([...extra.downloads.matchAll(/data-menu-download aria-label=/g)].length, 1);
   for (const version of ['100', '129', '132']) assert.match(extra.downloads, new RegExp('/downloads/archive/b35a678f8578/rdr3Payload_' + version + '\\.sprx'));
   assert.match(extra.downloads, /1\.00 \(experimental\)/);
   const supplement = imported.supplement('rdr2', [menu]);
