@@ -12883,5 +12883,41 @@
     "verification": "docs/qa/repository-sync-20261115-verification.json",
     "scratchPolicy": "/.tmp/ is ignored without deleting local files",
     "downloadsDeleted": false
+  },
+  "fortniteChestTool20261115": {
+    "date": "2026-11-15",
+    "status": "Reviewed for scoped publication to main; deployment pending.",
+    "page": "/console/mods/ps4/fortnite/#resource-fortnite-chest-tool",
+    "changes": "Added Chest Tool with the user screenshot, automatic chest opening and teleport description, vehicle-required automatic chest destruction/tour note, Download and Source code buttons, screenshot popup, menu directory entry and structured search metadata.",
+    "latestUserClarification": "Removed the visible Source documentation compatibility paragraph from the Chest Tool card. hideCardCompatibility:true preserves this on regeneration; original compatibility metadata and ZIP documentation are retained.",
+    "compatibility": "Source README documents plugin v25 for Fortnite build 43.10 CUSA07669 on a private EZFN server with PS4 FW14.02 GoldHEN. These are source claims, not hardware-tested here.",
+    "downloads": [
+      {
+        "filename": "FN_Chests_Tool_1.zip",
+        "bytes": 3392648,
+        "sha256": "ba5da2796a8a5ff55da1296fb6ce89b8da007560b8209cec8cf0bade816ab9c7"
+      },
+      {
+        "filename": "fn_chests_SOURCE.zip",
+        "bytes": 898206,
+        "sha256": "e1cd6ed3d9828c89390cd0631f97ad2eb937e0b5c65b228bd48bd5afb55a889d"
+      }
+    ],
+    "archive": {
+      "inventory": "docs/ps4-fortnite-chest-tool-private-inventory.json",
+      "status": "Both site and F: copies hash-verified. Windows helper and Source Code stored separately under PS4/Games/Fortnite/Chest Tool. Exact signed Discord source URLs preserved in inventory and public manifest.",
+      "index": "Metadata-only refresh complete: 9,566 present file records, zero missing and zero unavailable. Previous metadata retained in archive-history."
+    },
+    "verification": "docs/qa/fortnite-chest-tool-verification.json and docs/qa/fortnite-chest-tool-keywords.json. Eight focused preservation/link/hash checks, all 26 keyword aliases and tags, 37 search/deployment regression tests passed. Browser confirmed screenshot popup and requested paragraph removal. Production build and live checks pending.",
+    "auditLimit": "Full-site audit has 64 unrelated issues in old links and temporary saved captures; neither edited page reported. Existing GOLDHEN14.iso working-tree deletion left untouched.",
+    "payloadsExecuted": false,
+    "published": false,
+    "keywordRefresh": {
+      "date": "2026-11-15",
+      "status": "Reviewed for publication with the Chest Tool.",
+      "changes": "Added 26 Pirate Token, hack, auto farmer, farming, PS4 and chest-tool search aliases; Pirate Token and Auto farmer visible tags in the card and menu directory; eight priority page-metadata phrases; all 26 aliases in structured keywords and the search index.",
+      "verification": "docs/qa/fortnite-chest-tool-keywords.json; all alias/tag/metadata checks, existing card and link preservation verified. Original compatibility paragraph remains hidden.",
+      "published": false
+    }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-15T01:25:28.172Z",
+  "checks": [
+    "Chest Tool features, vehicle note, image and both download buttons",
+    "Requested compatibility paragraph stays hidden on current and regenerated cards",
+    "Existing resource records and manifest revisions are preserved",
+    "All old Fortnite cards and directory rows are byte-identical",
+    "Original attached screenshot bytes are preserved",
+    "Both website ZIPs and separately organized F: copies match inventory hashes",
+    "Search directory and structured metadata include Chest Tool",
+    "Both edited pages have unique IDs and valid local links/images/anchors"
+  ],
+  "passed": 8,
+  "failed": 0,
+  "browser": "Preview confirmed screenshot dialog, download/source links and removal of requested paragraph.",
+  "regressions": {
+    "passed": 37,
+    "failed": 0
+  },
+  "siteAudit": "64 unrelated existing issues: temporary saved pages, missing GOLDHEN14.iso and old anchors. Neither edited page was reported.",
+  "archiveIndex": {
+    "presentFileRecords": 9566,
+    "missingFileRecords": 0,
+    "otherUnavailableRecords": 0
+  },
+  "payloadsExecuted": false,
+  "published": false,
+  "publicationStatus": "Reviewed; production build and deployment pending."
+}
