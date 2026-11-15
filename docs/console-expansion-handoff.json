@@ -12927,7 +12927,7 @@
   },
   "nwareUpdate20261115": {
     "date": "2026-11-15",
-    "status": "Prepared for push to origin/main; Pages deployment not verified.",
+    "status": "Pushed to origin/main as 32212e92; superseded by build 2.",
     "page": "console/mods/ps4/apex-legends/index.html",
     "sourceUrl": "https://cdn.discordapp.com/attachments/1571051263960031242/1571371208694439987/niggerware.sprx?ex=6afa7cfa&is=6af92b7a&hm=5dc37e4a909cb0c2c04524a05f1a6701b8ce4d9f96a5f4cf38958962ee862810&",
     "version": "Unversioned snapshot 2026-11-15",
@@ -12943,5 +12943,41 @@
       "missingFileRecords": 0,
       "otherUnavailableRecords": 0
     }
+  },
+  "nwareUpdate20261115Build2": {
+    "date": "2026-11-15",
+    "status": "Prepared for push; Pages deployment not verified.",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1571051263960031242/1571510459482243204/niggerware.sprx?ex=6afafeaa&is=6af9ad2a&hm=2f8198910b7a8480a40347d94de0c57325b9356d80f249e779b6f52c2ea28777&",
+    "version": "Unversioned snapshot 2026-11-15 build 2",
+    "bytes": 313280,
+    "sha256": "7205e4ba807456478944f1773546175c39d4f95a4a0856ca38ab86897b7823e7",
+    "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Apex Legends\\nware\\Builds\\Unversioned snapshot 2026-11-15 build 2\\niggerware.sprx",
+    "olderBuildsPreserved": 2,
+    "payloadExecuted": false,
+    "compatibility": "Unchanged; game update, firmware and region unspecified.",
+    "verification": "Passed: existing page links and unrelated resource records preserved; new site and archive SHA-256 verified; directory schema/tags/search checks passed. Broader catalogue tests: 7 passed, 2 failures in unchanged DLC/reference data.",
+    "archiveIndex": {
+      "presentFileRecords": 9569,
+      "missingFileRecords": 0,
+      "otherUnavailableRecords": 0
+    }
+  },
+  "zephAioFortnite20261115": {
+    "date": "2026-11-15",
+    "status": "Prepared for push; Pages deployment not verified.",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1571487912963477555/1571487913265336391/Zephs_AIO_FN_Tool.rar?ex=6afae9ab&is=6af9982b&hm=cded4bc01fee1d66588d6c01e0d0146099c4204830a8547e2299b91e1cb647c3&",
+    "version": "v1.8",
+    "bytes": 3481689,
+    "sha256": "ec92bda98741def9ace91bdffcc8407b85d6eeaf0f6c49a11b3be36c2ced04a7",
+    "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Fortnite\\Zeph's AIO Tool\\Helpers\\Windows\\v1.8\\Zephs_AIO_FN_Tool.rar",
+    "sourceEvidence": "docs/sources/fortnite/zeph-aio-source.json",
+    "compatibility": "README: GoldHEN, FTP/BinLoader and same-network Windows PC; supplied plugins.ini: CUSA07669. No game update or firmware inferred.",
+    "payloadExecuted": false,
+    "archiveIndex": {
+      "presentFileRecords": 9569,
+      "missingFileRecords": 0,
+      "otherUnavailableRecords": 0
+    },
+    "verification": "Passed: existing page links and unrelated resource records preserved; new site and archive SHA-256 verified; directory schema/tags/search checks passed. Broader catalogue tests: 7 passed, 2 failures in unchanged DLC/reference data."
   }
 }
