@@ -120,7 +120,7 @@
   },
   "metadataStable": true,
   "searchTagsStable": true,
-  "published": false,
+  "published": true,
   "addedPageKeywordPhrases": 149,
   "collectionSchemas": 37,
   "breadcrumbSchemas": 37,
@@ -159,5 +159,7 @@
     "renderedLanguageRoutes": 42,
     "fix": "Explicit authored route registration reuses the translation cache and retains new authored English text until the normal cache refresh.",
     "sparseCheckoutVerified": true
-  }
+  },
+  "repositoryCommit": "8b28a5d0321766716705f189260078169630a6ca",
+  "liveVerification": "docs/qa/search-refresh-20261115-publication.json"
 }

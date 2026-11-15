@@ -12843,12 +12843,17 @@
       "failed": 0
     },
     "sitemapCanonicals": 510,
-    "published": false,
+    "published": true,
     "localizedSelectors": {
       "authoredRoutes": 2,
       "renderedLanguageRoutes": 42,
-      "fix": "Explicit authored route registration reuses the translation cache and retains new authored English text until the normal cache refresh."
+      "fix": "Explicit authored route registration reuses the translation cache and retains new authored English text until the normal cache refresh.",
+      "sparseCheckoutVerified": true
     },
-    "initialMetadataCommit": "d84cc6c5190c006ea144cce6c81dbe80a7d4155e"
+    "initialMetadataCommit": "d84cc6c5190c006ea144cce6c81dbe80a7d4155e",
+    "repositoryCommit": "8b28a5d0321766716705f189260078169630a6ca",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43658539561",
+    "liveCheckedAt": "2026-11-15T00:39:10.974Z",
+    "liveVerification": "docs/qa/search-refresh-20261115-publication.json"
   }
 }
