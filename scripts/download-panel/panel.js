@@ -72,12 +72,13 @@ function tab(library) {
   for(const [id,active] of [['add-tab',!library],['library-tab',library]]) {$(id).classList.toggle('active',active);if(active)$(id).setAttribute('aria-current','page');else $(id).removeAttribute('aria-current');}
 }
 $('add-tab').addEventListener('click',()=>tab(false));$('library-tab').addEventListener('click',()=>tab(true));
-$('group').addEventListener('change',choosePages);$('page-search').addEventListener('input',choosePages);
+$('group').addEventListener('change',()=>{$('page-search').value='';choosePages();});$('page-search').addEventListener('input',choosePages);
 form.addEventListener('input',updatePreview);form.addEventListener('change',updatePreview);
 for(const radio of form.elements.imageMode)radio.addEventListener('change',imageMode);
 $('imageUrl').addEventListener('change',previewImage);
 $('imagePath').addEventListener('input',()=>{imageUpload='';$('image-file').value='';$('image-file-name').textContent='or paste a full path above';});
 $('imagePath').addEventListener('change',previewImage);
+$('preview-local').addEventListener('click',previewImage);
 $('downloadPath').addEventListener('input',()=>{downloadUpload='';$('download-file').value='';$('download-file-name').textContent='or paste its full path';});
 $('image-file').addEventListener('change',event=>upload('image',event.target.files[0]));
 $('download-file').addEventListener('change',event=>upload('download',event.target.files[0]));

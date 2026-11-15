@@ -37,6 +37,14 @@ test('validation preserves version pins, restricts PS3 variants and upstream del
   assert.equal(validate({...base,variant:'HEN'},[{file:PAGE,group:'PS3'}]).variant,'HEN');
   assert.throws(()=>validate({...base,type:'app',mirror:true},[{file:PAGE,group:'PS4'}]),/upstream/);
 });
+test('legacy Free cheats pages use div main containers and retain the insertion inside them',()=>{
+  const file='games/gta/index.html';
+  const html='<html><head></head><body><aside><footer>Sidebar</footer></aside><div class="main-content" role="main"><section><div>Old game downloads</div></section></div><footer>Site footer</footer></body></html>';
+  const entry={id:'example',page:file,type:'menu',title:'New menu',description:'Description',version:'v1',downloadUrl:'https://example.com/v1.zip',sourceUrl:'https://example.com/v1.zip'};
+  assert.equal(data.allowedPage(file,html),true);
+  const output=data.apply(file,html,[entry]);assert.ok(output.indexOf('Old game downloads')<output.indexOf('download-panel:start'));assert.ok(output.indexOf('download-panel:end')<output.indexOf('</div><footer>Site footer'));
+  assert.equal(data.apply(file,output,[entry]),output);
+});
 test('save copies files, archives metadata, preserves older builds and survives regeneration',async t=>{
   const {root,backupRoot,source,image,panel,input}=await fixture(t);
   const first=await panel.save(input);assert.deepEqual(first.warnings,[]);
@@ -76,8 +84,18 @@ test('HTTP API protects local paths and saves browser uploads with original file
   const saved=await fetch(base+'/api/entries',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({...input,downloadPath:'',downloadUpload:uploaded.id})});
   assert.equal(saved.status,200);const result=await saved.json();assert.equal(result.entry.file.name,'Original Menu.prx');
   assert.ok((await (await fetch(base+result.pageUrl)).text()).includes(result.entry.id));
+  const download=await fetch(base+result.entry.downloadUrl);assert.equal(download.status,200);assert.match(download.headers.get('content-disposition'),/attachment/);assert.equal(await download.text(),'a fixture plugin');
+  assert.equal((await fetch(base+'/downloads/panel/%2e%2e%2f%2e%2e%2fdocs/download-panel-entries.json')).status,400);
   assert.equal((await fetch(base+'/site/docs/download-panel-entries.json')).status,404);
   assert.ok(fs.existsSync(path.join(root,result.entry.image)));
+});
+test('Pages packaging restores saved panel cards even after a standalone page regeneration',async t=>{
+  const {root,panel,input}=await fixture(t);const saved=await panel.save(input);
+  await fsp.writeFile(path.join(root,PAGE),HTML);
+  const names=[PAGE,data.MANIFEST,'assets/download-panel-cards.css',saved.entry.image.slice(1),decodeURIComponent(saved.entry.downloadUrl.slice(1))];
+  await fsp.writeFile(path.join(root,'assets/download-panel-cards.css'),'.panel-downloads{display:block}');
+  const output=path.join(root,'stage');require('../build-pages.cjs').build({root,output,names});
+  const staged=fs.readFileSync(path.join(output,PAGE),'utf8');assert.ok(staged.includes(saved.entry.id));assert.ok(staged.includes('download-panel-cards.css'));assert.equal((staged.match(/download-panel:start/g)||[]).length,1);
 });
 test('panel launcher and tool sources stay out of the public build',()=>{
   assert.equal(eligible('Add-Downloads.bat'),false);assert.equal(eligible('scripts/download-panel.cjs'),false);assert.equal(eligible('scripts/download-panel/index.html'),false);assert.equal(eligible('assets/download-panel-cards.css'),true);

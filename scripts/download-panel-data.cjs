@@ -12,10 +12,19 @@ function groupFor(file) {
   const platform = file.match(/^console\/(?:mods\/)?([^/]+)/)?.[1];
   return platform ? ({ps4:'PS4',ps5:'PS5',ps3:'PS3',xbox360:'Xbox 360',psvita:'PS Vita',retro:'Retro consoles','nintendo-switch':'Nintendo Switch','nintendo-switch-2':'Nintendo Switch 2',steamdeck:'Steam Deck','xbox-one-series':'Xbox One / Series'}[platform] || 'Console') : 'PC / downloads';
 }
+function mainBounds(html) {
+  const main=/<main\b[^>]*>/i.exec(html) || /<div\b[^>]*(?:\bclass\s*=\s*["'][^"']*\bmain-content\b[^"']*["']|\bid\s*=\s*["']main-content["']|\brole\s*=\s*["']main["'])[^>]*>/i.exec(html);
+  if(!main)return null;
+  const tag=main[0].match(/^<(main|div)\b/i)[1];
+  const tokens=new RegExp('<\\/?'+tag+'\\b[^>]*>','gi');tokens.lastIndex=main.index+main[0].length;
+  let depth=1,match;
+  while((match=tokens.exec(html))) {depth+=match[0].startsWith('</')?-1:1;if(!depth)return {start:main.index+main[0].length,end:match.index};}
+  return null;
+}
 function allowedPage(file, html) {
   return /^(?:console|games|mods|pc|games-downloads)\/[a-zA-Z0-9_./-]+\.html$/.test(file) &&
     !file.split('/').includes('..') && !/\b(?:host|whatsite-ps[45])[^/]*\.html$/i.test(file) &&
-    !/<meta\b[^>]*http-equiv\s*=\s*["']?refresh/i.test(html) && /<main\b/i.test(html) && /<\/main>/i.test(html);
+    !/<meta\b[^>]*http-equiv\s*=\s*["']?refresh/i.test(html) && !!mainBounds(html);
 }
 function listPages(root) {
   const result = [];
@@ -47,7 +56,9 @@ function apply(file,html,entries) {
   for(const entry of relevant) {if(!groups.has(entry.type))groups.set(entry.type,[]);groups.get(entry.type).push(entry);}
   const block='<!-- download-panel:start -->\n<section class="panel-downloads container" id="added-downloads" aria-label="Downloads">'+[...groups].map(([type,items])=>`<h2>${esc(TYPES[type]||type)}</h2><div class="panel-download-grid">${items.map(card).join('\n')}</div>`).join('\n')+'</section>\n<!-- download-panel:end -->\n';
   // Place additions before the existing page footer when possible.
-  html=html.replace(/<footer\b|<\/main>/i,match=>block+match);
+  const bounds=mainBounds(html),footer=/<footer\b/i.exec(html.slice(bounds.start,bounds.end));
+  const position=footer?bounds.start+footer.index:bounds.end;
+  html=html.slice(0,position)+block+html.slice(position);
   if(!html.includes('href="/assets/download-panel-cards.css"')) html=html.replace(/<\/head>/i,'<link rel="stylesheet" href="/assets/download-panel-cards.css">\n</head>');
   return html;
 }

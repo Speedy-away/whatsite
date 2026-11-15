@@ -205,6 +205,12 @@ function createPanel({root=ROOT,backupRoot=path.resolve('F:/whatsite-backup-down
       }
       if(['/panel.js','/panel.css'].includes(url.pathname))return staticFile(res,path.join(__dirname,'download-panel',url.pathname.slice(1)),url.pathname.endsWith('.js')?'text/javascript; charset=utf-8':'text/css; charset=utf-8');
       const fileName=decodeURIComponent(url.pathname.replace(/^\/site(?=\/)/,''));
+      if(fileName.startsWith('/downloads/panel/')) {
+        const file=contained(path.join(root,'downloads/panel'),path.join(root,'.'+fileName));
+        if(!fs.existsSync(file)||!fs.statSync(file).isFile())return json(res,404,{error:'Download not found.'});
+        res.writeHead(200,{'Content-Type':'application/octet-stream','Content-Disposition':"attachment; filename*=UTF-8''"+encodeURIComponent(path.basename(file)),'Content-Length':fs.statSync(file).size,'X-Content-Type-Options':'nosniff'});
+        fs.createReadStream(file).on('error',()=>res.destroy()).pipe(res);return;
+      }
       if(/^(?:\/assets\/|\/style\.css$|\/script\.js$|\/languages\/|\/console\/|\/games\/|\/mods\/|\/pc\/|\/games-downloads\/)/.test(fileName)) {
         let file=contained(root,path.join(root,'.'+fileName));if(fs.existsSync(file)&&fs.statSync(file).isDirectory())file=contained(root,path.join(file,'index.html'));
         const ext=path.extname(file).toLowerCase(),type={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.gif':'image/gif','.avif':'image/avif','.svg':'image/svg+xml','.woff2':'font/woff2'}[ext];

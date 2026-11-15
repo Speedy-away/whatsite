@@ -12855,5 +12855,33 @@
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43658539561",
     "liveCheckedAt": "2026-11-15T00:39:10.974Z",
     "liveVerification": "docs/qa/search-refresh-20261115-publication.json"
+  },
+  "localDownloadPanel20261114": {
+    "date": "2026-11-14",
+    "status": "Added Add-Downloads.bat and a local browser panel for adding downloads to existing console, Free Cheats and PC pages. Includes page/type selection, title/description, local image copying or remote image URLs, local/remote download intake and exact compatibility fields.",
+    "data": "docs/download-panel-entries.json preserves panel entries across generator and Pages builds. Local recovery files stay in ignored .tmp/download-panel/. Instructions: docs/download-panel.md.",
+    "archive": "Uses console-expansion-archive.cjs and download-archive-layout.cjs for F: preservation and source/version/size/SHA-256 inventory. Production F: writes were not exercised; save integration was tested with isolated temporary archives.",
+    "scope": "Local authoring only. Existing downloads, host migration redirects and other catalogue entries remain preserved.",
+    "verification": {
+      "testsPassed": 30,
+      "testsFailed": 0,
+      "legacyMainContainers": true,
+      "savedDownloadsInLocalPreview": true,
+      "downloadPathContainment": true,
+      "previewPathButton": true,
+      "pageGroupFilterReset": true
+    },
+    "repositoryStatus": "Reviewed and included in the repository synchronization."
+  },
+  "repositoryLocalSync20261115": {
+    "date": "2026-11-15",
+    "status": "Reviewed remaining local panel changes for commit and push. Temporary task files remain local and ignored. Restored the missing tracked GoldHEN ISO from repository bytes and verified its existing size/SHA-256 inventory.",
+    "tests": {
+      "passed": 30,
+      "failed": 0
+    },
+    "verification": "docs/qa/repository-sync-20261115-verification.json",
+    "scratchPolicy": "/.tmp/ is ignored without deleting local files",
+    "downloadsDeleted": false
   }
 }
