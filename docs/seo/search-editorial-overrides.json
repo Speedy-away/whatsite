@@ -1,7 +1,7 @@
 {
   "index.html": {
     "title": "Game Downloads, Console Guides & Free Cheats | whatwhatboy",
-    "description": "Browse PlayStation, Xbox and Nintendo game libraries, free cheats and trainers by game, console homebrew guides, emulators, mods and PC tools.",
+    "description": "Choose Console or PC for game mods and mod menus. Browse free cheats, PlayStation, Xbox and Nintendo game libraries, homebrew guides, emulators and tools.",
     "keywords": [
       "game downloads",
       "WWBsgames",
@@ -17,7 +17,10 @@
       "Nintendo Switch homebrew",
       "Steam Deck tools",
       "PC emulators",
-      "Lua scripts"
+      "Lua scripts",
+      "Game Mods / Mod Menus",
+      "console and PC game mods",
+      "mod menu directory"
     ]
   },
   "cheats/index.html": {
@@ -40,7 +43,25 @@
       "FiveM cheats",
       "Left 4 Dead 2 cheats",
       "Battlefield tools",
-      "Counter-Strike 1.6 cheats"
+      "Counter-Strike 1.6 cheats",
+      "PC cheats by game",
+      "free mod menus by game",
+      "PC game scripts",
+      "game trainer directory"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "PC",
+        "url": "/pages/pc-mods-selector.html"
+      },
+      {
+        "name": "Free Cheats",
+        "url": "/cheats/"
+      }
     ]
   },
   "console/xbox-game-library/index.html": {
@@ -1822,9 +1843,46 @@
       "DLPSGame PS2",
       "external game directories",
       "console game listings",
-      "game source websites"
+      "game source websites",
+      "PlayStation 2 game directory",
+      "PlayStation 2 game download sources",
+      "PlayStation 2 game listings",
+      "PlayStation 2 Vimm’s Lair · PS2",
+      "PlayStation 2 DLPSGame · PS2"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "PlayStation 2",
+        "url": "/console/ps2/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "PlayStation Game Library",
+        "url": "/console/playstation-library/?platform=PS2"
+      },
+      {
+        "name": "Vimm’s Lair · PS2",
+        "url": "https://vimm.net/vault/PS2"
+      },
+      {
+        "name": "DLPSGame · PS2",
+        "url": "https://dlpsgame.com/category/ps2/"
+      }
+    ]
   },
   "console/gamecube/game-downloads.html": {
     "title": "GameCube Game Downloads & External Directories | whatwhatboy",
@@ -1837,7 +1895,36 @@
       "Vimm’s Lair GameCube",
       "external game directories",
       "console game listings",
-      "game source websites"
+      "game source websites",
+      "Nintendo GameCube game directory",
+      "Nintendo GameCube game download sources",
+      "Nintendo GameCube game listings",
+      "Nintendo GameCube Vimm’s Lair · GameCube"
+    ],
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Nintendo GameCube",
+        "url": "/console/gamecube/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Vimm’s Lair · GameCube",
+        "url": "https://vimm.net/vault/GameCube"
+      }
     ]
   },
   "console/wii/game-downloads.html": {
@@ -1863,9 +1950,46 @@
       "Nintendo Wii game catalog",
       "Wii title list",
       "Mario Kart Wii",
-      "Super Smash Bros Brawl Wii"
+      "Super Smash Bros Brawl Wii",
+      "Nintendo Wii game directory",
+      "Nintendo Wii game download sources",
+      "Nintendo Wii game listings",
+      "Nintendo Wii Vimm’s Lair · Wii",
+      "Nintendo Wii NSWGame · Wii"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Nintendo Wii",
+        "url": "/console/wii/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Nintendo Game Library",
+        "url": "/console/nintendo-game-library/?platform=wii"
+      },
+      {
+        "name": "Vimm’s Lair · Wii",
+        "url": "https://vimm.net/vault/Wii"
+      },
+      {
+        "name": "NSWGame · Wii",
+        "url": "https://nswgame.com/category/game-wii/"
+      }
+    ]
   },
   "console/wiiu/game-downloads.html": {
     "title": "Wii U Game Downloads & External Directories | whatwhatboy",
@@ -1891,9 +2015,98 @@
       "Wii U title list",
       "Nintendo Wii U game catalog",
       "Twilight Princess HD Wii U",
-      "Mario Kart 8 Wii U"
+      "Mario Kart 8 Wii U",
+      "Nintendo Wii U game directory",
+      "Nintendo Wii U game download sources",
+      "Nintendo Wii U game listings",
+      "Nintendo Wii U Vimm’s Lair · Wii U",
+      "Nintendo Wii U NSWGame · Wii U"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Nintendo Wii U",
+        "url": "/console/wiiu/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "DonkeyKong-ish",
+        "url": "https://wiiu.cdn.fortheusers.org/zips/DonkeyKongish.zip"
+      },
+      {
+        "name": "PacMan-ish",
+        "url": "https://wiiu.cdn.fortheusers.org/zips/PacManish.zip"
+      },
+      {
+        "name": "Trogdor-Reburninated",
+        "url": "https://wiiu.cdn.fortheusers.org/zips/Trogdor-Reburninated.zip"
+      },
+      {
+        "name": "Conway's Game of Life",
+        "url": "https://wiiu.cdn.fortheusers.org/zips/ConwaysGameofLife.zip"
+      },
+      {
+        "name": "Pong U",
+        "url": "https://wiiu.cdn.fortheusers.org/zips/PongU.zip"
+      },
+      {
+        "name": "Newo Shooter",
+        "url": "https://hbb1.oscwii.org/api/contents/NewoShooter/NewoShooter.zip"
+      },
+      {
+        "name": "Wii-Tac-Toe",
+        "url": "https://hbb1.oscwii.org/api/contents/Wii-Tac-Toe/Wii-Tac-Toe.zip"
+      },
+      {
+        "name": "Newo Fox",
+        "url": "https://hbb1.oscwii.org/api/contents/NewoFox/NewoFox.zip"
+      },
+      {
+        "name": "chro.mono 2",
+        "url": "https://hbb1.oscwii.org/api/contents/chromono2/chromono2.zip"
+      },
+      {
+        "name": "Retro Tennis 2",
+        "url": "https://hbb1.oscwii.org/api/contents/retro_tennis_2/retro_tennis_2.zip"
+      },
+      {
+        "name": "Wiirdle",
+        "url": "https://hbb1.oscwii.org/api/contents/wiirdle/wiirdle.zip"
+      },
+      {
+        "name": "Riivolution",
+        "url": "https://hbb1.oscwii.org/api/contents/riivolution/riivolution.zip"
+      },
+      {
+        "name": "mkwcat's NSMBW project",
+        "url": "https://github.com/mkwcat/nsmbw-project/releases/download/v0.6.5/mkwcat-nsmbw.zip"
+      },
+      {
+        "name": "Nintendo Game Library",
+        "url": "/console/nintendo-game-library/?platform=wiiu"
+      },
+      {
+        "name": "Vimm’s Lair · Wii U",
+        "url": "https://vimm.net/vault/WiiU"
+      },
+      {
+        "name": "NSWGame · Wii U",
+        "url": "https://nswgame.com/category/game-wii-u/"
+      }
+    ]
   },
   "console/psp/game-downloads.html": {
     "title": "PSP Game Downloads & Library | whatwhatboy",
@@ -1916,9 +2129,46 @@
       "DownloadGamePSP PSP",
       "external game directories",
       "console game listings",
-      "game source websites"
+      "game source websites",
+      "PlayStation Portable game directory",
+      "PlayStation Portable game download sources",
+      "PlayStation Portable game listings",
+      "PlayStation Portable Vimm’s Lair · PSP",
+      "PlayStation Portable DownloadGamePSP · PSP"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "PlayStation Portable",
+        "url": "/console/psp/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "PlayStation Game Library",
+        "url": "/console/playstation-library/?platform=PSP"
+      },
+      {
+        "name": "Vimm’s Lair · PSP",
+        "url": "https://vimm.net/vault/PSP"
+      },
+      {
+        "name": "DownloadGamePSP · PSP",
+        "url": "https://downloadgamepsp.org/category/psp/"
+      }
+    ]
   },
   "console/3ds/game-downloads.html": {
     "title": "Nintendo 3DS Game Downloads & External Directories | whatwhatboy",
@@ -1946,9 +2196,46 @@
       "Nintendo 3DS title list",
       "N3DS game catalog",
       "Mario Kart 7 3DS",
-      "3DS platformer games"
+      "3DS platformer games",
+      "Nintendo 2DS & 3DS game directory",
+      "Nintendo 2DS & 3DS game download sources",
+      "Nintendo 2DS & 3DS game listings",
+      "Nintendo 2DS & 3DS NSWGF · Nintendo 3DS",
+      "Nintendo 2DS & 3DS NSWGame · Nintendo 3DS"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Nintendo 2DS & 3DS",
+        "url": "/console/3ds/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Nintendo Game Library",
+        "url": "/console/nintendo-game-library/?platform=3ds"
+      },
+      {
+        "name": "NSWGF · Nintendo 3DS",
+        "url": "https://nswgf.com/category/3ds/"
+      },
+      {
+        "name": "NSWGame · Nintendo 3DS",
+        "url": "https://nswgame.com/category/3ds/"
+      }
+    ]
   },
   "console/ds/game-downloads.html": {
     "title": "Nintendo DS Game Downloads & External Directories | whatwhatboy",
@@ -1976,9 +2263,46 @@
       "NDS game catalog",
       "Nintendo DS title list",
       "DS racing games",
-      "Mario Kart DS"
+      "Mario Kart DS",
+      "Nintendo DS & DSi game directory",
+      "Nintendo DS & DSi game download sources",
+      "Nintendo DS & DSi game listings",
+      "Nintendo DS & DSi Vimm’s Lair · Nintendo DS",
+      "Nintendo DS & DSi NSWGame · Nintendo DS"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Nintendo DS & DSi",
+        "url": "/console/ds/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Nintendo Game Library",
+        "url": "/console/nintendo-game-library/?platform=ds"
+      },
+      {
+        "name": "Vimm’s Lair · Nintendo DS",
+        "url": "https://vimm.net/vault/DS"
+      },
+      {
+        "name": "NSWGame · Nintendo DS",
+        "url": "https://nswgame.com/category/ds/"
+      }
+    ]
   },
   "console/nintendo-switch/game-downloads.html": {
     "title": "Nintendo Switch Game Downloads & External Directories | whatwhatboy",
@@ -2002,9 +2326,41 @@
       "Switch action games",
       "Zelda BOTW Switch",
       "Zelda TOTK Switch",
-      "Mario Kart 8 Deluxe Switch"
+      "Mario Kart 8 Deluxe Switch",
+      "Nintendo Switch game directory",
+      "Nintendo Switch game download sources",
+      "Nintendo Switch game listings",
+      "Nintendo Switch NSWGame · Nintendo Switch"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Nintendo Switch",
+        "url": "/console/nintendo-switch/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Nintendo Game Library",
+        "url": "/console/nintendo-game-library/?platform=nintendo-switch"
+      },
+      {
+        "name": "NSWGame · Nintendo Switch",
+        "url": "https://nswgame.com/category/switch/"
+      }
+    ]
   },
   "console/nintendo-switch-2/game-downloads.html": {
     "title": "Nintendo Switch 2 Game Downloads & External Directories | whatwhatboy",
@@ -2016,8 +2372,31 @@
       "Nintendo Switch 2 game directories",
       "external game directories",
       "console game listings",
-      "game source websites"
-    ]
+      "game source websites",
+      "Nintendo Switch 2 game directory",
+      "Nintendo Switch 2 game download sources",
+      "Nintendo Switch 2 game listings"
+    ],
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Nintendo Switch 2",
+        "url": "/console/nintendo-switch-2/game-downloads.html"
+      }
+    ],
+    "items": []
   },
   "console/xbox-one-series/game-downloads.html": {
     "title": "Xbox One Game Downloads & External Directories | whatwhatboy",
@@ -2030,8 +2409,31 @@
       "Xbox One game directories",
       "external game directories",
       "console game listings",
-      "game source websites"
-    ]
+      "game source websites",
+      "Xbox One / Series X|S game directory",
+      "Xbox One / Series X|S game download sources",
+      "Xbox One / Series X|S game listings"
+    ],
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Xbox One / Series X|S",
+        "url": "/console/xbox-one-series/game-downloads.html"
+      }
+    ],
+    "items": []
   },
   "console/steamdeck/game-downloads.html": {
     "title": "Steam Deck Game Downloads & External Directories | whatwhatboy",
@@ -2043,8 +2445,31 @@
       "Steam Deck game directories",
       "external game directories",
       "console game listings",
-      "game source websites"
-    ]
+      "game source websites",
+      "Steam Deck game directory",
+      "Steam Deck game download sources",
+      "Steam Deck game listings"
+    ],
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Steam Deck",
+        "url": "/console/steamdeck/game-downloads.html"
+      }
+    ],
+    "items": []
   },
   "console/psvita/game-downloads.html": {
     "title": "PS Vita Game Downloads & Library | whatwhatboy",
@@ -2066,9 +2491,41 @@
       "DownloadGamePSP PS Vita",
       "external game directories",
       "console game listings",
-      "game source websites"
+      "game source websites",
+      "PS Vita game directory",
+      "PS Vita game download sources",
+      "PS Vita game listings",
+      "PS Vita DownloadGamePSP · PS Vita"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "PS Vita",
+        "url": "/console/psvita/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "PlayStation Game Library",
+        "url": "/console/playstation-library/?platform=PS%20Vita"
+      },
+      {
+        "name": "DownloadGamePSP · PS Vita",
+        "url": "https://downloadgamepsp.org/category/psvita-game-free-new/"
+      }
+    ]
   },
   "console/ps3/game-downloads.html": {
     "title": "PS3 Game Downloads & Library | whatwhatboy",
@@ -2091,9 +2548,46 @@
       "DLPSGame PS3",
       "external game directories",
       "console game listings",
-      "game source websites"
+      "game source websites",
+      "PlayStation 3 game directory",
+      "PlayStation 3 game download sources",
+      "PlayStation 3 game listings",
+      "PlayStation 3 Vimm’s Lair · PS3",
+      "PlayStation 3 DLPSGame · PS3"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "PlayStation 3",
+        "url": "/console/ps3/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "PlayStation Game Library",
+        "url": "/console/playstation-library/?platform=PS3"
+      },
+      {
+        "name": "Vimm’s Lair · PS3",
+        "url": "https://vimm.net/vault/PS3"
+      },
+      {
+        "name": "DLPSGame · PS3",
+        "url": "https://dlpsgame.com/list-all-game-ps3/"
+      }
+    ]
   },
   "console/ps4/dlcs.html": {
     "title": "PS4 DLC Downloads: Black Ops Season Passes | whatwhatboy",
@@ -2242,9 +2736,73 @@
       "PlayStation 4",
       "external game directories",
       "console game listings",
-      "game source websites"
+      "game source websites",
+      "PlayStation 4 game directory",
+      "PlayStation 4 game download sources",
+      "PlayStation 4 game listings",
+      "PlayStation 4 DLPSGame · PS4"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "PlayStation 4",
+        "url": "/console/ps4/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "FPKG's Fixes",
+        "url": "/console/ps4/fpkg-fixes.html#resource-bo2-fpkg-111-crash-fix"
+      },
+      {
+        "name": "Game Patches",
+        "url": "/console/ps4/game-patches.html"
+      },
+      {
+        "name": "DLC's",
+        "url": "/console/ps4/dlcs.html"
+      },
+      {
+        "name": "Updates",
+        "url": "/console/ps4/updates.html"
+      },
+      {
+        "name": "PlayStation Game Library",
+        "url": "/console/playstation-library/?platform=PS4"
+      },
+      {
+        "name": "DLPSGame · PS4",
+        "url": "https://dlpsgame.com/category/ps4/"
+      },
+      {
+        "name": "Infinitykkj STORE · v0.0.11 Beta",
+        "url": "https://drive.google.com/file/d/1UnS-7mR9QSObVWgHRXkjfGrWixJQ4-NW/view"
+      },
+      {
+        "name": "Nova Store",
+        "url": "https://drive.google.com/file/d/1gZoNjmH6uOvQ4uvbfzeah27EWWTGVIaf/view"
+      },
+      {
+        "name": "Orbit Store 1.8.1",
+        "url": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf"
+      },
+      {
+        "name": "JobeesLair · PS4 · 0.1.5 Beta 5",
+        "url": "https://github.com/JVK3R/JobeesLair-PS4/releases/download/v0.1.5/JobeesLair-PS4-0.1.5-Beta-5.pkg"
+      }
+    ]
   },
   "console/playstation-library/index.html": {
     "title": "PlayStation Game Library: PS2 to PS5, PSP & Vita | whatwhatboy",
@@ -2511,9 +3069,61 @@
       "PS5 Game Downloads & External Directories",
       "PlayStation 5",
       "PS5",
-      "PS 5"
+      "PS 5",
+      "PlayStation 5 game directory",
+      "PlayStation 5 game download sources",
+      "PlayStation 5 game listings",
+      "PlayStation 5 DLPSGame · PS5"
     ],
-    "type": "CollectionPage"
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "PlayStation 5",
+        "url": "/console/ps5/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Game Patches",
+        "url": "/console/ps4/game-patches.html#native-ps5-patches"
+      },
+      {
+        "name": "PlayStation Game Library",
+        "url": "/console/playstation-library/?platform=PS5"
+      },
+      {
+        "name": "DLPSGame · PS5",
+        "url": "https://dlpsgame.com/category/ps5/"
+      },
+      {
+        "name": "Infinitykkj STORE · v0.0.11 Beta",
+        "url": "https://drive.google.com/file/d/1UnS-7mR9QSObVWgHRXkjfGrWixJQ4-NW/view"
+      },
+      {
+        "name": "Nova Store",
+        "url": "https://drive.google.com/file/d/1gZoNjmH6uOvQ4uvbfzeah27EWWTGVIaf/view"
+      },
+      {
+        "name": "Orbit Store 1.8.1",
+        "url": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf"
+      },
+      {
+        "name": "JobeesLair · PS5 · 0.5.6",
+        "url": "https://github.com/JVK3R/JobeesLair/releases/download/v0.5.6/JobeesLair.exfat"
+      }
+    ]
   },
   "console/xbox360/game-downloads.html": {
     "title": "Xbox 360 Game Downloads & Library | whatwhatboy",
@@ -2535,7 +3145,35 @@
       "Xbox 360 Indie Games",
       "XBLIG",
       "Xbox 360 shooter games",
-      "Xbox 360 racing games"
+      "Xbox 360 racing games",
+      "Xbox 360 game directory",
+      "Xbox 360 game download sources",
+      "Xbox 360 game listings"
+    ],
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Xbox 360",
+        "url": "/console/xbox360/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Xbox Game Library",
+        "url": "/console/xbox-game-library/?platform=xbox360"
+      }
     ]
   },
   "console/xbox/game-downloads.html": {
@@ -2554,7 +3192,35 @@
       "Original Xbox game catalog",
       "Xbox games by region",
       "Xbox disc revision lookup",
-      "Halo Combat Evolved Xbox"
+      "Halo Combat Evolved Xbox",
+      "Original Xbox game directory",
+      "Original Xbox game download sources",
+      "Original Xbox game listings"
+    ],
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      },
+      {
+        "name": "Original Xbox",
+        "url": "/console/xbox/game-downloads.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Xbox Game Library",
+        "url": "/console/xbox-game-library/?platform=xbox"
+      }
     ]
   },
   "console/game-downloads/index.html": {
@@ -2628,7 +3294,11 @@
       "Atari Lynx",
       "Sega Game Gear",
       "Virtual Boy",
-      "Game Boy Color"
+      "Game Boy Color",
+      "console game download selector",
+      "PS5 game directories",
+      "PS4 game directories",
+      "PS3 game directories"
     ],
     "items": [
       {
@@ -2811,6 +3481,20 @@
         "name": "Game Boy Advance",
         "url": "https://vimm.net/vault/GBA"
       }
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      },
+      {
+        "name": "Console game downloads",
+        "url": "/console/game-downloads/"
+      }
     ]
   },
   "pages/mods.html": {
@@ -2832,8 +3516,33 @@
       "Elden Ring mods",
       "PC game mods",
       "PC mod menus",
-      "Game Mods / Mod Menus"
-    ]
+      "Game Mods / Mod Menus",
+      "PC modding directory",
+      "game mods by game",
+      "PC graphics mods",
+      "PC gameplay mods",
+      "game script hooks"
+    ],
+    "type": "CollectionPage",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC",
+        "url": "/pages/pc-mods-selector.html"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods.html"
+      }
+    ],
+    "items": []
   },
   "games-downloads/index.html": {
     "title": "PC & Console Game Downloads | whatwhatboy",
@@ -2855,7 +3564,23 @@
       "PlayStation games",
       "Xbox games",
       "Nintendo games",
-      "retro game directories"
+      "retro game directories",
+      "console game directory",
+      "PC game download directory",
+      "PlayStation game downloads",
+      "Xbox game downloads",
+      "Nintendo game downloads",
+      "game libraries by platform"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game downloads",
+        "url": "/games-downloads/"
+      }
     ]
   },
   "console/index.html": {
@@ -4594,7 +5319,7 @@
   },
   "pages/mods-selector.html": {
     "title": "Game Mods / Mod Menus: Console or PC | whatwhatboy",
-    "description": "Choose Console or PC. Browse console mod menus, or select free PC cheats and game mods by game.",
+    "description": "Choose Console or PC to browse game mods and mod menus. Find console resources by platform, or choose free PC cheats, scripts and game mods.",
     "type": "CollectionPage",
     "keywords": [
       "Game Mods / Mod Menus",
@@ -4602,7 +5327,13 @@
       "PC mod menus",
       "PC game mods",
       "free PC cheats",
-      "console or PC"
+      "console or PC",
+      "game mods by platform",
+      "mod menus by console",
+      "console game mods",
+      "PC mods and cheats",
+      "game mod directory",
+      "mod menu platform selector"
     ],
     "items": [
       {
@@ -4612,6 +5343,16 @@
       {
         "name": "PC",
         "url": "/pages/pc-mods-selector.html"
+      }
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
       }
     ]
   },
@@ -4624,7 +5365,12 @@
       "PC game mods",
       "PC mod menus",
       "free cheats by game",
-      "Game Mods / Mod Menus"
+      "Game Mods / Mod Menus",
+      "PC cheats and mods directory",
+      "free PC game cheats",
+      "PC modding tools",
+      "PC scripts and add-ons",
+      "PC game mods by game"
     ],
     "items": [
       {
@@ -4635,6 +5381,583 @@
         "name": "Game Mods / Mod Menus",
         "url": "/pages/mods.html"
       }
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC",
+        "url": "/pages/pc-mods-selector.html"
+      }
     ]
+  },
+  "mods/baldurs-gate-3.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Baldur's Gate 3 mods",
+      "Baldur's Gate 3 PC mods",
+      "Baldur's Gate 3 modding tools",
+      "BG3 mods",
+      "BG3 PC mods",
+      "BG3 modding tools",
+      "Party Limit Begone",
+      "ImpUI (ImprovedUI)",
+      "Official mod browser"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Baldur’s Gate 3 Mods & Tools",
+        "url": "/mods/baldurs-gate-3.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Party Limit Begone",
+        "url": "https://www.nexusmods.com/baldursgate3/mods/327"
+      },
+      {
+        "name": "ImpUI (ImprovedUI)",
+        "url": "https://www.nexusmods.com/baldursgate3/mods/366"
+      },
+      {
+        "name": "Official mod browser",
+        "url": "https://baldursgate3.game/mods"
+      }
+    ],
+    "description": "Browse Baldur's Gate 3 mods and tools, including Party Limit Begone, ImpUI (ImprovedUI), Official mod browser."
+  },
+  "mods/celeste.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Celeste mods",
+      "Celeste PC mods",
+      "Celeste modding tools",
+      "Everest",
+      "Celeste maps & campaigns"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Celeste Mods & Tools",
+        "url": "/mods/celeste.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Everest",
+        "url": "https://github.com/EverestAPI/Everest/releases/download/stable-1.6662.0/main.zip"
+      },
+      {
+        "name": "Celeste maps & campaigns",
+        "url": "https://gamebanana.com/games/6460"
+      }
+    ],
+    "description": "Browse Celeste mods and tools, including Everest, Celeste maps & campaigns. Check the listed versions, requirements and source links."
+  },
+  "mods/cyberpunk-2077.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Cyberpunk 2077 mods",
+      "Cyberpunk 2077 PC mods",
+      "Cyberpunk 2077 modding tools",
+      "CP2077 mods",
+      "CP2077 PC mods",
+      "CP2077 modding tools",
+      "Ragdoll Physics Overhaul",
+      "Cyberpunk 2077 mod collection"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Cyberpunk 2077 Mods & Tools",
+        "url": "/mods/cyberpunk-2077.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Ragdoll Physics Overhaul",
+        "url": "https://www.nexusmods.com/cyberpunk2077/mods/3858"
+      },
+      {
+        "name": "Cyberpunk 2077 mod collection",
+        "url": "https://www.nexusmods.com/games/cyberpunk2077/mods"
+      }
+    ],
+    "description": "Browse Cyberpunk 2077 mods and tools, including Ragdoll Physics Overhaul, Cyberpunk 2077 mod collection. Check the listed versions, requirements and source links."
+  },
+  "mods/elden-ring.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Elden Ring mods",
+      "Elden Ring PC mods",
+      "Elden Ring modding tools",
+      "Seamless Co-op"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Elden Ring Mods & Tools",
+        "url": "/mods/elden-ring.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Seamless Co-op",
+        "url": "https://github.com/yuiamoroll/EldenRingSeamlessCoopRelease/releases/download/v2.0.1/Seamless.Co-op.v2.0.1.zip"
+      }
+    ],
+    "description": "Browse Elden Ring mods and tools, including Seamless Co-op. Check the listed versions, requirements and source links."
+  },
+  "mods/fallout-4.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Fallout 4 mods",
+      "Fallout 4 PC mods",
+      "Fallout 4 modding tools",
+      "FO4 mods",
+      "FO4 PC mods",
+      "FO4 modding tools",
+      "Sim Settlements 2",
+      "Unofficial Fallout 4 Patch"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Fallout 4 Mods & Tools",
+        "url": "/mods/fallout-4.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Sim Settlements 2",
+        "url": "https://www.nexusmods.com/fallout4/mods/47976"
+      },
+      {
+        "name": "Unofficial Fallout 4 Patch",
+        "url": "https://www.nexusmods.com/fallout4/mods/4598"
+      }
+    ],
+    "description": "Browse Fallout 4 mods and tools, including Sim Settlements 2, Unofficial Fallout 4 Patch. Check the listed versions, requirements and source links."
+  },
+  "mods/gta4.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Grand Theft Auto IV mods",
+      "Grand Theft Auto IV PC mods",
+      "Grand Theft Auto IV modding tools",
+      "GTA 4 mods",
+      "GTA 4 PC mods",
+      "GTA 4 modding tools"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "GTA IV Mods",
+        "url": "/mods/gta4.html"
+      }
+    ],
+    "items": [],
+    "description": "Browse Grand Theft Auto IV mods and tools, including . Check the listed versions, requirements and source links."
+  },
+  "mods/gta5.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Grand Theft Auto V mods",
+      "Grand Theft Auto V PC mods",
+      "Grand Theft Auto V modding tools",
+      "GTA 5 mods",
+      "GTA 5 PC mods",
+      "GTA 5 modding tools"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "GTA V Mods",
+        "url": "/mods/gta5.html"
+      }
+    ],
+    "items": [],
+    "description": "Browse Grand Theft Auto V mods and tools, including . Check the listed versions, requirements and source links."
+  },
+  "mods/hollow-knight.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Hollow Knight mods",
+      "Hollow Knight PC mods",
+      "Hollow Knight modding tools",
+      "Randomizer 4",
+      "Hollow Knight Modding API",
+      "Lumafly"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Hollow Knight Mods & Tools",
+        "url": "/mods/hollow-knight.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Randomizer 4",
+        "url": "https://github.com/homothetyhk/RandomizerMod/releases/download/v4.1.6%2B987/RandomizerMod.zip"
+      },
+      {
+        "name": "Hollow Knight Modding API",
+        "url": "https://github.com/hk-modding/api/releases/download/1.5.78.11833-77/moddingapi.v77.windows.zip"
+      },
+      {
+        "name": "Lumafly",
+        "url": "https://github.com/TheMulhima/Lumafly/releases/download/v3.3.0.0/Lumafly-Windows.zip"
+      }
+    ],
+    "description": "Browse Hollow Knight mods and tools, including Randomizer 4, Hollow Knight Modding API, Lumafly. Check the listed versions, requirements and source links."
+  },
+  "mods/minecraft.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Minecraft Java mods",
+      "Minecraft Java PC mods",
+      "Minecraft Java modding tools",
+      "Sodium",
+      "Iris",
+      "Lithium",
+      "FerriteCore",
+      "Fabric API"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Minecraft Java Mods & Tools",
+        "url": "/mods/minecraft.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "Sodium",
+        "url": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar"
+      },
+      {
+        "name": "Iris",
+        "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar"
+      },
+      {
+        "name": "Lithium",
+        "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/N08Z8wog/lithium-fabric-0.15.4%2Bmc1.21.1.jar"
+      },
+      {
+        "name": "FerriteCore",
+        "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar"
+      },
+      {
+        "name": "Fabric API",
+        "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Mys3P7lK/fabric-api-0.116.17%2B1.21.1.jar"
+      }
+    ],
+    "description": "Browse Minecraft Java mods and tools, including Sodium, Iris, Lithium. Check the listed versions, requirements and source links."
+  },
+  "mods/rdr2.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Red Dead Redemption 2 mods",
+      "Red Dead Redemption 2 PC mods",
+      "Red Dead Redemption 2 modding tools",
+      "RDR2 mods",
+      "RDR2 PC mods",
+      "RDR2 modding tools"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Red Dead Redemption 2 Mods",
+        "url": "/mods/rdr2.html"
+      }
+    ],
+    "items": [],
+    "description": "Browse Red Dead Redemption 2 mods and tools, including . Check the listed versions, requirements and source links."
+  },
+  "mods/skyrim.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Skyrim mods",
+      "Skyrim PC mods",
+      "Skyrim modding tools"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Skyrim Mods",
+        "url": "/mods/skyrim.html"
+      }
+    ],
+    "items": [],
+    "description": "Browse Skyrim mods and tools, including . Check the listed versions, requirements and source links."
+  },
+  "mods/stardew-valley.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Stardew Valley mods",
+      "Stardew Valley PC mods",
+      "Stardew Valley modding tools",
+      "SMAPI",
+      "Automate",
+      "Chests Anywhere",
+      "Content Patcher",
+      "Data Layers"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Stardew Valley Mods & Tools",
+        "url": "/mods/stardew-valley.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "SMAPI",
+        "url": "https://github.com/Pathoschild/SMAPI/releases/download/4.5.2/SMAPI-4.5.2-installer.zip"
+      },
+      {
+        "name": "Automate",
+        "url": "https://www.nexusmods.com/stardewvalley/mods/1063"
+      },
+      {
+        "name": "Chests Anywhere",
+        "url": "https://www.nexusmods.com/stardewvalley/mods/518"
+      },
+      {
+        "name": "Content Patcher",
+        "url": "https://www.nexusmods.com/stardewvalley/mods/1915"
+      },
+      {
+        "name": "Data Layers",
+        "url": "https://www.nexusmods.com/stardewvalley/mods/1691"
+      }
+    ],
+    "description": "Browse Stardew Valley mods and tools, including SMAPI, Automate, Chests Anywhere. Check the listed versions, requirements and source links."
+  },
+  "mods/terraria.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "Terraria mods",
+      "Terraria PC mods",
+      "Terraria modding tools",
+      "tModLoader",
+      "Recipe Browser",
+      "Boss Checklist"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "Terraria Mods & Tools",
+        "url": "/mods/terraria.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "tModLoader",
+        "url": "https://github.com/tModLoader/tModLoader/releases/download/v2026.09.3.1/tModLoader.zip"
+      },
+      {
+        "name": "Recipe Browser",
+        "url": "https://github.com/JavidPack/RecipeBrowser"
+      },
+      {
+        "name": "Boss Checklist",
+        "url": "https://github.com/JavidPack/BossChecklist"
+      }
+    ],
+    "description": "Browse Terraria mods and tools, including tModLoader, Recipe Browser, Boss Checklist. Check the listed versions, requirements and source links."
+  },
+  "mods/witcher-3.html": {
+    "type": "CollectionPage",
+    "keywords": [
+      "The Witcher 3 mods",
+      "The Witcher 3 PC mods",
+      "The Witcher 3 modding tools",
+      "Witcher 3 mods",
+      "Witcher 3 PC mods",
+      "Witcher 3 modding tools",
+      "HD Reworked Project — OldGen",
+      "Brothers in Arms — Next-Gen"
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Game Mods / Mod Menus",
+        "url": "/pages/mods-selector.html"
+      },
+      {
+        "name": "PC game mods",
+        "url": "/pages/mods.html"
+      },
+      {
+        "name": "The Witcher 3 Mods & Tools",
+        "url": "/mods/witcher-3.html"
+      }
+    ],
+    "items": [
+      {
+        "name": "HD Reworked Project — OldGen",
+        "url": "https://www.nexusmods.com/witcher3/mods/1021"
+      },
+      {
+        "name": "Brothers in Arms — Next-Gen",
+        "url": "https://www.nexusmods.com/witcher3/mods/7329"
+      }
+    ],
+    "description": "Browse The Witcher 3 mods and tools, including HD Reworked Project — OldGen, Brothers in Arms — Next-Gen. Check the listed versions, requirements and source links."
   }
 }

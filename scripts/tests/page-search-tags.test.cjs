@@ -3,6 +3,27 @@ const assert = require('node:assert/strict');
 const {apply, aliasesFor, resourceTerms, decode} = require('../page-search-tags.cjs');
 const search = html => decode(html.match(/data-(?:library-)?search=(["'])([\s\S]*?)\1/)[2]);
 
+test('PC mod cards gain game context while keeping the exact loader and version pins', () => {
+  const input = '<article data-search="sodium Minecraft Java 1.21.1 Fabric"><h3>Sodium</h3><p>Compatibility: Minecraft Java 1.21.1 · Fabric. Not tested with Forge or PS5.</p><a href="https://example.test/sodium-1.21.1-fabric.jar" download>Exact build</a></article>';
+  const output = apply('mods/minecraft.html', input);
+  assert.ok(search(output).includes('minecraft java sodium'));
+  assert.ok(search(output).includes('pc game mods'));
+  assert.ok(!search(output).includes('forge'));
+  assert.ok(!search(output).includes('ps5'));
+  assert.ok(!search(output).includes('1.21.2'));
+  const withoutSearch = html => html.replace(/\sdata-search(?:-i18n)?="[^"]*"/g, '');
+  assert.equal(withoutSearch(output), withoutSearch(input));
+  assert.equal(apply('mods/minecraft.html', output), output);
+});
+
+test('PC game context does not spill into console menus or downloaded tools', () => {
+  const terms = require('../pc-mod-search-terms.cjs').termsForCard;
+  assert.deepEqual(terms('console/mods/ps4/gta5/index.html', 'Menyoo'), []);
+  assert.deepEqual(terms('downloads/minecraft/helper.html', 'Sodium'), []);
+  assert.deepEqual(terms('mods/unlisted-game.html', 'Example tool'), []);
+  assert.ok(terms('mods/baldurs-gate-3.html', 'ImpUI').includes('BG3 ImpUI'));
+});
+
 test('host cards use their visible console labels without making the host grid searchable', () => {
   const input = '<div class="guide-host-grid"><a class="guide-host" href="https://example.test/pinned"><h3>Karo</h3><span class="feature-tag">PS4</span><span class="feature-tag">Browser host</span></a></div>';
   const output = apply('console/ps4/index.html', input);

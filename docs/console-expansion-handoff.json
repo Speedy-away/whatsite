@@ -12828,5 +12828,21 @@
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43656429693",
     "liveCheckedAt": "2026-11-15T00:13:56.821Z",
     "liveVerification": "docs/qa/console-picker-order-publication.json"
+  },
+  "searchRefresh20261115": {
+    "date": "2026-11-15",
+    "status": "Refreshed page-specific metadata, PC mod search tags and collection/breadcrumb schema. Visible pages, all links/images, compatibility pins and indexing directives preserved.",
+    "verification": "docs/qa/search-refresh-20261115-verification.json",
+    "auditedPages": 585,
+    "changedPages": 49,
+    "searchTagPages": 16,
+    "editorialPages": 38,
+    "addedPageKeywordPhrases": 149,
+    "tests": {
+      "passed": 57,
+      "failed": 0
+    },
+    "sitemapCanonicals": 510,
+    "published": false
   }
 }
