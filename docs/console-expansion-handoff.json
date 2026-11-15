@@ -12821,8 +12821,12 @@
     "all17ConsoleChoicesPreserved": true,
     "onlyPickerOrderChanged": true,
     "generatorIdempotent": true,
-    "published": false,
+    "published": true,
     "status": "Console download selectors start with PS5, PS4 and PS3; all other choices retain their relative order.",
-    "verification": "docs/qa/console-picker-order-verification.json"
+    "verification": "docs/qa/console-picker-order-verification.json",
+    "repositoryCommit": "2700105dd68b94d90147eb4f45c1b8e08da3ee76",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43656429693",
+    "liveCheckedAt": "2026-11-15T00:13:56.821Z",
+    "liveVerification": "docs/qa/console-picker-order-publication.json"
   }
 }
