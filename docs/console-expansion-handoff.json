@@ -12805,5 +12805,24 @@
     "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43655554744",
     "liveCheckedAt": "2026-11-15T00:03:44.083Z",
     "liveVerification": "docs/qa/dlc-card-shortcuts-publication.json"
+  },
+  "consolePickerOrder20261115": {
+    "date": "2026-11-15",
+    "pages": [
+      "console/game-downloads/index.html",
+      "games-downloads/index.html"
+    ],
+    "firstConsoles": [
+      "PlayStation 5",
+      "PlayStation 4",
+      "PlayStation 3"
+    ],
+    "remainingOrderPreserved": true,
+    "all17ConsoleChoicesPreserved": true,
+    "onlyPickerOrderChanged": true,
+    "generatorIdempotent": true,
+    "published": false,
+    "status": "Console download selectors start with PS5, PS4 and PS3; all other choices retain their relative order.",
+    "verification": "docs/qa/console-picker-order-verification.json"
   }
 }

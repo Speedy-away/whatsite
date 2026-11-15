@@ -223,7 +223,9 @@ function directoryChoice(url, label, logo, {externalSite = false, preserveColor 
 }
 function consolePicker(data) {
   const specialLogos = {'3ds': '3ds.png', xbox: 'xbox.png', 'nintendo-switch-2': 'nintendo-switch-2-symbol.svg'};
-  const choices = data.platforms.map(platform => directoryChoice(directoryPath(platform), platform.title,
+  const priority = {ps5: 0, ps4: 1, ps3: 2};
+  const platforms = [...data.platforms].sort((a, b) => (priority[a.id] ?? 3) - (priority[b.id] ?? 3));
+  const choices = platforms.map(platform => directoryChoice(directoryPath(platform), platform.title,
     '/assets/images/platform-logos/' + (specialLogos[platform.id] || platform.id + '.svg')));
   return require('./build-console-guides.cjs').section('consoles', 'Choose your console',
     `<ul class="download-directory">${choices.join('\n')}</ul>`);
