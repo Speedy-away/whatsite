@@ -126,7 +126,7 @@
   "breadcrumbSchemas": 37,
   "structuredCollectionItems": 135,
   "tests": {
-    "passed": 57,
+    "passed": 79,
     "failed": 0
   },
   "sitemap": {
@@ -153,5 +153,10 @@
     "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb",
     "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
     "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
-  ]
+  ],
+  "localizedSelectors": {
+    "authoredRoutes": 2,
+    "renderedLanguageRoutes": 42,
+    "fix": "Explicit authored route registration reuses the translation cache and retains new authored English text until the normal cache refresh."
+  }
 }

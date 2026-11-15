@@ -6,6 +6,16 @@ test('retired PC hub stays a noindex redirect in every language',()=>{
 });
 const {tag:languageLoader}=require('../language-loader.cjs');
 const root=path.resolve(__dirname,'../..');
+test('authored mod selectors have localized routes and keep navigation in the selected language',()=>{
+ const names=['pages/mods-selector.html','pages/pc-mods-selector.html'];
+ const ctx=builder.load(root,{previewPages:names});
+ for(const name of names){const page=ctx.pages.get(name);assert.ok(page,name+' enrolled');
+  for(const code of ['en',...html.codes]){const result=builder.render(ctx,page,fs.readFileSync(path.join(root,name),'utf8'),code),prefix=code==='en'?'':'/'+code;
+   assert.ok(result.includes('href="'+html.origin+prefix+'/'+name+'"'));assert.ok(result.includes('BreadcrumbList'));
+   if(name==='pages/mods-selector.html')assert.ok(result.includes('href="'+prefix+'/pages/pc-mods-selector.html"'));
+  }
+ }
+});
 function fixture(){
  const dictionary=html.dictionary(root,'es'),source='<!doctype html><html lang="en"><head><title>Home</title><meta name="description" content="Tools"><meta property="og:title" content="Home"><meta property="og:description" content="Tools"><meta property="og:locale" content="en_US"><meta property="og:url" content="https://whatwhatboy.com/"><link rel="canonical" href="https://whatwhatboy.com/"><style>.card{background:url(assets/cover.png)}</style><script defer src="/languages/i18n.js?v=3"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Home","description":"Tools","url":"https://whatwhatboy.com/"}</script></head><body><h1>Home</h1><p>Tools</p><code>PS4 5.05 / CUSA00419 / old-v1.27.bin</code><a href="console/ps4/?view=files#guide">Guides</a><a href="downloads/old-v1.27.bin" download>Download</a><img src="assets/cover.png" alt="Game patches"><script>window.exact="../docs/catalog.json";</script></body></html>';
  const page={page:'index.html',canonical:html.origin+'/',sha256:html.hash(source)},other={page:'console/ps4/index.html',canonical:html.origin+'/console/ps4/',sha256:html.hash(source)},strings=new Map();

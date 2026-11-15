@@ -15,6 +15,16 @@ function load(root,{estimateSource=false,previewPages=null,previewLanguages=null
  const file=path.join(root,configName);if(!fs.existsSync(file))return null;
  const manifest=JSON.parse(fs.readFileSync(file,'utf8')),strings=new Map(manifest.strings.map(row=>[row.source,row])),languages=new Map();
  const translatedPages=manifest.pages.map(libraryRoutes.moveTranslation);
+ // New authored routes reuse cached translations and retain new English prose
+ // until the normal translation-cache refresh includes them.
+ const authoredFile=path.join(root,'docs/i18n/authored-pages.json');
+ for(const page of fs.existsSync(authoredFile)?JSON.parse(fs.readFileSync(authoredFile,'utf8')):[]){
+  assert(typeof page==='string'&&page.endsWith('.html')&&!page.startsWith('/')&&!page.includes('\\')&&!page.split('/').includes('..'),'Invalid authored language route');
+  if(translatedPages.some(record=>record.page===page))continue;
+  const source=fs.readFileSync(path.join(root,page),'utf8'),canonical=source.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
+  assert(canonical&&new URL(canonical).origin===html.origin,'Missing authored page canonical: '+page);
+  translatedPages.push({page,canonical,sha256:html.hash(source),strings:[...new Set(html.spans(source).map(span=>span.source))]});
+ }
  const previewRequired=previewPages?new Set(translatedPages.filter(page=>previewPages.includes(page.page)).flatMap(page=>page.strings).map(source=>strings.get(source)?.id).filter(Boolean)):null;
  for(const code of manifest.languages.filter(code=>!previewLanguages||previewLanguages.includes(code))){
   assert(html.codes.includes(code),'Unknown locale '+code);

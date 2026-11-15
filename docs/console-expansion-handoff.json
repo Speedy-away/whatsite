@@ -12839,10 +12839,16 @@
     "editorialPages": 38,
     "addedPageKeywordPhrases": 149,
     "tests": {
-      "passed": 57,
+      "passed": 79,
       "failed": 0
     },
     "sitemapCanonicals": 510,
-    "published": false
+    "published": false,
+    "localizedSelectors": {
+      "authoredRoutes": 2,
+      "renderedLanguageRoutes": 42,
+      "fix": "Explicit authored route registration reuses the translation cache and retains new authored English text until the normal cache refresh."
+    },
+    "initialMetadataCommit": "d84cc6c5190c006ea144cce6c81dbe80a7d4155e"
   }
 }
