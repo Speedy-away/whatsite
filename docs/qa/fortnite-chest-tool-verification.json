@@ -17,13 +17,15 @@
     "passed": 37,
     "failed": 0
   },
-  "siteAudit": "64 unrelated existing issues: temporary saved pages, missing GOLDHEN14.iso and old anchors. Neither edited page was reported.",
+  "siteAudit": "Final production artifact check: 10,865 pages, 1,246,890 links/assets, zero issues. Earlier raw source-tree audit included unrelated temporary captures and old anchors.",
   "archiveIndex": {
     "presentFileRecords": 9566,
     "missingFileRecords": 0,
     "otherUnavailableRecords": 0
   },
   "payloadsExecuted": false,
-  "published": false,
-  "publicationStatus": "Reviewed; production build and deployment pending."
+  "published": true,
+  "publicationStatus": "Deployed and verified live.",
+  "repositoryCommit": "6ae781e1bc0ac49f00f27f42b79ee14b24d73051",
+  "liveVerification": "docs/qa/fortnite-chest-tool-publication.json"
 }

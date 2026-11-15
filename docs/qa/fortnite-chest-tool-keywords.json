@@ -1,14 +1,6 @@
 {
   "date": "2026-11-15",
   "newSearchPhrases": 26,
-  "visibleTags": [
-    "Pirate Token",
-    "Auto farmer",
-    "Auto-open chests",
-    "Chest teleport",
-    "Vehicle required",
-    "Windows tool"
-  ],
   "checks": [
     "console/mods/ps4/fortnite/index.html: all 26 aliases, six tags, structured keywords, prior cards and URLs verified",
     "console/mods/ps4/menus.html: all 26 aliases, six tags, structured keywords, prior cards and URLs verified"
@@ -16,5 +8,15 @@
   "existingContentPreserved": true,
   "compatibilityParagraphHidden": true,
   "downloadsChanged": false,
-  "published": false
+  "published": true,
+  "repositoryCommit": "6ae781e1bc0ac49f00f27f42b79ee14b24d73051",
+  "liveVerification": "docs/qa/fortnite-chest-tool-publication.json",
+  "indexedTags": [
+    "Pirate Token",
+    "Auto farmer",
+    "Auto-open chests",
+    "Chest teleport",
+    "Vehicle required",
+    "Windows tool"
+  ]
 }
