@@ -3,16 +3,16 @@ const root=path.resolve(__dirname,'../..');
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const page=()=>fs.readFileSync(path.join(root,'console/mods/ps4/gta5/index.html'),'utf8');
 
-test('Each menu group has one Download button and a dropdown only when multiple files exist',()=>{
+test('Each menu group has one Download button and version-specific Cyprus selectors',()=>{
  const html=page(),widgets=[...html.matchAll(/<fieldset class="gta-plugin-download"[\s\S]*?<\/fieldset>/g)];
- assert.equal(widgets.length,21);
+ assert.equal(widgets.length,23);
  assert.doesNotMatch(html,/data-plugin-bundle|data-plugin-configs|data-plugin-choices|Download menu \+ plugins\.ini|Download menu only|plugins\.ini only|Original menu files|gta5-plugin-downloads\.js/);
  for(const [widget] of widgets){
   assert.doesNotMatch(widget,/<button|<details|<summary|<noscript/);
   const links=[...widget.matchAll(/<a class="btn btn-primary" href="([^"]+)" download="([^"]+)" data-no-file-options data-menu-download[^>]*>[\s\S]*?<\/a>/g)];
   assert.equal(links.length,1);assert.ok(links[0][0].endsWith(' Download</a>'));
   const options=[...widget.matchAll(/<option value="([^"]+)"/g)];
-  if(options.length){assert.ok(options.length>1);assert.equal(options[0][1],links[0][1]);const id=widget.match(/<select id="([^"]+)"/)[1];assert.ok(widget.includes('for="'+id+'"'));}
+  if(options.length){assert.ok(options.length>1||widget.includes('data-menu-name="Cyprus"'));assert.equal(options[0][1],links[0][1]);const id=widget.match(/<select id="([^"]+)"/)[1];assert.ok(widget.includes('for="'+id+'"'));}
   for(const [,url] of [...links,...options])assert.ok(fs.existsSync(path.join(root,'.'+decode(url))),url);
  }
 });
@@ -22,11 +22,18 @@ test('Every menu package and game-update variant stays available after removing 
  const plugin=require('../gta5-plugin-downloads.cjs').createPluginDownloads(),html=page();
  for(const item of forGame('gta5')){
   const rows=plugin.choices(item);if(!rows.length)continue;
-  const card=html.match(new RegExp('<article class="guide-resource" id="resource-'+item.id+'"[^>]*>[\\s\\S]*?</article>'))[0];
+  const cards=[...html.matchAll(new RegExp('<article class="guide-resource" id="resource-'+item.id+(item.splitGameVersionCards?'(?:-v156|-older)?':'')+'"[^>]*>[\\s\\S]*?</article>','g'))].map(m=>m[0]);
+  const card=cards.join('');
   const sources=[...new Set(rows.map(row=>row.source.url))];
   const offered=[...card.matchAll(/(?:href|value)="([^"]+)"/g)].map(match=>decode(match[1]));
   for(const url of sources)assert.ok(offered.includes(url),url);
-  assert.ok(card.includes(plugin.render(item)),'Generated download block matches '+item.id);
+  if(item.splitGameVersionCards){
+   assert.equal(cards.length,3);
+   for(const [group,versions] of [['v157',['1.57']],['v156',['1.56']],['older',['1.53','1.54','1.55']]]){
+    const instance={...item,cardInstanceId:group==='v157'?item.id:item.id+'-'+group,showGameVersionSelect:true,downloads:item.downloads.filter(file=>versions.some(v=>file.label.includes(v)))};
+    assert.ok(card.includes(plugin.render(instance)),'Exact Cyprus '+group+' download block');
+   }
+  }else assert.ok(card.includes(plugin.render(item)),'Generated download block matches '+item.id);
  }
 });
 
@@ -51,7 +58,7 @@ test('Changing every dropdown option updates the one button to the exact publish
   return {dataset:{menuName:decode(widget.match(/data-menu-name="([^"]+)"/)[1])},select,link,querySelector(selector){return selector==='[data-menu-version]'?select:link;}};
  });
  const doc={querySelectorAll(){return groups;}},api=require('../../assets/gta5-menu-downloads.js');
- assert.equal(groups.length,11);assert.equal(api.install(doc).length,11);
+ assert.equal(groups.length,13);assert.equal(api.install(doc).length,13);
  for(const group of groups){assert.equal(group.select.disabled,false);for(let i=0;i<group.select.options.length;i++){group.select.selectedIndex=i;group.select.change();const option=group.select.options[i];assert.equal(group.link.attrs.href,option.value);assert.equal(group.link.attrs.download,option.dataset.filename);assert.equal(group.link.attrs['aria-label'],'Download '+group.dataset.menuName+' · '+option.textContent);assert.match(group.link.attrs.href,/^https:\/\/raw\.githubusercontent\.com\/Speedy-away\/whatsite\/[a-f0-9]{40}\/downloads\//);}}
  assert.equal(api.install(doc).length,0);
 });

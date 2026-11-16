@@ -136,7 +136,8 @@ function card(item) {
   const actions = buttons + sourceLink + videoLink + detailLink + relatedLinks;
   const version = !item.hideCardBuildDetails && item.version ? `<p>${h(item.version)}</p>` : '';
   const compatibility = !cleanGta && !item.hideCardBuildDetails && !item.hideCardCompatibility ? compatibilityMarkup(item) : '';
-  return `<article class="guide-resource" id="resource-${item.id}" data-search="${h(search)}">${legacyAnchors(item,'resource')}${image ? imageMarkup(image, item.name, false, screenshot ? screenshotId(item, screenshot) : '') : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
+  const regions = cleanGta && !pairedDownloads && item.cardRegionTitleIds ? '<dl class="gta-plugin-facts">'+(item.gameVersions?.length?'<dt>Game update / package</dt><dd>GTA V '+item.gameVersions.map(h).join(' / ')+'</dd>':'')+'<dt>Game region</dt><dd>'+Object.entries(item.cardRegionTitleIds).map(([region,id])=>h(region)+' · '+h(id)).join('<br>')+'</dd></dl>' : '';
+  return `<article class="guide-resource" id="resource-${item.cardInstanceId||item.id}" data-search="${h(search)}">${legacyAnchors(item,'resource')}${image ? imageMarkup(image, item.name, false, screenshot ? screenshotId(item, screenshot) : '') : cardMedia}<h3>${h(item.name)}</h3>${version}${!cleanGta && item.description ? `<p>${lines(item.description)}</p>` : ''}${compatibility}${regions}${requirementsMarkup(item)}${tagMarkup}${actions ? `<div class="guide-links">${actions}</div>` : ''}</article>`;
 }
 function guideBlock(block) {
   const title = block.title ? `<h3>${h(block.title)}</h3>` : '';

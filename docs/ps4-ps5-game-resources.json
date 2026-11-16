@@ -3616,7 +3616,8 @@
         "1.56",
         "1.57"
       ],
-      "menuVersion": "Lite (numeric release unspecified)"
+      "menuVersion": "Lite (numeric release unspecified)",
+      "splitGameVersionCards": true
     },
     {
       "id": "gta5-serendipity-1-57",
@@ -17135,9 +17136,12 @@
       "platforms": [
         "ps4"
       ],
-      "titleIds": [],
+      "titleIds": [
+        "CUSA00411",
+        "CUSA00419"
+      ],
       "description": "Combined ZIP containing the Synapse data folder and synapse.sprx. GTA V 1.57 compatibility supplied by the user.",
-      "compatibilityText": "PS4 · GTA V 1.57 (user supplied). Menu version, title IDs, firmware requirements and opening controls were not provided.",
+      "compatibilityText": "PS4 · GTA V 1.57 · Europe / EU CUSA00411 · USA CUSA00419 (user supplied). Firmware and opening controls unspecified.",
       "source": {
         "forumTitle": "User-supplied attachments",
         "postTitle": "Synapse for PS4 GTA V 1.57",
@@ -17146,12 +17150,13 @@
         "originalDownloadUrls": [
           "https://cdn.discordapp.com/attachments/1567536412130279425/1567536639448850442/synapse.rar?ex=6aec89c2&is=6aeb3842&hm=0515644ba4d9bfea2dede43996ad4abad97e5d7aa6ee67ae6268e58f59d01e7e&",
           "https://cdn.discordapp.com/attachments/1567536412130279425/1567536639838781580/synapse.sprx?ex=6aec89c2&is=6aeb3842&hm=990a5e280e00a3a1753f391fc2233afc5214fdd906e076ef45ec5056f22b97be&"
-        ]
+        ],
+        "userRegionLabelsUpdated": "2026-11-16"
       },
       "downloads": [
         {
           "id": "gta5-synapse-1-57-package",
-          "label": "Full ZIP · folder + SPRX · GTA V 1.57",
+          "label": "Download",
           "filename": "Synapse-PS4-GTA-V-1.57.zip",
           "url": "https://whatwhatboy.com/downloads/ps4/GTA5/157/synapse/Synapse-PS4-GTA-V-1.57.zip",
           "distribution": "include"
@@ -17175,7 +17180,7 @@
         {
           "type": "paragraph",
           "title": "Compatibility and setup",
-          "text": "The user identifies this menu for GTA V 1.57 on PS4. No title ID, firmware pin, menu release number, opening shortcut or installation instructions were supplied. Use the menu author’s setup instructions for your game region; no PS5 compatibility is established."
+          "text": "The user identifies this menu for GTA V 1.57 on PS4 and supplies Europe / EU CUSA00411 and USA CUSA00419 region labels. Firmware, menu release number and opening controls remain unspecified. Use the author’s setup instructions; no PS5 compatibility is established."
         }
       ],
       "guideLabel": "Package & requirements",
@@ -17188,7 +17193,11 @@
         "Grand Theft Auto V",
         "1.57"
       ],
-      "catalogueSection": "v157"
+      "catalogueSection": "v157",
+      "cardRegionTitleIds": {
+        "Europe / EU": "CUSA00411",
+        "USA": "CUSA00419"
+      }
     },
     {
       "id": "gta5-arise-rtm-1-57",
@@ -17571,9 +17580,10 @@
       ],
       "catalogueSection": "v157",
       "titleIds": [
+        "CUSA00411",
         "CUSA00419"
       ],
-      "compatibilityText": "PS4 · GTA V 1.57 · supplied plugins.ini targets CUSA00419",
+      "compatibilityText": "PS4 · GTA V 1.57 · Europe / EU CUSA00411 · USA CUSA00419. Region labels supplied by the user; original plugins.ini targets CUSA00419.",
       "tags": [
         "PS4",
         "GTA V",
@@ -17608,7 +17618,8 @@
         "Lester SPRX setup",
         "Lester SPRX installation guide",
         "Lester SPRX screenshot",
-        "PS4 GTA V 1.57 Lester menu"
+        "PS4 GTA V 1.57 Lester menu",
+        "Lester SPRX CUSA00411"
       ],
       "images": [
         {
@@ -17634,7 +17645,8 @@
         "captureFile": "docs/sources/lester-sprx/v2-source.json",
         "originalDownloadUrls": [
           "https://www.mediafire.com/file/r1omzh0gcl5wx89/XlesterX+sprx+V2.rar/file"
-        ]
+        ],
+        "userRegionLabelsUpdated": "2026-11-16"
       },
       "guideBlocks": [
         {
@@ -17691,8 +17703,13 @@
         "Lester SPRX setup",
         "Lester SPRX installation guide",
         "Lester SPRX screenshot",
-        "PS4 GTA V 1.57 Lester menu"
-      ]
+        "PS4 GTA V 1.57 Lester menu",
+        "Lester SPRX CUSA00411"
+      ],
+      "cardRegionTitleIds": {
+        "Europe / EU": "CUSA00411",
+        "USA": "CUSA00419"
+      }
     },
     {
       "id": "apex-legends-nware",

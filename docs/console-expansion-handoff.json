@@ -13053,7 +13053,7 @@
   },
   "magCodExpansion20261116": {
     "date": "2026-11-16",
-    "status": "Pushed to origin/main; live deployment not verified.",
+    "status": "Live verified at commit c0b79cee; all 14 pages, keywords/tags, cards, downloads and sitemap passed.",
     "newResourceIds": [
       "mag-gsc-injector-black-ops-3",
       "mag-gsc-injector-black-ops-4",
@@ -13117,12 +13117,22 @@
     "repositoryCommit": "357598ac",
     "seo": {
       "date": "2026-11-16",
-      "status": "Prepared for push; live deployment not verified.",
+      "status": "Deployed and verified live.",
       "pages": 14,
       "verification": "docs/qa/mag-cod-seo-verification.json",
       "sitemapUrls": 513,
       "compatibilityPreserved": true,
       "tests": "7 keyword-quality/search/schema/resource-tag tests passed; all 14 page transforms and sitemap dates verified; all prior download and compatibility fields preserved."
-    }
+    },
+    "liveVerification": "docs/qa/mag-cod-live-verification.json",
+    "liveCommit": "c0b79cee893b94da7d7baa6e6584ae7c713d03f6",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43800772831"
+  },
+  "lesterCardLayout20261116": {
+    "date": "2026-11-16",
+    "status": "Prepared for push; live layout not yet verified.",
+    "changes": "Moved Lester into the GTA V 1.57 games-grid as the first standard card; added user-supplied EU CUSA00411 and USA CUSA00419 region labels. Builder and renderer retain the layout and labels. Standard Game update / package and Game region facts added to Lester and Synapse; Synapse button reads Download. Cyprus has separate 1.57 and 1.56 cards with only the matching module, and older 1.53–1.55 choices remain in Older GTA 5 versions. Builder keeps all three instances distinct.",
+    "verification": "All original hrefs and all five Cyprus option URLs preserved; each section has its exact version-specific file; no binary/archive bytes changed.",
+    "tests": "Four download UI/regression tests passed, including every version-specific file after Pages rewriting; first-card position, per-section Cyprus modules, region labels, unique IDs and original URLs verified."
   }
 }

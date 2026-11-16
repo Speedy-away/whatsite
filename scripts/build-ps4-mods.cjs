@@ -20,8 +20,15 @@ function gtaSection(item){
  if(item.gameVersions?.includes('1.56'))return 'v156';
  return item.gameVersions?.length ? 'older' : 'unconfirmed';
 }
-const gtaCards=group=>gtaItems.filter(item=>gtaSection(item)===group).map(item=>imported.renderer.card(item));
-const gta157FeaturedIds=['gta5-velora-1-57','gta5-crystalis-1-57','gta5-synapse-1-57'];
+function gtaCardForSection(item,group){
+ if(item.splitGameVersionCards){
+  const versions=group==='v157'?['1.57']:group==='v156'?['1.56']:['1.53','1.54','1.55'];
+  return imported.renderer.card({...item,cardInstanceId:group==='v157'?item.id:item.id+'-'+group,showGameVersionSelect:true,downloads:item.downloads.filter(file=>versions.some(v=>file.label.includes(v)))});
+ }
+ return imported.renderer.card(item);
+}
+const gtaCards=group=>gtaItems.filter(item=>gtaSection(item)===group||(item.splitGameVersionCards&&['v156','older'].includes(group))).map(item=>gtaCardForSection(item,group));
+const gta157FeaturedIds=['gta5-lester-sprx-v2-1-57','gta5-velora-1-57','gta5-crystalis-1-57','gta5-synapse-1-57'];
 const unmatchedFiles=files.filter(file=>!gtaItems.some(item=>imported.matches(item,file)));
 function guideDownloads(ids,onlyDownload){
  const buttons=ids.map(id=>{
@@ -81,7 +88,7 @@ section('rtm-tools','RTM Tools',grid(...gtaCards('rtm-tools')))+
 section('v157','GTA V 1.57',grid(
  ...gta157FeaturedIds.map(id=>imported.renderer.card(gtaItems.find(item=>item.id===id))),
  ...unmatchedFiles.filter(f=>f.group==='157').map(downloadCard),
- ...gtaItems.filter(item=>gtaSection(item)==='v157'&&!gta157FeaturedIds.includes(item.id)).map(item=>imported.renderer.card(item))
+ ...gtaItems.filter(item=>gtaSection(item)==='v157'&&!gta157FeaturedIds.includes(item.id)).map(item=>gtaCardForSection(item,'v157'))
 ))+
 section('v156','GTA V 1.56',grid(...unmatchedFiles.filter(f=>f.group==='156').map(downloadCard),...gtaCards('v156')))+
 section('older','Older GTA 5 versions',note('<p>Menus with confirmed older GTA V update requirements and no listed support for 1.56 or 1.57. Keep each download’s exact update pin.</p>')+grid(...gtaCards('older')))+
