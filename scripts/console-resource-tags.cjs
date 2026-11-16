@@ -15,6 +15,9 @@ const gameAliases = {
   'infinite-warfare': ['IW', 'Infinite Warfare', 'COD IW'],
   'modern-warfare-remastered': ['MWR', 'MW4R', 'Modern Warfare Remastered', 'COD4 Remastered'],
   'modern-warfare-2-remastered': ['MW2R', 'MW2 Remastered', 'Modern Warfare 2 Campaign Remastered'],
+  'modern-warfare-2019': ['MW 2019', 'MW2019', 'Modern Warfare 2019', 'Call of Duty Modern Warfare 2019'],
+  'modern-warfare-ii-2022': ['MWII', 'MW2 2022', 'MWII 2022', 'Modern Warfare II 2022', 'Modern Warfare 2 2022'],
+  'vanguard': ['Vanguard', 'COD Vanguard', 'Call of Duty Vanguard'],
   'cold-war': ['Cold War', 'BOCW', 'Black Ops Cold War'],
   'wwii': ['WWII', 'WW2', 'World War II', 'Call of Duty WWII']
 };
@@ -26,6 +29,7 @@ const unique = values => [...new Map(values.filter(Boolean).map(value => [String
 function resourceTags(item) {
   const tags = [categoryLabels[item.category] || 'Resource', ...(item.gameIds || []).map(id => gameAliases[id]?.[0])];
   const subject = [item.name, item.group, item.description].filter(Boolean).join(' ');
+  if (item.offHost === true) tags.push('Off-host');
   if ([...(item.platforms || []), ...(item.tags || [])].some(value => /^PS4$/i.test(value))) tags.push('PS4', 'PlayStation 4');
   if (/\bzombies\b|\bZM\b/i.test(subject)) tags.push('Zombies');
   if (/\bmultiplayer\b|\bMP\b/i.test(subject)) tags.push('Multiplayer');

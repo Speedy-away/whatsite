@@ -1,6 +1,9 @@
 const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
+  'modern-warfare-2019': ['MW 2019 PS4 MAG Host Menu & GSC Injector', 'Download the MAG host menu and GSC injector for Modern Warfare 2019 on PS4 update 1.67, CUSA08829 USA. Includes setup and compatibility notes.'],
+  'modern-warfare-ii-2022': ['MWII 2022 PS4 MAG Host Menu & GSC Injector', 'Find the MAG host menu and GSC injector for Modern Warfare II (2022) on PS4 update 1.08, CUSA34029, with game-specific setup and compatibility notes.'],
+  'vanguard': ['Vanguard PS4 MAG Menus & GSC Injector', 'Browse MAG host menus and GSC injection for Vanguard Multiplayer and Zombies on PS4 update 1.26, CUSA24041 USA, with setup and compatibility notes.'],
   'apex-legends': ['Apex Legends PS4 Mod Menus: nware SPRX', 'Download the nware SPRX mod menu for Apex Legends on PS4 and view its screenshot. Game-update, region and firmware requirements are unspecified.',
     ['Apex Legends PS4 mods', 'Apex Legends PS4 mod menu', 'Apex Legends PS4 mod menus', 'Apex Legends PS4 mod menu download',
       'Apex PS4 mod menu', 'Apex Legends PlayStation 4 mods', 'PlayStation 4 Apex Legends mod menu', 'Apex Legends SPRX',
@@ -54,7 +57,7 @@ function metadataByPage() {
   }
   const directory = {title: 'PS4/PS5 Menu Directory: Games, Tools & Guides | whatwhatboy',
     description: `Search ${entries.length} PS4/PS5 game-resource entries across ${games.length} games by menu name, game alias, update or type. Open downloads, previews and guide popups.`,
-    keywords: unique(['PS4 mod menu downloads', 'PS4 mod menu guides', 'GTA 5 mod menu downloads', 'RDR2 mod menu downloads', 'Call of Duty mod menu downloads', ...games.map(game => game.title), 'PS4 PS5 menu directory', 'console game resources', 'mod menu search', 'injectors', 'RTM tools', 'CFG', 'scripts', 'DLC references', ...games.flatMap(game => gameAliases[game.id] || [])]),
+    keywords: unique(['PS4 mod menu downloads', 'PS4 mod menu guides', 'MultiCOD', 'MAG GSC Injector', 'MAG host menus', 'BO4 Multiplayer Zombies source code', 'PS4 host mod menus', 'PS4 off-host mod menus', 'GTA 5 mod menu downloads', 'RDR2 mod menu downloads', 'Call of Duty mod menu downloads', ...games.map(game => game.title), 'PS4 PS5 menu directory', 'console game resources', 'mod menu search', 'injectors', 'RTM tools', 'CFG', 'scripts', 'DLC references', ...games.flatMap(game => gameAliases[game.id] || [])]),
     type: 'CollectionPage', items: entries.map(entry => ({name: entry.game + ' · ' + entry.name, url: entry.url, keywords: entry.keywords}))};
   result.set('console/mods/ps4/menus.html', directory);
   result.set('console/mods/ps4/index.html', {title: 'PS4/PS5 Mods / Mod Menus | whatwhatboy',
@@ -63,7 +66,15 @@ function metadataByPage() {
   const codGames = games.filter(game => game.url.includes('/call-of-duty/'));
   result.set('console/mods/ps4/call-of-duty/index.html', {title: 'Call of Duty Console Menus, Injectors & Guides | whatwhatboy',
     description: `Browse ${codGames.length} Call of Duty collections, from Black Ops to WWII, with game-specific menus, GSC injectors, RTM tools, previews and DLC references.`,
-    keywords: unique(['Call of Duty console resources', 'COD mod menus', 'Call of Duty mod menu downloads', 'Call of Duty mod menu guides', 'PS4 Call of Duty mod menus', 'Black Ops mod menus', 'GSC injector downloads', 'GSC injector guides', ...codGames.map(game => game.title), 'GSC injectors', 'RTM tools', 'DLC references', ...codGames.flatMap(game => gameAliases[game.id] || [])]), type: 'CollectionPage'});
+    keywords: unique(['Call of Duty console resources', 'COD mod menus', 'Call of Duty mod menu downloads', 'Call of Duty mod menu guides', 'PS4 Call of Duty mod menus', 'Black Ops mod menus', 'GSC injector downloads', 'GSC injector guides', 'MultiCOD', 'MAG GSC Injector', 'MAG host menus', 'PS4 off-host menus', 'BO4 Multiplayer Zombies source code', ...codGames.map(game => game.title), 'GSC injectors', 'RTM tools', 'DLC references', ...codGames.flatMap(game => gameAliases[game.id] || [])]), type: 'CollectionPage',
+    items: [{name: 'MultiCOD', url: '/console/mods/ps4/call-of-duty/multicod/'}, ...codGames.map(game => ({name: game.title, url: game.url, keywords: gameAliases[game.id] || []}))]});
+  const multi = require('./console-multicod.cjs').load();
+  result.set('console/mods/ps4/call-of-duty/multicod/index.html', {
+    title: 'MultiCOD PS4 Host Menus, GSC Injectors & Supported Games | whatwhatboy',
+    description: 'Compare MultiCOD PS4 host-menu packs and MAG GSC injectors by supported game and update. Includes game-specific downloads, setup and compatibility notes.',
+    type: 'CollectionPage', keywords: unique(['MultiCOD', 'Multi COD PS4', 'MultiCOD PS4 downloads', 'MAG GSC Injector', 'MAG host menus', 'PS4 GSC injector', ...multi.data.families.map(f => f.title), ...multi.data.families.flatMap(f => f.games.flatMap(g => [multi.games.get(g.gameId).title, ...(gameAliases[g.gameId] || []), g.support]))]),
+    items: multi.data.families.flatMap(f => f.games.map(g => ({name: f.title + ' · ' + multi.games.get(g.gameId).title, url: require('./console-multicod.cjs').gameUrl(g, multi), keywords: [f.title, g.support, ...(gameAliases[g.gameId] || [])]})))
+  });
   const vault = require('../docs/console-vault-resources.json');
   result.set('console/vault.html', {title: 'The Vault: Console Apps, Updates & Reference Sites | whatwhatboy',
     description: 'Find PKG-Zone, OrbisPatches, Garlicsaves, PlayStation firmware archives, SuperPSX and Vimm’s Lair, with usage notes and link-check status.',

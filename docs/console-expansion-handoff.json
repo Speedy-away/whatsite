@@ -13053,7 +13053,7 @@
   },
   "magCodExpansion20261116": {
     "date": "2026-11-16",
-    "status": "Prepared locally; publication pending.",
+    "status": "Pushed to origin/main; live deployment not verified.",
     "newResourceIds": [
       "mag-gsc-injector-black-ops-3",
       "mag-gsc-injector-black-ops-4",
@@ -13113,6 +13113,16 @@
     },
     "verification": "Ten source-confirmed games cross-listed with exact update pins; Cold War pending and disabled; all prior resources preserved; all 123 archive hashes verified; unique page IDs and new sitemap routes checked.",
     "tests": "10 focused search/schema, MultiCOD mapping, compatibility-pin and Matrix-readiness checks passed. Broader MultiCOD suite retains an existing no-video expectation failure on unchanged BO1 page (existing crash-fix video).",
-    "verificationReport": "docs/qa/mag-cod-page-changes.json"
+    "verificationReport": "docs/qa/mag-cod-page-changes.json",
+    "repositoryCommit": "357598ac",
+    "seo": {
+      "date": "2026-11-16",
+      "status": "Prepared for push; live deployment not verified.",
+      "pages": 14,
+      "verification": "docs/qa/mag-cod-seo-verification.json",
+      "sitemapUrls": 513,
+      "compatibilityPreserved": true,
+      "tests": "7 keyword-quality/search/schema/resource-tag tests passed; all 14 page transforms and sitemap dates verified; all prior download and compatibility fields preserved."
+    }
   }
 }
