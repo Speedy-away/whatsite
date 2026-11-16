@@ -82,12 +82,16 @@
         "nware SPRX",
         "nware screenshot",
         "nware PS4 mod menu",
-        "nware PS4 download"
+        "nware PS4 download",
+        "CUSA12552",
+        "CUSA12540",
+        "GoldHEN plugins.ini"
       ],
       "categoryHeadings": {
         "menu": "Mod menus"
       },
-      "heroAnchor": "#menu"
+      "heroAnchor": "#menu",
+      "pluginTemplate": true
     },
     {
       "id": "rainbow-six-siege",
@@ -120,7 +124,9 @@
         "Rainbow Six Siege PS4 mod menus",
         "R6 Siege PS4 mods",
         "R6 Siege PS4 mod menus",
-        "Tom Clancy Rainbow Six Siege PS4"
+        "Tom Clancy Rainbow Six Siege PS4",
+        "CUSA01800",
+        "GoldHEN plugins.ini"
       ],
       "tags": [
         "PS4",
@@ -129,7 +135,8 @@
         "R6",
         "Game mods",
         "Mod menus"
-      ]
+      ],
+      "pluginTemplate": true
     },
     {
       "id": "other-games",
@@ -17895,7 +17902,7 @@
       "downloads": [
         {
           "id": "apex-legends-nware-sprx",
-          "label": "Download",
+          "label": "2026-11-15 · Build 2",
           "filename": "niggerware.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1571510459482243204/niggerware.sprx?ex=6afafeaa&is=6af9ad2a&hm=2f8198910b7a8480a40347d94de0c57325b9356d80f249e779b6f52c2ea28777&",
           "distribution": "include",
@@ -17904,7 +17911,7 @@
         },
         {
           "id": "apex-legends-nware-sprx-20261115",
-          "label": "Download previous build (2026-11-15)",
+          "label": "2026-11-15 · Build 1",
           "filename": "niggerware.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1571371208694439987/niggerware.sprx?ex=6afa7cfa&is=6af92b7a&hm=5dc37e4a909cb0c2c04524a05f1a6701b8ce4d9f96a5f4cf38958962ee862810&",
           "distribution": "include",
@@ -17913,7 +17920,7 @@
         },
         {
           "id": "apex-legends-nware-sprx-20261114",
-          "label": "Download previous build (2026-11-14)",
+          "label": "2026-11-14",
           "filename": "niggerware.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571283550395965470/1571283597288280075/niggerware.sprx?ex=6afa2b62&is=6af8d9e2&hm=3ba6dc358e32ada90598aba0eabeb7f8d73e5a69ce67c3a1849ccf128f76ce97&",
           "distribution": "include",
@@ -17959,7 +17966,9 @@
         "nware PS4 mod menu",
         "nware PS4 download",
         "nware menu screenshot"
-      ]
+      ],
+      "gameVersionDropdown": true,
+      "versionDropdownLabel": "Build version"
     },
     {
       "id": "fortnite-chest-tool",
@@ -18303,6 +18312,86 @@
           "distribution": "include",
           "bytes": 4789669,
           "sha256": "1760c0a8f2711358c47968b4748cb65f08a080226c1821d302977927c42962d6"
+        }
+      ]
+    },
+    {
+      "id": "r6s-nware",
+      "name": "Nware",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "rainbow-six-siege"
+      ],
+      "description": "SPRX mod menu for Rainbow Six Siege on PS4.",
+      "titleIds": [
+        "CUSA01800"
+      ],
+      "compatibilityText": "PS4 with GoldHEN · CUSA01800 (supplied title ID). Game update and firmware unspecified.",
+      "tags": [
+        "PS4",
+        "SPRX",
+        "GoldHEN"
+      ],
+      "keywords": [
+        "Nware R6",
+        "Nware R6S",
+        "Nware Rainbow Six Siege PS4",
+        "r6s.sprx",
+        "CUSA01800"
+      ],
+      "screenshotPopup": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-rainbow-six-siege/nware-preview.webp",
+          "caption": "Nware in the Rainbow Six Siege shooting range"
+        }
+      ],
+      "source": {
+        "captureFile": "docs/sources/rainbow-six-siege/nware.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1571822588370620486/1571834048865902602/r6s.sprx?ex=6afc2c08&is=6afada88&hm=bf04c0c7a04919f6d204fb6a4c21c861779720924b7a7eed9012b7d8d8ce2ac0&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "r6s-nware-sprx",
+          "label": "Download",
+          "filename": "r6s.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1571822588370620486/1571834048865902602/r6s.sprx?ex=6afc2c08&is=6afada88&hm=bf04c0c7a04919f6d204fb6a4c21c861779720924b7a7eed9012b7d8d8ce2ac0&",
+          "distribution": "include",
+          "bytes": 173152,
+          "sha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911"
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Copy the SPRX",
+              "text": "Save the file as /data/NIGGERWARE/r6s.sprx."
+            },
+            {
+              "title": "Update the plugin configuration",
+              "text": "Open /data/GoldHEN/plugins.ini. Add the entry below under CUSA01800. If the section already exists, add the path to that section."
+            },
+            {
+              "title": "Enable plugins and launch the game",
+              "text": "In GoldHEN, open Plugin Settings and turn on Enable Plugins. Launch Rainbow Six Siege."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "plugins.ini entry",
+          "text": "[CUSA01800]\n/data/NIGGERWARE/r6s.sprx"
+        }
+      ],
+      "controls": [
+        {
+          "input": "L3 + R3",
+          "action": "Open or close the menu."
         }
       ]
     }

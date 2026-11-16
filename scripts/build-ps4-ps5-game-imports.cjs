@@ -159,11 +159,13 @@ function createGameImports({root = ROOT, data, files} = {}) {
           childCards + (game.showEmpty && !items.length && !children.length ? section('menu', 'Mod menus', '<p>No PS4 mod-menu downloads are listed yet.</p>' + (game.tags?.length ? '<ul class="guide-resource-tags" aria-label="Game tags">'+game.tags.map(tag=>'<li class="feature-tag">'+h(tag)+'</li>').join('')+'</ul>' : '')) : renderer.gameContent(items, '', game.categoryHeadings)) +
           (relatedCards.length ? section('related-resources', 'Related resources', grid(...relatedCards)) : '') +
           (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), game.heroAnchor || '#content', 'Browse resources');
-        if (game.keywords?.length || filter) {
+        const hasVersionDownloads = items.some(item => item.gameVersionDropdown);
+        if (game.keywords?.length || filter || hasVersionDownloads) {
           const target = path.join(root, file);
           let html = fs.readFileSync(target, 'utf8');
           if (game.keywords?.length) html = html.replace(/<meta name="keywords" content="[^"]*">/, '<meta name="keywords" content="' + h(game.keywords.join(', ')) + '">');
           if (filter) html = html.replace('</head>', '<link rel="stylesheet" href="/assets/console-extra-games.css"></head>').replace('</body>', '<script defer src="/assets/console-extra-games.js"></script></body>');
+          if (hasVersionDownloads) html = html.replace('</head>', '<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=8"></head>').replace('</body>', '<script defer src="/assets/gta5-menu-downloads.js?v=1"></script></body>');
           // Keep authored keyword additions aligned with social and schema metadata.
           html = require('./page-search-metadata.cjs').transform(file, html).html;
           fs.writeFileSync(target, html);

@@ -51,7 +51,9 @@ function addTitleIdCopy(html) {
 function sectionFor(id) {
   const file = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).files.find(file => file.id === id);
   if (!file) throw Error('Unknown game: ' + id);
-  const instructions = file.plugin ? `<p>Place <code>${esc(file.plugin)}</code> in <code>/data/GoldHEN/plugins/</code>. Back up <code>/data/GoldHEN/plugins.ini</code> and merge the entry for your installed title ID into it, keeping your existing entries.</p><p>${esc(file.compatibility)}</p>` : '<p>Template with all three regional sections. Add the exact plugin filenames after <code>/data/GoldHEN/plugins/</code> and match the section to your installed game’s title ID. Merge into <code>/data/GoldHEN/plugins.ini</code>, keeping your existing entries. Plugin files are downloaded separately.</p>';
+  const instructions = file.instructions
+    ? `<p>${esc(file.instructions)}</p>`
+    : file.plugin ? `<p>Place <code>${esc(file.plugin)}</code> in <code>/data/GoldHEN/plugins/</code>. Back up <code>/data/GoldHEN/plugins.ini</code> and merge the entry for your installed title ID into it, keeping your existing entries.</p><p>${esc(file.compatibility)}</p>` : '<p>Template with all three regional sections. Add the exact plugin filenames after <code>/data/GoldHEN/plugins/</code> and match the section to your installed game’s title ID. Merge into <code>/data/GoldHEN/plugins.ini</code>, keeping your existing entries. Plugin files are downloaded separately.</p>';
   const regions = file.regions.map((region, index) => [region, file.titleIds[index]]);
   return renderSection({game: file.game, local: file.local, regions, instructions});
 }

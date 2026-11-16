@@ -100,7 +100,8 @@ function versionDownloads(item) {
   });
   if(!choices.length)return '';
   const id='game-version-'+item.id,first=choices[0];
-  return `<fieldset class="gta-plugin-download" aria-label="Game version download" data-menu-download-group data-menu-name="${h(item.name)}"><div class="gta-plugin-originals"><label class="gta-menu-version-label" for="${h(id)}">Game version</label><select id="${h(id)}" class="gta-menu-version" data-menu-version disabled>${choices.map(choice=>`<option value="${h(choice.url)}" data-filename="${h(choice.filename)}">${h(choice.label)}</option>`).join('')}</select><a class="btn btn-primary" href="${h(first.url)}" download="${h(first.filename)}" data-no-file-options data-menu-download aria-label="${h('Download '+item.name+' · '+first.label)}"><i class="fas fa-download" aria-hidden="true"></i> Download</a></div></fieldset>`;
+  const selectorLabel=h(item.versionDropdownLabel || 'Game version');
+  return `<fieldset class="gta-plugin-download" aria-label="${selectorLabel} download" data-menu-download-group data-menu-name="${h(item.name)}"><div class="gta-plugin-originals"><label class="gta-menu-version-label" for="${h(id)}">${selectorLabel}</label><select id="${h(id)}" class="gta-menu-version" data-menu-version disabled>${choices.map(choice=>`<option value="${h(choice.url)}" data-filename="${h(choice.filename)}">${h(choice.label)}</option>`).join('')}</select><a class="btn btn-primary" href="${h(first.url)}" download="${h(first.filename)}" data-no-file-options data-menu-download aria-label="${h('Download '+item.name+' · '+first.label)}"><i class="fas fa-download" aria-hidden="true"></i> Download</a></div></fieldset>`;
 }
 function card(item) {
   const cardImage=require('./ps4-ps5-card-images.cjs').resourceImage(item);

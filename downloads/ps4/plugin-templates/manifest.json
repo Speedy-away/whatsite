@@ -72,6 +72,46 @@
       "bytes": 325,
       "sha256": "19522833be01c8291a60e1353a242053536fca37fc1c935133f566289ba8da4e",
       "template": true
+    },
+    {
+      "id": "rainbow-six-siege",
+      "game": "Rainbow Six Siege",
+      "regions": [
+        "Supplied PS4 title ID"
+      ],
+      "titleIds": [
+        "CUSA01800"
+      ],
+      "instructions": "Back up /data/GoldHEN/plugins.ini, then merge the entry into your existing configuration. The supplied Nware setup uses CUSA01800 and /data/NIGGERWARE/r6s.sprx.",
+      "name": "plugins.ini",
+      "local": "/downloads/ps4/plugin-templates/rainbow-six-siege/9d8abd720174/plugins.ini",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/plugin-templates/rainbow-six-siege/9d8abd720174/plugins.ini",
+      "version": "2026-11-16",
+      "bytes": 38,
+      "sha256": "9d8abd720174fce39d2e13e1767efbad542103e203279268d1cf6debdb2010b2",
+      "template": true,
+      "provenance": "User-supplied Nware configuration."
+    },
+    {
+      "id": "apex-legends",
+      "game": "Apex Legends",
+      "regions": [
+        "Europe",
+        "USA"
+      ],
+      "titleIds": [
+        "CUSA12552",
+        "CUSA12540"
+      ],
+      "instructions": "These are the PlayStation Store game title IDs. The Apex Nware release does not document region or game-update support. The example plugin paths are commented out. Confirm the build and your installed title ID, then back up and merge the applicable section into /data/GoldHEN/plugins.ini.",
+      "name": "plugins.ini",
+      "local": "/downloads/ps4/plugin-templates/apex-legends/8a975783b5f3/plugins.ini",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/plugin-templates/apex-legends/8a975783b5f3/plugins.ini",
+      "version": "2026-11-16",
+      "bytes": 257,
+      "sha256": "8a975783b5f330bd29d4e5f2dafc174b6edd5b24f7eefe5cd3629588f4932f44",
+      "template": true,
+      "provenance": "Title IDs from PlayStation Store PS4 listings; plugin entries commented."
     }
   ]
 }

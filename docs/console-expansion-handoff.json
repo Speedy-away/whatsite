@@ -13197,5 +13197,44 @@
     "height": 907,
     "scope": "Homepage social preview changed to centered whatwhatboy wordmark on dark textured background, using the user reference mood. OG, Twitter and structured image metadata synchronized; old asset preserved.",
     "verification": "PNG signature/dimensions/hash verified; homepage body unchanged; generated asset copied byte for byte; new versioned URL in all social image metadata."
+  },
+  "r6Nware20261116": {
+    "page": "console/mods/ps4/rainbow-six-siege/index.html",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1571822588370620486/1571834048865902602/r6s.sprx?ex=6afc2c08&is=6afada88&hm=bf04c0c7a04919f6d204fb6a4c21c861779720924b7a7eed9012b7d8d8ce2ac0&",
+    "version": "Unversioned snapshot 2026-11-16",
+    "bytes": 173152,
+    "sha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911",
+    "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Rainbow Six Siege\\Nware\\Builds\\Unversioned snapshot 2026-11-16\\r6s.sprx",
+    "image": "/assets/images/ps4-rainbow-six-siege/nware-preview.webp",
+    "payloadExecuted": false,
+    "archiveVerified": true,
+    "configTemplates": {
+      "games": [
+        {
+          "id": "rainbow-six-siege",
+          "titleIds": [
+            "CUSA01800"
+          ]
+        },
+        {
+          "id": "apex-legends",
+          "titleIds": [
+            "CUSA12552",
+            "CUSA12540"
+          ]
+        }
+      ],
+      "apexTitleIdSources": [
+        "https://store.playstation.com/en-ie/product/EP0006-CUSA12552_00-APEXLEGENDRSPWN1",
+        "https://store.playstation.com/en-us/product/UP0006-CUSA12540_00-APEXLEGENDRSPWN1/"
+      ],
+      "apexBuildsPreserved": 3
+    },
+    "date": "2026-11-16",
+    "archiveIndex": {
+      "presentFileRecords": 9720,
+      "missingFileRecords": 0
+    },
+    "verification": "Eight catalogue and download UI tests passed. Both template downloads and copyable title IDs verified, plus three Apex choices with newest default."
   }
 }
