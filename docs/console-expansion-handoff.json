@@ -13023,6 +13023,7 @@
       "otherUnavailableRecords": 0
     },
     "verificationReport": "docs/qa/mag-gta-menus-verification.json",
-    "tests": "Four search/schema/resource-tags checks passed; preservation, SHA-256, visible compatibility and screenshot popup targets verified."
+    "tests": "Four search/schema/resource-tags checks passed; preservation, SHA-256, visible compatibility and screenshot popup targets verified.",
+    "pathVerification": "Shared ZIP uses existing case-sensitive /downloads/ps4/GTA5/ directory."
   }
 }
