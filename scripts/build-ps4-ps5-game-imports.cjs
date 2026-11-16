@@ -153,6 +153,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
           (game.fileCleanup ? section('fortnite-hwid-unban', h(game.fileCleanup.title),
             note('<p>This is a user-supplied file cleanup tip. Removing local download files has not been verified to lift an Epic Games account or hardware ban.</p>') +
             `<ol class="guide-steps"><li><strong>Open the Fortnite title folder</strong>In a PS4 file manager, go to <code>${h(game.fileCleanup.path)}</code>. Replace <code>CUSAxxxxx</code> with the title ID for your installed Fortnite region. Check the title ID before changing files.</li><li><strong>Back up and remove the two files</strong>Back up the files first, then delete <code>${h(game.fileCleanup.files[0])}</code> and <code>${h(game.fileCleanup.files[1])}</code> if they are present in that Fortnite folder.</li></ol>` +
+            (game.fileCleanup.accountNote ? '<p>'+h(game.fileCleanup.accountNote)+'</p>' : '') +
             `<ul class="guide-resource-tags" aria-label="Tags">${game.fileCleanup.tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>`
           ) : '') +
           childCards + renderer.gameContent(items, '', game.categoryHeadings) +

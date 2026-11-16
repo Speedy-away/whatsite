@@ -13044,5 +13044,11 @@
       "otherUnavailableRecords": 0
     },
     "tests": "Four search/schema/resource-tags checks passed; all prior links and unrelated resource records preserved; git diff --check passed."
+  },
+  "fortniteMagsDisabledHwid20261116": {
+    "date": "2026-11-16",
+    "status": "Prepared for push; live deployment not verified.",
+    "changes": "Mags FN keeps a disabled Download button without href. Original download metadata and archived bytes preserved. Existing HWID file cleanup section retains /user/download/CUSAxxxxx/, download0.dat and download0_infomation.dat; added user-supplied new-account requirement.",
+    "verification": "Existing note that cleanup is not verified to remove bans remains visible."
   }
 }

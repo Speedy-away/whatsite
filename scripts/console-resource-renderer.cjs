@@ -78,6 +78,7 @@ function imageMarkup(image, name, naturalSize = false, popupId = '') {
   return `<a href="${h(source)}" target="_blank" rel="noopener noreferrer" aria-label="View ${h(caption)}"${fullSize ? ' style="display:block;width:100%;max-width:100%"' : ''}><img src="${h(source)}" alt="${h(caption)}" loading="lazy"${fullSize ? ' style="aspect-ratio:auto;height:auto;max-width:100%"' : ''}></a>`;
 }
 function downloadButton(file, item) {
+  if (file.disabled === true) return '<button type="button" class="btn btn-primary" disabled aria-disabled="true"><i class="fas fa-download" aria-hidden="true"></i> '+h(file.label || 'Download')+'</button>';
   const stored = storedFiles.find(entry => entry.downloadId === file.id && entry.status === 'downloaded' && localFile(entry.local, 'downloads'));
   let url = stored ? stored.local : httpsUrl(file.url);
   let label = file.label || 'Download';
