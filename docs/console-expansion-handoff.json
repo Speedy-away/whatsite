@@ -13235,6 +13235,25 @@
       "presentFileRecords": 9720,
       "missingFileRecords": 0
     },
-    "verification": "Eight catalogue and download UI tests passed. Both template downloads and copyable title IDs verified, plus three Apex choices with newest default."
+    "verification": "Eight catalogue and download UI tests passed. Both template downloads and copyable title IDs verified, plus three Apex choices with newest default.",
+    "liveVerification": {
+      "commit": "8d394c2d",
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43857200117",
+      "result": "Nware, both templates, title IDs, R6 SPRX, and all three Apex dropdown downloads verified live with SHA-256."
+    },
+    "fullPackage": {
+      "name": "nware-r6.zip",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/c0ebf779f1e7/nware-r6.zip",
+      "provenance": "User-supplied attachment",
+      "version": "Unversioned snapshot 2026-11-16",
+      "bytes": 50167,
+      "sha256": "c0ebf779f1e74a0acedb589386add0b5f2fc663f517a744c24bd4b6942ddbbca",
+      "contents": [
+        "nware-r6/NIGGERWARE/r6s.sprx",
+        "nware-r6/plugins.ini"
+      ],
+      "embeddedSprxSha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911",
+      "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Rainbow Six Siege\\Nware\\Builds\\Unversioned snapshot 2026-11-16\\nware-r6.zip"
+    }
   }
 }

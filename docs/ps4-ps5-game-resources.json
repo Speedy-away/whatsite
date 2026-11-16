@@ -18323,7 +18323,7 @@
       "gameIds": [
         "rainbow-six-siege"
       ],
-      "description": "SPRX mod menu for Rainbow Six Siege on PS4.",
+      "description": "SPRX mod menu for Rainbow Six Siege on PS4. The full ZIP includes the SPRX and plugins.ini.",
       "titleIds": [
         "CUSA01800"
       ],
@@ -18356,12 +18356,21 @@
       "downloads": [
         {
           "id": "r6s-nware-sprx",
-          "label": "Download",
+          "label": "Download SPRX only",
           "filename": "r6s.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571822588370620486/1571834048865902602/r6s.sprx?ex=6afc2c08&is=6afada88&hm=bf04c0c7a04919f6d204fb6a4c21c861779720924b7a7eed9012b7d8d8ce2ac0&",
           "distribution": "include",
           "bytes": 173152,
           "sha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911"
+        },
+        {
+          "id": "r6s-nware-full-zip",
+          "label": "Download full ZIP",
+          "filename": "nware-r6.zip",
+          "url": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/c0ebf779f1e7/nware-r6.zip",
+          "distribution": "include",
+          "bytes": 50167,
+          "sha256": "c0ebf779f1e74a0acedb589386add0b5f2fc663f517a744c24bd4b6942ddbbca"
         }
       ],
       "guideBlocks": [
