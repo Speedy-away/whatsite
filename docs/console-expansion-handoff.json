@@ -12979,5 +12979,26 @@
       "otherUnavailableRecords": 0
     },
     "verification": "Passed: existing page links and unrelated resource records preserved; new site and archive SHA-256 verified; directory schema/tags/search checks passed. Broader catalogue tests: 7 passed, 2 failures in unchanged DLC/reference data."
+  },
+  "magsFnFortnite20261116": {
+    "date": "2026-11-16",
+    "status": "Prepared for push; live deployment not verified.",
+    "sourceUrl": "https://www.mediafire.com/file/b466nzvbpt0kooc/fn.sprx.rar/file",
+    "version": "Unversioned snapshot 2026-11-16",
+    "bytes": 78917,
+    "sha256": "79e5197f4b856ad772da5d8b62b541f01ed7f149585af58e9e5e8551a760b97d",
+    "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Fortnite\\Mags FN\\Builds\\Unversioned snapshot 2026-11-16\\fn.sprx.rar",
+    "pluginArchive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Fortnite\\Mags FN\\Builds\\Unversioned snapshot 2026-11-16\\fn.sprx",
+    "image": "/assets/images/ps4-fortnite/mags-fn-user-preview.png",
+    "compatibility": "PS4 · Supplied configuration targets CUSA07669 and the GoldHEN plugin loader. Game update and firmware unspecified.",
+    "payloadExecuted": false,
+    "verification": "Original RAR and extracted ready-to-use SPRX archived and SHA-256 verified. User screenshot copied unchanged. Existing page and directory links preserved.",
+    "verificationReport": "docs/qa/mags-fn-fortnite-verification.json",
+    "tests": "4 resource-tags/schema/search checks passed; existing resource records and links preserved; no duplicate IDs; screenshot popup markup verified.",
+    "archiveIndex": {
+      "presentFileRecords": 9571,
+      "missingFileRecords": 0,
+      "otherUnavailableRecords": 0
+    }
   }
 }
