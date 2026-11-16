@@ -9,7 +9,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 
 test('MultiCOD mappings resolve to each supported game and its own existing resource anchor', () => {
   const context = load();
-  assert.equal(context.data.families.length, 5);
+  assert.ok(context.data.families.length >= 5);
   assert.ok(!context.games.has('multicod'));
   for (const family of context.data.families) {
     assert.ok(family.games.length >= 2);

@@ -108,11 +108,11 @@ for (const game of visibleGames) {
 
 const hubCover = visibleGames.find(game => game.id === 'black-ops-3')?.cover || visibleGames[0]?.cover || '/assets/images/covers/cod-black-ops-3.jpg';
 const gameCards = visibleGames.map(game => resource(h(game.title),
-  game.id === 'black-ops-3' ? 'GSC Injector setup, Zombies and Multiplayer menus, downloads and screenshots.' : h(game.summary || 'Downloads, screenshots and supplied setup guides.'),
+  h(game.summary || (game.id === 'black-ops-3' ? 'GSC Injector setup, Zombies and Multiplayer menus, downloads and screenshots.' : 'Downloads, screenshots and supplied setup guides.')),
   link(base + game.slug + '/', 'Open resources'), game.cover));
 page('console/mods/ps4/call-of-duty/index.html', 'Call of Duty · PS4/PS5 Resources',
   'Choose a Call of Duty game to browse the PS4/PS5 resource collection, including menus, tools, screenshots and supplied guides.',
-  hubCover, multiNav, section('games', 'Call of Duty games', gameCards.length ? grid(...gameCards) : '<p>No imported games are available yet.</p>'),
+  hubCover, multiNav, section('games', 'Call of Duty games', grid(resource('MultiCOD', 'Shared host-menu packs, GSC injectors and tools, grouped by each supported game and update.', link(multiCod.indexUrl, 'Browse MultiCOD'), '/assets/images/cod.png'), ...gameCards)),
   '#games', 'Browse games');
 if (!infiniteWarfareOnly) page('console/mods/ps4/call-of-duty/multicod/index.html', 'MultiCOD · Supported Games',
   'Shared Call of Duty menu packs and tools, with a separate resource entry for every source-confirmed supported game.',

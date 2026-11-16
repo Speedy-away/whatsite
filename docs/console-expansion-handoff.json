@@ -13050,5 +13050,69 @@
     "status": "Prepared for push; live deployment not verified.",
     "changes": "Mags FN keeps a disabled Download button without href. Original download metadata and archived bytes preserved. Existing HWID file cleanup section retains /user/download/CUSAxxxxx/, download0.dat and download0_infomation.dat; added user-supplied new-account requirement.",
     "verification": "Existing note that cleanup is not verified to remove bans remains visible."
+  },
+  "magCodExpansion20261116": {
+    "date": "2026-11-16",
+    "status": "Prepared locally; publication pending.",
+    "newResourceIds": [
+      "mag-gsc-injector-black-ops-3",
+      "mag-gsc-injector-black-ops-4",
+      "mag-gsc-injector-ghosts",
+      "mag-gsc-injector-advanced-warfare",
+      "mag-gsc-injector-infinite-warfare",
+      "mag-gsc-injector-modern-warfare-remastered",
+      "mag-gsc-injector-wwii",
+      "mag-gsc-injector-vanguard",
+      "mag-gsc-injector-modern-warfare-2019",
+      "mag-gsc-injector-modern-warfare-ii-2022",
+      "bo4-mag-mp-zm-source-package",
+      "mag-gsc-injector-cold-war-pending"
+    ],
+    "supportedGames": [
+      "black-ops-3",
+      "black-ops-4",
+      "ghosts",
+      "advanced-warfare",
+      "infinite-warfare",
+      "modern-warfare-remastered",
+      "wwii",
+      "vanguard",
+      "modern-warfare-2019",
+      "modern-warfare-ii-2022"
+    ],
+    "pendingGames": [
+      "black-ops-1",
+      "black-ops-2",
+      "cold-war"
+    ],
+    "newGames": [
+      "modern-warfare-2019",
+      "modern-warfare-ii-2022",
+      "vanguard"
+    ],
+    "archiveFiles": 123,
+    "archives": [
+      {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Call of Duty\\Black Ops 4\\MAG BO4 Menus\\Builds\\Unversioned snapshot 2026-11-16\\all_boIIII.zip",
+        "bytes": 103448,
+        "sha256": "cad26117348c556ad25b1037aeb9d2e1c60f6b42fd0a63d779b7dbdfa998df7d"
+      },
+      {
+        "path": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Call of Duty\\MultiCOD\\MAG GSC Injector\\Helpers\\Windows\\Unversioned snapshot 2026-11-16\\MAG_INJECTOR_ADDED-MW2.2022+FIXS_MWR_WW2_IW.zip",
+        "bytes": 83765713,
+        "sha256": "cfd76a6a8b21cdfa05ebb62ef96024e7e861f1692b2e00ec65e225ac2f5ec7b7"
+      }
+    ],
+    "sourceCodeSeparate": true,
+    "largeInjectorArchiveOnly": true,
+    "payloadExecuted": false,
+    "archiveIndex": {
+      "presentFileRecords": 9706,
+      "missingFileRecords": 0,
+      "otherUnavailableRecords": 0
+    },
+    "verification": "Ten source-confirmed games cross-listed with exact update pins; Cold War pending and disabled; all prior resources preserved; all 123 archive hashes verified; unique page IDs and new sitemap routes checked.",
+    "tests": "10 focused search/schema, MultiCOD mapping, compatibility-pin and Matrix-readiness checks passed. Broader MultiCOD suite retains an existing no-video expectation failure on unchanged BO1 page (existing crash-fix video).",
+    "verificationReport": "docs/qa/mag-cod-page-changes.json"
   }
 }
