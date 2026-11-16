@@ -10,7 +10,7 @@ function catalog() {
   const other = require('./build-ps4-ps5-game-imports.cjs').createGameImports();
   const bo3 = read('docs/ps4-bo3-resources.json').resources;
   const renderer = other.renderer;
-  const games = [...other.data.games.filter(game => other.forGame(game.id).length).map(game => ({...game, url: base + game.slug + '/'})),
+  const games = [...other.data.games.filter(game => game.showEmpty || other.forGame(game.id).length).map(game => ({...game, url: base + game.slug + '/'})),
     ...cod.games.filter(game => game.id === 'black-ops-3' || cod.resources.some(item => item.publication === 'include' && item.gameIds.includes(game.id))).map(game => ({...game, url: base + 'call-of-duty/' + game.slug + '/'}))];
   const entries = [];
   function add(item, gameId, url) {

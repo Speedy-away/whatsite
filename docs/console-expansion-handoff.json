@@ -13130,17 +13130,35 @@
   },
   "lesterCardLayout20261116": {
     "date": "2026-11-16",
-    "status": "Prepared for push; live layout not yet verified.",
+    "status": "Deployed and verified live at 7bd02b74.",
     "changes": "Moved Lester into the GTA V 1.57 games-grid as the first standard card; added user-supplied EU CUSA00411 and USA CUSA00419 region labels. Builder and renderer retain the layout and labels. Standard Game update / package and Game region facts added to Lester and Synapse; Synapse button reads Download. Cyprus has separate 1.57 and 1.56 cards with only the matching module, and older 1.53–1.55 choices remain in Older GTA 5 versions. Builder keeps all three instances distinct.",
     "verification": "All original hrefs and all five Cyprus option URLs preserved; each section has its exact version-specific file; no binary/archive bytes changed.",
     "tests": "Four download UI/regression tests passed, including every version-specific file after Pages rewriting; first-card position, per-section Cyprus modules, region labels, unique IDs and original URLs verified.",
     "repositoryCommit": "d22f5e2f",
     "seo": {
       "date": "2026-11-16",
-      "status": "Prepared for push; combined live verification pending.",
+      "status": "Deployed and verified live; keywords, description and sitemap match the committed update.",
       "changes": "Curated Lester, Synapse and Cyprus phrases; version-specific keywords; regional labels; search attributes; structured data; metadata registry and sitemap dates.",
       "testsPassed": 11,
       "allPreviousLinksPreserved": true
+    },
+    "liveCommit": "7bd02b74547392543b0291aaa22c1e56cee46177",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43802175268",
+    "liveVerification": "docs/qa/gta-live-verification-20261116.json",
+    "liveChecks": {
+      "passed": 32,
+      "downloadHashesVerified": 7,
+      "browserLayoutVerified": true
     }
+  },
+  "rainbowSixSiegePs420261116": {
+    "date": "2026-11-16",
+    "status": "Prepared for push; live deployment not verified.",
+    "page": "console/mods/ps4/rainbow-six-siege/index.html",
+    "image": "/assets/images/ps4-rainbow-six-siege/user-cover.jpg",
+    "imageSha256": "d94c1dc664316800df02fc99a2901687164bccacde5c07b06f46f9636ca0d396",
+    "resources": 0,
+    "scope": "New PS4 page, hub card, directory filter, keywords/tags and sitemap. User image preserved unchanged. No download supplied; no PS4 compatibility inferred.",
+    "verification": "docs/qa/rainbow-six-siege-ps4-verification.json"
   }
 }

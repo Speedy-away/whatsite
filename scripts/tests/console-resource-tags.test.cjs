@@ -56,7 +56,7 @@ test('directory schema lists exactly the visible entries and keeps every target 
     assert.equal(item.url,new URL(entries[index].url,'https://whatwhatboy.com').href);
   }
   assert.equal(schema['@graph'][0]['@id'], page.isPartOf['@id']);
-  for (const game of games) assert.ok(page.mainEntity.itemListElement.some(item=>
+  for (const game of games.filter(game=>entries.some(entry=>entry.gameId===game.id))) assert.ok(page.mainEntity.itemListElement.some(item=>
     item.name.startsWith(game.title+' · ') && new URL(item.url).pathname===new URL(game.url,'https://whatwhatboy.com').pathname
   ),game.title+' is missing its named game-page target');
 });

@@ -126,7 +126,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
     fs.writeFileSync(target, html);
   }
   function extraGameCards() {
-    return data.games.filter(game => !game.legacy && !game.parent && (forGame(game.id).length || data.games.some(child => child.parent === game.id && forGame(child.id).length))).map(game => resource(h(game.title), h(game.summary ?? 'Game-specific downloads, screenshots and supplied guides.'), link('/console/mods/ps4/' + game.slug + '/', 'Open resources'), game.cover)).join('\n');
+    return data.games.filter(game => !game.legacy && !game.parent && (game.showEmpty || forGame(game.id).length || data.games.some(child => child.parent === game.id && forGame(child.id).length))).map(game => resource(h(game.title), h(game.summary ?? 'Game-specific downloads, screenshots and supplied guides.'), link('/console/mods/ps4/' + game.slug + '/', 'Open resources'), game.cover)).join('\n');
   }
   function buildMods({gtaFiles = [], rdrMenus = [], gameIds: selectedGames, gtaRendered = false} = {}) {
     for (const game of data.games) {
@@ -135,7 +135,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
       if (game.legacy) {
         const legacy = game.id === 'gta5' ? gtaFiles : rdrMenus;
         append('console/mods/ps4/' + game.slug + '/index.html', supplement(game.id, legacy, 'mods', game.id === 'gta5' && gtaRendered), 'game-imports');
-      } else if (items.length || data.games.some(child => child.parent === game.id && forGame(child.id).length)) {
+      } else if (game.showEmpty || items.length || data.games.some(child => child.parent === game.id && forGame(child.id).length)) {
         const children = data.games.filter(child => child.parent === game.id && forGame(child.id).length).sort((a, b) => a.title.localeCompare(b.title, 'en'));
         const filter = children.length >= 6 ? '<div class="extra-game-filter"><label for="extraGameSearch">Search games or exact CUSA title ID</label><input id="extraGameSearch" type="search" placeholder="Find a game, title ID or update…" autocomplete="off"><p id="extraGameCount" role="status" aria-live="polite">' + children.length + ' game collections</p></div>' : '';
         const childCards = children.length ? section('games', 'Choose a game', filter + grid(...children.map(child => resource(h(child.title), h(child.summary || 'Game-specific files and exact compatibility.'), link('/console/mods/ps4/' + child.slug + '/', 'Open resources'), child.cover))).replace('<div class="games-grid">', '<div class="games-grid" data-extra-game-grid>') + (filter ? '<p id="extraGameEmpty" hidden>No matching game. Try the game name or a listed title ID.</p>' : '')) : '';
@@ -156,7 +156,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
             (game.fileCleanup.accountNote ? '<p>'+h(game.fileCleanup.accountNote)+'</p>' : '') +
             `<ul class="guide-resource-tags" aria-label="Tags">${game.fileCleanup.tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>`
           ) : '') +
-          childCards + renderer.gameContent(items, '', game.categoryHeadings) +
+          childCards + (game.showEmpty && !items.length && !children.length ? section('menu', 'Mod menus', '<p>No PS4 mod-menu downloads are listed yet.</p>') : renderer.gameContent(items, '', game.categoryHeadings)) +
           (relatedCards.length ? section('related-resources', 'Related resources', grid(...relatedCards)) : '') +
           (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), game.heroAnchor || '#content', 'Browse resources');
         if (game.keywords?.length || filter) {

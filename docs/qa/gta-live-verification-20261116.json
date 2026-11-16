@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-11-16T04:08:45.420Z",
+  "expectedCommit": "7bd02b74547392543b0291aaa22c1e56cee46177",
+  "checks": [
+    "Live metadata keywords equal committed output",
+    "Live description equals committed output",
+    "Lester is the first 1.57 card",
+    "Lester is directly inside the normal grid",
+    "gta5-lester-sprx-v2-1-57: Game update / package",
+    "gta5-lester-sprx-v2-1-57: GTA V 1.57",
+    "gta5-lester-sprx-v2-1-57: Game region",
+    "gta5-lester-sprx-v2-1-57: Europe / EU · CUSA00411",
+    "gta5-lester-sprx-v2-1-57: USA · CUSA00419",
+    "gta5-lester-sprx-v2-1-57: normal Download label",
+    "gta5-synapse-1-57: Game update / package",
+    "gta5-synapse-1-57: GTA V 1.57",
+    "gta5-synapse-1-57: Game region",
+    "gta5-synapse-1-57: Europe / EU · CUSA00411",
+    "gta5-synapse-1-57: USA · CUSA00419",
+    "gta5-synapse-1-57: normal Download label",
+    "Cyprus v157 lists only its exact versions",
+    "Cyprus v157 has its own selector label",
+    "Cyprus v156 lists only its exact versions",
+    "Cyprus v156 has its own selector label",
+    "Cyprus older lists only its exact versions",
+    "Cyprus older has its own selector label",
+    "gta5-lester-sprx-v2-1-57: original download SHA-256",
+    "gta5-synapse-1-57: original download SHA-256",
+    "Cyprus 1.57: original download SHA-256",
+    "Cyprus 1.56: original download SHA-256",
+    "Cyprus 1.53: original download SHA-256",
+    "Cyprus 1.54: original download SHA-256",
+    "Cyprus 1.55: original download SHA-256",
+    "Sitemap contains the GTA canonical URL",
+    "Sitemap has no duplicate URLs",
+    "Lester, Synapse and Cyprus keywords present"
+  ],
+  "downloads": [
+    {
+      "resource": "gta5-lester-sprx-v2-1-57",
+      "url": "https://www.mediafire.com/file/r1omzh0gcl5wx89/XlesterX+sprx+V2.rar/file",
+      "bytes": 206823,
+      "sha256": "9094506c1461dd62594bfc5c5d8f0a36e6d6e03d0c9487aadbde88f9ea9a5e10",
+      "verified": true
+    },
+    {
+      "resource": "gta5-synapse-1-57",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/7bd02b74547392543b0291aaa22c1e56cee46177/downloads/ps4/GTA5/157/synapse/Synapse-PS4-GTA-V-1.57.zip",
+      "bytes": 314093,
+      "sha256": "b647b811525afeb9c87eda9c2d856239786a03f610a227dd508dfd0e9f98bcd0",
+      "verified": true
+    },
+    {
+      "resource": "Cyprus 1.57",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/7bd02b74547392543b0291aaa22c1e56cee46177/downloads/ps4-ps5/gta5-cyprus-1-57/CyprusMenu.prx",
+      "bytes": 724286,
+      "sha256": "7731188ec03a0bee74fe0946ffcf6eefed466c13a9b68c4a29df3263bd724157",
+      "verified": true
+    },
+    {
+      "resource": "Cyprus 1.56",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/7bd02b74547392543b0291aaa22c1e56cee46177/downloads/ps4-ps5/gta5-cyprus-1-56/CyprusMenu.prx",
+      "bytes": 724382,
+      "sha256": "9bedea869077bb6016171a79823b4b98703631d904b1cb52173dd97349fbb1c0",
+      "verified": true
+    },
+    {
+      "resource": "Cyprus 1.53",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/7bd02b74547392543b0291aaa22c1e56cee46177/downloads/ps4-ps5/gta5-cyprus-1-53/CyprusMenu.prx",
+      "bytes": 823786,
+      "sha256": "9b89901f75dc13b01668fd11d885e4b0d69f383eac0c81ea8e18d028b63851ea",
+      "verified": true
+    },
+    {
+      "resource": "Cyprus 1.54",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/7bd02b74547392543b0291aaa22c1e56cee46177/downloads/ps4-ps5/gta5-cyprus-1-54/CyprusMenu.prx",
+      "bytes": 725358,
+      "sha256": "626ea00e1cfd0a082a73f2d2147beb5024a6722e98ec5c6cf58eba38b67158e2",
+      "verified": true
+    },
+    {
+      "resource": "Cyprus 1.55",
+      "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/7bd02b74547392543b0291aaa22c1e56cee46177/downloads/ps4-ps5/gta5-cyprus-1-55/CyprusMenu.prx",
+      "bytes": 725038,
+      "sha256": "cd69992373148cafc817ca354ad3b91f3b37064a79f9dd16f5f0cbfb43b5b7a1",
+      "verified": true
+    }
+  ],
+  "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/43802175268",
+  "passed": true,
+  "finishedAt": "2026-11-16T04:16:06.290Z",
+  "browser": {
+    "lesterFirstStandardGridCard": true,
+    "cardWidthsEqual": true,
+    "cardWidthPixels": 283,
+    "imagesLoaded": [
+      "Lester",
+      "Synapse",
+      "Cyprus 1.57",
+      "Cyprus 1.56"
+    ],
+    "cyprusSelectorsEnabled": true,
+    "cyprus157Selected": "GTA V 1.57",
+    "cyprus156Selected": "GTA V 1.56",
+    "standardDownloadButtons": true
+  }
+}
