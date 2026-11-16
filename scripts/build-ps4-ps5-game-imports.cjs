@@ -156,7 +156,7 @@ function createGameImports({root = ROOT, data, files} = {}) {
             (game.fileCleanup.accountNote ? '<p>'+h(game.fileCleanup.accountNote)+'</p>' : '') +
             `<ul class="guide-resource-tags" aria-label="Tags">${game.fileCleanup.tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>`
           ) : '') +
-          childCards + (game.showEmpty && !items.length && !children.length ? section('menu', 'Mod menus', '<p>No PS4 mod-menu downloads are listed yet.</p>') : renderer.gameContent(items, '', game.categoryHeadings)) +
+          childCards + (game.showEmpty && !items.length && !children.length ? section('menu', 'Mod menus', '<p>No PS4 mod-menu downloads are listed yet.</p>' + (game.tags?.length ? '<ul class="guide-resource-tags" aria-label="Game tags">'+game.tags.map(tag=>'<li class="feature-tag">'+h(tag)+'</li>').join('')+'</ul>' : '')) : renderer.gameContent(items, '', game.categoryHeadings)) +
           (relatedCards.length ? section('related-resources', 'Related resources', grid(...relatedCards)) : '') +
           (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), game.heroAnchor || '#content', 'Browse resources');
         if (game.keywords?.length || filter) {

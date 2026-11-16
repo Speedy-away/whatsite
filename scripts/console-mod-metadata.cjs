@@ -1,7 +1,7 @@
 const {catalog} = require('./console-mod-catalog.cjs');
 const {gameAliases, unique} = require('./console-resource-tags.cjs');
 const gameCopy = {
-  'rainbow-six-siege': ['Rainbow Six Siege PS4 Mods & Mod Menus', 'Rainbow Six Siege PS4 game-mod and mod-menu page. Browse R6 resources as they are added, with game-update, region and compatibility details.', ['R6 PS4', 'R6 Siege PS4', 'Rainbow Six Siege PS4 mods', 'Rainbow Six Siege PS4 mod menus', 'R6 PS4 mod menu', 'R6 Siege PS4 mods']],
+  'rainbow-six-siege': ['Rainbow Six Siege PS4 Mods & Mod Menus', 'Rainbow Six Siege PS4 game-mod and mod-menu page. Browse R6 resources as they are added, with game-update, region and compatibility details.', ['Rainbow Six Siege PS4', 'R6 PS4', 'R6S PS4', 'R6 Siege PS4', 'Rainbow 6 Siege PS4', 'Rainbow Six Siege PlayStation 4', 'Rainbow Six Siege PS4 mods', 'Rainbow Six Siege PS4 game mods', 'Rainbow Six Siege PS4 mod menu', 'Rainbow Six Siege PS4 mod menus', 'R6 PS4 mod menu', 'R6 Siege PS4 mods', 'R6 Siege PS4 mod menus', 'Tom Clancy Rainbow Six Siege PS4']],
   'modern-warfare-2019': ['MW 2019 PS4 MAG Host Menu & GSC Injector', 'Download the MAG host menu and GSC injector for Modern Warfare 2019 on PS4 update 1.67, CUSA08829 USA. Includes setup and compatibility notes.'],
   'modern-warfare-ii-2022': ['MWII 2022 PS4 MAG Host Menu & GSC Injector', 'Find the MAG host menu and GSC injector for Modern Warfare II (2022) on PS4 update 1.08, CUSA34029, with game-specific setup and compatibility notes.'],
   'vanguard': ['Vanguard PS4 MAG Menus & GSC Injector', 'Browse MAG host menus and GSC injection for Vanguard Multiplayer and Zombies on PS4 update 1.26, CUSA24041 USA, with setup and compatibility notes.'],
@@ -54,7 +54,8 @@ function metadataByPage() {
     const items = searchable.length ? matching.map(({name, url, keywords}) => ({name, url, keywords})) : undefined;
     result.set(game.url.slice(1) + 'index.html', {title: pageTitle, brandTitle: !matchHeading, description,
       keywords: unique([...(gameAliases[game.id] || []), game.title, ...(matchHeading ? [title] : []), ...discoveryTerms, ...matching.map(entry => entry.name),
-        ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), searchKeywords, type: 'CollectionPage', items});
+        ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), searchKeywords, type: 'CollectionPage', items,
+      ...(game.id === 'rainbow-six-siege' ? {breadcrumbs: [{name:'Home',url:'/'},{name:'Mods / Mod Menus',url:'/console/mods/'},{name:'PS4/PS5 Games',url:'/console/mods/ps4/'},{name:'Rainbow Six Siege',url:game.url}]} : {})});
   }
   const directory = {title: 'PS4/PS5 Menu Directory: Games, Tools & Guides | whatwhatboy',
     description: `Search ${entries.length} PS4/PS5 game-resource entries across ${games.length} games by menu name, game alias, update or type. Open downloads, previews and guide popups.`,
