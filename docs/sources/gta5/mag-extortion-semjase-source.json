@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-16",
+  "sourceUrl": "https://www.mediafire.com/file/3ik1s1ci52fi4dx/GTAV_MAGMenu_Extortion-Semjases.zip/file",
+  "version": "Unversioned snapshot 2026-11-16",
+  "bytes": 4789669,
+  "sha256": "1760c0a8f2711358c47968b4748cb65f08a080226c1821d302977927c42962d6",
+  "readme": "WORKS ONLY ON  1.57 CUSA00411\r\n\r\n1:Download and extract zip\r\n\r\n2: Open FileZilla, go in /data/ and drag & drop mag injector folder\r\n\r\n3: go in /data/GoldHEN/plugins/ drag & drop gtav_mag_loader.prx here\r\n\r\n4: edit your plugins.ini, in [CUSA00411] section add /data/GoldHEN/plugins/gtav_mag_loader.prx=true and save\r\n\r\n5: done !\r\n\r\n\r\nour discord ; discord.gg/FYHewFgZkb",
+  "members": [
+    "GTAV_MAGMenu_Extortion-Semjases/gtav_mag_loader.prx",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/ExtortionReborn.sprx",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/SemjasesReborn.sprx",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/logo_semjases.png",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/logo.png",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/outfits/Pink.xml",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/outfits/2.xml",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/outfits/Test.xml",
+    "GTAV_MAGMenu_Extortion-Semjases/mag injector/GTAO157/logo_semjases_notify_bef6d821.png",
+    "GTAV_MAGMenu_Extortion-Semjases/read.txt"
+  ],
+  "images": [
+    {
+      "path": "/assets/images/ps4-gta5/mag-extortion-reborn-user-preview.png",
+      "sha256": "fe26ef222e7213a123bdc2d65323c5dd30d8900ab4a377e4d395917455aecf35",
+      "source": "User attachment, unchanged"
+    },
+    {
+      "path": "/assets/images/ps4-gta5/mag-semjase-user-preview.png",
+      "sha256": "3b608d0381948277c5ba3a8569c1aa68eb95ba1c07017cec9f0068967439fcb6",
+      "source": "User attachment, unchanged"
+    }
+  ],
+  "payloadExecuted": false
+}
