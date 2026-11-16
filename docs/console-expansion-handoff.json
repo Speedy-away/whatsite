@@ -13232,7 +13232,7 @@
     },
     "date": "2026-11-16",
     "archiveIndex": {
-      "presentFileRecords": 9720,
+      "presentFileRecords": 9723,
       "missingFileRecords": 0
     },
     "verification": "Eight catalogue and download UI tests passed. Both template downloads and copyable title IDs verified, plus three Apex choices with newest default.",
@@ -13242,6 +13242,20 @@
       "result": "Nware, both templates, title IDs, R6 SPRX, and all three Apex dropdown downloads verified live with SHA-256."
     },
     "fullPackage": {
+      "name": "nware-r6.zip",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/f094f23c99b2/nware-r6.zip",
+      "provenance": "User-supplied attachment",
+      "version": "2026-11-16 regional configuration update",
+      "bytes": 50193,
+      "sha256": "f094f23c99b20a2f8f8b3c38b63d025b63f18f28950009651eaf7b844b10f3fa",
+      "contents": [
+        "nware-r6/NIGGERWARE/r6s.sprx",
+        "nware-r6/plugins.ini"
+      ],
+      "embeddedSprxSha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911",
+      "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Rainbow Six Siege\\Nware\\Builds\\2026-11-16 regional configuration update\\nware-r6.zip"
+    },
+    "previousFullPackage": {
       "name": "nware-r6.zip",
       "sourceUrl": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/c0ebf779f1e7/nware-r6.zip",
       "provenance": "User-supplied attachment",
@@ -13254,6 +13268,14 @@
       ],
       "embeddedSprxSha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911",
       "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Rainbow Six Siege\\Nware\\Builds\\Unversioned snapshot 2026-11-16\\nware-r6.zip"
+    },
+    "regionUpdate": {
+      "titleIds": [
+        "CUSA01788",
+        "CUSA-01800"
+      ],
+      "templateArchive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Rainbow Six Siege\\Nware\\Builds\\2026-11-16 regional configuration update\\plugins.ini",
+      "embeddedSprxUnchanged": true
     }
   }
 }

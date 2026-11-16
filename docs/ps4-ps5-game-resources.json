@@ -126,7 +126,9 @@
         "R6 Siege PS4 mod menus",
         "Tom Clancy Rainbow Six Siege PS4",
         "CUSA01800",
-        "GoldHEN plugins.ini"
+        "GoldHEN plugins.ini",
+        "CUSA01788",
+        "CUSA-01800"
       ],
       "tags": [
         "PS4",
@@ -18325,9 +18327,10 @@
       ],
       "description": "SPRX mod menu for Rainbow Six Siege on PS4. The full ZIP includes the SPRX and plugins.ini.",
       "titleIds": [
-        "CUSA01800"
+        "CUSA01788",
+        "CUSA-01800"
       ],
-      "compatibilityText": "PS4 with GoldHEN · CUSA01800 (supplied title ID). Game update and firmware unspecified.",
+      "compatibilityText": "PS4 with GoldHEN · Europe / EU CUSA01788 · alternate title ID CUSA-01800. Game update and firmware unspecified.",
       "tags": [
         "PS4",
         "SPRX",
@@ -18338,7 +18341,9 @@
         "Nware R6S",
         "Nware Rainbow Six Siege PS4",
         "r6s.sprx",
-        "CUSA01800"
+        "CUSA01800",
+        "CUSA01788",
+        "CUSA-01800"
       ],
       "screenshotPopup": true,
       "images": [
@@ -18364,13 +18369,13 @@
           "sha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911"
         },
         {
-          "id": "r6s-nware-full-zip",
+          "id": "r6s-nware-full-zip-f094f23c99b2",
           "label": "Download full ZIP",
           "filename": "nware-r6.zip",
-          "url": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/c0ebf779f1e7/nware-r6.zip",
+          "url": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/f094f23c99b2/nware-r6.zip",
           "distribution": "include",
-          "bytes": 50167,
-          "sha256": "c0ebf779f1e74a0acedb589386add0b5f2fc663f517a744c24bd4b6942ddbbca"
+          "bytes": 50193,
+          "sha256": "f094f23c99b20a2f8f8b3c38b63d025b63f18f28950009651eaf7b844b10f3fa"
         }
       ],
       "guideBlocks": [
@@ -18383,7 +18388,7 @@
             },
             {
               "title": "Update the plugin configuration",
-              "text": "Open /data/GoldHEN/plugins.ini. Add the entry below under CUSA01800. If the section already exists, add the path to that section."
+              "text": "Open /data/GoldHEN/plugins.ini. Merge the entry for your installed title ID, CUSA01788 or CUSA-01800. Preserve existing plugin entries."
             },
             {
               "title": "Enable plugins and launch the game",
@@ -18394,7 +18399,7 @@
         {
           "type": "code",
           "title": "plugins.ini entry",
-          "text": "[CUSA01800]\n/data/NIGGERWARE/r6s.sprx"
+          "text": "[CUSA01788]\n/data/NIGGERWARE/r6s.sprx\n\n\n[CUSA-01800]\n/data/NIGGERWARE/r6s.sprx"
         }
       ],
       "controls": [
