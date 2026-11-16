@@ -17301,18 +17301,20 @@
         "ps4"
       ],
       "publication": "include",
-      "version": "v1.0.0 · GTA V Online 1.57",
+      "version": "v2.0.0 · GTA V Online 1.57",
       "gameVersions": [
         "1.57"
       ],
       "description": "Windows RTM tool by yAmethxst with an outfit editor, fast-run unlock, clothing-shop teleport and K/D editing.",
-      "compatibilityText": "PS4 firmware 14.00 with GoldHEN · GTA V 1.57 · EU CUSA00411 or US CUSA00419. The author tested EU. Requires a Windows PC on the same network with .NET Framework 4.8.1.",
+      "compatibilityText": "PS4 firmware 14.00 or 14.02 with GoldHEN · GTA V 1.57 · EU CUSA00411 or US CUSA00419. Author-tested EU on both firmware versions. Requires Windows and .NET Framework 4.8.1.",
       "tags": [
         "PS4",
         "Outfit editor",
         "PS4 outfit editor",
         "GTA Online outfit editor",
-        "Fast-run unlock"
+        "Fast-run unlock",
+        "v2.0.0",
+        "Firmware 14.02"
       ],
       "keywords": [
         "Arise RTM",
@@ -17325,7 +17327,11 @@
         "GTA V unlocks",
         "clothing shop teleport",
         "custom K/D",
-        "GoldHEN"
+        "GoldHEN",
+        "Arise RTM 2.0.0",
+        "Arise v2.0.0",
+        "Arise PS4 14.02",
+        "ps4debug-NG v1.3.4"
       ],
       "guideLabel": "Setup & screenshot",
       "hideCardCompatibility": true,
@@ -17335,6 +17341,11 @@
           "type": "paragraph",
           "title": "Setup",
           "text": "The release uses a Windows PC and a PS4 on the same network. Enable FTP and Payload Loader in GoldHEN, start GTA V, then connect the desktop app to the PS4 and to the game. The ZIP includes the desktop app and the ps4debug payload. See the linked source repository for the full instructions."
+        },
+        {
+          "type": "paragraph",
+          "title": "v2.0.0 update",
+          "text": "Updates the included ps4debug.bin to ps4debug-NG v1.3.4 for PS4 firmware 14.02 support. The tool code and existing features are unchanged. The original v1.0.0 ZIP remains available separately."
         }
       ],
       "images": [
@@ -17345,15 +17356,29 @@
       ],
       "source": {
         "repositoryUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4",
-        "releaseUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v1.0.0"
+        "releaseUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v2.0.0",
+        "previousReleaseUrls": [
+          "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v1.0.0"
+        ],
+        "captureFile": "docs/sources/arise-rtm/v2.0.0.json"
       },
       "downloads": [
         {
+          "id": "gta5-arise-rtm-v2-0-0-zip",
+          "label": "Download v2.0.0 ZIP",
+          "filename": "Arise-RTM-GTAV-PS4.zip",
+          "url": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/download/v2.0.0/Arise-RTM-GTAV-PS4.zip",
+          "distribution": "include",
+          "bytes": 910275,
+          "sha256": "44e662f65a4b6ca5e3d7e4af4772f162e98859c272024ad7c548af5fd446ec8c"
+        },
+        {
           "id": "gta5-arise-rtm-v1-0-0-zip",
-          "label": "Download v1.0.0 ZIP",
+          "label": "Download previous v1.0.0 ZIP",
           "filename": "Arise-RTM-GTAV-PS4.zip",
           "url": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/download/v1.0.0/Arise-RTM-GTAV-PS4.zip",
-          "distribution": "include"
+          "distribution": "include",
+          "compatibility": "Original v1.0.0 release: PS4 firmware 14.00; GTA V 1.57; CUSA00411 / CUSA00419."
         }
       ]
     },

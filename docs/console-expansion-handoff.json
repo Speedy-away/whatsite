@@ -13166,5 +13166,26 @@
       "status": "Prepared for push; live deployment not verified.",
       "changes": "Expanded R6/R6S/Rainbow 6/Tom Clancy aliases, PS4/PlayStation 4 keyword phrases, visible game tags, game-index tags, supplied-image social preview metadata and four-level breadcrumb schema. Existing sitemap canonical retained without duplicates."
     }
+  },
+  "ariseRtmV220261116": {
+    "date": "2026-11-16",
+    "status": "Prepared for push; live deployment not verified.",
+    "version": "v2.0.0",
+    "sourceUrl": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/tag/v2.0.0",
+    "download": "https://github.com/Amethxst/Arise-RTM-GTAV-PS4/releases/download/v2.0.0/Arise-RTM-GTAV-PS4.zip",
+    "bytes": 910275,
+    "sha256": "44e662f65a4b6ca5e3d7e4af4772f162e98859c272024ad7c548af5fd446ec8c",
+    "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.57\\RTM Tools\\Arise RTM GTAV PS4\\Helpers\\Windows\\v2.0.0\\Arise-RTM-GTAV-PS4.zip",
+    "archiveFiles": 11,
+    "previousVersionPreserved": "v1.0.0; original firmware 14.00 compatibility retained.",
+    "compatibility": "PS4 firmware 14.00 or 14.02 with GoldHEN · GTA V 1.57 · EU CUSA00411 or US CUSA00419. Author-tested EU on both firmware versions. Requires Windows and .NET Framework 4.8.1.",
+    "payloadExecuted": false,
+    "archiveIndex": {
+      "presentFileRecords": 9717,
+      "missingFileRecords": 0,
+      "otherUnavailableRecords": 0
+    },
+    "verification": "GitHub asset digest and all new archive hashes verified; original v1.0.0 archive checksum verified unchanged; both website links present; all prior page links preserved; seven search/schema/keyword checks passed.",
+    "verificationReport": "docs/qa/arise-rtm-v2-verification.json"
   }
 }
