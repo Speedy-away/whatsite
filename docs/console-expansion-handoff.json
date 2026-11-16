@@ -13133,6 +13133,14 @@
     "status": "Prepared for push; live layout not yet verified.",
     "changes": "Moved Lester into the GTA V 1.57 games-grid as the first standard card; added user-supplied EU CUSA00411 and USA CUSA00419 region labels. Builder and renderer retain the layout and labels. Standard Game update / package and Game region facts added to Lester and Synapse; Synapse button reads Download. Cyprus has separate 1.57 and 1.56 cards with only the matching module, and older 1.53–1.55 choices remain in Older GTA 5 versions. Builder keeps all three instances distinct.",
     "verification": "All original hrefs and all five Cyprus option URLs preserved; each section has its exact version-specific file; no binary/archive bytes changed.",
-    "tests": "Four download UI/regression tests passed, including every version-specific file after Pages rewriting; first-card position, per-section Cyprus modules, region labels, unique IDs and original URLs verified."
+    "tests": "Four download UI/regression tests passed, including every version-specific file after Pages rewriting; first-card position, per-section Cyprus modules, region labels, unique IDs and original URLs verified.",
+    "repositoryCommit": "d22f5e2f",
+    "seo": {
+      "date": "2026-11-16",
+      "status": "Prepared for push; combined live verification pending.",
+      "changes": "Curated Lester, Synapse and Cyprus phrases; version-specific keywords; regional labels; search attributes; structured data; metadata registry and sitemap dates.",
+      "testsPassed": 11,
+      "allPreviousLinksPreserved": true
+    }
   }
 }

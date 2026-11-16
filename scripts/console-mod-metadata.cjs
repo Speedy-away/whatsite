@@ -33,7 +33,7 @@ const gameCopy = {
   'cold-war': ['Cold War Console Resources & DLC References', 'View the supplied Black Ops Cold War menu demonstration and the captured CUSA15010 v1.41 DLC reference, with media and compatibility details.'],
   'infinite-warfare': ['Infinite Warfare PS4 MAG Menu + GSC Injector', 'Download MAG Menu + GSC Injector for Infinite Warfare Multiplayer and Zombies in Spaceland on PS4 CUSA04762 v1.25. Browse screenshots and DLC references.'],
   'wwii': ['WWII PS4 Menus: HYDRA & DLC References', 'Find HYDRA 2.2.0 PS4 WWII Multiplayer and Zombies menu notes, Windows portable download, opening controls and captured DLC title-ID references.'],
-  'gta5': ['GTA 5 PS4 Mod Menus by Game Update', 'Browse GTA 5 PS4 mod menus by update, plus RK MODZ’s 38-script CSC pack, script-loader requirements, downloads and installation guides.', ['GTA V CSC menus', 'CSC script packs', 'RK MODZ', 'RKMODZ manager']],
+  'gta5': ['GTA 5 PS4 Mod Menus by Game Update', 'Download Lester SPRX V2, Synapse and Cyprus for GTA V on PS4. Match game updates 1.57, 1.56 or older builds, regional title IDs and setup requirements.', ['Lester SPRX', 'LesterSPRX', 'XlesterX', 'Synapse PS4', 'Cyprus PS4', 'Cyprus Lite', 'GTA V 1.57 PS4 mod menus', 'GTA V 1.56 PS4 mod menus', 'Cyprus GTA V 1.57', 'Cyprus GTA V 1.56', 'CUSA00411', 'CUSA00419', 'GTA V CSC menus', 'CSC script packs', 'RK MODZ', 'RKMODZ manager']],
   'rdr2': ['RDR2 PS4 Menus: Havana, North, Sheriff & Oyster', 'Get RDR2 PS4 North, Sheriff, Havana and Oyster resources, with matching builds, publisher checksums, previews and supplied installation guides.']
 };
 function metadataByPage() {
