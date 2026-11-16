@@ -57,6 +57,15 @@ test('Pages stages one native ad rail and preserves excluded documents', () => {
     assert.equal(fs.readFileSync(path.join(output, 'downloads/helper/index.html'), 'utf8'), withBanner);
   } finally { fs.rmSync(root, {recursive: true, force: true}); }
 });
+test('Pages preserves the homepage Native Banner between the directory and console sections', () => {
+  const {publishAds} = require('../site-ads.cjs');
+  const source = fs.readFileSync(path.join(__dirname, '../../index.html'), 'utf8');
+  const staged = publishAds('index.html', source);
+  assert.match(staged, /<div class="site-ad-layout home-ad-layout">\s*<section [^>]*id="home"[^>]*>[\s\S]*?<\/section>\s*<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->\s*<div class="site-ad-content">\s*<section [^>]*id="console"/);
+  assert.equal(staged.match(/id="page-advertisement"/g).length, 1);
+  assert.equal(staged.match(/bauval\.org\/21\/fd0a4dcec74a63f4d2662af5273f9d5b/g).length, 1);
+  assert.equal(publishAds('index.html', staged), staged);
+});
 test('new native receiver snapshots fetch repository bytes directly while preserving source pins and foreign URLs', () => {
   const items = [{id:'one',url:'https://whatwhatboy.com/downloads/ps4/menu.bin',filename:'menu.bin',sha256:'a'.repeat(64),bytes:123,firmwares:['9.00']},{id:'two',url:'https://example.com/build.pkg'}];
   const html = renderCompanion('ps4', items);

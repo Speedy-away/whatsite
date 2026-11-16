@@ -7,6 +7,7 @@ const start = '<!-- BEGIN SITE AD -->';
 const end = '<!-- END SITE AD -->';
 const banner = /[ \t]*<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->[ \t]*\r?\n?/g;
 const railOpen = '<div class="site-ad-layout"><div class="site-ad-content">';
+const homeRailOpen = '<div class="site-ad-layout home-ad-layout">';
 const stylesheet = '<link rel="stylesheet" href="/assets/site-ads.css?v=8">';
 const script = '<script defer src="/assets/site-ads.js?v=3"></script>';
 const unit = 'fd0a4dcec74a63f4d2662af5273f9d5b';
@@ -47,7 +48,7 @@ function placement({sponsored = false} = {}) {
 }
 
 function addRail(html, file, options) {
-  if (html.includes(railOpen)) {
+  if (html.includes(railOpen) || html.includes(homeRailOpen)) {
     return html.replace(banner, () => placement(options) + '\n');
   }
 

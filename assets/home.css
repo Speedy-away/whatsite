@@ -99,3 +99,21 @@
 @media (max-width: 380px) {
     .home-directory-grid { grid-template-columns: 1fr; }
 }
+
+@media (width < 1440px) or (height < 650px) {
+    .home-ad-layout .site-ad-stage #container-fd0a4dcec74a63f4d2662af5273f9d5b > [class$="__stand"] {
+        /* Match the mobile grid even when the provider sets display inline. */
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+}
+
+@media (min-width: 1440px) and (min-height: 650px) {
+    .home-ad-layout {
+        grid-template-areas: "advertisement directory" "advertisement content";
+        grid-template-rows: auto 1fr;
+        row-gap: 0;
+    }
+    .home-ad-layout > .home-directory { grid-area: directory; }
+}
