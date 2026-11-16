@@ -430,7 +430,11 @@
         "postTitle": "Baguette off host ported for ps4",
         "postUrl": "https://discord.com/channels/1528329794947776572/1559402129926651904",
         "capturedAt": "2026-11-02",
-        "captureFile": "docs/discord-ps4-ps5-raw/bo2-baguette.json"
+        "captureFile": "docs/discord-ps4-ps5-raw/bo2-baguette.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1571664071449649183/1571664072410406953/t6.sprx?ex=6afb8dba&is=6afa3c3a&hm=fa79db2ae83eb87ebc6ef47dca63605a61e8268f88faef70e2f6082e93c5db0f&"
+        ],
+        "latestDownloadCaptureFile": "docs/sources/black-ops-2/baguette-update-20261116.json"
       },
       "images": [
         {
@@ -440,8 +444,17 @@
       ],
       "downloads": [
         {
+          "id": "ps4-bo2-baguette-20261116",
+          "label": "Download Baguette",
+          "filename": "t6.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1571664071449649183/1571664072410406953/t6.sprx?ex=6afb8dba&is=6afa3c3a&hm=fa79db2ae83eb87ebc6ef47dca63605a61e8268f88faef70e2f6082e93c5db0f&",
+          "distribution": "include",
+          "bytes": 377308,
+          "sha256": "b663f700e63ce8e97de8ea64d634282601cf737ddf0b28822f3117378a9b9502"
+        },
+        {
           "id": "ps4-bo2-baguette-volt-111",
-          "label": "Download Baguette 1.11",
+          "label": "Download previous Baguette 1.11",
           "url": "https://cdn.discordapp.com/attachments/1559402129926651904/1567999240465027373/Baguette_1.11_by_volt.zip?ex=6af22d16&is=6af0db96&hm=5b28f7a42f626ea540a83255504896616ed607c8fc5b3bc1e5bd69d2fb3674e3&",
           "distribution": "include"
         },
@@ -460,7 +473,7 @@
       ],
       "guideBlocks": [],
       "controls": [],
-      "compatibilityText": "The ZIP includes a CUSA57548 plugins.ini for Black Ops II."
+      "compatibilityText": "Previous 1.11 ZIP includes a CUSA57548 plugins.ini for Black Ops II. The new SPRX was supplied without a release number or confirmed game-update, region and firmware requirements."
     },
     {
       "id": "bo2-royal-injector",
@@ -2134,7 +2147,9 @@
     },
     {
       "id": "bo2-fpkg-111-crash-fix",
-      "gameIds": ["black-ops-2"],
+      "gameIds": [
+        "black-ops-2"
+      ],
       "category": "fpkg",
       "publication": "include",
       "name": "Black Ops II FPKG 1.11 crash fix",
@@ -2145,11 +2160,20 @@
       "version": "PS4 · Game update 1.11 · CUSA57548",
       "description": "Addresses crashes when loading Multiplayer (MP) or Zombies (ZM).",
       "compatibilityText": "The 28.9 MiB package lists update 01.11 and title ID CUSA57548.",
-      "tags": ["PS4", "CUSA57548"],
+      "tags": [
+        "PS4",
+        "CUSA57548"
+      ],
       "keywords": [
-        "Call of Duty Black Ops II", "PS4 FPKG fixes", "PS4 fake package patch",
-        "BO2 1.11 crash fix", "BO2 01.11 PKG", "Black Ops 2 Multiplayer crash fix",
-        "Black Ops 2 Zombies crash fix", "BO2 MP ZM loading crash", "BO2_ZMMP_CrashFix.pkg"
+        "Call of Duty Black Ops II",
+        "PS4 FPKG fixes",
+        "PS4 fake package patch",
+        "BO2 1.11 crash fix",
+        "BO2 01.11 PKG",
+        "Black Ops 2 Multiplayer crash fix",
+        "Black Ops 2 Zombies crash fix",
+        "BO2 MP ZM loading crash",
+        "BO2_ZMMP_CrashFix.pkg"
       ],
       "source": {
         "type": "user-supplied-attachment",

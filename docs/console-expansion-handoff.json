@@ -13025,5 +13025,24 @@
     "verificationReport": "docs/qa/mag-gta-menus-verification.json",
     "tests": "Four search/schema/resource-tags checks passed; preservation, SHA-256, visible compatibility and screenshot popup targets verified.",
     "pathVerification": "Shared ZIP uses existing case-sensitive /downloads/ps4/GTA5/ directory."
+  },
+  "baguetteBo2Update20261116": {
+    "date": "2026-11-16",
+    "status": "Prepared for push; live deployment not verified.",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1571664071449649183/1571664072410406953/t6.sprx?ex=6afb8dba&is=6afa3c3a&hm=fa79db2ae83eb87ebc6ef47dca63605a61e8268f88faef70e2f6082e93c5db0f&",
+    "version": "Unversioned snapshot 2026-11-16",
+    "bytes": 377308,
+    "sha256": "b663f700e63ce8e97de8ea64d634282601cf737ddf0b28822f3117378a9b9502",
+    "archive": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Call of Duty\\Black Ops 2\\Baguette\\Builds\\Unversioned snapshot 2026-11-16\\t6.sprx",
+    "olderDownloadsPreserved": true,
+    "payloadExecuted": false,
+    "compatibility": "Previous 1.11 ZIP includes a CUSA57548 plugins.ini for Black Ops II. The new SPRX was supplied without a release number or confirmed game-update, region and firmware requirements.",
+    "verification": "New website and F: files match SHA-256; new primary download and previous 1.11 button present; all prior page links preserved.",
+    "archiveIndex": {
+      "presentFileRecords": 9583,
+      "missingFileRecords": 0,
+      "otherUnavailableRecords": 0
+    },
+    "tests": "Four search/schema/resource-tags checks passed; all prior links and unrelated resource records preserved; git diff --check passed."
   }
 }
