@@ -18349,8 +18349,6 @@
         "CUSA-01800",
         "Nware R6 PS4 download",
         "Nware R6 SPRX download",
-        "Nware R6 full ZIP",
-        "nware-r6.zip",
         "R6 GoldHEN plugins.ini",
         "Nware CUSA01788",
         "Nware CUSA-01800",
@@ -18366,28 +18364,20 @@
       "source": {
         "captureFile": "docs/sources/rainbow-six-siege/nware.json",
         "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1571822588370620486/1572303398420746421/r6s.sprx?ex=6afde126&is=6afc8fa6&hm=f145d2aa74475bdd2b1f8556ffcd9a49319e0584d6b6cfdd96f6ed330cba256b&",
           "https://cdn.discordapp.com/attachments/1571822588370620486/1571921194578354317/r6s.sprx?ex=6afc7d31&is=6afb2bb1&hm=98ca164f6c438e1e886e37fb4c9190e5cee1ebbde59574ecce512f6c3a1a2a6a&",
           "https://cdn.discordapp.com/attachments/1571822588370620486/1571834048865902602/r6s.sprx?ex=6afc2c08&is=6afada88&hm=bf04c0c7a04919f6d204fb6a4c21c861779720924b7a7eed9012b7d8d8ce2ac0&"
         ]
       },
       "downloads": [
         {
-          "id": "r6s-nware-sprx-3f2199a84f89",
-          "label": "Download SPRX only",
+          "id": "r6s-nware-sprx-55844e01af9f",
+          "label": "Download",
           "filename": "r6s.sprx",
-          "url": "https://cdn.discordapp.com/attachments/1571822588370620486/1571921194578354317/r6s.sprx?ex=6afc7d31&is=6afb2bb1&hm=98ca164f6c438e1e886e37fb4c9190e5cee1ebbde59574ecce512f6c3a1a2a6a&",
+          "url": "https://cdn.discordapp.com/attachments/1571822588370620486/1572303398420746421/r6s.sprx?ex=6afde126&is=6afc8fa6&hm=f145d2aa74475bdd2b1f8556ffcd9a49319e0584d6b6cfdd96f6ed330cba256b&",
           "distribution": "include",
-          "bytes": 153904,
-          "sha256": "3f2199a84f89d25cd4a631d75dfbbff303c5f8cb7254986337143ea657741b7e"
-        },
-        {
-          "id": "r6s-nware-full-zip-3af0aca11d86",
-          "label": "Download full ZIP",
-          "filename": "nware-r6.zip",
-          "url": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/3af0aca11d86/nware-r6.zip",
-          "distribution": "include",
-          "bytes": 46528,
-          "sha256": "3af0aca11d86786d901c02f75a09b9ebd2692a9546ff7c137c123dd56ca4a4f0"
+          "bytes": 264640,
+          "sha256": "55844e01af9f73f1c33a67456492031bb59e3760f25ffdd454fd3fde87a1f97f"
         }
       ],
       "guideBlocks": [
@@ -18424,9 +18414,7 @@
         "Nware Rainbow Six Siege PS4",
         "Nware R6 PS4 download",
         "Nware R6 SPRX download",
-        "Nware R6 full ZIP",
         "r6s.sprx",
-        "nware-r6.zip",
         "R6 GoldHEN plugins.ini",
         "Nware CUSA01788",
         "Nware CUSA-01800",
@@ -18434,7 +18422,6 @@
       ],
       "featureTags": [
         "SPRX",
-        "Full ZIP",
         "GoldHEN",
         "CUSA01788",
         "CUSA-01800"
@@ -18443,7 +18430,27 @@
       "cardRegionTitleIds": {
         "Europe / EU": "CUSA01788",
         "USA": "CUSA-01800"
-      }
+      },
+      "previousDownloads": [
+        {
+          "id": "r6s-nware-sprx-3f2199a84f89",
+          "label": "Download SPRX only",
+          "filename": "r6s.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1571822588370620486/1571921194578354317/r6s.sprx?ex=6afc7d31&is=6afb2bb1&hm=98ca164f6c438e1e886e37fb4c9190e5cee1ebbde59574ecce512f6c3a1a2a6a&",
+          "distribution": "include",
+          "bytes": 153904,
+          "sha256": "3f2199a84f89d25cd4a631d75dfbbff303c5f8cb7254986337143ea657741b7e"
+        },
+        {
+          "id": "r6s-nware-full-zip-3af0aca11d86",
+          "label": "Download full ZIP",
+          "filename": "nware-r6.zip",
+          "url": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/3af0aca11d86/nware-r6.zip",
+          "distribution": "include",
+          "bytes": 46528,
+          "sha256": "3af0aca11d86786d901c02f75a09b9ebd2692a9546ff7c137c123dd56ca4a4f0"
+        }
+      ]
     },
     {
       "id": "r6s-scooby",

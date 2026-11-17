@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-16",
-  "sourceUrl": "https://cdn.discordapp.com/attachments/1571822588370620486/1571921194578354317/r6s.sprx?ex=6afc7d31&is=6afb2bb1&hm=98ca164f6c438e1e886e37fb4c9190e5cee1ebbde59574ecce512f6c3a1a2a6a&",
-  "version": "Unversioned snapshot 2026-11-16 attachment 1571921194578354317",
-  "bytes": 153904,
-  "sha256": "3f2199a84f89d25cd4a631d75dfbbff303c5f8cb7254986337143ea657741b7e",
+  "date": "2026-11-17",
+  "sourceUrl": "https://cdn.discordapp.com/attachments/1571822588370620486/1572303398420746421/r6s.sprx?ex=6afde126&is=6afc8fa6&hm=f145d2aa74475bdd2b1f8556ffcd9a49319e0584d6b6cfdd96f6ed330cba256b&",
+  "version": "Unversioned snapshot 2026-11-17 attachment 1572303398420746421",
+  "bytes": 264640,
+  "sha256": "55844e01af9f73f1c33a67456492031bb59e3760f25ffdd454fd3fde87a1f97f",
   "imageSha256": "8926547a98803f9eda64dfffbc4330e7602c57c0236db05e43510e2e00528a3f",
   "titleId": "CUSA01800",
   "compatibilitySource": "User supplied; firmware and game update unspecified.",
@@ -40,6 +40,47 @@
   },
   "previousBuilds": [
     {
+      "date": "2026-11-16",
+      "sourceUrl": "https://cdn.discordapp.com/attachments/1571822588370620486/1571921194578354317/r6s.sprx?ex=6afc7d31&is=6afb2bb1&hm=98ca164f6c438e1e886e37fb4c9190e5cee1ebbde59574ecce512f6c3a1a2a6a&",
+      "version": "Unversioned snapshot 2026-11-16 attachment 1571921194578354317",
+      "bytes": 153904,
+      "sha256": "3f2199a84f89d25cd4a631d75dfbbff303c5f8cb7254986337143ea657741b7e",
+      "imageSha256": "8926547a98803f9eda64dfffbc4330e7602c57c0236db05e43510e2e00528a3f",
+      "titleId": "CUSA01800",
+      "compatibilitySource": "User supplied; firmware and game update unspecified.",
+      "payloadExecuted": false,
+      "fullPackage": {
+        "name": "nware-r6.zip",
+        "sourceUrl": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/3af0aca11d86/nware-r6.zip",
+        "provenance": "Repacked with supplied SPRX and byte-identical regional plugins.ini",
+        "version": "Unversioned snapshot 2026-11-16 attachment 1571921194578354317",
+        "bytes": 46528,
+        "sha256": "3af0aca11d86786d901c02f75a09b9ebd2692a9546ff7c137c123dd56ca4a4f0",
+        "contents": [
+          "nware-r6/NIGGERWARE/r6s.sprx",
+          "nware-r6/plugins.ini"
+        ],
+        "embeddedSprxSha256": "3f2199a84f89d25cd4a631d75dfbbff303c5f8cb7254986337143ea657741b7e"
+      },
+      "titleIds": [
+        "CUSA01788",
+        "CUSA-01800"
+      ],
+      "previousFullPackage": {
+        "name": "nware-r6.zip",
+        "sourceUrl": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/c0ebf779f1e7/nware-r6.zip",
+        "provenance": "User-supplied attachment",
+        "version": "Unversioned snapshot 2026-11-16",
+        "bytes": 50167,
+        "sha256": "c0ebf779f1e74a0acedb589386add0b5f2fc663f517a744c24bd4b6942ddbbca",
+        "contents": [
+          "nware-r6/NIGGERWARE/r6s.sprx",
+          "nware-r6/plugins.ini"
+        ],
+        "embeddedSprxSha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911"
+      }
+    },
+    {
       "sourceUrl": "https://cdn.discordapp.com/attachments/1571822588370620486/1571834048865902602/r6s.sprx?ex=6afc2c08&is=6afada88&hm=bf04c0c7a04919f6d204fb6a4c21c861779720924b7a7eed9012b7d8d8ce2ac0&",
       "version": "Unversioned snapshot 2026-11-16",
       "bytes": 173152,
@@ -58,5 +99,8 @@
         "embeddedSprxSha256": "9d27a5cb9a96622fa6eaefddee64145885311d0dbf32c09935cf07b6b3d0f911"
       }
     }
-  ]
+  ],
+  "local": "/downloads/ps4/rainbow-six-siege/55844e01af9f/r6s.sprx",
+  "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Rainbow Six Siege\\Nware\\Builds\\Unversioned snapshot 2026-11-17 attachment 1572303398420746421\\r6s.sprx",
+  "downloadPresentation": "One SPRX Download button; ZIP and older builds preserved in repository and archive."
 }
