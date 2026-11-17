@@ -15,7 +15,7 @@ const pluginDownloads=(item,downloads,legacy)=>pluginBundles.render(item,downloa
 const requirementsMarkup=item=>(item?.requiredResources||[]).filter(r=>/^#guide-[a-z0-9-]+$/.test(r.href||'')).map(r=>`<p class="guide-required-resource">${guideLink(r.href,h(r.label))}</p>`).join('');
 const h = value => esc(String(value ?? ''));
 const lines = value => h(value).replace(/\r?\n/g, '<br>');
-const compatibilityMarkup = item => item?.cardRegionTitleIds ? '<p class="guide-region-ids" aria-label="Game region title IDs">'+Object.entries(item.cardRegionTitleIds).map(([region,id])=>h(region)+': '+h(id)).join('<br>')+'</p>' : item?.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
+const compatibilityMarkup = item => item?.cardRegionFacts && item?.cardRegionTitleIds ? '<dl class="guide-region-facts"><dt>Game region</dt><dd>'+Object.entries(item.cardRegionTitleIds).map(([region,id])=>h(region)+' · '+h(id)).join('<br>')+'</dd></dl>' : item?.cardRegionTitleIds ? '<p class="guide-region-ids" aria-label="Game region title IDs">'+Object.entries(item.cardRegionTitleIds).map(([region,id])=>h(region)+': '+h(id)).join('<br>')+'</p>' : item?.compatibilityText ? `<p>${lines(item.compatibilityText)}</p>` : '';
 
 function localFile(value, directory) {
   if (typeof value !== 'string' || !value.startsWith('/' + directory + '/') || /[?#\\]/.test(value)) return null;

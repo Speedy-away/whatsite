@@ -128,7 +128,10 @@
         "CUSA01800",
         "GoldHEN plugins.ini",
         "CUSA01788",
-        "CUSA-01800"
+        "CUSA-01800",
+        "Scooby R6",
+        "Scooby Rainbow Six Siege",
+        "Scooby R6 PS4"
       ],
       "tags": [
         "PS4",
@@ -18325,7 +18328,7 @@
       "gameIds": [
         "rainbow-six-siege"
       ],
-      "description": "SPRX mod menu for Rainbow Six Siege on PS4. The full ZIP includes the SPRX and plugins.ini.",
+      "description": "Aimbot, ESP & more",
       "titleIds": [
         "CUSA01788",
         "CUSA-01800"
@@ -18435,6 +18438,64 @@
         "GoldHEN",
         "CUSA01788",
         "CUSA-01800"
+      ],
+      "cardRegionFacts": true,
+      "cardRegionTitleIds": {
+        "Europe / EU": "CUSA01788",
+        "USA": "CUSA-01800"
+      }
+    },
+    {
+      "id": "r6s-scooby",
+      "name": "Scooby R6",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "rainbow-six-siege"
+      ],
+      "description": "Scooby mod menu for Rainbow Six Siege on PS4. Coming soon; the official product page has no R6 download yet.",
+      "compatibilityText": "PS4 · EU CUSA01788 · alternate title ID CUSA-01800. Game update and firmware requirements have not been published.",
+      "titleIds": [
+        "CUSA01788",
+        "CUSA-01800"
+      ],
+      "tags": [
+        "PS4",
+        "Coming soon",
+        "Mod menu"
+      ],
+      "featureTags": [
+        "Coming soon",
+        "PS4",
+        "CUSA01788",
+        "CUSA-01800"
+      ],
+      "keywords": [
+        "Scooby R6",
+        "Scooby Rainbow Six Siege",
+        "Scooby R6 PS4",
+        "Scooby R6S",
+        "Scooby Menu"
+      ],
+      "screenshotPopup": true,
+      "hideCardGuideLink": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-rainbow-six-siege/scooby-r6-preview.png",
+          "caption": "Scooby R6 menu in the Rainbow Six Siege shooting range"
+        }
+      ],
+      "source": {
+        "postUrl": "https://scoobymenu.cc/console/products/r6/",
+        "captureFile": "docs/sources/rainbow-six-siege/scooby-r6.json",
+        "capturedAt": "2026-11-17"
+      },
+      "downloads": [],
+      "relatedLinks": [
+        {
+          "url": "https://scoobymenu.cc/console/products/r6/",
+          "label": "Official Scooby R6 page"
+        }
       ]
     }
   ]

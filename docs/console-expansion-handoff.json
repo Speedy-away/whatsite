@@ -13326,5 +13326,26 @@
       },
       "priorDownloadLinksPreserved": true
     }
+  },
+  "scoobyR6Ps420261117": {
+    "date": "2026-11-17",
+    "status": "Added locally to R6 PS4 page and searchable menu directory with user screenshot and official product link.",
+    "page": "/console/mods/ps4/rainbow-six-siege/#resource-r6s-scooby",
+    "source": "docs/sources/rainbow-six-siege/scooby-r6.json",
+    "availability": "Official product page says Coming soon; no R6 binary available to download or archive.",
+    "preserved": "Existing Nware card, downloads and plugin template preserved.",
+    "published": false,
+    "verification": "docs/qa/scooby-r6-verification.json"
+  },
+  "r6NwareCardLayout20261117": {
+    "date": "2026-11-17",
+    "status": "Replaced pictured Nware description with Aimbot, ESP & more. Replaced card compatibility paragraph with GTA V style Game region facts.",
+    "regions": {
+      "Europe / EU": "CUSA01788",
+      "USA": "CUSA-01800"
+    },
+    "regionLabelSource": "USA label requested by user; existing title ID spelling retained.",
+    "verification": "Rendered card assertions passed; all original download URLs preserved.",
+    "published": false
   }
 }
