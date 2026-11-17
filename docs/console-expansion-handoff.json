@@ -13347,5 +13347,17 @@
     "regionLabelSource": "USA label requested by user; existing title ID spelling retained.",
     "verification": "Rendered card assertions passed; all original download URLs preserved.",
     "published": false
+  },
+  "r6DeploymentRepair20261117": {
+    "date": "2026-11-17",
+    "status": "Restored the original GOLDHEN14.iso removed by commit 1633a359; current GoldHEN links still require this exact file.",
+    "restored": {
+      "path": "downloads/ps4-ps5/goldhen14-ps4/GOLDHEN14.iso",
+      "bytes": 6356992,
+      "sha256": "06e57f14e3fea2b78082599a71ee9e8b6506b7cd741b47ed40ab89e32787d136"
+    },
+    "checks": "22 deployment tests passed. Source link audit found this was the only missing file target.",
+    "published": false,
+    "payloadExecuted": false
   }
 }
