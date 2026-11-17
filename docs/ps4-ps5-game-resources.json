@@ -18460,7 +18460,7 @@
       "gameIds": [
         "rainbow-six-siege"
       ],
-      "description": "Scooby mod menu for Rainbow Six Siege on PS4. Coming soon; the official product page has no R6 download yet.",
+      "description": "Aimbot, ESP & more",
       "compatibilityText": "PS4 · EU CUSA01788 · alternate title ID CUSA-01800. Game update and firmware requirements have not been published.",
       "titleIds": [
         "CUSA01788",
@@ -18503,7 +18503,12 @@
           "url": "https://scoobymenu.cc/console/products/r6/",
           "label": "Official Scooby R6 page"
         }
-      ]
+      ],
+      "cardRegionFacts": true,
+      "cardRegionTitleIds": {
+        "Europe / EU": "CUSA01788",
+        "USA": "CUSA-01800"
+      }
     }
   ]
 }
