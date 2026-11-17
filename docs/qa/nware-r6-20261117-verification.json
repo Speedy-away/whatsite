@@ -21,5 +21,18 @@
     "links": 1245818,
     "issues": 0
   },
-  "payloadExecuted": false
+  "payloadExecuted": false,
+  "live": {
+    "checkedAt": "2026-11-17T20:01:54.083Z",
+    "commit": "b7cb8e35d34087212a5358909a2c81bcb79d7b83",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/44163511378",
+    "status": "Both build and deploy jobs succeeded; browser verified Scooby screenshot, Nware description, region layout, one Download button and no ZIP button.",
+    "download": {
+      "singleDownloadButton": true,
+      "zipButtonAbsent": true,
+      "bytes": 264640,
+      "sha256": "55844e01af9f73f1c33a67456492031bb59e3760f25ffdd454fd3fde87a1f97f",
+      "payloadExecuted": false
+    }
+  }
 }

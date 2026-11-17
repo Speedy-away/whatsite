@@ -13329,24 +13329,30 @@
   },
   "scoobyR6Ps420261117": {
     "date": "2026-11-17",
-    "status": "Added locally to R6 PS4 page and searchable menu directory with user screenshot and official product link.",
+    "status": "Published and visually verified live with supplied screenshot and official product link.",
     "page": "/console/mods/ps4/rainbow-six-siege/#resource-r6s-scooby",
     "source": "docs/sources/rainbow-six-siege/scooby-r6.json",
     "availability": "Official product page says Coming soon; no R6 binary available to download or archive.",
     "preserved": "Existing Nware card, downloads and plugin template preserved.",
-    "published": false,
-    "verification": "docs/qa/scooby-r6-verification.json"
+    "published": true,
+    "verification": "docs/qa/scooby-r6-verification.json",
+    "repositoryCommit": "b7cb8e35d34087212a5358909a2c81bcb79d7b83",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/44163511378",
+    "liveCheckedAt": "2026-11-17T20:01:54.083Z"
   },
   "r6NwareCardLayout20261117": {
     "date": "2026-11-17",
-    "status": "Replaced pictured Nware description with Aimbot, ESP & more. Replaced card compatibility paragraph with GTA V style Game region facts.",
+    "status": "Published and visually verified live: Aimbot, ESP & more and GTA V style Europe / EU and USA game-region facts.",
     "regions": {
       "Europe / EU": "CUSA01788",
       "USA": "CUSA-01800"
     },
     "regionLabelSource": "USA label requested by user; existing title ID spelling retained.",
     "verification": "Rendered card assertions passed; all original download URLs preserved.",
-    "published": false
+    "published": true,
+    "repositoryCommit": "b7cb8e35d34087212a5358909a2c81bcb79d7b83",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/44163511378",
+    "liveCheckedAt": "2026-11-17T20:01:54.083Z"
   },
   "r6DeploymentRepair20261117": {
     "date": "2026-11-17",
@@ -13357,8 +13363,11 @@
       "sha256": "06e57f14e3fea2b78082599a71ee9e8b6506b7cd741b47ed40ab89e32787d136"
     },
     "checks": "22 deployment tests passed. Full local Pages artifact verified: 10,869 pages, 1,245,818 links, zero issues after restoring original ISO.",
-    "published": false,
-    "payloadExecuted": false
+    "published": true,
+    "payloadExecuted": false,
+    "repositoryCommit": "b7cb8e35d34087212a5358909a2c81bcb79d7b83",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/44163511378",
+    "liveCheckedAt": "2026-11-17T20:01:54.083Z"
   },
   "r6NwareBuild1572303398420746421": {
     "date": "2026-11-17",
@@ -13386,6 +13395,16 @@
       "otherUnavailableRecords": 0
     },
     "payloadExecuted": false,
-    "published": false
+    "published": true,
+    "repositoryCommit": "b7cb8e35d34087212a5358909a2c81bcb79d7b83",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/44163511378",
+    "liveCheckedAt": "2026-11-17T20:01:54.083Z",
+    "liveVerification": {
+      "singleDownloadButton": true,
+      "zipButtonAbsent": true,
+      "bytes": 264640,
+      "sha256": "55844e01af9f73f1c33a67456492031bb59e3760f25ffdd454fd3fde87a1f97f",
+      "payloadExecuted": false
+    }
   }
 }
