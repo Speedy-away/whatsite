@@ -13409,12 +13409,15 @@
   },
   "scoobyR6CardMatch20261117": {
     "date": "2026-11-17",
-    "status": "Matched Scooby R6 description and Game region facts to Nware. Screenshot, official product link and coming-soon metadata retained.",
+    "status": "Published and verified on live R6 page. Scooby shows Aimbot, ESP & more with the same Game region layout as Nware. Both superseded paragraphs are absent from the visible card.",
     "regions": {
       "Europe / EU": "CUSA01788",
       "USA": "CUSA-01800"
     },
     "verification": "Exact rendered description/region assertions passed; surrounding page unchanged.",
-    "published": false
+    "published": true,
+    "repositoryCommit": "2cfec95f29b3622a74e308cf9dfcea59986930fd",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/44165357480",
+    "liveCheckedAt": "2026-11-17T20:12:43.983Z"
   }
 }
