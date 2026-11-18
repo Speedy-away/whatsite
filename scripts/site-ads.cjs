@@ -9,7 +9,7 @@ const banner = /[ \t]*<!-- BEGIN SITE AD -->[\s\S]*?<!-- END SITE AD -->[ \t]*\r
 const railOpen = '<div class="site-ad-layout"><div class="site-ad-content">';
 const homeRailOpen = '<div class="site-ad-layout home-ad-layout">';
 const stylesheet = '<link rel="stylesheet" href="/assets/site-ads.css?v=8">';
-const script = '<script defer src="/assets/site-ads.js?v=3"></script>';
+const script = '<script defer src="/assets/site-ads.js?v=4"></script>';
 const unit = 'fd0a4dcec74a63f4d2662af5273f9d5b';
 const legacyNative = 'https://aloudalimonyexplosion.com/' + unit + '/invoke.js';
 const native = 'https://bauval.org/21/' + unit;
@@ -76,6 +76,13 @@ function addRail(html, file, options) {
 }
 
 function configureAds(file, html, {sponsored = false} = {}) {
+  // Key pages and other noindex public documents also carried this embed.
+  // Remove it before the ad-layout eligibility check, preserving packaged files.
+  if (publicPage(relativePath(file)) && !relativePath(file).startsWith('hosts/')) {
+    html = mapTokens(html, token => {
+      if (/^<script\b/i.test(token) && attributes(token.slice(0, token.indexOf('>') + 1)).src === headAd) return '';
+    });
+  }
   if (!eligible(file, html)) return html;
   const route=relativePath(file).replace(/^(?:es|pt|fr|de|ru|tr|pl|it|zh|ja|ko|th|vi|id|hi|sr|nl|ka|ar|he)\//,'');
   const interactiveGuide=/^console\/(?:ps[45]\/file-transfer-guide\.html|download-center\/index\.html)$/.test(route);
@@ -88,7 +95,7 @@ function configureAds(file, html, {sponsored = false} = {}) {
   const cleaned = mapTokens(html.replace(nativeUnit, ''), token => {
     if (/^<script\b/i.test(token)) {
       const {src} = attributes(token.slice(0, token.indexOf('>') + 1));
-      if (src === legacyNative || src === native || (sponsored && replacedScripts.includes(src))) return '';
+      if (src === headAd || src === legacyNative || src === native || (sponsored && replacedScripts.includes(src))) return '';
       if (src?.split('?')[0] === '/assets/site-ads.js') {
         if (hasRuntime) return '';
         hasRuntime = true;
@@ -101,8 +108,9 @@ function configureAds(file, html, {sponsored = false} = {}) {
       return stylesheet;
     }
     if (/^<\/head\s*>$/i.test(token)) {
-      const publisherHead = publisherLayers ? '<script data-cfasync="false" src="' + headAd + '"></script>' : '';
-      return (hasStylesheet ? '' : stylesheet) + publisherHead + token;
+      // Never load the site-wide popunder: it intercepts ordinary navigation.
+      // The runtime opens a direct ad only from an actual download click.
+      return (hasStylesheet ? '' : stylesheet) + token;
     }
     if (/^<\/body\s*>$/i.test(token)) {
       const publisherBody = publisherLayers ? '<script data-cfasync="false" src="' + bodyAd + '"></script>' : '';

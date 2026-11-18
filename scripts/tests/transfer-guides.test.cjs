@@ -150,5 +150,5 @@ test('guide choices retain native ads without publisher click-interception layer
   assert.equal(publishAds(page,html),html);
  }
  const other=publishAds('console/ps4/apps.html',input);
- assert.match(other,/abscloud.org\/1\//);assert.match(other,/bauval.org\/14\//);
+ assert.doesNotMatch(other,/abscloud.org\/1\//);assert.match(other,/bauval.org\/14\//);
 });

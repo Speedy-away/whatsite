@@ -40,9 +40,9 @@ test('Pages stages one native ad rail and preserves excluded documents', () => {
     const output = path.join(root, 'stage');
     build({root, output, names: Object.keys(files)});
     const staged = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
-    assert.match(staged, /<script data-cfasync="false" src="https:\/\/abscloud\.org\/1\/366a2e3edafab888009b3076fcd47b82"><\/script>\s*<\/head>/);
+    assert.doesNotMatch(staged, /abscloud\.org\/1\/366a2e3edafab888009b3076fcd47b82/);
     assert.match(staged, /<script data-cfasync="false" src="https:\/\/bauval\.org\/14\/5723aef0781af6b27fc0113e359a1d7c"><\/script>\s*<\/body>/);
-    assert.equal(staged.match(/366a2e3edafab888009b3076fcd47b82/g).length, 1);
+    assert.match(staged, /site-ads\.js\?v=4/);
     assert.equal(staged.match(/5723aef0781af6b27fc0113e359a1d7c/g).length, 1);
     assert.match(staged, /<a [^>]*href="https:\/\/araplhn\.org\/4\/ac85b864baf2e2322b99cd2ad051fbc2"[^>]*rel="sponsored noopener noreferrer">Sponsored link<\/a>/);
     assert.match(staged, /<div id="container-fd0a4dcec74a63f4d2662af5273f9d5b"><\/div>\s*<script async="async" data-cfasync="false" src="https:\/\/bauval\.org\/21\/fd0a4dcec74a63f4d2662af5273f9d5b"><\/script>/);
