@@ -1,0 +1,15 @@
+.ios-guide-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;margin:28px 0}
+.ios-guide-gallery figure{margin:0;min-width:0}
+.ios-guide-gallery img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:12px;background:#111}
+.ios-guide-gallery figcaption{margin-top:10px;color:var(--text-secondary);font-size:14px;line-height:1.6}
+.ios-guide-gallery a:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+.ios-guide-credit{color:var(--text-secondary);font-size:13px}
+#freya-guide .install-steps li,#trust-apps .install-steps li,#recovery-mode .install-steps li{margin-bottom:16px}
+.ios-firmware-scroll{overflow-x:auto;margin:28px 0;max-width:100%}
+.ios-firmware-scroll:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.ios-firmware-table{border-collapse:collapse;width:100%;min-width:560px;text-align:left;font-size:14px;line-height:1.6}
+.ios-firmware-table caption{text-align:left;font-weight:600;padding:0 0 14px;color:var(--text-primary)}
+.ios-firmware-table th,.ios-firmware-table td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top}
+.ios-firmware-table thead th{background:var(--bg-secondary);color:var(--text-primary)}
+.ios-firmware-table tbody th{font-weight:600;white-space:nowrap}
+.ios-firmware-table td{color:var(--text-secondary)}

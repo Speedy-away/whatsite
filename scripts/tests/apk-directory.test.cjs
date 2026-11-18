@@ -45,11 +45,14 @@ test('all eight repaired entries keep their old source and use accurately labell
  assert.match(c.apps.find(a=>a.id==='tv-launcher').delivery.url,/tvlauncher-3-1-1/);
  assert.match(c.apps.find(a=>a.id==='atv-launcher').delivery.description,/paid Pro/);
 });
-test('Phone groups its landing page and the Tv/Movies apps link',()=>{
+test('IOS / Android groups both platforms and retains the Tv/Movies apps link',()=>{
  const phone=read('pages/phone.html'),apk=read('pages/apk.html');
  const main=phone.slice(phone.indexOf('<div class="main-content"'),phone.indexOf('<!-- Footer -->'));
- assert.match(main,/<h1 class="page-title">Phone<\/h1>/);
- assert.doesNotMatch(main,/app-card|app-tabs|<article|<a\b/);
+ assert.match(main,/<h1 class="page-title">IOS \/ Android<\/h1>/);
+ assert.match(main,/href="\/pages\/ios\.html"/);
+ assert.match(main,/href="\/pages\/android\.html"/);
+ assert.match(read('pages/ios.html'),/id="jailbreaking"[\s\S]*?href="https:\/\/ipa-apps\.me\/"/);
+ assert.match(read('pages/android.html'),/href="\/pages\/apk\.html"/);
  assert.match(phone,/href="\/pages\/phone\.html" class="nav-link nav-sublink active" aria-current="page"/);
  assert.match(apk,/href="\/pages\/apk\.html" class="nav-link nav-sublink active" aria-current="page" data-tooltip="Tv\/Movies apps"/);
  assert.doesNotMatch(apk,/data-app-tablist|id="phone(?:-ios|-android|-harmony)?"/);
@@ -59,7 +62,7 @@ test('Phone groups its landing page and the Tv/Movies apps link',()=>{
   const sidebar=html.match(/<nav\b[^>]*class="sidebar-nav"[^>]*>[\s\S]*?<\/nav>/)?.[0];
   if(!sidebar?.includes('data-tooltip="PC"'))continue;
   assert.equal((sidebar.match(/data-phone-navigation/g)||[]).length,1,file);
-  assert.match(sidebar, /data-phone-navigation><button[^>]+data-tooltip="Phone"[\s\S]*?<ul class="nav-sublist">[\s\S]*?href="\/pages\/apk\.html"[^>]+data-tooltip="Tv\/Movies apps"/,file);
+  assert.match(sidebar, /data-phone-navigation><button[^>]+data-tooltip="IOS \/ Android"[\s\S]*?<ul class="nav-sublist">[\s\S]*?href="\/pages\/ios\.html"[\s\S]*?href="\/pages\/android\.html"[\s\S]*?href="\/pages\/apk\.html"[^>]+data-tooltip="Tv\/Movies apps"/,file);
   assert.doesNotMatch(sidebar,/data-tooltip="APK Downloads"/,file);
   assert.equal(navigation.apply(path.relative(root,file),html),html,file);
  }

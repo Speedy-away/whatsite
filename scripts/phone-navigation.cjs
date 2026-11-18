@@ -1,4 +1,4 @@
-// Shared Phone group for current pages and future generators.
+// Shared IOS / Android group for current pages and future generators.
 const fs = require('node:fs');
 const path = require('node:path');
 const {root, pages, relativePath} = require('./site-public-pages.cjs');
@@ -12,8 +12,8 @@ function phoneLink(file, href, label, symbol) {
 function apply(file, html) {
   file = relativePath(file);
   return html.replace(/<nav\b[^>]*class="sidebar-nav"[^>]*>[\s\S]*?<\/nav>/, nav => {
-    const open = file === 'pages/phone.html' || file === 'pages/apk.html';
-    const entry = `<li class="nav-group${open ? ' open' : ''}" data-phone-navigation><button type="button" class="nav-link nav-group-toggle" aria-expanded="${open}" data-tooltip="Phone" aria-label="Phone">${icon('phone')}<span>Phone</span>${icon('chevron', true)}</button><ul class="nav-sublist">${phoneLink(file, '/pages/phone.html', 'Phone', 'phone')}${phoneLink(file, '/pages/apk.html', 'Tv/Movies apps', 'android')}</ul></li>`;
+    const open = ['pages/phone.html', 'pages/ios.html', 'pages/android.html', 'pages/apk.html'].includes(file);
+    const entry = `<li class="nav-group${open ? ' open' : ''}" data-phone-navigation><button type="button" class="nav-link nav-group-toggle" aria-expanded="${open}" data-tooltip="IOS / Android" aria-label="IOS / Android">${icon('phone')}<span>IOS / Android</span>${icon('chevron', true)}</button><ul class="nav-sublist">${phoneLink(file, '/pages/phone.html', 'IOS / Android', 'phone')}${phoneLink(file, '/pages/ios.html', 'IOS', 'phone')}${phoneLink(file, '/pages/android.html', 'Android', 'android')}${phoneLink(file, '/pages/apk.html', 'Tv/Movies apps', 'android')}</ul></li>`;
     const phone = /<li\b(?=[^>]*\bdata-phone-navigation)[^>]*>(?:\s*<a\b[\s\S]*?<\/a>\s*|\s*<button\b[\s\S]*?<\/ul>\s*)<\/li>/;
     const legacyApk = /[ \t]*<li\b[^>]*>\s*<a\b(?=[^>]*\bdata-tooltip="APK Downloads")[^>]*>[\s\S]*?<\/a>\s*<\/li>\r?\n?/g;
     const withoutLegacyApk = nav.replace(legacyApk, '');
@@ -36,6 +36,6 @@ if (require.main === module) {
     const after = apply(path.relative(root, file), before);
     if (before !== after) { fs.writeFileSync(file, after); changed++; }
   }
-  console.log(`Updated Phone navigation in ${changed} sidebars.`);
+  console.log(`Updated IOS / Android navigation in ${changed} sidebars.`);
 }
 module.exports = {apply};
