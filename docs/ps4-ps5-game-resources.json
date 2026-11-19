@@ -62,6 +62,11 @@
       "summary": "nware SPRX mod menu for Apex Legends on PS4.",
       "description": "Download the nware SPRX mod menu for Apex Legends on PS4 and view the supplied screenshot.",
       "keywords": [
+        "Mags Apex",
+        "MAG Menu Apex",
+        "Mags Apex v1.0.1",
+        "Mags Apex PS4 download",
+        "Apex Legends PS4 triggerbot",
         "Apex Legends",
         "Apex",
         "ApexLegends",
@@ -103,6 +108,11 @@
       "description": "Rainbow Six Siege game mods and mod menus for PlayStation 4.",
       "showEmpty": true,
       "keywords": [
+        "LazyUI",
+        "IazyUI",
+        "R6 LazyUI",
+        "LazyUI PS4 download",
+        "LazyUI CUSA01800",
         "Rainbow Six Siege",
         "R6",
         "R6 Siege",
@@ -17976,6 +17986,68 @@
       "versionDropdownLabel": "Build version"
     },
     {
+      "id": "apex-legends-mags",
+      "name": "Mags Apex",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "apex-legends"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "description": "Aimbot, triggerbot, ESP & more",
+      "compatibilityText": "PS4 · CUSA12552 · Game version 3.24 (build r5-310) · Requires the GoldHEN plugin loader",
+      "gameVersions": [
+        "3.24"
+      ],
+      "titleIds": [
+        "CUSA12552"
+      ],
+      "featureTags": [
+        "PRX",
+        "GoldHEN",
+        "CUSA12552",
+        "Game 3.24",
+        "Aimbot",
+        "ESP",
+        "Triggerbot"
+      ],
+      "keywords": [
+        "MAG Menu Apex",
+        "Mags Apex v1.0.1",
+        "Mags Apex PS4 download",
+        "Apex Legends PS4 triggerbot",
+        "Apex Legends PS4 aimbot",
+        "Apex Legends PS4 ESP",
+        "Apex Legends r5-310"
+      ],
+      "screenshotPopup": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-apex-legends/mags-apex-preview.png",
+          "caption": "Mags Apex menu on PS4"
+        }
+      ],
+      "source": {
+        "capturedAt": "2026-11-19",
+        "originalDownloadUrls": [
+          "https://www.mediafire.com/file/8htofndrpuhecpw/RELEASE_MAG_MENU_APEX_v1.0.1.zip/file"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "apex-legends-mags-zip",
+          "label": "Download v1.0.1",
+          "filename": "RELEASE_MAG_MENU_APEX_v1.0.1.zip",
+          "url": "https://www.mediafire.com/file/8htofndrpuhecpw/RELEASE_MAG_MENU_APEX_v1.0.1.zip/file",
+          "distribution": "include",
+          "bytes": 2200206,
+          "sha256": "91c552d9f6b3f9e55803fd39fa4065a1c90659c1119c2e2bf15a20277b772fe4"
+        }
+      ]
+    },
+    {
       "id": "fortnite-chest-tool",
       "name": "Chest Tool",
       "category": "rtm",
@@ -18549,6 +18621,67 @@
         "Europe / EU": "CUSA01788",
         "USA": "CUSA-01800"
       }
+    },
+    {
+      "id": "r6s-lazyui",
+      "name": "LazyUI",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "rainbow-six-siege"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "description": "Aimbot, ESP & more",
+      "compatibilityText": "PS4 · CUSA01800 · Game version 03.71 · Requires the GoldHEN plugin loader",
+      "gameVersions": [
+        "03.71"
+      ],
+      "titleIds": [
+        "CUSA01800"
+      ],
+      "featureTags": [
+        "SPRX",
+        "GoldHEN",
+        "CUSA01800",
+        "Game 03.71",
+        "Aimbot",
+        "ESP"
+      ],
+      "keywords": [
+        "IazyUI",
+        "R6 LazyUI",
+        "LazyUI PS4 download",
+        "Rainbow Six Siege PS4 aimbot",
+        "Rainbow Six Siege PS4 ESP",
+        "LazyUI Radar",
+        "LazyUI Snaplines"
+      ],
+      "screenshotPopup": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-rainbow-six-siege/lazyui-preview.png",
+          "caption": "LazyUI menu on PS4"
+        }
+      ],
+      "source": {
+        "capturedAt": "2026-11-19",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1572710974840905780/1572731403295002754/R6_LazyUI_CUSA01800.zip?ex=6aff6fc2&is=6afe1e42&hm=0e061bfaed87e0f75d2739ccce11b4ff7ce3e1aa274b2a5fa8183a7fcd1b229f&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "r6s-lazyui-zip",
+          "label": "Download",
+          "filename": "R6_LazyUI_CUSA01800.zip",
+          "url": "https://whatwhatboy.com/downloads/ps4/rainbow-six-siege/37c8cc8621c0/R6_LazyUI_CUSA01800.zip",
+          "distribution": "include",
+          "bytes": 520010,
+          "sha256": "37c8cc8621c01b62596a4fb57d759fda9c3fe1f09e909d107c931cd477a904ac"
+        }
+      ]
     },
     {
       "id": "gta5-nova-protocol-1-57",
