@@ -105,7 +105,7 @@ jobs:
                   for tag in re.findall(pattern, source):
                       key = tag.split(' content=')[0] if ' content=' in tag else '<title>'
                       target = replace_one(target, re.escape(key) + (r'[^>]*>' if key != '<title>' else r'.*?</title>'), tag)
-              target = merge_schema(target, source, '#resource-' + item, True)
+              target = merge_schema(target, source, '#guide-' + item, True)
               assert f'id="guide-{item}"' in target
               (site / path).write_text(target)
               row = find_article(source_directory, lambda value: '#guide-' + item + '"' in value)
