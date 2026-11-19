@@ -119,6 +119,7 @@ jobs:
               search = re.search(r'data-search="[^"]*"(?: data-search-i18n="[^"]*")?', new_card)[0]
               games = games.replace(old_card, replace_one(old_card, r'data-search="[^"]*"(?: data-search-i18n="[^"]*")?', search), 1)
               image_path = Path('assets/images') / ('ps4-' + game) / image
+              (site / image_path).parent.mkdir(parents=True, exist_ok=True)
               shutil.copyfile(image_path, site / image_path)
 
           directory = re.sub(r'(id="modCatalogCount"[^>]*>)(\d+)', lambda m: m[1] + str(int(m[2]) + len(items)), directory)
