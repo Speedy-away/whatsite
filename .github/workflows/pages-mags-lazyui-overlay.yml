@@ -28,13 +28,16 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           artifact-ids: '14420563469'
+          merge-multiple: true
           run-id: '44289869563'
           github-token: ${{ github.token }}
           path: ${{ runner.temp }}/baseline
       - name: Apply the two resource updates
         run: |
           mkdir "$RUNNER_TEMP/site"
-          tar -xf "$RUNNER_TEMP/baseline/artifact.tar" -C "$RUNNER_TEMP/site"
+          mapfile -t archives < <(find "$RUNNER_TEMP/baseline" -type f -name artifact.tar)
+          test "${#archives[@]}" -eq 1
+          tar -xf "${archives[0]}" -C "$RUNNER_TEMP/site"
           python3 - <<'PY'
           import hashlib
           import json
