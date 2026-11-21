@@ -19,11 +19,10 @@ function preserveInputExamples(){
  fs.writeFileSync(path.join(root,file),JSON.stringify({...report,inputFiles,notes:'Exact original input captures retained with their original paths, byte counts and SHA-256. Tests and regeneration use immutable repository snapshots; live Desktop/Downloads files are not required or modified. Blank directory-only lines are omitted from generated one-menu configurations.'},null,2)+'\n');
  return inputFiles;
 }
-function ini({resource,gameVersion,module,region,confirmed,dependencies=[]}){
+function ini({gameVersion,module,region,dependencies=[]}){
  if(!/^[^/\\\r\n]+\.(?:prx|sprx)$/i.test(module)||!regions.some(r=>r.id===region.id))throw Error('Invalid plugin configuration');
- const clean=s=>String(s).replace(/[\r\n]/g,' ');
  for(const d of dependencies)if(!/^[^/\\\r\n]+\.(?:prx|sprx)$/i.test(d.name)||d.gameVersion!==gameVersion)throw Error('Dependency must match the selected game update');
- return '; '+clean(resource.name)+'\r\n; GTA V update: '+clean(gameVersion||'not specified by source')+'\r\n; '+region.name+' / '+region.id+'\r\n; '+(confirmed?'This title-ID entry is documented in the supplied source; console behavior is untested.':'Configuration template only: the supplied source does not confirm this regional build.')+'\r\n; Merge this section into /data/GoldHEN/plugins.ini; preserve unrelated entries.\r\n; Enable one menu at a time.'+(dependencies.length?' Keep its required GTA Reborn client enabled.\r\n; Register in GTA Reborn Discord and obtain your own /data/Reborn.txt. Live announcement: 1.57 only.':'')+'\r\n['+region.id+']\r\n'+dependencies.map(d=>'/data/GoldHEN/plugins/'+d.name+'\r\n').join('')+'/data/GoldHEN/plugins/'+module+'\r\n';
+ return '['+region.id+']\r\n'+dependencies.map(d=>'/data/GoldHEN/plugins/'+d.name+'\r\n').join('')+'/data/GoldHEN/plugins/'+module+'\r\n';
 }
 function known(resource,gameVersion,region){
  if(/^gta5-expulsion-v[57]-/.test(resource.id))return true;
@@ -71,7 +70,7 @@ function prepare(){
    const key=slug(module),configs={};
    for(const region of regions){
     const selectedModule=scorpion?.[1]==='100'?module.replace(/100EU/,region.short==='EU'?'100EU':'100US'):module;
-    const confirmed=known(resource,gameVersion,region),text=ini({resource,gameVersion,module:selectedModule,region,confirmed,dependencies}),buffer=Buffer.from(text),hash=sha(buffer);
+    const confirmed=known(resource,gameVersion,region),text=ini({gameVersion,module:selectedModule,region,dependencies}),buffer=Buffer.from(text),hash=sha(buffer);
     const configLocal='/downloads/ps4/GTA5/plugin-configs/'+download.id+'/'+key+'/'+region.id+'/'+hash.slice(0,12)+'/plugins.ini';
     preserve(configLocal,buffer);
     const file={name:'plugins.ini',local:configLocal,bytes:buffer.length,sha256:hash,sourceUrl:'https://whatwhatboy.com'+configLocal,

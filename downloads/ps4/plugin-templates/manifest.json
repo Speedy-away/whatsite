@@ -65,13 +65,14 @@
       ],
       "plugin": "fn.sprx",
       "compatibility": "EU and Australia share CUSA07669, the title ID checked by this build. USA and Japan share CUSA07022, which is included for reference with the plugin disabled.",
-      "version": "Regional template 2026-11-08",
-      "local": "/downloads/ps4/plugin-templates/fortnite/19522833be01/plugins.ini",
-      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/plugin-templates/fortnite/19522833be01/plugins.ini",
+      "version": "Simple layout 2026-11-21",
+      "local": "/downloads/ps4/plugin-templates/fortnite/8f0cecbe7803/plugins.ini",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/plugin-templates/fortnite/8f0cecbe7803/plugins.ini",
       "provenance": "Site-authored template based on the supplied Discord configuration and the plugin title-ID check.",
-      "bytes": 325,
-      "sha256": "19522833be01c8291a60e1353a242053536fca37fc1c935133f566289ba8da4e",
-      "template": true
+      "bytes": 92,
+      "sha256": "8f0cecbe7803db10a02330c9b8eb4615e23ac69e60a840cbf5a17cd62e315372",
+      "template": true,
+      "originalTemplate": "/downloads/ps4/plugin-templates/fortnite/19522833be01/plugins.ini"
     },
     {
       "id": "rainbow-six-siege",
@@ -107,13 +108,14 @@
       ],
       "instructions": "These are the PlayStation Store game title IDs. The Apex Nware release does not document region or game-update support. The example plugin paths are commented out. Confirm the build and your installed title ID, then back up and merge the applicable section into /data/GoldHEN/plugins.ini.",
       "name": "plugins.ini",
-      "local": "/downloads/ps4/plugin-templates/apex-legends/8a975783b5f3/plugins.ini",
-      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/plugin-templates/apex-legends/8a975783b5f3/plugins.ini",
-      "version": "2026-11-16",
-      "bytes": 257,
-      "sha256": "8a975783b5f330bd29d4e5f2dafc174b6edd5b24f7eefe5cd3629588f4932f44",
+      "local": "/downloads/ps4/plugin-templates/apex-legends/87d8f22a24f5/plugins.ini",
+      "sourceUrl": "https://whatwhatboy.com/downloads/ps4/plugin-templates/apex-legends/87d8f22a24f5/plugins.ini",
+      "version": "Simple layout 2026-11-21",
+      "bytes": 110,
+      "sha256": "87d8f22a24f56263a282b468bec3651e98a0f3d4a87deba2b8239dffdc80e0dc",
       "template": true,
-      "provenance": "Title IDs from PlayStation Store PS4 listings; plugin entries commented."
+      "provenance": "Title IDs from PlayStation Store PS4 listings; plugin entries commented.",
+      "originalTemplate": "/downloads/ps4/plugin-templates/apex-legends/8a975783b5f3/plugins.ini"
     }
   ]
 }
