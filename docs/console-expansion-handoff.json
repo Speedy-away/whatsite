@@ -13552,5 +13552,29 @@
     ],
     "archiveVerified": true,
     "payloadExecuted": false
+  },
+  "ps5Gta6Saves20261123": {
+    "date": "2026-11-23",
+    "pages": [
+      "console/ps5/save-tools.html",
+      "console/ps5/game-saves/gta-6/index.html"
+    ],
+    "titleId": "PPSA01547",
+    "changes": "GTA 6 is the first Browse game saves card. Its page uses the supplied AVIF, lists both community saves with tags, and documents resigning, pairing and uploading. The PS5 saves index has a Tools section above the existing Garlic SaveMgr guide. Both pages link to GarlicTransfer v0.3.12, GarlicSaves and PlayStation-Titles. Both have curated keywords and social metadata. The GTA 6 page also has breadcrumb structured data and a sitemap entry.",
+    "artwork": "assets/images/ps5-game-saves/gta-6.avif",
+    "artworkSha256": "260e170a09af3876903aeedc1065b3c0f2154cc9bd9e8f07743dbc6b0d5ea398",
+    "garlicTransferRelease": "https://github.com/earthonion/GarlicTransfer/releases/tag/v0.3.12",
+    "saveReferences": [
+      "https://garlicsaves.com/",
+      "https://github.com/andshrew/PlayStation-Titles"
+    ],
+    "discordLinkExpiry": "2026-11-24",
+    "inventory": "docs/ps5-gta6-saves-private-inventory.json",
+    "archiveInventory": "F:\\whatsite-backup-downloads-etc\\inventories\\ps5-gta6-saves-v0.3.12.json",
+    "archiveVerified": true,
+    "archiveNote": "Both saves and GarlicTransfer v0.3.8 and v0.3.12 are preserved with verified bytes and SHA-256. The shared index merge stopped on a pre-existing missing Nintendo 3DS theme file. The scoped archive inventory is available on F:.",
+    "regenerate": "node scripts/build-ps5-game-saves.cjs",
+    "consoleImportTested": false,
+    "payloadExecuted": false
   }
 }
