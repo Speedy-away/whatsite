@@ -62,6 +62,9 @@ test('MatrixMods shows the mirrored RAR before the Discord source on the index a
   const source = matrix.archiveSourceUrl.replaceAll('&', '&amp;');
   const index = read(indexUrl.slice(1) + 'index.html');
   const pack = index.match(/<article id="multicod-matrix-menus-ps4">[\s\S]*?(?=<article id="multicod-)/)[0];
+  const bo3Card = [...pack.matchAll(/<article class="guide-resource multicod-card">([\s\S]*?)<\/article>/g)]
+    .find(([, card]) => card.includes('<h3>Call of Duty: Black Ops 3</h3>'))?.[1];
+  assert.match(bo3Card, /src="\/assets\/images\/ps4-bo3\/matrixmods\.png"/);
   const assertDownload = (card, mirror) => {
     const links = [...card.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
     const primary = links.findIndex(([, attrs]) => attrs.includes('btn-primary') && attrs.includes(`href="${mirror}"`) && /\bdownload\b/.test(attrs));

@@ -10,6 +10,12 @@ const h = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot
 const fullLink = (url, label) => require('./internal-page-navigation.cjs').apply('console/mods/index.html',`<a href="${h(url)}" target="_blank" rel="noopener noreferrer">${h(label)} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>`);
 const labels = {'menu-pack': 'Console menu packs', 'desktop-menu': 'Windows menu tools', 'desktop-helper': 'Shared Windows functions', historical: 'Historical entries'};
 
+function mappedResource(mapping, {legacy, resources}) {
+  return mapping.legacy
+    ? legacy.find(item => 'bo3-' + item.id === mapping.resourceId)
+    : resources.get(mapping.resourceId);
+}
+
 function load() {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'docs/ps4-ps5-multicod.json'), 'utf8'));
   const cod = JSON.parse(fs.readFileSync(path.join(root, 'docs/ps4-ps5-cod-resources.json'), 'utf8'));
@@ -24,7 +30,7 @@ function load() {
     ids.add(family.id);
     const mappedGames = new Set();
     for (const mapping of family.games) {
-      const item = mapping.legacy ? legacy.find(item => 'bo3-' + item.id === mapping.resourceId) : resources.get(mapping.resourceId);
+      const item = mappedResource(mapping, {legacy, resources});
       if (!games.has(mapping.gameId) || mappedGames.has(mapping.gameId) || !item || (mapping.legacy ? mapping.gameId !== 'black-ops-3' : !item.gameIds.includes(mapping.gameId))) throw new Error('Invalid MultiCOD game/resource mapping: ' + family.id);
       if (!mapping.support || !/^https:\/\//.test(mapping.source)) throw new Error('MultiCOD source and compatibility text required: ' + family.id);
       mappedGames.add(mapping.gameId);
@@ -65,7 +71,7 @@ function gameUrl(mapping, context = load()) {
 
 function mappingCard(family, mapping, context) {
   const game = context.games.get(mapping.gameId);
-  const item = context.resources.get(mapping.resourceId);
+  const item = mappedResource(mapping, context);
   const preview = family.id === 'matrix-menus-ps4' && item
     ? require('./ps4-ps5-card-images.cjs').resourceImage(item)
     : null;
@@ -106,7 +112,7 @@ function gameContent(gameId, context = load()) {
       const current = family.games.find(mapping => mapping.gameId === gameId);
       const others = family.games.filter(mapping => mapping.gameId !== gameId);
       const ready = family.id === 'matrix-menus-ps4' ? readyFileLinks(gameId, context) : '';
-      const item=current.legacy?context.legacy.find(item=>'bo3-'+item.id===current.resourceId):context.resources.get(current.resourceId);
+      const item = mappedResource(current, context);
       const preview=require('./ps4-ps5-card-images.cjs').resourceImage(item||{gameIds:[gameId]});
       return compactCard(family.title, preview?.src||context.games.get(gameId).cover, ready ? 'PS4 · choose your installed game update' : current.support,
         ready || `<div class="guide-links">${fullLink(indexUrl + '#multicod-' + family.id, 'Compare games')}</div>`,
