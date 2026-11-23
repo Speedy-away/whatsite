@@ -15,7 +15,9 @@ test('dedicated guides use their own console manager and exact FTP services',()=
   for(const host of ['apps.apple.com','play.google.com','appgallery.huawei.com'])assert.ok(html.includes(host));
   assert.ok(html.includes(iosFtpManagerUrl));
   assert.ok(html.includes(androidFtpManagerUrl));
-  assert.match(html, /id="phone"[\s\S]*?href="https:\/\/youtu\.be\/L9hW8XIJQxU\?si=vrP7tcev8AwR8v8o"[\s\S]*?Watch the phone FTP guide on YouTube/);
+  const phone = html.match(/<section[^>]*id="phone"[^>]*>[\s\S]*?<\/section>/)?.[0] || '';
+  assert.match(phone, /<iframe[^>]+src="https:\/\/www\.youtube-nocookie\.com\/embed\/L9hW8XIJQxU\?[^\"]*autoplay=0/);
+  assert.match(phone, /href="https:\/\/www\.youtube\.com\/watch\?v=L9hW8XIJQxU"/);
   assert.match(html,/Copying a file does not install or run it/);
   assert.ok(!html.includes('console-setup-popups.js'));
   assert.doesNotMatch(html,/data-(?:localized-diagram|diagram-link)|transfer-guides\/[\w-]+\.svg/);
