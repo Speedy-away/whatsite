@@ -28,7 +28,7 @@ function gtaCardForSection(item,group){
  return imported.renderer.card(item);
 }
 const gtaCards=group=>gtaItems.filter(item=>gtaSection(item)===group||(item.splitGameVersionCards&&['v156','older'].includes(group))).map(item=>gtaCardForSection(item,group));
-const gta157FeaturedIds=['gta5-lester-sprx-v2-1-57','gta5-velora-1-57','gta5-crystalis-1-57','gta5-synapse-1-57'];
+const gta157FeaturedIds=['gta5-wzsoftware-1-57','gta5-nova-protocol-1-57','gta5-mag-extortion-reborn','gta5-mag-semjase','gta5-lester-sprx-v2-1-57','gta5-velora-1-57','gta5-crystalis-1-57','gta5-synapse-1-57'];
 const unmatchedFiles=files.filter(file=>!gtaItems.some(item=>imported.matches(item,file)));
 function guideDownloads(ids,onlyDownload){
  const buttons=ids.map(id=>{
