@@ -1,6 +1,8 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const source=require('../../i18n-tools/transfer-guide-source.json');
 const codes=require('../localized-html.cjs').codes;
+const iosFtpManagerUrl='https://apps.apple.com/gb/app/ftpmanager-ftp-sftp-client/id525959186';
+const androidFtpManagerUrl='https://play.google.com/store/apps/details?id=com.ftp_manager';
 test('dedicated guides use their own console manager and exact FTP services',()=>{
  const ps4=fs.readFileSync('console/ps4/file-transfer-guide.html','utf8');
  const ps5=fs.readFileSync('console/ps5/file-transfer-guide.html','utf8');
@@ -11,12 +13,15 @@ test('dedicated guides use their own console manager and exact FTP services',()=
  for(const html of [ps4,ps5]){
   assert.match(html,/data-choose-method="ftp"/);assert.match(html,/data-choose-method="usb"/);
   for(const host of ['apps.apple.com','play.google.com','appgallery.huawei.com'])assert.ok(html.includes(host));
+  assert.ok(html.includes(iosFtpManagerUrl));
+  assert.ok(html.includes(androidFtpManagerUrl));
   assert.match(html,/Copying a file does not install or run it/);
   assert.ok(!html.includes('console-setup-popups.js'));
   assert.doesNotMatch(html,/data-(?:localized-diagram|diagram-link)|transfer-guides\/[\w-]+\.svg/);
   for(const id of ['ios','android','harmony']){
    const card=html.match(new RegExp('<article[^>]*data-phone-platform="'+id+'"[\\s\\S]*?</article>'))?.[0];
    assert.equal((card?.match(/<li><strong>/g)||[]).length,3,id+' walkthrough');
+   if(id==='android'){assert.ok(card.includes(androidFtpManagerUrl));assert.match(card,/Solid Explorer/);}
   }
  }
 });
@@ -49,9 +54,14 @@ test('new hub entry replaces the old desktop-only card on PS4 and PS5, preservin
  for(const platform of ['ps4','ps5']){
   const file='console/'+platform+'/index.html',out=apply(file,input);
   assert.match(out,new RegExp('/console/'+platform+'/file-transfer-guide.html'));assert.match(out,/Not finished/);assert.ok(!out.includes('Download FileZilla Client'));
+  assert.ok(out.includes(iosFtpManagerUrl));assert.ok(out.includes(androidFtpManagerUrl));
   assert.equal(apply(file,out),out);
  }
- assert.match(apply('console/ps3/index.html',input),/Download FileZilla Client/);
+ for(const file of ['console/ps3/index.html','console/ps3/transfer-tools.html','console/psvita/index.html','console/xbox360/index.html']){
+  const out=apply(file,input);
+  assert.match(out,/FileZilla Client · computer/);assert.ok(out.includes(iosFtpManagerUrl));assert.ok(out.includes(androidFtpManagerUrl));
+  assert.equal(apply(file,out),out);
+ }
 });
 test('guide routes, source assets and hub entry links resolve locally',()=>{
  const files=['console/ps4/file-transfer-guide.html','console/ps5/file-transfer-guide.html','console/download-center/index.html',...['ps4','ps5'].flatMap(p=>['index','transfer-tools'].map(n=>'console/'+p+'/'+n+'.html'))];

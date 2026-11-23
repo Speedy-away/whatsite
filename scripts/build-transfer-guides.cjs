@@ -7,7 +7,10 @@ const root = path.resolve(__dirname, '..');
 const guidePath = platform => `console/${platform}/file-transfer-guide.html`;
 const p = key => `<p>${esc(text[key])}</p>`;
 const a = (url, key, external = false) => `<a class="btn btn-outline" href="${esc(url)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(text[key])}</a>`;
+const namedExternal = (url, label) => `<a class="btn btn-outline" href="${esc(url)}" target="_blank" rel="noopener noreferrer"><span translate="no">${esc(label)}</span></a>`;
 const downloads = links => `<div class="guide-links tg-downloads">${links}</div>`;
+const iosFtpManagerUrl = 'https://apps.apple.com/gb/app/ftpmanager-ftp-sftp-client/id525959186';
+const androidFtpManagerUrl = 'https://play.google.com/store/apps/details?id=com.ftp_manager';
 const screenshotPath = '/assets/images/transfer-guides/screenshots/';
 const photos = {
   ps4Ip: ['ps4-connection-status.webp', 500, 278, 'ipAddress', 'Rachel Bauer / SetupRouter', 'https://setuprouter.com/find-ps4-ip-address/'],
@@ -40,6 +43,7 @@ const sources = platform => [
   [platform === 'ps4' ? 'https://github.com/Lapy055/PS4-Xplorer' : 'https://github.com/cy33hc/ps5-ezremote-client', platform === 'ps4' ? 'PS4-Xplorer' : 'ezRemote · PS5'],
   ['https://www.skyjos.com/en/ftpmanager/guide/ios/setup-connection/', 'FTPManager · iOS'],
   ['https://www.skyjos.com/en/ftpmanager/guide/ios/file-transfer/', 'FTPManager · Copy to'],
+  [androidFtpManagerUrl, 'FTP Manager · Android'],
   ['https://neatbytes.com/solidexplorer/index.php/2015/06/23/usage-basics-for-dummies/', 'Solid Explorer · Android'],
   ['https://github.com/electerm/electerm-harmony', 'electerm · HarmonyOS'],
   [platform === 'ps4' ? 'https://manuals.playstation.net/document/en/ps4/settings/nw_status.html' : 'https://www.playstation.com/en-us/support/connectivity/internet-connect-playstation/', 'PlayStation · Network'],
@@ -71,7 +75,7 @@ function buildGuide(platform) {
   const computer = part('ftp','filezilla','filezillaTitle', p('clientNote') + downloads(a('https://filezilla-project.org/download.php?show_all=1','filezillaDownload',true)) + photo('filezilla') + list(['fz1','fz2','fz3','fz4'])).replace('<section ', '<section data-ftp-device="computer" ');
   const phones = ['ios','android','harmony'].map(os=>'<a class="btn btn-outline" data-choose-phone="'+os+'" href="?method=ftp&amp;device=phone&amp;phone='+os+'#'+os+'">'+esc(text[os+'Choice'])+'</a>').join('');
   const phoneApps = [
-    ['ios', 'FTPManager', 'https://apps.apple.com/app/id525959186'],
+    ['ios', 'FTPManager', iosFtpManagerUrl],
     ['android', 'Solid Explorer', 'https://play.google.com/store/apps/details?id=pl.solidexplorer2'],
     ['harmony', 'electerm', 'https://appgallery.huawei.com/app/detail?id=org.electerm.electerm']
   ];
@@ -83,7 +87,8 @@ function buildGuide(platform) {
     const help = os === 'harmony'
       ? note(p('harmonyNote')) + downloads(a('https://electerm.org/blogs/bookmark-quick-connect/', 'officialDocs', true))
       : '';
-    return `<article class="tg-phone" data-phone-platform="${os}" id="${os}"><h3><span translate="no">${esc(name)} · </span>${esc(text[os+'Title'])}</h3>${downloads(a(url,os+'Download',true))}${walkthrough}${help}</article>`;
+    const alternatives = os === 'android' ? namedExternal(androidFtpManagerUrl, 'FTP Manager · Google Play') : '';
+    return `<article class="tg-phone" data-phone-platform="${os}" id="${os}"><h3><span translate="no">${esc(name)} · </span>${esc(text[os+'Title'])}</h3>${downloads(a(url,os+'Download',true)+alternatives)}${walkthrough}${help}</article>`;
   }).join('');
   const phone = part('ftp','phone','phoneTitle', p('phoneIntro') + '<h3>'+esc(text.phoneQuestion)+'</h3><div class="tg-choice-row" aria-label="'+esc(text.choosePhone)+'">'+phones+'</div>' + phoneCards + p('phoneFinish') + downloads(a('/guides/phone-downloads/','phoneSaving'))).replace('<section ', '<section data-ftp-device="phone" ');
   const usb = part('usb','usb','usbTitle', '<div class="tg-usb-prep">' + photo('usb') + list(['usb1','usb2','usb3','usb4']) + '</div>');
