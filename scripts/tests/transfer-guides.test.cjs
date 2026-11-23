@@ -57,7 +57,7 @@ test('new hub entry replaces the old desktop-only card on PS4 and PS5, preservin
   assert.ok(out.includes(iosFtpManagerUrl));assert.ok(out.includes(androidFtpManagerUrl));
   assert.equal(apply(file,out),out);
  }
- for(const file of ['console/ps3/index.html','console/ps3/transfer-tools.html','console/psvita/index.html','console/xbox360/index.html']){
+ for(const file of ['console/ps3/index.html','console/ps3/transfer-tools.html','console/psvita/index.html','console/psvita/home.html','console/xbox360/index.html']){
   const out=apply(file,input);
   assert.match(out,/FileZilla Client · computer/);assert.ok(out.includes(iosFtpManagerUrl));assert.ok(out.includes(androidFtpManagerUrl));
   assert.equal(apply(file,out),out);

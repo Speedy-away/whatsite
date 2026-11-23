@@ -20,7 +20,7 @@ function apply(file,html){
     }
   }
 
-  if (/^console\/(ps3|ps4|ps5|psvita|xbox360)\/(index|transfer-tools)\.html$/.test(file)) {
+  if (/^console\/(ps3|ps4|ps5|psvita|xbox360)\/(index|transfer-tools)\.html$/.test(file) || file === 'console/psvita/home.html') {
     html = html.replace(/<section\b[^>]*\bid="helpful-desktop-tools"[^>]*>[\s\S]*?<\/section>/g, '');
     const consolePlatform=/^console\/(ps[45])\//.exec(file)?.[1];
     const card = consolePlatform
