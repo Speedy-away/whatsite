@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const {section, grid, resource} = require('./build-console-guides.cjs');
+const {tagMarkup} = require('./console-mod-catalog.cjs');
 const root = path.resolve(__dirname, '..');
 const base = '/console/mods/ps4/call-of-duty/';
 const indexUrl = base + 'multicod/';
@@ -19,6 +20,7 @@ function load() {
   const ids = new Set();
   for (const family of data.families) {
     if (!/^[a-z0-9-]+$/.test(family.id) || ids.has(family.id) || !labels[family.type] || family.games.length < 2) throw new Error('Invalid MultiCOD family: ' + family.id);
+    if (family.archiveSourceUrl && new URL(family.archiveSourceUrl).protocol !== 'https:') throw new Error('MultiCOD archive source must use HTTPS: ' + family.id);
     ids.add(family.id);
     const mappedGames = new Set();
     for (const mapping of family.games) {
@@ -63,11 +65,23 @@ function gameUrl(mapping, context = load()) {
 
 function mappingCard(family, mapping, context) {
   const game = context.games.get(mapping.gameId);
+  const item = context.resources.get(mapping.resourceId);
+  const preview = family.id === 'matrix-menus-ps4' && item
+    ? require('./ps4-ps5-card-images.cjs').resourceImage(item)
+    : null;
   const ready = family.id === 'matrix-menus-ps4' ? readyFileLinks(mapping.gameId, context) : '';
   const description = ready ? 'PS4 · choose your installed game update' : mapping.support;
   const files = mapping.archiveFiles?.length ? `<p>Archive files: ${mapping.archiveFiles.map(file => `<code>${h(file)}</code>`).join(', ')}.</p>` : '';
   const details = `<p>${h(mapping.support)}</p>${files}${ready ? '<p>Firmware and title-ID ranges are not documented by the original archive. Saving an ELF does not launch it.</p>' : ''}<div class="guide-links">${fullLink(gameUrl(mapping, context), 'Open game page')}${fullLink(mapping.source, 'Source')}${ready ? `<a href="${h(context.readyFiles.find(file=>file.gameId===mapping.gameId).supportPack)}" download>Original archive</a>` : ''}</div>`;
-  return compactCard(game.title, game.cover, description, ready || `<div class="guide-links">${fullLink(gameUrl(mapping, context), 'Open game page')}</div>`, details);
+  return compactCard(game.title, preview?.src || game.cover, description, ready || `<div class="guide-links">${fullLink(gameUrl(mapping, context), 'Open game page')}</div>`, details);
+}
+
+const archiveLinkLabel = 'Download full RAR from Discord';
+
+function archiveLinks(gameId, resourceId, context) {
+  return context.data.families
+    .filter(family => family.archiveSourceUrl && family.games.some(mapping => mapping.gameId === gameId && mapping.resourceId === resourceId))
+    .map(family => ({url: family.archiveSourceUrl, label: archiveLinkLabel}));
 }
 
 function indexContent(context = load()) {
@@ -75,8 +89,10 @@ function indexContent(context = load()) {
     '<p>Choose your game and match the installed update.</p><details class="multicod-details"><summary>Compatibility notes</summary><p>MultiCOD means a resource supports more than one Call of Duty game. A PS4 payload or Windows tool does not become a native PS5 build by appearing here. PS5 use requires the resource’s documented game environment and loader.</p></details>');
   return intro + Object.entries(labels).map(([type, label]) => {
     const families = context.data.families.filter(family => family.type === type);
-    return !families.length ? '' : section('type-' + type, label, families.map(family =>
-      `<article id="multicod-${h(family.id)}"><h3>${h(family.title)}</h3><details class="multicod-details"><summary>Pack requirements</summary><p>${h(family.version)}. ${h(family.description)}</p><p>${h(family.environment)}</p></details>${grid(...family.games.map(mapping => mappingCard(family, mapping, context)))}</article>`).join(''));
+    return !families.length ? '' : section('type-' + type, label, families.map(family => {
+      const archive = family.archiveSourceUrl ? `<div class="guide-links">${fullLink(family.archiveSourceUrl, archiveLinkLabel)}</div>` : '';
+      return `<article id="multicod-${h(family.id)}"><h3>${h(family.title)}</h3>${tagMarkup(family.tags || [])}${archive}<details class="multicod-details"><summary>Pack requirements</summary><p>${h(family.version)}. ${h(family.description)}</p><p>${h(family.environment)}</p></details>${grid(...family.games.map(mapping => mappingCard(family, mapping, context)))}</article>`;
+    }).join(''));
   }).join('');
 }
 
@@ -96,4 +112,4 @@ function gameContent(gameId, context = load()) {
     }))}`);
 }
 
-module.exports = {load, gameUrl, indexContent, gameContent, readyFileLinks, indexUrl};
+module.exports = {load, gameUrl, indexContent, gameContent, readyFileLinks, archiveLinks, indexUrl};

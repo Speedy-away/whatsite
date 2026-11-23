@@ -39,6 +39,9 @@ const gameCopy = {
 };
 function metadataByPage() {
   const {games, entries} = catalog();
+  const {load, gameUrl} = require('./console-multicod.cjs');
+  const multi = load();
+  const familyKeywords = family => [family.title, ...(family.tags || []), ...(family.keywords || [])];
   const result = new Map();
   for (const game of games) {
     const matching = entries.filter(entry => entry.gameId === game.id);
@@ -46,9 +49,14 @@ function metadataByPage() {
     const matchHeading = game.id === 'fortnite';
     const pageTitle = matchHeading ? `${game.title} · ${game.platformLabel}` : `${title} | whatwhatboy`;
     const searchable = matching.filter(entry => entry.keywords.length);
+    const sharedKeywords = multi.data.families
+      .filter(family => family.games.some(mapping => mapping.gameId === game.id && matching.some(entry => entry.id === mapping.resourceId)))
+      .flatMap(family => family.keywords || []);
     const searchKeywords = unique([
+      ...sharedKeywords,
       ...searchable.map(entry => entry.name),
       ...searchable.flatMap(entry => entry.keywords.filter(term => term.startsWith(game.title + ' '))),
+      ...searchable.flatMap(entry => entry.keywords.filter(term => /\.rar$/i.test(term))),
       ...searchable.flatMap(entry => entry.keywords.filter(term => / (?:download|guide|setup|controls)$/.test(term)))
     ]);
     const items = searchable.length ? matching.map(({name, url, keywords}) => ({name, url, keywords})) : undefined;
@@ -70,12 +78,11 @@ function metadataByPage() {
     description: `Browse ${codGames.length} Call of Duty collections, from Black Ops to WWII, with game-specific menus, GSC injectors, RTM tools, previews and DLC references.`,
     keywords: unique(['Call of Duty console resources', 'COD mod menus', 'Call of Duty mod menu downloads', 'Call of Duty mod menu guides', 'PS4 Call of Duty mod menus', 'Black Ops mod menus', 'GSC injector downloads', 'GSC injector guides', 'MultiCOD', 'MAG GSC Injector', 'MAG host menus', 'PS4 off-host menus', 'BO4 Multiplayer Zombies source code', ...codGames.map(game => game.title), 'GSC injectors', 'RTM tools', 'DLC references', ...codGames.flatMap(game => gameAliases[game.id] || [])]), type: 'CollectionPage',
     items: [{name: 'MultiCOD', url: '/console/mods/ps4/call-of-duty/multicod/'}, ...codGames.map(game => ({name: game.title, url: game.url, keywords: gameAliases[game.id] || []}))]});
-  const multi = require('./console-multicod.cjs').load();
   result.set('console/mods/ps4/call-of-duty/multicod/index.html', {
     title: 'MultiCOD PS4 Host Menus, GSC Injectors & Supported Games | whatwhatboy',
-    description: 'Compare MultiCOD PS4 host-menu packs and MAG GSC injectors by supported game and update. Includes game-specific downloads, setup and compatibility notes.',
-    type: 'CollectionPage', keywords: unique(['MultiCOD', 'Multi COD PS4', 'MultiCOD PS4 downloads', 'MAG GSC Injector', 'MAG host menus', 'PS4 GSC injector', ...multi.data.families.map(f => f.title), ...multi.data.families.flatMap(f => f.games.flatMap(g => [multi.games.get(g.gameId).title, ...(gameAliases[g.gameId] || []), g.support]))]),
-    items: multi.data.families.flatMap(f => f.games.map(g => ({name: f.title + ' · ' + multi.games.get(g.gameId).title, url: require('./console-multicod.cjs').gameUrl(g, multi), keywords: [f.title, g.support, ...(gameAliases[g.gameId] || [])]})))
+    description: 'Find MatrixMods PS4 ELF downloads and MAG GSC injectors by Call of Duty game and update, with compatibility and setup notes.',
+    type: 'CollectionPage', keywords: unique(['MultiCOD', 'Multi COD PS4', 'MultiCOD PS4 downloads', 'MAG GSC Injector', 'MAG host menus', 'PS4 GSC injector', ...multi.data.families.flatMap(familyKeywords), ...multi.data.families.flatMap(f => f.games.flatMap(g => [multi.games.get(g.gameId).title, ...(gameAliases[g.gameId] || []), g.support]))]),
+    items: multi.data.families.flatMap(f => f.games.map(g => ({name: f.title + ' · ' + multi.games.get(g.gameId).title, url: gameUrl(g, multi), keywords: unique([...familyKeywords(f), g.support, ...(gameAliases[g.gameId] || [])])})))
   });
   const vault = require('../docs/console-vault-resources.json');
   result.set('console/vault.html', {title: 'The Vault: Console Apps, Updates & Reference Sites | whatwhatboy',

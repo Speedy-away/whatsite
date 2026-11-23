@@ -71,6 +71,7 @@ function validate() {
 validate();
 
 const included = data.resources.filter(item => item.publication === 'include');
+const multiContext = multiCod.load();
 const itemsFor = game => included.filter(item => item.gameIds.includes(game.id));
 const visibleGames = data.games.filter(game => itemsFor(game).length || game.id === 'black-ops-3' && legacy.length);
 const nav = [['/console/mods/', 'Console Mods'], ['/console/mods/ps4/', 'PS4/PS5 Games'], [base, 'Call of Duty']];
@@ -88,21 +89,24 @@ const contentWithOffHost = items => {
 for (const game of visibleGames) {
   if (infiniteWarfareOnly && game.id !== 'infinite-warfare') continue;
   if (multiGameOnly && !multiGamePages.has(game.id)) continue;
-  const items = itemsFor(game);
+  const items = itemsFor(game).map(item => {
+    const links = multiCod.archiveLinks(game.id, item.id, multiContext);
+    return links.length ? {...item, relatedLinks: [...(item.relatedLinks || []), ...links]} : item;
+  });
   if (game.id === 'black-ops-3') {
     const target = path.join(root, 'console/mods/ps4/call-of-duty/black-ops-3/index.html');
     const html = fs.readFileSync(target, 'utf8');
     const marker = '</div>\n<footer class="guide-footer">';
     assert(html.includes(marker), 'legacy BO3 content marker is missing');
     const imported = items.length ? gameContent(items.map(item => ({...item, videos: []}))) : '';
-    fs.writeFileSync(target, html.replace(marker, imported + multiCod.gameContent(game.id) + marker));
+    fs.writeFileSync(target, html.replace(marker, imported + multiCod.gameContent(game.id, multiContext) + marker));
     continue;
   }
   if (!items.length) continue;
   page('console/mods/ps4/call-of-duty/' + game.slug + '/index.html', game.title + ' · PS4/PS5 Resources',
     game.resourceDescription || 'Downloads, screenshots and supplied guides for ' + game.title + ' in the PS4/PS5 collection.',
     game.cover, [...multiNav, [base + game.slug + '/', game.title.replace(/^Call of Duty: /, '')]],
-    (['black-ops-1', 'black-ops-2'].includes(game.id) ? crashSection : '') + contentWithOffHost(items.map(item => ({...item, videos: []}))) + multiCod.gameContent(game.id),
+    (['black-ops-1', 'black-ops-2'].includes(game.id) ? crashSection : '') + contentWithOffHost(items.map(item => ({...item, videos: []}))) + multiCod.gameContent(game.id, multiContext),
     '#content', 'Browse resources');
 }
 
@@ -116,5 +120,5 @@ page('console/mods/ps4/call-of-duty/index.html', 'Call of Duty · PS4/PS5 Resour
   '#games', 'Browse games');
 if (!infiniteWarfareOnly) page('console/mods/ps4/call-of-duty/multicod/index.html', 'MultiCOD · Supported Games',
   'Shared Call of Duty menu packs and tools, with a separate resource entry for every source-confirmed supported game.',
-  hubCover, multiNav, multiCod.indexContent(), '#supported-games', 'Choose supported game');
+  hubCover, multiNav, multiCod.indexContent(multiContext), '#supported-games', 'Choose supported game');
 console.log(multiGameOnly ? 'Built MultiCOD index, COD hub and seven game-specific resource pages.' : `Built PS4/PS5 COD collection: ${visibleGames.length} games, ${included.length} new included resources; legacy BO3 preserved.`);

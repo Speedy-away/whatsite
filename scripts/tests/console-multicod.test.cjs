@@ -56,6 +56,28 @@ test('Windows tools preserve per-version and partial-function compatibility', ()
   assert.ok(!data.families.some(family => family.id === 'bo1-bo2-payload-injector-debug'));
 });
 
+test('MatrixMods shows the shared RAR source and supplied previews on the index and game pages', () => {
+  const context = load();
+  const matrix = context.data.families.find(family => family.id === 'matrix-menus-ps4');
+  const source = matrix.archiveSourceUrl.replaceAll('&', '&amp;');
+  const index = read(indexUrl.slice(1) + 'index.html');
+  const pack = index.match(/<article id="multicod-matrix-menus-ps4">[\s\S]*?(?=<article id="multicod-)/)[0];
+  assert.ok(pack.includes(`href="${source}"`));
+  for (const mapping of matrix.games.filter(mapping => !mapping.legacy)) {
+    const [url, anchor] = gameUrl(mapping, context).split('#');
+    const resource = context.resources.get(mapping.resourceId);
+    const image = resource.images[0].original;
+    const html = read(url.slice(1) + 'index.html');
+    const card = html.slice(html.indexOf(`id="${anchor}"`)).split('</article>')[0];
+    assert.match(image, /-matrixmods-user-preview\.png$/);
+    assert.ok(fs.existsSync(path.join(root, image.slice(1))), image);
+    assert.ok(pack.includes(`src="${image}"`), mapping.gameId);
+    assert.ok(card.includes(`src="${image}"`), mapping.gameId);
+    assert.ok(card.includes(`href="${source}"`), mapping.gameId);
+    assert.ok(card.includes(`href="/downloads/ps4-ps5/${resource.id}/MatrixMenusPS4.rar"`), mapping.gameId);
+  }
+});
+
 test('archived Matrix ELF links select the exact game and preserve PS4-only download routes', () => {
   const context = load();
   assert.equal(context.readyFiles.length, 8);
@@ -73,7 +95,7 @@ test('archived Matrix ELF links select the exact game and preserve PS4-only down
   assert.equal(readyFileLinks('black-ops-1', context), '');
 });
 
-test('new index and seven expanded pages have full-page cross-links and no video players', () => {
+test('the MultiCOD index and shared resource sections have full-page cross-links and no video players', () => {
   const index = read('console/mods/ps4/call-of-duty/multicod/index.html');
   assert.match(index, /does not become a native PS5 build/);
   for (const slug of ['black-ops-1', 'black-ops-2', 'wwii', 'ghosts', 'black-ops-3', 'advanced-warfare', 'modern-warfare-remastered']) {
@@ -94,7 +116,7 @@ test('new index and seven expanded pages have full-page cross-links and no video
       else assert.doesNotMatch(tag, /target="_blank"/);
       assert.doesNotMatch(tag, /data-guide-open/);
     }
-    assert.doesNotMatch(html, /<video\b|<iframe\b[^>]*youtube|youtube-nocookie/);
+    assert.doesNotMatch(section, /<video\b|<iframe\b[^>]*youtube|youtube-nocookie/);
   }
   assert.doesNotMatch(index, /<video\b|<iframe\b|data-guide-open|\b(?:DEX|HEN) variants\b/);
   for (const card of index.matchAll(/<article class="guide-resource multicod-card">([\s\S]*?)<\/article>/g)) {
