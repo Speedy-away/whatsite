@@ -11,7 +11,7 @@ const gameCopy = {
       'Apex Legends PS4 SPRX', 'Apex Legends SPRX download', 'Apex Legends nware', 'Apex Legends nware download',
       'nware PS4', 'nware Apex Legends', 'nware mod menu', 'nware PS4 mod menu', 'nware download', 'nware SPRX', 'nware screenshot']],
   'fortnite': ['Fortnite PS4 Cheats & Mod Menus', 'Browse Fortnite PS4 mod menus, GoldHEN setup and a user-submitted Fortnite download-file cleanup tip for the matching CUSA title ID.',
-    ['Fortnite Pirate Token', 'Pirate Token hack', 'auto farmer Pirate Token', 'Pirate Token auto farmer',
+    ['OLE8 FN PS4 download', 'O1E8 FN PRX', 'crack_o1e8_v120.prx', 'Infinity Mod Menu PS4 download', 'Fortnite PS4 PRX download', 'Fortnite Pirate Token', 'Pirate Token hack', 'auto farmer Pirate Token', 'Pirate Token auto farmer',
       'Fortnite Pirate Token farm', 'Fortnite PS4 Pirate Token', 'Fortnite Pirate Tokens', 'Fortnite chest auto farmer',
       'Fortnite PS4 cheat', 'Fortnite PS4 hacks', 'Fortnite PS4 cheat menu', 'Fortnite cheats PS4', 'Fortnite hacks PS4', 'PlayStation 4 Fortnite cheats',
       'Fortnite PS4 mods', 'Fortnite PS4 mod menus', 'Fortnite PS4 mod menu download', 'Fortnite PS4 SPRX download', 'Fortnite PS4 GoldHEN plugin',
