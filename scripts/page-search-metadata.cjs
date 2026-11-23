@@ -408,6 +408,10 @@ function transform(file, before, options = {}) {
     }
   }
   const aliasModule = path.join(__dirname, 'page-search-tags.cjs');
+  const ftpCardRoute = /^console\/(?:ps[345]|psvita|xbox360)\/(?:index|transfer-tools)\.html$/.test(relative) || relative === 'console/psvita/home.html';
+  if (!noindex && !redirect && ftpCardRoute && before.includes('id="helpful-desktop-tools"')) {
+    terms.splice(1, 0, ...require('./transfer-guide-seo.cjs').mobileKeywords, 'console FTP file transfer');
+  }
   if (!noindex && !redirect && fs.existsSync(aliasModule) && !override?.exactKeywords && !editorial?.exactKeywords) {
     const subjectHeadings = subject + ' ' + [...content.matchAll(/<h[123]\b[^>]*>([\s\S]*?)<\/h[123]>/gi)].map(m => plain(m[1])).join(' ');
     const discovery = require(aliasModule).aliasesFor(subjectHeadings);

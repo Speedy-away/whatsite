@@ -26,10 +26,12 @@ function apply(file,html){
     const card = consolePlatform
       ? `<section id="helpful-desktop-tools" class="section"><div class="container"><h2 class="section-title">Transfer files to your console</h2><article class="guide-resource tg-guide-entry" data-search="${require('./transfer-guide-seo.cjs').keywords(consolePlatform).join(' ')}"><h3>${consolePlatform.toUpperCase()} · FTP / USB</h3><p>Choose FTP or USB for a simple guide with pictures, phone apps and file management steps.</p><div class="guide-links" style="justify-content:center;width:100%"><a class="btn btn-primary" href="/console/${consolePlatform}/file-transfer-guide.html">Open transfer guide</a>${mobileFtpLinks}<a class="btn btn-outline" href="/console/download-center/">Download Center <span>·</span> <span>Not finished</span></a></div></article></div></section>`
       : `<section id="helpful-desktop-tools" class="section"><div class="container"><h2 class="section-title">FTP clients for your console</h2><article class="guide-resource"><h3>FTP from a computer or phone</h3><p>Start the console's FTP service, then connect with its local IP address, port and required login. Keep both devices on the same trusted local network and do not forward the FTP port on your router.</p><div class="guide-links"><a class="btn btn-primary" href="https://filezilla-project.org/download.php?show_all=1" target="_blank" rel="noopener noreferrer">FileZilla Client · computer</a>${mobileFtpLinks}</div></article></div></section>`;
+    const {mobileBadges}=require('./transfer-guide-seo.cjs');
+    const taggedCard=card.replace('</h3>','</h3>'+mobileBadges());
     const firmware = /<section\b[^>]*\bid="(?:firmware-jailbreak|console-hub-setup)"[^>]*>/;
     const setup = /<div\b[^>]*\bid="console-hub-setup"[^>]*>/;
     const before = /^console\/ps[45]\/index\.html$/.test(file) && (html.match(firmware) || html.match(setup));
-    html = before ? html.replace(before[0], card + before[0]) : html.replace('<div id="content">', '<div id="content">' + card);
+    html = before ? html.replace(before[0], taggedCard + before[0]) : html.replace('<div id="content">', '<div id="content">' + taggedCard);
   }
 return addTitleIdCopy(html);}
 module.exports={apply,prepare};if(require.main===module)console.log('Prepared '+prepare().length+' regional templates');

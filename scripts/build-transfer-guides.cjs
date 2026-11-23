@@ -11,6 +11,7 @@ const namedExternal = (url, label) => `<a class="btn btn-outline" href="${esc(ur
 const downloads = links => `<div class="guide-links tg-downloads">${links}</div>`;
 const iosFtpManagerUrl = 'https://apps.apple.com/gb/app/ftpmanager-ftp-sftp-client/id525959186';
 const androidFtpManagerUrl = 'https://play.google.com/store/apps/details?id=com.ftp_manager';
+const phoneFtpVideo = 'https://youtu.be/L9hW8XIJQxU?si=vrP7tcev8AwR8v8o';
 const screenshotPath = '/assets/images/transfer-guides/screenshots/';
 const photos = {
   ps4Ip: ['ps4-connection-status.webp', 500, 278, 'ipAddress', 'Rachel Bauer / SetupRouter', 'https://setuprouter.com/find-ps4-ip-address/'],
@@ -90,7 +91,7 @@ function buildGuide(platform) {
     const alternatives = os === 'android' ? namedExternal(androidFtpManagerUrl, 'FTP Manager · Google Play') : '';
     return `<article class="tg-phone" data-phone-platform="${os}" id="${os}"><h3><span translate="no">${esc(name)} · </span>${esc(text[os+'Title'])}</h3>${downloads(a(url,os+'Download',true)+alternatives)}${walkthrough}${help}</article>`;
   }).join('');
-  const phone = part('ftp','phone','phoneTitle', p('phoneIntro') + '<h3>'+esc(text.phoneQuestion)+'</h3><div class="tg-choice-row" aria-label="'+esc(text.choosePhone)+'">'+phones+'</div>' + phoneCards + p('phoneFinish') + downloads(a('/guides/phone-downloads/','phoneSaving'))).replace('<section ', '<section data-ftp-device="phone" ');
+  const phone = part('ftp','phone','phoneTitle', p('phoneIntro') + downloads(namedExternal(phoneFtpVideo, 'Watch the phone FTP guide on YouTube')) + '<h3>'+esc(text.phoneQuestion)+'</h3><div class="tg-choice-row" aria-label="'+esc(text.choosePhone)+'">'+phones+'</div>' + phoneCards + p('phoneFinish') + downloads(a('/guides/phone-downloads/','phoneSaving'))).replace('<section ', '<section data-ftp-device="phone" ');
   const usb = part('usb','usb','usbTitle', '<div class="tg-usb-prep">' + photo('usb') + list(['usb1','usb2','usb3','usb4']) + '</div>');
   const manager = part('usb','file-manager',platform+'ManagerTitle', p(platform+'ManagerIntro') + downloads(a(ps4?'/console/ps4/apps.html':'/console/ps5/transfer-tools.html',platform+'App')) + photo(platform+'Manager') + p(platform+'Controls') + p(platform+'ManagerSteps') + note(p('managerFinish')));
   const destination = section('destination',text.destinations,p('destinationNote')+p('pkgNote')).replace('<section ', '<section data-transfer-shared ');

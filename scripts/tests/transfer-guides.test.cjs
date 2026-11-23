@@ -15,6 +15,7 @@ test('dedicated guides use their own console manager and exact FTP services',()=
   for(const host of ['apps.apple.com','play.google.com','appgallery.huawei.com'])assert.ok(html.includes(host));
   assert.ok(html.includes(iosFtpManagerUrl));
   assert.ok(html.includes(androidFtpManagerUrl));
+  assert.match(html, /id="phone"[\s\S]*?href="https:\/\/youtu\.be\/L9hW8XIJQxU\?si=vrP7tcev8AwR8v8o"[\s\S]*?Watch the phone FTP guide on YouTube/);
   assert.match(html,/Copying a file does not install or run it/);
   assert.ok(!html.includes('console-setup-popups.js'));
   assert.doesNotMatch(html,/data-(?:localized-diagram|diagram-link)|transfer-guides\/[\w-]+\.svg/);
@@ -116,7 +117,8 @@ test('guide metadata names the taught protocols, correct console manager and art
   const schema=JSON.parse(html.match(/<script id="site-page-schema" type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   const article=schema['@graph'].find(x=>x['@type']==='TechArticle');
   const breadcrumb=schema['@graph'].find(x=>x['@type']==='BreadcrumbList');
-  assert.ok(article);assert.equal(article.dateModified,'2026-11-11');
+  assert.ok(article);assert.equal(article.dateModified,'2026-11-23');
+  assert.match(words,/FTPManager iOS/);assert.match(words,/FTP Manager Android/);
   assert.deepEqual(breadcrumb.itemListElement.map(x=>x.position),[1,2,3,4]);
   assert.ok(html.includes('class="tg-tags"'));assert.ok(html.includes('data-search='));
  }
