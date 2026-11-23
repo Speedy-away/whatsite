@@ -13,6 +13,7 @@ const libraryArtwork = new Set([
 ].map(name => 'assets/images/playstation-library/' + name).concat('assets/images/wwbsgames.svg'));
 const legacyLibraryShard = /^assets\/playstation-library\/legacy\/([a-f0-9]{2})\.json$/;
 const siteDownloads = new Set([
+  'downloads/ps4/BO3/both/MatrixMenusPS4.rar',
   'downloads/ps4-ps5/aw-matrixmods/MatrixMenusPS4.rar',
   'downloads/ps4-ps5/ghosts-matrixmods/MatrixMenusPS4.rar',
   'downloads/ps4-ps5/mwr-matrixmods/MatrixMenusPS4.rar'

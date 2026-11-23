@@ -25,6 +25,7 @@ test('main Pages excludes migrated native hosts and internals but retains compat
 });
 test('MatrixMods primary RAR mirrors stay on Pages when other archives move to repository delivery', () => {
   const mirrors = ['aw', 'ghosts', 'mwr'].map(game => `downloads/ps4-ps5/${game}-matrixmods/MatrixMenusPS4.rar`);
+  mirrors.push('downloads/ps4/BO3/both/MatrixMenusPS4.rar');
   const other = 'downloads/test/ordinary-archive.rar';
   const sizes = new Map(mirrors.map(name => [name, 215383]));
   sizes.set(other, LIMIT);

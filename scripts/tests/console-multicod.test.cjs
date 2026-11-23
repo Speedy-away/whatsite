@@ -102,6 +102,19 @@ test('archived Matrix ELF links select the exact game and preserve PS4-only down
   assert.equal(readyFileLinks('black-ops-1', context), '');
 });
 
+test('BO3 MatrixMods uses the site RAR and original Discord post with Matrix search terms', () => {
+  const html = read('console/mods/ps4/call-of-duty/black-ops-3/index.html');
+  const card = html.match(/<article\b[^>]*id="resource-bo3-matrix"[\s\S]*?<\/article>/)[0];
+  const mirror = card.match(/<a\b[^>]*href="\/downloads\/ps4\/BO3\/both\/MatrixMenusPS4\.rar"[^>]*download[^>]*>[\s\S]*?<\/a>/);
+  const source = card.match(/<a\b[^>]*href="https:\/\/discord\.com\/channels\/1528329794947776572\/1565343630321909790"[^>]*>[\s\S]*?<\/a>/);
+  assert.match(mirror?.[0], /btn-primary[\s\S]*?Download MatrixMods RAR/);
+  assert.match(source?.[0], /Discord source/);
+  assert.ok(mirror.index < source.index);
+  for (const tag of ['PS4', 'ELF', 'MultiCOD', 'BO3']) assert.ok(card.includes(`class="feature-tag">${tag}</li>`));
+  assert.match(card, /matrix bo3 mod menu/);
+  assert.match(html, /<meta name="keywords" content="[^"]*Matrix mod menu/);
+});
+
 test('the MultiCOD index and shared resource sections have full-page cross-links and no video players', () => {
   const index = read('console/mods/ps4/call-of-duty/multicod/index.html');
   assert.match(index, /does not become a native PS5 build/);
