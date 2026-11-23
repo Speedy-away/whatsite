@@ -23,6 +23,15 @@ test('main Pages excludes migrated native hosts and internals but retains compat
   for (const name of ['.git/config','.agents/skills/a','scripts/test.cjs','docs/qa/a.txt','docs/screenshots/a.png','hosts/runtime/ps4/index.html']) assert.equal(eligible(name), false, name);
   for (const name of ['hosts/index.html','docs/host-actions-ps4.json','downloads/helpers/old/helper.html','CNAME']) assert.equal(eligible(name), true, name);
 });
+test('MatrixMods primary RAR mirrors stay on Pages when other archives move to repository delivery', () => {
+  const mirrors = ['aw', 'ghosts', 'mwr'].map(game => `downloads/ps4-ps5/${game}-matrixmods/MatrixMenusPS4.rar`);
+  const other = 'downloads/test/ordinary-archive.rar';
+  const sizes = new Map(mirrors.map(name => [name, 215383]));
+  sizes.set(other, LIMIT);
+  const {offloaded} = plan(path.resolve(__dirname, '../..'), [...sizes.keys()], 'main', sizes);
+  for (const name of mirrors) assert.equal(offloaded.has(name), false, name);
+  assert.equal(offloaded.get(other), rawURL(other));
+});
 test('Pages stages one native ad rail and preserves excluded documents', () => {
   const root = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'pages-ads-'));
   try {

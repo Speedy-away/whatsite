@@ -56,13 +56,21 @@ test('Windows tools preserve per-version and partial-function compatibility', ()
   assert.ok(!data.families.some(family => family.id === 'bo1-bo2-payload-injector-debug'));
 });
 
-test('MatrixMods shows the shared RAR source and supplied previews on the index and game pages', () => {
+test('MatrixMods shows the mirrored RAR before the Discord source on the index and game pages', () => {
   const context = load();
   const matrix = context.data.families.find(family => family.id === 'matrix-menus-ps4');
   const source = matrix.archiveSourceUrl.replaceAll('&', '&amp;');
   const index = read(indexUrl.slice(1) + 'index.html');
   const pack = index.match(/<article id="multicod-matrix-menus-ps4">[\s\S]*?(?=<article id="multicod-)/)[0];
-  assert.ok(pack.includes(`href="${source}"`));
+  const assertDownload = (card, mirror) => {
+    const links = [...card.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
+    const primary = links.findIndex(([, attrs]) => attrs.includes('btn-primary') && attrs.includes(`href="${mirror}"`) && /\bdownload\b/.test(attrs));
+    const discord = links.findIndex(([, attrs]) => attrs.includes(`href="${source}"`));
+    assert.ok(primary >= 0 && discord > primary, mirror);
+    assert.match(links[primary][2], /Download MatrixMods RAR/);
+    assert.match(links[discord][2], /Discord source/);
+  };
+  assertDownload(pack, matrix.archiveMirror);
   for (const mapping of matrix.games.filter(mapping => !mapping.legacy)) {
     const [url, anchor] = gameUrl(mapping, context).split('#');
     const resource = context.resources.get(mapping.resourceId);
@@ -73,8 +81,7 @@ test('MatrixMods shows the shared RAR source and supplied previews on the index 
     assert.ok(fs.existsSync(path.join(root, image.slice(1))), image);
     assert.ok(pack.includes(`src="${image}"`), mapping.gameId);
     assert.ok(card.includes(`src="${image}"`), mapping.gameId);
-    assert.ok(card.includes(`href="${source}"`), mapping.gameId);
-    assert.ok(card.includes(`href="/downloads/ps4-ps5/${resource.id}/MatrixMenusPS4.rar"`), mapping.gameId);
+    assertDownload(card, `/downloads/ps4-ps5/${resource.id}/MatrixMenusPS4.rar`);
   }
 });
 

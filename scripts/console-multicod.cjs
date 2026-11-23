@@ -76,12 +76,12 @@ function mappingCard(family, mapping, context) {
   return compactCard(game.title, preview?.src || game.cover, description, ready || `<div class="guide-links">${fullLink(gameUrl(mapping, context), 'Open game page')}</div>`, details);
 }
 
-const archiveLinkLabel = 'Download full RAR from Discord';
+const archiveSourceLabel = 'Discord source';
 
 function archiveLinks(gameId, resourceId, context) {
   return context.data.families
     .filter(family => family.archiveSourceUrl && family.games.some(mapping => mapping.gameId === gameId && mapping.resourceId === resourceId))
-    .map(family => ({url: family.archiveSourceUrl, label: archiveLinkLabel}));
+    .map(family => ({url: family.archiveSourceUrl, label: archiveSourceLabel}));
 }
 
 function indexContent(context = load()) {
@@ -90,7 +90,9 @@ function indexContent(context = load()) {
   return intro + Object.entries(labels).map(([type, label]) => {
     const families = context.data.families.filter(family => family.type === type);
     return !families.length ? '' : section('type-' + type, label, families.map(family => {
-      const archive = family.archiveSourceUrl ? `<div class="guide-links">${fullLink(family.archiveSourceUrl, archiveLinkLabel)}</div>` : '';
+      const download = family.archiveMirror ? `<a class="btn btn-primary" href="${h(family.archiveMirror)}" download="${h(family.archiveFilename)}"><i class="fas fa-download" aria-hidden="true"></i> Download MatrixMods RAR</a>` : '';
+      const source = family.archiveSourceUrl ? fullLink(family.archiveSourceUrl, archiveSourceLabel) : '';
+      const archive = download || source ? `<div class="guide-links">${download}${source}</div>` : '';
       return `<article id="multicod-${h(family.id)}"><h3>${h(family.title)}</h3>${tagMarkup(family.tags || [])}${archive}<details class="multicod-details"><summary>Pack requirements</summary><p>${h(family.version)}. ${h(family.description)}</p><p>${h(family.environment)}</p></details>${grid(...family.games.map(mapping => mappingCard(family, mapping, context)))}</article>`;
     }).join(''));
   }).join('');

@@ -12,6 +12,11 @@ const libraryArtwork = new Set([
   'bloodborne.webp', 'god-of-war-iii.webp', 'astro-bot.png'
 ].map(name => 'assets/images/playstation-library/' + name).concat('assets/images/wwbsgames.svg'));
 const legacyLibraryShard = /^assets\/playstation-library\/legacy\/([a-f0-9]{2})\.json$/;
+const siteDownloads = new Set([
+  'downloads/ps4-ps5/aw-matrixmods/MatrixMenusPS4.rar',
+  'downloads/ps4-ps5/ghosts-matrixmods/MatrixMenusPS4.rar',
+  'downloads/ps4-ps5/mwr-matrixmods/MatrixMenusPS4.rar'
+]);
 const encodePath = name => name.split('/').map(encodeURIComponent).join('/');
 function rawURL(name, revision = 'main') {
   if (!/^(?:main|[a-f0-9]{40})$/.test(revision)) throw Error('Invalid repository revision');
@@ -75,7 +80,7 @@ function plan(root = ROOT, names, revision = 'main', sizes, reservedBytes = 0, p
   const files = [...new Set(names)].filter(eligible).filter(name => !/^hosts\/runtime\/karo-/.test(name) || !activeKaro || name.startsWith(activeKaro)).map(name => ({name, bytes: sizes ? sizes.get(name) : fs.statSync(path.join(root, name)).size}));
   let bytes = reservedBytes + files.reduce((sum, f) => sum + f.bytes, 0);
   const candidates = files.filter(f =>
-    (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
+    (f.name.startsWith('downloads/') && !protectedFiles.has(f.name) && !siteDownloads.has(f.name) && !/\.(?:html|js|mjs|css|json|wasm|txt|md|xml|ini|cfg|conf|lua|gsc|csc|c|cc|cpp|h|hpp|py|ps1|sh|bat|cmd|ct|cht|csv|tsv|yml|yaml|toml|svg|png|jpe?g|webp|gif|avif|ico)$/i.test(f.name)) ||
     legacyLibraryShard.test(f.name) ||
     isBuildRecord(f.name) ||
     /^scooby\/(?:FSL\/)?WINMM\.dll$/i.test(f.name) ||
