@@ -13576,5 +13576,19 @@
     "regenerate": "node scripts/build-ps5-game-saves.cjs",
     "consoleImportTested": false,
     "payloadExecuted": false
+  },
+  "ps5PsnAccountId20261123": {
+    "date": "2026-11-23",
+    "page": "console/ps5/save-tools.html#tools",
+    "changes": "Added the Windows Extrator PSN release under Tools with Windows, Base64, Remote Play and Chiaki tags and PSN account ID search terms.",
+    "release": "https://github.com/thiagozerolag/extrator-psn-gui/releases/tag/v1.0",
+    "version": "v1.0",
+    "releaseAsset": "Extrator_PSN_Portal_Latency_Lab.exe.exe",
+    "bytes": 13621820,
+    "sha256": "1d08793d22009b5f41ee2aa601be21a6369acd8eb5d28ab540d6adde1150fa81",
+    "inventory": "docs/ps5-psn-account-id-private-inventory.json",
+    "archiveInventory": "F:\\whatsite-backup-downloads-etc\\inventories\\ps5-psn-account-id-private-inventory.json",
+    "archiveVerified": true,
+    "payloadExecuted": false
   }
 }

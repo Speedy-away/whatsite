@@ -15,14 +15,14 @@ function buildPs5GameSaves() {
   const garlicTransferDownload = ext(garlicTransferRelease, `Download GarlicTransfer v${garlicTransferVersion}`);
   const gta6PlatinumSave = 'https://cdn.discordapp.com/attachments/1574118029682417724/1574165882547081377/GTA6_Platinum_Save.zip?ex=6b05f938&is=6b04a7b8&hm=825b3f45bde9ab49bffa26dbae14e4e5736e0bcc3723bbd3fa4f5a8221d68696&';
   const gta6StorySave = 'https://cdn.discordapp.com/attachments/1574118029682417724/1574273523189424290/resign_23d04672.zip?ex=6b05b4b8&is=6b046338&hm=9c0a7cf9b1c72260db4a3b3dac8aa4c2f55244060df4e3f6de3462b3beb0d594&';
-  const saveTags = (card, tags) => card.replace('<div class="guide-links">',
-    `<ul class="guide-resource-tags" aria-label="Save tags">${tags.map(tag => `<li class="feature-tag">${esc(tag)}</li>`).join('')}</ul><div class="guide-links">`);
+  const taggedResource = (card, tags, label = 'Save tags') => card.replace('<div class="guide-links">',
+    `<ul class="guide-resource-tags" aria-label="${esc(label)}">${tags.map(tag => `<li class="feature-tag">${esc(tag)}</li>`).join('')}</ul><div class="guide-links">`);
 
   page('console/ps5/save-tools.html', 'PS5 Game saves',
     'Find PS5 community save samples, back up and import saves with Garlic SaveMgr, or browse the PS4 save catalogue for PS4 games played on a PS5.',
     ps5SaveImage, ps5nav,
     section('saves', 'Browse game saves', grid(
-      saveTags(resource('Grand Theft Auto VI (GTA 6)',
+      taggedResource(resource('Grand Theft Auto VI (GTA 6)',
         'PS5 Platinum save, full story save with $99,999,999, and a GarlicTransfer upload guide for PPSA01547.',
         link(gta6Page, 'Browse GTA 6 saves'), gta6Image, 'Grand Theft Auto VI artwork'),
         ['PS5', 'PPSA01547', 'Platinum save', 'Story save']),
@@ -44,7 +44,11 @@ function buildPs5GameSaves() {
         ext(garlicSaves, 'Open GarlicSaves')),
       resource('PlayStation-Titles',
         'Look up PS4 and PS5 game title IDs before choosing a compatible save.',
-        ext(ps5TitleLookup, 'Browse PS5 title IDs') + ext(playstationTitles, 'View on GitHub'))
+        ext(ps5TitleLookup, 'Browse PS5 title IDs') + ext(playstationTitles, 'View on GitHub')),
+      taggedResource(resource('Grab PSN Account ID',
+        'Use Extrator PSN on Windows to get your own Base64 PlayStation Network account ID for Remote Play clients such as Chiaki.',
+        ext('https://github.com/thiagozerolag/extrator-psn-gui/releases/tag/v1.0', 'Download v1.0 for Windows')),
+        ['Windows', 'Base64', 'Remote Play', 'Chiaki'], 'Tool tags')
     )) +
     section('save-tools', 'Back up and import saves with Garlic SaveMgr', grid(
       resource(`Garlic SaveMgr · ${garlic.version}`,
@@ -72,9 +76,9 @@ function buildPs5GameSaves() {
       grid(
         resource(`GarlicTransfer v${garlicTransferVersion}`, 'Open the release and choose the Windows installer under Assets.',
           garlicTransferDownload),
-        saveTags(resource('GTA 6 Platinum Save', 'Community Platinum save for PS5. The Discord link expires on 24 November 2026.',
+        taggedResource(resource('GTA 6 Platinum Save', 'Community Platinum save for PS5. The Discord link expires on 24 November 2026.',
           ext(gta6PlatinumSave, 'Download GTA6_Platinum_Save.zip')), ['PS5', 'PPSA01547', 'Platinum trophy']),
-        saveTags(resource('Full story save with $99,999,999', 'Community save with the story completed. The Discord link expires on 24 November 2026.',
+        taggedResource(resource('Full story save with $99,999,999', 'Community save with the story completed. The Discord link expires on 24 November 2026.',
           ext(gta6StorySave, 'Download resign_23d04672.zip')), ['PS5', 'PPSA01547', 'Story completed', '$99,999,999'])
       )) +
     section('pair-ps5', 'Pair your PS5', steps([
