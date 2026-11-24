@@ -3,7 +3,7 @@ const {relativePath,eligible}=require('./site-public-pages.cjs');
 const stylesheet='<link rel="stylesheet" href="/assets/mod-catalog-layout.css?v=1">';
 function isModPage(file){
  file=relativePath(file);
- return eligible(file)&&!file.startsWith('hosts/')&&(/(?:^|\/)(?:mods|discord-mods)(?:\/|\.html$)/.test(file)||/(?:^|\/)(?:game-mods|3ds-mods|mod-menus)\.html$/.test(file));
+ return eligible(file)&&!file.startsWith('hosts/')&&(file==='console/ps5/game-cheats.html'||/(?:^|\/)(?:mods|discord-mods)(?:\/|\.html$)/.test(file)||/(?:^|\/)(?:game-mods|3ds-mods|mod-menus)\.html$/.test(file));
 }
 function removeGenericMediaLinks(html){
  return html.replace(/<article\b[\s\S]*?<\/article>/g,card=>card.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g,anchor=>{

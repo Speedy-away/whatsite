@@ -25,6 +25,7 @@ function repair(){
     item=mapping&&art.resources.find(r=>r.id===mapping.resourceId);
     if(item)image=art.resourceImage(item);
    }
+   if(item?.hideFallbackArtwork&&!image)return all;
    const source=image?.src||art.gameImage(catalogGame)||art.gameImage(pageGame?.id)||art.gameImage(ps5Slug)||art.gameImage(null,title.replaceAll('&amp;','&'));
    if(!art.exists(source)){report.unresolved.push({file,title});return all;}
    image||={src:source,alt:(pageGame?.title||title.replaceAll('&amp;','&'))+' artwork',kind:'artwork'};

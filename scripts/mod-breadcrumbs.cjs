@@ -23,6 +23,7 @@ function trail(file,html){
   else if(file.startsWith('console/retro/3ds'))rows.push(['/console/retro/3ds.html','Nintendo 3DS']);
   else if(file.startsWith('console/wiiu/'))rows.push(['/console/wiiu/mods.html','Wii U']);
   else if(file.startsWith('console/ps5/'))rows.push(['/console/ps5/','PS5']);
+  if(file==='console/ps5/game-cheats.html')rows.push(['/console/ps5/mods.html','PS5 Mods / Mod Menus']);
  }else rows.push(['/pc/','PC'],['/pages/mods.html','Mods / Mod Menus']);
  const parts=file.split('/');
  for(let i=2;i<parts.length;i++){

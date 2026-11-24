@@ -14,8 +14,8 @@
       "title": "Call of Duty: Black Ops 2",
       "slug": "black-ops-2",
       "cover": "/assets/images/covers/cod-black-ops-2.jpg",
-      "summary": "Baguette off-host, host menus, GSC injectors, RTM tools and the FPKG crash fix.",
-      "resourceDescription": "Baguette off-host, host menus, GSC injectors, RTM tools and the FPKG crash fix."
+      "summary": "Exliation and Baguette off-host menus, host menus, GSC injectors, RTM tools and the FPKG crash fix.",
+      "resourceDescription": "Exliation and Baguette off-host menus, host menus, GSC injectors, RTM tools and the FPKG crash fix."
     },
     {
       "id": "black-ops-3",
@@ -454,6 +454,49 @@
           "distribution": "include"
         }
       ],
+      "guideBlocks": [],
+      "controls": []
+    },
+    {
+      "id": "bo2-exliation-offhost-c",
+      "gameIds": ["black-ops-2"],
+      "category": "menu",
+      "group": "shared",
+      "publication": "include",
+      "offHost": true,
+      "name": "Exliation offhost - C",
+      "platforms": ["PS4"],
+      "tags": ["PS4", "SPRX", "Off-host"],
+      "featureTags": ["Exliation", "BO2", "PS4", "Off-host", "SPRX", "Mod menu"],
+      "keywords": [
+        "Exliation", "Exliation offhost", "Exliation off host", "Exliation off-host", "Exliation offhost C",
+        "Exliation PS4", "Exliation BO2", "Exliation BO2 PS4", "Exliation Black Ops 2", "Exliation Black Ops II", "bo2_visuals.sprx"
+      ],
+      "searchKeywords": [
+        "Exliation PS4 mod menu", "Exliation BO2 mod menu", "Exliation offhost PS4 download",
+        "Exliation off-host SPRX download", "Exliation Black Ops 2 PS4 download",
+        "Exliation Black Ops II off-host menu", "Exliation bo2_visuals.sprx download"
+      ],
+      "description": "Off-host menu for Black Ops 2 on PS4.",
+      "compatibilityText": "Game update, title ID, region, firmware and loader requirements were not supplied.",
+      "source": {
+        "postTitle": "Exliation offhost - C",
+        "capturedAt": "2026-11-23",
+        "originalDownloadUrls": ["https://cdn.discordapp.com/attachments/1574136786941247559/1574510792445788310/bo2_visuals.sprx?ex=6b05e8f1&is=6b049771&hm=b16b7b28ac8c33784ec085d39c41f815bbd941b9bcfa587463dc9ae02c231050&"]
+      },
+      "images": [{
+        "original": "/assets/images/ps4-ps5/originals/bo2-exliation-offhost-c-user-preview.png",
+        "caption": "Exliation offhost - C preview supplied by the user."
+      }],
+      "downloads": [{
+        "id": "ps4-bo2-exliation-20261123",
+        "label": "Download Exliation offhost - C",
+        "filename": "bo2_visuals.sprx",
+        "url": "https://cdn.discordapp.com/attachments/1574136786941247559/1574510792445788310/bo2_visuals.sprx?ex=6b05e8f1&is=6b049771&hm=b16b7b28ac8c33784ec085d39c41f815bbd941b9bcfa587463dc9ae02c231050&",
+        "distribution": "include",
+        "bytes": 10263200,
+        "sha256": "f5965dd37e820eb42af0292252274e8d9843129b29546d0acb339eb78f03200e"
+      }],
       "guideBlocks": [],
       "controls": []
     },

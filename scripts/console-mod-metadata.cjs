@@ -5,8 +5,9 @@ const gameCopy = {
   'modern-warfare-2019': ['MW 2019 PS4 MAG Host Menu & GSC Injector', 'Download the MAG host menu and GSC injector for Modern Warfare 2019 on PS4 update 1.67, CUSA08829 USA. Includes setup and compatibility notes.'],
   'modern-warfare-ii-2022': ['MWII 2022 PS4 MAG Host Menu & GSC Injector', 'Find the MAG host menu and GSC injector for Modern Warfare II (2022) on PS4 update 1.08, CUSA34029, with game-specific setup and compatibility notes.'],
   'vanguard': ['Vanguard PS4 MAG Menus & GSC Injector', 'Browse MAG host menus and GSC injection for Vanguard Multiplayer and Zombies on PS4 update 1.26, CUSA24041 USA, with setup and compatibility notes.'],
-  'apex-legends': ['Apex Legends PS4 Mod Menus: Mags Apex & nware', 'Download Mags Apex v1.0.1 and nware for Apex Legends on PS4. Mags Apex targets CUSA12552 game version 3.24 with GoldHEN.',
-    ['Mags Apex PS4', 'MAG Menu Apex', 'Mags Apex v1.0.1', 'Mags Apex PS4 download', 'Apex Legends PS4 triggerbot', 'Apex Legends PS4 aimbot', 'Apex Legends PS4 ESP', 'Apex Legends PS4 mods', 'Apex Legends PS4 mod menu', 'Apex Legends PS4 mod menus', 'Apex Legends PS4 mod menu download',
+  'apex-legends': ['Apex Legends PS4 Mod Menus · Spectrum, Mags & nware', 'Find Spectrum Apex, Mags Apex v1.0.1 and nware downloads. Mags Apex targets PS4 CUSA12552 game version 3.24 with GoldHEN.',
+    ['Spectrum Apex', 'Spectrum Apex download', 'Spectrum Apex SPRX', 'apex.sprx',
+      'Mags Apex PS4', 'MAG Menu Apex', 'Mags Apex v1.0.1', 'Mags Apex PS4 download', 'Apex Legends PS4 triggerbot', 'Apex Legends PS4 aimbot', 'Apex Legends PS4 ESP', 'Apex Legends PS4 mods', 'Apex Legends PS4 mod menu', 'Apex Legends PS4 mod menus', 'Apex Legends PS4 mod menu download',
       'Apex PS4 mod menu', 'Apex Legends PlayStation 4 mods', 'PlayStation 4 Apex Legends mod menu', 'Apex Legends SPRX',
       'Apex Legends PS4 SPRX', 'Apex Legends SPRX download', 'Apex Legends nware', 'Apex Legends nware download',
       'nware PS4', 'nware Apex Legends', 'nware mod menu', 'nware PS4 mod menu', 'nware download', 'nware SPRX', 'nware screenshot']],
@@ -22,9 +23,11 @@ const gameCopy = {
       'Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite skin changer', 'Unlock all skins', 'Free skins', 'Fortnite PS4 hack',
       'fn.sprx', 'GoldHEN plugin setup', 'plugins.ini', 'CUSA07669', 'CUSA07022 title ID reference',
       'Fortnite PS4 HWID unban', 'PS4 Fortnite ban file cleanup', '/user/download/CUSAxxxxx/', 'download0.dat', 'download0_infomation.dat']],
+  'dayz': ['DayZ Mod Menu Download · Spectrum DayZ v2', 'Download the Spectrum DayZ v2 SPRX mod menu.',
+    ['Spectrum DayZ v2', 'DayZ SPRX download', 'Spectrum_DayZ_v2_all_features.sprx']],
   'black-ops-1': ['Black Ops 1 Console Menus, CFG & RTM Tools', 'Browse EnCoReV8, Discarded, Purple Kush, the BO1/BO2 GSC injector, CFG resources and RTM tools, with supplied previews and guide popups.'],
-  'black-ops-2': ['Black Ops 2 Menus, Injectors & PS4 FPKG Fix', 'Browse BO2 mod menus, GSC injectors and RTM tools, plus the PS4 FPKG 1.11 patch for Multiplayer and Zombies loading crashes on CUSA57548.',
-    ['PS4 FPKG fixes', 'BO2 1.11 crash fix', 'BO2 01.11 PKG', 'CUSA57548', 'Black Ops 2 Multiplayer crash fix', 'Black Ops 2 Zombies crash fix', 'BO2_ZMMP_CrashFix.pkg']],
+  'black-ops-2': ['Black Ops 2 PS4 Menus: Exliation, Baguette & FPKG Fix', 'Download Exliation offhost - C and Baguette for Black Ops 2 PS4. Browse SPRX menus, GSC injectors, RTM tools and the separate FPKG 1.11 crash fix.',
+    ['Exliation PS4', 'Exliation BO2', 'Exliation offhost - C', 'Exliation off-host SPRX download', 'Exliation Black Ops II', 'bo2_visuals.sprx', 'PS4 FPKG fixes', 'BO2 1.11 crash fix', 'BO2 01.11 PKG', 'CUSA57548', 'Black Ops 2 Multiplayer crash fix', 'Black Ops 2 Zombies crash fix', 'BO2_ZMMP_CrashFix.pkg']],
   'black-ops-3': ['BO3 PS4 Menus: MatrixMods, Zombies & Multiplayer', 'Download the Black Ops 3 MatrixMods PS4 RAR for game updates 1.00 and 1.26. Find the GSC injector and other Multiplayer and Zombies menus.'],
   'black-ops-4': ['Black Ops 4 PS4 Menus: B33, Atian & Lucy', 'Browse Mags, B33, Atian and Lucy menus for Black Ops 4 on PS4, with screenshots and downloads.'],
   'ghosts': ['Ghosts PS4 Menus: MatrixMods, SilentShadow & HYDRA', 'Find Ghosts MatrixMods, SilentShadow v2/v3 and the separate HYDRA 2.2.0 resource, with previews, release details and DLC title-ID references.'],
@@ -72,7 +75,7 @@ function metadataByPage() {
     type: 'CollectionPage', items: entries.map(entry => ({name: entry.game + ' · ' + entry.name, url: entry.url, keywords: entry.keywords}))};
   result.set('console/mods/ps4/menus.html', directory);
   result.set('console/mods/ps4/index.html', {title: 'PS4/PS5 Mods / Mod Menus | whatwhatboy',
-    description: `Browse ${games.length} game collections, including GTA V, RDR2, Call of Duty, Fortnite and Apex Legends. Find mod menus, downloads and game-specific requirements.`,
+    description: `Browse ${games.length} game collections, including GTA V, RDR2, Call of Duty, Fortnite, DayZ and Apex Legends. Find mod menus, downloads and game-specific requirements.`,
     keywords: directory.keywords, type: 'CollectionPage'});
   const codGames = games.filter(game => game.url.includes('/call-of-duty/'));
   result.set('console/mods/ps4/call-of-duty/index.html', {title: 'Call of Duty Console Menus, Injectors & Guides | whatwhatboy',

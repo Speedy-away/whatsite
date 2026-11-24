@@ -6,6 +6,23 @@ test('native pages reject PS4 IDs and mismatched filename/update identities',()=
   assert.doesNotThrow(()=>validateIdentity(valid));
   for(const change of [{titleId:'CUSA10662'},{filename:'PPSA10662_01.001.000.json'},{gameVersion:'01.30'},{format:'ELF'}]) assert.throws(()=>validateIdentity({...valid,...change}),/Invalid native PS5 identity/);
 });
+test('PS5 mods features GTA V and groups the remaining games in the searchable directory', () => {
+  const hub = fs.readFileSync(path.join(root, 'console/ps5/mods.html'), 'utf8');
+  const directory = fs.readFileSync(path.join(root, 'console/ps5/game-cheats.html'), 'utf8');
+  const gameSection = html => html.match(/<section class="section" id="(?:native-cheats|games)"[\s\S]*?<\/section>/)[0];
+  const gameLinks = html => [...gameSection(html).matchAll(/href="(\/console\/ps5\/game-cheats[^"]+)"/g)].map(match => match[1]);
+  assert.equal([...gameSection(hub).matchAll(/<article\b/g)].length, 2);
+  assert.deepEqual(gameLinks(hub), ['/console/ps5/game-cheats/gta-v/', '/console/ps5/game-cheats.html']);
+  const otherGames = collect().filter(game => game.slug !== 'gta-v');
+  assert.deepEqual(gameLinks(directory).sort(), otherGames.map(gameURL).sort());
+  assert.match(directory, /data-extra-game-grid/);
+  const cards = gameSection(directory).match(/<article\b[\s\S]*?<\/article>/g);
+  for (const game of otherGames) {
+    const card = cards.find(markup => markup.includes('href="' + gameURL(game) + '"'));
+    const search = card.match(/data-search="([^"]+)"/)[1];
+    for (const file of game.files) assert.ok(search.includes(file.titleId.toLowerCase() + ' ' + file.gameVersion));
+  }
+});
 test('each backed native build has its own matching download/storage row and collapsed setup',()=>{
   const games=collect();assert.equal(games.length,17);assert.equal(games.reduce((s,g)=>s+g.files.length,0),20);
   for(const game of games){

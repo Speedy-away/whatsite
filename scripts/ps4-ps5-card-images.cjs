@@ -25,6 +25,7 @@ function resourceImage(item){
  const own=(item.images||[]).find(i=>i.role!=='guide'&&(exists(i.display)||exists(i.original)));
  if(own)return {src:exists(own.display)?own.display:own.original,alt:own.caption||item.name,kind:'source'};
  const known=resources.find(r=>r.id===item.id);
+ if(item.hideFallbackArtwork||known?.hideFallbackArtwork)return null;
  const image=gameImage(item.gameIds?.[0]||known?.gameIds?.[0]);
  return image?{src:image,alt:(games.find(g=>g.id===(item.gameIds?.[0]||known?.gameIds?.[0]))?.title||item.name)+' artwork',kind:'artwork'}:null;
 }

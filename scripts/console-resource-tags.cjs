@@ -2,6 +2,7 @@ const gameAliases = {
   'gta5': ['GTA V', 'GTA 5', 'Grand Theft Auto V'],
   'rdr2': ['RDR2', 'RDR 2', 'Red Dead Redemption 2'],
   'fortnite': ['Fortnite'],
+  'dayz': ['DayZ'],
   'apex-legends': ['Apex Legends', 'Apex', 'ApexLegends'],
   'rainbow-six-siege': ['Rainbow Six Siege', 'R6', 'R6S', 'R6 Siege', 'Rainbow 6 Siege', "Tom Clancy's Rainbow Six Siege", 'Tom Clancys Rainbow Six Siege'],
   'dying-light': ['Dying Light', 'Dying Light The Following', 'Dying Light Enhanced Edition'],

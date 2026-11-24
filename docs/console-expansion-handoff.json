@@ -1,7 +1,14 @@
 {
+  "gitPullRecovery20261124": {
+    "date": "2026-11-24",
+    "status": "Pulled nine commits through 6cc0ba87 and restored unfinished local work.",
+    "backup": "Git stash: Safety backup before pull 2026-11-24 (retained).",
+    "verification": "Resolved eight overlapping files, verified all 14 originally untracked files against the stash with text line endings normalized, and passed 23 focused MultiCOD, OLE8, PS5 cheat-page and transfer-guide tests. No archive files removed or payloads executed.",
+    "published": false
+  },
   "matrixModsPs420261123": {
     "date": "2026-11-23",
-    "status": "Archived and included in the MatrixMods Pages deployment.",
+    "status": "Published and verified live. Original RAR archived on F:.",
     "pages": [
       "/console/mods/ps4/call-of-duty/multicod/#multicod-matrix-menus-ps4",
       "/console/mods/ps4/call-of-duty/advanced-warfare/#resource-aw-matrixmods",
@@ -23,8 +30,10 @@
     "inventory": "F:\\whatsite-backup-downloads-etc\\inventories\\ps4-matrixmods-1574389010422439976.json",
     "archiveVerified": true,
     "primaryMirror": "The four listings use the existing RAR mirrors as their primary downloads. MultiCOD shares the Advanced Warfare mirror. GitHub Pages serves all three RAR routes on whatwhatboy.com, with the signed Discord attachment retained as the source.",
+    "primaryMirrorCommit": "9fa8d399a39d84056830285a8a445cc54ecb0f5c",
+    "primaryMirrorDeployment": "https://github.com/Speedy-away/whatsite/actions/runs/45282745019",
+    "primaryMirrorVerification": "Verified all four live primary buttons and secondary Discord source links. Each of the three direct whatwhatboy.com RAR URLs returned 215383 bytes with the archived SHA-256.",
     "bo3Mirror": {
-      "multicodPreview": "/assets/images/ps4-bo3/matrixmods.png",
       "page": "/console/mods/ps4/call-of-duty/black-ops-3/#resource-bo3-matrix",
       "download": "/downloads/ps4/BO3/both/MatrixMenusPS4.rar",
       "source": "https://discord.com/channels/1528329794947776572/1565343630321909790",
@@ -32,14 +41,86 @@
         "1.00",
         "1.26"
       ],
-      "seo": "Added Matrix mod menu and BO3 aliases, visible PS4, ELF, MultiCOD and BO3 tags, structured data and the BO3 sitemap date."
+      "multicodPreview": "/assets/images/ps4-bo3/matrixmods.png",
+      "multicodPreviewCommit": "6cc0ba872026935b801f1a84779a1e37c303cf0d",
+      "multicodPreviewDeployment": "https://github.com/Speedy-away/whatsite/actions/runs/45286799037",
+      "multicodPreviewVerification": "The live BO3 MultiCOD card serves the existing MatrixMods PNG with a matching SHA-256. Both pinned ELF links and the BO3 game page link are present.",
+      "seo": "Added Matrix mod menu and BO3 aliases, visible PS4, ELF, MultiCOD and BO3 tags, structured data and the BO3 sitemap date.",
+      "repositoryCommit": "79a8409ac9993bc505320a99f2db0fb672b6a788",
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/45284628252",
+      "liveVerification": "The live primary RAR button serves the archived bytes directly from whatwhatboy.com. The BO3 1.00 and 1.26 ELF downloads also matched their pinned SHA-256 values. Verified the separate original Discord source, visible tags, Matrix keywords, directory listing and sitemap."
     },
-    "seo": "Added visible PS4, ELF and MultiCOD tags and searchable MatrixMenusPS4.rar metadata to the three requested MatrixMods game entries and MultiCOD. Refreshed the menu directory cards, structured data, metadata and resource tag reports, and sitemap dates.",
-    "payloadExecuted": false
+    "seo": "Added visible PS4, ELF and MultiCOD tags and searchable Matrix mod menu, Matrix PS4 mod menu, MatrixMenusPS4.rar and game-specific aliases. Refreshed the menu directory cards, structured data, metadata and resource tag reports, and sitemap dates.",
+    "repositoryCommit": "5f5b3bbb6d37e92224cabae987366053127a30fe",
+    "deployedRevision": "85325b28ea0c80785d4e3ba43e989bc8502cbc23",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/45280726629",
+    "liveVerification": "Verified all four live pages for screenshot references, visible tags, Matrix mod menu keywords, structured data, and canonical sitemap dates. All three live screenshots, eight game-update ELF files, four mirrored RARs, and the supplied Discord RAR matched SHA-256.",
+    "payloadExecuted": false,
+    "published": true
+  },
+  "spectrumApex20261123": {
+    "date": "2026-11-23",
+    "status": "Added locally and archived.",
+    "page": "/console/mods/ps4/apex-legends/#resource-apex-legends-spectrum",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1569900865547145246/1574530628769284268/apex.sprx?ex=6b05fb6b&is=6b04a9eb&hm=823970bcd4f062570f0a02baa24575bce692192f834b85602f8d182c3b2b5bc3&",
+    "compatibility": "Release version, console support, game update, title ID, region, firmware and loader are unconfirmed.",
+    "artwork": "Existing Apex Legends game cover.",
+    "download": {
+      "local": "/downloads/ps4/apex-legends/26a3716726ea/apex.sprx",
+      "version": "Unversioned snapshot 2026-11-23 attachment 1574530628769284268",
+      "bytes": 471456,
+      "sha256": "26a3716726eac5b690184a4ba0261dfdc21e82ec314b29158df619d1fd66bfd2",
+      "inventory": "docs/ps4-apex-spectrum-private-inventory.json",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Apex Legends\\Spectrum Apex\\Builds\\Unversioned snapshot 2026-11-23 attachment 1574530628769284268\\apex.sprx",
+      "archiveVerified": true
+    },
+    "verification": "16 focused tests passed. Desktop and mobile previews verified the menu search, existing Mags Apex and nware cards, and a matching checksum for the Spectrum Apex download. Updated keywords, resource tags, metadata and sitemap.",
+    "payloadExecuted": false,
+    "published": false
+  },
+  "ps5ModsOtherGames20261123": {
+    "date": "2026-11-23",
+    "status": "Updated locally.",
+    "hub": "/console/ps5/mods.html",
+    "featured": "/console/ps5/game-cheats/gta-v/",
+    "otherGames": "/console/ps5/game-cheats.html",
+    "layout": "The PS5 hub features GTA V and Other Games, with PS4 collections available as text links. The Other Games page groups 16 native PS5 titles and supports search by game, PPSA title ID or game update.",
+    "downloads": "All 20 existing site files match their recorded SHA-256 checksums and retain their version-specific download routes. The F: PS5 archive paths were unavailable during this work. Site regeneration accepts previously verified archive records alongside verified local bytes.",
+    "verification": "23 focused tests passed. Browser checks at 1440 and 390 pixels verified the two hub cards, Other Games search, navigation and all three GTA V download URLs. Metadata and sitemap dates were refreshed for both routes.",
+    "published": false
+  },
+  "spectrumDayZ20261123": {
+    "date": "2026-11-23",
+    "status": "DayZ page and Spectrum DayZ v2 download added locally and archived.",
+    "page": "/console/mods/ps4/dayz/#resource-dayz-spectrum",
+    "catalogueOrder": "Apex Legends, Fortnite, DayZ. Apex Legends moved ahead of Fortnite so Fortnite and DayZ share a row in the two-, three- and four-column grids.",
+    "cover": {
+      "local": "/assets/images/ps4-dayz/dayz-cover.webp",
+      "source": "User-supplied dayz-pc-steam-cover.jpg",
+      "bytes": 281870,
+      "sha256": "2ff9c893768652802c09f6c0763fa5df3bddbeeeecc96d2214ab2f1c8c4a253d"
+    },
+    "menuImage": null,
+    "compatibility": "The source names DayZ and the v2 SPRX build. Exact console support, game update, region, firmware and loader are unconfirmed.",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1569901533447987270/1572377642961997844/Spectrum_DayZ_v2_all_features.sprx?ex=6b05668b&is=6b04150b&hm=bb91293666220db02be17c7b4135b6068bc39a8b480ac344c48e7f5715900e28&",
+    "download": {
+      "version": "v2",
+      "local": "/downloads/ps4/dayz/d7ed3905f6dd/Spectrum_DayZ_v2_all_features.sprx",
+      "bytes": 137280,
+      "sha256": "d7ed3905f6ddfee28eba760d7ebf9efe94187f97f845d873ad8d9e47f29ced91",
+      "inventory": "docs/ps4-dayz-spectrum-private-inventory.json",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\DayZ\\Spectrum DayZ\\Builds\\v2\\Spectrum_DayZ_v2_all_features.sprx",
+      "archiveVerified": true,
+      "globalReconciliation": "The shared archive index refresh remains blocked by the existing missing Nintendo 3DS Adventure Time 1B6B0.zip archive file. Both DayZ copies match the scoped inventory."
+    },
+    "seo": "Updated game and menu search terms, resource tags, canonical and social metadata, structured data, metadata report and sitemap.",
+    "verification": "24 focused tests passed. Local browser previews at 1440, 1150, 850 and 390 pixels verified hub placement, navigation, cover, the image-free Spectrum listing, menu search and inert download checksum. The metadata and sitemap checks passed for all three affected routes.",
+    "payloadExecuted": false,
+    "published": false
   },
   "ole8FnPs420261123": {
     "date": "2026-11-23",
-    "status": "OLE8 FN download and SEO prepared for deployment.",
+    "status": "Download added locally and archived; not committed or published.",
     "page": "/console/mods/ps4/fortnite/#resource-fortnite-ole8-fn",
     "compatibility": "PS4 was supplied by the user. Exact Fortnite update, title ID, region, firmware, loader and controls were not supplied and were not inferred.",
     "sourceUrl": "https://cdn.discordapp.com/attachments/1573427293676765235/1573427294616297533/crack_o1e8_v120.prx?ex=6b05ec5b&is=6b049adb&hm=d59aa1c00d5ea3d083f220db0fb73e3d4595079e53bcc8a19899f17964c93f2c&",
@@ -56,6 +137,97 @@
       "globalReconciliation": "The all-sidecar index refresh remains blocked by the pre-existing missing Nintendo 3DS Adventure Time 1B6B0.zip archive file. The scoped OLE8 inventory and verified file are preserved, and no unrelated archive record was changed."
     },
     "verification": "3 focused Node tests passed for the OLE8 metadata, PRX/image hashes, PS4 SELF header and generated Fortnite download card. The payload was not executed.",
+    "payloadExecuted": false,
+    "published": false
+  },
+  "infinityModMenuPs420261123": {
+    "date": "2026-11-23",
+    "status": "Added locally and archived; not committed or published.",
+    "page": "/console/mods/ps4/fortnite/#resource-fortnite-infinity-mod-menu",
+    "description": "Aimbot, ESP, teleport and more.",
+    "compatibility": "PS4 was supplied by the user. Exact Fortnite update, title ID, region, firmware, menu release, loader and controls were not supplied and were not inferred.",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1574333040732405760/1574333345389879376/infinity.prx?ex=6b05ec6f&is=6b049aef&hm=2fe906b189eb8dcfcee9c418cf30bd14b29e317b20267e1bc160c7789bd47eab&",
+    "image": "/assets/images/ps4-fortnite/infinity-mod-menu-user-preview.png",
+    "imageBytes": 884282,
+    "imageSha256": "e873431bb2d56a7d414279ee4110633475ee34372ee8cf04eb440a401fd81552",
+    "archive": {
+      "inventory": "docs/ps4-fortnite-infinity-mod-menu-private-inventory.json",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Fortnite\\Infinity Mod Menu\\Builds\\Unversioned snapshot 2026-11-23 attachment 1574333345389879376\\infinity.prx",
+      "version": "Unversioned snapshot 2026-11-23 attachment 1574333345389879376",
+      "bytes": 5291824,
+      "sha256": "11e6459cc264afba89cd62ada636c848a58c458eb55c56f39c514c0c911a0a13",
+      "verified": true,
+      "globalReconciliation": "The all-sidecar index refresh remains blocked by the pre-existing missing Nintendo 3DS Adventure Time 1B6B0.zip archive file. The scoped Infinity inventory and verified file are preserved, and no unrelated archive record was changed."
+    },
+    "verification": "48 focused Node tests passed, including Infinity metadata, compatibility boundaries, PRX/image identities, the generated Fortnite card and menu-directory link, plus GTA ordering regressions. Local HTTP checks returned 200 for the Fortnite page, image and PRX, and the card was visually checked at desktop and 390 x 844 mobile viewports.",
+    "payloadExecuted": false,
+    "published": false
+  },
+  "gta5FeaturedMenuOrder20261123": {
+    "date": "2026-11-23",
+    "status": "Moved locally to the top of the GTA V 1.57 grid; not committed or published.",
+    "page": "/console/mods/ps4/gta5/#v157",
+    "order": [
+      "WZSoftware",
+      "Nova Protocol",
+      "Extortion Reborn",
+      "Semjase"
+    ],
+    "implementation": "Prepended the four stable resource IDs to gta157FeaturedIds so later GTA-only regeneration preserves the requested order without moving source records or changing compatibility groups.",
+    "verification": "The generated GTA V 1.57 grid begins WZSoftware, Nova Protocol, Extortion Reborn and Semjase. The focused order test and responsive desktop preview both confirmed the sequence.",
+    "published": false
+  },
+  "ftpMobileClientLinks20261123": {
+    "date": "2026-11-23",
+    "status": "Published to GitHub Pages and verified live.",
+    "changes": "Added the supplied FTPManager iOS and FTP Manager Android store links directly to the PS4 and PS5 transfer cards, both dedicated FTP/USB guides, and the existing FTP client cards on PS3, PS Vita and Xbox 360 pages.",
+    "pages": [
+      "console/ps3/index.html",
+      "console/ps3/transfer-tools.html",
+      "console/ps4/index.html",
+      "console/ps4/transfer-tools.html",
+      "console/ps4/file-transfer-guide.html",
+      "console/ps5/index.html",
+      "console/ps5/transfer-tools.html",
+      "console/ps5/file-transfer-guide.html",
+      "console/psvita/index.html",
+      "console/psvita/home.html",
+      "console/xbox360/index.html"
+    ],
+    "androidAccuracy": "Kept the existing Solid Explorer walkthrough and screenshot, then added the supplied FTP Manager app as a clearly separate Google Play option. No claim was made that uploads or paid features are free.",
+    "durability": "Updated scripts/build-transfer-guides.cjs, scripts/console-helpful-tools.cjs and focused transfer-guide tests so later site regeneration retains both store links. Current public HTML was changed only in the relevant guide and transfer-card sections; unrelated pending shell regeneration was deliberately excluded.",
+    "verification": "60 focused local checks passed. Live pages-build.json reported revision a23a0b16e5104efc29fbc9faeba11bea55116100. All 11 updated routes returned HTTP 200 and included the exact iOS and Android store links in their transfer cards or phone guide panels. Both store links returned HTTP 200 and led to the expected app listings.",
+    "repositoryCommits": [
+      "0ff3800823d5e656fbf7309ae57453a6e602967c",
+      "4fe4a055860f88b7ab2d89108484e2d394356c1f"
+    ],
+    "deployedRevision": "a23a0b16e5104efc29fbc9faeba11bea55116100",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/45261070152",
+    "seoFollowup": "Published both mobile FTP app names in search metadata and visible tags on all 11 pages. Updated their canonical sitemap dates and the PS4/PS5 guide article modification dates to 2026-11-23. Added the supplied phone FTP YouTube video to both guides. Verified all 11 live pages, all 11 sitemap entries and both video links at revision c3da05e5a4053f0943e6eb20ed552d8c72c21cba. Deployment: https://github.com/Speedy-away/whatsite/actions/runs/45279321691.",
+    "videoEmbedFollowup": "Published the YouTube player for L9hW8XIJQxU in both phone FTP sections at revision 85325b28ea0c80785d4e3ba43e989bc8502cbc23. On both public pages, clicking Play video started playback and the browser reported an advancing video timer. Deployment: https://github.com/Speedy-away/whatsite/actions/runs/45280726629.",
+    "archive": "Store-link-only change. No mobile packages or console payloads were downloaded or executed, and the F: archive was not changed.",
+    "published": true
+  },
+  "wzSoftwarePs420261123": {
+    "date": "2026-11-23",
+    "status": "Added locally and archived; not committed or published.",
+    "page": "/console/mods/ps4/gta5/#resource-gta5-wzsoftware-1-57",
+    "gameVersion": "1.57",
+    "compatibility": "PS4 and GTA V 1.57 were supplied by the user. Firmware, title ID, menu release and opening controls were not supplied and were not inferred.",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1574345361458200596/1574345582862926005/WZSoftware.prx?ex=6b054f14&is=6b03fd94&hm=3b16364cf3831b36e3280188d9e3fd7bee9a594a652c7d7eefee0e46ac52d840&",
+    "image": "/assets/images/ps4-gta5/wzsoftware-user-preview.png",
+    "imageBytes": 636765,
+    "imageSha256": "91e789fd74ba11e7611bd6350f286ca1f347cccb3a10ad670769b848cf44519c",
+    "archive": {
+      "inventory": "docs/ps4-gta5-wzsoftware-private-inventory.json",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\1.57\\WZSoftware\\Builds\\Unversioned snapshot 2026-11-23 attachment 1574345582862926005\\WZSoftware.prx",
+      "version": "Unversioned snapshot 2026-11-23 attachment 1574345582862926005",
+      "bytes": 1982912,
+      "sha256": "7c6e6f0ee33a90662258c4b3faed57fae78bcefeba65699c212049f47569f06f",
+      "verified": true,
+      "globalReconciliation": "The all-sidecar index refresh remains blocked by a pre-existing missing Nintendo 3DS Adventure Time 1B6B0.zip archive file. The scoped WZSoftware inventory and verified file are preserved, and no unrelated archive record was changed."
+    },
+    "verification": "44 focused Node tests passed, including the WZSoftware source, compatibility pin, PRX/image identities and generated page/directory entries. Local HTTP checks returned 200 for the page, image and PRX, and the card was visually checked at desktop and 390 x 844 mobile viewports.",
     "payloadExecuted": false,
     "published": false
   },
@@ -13612,6 +13784,9 @@
     "archiveVerified": true,
     "archiveNote": "Both saves and GarlicTransfer v0.3.8 and v0.3.12 are preserved with verified bytes and SHA-256. The shared index merge stopped on a pre-existing missing Nintendo 3DS theme file. The scoped archive inventory is available on F:.",
     "regenerate": "node scripts/build-ps5-game-saves.cjs",
+    "publishedCommit": "1e454c9bbb80c9b8f46f70eec37066bad7512bd8",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/45277051646",
+    "liveVerification": "Both pages, both save downloads, GarlicTransfer v0.3.12 and its Windows installer, GarlicSaves and PlayStation-Titles returned HTTP 200. GTA 6 was the first save listing. Verified the links between pages, tagged save cards, Tools section, artwork SHA-256 and both URLs in the live sitemap.",
     "consoleImportTested": false,
     "payloadExecuted": false
   },
@@ -13627,6 +13802,49 @@
     "inventory": "docs/ps5-psn-account-id-private-inventory.json",
     "archiveInventory": "F:\\whatsite-backup-downloads-etc\\inventories\\ps5-psn-account-id-private-inventory.json",
     "archiveVerified": true,
+    "publishedCommit": "a5a1deb79f3a8f98f8e3f4e7800688e9c5fdc814",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/45279321691",
+    "liveVerification": "PS5 Game Saves and the pinned v1.0 release returned HTTP 200. The Tools card, tags and keywords were present on the live page. The downloaded Windows asset matched the archived size and SHA-256.",
     "payloadExecuted": false
+  },
+  "exliationBo2Ps420261123": {
+    "date": "2026-11-23",
+    "status": "Added locally and archived; not committed or published.",
+    "page": "/console/mods/ps4/call-of-duty/black-ops-2/#resource-bo2-exliation-offhost-c",
+    "name": "Exliation offhost - C",
+    "section": "Off host",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1574136786941247559/1574510792445788310/bo2_visuals.sprx?ex=6b05e8f1&is=6b049771&hm=b16b7b28ac8c33784ec085d39c41f815bbd941b9bcfa587463dc9ae02c231050&",
+    "compatibility": "PS4 and Black Ops 2 supplied by the user. Exact game update, title ID, region, firmware, loader and controls were not supplied and were not inferred.",
+    "image": "/assets/images/ps4-ps5/originals/bo2-exliation-offhost-c-user-preview.png",
+    "imageBytes": 1795973,
+    "imageSha256": "2f9f771c98a097956164f3d511f3a093745f7400e99a740da10a6249e83c81df",
+    "archive": {
+      "inventory": "docs/ps4-bo2-exliation-private-inventory.json",
+      "backupInventory": "F:/whatsite-backup-downloads-etc/inventories/ps4-bo2-exliation-1574510792445788310.json",
+      "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Call of Duty\\Black Ops 2\\Exliation offhost - C\\Builds\\Unversioned snapshot 2026-11-23 attachment 1574510792445788310\\bo2_visuals.sprx",
+      "version": "Unversioned snapshot 2026-11-23 attachment 1574510792445788310",
+      "local": "/downloads/ps4/black-ops-2/f5965dd37e82/bo2_visuals.sprx",
+      "bytes": 10263200,
+      "sha256": "f5965dd37e820eb42af0292252274e8d9843129b29546d0acb339eb78f03200e",
+      "verified": true,
+      "globalReconciliation": "Shared inventory/index refresh remains blocked by the pre-existing missing Nintendo 3DS Adventure Time Home Screen 1B6B0.zip. Scoped workspace and F: inventories preserve the verified new file."
+    },
+    "verification": "15 focused search, resource tag, metadata and MultiCOD tests passed. Verified original image identity, both SPRX SHA-256 values, ELF header, Off host placement, direct download, directory link and retained Baguette downloads. Local browser confirmed the card and loaded image. Three scoped page metadata checks passed.",
+    "payloadExecuted": false,
+    "published": false,
+    "seo": {
+      "status": "Updated locally; not committed or published.",
+      "visibleTags": [
+        "Exliation",
+        "BO2",
+        "PS4",
+        "Off-host",
+        "SPRX",
+        "Mod menu"
+      ],
+      "keywords": "Added offhost, off host and off-host name variants, BO2 / Black Ops 2 / Black Ops II aliases, PS4 mod menu, SPRX and download searches.",
+      "metadata": "Updated the Black Ops 2 page title, description, keywords, Open Graph and Twitter metadata, individual resource structured keywords, menu-directory card and resource tag report.",
+      "verification": "8 focused search/tag/metadata tests passed, plus targeted assertions for tags, aliases, card search attributes, page/social metadata and structured entries. Three scoped metadata checks passed."
+    }
   }
 }

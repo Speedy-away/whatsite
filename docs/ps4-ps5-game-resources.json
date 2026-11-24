@@ -16,6 +16,54 @@
       "legacy": true
     },
     {
+      "id": "apex-legends",
+      "title": "Apex Legends",
+      "slug": "apex-legends",
+      "cover": "/assets/images/ps4-apex-legends/apex-legends-user-cover.jpg",
+      "platformLabel": "PS4 Mods / Mod Menus",
+      "summary": "Spectrum Apex, Mags Apex and nware mod menus.",
+      "description": "Download Spectrum Apex, Mags Apex and nware for Apex Legends.",
+      "keywords": [
+        "Spectrum Apex",
+        "Spectrum Apex download",
+        "Spectrum Apex SPRX",
+        "Mags Apex",
+        "MAG Menu Apex",
+        "Mags Apex v1.0.1",
+        "Mags Apex PS4 download",
+        "Apex Legends PS4 triggerbot",
+        "Apex Legends",
+        "Apex",
+        "ApexLegends",
+        "Apex Legends PS4",
+        "Apex Legends PS4 mods",
+        "Apex Legends mod menu",
+        "Apex Legends PS4 mod menus",
+        "Apex Legends PS4 mod menu download",
+        "Apex PS4 mod menu",
+        "PlayStation 4 Apex Legends mods",
+        "Apex Legends SPRX",
+        "Apex Legends SPRX download",
+        "nware",
+        "nware PS4",
+        "nware Apex Legends",
+        "nware mod menu",
+        "nware download",
+        "nware SPRX",
+        "nware screenshot",
+        "nware PS4 mod menu",
+        "nware PS4 download",
+        "CUSA12552",
+        "CUSA12540",
+        "GoldHEN plugins.ini"
+      ],
+      "categoryHeadings": {
+        "menu": "Mod menus"
+      },
+      "heroAnchor": "#menu",
+      "pluginTemplate": true
+    },
+    {
       "id": "fortnite",
       "title": "Fortnite",
       "slug": "fortnite",
@@ -54,49 +102,18 @@
       ]
     },
     {
-      "id": "apex-legends",
-      "title": "Apex Legends",
-      "slug": "apex-legends",
-      "cover": "/assets/images/ps4-apex-legends/apex-legends-user-cover.jpg",
-      "platformLabel": "PS4 Mods / Mod Menus",
-      "summary": "nware SPRX mod menu for Apex Legends on PS4.",
-      "description": "Download the nware SPRX mod menu for Apex Legends on PS4 and view the supplied screenshot.",
+      "id": "dayz",
+      "title": "DayZ",
+      "slug": "dayz",
+      "cover": "/assets/images/ps4-dayz/dayz-cover.webp",
+      "platformLabel": "Mod Menus",
+      "summary": "Spectrum DayZ mod menu.",
+      "description": "Download the Spectrum DayZ v2 SPRX mod menu.",
       "keywords": [
-        "Mags Apex",
-        "MAG Menu Apex",
-        "Mags Apex v1.0.1",
-        "Mags Apex PS4 download",
-        "Apex Legends PS4 triggerbot",
-        "Apex Legends",
-        "Apex",
-        "ApexLegends",
-        "Apex Legends PS4",
-        "Apex Legends PS4 mods",
-        "Apex Legends mod menu",
-        "Apex Legends PS4 mod menus",
-        "Apex Legends PS4 mod menu download",
-        "Apex PS4 mod menu",
-        "PlayStation 4 Apex Legends mods",
-        "Apex Legends SPRX",
-        "Apex Legends SPRX download",
-        "nware",
-        "nware PS4",
-        "nware Apex Legends",
-        "nware mod menu",
-        "nware download",
-        "nware SPRX",
-        "nware screenshot",
-        "nware PS4 mod menu",
-        "nware PS4 download",
-        "CUSA12552",
-        "CUSA12540",
-        "GoldHEN plugins.ini"
+        "Spectrum DayZ v2",
+        "DayZ SPRX download"
       ],
-      "categoryHeadings": {
-        "menu": "Mod menus"
-      },
-      "heroAnchor": "#menu",
-      "pluginTemplate": true
+      "heroAnchor": "#menu"
     },
     {
       "id": "rainbow-six-siege",
@@ -17508,6 +17525,36 @@
       ]
     },
     {
+      "id": "dayz-spectrum",
+      "name": "Spectrum DayZ",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "dayz"
+      ],
+      "version": "v2",
+      "menuVersion": "v2",
+      "compatibilityText": "Supported consoles, DayZ update and firmware are unconfirmed.",
+      "hideFallbackArtwork": true,
+      "downloads": [
+        {
+          "id": "dayz-spectrum-v2-sprx",
+          "label": "Download",
+          "filename": "Spectrum_DayZ_v2_all_features.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1569901533447987270/1572377642961997844/Spectrum_DayZ_v2_all_features.sprx?ex=6b05668b&is=6b04150b&hm=bb91293666220db02be17c7b4135b6068bc39a8b480ac344c48e7f5715900e28&",
+          "distribution": "include",
+          "bytes": 137280,
+          "sha256": "d7ed3905f6ddfee28eba760d7ebf9efe94187f97f845d873ad8d9e47f29ced91"
+        }
+      ],
+      "source": {
+        "capturedAt": "2026-11-23",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1569901533447987270/1572377642961997844/Spectrum_DayZ_v2_all_features.sprx?ex=6b05668b&is=6b04150b&hm=bb91293666220db02be17c7b4135b6068bc39a8b480ac344c48e7f5715900e28&"
+        ]
+      }
+    },
+    {
       "id": "fortnite-ole8-fn",
       "name": "OLE8 FN",
       "category": "menu",
@@ -18186,6 +18233,33 @@
           "sha256": "91c552d9f6b3f9e55803fd39fa4065a1c90659c1119c2e2bf15a20277b772fe4"
         }
       ]
+    },
+    {
+      "id": "apex-legends-spectrum",
+      "name": "Spectrum Apex",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "apex-legends"
+      ],
+      "compatibilityText": "Supported consoles, Apex Legends update and firmware are unconfirmed.",
+      "downloads": [
+        {
+          "id": "apex-legends-spectrum-sprx-20261123",
+          "label": "Download",
+          "filename": "apex.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1569900865547145246/1574530628769284268/apex.sprx?ex=6b05fb6b&is=6b04a9eb&hm=823970bcd4f062570f0a02baa24575bce692192f834b85602f8d182c3b2b5bc3&",
+          "distribution": "include",
+          "bytes": 471456,
+          "sha256": "26a3716726eac5b690184a4ba0261dfdc21e82ec314b29158df619d1fd66bfd2"
+        }
+      ],
+      "source": {
+        "capturedAt": "2026-11-23",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1569900865547145246/1574530628769284268/apex.sprx?ex=6b05fb6b&is=6b04a9eb&hm=823970bcd4f062570f0a02baa24575bce692192f834b85602f8d182c3b2b5bc3&"
+        ]
+      }
     },
     {
       "id": "fortnite-chest-tool",
