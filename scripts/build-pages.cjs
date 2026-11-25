@@ -55,7 +55,7 @@ function materializeLocaleSources(root) {
   if (authored.some(page => typeof page !== 'string' || !page.endsWith('.html') || page.startsWith('/') || page.includes('\\') || page.split('/').includes('..'))) throw Error('Invalid authored language route');
   const names = [...new Set([...manifest.pages.map(require('./playstation-library-routes.cjs').moveTranslation).map(page => page.page), ...authored])];
   const sources = names.map(page => '/' + page.replace(/[\\*?\[\]]/g, match => '\\' + match));
-  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/','/i18n-tools/transfer-guide-source.json',...sources].join('\n')+'\n',maxBuffer:64*1024*1024});
+  execFileSync('git', ['sparse-checkout', 'set', '--no-cone', '--stdin'], {cwd:root,input:['/scripts/','/docs/','/languages/','/i18n-tools/transfer-guide-source.json','/i18n-tools/discovery-concepts.cjs',...sources].join('\n')+'\n',maxBuffer:64*1024*1024});
 }
 function sourceLinks(root) {
   const file=path.join(root,'docs/download-source-links.json');

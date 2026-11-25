@@ -142,12 +142,12 @@ function buildPs4Software() {
     storeIntro('ps4') + intro('ps4') + section('apps', 'PS4 apps & homebrew tools', grid(
       storeCard('ps4',itemzflowId,{hideDescription:true}),
       resource(
-        'trophy_unlockers',
+        'PS4 trophy unlockers',
         'PS4 trophy unlocker collection with game-specific PKG files, a guide, TrophyUnlocker for Windows and PS4PKGViewer. Match each package to its game title ID and region.',
         '<a class="btn btn-primary" href="https://www.mediafire.com/folder/5m9vrii984nbi/trophy_unlockers" target="_blank" rel="noopener noreferrer">Download <i class="fas fa-download" aria-hidden="true"></i></a>' +
         '<a class="btn btn-outline" href="https://youtu.be/r4B34XMpewU?si=tOLMZ8eZp4kymiFF" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> Watch video guide</a>',
         ps4Image
-      ).replace('<article ', '<article id="trophy-unlockers" ').replace('<div class="guide-links">', '<ul class="guide-resource-tags" aria-label="Tags"><li class="feature-tag">PS4</li><li class="feature-tag">Trophy unlocker</li><li class="feature-tag">PKG</li><li class="feature-tag">Windows tools</li></ul><div class="guide-links">'),
+      ).replace('<article ', '<article id="trophy-unlockers" ').replace('<div class="guide-links">', '<ul class="guide-resource-tags" aria-label="Tags"><li class="feature-tag">PS4</li><li class="feature-tag">Trophy unlocker</li><li class="feature-tag">PKG</li><li class="feature-tag">Windows tools</li><li class="feature-tag">Video guide</li></ul><div class="guide-links">'),
       resource(
         'PS4-Xplorer',
         'PS4 file-manager project with documentation and setup information.',

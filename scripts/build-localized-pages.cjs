@@ -3,6 +3,9 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {revision:languageRevision}=require('./language-loader.cjs');
 const libraryRoutes=require('./playstation-library-routes.cjs');
 const goldHenSearch=require('./goldhen-search-copy.cjs');
+const trophySearch=require('./trophy-search-copy.cjs');
+const {concepts}=require('../i18n-tools/discovery-concepts.cjs');
+const keywordAliases=concepts.flatMap(({aliases})=>aliases).sort((a,b)=>b.length-a.length);
 const configName='docs/i18n/page-translations.json';
 const jailbreakRedirects=new Map([
  ['console/ps4/jailbreak.html','console/ps4/jailbreaks.html'],
@@ -44,8 +47,8 @@ function load(root,{estimateSource=false,previewPages=null,previewLanguages=null
 }
 function translate(ctx,source,code){
  if(code==='en')return source;
- const goldHen=goldHenSearch.localize(source,code);
- if(goldHen!==undefined)return goldHen;
+ const authored=goldHenSearch.localize(source,code) ?? trophySearch.localize(source,code);
+ if(authored!==undefined)return authored;
  const record=ctx.strings.get(html.normalize(source));
  // New authored source text remains in English until the next translation-cache refresh.
  // Keep the Pages build deployable while preserving the source text verbatim.
@@ -54,6 +57,18 @@ function translate(ctx,source,code){
  const language=ctx.languages.get(code);
  if(record.dictionary){const value=language.dictionary[record.source];assert(typeof value==='string','Missing dictionary '+code+': '+record.source);return value;}
  return html.restore(language.translations[record.id],record.values);
+}
+function discoveryKeywords(source,dictionary){
+ const localized=new Set();
+ for(const term of html.keywordTerms(source)){
+  const lower=term.toLowerCase();
+  const alias=keywordAliases.find(candidate=>lower===candidate||lower.endsWith(' '+candidate));
+  if(!alias)continue;
+  const translated=lower===alias ? dictionary[alias] : dictionary['{name} '+alias]?.replace('{name}',()=>term.slice(0,-alias.length).trimEnd());
+  if(translated&&translated.toLowerCase()!==lower)localized.add(translated);
+  if(localized.size===8)break;
+ }
+ return [...localized];
 }
 function translateKeywords(ctx,page,source,code){
  if(code==='en')return source;
@@ -67,7 +82,15 @@ function translateKeywords(ctx,page,source,code){
   const localized=keys.map(key=>translate(ctx,authored[key],code));
   return [...new Map([...localized,...source.split(',').map(value=>value.trim())].map(value=>[value.toLocaleLowerCase(code),value])).values()].join(', ');
  }
- if(!html.localizeKeywordTerms(page.page))return translate(ctx,source,code);
+ if(!html.localizeKeywordTerms(page.page)){
+  const cached=translate(ctx,source,code);
+  if(page.noindex)return cached;
+  const localized=discoveryKeywords(source,ctx.languages.get(code).dictionary);
+  if(page.page==='console/ps4/apps.html'&&/\btrophy unlockers?\b/i.test(source))localized.unshift(trophySearch.localize(trophySearch.english.name,code));
+  const additions=localized.filter(Boolean);
+  if(!additions.length)return cached;
+  return [...new Map([...additions,...html.keywordTerms(cached)].map(term=>[term.toLocaleLowerCase(code),term])).values()].join(', ');
+ }
  const translated=html.keywordTerms(source).map(term=>translate(ctx,term,code));
  return [...new Map(translated.map(term=>[term.toLocaleLowerCase(code),term])).values()].join(', ');
 }

@@ -85,7 +85,7 @@ function metadataByPage() {
   result.set('console/mods/ps4/menus.html', directory);
   result.set('console/mods/ps4/index.html', {title: 'PS4/PS5 Mods / Mod Menus | whatwhatboy',
     description: `Browse ${games.length} game collections, including GTA V, RDR2, Call of Duty, Fortnite, DayZ and Apex Legends. Find mod menus, downloads and game-specific requirements.`,
-    keywords: directory.keywords, type: 'CollectionPage'});
+    keywords: unique(['Scooby Console', 'Scooby PS4 mod menus', 'Overwatch PS4 coming soon', ...directory.keywords]), type: 'CollectionPage'});
   const codGames = games.filter(game => game.url.includes('/call-of-duty/'));
   result.set('console/mods/ps4/call-of-duty/index.html', {title: 'Call of Duty Console Menus, Injectors & Guides | whatwhatboy',
     description: `Browse ${codGames.length} Call of Duty collections, from Black Ops to WWII, with game-specific menus, GSC injectors, RTM tools, previews and DLC references.`,
