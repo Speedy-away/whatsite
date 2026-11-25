@@ -1,12 +1,22 @@
 # robots.txt for whatwhatboy.com
 
+# Web search and user-requested retrieval
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+Disallow: /assets/vendor/
+Crawl-delay: 1
+
 User-agent: *
 Allow: /
-
-# Disallow vendor assets
 Disallow: /assets/vendor/
+Crawl-delay: 1
 
 # Sitemap
 Sitemap: https://whatwhatboy.com/sitemap.xml
-
-Crawl-delay: 1

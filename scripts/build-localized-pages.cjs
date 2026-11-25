@@ -2,6 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),html=require('./localized-html.cjs');
 const {revision:languageRevision}=require('./language-loader.cjs');
 const libraryRoutes=require('./playstation-library-routes.cjs');
+const goldHenSearch=require('./goldhen-search-copy.cjs');
 const configName='docs/i18n/page-translations.json';
 const jailbreakRedirects=new Map([
  ['console/ps4/jailbreak.html','console/ps4/jailbreaks.html'],
@@ -43,6 +44,8 @@ function load(root,{estimateSource=false,previewPages=null,previewLanguages=null
 }
 function translate(ctx,source,code){
  if(code==='en')return source;
+ const goldHen=goldHenSearch.localize(source,code);
+ if(goldHen!==undefined)return goldHen;
  const record=ctx.strings.get(html.normalize(source));
  // New authored source text remains in English until the next translation-cache refresh.
  // Keep the Pages build deployable while preserving the source text verbatim.
@@ -54,6 +57,9 @@ function translate(ctx,source,code){
 }
 function translateKeywords(ctx,page,source,code){
  if(code==='en')return source;
+ const firstTerm=source.split(',',1)[0].trim();
+ const goldHen=goldHenSearch.localize(firstTerm,code);
+ if(goldHen!==undefined)return goldHen+', '+source;
  const guide=/^console\/(ps[45])\/file-transfer-guide\.html$/.exec(page.page);
  if(guide||page.page==='console/download-center/index.html'){
   const authored=require('../i18n-tools/transfer-guide-source.json');

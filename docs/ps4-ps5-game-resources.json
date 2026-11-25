@@ -17704,6 +17704,17 @@
       ],
       "publication": "include",
       "description": "ImGui Only and Beta builds for PS4.",
+      "tags": ["PS4", "SPRX"],
+      "keywords": ["Fortnite 5.28", "Spectrum FN 43.10 ImGui Only", "Spectrum FN Beta", "Spectrum_FN_43.10_ImGui_Only.sprx", "Spectrum_FN_Beta.sprx"],
+      "gameVersionDropdown": true,
+      "versionDropdownLabel": "Build version",
+      "screenshotPopup": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-fortnite/spectrum-fn.png",
+          "caption": "Spectrum FN v32 menu preview from an earlier build."
+        }
+      ],
       "downloads": [
         {
           "id": "fortnite-spectrum-fn-528-imgui",
@@ -17726,28 +17737,6 @@
       ]
     },
     {
-      "id": "fortnite-nware-apex-528",
-      "name": "Nware Apex",
-      "category": "menu",
-      "menuVersion": "5.28",
-      "gameIds": [
-        "fortnite"
-      ],
-      "publication": "include",
-      "description": "PS4 SPRX download.",
-      "downloads": [
-        {
-          "id": "fortnite-nware-apex-528-sprx",
-          "label": "Download",
-          "filename": "Nware_Apex.sprx",
-          "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1575130986843472062/niggerware.sprx?ex=6b082a8b&is=6b06d90b&hm=5d1950404a15dc1059b966e965ce6ee9ddb0507ae520e308597d3144f22684fc&",
-          "distribution": "include",
-          "bytes": 542144,
-          "sha256": "213b9d31f4e12c845f44622b64665582dbfb54b3d34da06c68351f54e9a2fb07"
-        }
-      ]
-    },
-    {
       "id": "fortnite-infinity-fn-528",
       "name": "Infinity FN",
       "category": "menu",
@@ -17757,6 +17746,15 @@
       ],
       "publication": "include",
       "description": "Updated PS4 PRX build.",
+      "tags": ["PS4", "PRX"],
+      "keywords": ["Fortnite 5.28", "Infinity FN PS4", "Infinity FN 5.28 download", "infinity.prx"],
+      "screenshotPopup": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-fortnite/infinity-mod-menu-user-preview.png",
+          "caption": "Infinity menu preview from an earlier Fortnite build."
+        }
+      ],
       "downloads": [
         {
           "id": "fortnite-infinity-fn-528-prx",
@@ -18170,6 +18168,24 @@
       ],
       "downloads": [
         {
+          "id": "apex-legends-nware-1575173235086196907",
+          "label": "2026-11-25 · Updated build",
+          "filename": "Nware_Apex.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1575173235086196907/niggerware.sprx?ex=6b0851e4&is=6b070064&hm=af83368cd2ac1d6507a11920db4d73993cff648c10d178f5470019fc33de9dff&",
+          "distribution": "include",
+          "bytes": 600768,
+          "sha256": "d7163a094c8fb3b5b1061846d975dd4b5a7363b4c88973990c6307957aeba2f2"
+        },
+        {
+          "id": "fortnite-nware-apex-528-sprx",
+          "label": "2026-11-25 · Earlier build",
+          "filename": "Nware_Apex.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1575130986843472062/niggerware.sprx?ex=6b082a8b&is=6b06d90b&hm=5d1950404a15dc1059b966e965ce6ee9ddb0507ae520e308597d3144f22684fc&",
+          "distribution": "include",
+          "bytes": 542144,
+          "sha256": "213b9d31f4e12c845f44622b64665582dbfb54b3d34da06c68351f54e9a2fb07"
+        },
+        {
           "id": "apex-legends-nware-20261119",
           "label": "Download",
           "filename": "niggerware.sprx",
@@ -18246,7 +18262,8 @@
         "nware PS4 download",
         "nware menu screenshot"
       ],
-      "versionDropdownLabel": "Build version"
+      "versionDropdownLabel": "Build version",
+      "gameVersionDropdown": true
     },
     {
       "id": "apex-legends-mags",
@@ -18511,8 +18528,6 @@
       ],
       "publication": "include",
       "version": "v1.8",
-      "description": "Windows companion for Fortnite PS4 chest tours, nearby chest opening and teleport controls. Includes the fn_chests25 plugin, configuration and source files.",
-      "compatibilityText": "Requires a jailbroken PS4 with GoldHEN, FTP Server and BinLoader Server, plus a Windows PC on the same network. Supplied plugins.ini targets CUSA07669. Exact Fortnite update and firmware are unspecified.",
       "featureTags": [
         "Chest Tool",
         "Windows tool",

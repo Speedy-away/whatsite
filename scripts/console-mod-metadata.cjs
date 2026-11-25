@@ -5,19 +5,20 @@ const gameCopy = {
   'modern-warfare-2019': ['MW 2019 PS4 MAG Host Menu & GSC Injector', 'Download the MAG host menu and GSC injector for Modern Warfare 2019 on PS4 update 1.67, CUSA08829 USA. Includes setup and compatibility notes.'],
   'modern-warfare-ii-2022': ['MWII 2022 PS4 MAG Host Menu & GSC Injector', 'Find the MAG host menu and GSC injector for Modern Warfare II (2022) on PS4 update 1.08, CUSA34029, with game-specific setup and compatibility notes.'],
   'vanguard': ['Vanguard PS4 MAG Menus & GSC Injector', 'Browse MAG host menus and GSC injection for Vanguard Multiplayer and Zombies on PS4 update 1.26, CUSA24041 USA, with setup and compatibility notes.'],
-  'apex-legends': ['Apex Legends PS4 Mod Menus · Spectrum, Mags & nware', 'Find Spectrum Apex, Mags Apex v1.0.1 and nware downloads. Mags Apex targets PS4 CUSA12552 game version 3.24 with GoldHEN.',
+  'apex-legends': ['Apex Legends PS4 Mod Menus · Spectrum, Mags & nware', 'Download the updated Nware Apex SPRX and browse Spectrum Apex and Mags Apex for PS4. Mags Apex targets CUSA12552 game update 3.24.',
     ['Spectrum Apex', 'Spectrum Apex download', 'Spectrum Apex SPRX', 'apex.sprx',
       'Mags Apex PS4', 'MAG Menu Apex', 'Mags Apex v1.0.1', 'Mags Apex PS4 download', 'Apex Legends PS4 triggerbot', 'Apex Legends PS4 aimbot', 'Apex Legends PS4 ESP', 'Apex Legends PS4 mods', 'Apex Legends PS4 mod menu', 'Apex Legends PS4 mod menus', 'Apex Legends PS4 mod menu download',
       'Apex PS4 mod menu', 'Apex Legends PlayStation 4 mods', 'PlayStation 4 Apex Legends mod menu', 'Apex Legends SPRX',
       'Apex Legends PS4 SPRX', 'Apex Legends SPRX download', 'Apex Legends nware', 'Apex Legends nware download',
-      'nware PS4', 'nware Apex Legends', 'nware mod menu', 'nware PS4 mod menu', 'nware download', 'nware SPRX', 'nware screenshot']],
-  'fortnite': ['Fortnite PS4 Cheats & Mod Menus', 'Browse Fortnite PS4 mod menus, GoldHEN setup and a user-submitted Fortnite download-file cleanup tip for the matching CUSA title ID.',
+      'nware PS4', 'nware Apex Legends', 'nware mod menu', 'nware PS4 mod menu', 'nware download', 'nware SPRX', 'Nware Apex PS4 download', 'Nware_Apex.sprx', 'nware screenshot']],
+  'fortnite': ['Fortnite PS4 Cheats & Mod Menus', 'Browse Fortnite PS4 mod menus for 5.28 and 5.27, including Spectrum FN 43.10 ImGui Only, Spectrum FN Beta and Infinity FN, with GoldHEN setup.',
     ['OLE8 FN PS4 download', 'O1E8 FN PRX', 'crack_o1e8_v120.prx', 'Infinity Mod Menu PS4 download', 'Fortnite PS4 PRX download', 'Fortnite Pirate Token', 'Pirate Token hack', 'auto farmer Pirate Token', 'Pirate Token auto farmer',
       'Fortnite Pirate Token farm', 'Fortnite PS4 Pirate Token', 'Fortnite Pirate Tokens', 'Fortnite chest auto farmer',
       'Fortnite PS4 cheat', 'Fortnite PS4 hacks', 'Fortnite PS4 cheat menu', 'Fortnite cheats PS4', 'Fortnite hacks PS4', 'PlayStation 4 Fortnite cheats',
       'Fortnite PS4 mods', 'Fortnite PS4 mod menus', 'Fortnite PS4 mod menu download', 'Fortnite PS4 SPRX download', 'Fortnite PS4 GoldHEN plugin',
       'Fortnite PS4 aimbot', 'Fortnite PS4 silent aim', 'Fortnite PS4 ESP', 'Fortnite PS4 player ESP', 'Fortnite PS4 loot ESP', 'Fortnite PS4 container ESP',
       'Fortnite PS4 skin changer', 'Fortnite PS4 no recoil', 'Fortnite PS4 vehicle flying', 'Fortnite skins database', 'Fortnite outfit catalogue',
+      'Fortnite PS4 5.28 mod menus', 'Fortnite PS4 5.27 mod menus', 'Spectrum FN 43.10 ImGui Only', 'Spectrum FN Beta download', 'Infinity FN 5.28 download',
       'Spectrum FN v43.10', 'Spectrum FN PS4', 'Spectrum FN download', 'Spectrum FN mod menu', 'Spectrum_FN.sprx', 'Dev-Phobia Spectrum FN',
       'Fortnite PS4 SPRX', 'Fortnite PS4 cheats', 'Fortnite silent aim', 'Fortnite player ESP', 'Fortnite loot ESP', 'Fortnite client-side skin changer',
       'Fortnite PS4 mod menu', 'Fortnite aimbot', 'Fortnite ESP', 'Fortnite skin changer', 'Unlock all skins', 'Free skins', 'Fortnite PS4 hack',
@@ -48,7 +49,15 @@ function metadataByPage() {
   const result = new Map();
   for (const game of games) {
     const matching = entries.filter(entry => entry.gameId === game.id);
-    const [title, description, discoveryTerms = []] = gameCopy[game.id] || [game.title + ' Resources', game.summary || 'Browse game-specific menus, tools and supplied guides.'];
+    const goldHenBuild = /^GoldHEN JSON cheats · (CUSA\d{5}) · game (\d+\.\d+)\.$/.exec(game.summary || '');
+    const defaultCopy = [game.title + ' Resources', game.description || game.summary || 'Browse game-specific menus, tools and supplied guides.'];
+    if (goldHenBuild) {
+      const [, titleId, update] = goldHenBuild;
+      defaultCopy[0] = game.title + ' PS4 GoldHEN Cheats';
+      defaultCopy[1] = `Download the GoldHEN JSON cheat file for ${game.title} on PS4, ${titleId}, game update ${update}.`;
+      defaultCopy[2] = [`${game.title} PS4 cheat file download`, `${game.title} GoldHEN JSON`, `${titleId} ${update} GoldHEN cheats`];
+    }
+    const [title, description, discoveryTerms = []] = gameCopy[game.id] || defaultCopy;
     const matchHeading = game.id === 'fortnite';
     const pageTitle = matchHeading ? `${game.title} · ${game.platformLabel}` : `${title} | whatwhatboy`;
     const searchable = matching.filter(entry => entry.keywords.length);
@@ -69,9 +78,9 @@ function metadataByPage() {
         ...matching.flatMap(entry => entry.tags), ...matching.flatMap(entry => entry.versions.match(/\bCUSA\d{5}\b/g) || [])]), searchKeywords, type: 'CollectionPage', items,
       ...(game.id === 'rainbow-six-siege' ? {breadcrumbs: [{name:'Home',url:'/'},{name:'Mods / Mod Menus',url:'/console/mods/'},{name:'PS4/PS5 Games',url:'/console/mods/ps4/'},{name:'Rainbow Six Siege',url:game.url}]} : {})});
   }
-  const directory = {title: 'PS4/PS5 Menu Directory: Games, Tools & Guides | whatwhatboy',
+  const directory = {title: 'PS4 Mod Menu Downloads & PS5 Game Tools | whatwhatboy',
     description: `Search ${entries.length} PS4/PS5 game-resource entries across ${games.length} games by menu name, game alias, update or type. Open downloads, previews and guide popups.`,
-    keywords: unique(['PS4 mod menu downloads', 'PS4 mod menu guides', 'MultiCOD', 'MAG GSC Injector', 'MAG host menus', 'BO4 Multiplayer Zombies source code', 'PS4 host mod menus', 'PS4 off-host mod menus', 'GTA 5 mod menu downloads', 'RDR2 mod menu downloads', 'Call of Duty mod menu downloads', ...games.map(game => game.title), 'PS4 PS5 menu directory', 'console game resources', 'mod menu search', 'injectors', 'RTM tools', 'CFG', 'scripts', 'DLC references', ...games.flatMap(game => gameAliases[game.id] || [])]),
+    keywords: unique(['PS4 mod menu downloads', 'where to download PS4 mod menus', 'PlayStation 4 mod menus', 'PS4 SPRX mod menus', 'PS4 PRX mod menus', 'Fortnite PS4 mod menus', 'Apex Legends PS4 mod menus', 'PS4 mod menu guides', 'MultiCOD', 'MAG GSC Injector', 'MAG host menus', 'BO4 Multiplayer Zombies source code', 'PS4 host mod menus', 'PS4 off-host mod menus', 'GTA 5 mod menu downloads', 'RDR2 mod menu downloads', 'Call of Duty mod menu downloads', ...games.map(game => game.title), 'PS4 PS5 menu directory', 'console game resources', 'mod menu search', 'injectors', 'RTM tools', 'CFG', 'scripts', 'DLC references', ...games.flatMap(game => gameAliases[game.id] || [])]),
     type: 'CollectionPage', items: entries.map(entry => ({name: entry.game + ' · ' + entry.name, url: entry.url, keywords: entry.keywords}))};
   result.set('console/mods/ps4/menus.html', directory);
   result.set('console/mods/ps4/index.html', {title: 'PS4/PS5 Mods / Mod Menus | whatwhatboy',
