@@ -92,7 +92,7 @@
       "categoryHeadings": {
         "menu": "5.27"
       },
-      "upcomingMenuVersion": "5.28",
+      "featuredMenuVersion": "5.28",
       "relatedCards": [
         {
           "title": "Skins database",
@@ -17691,6 +17691,81 @@
           "filename": "Spectrum_FN_43.10.sprx",
           "url": "https://cdn.discordapp.com/attachments/1569043359895654582/1571087383393341561/Spectrum_FN_43.10.sprx?ex=6af974a5&is=6af82325&hm=eae5130716bc3334a4c82b699c83f8408935e57f29209cf960738eb90e6cd24b&",
           "distribution": "include"
+        }
+      ]
+    },
+    {
+      "id": "fortnite-spectrum-fn-528",
+      "name": "Spectrum FN",
+      "category": "menu",
+      "menuVersion": "5.28",
+      "gameIds": [
+        "fortnite"
+      ],
+      "publication": "include",
+      "description": "ImGui Only and Beta builds for PS4.",
+      "downloads": [
+        {
+          "id": "fortnite-spectrum-fn-528-imgui",
+          "label": "43.10 ImGui Only",
+          "filename": "Spectrum_FN_43.10_ImGui_Only.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1569900865547145246/1574967137095651328/Spectrum_FN_43.10_ImGui_Only.sprx?ex=6b0791f2&is=6b064072&hm=b099c6abfcd3f4df80d266d86d6ac170492aea38a1741c5b846f7b19ec4fc3cb&",
+          "distribution": "include",
+          "bytes": 13912288,
+          "sha256": "483888d35b9becd278f5ddccf91e36f8d354ca27449b754d0bce9e2100a3e814"
+        },
+        {
+          "id": "fortnite-spectrum-fn-528-beta",
+          "label": "Beta",
+          "filename": "Spectrum_FN_Beta.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1569900865547145246/1575114609935786084/Spectrum_FN_Beta.sprx?ex=6b081b4b&is=6b06c9cb&hm=d71c4188e389b4d7fd34db152060aaa6222b731122024f2500b1af485a63bb08&",
+          "distribution": "include",
+          "bytes": 14870384,
+          "sha256": "d48082a9cbc1020f80ff5ce67fd9ba127c26e0227fbf8973e06ce3340f221eee"
+        }
+      ]
+    },
+    {
+      "id": "fortnite-nware-apex-528",
+      "name": "Nware Apex",
+      "category": "menu",
+      "menuVersion": "5.28",
+      "gameIds": [
+        "fortnite"
+      ],
+      "publication": "include",
+      "description": "PS4 SPRX download.",
+      "downloads": [
+        {
+          "id": "fortnite-nware-apex-528-sprx",
+          "label": "Download",
+          "filename": "Nware_Apex.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1575130986843472062/niggerware.sprx?ex=6b082a8b&is=6b06d90b&hm=5d1950404a15dc1059b966e965ce6ee9ddb0507ae520e308597d3144f22684fc&",
+          "distribution": "include",
+          "bytes": 542144,
+          "sha256": "213b9d31f4e12c845f44622b64665582dbfb54b3d34da06c68351f54e9a2fb07"
+        }
+      ]
+    },
+    {
+      "id": "fortnite-infinity-fn-528",
+      "name": "Infinity FN",
+      "category": "menu",
+      "menuVersion": "5.28",
+      "gameIds": [
+        "fortnite"
+      ],
+      "publication": "include",
+      "description": "Updated PS4 PRX build.",
+      "downloads": [
+        {
+          "id": "fortnite-infinity-fn-528-prx",
+          "label": "Download",
+          "filename": "infinity.prx",
+          "url": "https://cdn.discordapp.com/attachments/1574333040732405760/1574950395720237126/infinity.prx?ex=6b082b1b&is=6b06d99b&hm=4e11650d434b1c916689d751557029f599c98c95265cac8ace5bf9fe2aa46abe&",
+          "distribution": "include",
+          "bytes": 5308320,
+          "sha256": "5a83165a60e38a2d91bc9fb597fd836e6607aee28beeb464c239d5d9b870589e"
         }
       ]
     },

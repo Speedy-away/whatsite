@@ -140,6 +140,8 @@ function createGameImports({root = ROOT, data, files} = {}) {
         const filter = children.length >= 6 ? '<div class="extra-game-filter"><label for="extraGameSearch">Search games or exact CUSA title ID</label><input id="extraGameSearch" type="search" placeholder="Find a game, title ID or update…" autocomplete="off"><p id="extraGameCount" role="status" aria-live="polite">' + children.length + ' game collections</p></div>' : '';
         const childCards = children.length ? section('games', 'Choose a game', filter + grid(...children.map(child => resource(h(child.title), h(child.summary || 'Game-specific files and exact compatibility.'), link('/console/mods/ps4/' + child.slug + '/', 'Open resources'), child.cover))).replace('<div class="games-grid">', '<div class="games-grid" data-extra-game-grid>') + (filter ? '<p id="extraGameEmpty" hidden>No matching game. Try the game name or a listed title ID.</p>' : '')) : '';
         const file = 'console/mods/ps4/' + game.slug + '/index.html';
+        const versionMenus = items.filter(item => item.menuVersion && item.menuVersion === game.featuredMenuVersion);
+        const otherItems = items.filter(item => !versionMenus.includes(item));
         const relatedCards = (game.relatedCards || []).flatMap(card => {
           const url = httpsUrl(card.url);
           return url ? [resource(h(card.title), h(card.description), ext(url, h(card.linkLabel)))] : [];
@@ -157,8 +159,8 @@ function createGameImports({root = ROOT, data, files} = {}) {
             `<ul class="guide-resource-tags" aria-label="Tags">${game.fileCleanup.tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>`
           ) : '') +
           childCards +
-          (game.upcomingMenuVersion ? section('menu-' + h(game.upcomingMenuVersion.replaceAll('.', '-')), h(game.upcomingMenuVersion), '<p>No mod menus listed yet.</p>') : '') +
-          (game.showEmpty && !items.length && !children.length ? section('menu', 'Mod menus', '<p>No PS4 mod-menu downloads are listed yet.</p>' + (game.tags?.length ? '<ul class="guide-resource-tags" aria-label="Game tags">'+game.tags.map(tag=>'<li class="feature-tag">'+h(tag)+'</li>').join('')+'</ul>' : '')) : renderer.gameContent(items, '', game.categoryHeadings)) +
+          (game.featuredMenuVersion ? section('menu-' + h(game.featuredMenuVersion.replaceAll('.', '-')), h(game.featuredMenuVersion), versionMenus.length ? grid(...versionMenus.map(card)) : '<p>No mod menus listed yet.</p>') + versionMenus.map(details).join('\n') : '') +
+          (game.showEmpty && !items.length && !children.length ? section('menu', 'Mod menus', '<p>No PS4 mod-menu downloads are listed yet.</p>' + (game.tags?.length ? '<ul class="guide-resource-tags" aria-label="Game tags">'+game.tags.map(tag=>'<li class="feature-tag">'+h(tag)+'</li>').join('')+'</ul>' : '')) : renderer.gameContent(otherItems, '', game.categoryHeadings)) +
           (relatedCards.length ? section('related-resources', 'Related resources', grid(...relatedCards)) : '') +
           (game.sourceLinks?.length ? section('sources', 'Sources & related guides', sourceList(game.sourceLinks)) : ''), game.heroAnchor || '#content', 'Browse resources');
         const hasVersionDownloads = items.some(item => item.gameVersionDropdown);
