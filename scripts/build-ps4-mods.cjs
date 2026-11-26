@@ -4,8 +4,9 @@ const {page:renderPage,section,grid,resource,note,steps,videoEmbed:video,ext,lin
 const gtaOnly=process.argv.includes('--gta5-only');
 const rdr2Only=process.argv.includes('--rdr2-only');
 const fortniteOnly=process.argv.includes('--fortnite-only');
-const scoped=gtaOnly||rdr2Only||fortniteOnly;
-const page=(file,...args)=>{if((!scoped)||(gtaOnly&&['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'].includes(file))||(rdr2Only&&file==='console/mods/ps4/rdr2/index.html')||(fortniteOnly&&file==='console/mods/ps4/index.html'))renderPage(file,...args);};
+const overwatchOnly=process.argv.includes('--overwatch-only');
+const scoped=gtaOnly||rdr2Only||fortniteOnly||overwatchOnly;
+const page=(file,...args)=>{if((!scoped)||(gtaOnly&&['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'].includes(file))||(rdr2Only&&file==='console/mods/ps4/rdr2/index.html')||((fortniteOnly||overwatchOnly)&&file==='console/mods/ps4/index.html'))renderPage(file,...args);};
 const imported=require('./build-ps4-ps5-game-imports.cjs').createGameImports();
 const catalog=require('./console-mod-catalog.cjs');
 const {resourceTags,resourceTerms}=require('./console-resource-tags.cjs');
@@ -76,8 +77,7 @@ if(!scoped)require('./build-mods-hub.cjs').buildModsHub();
 page('console/mods/ps4/index.html','PS4/PS5 Mods / Mod Menus','Browse the PS4/PS5 collection of GTA V, Red Dead Redemption 2, Call of Duty, Fortnite and DayZ resources, with menu downloads, screenshots and setup guides.',image,nav,
 require('./build-console-downloads.cjs').intro('ps4')+
 section('scooby-console','Scooby Console',grid(resource('Scooby','Browse Scooby PS4 mod menus, apps, and release status.',ext('https://scoobymenu.cc/console/','Open Scooby Console'),'https://scoobymenu.cc/assets/images/social/console-brand-v1.png')))+
-section('games','Available games',grid(resource('Grand Theft Auto V','Menus by game update, script resources, plugin setup and supplied guides.',ext(base,'Open GTA V mods'),'/assets/images/gta52.png'),resource('Red Dead Redemption 2','North, Sheriff, Havana and Oyster resources, with supplied screenshots and videos.',ext(rdr2base,'Open RDR2 mods'),'/assets/images/rdr2.png'),resource('Call of Duty','Game-specific menus, injectors, CFG and RTM tools, screenshots and supplied guides.',ext(codbase,'Browse Call of Duty mods'),'/assets/images/covers/cod-black-ops-3.jpg'),imported.extraGameCards(),
-resource('Overwatch','Scooby PS4 listing. Coming soon.',ext('https://scoobymenu.cc/console/products/overwatch/','View Overwatch listing'),'/assets/images/overwatch.png')))+
+section('games','Available games',grid(resource('Grand Theft Auto V','Menus by game update, script resources, plugin setup and supplied guides.',ext(base,'Open GTA V mods'),'/assets/images/gta52.png'),resource('Red Dead Redemption 2','North, Sheriff, Havana and Oyster resources, with supplied screenshots and videos.',ext(rdr2base,'Open RDR2 mods'),'/assets/images/rdr2.png'),resource('Call of Duty','Game-specific menus, injectors, CFG and RTM tools, screenshots and supplied guides.',ext(codbase,'Browse Call of Duty mods'),'/assets/images/covers/cod-black-ops-3.jpg'),imported.extraGameCards()))+
 section('menu-directory','Find a specific menu',`<p>Search every imported game, menu, script and tool, including older GTA V builds.</p><div class="guide-links">${link('/console/mods/ps4/menus.html','Search the menu directory')}</div>`)+
 section('requirements','Before choosing a mod',note('<p>Match the console firmware, homebrew enabler, game title ID and game update separately. A menu built for GTA V 1.57 is not automatically compatible with 1.56, and the PS4 14.00 jailbreak does not establish GoldHEN plugin support.</p>')), '#games','Browse games');
 page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse ACE-HIGH, North, Sheriff, Havana and Oyster resources for Red Dead Redemption 2, with supplied screenshots and videos.',rdr2image,nav.slice(0,5),
@@ -140,8 +140,8 @@ section('setup','Private-server setup checklist',steps([
 ])+`<div class="guide-links">${ext('https://lossantosonline.com/','Open Los Santos Online')}${link(base+'install.html','Plugin installation guide')}</div>`)+
 section('video','Private-server video companion',video('P9SAjhA-lNU','How To Play GTA Online On A Jailbroken PS4 (Private server)')+note('<p>No transcript was available for this video. The steps above are a preparation checklist, not a verified reproduction of its server-specific installation sequence. Visit the Los Santos Online website for the current client package and setup instructions.</p>')),'#setup','Read server checklist');
 if(!scoped)require('./build-ps4-ps5-cod.cjs');
-imported.buildMods({gtaRendered:true,gtaFiles:files,rdrMenus:rdr2menus,...(gtaOnly?{gameIds:['gta5']}:rdr2Only?{gameIds:['rdr2']}:fortniteOnly?{gameIds:['fortnite']}:{})});
-if(!rdr2Only&&!fortniteOnly){
+imported.buildMods({gtaRendered:true,gtaFiles:files,rdrMenus:rdr2menus,...(gtaOnly?{gameIds:['gta5']}:rdr2Only?{gameIds:['rdr2']}:fortniteOnly?{gameIds:['fortnite']}:overwatchOnly?{gameIds:['overwatch']}:{})});
+if(!rdr2Only&&!fortniteOnly&&!overwatchOnly){
  const file='console/mods/ps4/gta5/index.html';
  const preview=`<dialog id="gta-screenshot-preview" class="gta-screenshot-preview" aria-labelledby="gta-screenshot-title">
 <form method="dialog" class="guide-dialog__header"><h2 id="gta-screenshot-title">Screenshot preview</h2><button type="submit" class="guide-dialog__close" aria-label="Close" autofocus><span aria-hidden="true">✕</span></button></form>
@@ -153,10 +153,10 @@ if(!rdr2Only&&!fortniteOnly){
    .replace('</body>',preview+'<script defer src="/assets/gta5-screenshot-preview.js?v=1"></script><script defer src="/assets/gta5-menu-downloads.js?v=1"></script></body>');
  fs.writeFileSync(file,html);
 }
-if(!gtaOnly&&!fortniteOnly){
+if(!gtaOnly&&!fortniteOnly&&!overwatchOnly){
  const file='console/mods/ps4/rdr2/index.html';
  fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=8"></head>').replace('</body>','<script defer src="/assets/gta5-menu-downloads.js?v=1"></script></body>'));
 }
 if(gtaOnly||rdr2Only)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));
 if(!rdr2Only)catalog.build();
-console.log(fortniteOnly?'Built Fortnite, PS4/PS5 Games and the menu directory.':rdr2Only?'Built RDR2 catalogue with Oyster next to North.':gtaOnly?'Built GTA V catalogue, installation guide and menu directory.':'Built Console Mods, PS4/PS5 Games, three GTA V pages and RDR2 with North, Sheriff and Havana downloads.');
+console.log(overwatchOnly?'Built Overwatch, PS4/PS5 Games and the menu directory.':fortniteOnly?'Built Fortnite, PS4/PS5 Games and the menu directory.':rdr2Only?'Built RDR2 catalogue with Oyster next to North.':gtaOnly?'Built GTA V catalogue, installation guide and menu directory.':'Built Console Mods, PS4/PS5 Games, three GTA V pages and RDR2 with North, Sheriff and Havana downloads.');

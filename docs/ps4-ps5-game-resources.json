@@ -19,6 +19,7 @@
       "id": "apex-legends",
       "title": "Apex Legends",
       "slug": "apex-legends",
+      "featuredMenuVersion": "v3.25",
       "cover": "/assets/images/ps4-apex-legends/apex-legends-user-cover.jpg",
       "platformLabel": "PS4 Mods / Mod Menus",
       "summary": "Spectrum Apex, Mags Apex and nware mod menus.",
@@ -108,7 +109,7 @@
       "slug": "dayz",
       "cover": "/assets/images/ps4-dayz/dayz-cover.webp",
       "platformLabel": "Mod Menus",
-      "summary": "Spectrum DayZ mod menu.",
+      "summary": "",
       "description": "Download the Spectrum DayZ v2 SPRX mod menu.",
       "keywords": [
         "Spectrum DayZ v2",
@@ -187,6 +188,26 @@
         "Dead Island Riptide",
         "JSON cheat files",
         "CUSA compatibility"
+      ]
+    },
+    {
+      "id": "overwatch",
+      "title": "Overwatch",
+      "slug": "overwatch",
+      "cover": "/assets/images/overwatch-banner.jpg",
+      "platformLabel": "PS4",
+      "summary": "Scooby PS4 listing. Coming soon.",
+      "description": "Check the release status of Scooby Overwatch for PlayStation 4 and visit the official product page for updates.",
+      "showEmpty": true,
+      "tags": ["PS4", "Overwatch", "Scooby Console"],
+      "heroAnchor": "#related-resources",
+      "relatedCards": [
+        {
+          "title": "Scooby Overwatch for PS4",
+          "description": "Coming soon. Scooby plans to make downloads available at launch.",
+          "url": "https://scoobymenu.cc/console/products/overwatch/",
+          "linkLabel": "Check release status on Scooby"
+        }
       ]
     },
     {
@@ -18113,8 +18134,9 @@
     },
     {
       "id": "apex-legends-nware",
-      "name": "nware",
+      "name": "Nware",
       "category": "menu",
+      "menuVersion": "v3.25",
       "gameIds": [
         "apex-legends"
       ],
@@ -18123,8 +18145,8 @@
       ],
       "publication": "include",
       "description": "SPRX mod menu for Apex Legends on PS4.",
-      "compatibilityText": "PS4 · Game update and firmware unspecified",
-      "gameVersions": [],
+      "compatibilityText": "PS4 · Firmware unspecified",
+      "gameVersions": ["3.25"],
       "tags": [
         "PS4",
         "PlayStation 4",
@@ -18169,7 +18191,7 @@
       "downloads": [
         {
           "id": "apex-legends-nware-1575221104857972838",
-          "label": "2026-11-25 · Newest build",
+          "label": "Download",
           "filename": "Nware_Apex.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1575221104857972838/niggerware.sprx?ex=6b087e79&is=6b072cf9&hm=c59870fed86ea902f243ec251ad3235389c95cdd40a0fa4cefadeb1916e2ce5a&",
           "distribution": "include",
@@ -18181,7 +18203,7 @@
           "label": "2026-11-25 · Build 1575173235086196907",
           "filename": "Nware_Apex.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1575173235086196907/niggerware.sprx?ex=6b0851e4&is=6b070064&hm=af83368cd2ac1d6507a11920db4d73993cff648c10d178f5470019fc33de9dff&",
-          "distribution": "include",
+          "distribution": "excluded",
           "bytes": 600768,
           "sha256": "d7163a094c8fb3b5b1061846d975dd4b5a7363b4c88973990c6307957aeba2f2"
         },
@@ -18190,7 +18212,7 @@
           "label": "2026-11-25 · Earlier build",
           "filename": "Nware_Apex.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1575130986843472062/niggerware.sprx?ex=6b082a8b&is=6b06d90b&hm=5d1950404a15dc1059b966e965ce6ee9ddb0507ae520e308597d3144f22684fc&",
-          "distribution": "include",
+          "distribution": "excluded",
           "bytes": 542144,
           "sha256": "213b9d31f4e12c845f44622b64665582dbfb54b3d34da06c68351f54e9a2fb07"
         },
@@ -18199,7 +18221,7 @@
           "label": "Download",
           "filename": "niggerware.sprx",
           "url": "https://cdn.discordapp.com/attachments/1571051263960031242/1572888188173819904/niggerware.sprx?ex=6b0001c6&is=6afeb046&hm=9cac8c2ca102d154c83ff12a2948da206c6214cd31cbb9152d66090a4f9ea5c1&",
-          "distribution": "include",
+          "distribution": "excluded",
           "bytes": 454176,
           "sha256": "d33b9dc563db989d6207556df69071e7c86a499c1312c322b12df60343897e11"
         },
@@ -18270,9 +18292,7 @@
         "nware PS4 mod menu",
         "nware PS4 download",
         "nware menu screenshot"
-      ],
-      "versionDropdownLabel": "Build version",
-      "gameVersionDropdown": true
+      ]
     },
     {
       "id": "apex-legends-mags",
