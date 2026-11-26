@@ -139,7 +139,7 @@ function page(file, title, description, image, nav, content, primary = '#content
 <footer class="guide-footer"><div class="container">${isPhoneHelp ? 'Saving steps vary by browser and file type. Browser help is linked above.' : isDownloads ? 'Menus, scripts, tools and source-code downloads.' : isSource ? 'Game source-code collections and project links.' : `Reviewed ${reviewed}. Check each project's release notes for firmware and installation requirements.`} <a href="/pages/contact.html">Report a broken link</a>.</div></footer>
 </main><script src="/script.js?v=3.1.21"></script><script defer src="/assets/console-guide-dialog.js?v=5"></script></body></html>`;
   fs.mkdirSync(path.dirname(path.join(root, file)), { recursive: true });
-  const prepared = require('./console-hub-hens.cjs').apply(file, require('./page-search-tags.cjs').apply(file, require('./guide-popup-policy.cjs').applyGuidePopupPolicy(file, require('./console-game-directories.cjs').apply(file, require('./console-hubs.cjs').improveHub(file, html)))));
+  const prepared = require('./page-search-tags.cjs').apply(file, require('./guide-popup-policy.cjs').applyGuidePopupPolicy(file, require('./console-game-directories.cjs').apply(file, require('./console-hubs.cjs').improveHub(file, html))));
   const output = require('./apply-mobile-layout.cjs').improve(require('./sidebar-icons.cjs').applySidebarIcons(file, require('./site-ads.cjs').applyAds(file, prepared)));
   fs.writeFileSync(path.join(root, file), require('./search-page-output.cjs').finish(file, output));
 }
