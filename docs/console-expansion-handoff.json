@@ -13919,5 +13919,103 @@
       "metadata": "Updated the Black Ops 2 page title, description, keywords, Open Graph and Twitter metadata, individual resource structured keywords, menu-directory card and resource tag report.",
       "verification": "8 focused search/tag/metadata tests passed, plus targeted assertions for tags, aliases, card search attributes, page/social metadata and structured entries. Three scoped metadata checks passed."
     }
+  },
+  "phantomHenHost20261126": {
+    "date": "2026-11-26",
+    "repository": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+    "page": "https://speedy-away.github.io/ps4/phantomhen/",
+    "status": "Added PS4 14.02 PhantomHEN choice and matching console screens in the independent host repository. Main-site migration redirects preserved.",
+    "sourceInventory": "speedy-away.github.io/docs/phantomhen-source-inventory.json",
+    "archiveInventory": "F:/whatsite-backup-downloads-etc/inventories/phantomhen-20261126.json",
+    "payloadExecuted": false,
+    "hardwareTested": false,
+    "published": true,
+    "repositoryCommit": "3388d2ab367f94915046b4a857e8b6e1b36349a1",
+    "deployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/45836882785",
+    "verification": "Live PS4 navigation and both HEN choosers verified. 31 focused tests and all five CI deployment verifiers passed. Eight live PhantomHEN modules/payloads matched upstream hashes; F: ZIPs verified. Physical-console testing not performed."
+  },
+  "ps4HensHub20261126": {
+    "date": "2026-11-26",
+    "page": "https://speedy-away.github.io/ps4/hens/",
+    "status": "User clarified Hens belongs on the PS4 host. Removed the main-site section and its generator hook; host now owns /ps4/hens/ with GoldHEN, HEN / SilverHEN and PhantomHEN choices.",
+    "links": [
+      "/console/ps4/goldhen.html",
+      "https://speedy-away.github.io/ps4/14.02/",
+      "https://speedy-away.github.io/ps4/phantomhen/"
+    ],
+    "regeneration": "scripts/console-hub-hens.cjs, called by scripts/build-console-guides.cjs",
+    "verification": "Checked three cards, section placement, local image and page links, idempotent regeneration and syntax.",
+    "repositoryCommit": "01a96c7a0d2d64612498b76a7c964f0dfaeb2f39",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/45837853933",
+    "published": true,
+    "mainRemovalCommit": "8987ed72",
+    "hostCommit": "e32d2d2",
+    "hostDeployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/45844827037",
+    "liveVerification": "Deployment succeeded; /ps4/hens/ returned HTTP 200 with all three HEN choices."
+  },
+  "ps4HensPlacement20261126": {
+    "date": "2026-11-26",
+    "request": "Only keep Hens choices inside the 14.02 exploit. Remove the separate Hens host menu/page.",
+    "repository": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+    "page": "https://speedy-away.github.io/ps4/14.02/",
+    "hostCommit": "3621606",
+    "deployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/45850493669",
+    "status": "Separate Hens page/menu and generator removed. GoldHEN, HEN / SilverHEN, PhantomHEN retained in the 14.02 selector. Archives and native runtimes preserved.",
+    "verification": "20 focused tests passed. Links, metadata and offline-cache verification passed; generated output has no Hens page/menu and keeps all three selector choices.",
+    "published": true,
+    "repositoryCommit": "3621606",
+    "liveVerification": "Verified live: PS4 menu has no /ps4/hens/ link; separate Hens URL returns 404; 14.02 selector retains GoldHEN, HEN / SilverHEN and PhantomHEN."
+  },
+  "ps4HensSeo20261126": {
+    "date": "2026-11-26",
+    "repository": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+    "commit": "42f4a73",
+    "status": "Updated keywords, launcher/search tags, social/schema tags and localized descriptions for the three HEN choices inside PS4 14.02. Refreshed the guide and sitemap lastmod; removed Hens page is excluded.",
+    "deployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/45851481753",
+    "published": true,
+    "liveVerification": "Deployment succeeded; live guide keywords contain GoldHEN, SilverHEN and PhantomHEN; sitemap has updated lastmod dates and excludes the removed Hens page."
+  },
+  "phantomHenExpandedSeo20261126": {
+    "date": "2026-11-26",
+    "repository": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+    "commit": "5c1e08a",
+    "status": "Expanded PhantomHEN aliases, HEN 184 and exact payload filename terms, action tags, 21-language metadata, social/schema tags and existing 14.02 guide content. Both PhantomHEN wrapper URLs now receive complete metadata. No separate Hens menu/page was restored.",
+    "deployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/45853535677",
+    "published": true,
+    "liveVerification": "Live /ps4/phantomhen/ returns HTTP 200 with Phantom HEN, HEN184 and exact payload filename keywords and SoftwareApplication metadata. The live 14.02 guide includes the PhantomHEN subsection."
+  },
+  "ps4PsPlusFaqSeo20261126": {
+    "date": "2026-11-26",
+    "repository": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+    "page": "https://speedy-away.github.io/hosts/ps4/14.02-guide/#ps-plus-faq",
+    "commit": "927e091",
+    "status": "Added 14 question-intent search terms and six sourced PS Plus/jailbreak FAQ answers with tags and FAQ schema. Accurate subscription/sharing explanations; no claim that jailbreak grants free PS Plus. Existing sitemap verified.",
+    "deployment": "https://github.com/Speedy-away/speedy-away.github.io/actions/runs/45854239575",
+    "published": true,
+    "liveVerification": "Deployment succeeded. Live guide returns HTTP 200 with PS Plus/jailbreak keywords, visible FAQ and six structured questions. Sitemap includes guide and excludes removed Hens page."
+  },
+  "goldhenSilverHenExpandedSeo20261126": {
+    "date": "2026-11-26",
+    "repository": "C:/Users/whatw/Documents/GitHub/speedy-away.github.io",
+    "commit": "598e38a",
+    "status": "Expanded GoldHEN and HEN / SilverHEN keywords, searchable/visible tags, localized metadata and existing 14.02 guide content. 19 tests and four deployment verifiers passed; kept firmware pins, payload identities and removed-Hens-page state.",
+    "pushed": true,
+    "published": false
+  },
+  "overwatchScoobyPreview20261127": {
+    "date": "2026-11-27",
+    "page": "/console/mods/ps4/overwatch/#resource-overwatch-scooby",
+    "status": "Added Scooby card with original supplied screenshot, Aimbot/Triggerbot/ESP features and Download link to official product page. Official product/download pages still list Overwatch as coming soon; no ready-to-use asset was offered. Exact compatibility left unconfirmed.",
+    "source": "https://scoobymenu.cc/console/products/overwatch/",
+    "image": "/assets/images/ps4-overwatch/scooby-user-preview.png",
+    "imageSHA256": "fa11a9f7eb2dadba8b39245e250b655235384edbcd22e65a279e4db87b01dda0",
+    "archiveInventory": "F:/whatsite-backup-downloads-etc/inventories/ps4-overwatch-scooby-20261127.json",
+    "verification": "Original and F: preview SHA-256 verified. Browser checked card and enlarged screenshot popup. Metadata, source link, tags, directory and three sitemap dates checked. 15 tests passed; one unrelated pre-existing Dead Island catalogue metadata assertion failed.",
+    "readyToUseDownloadArchived": false,
+    "payloadExecuted": false,
+    "published": false,
+    "publicationStatus": "User explicitly approved push. Scoped Overwatch changes committed and pushed to origin/main; deployment not yet verified.",
+    "repositoryCommit": "e009f7d9",
+    "pushed": true
   }
 }
