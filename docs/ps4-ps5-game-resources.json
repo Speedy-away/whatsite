@@ -196,19 +196,19 @@
       "slug": "overwatch",
       "cover": "/assets/images/overwatch-banner.jpg",
       "platformLabel": "PS4",
-      "summary": "Scooby PS4 listing. Coming soon.",
-      "description": "Check the release status of Scooby Overwatch for PlayStation 4 and visit the official product page for updates.",
+      "summary": "Scooby PS4 · Aimbot, triggerbot and ESP.",
+      "description": "Browse Scooby for Overwatch PS4: aimbot, triggerbot and ESP, with the supplied menu screenshot and official download page.",
       "showEmpty": true,
-      "tags": ["PS4", "Overwatch", "Scooby Console"],
-      "heroAnchor": "#related-resources",
-      "relatedCards": [
-        {
-          "title": "Scooby Overwatch for PS4",
-          "description": "Coming soon. Scooby plans to make downloads available at launch.",
-          "url": "https://scoobymenu.cc/console/products/overwatch/",
-          "linkLabel": "Check release status on Scooby"
-        }
-      ]
+      "tags": [
+        "PS4",
+        "Overwatch",
+        "Scooby",
+        "Aimbot",
+        "Triggerbot",
+        "ESP"
+      ],
+      "heroAnchor": "#menu",
+      "relatedCards": []
     },
     {
       "id": "dying-light",
@@ -17725,8 +17725,17 @@
       ],
       "publication": "include",
       "description": "ImGui Only and Beta builds for PS4.",
-      "tags": ["PS4", "SPRX"],
-      "keywords": ["Fortnite 5.28", "Spectrum FN 43.10 ImGui Only", "Spectrum FN Beta", "Spectrum_FN_43.10_ImGui_Only.sprx", "Spectrum_FN_Beta.sprx"],
+      "tags": [
+        "PS4",
+        "SPRX"
+      ],
+      "keywords": [
+        "Fortnite 5.28",
+        "Spectrum FN 43.10 ImGui Only",
+        "Spectrum FN Beta",
+        "Spectrum_FN_43.10_ImGui_Only.sprx",
+        "Spectrum_FN_Beta.sprx"
+      ],
       "gameVersionDropdown": true,
       "versionDropdownLabel": "Build version",
       "screenshotPopup": true,
@@ -17767,8 +17776,16 @@
       ],
       "publication": "include",
       "description": "Updated PS4 PRX build.",
-      "tags": ["PS4", "PRX"],
-      "keywords": ["Fortnite 5.28", "Infinity FN PS4", "Infinity FN 5.28 download", "infinity.prx"],
+      "tags": [
+        "PS4",
+        "PRX"
+      ],
+      "keywords": [
+        "Fortnite 5.28",
+        "Infinity FN PS4",
+        "Infinity FN 5.28 download",
+        "infinity.prx"
+      ],
       "screenshotPopup": true,
       "images": [
         {
@@ -18197,7 +18214,9 @@
       "publication": "include",
       "description": "SPRX mod menu for Apex Legends on PS4.",
       "compatibilityText": "PS4 · Firmware unspecified",
-      "gameVersions": ["3.25"],
+      "gameVersions": [
+        "3.25"
+      ],
       "tags": [
         "PS4",
         "PlayStation 4",
@@ -19164,6 +19183,67 @@
           "distribution": "include",
           "bytes": 1982912,
           "sha256": "7c6e6f0ee33a90662258c4b3faed57fae78bcefeba65699c212049f47569f06f"
+        }
+      ]
+    },
+    {
+      "id": "overwatch-scooby",
+      "name": "Scooby",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "overwatch"
+      ],
+      "platforms": [
+        "PS4"
+      ],
+      "description": "Aimbot, triggerbot and ESP.",
+      "compatibilityText": "PS4. The official product page currently lists Overwatch as coming soon. Exact game update, title ID, region, firmware and setup requirements have not been published.",
+      "tags": [
+        "PS4",
+        "Scooby",
+        "Overwatch",
+        "Aimbot",
+        "Triggerbot",
+        "ESP"
+      ],
+      "featureTags": [
+        "PS4",
+        "Aimbot",
+        "Triggerbot",
+        "ESP",
+        "Scooby",
+        "Overwatch"
+      ],
+      "keywords": [
+        "Scooby Overwatch",
+        "Scooby Overwatch PS4",
+        "Overwatch PS4 mod menu",
+        "Overwatch PS4 aimbot",
+        "Overwatch PS4 triggerbot",
+        "Overwatch PS4 ESP",
+        "Scooby Console Overwatch",
+        "Scooby Overwatch download",
+        "Overwatch PlayStation 4"
+      ],
+      "screenshotPopup": true,
+      "hideCardGuideLink": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-overwatch/scooby-user-preview.png",
+          "caption": "User-supplied Scooby Overwatch menu screenshot showing the practice range, ESP overlays and the Scooby menu."
+        }
+      ],
+      "source": {
+        "postUrl": "https://scoobymenu.cc/console/products/overwatch/",
+        "captureFile": "docs/sources/overwatch/scooby-overwatch.json",
+        "capturedAt": "2026-11-27"
+      },
+      "downloads": [],
+      "relatedLinks": [
+        {
+          "url": "https://scoobymenu.cc/console/products/overwatch/",
+          "label": "Download"
         }
       ]
     }
