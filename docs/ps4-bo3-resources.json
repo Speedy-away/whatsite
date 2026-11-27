@@ -1,6 +1,134 @@
 {
   "resources": [
     {
+      "id": "daybreak-engine-off-host",
+      "group": "multiplayer",
+      "offHost": true,
+      "name": "DayBreak Engine Off-Host",
+      "version": "Beta 0.9 · BO3 1.33",
+      "gameVersions": [
+        "1.33"
+      ],
+      "platforms": [
+        "PS4"
+      ],
+      "titleIds": [
+        "CUSA02290"
+      ],
+      "description": "Multiplayer off-host menu with aimbot, triggerbot and anti-aim options shown in the supplied preview.",
+      "compatibilityText": "PS4 · BO3 1.33 Multiplayer · CUSA02290 · GoldHEN Plugin Loader",
+      "tags": [
+        "PS4",
+        "Off-host",
+        "Multiplayer",
+        "SPRX",
+        "DayBreak Engine",
+        "BO3 1.33"
+      ],
+      "featureTags": [
+        "PS4",
+        "Off-host",
+        "Multiplayer",
+        "Game 1.33",
+        "SPRX",
+        "Beta 0.9"
+      ],
+      "keywords": [
+        "DayBreak Engine Off-Host",
+        "DayBreak Engine BO3 PS4",
+        "DayBreak Engine Beta 0.9",
+        "BO3 1.33 off-host menu",
+        "Black Ops 3 PS4 off-host mod menu",
+        "DayBreak.sprx",
+        "BO3PS4_1.33_DayBreakEngine_MP.rar",
+        "DayBreak Engine PS4 download"
+      ],
+      "searchKeywords": [
+        "DayBreak Engine Off-Host",
+        "DayBreak Engine BO3 PS4",
+        "DayBreak Engine Beta 0.9",
+        "BO3 1.33 off-host menu",
+        "Black Ops 3 PS4 off-host mod menu",
+        "DayBreak.sprx",
+        "BO3PS4_1.33_DayBreakEngine_MP.rar",
+        "DayBreak Engine PS4 download"
+      ],
+      "screenshotPopup": true,
+      "images": [
+        {
+          "original": "/assets/images/ps4-bo3/daybreak-engine-off-host-user-preview.webp",
+          "caption": "User-supplied DayBreak Engine Beta 0.9 screenshot showing the Aimbot tab, triggerbot and anti-aim options."
+        }
+      ],
+      "downloads": [
+        {
+          "label": "Download",
+          "filename": "BO3PS4_1.33_DayBreakEngine_MP.rar",
+          "url": "https://cdn.discordapp.com/attachments/1576015087922053150/1576015088589213696/BO3PS4_1.33_DayBreakEngine_MP.rar?ex=6b0b61ee&is=6b0a106e&hm=41ae2f1aba282ce3edb8e74ea72c06d96259edcf3052ab638b9ef19af305fe18&"
+        }
+      ],
+      "source": {
+        "postTitle": "DayBreak Engine Off-Host",
+        "capturedAt": "2026-11-27",
+        "captureFile": "docs/sources/black-ops-3/daybreak-engine-off-host.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1576015087922053150/1576015088589213696/BO3PS4_1.33_DayBreakEngine_MP.rar?ex=6b0b61ee&is=6b0a106e&hm=41ae2f1aba282ce3edb8e74ea72c06d96259edcf3052ab638b9ef19af305fe18&"
+        ]
+      },
+      "controls": [
+        {
+          "input": "L1 + D-pad Right",
+          "action": "Open / close the menu."
+        },
+        {
+          "input": "L1 / R1",
+          "action": "Previous / next tab."
+        },
+        {
+          "input": "D-pad",
+          "action": "Navigate and change a value."
+        },
+        {
+          "input": "X / Circle",
+          "action": "Select / back or close."
+        }
+      ],
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Compatibility",
+          "text": "The supplied archive filename identifies BO3 PS4 1.33 Multiplayer. Its README lists CUSA02290 and GoldHEN plugin loading. The supplied screenshot shows DayBreak Engine Beta 0.9. No other title IDs, firmware versions or Zombies support are confirmed for this build."
+        },
+        {
+          "type": "steps",
+          "title": "Install DayBreak.sprx",
+          "items": [
+            {
+              "title": "Copy the plugin",
+              "text": "Extract DayBreak.sprx from the RAR and copy it to /data/GoldHEN/plugins/."
+            },
+            {
+              "title": "Merge the configuration",
+              "text": "Back up plugins.ini and add the supplied CUSA02290 entry without replacing your existing game sections."
+            },
+            {
+              "title": "Launch",
+              "text": "Enable GoldHEN plugin loading, start the matching BO3 build and press L1 + D-pad Right."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Configuration from the included README",
+          "text": "[CUSA02290]\n/data/GoldHEN/plugins/DayBreak.sprx"
+        },
+        {
+          "type": "paragraph",
+          "text": "The README credits XeXPoiiison. Save Config in the Style tab keeps settings; name and clan-tag choices are not saved."
+        }
+      ]
+    },
+    {
       "id": "injector",
       "group": "injector",
       "name": "GSC Injector · no PC needed",
@@ -359,10 +487,25 @@
       "id": "matrix",
       "group": "both",
       "name": "MatrixMods PS4",
-      "platforms": ["PS4"],
-      "featureTags": ["PS4", "ELF", "MultiCOD"],
-      "gameVersions": ["1.00", "1.26"],
-      "searchKeywords": ["Matrix mod menu", "Matrix PS4 mod menu", "Matrix BO3 mod menu", "BO3 MatrixMods", "Black Ops III Matrix mod menu download"],
+      "platforms": [
+        "PS4"
+      ],
+      "featureTags": [
+        "PS4",
+        "ELF",
+        "MultiCOD"
+      ],
+      "gameVersions": [
+        "1.00",
+        "1.26"
+      ],
+      "searchKeywords": [
+        "Matrix mod menu",
+        "Matrix PS4 mod menu",
+        "Matrix BO3 mod menu",
+        "BO3 MatrixMods",
+        "Black Ops III Matrix mod menu download"
+      ],
       "image": "matrixmods.png",
       "downloads": [
         {
@@ -542,4 +685,3 @@
   "schemaVersion": 1,
   "captureDate": "2026-11-02"
 }
-

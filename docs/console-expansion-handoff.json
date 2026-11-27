@@ -14030,9 +14030,37 @@
     "downloadStatus": "Official product page says coming soon and PS4 download pending release; download hub explicitly states RDR2 downloads are unavailable.",
     "verification": "docs/qa/scooby-rdr2-verification.json",
     "payloadExecuted": false,
-    "published": false,
+    "published": true,
     "editorialUpdate": "User requested Scooby be labelled Best RDR2 Online PS4 mod menu. Added the phrase to the first card, hero, search keywords and page/social metadata; retained 1.32, Online features, screenshot and official product link. Verified locally; not published.",
     "seoUpdate": "Expanded Scooby/RDR2 Online/PS4/1.32/Gold/Money/XP keywords and directory search aliases; six visible feature tags; refreshed search, Open Graph, Twitter and CollectionPage item keywords. Both canonical sitemap entries verified unique with 2026-11-27 lastmod. Targeted checks passed; SEO suite 8 passed and one existing unrelated Dead Island description-length assertion failed. Local only; not published.",
-    "publicationStatus": "User authorized push; scoped Scooby changes prepared for origin/main. Deployment verification pending."
+    "publicationStatus": "Published and verified live.",
+    "repositoryCommit": "29d2dea06a415aac455d6b7d2eda07af3ac5db96",
+    "pushed": true,
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46081204968",
+    "liveCheckedAt": "2026-11-27T23:19:26.807Z",
+    "liveVerification": "Live Scooby first-card placement, exact Best RDR2 Online PS4 mod menu wording, 1.32, Online/Gold/Money/XP details, six tags, product link, revision-pinned screenshot SHA-256, keywords, social metadata, JSON-LD, directory search and sitemap passed."
+  },
+  "bo3DaybreakEngineOffHost20261127": {
+    "date": "2026-11-27",
+    "page": "/console/mods/ps4/call-of-duty/black-ops-3/#resource-bo3-daybreak-engine-off-host",
+    "status": "Added DayBreak Engine Off-Host under Off host, separately from existing DayBreak Zombies. Supplied image enlarges; original RAR mirrored with pinned source preserved. Keywords, six visible tags, directory, social/schema metadata and sitemap updated.",
+    "compatibility": "PS4 BO3 1.33 Multiplayer from archive filename; CUSA02290 and GoldHEN Plugin Loader from included README. Beta 0.9 from supplied screenshot. No other regions, firmware or Zombies support inferred.",
+    "download": {
+      "sourceUrl": "https://cdn.discordapp.com/attachments/1576015087922053150/1576015088589213696/BO3PS4_1.33_DayBreakEngine_MP.rar?ex=6b0b61ee&is=6b0a106e&hm=41ae2f1aba282ce3edb8e74ea72c06d96259edcf3052ab638b9ef19af305fe18&",
+      "local": "/downloads/ps4/BO3/daybreak-engine-off-host/bf83e58dae13/BO3PS4_1.33_DayBreakEngine_MP.rar",
+      "bytes": 89008,
+      "sha256": "bf83e58dae13692f56f0748114c6bc5feb744bb643924a7d450546a5ee57578f"
+    },
+    "source": "docs/sources/black-ops-3/daybreak-engine-off-host.json",
+    "inventory": "docs/ps4-bo3-daybreak-engine-private-inventory.json",
+    "backupInventory": "F:/whatsite-backup-downloads-etc/inventories/ps4-bo3-daybreak-engine-1576015088589213696.json",
+    "archiveVerified": true,
+    "archiveFiles": "Original RAR, extracted DayBreak.sprx and README.txt preserved on F: and SHA-256 verified.",
+    "archiveIndexStatus": "Archive index refreshed with all three DayBreak files present. 9,737 total records: 34 present, 9,703 older records missing; older paths, versions and metadata retained and no original files deleted. Initial all-sidecar merge hit a pre-existing missing 3DS theme, so only the new verified scoped records were unioned into the audit before the metadata-only index refresh.",
+    "generator": "node scripts/build-ps4-ps5-cod.cjs --bo3-only",
+    "verification": "docs/qa/daybreak-engine-bo3-verification.json; 24 focused tests passed, browser card/popup checked, all existing downloads preserved and scoped regeneration idempotent across 16 tracked COD pages.",
+    "payloadExecuted": false,
+    "published": false,
+    "publicationStatus": "User authorized repository push; scoped DayBreak changes prepared for origin/main."
   }
 }

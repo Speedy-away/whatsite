@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-27",
+  "page": "/console/mods/ps4/call-of-duty/black-ops-3/#resource-bo3-daybreak-engine-off-host",
+  "name": "DayBreak Engine Off-Host",
+  "menuVersion": "Beta 0.9 (supplied preview)",
+  "gameUpdate": "1.33",
+  "titleId": "CUSA02290",
+  "download": {
+    "local": "/downloads/ps4/BO3/daybreak-engine-off-host/bf83e58dae13/BO3PS4_1.33_DayBreakEngine_MP.rar",
+    "bytes": 89008,
+    "sha256": "bf83e58dae13692f56f0748114c6bc5feb744bb643924a7d450546a5ee57578f",
+    "sourceUrl": "https://cdn.discordapp.com/attachments/1576015087922053150/1576015088589213696/BO3PS4_1.33_DayBreakEngine_MP.rar?ex=6b0b61ee&is=6b0a106e&hm=41ae2f1aba282ce3edb8e74ea72c06d96259edcf3052ab638b9ef19af305fe18&"
+  },
+  "image": {
+    "local": "/assets/images/ps4-bo3/daybreak-engine-off-host-user-preview.webp",
+    "bytes": 493856,
+    "sha256": "a511e22b923164b854d6f0c8c505e0a922670a8f7a33746b03079155bf64feeb",
+    "source": "User supplied 61b898a0-85cc-44f1-8b9d-fd4112924b93.webp"
+  },
+  "archiveVerified": true,
+  "inventory": "docs/ps4-bo3-daybreak-engine-private-inventory.json",
+  "focusedTests": "24 passed",
+  "browser": "Verified Off host card and original screenshot enlargement.",
+  "existingDownloadsPreserved": true,
+  "seo": "Visible tags, search keywords, directory entry, social metadata, JSON-LD and sitemap verified.",
+  "payloadExecuted": false,
+  "published": false,
+  "scopedRebuild": "BO3-only regeneration is idempotent; all 16 tracked Call of Duty pages retain their pre-run SHA-256.",
+  "archiveIndex": {
+    "newFiles": 3,
+    "newFilesPresent": 3,
+    "totalFileRecords": 9737,
+    "presentFileRecords": 34,
+    "olderMissingFileRecords": 9703,
+    "filesDeleted": false,
+    "note": "Archive index refreshed with all three DayBreak files present. 9,737 total records: 34 present, 9,703 older records missing; older paths, versions and metadata retained and no original files deleted. Initial all-sidecar merge hit a pre-existing missing 3DS theme, so only the new verified scoped records were unioned into the audit before the metadata-only index refresh."
+  },
+  "deploymentChecks": "23 Pages deployment/routing/sparse-tree/source-link tests passed before push.",
+  "publicationStatus": "User authorized repository push; deployment verification pending."
+}

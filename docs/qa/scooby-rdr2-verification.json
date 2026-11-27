@@ -21,7 +21,7 @@
     "Older Oyster F: archive path referenced by the test is missing."
   ],
   "readyToUseDownloadArchived": false,
-  "published": false,
+  "published": true,
   "editorialLabel": "Best RDR2 Online PS4 mod menu",
   "editorialLabelChecks": "First card, existing features, image and source link, page title and directory search verified.",
   "seoUpdate": {
@@ -53,5 +53,35 @@
     "targetedChecks": "Passed all Scooby tags, keywords, social metadata, schema, directory search, first-card placement, source link, image and sitemap checks."
   },
   "deploymentChecks": "23 Pages deployment/routing/sparse-tree/source-link tests passed on 2026-11-27.",
-  "publicationStatus": "User authorized push; deployment verification pending."
+  "publicationStatus": "Published and verified live.",
+  "live": {
+    "checkedAt": "2026-11-27T23:19:26.807Z",
+    "repositoryCommit": "29d2dea06a415aac455d6b7d2eda07af3ac5db96",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46081204968",
+    "status": "success",
+    "routes": [
+      {
+        "url": "https://whatwhatboy.com/console/mods/ps4/rdr2/",
+        "status": 200,
+        "bytes": 75376
+      },
+      {
+        "url": "https://whatwhatboy.com/console/mods/ps4/menus.html",
+        "status": 200,
+        "bytes": 1618483
+      },
+      {
+        "url": "https://whatwhatboy.com/sitemap.xml",
+        "status": 200,
+        "bytes": 69434
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/29d2dea06a415aac455d6b7d2eda07af3ac5db96/assets/images/ps4-rdr2/scooby-user-preview.webp",
+        "status": 200,
+        "bytes": 729998
+      }
+    ],
+    "imageSHA256": "56baa30fea191e845440cd51100c808a591f8b63bfc716cb089623489c94cc75",
+    "verification": "Live Scooby first-card placement, exact Best RDR2 Online PS4 mod menu wording, 1.32, Online/Gold/Money/XP details, six tags, product link, revision-pinned screenshot SHA-256, keywords, social metadata, JSON-LD, directory search and sitemap passed."
+  }
 }

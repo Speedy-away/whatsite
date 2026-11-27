@@ -1,6 +1,8 @@
 const fs=require('node:fs');
 const path=require('node:path');
-const {page,section,grid,resource,note,steps,ext,link,esc}=require('./build-console-guides.cjs');
+const {page:renderPage,section,grid,resource,note,steps,ext,link,esc}=require('./build-console-guides.cjs');
+const bo3Only=typeof process!=='undefined'&&process.argv?.includes('--bo3-only');
+const page=(file,...args)=>{if(!bo3Only||file==='console/mods/ps4/call-of-duty/black-ops-3/index.html')renderPage(file,...args);};
 const {resources}=JSON.parse(fs.readFileSync('docs/ps4-bo3-resources.json','utf8'));
 const manifestFile='downloads/ps4/BO3/manifest.json';
 const localFiles=fs.existsSync(manifestFile)?JSON.parse(fs.readFileSync(manifestFile,'utf8')).files:[];
@@ -30,7 +32,7 @@ const card=menu=>renderer.card(normalized.find(item=>item.id==='bo3-'+menu.id));
 page('console/mods/ps4/call-of-duty/index.html','Call of Duty Mods for PS4','Browse Call of Duty mod menus for PS4. Find Black Ops 3 GSC tools, Zombies and Multiplayer menus, downloads and setup steps.',cover,nav,
  section('games','Call of Duty games',grid(resource('Call of Duty: Black Ops 3','GSC Injector setup, MuzzMan’s menu pack, Zombies menus and Multiplayer downloads.',link(bo3,'Open Black Ops 3 mods'),cover))), '#games','Browse games');
 page('console/mods/ps4/call-of-duty/black-ops-3/index.html','Black Ops 3 Mods for PS4','PS4 Black Ops 3 GSC Injector setup and menu downloads: DayBreak, EnCoRe, Purple Lake, Frostbite, WhiteShadow8500, Synergy and MatrixMods.',cover,nav,
- section('browse','Choose a mode',`<nav class="guide-nav" aria-label="Black Ops 3 sections"><a href="#injector">GSC Injector</a><a href="#setup">Injector setup</a><a href="#zombies">Zombies</a><a href="#multiplayer">Multiplayer</a><a href="#both">MP &amp; ZM</a>${resources.some(menu=>menu.group==='other')?'<a href="#other">Other resources</a>':''}</nav>`)+
+ section('browse','Choose a mode',`<nav class="guide-nav" aria-label="Black Ops 3 sections">${resources.some(menu=>menu.offHost)?'<a href="#off-host">Off host</a>':''}<a href="#injector">GSC Injector</a><a href="#setup">Injector setup</a><a href="#zombies">Zombies</a><a href="#multiplayer">Multiplayer</a><a href="#both">MP &amp; ZM</a>${resources.some(menu=>menu.group==='other')?'<a href="#other">Other resources</a>':''}</nav>`)+
  (resources.some(m=>m.offHost)?section('off-host','Off host',grid(...resources.filter(m=>m.offHost).map(card))):'')+
  section('injector','GSC Injector & menu pack',grid(...resources.filter(m=>['injector','packs'].includes(m.group)&&!m.offHost).map(card),...nextResources.map(item=>nextRenderer.card(item))))+
  section('setup','GSC Injector setup · no PC injector needed',steps([
@@ -43,9 +45,9 @@ page('console/mods/ps4/call-of-duty/black-ops-3/index.html','Black Ops 3 Mods fo
  ])+`<pre class="guide-code"><code>/data/GoldHEN/plugins/T7_GSC_Injector.prx</code></pre>`+
  note('<p>The folder-creation steps follow the supplied T7 injector notes. The MuzzMan pack works with the posted injector or another compatible injector; packaged SPRX menus can have a different installation method. Follow each menu’s included instructions.</p>')+
  `<div class="guide-links">${ext('https://github.com/GoldHEN/GoldHEN_Plugins_Repository','GoldHEN plugin setup documentation')}</div>`)+
- section('zombies','Zombies mod menus',grid(...resources.filter(m=>m.group==='zombies').map(card)))+
- section('multiplayer','Multiplayer mod menus',grid(...resources.filter(m=>m.group==='multiplayer').map(card)))+
- section('both','Multiplayer & Zombies',grid(...resources.filter(m=>m.group==='both').map(card)))+
+ section('zombies','Zombies mod menus',grid(...resources.filter(m=>m.group==='zombies'&&!m.offHost).map(card)))+
+ section('multiplayer','Multiplayer mod menus',grid(...resources.filter(m=>m.group==='multiplayer'&&!m.offHost).map(card)))+
+ section('both','Multiplayer & Zombies',grid(...resources.filter(m=>m.group==='both'&&!m.offHost).map(card)))+
  (resources.some(menu=>menu.group==='other')?section('other','Other BO3 resources',grid(...resources.filter(m=>m.group==='other').map(card))):'')+
  normalized.map(item=>renderer.details(item)).join('\n')+nextResources.map(item=>nextRenderer.details(item)).join('\n'), '#injector','Get GSC Injector');
 console.log(`Built PS4 BO3 collection: ${resources.length} resources, ${resources.reduce((count,item)=>count+item.downloads.length,0)} download links.`);
