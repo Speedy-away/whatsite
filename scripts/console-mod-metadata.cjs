@@ -41,7 +41,7 @@ const gameCopy = {
   'infinite-warfare': ['Infinite Warfare PS4 MAG Menu + GSC Injector', 'Download MAG Menu + GSC Injector for Infinite Warfare Multiplayer and Zombies in Spaceland on PS4 CUSA04762 v1.25. Browse screenshots and DLC references.'],
   'wwii': ['WWII PS4 Menus: HYDRA & DLC References', 'Find HYDRA 2.2.0 PS4 WWII Multiplayer and Zombies menu notes, Windows portable download, opening controls and captured DLC title-ID references.'],
   'gta5': ['GTA 5 PS4 Mod Menus by Game Update', 'Download Lester SPRX V2, Synapse and Cyprus for GTA V on PS4. Match game updates 1.57, 1.56 or older builds, regional title IDs and setup requirements.', ['Lester SPRX', 'LesterSPRX', 'XlesterX', 'Synapse PS4', 'Cyprus PS4', 'Cyprus Lite', 'GTA V 1.57 PS4 mod menus', 'GTA V 1.56 PS4 mod menus', 'Cyprus GTA V 1.57', 'Cyprus GTA V 1.56', 'CUSA00411', 'CUSA00419', 'GTA V CSC menus', 'CSC script packs', 'RK MODZ', 'RKMODZ manager']],
-  'rdr2': ['RDR2 PS4 Menus: Havana, North, Sheriff & Oyster', 'Get RDR2 PS4 North, Sheriff, Havana and Oyster resources, with matching builds, publisher checksums, previews and supplied installation guides.']
+  'rdr2': ['Best RDR2 Online PS4 Mod Menu: Scooby & More', 'Scooby: Best RDR2 Online PS4 mod menu for RDR2 Online 1.32 with Gold, Money, XP and more. Browse ACE-HIGH, North, Sheriff, Havana and Oyster too.']
 };
 function metadataByPage() {
   const {games, entries} = catalog();

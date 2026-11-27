@@ -47,6 +47,7 @@ const nav=[['/console/mods/','Mods / Mod Menus'],['/console/mods/ps4/','PS4/PS5 
 const image='/assets/images/ps4-gta5/oxagon.png';
 const rdr2image='/assets/images/ps4-rdr2/north.png';
 const rdr2menus=[
+ {name:'Scooby',resourceId:'rdr2-scooby',url:'https://scoobymenu.cc/console/products/rdr2/',downloadsRendered:true,showVersion:true},
  {name:'ACE-HIGH',resourceId:'rdr2-ace-high-v1-1',url:imported.forGame('rdr2').find(item=>item.id==='rdr2-ace-high-v1-1').downloads[0].url,downloadsRendered:true,showVersion:true},
  {name:'North',image:'north.png',url:'https://www.mediafire.com/file/25tajv70j2bocmu/NorthBeta011.rar/file',downloadsRendered:true},
  {name:'Oyster',resourceId:'rdr2-oyster',url:imported.forGame('rdr2').find(item=>item.id==='rdr2-oyster').downloads[0].url,downloadsRendered:true},
@@ -80,7 +81,7 @@ section('scooby-console','Scooby Console',grid(resource('Scooby','Browse Scooby 
 section('games','Available games',grid(resource('Grand Theft Auto V','Menus by game update, script resources, plugin setup and supplied guides.',ext(base,'Open GTA V mods'),'/assets/images/gta52.png'),resource('Red Dead Redemption 2','North, Sheriff, Havana and Oyster resources, with supplied screenshots and videos.',ext(rdr2base,'Open RDR2 mods'),'/assets/images/rdr2.png'),resource('Call of Duty','Game-specific menus, injectors, CFG and RTM tools, screenshots and supplied guides.',ext(codbase,'Browse Call of Duty mods'),'/assets/images/covers/cod-black-ops-3.jpg'),imported.extraGameCards()))+
 section('menu-directory','Find a specific menu',`<p>Search every imported game, menu, script and tool, including older GTA V builds.</p><div class="guide-links">${link('/console/mods/ps4/menus.html','Search the menu directory')}</div>`)+
 section('requirements','Before choosing a mod',note('<p>Match the console firmware, homebrew enabler, game title ID and game update separately. A menu built for GTA V 1.57 is not automatically compatible with 1.56, and the PS4 14.00 jailbreak does not establish GoldHEN plugin support.</p>')), '#games','Browse games');
-page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Browse ACE-HIGH, North, Sheriff, Havana and Oyster resources for Red Dead Redemption 2, with supplied screenshots and videos.',rdr2image,nav.slice(0,5),
+page('console/mods/ps4/rdr2/index.html','RDR2 Mods for PS4','Scooby: Best RDR2 Online PS4 mod menu. Working for RDR2 Online 1.32 with Gold, Money, XP and more. Browse ACE-HIGH, North, Sheriff, Havana and Oyster too.',rdr2image,nav.slice(0,5),
 require('./ps4-user-plugin-templates.cjs').sectionFor('rdr2')+
 section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2Card)))+
 section('rdr2-video-guide','RDR2 Online PS4 mod menu video guide',video('d8h6O_okVMc','RDR2 Online PS4 mod menu download and setup')), '#downloads','Browse downloads');
