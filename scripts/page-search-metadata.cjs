@@ -162,7 +162,7 @@ const aliases = {
   'console/ps4/emulators.html': ['PS4 emulator downloads', 'emulators on jailbroken PS4', 'PS4 PS2 emulator', 'PS4 GameCube emulator', 'PS4 Wii emulator', 'PS4 Wii U emulator', 'PS4 Dreamcast emulator', 'PS4 homebrew PKG installation'],
   'console/ps5/emulators.html': ['PS5 emulator downloads', 'emulators on jailbroken PS5', 'PS5 PS2 emulator', 'PS5 PS3 emulator', 'PS5 GameCube emulator', 'PS5 Wii emulator', 'PS5 Wii U emulator', 'PS5 Xbox 360 emulator', 'PS5 Dreamcast emulator', 'PS5 RetroArch'],
   'console/mods/ps4/gta5/install.html': ['GTA 5 PS4 mod menu installation', 'GTA V GoldHEN plugin setup', 'GTA 5 plugins.ini', 'PS4 SPRX installation guide', 'GTA V CSC script installation'],
-  'console/mods/ps4/gta5/online.html': ['Los Santos Online', 'GTA 5 PS4 private server', 'GTA V private server setup', 'Los Santos Online guide'],
+  'console/mods/ps4/gta5/online.html': ['No PS Plus', 'no-ps-plus.prx', 'No PS Plus GTA V Online plugin', 'GTA V Online PS4 plugins', 'Los Santos Online', 'GTA 5 PS4 private server', 'GTA V private server setup', 'Los Santos Online guide'],
   'console/retro/wii.html': ['Nintendo Wii homebrew', 'Wii Homebrew Channel', 'Wii apps', 'Wii setup guide'],
   'console/retro/gamecube.html': ['Nintendo GameCube homebrew', 'GameCube apps', 'Swiss GameCube loader', 'GameCube setup guide'],
   'console/retro/ds.html': ['Nintendo DS homebrew', 'Nintendo DSi homebrew', 'DS flashcart setup', 'DSi custom firmware'],

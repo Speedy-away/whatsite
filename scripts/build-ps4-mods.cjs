@@ -6,7 +6,7 @@ const rdr2Only=process.argv.includes('--rdr2-only');
 const fortniteOnly=process.argv.includes('--fortnite-only');
 const overwatchOnly=process.argv.includes('--overwatch-only');
 const scoped=gtaOnly||rdr2Only||fortniteOnly||overwatchOnly;
-const page=(file,...args)=>{if((!scoped)||(gtaOnly&&['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'].includes(file))||(rdr2Only&&file==='console/mods/ps4/rdr2/index.html')||((fortniteOnly||overwatchOnly)&&file==='console/mods/ps4/index.html'))renderPage(file,...args);};
+const page=(file,...args)=>{if((!scoped)||(gtaOnly&&['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html','console/mods/ps4/gta5/online.html'].includes(file))||(rdr2Only&&file==='console/mods/ps4/rdr2/index.html')||((fortniteOnly||overwatchOnly)&&file==='console/mods/ps4/index.html'))renderPage(file,...args);};
 const imported=require('./build-ps4-ps5-game-imports.cjs').createGameImports();
 const catalog=require('./console-mod-catalog.cjs');
 const {resourceTags,resourceTerms}=require('./console-resource-tags.cjs');
@@ -14,6 +14,7 @@ const files=JSON.parse(fs.readFileSync('downloads/ps4/GTA5/manifest.json','utf8'
 // Render each catalogue resource once; older download lists only fill missing entries.
 const gtaItems=imported.forGame('gta5');
 function gtaSection(item){
+ if(item.category==='plugin')return 'online-plugins';
  if(item.category==='client')return 'servers';
  if(item.category==='rtm')return 'rtm-tools';
  if(['script','cfg'].includes(item.category)||['gta5-script-loader-pack','gta5-random-scripts-pack'].includes(item.id))return 'scripts';
@@ -29,7 +30,7 @@ function gtaCardForSection(item,group){
  return imported.renderer.card(item);
 }
 const gtaCards=group=>gtaItems.filter(item=>gtaSection(item)===group||(item.splitGameVersionCards&&['v156','older'].includes(group))).map(item=>gtaCardForSection(item,group));
-const gta157FeaturedIds=['gta5-wzsoftware-1-57','gta5-nova-protocol-1-57','gta5-mag-extortion-reborn','gta5-mag-semjase','gta5-lester-sprx-v2-1-57','gta5-velora-1-57','gta5-crystalis-1-57','gta5-synapse-1-57'];
+const gta157FeaturedIds=['gta5-orbital-1-57','gta5-wzsoftware-1-57','gta5-nova-protocol-1-57','gta5-mag-extortion-reborn','gta5-mag-semjase','gta5-lester-sprx-v2-1-57','gta5-velora-1-57','gta5-crystalis-1-57','gta5-synapse-1-57'];
 const unmatchedFiles=files.filter(file=>!gtaItems.some(item=>imported.matches(item,file)));
 function guideDownloads(ids,onlyDownload){
  const buttons=ids.map(id=>{
@@ -43,7 +44,7 @@ function guideDownloads(ids,onlyDownload){
 const base='/console/mods/ps4/gta5/';
 const rdr2base='/console/mods/ps4/rdr2/';
 const codbase='/console/mods/ps4/call-of-duty/';
-const nav=[['/console/mods/','Mods / Mod Menus'],['/console/mods/ps4/','PS4/PS5 Games'],['/console/mods/ps4/menus.html','Menu Directory'],[base,'GTA V Downloads'],[rdr2base,'RDR2 Downloads'],[codbase,'Call of Duty'],[base+'install.html','Installation'],[base+'online.html','Los Santos Online']];
+const nav=[['/console/mods/','Mods / Mod Menus'],['/console/mods/ps4/','PS4/PS5 Games'],['/console/mods/ps4/menus.html','Menu Directory'],[base,'GTA V Downloads'],[rdr2base,'RDR2 Downloads'],[codbase,'Call of Duty'],[base+'install.html','Installation'],[base+'online.html','GTA V Online']];
 const image='/assets/images/ps4-gta5/oxagon.png';
 const rdr2image='/assets/images/ps4-rdr2/north.png';
 const rdr2menus=[
@@ -87,7 +88,8 @@ section('downloads','Red Dead Redemption 2 mod menus',grid(...rdr2menus.map(rdr2
 section('rdr2-video-guide','RDR2 Online PS4 mod menu video guide',video('d8h6O_okVMc','RDR2 Online PS4 mod menu download and setup')), '#downloads','Browse downloads');
 page('console/mods/ps4/gta5/index.html','GTA V Mods for PS4','Browse menus by GTA V game update, CSC scripts, screenshots and supplied setup guides.',image,nav,
 require('./ps4-user-plugin-templates.cjs').sectionFor('gta5')+
-section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#rtm-tools">RTM Tools</a><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
+section('versions','Choose your GTA V update',`<nav class="guide-nav" aria-label="Download versions"><a href="#online-plugins">Online plugins</a><a href="#rtm-tools">RTM Tools</a><a href="#v157">GTA V 1.57</a><a href="#v156">GTA V 1.56</a><a href="#older">Older GTA 5 versions</a><a href="#scripts">Scripts &amp; CSC</a><a href="#servers">Private servers</a></nav>`)+
+section('online-plugins','GTA V Online plugins',grid(...gtaCards('online-plugins')))+
 section('rtm-tools','RTM Tools',grid(...gtaCards('rtm-tools')))+
 section('v157','GTA V 1.57',grid(
  ...gta157FeaturedIds.map(id=>imported.renderer.card(gtaItems.find(item=>item.id===id))),
@@ -129,7 +131,8 @@ section('scripts','Using CSC script resources',guideDownloads(['gta5-script-load
 ])+note('<p>Back up and merge your existing configuration using the menu’s own example. Get Los Santos Online setup files and instructions from its website.</p>'))+
 section('video','Velora 1.57 video companion',video('jUlSB1gEHtQ','PS4: Install Velora Mod Menu for GTA V 1.57')),'#plugin','Read setup steps');
 
-page('console/mods/ps4/gta5/online.html','GTA V PS4: Los Santos Online','Private-server resources for compatible PS4 setups, separate from Rockstar’s official GTA Online service.','/assets/images/ps4-gta5/ozark.png',nav,
+page('console/mods/ps4/gta5/online.html','GTA V Online PS4 Resources','User-supplied GTA V Online plugins and private-server setup resources. Check each resource’s compatibility and requirements.','/assets/images/ps4-gta5/ozark.png',nav,
+section('online-plugins','GTA V Online plugins',grid(...gtaCards('online-plugins')))+
 section('routes','Choose the online service',note('<p><strong>Official GTA Online:</strong> a 14.00 jailbreak alone is not a guarantee of PSN or Rockstar service access. Official play depends on the required console/game software, account and service eligibility. This guide does not recommend updating a lower-firmware console solely to obtain online access.</p><p><strong>Los Santos Online:</strong> an independent private-server option advertised for PS4 and Xbox 360. Its website describes it as premium. Check supported firmware, GTA V update, access terms and current setup files with the server team before buying access or changing your console.</p>')+sourceList([['https://www.playstation.com/en-us/support/hardware/ps4-set-up/','PlayStation official online setup requirements'],['https://lossantosonline.com/','Los Santos Online service and support']]))+
 section('setup','Private-server setup checklist',steps([
 ['Check the server’s current requirements','Open the official site and its linked community. Confirm your exact PS4 firmware, GTA V title ID and update are supported. Staying on lower firmware requires a server-compatible configuration, not just any jailbroken PS4.'],
@@ -158,6 +161,6 @@ if(!gtaOnly&&!fortniteOnly&&!overwatchOnly){
  const file='console/mods/ps4/rdr2/index.html';
  fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('</head>','<link rel="stylesheet" href="/assets/gta5-plugin-downloads.css?v=8"></head>').replace('</body>','<script defer src="/assets/gta5-menu-downloads.js?v=1"></script></body>'));
 }
-if(gtaOnly||rdr2Only)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));
+if(gtaOnly||rdr2Only)for(const file of rdr2Only?['console/mods/ps4/rdr2/index.html']:['console/mods/ps4/gta5/index.html','console/mods/ps4/gta5/install.html','console/mods/ps4/gta5/online.html'])fs.writeFileSync(file,require('./search-page-output.cjs').finish(file,fs.readFileSync(file,'utf8')));
 if(!rdr2Only)catalog.build();
 console.log(overwatchOnly?'Built Overwatch, PS4/PS5 Games and the menu directory.':fortniteOnly?'Built Fortnite, PS4/PS5 Games and the menu directory.':rdr2Only?'Built RDR2 catalogue with Oyster next to North.':gtaOnly?'Built GTA V catalogue, installation guide and menu directory.':'Built Console Mods, PS4/PS5 Games, three GTA V pages and RDR2 with North, Sheriff and Havana downloads.');

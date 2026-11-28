@@ -24,7 +24,7 @@
   "existingDownloadsPreserved": true,
   "seo": "Visible tags, search keywords, directory entry, social metadata, JSON-LD and sitemap verified.",
   "payloadExecuted": false,
-  "published": false,
+  "published": true,
   "scopedRebuild": "BO3-only regeneration is idempotent; all 16 tracked Call of Duty pages retain their pre-run SHA-256.",
   "archiveIndex": {
     "newFiles": 3,
@@ -36,5 +36,71 @@
     "note": "Archive index refreshed with all three DayBreak files present. 9,737 total records: 34 present, 9,703 older records missing; older paths, versions and metadata retained and no original files deleted. Initial all-sidecar merge hit a pre-existing missing 3DS theme, so only the new verified scoped records were unioned into the audit before the metadata-only index refresh."
   },
   "deploymentChecks": "23 Pages deployment/routing/sparse-tree/source-link tests passed before push.",
-  "publicationStatus": "User authorized repository push; deployment verification pending."
+  "publicationStatus": "Published and verified live.",
+  "repositoryCommit": "6061b515db25f29cb735c6504f5e054dc3f75c71",
+  "pushed": true,
+  "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46083806702",
+  "live": {
+    "checkedAt": "2026-11-27T23:47:41.280Z",
+    "repositoryCommit": "6061b515db25f29cb735c6504f5e054dc3f75c71",
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46083806702",
+    "status": "success",
+    "routes": [
+      {
+        "url": "https://whatwhatboy.com/console/mods/ps4/call-of-duty/black-ops-3/",
+        "status": 200,
+        "bytes": 188846
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/6061b515db25f29cb735c6504f5e054dc3f75c71/assets/images/ps4-bo3/daybreak-engine-off-host-user-preview.webp",
+        "status": 200,
+        "bytes": 493856
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Speedy-away/whatsite/6061b515db25f29cb735c6504f5e054dc3f75c71/downloads/ps4/BO3/daybreak-engine-off-host/bf83e58dae13/BO3PS4_1.33_DayBreakEngine_MP.rar",
+        "status": 200,
+        "bytes": 89008
+      },
+      {
+        "url": "https://whatwhatboy.com/console/mods/ps4/menus.html",
+        "status": 200,
+        "bytes": 1627576
+      },
+      {
+        "url": "https://whatwhatboy.com/sitemap.xml",
+        "status": 200,
+        "bytes": 69434
+      }
+    ],
+    "archiveSHA256": "bf83e58dae13692f56f0748114c6bc5feb744bb643924a7d450546a5ee57578f",
+    "imageSHA256": "a511e22b923164b854d6f0c8c505e0a922670a8f7a33746b03079155bf64feeb",
+    "verification": "Live DayBreak Engine Off-Host card, Beta 0.9 / BO3 1.33 / CUSA02290 details, six tags, screenshot popup, setup panel, exact download and image hashes, metadata, JSON-LD, menu directory and sitemap verified. Older DayBreak Zombies retained."
+  },
+  "keywordTagExpansion": {
+    "date": "2026-11-27",
+    "keywordPhrases": 26,
+    "cardTags": [
+      "PS4",
+      "Off-host",
+      "Multiplayer",
+      "BO3 1.33",
+      "SPRX",
+      "Beta 0.9",
+      "Aimbot",
+      "Triggerbot",
+      "Anti-aim",
+      "CUSA02290",
+      "GoldHEN",
+      "Plugin Loader"
+    ],
+    "tagsUseExistingHiddenBadgeStyle": true,
+    "checks": "Card search, page keywords, structured item keywords, menu directory, exact image/download links and older DayBreak Zombies checked. Tag count defaults to six and is capped at twelve.",
+    "published": false
+  },
+  "pendingPublication": {
+    "date": "2026-11-28",
+    "scope": "DayBreak keywords",
+    "status": "User authorized push; scoped changes prepared for origin/main.",
+    "deploymentChecks": "23 Pages deployment/routing/sparse-tree/source-link checks passed."
+  }
 }

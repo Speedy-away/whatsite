@@ -61,6 +61,7 @@ test('GTA V catalogue groups each resource once and reserves older versions for 
   const marker='id="resource-'+r.id+'"';assert.equal(html.split(marker).length-1,1,r.id);
   if(r.category==='client'){assert.ok(section('servers').includes(marker),r.id);continue;}
   if(r.category==='rtm'){assert.ok(section('rtm-tools').includes(marker),r.id);continue;}
+  if(r.category==='plugin'){assert.ok(section('online-plugins').includes(marker),r.id);continue;}
   if(['script','cfg'].includes(r.category)||['gta5-script-loader-pack','gta5-random-scripts-pack'].includes(r.id)){assert.ok(section('scripts').includes(marker),r.id);continue;}
   const group=r.gameVersions?.includes('1.57')?'v157':r.gameVersions?.includes('1.56')?'v156':r.gameVersions?.length?'older':'unconfirmed';
   assert.ok(section(group).includes(marker),r.id+' in '+group);

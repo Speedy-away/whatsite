@@ -4,7 +4,7 @@ const {resourceTags, resourceTerms} = require('./console-resource-tags.cjs');
 const {section, guideSection, grid, steps, videoEmbed, link, guideLink, ext, esc} = require('./build-console-guides.cjs');
 
 const categories = {
-  menu: 'Mod menus', client: 'Server clients', injector: 'Injectors', pack: 'Menu packs', script: 'Scripts', cfg: 'CFG resources',
+  menu: 'Mod menus', plugin: 'Plugins', client: 'Server clients', injector: 'Injectors', pack: 'Menu packs', script: 'Scripts', cfg: 'CFG resources',
   rtm: 'RTM tools', cheat: 'Cheat files', dlc: 'DLC resources', reference: 'DLC compatibility references', fpkg: 'FPKG resources', source: 'Source codes'
 };
 
@@ -128,8 +128,9 @@ function card(item) {
   const videoLink = videoGuide ? `<a class="btn btn-outline" href="${h(videoGuide.url)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> Watch video guide</a>` : '';
   const detailLink = !item.hideCardGuideLink && (!cleanGta || item.mergedResourceIds?.length) && hasDetails(item, screenshot) ? guideLink('#guide-' + item.id, h(item.guideLabel || 'Guide & media')) : '';
   const search = resourceTerms(item).join(' ').toLowerCase();
-  const tags = resourceTags(item).slice(0, 6);
-  const tagMarkup = cleanGta ? '' : tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
+  const tagLimit = Number.isInteger(item.cardTagLimit) ? Math.max(1, Math.min(12, item.cardTagLimit)) : 6;
+  const tags = resourceTags(item).slice(0, tagLimit);
+  const tagMarkup = cleanGta && item.category !== 'plugin' ? '' : tags.length ? `<ul class="guide-resource-tags" aria-label="Tags">${tags.map(tag => `<li class="feature-tag">${h(tag)}</li>`).join('')}</ul>` : '';
   const relatedLinks = (item.relatedLinks || []).flatMap(({url, label}) => {
     const href = httpsUrl(url);
     return href && label ? [ext(href, h(label))] : [];

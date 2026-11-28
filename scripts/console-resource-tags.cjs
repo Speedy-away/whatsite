@@ -24,7 +24,7 @@ const gameAliases = {
   'wwii': ['WWII', 'WW2', 'World War II', 'Call of Duty WWII']
 };
 const categoryLabels = {
-  menu: 'Mod menu', client: 'Server client', injector: 'Injector', pack: 'Menu pack', cfg: 'CFG',
+  menu: 'Mod menu', plugin: 'Plugin', client: 'Server client', injector: 'Injector', pack: 'Menu pack', cfg: 'CFG',
   rtm: 'RTM tool', script: 'Script', cheat: 'Cheat file', reference: 'DLC reference', fpkg: 'FPKG fix', source: 'Source code'
 };
 const unique = values => [...new Map(values.filter(Boolean).map(value => [String(value).toLowerCase(), String(value)])).values()];
@@ -60,7 +60,7 @@ function resourceTerms(item, gameTitle = '') {
 // Search intent follows the resource's documented category and available material.
 // A page's PS4 directory alone is not proof of platform or firmware compatibility.
 function discoveryTerms(item, gameTitle = '') {
-  if (!['menu', 'pack', 'script', 'injector', 'rtm', 'cfg', 'client', 'cheat'].includes(item.category)) return [];
+  if (!['menu', 'plugin', 'pack', 'script', 'injector', 'rtm', 'cfg', 'client', 'cheat'].includes(item.category)) return [];
   const name = item.name;
   if (!name) return [];
   const kind = categoryLabels[item.category].toLowerCase();

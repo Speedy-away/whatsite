@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-28",
+  "page": "/console/mods/ps4/gta5/#resource-gta5-orbital-1-57",
+  "placement": "GTA V 1.57",
+  "singleCard": true,
+  "compatibility": {
+    "platform": "PS4",
+    "gameUpdate": "1.57",
+    "titleId": "CUSA00411",
+    "licenceRequired": true
+  },
+  "download": {
+    "local": "/downloads/ps4/GTA5/157/orbital/5929213b8463/orbitale-v1.3.0-ps4.zip",
+    "bytes": 1078276,
+    "sha256": "5929213b8463dbda6674ea64e79fcb7cb54b2d153948b97f61380839a0f605da"
+  },
+  "image": {
+    "local": "/assets/images/ps4-gta5/orbital-user-preview.png",
+    "bytes": 319490,
+    "sha256": "08a7e11b65b7e637755084f6d800a00ebd0e0fc2b323624a944664fa457ce6d2",
+    "source": "User supplied codex-clipboard-8f9d70ec-9d94-4fbd-85dd-f4b6f43e359e.png"
+  },
+  "archiveVerified": true,
+  "inventory": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\docs\\ps4-gta5-orbital-private-inventory.json",
+  "backupInventory": "F:/whatsite-backup-downloads-etc/inventories/ps4-gta5-orbital-1576048075003396136.json",
+  "versionLabels": {
+    "package": "v1.3.0 from ZIP filename",
+    "readme": "PS4 component v1.2.5 from README",
+    "image": "v1.5.8 from user-supplied preview"
+  },
+  "browser": "Verified 1.57 card, CUSA00411, licence requirement and original screenshot popup.",
+  "checks": "Six focused tests passed; targeted card placement, one download, image/archive SHA-256, preserved older downloads, keywords, social/schema metadata and directory search passed.",
+  "preExistingTestFailure": "GTA guide-completeness test encounters four entries missing guideBlocks in both HEAD and current data: Extortion Reborn, Semjase, Nova Protocol and WZSoftware.",
+  "payloadExecuted": false,
+  "published": false,
+  "pendingPublication": {
+    "date": "2026-11-28",
+    "scope": "Orbital",
+    "status": "User authorized push; scoped changes prepared for origin/main.",
+    "deploymentChecks": "23 Pages deployment/routing/sparse-tree/source-link checks passed."
+  }
+}

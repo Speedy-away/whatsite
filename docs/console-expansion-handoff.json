@@ -14060,7 +14060,106 @@
     "generator": "node scripts/build-ps4-ps5-cod.cjs --bo3-only",
     "verification": "docs/qa/daybreak-engine-bo3-verification.json; 24 focused tests passed, browser card/popup checked, all existing downloads preserved and scoped regeneration idempotent across 16 tracked COD pages.",
     "payloadExecuted": false,
+    "published": true,
+    "publicationStatus": "Published and verified live.",
+    "repositoryCommit": "6061b515db25f29cb735c6504f5e054dc3f75c71",
+    "pushed": true,
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46083806702",
+    "liveCheckedAt": "2026-11-27T23:47:41.280Z",
+    "liveVerification": "Live DayBreak Engine Off-Host card, Beta 0.9 / BO3 1.33 / CUSA02290 details, six tags, screenshot popup, setup panel, exact download and image hashes, metadata, JSON-LD, menu directory and sitemap verified. Older DayBreak Zombies retained.",
+    "keywordTagExpansion": {
+      "date": "2026-11-27",
+      "status": "Expanded to 26 specific keyword/search phrases and 12 rendered tags, retaining the site’s hidden badge style. Off-host spelling variants, BO3/Black Ops III/PS4 aliases, Multiplayer 1.33, Beta 0.9, CUSA02290, GoldHEN/SPRX, screenshot features, author and setup terms included. Metadata, structured data and menu directory refreshed.",
+      "published": false
+    }
+  },
+  "orbitalGta5Ps415720261128": {
+    "date": "2026-11-28",
+    "page": "/console/mods/ps4/gta5/#resource-gta5-orbital-1-57",
+    "status": "Added Orbital to GTA V 1.57 with supplied screenshot, complete original ZIP mirror, Orbital/Orbitale search aliases and source-confirmed CUSA00411. Licence requirement visible. Keywords, tags, directory, social/schema metadata and sitemap updated.",
+    "versionLabels": {
+      "package": "v1.3.0 from ZIP filename",
+      "readme": "PS4 component v1.2.5 from README",
+      "image": "v1.5.8 from user-supplied preview"
+    },
+    "source": "docs/sources/gta5/orbital-1-57.json",
+    "download": {
+      "local": "/downloads/ps4/GTA5/157/orbital/5929213b8463/orbitale-v1.3.0-ps4.zip",
+      "bytes": 1078276,
+      "sha256": "5929213b8463dbda6674ea64e79fcb7cb54b2d153948b97f61380839a0f605da"
+    },
+    "archiveInventory": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\docs\\ps4-gta5-orbital-private-inventory.json",
+    "backupInventory": "F:/whatsite-backup-downloads-etc/inventories/ps4-gta5-orbital-1576048075003396136.json",
+    "archiveVerified": true,
+    "archiveScope": "Complete original ZIP with both PRX modules and supporting data preserved; scoped inventory and F: inventory saved. Global index reconciliation deferred because older unrelated archive records are missing.",
+    "verification": "docs/qa/orbital-gta5-157-verification.json",
+    "payloadExecuted": false,
+    "published": false
+  },
+  "gta5NoPsPlusPrx20261128": {
+    "date": "2026-11-28",
+    "pages": [
+      "/console/mods/ps4/gta5/",
+      "/console/mods/ps4/gta5/online.html"
+    ],
+    "status": "Added user-supplied no-ps-plus.prx as No PS Plus in dedicated Online plugins sections on GTA V catalogue and Online page. Direct mirror, plugin category/filter, keywords, tags and sitemap added. Existing menus, Orbital and private-server material preserved.",
+    "source": "docs/sources/gta5/no-ps-plus.json",
+    "download": {
+      "local": "/downloads/ps4/GTA5/online/no-ps-plus/6bb8b8e45993/no-ps-plus.prx",
+      "bytes": 181264,
+      "sha256": "6bb8b8e45993473281a6c51da9433d6eb6fa76b5d9f2c59b27dc2cbed5016800"
+    },
+    "sourceUrl": null,
+    "sourceType": "user-supplied-file",
+    "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\GTA5\\Online\\No PS Plus\\Builds\\Unversioned user attachment 2026-11-28\\no-ps-plus.prx",
+    "backupInventory": "F:/whatsite-backup-downloads-etc/inventories/ps4-gta5-no-ps-plus-20261128.json",
+    "archiveVerified": true,
+    "compatibility": "Unversioned user attachment. PS4 PRX header checked; game update, title ID, firmware, loader and subscription-related effect unverified. No download executed.",
+    "verification": "docs/qa/no-ps-plus-gta5-verification.json",
     "published": false,
-    "publicationStatus": "User authorized repository push; scoped DayBreak changes prepared for origin/main."
+    "seoUpdate": {
+      "date": "2026-11-28",
+      "keywordPhrases": 20,
+      "tags": [
+        "PS4",
+        "GTA V Online",
+        "Plugin",
+        "PRX",
+        "No PS Plus",
+        "User supplied",
+        "Unversioned",
+        "Untested",
+        "Compatibility unconfirmed",
+        "Direct download"
+      ],
+      "tagsKeepExistingHiddenBadgeStyle": true,
+      "metadata": "Main GTA page keywords and dedicated Online title/description, Open Graph and Twitter metadata verified.",
+      "structuredData": "CollectionPage and No PS Plus item keywords verified on both GTA pages; Online item points to its own card.",
+      "directory": "All 20 keyword phrases available in card and menu-directory search.",
+      "sitemap": [
+        {
+          "url": "https://whatwhatboy.com/console/mods/ps4/gta5/",
+          "lastmod": "2026-11-28",
+          "unique": true
+        },
+        {
+          "url": "https://whatwhatboy.com/console/mods/ps4/gta5/install.html",
+          "lastmod": "2026-11-28",
+          "unique": true
+        },
+        {
+          "url": "https://whatwhatboy.com/console/mods/ps4/gta5/online.html",
+          "lastmod": "2026-11-28",
+          "unique": true
+        },
+        {
+          "url": "https://whatwhatboy.com/console/mods/ps4/menus.html",
+          "lastmod": "2026-11-28",
+          "unique": true
+        }
+      ],
+      "verification": "11 focused tests passed; targeted tag, keyword, social metadata, schema, directory, sitemap and unchanged-download checks passed.",
+      "published": false
+    }
   }
 }
