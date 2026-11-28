@@ -25,6 +25,14 @@
       "summary": "Spectrum Apex, Mags Apex and nware mod menus.",
       "description": "Download Spectrum Apex, Mags Apex and nware for Apex Legends.",
       "keywords": [
+        "Spectrum_Apex",
+        "Spectrum Apex PS4 v3.25",
+        "Spectrum Apex ImGui",
+        "Spectrum_Apex_ImGui.sprx",
+        "Spectrum_Apex.sprx",
+        "Apex Legends 3.25 SPRX",
+        "Spectrum Apex PS4 download",
+        "Spectrum Apex load both files",
         "Spectrum Apex",
         "Spectrum Apex download",
         "Spectrum Apex SPRX",
@@ -3408,6 +3416,109 @@
     }
   ],
   "resources": [
+    {
+      "id": "apex-legends-spectrum-3-25",
+      "name": "Spectrum_Apex",
+      "category": "menu",
+      "publication": "include",
+      "gameIds": [
+        "apex-legends"
+      ],
+      "platforms": [
+        "ps4"
+      ],
+      "menuVersion": "v3.25",
+      "gameVersions": [
+        "3.25"
+      ],
+      "version": "v3.25 · Both files required",
+      "description": "Download both files and load Spectrum_Apex_ImGui.sprx and Spectrum_Apex.sprx together.",
+      "compatibilityText": "PS4 · Apex Legends v3.25 (user supplied). Title ID, firmware and loader requirements unspecified.",
+      "tags": [
+        "PS4",
+        "Apex Legends",
+        "SPRX",
+        "Game 3.25",
+        "Both files required"
+      ],
+      "featureTags": [
+        "PS4",
+        "Game 3.25",
+        "SPRX",
+        "Both files required",
+        "Spectrum Apex"
+      ],
+      "keywords": [
+        "Spectrum_Apex",
+        "Spectrum Apex PS4 v3.25",
+        "Spectrum Apex ImGui",
+        "Spectrum_Apex_ImGui.sprx",
+        "Spectrum_Apex.sprx",
+        "Apex Legends 3.25 SPRX",
+        "Spectrum Apex PS4 download",
+        "Spectrum Apex load both files"
+      ],
+      "searchKeywords": [
+        "Spectrum_Apex",
+        "Spectrum Apex PS4 v3.25",
+        "Spectrum Apex ImGui",
+        "Spectrum_Apex_ImGui.sprx",
+        "Spectrum_Apex.sprx",
+        "Apex Legends 3.25 SPRX",
+        "Spectrum Apex PS4 download",
+        "Spectrum Apex load both files"
+      ],
+      "images": [
+        {
+          "original": "/assets/images/ps4-apex-legends/apex-legends-user-cover.jpg",
+          "caption": "Apex Legends game artwork; no Spectrum_Apex menu screenshot supplied."
+        }
+      ],
+      "source": {
+        "postTitle": "Spectrum_Apex · v3.25 · load both files",
+        "capturedAt": "2026-11-28",
+        "captureFile": "docs/sources/apex-legends/spectrum-3-25.json",
+        "originalDownloadUrls": [
+          "https://cdn.discordapp.com/attachments/1569900865547145246/1576130956144943124/Spectrum_Apex_ImGui.sprx?ex=6b0bcdd7&is=6b0a7c57&hm=d62597fb2affbaacb7efc3cd8ebf74bb6105684ee6e92fe536737cafb2048f8a&",
+          "https://cdn.discordapp.com/attachments/1569900865547145246/1576130956492935309/Spectrum_Apex.sprx?ex=6b0bcdd7&is=6b0a7c57&hm=bb5ab93457f934e44289ed84530b9afa9edd8ea31f5ee0177f5d5124e849b902&"
+        ]
+      },
+      "downloads": [
+        {
+          "id": "apex-spectrum-325-imgui-sprx",
+          "label": "Download ImGui · required",
+          "filename": "Spectrum_Apex_ImGui.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1569900865547145246/1576130956144943124/Spectrum_Apex_ImGui.sprx?ex=6b0bcdd7&is=6b0a7c57&hm=d62597fb2affbaacb7efc3cd8ebf74bb6105684ee6e92fe536737cafb2048f8a&",
+          "distribution": "include",
+          "bytes": 3070656,
+          "sha256": "d64d9362bd9aa66a711c3239aa9d33c16b1af1fde576568b6dfa1d4393e8554e"
+        },
+        {
+          "id": "apex-spectrum-325-main-sprx",
+          "label": "Download Spectrum_Apex · required",
+          "filename": "Spectrum_Apex.sprx",
+          "url": "https://cdn.discordapp.com/attachments/1569900865547145246/1576130956492935309/Spectrum_Apex.sprx?ex=6b0bcdd7&is=6b0a7c57&hm=bb5ab93457f934e44289ed84530b9afa9edd8ea31f5ee0177f5d5124e849b902&",
+          "distribution": "include",
+          "bytes": 483104,
+          "sha256": "1179e5d4ec87b73f0be0ca202c052276e9c02bbd535bdb2bc56a22f416deb80c"
+        }
+      ],
+      "guideLabel": "Load both files",
+      "guideBlocks": [
+        {
+          "type": "paragraph",
+          "title": "Both modules are required",
+          "text": "Download Spectrum_Apex_ImGui.sprx and Spectrum_Apex.sprx. The user explicitly instructs loading both files together; neither download is an alternative to the other. Keep both original filenames."
+        },
+        {
+          "type": "paragraph",
+          "title": "Compatibility",
+          "text": "Listed under Apex Legends PS4 v3.25 as requested. The source supplies no exact title ID, region, firmware, loader configuration or loading order. Existing older Spectrum Apex files remain separate."
+        }
+      ],
+      "controls": [],
+      "videos": []
+    },
     {
       "id": "gta5-no-ps-plus",
       "name": "No PS Plus",

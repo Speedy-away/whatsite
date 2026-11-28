@@ -14018,6 +14018,19 @@
     "repositoryCommit": "e009f7d9",
     "pushed": true
   },
+  "ps5SaveGarage132020261127": {
+    "date": "2026-11-27",
+    "pages": [
+      "console/ps5/save-tools.html",
+      "console/ps5/game-saves/gta-6/index.html"
+    ],
+    "version": "v1.32.0",
+    "status": "Added Save Garage desktop tool to PS5 save tools and GTA VI saves with pinned Windows release, upstream artwork, requirements and experimental-edit note. Existing save links and compatibility pins preserved.",
+    "inventory": "docs/ps5-gta6-save-garage-private-inventory.json",
+    "archive": "F:/whatsite-backup-downloads-etc/inventories/ps5-gta6-save-garage-v1.32.0.json",
+    "verification": "Windows ZIP size and SHA-256 verified against GitHub release and publisher checksum list. No downloaded code executed.",
+    "published": false
+  },
   "scoobyRdr2Ps420261127": {
     "date": "2026-11-27",
     "page": "/console/mods/ps4/rdr2/#resource-rdr2-scooby",
@@ -14070,7 +14083,11 @@
     "keywordTagExpansion": {
       "date": "2026-11-27",
       "status": "Expanded to 26 specific keyword/search phrases and 12 rendered tags, retaining the site’s hidden badge style. Off-host spelling variants, BO3/Black Ops III/PS4 aliases, Multiplayer 1.33, Beta 0.9, CUSA02290, GoldHEN/SPRX, screenshot features, author and setup terms included. Metadata, structured data and menu directory refreshed.",
-      "published": false
+      "published": false,
+      "repositoryCommit": "f77760861e622c03be701ddcf713c105b4afdebd",
+      "pushed": true,
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46148681097",
+      "publicationStatus": "Pushed to origin/main; GitHub Pages deployment in progress. Live verification pending."
     }
   },
   "orbitalGta5Ps415720261128": {
@@ -14094,7 +14111,11 @@
     "archiveScope": "Complete original ZIP with both PRX modules and supporting data preserved; scoped inventory and F: inventory saved. Global index reconciliation deferred because older unrelated archive records are missing.",
     "verification": "docs/qa/orbital-gta5-157-verification.json",
     "payloadExecuted": false,
-    "published": false
+    "published": false,
+    "repositoryCommit": "f77760861e622c03be701ddcf713c105b4afdebd",
+    "pushed": true,
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46148681097",
+    "publicationStatus": "Pushed to origin/main; GitHub Pages deployment in progress. Live verification pending."
   },
   "gta5NoPsPlusPrx20261128": {
     "date": "2026-11-28",
@@ -14159,7 +14180,45 @@
         }
       ],
       "verification": "11 focused tests passed; targeted tag, keyword, social metadata, schema, directory, sitemap and unchanged-download checks passed.",
-      "published": false
-    }
+      "published": false,
+      "repositoryCommit": "f77760861e622c03be701ddcf713c105b4afdebd",
+      "pushed": true,
+      "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46148681097",
+      "publicationStatus": "Pushed to origin/main; GitHub Pages deployment in progress. Live verification pending."
+    },
+    "repositoryCommit": "f77760861e622c03be701ddcf713c105b4afdebd",
+    "pushed": true,
+    "deployment": "https://github.com/Speedy-away/whatsite/actions/runs/46148681097",
+    "publicationStatus": "Pushed to origin/main; GitHub Pages deployment in progress. Live verification pending."
+  },
+  "spectrumApex325Pair20261128": {
+    "date": "2026-11-28",
+    "page": "/console/mods/ps4/apex-legends/#resource-apex-legends-spectrum-3-25",
+    "status": "Added Spectrum_Apex under v3.25 with both required SPRX downloads and explicit instructions to load both together. Older Spectrum Apex record and original downloads retained. Uses existing Apex game artwork because no screenshot was supplied.",
+    "source": "docs/sources/apex-legends/spectrum-3-25.json",
+    "files": [
+      {
+        "name": "Spectrum_Apex_ImGui.sprx",
+        "local": "/downloads/ps4/apex-legends/spectrum-3-25/d64d9362bd9a/Spectrum_Apex_ImGui.sprx",
+        "bytes": 3070656,
+        "sha256": "d64d9362bd9aa66a711c3239aa9d33c16b1af1fde576568b6dfa1d4393e8554e",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Apex Legends\\Spectrum Apex\\Builds\\Apex Legends v3.25 - user-supplied pair 2026-11-28\\Spectrum_Apex_ImGui.sprx"
+      },
+      {
+        "name": "Spectrum_Apex.sprx",
+        "local": "/downloads/ps4/apex-legends/spectrum-3-25/1179e5d4ec87/Spectrum_Apex.sprx",
+        "bytes": 483104,
+        "sha256": "1179e5d4ec87b73f0be0ca202c052276e9c02bbd535bdb2bc56a22f416deb80c",
+        "backupPath": "F:\\whatsite-backup-downloads-etc\\files\\PS4\\Games\\Apex Legends\\Spectrum Apex\\Builds\\Apex Legends v3.25 - user-supplied pair 2026-11-28\\Spectrum_Apex.sprx"
+      }
+    ],
+    "archiveInventory": "C:\\Users\\whatw\\Documents\\GitHub\\whatsite\\docs\\ps4-apex-spectrum-325-private-inventory.json",
+    "backupInventory": "F:/whatsite-backup-downloads-etc/inventories/ps4-apex-spectrum-325-20261128.json",
+    "archiveVerified": true,
+    "compatibility": "PS4 / Apex Legends v3.25 supplied by user; title ID, region, firmware, loader and loading order unspecified.",
+    "verification": "docs/qa/spectrum-apex-325-verification.json; 9 tests passed plus both file/mirror/archive hashes, prior downloads, metadata and browser card/guide checks.",
+    "generator": "require('./scripts/build-ps4-ps5-game-imports.cjs').createGameImports().buildMods({gameIds:['apex-legends']})",
+    "payloadExecuted": false,
+    "published": false
   }
 }

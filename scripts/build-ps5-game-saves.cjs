@@ -1,6 +1,7 @@
 'use strict';
 
 function buildPs5GameSaves() {
+  const saveGarage = require('./ps5-save-garage.cjs');
   const {page, section, grid, resource, note, steps, ext, link, esc, ps5nav, ps5SaveImage, ps5SaveImageAlt} = require('./build-console-guides.cjs');
   const garlic = require('../docs/expansion-ps4-ps5.json').platforms.ps5.apps.find(item => item.id === 'garlic');
   const apolloImage = '/assets/images/consoles/apollo-save-tool.png';
@@ -36,6 +37,7 @@ function buildPs5GameSaves() {
         apolloImage, 'Apollo Save Tool artwork')
     )) +
     section('tools', 'Tools', grid(
+      saveGarage.card(),
       resource('Garlic Save Manager (GarlicTransfer)',
         'Download and upload PS5 saves from a Windows PC over your local network.',
         garlicTransferDownload),
@@ -70,6 +72,7 @@ function buildPs5GameSaves() {
   page('console/ps5/game-saves/gta-6/index.html', 'Grand Theft Auto VI (GTA 6) PS5 Game Saves',
     'Download the Platinum save or full story save for PS5 title ID PPSA01547 and upload it with GarlicTransfer.',
     gta6Image, ps5nav,
+    section('save-garage-tool', 'Save Garage Tool', grid(saveGarage.card())) +
     section('downloads', 'Downloads',
       note('<p><strong>Resign the save to your own PSN account before uploading.</strong> Use that same account on your PS5 and check that your game’s title ID is <code>PPSA01547</code>. Back up your existing GTA 6 saves before importing a community save.</p>' +
         `<div class="guide-links">${ext(garlicSaves, 'Open GarlicSaves')}</div>`) +
